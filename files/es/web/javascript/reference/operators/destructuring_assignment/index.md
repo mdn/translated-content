@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 original_slug: Web/JavaScript/Referencia/Operadores/Destructuring_assignment
 ---
+
 {{jsSidebar("Operators", "Operadores")}}
 
 La sintaxis de **desestructuración** es una expresión de JavaScript que permite desempacar valores de arreglos o propiedades de objetos en distintas variables.

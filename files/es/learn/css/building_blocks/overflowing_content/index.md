@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
 translation_of: Learn/CSS/Building_blocks/Overflowing_content
 original_slug: Learn/CSS/Building_blocks/Contenido_desbordado
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
 En este artículo veremos otro concepto importante en CSS: el **desbordamiento**. El desbordamiento es lo que sucede cuando hay demasiado contenido para que pueda caber cómodamente en una caja. En esta guía aprenderás qué es y cómo administrarlo.

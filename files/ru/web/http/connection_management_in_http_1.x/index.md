@@ -3,6 +3,7 @@ title: Connection management in HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
 translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
+
 {{HTTPSidebar}}
 
 Управление соединением является ключевой темой HTTP: открытие и поддержка соединения оказывает значительное влияние на производительность веб-сайтов и веб-приложений. В HTTP/1.x имеются следующие модели: _краткосрочные соединения_, _постоянные соединения_ и _конвейерная обработка HTTP_ (_HTTP pipelining_).

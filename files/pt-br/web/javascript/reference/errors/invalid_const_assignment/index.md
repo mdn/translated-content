@@ -2,6 +2,7 @@
 title: 'TypeError: atribuição inválida para const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem

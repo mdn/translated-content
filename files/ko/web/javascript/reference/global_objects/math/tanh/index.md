@@ -2,6 +2,7 @@
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
+
 {{JSRef}}
 
 **`Math.tanh()`** 함수는 쌍곡탄젠트 값을 반환합니다. 수식으로는 아래와 같습니다.

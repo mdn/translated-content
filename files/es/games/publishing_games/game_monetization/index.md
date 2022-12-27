@@ -12,6 +12,7 @@ tags:
 translation_of: Games/Publishing_games/Game_monetization
 original_slug: Games/Publishing_games/Monetización_de_los_juegos
 ---
+
 {{GamesSidebar}}
 
 Cuando empleas tu tiempo en crear un juego, [distribuirlo](/en-US/docs/Games/Techniques/Publishing_games/Game_distribution) y [promocionarlo](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion) deberías considerar ganar un poco de dinero con ello. Si tu trabajo es un esfuerzo serio en tu camino para ser un desarrollador independiente de juegos capaz de ganarse la vida, sigue leyendo y verás cuales son tus opciones. La tecnología es lo suficientemente madura; ahora es cuestión de elegir el enfoque adecuado.

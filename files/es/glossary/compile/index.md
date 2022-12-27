@@ -8,6 +8,7 @@ tags:
   - compilar
 translation_of: Glossary/Compile
 ---
+
 Compilar es el proceso de transformar un programa informático escrito en un {{Glossary("computer programming", "lenguaje")}} en un programa equivalente en otro formato. Al programa que se encarga de compilar se le llama compilador. A veces, a esta tarea se le llama "ensamblar" o "construir", lo que suele implicar otros procesos adicionales, e.j. empaquetarlo en formato binario.
 
 Normalmente, un compilador transforma un lenguaje de alto nivel como C o {{Glossary("Java")}}, el cual es legible por los humanos, en un lenguaje máquina que la CPU puede entender. Algunos compiladores que traducen de un lenguaje a otro del mismo nivel son llamados transpiladores, por ejemplo al compilar de TypeScript a {{Glossary("JavaScript")}}. Son considerados herramientas de productividad.
@@ -20,7 +21,7 @@ Los compiladores JIT suelen ser transparentes para el programador. Por ejemplo e
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Compiler")}} on Wikipedia
+- [Compiler](https://es.wikipedia.org/wiki/Compiler) on Wikipedia
 - The [GNU Compiler Collection (GCC)](https://gcc.gnu.org)
 
 ### Véase también

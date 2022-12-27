@@ -4,9 +4,10 @@ slug: Web/API/Node/selectstart_event
 translation_of: Web/API/GlobalEventHandlers/onselectstart
 original_slug: Web/API/Document/selectstart_event
 ---
+
 {{ApiRef('DOM')}}{{SeeCompatTable}}
 
-La propiedad **`GlobalEventHandlers.onselectstart`** representa el manejador de evento que es invocado cuando un evento {{event("selectstart")}} alcanza el objeto.
+La propiedad **`GlobalEventHandlers.onselectstart`** representa el manejador de evento que es invocado cuando un evento [`selectstart`](/es/docs/Web/Reference/Events/selectstart) alcanza el objeto.
 
 ## Sintaxis
 
@@ -24,9 +25,7 @@ document.onselectstart = function() { console.log("¡Selección iniciada!"); };
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Observaciones      |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Selection API','','GlobalEventHandlers.onselectstart')}} | {{Spec2('Selection API')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
@@ -34,5 +33,5 @@ document.onselectstart = function() { console.log("¡Selección iniciada!"); };
 
 ## Ver también
 
-- {{event("selectstart")}}
-- {{domxref("Document.onselectionchange")}} and {{event('selectionchange')}}.
+- [`selectstart`](/es/docs/Web/Reference/Events/selectstart)
+- {{domxref("Document.onselectionchange")}} and [`selectionchange`](/es/docs/Web/Reference/Events/selectionchange).

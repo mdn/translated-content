@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/General_sibling_combinator
 original_slug: Web/CSS/Selectores_hermanos_generales
 ---
+
 {{CSSRef("Selectors")}}
 
 ## Resumen

@@ -4,6 +4,7 @@ slug: Web/HTTP/CORS
 translation_of: Web/HTTP/CORS
 original_slug: Web/HTTP/Access_control_CORS
 ---
+
 {{HTTPSidebar}}
 
 El Intercambio de Recursos de Origen Cruzado ({{Glossary("CORS")}}) es un mecanismo que utiliza cabeceras {{Glossary("HTTP")}} adicionales para permitir que un {{Glossary("user agent")}} obtenga permiso para acceder a recursos seleccionados desde un servidor, en un origen distinto (dominio) al que pertenece. Un agente crea una petición HTTP de origen cruzado cuando solicita un recurso desde un dominio distinto, un protocolo o un puerto diferente al del documento que lo generó.

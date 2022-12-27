@@ -2,6 +2,7 @@
 title: Array() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 ---
+
 {{JSRef}}
 
 **`Array()`** 생성자는 새로운 {{jsxref("Array")}} 객체를 생성할 때 사용합니다.

@@ -9,6 +9,7 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 ---
+
 {{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}
 
 ## Сводка

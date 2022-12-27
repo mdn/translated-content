@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 browser-compat: javascript.builtins.Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
+
 {{JSRef}}
 
 El objeto `Proxy` permite crear un intermediario para otro objeto, el cual

@@ -7,6 +7,7 @@ tags:
   - Оператор
 translation_of: Web/JavaScript/Reference/Operators/new
 ---
+
 {{jsSidebar("Operators")}}
 
 **Оператор** (операторная функция)** `new`** создаёт экземпляр объекта, встроенного или определённого пользователем, имеющего конструктор.

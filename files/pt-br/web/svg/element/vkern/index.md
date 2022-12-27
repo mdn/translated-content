@@ -2,6 +2,7 @@
 title: vkern
 slug: Web/SVG/Element/vkern
 ---
+
 {{SVGRef}}
 
 A distância vertical entre dois glifos de fontes cima-para-baixo podem ser bem otimizadas com um elemento `vkern`. Esse processo é conhecido como [Kerning](http://en.wikipedia.org/wiki/Kerning).

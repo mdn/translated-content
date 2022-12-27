@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Attributes
 original_slug: Web/HTML/Atributos
 ---
+
 Los elementos en HTML tienen **atributos**; estos son valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas para cumplir los criterios de los usuarios.
 
 ## Lista de Atributos

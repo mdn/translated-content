@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Element/dl
 original_slug: Web/HTML/Elemento/dl
 ---
+
 {{HTMLSidebar}}
 
 El elemento **HTML `<dl>`** representa una lista descriptiva. El elemento encierra una lista de grupos de términos (especificados con el uso del elemento {{HTMLElement("dt")}}) y de descripciones (proveídas con elementos {{HTMLElement("dd")}}). Algunos usos comunes para este elemento son implementar un glosario o para desplegar metadatos (lista de pares llave-valor).

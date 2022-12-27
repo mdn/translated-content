@@ -3,6 +3,7 @@ title: transition-duration
 slug: Web/CSS/transition-duration
 translation_of: Web/CSS/transition-duration
 ---
+
 {{CSSRef}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`transition-duration`** establece el tiempo que debe tardar una animación de transición en completarse. Por defecto, el valor es de `0s`, esto quiere decir que no se producirá ninguna animación.

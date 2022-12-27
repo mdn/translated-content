@@ -2,6 +2,7 @@
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
+
 {{JSRef}}
 
 **`toUpperCase()`** 메서드는 문자열을 대문자로 변환해 반환합니다.

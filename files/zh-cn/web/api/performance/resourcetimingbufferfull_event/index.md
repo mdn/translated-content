@@ -5,7 +5,7 @@ slug: Web/API/Performance/resourcetimingbufferfull_event
 
 {{APIRef("Resource Timing API")}}
 
-**`onresourcetimingbufferfull`** 属性是一个在{{event("resourcetimingbufferfull")}}事件触发时会被调用的 {{domxref("EventHandler","event handler")}} 。这个事件当浏览器的资源时间性能缓冲区已满时会触发。
+**`onresourcetimingbufferfull`** 属性是一个在 `resourcetimingbufferfull` 事件触发时会被调用的 {{domxref("EventHandler","event handler")}}。这个事件当浏览器的资源时间性能缓冲区已满时会触发。
 
 ## 语法
 
@@ -16,7 +16,7 @@ callback = performance.onresourcetimingbufferfull = buffer_full_cb;
 ### 返回值
 
 - callback
-  - : 一个当{{event("resourcetimingbufferfull")}} 事件触发时调用的{{event("Event_handlers", "event handler")}} 。
+  - : 一个当 `resourcetimingbufferfull` 事件触发时调用的事件处理器。
 
 ## 例子
 
@@ -44,6 +44,5 @@ function init() {
 
 ## 参见
 
-- {{event("resourcetimingbufferfull")}} event
 - {{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
 - {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}

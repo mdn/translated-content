@@ -2,6 +2,7 @@
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
+
 {{JSRef}}
 
 O Objeto **`EvalError`** indica um erro em relação a função global {{jsxref("Global_Objects/eval", "eval()")}}. Esta exceção não é mais lançada pelo JavaScript, no entanto, o objeto `EvalError` ainda permanece compatível.

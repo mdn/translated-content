@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Crypto/getRandomValues
 original_slug: Web/API/RandomSource/Obtenervaloresaleatorios
 ---
+
 {{APIRef("Web Crypto API")}}
 
 El método **`Crypto.getRandomValues()`** permite obtener valores aleatorios criptográficamente fuertes. El array que se pasa como parámetro se rellena con números aleatorios (entiéndase aleatorios en el sentido criptográfico).

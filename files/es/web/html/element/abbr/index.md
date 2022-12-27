@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/abbr
 original_slug: Web/HTML/Elemento/abbr
 ---
+
 {{HTMLSidebar}}
 
 El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una abreviación o acrónimo; el atributo opcional {{htmlattrxref("title")}} puede ampliar o describir la abreviatura. Si está presente, el atributo `title` debe contener la descripción completa y nada más.

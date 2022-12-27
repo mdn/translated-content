@@ -12,6 +12,7 @@ tags:
   - graficos
 translation_of: Web/CSS/backdrop-filter
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/Web/CSS) de **`backdrop-filter`** le permite aplicar efectos gráficos como el desenfoque o el cambio de color al área detrás de un elemento. Debido a que se aplica a todo lo que está _detrás_ del elemento, para ver el efecto debe hacer que el elemento o su fondo sean al menos parcialmente transparentes.

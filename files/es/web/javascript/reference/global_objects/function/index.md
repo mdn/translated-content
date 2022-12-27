@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function
 ---
+
 {{JSRef("Objetos_globales", "Function")}}
 
 Cada función de JavaScript en realidad es un objeto `Function`. Esto se puede ver con el código `(function() {}).constructor === Function`, que devuelve `true`.

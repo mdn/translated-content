@@ -3,6 +3,7 @@ title: Operador Exponencial
 slug: Web/JavaScript/Reference/Operators/Exponentiation
 original_slug: Web/JavaScript/Reference/Operators/Operador_Exponencial
 ---
+
 {{jsSidebar("Operators")}}
 
 ## Sumário

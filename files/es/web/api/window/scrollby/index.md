@@ -10,6 +10,7 @@ tags:
   - Referencia
 translation_of: Web/API/Window/scrollBy
 ---
+
 {{ APIRef() }}
 
 ## Resumen
@@ -65,8 +66,6 @@ window.scrollBy({
 
 [window.scrollBy](/es/docs/DOM/Window.scrollBy) desplaza el documento una cantidad determinada, mientras que [window.scroll](/es/docs/DOM/Window.scroll) lo hace hacia una posición absoluta en el documento. Vea también [window.scrollByLines](/es/docs/DOM/Window.scrollByLines), [window.scrollByPages](/es/docs/DOM/Window.scrollByPages)
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentarios         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }} | {{ Spec2('CSSOM View') }} | Definición inicial. |
+{{Specifications}}

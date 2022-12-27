@@ -246,4 +246,4 @@ Mude sua folha de estilo para identificar os títulos com letras maiúsculas em 
 
 ## Qual o proximo?
 
-{{NextPage ("/ en-US / docs / Web / Guia / CSS / Getting_Started / Boxes", "caixas")}} Quando seu navegador exibe seu documento de amostra, ele cria espaço ao redor dos elementos quando ele coloca-los na página. A próxima página descreve como você pode usar CSS para trabalhar com as formas subjacentes de elementos, caixas.
+Quando seu navegador exibe seu documento de amostra, ele cria espaço ao redor dos elementos quando ele coloca-los na página. A próxima página descreve como você pode usar CSS para trabalhar com as formas subjacentes de elementos, caixas.

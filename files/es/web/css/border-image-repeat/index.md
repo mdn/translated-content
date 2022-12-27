@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/border-image-repeat
 ---
+
 {{CSSRef}}
 
 ## Resumen

@@ -5,6 +5,7 @@ title: >-
 slug: Web/Guide/Parsing_and_serializing_XML
 translation_of: Web/Guide/Parsing_and_serializing_XML
 ---
+
 La plataforma web proveé Los siguientes objetos para hacer parsing (convertir una cadena de texto a código) y serializing (visceversa) a un XML:
 
 - [XMLSerializer](/en/XMLSerializer) para convertir a tipo string el arbol del DOM

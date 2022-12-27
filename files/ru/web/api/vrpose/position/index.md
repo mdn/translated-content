@@ -5,6 +5,7 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRPose/position
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 Постоянное свойство **position** (только для чтения) интерфейса {{domxref ("VRPose")}} возвращает позицию {{domxref ("VRDisplay")}} в текущем {{domxref ("VRPose.timestamp")}} как 3D вектор.

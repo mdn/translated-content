@@ -2,7 +2,7 @@
 title: BackgroundFetchManager.getIds()
 slug: Web/API/BackgroundFetchManager/getIds
 l10n:
-  sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
+  sourceCommit: d4886e476741a47b85b7fac249daef5c4b38690d
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
@@ -29,7 +29,7 @@ getIds()
 
 ## 例
 
-The following examples shows how to retrieve the IDs of all registered background fetches. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the `BackgroundFetchManager` object and call its `get()` method.
+下記の例は、登録済みのすべてのバックグラウンドフェッチの ID を取得する方法を紹介しています。アクティブな {{domxref('ServiceWorker', 'service worker')}} の {{domxref('ServiceWorkerRegistration.backgroundFetch')}} プロパティを参照して `BackgroundFetchManager` オブジェクトにアクセスし、その `getIds()` メソッドを呼び出しています。
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {

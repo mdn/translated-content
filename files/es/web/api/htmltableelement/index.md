@@ -8,6 +8,7 @@ tags:
   - para_revisar
 translation_of: Web/API/HTMLTableElement
 ---
+
 {{ ApiRef() }}
 
 ## Interfaz del elemento tabla HTML

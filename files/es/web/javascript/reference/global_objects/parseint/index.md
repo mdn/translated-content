@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/parseInt
 translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumen

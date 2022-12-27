@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:checked
 ---
+
 {{ CSSRef() }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/Web/CSS) representa cualquier **radio** ([\<input type="radio">](/es/docs/Web/HTML/Element/input/radio)), **checkbox** ([\<input type="checkbox">](/es/docs/Web/HTML/Element/input/checkbox)) u **option** ({{ HTMLElement("option") }} en un elemento {{ HTMLElement("select") }}) que está marcado o conmutado a un estado `on`.

@@ -13,6 +13,7 @@ tags:
 translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
+
 {{MDNSidebar}}
 
 Здесь вы можете прочитать о том, как создавать новые записи в [глоссарии веб-документов MDN](/ru/docs/Glossary), как их оформлять, а также как правильно создавать ссылки на записи глоссария.

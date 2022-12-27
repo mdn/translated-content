@@ -8,6 +8,7 @@ tags:
   - keep-alive
 translation_of: Web/HTTP/Headers/Keep-Alive
 ---
+
 {{HTTPSidebar}}{{Non-standard_header}}
 
 El encabezado **`Keep-Alive`** permite al remitente indicar como será la forma de conexión, se puede establecer un tiempo de espera y una cantidad máxima de solicitudes.

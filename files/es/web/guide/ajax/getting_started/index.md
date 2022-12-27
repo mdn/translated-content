@@ -10,6 +10,7 @@ tags:
 translation_of: Web/Guide/AJAX/Getting_Started
 original_slug: Web/Guide/AJAX/Primeros_Pasos
 ---
+
 Este artículo es una guía básica sobre AJAX e incluye dos ejemplos.
 
 ### ¿Qué es AJAX?

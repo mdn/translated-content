@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Document/documentURIObject
 original_slug: Web/API/Document/documentURIObject
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

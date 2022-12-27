@@ -7,6 +7,7 @@ tags:
   - Propiedad de CSS
 translation_of: Web/CSS/flex-basis
 ---
+
 {{CSSRef}}
 
 ## Resumen

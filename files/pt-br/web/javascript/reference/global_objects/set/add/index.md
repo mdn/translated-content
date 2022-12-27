@@ -2,6 +2,7 @@
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
+
 {{JSRef}}
 
 O método **`add()`** acrescenta um novo elemento com o valor especificado no final de um objeto `Set`.

@@ -3,6 +3,7 @@ title: Element.createShadowRoot()
 slug: Web/API/Element/createShadowRoot
 translation_of: Web/API/Element/createShadowRoot
 ---
+
 {{deprecated_header()}}
 
 Используйте `Element.createShadowRoot` чтобы создать экземпляр [shadow DOM](/ru/docs/Web/Web_Components/Using_shadow_DOM). После создания shadow DOM, он всегда будет привязан к существующему элементу. После создания shadowDOM, элемент к которому он привязан будет называться Теневой корень ({{glossary("shadow root","shadowRoot")}}) .

@@ -25,11 +25,6 @@ JSON e capaz de representar números, booleanos, textos, vazios, e listas (sequ�
 - [`Método JSON.parse`](/en/JavaScript/Reference/Global_Objects/JSON/parse)
   - : Analisa a string como JSON, opcionalmente transforma o valor produzido pela análise.
 
-## Comunidade
-
-- Veja os foruns Mozilla...
-- {{DiscussionList("dev-tech-json","mozilla.dev.tech.json") }}
-
 ## Ferramentas
 
 - [JSON polyfills](/en/JavaScript/Reference/Global_Objects/JSON#Browser_compatibility)

@@ -4,6 +4,7 @@ slug: Web/API/HTMLVideoElement
 translation_of: Web/API/HTMLVideoElement
 original_slug: Web/API/ElementosHTMLparaVideo
 ---
+
 {{APIRef("HTML DOM")}}
 
 El interfaz de **`HTMLVideoElement`** provee propiedades especiales y metodos para manipular objectos de videos. Tambien, este interfaz hereda propiedades y métodos de {{domxref("HTMLMediaElement")}} y {{domxref("HTMLElement")}}.

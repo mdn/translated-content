@@ -8,6 +8,7 @@ tags:
   - para_revisar
 translation_of: Web/API/HTMLStyleElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 ### Notas

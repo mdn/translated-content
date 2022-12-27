@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/hr
 original_slug: Web/HTML/Elemento/hr
 ---
+
 ### Definición
 
 - El **elemento HTML \<hr>** representa un cambio de tema entre párrafos (por ejemplo, un cambio de escena en una historia, un cambio de tema en una sección). En versiones previas de HTML representaba una línea horizontal. Aún puede ser representada como una línea horizontal en los navegadores visuales, pero ahora es definida en términos semánticos y no tanto en términos representativos, por tanto para dibujar una línea horizontal se debería usar el CSS apropiado.

@@ -3,6 +3,7 @@ title: 'Reason: CORS preflight channel did not succeed'
 slug: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 translation_of: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 ---
+
 {{HTTPSidebar}}
 
 ## Razón

@@ -3,6 +3,7 @@ title: SpeechRecognition
 slug: Web/API/SpeechRecognition
 translation_of: Web/API/SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 Интерфейс **Распознавание голоса** [Web Speech API](/ru/docs/Web/API/Web_Speech_API) является интерфейсом контроллера для сервиса распознавания; который так же перехватывает событие {{domxref("SpeechRecognitionEvent")}}, отправленное сервисом распознавания.

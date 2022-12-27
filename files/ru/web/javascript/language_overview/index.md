@@ -4,6 +4,7 @@ slug: Web/JavaScript/Language_Overview
 translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 {{jsSidebar}}
 
 Почему повторное введение? Потому что {{Glossary("JavaScript")}} известен тем, что является [самым неправильно понятым языком программирования в мире](http://javascript.crockford.com/javascript.html). Его часто называют игрушкой, но под слоем обманчивой простоты ожидают мощные языковые возможности. В настоящее время JavaScript используется невероятным количеством высококлассных приложений, показывая, что углублённое знание этой технологии является важным навыком для любого веб или мобильного разработчика.

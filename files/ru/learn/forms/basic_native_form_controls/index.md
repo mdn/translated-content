@@ -4,6 +4,7 @@ slug: Learn/Forms/Basic_native_form_controls
 translation_of: Learn/Forms/Basic_native_form_controls
 original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 Сейчас мы детально изучим возможности различных виджетов форм, посмотрим, какие функции доступны для получения информации в различных представлениях. Это исчерпывающая статья, описывающая все доступные стандартные виджеты форм.

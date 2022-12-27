@@ -5,6 +5,7 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Element
 ---
+
 {{ APIRef }}
 
 Este capítulo proporciona una breve explicación para los métodos generales, las propiedades y los eventos disponibles para los elementos HTML y XML en el DOM de Gecko.

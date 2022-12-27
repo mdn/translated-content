@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLTableElement/insertRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 Метод **`HTMLTableElement.insertRow()`**`добавляет новую строку в таблицу и возвращает на неё ссылку.`

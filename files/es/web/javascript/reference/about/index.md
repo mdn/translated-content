@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/About
 original_slug: Web/JavaScript/Referencia/Acerca_de
 ---
+
 {{JsSidebar}}
 
 ### Nuevas características en esta versión

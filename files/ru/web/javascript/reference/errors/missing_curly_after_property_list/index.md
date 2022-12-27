@@ -7,6 +7,7 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

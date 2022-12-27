@@ -7,6 +7,7 @@ browser-compat: javascript.builtins.Symbol.search
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.search`** especifica el método que devuelve el índice dentro de una cadena que coincide con la expresión regular. Esta función es llamada por el método {{jsxref("String.prototype.search()")}}.

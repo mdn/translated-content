@@ -3,6 +3,7 @@ title: Clients.claim()
 slug: Web/API/Clients/claim
 translation_of: Web/API/Clients/claim
 ---
+
 {{APIRef("Service Worker Clients")}}
 
 Метод **`claim()`** интерфейса {{domxref("Clients")}} позволяет активному сервис-воркеру установить себя {{domxref("ServiceWorkerContainer.controller", "контролирующим воркером")}} для всех клиентских страниц в своей {{domxref("ServiceWorkerRegistration.scope", "области видимости")}}. Вызывает событие "`controllerchange`" на {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} всех клиентских страниц, контролируемых сервис-воркером.

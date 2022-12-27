@@ -2,6 +2,7 @@
 title: 'Erro de Sintaxe: faltando : depois da propriedade id'
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem

@@ -6,6 +6,7 @@ tags:
   - XPath
 translation_of: Web/XPath
 ---
+
 El **Lenguaje de Caminos XML**
 proporciona un modo flexible de dirigirse (señalando a) a las distintas partes de un documento XML. También puede ser usado para cotejar nodos y determinar si encajan un modelo o no.
 

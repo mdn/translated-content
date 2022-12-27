@@ -3,6 +3,7 @@ title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 translation_of: Web/API/CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSStyleSheet`** interface представляет одну [CSS](/ru/docs/Web/CSS) таблицу стилей. CSS таблица наследует свойства и методы от родителя, {{domxref("StyleSheet")}}.

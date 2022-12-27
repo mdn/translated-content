@@ -2,6 +2,7 @@
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 ---
+
 {{JSRef}}
 
 A função **`Math.atan()`** retorna a arco tangente (em radianos) de um número, onde

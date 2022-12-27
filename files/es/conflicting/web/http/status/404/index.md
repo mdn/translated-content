@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/404
 original_slug: Glossary/404
 ---
+
 Una respuesta 404 es una respuesta estándar que significa que el {{Glossary("Server", "server")}} no puede encontrar el recursos solicitado.
 
 ## Aprender más

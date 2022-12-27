@@ -2,6 +2,7 @@
 title: Date.prototype.setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 ---
+
 {{JSRef}}
 
 O método **`setDate()`** configura o dia do objeto {{jsxref("Date")}} relativamente ao início do mês configurado previamente.

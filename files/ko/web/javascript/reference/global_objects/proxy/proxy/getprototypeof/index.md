@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.getPrototypeOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 ---
+
 {{JSRef}}
 
 **`handler.getPrototypeOf()`** 메서드는 `[[GetPrototypeOf]]` 내부 메서드에 대한 트랩입니다.

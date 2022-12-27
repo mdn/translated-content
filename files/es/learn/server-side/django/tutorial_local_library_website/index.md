@@ -12,6 +12,7 @@ tags:
   - lado servidor
 translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
 El primer artículo de nuestra serie de tutoriales prácticos explica qué puedes aprender, y proporciona una visión general del sitio web de ejemplo de "biblioteca local" en el que estaremos trabajando y evolucionando en artículos subsiguientes.

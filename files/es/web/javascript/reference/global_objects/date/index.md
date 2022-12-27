@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 original_slug: Web/JavaScript/Referencia/Objetos_Globales/Date
 browser-compat: javascript.builtins.Date
 ---
+
 {{JSRef}}
 
 Los objetos **`Date`** representan en JavaScript un momento fijo en el tiempo en un formato independiente. El objeto `Date` contiene un `Number` que representa los milisegundos transcurridos desde el 1 de Enero de 1970 UTC.

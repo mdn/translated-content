@@ -83,7 +83,7 @@ myWorker.port.onmessage = function(e) {
 }
 ```
 
-在 worker 内部我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口。与 worker 相关联的端口可以在 {{event("connect")}} 事件的 `ports` 属性中访问到 — 接着我们使用 {{domxref("MessagePort")}} `start()` 方法打开端口，`onmessage` 处理器来处理主线程传来的消息。
+在 worker 内部我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口。与 worker 相关联的端口可以在 {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} 事件的 `ports` 属性中访问到——接着我们使用 {{domxref("MessagePort")}} `start()` 方法打开端口，`onmessage` 处理器来处理主线程传来的消息。
 
 ```js
 onconnect = function(e) {

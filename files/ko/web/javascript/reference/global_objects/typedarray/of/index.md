@@ -2,6 +2,7 @@
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 ---
+
 {{JSRef}}
 
 <code><strong><em>TypedArray</em>.of()</strong></code>

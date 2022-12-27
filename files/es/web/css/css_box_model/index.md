@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Box_Model
 original_slug: Web/CSS/CSS_Modelo_Caja
 ---
+
 {{CSSRef}}
 
 **El modelo de caja CSS** es un módulo CSS que define cajas rectangulares, incluyendo sus rellenos y márgenes, que son generadas para los elementos y que se disponen de acuerdo al modelo de formato visual.

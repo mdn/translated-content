@@ -14,6 +14,7 @@ tags:
   - WebAPI
 translation_of: Web/API/PushManager
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 The `PushManager` interface of the [Push API](/es/docs/Web/API/Push_API) provides a way to receive notifications from third-party servers as well as request URLs for push notifications.

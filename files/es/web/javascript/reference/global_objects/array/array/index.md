@@ -34,6 +34,7 @@ Array(arrayLength)
   - : Se lanza si sólo hay un argumento (`arrayLength`) y su valor no está entre 0 y 2^32 - 1 (incluido).
 
 ## Ejemplos
+
 ### Notación literal de array
 
 Los arrays pueden ser creados usando la notación [literal](/es/docs/Web/JavaScript/Reference/Lexical_grammar#arreglos_literales):

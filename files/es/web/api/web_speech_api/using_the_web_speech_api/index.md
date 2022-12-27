@@ -4,6 +4,7 @@ slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 original_slug: Web/API/Web_Speech_API/Uso_de_la_Web_Speech_API
 ---
+
 La API Web Speech API proporciona dos funcionalidades distintas — reconocimiento de voz, y síntesis de voz (también conocido como texto a voz o tts) — lo que nos ofrece nuevas e interesantes posibilidades para accesibilidad y otros mecanismos. Este artículo ofrece una breve introducción en las dos áreas, así como unas demos.
 
 ## Reconocimiento de voz

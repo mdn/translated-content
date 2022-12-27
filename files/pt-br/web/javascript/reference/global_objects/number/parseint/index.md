@@ -2,6 +2,7 @@
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
+
 {{JSRef}}
 
 O método **`Number.parseInt()`** converte um argumento de _string_ e retorna um inteiro da raiz ou base específica.

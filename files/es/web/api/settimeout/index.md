@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 El método **`setTimeout()`** del mixin {{domxref("WindowOrWorkerGlobalScope")}} establece un temporizador que ejecuta una función o una porción de código después de que transcurre un tiempo establecido.

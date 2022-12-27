@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/displayName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The **`function.displayName`** property returns the display name of the function.

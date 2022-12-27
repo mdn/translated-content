@@ -7,6 +7,7 @@ tags:
 translation_of: Web/XSLT/Element/key
 original_slug: Web/XSLT/key
 ---
+
 {{XsltRef}}
 
 El elemento `<xsl:key>` declara una llave con nombre la cual puede ser usada en otro lugar dentro de la hoja de estilo usando la función `key( )`.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/del
 original_slug: Web/HTML/Elemento/del
 ---
+
 ### Definición
 
 - El elemento `del` (deleted-borrado) marca las partes de un texto o documento que han sido suprimidas o sustituidas.

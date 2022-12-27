@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/dfn
 original_slug: Web/HTML/Elemento/dfn
 ---
+
 ### Definición
 
 - Sirve para marcar el término que se quiere definir.

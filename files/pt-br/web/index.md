@@ -58,10 +58,10 @@ A Web aberta apresenta oportunidades incríveis para os desenvolvedores. Para ti
 ## Documentação das ferramentas do desenvolvedor
 
 - [Ferramentas do desenvolvedor do Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-   - : Documentação para o conjunto de ferramentas de desenvolvimento web incorporadas ao Firefox.
+  - : Documentação para o conjunto de ferramentas de desenvolvimento web incorporadas ao Firefox.
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
-   - : Documentação para o conjunto de ferramentas de desenvolvedor da Web incorporadas ao Chrome.
+  - : Documentação para o conjunto de ferramentas de desenvolvedor da Web incorporadas ao Chrome.
 - [Safari Web Inspector](https://webkit.org/web-inspector/)
-   - : Documentação para o conjunto de ferramentas de desenvolvedor da Web incorporadas ao Safari.
+  - : Documentação para o conjunto de ferramentas de desenvolvedor da Web incorporadas ao Safari.
 - [Edge DevTools](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/landing/)
-   - : Documentação para o conjunto de ferramentas de desenvolvedor da Web incorporadas ao Edge.
+  - : Documentação para o conjunto de ferramentas de desenvolvedor da Web incorporadas ao Edge.

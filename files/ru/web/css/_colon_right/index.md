@@ -3,6 +3,7 @@ title: ':right'
 slug: Web/CSS/:right
 translation_of: Web/CSS/:right
 ---
+
 {{ CSSRef() }}
 
 The **`:right`** CSS [page](/en/CSS/@page) [pseudo-class](/en/CSS/Pseudo-classes) matches any right page when printing a page. It allows you to describe the styling of right-side pages.

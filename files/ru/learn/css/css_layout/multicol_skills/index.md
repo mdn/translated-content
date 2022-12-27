@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Multicol_skills
 translation_of: Learn/CSS/CSS_layout/Multicol_skills
 original_slug: Learn/CSS/CSS_layout/Навыки_Multicol
 ---
+
 {{LearnSidebar}}
 
 Цель этого задания — чтобы вы поработали с CSS свойствами {{CSSxRef("column-count")}}, {{CSSxRef("column-width")}}, {{CSSxRef("column-gap")}}, {{CSSxRef("column-span")}} и {{CSSxRef("column-rule")}} и со значениями которые описаны в нашем уроке [Макет с несколькими столбцами](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout). Вы будете работать над тремя небольшими задачами, использующими различные элементы из пройденного материала.

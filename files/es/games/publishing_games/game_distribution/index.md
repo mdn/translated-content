@@ -15,6 +15,7 @@ tags:
   - juegos
 translation_of: Games/Publishing_games/Game_distribution
 ---
+
 {{GamesSidebar}}
 
 Has seguido un tutorial o dos y creado un juego de HTLM5 — eso es genial. Este artículo cubre todo lo que necesitas saber sobre las formas en que puedes distribuir tu juego recién creado al mundo. Esto incluye alojarlo tu mismo en línea, enviarlo a mercados abiertos, y enviándolo a aplicaciones cerradas como Google Play o iOS App Store.

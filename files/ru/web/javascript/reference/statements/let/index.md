@@ -3,6 +3,7 @@ title: let
 slug: Web/JavaScript/Reference/Statements/let
 translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}Директива **`let`** объявляет переменную с блочной областью видимости с возможностью инициализировать её значением.
 
 ## Синтаксис

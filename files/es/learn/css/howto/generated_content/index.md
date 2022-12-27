@@ -4,6 +4,7 @@ slug: Learn/CSS/Howto/Generated_content
 translation_of: Learn/CSS/Howto/Generated_content
 original_slug: Learn/CSS/Howto/Generated_content
 ---
+
 {{LearnSidebar}}
 
 Este artículo describe algunas formas en las que puedes usar CSS para agregar contenido cuando se muestra un documento. Modificas tu hoja de estilo para agregar contenido de texto o imágenes.

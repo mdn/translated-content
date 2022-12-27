@@ -8,6 +8,7 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-webkit-border-before
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

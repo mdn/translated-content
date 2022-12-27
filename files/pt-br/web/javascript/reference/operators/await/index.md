@@ -2,6 +2,7 @@
 title: await
 slug: Web/JavaScript/Reference/Operators/await
 ---
+
 {{jsSidebar("Operators")}}
 
 O operador `await` é utilizado para esperar por uma {{jsxref("Promise")}}. Ele pode ser usado apenas dentro de uma {{jsxref("Statements/async_function", "async function")}}.

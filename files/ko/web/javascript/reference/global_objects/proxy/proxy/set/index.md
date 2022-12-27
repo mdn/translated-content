@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.set
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
+
 {{JSRef}}
 
 **`handler.set()`** 메서드는 속성 값을 설정을 위한 트랩입니다.

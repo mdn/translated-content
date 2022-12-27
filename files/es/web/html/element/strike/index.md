@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/strike
 original_slug: Web/HTML/Elemento/strike
 ---
+
 ### Definición
 
 - Muestra el texto tachado con una linea horizontal.

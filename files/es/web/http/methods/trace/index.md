@@ -3,6 +3,7 @@ title: TRACE
 slug: Web/HTTP/Methods/TRACE
 translation_of: Web/HTTP/Methods/TRACE
 ---
+
 {{HTTPSidebar}}
 
 El **método HTTP `TRACE`** efectúa una prueba de bucle de mensaje por el camino al recurso objetivo proporcionando un útil mecanismo de debugging.

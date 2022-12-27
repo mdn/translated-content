@@ -18,6 +18,7 @@ tags:
 translation_of: Learn/Server-side/Django/Authentication
 original_slug: Learn/Server-side/Django/Аутентификация
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
 В данном руководстве мы продемонстрируем вам систему входа пользователя на ваш сайт используя его собственный аккаунт. Кроме того, мы покажем как реализовать контроль того, что может видеть и делать пользователь, в зависимости от того, залогинен он, или нет, а также имеет ли он соответствующий уровень прав доступа _(permissions)_. Для того чтобы продемонстрировать все это, мы расширим [LocalLibrary](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website), добавив страницы для входа/выхода, а также страницы просмотра/редактирования книг, специфические для пользователя и персонала.

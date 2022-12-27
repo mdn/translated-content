@@ -2,6 +2,7 @@
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
+
 {{JSRef}}
 
 O método **`toString()`** retorna uma string representando um array específico e seus elementos.

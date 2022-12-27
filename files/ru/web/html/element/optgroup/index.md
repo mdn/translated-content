@@ -9,6 +9,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/optgroup
 ---
+
 **HTML-элемент `<optgroup>` **позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}.
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                                                                                                                                |

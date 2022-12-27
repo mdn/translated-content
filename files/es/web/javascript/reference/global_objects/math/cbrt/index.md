@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/cbrt
 ---
+
 {{JSRef}}
 
 La función **`Math.cbrt()`** nos retorna la raíz del cubo del numero, eso es

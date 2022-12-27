@@ -9,6 +9,7 @@ translation_of: Web/HTML/Global_attributes/dir
 original_slug: Web/HTML/Atributos_Globales/dir
 browser-compat: html.global_attributes.dir
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 El [atributo global](/es/docs/Web/HTML/Atributos_Globales) dir es un atributo enumerado que indica la direccionalidad del texto de los elementos . Puede tener los siguientes valores :

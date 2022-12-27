@@ -13,6 +13,7 @@ tags:
   - Сборка
   - Ресурсы
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 В финальной статье об Angular рассказывается, как создать полностью готовое приложение и предоставляются дополнительные ресурсы, которые помогут вам продолжить обучение

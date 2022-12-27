@@ -4,6 +4,7 @@ slug: Web/HTML/Link_types
 translation_of: Web/HTML/Link_types
 original_slug: Web/HTML/Tipos_de_enlaces
 ---
+
 {{HTMLSidebar}}
 
 En HTML, los siguientes tipos de enlaces indican la relación entre dos documentos, de los cuales uno enlaza al otro usando un elemento {{HTMLElement("a")}} o bien {{HTMLElement("area")}}, o bien {{HTMLElement("link")}}.

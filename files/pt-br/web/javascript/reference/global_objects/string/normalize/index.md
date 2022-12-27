@@ -2,6 +2,7 @@
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
+
 {{JSRef}}
 
 O método **`normalize()`** retorna a Forma de Normalização Unicode (Unicode Normalization Form) de uma dada string (se o valor não é uma string, ele será convertido para uma primeiramente).

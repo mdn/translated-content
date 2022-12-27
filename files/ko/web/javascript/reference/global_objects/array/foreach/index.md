@@ -2,6 +2,7 @@
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
+
 {{JSRef}}
 
 **`forEach()`** 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다.

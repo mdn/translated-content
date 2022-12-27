@@ -1,5 +1,5 @@
 ---
-title: "Revue\_: structurer les données des planètes"
+title: "Revue : structurer les données des planètes"
 slug: Learn/HTML/Tables/Structuring_planet_data
 translation_of: Learn/HTML/Tables/Structuring_planet_data
 original_slug: Apprendre/HTML/Tableaux/Structuring_planet_data

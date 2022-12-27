@@ -2,6 +2,7 @@
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Sumário

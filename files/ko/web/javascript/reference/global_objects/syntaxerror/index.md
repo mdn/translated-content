@@ -2,6 +2,7 @@
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
 ---
+
 {{JSRef}}
 
 **`SyntaxError`** 객체는 문법적으로 유효하지 않은 코드를 해석하려고 시도할 때 발생하는 오류를

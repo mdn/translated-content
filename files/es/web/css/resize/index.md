@@ -3,6 +3,7 @@ title: resize
 slug: Web/CSS/resize
 translation_of: Web/CSS/resize
 ---
+
 {{CSSRef}}
 
 ## Resumen

@@ -2,6 +2,7 @@
 title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 **`Number.MAX_SAFE_INTEGER`** 상수는 JavaScript에서 안전한 최대 정수값을 나타냅니다. (`2^53 - 1`).

@@ -10,6 +10,7 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 ---
+
 {{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}
 
 ## Сводка

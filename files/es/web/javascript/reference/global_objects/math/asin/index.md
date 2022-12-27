@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asin
 ---
+
 {{JSRef}}
 
 La Funcion **`Math.asin()`** retorna El arco seno (en radianes) de un número, eso es.
@@ -46,14 +47,9 @@ Math.asin(2);   // NaN
 
 For values less than -1 or greater than 1, `Math.asin()` returns {{jsxref("NaN")}}.
 
-## Espesificaciones
+## Especificaciones
 
-| Espesificacion                                                           | Estado                       | Comentario                                         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.3', 'Math.asin')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.asin', 'Math.asin')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.asin', 'Math.asin')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

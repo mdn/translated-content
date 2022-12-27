@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/border-bottom-right-radius
 ---
+
 {{CSSRef}}
 
 ## Resumen

@@ -13,6 +13,7 @@ tags:
   - Workers
 translation_of: Web/API/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`Worker`** interface of the [Web Workers API](/es/docs/Web/API/Web_Workers_API) represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the `Worker()` constructor and specifying a script to be run in the worker thread.
@@ -63,12 +64,9 @@ first.onchange = function() {
 
 For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
 
-## Specifications
+## Especificaciones
 
-| Specification                                                    | Status                           | Comment                                              |
-| ---------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#worker", "Worker")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
-| {{SpecName('Web Workers', "#worker", "Worker")}} | {{Spec2('Web Workers')}} | Initial definition.                                  |
+{{Specifications}}
 
 ## Browser compatibility
 

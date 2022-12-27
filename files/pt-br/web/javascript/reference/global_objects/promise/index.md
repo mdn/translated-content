@@ -44,7 +44,7 @@ Essa promise já está _resolvida_ no momento em que é criada (porque o `resolv
 
 ### Promises em cadeia
 
-Os métodos `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}` e `{{jsxref("Promise.prototype.finally()")}}` são usados para associar uma ação adicional com uma promise que se torna liquidada. Como `{{JSxRef("Promise/then", "Promise.prototype.then()")}}` e `{{JSxRef("Promise/catch", "Promise.prototype.catch()")}} ` métodos retornam promises, eles podem ser encadeados.
+Os métodos `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}` e `{{jsxref("Promise.prototype.finally()")}}` são usados para associar uma ação adicional com uma promise que se torna liquidada. Como `{{JSxRef("Promise/then", "Promise.prototype.then()")}}` e `{{JSxRef("Promise/catch", "Promise.prototype.catch()")}}` métodos retornam promises, eles podem ser encadeados.
 
 O método `.then()` aceita até dois argumentos; o primeiro argumento é uma função de retorno de chamada para o caso cumprido da promise e o segundo argumento é uma função de retorno de chamada para o caso rejeitado. Cada `.then()` retorna um objeto de promise recém-gerado, que pode ser usado opcionalmente para encadeamento; por exemplo:
 
@@ -265,7 +265,7 @@ Consulte o [Guia do Microtask](/pt-BR/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - {{jsxref("Promise.prototype.catch()")}}
   - : Anexa um retorno de chamada do manipulador de rejeição à promise e retorna uma nova promise resolvendo o valor de retorno do retorno de chamada se for chamado ou seu valor de cumprimento original se a promise for cumprida.
 - {{jsxref("Promise.prototype.then()")}}
-  - : Anexa manipuladores de cumprimento e rejeição à promise e retorna uma nova promise resolvendo o valor de retorno do manipulador chamado ou seu valor estabelecido original se a promise não foi tratada (ou seja, se o manipulador relevante `onFulfilled` ou `onRejected ` não é uma função).
+  - : Anexa manipuladores de cumprimento e rejeição à promise e retorna uma nova promise resolvendo o valor de retorno do manipulador chamado ou seu valor estabelecido original se a promise não foi tratada (ou seja, se o manipulador relevante `onFulfilled` ou `onRejected` não é uma função).
 - {{jsxref("Promise.prototype.finally()")}}
   - : Anexa um manipulador à promise e retorna uma nova promise que é resolvida quando a promise original é resolvida. O manipulador é chamado quando a promise é liquidada, seja cumprida ou rejeitada.
 
@@ -422,7 +422,7 @@ btn.addEventListener("click", testPromise);
 
 ### Carregando uma imagem com XHR
 
-Outro exemplo simples usando `Promise` e {{domxref("XMLHttpRequest")}} para carregar uma imagem está disponível no MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/ master/promises-test). Você também pode [ver em ação](https://mdn.github.io/js-examples/promises-test/). Cada etapa é comentada e permite acompanhar de perto a arquitetura Promise e XHR.
+Outro exemplo simples usando `Promise` e {{domxref("XMLHttpRequest")}} para carregar uma imagem está disponível no MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test). Você também pode [ver em ação](https://mdn.github.io/js-examples/promises-test/). Cada etapa é comentada e permite acompanhar de perto a arquitetura Promise e XHR.
 
 ## Especificações
 
@@ -438,4 +438,4 @@ Outro exemplo simples usando `Promise` e {{domxref("XMLHttpRequest")}} para carr
 - [Usando promises](/pt-BR/docs/Web/JavaScript/Guide/Using_promises)
 - [Promises/A+ especificação](https://promisesaplus.com/)
 - [Promises JavaScript: uma introdução](https://web.dev/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity -em-javascript)
+- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)

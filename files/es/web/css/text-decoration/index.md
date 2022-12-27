@@ -6,6 +6,7 @@ tags:
   - Texto CSS
 translation_of: Web/CSS/text-decoration
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`text-decoration`** se usa para establecer el formato de texto a subrayado (`underline`) y suprarrayado (`overline`), tachado (`line-through`) o parpadeo (`blink`). El subrayado y el suprarrayado son posicionados bajo el texto, mientras la línea a través de éste se posiciona por encima.

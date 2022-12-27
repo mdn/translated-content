@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/frameset
 original_slug: Web/HTML/Elemento/frameset
 ---
+
 ### Definición
 
 - **frameset** -_conjunto de marcos_ . Define la organización de los marcos dentro de la ventana del usuario.

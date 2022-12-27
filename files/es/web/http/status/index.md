@@ -8,6 +8,7 @@ tags:
   - TopicStub
 translation_of: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una solicitud HTTP específica. Las respuestas se agrupan en cinco clases:

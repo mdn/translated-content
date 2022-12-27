@@ -7,6 +7,7 @@ tags:
   - JavaScript
 browser-compat: javascript.builtins.Function
 ---
+
 {{JSRef}}
 
 На самом деле каждая JavaScript-функция является объектом `Function`. Это легко проверить, выполнив проверку `(function(){}).constructor === Function`, которая вернёт true.

@@ -13,6 +13,7 @@ tags:
   - Referencia
 translation_of: Web/API/Document/clear
 ---
+
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
 Método que se usa en versiones anterior a las 1.0 de Mozilla para para limpiar el documento completo.

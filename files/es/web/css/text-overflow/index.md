@@ -3,6 +3,7 @@ title: text-overflow
 slug: Web/CSS/text-overflow
 translation_of: Web/CSS/text-overflow
 ---
+
 {{CSSRef}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`text-overflow`** determina como el contenido que se desborda y que no es mostrado, va a hacérsele notar a los usuarios. Puede ser cortado, mostrar una elipsis ('`…`', `U+2026 Horizontal Ellipsis`), o mostrar una cadena de texto personalizada.

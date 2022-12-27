@@ -3,6 +3,7 @@ title: Использование интерфейса записи медиап
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 ---
+
 {{DefaultAPISidebar("MediaStream Recording")}}
 
 Интерфейс [MediaStream Recording](/ru/docs/Web/API/MediaStream_Recording_API) позволяет записывать аудио и видео потоки. При использовании с методом {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, предлагает простой способ записи данных с устройств пользователя, и немедленное их использование в веб приложениях.И аудио и видео могут быть записаны вместе или по отдельности.Цель данной статьи - предоставить базовое руководство о том как использовать объект `MediaRecorder`, реализующий такой программный интерфейс.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/ol
 original_slug: Web/HTML/Elemento/ol
 ---
+
 ### Definición
 
 - El elemento `ol` permite definir listas o viñetas ordenadas (“Ordered List”), bien con numeración o alfabéticamente.

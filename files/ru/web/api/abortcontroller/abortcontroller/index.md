@@ -3,6 +3,7 @@ title: AbortController.AbortController()
 slug: Web/API/AbortController/AbortController
 translation_of: Web/API/AbortController/AbortController
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 Конструктор **`AbortController()`** создаёт новый экземпляр объекта `AbortController`.

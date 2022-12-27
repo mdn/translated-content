@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 original_slug: Web/API/WebSockets_API/Escribiendo_servidor_WebSocket
 ---
+
 ## Introducción
 
 Si deseas utilizar la API WebSocket, es conveniente si tienes un servidor. En este artículo te mostraré como puedes escribir uno en C#. Tú puedes hacer esto en cualquier lenguaje del lado del servidor, pero para mantener las cosas simples y más comprensibles, elegí el lenguaje de Microsoft.

@@ -1793,10 +1793,6 @@
     "modified": "2020-09-30T15:30:35.142Z",
     "contributors": ["chrisdavidmills", "java2020007"]
   },
-  "MDN/Yari": {
-    "modified": "2019-09-06T03:29:26.311Z",
-    "contributors": ["SphinxKnight", "wbamberg", "zziuni"]
-  },
   "Mozilla": {
     "modified": "2019-03-23T23:35:24.435Z",
     "contributors": ["zziuni", "ethertank"]
@@ -11535,6 +11531,10 @@
   "orphaned/MDN/Tools/Page_regeneration": {
     "modified": "2020-09-30T16:51:25.059Z",
     "contributors": ["chrisdavidmills", "wbamberg", "Netaras"]
+  },
+  "orphaned/MDN/Yari": {
+    "modified": "2019-09-06T03:29:26.311Z",
+    "contributors": ["SphinxKnight", "wbamberg", "zziuni"]
   },
   "orphaned/Places/Custom_Containers": {
     "modified": "2020-01-12T05:08:34.067Z",

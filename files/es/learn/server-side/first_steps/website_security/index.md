@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/Server-side/First_steps/Website_security
 original_slug: Learn/Server-side/Primeros_pasos/seguridad_sitios_web
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 La Seguridad web require vigilancia en todos los aspectos del diseño y uso de un sitio web. Este artículo introductorio no te hará un gurú de la seguridad en sitios web, pero te ayudará a entender de donde vienen las amenazas y qué puedes hacer para fortalecer tu aplicación web contra los ataques más comunes.

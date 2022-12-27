@@ -3,6 +3,7 @@ title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
 translation_of: Web/API/Window/showModalDialog
 ---
+
 {{ deprecated_header() }}{{APIRef}}
 
 El método **`Window.showModalDialog()`** crea y visualiza una caja de diálogo modal, conteniendo el documento HTML especificado.

@@ -12,6 +12,7 @@ tags:
   - селектор
 translation_of: Web/API/Document/querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Document")}} метод **`querySelector()`** возвращает первый элемент ({{domxref("Element")}}) документа, который соответствует указанному селектору или группе селекторов. Если совпадений не найдено, возвращает значение `null`.

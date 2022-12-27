@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/col
 original_slug: Web/HTML/Elemento/col
 ---
+
 ### Definición
 
 - Permite especificar propiedades para una columna o un grupo de ellas.

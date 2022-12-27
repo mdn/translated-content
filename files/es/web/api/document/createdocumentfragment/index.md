@@ -3,6 +3,7 @@ title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 translation_of: Web/API/Document/createDocumentFragment
 ---
+
 {{ ApiRef("DOM") }}
 
 Crea un nuevo [`DocumentFragment`](/en-US/docs/DOM/DocumentFragment) vacio, dentro del cual un nodo del DOM puede ser adicionado para construir un nuevo arbol DOM fuera de pantalla.

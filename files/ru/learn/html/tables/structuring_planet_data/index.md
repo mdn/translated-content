@@ -7,6 +7,7 @@ tags:
   - таблицы
 translation_of: Learn/HTML/Tables/Structuring_planet_data
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 В нашей аттестации, мы предоставим вам некоторые данные о планетах солнечной системы, и убедим вас структурировать их в HTML таблицу.

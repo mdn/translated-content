@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 ---
+
 {{JSRef}}
 
 **getUTCDay()** 메서드는 지정된 날짜의 요일을 표준시에 따라 반환합니다. 여기서 0은 일요일을 나타냅니다.

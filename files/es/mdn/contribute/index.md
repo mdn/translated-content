@@ -7,6 +7,7 @@ tags:
   - MDN Meta
 translation_of: MDN/Contribute
 ---
+
 {{MDNSidebar}}
 
 ¡MDN Web Docs necesita tu ayuda! Tenemos una gran cantidad de errores tipográficos para corregir, ejemplos para escribir, errores para corregir, personas con las que hablar y más, y el número crece a medida que más personas comienzan a usar el sitio. Esta página describe lo que puedes hacer para ayudar.

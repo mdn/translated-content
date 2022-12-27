@@ -3,6 +3,7 @@ title: Element.outerHTML
 slug: Web/API/Element/outerHTML
 translation_of: Web/API/Element/outerHTML
 ---
+
 {{APIRef}}
 
 ## Resumen

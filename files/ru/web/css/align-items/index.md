@@ -3,6 +3,7 @@ title: align-items
 slug: Web/CSS/align-items
 translation_of: Web/CSS/align-items
 ---
+
 {{CSSRef}}
 
 ## Описание

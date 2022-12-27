@@ -5,6 +5,7 @@ translation_of: Web/API/WindowEventHandlers/onbeforeunload
 original_slug: Web/API/WindowEventHandlers/onbeforeunload
 browser-compat: api.Window.beforeunload_event
 ---
+
 {{ApiRef}}
 
 ## Introducción

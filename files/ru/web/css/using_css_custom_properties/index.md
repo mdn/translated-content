@@ -8,6 +8,7 @@ tags:
   - Руководства
 translation_of: Web/CSS/Using_CSS_custom_properties
 ---
+
 {{SeeCompatTable}}
 
 **CSS переменные** (**пользовательские CSS-свойства**) это сущности, определяемые автором CSS, хранящие конкретные значения, которые можно повторно использовать в документе. Они устанавливаются с использованием custom property нотации (например. **`--main-color: black;`**) и доступны через функцию [var()](/ru/docs/Web/CSS/var) (например. `color: var(--main-color);`) .

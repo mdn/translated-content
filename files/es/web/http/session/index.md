@@ -4,6 +4,7 @@ slug: Web/HTTP/Session
 translation_of: Web/HTTP/Session
 original_slug: Web/HTTP/Sesión
 ---
+
 {{HTTPSidebar}}
 
 En los protocolos basados en el modelo cliente-servidor, como es el caso del HTTP, una sesión consta de tres fases:

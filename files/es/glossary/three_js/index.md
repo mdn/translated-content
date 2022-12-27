@@ -15,5 +15,5 @@ La biblioteca three.js proporciona muchas funciones y {{Glossary("API","APIs")}}
 
 ### Conocimientos Generales
 
-- {{Interwiki("wikipedia", "Three.js")}} en Wikipedia
+- [Three.js](https://es.wikipedia.org/wiki/Three.js) en Wikipedia
 - [sitio oficial de three.js](http://threejs.org/)

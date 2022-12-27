@@ -433,4 +433,4 @@ const {self, prot} = obj;
 - [42#在人类文化中 - 维基百科](https://zh.wikipedia.org/wiki/42#%E5%9C%A8%E4%BA%BA%E7%B1%BB%E6%96%87%E5%8C%96%E4%B8%AD)
 - [生命、宇宙以及任何事情的终极答案 - 维基百科](https://zh.wikipedia.org/wiki/%E7%94%9F%E5%91%BD%E3%80%81%E5%AE%87%E5%AE%99%E4%BB%A5%E5%8F%8A%E4%BB%BB%E4%BD%95%E4%BA%8B%E6%83%85%E7%9A%84%E7%B5%82%E6%A5%B5%E7%AD%94%E6%A1%88)
 - [42\_(number)#The Hitchhiker's Guide to the Galaxy - Wikipedia](<https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker's_Guide_to_the_Galaxy>)
-- [Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,\_the_Universe,\_and_Everything\_(42) - Wikipedia](<https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42)>)
+- <https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42)>

@@ -8,6 +8,7 @@ tags:
   - css3-color
 translation_of: Web/CSS/opacity
 ---
+
 {{ CSSRef() }}
 
 ## Resumen

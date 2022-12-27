@@ -2,6 +2,7 @@
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
+
 {{JSRef}}
 
 **Math.max()**함수는 입력값으로 받은 0개 이상의 숫자 중 가장 큰 숫자를 반환합니다.

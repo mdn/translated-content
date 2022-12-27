@@ -43,7 +43,7 @@ original_slug: Web/HTML/Elemento/slot
     </tr>
     <tr>
       <th scope="row">Eventos</th>
-      <td>{{event("slotchange")}}</td>
+      <td>[`slotchange`](/es/docs/Web/Reference/Events/slotchange)</td>
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>

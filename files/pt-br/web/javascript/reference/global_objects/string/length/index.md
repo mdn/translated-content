@@ -2,6 +2,7 @@
 title: String.length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
 ---
+
 {{JSRef}}
 
 A propriedade `length` de um objeto {{jsxref("String")}} contém o comprimento da string. `length` é uma propriedade `read-only` (somente leitura) de instâncias de string.

@@ -3,6 +3,7 @@ title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
 translation_of: Web/API/MediaRecorder/start
 ---
+
 {{APIRef("Media Recorder API")}}
 
 Метод **`MediaRecorder.start()`** (часть [MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API)) используется для начала захвата медиа {{domxref("Blob")}}.

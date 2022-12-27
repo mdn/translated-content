@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/arguments
 ---
+
 {{JSRef("Objetos_globales", "Function")}} {{deprecated_header}}
 
 ### Resumen

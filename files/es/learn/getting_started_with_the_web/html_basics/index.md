@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Learn/Getting_started_with_the_web/HTML_basics
 ---
+
 {{LearnSideBar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web")}}

@@ -3,6 +3,7 @@ title: RegExp.lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 Нестандартное свойство **lastMatch** является доступным только для чтения статическим свойством регулярных выражений. Оно содержит последние совпавшие символы. Значение свойства также можно получить как `RegExp.$&`.

@@ -11,6 +11,7 @@ tags:
   - status
 translation_of: Web/API/Response/status
 ---
+
 {{APIRef("Fetch")}}
 
 La propiedad de solo lectura **`status`** de la interfaz {{domxref("Response")}} contiene el código de estado de la respuesta (ejm., `200` para un éxito).

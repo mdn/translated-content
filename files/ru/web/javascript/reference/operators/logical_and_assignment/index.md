@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_and_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 Оператор присваивания логического И (`x &&= y`) присваивает значение переменной `x` только в случае, если её текущее значение {{Glossary("truthy", "истинноподобно")}}.

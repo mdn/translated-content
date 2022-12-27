@@ -11,6 +11,7 @@ tags:
   - Referencia
 translation_of: Web/API/AnimationEvent/animationName
 ---
+
 {{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
 La propiedad de solo-lectura **`AnimationEvent.animationName`** es un {{domxref("DOMString")}} conteniendo el valor de la propiedad de CSS {{cssxref("animation-name")}} asociada con la transición.

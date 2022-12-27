@@ -6,6 +6,7 @@ tags:
   - CSS-свойство
 translation_of: Web/CSS/padding-right
 ---
+
 {{CSSRef}}
 
 ## Summary

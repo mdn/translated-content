@@ -5,6 +5,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_e
 original_slug: >-
   Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento
 ---
+
 « [CSS](/en/CSS) « [Understanding CSS z-index](/en/CSS/Understanding_z-index)
 
 Este último ejemplo muestra los problemas que surgen cuando se combinan varios elementos posicionados en una jerarquía HTML multi nivel y cuando los valores z-index son asignados usando selectores de clase.

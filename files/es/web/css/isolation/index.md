@@ -7,6 +7,7 @@ tags:
   - Propieiedad CSS
 translation_of: Web/CSS/isolation
 ---
+
 {{CSSRef}}
 
 ## Resumen

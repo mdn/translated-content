@@ -7,6 +7,7 @@ tags:
   - Texto CSS
 translation_of: Web/CSS/text-decoration-color
 ---
+
 {{ CSSRef }}
 
 ## Resumen

@@ -9,6 +9,7 @@ tags:
   - sessionStorage
 translation_of: Web/API/Storage/clear
 ---
+
 {{APIRef("Web Storage API")}}
 
 El método `clear()` de la interfaz {{domxref("Storage")}}, al invocarlo, elimina todos los registros del almacen local.
@@ -45,9 +46,7 @@ function populateStorage() {
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                           | Comentario |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#dom-storage-clear', 'clear()')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

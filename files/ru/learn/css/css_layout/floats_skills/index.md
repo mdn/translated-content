@@ -3,6 +3,7 @@ title: 'Проверка ваших навыков: floats'
 slug: Learn/CSS/CSS_layout/Floats_skills
 translation_of: Learn/CSS/CSS_layout/Floats_skills
 ---
+
 {{LearnSidebar}}
 
 Цель этого задания - чтобы вы поработали со свойствами CSS {{CSSxRef("float")}} и {{CSSxRef("clear")}} которые описаны в нашем уроке [Floats](/ru/docs/Learn/CSS/CSS_layout/Floats). Вы будете работать над тремя небольшими задачами, использующими различные элементы из пройденного материала.

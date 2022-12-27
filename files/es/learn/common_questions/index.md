@@ -11,6 +11,7 @@ tags:
   - WebMechanics
 translation_of: Learn/Common_questions
 ---
+
 {{LearnSidebar}}
 
 Esta sección del área de aprendizaje está diseñada para proveer respuestas a preguntas frecuentes que pueden surgir, las cuales no son necesariamente parte del núcleo estructurado de formas de aprendizaje (ej. los artículos de aprendizaje de [HTML](/en-US/docs/Learn/HTML) o [CSS](/en-US/docs/Learn/CSS)). Éstos artículos están diseñados para trabajar por su cuenta.

@@ -2,6 +2,7 @@
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
+
 {{JSRef}}
 
 O método **`String.fromCharCode()`** retorna uma string criada ao usar uma sequência específica de valores Unicode.

@@ -4,6 +4,7 @@ slug: Web/HTML/Element/label
 translation_of: Web/HTML/Element/label
 original_slug: Web/HTML/Elemento/label
 ---
+
 ## Resumen
 
 El **Elemento HTML `<label>`** representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo for, o ubicando el control dentro del elemento label. Tal control es llamado "el control etiquetado" del elemento label.

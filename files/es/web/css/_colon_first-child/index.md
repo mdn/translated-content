@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:first-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:first-child`** de [CSS](/es/docs/Web/CSS) representa el primer elemento entre un grupo de elementos hermanos.

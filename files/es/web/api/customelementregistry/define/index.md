@@ -3,6 +3,7 @@ title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
 translation_of: Web/API/CustomElementRegistry/define
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 El método **`define()`** de la interfaz {{domxref("CustomElementRegistry")}} define un nuevo elemento personalizado.
@@ -197,9 +198,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## Especificaciones
 
-| Especificación                                                                                                                                       | Estado                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "custom-elements.html#dom-customelementregistry-define", "customElements.define()")}} | {{Spec2("HTML WHATWG")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad navegadores
 

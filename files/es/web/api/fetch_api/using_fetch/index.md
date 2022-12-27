@@ -5,6 +5,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 original_slug: Web/API/Fetch_API/Utilizando_Fetch
 browser-compat: api.fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}{{ SeeCompatTable }}
 
 La [API Fetch](/es/docs/Web/API/Fetch_API) proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas. También provee un método global {{domxref("GlobalFetch.fetch","fetch()")}} que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.

@@ -5,6 +5,7 @@ tags:
   - смежные селекторы CSS спецификация комбинатор
 translation_of: Web/CSS/General_sibling_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 ## Описание

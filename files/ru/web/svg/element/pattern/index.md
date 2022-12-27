@@ -6,6 +6,7 @@ tags:
 translation_of: Web/SVG/Element/pattern
 original_slug: Web/SVG/Элемент/pattern
 ---
+
 {{SVGRef}}
 Элемент **`<pattern>`** определяет графический объект, который может быть перерисован с повторяющимися координатами **x** и **y** («мозаичным»), чтобы покрыть область.
 На ссылку `<pattern>` ссылаются атрибуты {{SVGAttr("fill")}} и / или {{SVGAttr("stroke")}} на других [графических элементах](/ru/docs/Web/SVG/Tutorial/Basic_Shapes) , чтобы заполнить или обвести эти элементы указанным шаблоном.

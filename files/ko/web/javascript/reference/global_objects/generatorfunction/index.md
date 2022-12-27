@@ -2,6 +2,7 @@
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
+
 {{JSRef}}
 
 **`GeneratorFunction` 생성자**는 새로운 {{jsxref("Statements/function*", "generator function")}} 객체를 생성한다. JavaScript 에서 모든 generator function 은 실제로 `GeneratorFunction` object 이다.

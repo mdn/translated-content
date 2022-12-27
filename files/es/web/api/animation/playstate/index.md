@@ -10,6 +10,7 @@ tags:
   - playState
 translation_of: Web/API/Animation/playState
 ---
+
 {{APIRef("Web Animations")}}
 
 La propiedad `Animation.playState` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve y establece un valor enumerado que describe el estado de reproducción de una animación.

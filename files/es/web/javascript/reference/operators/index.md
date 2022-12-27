@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators
 original_slug: Web/JavaScript/Referencia/Operadores
 ---
+
 {{jsSidebar("Operators", "Operadores")}}
 
 Este capítulo documenta todos los operadores, expresiones y palabras clave del lenguaje JavaScript.

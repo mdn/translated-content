@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/::before
 ---
+
 {{CSSRef}}
 
 En CSS, `::before` crea un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad {{cssxref("content")}}. Este elemento se muestra en línea con el texto de forma predeterminada.

@@ -2,6 +2,7 @@
 title: animateMotion
 slug: Web/SVG/Element/animateMotion
 ---
+
 {{SVGRef}}
 
 O elemento `animateMotion` interfere em uma elemento referenciado para se mover ao longo de uma trajetória de movimento.

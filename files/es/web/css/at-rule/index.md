@@ -3,6 +3,7 @@ title: Regla-At
 slug: Web/CSS/At-rule
 translation_of: Web/CSS/At-rule
 ---
+
 {{cssref}}
 
 Una **regla-at** es una [declaración CSS](/es/docs/Web/CSS/Syntax#CSS_statements) que comienza con el símbolo arroba, '@' (U+0040 COMMERCIAL AT), seguido por un identificador, e incluye todo el contenido hasta el siguiente punto y coma, ';' (U+003B SEMICOLON), o el siguiente [bloque CSS](/es/docs/Web/CSS/Syntax#CSS_declarations_blocks), lo que sea primero.

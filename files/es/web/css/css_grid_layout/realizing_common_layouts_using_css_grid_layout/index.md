@@ -7,6 +7,7 @@ tags:
   - Guía
 translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---
+
 Para completar este conjunto de guías de CSS Grid Layout, voy a recorrer algunos diseños diferentes, que demuestran algunas de las diferentes técnicas que puede utilizar al diseñar con grid layout. Vamos a ver un ejemplo usando [grid-template-areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas) un típico sistema de cuadrícula flexible de 12 columnas, y también un listado de productos usando el emplazamiento automático. Como puedes ver en este conjunto de ejemplos, a menudo hay más de una manera de lograr el resultado que deseas con el diseño de cuadrícula. Escoge el método que encuentres más útil para los problemas que estás resolviendo y los diseños que necesitas implementar.
 
 ## Responsive layout de 1 a 3 columnas fluidas usando `grid-template-areas`

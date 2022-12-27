@@ -2,6 +2,7 @@
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Resumo

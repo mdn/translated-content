@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/from
 ---
+
 {{JSRef}}
 
 El método **`Array.from()`** crea una nueva instancia de `Array` a partir de un objeto iterable.
@@ -215,10 +216,7 @@ if (!Array.from) {
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.from', 'Array.from')}}         | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.from', 'Array.from')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

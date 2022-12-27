@@ -3,6 +3,7 @@ title: SharedWorker
 slug: Web/API/SharedWorker
 translation_of: Web/API/SharedWorker
 ---
+
 {{APIRef("Web Workers API")}}
 
 `Интерфейс SharedWorker (разделяемый воркер)` является особым видом воркеров к которому можно получить доступ из нескольких контекстов браузера, например, из нескольких окон, iframe, или других воркеров. Этот интерфейс реализован иначе, чем dedicated воркеры и имеют иной глобальный контекст, {{domxref("SharedWorkerGlobalScope")}}.

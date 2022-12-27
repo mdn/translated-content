@@ -3,6 +3,7 @@ title: <color>
 slug: Web/CSS/color_value
 translation_of: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 Тип **`<color>`** [CSS](/ru/docs/Web/CSS) [data type](/ru/docs/Web/CSS/CSS_Types) предоставляет цвет в цветовом спектре [sRGB](https://en.wikipedia.org/wiki/SRGB). В `<color>` может включать значения прозрачности Альфа-канала ([alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing)), указывающие, как цвет [сочетается](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) с его фоном.

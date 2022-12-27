@@ -4,6 +4,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Создание_кирпичей
 ---
+
 {{GamesSidebar}}{{IncludeSubnav("/ru/docs/Games")}}
 
 {{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Обработка_коллизий")}}

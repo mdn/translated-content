@@ -4,6 +4,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 translation_of: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 ---
+
 {{LearnSidebar}} {{PreviousMenuNext("Aprende / HTML / Formularios / The_native_form_widgets", "Aprender / html / Formularios / Form_validation", "Aprender / html / Forms")}}
 
 En este artículo se analiza lo que sucede cuando un usuario envía un formulario - ¿A dónde van los datos y cómo los manejamos cuando llegan allí? - También tenemos en cuenta algunos de los problemas de seguridad asociados con el envío de los datos del formulario.

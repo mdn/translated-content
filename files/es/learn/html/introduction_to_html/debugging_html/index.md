@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 original_slug: Learn/HTML/Introduccion_a_HTML/Debugging_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 Escribir HTML es fácil, pero ¿qué pasa si algo va mal y desconocemos dónde está el error de codificación? En este artículo veremos varias herramientas que nos ayudarán a arreglar errores en HTML.

@@ -12,6 +12,7 @@ tags:
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework
 ---
+
 {{GamesSidebar}}{{IncludeSubnav("ru/docs/")}}
 
 {{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling")}}

@@ -6,6 +6,7 @@ tags:
   - Псевдоклассы
 translation_of: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
 [Псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим {{htmlattrxref("id")}} URL-фрагментом.

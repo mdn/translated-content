@@ -3,6 +3,7 @@ title: Начальное значение
 slug: Web/CSS/initial_value
 translation_of: Web/CSS/initial_value
 ---
+
 ## Описание
 
 **Начальное значение**, данное в кратком описании [каждого CSS-свойства](/ru/docs/Web/CSS/Reference) имеет различное значение для [наследуемых и не наследуемых свойств](/ru/docs/Web/CSS/inheritance).

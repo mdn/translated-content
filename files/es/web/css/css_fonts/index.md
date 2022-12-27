@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Fonts
 ---
+
 {{CSSRef}}
 
 **CSS Fonts** es el modulo CSS que define todo lo relacionado con los recursos tipográficos, sus propiedades y como son cargados. Permite definir el estilo de una fuente, su familia tipográfica, tamaño o peso, y las variantes que puede tener la fuente. También permite definir la altura de una línea.

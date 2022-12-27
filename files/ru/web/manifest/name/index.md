@@ -7,6 +7,7 @@ tags:
   - name
 translation_of: Web/Manifest/name
 ---
+
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">

@@ -3,6 +3,7 @@ title: Сравнение разных Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
 translation_of: Web/API/Event/Comparison_of_Event_Targets
 ---
+
 {{ ApiRef() }}
 
 ### Event targets

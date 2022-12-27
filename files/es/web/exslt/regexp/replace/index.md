@@ -7,6 +7,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/regexp/replace
 ---
+
 {{XsltRef}}
 
 `regexp:replace()` reemplaza porciones de una cadena que coincide con la expresión regular dada por el contenido de otra cadena.

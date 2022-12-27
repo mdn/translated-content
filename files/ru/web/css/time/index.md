@@ -7,6 +7,7 @@ tags:
   - время
 translation_of: Web/CSS/time
 ---
+
 {{CSSRef}}
 
 [Тип данных](/ru/docs/Web/CSS/CSS_Types) [CSS](/ru/docs/Web/CSS) **`<time>`** представляет значение времени, выраженное в секундах или миллисекундах. Он используется в {{cssxref("animation")}}, {{cssxref("transition")}}, и связанных свойствах.

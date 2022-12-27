@@ -7,6 +7,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/trailing
 ---
+
 {{XsltRef}}
 
 `set:trailing()` devuelve los nodos de un conjunto de nodos que vienen después del primer nodo de otro conjunto de nodos.

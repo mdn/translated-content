@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
 El método **`Object.getOwnPropertyDescriptors()`** regresa todos los descriptores de propiedad propios de un objeto dado.
@@ -81,10 +82,7 @@ subclass.prototype = Object.create(
 
 ## Especificaciones
 
-| Specification                                                                                                                        | Status                       | Comment                                |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} | {{Spec2('ESDraft')}} | Definición inicial en ECMAScript 2017. |
-| {{SpecName('ES2017', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} | {{Spec2('ES2017')}}     |                                        |
+{{Specifications}}
 
 ## Browser compatibility
 

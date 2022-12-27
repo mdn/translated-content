@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 original_slug: Web/JavaScript/Reference/Global_Objects/Promise
 browser-compat: javascript.builtins.Promise
 ---
+
 {{JSRef}}
 
 El objeto **`Promise`** representa la eventual finalización (o falla) de una operación asincrónica y su valor resultante.

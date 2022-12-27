@@ -11,6 +11,7 @@ tags:
   - Web
 translation_of: Web/CSS/fit-content
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La función [CSS](/es/docs/Web/CSS) **`fit-content()`** ajusta un tamaño dado a un tamaño disponible de acuerdo a la fórmula: `min(maximum size, max(minimum size, argument))`.

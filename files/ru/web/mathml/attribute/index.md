@@ -8,6 +8,7 @@ tags:
 translation_of: Web/MathML/Attribute
 original_slug: Web/MathML/Атрибут
 ---
+
 {{MathMLRef}}
 
 Ниже приведён список атрибутов MathML в алфавитном порядке. Более подробная информация о каждом атрибуте доступна на [странице элементов](/ru/docs/Web/MathML/Element).

@@ -40,7 +40,7 @@ slug: Web/API/MediaRecorder
 - {{domxref("MediaRecorder.start()")}}
   - : 开始录制媒体，这个方法调用时可以通过给`timeslice`参数设置一个毫秒值，如果设置这个毫秒值，那么录制的媒体会按照你设置的值进行分割成一个个单独的区块，而不是以默认的方式录制一个非常大的整块内容。
 - {{domxref("MediaRecorder.stop()")}}
-  - : 停止录制。同时触发{{event("dataavailable")}}事件，返回一个存储`Blob`内容的录制数据。之后不再记录
+  - : 停止录制。同时触发 {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} 事件，返回一个存储`Blob`内容的录制数据。之后不再记录
 
 ## 静态方法
 
@@ -50,17 +50,17 @@ slug: Web/API/MediaRecorder
 ## 事件处理
 
 - {{domxref("MediaRecorder.ondataavailable")}}
-  - : 调用它用来处理 {{event("dataavailable")}} 事件，该事件可用于获取录制的媒体资源 (在事件的 `data` 属性中会提供一个可用的 {{domxref("Blob")}} 对象.)
+  - : 调用它用来处理 `dataavailable` 事件，该事件可用于获取录制的媒体资源 (在事件的 `data` 属性中会提供一个可用的 {{domxref("Blob")}} 对象.)
 - {{domxref("MediaRecorder.onerror")}}
-  - : An {{event("Event_handlers", "event handler")}} called to handle the {{event("recordingerror")}} event, including reporting errors that arise with media recording. These are fatal errors that stop recording.
+  - : An event handler called to handle the `recordingerror` event, including reporting errors that arise with media recording. These are fatal errors that stop recording.
 - {{domxref("MediaRecorder.onpause")}}
   - : 用来处理 [`pause`](/zh-CN/docs/Web/API/HTMLMediaElement/pause_event) 事件，该事件在媒体暂停录制时触发（{{domxref("MediaRecorder.pause()")}}）.
 - {{domxref("MediaRecorder.onresume")}}
-  - : 用来处理 {{event("resume")}} 事件，该事件在暂停后回复录制视频时触发（{{domxref("MediaRecorder.resume()")}}）.
+  - : 用来处理 `resume` 事件，该事件在暂停后回复录制视频时触发（{{domxref("MediaRecorder.resume()")}}）.
 - {{domxref("MediaRecorder.onstart")}}
-  - : 用来处理 {{event("start")}} 事件，该事件在媒体开始录制时触发（{{domxref("MediaRecorder.start()")}}）.
+  - : 用来处理 `start` 事件，该事件在媒体开始录制时触发（{{domxref("MediaRecorder.start()")}}）.
 - {{domxref("MediaRecorder.onstop")}}
-  - : 用来处理 {{event("stop")}} 事件，该事件会在媒体录制结束时、媒体流（{{domxref("MediaStream")}}）结束时、或者调用{{domxref("MediaRecorder.stop()")}} 方法后触发。
+  - : 用来处理 `stop` 事件，该事件会在媒体录制结束时、媒体流（{{domxref("MediaStream")}}）结束时、或者调用 {{domxref("MediaRecorder.stop()")}} 方法后触发。
 
 ## 事件
 

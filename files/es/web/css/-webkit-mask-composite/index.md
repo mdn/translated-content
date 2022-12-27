@@ -5,6 +5,7 @@ tags:
   - CSS
 translation_of: Web/CSS/-webkit-mask-composite
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}

@@ -3,6 +3,7 @@ title: Response.ok
 slug: Web/API/Response/ok
 translation_of: Web/API/Response/ok
 ---
+
 {{APIRef("Fetch")}}
 La propiedad de solo lectura **`ok`** de la interfaz {{domxref("Response")}} contiene un Booleano que indica si la respuesta fue exitosa (estado en un rango de 200 a 299) o no.
 

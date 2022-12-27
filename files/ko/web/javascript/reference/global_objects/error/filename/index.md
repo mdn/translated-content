@@ -2,6 +2,7 @@
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`fileName`** 속성은 이 오류가 발생한 파일의 경로를 포함합니다.

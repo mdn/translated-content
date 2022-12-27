@@ -16,6 +16,7 @@ tags:
 translation_of: Web/HTML/Element/input/text
 original_slug: Web/HTML/Elemento/input/text
 ---
+
 {{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} de tipo {{HTMLAttrDef("text")}} crean campos de texto básicos de una sola línea.
@@ -37,7 +38,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("change")}} y {{event("input")}}</td>
+      <td>[`change`](/es/docs/Web/Reference/Events/change) y [`input`](/es/docs/Web/Reference/Events/input)</td>
     </tr>
     <tr>
       <td><strong>Atributos comunes admitidos</strong></td>

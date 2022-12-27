@@ -10,6 +10,7 @@ tags:
   - juegos
 translation_of: Games
 ---
+
 {{GamesSidebar}}
 
 ## Introducción de los juegos para la Web

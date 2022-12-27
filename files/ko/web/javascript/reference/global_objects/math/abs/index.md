@@ -2,6 +2,7 @@
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 ---
+
 {{JSRef}}
 
 **`Math.abs()`** 함수는 주어진 숫자의 절대값을

@@ -11,6 +11,7 @@ tags:
   - Workers
 translation_of: Web/API/FetchEvent
 ---
+
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
 Este es el tipo de evento para eventos "`fetch`" despachados en el {{domxref("ServiceWorkerGlobalScope", "scope global del service worker", "", 1)}}. Contiene información sobre la búsqueda (fetch), incluyendo la petición (request) y cómo el receptor tratará la respuesta (response).
@@ -73,9 +74,7 @@ addEventListener('fetch', event => {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#fetch-event-section', 'FetchEvent')}} | {{Spec2('Service Workers')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

@@ -8,6 +8,7 @@ tags:
   - начальный уровень
 translation_of: Learn/Server-side/First_steps/Web_frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 В предыдущей статье было показано, как выглядит общение между веб-клиентами и серверами, характер HTTP-запросов и ответов, а также то, что веб-приложение на стороне сервера должно выполнять, чтобы отвечать на запросы из веб-браузера. Благодаря этим знаниям настало время изучить, как веб-интерфейсы могут упростить эти задачи, и дать вам представление о том, как выбрать структуру для своего первого веб-приложения на стороне сервера.

@@ -2,6 +2,7 @@
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
+
 {{JSRef}}
 
 setSeconds () 메서드는 현지 시간에 따라 지정된 날짜의 초를 설정합니다.

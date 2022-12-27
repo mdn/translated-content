@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/menu
 original_slug: Web/HTML/Elemento/menu
 ---
+
 ### Definición
 
 - El elemento `menu` (directorio) es un elemento desaprobado. En su origen fue pensado para crear menús, en la actualidad es inutil.

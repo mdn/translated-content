@@ -7,6 +7,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Cascade_tasks
 original_slug: Learn/CSS/Building_blocks/Каскад_задачи
 ---
+
 {{LearnSidebar}}
 
 Цель этого задания — помочь вам проверить ваше понимание некоторых значений и элементов, которые мы рассмотрели в уроке [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).

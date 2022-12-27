@@ -7,6 +7,7 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensaje

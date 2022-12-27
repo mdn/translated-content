@@ -2,6 +2,7 @@
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 A propriedade **`function.caller`** retorna a função que invocou a função especificada.

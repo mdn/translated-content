@@ -2,6 +2,7 @@
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** 메소드는 문자열의 일부를 추출하면서 새로운 문자열을 반환합니다.

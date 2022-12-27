@@ -2,6 +2,7 @@
 title: animate
 slug: Web/SVG/Element/animate
 ---
+
 {{SVGRef}}
 
 O elemento SVG **`<animate>`** fornece uma maneira de animar um atributo de um elemento ao longo do tempo.

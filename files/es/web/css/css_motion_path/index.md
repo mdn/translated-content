@@ -3,6 +3,7 @@ title: CSS Motion Path
 slug: Web/CSS/CSS_Motion_Path
 translation_of: Web/CSS/CSS_Motion_Path
 ---
+
 {{CSSRef}}{{seecompattable}}
 
 **Motion Path** es un módulo CSS que permite animar cualquier objeto gráfico a lo largo de una ruta personalizada.

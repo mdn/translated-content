@@ -7,6 +7,7 @@ tags:
 translation_of: Web/XSLT/Element/when
 original_slug: Web/XSLT/when
 ---
+
 {{XsltRef}}
 
 El elemento `<xsl:when>` siempre aparece dentro de un elemento `<xsl:choose>`, actuando como una sentencia case.

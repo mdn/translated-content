@@ -2,6 +2,7 @@
 title: JavaScript
 slug: Web/JavaScript
 ---
+
 {{JsSidebar}}
 
 **JavaScript®** (às vezes abreviado para **JS**) é uma linguagem leve, interpretada e baseada em objetos com _[funções de primeira classe](http://en.wikipedia.org/wiki/First-class_function),_ mais conhecida como a linguagem de script para páginas Web, mas usada também em [vários outros ambientes sem browser](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages), tais como [node.js](http://nodejs.org/), [Apache CouchDB](http://couchdb.apache.org/) e Adobe Acrobat. O JavaScript é uma linguagem [baseada em protótipos](https://en.wikipedia.org/wiki/Prototype-based), [multi-paradigma](https://en.wikipedia.org/wiki/Programming_paradigm) e dinâmica, suportando estilos de orientação a objetos, imperativos e declarativos (como por exemplo a programação funcional). Saiba mais [sobre o JavaScript](/pt-BR/docs/Web/JavaScript/About_JavaScript).

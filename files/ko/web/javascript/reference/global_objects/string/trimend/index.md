@@ -2,6 +2,7 @@
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 ---
+
 {{JSRef}}
 
 **`trimEnd()`** 메서드는 문자열 끝부분의 공백을 제거합니다.

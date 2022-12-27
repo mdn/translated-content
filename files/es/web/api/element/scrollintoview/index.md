@@ -7,6 +7,7 @@ tags:
   - metodo
 translation_of: Web/API/Element/scrollIntoView
 ---
+
 {{ APIRef("DOM")}}
 
 El método `scrollIntoView()` de la interfaz {{domxref("Element")}} desplaza el contenedor principal del elemento de forma que el elemento sobre el cual se invoca `scrollIntoView()` sea visible al usuario.

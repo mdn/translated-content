@@ -10,6 +10,7 @@ tags:
   - editor
 translation_of: Web/API/Document/execCommand
 ---
+
 {{ApiRef("DOM")}}{{ Deprecated_header() }}
 
 ## Resumen

@@ -7,6 +7,7 @@ tags:
   - Web
 translation_of: Web/CSS/computed_value
 ---
+
 {{cssref}}
 
 **Вычисленное значение** CSS-свойства вычисляется из указанного значения посредством:

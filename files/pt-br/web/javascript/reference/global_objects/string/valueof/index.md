@@ -2,6 +2,7 @@
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
+
 {{JSRef}}
 
 O método `valueOf()` retorna o valor primitivo de um objeto {{jsxref("String")}}.

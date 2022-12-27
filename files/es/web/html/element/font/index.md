@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/font
 original_slug: Web/HTML/Elemento/font
 ---
+
 ### Definición
 
 - **font** -_fuente_ . Indica el tamaño, color, o fuente del texto que contiene.

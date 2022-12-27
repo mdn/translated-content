@@ -4,6 +4,7 @@ slug: Web/API/HTMLMediaElement/seeking_event
 translation_of: Web/API/HTMLMediaElement/seeking_event
 original_slug: Web/HTML/Element/video/seeking_event
 ---
+
 Событие 'seeking' в случае, когда идёт подгрузка видео
 
 ## General info

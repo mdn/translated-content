@@ -4,6 +4,7 @@ slug: Learn/HTML/Tables
 translation_of: Learn/HTML/Tables
 original_slug: Learn/HTML/Tablas
 ---
+
 {{LearnSidebar}}
 
 Una tarea muy común en HTML es la estructuración de datos, y para esto hay múltiples elementos y atributos. Esto unido a un poco de CSS, hace que en HTML sea sencillo mostrar tablas con información sobre tu horario escolar, los horarios de una piscina local o las estadisticas de tu equipo de dinosaurios o fútbol preferido. Este módulo te guiará en todo lo que necesitas saber sobre la estructuración tabular de datos en HTML.

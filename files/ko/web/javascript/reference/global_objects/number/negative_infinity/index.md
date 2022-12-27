@@ -2,6 +2,7 @@
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
+
 {{JSRef}}
 
 **`Number.NEGATIVE_INFINITY`** 속성은 음의 무한대를 나타냅니다.

@@ -10,6 +10,7 @@ tags:
   - Respuesta
 translation_of: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
 La interfaz **`Response`** de la [Fetch API](/es/docs/Web/API/Fetch_API) representa la respuesta a una petición.

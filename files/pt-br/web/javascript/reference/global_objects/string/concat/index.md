@@ -2,6 +2,7 @@
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
+
 {{JSRef}}
 
 O método **`concat()`** combina o texto de duas ou mais strings e retorna uma nova string.

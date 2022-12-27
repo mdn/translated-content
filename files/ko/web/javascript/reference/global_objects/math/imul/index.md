@@ -2,6 +2,7 @@
 title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
+
 {{JSRef}}
 
 **`Math.imul()`** 함수는 C 언어와 같은 양식으로 2개 파라메터의 32-bit 곱셈 결과를 리턴합니다.

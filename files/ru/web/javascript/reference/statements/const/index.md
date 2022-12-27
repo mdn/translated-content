@@ -8,6 +8,7 @@ tags:
   - Константы
 translation_of: Web/JavaScript/Reference/Statements/const
 ---
+
 {{jsSidebar("Statements")}}
 
 Значение констант не может быть изменено новым присваиванием, а также не может быть переопределено. Константы (`const`) подчиняются области видимости уровня блока так же, как переменные, объявленные с использованием ключевого слова [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let).

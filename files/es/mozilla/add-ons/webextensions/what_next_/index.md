@@ -3,6 +3,7 @@ title: What next?
 slug: Mozilla/Add-ons/WebExtensions/What_next_
 translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 ---
+
 {{AddonSidebar}}
 
 Ahora estarás listo para comenzar a convertir tus idea para una extensión de navegador en realidad. Antes de comenzar ese viaje, vale la pena ser consciente de algunas cosas que ayudarán a que sea más sencillo.

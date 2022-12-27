@@ -6,6 +6,7 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/specified_value
 ---
+
 {{CSSRef}}
 
 El **valor especificado** (**specified value**) de una propiedad CSS es establecido de una de las siguientes maneras:

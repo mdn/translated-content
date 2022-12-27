@@ -9,6 +9,7 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/:-moz-only-whitespace
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Resumen

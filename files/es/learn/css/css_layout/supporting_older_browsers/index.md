@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 original_slug: Learn/CSS/CSS_layout/Soporte_a_navegadores_antiguos
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}

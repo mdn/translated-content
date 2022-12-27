@@ -2,6 +2,7 @@
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
+
 {{JSRef}}
 
 O método `matchAll()` retorna um iterador de todos os resultados correspondentes a uma string em relação a uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions), incluindo [grupos de captura](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).

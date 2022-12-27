@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/contextmenu
 original_slug: Web/HTML/Atributos_Globales/contextmenu
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **contextmenu** es el [**id**](/es/docs/Web/HTML/Atributos_Globales/id) de un {{HTMLElement("menu")}} para nosotros como el menu contextual para este elemento .

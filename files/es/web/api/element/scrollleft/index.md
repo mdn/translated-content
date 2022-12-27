@@ -11,6 +11,7 @@ tags:
   - Vista CSSOM
 translation_of: Web/API/Element/scrollLeft
 ---
+
 {{ APIRef }}
 
 La propiedad `Element.scrollLeft` obtiene o establece el número de píxeles que desplaza el contenido de un elemento hacia la izquierda.

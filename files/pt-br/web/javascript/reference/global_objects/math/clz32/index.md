@@ -2,6 +2,7 @@
 title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
+
 {{JSRef}}
 
 A função Math.clz32 () retorna o número de zero bit inicial na representação binária de 32 bits de um número.

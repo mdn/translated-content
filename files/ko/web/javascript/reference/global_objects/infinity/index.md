@@ -2,6 +2,7 @@
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
+
 {{jsSidebar("Objects")}}
 
 **`Infinity`** 전역 속성은 무한대를 나타내는 숫자값입니다.

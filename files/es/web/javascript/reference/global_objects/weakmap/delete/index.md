@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/delete
 ---
+
 {{JSRef}}
 
 El método **`delete()`** elimina un elemento específico del objeto `WeakMap` .
@@ -43,10 +44,7 @@ wm.has(window);    // Devuelve false. El elemento window ya no es parte de WeakM
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

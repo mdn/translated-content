@@ -9,6 +9,7 @@ tags:
   - Selectores CSS
 translation_of: Web/CSS/:has
 ---
+
 {{ CSSRef() }}{{SeeCompatTable}}
 
 ## Resumen

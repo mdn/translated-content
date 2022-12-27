@@ -11,6 +11,7 @@ tags:
   - npm
 translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 Ahora que sabes para que sirve Express, nosotros te vamos a mostrar como preparar y testear un entorno de desarrollo Node/Express en: Windows, Linux (Ubuntu), y macOS. Este artículo te va a dar todo lo que se necesita para poder empezar a desarrollar apps en Express, sin importar el sistema operativo que se use.

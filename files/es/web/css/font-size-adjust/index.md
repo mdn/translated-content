@@ -8,6 +8,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/font-size-adjust
 ---
+
 {{ CSSRef() }}
 
 ## Resumen

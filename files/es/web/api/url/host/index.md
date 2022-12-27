@@ -3,6 +3,7 @@ title: Estabilidad
 slug: Web/API/URL/Host
 translation_of: Web/API/URL/host
 ---
+
 {{ApiRef("URL API")}}
 
 The **`host`** property of the {{domxref("URL")}} interface is a {{domxref("USVString")}} containing the host, that is the {{domxref("URL.hostname", "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a `':'`, followed by the {{domxref("URL.port", "port")}} of the URL.

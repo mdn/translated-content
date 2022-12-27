@@ -2,6 +2,7 @@
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 ---
+
 {{JSRef}}
 
 `Error` 객체는 런타임 오류가 발생했을 때 던져집니다.

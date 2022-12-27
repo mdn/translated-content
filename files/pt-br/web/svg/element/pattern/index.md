@@ -2,6 +2,7 @@
 title: pattern
 slug: Web/SVG/Element/pattern
 ---
+
 {{SVGRef}}
 
 Um padrão é utilizado para preenchimento ou traçado de um objeto utilizando um objeto gráfico pré-definido o qual pode ser replicado ("ladrilhado") com intervalos fixados em x e y para cobrir as áreas que serão pintadas. Padrões são definidos utilizando o elemento `pattern` e, em seguida, referenciado pelas propriedades `fill` e `stroke` em um determinado elemento gráfico para indicar que o elemento em questão deveria ser preenchido ou traçado com o padrão referenciado.

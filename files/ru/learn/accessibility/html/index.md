@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/Accessibility/HTML
 original_slug: Learn/Доступность/HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 Большая часть содержимого интернета может быть сделана доступной просто благодаря использованию правильных HTML-элементов по назначению. В этой статье подробно рассмотрено как HTML может быть использован для обеспечения максимальной доступности.

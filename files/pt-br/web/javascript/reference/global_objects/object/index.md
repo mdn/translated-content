@@ -2,6 +2,7 @@
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 ---
+
 {{JSRef}}
 
 O construtor `Object` cria um wrapper de objeto.

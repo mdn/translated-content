@@ -6,6 +6,7 @@ tags:
   - Texto CSS
 translation_of: Web/CSS/text-decoration-style
 ---
+
 {{CSSRef}}
 
 ## Resumen

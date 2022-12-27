@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 El método **`toSource()`** devuelve una cadena que representa el código fuente del objeto.

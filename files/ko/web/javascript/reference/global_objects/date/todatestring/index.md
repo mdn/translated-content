@@ -2,6 +2,7 @@
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ---
+
 {{JSRef}}
 
 **`toDateString()`** 메서드는 미국 영어로 사람이 읽을 수있는 형태로 {{jsxref("Date")}} 객체의 날짜 부분을 반환합니다.

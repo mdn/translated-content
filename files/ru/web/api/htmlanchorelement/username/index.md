@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/username
 original_slug: Web/API/HTMLHyperlinkElementUtils/username
 ---
+
 {{ApiRef("URL API")}}
 
 Свойство **`HTMLHyperlinkElementUtils.username`** – это {{domxref("USVString")}}, содержащий имя пользователя, указанное перед именем домена.

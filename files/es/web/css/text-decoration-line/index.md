@@ -6,6 +6,7 @@ tags:
   - Texto CSS
 translation_of: Web/CSS/text-decoration-line
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/CSS) **`text-decoration-line`** establece el tipo de decoración de línea que se agregará a un elemento.

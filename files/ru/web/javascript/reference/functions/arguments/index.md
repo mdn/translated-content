@@ -8,6 +8,7 @@ tags:
   - arguments
 translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{jsSidebar("Functions")}}
 
 Объект **`arguments`** — это подобный массиву объект, который содержит аргументы, переданные в функцию.

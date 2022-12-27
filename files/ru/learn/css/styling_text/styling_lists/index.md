@@ -4,6 +4,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 translation_of: Learn/CSS/Styling_text/Styling_lists
 original_slug: Learn/CSS/Styling_text/Стилизация_списков
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [Списки](/ru/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists), по-большому счету, ведут себя также как любой другой текст, но существуют некоторые специфичные настройки CSS, о которых вы должны знать. В этой статье они все описываются.

@@ -2,6 +2,7 @@
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
+
 {{JSRef}}
 
 A função **`Math.cbrt()`** retorna a raiz cúbica de um número, isto é

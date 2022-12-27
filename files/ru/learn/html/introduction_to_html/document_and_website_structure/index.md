@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: Learn/HTML/Введение_в_HTML/Структура_документа_и_веб-сайта
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 В дополнение к определению отдельных частей вашей страницы (таких как «абзац» или «изображение»), {{glossary("HTML")}} также содержит ряд элементов блочного уровня, используемых для определения областей вашего веб-сайта (такие как «заголовок», «навигационное меню», «колонка основного содержимого»). В этой статье рассматривается, как планировать базовую структуру сайта и писать HTML для представления этой структуры.

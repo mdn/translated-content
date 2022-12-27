@@ -14,6 +14,7 @@ tags:
   - регулярные выражения
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
+
 {{JSRef("Global_Objects", "RegExp")}}
 
 ## Сводка

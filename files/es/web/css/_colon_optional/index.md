@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:optional
 ---
+
 {{ CSSRef }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:optional`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} que no tenga el atributo {{ htmlattrxref("required", "input") }} establecido en él.

@@ -3,6 +3,7 @@ title: AudioNode
 slug: Web/API/AudioNode
 translation_of: Web/API/AudioNode
 ---
+
 {{ APIRef("Web Audio API") }}
 **AudioNode** это общий интерфейс для описания модулей обработки аудио таких как источники звука (например HTML элементы {{HTMLElement("audio")}} или {{HTMLElement("video")}}), генераторы звука (например {{domxref("OscillatorNode")}} и т.п.), приёмники звука для модулей производящих обработку звука (например {{domxref("BiquadFilterNode")}} или {{domxref("ConvolverNode")}}), или регуляторы громкости (например {{domxref("GainNode")}}).
 

@@ -14,4 +14,4 @@ El pseudocódigo se refiere a la sintaxis del código que generalmente se usa pa
 
 ### Conocimientos generales
 
-- {{interwiki("wikipedia", "Pseudocódigo", "Pseudocódigo")}} en Wikipedia.
+- [Pseudocódigo](https://es.wikipedia.org/wiki/Pseudocódigo) en Wikipedia.

@@ -13,6 +13,7 @@ tags:
   - Tutorial
 translation_of: Games/Tutorials/2D_breakout_game_Phaser
 ---
+
 {{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}

@@ -87,7 +87,7 @@ Una vez que el usuario está suscrito, puede recibir notificaciones automáticas
 
 Desde el lado del servidor, todo el proceso tiene que estar encriptado con claves públicas y privadas por razones de seguridad — permitir que todos envíen mensajes `push` sin seguridad usando tu aplicación sería una idea terrible. Consulta la [página de prueba de encriptación de datos `Push` en la Web](https://jrconlin.github.io/WebPushDataTestPage/) para obtener información detallada sobre cómo proteger el servidor. El servidor almacena toda la información recibida cuando el usuario se suscribió, por lo que los mensajes se pueden enviar más tarde cuando sea necesario.
 
-Para recibir mensajes `push`, podemos escuchar el evento {{event("push")}} en el archivo `Service Worker`:
+Para recibir mensajes `push`, podemos escuchar el evento [`push`](/es/docs/Web/Reference/Events/push) en el archivo `Service Worker`:
 
 ```js
 self.addEventListener("push", function (e) {
@@ -272,7 +272,7 @@ self.addEventListener("push", function (event) {
 });
 ```
 
-Todo lo que hace es agregar un escucha para el evento {{Event("push")}}, crear la variable de carga útil que consiste en el texto tomado de los datos (o crear una cadena para usar si los datos están vacíos), y luego esperar hasta la notificación se muestra al usuario.
+Todo lo que hace es agregar un escucha para el evento [`push`](/es/docs/Web/Reference/Events/push), crear la variable de carga útil que consiste en el texto tomado de los datos (o crear una cadena para usar si los datos están vacíos), y luego esperar hasta la notificación se muestra al usuario.
 
 No dudes en explorar el resto de los ejemplos en el [Libro de recetas para el servicio _workers_](https://github.com/mdn/serviceworker-cookbook/) si deseas saber cómo se manejan: el [código fuente completo está disponible en GitHub](https://github.com/mozilla/serviceworker-cookbook/). Hay una gran colección de ejemplos de uso que muestran el uso general, pero también la inserción web, las estrategias de almacenamiento en caché, el rendimiento, el trabajo sin conexión y más.
 

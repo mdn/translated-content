@@ -15,6 +15,7 @@ tags:
 translation_of: Web/API/MediaTrackConstraints/echoCancellation
 original_slug: Web/API/MediaTrackConstraints/Эхоподавление
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 Свойство **`echoCancellation`** объекта {{domxref("MediaTrackConstraints")}} это {{domxref("ConstrainBoolean")}} описывающее запрашиваемые или обязательные ограничения накладываемые на ограничивающее свойство {{domxref("MediaTrackSettings.echoCancellation", "echoCancellation")}}.

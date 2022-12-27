@@ -7,6 +7,7 @@ tags:
   - Web
 translation_of: Web/API/Window/hashchange_event
 ---
+
 {{ APIRef }}
 
 El evento `hashchange` es ejecutado cuando el fragmento identificador de la URL ha cambiado (la parte de la URL que continúa despues del simbolo #, incluyendo el símbolo #).
@@ -83,9 +84,7 @@ En [esta página](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browse
 
 ## Especificaciones
 
-| Especificacion                                                                                       | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'indices.html#event-hashchange', 'hashchange')}} | {{Spec2('HTML WHATWG')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

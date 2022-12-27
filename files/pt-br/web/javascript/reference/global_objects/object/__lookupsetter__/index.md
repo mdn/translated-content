@@ -2,6 +2,7 @@
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **`__lookupSetter__`** retorna a função vinculada como _setter_ para a propriedade especificada.

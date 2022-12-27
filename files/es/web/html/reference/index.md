@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Reference
 original_slug: Web/HTML/Referencia
 ---
+
 {{HTMLSidebar}}
 
 Esta referencia [HTML](/es/docs/Web/HTML) describe todos los **elementos** y **atributos** de HTML, incluyendo los **atributos globales** que se aplican a todos los elementos.

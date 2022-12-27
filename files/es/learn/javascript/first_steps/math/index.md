@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/JavaScript/First_steps/Math
 original_slug: Learn/JavaScript/First_steps/Matemáticas
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 En este punto del curso, hablaremos de matemáticas en JavaScript — cómo podemos usar {{Glossary("Operator","operadores")}} y otras características para manipular con éxito números y conseguir lo que nos hayamos propuesto.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Decrement
 original_slug: Web/JavaScript/Referencia/Operadores/Decremento
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de decremento (--) disminuye (o resta de a uno) su operando y retorna un valor.

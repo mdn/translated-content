@@ -10,6 +10,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 ---
+
 {{JSRef}}
 
 **`handler.setPrototypeOf()`** 메서드는 {{jsxref("Object.setPrototypeOf()")}}에 대한 트랩입니다.

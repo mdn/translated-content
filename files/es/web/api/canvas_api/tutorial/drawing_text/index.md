@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Dibujar_texto_usando_canvas
 ---
+
 El elemento [`<canvas>`](es/HTML/Canvas) permite dibujar texto en él a través de una API experimental de Mozilla.
 
 ### API

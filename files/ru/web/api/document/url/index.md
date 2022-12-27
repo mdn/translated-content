@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/API/Document/URL
 ---
+
 {{APIRef("DOM")}}
 
 Возвращает строку URL документа HTML.

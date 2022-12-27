@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/specified_value
 original_slug: Web/CSS/Указанное_значение
 ---
+
 {{CSSRef}}
 
 **Указанное значение** CSS-свойства может устанавливаться одним из 3 следующих способов.

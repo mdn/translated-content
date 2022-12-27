@@ -9,6 +9,7 @@ tags:
 translation_of: Games/Tools
 original_slug: Games/Herramients
 ---
+
 {{GamesSidebar}}
 
 En esta pagina puedes encontrar enlaces a nuestros articulos de desarrollo de juegos, que enventualmente apuenta a cubrir frameworks, compiladores y herramientas de depuracion.

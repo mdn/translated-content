@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getSeconds
 ---
+
 {{JSRef}}
 
 El método **`getSeconds()`** devuelve los segundos en la fecha especificada de acuerdo a la hora local.
@@ -41,12 +42,7 @@ console.log(seconds); // 30
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                       | Comentario                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.22', 'Date.prototype.getSeconds')}}                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

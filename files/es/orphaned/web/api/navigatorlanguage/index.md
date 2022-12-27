@@ -12,6 +12,7 @@ translation_of: Web/API/NavigatorLanguage
 original_slug: Web/API/NavigatorLanguage
 browser-compat: api.NavigatorLanguage
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`NavigatorLanguage`** contains methods and properties related to the language of the navigator.

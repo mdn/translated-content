@@ -9,6 +9,7 @@ tags:
   - Propiedad
 translation_of: Web/API/Document/embeds
 ---
+
 {{ApiRef}}
 
 **`embeds`** es una propiedad de sólo lectura de la interfaz de {{domxref("Document")}}. Devuelve una lista con los elementos {{htmlelement("object")}} incrustados dentro del documento actual.

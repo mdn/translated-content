@@ -13,6 +13,7 @@ tags:
   - media feature
 translation_of: Web/CSS/@media/display-mode
 ---
+
 {{cssref}}
 
 La [característica de medios (media feature) de CSS](/es/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`display-mode`** puede ser utilizada para probar el modo de visualización de una aplicación. Puede ser usada para proveer de una experiencia de usuario consistente entre el lanzamiento de un sitio desde una URL y desde un ícono del escritorio.

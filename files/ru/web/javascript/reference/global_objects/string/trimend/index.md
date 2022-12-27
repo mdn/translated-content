@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 ---
+
 {{JSRef("Global_Objects", "String")}} {{non-standard_header}}
 
 ## Сводка

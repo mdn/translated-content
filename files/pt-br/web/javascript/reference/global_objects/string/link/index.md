@@ -2,6 +2,7 @@
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método `link()` cria uma string que representa o código para um elemento HTML [`<a>`](/pt-BR/docs/Web/HTML/Element/a) a ser usado como um link de hipertexto para outro URL.

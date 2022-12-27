@@ -3,6 +3,7 @@ title: AudioParam.setValueAtTime()
 slug: Web/API/AudioParam/setValueAtTime
 translation_of: Web/API/AudioParam/setValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `setValueAtTime()` метод интерфейса {{domxref("AudioParam")}} позволяющий мгновенно точно по времени изменять значение `AudioParam` , сравнивая с {{domxref("AudioContext.currentTime")}}. Новое значение даётся в значении параметра.

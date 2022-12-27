@@ -3,6 +3,7 @@ title: Обратная совместимость Flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 ---
+
 {{CSSRef}}
 
 Flexbox очень хорошо поддерживается современными браузерами, однако есть несколько проблем, с которыми вы могли столкнуться. В этом руководстве мы рассмотрим, насколько хорошо flexbox поддерживается браузерами, а так же некоторые потенциальные проблемы, ресурсы и методы для создания обходных путей и запасных вариантов.

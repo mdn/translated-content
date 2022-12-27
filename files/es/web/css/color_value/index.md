@@ -10,6 +10,7 @@ tags:
   - Web
 translation_of: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 ## Resumen

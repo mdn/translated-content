@@ -2,6 +2,7 @@
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 ---
+
 {{JSRef}}
 
 A função Math.acosh() retorna o arco cosseno hiperbólico de um número, onde

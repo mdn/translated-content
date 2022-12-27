@@ -119,7 +119,7 @@ slug: Web/HTML/Element/audio
 
 ### 检测音轨添加和移除
 
-你能够通过 {{event("addtrack")}} and {{event("removetrack")}} 事件来检测何时音轨从 `<audio>` 元素中添加和移除了。然而，这些事件并不是直接传递给 `<audio>` 元素自己的。相反，它们是发送给 `<audio>` 元素的{{domxref("HTMLMediaElement")}} 中的音轨列表对象的。这些对象与添加进元素的音轨类型一一对应。
+你能够通过 {{domxref("AudioTrackList/addtrack_event", "addtrack")}} 和 {{domxref("AudioTrackList/removetrack_event", "removetrack")}} 事件来检测何时音轨从 `<audio>` 元素中添加和移除了。然而，这些事件并不是直接传递给 `<audio>` 元素自己的。相反，它们是发送给 `<audio>` 元素的{{domxref("HTMLMediaElement")}} 中的音轨列表对象的。这些对象与添加进元素的音轨类型一一对应。
 
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : 一个 {{domxref("AudioTrackList")}} 包含所有的媒体对象的音轨。你能在为 `addtrack` 事件添加监听，以在新音轨添加进元素时获得通知。
@@ -146,7 +146,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 
 这份代码监听音轨从目标元素中添加删除的事件，并且调用了一个轨道编辑器上的虚拟函数，来从编辑器上的可用音轨列表中注册和移除音轨。
 
-你也可以使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来监听 {{event("addtrack")}} 和 {{event("removetrack")}} 事件。
+你也可以使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来监听 {{domxref("AudioTrackList/addtrack_event", "addtrack")}} 和 {{domxref("AudioTrackList/removetrack_event", "removetrack")}} 事件。
 
 ## 示例
 

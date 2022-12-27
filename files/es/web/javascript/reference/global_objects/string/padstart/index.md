@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/padStart
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 El método **`padStart()`** rellena la cadena actual con una cadena dada (repetida eventualmente) de modo que la cadena resultante alcance una longitud dada. El relleno es aplicado desde el inicio (izquierda) de la cadena actual.

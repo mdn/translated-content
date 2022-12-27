@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/font-variant-alternates
 ---
+
 {{CSSRef}}
 
 ## Resumen

@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-last-child()`** de [CSS](/es/docs/Web/CSS) selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final.

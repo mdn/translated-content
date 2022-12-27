@@ -3,6 +3,7 @@ title: Отладка CSS
 slug: Learn/CSS/Building_blocks/Debugging_CSS
 translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 Порой, при написании CSS, вы будете сталкиваться с проблемой, при которой будет казаться, что CSS не делает того, чего вы ожидаете от него. Возможно, вы считаете, что определённый селектор должен соответствовать элементу, но ничего не происходит, или поле имеет размер, отличный от ожидаемого. Эта статья поможет вам с тем, как отладить CSS проблемы и покажет вам как DevTools (инструменты разработчика), включённые во все современные браузеры, могут помочь разобраться с тем, что происходит.

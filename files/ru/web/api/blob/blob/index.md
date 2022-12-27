@@ -3,6 +3,7 @@ title: Blob()
 slug: Web/API/Blob/Blob
 translation_of: Web/API/Blob/Blob
 ---
+
 {{APIRef("File API")}}
 
 `Конструктор Blob()` возвращает новый объект {{domxref("Blob")}}. Содержимое blob состоит из объединённых значений, переданных в параметре _array_.

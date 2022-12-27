@@ -2,6 +2,7 @@
 title: var
 slug: Web/JavaScript/Reference/Statements/var
 ---
+
 {{jsSidebar("Statements")}}
 
 **`var`**문은 변수를 선언하고, 선택적으로 초기화할 수 있습니다.

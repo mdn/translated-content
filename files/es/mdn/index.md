@@ -7,6 +7,7 @@ tags:
   - MDN Meta
 translation_of: MDN
 ---
+
 {{MDNSidebar}}
 
 El proyecto de documentación de la web de MDN (MDN web docs) es un wiki en el que se documenta la web abierta (estándares web), las tecnologías de Mozilla y otros temas de desarrollo. Todos tienen permiso de añadir y editar contenido. No necesitas ser un programador o saber mucho de tecnología; hay muchas actividades que necesitan llevarse a cabo, tanto simples (por ejemplo: Corregir ortografía, puntuación, etc.) como complejas (documentar las API).

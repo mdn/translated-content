@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 translation_of: Learn/JavaScript/Objects/Object_building_practice
 original_slug: Learn/JavaScript/Objects/Ejercicio_práctico_de_construcción_de_objetos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 En los artículos anteriores se explicó lo fundamental de la teoría de los objetos en JavaScript asi como su sintaxis, para que Usted tenga un punto de partida sólido. En éste artículo, desarrollaremos un ejercicio práctico para ganar experiencia en la programación de objetos en JavaScript, con un resultado divertido y colorido.

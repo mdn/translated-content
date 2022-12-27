@@ -13,6 +13,7 @@ tags:
 translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation
 ---
+
 {{GamesSidebar}}
 
 ## Introducción

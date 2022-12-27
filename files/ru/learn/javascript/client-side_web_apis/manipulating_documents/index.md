@@ -10,6 +10,7 @@ tags:
   - Окно
 translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
 При написании веб-страниц и приложений вам придётся часто каким-либо образом управлять структурой документа. Обычно это делается с помощью Document Object Model (DOM), набора API для управления разметкой HTML и стилями, которая сильно использует объект {{domxref ("Document")}}. В этой статье мы подробно рассмотрим, как использовать DOM и некоторые другие интересные API, которые могут изменить вашу среду интересными способами.

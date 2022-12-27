@@ -4,6 +4,7 @@ slug: Web/API/Pointer_Lock_API
 translation_of: Web/API/Pointer_Lock_API
 original_slug: WebAPI/Pointer_Lock
 ---
+
 **Pointer Lock** (antes llamado Bloqueo del _Mouse_) proporciona métodos de entrada basados ​​en el movimiento del ratón a traves del tiempo (es decir, deltas), no sólo la posición absoluta del cursor del _mouse_. Te da acceso al movimiento puro del _mouse_, bloquea el objetivo de los eventos del _mouse_ a un solo elemento, elimina límites en cuanto a que tan lejos puedes mover el _mouse_ en una sola dirección, y quita el cursor de la vista.
 
 Esta API es útil para aplicaciones que requieren bastantes acciones para controlar los movimientos del _mouse_, rotar objetos y cambiar las entradas. Es especialmente importante para aplicaciones altamente visuales, tales como los que utilizan la perspectiva en primera persona, así como vistas en 3D y modelado.
@@ -203,11 +204,9 @@ Pointer lock can only lock one iframe at a time. If you lock one iframe, you can
 
 While iframes work by default, "sandboxed" iframes block Pointer lock. The ability to avoid this limitation, in the form of the attribute/value combination `<iframe sandbox="allow-pointer-lock">`, is expected to appear in Chrome soon.
 
-## Specifications
+## Especificaciones
 
-| Specification                        | Status                           | Comment                |
-| ------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Pointer Lock')}} | {{Spec2('Pointer Lock')}} | Initial specification. |
+{{Specifications}}
 
 ## Browser compatibility
 

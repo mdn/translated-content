@@ -3,6 +3,7 @@ title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 translation_of: Web/JavaScript/Reference/Operators/yield*
 ---
+
 {{jsSidebar("Operators")}}
 
 **Выражение `yield*` **используется для того, чтобы "передать управление" функцией-генератором другому {{jsxref("Statements/function*", "генератору")}} или итерируемому объекту.

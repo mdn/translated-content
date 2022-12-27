@@ -7,6 +7,7 @@ tags:
   - Web
 translation_of: Web/Manifest/icons
 ---
+
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">

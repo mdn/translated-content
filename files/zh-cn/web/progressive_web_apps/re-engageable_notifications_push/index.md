@@ -77,7 +77,7 @@ registration.pushManager.getSubscription() .then( /* ... */ );
 
 从服务端的角度来看，出于安全的目的，这整个过程必须使用非对称加密技术进行保护：允许任何人用你的应用发送未加密的消息就大有问题了。你可以通过阅读[Web 推送数据加密测试页](https://jrconlin.github.io/WebPushDataTestPage/)里面的详细信息来保护你的服务器。当用户订阅服务时，服务器会储存所有接收到的信息，以便在后续需要的时候能将信息推送出去。
 
-为了能够接收到推送的消息，我们需要在 Service Worker 文件里面监听 {{event("push")}} 事件：
+为了能够接收到推送的消息，我们需要在 Service Worker 文件里面监听 {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} 事件：
 
 ```js
 self.addEventListener('push', function(e) { /* ... */ });
@@ -256,7 +256,7 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-它做的就只是监听 {{event("push")}} 事件，创建 payload 变量，这个变量包含了来自 event.data 的文本（如果 data 是空的，就设置成 "no payload" 字符串），然后一直等到通知推送给用户为止。
+它做的就只是监听 {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} 事件，创建 payload 变量，这个变量包含了来自 event.data 的文本（如果 data 是空的，就设置成 "no payload" 字符串），然后一直等到通知推送给用户为止。
 
 如果你想知道它们具体是怎么处理的，请随意探索 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) 里面剩下的例子。[GitHub 上面提供了完整的源代码](https://github.com/mozilla/serviceworker-cookbook/)，也有大量的示例展示了各种用法，包括 Web 推送、缓存策略、性能、离线运行等等。
 

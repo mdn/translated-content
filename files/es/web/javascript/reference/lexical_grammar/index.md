@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Lexical_grammar
 original_slug: Web/JavaScript/Referencia/Gramatica_lexica
 ---
+
 {{JsSidebar("Más")}}
 
 Esta página describe la gramática léxica de JavaScript. El texto fuente de los scripts de ECMAScript se escanea de izquierda a derecha y se convierte en una secuencia de elementos de entrada que son segmentos, caracteres de control, terminadores de línea, comentarios o {{Glossary("Espacio en blanco")}}. ECMAScript también define ciertas palabras clave y literales y tiene reglas para la inserción automática del punto y coma en las declaraciones finales.

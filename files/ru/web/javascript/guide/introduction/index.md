@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Introduction
 original_slug: Web/JavaScript/Guide/Введение_в_JavaScript
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Values,_variables,_and_literals")}}
 
 Данная глава является введением в JavaScript и рассматривает некоторые его фундаментальные концепции.

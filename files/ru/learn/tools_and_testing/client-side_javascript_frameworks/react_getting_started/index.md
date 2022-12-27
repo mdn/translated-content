@@ -6,6 +6,7 @@ translation_of: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 original_slug: Learn/Tools_and_testing/Фронтенд_JavaScript_фреймворки/React_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 В этой статье мы скажем привет React. Мы узнаем немного подробностей о его происхождении и сценариях использования, настроим базовый набор инструментов на нашем локальном компьютере, а также создадим и поиграем с простым приложением для начинающих, и в процессе узнаем немного о том, как React работает .

@@ -27,7 +27,7 @@ _`Performance` 接口没有继承任何属性。_
 ### 事件处理程序
 
 - {{domxref("Performance.onresourcetimingbufferfull")}}
-  - : 一个回调的 {{domxref("EventTarget")}}，当触发 {{event("resourcetimingbufferfull")}} 事件的时候会被调用。
+  - : 一个回调的 {{domxref("EventTarget")}}，当触发 `resourcetimingbufferfull` 事件的时候会被调用。
 
 ## 方法
 

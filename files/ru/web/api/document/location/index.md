@@ -9,6 +9,7 @@ tags:
   - Свойство
 translation_of: Web/API/Document/location
 ---
+
 {{APIRef("DOM")}}
 
 Доступное только для чтения свойство **`Document.location`** возвращает объект {{domxref("Location")}}, который содержит информацию о URL страницы и предоставляет методы для изменения этого URL и загрузки другого URL.

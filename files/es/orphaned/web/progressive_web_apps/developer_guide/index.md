@@ -17,6 +17,7 @@ tags:
 translation_of: Web/Progressive_web_apps/Developer_guide
 original_slug: Web/Progressive_web_apps/Developer_guide
 ---
+
 In the articles listed here, you'll find guides about every aspect of development specific to the creation of progressive web applications (PWAs). For all other documentation about web development, which generally pertains to PWAs as well, see our primary [web development documentation](/es/docs/Web).
 
 **--->>> Titles below are just for the list; give articles good SEO names and feel free to tweak those and this as needed... <<<---**

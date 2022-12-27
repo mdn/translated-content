@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/seal
 ---
+
 {{JSRef}}
 
 El método **`Object.seal()`** sella un objeto, previniendo que puedan añadirse nuevas propiedades al mismo, y marcando todas las propiedades existentes como no-configurables. Los valores de las propiedades presentes permanecen pudiendo cambiarse en tanto en cuanto dichas propiedades sean de escritura.
@@ -82,11 +83,7 @@ Object.seal(1);
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Observaciones                                         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.8', 'Object.seal')}}     | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.seal', 'Object.seal')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

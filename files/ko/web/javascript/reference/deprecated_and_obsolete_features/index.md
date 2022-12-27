@@ -2,6 +2,7 @@
 title: Deprecated and obsolete features
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
+
 {{JsSidebar("More")}}
 
 본 페이지는 자바스크립트의 제외 예정인(즉, 아직 사용할 수 있지만 제거 계획이 있는) 기능과 제외된(즉, 더 이상 사용할 수 없는) 기능을 나열합니다.

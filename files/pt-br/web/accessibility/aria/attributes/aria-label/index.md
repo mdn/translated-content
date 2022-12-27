@@ -57,9 +57,9 @@ Se você der a seus {{HTMLElement('iframe')}}s um `title`, suas imagens um atrib
 ## API ARIAMixin
 
 - {{domxref("Element.ariaLabel")}}
-  - : A propriedade [`ariaLabel`](/pt-BR/docs/Web/API/Element/ariaLabel), parte da interface {{domxref("Element")}}, reflete o valor do `aria-label ` atributo.
+  - : A propriedade [`ariaLabel`](/pt-BR/docs/Web/API/Element/ariaLabel), parte da interface {{domxref("Element")}}, reflete o valor do `aria-label` atributo.
 - {{domxref("ElementInternals.ariaLabel")}}
-  - : A propriedade [`ariaLabel`](/pt-BR/docs/Web/API/ElementInternals/ariaLabel), parte da interface {{domxref("ElementInternals")}}, reflete o valor do `aria-label ` atributo.
+  - : A propriedade [`ariaLabel`](/pt-BR/docs/Web/API/ElementInternals/ariaLabel), parte da interface {{domxref("ElementInternals")}}, reflete o valor do `aria-label` atributo.
 
 ## Funções associadas
 

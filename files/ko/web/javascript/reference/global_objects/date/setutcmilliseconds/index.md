@@ -2,6 +2,7 @@
 title: Date.prototype.setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 ---
+
 {{JSRef}}
 
 **setUTCMilliseconds()** 메서드는 표준시에 따라 지정된 날짜의 밀리 초를 설정합니다.

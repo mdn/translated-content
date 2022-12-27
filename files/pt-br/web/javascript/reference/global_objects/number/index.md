@@ -2,6 +2,7 @@
 title: Número
 slug: Web/JavaScript/Reference/Global_Objects/Number
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Sumário

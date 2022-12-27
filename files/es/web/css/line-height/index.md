@@ -10,6 +10,7 @@ tags:
   - páginas_a_traducir
 translation_of: Web/CSS/line-height
 ---
+
 ```
 https://developer.mozilla.org/en-US/docs/Web/CSS{{ CSSRef() }}
 /*Keyword value*/

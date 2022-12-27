@@ -2,6 +2,7 @@
 title: Array.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
+
 {{JSRef}}
 
 A propriedade **`length`** representa um inteiro de 32-bit sem sinal, que especifíca o número de elementos em um array.

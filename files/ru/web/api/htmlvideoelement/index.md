@@ -3,6 +3,7 @@ title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
 translation_of: Web/API/HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLVideoElement`** интерфейс предоставляет специальные свойства и методы для манипулирования видео объектов. Он также наследует свойства и методы {{domxref("HTMLMediaElement")}} и {{domxref("HTMLElement")}}.

@@ -7,6 +7,7 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 ---
+
 ## Mensaje
 
 ```

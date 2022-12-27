@@ -7,6 +7,7 @@ tags:
   - Средний
 translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 JavaScript предоставляет три оператора сравнения величин:

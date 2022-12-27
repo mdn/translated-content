@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере
 ---
+
 {{CSSRef}}
 
 Одной из причин быстрого роста популярности flexbox среди веб-разработчиков было то, что впервые были предоставлены адекватные возможности выравнивания. Он предоставил адекватное вертикальное выравнивание, и стало возможным, наконец, легко поместить элемент в центр по вертикали. В этом руководстве детально рассматривается, как выравнивание и распределение работают во Flexbox.

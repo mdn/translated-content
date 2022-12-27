@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
 
 Has avanzado mucho en este módulo, debes sentirte orgulloso de haber llegado hasta el final. El último paso antes de terminar es intentar el examen del módulo — que incluye completar varios ejercicios para crear el último diseño — una tarjeta de presentación/de jugador/perfil de redes sociales.

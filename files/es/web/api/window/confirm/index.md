@@ -3,6 +3,7 @@ title: Window.confirm()
 slug: Web/API/Window/confirm
 translation_of: Web/API/Window/confirm
 ---
+
 {{ApiRef("Window")}}
 
 El método **`Window.confirm()`** muestra una ventana de diálogo con un mensaje opcional y dos botones, Aceptar y Cancelar.
@@ -38,11 +39,9 @@ A partir de la versión 46.0 de Chrome este método es bloqueado dentro de un {{
 
 El argumento es opcional y no requerido por la especificación.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                           | Estado                                       | Comentarios         |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('HTML5 Web application', '#dom-confirm', 'confirm()')}} | {{Spec2('HTML5 Web application')}} | Definición inicial. |
+{{Specifications}}
 
 ## Ver también
 

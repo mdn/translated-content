@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.get
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
+
 {{JSRef}}
 
 **`handler.get()`** 메서드는 속성 값을 가져오기 위한 트랩입니다.

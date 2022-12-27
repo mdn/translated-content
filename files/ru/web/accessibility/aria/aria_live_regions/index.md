@@ -3,6 +3,7 @@ title: ARIA Live Regions
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
 translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 ---
+
 ## Introduction
 
 In the past, a web page change could only be spoken in entirety which often annoyed a user, or by speaking very little to nothing, making some or all information inaccessible. Until recently, screen readers have not been able to improve this because no standardized markup existed to alert the screen reader to a change. ARIA live regions fill this gap and provide suggestions to screen readers regarding whether and how to interrupt users with a change.

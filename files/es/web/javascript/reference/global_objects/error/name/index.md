@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/name
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/name
 ---
+
 {{JSRef}}
 
 La propiedad **`name`** representa un nombre para el tipo de error. El valor inicial es "Error".

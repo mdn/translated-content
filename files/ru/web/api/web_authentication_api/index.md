@@ -3,6 +3,7 @@ title: Web Authentication API
 slug: Web/API/Web_Authentication_API
 translation_of: Web/API/Web_Authentication_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
 API Web Authentication - расширение [Credential Management API](/ru/docs/Web/API/Credential_Management_API), добавляющее аутентификацию с использованием криптографии с открытым ключом, вход без пароля и/или надёжный второй фактор, не требующий SMS.

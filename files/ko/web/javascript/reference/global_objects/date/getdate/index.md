@@ -2,6 +2,7 @@
 title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 ---
+
 {{JSRef}}
 
 **`getDate()`** 메서드는 주어진 날짜의 현지 시간 기준 일을 반환합니다.

@@ -2,6 +2,7 @@
 title: class
 slug: Web/JavaScript/Reference/Statements/class
 ---
+
 {{jsSidebar("Statements")}}A **declaração class** cria uma nova classe com dado **nome** usando a herança do protótipo base.
 
 Você também pode definir uma classe usando {{jsxref("Operators/class", "class expression", "", 1)}}.

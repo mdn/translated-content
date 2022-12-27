@@ -3,6 +3,7 @@ title: HTMLDivElement
 slug: Web/API/HTMLDivElement
 translation_of: Web/API/HTMLDivElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Интерфейс **HTMLDivElement** предоставляет специальные свойства (не входящее в интерфейс {{domxref("HTMLElement")}} ) для манипулирования DIV элементов.

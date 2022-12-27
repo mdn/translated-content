@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image
 ---
+
 {{CSSRef("CSS Borders")}}
 
 ## Resumen

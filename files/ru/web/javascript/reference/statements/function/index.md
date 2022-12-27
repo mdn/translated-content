@@ -6,6 +6,7 @@ tags:
   - Функция
 translation_of: Web/JavaScript/Reference/Statements/function
 ---
+
 {{jsSidebar("Statements")}}
 
 **Объявление функции** определяет функцию с указанными аргументами.

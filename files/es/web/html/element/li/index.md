@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/li
 original_slug: Web/HTML/Elemento/li
 ---
+
 ### Definición
 
 - El elemento `li` del ingles _item list_ o _elemento de lista_ declara cada uno de los elementos de una lista.

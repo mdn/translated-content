@@ -7,6 +7,7 @@ tags:
 translation_of: MDN/Kuma
 original_slug: MDN/Kuma
 ---
+
 {{MDNSidebar}}{{IncludeSubnav("/ru/docs/MDN")}}
 
 Kuma - код на Django, который обслуживает Mozilla Developer Network.

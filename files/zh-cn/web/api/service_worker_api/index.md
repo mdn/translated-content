@@ -86,7 +86,7 @@ Service workers 也可以用来做这些事情：
 - {{domxref("ExtendableEvent") }} {{Experimental_Inline}}
   - : 扩展被分发到{{domxref("ServiceWorkerGlobalScope")}}的`install 和 activate`事件时序，作为 service worker 生命周期的一部分。这会确保任何功能型事件（如{{domxref("FetchEvent")}}）不被分发到{{domxref("ServiceWorker")}}，直到它更新了数据库架构、删除过期缓存项等等以后。
 - {{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}
-  - : The event object of a {{event("message_(ServiceWorker)","message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
+  - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 - {{domxref("FetchEvent") }}{{Experimental_Inline}}
   - : 传递给{{domxref("ServiceWorkerGlobalScope.onfetch")}}处理函数的参数，FetchEvent 代表一个在{{domxref("ServiceWorker")}}的{{domxref("ServiceWorkerGlobalScope")}}中分发的请求动作。它包含关于请求和响应的结果信息，并且提供{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}方法，这个方法允许我们提供任意的响应返回到控制页面。
 - {{domxref("InstallEvent") }}{{Experimental_Inline}}

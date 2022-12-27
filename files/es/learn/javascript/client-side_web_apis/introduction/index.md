@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 original_slug: Learn/JavaScript/Client-side_web_APIs/Introducción
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
 En primer lugar empezaremos echando un vistazo a las APIS desde un nivel superior — ¿qué son, cómo funcionan, cómo usarlas en el código, y cómo están estructuradas?. También echaremos un vistazo a cuáles son los principales tipos de APIs, y para qué se usan.

@@ -10,6 +10,7 @@ tags:
   - Гайды
 translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 [Intersection Observer API](/ru/docs/Web/API/Intersection_Observer_API) позволяет в асинхронном режиме уведомлять приложение о том, что какой-то интересующий нас элемент в той или иной степени перекрыл родительский или другой элемент, в том числе {{domxref("Document")}}. В этой статье мы построим пример блога, в котором в DOM динамически встраиваются рекламные блоки. Затем, с помощью Intersection Observer API, мы выясним, сколько времени показывается каждая отдельная реклама пользователю. Когда такая реклама показывается дольше, чем одну минуту, мы заменяем её на новую.

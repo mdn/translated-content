@@ -4,6 +4,7 @@ slug: Web/API/Window/error_event
 translation_of: Web/API/GlobalEventHandlers/onerror
 original_slug: Web/API/GlobalEventHandlers/onerror
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 Un manejador de eventos para errores en scripts en tiempo de ejecución.

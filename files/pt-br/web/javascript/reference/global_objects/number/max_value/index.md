@@ -2,6 +2,7 @@
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
+
 {{JSRef}}
 
 A propriedade **`Number.MAX_VALUE`** representa o maior valor numérico representável em JavaScript.

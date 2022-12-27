@@ -3,6 +3,7 @@ title: background-origin
 slug: Web/CSS/background-origin
 translation_of: Web/CSS/background-origin
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`background-origin`** устанавливает _область расположения фона_. Другими словами, оно устанавливает исходную позицию изображения, установленную с помощью свойства {{cssxref("background-image")}}.

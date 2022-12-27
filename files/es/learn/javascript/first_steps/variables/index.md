@@ -14,6 +14,7 @@ tags:
   - strings
 translation_of: Learn/JavaScript/First_steps/Variables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 Después de leer los últimos artículos, deberías saber qué es JavaScript, qué puede hacer por ti, cómo usarlo junto con otras tecnologías web y cómo se ven sus características principales desde un alto nivel. En este artículo, llegaremos a los conceptos básicos reales, y veremos cómo trabajar con los bloques de construcción más básicos de JavaScript — Variables.

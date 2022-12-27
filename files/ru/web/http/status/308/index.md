@@ -3,6 +3,7 @@ title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
 translation_of: Web/HTTP/Status/308
 ---
+
 {{HTTPSidebar}}
 
 Код ответа на статус перенаправления "HTTP **`308 Permanent Redirect"`** указывает, что запрошенный ресурс был окончательно перемещён в URL-адрес, указанный в {{HTTPHeader("Location")}}. Браузер перенаправляется на эту страницу, а поисковые системы обновляют свои ссылки на ресурс (в SEO-speak говорится, что link-juice отправляется на новый URL-адрес).

@@ -4,6 +4,7 @@ slug: Web/HTML/Element/form
 translation_of: Web/HTML/Element/form
 original_slug: Web/HTML/Elemento/form
 ---
+
 ## Resumen
 
 El elemento HTML form (`<form>`) representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web.
@@ -22,7 +23,7 @@ Es posible usar las pseudo-clasess de CSS [`:valid`](/es/CSS/%3Avalid) e [`:inva
 
 Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/en/HTML/Global_attributes)
 
-- {{ htmlattrdef("accept") }}  {{ obsolete_inline() }}
+- {{ htmlattrdef("accept") }}  {{deprecated_inline}}
 
   - : Una lista separada por comas de los tipos de contenido que el servidor acepta.
 

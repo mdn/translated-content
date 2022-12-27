@@ -3,6 +3,7 @@ title: Mensajes HTTP
 slug: Web/HTTP/Messages
 translation_of: Web/HTTP/Messages
 ---
+
 {{HTTPSidebar}}
 
 Los mensajes HTTP, son los medios por los cuales se intercambian datos entre servidores y clientes. Hay dos tipos de mensajes: _peticiones_, enviadas por el cliente al servidor, para pedir el inicio de una acción; y _respuestas_, que son la respuesta del servidor.

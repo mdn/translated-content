@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/API/Location
 ---
+
 {{APIRef("HTML DOM")}}
 
 La interface **`Location`** representa la ubicación (URL) del objeto al que esta vinculado. Los cambios hechos en ella son reflejados en el objeto al cual está relacionado. Ambas interfaces, {{domxref("Document")}} y {{domxref("Window")}} tienen una interface `Location` asignada, accessible desde {{domxref("Document.location")}} y {{domxref("Window.location")}} respectivamente.

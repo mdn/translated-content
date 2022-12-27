@@ -9,6 +9,7 @@ tags:
   - Файлы
 translation_of: Web/API/FileReader
 ---
+
 {{ APIRef("File API") }}
 
 ## Общая информация

@@ -11,6 +11,7 @@ tags:
   - Экспериментальная функция
 translation_of: Web/API/CacheStorage/match
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 Метод **`match()`** интерфейса {{domxref("CacheStorage")}} (доступный через глобальное свойство `caches`) проверяет является ли данный {{domxref("Request")}} или строка url ключом для какого-либо хранимого {{domxref("Response")}}. Метод возвращает {{jsxref("Promise")}} если {{domxref("Response")}} найден, или `undefined` если нет ни одного совпадения.

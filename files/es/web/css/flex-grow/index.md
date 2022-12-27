@@ -7,6 +7,7 @@ tags:
   - Propiedades CSS
 translation_of: Web/CSS/flex-grow
 ---
+
 {{CSSRef}}
 
 ## Resumen

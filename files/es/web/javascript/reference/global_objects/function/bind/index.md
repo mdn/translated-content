@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/bind
 ---
+
 {{JSRef("Global_Objects", "Function")}}
 
 ## Resumen
@@ -216,10 +217,7 @@ Por favor checa <https://github.com/Raynos/function-bind> para ver una solución
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                   | Comentarios                                           |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}                 | {{Spec2('ES5.1')}} | Definición inicial. Implementado en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-function.prototype.bind', 'Function.prototype.bind')}} | {{Spec2('ES6')}}     |                                                       |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

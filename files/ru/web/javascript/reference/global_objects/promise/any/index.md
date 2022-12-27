@@ -3,6 +3,7 @@ title: Promise.any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 ---
+
 {{JSRef}}
 
 `Метод Promise.any()` принимает итерируемый объект содержащий объекты промисов {{JSxRef("Promise")}}. Как только один из промисов (`Promise)` выполнится успешно (`fulfill`), метод возвратит единственный объект `Promise` со значением выполненного промиса. Если ни один из промисов не завершится успешно (если все промисы завершатся с ошибкой, т.е. `rejected`), тогда возвращённый объект Promise будет отклонён (`rejected`) с одним из значений: массив содержащий причины ошибки (отклонения), или {{JSxRef("AggregateError")}} — подкласс {{JSxRef("Error")}}, который объединяет выброшенные ошибки вместе. По существу, метод `Promise.any()` является противоположностью для {{JSxRef("Promise.all()")}}.

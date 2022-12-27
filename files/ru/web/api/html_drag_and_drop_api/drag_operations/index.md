@@ -4,6 +4,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 Ниже описаны шаги, которые происходят при drag and drop операции.

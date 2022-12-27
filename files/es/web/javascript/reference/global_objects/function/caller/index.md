@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/caller
 ---
+
 {{JSRef("Global_Objects", "Function")}} {{non-standard_header}}
 
 ## Resumen

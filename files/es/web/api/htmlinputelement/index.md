@@ -14,6 +14,7 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La interface **`HTMLInputElement`** proporciona propiedades y métodos especiales para manipular las opciones, estructura y presentacion de los elementos {{HtmlElement("input")}}.
@@ -164,9 +165,9 @@ Propiedades aun no categorizadas
 
 <!---->
 
-- {{domxref("HTMLInputElement.align")}} {{obsolete_inline}}
+- {{domxref("HTMLInputElement.align")}} {{deprecated_inline}}
   - : `string:` **represents** the alignment of the element. _Use CSS instead._
-- {{domxref("HTMLInputElement.useMap")}} {{ obsolete_inline }}
+- {{domxref("HTMLInputElement.useMap")}} {{deprecated_inline}}
   - : `string:` **represents** a client-side image map.
 
 ## Métodos
@@ -197,7 +198,7 @@ Propiedades aun no categorizadas
 - `setCustomValidity()`
   - : Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
 - `checkValidity()`
-  - : Returns a {{jsxref("Boolean")}} that is `false` if the element is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires an {{event("invalid")}} event at the element. It returns `true` if the element is not a candidate for constraint validation, or if it satisfies its constraints.
+  - : Returns a {{jsxref("Boolean")}} that is `false` if the element is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires an [`invalid`](/es/docs/Web/Reference/Events/invalid) event at the element. It returns `true` if the element is not a candidate for constraint validation, or if it satisfies its constraints.
 
 <!---->
 

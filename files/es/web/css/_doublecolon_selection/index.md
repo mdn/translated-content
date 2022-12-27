@@ -3,6 +3,7 @@ title: '::selection'
 slug: Web/CSS/::selection
 translation_of: Web/CSS/::selection
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}

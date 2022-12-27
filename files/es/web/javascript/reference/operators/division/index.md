@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Division
 original_slug: Web/JavaScript/Referencia/Operadores/Division
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de división (`/`) produce el cociente de sus operandos donde el operando izquierdo es el dividendo y el operando derecho es el divisor.

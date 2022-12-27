@@ -9,6 +9,7 @@ tags:
   - Tipo de Dato CSS
 translation_of: Web/CSS/blend-mode
 ---
+
 {{CSSRef}}
 
 ## Resumen

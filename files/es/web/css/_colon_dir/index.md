@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/:dir
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:dir` de [CSS](/es/docs/Web/CSS) coincide con los elementos en función de la direccionalidad del texto contenido en ellos.

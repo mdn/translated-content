@@ -3,6 +3,7 @@ title: Node.removeChild()
 slug: Web/API/Node/removeChild
 translation_of: Web/API/Node/removeChild
 ---
+
 {{APIRef ( "DOM")}}
 
 El método **`Node.removeChild()`** elimina un nodo hijo del DOM y puede devolver el nodo eliminado.

@@ -15,6 +15,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope
 original_slug: Web/API/WindowOrWorkerGlobalScope
 ---
+
 {{ApiRef()}}
 
 El mixin **`WindowOrWorkerGlobalScope`** describe diversas características comunes a las interfaces {{domxref("Window")}} y {{domxref("WorkerGlobalScope")}}. Cada una de estas interfaces pueden, por supuesto, añadir más funcionalidades sobre las listadas a continuación.

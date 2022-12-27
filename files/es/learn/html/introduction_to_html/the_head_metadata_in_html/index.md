@@ -317,7 +317,7 @@ También puedes establecer que las subsecciones de tu documento se reconozcan en
 <p>Ejemplo Japonés: <span lang="ja">ご飯が熱い。</span>.</p>
 ```
 
-El estándar {{interwiki("wikipedia", "ISO_639-1")}} define estos códigos. Puedes encontrar más información sobre ello en [Etiquetas de idioma en HTML y XML](https://www.w3.org/International/articles/language-tags/).
+El estándar [ISO_639-1](https://es.wikipedia.org/wiki/ISO_639-1) define estos códigos. Puedes encontrar más información sobre ello en [Etiquetas de idioma en HTML y XML](https://www.w3.org/International/articles/language-tags/).
 
 ## Resumen
 

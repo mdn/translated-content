@@ -11,6 +11,7 @@ tags:
   - Web
 translation_of: Web/CSS/background-clip
 ---
+
 {{ CSSRef() }}
 
 ## Resumen

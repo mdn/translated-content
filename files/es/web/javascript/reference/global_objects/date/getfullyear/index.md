@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getFullYear
 ---
+
 {{JSRef}}
 
 El método **`getFullYear()`** devuelve el año de la fecha indicada acorde a la hora local.

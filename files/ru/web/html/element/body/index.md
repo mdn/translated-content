@@ -13,6 +13,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/body
 ---
+
 {{HTMLSidebar}}
 
 **HTML-элемент `<body>`** представляет собой контент (содержимое) документа HTML. В документе может быть только один элемент `<body>`.

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 original_slug: Web/JavaScript/Reference/Operators/Условный_оператор
 ---
+
 {{jsSidebar("Operators")}}
 
 **Условный (тернарный) оператор** - единственный оператор в JavaScript, принимающий три операнда: условие, за которым следует знак вопроса (?), затем выражение, которое выполняется, если условие истинно, сопровождается двоеточием (:), и, наконец, выражение, которое выполняется, если условие ложно. Он часто используется в качестве укороченного варианта условного оператора [`if`](/ru/docs/Web/JavaScript/Reference/Statements/if...else).

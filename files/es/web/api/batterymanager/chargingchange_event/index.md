@@ -12,11 +12,12 @@ translation_of: Web/API/BatteryManager/onchargingchange
 original_slug: Web/API/BatteryManager/onchargingchange
 browser-compat: api.BatteryManager.onchargingchange
 ---
+
 {{deprecated_header}}
 
 {{APIRef("Battery API")}}
 
-Especifica un evento que escucha para recibir eventos {{event("chargingchange")}}. Estos eventos se producen cuando se actualiza el estado de la batería {{domxref("BatteryManager.charging", "charging")}}.
+Especifica un evento que escucha para recibir eventos [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange). Estos eventos se producen cuando se actualiza el estado de la batería {{domxref("BatteryManager.charging", "charging")}}.
 
 ## Sintaxis
 
@@ -24,7 +25,7 @@ Especifica un evento que escucha para recibir eventos {{event("chargingchange")}
 battery.onchargingchange = funcRef
 ```
 
-Donde `battery` es un objeto {{domxref("BatteryManager")}}, y `funcRef` es una función para llamar cuando se produce el evento {{event("chargingchange")}}.
+Donde `battery` es un objeto {{domxref("BatteryManager")}}, y `funcRef` es una función para llamar cuando se produce el evento [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange).
 
 ## Ejemplo
 

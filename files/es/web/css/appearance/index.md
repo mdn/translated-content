@@ -7,6 +7,7 @@ tags:
   - No-estándar
 translation_of: Web/CSS/appearance
 ---
+
 {{non-standard_header}}{{CSSRef}}
 
 La propiedad CSS `-moz-appearance` se utiliza en Gecko (Firefox) para visualizar un elemento utilizando una plataforma nativa basada en el estilo del tema del sistema operativo.

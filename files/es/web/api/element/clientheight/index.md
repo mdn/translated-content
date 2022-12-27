@@ -5,6 +5,7 @@ tags:
   - Propiedad
 translation_of: Web/API/Element/clientHeight
 ---
+
 {{ APIRef }}
 
 La propiedad de sólo lectura `Element.clientHeight` devuelve la altura de un elemento en píxeles, incluyendo el padding pero no las barras horizontales, el borde o el margen.

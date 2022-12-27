@@ -8,6 +8,7 @@ tags:
   - Notificaciones
 translation_of: Web/API/Notification/body
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propiedad **`body`** de solo lectura de la interfaz

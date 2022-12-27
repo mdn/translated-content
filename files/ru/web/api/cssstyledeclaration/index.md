@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/CSSStyleDeclaration
 ---
+
 {{ APIRef("CSSOM") }}
 
 Интерфейс **`CSSStyleDeclaration`** представляет объект, являющийся блоком объявления CSS, и предоставляет информацию о стиле и различные связанные со стилем методы и свойства.

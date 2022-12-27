@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Conditional_Rules
 original_slug: Web/CSS/CSS_Reglas_Condicionales
 ---
+
 {{CSSRef}}
 
 Las **Reglas Condicionales** (At-rules) es un módulo de CSS que permite definir un conjunto de reglas que solo aplicarán con base en las capacidades del procesador o del documento al cual la hoja de estilos está siendo aplicada.

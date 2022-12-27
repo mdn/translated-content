@@ -11,6 +11,7 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLFormElement/reset
 ---
+
 {{APIRef("HTML DOM")}}
 
 El método **`HTMLFormElement.reset()`** restaura los elementos de un formulario a sus valores por defecto. Este método hace lo mismo que haciendo clic en el botón de restauración.
@@ -31,9 +32,7 @@ document.getElementById('myform').reset();
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#dom-form-reset', 'HTMLFormElement: reset')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

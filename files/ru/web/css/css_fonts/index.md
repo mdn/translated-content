@@ -3,6 +3,7 @@ title: CSS Fonts
 slug: Web/CSS/CSS_Fonts
 translation_of: Web/CSS/CSS_Fonts
 ---
+
 {{CSSRef}}
 
 **CSS Fonts** - модуль в CSS, который определяет свойства связанные со шрифтами и как шрифтовые ресурсы загружаются. Модуль позволяет вам задать стиль шрифта, вроде font-family, font-size и font-weight, lineheight и варианты отображения знаков, когда для одного доступны сразу несколько

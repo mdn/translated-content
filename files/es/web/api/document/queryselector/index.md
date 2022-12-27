@@ -11,6 +11,7 @@ tags:
   - metodo
 translation_of: Web/API/Document/querySelector
 ---
+
 {{ ApiRef("DOM") }}Devuelve el primer elemento del documento (utilizando un [recorrido primero en profundidad pre ordenado](http://en.wikipedia.org/wiki/Tree_traversal#Pre-order_2) de los nodos del documento) que coincida con el grupo especificado de selectores.
 
 ## Sintaxis

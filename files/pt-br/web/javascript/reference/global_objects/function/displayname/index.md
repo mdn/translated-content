@@ -2,6 +2,7 @@
 title: Function.displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 A propriedade **`function.displayName`** retorna o nome de exibição da função.

@@ -8,6 +8,7 @@ page-type: web-api-global-function
 l10n:
   sourceCommit: 0717d1c0a7528b2dd44d065fe90d860e3bdc2e6a
 ---
+
 {{APIRef("HTML DOM")}}
 
 El método **`setInterval()`** , ofrecido en las interfaces {{domxref("Window")}} y {{domxref("Worker")}} , llama a una función o ejecuta un fragmento de código de forma reiterada, con un retardo de tiempo fijo entre cada llamada.

@@ -2,6 +2,7 @@
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
+
 {{JSRef}}
 
 A função **`Math.sign()`** retorna o sinal de um número, indicando se o número é positivo, negativo ou zero.

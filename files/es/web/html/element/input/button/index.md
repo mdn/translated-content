@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Element/input/button
 original_slug: Web/HTML/Elemento/input/Botón
 ---
+
 {{HTMLSidebar}}
 
 El elemento HTML **`<input type="button">`** es una versión específica del elemento **`<input>`**`,` que se usa para crear un botón en el que se puede hacer click sin ningún valor por defecto, es decir, **no tiene un comportamiento predeterminado** como por ejemplo **`<input type="reset">`** . En HTML5 ha sido sustituido por el elemento **[\<button>](/es/docs/Web/HTML/Element/button)**.

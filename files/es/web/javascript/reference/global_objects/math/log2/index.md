@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/log2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/log2
 ---
+
 {{JSRef}}
 
 La función **`Math.log2()`** retorna el logaritmo base 2 de un número, esto es
@@ -58,12 +59,9 @@ Math.log2 = Math.log2 || function(x) {
 };
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                            | Status                       | Comment             |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.log2', 'Math.log2')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-math.log2', 'Math.log2')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Browser compatibility
 

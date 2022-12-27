@@ -3,6 +3,7 @@ title: d
 slug: Web/SVG/Attribute/d
 translation_of: Web/SVG/Attribute/d
 ---
+
 {{SVGRef}}
 
 Атрибут **`d`** предоставляет определение пути для рисования.

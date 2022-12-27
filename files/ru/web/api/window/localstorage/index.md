@@ -13,6 +13,7 @@ tags:
   - localStorage
 translation_of: Web/API/Window/localStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
 Свойство **`localStorage`** позволяет получить доступ к {{domxref("Storage")}} объекту. `localStorage` аналогично свойству [`sessionStorage`](/en-US/docs/Web/API/Window.sessionStorage). Разница только в том, что свойство `sessionStorage` хранит данные в течение сеанса (до закрытия браузера), в отличие от данных, находящихся в свойстве `localStorage`, которые не имеют ограничений по времени хранения и могут быть удалены только с помощью JavaScript.

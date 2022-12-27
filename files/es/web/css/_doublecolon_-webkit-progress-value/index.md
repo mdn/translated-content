@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/::-webkit-progress-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

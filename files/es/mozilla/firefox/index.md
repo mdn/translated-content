@@ -7,6 +7,7 @@ tags:
   - Página de Llegada
 translation_of: Mozilla/Firefox
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox](https://www.mozilla.org/firefox/) es el popular navegador Web de Mozilla, disponible para múltiples plataformas incluyendo Windows, OS X, y Linux en las máquinas de escritorio así como en los dispositivos móviles basados en Android e iOS. Su amplia compatibilidad, su adaptación a las más recientes tecnologías Web y poderosas herramientas de desarrollo, hacen de Firefox la elección por excelencia para desarrolladores Web y también para usuarios finales.

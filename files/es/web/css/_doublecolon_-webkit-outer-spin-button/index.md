@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/::-webkit-outer-spin-button
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

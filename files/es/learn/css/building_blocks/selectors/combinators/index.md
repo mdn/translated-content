@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Combinators
 translation_of: Learn/CSS/Building_blocks/Selectors/Combinators
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Combinadores
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
 Los últimos selectores que veremos son los llamados selectores de combinación. Se llaman así porqué combinan otros selectores de manera que proporciona una relación útil entre ellos y la ubicación del contenido en el documento.

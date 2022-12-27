@@ -12,6 +12,7 @@ tags:
 translation_of: MDN/Structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
 ---
+
 {{MDNSidebar}}
 
 MDN tiene un formato estándar para tablas de compatibilidad para nuestra documentación web abierta; es decir, documentación de tecnologías como DOM, HTML, CSS, JavaScript, SVG, etc., que se comparte en todos los navegadores. Este artículo es una guía de "introducción" sobre cómo agregar y mantener la base de datos a partir de la cual se generan las tablas de compatibilidad, además de cómo integrar las tablas en artículos.

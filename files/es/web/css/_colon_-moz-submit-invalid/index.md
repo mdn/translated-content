@@ -8,6 +8,7 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/:-moz-submit-invalid
 ---
+
 {{Non-standard_header}}{{ CSSRef() }}
 
 ## Resumen

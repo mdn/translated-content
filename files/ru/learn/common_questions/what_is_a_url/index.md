@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Common_questions/What_is_a_URL
 original_slug: Learn/Understanding_URLs
 ---
+
 Данная статья описывает Единый локатор ресурсов или Uniform Resource Locators (URLs), объясняет, что это такое, и описывает его структуру.
 
 | Предварительно: | Вам нужно узнать [как работает интернет](/ru/docs/Learn/How_the_Internet_works), [что такое Веб сервер](/ru/docs/Learn/What_is_a_Web_server) and [что лежит в основе веб ссылок](/ru/docs/Learn/Understanding_links_on_the_web). |

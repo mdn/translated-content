@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Element
 original_slug: Web/HTML/Elemento
 ---
+
 {{HTMLSidebar("Elements")}}
 
 Esta página lista todos los {{Glossary("Element","elementos")}} {{Glossary("HTML")}}. Están agrupados por funciones para ayudarte a encontrar lo que tienes en mente con facilidad. Aunque esta guía está escrita para aquellos que son nuevos escribiendo código, se pretende que sea una referencia útil para cualquiera.

@@ -9,13 +9,14 @@ tags:
   - navegación
 translation_of: Glossary/Apple_Safari
 ---
+
 [Safari](http://www.apple.com/safari/) es un {{Glossary("Browser","navegador web")}} desarrollado por Apple y ligado a Mac OS X y iOS. Está basado en el motor de código abierto [WebKit](http://www.webkit.org/).
 
 ## Saber más
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Safari (web browser)", "Safari")}} en Wikipedia
+- [Safari](https://es.wikipedia.org/wiki/Safari_(web_browser)) en Wikipedia
 - [Safari en apple.com](http://www.apple.com/safari/)
 
 ### Información técnica

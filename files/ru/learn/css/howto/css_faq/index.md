@@ -13,25 +13,30 @@ original_slug: Web/CSS/Common_CSS_Questions
 - _Индивидуальный_: его также называют backwards-compatibility mode, даёт возможность устаревшим страницам отображаться так, как планировал автор, следуя уже не стандартным правилам отображения, которые использовались ещё старыми браузерами. Документы с неполной, некорректной или отсутствующий `DOCTYPE` декларацией или с тем видом `DOCTYPE`, который использовался до 2001 года, будет отображён в индивидуальном режиме.
 - _Стандартный_: в этом режиме браузер старается строго следовать стандартам W3C. Ожидается, что современные HTML страницы разработаны для браузеров, следуемых стандартам, и в результате, страницы с современным `DOCTYPE` отображаются уже в стандартом режиме.
 
-Gecko-based browsers, have a third _[Almost Standards Mode](/ru/docs/Gecko's_"Almost*Standards"\_Mode "Gecko's*\"Almost*Standards\"\_Mode")* that has only a few minor quirks.
+Gecko-based browsers, have a third _[Almost Standards Mode](/ru/docs/Mozilla/Gecko_Almost_Standards_Mode))_ that has only a few minor quirks.
 
-This is a list of the most commonly used `DOCTYPE` declarations that will trigger Standards or Almost Standards mode:
+The standard `DOCTYPE` declaration that will trigger standards mode is:
 
+```html
+<!DOCTYPE html>
 ```
-<!DOCTYPE html> /* This is the HTML5 doctype. Given that each modern browser uses an HTML5
-                   parser, this is the recommended doctype */
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+```
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+```
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 ## Why doesn't my CSS, which is valid, render at all?

@@ -2,6 +2,7 @@
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
+
 {{JSRef}}
 
 O método estático **`Reflect.apply()`** chama uma função alvo com os argumentos especificados.

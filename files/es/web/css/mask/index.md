@@ -10,6 +10,7 @@ translation_of: Web/CSS/mask
 translation_of_original: Web/CSS/-webkit-mask
 original_slug: Web/CSS/-webkit-mask
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

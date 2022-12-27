@@ -18,14 +18,17 @@ _This interface also inherits properties from its parent interface, {{domxref("E
 - {{domxref("VideoTrackList.selectedIndex", "selectedIndex")}} {{ReadOnlyInline}}
   - : The index of the currently selected track, if any, or `−1` otherwise.
 
-## Event handlers
+## 事件
 
-- {{domxref("VideoTrackList.onaddtrack", "onaddtrack")}}
-  - : An event handler to be called when the {{event("addtrack")}} event is fired, indicating that a new video track has been added to the media element.
-- {{domxref("VideoTrackList.onchange", "onchange")}}
-  - : An event handler to be called when the [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) event occurs — that is, when the value of the {{domxref("VideoTrack.selected", "selected")}} property for a track has changed, due to the track being made active or inactive.
-- {{domxref("VideoTrackList.onremovetrack", "onremovetrack")}}
-  - : An event handler to call when the {{event("removetrack")}} event is sent, indicating that a video track has been removed from the media element.
+- {{domxref("VideoTrackList/addtrack_event", "addtrack")}}
+  - : Fired when a new video track has been added to the media element.
+    Also available via the `onaddtrack` property.
+- {{domxref("VideoTrackList.change_event", "change")}}
+  - : Fired when a video track has been made active or inactive.
+    Also available via the `onchange` property.
+- {{domxref("VideoTrackList/removetrack_event", "removetrack")}}
+  - : Fired when a new video track has been removed from the media element.
+    Also available via the `onremovetrack` property.
 
 ## Methods
 
@@ -48,9 +51,9 @@ _This interface also inherits methods from its parent interface, {{domxref("Even
 
 ## Usage notes
 
-In addition to being able to obtain direct access to the video tracks present on a media element, `VideoTrackList` lets you set event handlers on the {{event("addtrack")}} and {{event("removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream. See {{domxref("VideoTrackList.onaddtrack", "onaddtrack")}} and {{domxref("VideoTrackList.onremovetrack", "onremovetrack")}} for details and examples.
+In addition to being able to obtain direct access to the video tracks present on a media element, `VideoTrackList` lets you set event handlers on the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{domxref("VideoTrackList/removetrack_event", "removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream.
 
-## Examples
+## 示例
 
 ### Getting a media element's video track list
 
@@ -62,7 +65,7 @@ var videoTracks = document.querySelector("video").videoTracks;
 
 ### Monitoring track count changes
 
-In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{event("addtrack")}} and {{event("removetrack")}} events are set up.
+In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{domxref("VideoTrackList/removetrack_event", "removetrack")}} events are set up.
 
 ```js
 videoTracks.onaddtrack = updateTrackCount;
@@ -74,10 +77,10 @@ function updateTrackCount(event) {
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

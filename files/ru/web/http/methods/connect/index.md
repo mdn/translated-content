@@ -3,6 +3,7 @@ title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
 translation_of: Web/HTTP/Methods/CONNECT
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `CONNECT` method** запускает двустороннюю связь с запрошенным ресурсом. Метод можно использовать для открытия туннеля.

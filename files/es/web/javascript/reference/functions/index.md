@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions
 original_slug: Web/JavaScript/Referencia/Funciones
 ---
+
 {{jsSidebar("Functions")}}
 
 En términos generales, una función es un "subprograma" que puede ser _llamado_ por código externo (o interno en caso de recursión) a la función. Al igual que el programa en sí mismo, una función se compone de una secuencia de declaraciones, que conforman el llamado _cuerpo de la función_. Se pueden pasar valores a una función, y la función puede _devolver_ un valor.

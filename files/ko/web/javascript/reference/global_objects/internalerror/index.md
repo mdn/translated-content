@@ -2,6 +2,7 @@
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`InternalError`** 객체는 JavaScript 엔진 내부에서 발생한 오류를 나타냅니다.

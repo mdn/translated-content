@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTTP/Headers/Content-Length
 original_slug: Web/HTTP/Заголовки/Content-Length
 ---
+
 {{HTTPSidebar}}
 
 Заголовок **`Content-Length`** указывает размер отправленного получателю тела объекта в байтах.

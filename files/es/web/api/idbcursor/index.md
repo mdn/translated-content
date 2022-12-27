@@ -14,6 +14,7 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La interfaz **`IDBCursor`** de la [IndexedDB API](/es/docs/IndexedDB) representa un [cursor](/es/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor) para atravesar o iterar varios registros de una base de datos.

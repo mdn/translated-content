@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Forms/Test_your_skills:_HTML5_controls
 original_slug: Learn/HTML/Forms/Prueba_tus_habilidades:_controles_HTML5
 ---
+
 {{learnsidebar}}
 
 El objetivo de esta prueba es evaluar si has comprendido nuestro artículo [The HTML5 input types](/es/docs/Learn/Forms/HTML5_input_types).

@@ -7,6 +7,7 @@ tags:
   - Tipo de Dato CSS
 translation_of: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 ## Resumen

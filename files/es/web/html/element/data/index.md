@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Element/data
 original_slug: Web/HTML/Elemento/data
 ---
+
 ## Resúmen
 
 El **Elemento HTML `<data>`** vincula un contenido dado con una traducción legible por una máquina. Si el contenido está relacionado con `time-` o `date-`, debe usarse el elemento {{HTMLElement("time")}}.

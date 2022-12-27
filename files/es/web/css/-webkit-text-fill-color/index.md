@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-text-fill-color
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

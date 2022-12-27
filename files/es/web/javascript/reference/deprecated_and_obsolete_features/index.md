@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 original_slug: Web/JavaScript/Referencia/Características_Desaprobadas
 ---
+
 {{JsSidebar("More")}}
 
 Esta página enumera las características de JavaScript que están en desuso (es decir, todavía están disponibles pero se planea eliminarlas) y obsoletas (es decir, que ya no se pueden usar).

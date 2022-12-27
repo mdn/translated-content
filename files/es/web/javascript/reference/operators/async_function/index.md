@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/async_function
 original_slug: Web/JavaScript/Referencia/Operadores/async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 La palabra clave **`async function`** puede ser utilizada para definir funciones `async` dentro de expresiones.

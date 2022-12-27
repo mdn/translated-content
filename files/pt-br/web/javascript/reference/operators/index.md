@@ -2,6 +2,7 @@
 title: Operadores
 slug: Web/JavaScript/Reference/Operators
 ---
+
 {{jsSidebar("Operadores")}}
 
 Este capítulo documenta todos os operadores, expressões e keywords da linguagem JavaScript .

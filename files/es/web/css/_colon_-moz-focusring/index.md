@@ -8,6 +8,7 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/:-moz-focusring
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Resumen

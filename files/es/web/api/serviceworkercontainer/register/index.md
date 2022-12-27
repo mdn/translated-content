@@ -3,6 +3,7 @@ title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
 translation_of: Web/API/ServiceWorkerContainer/register
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 El método **`register()`** de la interfaz {{domxref("ServiceWorkerContainer")}} crea o actualiza un {{domxref("ServiceWorkerRegistration")}} para un `scriptURL`. dado

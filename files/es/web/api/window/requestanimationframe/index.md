@@ -3,6 +3,7 @@ title: Window.requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
 translation_of: Web/API/window/requestAnimationFrame
 ---
+
 {{APIRef}}El método **`window.requestAnimationFrame`** informa al navegador que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación. El método acepta como argumento una función a la que llamar antes de efectuar el repintado.
 
 > **Nota:** Si no quieres que tu animación se detenga, debes asegurarte de llamar a su vez a `requestAnimationFrame()` desde tu callback.

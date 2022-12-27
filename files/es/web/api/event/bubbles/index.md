@@ -10,6 +10,7 @@ tags:
   - eventos
 translation_of: Web/API/Event/bubbles
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

@@ -3,6 +3,7 @@ title: Vary
 slug: Web/HTTP/Headers/Vary
 translation_of: Web/HTTP/Headers/Vary
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de respuesta **`Vary`** HTTP determina como hacer coincidir los encabezados de las solicitudes futuras para decidir si se puede utilizar una respuesta almacenada en caché en lugar de solicitar una nueva desde el servidor de origen. Esto es usado por el servidor para indicar cuales encabezados usa cuando selecciona una representación de recursos en un algoritmo [content negotiation](/es/docs/Web/HTTP/Content_negotiation) .

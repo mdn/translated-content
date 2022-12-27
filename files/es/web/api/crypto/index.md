@@ -8,6 +8,7 @@ tags:
   - Web Crypto API
 translation_of: Web/API/Crypto
 ---
+
 {{APIRef("Web Crypto API")}}
 
 La interfaz **`Crypto`** representa las características básicas de criptografía disponibles en el contexto actual. Permite acceder a un generador de números aleatorios criptográficamente fuerte y a primitivos criptográficos.

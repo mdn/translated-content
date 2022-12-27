@@ -2,6 +2,7 @@
 title: glyphRef
 slug: Web/SVG/Element/glyphRef
 ---
+
 {{SVGRef}}
 
 O elemento `glyphRef` fornece um único glifo possível referenciando a substituição do {{ SVGElement("altGlyph") }}.

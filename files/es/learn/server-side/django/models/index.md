@@ -12,6 +12,7 @@ tags:
   - lado-servidor
 translation_of: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 Este artículo muestra cómo definir modelos para el sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website). En él se explica lo que es un modelo, cómo se declara, y cuáles son algunos de los principales tipos de campos de un modelo. También veremos, brevemente, cuáles son algunas de las maneras en que puede accederse a los datos del modelo.

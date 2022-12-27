@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Animation/currentTime
 original_slug: Web/API/Animation/tiempoActual
 ---
+
 {{APIRef("Web Animations")}}
 
 La propiedad `Animation.currentTime` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve y establece el valor del tiempo de la animación en milisegundos, tanto si se está ejecutando como en pausa.

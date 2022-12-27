@@ -2,6 +2,7 @@
 title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
+
 {{JSRef}}
 
 **charAt()** 함수는 문자열에서 특정 인덱스에 위치하는 유니코드 단일문자를 반환합니다.

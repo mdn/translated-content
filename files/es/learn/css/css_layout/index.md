@@ -18,6 +18,7 @@ tags:
   - float
 translation_of: Learn/CSS/CSS_layout
 ---
+
 {{LearnSidebar}}
 
 Llegados a este punto, hemos examinado los fundamentos básicos de CSS: cómo dar estilo al texto y cómo manipular las cajas que incluyen tu contenido. Llegó el momento de explorar cómo colocar tus cajas en el lugar que elijas con respecto a la ventana principal y el resto de cajas. Hemos cubierto ya los prerrequisitos necesarios, así que vamos a sumergirnos en la maquetación CSS, fijándonos en diferentes configuraciones de visualización, métodos de maquetación tradicionales que implican _floats_ y posicionamiento, así como a nuevas herramientas de maquetación en voga, como _flexbox_.

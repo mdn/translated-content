@@ -3,6 +3,7 @@ title: <input type="file">
 slug: Web/HTML/Element/Input/file
 translation_of: Web/HTML/Element/input/file
 ---
+
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} элемент с атрибутом **`type="file"`** позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи [формы](/ru/docs/Learn/HTML/Forms), или обработаны JavaScript и [File API](/ru/docs/Using_files_from_web_applications).

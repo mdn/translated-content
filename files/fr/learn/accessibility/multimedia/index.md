@@ -268,7 +268,7 @@ Si vous créez votre propre interface utilisateur pour présenter votre audio et
 
 ### Descriptions audio
 
-Dans les cas où des éléments visuels accompagnent votre son, vous devez fournir une description de l’audio pour décrire ce contenu supplémentaire.
+Dans les cas où des éléments visuels accompagnent votre son, vous devez fournir une piste sonore vocale pour décrire ce contenu supplémentaire.
 
 Dans de nombreux cas, il s'agira simplement d'une vidéo. Dans ce cas, vous pouvez implémenter des légendes à l'aide des techniques décrites dans la section suivante de l'article.
 

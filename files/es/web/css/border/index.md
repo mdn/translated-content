@@ -7,6 +7,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Web/CSS/border
 ---
+
 {{ PreviousNext("Guía de referencia de CSS", "CSS:border-color") }}
 
 ### Propiedades Constitutivas

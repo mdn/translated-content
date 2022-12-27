@@ -9,6 +9,7 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/:-moz-window-inactive
 ---
+
 {{CSSRef}}
 
 ## Resumen

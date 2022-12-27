@@ -5,6 +5,7 @@ translation_of: Web/API/AudioNode
 original_slug: Web/API/AudioNode
 browser-compat: api.AudioNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioNode`** es una interfaz genérica para representar un módulo de procesamiento de audio.

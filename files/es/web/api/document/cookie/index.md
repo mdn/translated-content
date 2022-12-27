@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Document/cookie
 original_slug: DOM/document.cookie
 ---
+
 {{ApiRef("DOM")}}
 
 ### Resumen

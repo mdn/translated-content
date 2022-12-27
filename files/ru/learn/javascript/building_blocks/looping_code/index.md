@@ -3,6 +3,7 @@ title: Зацикливание кода
 slug: Learn/JavaScript/Building_blocks/Looping_code
 translation_of: Learn/JavaScript/Building_blocks/Looping_code
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 Языки программирования очень полезны для быстрой реализации повторяющихся задач. От базовых числовых операций до любой другой ситуации, когда у вас есть много похожих операций, которые нужно выполнить. В этой статье мы рассмотрим структуры циклов, доступные в JavaScript, которые можно использовать для этих целей.

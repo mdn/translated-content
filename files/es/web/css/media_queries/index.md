@@ -3,6 +3,7 @@ title: Media queries
 slug: Web/CSS/Media_Queries
 translation_of: Web/CSS/Media_Queries
 ---
+
 {{CSSRef}}
 
 Las **consultas de medios** le permiten adaptar su sitio o aplicación dependiendo de la presencia o el valor de varias características y parámetros del dispositivo.

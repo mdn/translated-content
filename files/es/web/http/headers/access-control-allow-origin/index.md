@@ -14,6 +14,7 @@ tags:
   - error cross-origin
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de respuesta **`Access-Control-Allow-Origin`** indica si los recursos de la respuesta pueden ser compartidos con el {{glossary("origin", "origen")}} dado.

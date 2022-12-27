@@ -2,6 +2,7 @@
 title: Referência JavaScript
 slug: Web/JavaScript/Reference
 ---
+
 ## [Sobre essa Referência](/pt-BR/docs/JavaScript/Reference/About)
 
 {{page("/pt-BR/docs/JavaScript/Reference/About")}}

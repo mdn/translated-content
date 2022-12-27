@@ -3,6 +3,7 @@ title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
 translation_of: Web/API/URL/createObjectURL
 ---
+
 {{ApiRef("URL")}}{{SeeCompatTable}}
 
 ## Определение

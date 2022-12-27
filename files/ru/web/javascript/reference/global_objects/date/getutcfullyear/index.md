@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Сводка

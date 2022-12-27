@@ -2,6 +2,7 @@
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale`** constructor is a standard built-in property of the Intl object that represents a Unicode locale identifier.

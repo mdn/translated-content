@@ -2,6 +2,7 @@
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
+
 {{JSRef}}
 
 O método **`copyWithin()`** copia parte de um array para outra localização dentro deste mesmo array e o retorna, sem alterar seu tamanho.

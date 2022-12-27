@@ -7,6 +7,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT
 ---
+
 {{XsltRef}}EXSLT es un conjunto de extensiones de [XSLT](/es/XSLT). Existen varios módulos; aquellos que están implementados por Firefox se listan a continuación:
 
 - [Common](#Common) (`exsl`)

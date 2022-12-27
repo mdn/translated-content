@@ -5,6 +5,7 @@ tags:
   - WebExgtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Examples
 ---
+
 {{AddonSidebar}}
 
 Para ayudar en la ilustración de cómo desarrollar las extension, se mantiene un repositorio de ejemplos simples de extensions en <https://github.com/mdn/webextensions-examples>. Este artículo describe las extensiones en ese repositorio.

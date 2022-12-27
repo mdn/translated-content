@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/isArray
 ---
+
 {{JSRef}}
 
 El método **`Array.isArray()`** determina si el valor pasado es un {{jsxref("Array")}}.
@@ -97,11 +98,7 @@ if (!Array.isArray) {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario                                            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}             | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toString
 ---
+
 {{JSRef}}
 
 El método **`toString()`** devuelve una cadena que representa el objeto {{JSxRef("Error")}} especificado.

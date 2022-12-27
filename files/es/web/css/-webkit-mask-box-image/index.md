@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/-webkit-mask-box-image
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}

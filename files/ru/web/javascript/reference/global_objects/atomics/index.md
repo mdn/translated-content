@@ -3,6 +3,7 @@ title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
+
 {{JSRef}}Объект **`Atomics`** предоставляет атомарные операции как статические методы. Используется вместе с объектом {{jsxref("SharedArrayBuffer")}}.
 
 Атомарные операции установлены в модуле `Atomics`. В отличие от других глобальных объектов, `Atomics` не является конструктором. Его нельзя использовать вместе с оператором [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new) или вызывать объект `Atomics` как функцию. Все свойства и методы `Atomics` статические (как у объекта {{jsxref("Math")}}, к примеру).

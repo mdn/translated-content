@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/find
 ---
+
 {{JSRef}}
 
 El método **`find()`** devuelve el **valor** del **primer elemento** del array que cumple la función de prueba proporcionada.

@@ -3,6 +3,7 @@ title: DOMParser
 slug: Web/API/DOMParser
 translation_of: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 `DOMParser` puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un [Documento](/es/docs/Web/API/Document) DOM. `DOMParser` está especificado en [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
@@ -112,9 +113,7 @@ Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM Parsing', '#the-domparser-interface', 'DOMParser')}} | {{Spec2('DOM Parsing')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

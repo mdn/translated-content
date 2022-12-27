@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/Server-side/First_steps/Web_frameworks
 original_slug: Learn/Server-side/Primeros_pasos/Web_frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 El artículo anterior te mostró que pinta tiene la comunicación entre los clientes web y los servidores, la naturaleza de las peticiones y respuestas HTTP, y lo que necesita hacer una aplicación web de lado servidor para responder a las peticiones de un explorador web. Con este conocimiento en nuestra mochila, es hora de explorar cómo los frameworks web pueden simplificar estas tareas, y darte una idea de cómo escogerías un framework para tu primera aplicación web de lado servidor.

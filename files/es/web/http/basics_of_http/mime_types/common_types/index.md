@@ -14,6 +14,7 @@ tags:
   - Video
 translation_of: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
+
 {{HTTPSidebar}}
 
 Aquí está una lista completa de tipos de MIME, asociados por tipo de documentos y ordenados por su extensión común.

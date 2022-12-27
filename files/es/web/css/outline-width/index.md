@@ -6,6 +6,7 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/outline-width
 ---
+
 {{CSSRef}}
 
 ## Resumen

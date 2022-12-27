@@ -2,6 +2,7 @@
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 ---
+
 {{JSRef}}
 
 O método `search()` realiza uma busca por uma ocorrência entre uma expressão regular e uma {{jsxref ("String")}}.

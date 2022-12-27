@@ -2,6 +2,7 @@
 title: let
 slug: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 Declara uma variável local no escopo do bloco atual, opcionalmente iniciando-a com um valor.

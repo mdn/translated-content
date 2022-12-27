@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/kbd
 original_slug: Web/HTML/Elemento/kbd
 ---
+
 ### Definición
 
 - Marca el texto que debe introducir el usuario.

@@ -16,6 +16,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/forms/Multipart_labels
 original_slug: Web/Accessibility/ARIA/forms/Etiquetas_complejas
 ---
+
 ## Problema
 
 Tiene un formulario donde le pregunta a su usuario una pregunta, pero la respuesta es mencionada en la misma pregunta. Un ejemplo clásico que todos conocemos de las configuraciones de nuestro navegador es la opción "Eliminar el historial despues de x días". "Eliminar el historial despues" está a la izquierda de la caja de texto, x es el número, por ejemplo 21, y la palabra "días" sigue a la caja de texto, formando una oración que es fácil de comprender.

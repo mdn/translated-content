@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/div
 original_slug: Web/HTML/Elemento/div
 ---
+
 ### Definición
 
 - **div** de "division" -_división_ . Sirve para crear secciones o agrupar contenidos.

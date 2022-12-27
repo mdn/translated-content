@@ -2,6 +2,7 @@
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
+
 {{JSRef}}
 
 O método **`getTime()`** retorna o valor numérico correspondente ao horário da data especificada de acordo com o horário universal.

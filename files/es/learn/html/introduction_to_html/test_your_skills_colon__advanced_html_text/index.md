@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
 translation_of: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
 original_slug: Learn/HTML/Introduccion_a_HTML/Test_your_skills:_Advanced_HTML_text
 ---
+
 {{learnsidebar}}
 
 El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras __[formato de texto avanzado](/es/docs//en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)__ articulo.

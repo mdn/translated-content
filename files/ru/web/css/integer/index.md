@@ -3,6 +3,7 @@ title: <integer>
 slug: Web/CSS/integer
 translation_of: Web/CSS/integer
 ---
+
 {{CSSRef}}
 
 **`<integer>`** - [тип хранения данных](/ru/docs/Web/CSS/CSS_Types) в [CSS](/ru/docs/Web/CSS) - является частным случаем типа {{cssxref("number")}}, который представляет целые числа: как положительное, так и отрицательное. Целые числа могу быть использованы в свойствах CSS , таких как {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, и {{cssxref("z-index")}}.

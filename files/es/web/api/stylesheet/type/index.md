@@ -3,6 +3,7 @@ title: Stylesheet.type
 slug: Web/API/StyleSheet/type
 translation_of: Web/API/StyleSheet/type
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

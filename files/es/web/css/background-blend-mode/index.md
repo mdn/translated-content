@@ -6,6 +6,7 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/background-blend-mode
 ---
+
 {{CSSRef()}}
 
 ## Resumen

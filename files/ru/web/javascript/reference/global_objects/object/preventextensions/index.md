@@ -9,6 +9,7 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 Метод **`Object.preventExtensions()`** предотвращает добавление новых свойств к объекту (то есть, предотвращает расширение этого объекта в будущем).

@@ -6,6 +6,7 @@ tags:
   - Glosario
 translation_of: Glossary/buffer
 ---
+
 Un búfer es un espacio de memoria en el que se almacenan datos de forma temporal mientras se están transfiriendo de un sitio a otro.
 
 ## Saber más

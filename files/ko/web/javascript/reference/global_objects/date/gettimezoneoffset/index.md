@@ -2,6 +2,7 @@
 title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 ---
+
 {{JSRef}}
 
 **getTimezoneOffset()** 메소드는 현재 로케일 (즉, 호스트 시스템 설정)에 대한 시간대 오프셋 (UTC)을 분 단위로 반환합니다.

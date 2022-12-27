@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Element/bgsound
 original_slug: Web/HTML/Elemento/bgsound
 ---
+
 {{non-standard_header}}
 
 ## Resumen

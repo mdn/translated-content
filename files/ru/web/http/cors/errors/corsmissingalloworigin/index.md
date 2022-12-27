@@ -3,6 +3,7 @@ title: 'Причина: отсутствует заголовок CORS «Access-
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
+
 ## [Причина](/ru/docs/)
 
 ```

@@ -7,6 +7,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/leading
 ---
+
 {{XsltRef}}
 
 `set:leading()` devuelve los nodos de un conjunto de nodos que viene antes del primer nodo del otro conjunto de nodos.

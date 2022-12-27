@@ -6,6 +6,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 original_slug: Learn/HTML/Введение_в_HTML/Structuring_a_page_of_content
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 Разметить страницу так, чтобы к ней было просто применить CSS — первое, чему должен научиться будущий веб-разработчик. В этом задании вам придётся подумать о том, как должна выглядеть страница, и подобрать подходящую семантическую разметку.

@@ -10,6 +10,7 @@ tags:
   - Web
 translation_of: Web/API/NodeList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 El método **`forEach()`** de la interfase{{domxref("NodeList")}} llama a la función callback proporcionada como parámetro una vez para cadapar de valores en la lista, en el orden en que se insertaron.

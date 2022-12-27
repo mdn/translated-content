@@ -7,6 +7,7 @@ tags:
   - метод
 translation_of: Web/API/Window/clearImmediate
 ---
+
 {{ Apiref() }}
 
 Данный метод очищает действие, определённое {{ domxref("window.setImmediate") }}.

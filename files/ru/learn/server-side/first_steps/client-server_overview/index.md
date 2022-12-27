@@ -16,6 +16,7 @@ tags:
   - Учить
 translation_of: Learn/Server-side/First_steps/Client-Server_overview
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 Теперь, когда вы знаете цель и потенциальные преимущества программирования на стороне сервера, мы подробно рассмотрим, что происходит, когда сервер получает «динамический запрос» от браузера. Поскольку большая часть серверного кода веб-сайта обрабатывает запросы и ответы аналогичным образом, это поможет вам понять, что нужно делать при написании большей части собственного кода.

@@ -38,7 +38,7 @@ Además de los atributos globales HTML básicos, también existen los siguientes
   - : Un atributo enumerado que indica si el usuario debe poder editar el elemento. Si es así, el navegador modifica su «_widget_» para permitir la edición. El atributo debe tomar uno de los siguientes valores:
     - `true` o la _cadena vacía_, la cual indica que el elemento debe ser editable;
     - `false`, el cual indica que el elemento no debe ser editable.
-- **`[contextmenu](/es/docs/Web/HTML/Global_attributes/contextmenu)`** {{Obsolete_Inline}}
+- **`[contextmenu](/es/docs/Web/HTML/Global_attributes/contextmenu)`** {{deprecated_inline}}
   - : El [id](#attr-id) de un {{HTMLElement ("menu")}} para usar como el menú contextual para este elemento.
 - **`[data-*](/es/docs/Web/HTML/Global_attributes/data-*)`**
   - : Forma una clase de atributos, denominados atributos de datos personalizados, que permiten el intercambio de información de propiedad entre el [HTML](/es/docs/Web/HTML) y su representación {{Glossary("DOM")}} que pueden utilizar los scripts. Todos estos datos personalizados están disponibles a través de la interfaz {{DOMxRef("HTMLElement")}} del elemento en el que está configurado el atributo. La propiedad {{DOMxRef("HTMLElement.dataset")}} les da acceso.

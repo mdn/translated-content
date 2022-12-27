@@ -2,6 +2,7 @@
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 ---
+
 {{JSRef}}
 
 O **`DataView`** provê uma interface de baixo nível para leitura e escrita de múltiplos tipos de número em um {{jsxref("ArrayBuffer")}}, independentemente da [extremidade (_endianness_) da plataforma](/pt-BR/docs/Glossario/Endianness).

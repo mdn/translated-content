@@ -2,6 +2,7 @@
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer`** 객체는 일반적인 고정 길이 원시 이진 데이터 버퍼를 나타냅니다.

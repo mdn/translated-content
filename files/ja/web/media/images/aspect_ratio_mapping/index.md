@@ -2,6 +2,7 @@
 title: メディアコンテナ要素の幅と高さの属性をアスペクト比にマッピングする
 slug: Web/Media/images/aspect_ratio_mapping
 ---
+
 This article explains a change that has occured in the way sizes are worked out on web documents when width and height attributes are set on them.
 
 This change means that the aspect ratio of the image is calculated by the browser early on and can then be used to correct the size needed to display the image before it has loaded, if CSS has been applied that causes problems with its display size. Read on to find out more.

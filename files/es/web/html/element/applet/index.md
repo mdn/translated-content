@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/applet
 original_slug: Web/HTML/Elemento/applet
 ---
+
 ### Definición
 
 - Permite añadir un applet Java en un documento HTML. Es un elemento [Desaprobado](es/HTML/Elemento/Tipos_de_elementos#Desaprobado) En su lugar debe usarse el elemento [object](es/HTML/Elemento/object), su uso solo es válido declarando el dtd transicional.

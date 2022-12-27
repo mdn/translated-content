@@ -6,6 +6,7 @@ tags:
   - список селекторов
 translation_of: Web/CSS/Selector_list
 ---
+
 {{CSSRef}}
 
 CSS **список селекторов** (`,`) выбирает все соответствующие ноды.

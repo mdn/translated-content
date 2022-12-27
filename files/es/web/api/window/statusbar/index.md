@@ -3,6 +3,7 @@ title: Window.statusbar
 slug: Web/API/Window/statusbar
 translation_of: Web/API/Window/statusbar
 ---
+
 {{APIRef}}
 
 ## Resumen
@@ -47,10 +48,7 @@ Para alternar la visibilidad de las barras, debe de firmar sus scripts o abilita
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-statusbar', 'Window.statusbar')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-statusbar', 'Window.statusbar')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Ver tambien
 

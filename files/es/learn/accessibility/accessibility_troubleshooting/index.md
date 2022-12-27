@@ -12,6 +12,7 @@ tags:
   - WAI-ARIA
 translation_of: Learn/Accessibility/Accessibility_troubleshooting
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 En la evaluación de este módulo, le presentamos un sitio simple con una serie de problemas de accesibilidad que necesita diagnosticar y corregir.

@@ -4,6 +4,7 @@ slug: Web/API/Fetch_API
 translation_of: Web/API/Fetch_API
 browser-compat: api.fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 La API Fetch proporciona una interfaz para recuperar recursos (incluso a través de la red). Resultará familiar a cualquiera que haya usado {{domxref("XMLHttpRequest")}}, pero la nueva API ofrece un conjunto de características más potente y flexible.
 

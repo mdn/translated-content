@@ -3,6 +3,7 @@ title: '<ul>: The Unordered List element'
 slug: Web/HTML/Element/ul
 translation_of: Web/HTML/Element/ul
 ---
+
 {{HTMLSidebar}}
 
 **HTML-элемент `<ul>` **используется для неупорядоченного списка - в частности для маркированного списка.

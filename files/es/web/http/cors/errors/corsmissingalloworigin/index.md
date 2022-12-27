@@ -6,6 +6,7 @@ tags:
   - Seguridad
 translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
+
 {{HTTPSidebar}}
 
 ## Motivo

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/throw
 original_slug: Web/JavaScript/Referencia/Sentencias/throw
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Resumen

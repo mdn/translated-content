@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.has
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 ---
+
 {{JSRef}}
 
 **`handler.has()`** 메서드는 {{jsxref("Operators/in", "in")}} 연산자에 대한 트랩입니다.

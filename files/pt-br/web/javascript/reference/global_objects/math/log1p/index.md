@@ -2,6 +2,7 @@
 title: Math.log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
 ---
+
 {{JSRef}}
 
 A função **`Math.log1p()`** retorna o logaritmo natural (base {{jsxref("Math.E", "e")}}) de 1 + um número, isto é

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/charAt
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen
@@ -58,13 +59,9 @@ El carácter en el índice 4 es 'e'
 El carácter en el índice 999 es ''
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                           | Estado                   | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| ECMAScript 1st Edition.                                                                                  | Estándar                 | Primera definición |
-| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}                 | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ES6')}}     |                    |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

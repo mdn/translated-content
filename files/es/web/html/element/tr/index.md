@@ -5,6 +5,7 @@ translation_of: Web/HTML/Element/tr
 original_slug: Web/HTML/Elemento/tr
 browser-compat: html.elements.tr
 ---
+
 ## Resumen
 
 El elemento HTML _fila de tabla_ (_table row_) `<tr>` define una fila de celdas en una tabla. Estas pueden ser una mezcla de elementos {{HTMLElement("td")}} y {{HTMLElement("th")}}.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/cite
 original_slug: Web/HTML/Elemento/cite
 ---
+
 ### Definición
 
 - **cite** -_cita_ . Marca una referencia a una fuente, o el autor de un texto citado.

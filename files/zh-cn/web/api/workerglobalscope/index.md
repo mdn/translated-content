@@ -36,15 +36,15 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowTimers")}}, and {{domxref("WindowBase64")}}._
 
 - {{domxref("WorkerGlobalScope.onerror")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`error`](/zh-CN/docs/Web/API/Element/error_event) event is raised.
+  - : Is an event handler representing the code to be called when the [`error`](/zh-CN/docs/Web/API/Element/error_event) event is raised.
 - {{domxref("WorkerGlobalScope.onoffline")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`offline`](/zh-CN/docs/Web/API/Window/offline_event) event is raised.
+  - : Is an event handler representing the code to be called when the [`offline`](/zh-CN/docs/Web/API/Window/offline_event) event is raised.
 - {{domxref("WorkerGlobalScope.ononline")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`online`](/zh-CN/docs/Web/API/Window/online_event) event is raised.
+  - : Is an event handler representing the code to be called when the [`online`](/zh-CN/docs/Web/API/Window/online_event) event is raised.
 - {{domxref("WorkerGlobalScope.onlanguagechange")}}
-  - : An {{event("Event_handlers", "event handler")}} fired at the global/worker scope object when the user's preferred languages change.
+  - : An event handler fired at the global/worker scope object when the user's preferred languages change.
 - {{domxref("WorkerGlobalScope.onclose")}} {{non-standard_inline}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("close")}} event is raised.
+  - : Is an event handler representing the code to be called when the `close` event is raised.
 - {{domxref("WorkerGlobalScope.onrejectionhandled")}} {{non-standard_inline}}
   - : An event handler for handled [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
 - {{domxref("WorkerGlobalScope.onunhandledrejection")}} {{non-standard_inline}}

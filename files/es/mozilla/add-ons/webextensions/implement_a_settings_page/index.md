@@ -5,6 +5,7 @@ tags:
   - JavaScript
 translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 ---
+
 {{AddonSidebar}}
 
 Una página de configuración ofrece a los usuarios una manera de ver y cambiar los ajustes (algunas veces también llamados "preferencias" u "opciones") para el complemento.

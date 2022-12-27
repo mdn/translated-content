@@ -2,6 +2,7 @@
 title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the

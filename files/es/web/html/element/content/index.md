@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Element/content
 original_slug: Web/HTML/Elemento/content
 ---
+
 {{Deprecated_header}}
 
 El elemento [HTML](/es/docs/Web/HTML) `<content>` es usado dentro de un [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) como un {{glossary("insertion point")}} . No está pensado para ser usado en HTML ordinario . Es usado con [Web Components](/es/docs/Web/Web_Components).

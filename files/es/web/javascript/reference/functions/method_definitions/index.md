@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Functions/Method_definitions
 translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 original_slug: Web/JavaScript/Referencia/Funciones/Method_definitions
 ---
+
 {{JsSidebar("Functions")}}A partir de ECMAScript 2015 (ES6), se introdujo una sintaxis abreviada para la definición de métodos en inicializadores de objetos. Es una forma abreviada para la asignación de una función al nombre del método.
 
 ## Sintaxis
@@ -117,13 +118,9 @@ console.log(bar.foo1()); // 1
 console.log(bar.foo2()); // 2
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                   | Estado                       | Observaciones                                                                                                              |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Definición inicial.                                                                                                        |
-| {{SpecName('ES7', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES7')}}         | Cambiado el que los métodos generadores no deban tener una trampa \[\[Construct]] y deban fallar cuando se usen con `new`. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                                                                                                            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

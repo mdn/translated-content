@@ -2,6 +2,7 @@
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
+
 {{JSRef}}
 
 **`Boolean`** 객체는 불리언 값을 감싸고 있는 객체입니다.

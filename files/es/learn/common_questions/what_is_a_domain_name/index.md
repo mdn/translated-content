@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Learn/Common_questions/What_is_a_domain_name
 ---
+
 En este artículo discutiremos acerca de los nombres de los dominios: qué son, cómo se estructuran y cómo conseguir uno.
 
 <table>

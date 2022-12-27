@@ -2,6 +2,7 @@
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Sumário

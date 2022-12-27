@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/transform-function/translateZ()
 original_slug: Web/CSS/transform-function/translateZ()
 ---
+
 {{CSSRef}}
 
 La función **`translateZ()`** [CSS](/es/docs/Web/CSS) reposiciona un elemento a lo largo del eje-z (z-axis) en el espacio 3D, es decir, más cerca o mas lejos del espectador. Su resultado es un {{cssxref("&lt;transform-function&gt;")}} tipo de dato.

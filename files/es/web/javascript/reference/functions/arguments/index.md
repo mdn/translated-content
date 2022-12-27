@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments
 original_slug: Web/JavaScript/Referencia/Funciones/arguments
 ---
+
 {{jsSidebar("Functions", "Funciones")}}
 
 **`arguments`** es un objeto similar a `Array` accesible dentro de [funciones](/es/docs/Web/JavaScript/Guide/Functions) que contiene los valores de los argumentos pasados a esa función.

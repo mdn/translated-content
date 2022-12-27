@@ -123,7 +123,7 @@ slug: Learn/Front-end_web_developer
 
 #### 预备知识
 
-高效使用 Web 表单需要 HTML、CSS 和 JavaScript 知识。鉴于与表格打交道的复杂性，这一节被独立了出来。
+高效使用 Web 表单需要 HTML、CSS 和 JavaScript 知识。鉴于与表单打交道的复杂性，这一节被独立了出来。
 
 #### 我怎么知道自己是否可以继续往下学习了？
 

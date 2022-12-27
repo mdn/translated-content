@@ -3,6 +3,7 @@ title: Element.clientWidth
 slug: Web/API/Element/clientWidth
 translation_of: Web/API/Element/clientWidth
 ---
+
 {{ APIRef }}
 
 La propiedad `Element.clientWidth` es cero para elementos sin CSS o cajas de diseño (layout), en caso contrario es la anchura interior de un elemento en pixels, incluyendo la anchura de relleno (padding) pero no la anchura de la barra de desplazamiento vertical (si está presente, si está dibujada), el borde o el margen.

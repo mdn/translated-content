@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onwheel
 original_slug: Web/API/GlobalEventHandlers/onwheel
 ---
+
 {{ ApiRef("DOM") }}
 
 {{ non-standard_header() }}

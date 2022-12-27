@@ -5,6 +5,7 @@ tags:
   - Псевдо-класс
 translation_of: Web/CSS/:disabled
 ---
+
 {{CSSRef}}
 
 ## Описание

@@ -7,6 +7,7 @@ tags:
   - metodo
 translation_of: Web/API/Element/getAttribute
 ---
+
 {{APIRef}}
 
 ## Resumen

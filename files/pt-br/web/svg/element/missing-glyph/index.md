@@ -2,6 +2,7 @@
 title: missing-glyph
 slug: Web/SVG/Element/missing-glyph
 ---
+
 {{SVGRef}}
 
 O conteúdo do `missing-glyph` é renderizado se, para um determinado caractere, não foi determinado um {{ SVGElement("glyph") }} apropriado.

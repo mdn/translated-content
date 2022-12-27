@@ -4,7 +4,7 @@
 
 同样地，如果你对本文的指南有任何改进的建议，请提出问题（issue）或发起 PR。我们对此表示欢迎。下面进入简体中文翻译指南的正文部分。
 
-> 若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅 [MDN 的 Markdown](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)。
+> 若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅[如何使用 markdown 来撰写文档](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)。
 
 ## 元数据
 
@@ -64,7 +64,7 @@ slug: Web/API/Fetch_API
 
 对于英文的示例代码块，可以选择翻译其中的注释、字符串、输出结果等等，但不建议对变量、函数、方法等名称进行翻译。
 
-一些示例代码块会有与之对应的“实例”（即对示例代码运行效果的实时展示）。这些实例是通过 `{{EmbedLiveSample}}` 等宏来实现的，因为在本地化文档中会翻译英文标题，请**注意一并修改运行实例宏的第一个参数为相对应的中文标题**（参见：[运行实例](https://developer.mozilla.org/zh-CN/docs/MDN/Structures/Live_samples)）。
+一些示例代码块会有与之对应的“实例”（即对示例代码运行效果的实时展示）。这些实例是通过 `{{EmbedLiveSample}}` 等宏来实现的，因为在本地化文档中会翻译英文标题，请**注意一并修改运行实例宏的第一个参数为相对应的中文标题**（参见：[运行实例](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)）。
 
 ## 站内链接翻译
 

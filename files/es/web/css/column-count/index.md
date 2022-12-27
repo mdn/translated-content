@@ -8,6 +8,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/column-count
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`column-count`** divide el contenido de un elemento en el número de columnas indicado.

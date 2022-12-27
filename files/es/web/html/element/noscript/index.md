@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/noscript
 original_slug: Web/HTML/Elemento/noscript
 ---
+
 ### Definición
 
 - **noscript** de -_no script_ . Aporta contenidos alternativos al elemento [script](es/HTML/Elemento/script). las aplicaciones de usuario que no soporten scripts deben mostrar en su lugar el contenido de este elemento.

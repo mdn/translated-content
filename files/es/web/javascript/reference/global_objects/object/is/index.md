@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
 ---
+
 {{JSRef}}
 
 El método **`Object.is()`** determina si dos valores [son iguales](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness).
@@ -95,9 +96,7 @@ if (!Object.is) {
 
 ## Especificaciones
 
-| Especificación                                                       | Estado               | Comentario          |
-| -------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-object.is', 'Object.is')}} | {{Spec2('ES6')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

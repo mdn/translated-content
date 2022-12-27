@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-name
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Resumen

@@ -3,6 +3,7 @@ title: DocumentFragment
 slug: Web/API/DocumentFragment
 translation_of: Web/API/DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 La interfaz **`DocumentFragment`** representa un objeto de documento mínimo que no tiene padre. Se utiliza como una versión ligera de {{domxref("Document")}} que almacena un segmento de una estructura de documento compuesta de nodos como un documento estándar. La gran diferencia se debe al hecho de que el fragmento de documento no forma parte de la estructura de árbol del documento activo. Los cambios realizados en el fragmento no afectan el documento (incluso en {{Glossary("reflow")}}) ni inciden en el rendimiento cuando se realizan cambios. {{InheritanceDiagram}}

@@ -8,6 +8,7 @@ tags:
   - Window
 translation_of: Web/API/Window/navigator
 ---
+
 {{APIRef}}
 
 `Window.navigator` является свойством только для чтения и возвращает ссылку на объект {{domxref("Navigator")}}, который может запросить информацию о приложении, запустившем скрипт.

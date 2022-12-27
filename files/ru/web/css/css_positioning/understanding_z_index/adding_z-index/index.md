@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 original_slug: Web/Guide/CSS/Understanding_z_index/Adding_z-index
 ---
+
 {{cssref}}
 
 The first part of this article, [Stacking without the z-index property](/en/CSS/Understanding_z-index/Stacking_without_z-index), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/ru/docs/Web/CSS/position#Types_of_positioning) element.

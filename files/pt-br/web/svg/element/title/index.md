@@ -2,6 +2,7 @@
 title: title
 slug: Web/SVG/Element/title
 ---
+
 {{SVGRef}}
 
 Cada elemento recipiente ou elemento gráfico em um desenho SVG pode fornecer uma descrição de `title`, onde esta descrição é de apenas texto. Quando o atual fragmento do documento SVG é renderizado em aparelhos audiovisuais, o elemento `title` não é renderizado como parte do gráfico. Entretanto, alguns agentes de usuários poderão, por exemplo, exibir o elemento `title` como uma dica. Apresentações alternativas são possíveis, tanto visual quanto auditiva, que exibem o elemento `title` mas não mostram o elemento `path` ou outros elementos gráficos. O elemento `title` geralmente aumenta a acessibilidade de documentos SVG.

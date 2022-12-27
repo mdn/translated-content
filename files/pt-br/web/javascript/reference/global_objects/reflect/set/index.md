@@ -2,6 +2,7 @@
 title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
+
 {{JSRef}}
 
 O método estático **`Reflect.set()`** define uma propriedade em um objeto.

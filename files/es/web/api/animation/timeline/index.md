@@ -10,6 +10,7 @@ tags:
   - timeline
 translation_of: Web/API/Animation/timeline
 ---
+
 {{ APIRef("Web Animations") }}
 
 La propiedad `Animation.timeline` de la interfaz {{domxref ("Animation")}} devuelve o establece el {{domxref ("AnimationTimeline", "timeline")}} asociado a esta animación. Un 'timeline' es una fuente de valores de tiempo para propósitos de sincronización, y es un objeto basado en {{domxref ("AnimationTimeline")}}. Por defecto, la línea de tiempo de la animación y la línea de tiempo de {{domxref ("Document")}} son las mismas.

@@ -8,6 +8,7 @@ tags:
   - juegos
 translation_of: Web/API/GamepadButton
 ---
+
 {{APIRef("Gamepad API")}}
 
 La interfaz **`GamepadButton`** define un botón individual de un gamepad u otro control, dando acceso al estado actual de diferentes tipos de botones disponibles en el dispositivo de control.

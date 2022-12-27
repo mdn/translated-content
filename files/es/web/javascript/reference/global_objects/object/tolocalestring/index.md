@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/toLocaleString
 ---
+
 {{JSRef}}
 
 El método **`toLocaleString()`** devuelve un string que representa a un objeto. Este método está pensado para ser redefinido en los objetos derivados, para los propósitos específicos de cada configuración regional.

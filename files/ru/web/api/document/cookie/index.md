@@ -9,6 +9,7 @@ tags:
   - cookie
 translation_of: Web/API/Document/cookie
 ---
+
 {{APIRef("DOM")}}
 
 Статья описывает получение и установку cookies связанных с текущим документом. Общая библиотека для работы с cookies смотри [simple cookie framework](/ru/docs/Web/API/Document/cookie/Simple_document.cookie_framework).

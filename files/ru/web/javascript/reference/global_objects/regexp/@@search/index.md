@@ -10,6 +10,7 @@ tags:
   - регулярные выражения
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
+
 {{JSRef}}
 
 Метод **`[@@search]()`** выполняет поиск совпадения между регулярным выражением `this` и строкой.

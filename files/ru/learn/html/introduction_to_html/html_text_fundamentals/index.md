@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 original_slug: Learn/HTML/Введение_в_HTML/HTML_text_fundamentals
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 Одна из основных задач HTML — придавать тексту структуру и смысл, {{glossary("семантику")}}, так, чтобы браузер смог отобразить текст корректно. Эта статья покажет, как можно использовать {{glossary("HTML")}}, чтобы упорядочить текст на странице путём добавления заголовков и абзацев, выделения слов, создания списков и многое другое.

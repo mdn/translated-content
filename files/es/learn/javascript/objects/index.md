@@ -15,6 +15,7 @@ tags:
   - Tutorial
 translation_of: Learn/JavaScript/Objects
 ---
+
 {{LearnSidebar}}
 
 En JavaScript, la mayoría de las cosas son objetos, desde características del núcleo de JavaScript como arrays hasta el explorador {{Glossary("API", "APIs")}} construído sobre JavaScript. Incluso puedes crear tus propios objetos para encapsular funciones y variables relacionadas dentro de paquetes eficientes que actúan como prácticos contenedores de datos. La naturaleza de JavaScript basada-en-objetos es importante de entender, si quieres avanzar con tu conocimiento del lenguaje, y por ello hemos hecho este módulo para ayudarte. Aquí enseñamos teoría de objetos y sintaxis en detalle, y luego veremos como crear tus propios objetos.

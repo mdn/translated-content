@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Equality
 original_slug: Web/JavaScript/Referencia/Operadores/Comparacion
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de comparacion (`==`) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (`===`), es que este convierte y compara operandos que son de diferentes tipos.

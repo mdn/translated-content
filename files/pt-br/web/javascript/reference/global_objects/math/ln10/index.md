@@ -2,6 +2,7 @@
 title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
 ---
+
 {{JSRef}}
 
 A propriedade **`Math.LN10`** representa o logaritmo natural de 10, aproximadamente 2.302:

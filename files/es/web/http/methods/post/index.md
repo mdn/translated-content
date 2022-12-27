@@ -7,6 +7,7 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 El **método HTTP `POST`** envía datos al servidor. El tipo del cuerpo de la solicitud es indicada por la cabecera {{HTTPHeader("Content-Type")}}.

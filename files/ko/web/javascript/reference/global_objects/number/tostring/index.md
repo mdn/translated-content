@@ -2,6 +2,7 @@
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
+
 {{JSRef}}
 
 **`toString()` **메서드는 특정한 {{jsxref("Number")}} 객체를 나타내는 문자열을 반환합니다.

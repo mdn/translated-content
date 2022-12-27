@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Forms/Your_first_form
 original_slug: Learn/HTML/Forms/Your_first_HTML_form
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
 El primer artículo de nuestra serie te proporciona una primera experiencia de creación de un formulario web, que incluye diseñar un formulario sencillo con controles de formulario adecuados y otros elementos HTML, añadir un poco de estilo muy simple con CSS y describir cómo se envían los datos a un servidor. Ampliaremos cada uno de estos subtemas más adelante.

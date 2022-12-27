@@ -96,7 +96,7 @@ searchTerms = mySearch.value;
 | 属性                              | 描述                                                                                                                                                              |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`autocorrect`](#autocorrect)     | 编辑此输入字段时是否允许自动更正。**Safari only.**                                                                                                                |
-| [`incremental`](#incremental)     | 是否发送重复的 {{event("search")}} 事件以允许在用户仍在编辑字段的值时更新实时搜索结果。**WebKit and Blink only (Safari, Chrome, Opera, etc.).**              |
+| [`incremental`](#incremental)     | 是否发送重复的 {{domxref("HTMLInputElement/search_event", "search")}} 事件以允许在用户仍在编辑字段的值时更新实时搜索结果。**WebKit and Blink only (Safari, Chrome, Opera, etc.).**              |
 | [`mozactionhint`](#mozactionhint) | 一个字符串，指示当用户在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键时将执行的操作类型；用于确定虚拟键盘上该键的适当标签。**Firefox for Android only.** |
 | [`results`](#results)             | 先前搜索查询的下拉列表中应显示的最大项目数。**Safari only.**                                                                                                      |
 
@@ -106,9 +106,9 @@ searchTerms = mySearch.value;
 
 ### incremental
 
-布尔值 `incremental` 属性是 WebKit 和 Blink 扩展（因此被 Safari, Opera, Chrome 等支持）如果存在，它会告诉 {{Glossary("user agent")}} 将输入作为实时搜索进行处理。当用户编辑字段的值时，用户代理将 `{{event("search")}}` 事件发送到代表搜索框的 `{{domxref("HTMLInputElement")}}` 对象。这允许您的代码在用户编辑搜索时实时更新搜索结果。
+布尔值 `incremental` 属性是 WebKit 和 Blink 扩展（因此被 Safari, Opera, Chrome 等支持）如果存在，它会告诉 {{Glossary("user agent")}} 将输入作为实时搜索进行处理。当用户编辑字段的值时，用户代理将 {{domxref("HTMLInputElement/search_event", "search")}} 事件发送到代表搜索框的 `{{domxref("HTMLInputElement")}}` 对象。这允许您的代码在用户编辑搜索时实时更新搜索结果。
 
-如果 `incremental` 没有被指定，则仅当用户显式启动搜索时（例如，在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> ）才发送 `{{event("search")}}` 事件。
+如果 `incremental` 没有被指定，则仅当用户显式启动搜索时（例如，在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> ）才发送 {{domxref("HTMLInputElement/search_event", "search")}} 事件。
 
 `search` 事件受速率限制，因此发送事件的频率不会超过实现定义的间隔。
 

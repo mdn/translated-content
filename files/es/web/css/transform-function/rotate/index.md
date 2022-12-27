@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/transform-function/rotate()
 original_slug: Web/CSS/transform-function/rotate()
 ---
+
 {{CSSRef}}
 
 La función [CSS](/es/docs/) **`rotate()`** define una transformación que gira un elemento alrededor de un punto fijo en un plano 2D sin deformarlo.

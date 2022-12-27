@@ -2,6 +2,7 @@
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
+
 {{JSRef}}
 
 A função **`Math.pow()`** retorna a _base_ elevada ao expoente _power_, ou seja, `baseexpoente`.

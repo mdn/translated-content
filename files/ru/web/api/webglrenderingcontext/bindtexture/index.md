@@ -3,6 +3,7 @@ title: WebGLRenderingContext.bindTexture()
 slug: Web/API/WebGLRenderingContext/bindTexture
 translation_of: Web/API/WebGLRenderingContext/bindTexture
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.bindTexture()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) связывает {{domxref("WebGLTexture")}} с `target`.

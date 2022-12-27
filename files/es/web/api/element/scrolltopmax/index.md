@@ -11,6 +11,7 @@ tags:
   - Solo lectura
 translation_of: Web/API/Element/scrollTopMax
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 La propiedad de solo lectura(read-only) `Element.scrollTopMax` retorna un {{jsxref("Number")}} que representa el máximo offset posible para el elemento.

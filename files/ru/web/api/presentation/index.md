@@ -10,6 +10,7 @@ tags:
   - Экспериментальный
 translation_of: Web/API/Presentation
 ---
+
 {{APIRef("Presentation API")}}
 
 The _`Presentation`_ can be defined as two possible user agents in the context: _Controlling user agent_ and _Receiving user agent_.

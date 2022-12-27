@@ -16,6 +16,7 @@ tags:
   - strings
 translation_of: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}

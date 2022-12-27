@@ -10,6 +10,7 @@ translation_of: Web/CSS/mask-position
 translation_of_original: Web/CSS/-webkit-mask-position
 original_slug: Web/CSS/-webkit-mask-position
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Sumario

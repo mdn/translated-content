@@ -10,6 +10,7 @@ tags:
   - метод
 translation_of: Web/API/EventTarget/addEventListener
 ---
+
 {{apiref("DOM Events")}}
 
 Метод `EventTarget.addEventListener()` регистрирует определённый обработчик события, вызванного на {{domxref("EventTarget")}}.

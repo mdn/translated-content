@@ -3,6 +3,7 @@ title: Cache.add()
 slug: Web/API/Cache/add
 translation_of: Web/API/Cache/add
 ---
+
 {{APIRef("Service Workers API")}}
 
 Метод **`add()`** интерфейса {{domxref("Cache")}} принимает в качестве параметра URL, загружает его и добавляет полученный объект ответа в заданный кеш. Метод `add()` функционально эквивалентен следующему коду:

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/button
 original_slug: Web/HTML/Elemento/button
 ---
+
 ## Definición
 
 **button** = botón.

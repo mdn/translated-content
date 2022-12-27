@@ -3,6 +3,7 @@ title: widows
 slug: Web/CSS/widows
 translation_of: Web/CSS/widows
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/CSS) **`widows`** especifica el número minimo de lineas en un contenedor de bloques que se deben mostrar en la parte superior de la [pagina](/es/docs/Web/CSS/Paged_Media), region o [columna](/es/docs/Web/CSS/CSS_Columns). Esta propiedad se usa normalmente para controlar como se producen las pausas.

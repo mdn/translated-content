@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:nth-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-of-type()`** de [CSS](/es/docs/Web/CSS) selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.

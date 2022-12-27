@@ -7,6 +7,7 @@ tags:
   - консоль
 translation_of: Web/API/Console/table
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 Отображает наборы данных в виде таблицы.

@@ -2,6 +2,7 @@
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
+
 {{JSRef}}
 
 O Acessor de propriedade **`Map[@@species]`** retorna o construtor do `Map`.

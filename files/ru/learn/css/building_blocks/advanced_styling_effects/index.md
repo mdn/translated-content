@@ -17,6 +17,7 @@ tags:
   - фильтры
 translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
+
 {{LearnSidebar}}
 
 В этой статье описаны некоторые хитрости, которые познакомят вас с такими узкоспециализированными свойствами, как box-shadow, режимы смешивания и фильтры.

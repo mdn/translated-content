@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 translation_of: Learn/JavaScript/Objects/Inheritance
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 Con la mayoría de los detalles internos de OOJS (_JavaScript Orientado a Objetos)_ explicados, este artículo muestra cómo crear clases "hijo" (constructores) que heredan características de sus clases "padre". Además, presentamos algunos consejos sobre cuándo y dónde puedes usar OOJS y cómo se crean las clases con la sintaxis moderna de ECMAScript.

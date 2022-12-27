@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Animation/Animation
 original_slug: Web/API/Animation/Animación
 ---
+
 {{ APIRef("Web Animations API") }}
 
 El constructor `Animation()` de [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve una instancia del objeto `Animation`.

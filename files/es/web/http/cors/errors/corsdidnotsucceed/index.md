@@ -14,6 +14,7 @@ tags:
   - solución de problemas
 translation_of: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
+
 {{HTTPSidebar}}
 
 ## Razón

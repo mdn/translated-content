@@ -6,6 +6,7 @@ tags:
   - Referencia
 translation_of: Web/API/CSSStyleDeclaration
 ---
+
 {{ APIRef("CSSOM") }}
 
 ## Resúmen

@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Position_skills
 translation_of: Learn/CSS/CSS_layout/Position_skills
 original_slug: Learn/CSS/CSS_layout/Навыки_позиционирования
 ---
+
 {{LearnSidebar}}
 
 Цель этого задания - чтобы вы поработали с CSS свойством {{CSSxRef("position")}} и его значениями которые описаны в нашем уроке [Позиционирование](/ru/docs/Learn/CSS/CSS_layout/Positioning). Вы будете работать над двумя небольшими задачами, использующими различные элементы из пройденного материала.

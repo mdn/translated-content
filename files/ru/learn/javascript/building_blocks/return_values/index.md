@@ -3,6 +3,7 @@ title: Возвращаемые значения функций
 slug: Learn/JavaScript/Building_blocks/Return_values
 translation_of: Learn/JavaScript/Building_blocks/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/События", "Learn/JavaScript/Building_blocks")}}
 
 Для нас в этом курсе имеется ещё один важный момент. Посмотрим внимательнее на возвращаемое значение функций. Некоторые функции не возвращают существенное значение после завершения, но некоторые возвращают, и важно понимать что это за значение и как использовать его в своём коде и как сделать так чтобы ваши собственные функции возвращали полезные значения. Мы объясним всё это ниже.

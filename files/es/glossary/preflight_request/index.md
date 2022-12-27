@@ -4,6 +4,7 @@ slug: Glossary/Preflight_request
 translation_of: Glossary/Preflight_request
 original_slug: Glossary/Preflight_peticion
 ---
+
 Una petición preflight CORS es una petición [CORS](/en-US/docs/Glossary/CORS) realizada para comprobar si el protocolo {{Glossary("CORS")}} es comprendido.
 
 Es una petición {{HTTPMethod("OPTIONS")}}, que emplea tres cabeceras HTTP: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, y la cabecera {{HTTPHeader("Origin")}} .

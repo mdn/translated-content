@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Casos_de_uso_tipicos_de_Flexbox.
 ---
+
 {{CSSRef}}
 
 En esta guía, analizaremos algunos de los casos de uso comunes de flexbox, en aquellos lugares donde tiene más sentido que otro método de diseño.

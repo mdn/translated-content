@@ -2,6 +2,7 @@
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 메서드는 {{jsxref("Boolean")}} 객체를 나타내는 문자열을 반환합니다.

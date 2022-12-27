@@ -2,6 +2,7 @@
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 As declarações **try...catch** marcam um bloco de declarações para testar (**try**), e especifica uma resposta, caso uma exceção seja lançada.

@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 original_slug: Learn/CSS/Building_blocks/Fondos_y_bordes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
 En este artículo, veremos algunas de las cosas creativas que puedes hacer con los fondos y los bordes de CSS. Añadir degradados, imágenes de fondo o redondear esquinas; los fondos y los bordes son la solución para una gran cantidad de cuestiones de estilo en CSS.

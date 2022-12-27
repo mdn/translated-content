@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/endsWith
 ---
+
 {{JSRef}}
 
 El método **`endsWith()`** determina si una cadena de texto termina con los caracteres de una cadena indicada, devolviendo `true` o `false` según corresponda.

@@ -2,6 +2,7 @@
 title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 A constante **`Number.MAX_SAFE_INTEGER`** representa o maior inteiro seguro no JavaScript (`253 - 1`).

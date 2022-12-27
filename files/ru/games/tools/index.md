@@ -4,6 +4,7 @@ slug: Games/Tools
 translation_of: Games/Tools
 original_slug: Games/Инструменты
 ---
+
 {{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
 
 На этой странице вы можете найти ссылки на наши статьи по инструментам для разработки игр, которая в конечном итоге нацелена на покрытие фреймворков, компиляторов и инструментов отладки.

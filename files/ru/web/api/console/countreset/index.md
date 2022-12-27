@@ -3,6 +3,7 @@ title: Console.countReset()
 slug: Web/API/Console/countReset
 translation_of: Web/API/Console/countReset
 ---
+
 {{APIRef("Console API")}}
 
 Сбрасывает значение счётчика. Эта функция также принимает необязательный аргумент `label`.

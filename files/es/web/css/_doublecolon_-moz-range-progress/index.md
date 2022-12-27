@@ -9,6 +9,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/::-moz-range-progress
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

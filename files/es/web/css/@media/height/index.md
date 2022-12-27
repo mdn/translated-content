@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/@media/height
 original_slug: Web/CSS/@media/altura
 ---
+
 {{cssref}}
 
 Las [CSS](/es/docs/CSS) [media feature (consulta de medios)](/es/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`height`** puede ser usada para aplicar estilos basados en la altura del {{glossary("viewport")}} (o la caja de la página, para [paged media](/es/docs/Web/CSS/Paged_media)).

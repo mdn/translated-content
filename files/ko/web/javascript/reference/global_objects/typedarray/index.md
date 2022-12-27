@@ -2,6 +2,7 @@
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
+
 {{JSRef}}
 
 **_TypedArray_** 객체는 [이진 데이터 버퍼](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)에 기초하여 배열과 같은 보기를 만들어냅니다.

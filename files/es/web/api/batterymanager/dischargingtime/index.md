@@ -13,6 +13,7 @@ tags:
 translation_of: Web/API/BatteryManager/dischargingTime
 browser-compat: api.BatteryManager.dischargingTime
 ---
+
 {{deprecated_header}}{{APIRef("Battery API")}}
 
 Indíca la cantidad de tiempo, en segundos,

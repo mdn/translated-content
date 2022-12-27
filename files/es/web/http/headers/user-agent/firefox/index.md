@@ -7,6 +7,7 @@ tags:
 translation_of: Web/HTTP/Headers/User-Agent/Firefox
 original_slug: Cadenas_del_User_Agent_de_Gecko
 ---
+
 ### Uso Apropiado
 
 No se recomienda el uso de las cadenas del User Agent como su principal opción para la detección del navegador. Vea [Deteccion Cross browser y Soporte Cross Browser](/es/Deteccion_Cross_browser_y_Soporte_Cross_Browser) para una ojeada mas en profundo a varias técnicas sobre detección de navegadores con recomendaciones.

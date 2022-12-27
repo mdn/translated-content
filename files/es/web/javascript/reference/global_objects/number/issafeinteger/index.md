@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isSafeInteger
 ---
+
 {{JSRef}}
 
 El método **`Number.isSafeInteger()`** determina si el valor provisto es un número que es un entero seguro.
@@ -62,10 +63,7 @@ Number.isSafeInteger = Number.isSafeInteger || function (value) {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                      | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-number.issafeinteger', 'Number.isSafeInteger')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

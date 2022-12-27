@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 original_slug: Web/JavaScript/Reference/Operators/Оператор_Запятая
 ---
+
 {{jsSidebar("Operators")}}
 
 **Оператор запятая** выполняет каждый из его операндов (слева направо) и возвращает значение последнего операнда.

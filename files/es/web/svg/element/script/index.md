@@ -12,6 +12,7 @@ tags:
 translation_of: Web/SVG/Element/script
 original_slug: Web/HTML/Elemento/script
 ---
+
 ## Resumen
 
 El _elemento HTML Script_ (**`<script>`**) se utiliza para insertar o hacer referencia a un script ejecutable dentro de un documento HTML o XHTML.

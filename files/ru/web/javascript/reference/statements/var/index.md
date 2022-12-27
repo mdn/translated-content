@@ -3,6 +3,7 @@ title: var
 slug: Web/JavaScript/Reference/Statements/var
 translation_of: Web/JavaScript/Reference/Statements/var
 ---
+
 {{jsSidebar("Statements")}}
 
 Оператор **var** объявляет переменную, инициализируя её, при необходимости.

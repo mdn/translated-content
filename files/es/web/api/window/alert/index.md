@@ -4,6 +4,7 @@ slug: Web/API/Window/alert
 translation_of: Web/API/Window/alert
 browser-compat: api.Window.alert
 ---
+
 {{ APIRef }}
 
 El método `Window.alert()` muestra un diálogo de alerta con un mensaje opcional,

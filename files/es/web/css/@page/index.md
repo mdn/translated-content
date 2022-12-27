@@ -3,6 +3,7 @@ title: '@page'
 slug: Web/CSS/@page
 translation_of: Web/CSS/@page
 ---
+
 {{CSSRef}}
 
 ## Resumen

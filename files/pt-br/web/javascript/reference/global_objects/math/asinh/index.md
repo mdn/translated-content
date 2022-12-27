@@ -2,6 +2,7 @@
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 ---
+
 {{JSRef}}
 
 A função **`Math.asinh()`** retorna o arco-seno hiperbólico de um número, isto é:

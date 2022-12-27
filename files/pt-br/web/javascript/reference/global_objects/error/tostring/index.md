@@ -2,6 +2,7 @@
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
+
 {{JSRef}}
 
 O método **`toString()`** retorna uma string representando o objeto {{jsxref("Error")}}.

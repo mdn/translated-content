@@ -2,6 +2,7 @@
 title: JavaScript 기술 개요
 slug: Web/JavaScript/JavaScript_technologies_overview
 ---
+
 {{JsSidebar("Introductory")}}
 
 ## 개요

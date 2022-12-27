@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTML/Element/colgroup
 original_slug: Web/HTML/Elemento/colgroup
 ---
+
 ### Definición
 
 - **colgroup** de column group = Grupo de columnas. Permite crear [grupos de columnas](http://html.conclase.net/w3c/html401-es/struct/tables.html#h-11.2.4).

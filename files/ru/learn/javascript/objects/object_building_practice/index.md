@@ -7,6 +7,7 @@ tags:
 translation_of: Learn/JavaScript/Objects/Object_building_practice
 original_slug: Learn/JavaScript/Объекты/Object_building_practice
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 В предыдущих статьях мы рассмотрели всю существенную теорию объектов JavaScript и детали синтаксиса, давая вам прочную основу для начала. В этой статье мы погружаемся в практическое упражнение, давая вам больше практики в создании пользовательских объектов JavaScript, с весёлым и красочным результатом.

@@ -5,6 +5,7 @@ translation_of: Web/HTML/Element/br
 original_slug: Web/HTML/Elemento/br
 browser-compat: html.elements.br
 ---
+
 ## Resumen
 
 El elemento HTML _line break_ `<br>` produce un salto de línea en el texto (retorno de carro). Es útil para escribir un poema o una dirección, donde la división de las líneas es significante.

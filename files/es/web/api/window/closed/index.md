@@ -9,6 +9,7 @@ tags:
   - Ventana
 translation_of: Web/API/Window/closed
 ---
+
 {{APIRef}}
 
 ## Resumen
