@@ -14,7 +14,7 @@ slug: Web/HTML/Element/img
 - `src` 属性是**必须的**，它包含了你想嵌入的图片的路径。
 - `alt` 属性包含一条对图像的文本描述，这不是强制性的，但对无障碍而言，它**难以置信地有用**——屏幕阅读器会将这些描述读给需要使用阅读器的使用者听，让他们知道图像的含义。如果由于某种原因无法加载图像，普通浏览器也会在页面上显示 `alt` 属性中的备用文本：例如，网络错误、内容被屏蔽或链接过期。
 
-还有很多其他属性，可以实现各种不同的目的：
+还有很多其它属性，可以实现各种不同的目的：
 
 - [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 {{htmlattrxref("crossorigin", "img")}} 和 {{htmlattrxref("referrerpolicy", "img")}} 属性。
 - 使用 {{htmlattrxref("width", "img")}} 和 {{htmlattrxref("height", "img")}} 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
@@ -135,7 +135,7 @@ Web 最常用的图像格式是：
     - `same-origin`：仅{{Glossary("Same-origin policy", "同源")}}请求发送来源地址，而跨源请求则不包含来源地址信息。
     - `strict-origin`：仅在协议安全级别保持不变（HTTPS→HTTPS）的情况下将文档的来源作为来源地址发送。而在目标的安全性降低（HTTPS→HTTP）时则不发送来源地址。
     - `strict-origin-when-cross-origin`（默认值）：执行同源请求时发送完整的 URL，且仅在协议安全级别保持不变（HTTPS→HTTPS）时发送来源（origin），在目标安全性降低（HTTPS→HTTP）时则不发送来源。
-    - `unsafe-url`：来源地址包括来源（origin）*和*路径（path）（但不包括 [分片](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为它将来源和路径从受 TLS 保护的资源泄露到不安全的来源。
+    - `unsafe-url`：来源地址包括来源（origin）*和*路径（path）（但不包括[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为它将来源和路径从受 TLS 保护的资源泄露到不安全的来源。
 
 - {{htmlattrdef("sizes")}}
   - : 表示资源大小的、以逗号隔开的一个或多个字符串。每一个资源大小包括：
