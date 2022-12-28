@@ -312,18 +312,15 @@ original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
           <li>
             Недавно реализованные атрибуты презентации: direction, unicode-bidi,
             font-variant, text-decoration
-            {{gecko_minversion_inline("25")}}
           </li>
           <li>
             SVGTextElement
             <ul>
               <li>
                 Недавно реализованные привязки: selectSubString
-                {{gecko_minversion_inline("25")}}
               </li>
               <li>
                 Недавно реализованные атрибуты: textLength, lengthAdjust
-                {{gecko_minversion_inline("25")}}
               </li>
             </ul>
           </li>
@@ -346,17 +343,15 @@ original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
           <li>
             Недавно реализованные атрибуты презентации: direction, unicode-bidi,
             font-variant, text-decoration
-            {{gecko_minversion_inline("25")}}
           </li>
           <li>
             SVGTSpanElement
             <ul>
               <li>
-                Недавно реализованные привязки:<br />selectSubString{{gecko_minversion_inline("25")}}
+                Недавно реализованные привязки:<br />selectSubString
               </li>
               <li>
                 Недавно реализованные атрибуты: textLength, lengthAdjust
-                {{gecko_minversion_inline("25")}}
               </li>
             </ul>
           </li>
@@ -386,7 +381,7 @@ original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
         <ul>
           <li>Выполнена.</li>
           <li>
-            Недавно реализованные привязки:<br />selectSubString{{gecko_minversion_inline("25")}}
+            Недавно реализованные привязки:<br />selectSubString
           </li>
         </ul>
       </td>
@@ -597,10 +592,10 @@ original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
           <li>
             Из псевдо-входов:<br /><code>SourceGraphic</code>,
             <code>SourceAlpha</code>,
-            <code>FillPaint</code> {{gecko_minversion_inline("17")}}
+            <code>FillPaint</code>
             и
             <code>StrokePaint</code>
-            {{gecko_minversion_inline("17")}} - реализованы.
+            - реализованы.
           </li>
           <li>
             Использование нереализованного псевдо-входного или фильтрующего
@@ -960,7 +955,6 @@ original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
         <ul>
           <li>
             Выполнено в Gecko 15.0 ({{Bug(512525)}}).
-            {{gecko_minversion_inline("15.0")}}.
           </li>
         </ul>
       </td>

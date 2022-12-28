@@ -19,7 +19,7 @@ _Интерфейс `File` также наследует свойства от {
 
 - {{domxref("File.lastModified")}} {{readonlyinline}}
   - : Возвращает время последнего изменения файла в миллисекунде с эпохи UNIX (1 января 1970 года в 00:00:00 в часовом поясе UTC).
-- {{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}
+- {{domxref("File.lastModifiedDate")}} {{readonlyinline}}
   - : Возвращает [дату](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date) последнего изменения файла, на который ссылается объект File.
 - {{domxref("File.name")}} {{readonlyinline}}
   - : Возвращает имя файла, на который ссылается объект File.

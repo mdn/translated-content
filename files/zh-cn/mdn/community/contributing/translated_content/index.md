@@ -19,9 +19,9 @@ original_slug: MDN/Contribute/Localize
 - 讨论组：[Telegram (MDN localization in Brazilian Portuguese)](https://t.me/mdn_l10n_pt_br)
 - 目前的志愿者：[Luisa Migueres](https://github.com/lumigueres)、[Julio Sampaio](https://github.com/juliosampaio)、[Josiel Rocha](https://github.com/josielrocha)、[Clóvis Lima Júnior](https://github.com/clovislima)
 
-### 汉语（zh-CN，zh-TW）
+### 汉语（zh-CN、zh-TW）
 
-- 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/tg)
+- 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/tg)、[Telegram (Mozilla China channel)](https://t.me/mozilla_china)
 - 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)
 
 ### 法语（fr）
