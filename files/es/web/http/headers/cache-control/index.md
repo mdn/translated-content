@@ -259,7 +259,7 @@ Cache-Control: sin caché
 
 Los navegadores generalmente agregan `no-cache` a las solicitudes cuando los usuarios **fuerzan la recarga** de una página.
 
-## `no-store`
+### `no-store`
 
 La directiva de petición `no-store` permite a un cliente solicitar que las cachés se abstengan de almacenar la petición y la respuesta correspondiente, incluso si la respuesta del servidor de origen pudiera almacenarse.
 
