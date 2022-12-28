@@ -740,7 +740,7 @@ AVC はまた、同じシーンの複数のビュー (Multiview Video Coding) �
     <tr>
       <th scope="row">ライセンス</th>
       <td>
-        	多数の特許を有する独占的なものです。商用利用する場合は<a href="https://www.mpegla.com/programs/avc-h-264/"
+        多数の特許を有する独占的なものです。商用利用する場合は<a href="https://www.mpegla.com/programs/avc-h-264/"
           >ライセンスが必要</a
         >です。複数のパテントプールが適用される場合があるので注意。
       </td>
