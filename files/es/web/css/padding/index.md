@@ -42,30 +42,28 @@ Esta propiedad puede ser especificada utilizando uno, dos, tres o cuatro de los 
 ### Ejemplos
 
 ```css
- padding: 5%;               /* aplica 5% de padding en todos los lados*/
+/* aplica 5% de padding en todos los lados*/
+ padding: 5%;
 ```
 
 ```css
- padding: 10px;              /* aplica 10px de padding en todos los lados */
+ /* aplica 10px de padding en todos los lados */
+ padding: 10px;
 ```
 
 ```css
- padding: 10px 20px;         /*  arriba y abajo, 10px de padding */
-                             /* izquierda y derecha, 20px de padding */
+/* Vertical | Horizontal */
+ padding: 10px 20px;
 ```
 
 ```css
- padding: 10px 3% 20px;      /*  arriba, 10px de padding          */
-                             /*  izquierda y derecha, 3% de padding */
-                             /*  bottom, 20px padding       */
+/* Arriba | Horizontal | Abajo */
+ padding: 10px 3% 20px;
 ```
 
 ```css
- padding: 1em 3px 30px 5px;  /*  arriba    1em  padding  */
-                             /*  derecha  3px  padding  */
-                             /*  abajo 30px padding  */
-                             /*  izquierda   5px  padding
-                 /* en dirección de las agujas del reloj */
+/* Arriba | Derecha | Abajo | Izquierda */
+ padding: 1em 3px 30px 5px;
 ```
 
 ```html hidden
