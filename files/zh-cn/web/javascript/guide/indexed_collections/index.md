@@ -1,5 +1,5 @@
 ---
-title: 索引集合类（Indexed collections）
+title: 索引集合类（Indexed collection）
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
@@ -600,12 +600,36 @@ var interpolatedZeros = [c+'0' for (c of str) ].join(''); // 'a0b0c0d0e0f0'
 
 {{jsxref("ArrayBuffer")}}是一种数据类型，用于表示一个通用的、固定长度的二进制数据缓冲区。你不能直接操纵一个 ArrayBuffer 中的内容；你需要创建一个数组类型视图或{{jsxref("DataView")}}来代表特定格式的缓冲区，并从而实现读写缓冲区的内容。
 
-### 类型数组视图 (Typed array views)
+## 使用类数组对象
 
-类型数组视图具有自描述性的名字，并且提供数据类型信息，例如`Int8`, `Uint32`, `Float64 等等。`如一个特定类型数组视图`Uint8ClampedArray`. 它意味着数据元素只包含 0 到 255 的整数值。它通常用于[Canvas 数据处理](/zh-CN/docs/Web/API/ImageData),例如。
+如 [`document.getElementsByTagName()`](/zh-CN/docs/Web/API/Document/getElementsByTagName) 返回的 [`NodeList`](/zh-CN/docs/Web/API/NodeList) 或 {{jsxref("Functions/arguments","arguments")}} 等 JavaScript 对象，有与数组相似的行为，但它们并不共享数组的所有方法。`arguments` 对象提供了 {{jsxref("Global_Objects/Function/length","length")}} 属性，但没有实现如 [`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 等数组方法。
 
-{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
+不能直接在类数组对象上调用数组方法。
 
-更多信息参考 [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays) 与参考文档中 {{jsxref("TypedArray")}}对象的不同
+```js example-bad
+function printArguments() {
+  arguments.forEach((item) => { // TypeError: arguments.forEach is not a function
+    console.log(item);
+  });
+}
+```
+
+但你可以通过 {{jsxref("Global_Objects/Function/call","Function.prototype.call()")}} 间接调用它们。
+
+```js example-good
+function printArguments() {
+  Array.prototype.forEach.call(arguments, (item) => {
+    console.log(item);
+  });
+}
+```
+
+数组原型方法也可以用于字符串，因为它们以类似于数组的方式提供对其中字符的顺序访问：
+
+```js
+Array.prototype.forEach.call('a string', (chr) => {
+  console.log(chr)
+})
+```
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}

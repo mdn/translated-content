@@ -1,33 +1,29 @@
 ---
 title: SourceBuffer.videoTracks
 slug: Web/API/SourceBuffer/videoTracks
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
-{{domxref("SourceBuffer")}} インターフェイスの **`videoTracks`** 読み取り専用プロパティは、現在 `SourceBuffer` 内に含まれている動画トラックのリストを返します。
+**`videoTracks`** は {{domxref("SourceBuffer")}} インターフェイスの読み取り専用プロパティで、現在 `SourceBuffer` 内に含まれている動画トラックのリストを返します。
 
-## 構文
+## 値
 
-```
-var myVideoTracks = sourceBuffer.videoTracks;
-```
-
-### 値
-
-{{domxref("VideoTrackList")}} オブジェクト。
+{{domxref("VideoTrackList")}} オブジェクトです。
 
 ## 例
 
-未定
+TBD
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer.videoTracks")}}
+{{Compat}}
 
 ## 関連情報
 

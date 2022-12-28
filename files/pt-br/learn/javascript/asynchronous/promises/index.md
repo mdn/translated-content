@@ -37,7 +37,7 @@ Com uma API baseada em promises, a função assíncrona inicia a operação e re
 
 Neste exemplo, vamos baixar o seguinte arquivo JSON <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> e registrar algumas informações sobre ele.
 
-Para isso, vamos fazer uma **Requisição HTTP** para o servidor. Em uma requisição HTTP, enviamos uma solicitação para o servidor e ele nos envia uma resposta de volta. Neste caso, vamos enviar uma solicitação para obeter um arquivo JSON do servidor. Relembre o último artigo, onde fizamos requisições HTTP usando a API {{domxref("XMLHttpRequest")}}? Bem, neste artigo, usaremos a API {{domxref("fetch", "fetch()")}}, que é a substituição moderna baseada em promise para XMLHttpRequest.
+Para isso, vamos fazer uma **Requisição HTTP** para o servidor. Em uma requisição HTTP, enviamos uma solicitação para o servidor e ele nos envia uma resposta de volta. Neste caso, vamos enviar uma solicitação para obter um arquivo JSON do servidor. Relembre o último artigo, onde fizamos requisições HTTP usando a API {{domxref("XMLHttpRequest")}}? Bem, neste artigo, usaremos a API {{domxref("fetch", "fetch()")}}, que é a substituição moderna baseada em promise para XMLHttpRequest.
 
 Cole o seguinte código no console do seu navegador:
 

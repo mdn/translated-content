@@ -1,10 +1,6 @@
 ---
 title: W3C DOM Level 1 Core 사용하기
 slug: Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
-tags:
-  - DOM
-  - NeedsUpdate
-translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 ---
 {{DefaultAPISidebar("DOM")}}
 
@@ -26,7 +22,7 @@ The W3C's DOM Level 1 Core 는 documents의 콘텐츠 트리를 변경하기 위
 </html>
 ```
 
-![image:Using_the_W3C_DOM_Level_1_Core-doctree.jpg](/@api/deki/files/415/=Using_the_W3C_DOM_Level_1_Core-doctree.jpg)
+![내용을 포함하는 루트 및 노드 요소가 있는 문서의 트리 형식의 DOM](using_the_w3c_dom_level_1_core-doctree.jpg)
 
 모질라에서 어떤 HTML 문서를 파싱할 때, 컨텐츠 트리를 만들고 이를 HTML 보여줄 때 사용합니다.
 
@@ -34,7 +30,7 @@ DOM Level 1 Core에 대해서 설명하기 위한 용어에 대한 설명입니�
 
 ## What does the DOM Level 1 Core let me do?
 
-The W3C DOM Level 1은 컨텐츠 트리를 웹 페이지 _개발자가 원하는 어떤 방식으로든_ 바꿀 수 있게 합니다. 백지 상태에서 HTML 문서를 제작할 수 있을 만큼 강력합니다. 또한 스크립트 언어를 통해 언제 어디서든 HTML 문서를 개발자가 조작할 수 있도록 합니다. 자바스크립트를 통해서 개발자는 동적으로 DOM을 가장 쉽게 변경할 수 있습니다. 자바스크립트는 전역 객체의 `document` 객체를 통해 오래된 브라우저가 접근했던 그 방식대로, HTML 문서에 접근 가능합니다, 이 `document` 객체는 the W3C's DOM Level 1 spec의 [Document interface](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#i-Document) 가 적용되어 있습니다.
+The W3C DOM Level 1은 컨텐츠 트리를 웹 페이지 **개발자가 원하는 어떤 방식으로든** 바꿀 수 있게 합니다. 백지 상태에서 HTML 문서를 제작할 수 있을 만큼 강력합니다. 또한 스크립트 언어를 통해 언제 어디서든 HTML 문서를 개발자가 조작할 수 있도록 합니다. 자바스크립트를 통해서 개발자는 동적으로 DOM을 가장 쉽게 변경할 수 있습니다. 자바스크립트는 전역 객체의 `document` 객체를 통해 오래된 브라우저가 접근했던 그 방식대로, HTML 문서에 접근 가능합니다, 이 `document` 객체는 the W3C's DOM Level 1 spec의 [Document interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#i-Document) 가 적용되어 있습니다.
 
 ## A simple example
 
@@ -79,15 +75,15 @@ The W3C DOM Level 1은 컨텐츠 트리를 웹 페이지 _개발자가 원하는
 
 {{ EmbedLiveSample('A_simple_example', 800, 300) }}
 
-[여기](/@api/deki/files/2866/=example.html)에서 완성된 예시를 확인하실 수 있습니다.
+[여기](using_the_w3c_dom_level_1_core-doctree.jpg)에서 완성된 예시를 확인할 수 있습니다.
 
 ## How can I learn more?
 
 이제 DOM의 기본적인 개념에 대한 설명이 끝났습니다. [DOM Level 1 fundamental methods](/ko/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces) 에 대해서 궁금하시다면, 더 자세히 공부하실 수 있습니다.
 
-더욱 정확하고 엄밀한 설명은 W3C [DOM Level 1 Core specification](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) 에서 확인하실 수 있습니다. 개발자에게 정보는 DOM 객체에 대한 설명과, 객체의 특성과 메소드에 대한 설명이 특히 유용합니다. [MDN의 다른 DOM 관련 문서](/ko/docs/DOM)도 참고 부탁 드립니다.
+더욱 정확하고 엄밀한 설명은 W3C [DOM Level 1 Core specification](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) 에서 확인하실 수 있습니다. 개발자에게 정보는 DOM 객체에 대한 설명과, 객체의 특성과 메소드에 대한 설명이 특히 유용합니다. [MDN의 다른 DOM 관련 문서](/ko/docs/Web/API/Document_Object_Model)도 참고 부탁 드립니다.
 
 **Original Document Information**
 
 - Author(s): L. David Baron \<dbaron at dbaron dot org>
-- Copyright Information: © 1998-2005 by individual mozilla.org contributors; content available under a [Creative Commons license](http://www.mozilla.org/foundation/licensing/website-content.html)
+- Copyright Information: © 1998-2005 by individual mozilla.org contributors; content available under a [Creative Commons license](https://www.mozilla.org/foundation/licensing/website-content.html)

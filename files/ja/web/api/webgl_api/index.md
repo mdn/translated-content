@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL (Web Graphics Library) は、互換性があるウェブブラウザーでプラグインを使用せずにインタラクティブな 3D グラフィックや 2D グラフィックをレンダリングするための JavaScript API です。HTML の {{HTMLElement("canvas")}} 要素へ OpenGL ES 2.0 に密接に従った API を導入することにより、WebGL を実現します。これにより、ユーザーの端末が提供するハードウェアのグラフィックアクセラレーションを API で利用することが可能になります。
 

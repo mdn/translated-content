@@ -1,17 +1,11 @@
 ---
-title: Consistent List Indentation
+title: 일관성있는 리스트 들여쓰기
 slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-tags:
-  - CSS
-  - Guide
-  - NeedsUpdate
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-original_slug: Consistent_List_Indentation
 ---
 
 {{CSSRef}}
 
-가장 흔하게 리스트에 적용되는 스타일 변경은 들여쓰기(indentation)거리의 변경입니다 -- 즉, 리스트 아이텡을 오른쪽으로 얼마나 멀리 들여쓸것인가 라는것입니다. 이 작업은 가끔 한 브라우저에서 나오던 효과가 다른 브라우저에서는 같은 효과를 내지 못해서 애를 먹게하곤 합니다. 예를들면, 리스트가 왼쪽 마진을 갖지 못하도록 선언할 경우, 익스플로러에선 이동이되지만, Gecko기반의 브라우저에선 고집스럽게도 꼼짝않고 제 자리를 지키며 있는 그런 경우 입니다.
+가장 흔하게 리스트에 적용되는 스타일 변경은 들여쓰기(indentation)거리의 변경입니다. 즉, 리스트 아이템을 오른쪽으로 얼마나 멀리 들여 쓸 것인가하는 것입니다. 이 작업은 가끔 한 브라우저에서 나오던 효과가 다른 브라우저에서는 같은 효과를 내지 못해서 애를 먹게하곤 합니다. 예를들면, 리스트가 왼쪽 마진을 갖지 못하도록 선언할 경우, 익스플로러에선 이동이되지만, Gecko기반의 브라우저에선 고집스럽게도 꼼짝않고 제 자리를 지키며 있는 그런 경우 입니다.
 
 왜 이런 일이 일어나는 가를 이해하고 더 나아가 이러한 문제점을 피해나갈 방법을 이해하기 위해서, 리스트 형성에대한 세부과정을 검토하는 것이 필요합니다.
 
@@ -19,21 +13,21 @@ original_slug: Consistent_List_Indentation
 
 먼저, 한개의 단순한 리스트 아이템을 생각해봅시다. 이 리스트 아이템엔 아무런 마커(불렛이라고도 알려져 있습니다)도 없고, 아직 그자체로 어떤 리스트의 부분이 아닙니다. 그림 1에서 보이는 바와같이, 단순하고 아무 치장도 없는 채로 그냥 혼자 허공에 떠 있는 상태라고 할 수 있습니다.
 
-![Figure 1](/@api/deki/files/619/=Consistent-list-indentation-figure1.gif)
+![Figure 1](consistent-list-indentation-figure1.gif)
 
 빨간 점선으로된 경계선은 리스트 아이템의 내용물-지역의 바깥 경계를 나타내고 있습니다. 이 시점에서 리스트 아이템은 패딩이나 보더(경계)를 가지고 있지 않다는 점을 상기하십시오. 만약 2개의 리스트 아이템을 더 추가 한다면, 그림 2에 보여진 것과같은 결과를 얻게 될 것입니다.
 
-![Figure 2](/@api/deki/files/620/=Consistent-list-indentation-figure2.gif)
+![Figure 2](consistent-list-indentation-figure2.gif)
 
 이제 이 아이템들을 부모 엘리먼트로 랩핑(포장)합니다; 이 경우, 우리는 아이템들을 순서없는 리스트로 (즉, `<ul>`) 랩핑합니다. CSS 상자(박스) 모델에 의하면, 리스트 아이템들의 상자들은 부모 엘리먼트의 내용물-지역안에 디스플레이 되어야만 합니다. 이 부모 엘리먼트에 패딩이나 마진이 아직 없으므로 우리는 그림 3에 보여진 것과 같은 상황을 맞이하게 됩니다.
 
-![Figure 3](/@api/deki/files/621/=Consistent-list-indentation-figure3.gif)
+![Figure 3](consistent-list-indentation-figure3.gif)
 
 여기서, 푸른 점선 경계선은 `<ul>`엘리먼트의 내용물 지역의 경계를 보여줍니다. `<ul>`엘리먼트에 패딩이 없으므로 엘리먼트의 내용물은 세 리스트 아이템들을 촘촘하게 랩핑하게 됩니다.
 
 이제, 리스트 아이템 마커를 추가합니다. 이 리스트는 순서가 없는 리스트이므로, 그림 4에 보여긴 것 같은 전통적인 채워진 원 불렛을 추가합니다.
 
-![Figure 4](/@api/deki/files/622/=Consistent-list-indentation-figure4.gif)
+![Figure 4](consistent-list-indentation-figure4.gif)
 
 보여지는 것으론, 마커들은 `<ul>`의 내용물-지역의*바깥* 에 있으나, 여기서 이점은 그다지 중요하지 않습니다. 중요한 점은 마커들이 `<li>`엘리먼트들의 "principal 상자"의 밖에 놓여진다는 점입니다. 이 마커들은 `<lt>`의 내용물-지역의 밖에 매달려 있으나 여전히 `<li>`에 부착되어있는 일종의 리스트 아이템들의 꼬리표같다고 할 수 있습니다.
 

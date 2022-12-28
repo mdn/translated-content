@@ -1,15 +1,8 @@
 ---
 title: 쌓임 맥락
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Reference
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 ---
-{{cssref}}
+{{CSSRef}}
 
 **쌓임 맥락**(stacking context)은 가상의 Z축을 사용한 HTML 요소의 3차원 개념화입니다. Z축은 사용자 기준이며, 사용자는 뷰포트 혹은 웹페이지를 바라보고 있을 것으로 가정합니다. 각각의 HTML 요소는 자신의 속성에 따른 우선순위를 사용해 3차원 공간을 차지합니다.
 
@@ -51,7 +44,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_conte
 
 ## 예시
 
-![Example of stacking rules modified using z-index](/@api/deki/files/913/=Understanding_zindex_04.png)
+![Example of stacking rules modified using z-index](understanding_zindex_04.png)
 
 위의 예시에서, 모든 요소는 각자의 포지션과 `z-index`로 인해 자신의 쌓임 맥락을 형성합니다. 쌓임 맥락의 계층 구조는 다음과 같습니다.
 
