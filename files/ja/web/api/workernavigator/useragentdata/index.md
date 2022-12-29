@@ -1,15 +1,8 @@
 ---
 title: WorkerNavigator.userAgentData
 slug: Web/API/WorkerNavigator/userAgentData
-page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - NavigatorUAData
-  - Experimental
-browser-compat: api.WorkerNavigator.userAgentData
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
