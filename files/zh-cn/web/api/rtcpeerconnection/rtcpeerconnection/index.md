@@ -18,109 +18,58 @@ new RTCPeerConnection(configuration)
 
 - `configuration` {{optional_inline}}
 
-  - : An object providing options to configure the new connection:
+  - : 一个对象，用于提供配置新连接的选项：
 
     - `bundlePolicy` {{optional_inline}}
 
-      - : Specifies how to handle negotiation of candidates
-        when the remote peer is not compatible
-        with the [SDP BUNDLE standard](https://webrtcstandards.info/sdp-bundle/).
-        If the remote endpoint is BUNDLE-aware,
-        all media tracks and data channels are bundled onto a single transport at the completion of negotiation,
-        regardless of policy used,
-        and any superfluous transports that were created initially are closed at that point.
+      - : 指定当远程对等点与 [SDP BUNDLE 标准](https://webrtcstandards.info/sdp-bundle/)不兼容时，应如何处理候选的协商。如果远程端点可以感知 BUNDLE，则在协商完成时，所有媒体轨道和数据通道都将捆绑到单个传输上，而不管使用何种策略，并且最初创建的任何多余传输都将在此时关闭。
 
-        In technical terms,
-        a BUNDLE lets all media flow between two peers flow across a single **5-tuple**;
-        that is, from a single IP and port on one peer to a single IP and port on the other peer,
-        using the same transport protocol.
+        用技术术语来说，BUNDLE 允许两个对等点之间的所有媒体流流经单个 **5 元组**；也就是说，使用相同的传输协议从一个对等点的单个 IP 和端口到另一个对等点的单个 IP 和端口。
 
-        This must be one of the following string values,
-        if not `balanced` is assumed:
+        如果假定为不平衡（`balanced`），这必须是以下字符串值之一：
 
         - `balanced`
-          - : The ICE agent initially creates one {{domxref("RTCDtlsTransport")}}
-            for each type of content added: audio, video, and data channels.
-            If the remote endpoint is not BUNDLE-aware,
-            then each of these DTLS transports handles all the communication for one type of data.
+          - : ICE 代理最初为每一种内容类型（音频、视频、数据通道）创建一个 {{domxref("RTCDtlsTransport")}}。如果远程端点无法感知 BUNDLE，那么每一个 DTLS 传输用于处理一种数据类型的通信。
         - `max-compat`
-          - : The ICE agent initially creates one {{domxref("RTCDtlsTransport")}} per media track
-            and a separate one for data channels.
-            If the remote endpoint is not BUNDLE-aware,
-            everything is negotiated on these separate DTLS transports.
+          - : ICE 代理最初为每个媒体轨道创建一个 {{domxref("RTCDtlsTransport")}}，对数据通道则创建一个单独的传输。如果远程端点无法感知 BUNDLE，那么对于所有的内容都会协商一个单独的 DTLS 传输。
         - `max-bundle`
-          - : The ICE agent initially creates only a single {{domxref("RTCDtlsTransport")}}
-            to carry all of the {{DOMxRef("RTCPeerConnection")}}'s data.
-            If the remote endpoint is not BUNDLE-aware,
-            then only a single track will be negotiated and the rest ignored.
+          - : ICE 代理最初仅创建一个 {{domxref("RTCDtlsTransport")}} 来承载所有的 {{DOMxRef("RTCPeerConnection")}} 的数据。如果远程端点无法感知 BUNDLE，那么仅会协商一个轨道而忽略其余的轨道。
 
     - `certificates` {{optional_inline}}
 
-      - : An {{jsxref("Array")}} of objects of type {{domxref("RTCCertificate")}}
-        which are used by the connection for authentication.
-        If this property isn't specified,
-        a set of certificates is generated automatically for each {{domxref("RTCPeerConnection")}} instance.
-        Although only one certificate is used by a given connection,
-        providing certificates for multiple algorithms may improve the odds of successfully connecting in some circumstances.
-        See [Using certificates](#using_certificates) for further information.
+      - : 一个由 {{domxref("RTCCertificate")}} 对象组成的{{jsxref("Array", "数组", "", 1)}}，用于连接的身份验证。如果未指定该属性，则会为每一个 {{domxref("RTCPeerConnection")}} 实例自动创建一组证书。尽管一个给定的连接只使用一个证书，但提供多个证书可以支持多种算法，从而提高某些情况下的连接成功的机率。参见[使用证书](#使用证书)以了解更多信息。
 
-        > **Note:** This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.
+        > **备注：** 此配置选项在首次指定后便不能更改；一旦设置了证书，此属性将在之后调用 {{domxref("RTCPeerConnection.setConfiguration()")}} 时被忽略。
 
     - `iceCandidatePoolSize` {{optional_inline}}
 
-      - : An unsigned 16-bit integer value which specifies the size of the prefetched ICE candidate pool.
-        The default value is 0 (meaning no candidate prefetching will occur).
-        You may find in some cases that connections can be established more quickly
-        by allowing the ICE agent to start fetching ICE candidates
-        before you start trying to connect,
-        so that they're already available for inspection
-        when {{domxref("RTCPeerConnection.setLocalDescription()")}} is called.
+      - : 一个无符号 16 位整数，其指定了预获取的 ICE 候选池的大小。其默认值为 0（表示不会发生候选的预获取）。你可能会发现，在某些情况下，通过在尝试建立连接前允许 ICE 代理预获取 ICE 候选，可以更快地建立连接，以在调用 {{domxref("RTCPeerConnection.setLocalDescription()")}} 时，已可以检查连接。
 
-        > **Note:** Changing the size of the ICE candidate pool may trigger the beginning of ICE gathering.
+        > **备注：** 改变 ICD 候选池的大小可能会触发 ICE 收集的开始。
 
     - `iceServers` {{optional_inline}}
-      - : An array of {{domxref("RTCIceServer")}} objects,
-        each describing one server which may be used by the ICE agent;
-        these are typically STUN and/or TURN servers.
-        If this isn't specified,
-        the connection attempt will be made with no STUN or TURN server available,
-        which limits the connection to local peers.
+      - : 一个由 {{domxref("RTCIceServer")}} 对象组成的数组，每个对象描述一个可能被 ICE 代理使用的服务器；这些通常是 STUN 或 TURN 服务器。如果未指定，则将在没有可用的 STUN 或 TURN 服务器的情况下进行连接尝试，这将连接限制为本地对等点。
     - `iceTransportPolicy` {{optional_inline}}
 
-      - : The current ICE transport policy;
-        if the policy isn't specified, `all` is assumed by default,
-        allowing all candidates to be considered.
-        Possible values are:
+      - : 当前的 ICE 传输策略；如果未指定策略，则默认使用 `all` 策略，允许考虑所有的候选。可能的值有：
 
         - `"all"`
-          - : All ICE candidates will be considered.
+          - : 所有的 ICE 候选都会被考虑。
         - `"public"` {{deprecated_inline}}
-          - : Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._
+          - : 只有拥有公共 IP 地址的 ICE 候选才会被考虑。_在 2016 年 5 月 13 日的规范工作草案中被移除。_
         - `"relay"`
-          - : Only ICE candidates whose IP addresses are being relayed, such as those being passed through a STUN or TURN server, will be considered.
+          - : 只有 IP 地址被中继的 ICE 候选，例如那些通过 STUN 或 TURN 服务器传递的，才会被考虑。
 
     - `peerIdentity` {{optional_inline}}
-      - : A string
-        which specifies the target peer identity for the {{domxref("RTCPeerConnection")}}.
-        If this value is set
-        (it defaults to `null`),
-        the `RTCPeerConnection` will not connect to a remote peer
-        unless it can successfully authenticate with the given name.
+      - : 一个字符串，用于指定 {{domxref("RTCPeerConnection")}} 目标对等点的标识。如果设置了该值（其默认为 `null`），则在成功验证远程对等点的身份为给定的名称之前，`RTCPeerConnection` 不会与其建立连接。
     - `rtcpMuxPolicy` {{optional_inline}}
 
-      - : The RTCP mux policy to use when gathering ICE candidates, in order to support non-multiplexed RTCP. Possible values are:
+      - : 收集 ICE 候选时使用的 RTCP mux 策略，以支持非复用的 RTCP。可能的值有：
 
         - `negotiate`
-          - : Instructs the ICE agent to gather both {{Glossary("RTP")}} and {{Glossary("RTCP")}} candidates.
-            If the remote peer can multiplex RTCP,
-            then RTCP candidates are multiplexed atop the corresponding RTP candidates.
-            Otherwise, both the RTP and RTCP candidates are returned, separately.
+          - : 指示 ICE 代理收集 {{Glossary("RTP")}} 和 {{Glossary("RTCP")}} 候选。如果远程对等点支持 RTCP 复用，那么 RTCP 候选将在相应的 RTP 候选之上多路复用。否则，分别返回 RTP 和 RTCP 候选。
         - `require`
-          - : Tells the ICE agent to gather ICE candidates for only RTP,
-            and to multiplex RTCP atop them.
-            If the remote peer doesn't support RTCP multiplexing,
-            then session negotiation fails.
-            This is the default value.
+          - : 告诉 ICE 代理仅收集 RTP 的 ICE 候选，并在它们之上多路复用 RTCP。如果远程对等点不支持 RTCP 多路复用，则会话协商失败。这是默认值。
 
 ### 返回值
 
@@ -132,9 +81,9 @@ new RTCPeerConnection(configuration)
 
 `certificates` 属性值在首次指定后便无法更改。如果在传递到调用的 {{domxref("RTCPeerConnection.setConfiguration", "setConfiguration()")}} 函数的配置信息中包含了该属性，则该属性会被忽略。
 
-该属性支持提供多个证书，因为即使给定的 DTLS 连接仅使用一个证书，提供多个证书也可以支持多种加密算法。`RTCPeerConnection` 的实现会根据其和远程的对等方支持的算法来选择要使用的证书，这在 DTLS 握手期间确定。
+该属性支持提供多个证书，因为即使给定的 DTLS 连接仅使用一个证书，提供多个证书也可以支持多种加密算法。`RTCPeerConnection` 的实现会根据其和远程的对等点支持的算法来选择要使用的证书，这在 DTLS 握手期间确定。
 
-如果你不提供证书，则会自动生成新的证书。提供你自己的证书有一个明显的好处：身份密钥的连续性——如果你对后续的调用使用相同的证书，则远程对等方可以告诉你是同一个调用者。这也避免生成新密钥的成本。
+如果你不提供证书，则会自动生成新的证书。提供你自己的证书有一个明显的好处：身份密钥的连续性——如果你对后续的调用使用相同的证书，则远程对等点可以告诉你是同一个调用者。这也避免生成新密钥的成本。
 
 ## 规范
 
