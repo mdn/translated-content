@@ -1,6 +1,6 @@
 ---
 title: 可转移对象
-slug: Glossary/Transferable_objects
+slug: Web/API/Web_Workers_API/Transferable_objects
 ---
 
 **可转移的对象**（Transferable object）是拥有属于自己的资源的对象，这些资源可以从一个上下文*转移*到另一个，确保资源一次仅在一个上下文可用。传输后，原始对象不再可用；它不再指向转移后的资源，并且任何读取或者写入该对象的尝试都将抛出异常。
