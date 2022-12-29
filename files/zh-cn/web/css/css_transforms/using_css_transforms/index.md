@@ -531,8 +531,8 @@ section {
 
 ## 参见
 
-- [CSS `transform` 属性](/en-US/docs/Web/CSS/transform)和 [CSS `<transform-function>` 数据类型](/en-US/docs/Web/CSS/transform-function)
+- [CSS `transform` 属性](/zh-CN/docs/Web/CSS/transform)和 [CSS `<transform-function>` 数据类型](/zh-CN/docs/Web/CSS/transform-function)
 - 单独的变换属性：{{cssxref('translate')}}、{{cssxref('rotate')}} 和 {{cssxref('scale')}}（没有 `skew` 属性）
-- [将设备方向与 3D 变换结合使用](/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
+- [将设备方向与 3D 变换结合使用](/zh-CN/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [CSS 3D 变换简介](https://3dtransforms.desandro.com/)（由 David DeSandro 撰写的博客）
 - [CSS 变换 Playground](https://css-transform.moro.es/)（CSS 变换函数可视化的在线工具）
