@@ -12,7 +12,7 @@ Basicamente é uma nova forma de criar strings e tornar o seu código um pouco m
 
 ## Sintaxe
 
-```
+```js-nolint
 `corpo de texto`
 
 `texto linha 1
