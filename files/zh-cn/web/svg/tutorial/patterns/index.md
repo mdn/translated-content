@@ -34,7 +34,7 @@ slug: Web/SVG/Tutorial/Patterns
 </svg>
 ```
 
-{{ EmbedLiveSample('Patterns','220','220','/files/725/SVG_Pattern_Example.png') }}
+{{ EmbedLiveSample('图案','220','220') }}
 
 在 pattern 元素内部你可以包含任何之前包含过的其它基本形状，并且每个形状都可以使用之前学习过的任何样式样式化，包括渐变和半透明。这里我们在 pattern 中绘制两个矩形（两个矩形互相重叠，一个矩形是另一个矩形大小的二倍，且用于填充整个 pattern）和一个圆。
 
