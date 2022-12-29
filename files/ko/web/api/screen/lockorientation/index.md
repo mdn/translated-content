@@ -1,7 +1,6 @@
 ---
 title: Screen.lockOrientation
 slug: Web/API/Screen/lockOrientation
-translation_of: Web/API/Screen/lockOrientation
 ---
 
 {{APIRef("CSSOM View")}}{{Deprecated_header}}

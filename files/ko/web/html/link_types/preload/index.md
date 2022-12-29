@@ -1,13 +1,6 @@
 ---
 title: '링크 유형: preload'
 slug: Web/HTML/Link_types/preload
-tags:
-  - Attribute
-  - HTML
-  - Link
-  - Link types
-  - Reference
-browser-compat: html.elements.link.rel.preload
 ---
 
 {{HTMLSidebar}}

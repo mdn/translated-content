@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
-browser-compat: javascript.builtins.Date.setHours
 ---
 
 {{JSRef}}

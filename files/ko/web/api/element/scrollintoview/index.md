@@ -1,7 +1,6 @@
 ---
 title: element.scrollIntoView
 slug: Web/API/Element/scrollIntoView
-translation_of: Web/API/Element/scrollIntoView
 ---
 {{APIRef("DOM")}}
 

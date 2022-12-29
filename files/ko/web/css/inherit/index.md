@@ -1,13 +1,6 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-tags:
-  - CSS
-  - CSS Cascade
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/inherit
 ---
 
 {{CSSRef}}

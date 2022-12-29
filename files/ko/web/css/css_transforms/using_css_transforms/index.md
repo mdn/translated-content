@@ -1,14 +1,6 @@
 ---
 title: CSS 변형 사용하기
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
-tags:
-  - 3D
-  - Advanced
-  - CSS
-  - CSS Transforms
-  - Graphics
-  - Guide
-translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
 {{CSSRef}}
 

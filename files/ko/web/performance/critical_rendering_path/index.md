@@ -1,7 +1,6 @@
 ---
 title: 중요 렌더링 경로
 slug: Web/Performance/Critical_rendering_path
-translation_of: Web/Performance/Critical_rendering_path
 original_slug: Web/Performance/중요_렌더링_경로
 ---
 

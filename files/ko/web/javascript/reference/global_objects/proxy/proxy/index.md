@@ -1,13 +1,6 @@
 ---
 title: Proxy() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-tags:
-  - Constructor
-  - JavaScript
-  - Proxy
-  - Reference
-browser-compat: javascript.builtins.Proxy.Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 ---
 
 {{JSRef}}

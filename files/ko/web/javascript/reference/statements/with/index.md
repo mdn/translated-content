@@ -1,7 +1,6 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-translation_of: Web/JavaScript/Reference/Statements/with
 ---
 
 <div class="warning">Use of the <code>with</code> statement is not recommended, as it may be the source of confusing bugs and compatibility issues. See the "Ambiguity Contra" paragraph in the "Description" section below for details.</div>

@@ -1,15 +1,6 @@
 ---
 title: BatteryManager
 slug: Web/API/BatteryManager
-tags:
-  - API
-  - Battery API
-  - Device API
-  - Interface
-  - Deprecated
-  - Reference
-browser-compat: api.BatteryManager
-translation_of: Web/API/BatteryManager
 ---
 {{APIRef}}{{deprecated_header}}
 

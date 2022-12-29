@@ -1,7 +1,6 @@
 ---
 title: 웹소켓 서버 작성하기
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_servers
 original_slug: WebSockets/Writing_WebSocket_servers
 ---
 

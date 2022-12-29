@@ -1,7 +1,6 @@
 ---
 title: <rect>
 slug: Web/SVG/Element/rect
-translation_of: Web/SVG/Element/rect
 original_slug: Web/SVG/Element/사각형
 ---
 

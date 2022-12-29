@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
 
 {{JSRef}}

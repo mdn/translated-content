@@ -1,13 +1,6 @@
 ---
 title: CSS Multi-column Layout
 slug: Web/CSS/CSS_Columns
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - Layout
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Columns
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 ---
 
 {{JSRef}}

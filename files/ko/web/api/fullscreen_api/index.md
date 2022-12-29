@@ -1,7 +1,6 @@
 ---
 title: Using fullscreen mode
 slug: Web/API/Fullscreen_API
-translation_of: Web/API/Fullscreen_API
 original_slug: Web/Guide/DOM/Using_full_screen_mode
 ---
 

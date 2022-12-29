@@ -1,7 +1,6 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-translation_of: Web/JavaScript/Reference/Operators/await
 ---
 
 {{jsSidebar("Operators")}}`await`연산자는 {{jsxref("Promise")}}를 기다리기 위해 사용됩니다. 연산자는 {{jsxref("Statements/async_function", "async function")}} 내부에서만 사용할 수 있습니다.

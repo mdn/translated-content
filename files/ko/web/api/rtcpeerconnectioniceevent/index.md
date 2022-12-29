@@ -1,16 +1,6 @@
 ---
 title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - RTCIceCandidateEvent
-  - Reference
-  - TopicStub
-  - WebRTC
-translation_of: Web/API/RTCPeerConnectionIceEvent
 ---
 
 {{APIRef("WebRTC")}}

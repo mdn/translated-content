@@ -1,12 +1,6 @@
 ---
 title: Understanding the Web Content Accessibility Guidelines
 slug: Web/Accessibility/Understanding_WCAG
-tags:
-  - NeedsTranslation
-  - TopicStub
-  - WCAG
-  - Web Content Accessibility Guidelines
-translation_of: Web/Accessibility/Understanding_WCAG
 ---
 
 This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the W3C Web Content Accessibility Guidelines 2.0 or 2.1 (or just WCAG, for the purposes of this writing).

@@ -1,15 +1,6 @@
 ---
 title: 웹 컴포넌트
 slug: Web/Web_Components
-tags:
-  - Landing
-  - NeedsTranslation
-  - Template
-  - Web Components
-  - custom elements
-  - slot
-  - 웹 컴포넌트
-translation_of: Web/Web_Components
 ---
 {{DefaultAPISidebar("Web Components")}}
 

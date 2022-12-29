@@ -1,13 +1,6 @@
 ---
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLFormElement
 ---
 
 {{APIRef("HTML DOM")}}

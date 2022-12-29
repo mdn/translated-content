@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
-translation_of: Web/API/RTCPeerConnection/addIceCandidate
 ---
 
 {{APIRef("WebRTC")}}

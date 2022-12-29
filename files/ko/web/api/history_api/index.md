@@ -1,15 +1,6 @@
 ---
 title: History API
 slug: Web/API/History_API
-tags:
-  - API
-  - Advanced
-  - DOM
-  - History
-  - 기록
-  - 브라우저 히스토리
-  - 히스토리
-translation_of: Web/API/History_API
 ---
 
 {{DefaultAPISidebar("History API")}}

@@ -1,7 +1,6 @@
 ---
 title: blur
 slug: Web/API/Element/blur_event
-translation_of: Web/API/Element/blur_event
 original_slug: Web/Events/blur
 ---
 

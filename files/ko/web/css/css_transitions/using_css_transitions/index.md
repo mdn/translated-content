@@ -1,12 +1,6 @@
 ---
 title: CSS 트랜지션 사용하기
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - Advanced
-  - CSS
-  - CSS Transitions
-  - Guide
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 
 {{CSSRef}}
