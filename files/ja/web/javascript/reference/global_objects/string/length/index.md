@@ -73,9 +73,7 @@ console.log(myString.length);
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-properties-of-string-instances-length')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

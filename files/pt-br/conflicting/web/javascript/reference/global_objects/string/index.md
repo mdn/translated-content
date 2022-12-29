@@ -4,6 +4,7 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
 translation_of: Web/API/DOMString
 original_slug: Web/API/DOMString
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMString`** é uma String UTF-16. Como o JavaScript já usa tais strings, uma `DOMString` é mapeada diretamente a uma {{jsxref("String")}}.

@@ -120,7 +120,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 
 [`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 属性允许服务器指定是否/何时通过跨站点请求发送（其中{{Glossary("Site","站点")}}由注册的域和*方案*定义：http 或 https）。这提供了一些针对跨站点请求伪造攻击（{{Glossary("CSRF")}}）的保护。它采用三个可能的值：`Strict`、`Lax` 和 `None`。
 
-使用 `Strict`，cookie 仅发送到它来源的站点。`Lax` 与 Strict 相似，只是在用户*导航*到 cookie 的源站点时发送 cookie。例如，通过跟踪来自外部站点的链接。`None` 指定浏览器会在统战请求和跨站请求下继续发送 cookie，但*仅在安全的上下文中*（即，如果 `SameSite=None`，且还必须设置 `Secure` 属性）。如果没有设置 `SameSite` 属性，则将 cookie 视为 `Lax`.
+使用 `Strict`，cookie 仅发送到它来源的站点。`Lax` 与 Strict 相似，只是在用户*导航*到 cookie 的源站点时发送 cookie。例如，通过跟踪来自外部站点的链接。`None` 指定浏览器会在同站请求和跨站请求下继续发送 cookie，但*仅在安全的上下文中*（即，如果 `SameSite=None`，且还必须设置 `Secure` 属性）。如果没有设置 `SameSite` 属性，则将 cookie 视为 `Lax`.
 
 下面是例子：
 

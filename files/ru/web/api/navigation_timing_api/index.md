@@ -84,4 +84,4 @@ var connectTime = perfData.responseEnd - perfData.requestStart;
 
 ## Совместимость с браузерами
 
-{{Compat("api.PerformanceTiming")}}
+{{Compat}}

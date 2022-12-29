@@ -3,6 +3,7 @@ title: Window.postMessage()
 slug: Web/API/Window/postMessage
 translation_of: Web/API/Window/postMessage
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`window.postMessage()`** 메소드는 {{domxref("Window")}} 오브젝트 사이에서 안전하게 cross-origin 통신을 할 수 있게 합니다. 예시로, 페이지와 생성된 팝업 간의 통신이나, 페이지와 페이지 안의 iframe 간의 통신에 사용할 수 있습니다.

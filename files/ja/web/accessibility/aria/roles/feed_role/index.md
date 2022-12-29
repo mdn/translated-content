@@ -83,9 +83,7 @@ slug: Web/Accessibility/ARIA/Roles/Feed_Role
 
 ## 仕様
 
-| 仕様                                             | 状態                     |
-| ------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#feed","feed")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

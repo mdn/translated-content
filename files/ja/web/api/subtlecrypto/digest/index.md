@@ -95,9 +95,7 @@ console.log(digestHex);
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

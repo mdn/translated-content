@@ -7,6 +7,7 @@ tags:
   - Gecko DOM Reference
 translation_of: Web/API/Element/attributes
 ---
+
 {{ ApiRef() }}
 
 ### 요약
@@ -78,7 +79,7 @@ var atts = para.attributes;
 
 `NamedNodeMap`은 배열처럼 반복될 수 있지만, `join`, `split` 등과 같은 `Array`에 있는 어떤 특수 메소드는 없습니다.
 
-이름으로 특정 속성에 접근하려면, [getAttribute](ko/DOM/element.getAttribute) 메소드를 쓰세요.
+이름으로 특정 속성에 접근하려면, [getAttribute](/ko/DOM/element.getAttribute) 메소드를 쓰세요.
 
 ### 명세
 

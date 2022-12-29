@@ -73,11 +73,7 @@ slug: Web/HTML/Element/option
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'form-elements.html#the-option-element', '&lt;option&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-option-element', '&lt;option&gt;')}}         | {{Spec2('HTML5 W3C')}}     |          |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;option&gt;')}}                     | {{Spec2('HTML4.01')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

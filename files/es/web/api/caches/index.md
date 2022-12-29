@@ -1,7 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.caches
 slug: Web/API/caches
-translation_of: Web/API/WindowOrWorkerGlobalScope/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
 

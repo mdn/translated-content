@@ -12,7 +12,7 @@ Si le clavier n'est pas physique, la valeur retournée sera définie par le navi
 
 Cette propriété est utile quand vous souhaitez manipuler les clés en fonction de leur position physique sur le clavier et non les caractères associés au clés (par exemple pour les touches de déplacement d'un jeu vidéo). Attention toutefois, on ne pourra pas utiliser la valeur fournie par `KeyboardEvent.code` afin de déterminer le caractère utilisé sur le clavier.
 
-Par exemple, le `code` retourné est `"KeyQ"` pour le caractère "<kbd>q</kbd>" sur un clavier QWERTY, mais le même `code` représente le caractère "<kbd>'</kbd>"  sur un clavier Dvorak, et le caractère "<kbd>a</kbd>" sur un clavier AZERTY. Cela rend impossible l'utilisation du `code` pour déterminer le code d'une clé destiné aux utilisateurs s'ils n'utilisent pas une disposition de clavier anticipé.
+Par exemple, le `code` retourné est `"KeyQ"` pour le caractère "<kbd>q</kbd>" sur un clavier QWERTY, mais le même `code` représente le caractère "<kbd>'</kbd>" sur un clavier Dvorak, et le caractère "<kbd>a</kbd>" sur un clavier AZERTY. Cela rend impossible l'utilisation du `code` pour déterminer le code d'une clé destiné aux utilisateurs s'ils n'utilisent pas une disposition de clavier anticipé.
 
 Pour déterminer quel caractère correspond à un `key event`, utilisez plutôt la propriété {{domxref("KeyboardEvent.key")}}.
 

@@ -1,8 +1,6 @@
 ---
 title: Introducción al modelo de caja básico de CSS
 slug: Web/CSS/CSS_Box_Model/introduction_to_the_CSS_box_model
-page-type: guide
-spec-urls: https://drafts.csswg.org/css-box/#intro
 l10n:
   sourceCommit: 71c4bc0b6329ec40ddbefd8d3124547e91cfa612
 ---
@@ -11,7 +9,7 @@ l10n:
 
 Al maquetar un documento, el motor de renderizado del navegador representa cada elemento como una caja rectangular, conforme al estándar del **modelo de caja básico de CSS**. CSS determina el tamaño, la posición y las propiedades (color, fondo, tamaño del borde, etc.) de estas cajas.
 
-Cada caja está compuesta de cuatro partes (o _áreas_), definidas por sus respectivos límites: _límite de contenido (content edge)_ , _límite de relleno (padding edge)_ , _límite de borde (border edge)_  y  _límite de margen (margin edge)_ .
+Cada caja está compuesta de cuatro partes (o _áreas_), definidas por sus respectivos límites: _límite de contenido (content edge)_ , _límite de relleno (padding edge)_ , _límite de borde (border edge)_ y _límite de margen (margin edge)_ .
 
 ![Modelo de caja de CSS](<boxmodel-(3).png>)
 

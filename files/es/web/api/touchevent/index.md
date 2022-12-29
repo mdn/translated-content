@@ -1,7 +1,6 @@
 ---
 title: TouchEvent
 slug: Web/API/TouchEvent
-translation_of: Web/API/TouchEvent
 ---
 
 {{ APIRef("Touch Events") }}

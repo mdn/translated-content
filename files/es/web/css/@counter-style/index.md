@@ -1,15 +1,6 @@
 ---
 title: '@counter-style'
 slug: Web/CSS/@counter-style
-tags:
-  - At-rule
-  - CSS
-  - NeedsTranslation
-  - Reference
-  - Styles
-  - TopicStub
-  - counter
-translation_of: Web/CSS/@counter-style
 ---
 
 {{CSSRef}}

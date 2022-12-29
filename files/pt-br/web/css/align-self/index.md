@@ -130,13 +130,7 @@ div:nth-child(3) {
 
 ## Compatibilidade com navegadores
 
-### Suporte em Flex layout
-
-{{Compat("css.properties.align-self.flex_context")}}
-
-### Suporte em Grid layout
-
-{{Compat("css.properties.align-self.grid_context")}}
+{{Compat}}
 
 ## Veja também
 

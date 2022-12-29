@@ -1,14 +1,6 @@
 ---
 title: MediaQueryList
 slug: Web/API/MediaQueryList
-tags:
-  - API
-  - CSSOM Vista
-  - CompatibilidadDeNavegadores
-  - Interface
-  - MediaQueryList
-  - Refetencia
-translation_of: Web/API/MediaQueryList
 ---
 
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}

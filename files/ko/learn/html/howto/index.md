@@ -2,6 +2,7 @@
 title: Learn HTML to solve problems
 slug: Learn/HTML/Howto
 ---
+
 Once you've covered [the basics](/en-US/Learn/Getting_started_with_the_web/HTML_basics), there isn't one right path to learn {{Glossary("HTML")}}. You can pick up whatever you like at your own pace. HTML is simply a set of {{glossary("tag","tags")}} you can use to set up your document structure and add extra functionality to your document. The following articles explain thoroughly, with full working examples, how to use HTML for the most common, frequent Web development tasks. If you need a quick explanation of a tag, please head over to our [HTML reference](/ko/docs/Web/HTML/Reference).
 
 ## Common use cases

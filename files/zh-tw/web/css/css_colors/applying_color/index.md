@@ -200,7 +200,7 @@ th {
 </table>
 ```
 
-{{EmbedLiveSample("hsl-swatches", 300, 260)}}
+{{EmbedLiveSample("HSL functional notation", 300, 260)}}
 
 > **備註：** Note that when you omit the hue's unit, it's assumed to be in degrees (`deg`).
 

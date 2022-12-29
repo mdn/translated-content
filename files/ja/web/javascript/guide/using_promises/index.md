@@ -362,7 +362,7 @@ doSomethingCritical()
 
 インデントではなく外側の `(` および `)` によってオプションの処理が入れ子になっていることに注意してください。
 
-内側の `catch` 文は `doSomethingOptional()` と `doSomethingExtraNice()` からの失敗だけを捕捉し、捕捉したあと `moreCriticalStuff()` へと処理が続きます。重要なのは、もし `doSomethingCritical()` が失敗したらそのエラーは最後 (外側) の  `catch` によってだけ捕捉されるということです。
+内側の `catch` 文は `doSomethingOptional()` と `doSomethingExtraNice()` からの失敗だけを捕捉し、捕捉したあと `moreCriticalStuff()` へと処理が続きます。重要なのは、もし `doSomethingCritical()` が失敗したらそのエラーは最後 (外側) の `catch` によってだけ捕捉されるということです。
 
 ## よくある間違い
 

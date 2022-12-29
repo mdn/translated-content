@@ -30,9 +30,7 @@ Bluetooth implements ServiceEventHandlers;
 
 ## 仕様
 
-| 仕様                                                                         | ステータス                           | コメント   |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Bluetooth', '#bluetooth', 'Bluetooth')}} | {{Spec2('Web Bluetooth')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

@@ -1,7 +1,6 @@
 ---
 title: Argumento
 slug: Glossary/Argument
-translation_of: Glossary/Argument
 original_slug: Glossary/Argumento
 ---
 

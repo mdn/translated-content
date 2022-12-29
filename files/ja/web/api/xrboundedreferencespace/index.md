@@ -22,9 +22,7 @@ _`XRBoundedReferenceSpace` は、その親インターフェイスである {{do
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#xrboundedreferencespace-interface','XRBoundedReferenceSpace')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

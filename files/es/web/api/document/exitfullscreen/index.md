@@ -1,7 +1,6 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
-translation_of: Web/API/Document/exitFullscreen
 ---
 
 {{ApiRef("Fullscreen API")}}

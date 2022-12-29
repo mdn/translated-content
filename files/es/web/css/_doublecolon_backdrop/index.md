@@ -1,15 +1,6 @@
 ---
 title: '::backdrop'
 slug: Web/CSS/::backdrop
-tags:
-  - CSS
-  - Layout
-  - NeedsContent
-  - Pantalla completa
-  - Pseudo Elemento CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/::backdrop
 ---
 
 {{CSSRef}} {{SeeCompatTable}}

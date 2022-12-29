@@ -1,12 +1,6 @@
 ---
 title: performance.clearMarks()
 slug: Web/API/Performance/clearMarks
-tags:
-  - API
-  - Referencia
-  - Rendimiento Web
-  - metodo
-translation_of: Web/API/Performance/clearMarks
 ---
 
 {{APIRef("User Timing API")}}

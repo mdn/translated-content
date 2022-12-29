@@ -69,7 +69,7 @@ Prenons le code WebAssembly suivant et supposons qu'il soit compilé dans un fic
 )
 ```
 
-Le fragment de code qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) pour importer le fichier **exemple.wasm**, en lui passant un «&nbsp;objet d'import&nbsp;» (`importObject`) qui inclue une nouvelle balise ([`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag)) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à l'instruction  `import` du code WebAssembly.
+Le fragment de code qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) pour importer le fichier **exemple.wasm**, en lui passant un «&nbsp;objet d'import&nbsp;» (`importObject`) qui inclue une nouvelle balise ([`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag)) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à l'instruction `import` du code WebAssembly.
 
 Une fois le fichier instancié, le code appelle la méthode WebAssembly exportée `run1()`, qui lèvera immédiatement une exception.
 

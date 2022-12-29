@@ -2,6 +2,7 @@
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
 flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이아웃 메서드입니다. 항목은 부족한 공간에 맞추기 위해 축소되거나 여분의 공간을 채우기 위해 변형된다. 이 문서는 근간이 되는 내용 전체를 설명합니다.

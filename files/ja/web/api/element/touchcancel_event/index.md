@@ -36,9 +36,7 @@ slug: Web/API/Element/touchcancel_event
 
 ## 仕様
 
-| Specification                                                        | Status                           |
-| -------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Touch Events', '#event-touchcancel')}} | {{Spec2('Touch Events')}} |
+{{Specifications}}
 
 ## ブラウザ互換性
 

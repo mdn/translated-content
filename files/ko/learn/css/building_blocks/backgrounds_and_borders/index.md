@@ -2,6 +2,7 @@
 title: 배경 및 테두리
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
 이번 수업에서는 CSS 배경과 테두리로 할 수 있는 창의적인 작업을 살펴보겠습니다. 그라데이션 (gradients), 배경 이미지, 둥근 테두리를 추가하는 것에서 배경과 테두리는 CSS 의 많은 스타일 질문에 대한 답입니다.

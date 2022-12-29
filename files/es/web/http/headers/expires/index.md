@@ -1,13 +1,6 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - Cache
-  - Expires
-  - HTTP
-  - Respuesta
-  - encabezado
-translation_of: Web/HTTP/Headers/Expires
 ---
 
 {{HTTPSidebar}}

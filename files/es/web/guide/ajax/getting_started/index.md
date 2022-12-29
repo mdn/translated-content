@@ -1,13 +1,6 @@
 ---
 title: Primeros Pasos
 slug: Web/Guide/AJAX/Getting_Started
-tags:
-  - AJAX
-  - API
-  - Avanzado
-  - Todas_las_Categorías
-  - XMLHttpRequest
-translation_of: Web/Guide/AJAX/Getting_Started
 original_slug: Web/Guide/AJAX/Primeros_Pasos
 ---
 

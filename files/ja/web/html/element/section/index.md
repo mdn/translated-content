@@ -179,11 +179,7 @@ slug: Web/HTML/Element/section
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}         | {{Spec2('HTML5.1')}}     |      |
-| {{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,12 +1,6 @@
 ---
 title: 400 Petición mala
 slug: Web/HTTP/Status/400
-tags:
-  - Codigo de Estado
-  - Error del cliente
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Status/400
 ---
 
 {{HTTPSidebar}}

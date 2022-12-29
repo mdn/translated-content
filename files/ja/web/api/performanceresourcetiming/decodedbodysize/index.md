@@ -53,9 +53,7 @@ function check_PerformanceEntries() {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | ステータス                           | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-decodedBodySize', 'decodedBodySize')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

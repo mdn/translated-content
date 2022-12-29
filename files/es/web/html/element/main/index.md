@@ -1,7 +1,6 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-translation_of: Web/HTML/Element/main
 original_slug: Web/HTML/Elemento/main
 ---
 

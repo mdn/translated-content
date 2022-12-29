@@ -1,14 +1,6 @@
 ---
 title: Proxy handler
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - NeedsTranslation
-  - Proxy
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-translation_of_original: Web/JavaScript/Reference/Global_Objects/Proxy/handler
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler
 ---
 
@@ -55,7 +47,7 @@ Some non-standard traps are [obsolete and have been removed](/es/docs/Web/JavaSc
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.Proxy.handler")}}
+{{Compat}}
 
 ## See also
 

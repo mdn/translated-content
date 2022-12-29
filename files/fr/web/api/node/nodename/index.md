@@ -56,7 +56,7 @@ text_field.value = div1.nodeName;
 
 En XHTML (ou tout autre format XML), la valeur de `text_field` sera «&nbsp;div&nbsp;». Cependant, en HTML, la valeur de `text_field` sera «&nbsp;DIV&nbsp;», parce que `nodeName` et `tagName` renvoient en casse majuscule sur les éléments HTML dans les DOM marqués comme des documents HTML. En lire plus [détails sur la sensibilité à la casse de nodeName dans différents navigateurs](http://ejohn.org/blog/nodename-case-sensitivity/) (en).
 
-Notez que la propriété [`tagName`](fr/DOM/element.tagName) aurait pu être uilisée à la place, puisque `nodeName` a la même valeur que `tagName` pour un élément. Souvenez vous cependant que `nodeName` renverra `#text` pour les nœuds texte tandis que `tagName` renverra `undefined`.
+Notez que la propriété [`tagName`](/fr/DOM/element.tagName) aurait pu être uilisée à la place, puisque `nodeName` a la même valeur que `tagName` pour un élément. Souvenez vous cependant que `nodeName` renverra `#text` pour les nœuds texte tandis que `tagName` renverra `undefined`.
 
 ## Spécification
 

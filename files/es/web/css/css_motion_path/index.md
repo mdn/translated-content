@@ -1,7 +1,6 @@
 ---
 title: CSS Motion Path
 slug: Web/CSS/CSS_Motion_Path
-translation_of: Web/CSS/CSS_Motion_Path
 ---
 
 {{CSSRef}}{{seecompattable}}

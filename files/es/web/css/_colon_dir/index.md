@@ -1,12 +1,6 @@
 ---
 title: ':dir()'
 slug: Web/CSS/:dir
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-clase
-  - Referencia
-translation_of: Web/CSS/:dir
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

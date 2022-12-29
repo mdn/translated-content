@@ -9,7 +9,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 
 {{EmbedInteractiveExample("pages/js/date-setutcmonth.html")}}
 
-
 ## 문법
 
 ```js-nolint

@@ -73,7 +73,7 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Compatibilités
 
-{{Compat("http/headers/trailer")}}
+{{Compat}}
 
 ## Voir aussi
 

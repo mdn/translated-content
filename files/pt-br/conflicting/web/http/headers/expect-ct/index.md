@@ -12,6 +12,7 @@ tags:
 translation_of: Web/HTTP/Headers/Public-Key-Pins
 original_slug: Web/HTTP/Headers/Public-Key-Pins
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 > **Nota:** O mecanismo de Fixação de Chaves Públicas (Public Key Pinning) foi depreciado em favor do [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency) e do cabeçalho {{HTTPHeader("Expect-CT")}}.

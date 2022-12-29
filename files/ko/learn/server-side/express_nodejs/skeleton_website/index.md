@@ -3,6 +3,7 @@ title: 'Express Tutorial Part 2: 스켈레톤 웹사이트 만들기'
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 original_slug: Learn/Server-side/Express_Nodejs/스켈레톤_웹사이트
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
@@ -195,7 +196,7 @@ At this point, we have a complete skeleton project. The website doesn't actually
 
 You should see a browser page that looks like this:
 
-![Browser for default Express app generator website](https://mdn.mozillademos.org/files/14375/ExpressGeneratorSkeletonWebsite.png)
+![Browser for default Express app generator website](expressgeneratorskeletonwebsite.png)
 
 You have a working Express application, serving itself to _localhost:3000_.
 

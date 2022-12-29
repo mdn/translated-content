@@ -297,7 +297,7 @@ ball.draw();
 
 ## Добавление управления мышью
 
-<p>Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события <code><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code> .  Событие <code><a href="/en-US/docs/Web/Events/click">click</a></code> отпускает мяч и позволяет ему снова прыгать</p>
+Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события [`mousemove`](/en-US/docs/Web/Reference/Events/mousemove). Событие [`click`](/en-US/docs/Web/Events/click) отпускает мяч и позволяет ему снова прыгать.
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>

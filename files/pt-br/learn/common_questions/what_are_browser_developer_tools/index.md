@@ -12,7 +12,7 @@ Todo navegador web moderno inclui um poderoso conjunto de ferramentas para desen
 
 O devtools está inserido no navegador em uma janela semelhante a esta:
 
-![](https://mdn.mozillademos.org/files/9561/Screenshot%20from%202014-11-25%2012:32:57.png)
+![](screenshot_from_2014-11-25_12-32-57.png)
 
 Como você acessa? Três modos:
 
@@ -23,20 +23,20 @@ Como você acessa? Três modos:
 
 - _**Menu bar.**_
 
-  - **Firefox.** Menu ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ ![](https://mdn.mozillademos.org/files/9639/Screenshot%20from%202014-11-26%2014:24:56.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
+  - **Firefox.** Menu ![](2014-01-10-13-08-08-f52b8c.png) _➤ ![](screenshot_from_2014-11-26_14-24-56.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
   - **Chrome.** _View ➤ Developer ➤ Developer Tools_
   - **Safari.** _Develop ➤ Show Web Inspector._ Se você não consegue ver o _menu Desenvolvedor_ , vá para _Safari ➤ Preferências ➤ Avançado_ e confira o _Show Develop menu no menu bar_ checkbox.
   - **Opera**. _Developer ➤ Web Inspector_
 
 - **_Context menu._** Pressione-e-segure/botão-direito no item da webpage (Ctrl-click on the Mac), e escolha _Inspect Element no_ menu de contexto que aparece. (_An added bonus:_ this method straight-away highlights the code of the element you right-clicked.)
 
-![](https://mdn.mozillademos.org/files/9605/inspect-element-option.png)
+![](inspect-element-option.png)
 
 ## O Inspetor: DOM explorer e editor CSS
 
 O devtools usualmente abre por padrão o inspetor, que se parece com a imagem abaixo. Esta ferramenta permite que você veja o resultado do HTML num site em execução, bem como o CSS aplicado en cada elemento na página. Ele também lhe mostra as mudanças efetuadas no HTML e CSS e os resultados são produzidos imediatamente, ao vivo, na janela do navegador.
 
-![](https://mdn.mozillademos.org/files/9607/inspector.png)
+![](inspector.png)
 
 Se você não vê o inspector,
 
@@ -57,7 +57,7 @@ Se você não vê o inspector,
 
 Para começar tente pressionar o botão direito do mouse sobre um elemento HTML no inspetor do DOM e olhe para o menu de contexto. As opções do menu variam nos navegadores, mas os mais importantes são os mesmos.
 
-![](https://mdn.mozillademos.org/files/9609/dev-tool-context-menu.png)
+![](dev-tool-context-menu.png)
 
 - **Delete Node** (às vezes Delete _Element_). Exclui o elemento atual.
 - **Edit as HTML** (às vezes _Add attribute_/_Edit text_). Permite alterar o HTML e ver os resultados na hora. Muito útil para depuração e teste.
@@ -71,7 +71,7 @@ Tente editar alguns dos seus DOM agora. Clique duas vezes em um elemento ou cliq
 
 Por padrão, o editor CSS exibe as regras CSS aplicadas ao elemento atualmente selecionado:
 
-![](https://mdn.mozillademos.org/files/9631/css-viewer-2.png)
+![](css-viewer-2.png)
 
 Esses recursos são especialmente úteis:
 
@@ -101,11 +101,11 @@ Descubra mais sobre o Inspetor em diferentes navegadores:
 
 O depurador Javascript permite a visualização dos conteúdos das variáveis e a configuração dos pontos de paradas(breakpoints) no código. Breakpoints são marcadores de linha para analisar a execução do código. A identificação previne problemas.
 
-![](https://mdn.mozillademos.org/files/16239/firefox_debugger.png)
+![](firefox_debugger.png)
 
 Para acessar o (debugger)depurador:
 
-**Firefox**: Clique![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) ➤ _Web Developer_ ➤ _Debugger_ ou pelo atalho <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> para abrir o Debugger Javascript. Se a ferramenta já estiver vísivel, clique na aba **Debugger**.
+**Firefox**: Clique![](2014-01-10-13-08-08-f52b8c.png) ➤ _Web Developer_ ➤ _Debugger_ ou pelo atalho <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> para abrir o Debugger Javascript. Se a ferramenta já estiver vísivel, clique na aba **Debugger**.
 
 **Chrome**: Abra as ferramentas de desenvolvimento e selecione a aba Fontes(**Sources)**. (Opera funciona igualmente).
 
@@ -121,13 +121,13 @@ Há três painéis no Depurador(debugger) no Firefox
 
 O primeiro painel na parte esquerda contém uma lista de arquivos associado com a página que está sendo depurada(debugging). Selecione o arquivo da seleção. Clique no arquivo para selecionar e visualizar os conteúdos no painel central do Debugger.
 
-![](https://mdn.mozillademos.org/files/16240/File_List.png)
+![](file_list.png)
 
 #### Código fonte
 
 Insira os pontos de parada (breakpoints) onde deseja que a execução pare. Na imagem abaixo, a linha selecionada é a 18 na qual tem um ponto de parada (breakpoint).
 
-![](https://mdn.mozillademos.org/files/16241/Source_code.png)
+![](source_code.png)
 
 #### Veja as expressões e pontos de paradas
 
@@ -143,7 +143,7 @@ A seção **Call stack** (chamada na pilha) mostra que o código foi executado p
 
 A seção final, **Scopes(escopos)**, mostra os valores visíveis em vários pontos no código. Por exemplo, na imagem abaixo, os objetos disponíveis estão na função addItemClick.
 
-![](https://mdn.mozillademos.org/files/16242/watch_items.png)
+![](watch_items.png)
 
 ## O console JavaScript
 
@@ -151,11 +151,11 @@ O console JavaScript é uma ferramenta incrivelmente útil para depurar códigos
 
 Para acessar o console basta abrir ferramentas de desenvolvimentos e escolher a aba Console.
 
-No Firefox o atalho é <kbd>ctrl</kbd> + <kbd>shift</kbd>+ <kbd>k</kbd> ou no menu comando: ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer_ _➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._
+No Firefox o atalho é <kbd>ctrl</kbd> + <kbd>shift</kbd>+ <kbd>k</kbd> ou no menu comando: ![](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer_ _➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._
 
 Aparecerá uma janela como a seguinte:
 
-![](https://mdn.mozillademos.org/files/9541/console.png)
+![](console.png)
 
 Para ver o que acontece, tente inserir os seguintes trechos de código no console, um por um (e, em seguida, pressione Enter):
 

@@ -33,9 +33,7 @@ console.log('ALPHABET'.toLowerCase()); // 'alphabet'
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

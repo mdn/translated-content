@@ -20,6 +20,4 @@ slug: Web/CSS/CSS_Fragmentation
 
 ## 仕様書
 
-| 仕様書                             | 状態                            | 備考     |
-| ---------------------------------- | ------------------------------- | -------- |
-| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} | 初回定義 |
+{{Specifications}}

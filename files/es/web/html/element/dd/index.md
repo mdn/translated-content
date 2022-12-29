@@ -1,18 +1,6 @@
 ---
 title: dd
 slug: Web/HTML/Element/dd
-tags:
-  - Contenido agrupado HTML
-  - Definición
-  - Detalles
-  - Detalles de descripción
-  - Elemento
-  - HTML
-  - Lista de descripciones
-  - Referencia
-  - Web
-  - dd
-translation_of: Web/HTML/Element/dd
 original_slug: Web/HTML/Elemento/dd
 ---
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/head
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} 인터페이스의 **`head`** 읽기 전용 속성은 현재 문서의 {{htmlelement("head")}} 요소를 나타냅니다.

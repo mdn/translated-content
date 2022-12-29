@@ -1,12 +1,6 @@
 ---
 title: Referencia de Elementos SVG
 slug: Web/SVG/Element
-tags:
-  - NeedsTranslation
-  - SVG
-  - SVG Reference
-  - TopicStub
-translation_of: Web/SVG/Element
 ---
 
 « [SVG](/es/docs/SVG) / [SVG Attribute reference](/es/docs/SVG/Attribute) »

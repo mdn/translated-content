@@ -1,7 +1,6 @@
 ---
 title: child
 slug: Web/XPath/Axes/child
-translation_of: Web/XPath/Axes/child
 original_slug: Web/XPath/Ejes/child
 ---
 

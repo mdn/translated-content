@@ -123,7 +123,7 @@ value2
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/headers/content-disposition")}}
+{{Compat}}
 
 ## Notes de compatibilité
 

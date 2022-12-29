@@ -1,12 +1,6 @@
 ---
 title: Tipos de datos básicos de CSS
 slug: Web/CSS/CSS_Types
-tags:
-  - CSS
-  - Referencia
-  - Tipo de Dato CSS
-  - Visión general
-translation_of: Web/CSS/CSS_Types
 ---
 
 {{CssRef}}

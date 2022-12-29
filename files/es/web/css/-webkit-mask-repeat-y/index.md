@@ -1,15 +1,6 @@
 ---
 title: '-webkit-mask-repeat-y'
 slug: Web/CSS/-webkit-mask-repeat-y
-tags:
-  - CSS
-  - Máscara CSS
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - No estandar
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/-webkit-mask-repeat-y
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -25,13 +25,11 @@ throw e;
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-error.prototype.message', 'Error.prototype.message')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Error.name")}}
+{{Compat}}
 
 ## 関連情報
 

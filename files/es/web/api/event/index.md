@@ -1,9 +1,6 @@
 ---
 title: evento
 slug: Web/API/Event
-tags:
-  - para_revisar
-translation_of: Web/API/Event
 ---
 
 {{APIRef("DOM")}}

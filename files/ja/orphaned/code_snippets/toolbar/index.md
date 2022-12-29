@@ -8,8 +8,8 @@ original_slug: Code_snippets/Toolbar
 
 二つのチュートリアルが参照可能です。
 
-- 初心者向けの詳細な説明のある順を追ったチュートリアル : [Custom Toolbar Button](ja/Custom_Toolbar_Button)
-- すでに拡張を作成しており開発の基本は知っている人向けの、ツールバーボタン追加に必要な手順を述べたチュートリアル : [Creating toolbar buttons](ja/Creating_toolbar_buttons)
+- 初心者向けの詳細な説明のある順を追ったチュートリアル : [Custom Toolbar Button](/ja/Custom_Toolbar_Button)
+- すでに拡張を作成しており開発の基本は知っている人向けの、ツールバーボタン追加に必要な手順を述べたチュートリアル : [Creating toolbar buttons](/ja/Creating_toolbar_buttons)
 
 ### Adding button by default
 

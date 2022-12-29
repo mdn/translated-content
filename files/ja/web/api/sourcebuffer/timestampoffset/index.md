@@ -1,47 +1,38 @@
 ---
 title: SourceBuffer.timestampOffset
 slug: Web/API/SourceBuffer/timestampOffset
+l10n:
+  sourceCommit: 7455f0c585ea29fa85ea09e11716b70f76241f5b
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
-{{domxref("SourceBuffer")}} インターフェイスの **`timestampOffset`** プロパティは、`SourceBuffer` に追加されるメディアセグメント内のタイムスタンプに適用されるオフセットを制御します。
+**`timestampOffset`** は {{domxref("SourceBuffer")}} インターフェイスのプロパティで、`SourceBuffer` に追加されるメディアセグメント内のタイムスタンプに適用されるオフセットを制御します。
 
 `timestampOffset` の初期値は 0 です。
 
-## 構文
+## 値
 
-```
-var myOffset = sourceBuffer.timestampOffset;
-
-sourceBuffer.timestampOffset = 2.5;
-```
-
-### 値
-
-オフセット量が秒単位で表される double 型。
+double 型で、秒単位のオフセット量です。
 
 ### 例外
 
-このプロパティに新しい値を設定すると、次の例外がスローされる場合があります。
+このプロパティに新しい値を設定すると、次の例外が発生する場合があります。
 
-| 例外                | 説明                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError` | {{domxref("MediaSource.sourceBuffers")}} の {{domxref("SourceBuffer")}} オブジェクトの 1 つ以上が更新中（つまり、{{domxref("SourceBuffer.updating")}} プロパティが現在 `true`）、`SourceBuffer` 内のメディアセグメントが現在解析中、またはこの `SourceBuffer` が {{domxref("MediaSource")}} から取り除かれています。 |
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : {{domxref("MediaSource.sourceBuffers")}} に含まれる {{domxref("SourceBuffer")}} オブジェクトの 1 つ以上が更新中（つまり、{{domxref("SourceBuffer.updating")}} プロパティが現在 `true`）、`SourceBuffer` 内のメディアセグメントが現在解析中、またはこの `SourceBuffer` が {{domxref("MediaSource")}} から取り除かれていた場合に発生します。
 
 ## 例
 
-未定
+TBD
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                 | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-timestampoffset', 'timestampOffset')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer.timestampOffset")}}
+{{Compat}}
 
 ## 関連情報
 

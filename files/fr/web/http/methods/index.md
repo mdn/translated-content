@@ -41,7 +41,7 @@ HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action qu
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/methods")}}
+{{Compat}}
 
 ## Voir aussi
 

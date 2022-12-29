@@ -1,14 +1,6 @@
 ---
 title: ':-moz-suppressed'
 slug: Web/CSS/:-moz-suppressed
-tags:
-  - CSS
-  - NeedsCompatTable
-  - NeedsContent
-  - NeedsExample
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-suppressed
 ---
 
 {{Non-standard_header}}{{CSSRef}}

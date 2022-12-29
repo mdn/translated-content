@@ -1,14 +1,6 @@
 ---
 title: ':host'
 slug: Web/CSS/:host
-tags:
-  - ':host'
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:host
 ---
 
 {{ CSSRef }}

@@ -1,11 +1,6 @@
 ---
 title: li
 slug: Web/HTML/Element/li
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/li
 original_slug: Web/HTML/Elemento/li
 ---
 
@@ -14,11 +9,11 @@ original_slug: Web/HTML/Elemento/li
 - El elemento `li` del ingles _item list_ o _elemento de lista_ declara cada uno de los elementos de una lista.
   - : **Sus etiquetas son**: \<li> y \</li> (la de cierre es opcional).
   
-    **Crea una caja**: [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Está definido como**:
 
-    **Puede contener**: cero o más elementos [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque) o en [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Puede contener**: cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque) o en [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
 #### Atributos
 

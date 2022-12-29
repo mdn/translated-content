@@ -1,15 +1,6 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-tags:
-  - CSS
-  - CSS Grid
-  - Diseño
-  - Función CSS
-  - Referencia
-  - Rejilla CSS
-  - Web
-translation_of: Web/CSS/minmax()
 original_slug: Web/CSS/minmax()
 ---
 

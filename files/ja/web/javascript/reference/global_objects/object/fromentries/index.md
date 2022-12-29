@@ -70,9 +70,7 @@ console.log(object2);
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

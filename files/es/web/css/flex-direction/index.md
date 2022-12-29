@@ -1,13 +1,6 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
-tags:
-  - CCS
-  - Cajas Flexibles CSS
-  - Propiedad CSS
-  - Referencia
-  - flexbox
-translation_of: Web/CSS/flex-direction
 ---
 
 {{CSSRef}}

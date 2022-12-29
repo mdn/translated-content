@@ -112,7 +112,7 @@ try {
 
 ### O identificador de exceção
 
-Quando uma exceção é lançada no bloco `try`, _`exception_var`_ (ex. o `e` dentro de `catch (e)`) armazena o valor especificado pela declaração `throw`. Você pode usar esse identificador para conseguir informação sobre a exceção que foi lançanda.
+Quando uma exceção é lançada no bloco `try`, `exception_var` (ex. o `e` dentro de `catch (e)`) armazena o valor especificado pela declaração `throw`. Você pode usar esse identificador para conseguir informação sobre a exceção que foi lançanda.
 
 Esse identificador é local para a cláusula `catch`. Ou seja, é criado quando a cláusula `catch` é introduzida e após terminar sua excecução o identificador não se torna mais disponível.
 

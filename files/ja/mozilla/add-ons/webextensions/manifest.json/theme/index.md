@@ -289,7 +289,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>, <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -319,7 +319,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>, <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -528,7 +528,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background.  The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background. The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -609,7 +609,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item.  The background color of a highlighted row in the sidebar is red with white text." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -633,7 +633,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item.  The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -659,7 +659,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
 }</pre
           >
         </details>
-        <p><img alt="A close-up screenshot of a browser windows's open sidebar.  The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar_colors.png" /></p>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar_colors.png" /></p>
       </td>
     </tr>
     <tr>

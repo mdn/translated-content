@@ -1,7 +1,6 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
-translation_of: Web/CSS/text-emphasis
 ---
 
 La **propiedad** **[CSS](/es/docs/Web/CSS)** de **text-emphasis**, es una propiedad _abreviada_ para establecer los valores de [text-empahasis-style](/es/docs/Web/CSS/text-emphasis-style) y [text-emphasis-color](/es/docs/Web/CSS/text-emphasis-color), en una sola declaración.

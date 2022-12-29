@@ -51,7 +51,7 @@ groupToMap(function(element, index, array) { /* … */ }, thisArg)
 
 - `thisArg` {{optional_inline}}
 
-  - :  L'objet à utiliser comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) pour `fnRappel`.
+  - : L'objet à utiliser comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) pour `fnRappel`.
 
     Cet argument est ignoré pour les fonctions fléchées qui disposent de leur propre portée lexicale, utilisée à la place. Sinon, si `thisArg` n'est pas fourni, c'est la valeur `this` de la portée d'exécution qui est appelée, ou `undefined` si la fonction est appelée en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 

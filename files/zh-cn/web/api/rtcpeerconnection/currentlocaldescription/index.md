@@ -3,7 +3,7 @@ title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
 ---
 
-{{WebRTCSidebar}}
+{{APIRef("WebRTC")}}
 
 只读属性 **`RTCPeerConnection.currentLocalDescription`** 返回一个 {{domxref("RTCSessionDescription")}} 对象，该对象描述了 自上次 {{domxref("RTCPeerConnection")}} 完成协商与连接到远程端后，最近一次成功协商的连接的本地端。原文（describing the local end of the connection as it was most recently successfully negotiated since the last time the RTCPeerConnection finished negotiating and connecting to a remote peer）。也包括自 RTCSessionDescription 所代表的 offer 或 anwser 首次实例化以来，ICE 代理可能已经生成的任何 ICE 候选人的列表。
 

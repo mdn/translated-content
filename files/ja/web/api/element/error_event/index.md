@@ -109,9 +109,7 @@ imgError.addEventListener('click', () => {
 
 ## 仕様書
 
-| 仕様書                                                       | 状態                         |
-| ------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-error')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

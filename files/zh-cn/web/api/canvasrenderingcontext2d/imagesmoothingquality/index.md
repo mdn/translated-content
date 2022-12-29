@@ -38,7 +38,7 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.src = 'canvas_createpattern.png';
 img.onload = function() {
  ctx.mozImageSmoothingEnabled = false;
  ctx.imageSmoothingQuality = "Medium";
@@ -59,7 +59,7 @@ img.onload = function() {
 </div>
 <textarea id="code" class="playable-code" style="height:140px;">
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.src = 'canvas_createpattern.png';
 img.onload = function() {
  ctx.mozImageSmoothingEnabled = false;
  ctx.webkitImageSmoothingEnabled = false;

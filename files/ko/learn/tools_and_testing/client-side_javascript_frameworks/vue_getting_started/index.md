@@ -2,6 +2,7 @@
 title: Vue 시작하기
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 이제 우리가 배울 세 번째 프레임워크인 Vue를 소개하겠습니다. 이 글에서 우리는 Vue에 대한 간단한 배경지식을 얻고, Vue를 설치하고 새로운 프로젝트를 만드는 방법을 배웁니다. 또한 전체 프로젝트와 컴포넌트의 주요 구조를 공부하고, 로컬에서 프로젝트를 실행하는 방법을 살펴본 후 예제 프로젝트를 구성해봅니다.
@@ -219,7 +220,7 @@ INFO  Starting development server...
 
 브라우저 탭을 열고 위의 “local” 주소로 (위 내용처럼 `http://localhost:8080`이거나 설정에 따라 다를 수 있음) 이동해보면, 아래 사진과 같은 앱이 나타날 것입니다. 환영 메시지, Vue 문서 링크, 우리가 선택한 CLI 플러그인 링크, 기타 유용한 Vue 커뮤니티와 생태계 링크 등이 표시되고 있습니다.
 
-![default vue app render, with vue logo, welcome message, and some documentation links](https://mdn.mozillademos.org/files/17240/vue-default-app.png)
+![default vue app render, with vue logo, welcome message, and some documentation links](vue-default-app.png)
 
 ## 약간의 변경 사항 적용하기
 

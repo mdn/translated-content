@@ -38,9 +38,7 @@ myMap.has('baz')   // returns false
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.has', 'Map.prototype.has')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

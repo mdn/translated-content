@@ -1,8 +1,6 @@
 ---
 title: grid-gap
 slug: Web/CSS/gap
-translation_of: Web/CSS/gap
-translation_of_original: Web/CSS/grid-gap
 original_slug: Web/CSS/grid-gap
 ---
 

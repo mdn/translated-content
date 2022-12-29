@@ -1,12 +1,6 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-  - is
-translation_of: Web/HTML/Global_attributes/is
 original_slug: Web/HTML/Atributos_Globales/is
 ---
 

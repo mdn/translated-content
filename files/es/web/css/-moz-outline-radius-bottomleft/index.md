@@ -1,12 +1,6 @@
 ---
 title: '-moz-outline-radius-bottomleft'
 slug: Web/CSS/-moz-outline-radius-bottomleft
-tags:
-  - CSS
-  - No estandar
-  - Propiedad CSS
-  - Referencia CSS
-translation_of: Web/CSS/-moz-outline-radius-bottomleft
 ---
 
 {{Non-standard_header}}{{CSSRef}}

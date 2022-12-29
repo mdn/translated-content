@@ -13,7 +13,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
 
 Maintenant que nous avons défini notre [environnement de canevas](/fr/docs/Tutoriel_canvas/Utilisation_de_base), nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.
 
@@ -306,7 +306,7 @@ La différence entre ces deux méthodes est mieux décrite par l'image à droite
 
 ![](canvas_curves.png)
 
-Les paramètres `x` et `y` de ces deux méthodes sont les coordonnées du point d'arrivée. `cp1x` et `cp1y` sont les coordonnées du premier point de contrôle, et  `cp2x` et `cp2y` sont les coordonnées du second point de contrôle.
+Les paramètres `x` et `y` de ces deux méthodes sont les coordonnées du point d'arrivée. `cp1x` et `cp1y` sont les coordonnées du premier point de contrôle, et `cp2x` et `cp2y` sont les coordonnées du second point de contrôle.
 
 Utiliser des courbes quadratiques et cubiques de Bézier peut constituer un certain défi, car à la différence d'un logiciel de tracé des vecteurs comme _Adobe Illustrator_, nous n'avons pas de retour visuel direct concernant ce que nous faisons. Cela rend passablement difficile le dessin de formes complexes. Dans l'exemple suivant, nous allons dessiner quelques formes naturelles simples, mais si vous avez du temps et - surtout - de la patience, des formes bien plus complexes peuvent être créées.
 

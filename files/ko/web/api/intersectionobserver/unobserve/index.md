@@ -12,6 +12,7 @@ tags:
 browser-compat: api.IntersectionObserver.unobserve
 translation_of: Web/API/IntersectionObserver/unobserve
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}}의 **`unobserve()`** 메서드는 특정 요소에 대한 가시성 변화 주시를 중단합니다.

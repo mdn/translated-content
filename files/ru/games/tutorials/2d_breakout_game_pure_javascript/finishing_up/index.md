@@ -9,9 +9,8 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключение
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
 
-{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}
+{{GamesSidebar}}{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}
 
 Это 10-й и заключительный шаг в [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код, как он должен выглядеть, после завершения этого урока в [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
 

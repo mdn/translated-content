@@ -63,9 +63,9 @@ Voilà la marche à suivre :
 
     - Allez à [python.org](https://www.python.org/)
     - Sous Télécharger, cliquez le lien pour Python "3.xxx".
-    - Tout en bas de la page,  télécharger le fichier pointé par le lien *Windows x86 executable installer*.
+    - Tout en bas de la page, télécharger le fichier pointé par le lien *Windows x86 executable installer*.
     - Exécuter ce programme quand le téléchargement est fini.
-    - Sur la première page de l'installeur, assurez-vous d'avoir coché la case  "Ajouter Python 3.xxx to PATH".
+    - Sur la première page de l'installeur, assurez-vous d'avoir coché la case "Ajouter Python 3.xxx to PATH".
     - Cliquer _Install_, puis _Fermer_ quand l'installation est complète.
 
 2. Ouvrez votre invite de commandes (Windows)/terminal (OS X et GNULinux). Pour vérifier que l'installation précédente s'est déroulée correctement, entrez la commande suivante :
@@ -102,6 +102,6 @@ Voilà la marche à suivre :
 
 Le module `SimpleHTTPServer` de Python est utile, mais il ne sait pas comment exécuter du code écrit dans des langages comme PHP ou Python. Pour gérer ça, vous aurez besoin de quelque chose en plus — ce dont vous aurez besoin exactement dépend du language serveur que vous essayez d'exécuter. Voici quelques exemples :
 
-- Pour exécuter du code Python coté-serveur, vous aurez besoin d'utiliser un framework web Python. Vous pouvez découvrir comment utiliser le framework Django en lisant [Django Web Framework (Python)](/fr/docs/Learn/Server-side/Django). [Flask](http://flask.pocoo.org/) est une alternative à Django, un peu plus légère. Pour l'exécuter, vous aurez besoin d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#Installing_Python_3), puis Flask en utilisant `pip3 install flask`.  À ce point, vous devriez être capable d'exécuter les exemples Python Flask en utilisant par exemple `python3 python-example.py`, puis consulter `localhost:5000` dans votre navigateur.
+- Pour exécuter du code Python coté-serveur, vous aurez besoin d'utiliser un framework web Python. Vous pouvez découvrir comment utiliser le framework Django en lisant [Django Web Framework (Python)](/fr/docs/Learn/Server-side/Django). [Flask](http://flask.pocoo.org/) est une alternative à Django, un peu plus légère. Pour l'exécuter, vous aurez besoin d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#Installing_Python_3), puis Flask en utilisant `pip3 install flask`. À ce point, vous devriez être capable d'exécuter les exemples Python Flask en utilisant par exemple `python3 python-example.py`, puis consulter `localhost:5000` dans votre navigateur.
 - Pour exécuter du code Node.js (JavaScript) côté-serveur, vous aurez besoin d'utiliser un noeud brut ou un framework construit par dessus ce dernier. Express est un bon choix — voir [Express Web Framework (Node.js/JavaScript)](/fr/docs/Learn/Server-side/Express_Nodejs).
 - Pour exécuter du code PHP côté serveur, vous aurez besoin d'une configuration serveur qui peut interpréter PHP. De bonnes options pour tester PHP localement sont [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) , [AMPPS](http://ampps.com/download) (Mac, Windows, Linux) and [LAMP](https://www.linux.com/learn/easy-lamp-server-installation) (Linux, Apache, MySQL, et PHP/Python/Perl). Ce sont des paquets complets qui créent des configurations locales vous permettant d'exécuter un serveur Apache, PHP et des bases de données MySQL.

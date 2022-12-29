@@ -1,12 +1,6 @@
 ---
 title: <figcaption>
 slug: Web/HTML/Element/figcaption
-tags:
-  - Elemento
-  - Elementos de agrupación de contenido en HTML
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Element/figcaption
 original_slug: Web/HTML/Elemento/figcaption
 ---
 

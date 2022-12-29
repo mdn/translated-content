@@ -1,12 +1,6 @@
 ---
 title: Asíncrono
 slug: Glossary/Asynchronous
-tags:
-  - Asíncrono
-  - Glosario
-  - Mecánicas de la Web
-  - Web
-translation_of: Glossary/Asynchronous
 original_slug: Glossary/Asíncrono
 ---
 

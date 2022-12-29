@@ -413,11 +413,11 @@ def book_detail_view(request,pk):
 
 Кликните ссылку **All books** для перехода на страницу со списком книг.
 
-![Book List Page](https://mdn.mozillademos.org/files/14049/book_list_page_no_pagination.png)
+![Book List Page](book_list_page_no_pagination.png)
 
 Затем кликните на ссылку одной из ваших книг. Если все настроено как надо, то вы должны увидеть то, что указано на картинке.
 
-![Book Detail Page](https://mdn.mozillademos.org/files/14051/book_detail_page_no_pagination.png)
+![Book Detail Page](book_detail_page_no_pagination.png)
 
 ## Постраничный вывод (Pagination)
 
@@ -477,7 +477,7 @@ class BookListView(generic.ListView):
 
 Ссылки на страницы показаны в нижней части страницы. Показаны ссылки следующая/предыдущая в зависимости от того на какой странице вы в данный момент находитесь.
 
-![Book List Page - paginated](https://mdn.mozillademos.org/files/14057/book_list_paginated.png)
+![Book List Page - paginated](book_list_paginated.png)
 
 ## Проверьте себя
 
@@ -499,9 +499,9 @@ class BookListView(generic.ListView):
 
 Когда вы закончите, ваши страницы должны будут выглядеть как на картинке.
 
-![Author List Page](https://mdn.mozillademos.org/files/14053/author_list_page_no_pagination.png)
+![Author List Page](author_list_page_no_pagination.png)
 
-![Author Detail Page](https://mdn.mozillademos.org/files/14055/author_detail_page_no_pagination.png)
+![Author Detail Page](author_detail_page_no_pagination.png)
 
 ## Итоги
 

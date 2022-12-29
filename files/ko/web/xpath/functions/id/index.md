@@ -20,7 +20,7 @@ id(expression )
 - `expression`
   - : 만약 `expression`이 노드 집합이면, 노드 집합 안 각 노드의 문자열 값은 개별 id로 다룹니다. 반환하는 노드 집합은 그 id와 대응하는 노드입니다.
 
-- 만약  `expression`
+- 만약 `expression`
   - : 이 문자열이나, 노드 집합이 아닌 어떤 거라면, `expression` 은 공백으로 구분된 id 목록으로 다룹니다. 반환하는 노드 집합은 그 id와 대응하는 노드입니다.
 
 ### 반환

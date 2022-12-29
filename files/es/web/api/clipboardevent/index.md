@@ -1,15 +1,6 @@
 ---
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
-tags:
-  - API
-  - Clipboard API
-  - Event
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/API/ClipboardEvent
 ---
 
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}

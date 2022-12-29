@@ -52,9 +52,7 @@ xrSession.requestReferenceSpace("local-floor")
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("WebXR","#dom-xrrigidtransform-xrrigidtransform","XRRigidTransform()")}} | {{Spec2("WebXR")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -45,14 +45,12 @@ slug: Web/API/Screen
 
 ## 方法
 
-- {{domxref("Screen.lockOrientation")}}
+_Also inherits methods from its parent {{domxref("EventTarget")}}_.
+
+- {{DOMxRef("Screen.lockOrientation")}} {{Deprecated_Inline}}
   - : Lock the screen orientation (only works in fullscreen or for installed apps)
-- {{domxref("Screen.unlockOrientation")}}
+- {{DOMxRef("Screen.unlockOrientation")}} {{Deprecated_Inline}}
   - : Unlock the screen orientation (only works in fullscreen or for installed apps)
-
-Methods inherit from {{domxref("EventTarget")}}
-
-{{page("/en-US/docs/Web/API/EventTarget","Methods")}}
 
 ## 範例
 

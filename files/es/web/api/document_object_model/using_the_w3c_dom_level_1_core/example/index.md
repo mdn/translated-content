@@ -1,10 +1,6 @@
 ---
 title: Example
 slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
-tags:
-  - DOM
-  - Ejemplo
-translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
 ---
 
 ```

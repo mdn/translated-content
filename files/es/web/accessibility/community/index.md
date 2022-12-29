@@ -1,7 +1,6 @@
 ---
 title: Comunidad
 slug: Web/Accessibility/Community
-translation_of: Web/Accessibility/Community
 original_slug: Web/Accesibilidad/Comunidad
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
-tags:
-  - CSS
-  - Experimental
-  - Layout
-  - Reference
-translation_of: Web/CSS/@font-face/unicode-range
 ---
 
 {{cssref}}
@@ -58,9 +52,7 @@ div {
 }
 ```
 
-### Reultado
-
-![What the example should looks like if your browser supports it.](https://mdn.mozillademos.org/files/6043/Refresult.png)
+{{EmbedLiveSample}}
 
 ## Especificaciones
 

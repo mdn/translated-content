@@ -1,18 +1,6 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
-tags:
-  - Access Control
-  - Access-Control-Allow-Origin
-  - CORS
-  - HTTP
-  - Lidiando con CORS
-  - Origen
-  - Referencia
-  - Seguridad
-  - encabezado HTTP
-  - error cross-origin
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
 
 {{HTTPSidebar}}

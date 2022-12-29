@@ -3,6 +3,7 @@ title: DOMParser
 slug: Web/API/DOMParser
 translation_of: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMParser`** 인터페이스는 DOM {{domxref("Document")}} 문서에 맞는 {{Glossary("XML")}} 및 {{Glossary("HTML")}} 소스 코드를 해석할 수 있는 기반을 제공한다 .

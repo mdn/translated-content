@@ -48,7 +48,7 @@ RegExp(motif[, marqueurs])
     - `i` (sensibilité à la casse)
       - : Si le marqueur `u` est également activé, active le repliage de casse Unicode (<i lang="en">case folding</i>).
     - `m` (multiligne)
-      - :  Les caractères (`^` et `$`) fonctionnent sur plusieurs lignes. Autrement dit, ils correspondent aux débuts et aux fins de chaque ligne (délimitées par `\n` ou `\r`) et pas uniquement au début ou à la fin de la chaîne de caractère étudiée.
+      - : Les caractères (`^` et `$`) fonctionnent sur plusieurs lignes. Autrement dit, ils correspondent aux débuts et aux fins de chaque ligne (délimitées par `\n` ou `\r`) et pas uniquement au début ou à la fin de la chaîne de caractère étudiée.
     - `s` ("dotAll")
       - : Permet à `.` de correspondre à des nouvelles lignes.
     - `u` (unicode)

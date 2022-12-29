@@ -45,7 +45,7 @@ l10n:
 - {{cssxref(':required')}} と {{cssxref(':optional')}}: 必須または省略可能なフォームコントロールを対象とします。
 - {{cssxref(":valid")}} と {{cssxref(":invalid")}}、 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}}: 設定されたフォーム検証の制約に従って有効/無効、または範囲内/範囲外のフォームコントロールを対象とします。
 - {{cssxref(":enabled")}} と {{cssxref(":disabled")}}、 {{cssxref(":read-only")}} と {{cssxref(":read-write")}}: 有効または無効なフォームコントロール（例: HTML の `disabled` 属性が設定されている）、および読み書き可能または読み取り専用のフォームコントロール（例: HTML の `readonly` 属性が設定されている）を対象としています。
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 `checked` 属性が設定されている [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) 、または `selected` 属性が設定されている [`<option>`](/ja/docs/Web/HTML/Element/option)  要素などが対象です。）
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 `checked` 属性が設定されている [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) 、または `selected` 属性が設定されている [`<option>`](/ja/docs/Web/HTML/Element/option) 要素などが対象です。）
 
 他にもたくさんありますが、上に挙げたものが明らかに最も有用です。他のいくつかは、非常に特殊なニッチな問題を解決することを目的としていたり、まだブラウザーがあまり対応していないものもあります。上に挙げたものはすべて、ブラウザーの対応がかなり進んでいますが、もちろん、フォームの実装を慎重にテストして、対象となるユーザーに動作することを確認する必要があります。
 

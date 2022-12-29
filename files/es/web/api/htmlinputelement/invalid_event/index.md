@@ -1,14 +1,6 @@
 ---
 title: Evento invalid
 slug: Web/API/HTMLInputElement/invalid_event
-tags:
-  - Evento
-  - Referencia
-  - eventos
-  - formulários
-  - invalid
-  - inválido
-translation_of: Web/API/HTMLInputElement/invalid_event
 ---
 
 {{APIRef}}

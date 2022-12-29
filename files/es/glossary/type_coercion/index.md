@@ -1,7 +1,6 @@
 ---
 title: Coerción
 slug: Glossary/Type_coercion
-translation_of: Glossary/Type_coercion
 original_slug: Glossary/coercion
 ---
 

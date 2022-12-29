@@ -1,7 +1,6 @@
 ---
 title: Agregando z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index
 ---
 

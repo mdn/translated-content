@@ -16,6 +16,7 @@ tags:
 browser-compat: api.Blob.type
 translation_of: Web/API/Blob/type
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} 객체의 **`type`** 속성은 데이터의 {{Glossary("MIME type", "MIME 유형")}}을 반환합니다.

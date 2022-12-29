@@ -1,10 +1,6 @@
 ---
 title: copy
 slug: Web/XSLT/Element/copy
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/copy
 original_slug: Web/XSLT/copy
 ---
 

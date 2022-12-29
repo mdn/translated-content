@@ -1,15 +1,6 @@
 ---
 title: MediaDevices
 slug: Web/API/MediaDevices
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Media
-  - MediaDevices
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/API/MediaDevices
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}

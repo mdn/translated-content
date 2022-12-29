@@ -1,7 +1,6 @@
 ---
 title: border-inline-start-style
 slug: Web/CSS/border-inline-start-style
-translation_of: Web/CSS/border-inline-start-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

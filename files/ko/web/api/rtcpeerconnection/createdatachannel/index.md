@@ -29,9 +29,9 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 - `ordered` {{optional_inline}}
   - : 이 옵션은 {{domxref("RTCDataChannel")}}에 전달된 메세지가 보내진 순서대로 상대방에게 도착해야하는지 (`true`) 아니면 순서가 달라도 허용 (`false`)이 되는지를 결정합니다. **기본 값: `true`.**
 - **`maxPacketLifeTime` {{optional_inline}}**
-  - : 불안정한 모드에서 메세지를 전송 할 때 최대 몇 초 동안 전송을 시도 할 것인지를 결정하는 옵션입니다. 이 값은 16bit의 부호가 없는 정수형이지만, 각 유저 에이전트는 적절하다고 판단되는 최대 값으로 지정 할 수 있습니다. (**주의**: **`maxPacketLifeTime`** 혹은 **`maxRetransmits` **옵션 둘 중 하나만 사용해야함.) **기본 값: `null`.**
+  - : 불안정한 모드에서 메세지를 전송 할 때 최대 몇 초 동안 전송을 시도 할 것인지를 결정하는 옵션입니다. 이 값은 16bit의 부호가 없는 정수형이지만, 각 유저 에이전트는 적절하다고 판단되는 최대 값으로 지정 할 수 있습니다. (**주의**: **`maxPacketLifeTime`** 혹은 **`maxRetransmits`** 옵션 둘 중 하나만 사용해야함.) **기본 값: `null`.**
 - `maxRetransmits` {{optional_inline}}
-  - : 불안정한 모드에서 메세지 전송이 실패하면 최대 몇 번을 재시도 할 것인지를 결정하는 옵션입니다. 이 값은 16bit의 부호가 없는 정수형이지만, 각 유저 에이전트는 적절하다고 판단되는 최대 값으로 지정 할 수 있습니다. (**주의**: **`maxPacketLifeTime`** 혹은 **`maxRetransmits` **옵션 둘 중 하나만 사용해야함.) **기본 값: `null`.**
+  - : 불안정한 모드에서 메세지 전송이 실패하면 최대 몇 번을 재시도 할 것인지를 결정하는 옵션입니다. 이 값은 16bit의 부호가 없는 정수형이지만, 각 유저 에이전트는 적절하다고 판단되는 최대 값으로 지정 할 수 있습니다. (**주의**: **`maxPacketLifeTime`** 혹은 **`maxRetransmits`** 옵션 둘 중 하나만 사용해야함.) **기본 값: `null`.**
 - `protocol` {{optional_inline}}
   - : {{domxref("RTCDataChannel")}}에 사용되는 서브 프로토콜의 이름입니다. 존재하지 않으면 이 옵션은 빈 문자열 (`""`)입니다. **기본 값: 빈 문자열, `""`.** 이 문자열은 65,535 바이트 보다 작아야합니다.
 - `negotiated` {{optional_inline}}

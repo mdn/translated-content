@@ -68,7 +68,7 @@ var textString = "I love MDN";
 ctx.fillText(textString, x, y);
 ```
 
-[![This image describe the impact of different value on retina display.](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png)](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff.png)]
+[![This image describe the impact of different value on retina display.](devicepixelration_diff..png)](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff.png)]
 
 ### Monitoring screen resolution or zoom level changes
 

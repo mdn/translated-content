@@ -62,10 +62,7 @@ if (document.elementsFromPoint) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                             |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Shadow DOM','#dom-documentorshadowroot-elementsfrompoint','elementsFromPoint()')}} | {{Spec2('Shadow DOM')}} |
-| {{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'elementsFromPoint()')}}             | {{Spec2('CSSOM View')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

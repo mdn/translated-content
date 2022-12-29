@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 original_slug: Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 これまで、キャンバスの実際のピクセルは見てきませんでした。 `ImageData` オブジェクトを使用して、ピクセルデータを操作するためにデータ配列へ直接読み取りや書き込みを行うことが可能です。また、画像のスムージング（アンチエイリアシング）の制御方法やキャンバスの画像を保存する方法も見ていきます。
 
@@ -153,7 +153,7 @@ canvas.addEventListener('click', function(event) {
 
 ## コンテキストへのピクセルデータの描画
 
-[putImageData()](/ja/docs/Web/API/CanvasRenderingContext2D/putImageData) メソッドを使用して、コンテキストにピクセルデータを描くことができます。
+{{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} メソッドを使用して、コンテキストにピクセルデータを描くことができます。
 
 ```js
 ctx.putImageData(myImageData, dx, dy);
@@ -169,7 +169,7 @@ ctx.putImageData(myImageData, 0, 0);
 
 ### 色のグレースケール化と反転
 
-この例では、すべてのピクセルに対して繰り返し処理を行い、値を変更したピクセル配列を [putImageData()] (/ja/docs/Web/API/CanvasRenderingContext2D/putImageData) を使ってキャンバスに戻しています。反転機能は、最大値 255 から各色を減算します。グレースケール関数は、赤、緑、青の平均値を使用します。また、例えば `x = 0.299r + 0.587g + 0.114b` という式で与えられる加重平均を使用することもできます。詳しくは Wikipedia の[グレースケール](https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB)をご覧ください。
+この例では、すべてのピクセルに対して繰り返し処理を行い、値を変更したピクセル配列を {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} を使ってキャンバスに戻しています。反転機能は、最大値 255 から各色を減算します。グレースケール関数は、赤、緑、青の平均値を使用します。また、例えば `x = 0.299r + 0.587g + 0.114b` という式で与えられる加重平均を使用することもできます。詳しくは Wikipedia の[グレースケール](https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB)をご覧ください。
 
 ```js
 var img = new Image();

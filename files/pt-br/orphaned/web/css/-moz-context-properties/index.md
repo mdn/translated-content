@@ -4,6 +4,7 @@ slug: orphaned/Web/CSS/-moz-context-properties
 translation_of: Web/CSS/-moz-context-properties
 original_slug: Web/CSS/-moz-context-properties
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 > **Nota:** Essa característica está disponível desde o Fireforx 55, mas só é suportada atualmente com imagens SVG carregadas via URLs `chrome://` ou `resource://`. Para experimentar o recurso em SVG na web é necessário definir `svg.context-properties.content.enabled` para `true`.

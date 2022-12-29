@@ -1,9 +1,7 @@
 ---
 title: Ejemplo 2 del contexto de apilamiento
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
-original_slug: >-
-  Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_2_del_contexto_de_apilamiento
+original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_2_del_contexto_de_apilamiento
 ---
 
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)

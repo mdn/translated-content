@@ -58,9 +58,7 @@ Int16Array.of(undefined);    // Int16Array [ 0 ]
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.of', '%TypedArray%.of')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

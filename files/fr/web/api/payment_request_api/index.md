@@ -57,7 +57,7 @@ Vous pouvez trouver un guide complet dans l'article [Using the Payment Request A
 ### Dictionnaires connexes pour la specification Basic Card
 
 - {{domxref("BasicCardChangeDetails")}}
-  - : Un objet qui donne l'information "_redacted_ address" qui est fournie comme {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} dans l'événement  [`paymentmethodchange`](/fr/docs/Web/API/PaymentRequest/paymentmethodchange_event) envoyé à {{domxref("PaymentRequest")}} lorsque l'utilisateur modifie les informations de paiement.
+  - : Un objet qui donne l'information "_redacted_ address" qui est fournie comme {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} dans l'événement [`paymentmethodchange`](/fr/docs/Web/API/PaymentRequest/paymentmethodchange_event) envoyé à {{domxref("PaymentRequest")}} lorsque l'utilisateur modifie les informations de paiement.
 - {{domxref("BasicCardErrors")}}
   - : Un message qui fournit tous les messages d'erreur associés avec les champs qui ne sont pas valides dans l'objet {{domxref("BasicCardResponse")}}. Il est utilisé comme valeur de la propriété {{domxref("PaymentValidationErrors.paymentMethod", "paymentMethod")}} dans l'objet {{domxref("PaymentValidationErrors")}} envoyé au {{domxref("PaymentRequest")}} lorsqu'une erreur se produit.
 - {{domxref('BasicCardRequest')}}

@@ -154,6 +154,6 @@ console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'coucou'
 - [`set`](/fr/docs/Web/JavaScript/Reference/Fonctions/set)
 - {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Définir des accesseurs et mutateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters), un chapitre du Guide JavaScript

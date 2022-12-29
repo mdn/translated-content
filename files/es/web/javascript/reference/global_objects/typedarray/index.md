@@ -1,13 +1,6 @@
 ---
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-tags:
-  - Clase
-  - Class
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 original_slug: Web/JavaScript/Referencia/Objetos_globales/TypedArray
 ---
 
@@ -195,9 +188,7 @@ Int8Array.prototype.foo = 'bar';
 
 ## Especificaciones
 
-| Especificación                                                                                   |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

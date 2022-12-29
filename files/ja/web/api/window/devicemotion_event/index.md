@@ -45,9 +45,7 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                                     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{SpecName("Device Orientation", "#devicemotion", "DeviceMotion event")}} | {{Spec2("Device Orientation")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

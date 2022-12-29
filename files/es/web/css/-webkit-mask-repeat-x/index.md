@@ -1,15 +1,6 @@
 ---
 title: '-webkit-mask-repeat-x'
 slug: Web/CSS/-webkit-mask-repeat-x
-tags:
-  - CSS
-  - Máscara CSS
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - No estandar
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/-webkit-mask-repeat-x
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -47,9 +47,7 @@ ArrayBuffer.isView(dv); // true
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

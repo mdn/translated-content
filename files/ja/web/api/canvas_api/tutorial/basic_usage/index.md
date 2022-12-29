@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_usage
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 このチュートリアルを、 {{HTMLElement("canvas")}} という {{Glossary("HTML")}} の要素を見てみることから始めましょう。このページの最後では、ブラウザーでキャンバス 2D コンテキストの設定し、最初の例を描画する方法を学びます。
 

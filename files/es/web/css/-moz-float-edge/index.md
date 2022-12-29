@@ -1,7 +1,6 @@
 ---
 title: '-moz-float-edge'
 slug: Web/CSS/-moz-float-edge
-browser-compat: css.properties.-moz-float-edge
 ---
 
 {{CSSRef}}{{Non-standard_header}}

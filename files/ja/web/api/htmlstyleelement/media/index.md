@@ -43,13 +43,7 @@ alert('InlineStyle: ' + document.getElementById('InlineStyle').media); // 'scree
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "semantics.html#attr-style-media", "HTMLStyleElement")}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5.1', "semantics.html#attr-style-media", "HTMLStyleElement")}}     | {{Spec2('HTML5.1')}}     |          |
-| {{SpecName('HTML5 W3C', "semantics.html#attr-style-media", "HTMLStyleElement")}} | {{Spec2('HTML5 W3C')}}     |          |
-| {{SpecName('DOM2 HTML', 'html.html#ID-16428977', 'HTMLStyleElement')}}                 | {{Spec2('DOM2 HTML')}}     |          |
-| {{SpecName('DOM1', 'level-one-html.html#ID-16428977', 'HTMLStyleElement')}}         | {{Spec2('DOM1')}}         | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

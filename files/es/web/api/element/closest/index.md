@@ -1,13 +1,6 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
-tags:
-  - API
-  - DOM
-  - Elemento
-  - Referencia
-  - metodo
-translation_of: Web/API/Element/closest
 ---
 
 {{APIRef}}

@@ -1,13 +1,6 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - Composición
-  - Composición CSS
-  - Modos de mezcla
-  - Referencia
-  - Tipo de Dato CSS
-translation_of: Web/CSS/blend-mode
 ---
 
 {{CSSRef}}
@@ -140,8 +133,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: normal;
 }
 ```
@@ -158,8 +151,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: multiply;
 }
 ```
@@ -176,8 +169,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: screen;
 }
 ```
@@ -194,8 +187,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: overlay;
 }
 ```
@@ -212,8 +205,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: darken;
 }
 ```
@@ -230,8 +223,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: lighten;
 }
 ```
@@ -248,8 +241,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: color-dodge;
 }
 ```
@@ -266,8 +259,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: color-burn;
 }
 ```
@@ -284,8 +277,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: hard-light;
 }
 ```
@@ -302,8 +295,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: soft-light;
 }
 ```
@@ -320,8 +313,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: difference;
 }
 ```
@@ -338,8 +331,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: exclusion;
 }
 ```
@@ -356,8 +349,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: hue;
 }
 ```
@@ -374,8 +367,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: saturation;
 }
 ```
@@ -392,8 +385,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: color;
 }
 ```
@@ -410,8 +403,8 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),
+                url('tr.png');
     background-blend-mode: luminosity;
 }
 ```

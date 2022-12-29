@@ -41,7 +41,7 @@ O diagrama a seguir descreve o fluxo de dados principal e os componentes necess�
 - View functions para obter os dados solicitados dos modelos, crie páginas HTML que exibem os dados e retorne as páginas ao usuário para visualização no navegador.
 - Templates para usar ao renderizar dados nas visualizações.
 
-![](https://mdn.mozillademos.org/files/13931/basic-django.png)
+![](basic-django.png)
 
 Como você verá na próxima seção, temos 5 páginas para exibir, o que é muita informação para documentar em um único artigo. Portanto, este artigo se concentrará em como implementar a página inicial e abordaremos as outras páginas em um artigo subsequente. Isso deve fornecer uma boa compreensão completa de como os mapeadores, visualizações e modelos de URL funcionam na prática.
 
@@ -55,7 +55,7 @@ As URLs que iremos precisar na nossa página são:
 - `catalog/books/` — Uma lista de todos os livros.
 - `catalog/authors/` — Uma lista de todos os autores.
 - `catalog/book/<id>` — A exibição de detalhes de um livro específico, com uma chave primária de campo `<id>` (o padrão). Por exemplo, o URL do terceiro livro adicionado à lista será `/catalog/book/3`.
-- `catalog/author/<id>` — A exibição de detalhes para o autor específico com um campo de chave primária de _`<id>`. Por exemplo, o URL do 11º autor adicionado à lista será `/catalog/author/11`.
+- `catalog/author/<id>` — A exibição de detalhes para o autor específico com um campo de chave primária de `<id>`. Por exemplo, o URL do 11º autor adicionado à lista será `/catalog/author/11`.
 
 Os três primeiros URLs retornarão a página de índice, a lista de livros e a lista de autores. Esses URLs não codificam nenhuma informação adicional e as consultas que buscam dados no banco de dados sempre serão as mesmas. No entanto, os resultados retornados pelas consultas dependerão do conteúdo do banco de dados.
 
@@ -356,7 +356,7 @@ TEMPLATES = [
 
 Neste ponto, criamos todos os recursos necessários para exibir a página index. Execute o servidor (`python3 manage.py runserver`) e abra `http://127.0.0.1:8000/` no seu navegador. Se tudo estiver configurado corretamente, seu site deverá ter a seguinte captura de tela.
 
-![Index page for LocalLibrary website](https://mdn.mozillademos.org/files/14045/index_page_ok.png)
+![Index page for LocalLibrary website](index_page_ok.png)
 
 > **Nota:** Os links **All books** e **All authors** ainda não funcionarão porque os caminhos, visualizações e modelos para essas páginas não estão definidos. Acabamos de inserir espaços reservados para esses links no template `base_generic.html`.
 

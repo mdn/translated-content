@@ -1,11 +1,6 @@
 ---
 title: Arquitectura de la información
 slug: Glossary/Information_architecture
-tags:
-  - Arquitectura informacional
-  - Diseño
-  - Glosario
-translation_of: Glossary/Information_architecture
 original_slug: Glossary/Arquitectura_de_la_información
 ---
 

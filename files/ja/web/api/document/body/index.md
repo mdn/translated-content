@@ -35,11 +35,7 @@ alert(document.body.id); // "newBodyElement"
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG','dom.html#dom-document-body','Document.body')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5.1','dom.html#dom-document-body','Document.body')}}     | {{Spec2('HTML5.1')}}     |      |
-| {{SpecName('HTML5 W3C','dom.html#dom-document-body','Document.body')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

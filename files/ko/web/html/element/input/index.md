@@ -45,7 +45,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplebutton">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="button" name="button" /></pre
+&#x3C;input type="button" name="button" /></pre
         >
         {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
       </td>
@@ -55,7 +55,7 @@ translation_of: Web/HTML/Element/input
       <td>단일 값을 선택하거나 선택 해제할 수 있는 체크박스.</td>
       <td id="examplecheckbox">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="checkbox" name="checkbox"/></pre
+&#x3C;input type="checkbox" name="checkbox"/></pre
         >
         {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
       </td>
@@ -68,7 +68,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplecolor">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="color" name="color"/></pre
+&#x3C;input type="color" name="color"/></pre
         >
         {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
       </td>
@@ -81,7 +81,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="exampledate">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="date" name="date"/></pre
+&#x3C;input type="date" name="date"/></pre
         >
         {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
       </td>
@@ -97,7 +97,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="exampledtl">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="datetime-local" name="datetime-local"/></pre
+&#x3C;input type="datetime-local" name="datetime-local"/></pre
         >
         {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
       </td>
@@ -172,7 +172,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplenumber">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="number" name="number"/></pre
+&#x3C;input type="number" name="number"/></pre
         >
         {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}
       </td>
@@ -187,7 +187,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplepassword">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="password" name="password"/></pre
+&#x3C;input type="password" name="password"/></pre
         >
         {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
       </td>
@@ -231,7 +231,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplereset">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="reset" name="reset"/></pre
+&#x3C;input type="reset" name="reset"/></pre
         >
         {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
       </td>
@@ -248,7 +248,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplesearch">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="search" name="search"/></pre
+&#x3C;input type="search" name="search"/></pre
         >
         {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
       </td>
@@ -271,7 +271,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="exampletel">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="tel" name="tel"/></pre
+&#x3C;input type="tel" name="tel"/></pre
         >
         {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
       </td>
@@ -296,7 +296,7 @@ translation_of: Web/HTML/Element/input
       <td>시간대가 없는 시간값을 입력하는 콘트롤</td>
       <td id="exampletime">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="time" name="time"/></pre
+&#x3C;input type="time" name="time"/></pre
         >
         {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
       </td>

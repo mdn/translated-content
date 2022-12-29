@@ -49,9 +49,7 @@ console.log(str2.replace(regex2,'')); // Output: bar
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.dotAll', 'RegExp.prototype.dotAll')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

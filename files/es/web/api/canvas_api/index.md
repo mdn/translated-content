@@ -1,17 +1,10 @@
 ---
 title: API Canvas
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - Canvas
-  - JavaScript
-  - Referencia
-  - introducción
-translation_of: Web/API/Canvas_API
 original_slug: Web/HTML/Canvas
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 Añadido en [HTML5](/es/docs/HTML/HTML5), el **elemento HTML {{HTMLElement("canvas")}}** se puede usar para dibujar gráficos mediante scripting en [JavaScript](/es/docs/Web/JavaScript). Por ejemplo, se puede usar para hacer gráficas, composiciones fotográficas, crear animaciones, o incluso procesado o renderizado de vídeo en tiempo real.
 

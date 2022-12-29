@@ -21,4 +21,4 @@ console.clear();
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Console.clear")}}
+{{Compat}}

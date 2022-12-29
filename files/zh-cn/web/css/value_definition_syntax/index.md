@@ -147,8 +147,8 @@ bold && <length>
 
 但以下不是合法取值：
 
-- `center 3%` as only one of the components must be present.
-- `3em 4.5em` as a component must be present at most one time.
+- `center 3%` 因为最多只能出现一个组成部分
+- `3em 4.5em` 因为每个组成部分最多只能出现一次
 
 > **备注：** “或”组合符的优先级高于“互斥”组合符，比如`bold | thin || <length>`等价于`bold | [ thin || <length> ]`。它们的合法取值是：`bold`, `thin`, `<length>`, `<length> thin`, 或 `thin <length>`，但不能是 `bold <length>`，因为“互斥”组合符所连接的数个部分中，只有一个能出现。
 

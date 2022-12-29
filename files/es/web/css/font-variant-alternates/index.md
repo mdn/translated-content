@@ -1,11 +1,6 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
-tags:
-  - Fuentes CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/font-variant-alternates
 ---
 
 {{CSSRef}}

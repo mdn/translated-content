@@ -6,6 +6,7 @@ tags:
   - Gecko
 translation_of: Web/API/Document/applets
 ---
+
 {{ ApiRef() }}
 
 ### 요약

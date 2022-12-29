@@ -921,7 +921,7 @@
 /fr/docs/DOM/element.innerHTML	/fr/docs/Web/API/Element/innerHTML
 /fr/docs/DOM/element.insertAdjacentHTML	/fr/docs/Web/API/Element/insertAdjacentHTML
 /fr/docs/DOM/element.insertBefore	/fr/docs/Web/API/Node/insertBefore
-/fr/docs/DOM/element.isSupported	/fr/docs/Web/API/Node/isSupported
+/fr/docs/DOM/element.isSupported	/fr/docs/Web/API/Node
 /fr/docs/DOM/element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/DOM/element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/DOM/element.localName	/fr/docs/Web/API/Element/localName
@@ -1009,14 +1009,14 @@
 /fr/docs/DOM/window.matchMedia	/fr/docs/Web/API/Window/matchMedia
 /fr/docs/DOM/window.navigator	/fr/docs/Web/API/Window/navigator
 /fr/docs/DOM/window.navigator.battery	/fr/docs/Web/API/Navigator/getBattery
-/fr/docs/DOM/window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
+/fr/docs/DOM/window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator
 /fr/docs/DOM/window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM/window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/DOM/window.onbeforeunload	/fr/docs/Web/API/Window/beforeunload_event
 /fr/docs/DOM/window.onload	/fr/docs/Web/API/Window/load_event
 /fr/docs/DOM/window.onpopstate	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/DOM/window.open	/fr/docs/Web/API/Window/open
-/fr/docs/DOM/window.openDialog	/fr/docs/Web/API/Window/openDialog
+/fr/docs/DOM/window.openDialog	/fr/docs/Web/API/Window
 /fr/docs/DOM/window.opener	/fr/docs/Web/API/Window/opener
 /fr/docs/DOM/window.parent	/fr/docs/Web/API/Window/parent
 /fr/docs/DOM/window.prompt	/fr/docs/Web/API/Window/prompt
@@ -1078,7 +1078,7 @@
 /fr/docs/DOM:element.id	/fr/docs/Web/API/Element/id
 /fr/docs/DOM:element.innerHTML	/fr/docs/Web/API/Element/innerHTML
 /fr/docs/DOM:element.insertBefore	/fr/docs/Web/API/Node/insertBefore
-/fr/docs/DOM:element.isSupported	/fr/docs/Web/API/Node/isSupported
+/fr/docs/DOM:element.isSupported	/fr/docs/Web/API/Node
 /fr/docs/DOM:element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/DOM:element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/DOM:element.localName	/fr/docs/Web/API/Element/localName
@@ -1157,7 +1157,7 @@
 /fr/docs/DOM:window.innerWidth	/fr/docs/Web/API/Window/innerWidth
 /fr/docs/DOM:window.location	/fr/docs/Web/API/window/location
 /fr/docs/DOM:window.navigator	/fr/docs/Web/API/Window/navigator
-/fr/docs/DOM:window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
+/fr/docs/DOM:window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator
 /fr/docs/DOM:window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM:window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/DOM:window.onload	/fr/docs/Web/API/Window/load_event
@@ -1825,7 +1825,7 @@
 /fr/docs/HTML/Attributes	/fr/docs/Web/HTML/Attributes
 /fr/docs/HTML/Attributs	/fr/docs/Web/HTML/Attributes
 /fr/docs/HTML/Canvas	/fr/docs/Web/API/Canvas_API
-/fr/docs/HTML/Catégorie_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
+/fr/docs/HTML/Catégorie_de_contenu	/fr/docs/Web/HTML/Content_categories
 /fr/docs/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/HTML/Element	/fr/docs/Web/HTML/Element
@@ -2075,7 +2075,7 @@
 /fr/docs/Introduction_à_la_cryptographie_à_clef_publique:Signatures_numériques	/fr/docs/Glossary/Signature/Security
 /fr/docs/JSON	/fr/docs/Glossary/JSON
 /fr/docs/JavaScript	/fr/docs/Web/JavaScript
-/fr/docs/JavaScript/A_propos	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/JavaScript/A_propos	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/A_re-introduction_to_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
 /fr/docs/JavaScript/Autres_outils_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /fr/docs/JavaScript/Gestion_de_la_mémoire	/fr/docs/Web/JavaScript/Memory_Management
@@ -2148,7 +2148,7 @@
 /fr/docs/JavaScript/Language_Resources	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/JavaScript/Les_différents_tests_d_égalité_comment_les_utiliser	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/JavaScript/Reference	/fr/docs/Web/JavaScript/Reference
-/fr/docs/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference/About
+/fr/docs/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference
 /fr/docs/JavaScript/Reference/A_propos/Conventions_d_écriture	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Reference/Annexes	/fr/docs/Web/JavaScript/Reference
 /fr/docs/JavaScript/Reference/Annexes/Annexe_-_Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
@@ -2298,7 +2298,7 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/setUTCSeconds	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/setYear	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/setYear
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/toDateString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString
-/fr/docs/JavaScript/Reference/Objets_globaux/Date/toGMTString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+/fr/docs/JavaScript/Reference/Objets_globaux/Date/toGMTString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/toISOString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/toJSON	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/toLocaleDateString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
@@ -2637,10 +2637,10 @@
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Propriétés_globales/Infinity	/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Propriétés_globales/NaN	/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Propriétés_globales/undefined	/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
-/fr/docs/JavaScript/Reference/Référence_JavaScript/À_propos	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/JavaScript/Reference/Référence_JavaScript/À_propos	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Reference/Référence_JavaScript/À_propos/Conventions_d'écriture	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Référence_JavaScript	/fr/docs/Web/JavaScript/Reference
-/fr/docs/JavaScript/Référence_JavaScript/A_propos	/fr/docs/Web/JavaScript/Reference/About
+/fr/docs/JavaScript/Référence_JavaScript/A_propos	/fr/docs/Web/JavaScript/Reference
 /fr/docs/JavaScript/Référence_JavaScript/Annexes	/fr/docs/Web/JavaScript/Reference
 /fr/docs/JavaScript/Référence_JavaScript/Annexes/Annexe_-_Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/JavaScript/Référence_JavaScript/Annexes/Fonctionnalités_dépréciées	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -2860,7 +2860,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Propriétés_globales/Infinity	/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Propriétés_globales/NaN	/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Propriétés_globales/undefined	/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
-/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos/Conventions_d'écriture	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
 /fr/docs/JavaScript/Shells	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
@@ -3032,6 +3032,7 @@
 /fr/docs/MDN/Contribute/GitHub_best_practices	/fr/docs/MDN/Community/Issues
 /fr/docs/MDN/Contribute/GitHub_cheatsheet	/fr/docs/MDN/Community/Issues
 /fr/docs/MDN/Contribute/Help_beginners	/fr/docs/MDN/Community/Learn_forum
+/fr/docs/MDN/Contribute/Howto	/fr/docs/MDN/Contribute
 /fr/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /fr/docs/MDN/Contribute/Howto/Create_and_edit_pages	/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /fr/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/fr/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
@@ -3040,7 +3041,7 @@
 /fr/docs/MDN/Contribute/Open_source_etiquette	/fr/docs/MDN/Community/Open_source_etiquette
 /fr/docs/MDN/Contribute/Structures/Macros	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-/fr/docs/MDN/Contribute/Tools	/fr/docs/MDN/Tools
+/fr/docs/MDN/Contribute/Tools	https://github.com/mdn/yari/tree/main/docs
 /fr/docs/MDN/Contribute/Where_is_everything	/fr/docs/MDN/Community/Contributing/Our_repositories
 /fr/docs/MDN/Débuter_sur_MDN	/fr/docs/MDN/Community/Contributing/Getting_started
 /fr/docs/MDN/Feedback	/fr/docs/MDN/Community
@@ -3062,7 +3063,8 @@
 /fr/docs/MDN/Structures/Live_samples	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/MDN/Structures/Macros	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/MDN/Structures/Macros/Commonly-used_macros	/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-/fr/docs/MDN/User_guide	/fr/docs/MDN/Tools
+/fr/docs/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
+/fr/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /fr/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /fr/docs/MDN_a_dix_ans	/fr/docs/MDN/At_ten
 /fr/docs/MDN_a_dix_ans/Contribuer_à_MDN	/fr/docs/MDN/Contribute
@@ -3354,7 +3356,7 @@
 /fr/docs/Précis_CSS_2:Tout_en_un	/fr/docs/Web/CSS/Reference
 /fr/docs/Référence_DOM_Gecko	/fr/docs/Glossary/DOM
 /fr/docs/Référence_de_JavaScript_1.5_Core	/fr/docs/Web/JavaScript/Reference
-/fr/docs/Référence_de_JavaScript_1.5_Core/A_propos_de_cette_reference	/fr/docs/Web/JavaScript/Reference/About
+/fr/docs/Référence_de_JavaScript_1.5_Core/A_propos_de_cette_reference	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Référence_de_JavaScript_1.5_Core/Fonctions_et_portee_des_fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/Référence_de_JavaScript_1.5_Core/Fonctions_et_portee_des_fonctions/Strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/Référence_de_JavaScript_1.5_Core/Fonctions_et_portee_des_fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
@@ -3662,7 +3664,7 @@
 /fr/docs/Web/API/Document.open	/fr/docs/Web/API/Document/open
 /fr/docs/Web/API/Document.write	/fr/docs/Web/API/Document/write
 /fr/docs/Web/API/Document/Document.anchors	/fr/docs/Web/API/Document/anchors
-/fr/docs/Web/API/Document/async	/fr/docs/Web/API/XMLDocument/async
+/fr/docs/Web/API/Document/async	/fr/docs/Web/API/XMLDocument
 /fr/docs/Web/API/Document/createEntityReference	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Document/defaultView/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Document/defaultView/storage_event	/fr/docs/Web/API/Window/storage_event
@@ -3677,6 +3679,7 @@
 /fr/docs/Web/API/Document/getBoxObjectFor	/fr/docs/Web/API/Element/getBoundingClientRect
 /fr/docs/Web/API/Document/height	/fr/docs/Web/API/Element/clientHeight
 /fr/docs/Web/API/Document/keypress_event	/fr/docs/Web/API/Element/keypress_event
+/fr/docs/Web/API/Document/mozSyntheticDocument	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Document/onafterscriptexecute	/fr/docs/Web/API/Document/afterscriptexecute_event
 /fr/docs/Web/API/Document/onbeforescriptexecute	/fr/docs/Web/API/Document/beforescriptexecute_event
 /fr/docs/Web/API/Document/onfullscreenchange	/fr/docs/Web/API/Document/fullscreenchange_event
@@ -3737,7 +3740,7 @@
 /fr/docs/Web/API/Element.innertHTML	/fr/docs/Web/API/Element/innerHTML
 /fr/docs/Web/API/Element.insertAdjacentHTML	/fr/docs/Web/API/Element/insertAdjacentHTML
 /fr/docs/Web/API/Element.insertBefore	/fr/docs/Web/API/Node/insertBefore
-/fr/docs/Web/API/Element.isSupported	/fr/docs/Web/API/Node/isSupported
+/fr/docs/Web/API/Element.isSupported	/fr/docs/Web/API/Node
 /fr/docs/Web/API/Element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/Web/API/Element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/Web/API/Element.localName	/fr/docs/Web/API/Element/localName
@@ -3874,10 +3877,11 @@
 /fr/docs/Web/API/Media_Streams_API	/fr/docs/Web/API/Media_Capture_and_Streams_API
 /fr/docs/Web/API/Media_Streams_API/Taking_still_photos	/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /fr/docs/Web/API/Navigator.getGamepads	/fr/docs/Web/API/Navigator/getGamepads
-/fr/docs/Web/API/Navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
+/fr/docs/Web/API/Navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/Navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/Navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/Web/API/Navigator/battery	/fr/docs/Web/API/Navigator/getBattery
+/fr/docs/Web/API/Navigator/mozIsLocallyAvailable	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages
@@ -3890,6 +3894,7 @@
 /fr/docs/Web/API/Node.contains	/fr/docs/Web/API/Node/contains
 /fr/docs/Web/API/Node/baseURIObject	/fr/docs/Web/API/Node
 /fr/docs/Web/API/Node/innerText	/fr/docs/Web/API/HTMLElement/innerText
+/fr/docs/Web/API/Node/isSupported	/fr/docs/Web/API/Node
 /fr/docs/Web/API/Node/localName	/fr/docs/Web/API/Element/localName
 /fr/docs/Web/API/Node/namespaceURI	/fr/docs/Web/API/Element/namespaceURI
 /fr/docs/Web/API/Node/nodePrincipal	/fr/docs/Web/API/Node
@@ -3930,6 +3935,7 @@
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/Web/API/ServiceWorker/onstatechange	/fr/docs/Web/API/ServiceWorker/statechange_event
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
+/fr/docs/Web/API/SharedWorkerGlobalScope/applicationCache	/fr/docs/Web/API/SharedWorkerGlobalScope
 /fr/docs/Web/API/SharedWorkerGlobalScope/onconnect	/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/Web/API/Window/localStorage
 /fr/docs/Web/API/StorageEstimate	/fr/docs/Web/API/StorageManager/estimate
@@ -3996,7 +4002,7 @@
 /fr/docs/Web/API/Window.onload	/fr/docs/Web/API/Window/load_event
 /fr/docs/Web/API/Window.onpopstate	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Window.onresize	/fr/docs/Web/API/Window/resize_event
-/fr/docs/Web/API/Window.openDialog	/fr/docs/Web/API/Window/openDialog
+/fr/docs/Web/API/Window.openDialog	/fr/docs/Web/API/Window
 /fr/docs/Web/API/Window.opener	/fr/docs/Web/API/Window/opener
 /fr/docs/Web/API/Window.postMessage	/fr/docs/Web/API/Window/postMessage
 /fr/docs/Web/API/Window.prompt	/fr/docs/Web/API/Window/prompt
@@ -4010,6 +4016,7 @@
 /fr/docs/Web/API/Window/mozAnimationStartTime	/fr/docs/Web/API/Animation/startTime
 /fr/docs/Web/API/Window/mozPaintCount	/fr/docs/Web/API/Window
 /fr/docs/Web/API/Window/onresize	/fr/docs/Web/API/Window/resize_event
+/fr/docs/Web/API/Window/openDialog	/fr/docs/Web/API/Window
 /fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Web/API/WindowBase64/atob	/fr/docs/Web/API/atob
 /fr/docs/Web/API/WindowBase64/btoa	/fr/docs/Web/API/btoa
@@ -4045,6 +4052,8 @@
 /fr/docs/Web/API/WorkerGlobalScope/onlanguagechange	/fr/docs/Web/API/WorkerGlobalScope/languagechange_event
 /fr/docs/Web/API/WorkerGlobalScope/onoffline	/fr/docs/Web/API/WorkerGlobalScope/offline_event
 /fr/docs/Web/API/WorkerGlobalScope/ononline	/fr/docs/Web/API/WorkerGlobalScope/online_event
+/fr/docs/Web/API/XMLDocument/async	/fr/docs/Web/API/XMLDocument
+/fr/docs/Web/API/XMLDocument/load	/fr/docs/Web/API/XMLDocument
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
 /fr/docs/Web/API/XMLHttpRequestEventTarget/onload	/fr/docs/Web/API/XMLHttpRequest/load_event
@@ -4596,6 +4605,7 @@
 /fr/docs/Web/Guide/API/DOM/Storage	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/Web/Guide/API/Gamepad	/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /fr/docs/Web/Guide/API/WebRTC	/fr/docs/Web/API/WebRTC_API
+/fr/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC	/fr/docs/Web/API/WebRTC_API
 /fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture	/fr/docs/Web/API/WebRTC_API/Connectivity
 /fr/docs/Web/Guide/API/WebRTC/WebRTC_basics	/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling
 /fr/docs/Web/Guide/CSS	/fr/docs/Learn/CSS
@@ -4617,7 +4627,8 @@
 /fr/docs/Web/Guide/Graphics/Dessiner_avec_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
-/fr/docs/Web/Guide/HTML/Catégories_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
+/fr/docs/Web/Guide/HTML/Catégories_de_contenu	/fr/docs/Web/HTML/Content_categories
+/fr/docs/Web/Guide/HTML/Content_categories	/fr/docs/Web/HTML/Content_categories
 /fr/docs/Web/Guide/HTML/Editable_content	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/Guide/HTML/Formulaires	/fr/docs/Learn/Forms
 /fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms	/fr/docs/Learn/Forms/Advanced_form_styling
@@ -4700,7 +4711,7 @@
 /fr/docs/Web/HTML/Attributs_universels/x-ms-acceleratorkey	/fr/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /fr/docs/Web/HTML/Attributs_universels/x-ms-format-detection	/fr/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /fr/docs/Web/HTML/Canvas	/fr/docs/Web/API/Canvas_API
-/fr/docs/Web/HTML/Catégorie_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
+/fr/docs/Web/HTML/Catégorie_de_contenu	/fr/docs/Web/HTML/Content_categories
 /fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
@@ -4762,7 +4773,10 @@
 /fr/docs/Web/HTTP/Cache	/fr/docs/Web/HTTP/Caching
 /fr/docs/Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent	/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Web/HTTP/Link_prefetching_FAQ
+/fr/docs/Web/HTTP/Feature_Policy	/fr/docs/Web/HTTP/Permissions_Policy
 /fr/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
+/fr/docs/Web/HTTP/Headers/Feature-Policy	/fr/docs/Web/HTTP/Headers/Permissions-Policy
+/fr/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/fr/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /fr/docs/Web/HTTP/Headers/Serveur	/fr/docs/Web/HTTP/Headers/Server
 /fr/docs/Web/HTTP/Index	/fr/docs/Web/HTTP
 /fr/docs/Web/HTTP/Méthode	/fr/docs/Web/HTTP/Methods
@@ -4777,8 +4791,9 @@
 /fr/docs/Web/HTTP/Méthode/TRACE	/fr/docs/Web/HTTP/Methods/TRACE
 /fr/docs/Web/HTTP/Public_Key_Pinning	/fr/docs/Web/Security/Certificate_Transparency
 /fr/docs/Web/HTTP/Requêtes_conditionnelles	/fr/docs/Web/HTTP/Conditional_requests
-/fr/docs/Web/JavaScript/A_propos	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/Web/JavaScript/A_propos	/fr/docs/Web/JavaScript
 /fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
+/fr/docs/Web/JavaScript/About_JavaScript	/fr/docs/Web/JavaScript
 /fr/docs/Web/JavaScript/Autres_outils_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement	/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /fr/docs/Web/JavaScript/Concurrence_et_boucle_des_événements	/fr/docs/Web/JavaScript/EventLoop
@@ -4830,7 +4845,8 @@
 /fr/docs/Web/JavaScript/Les_différents_tests_d_égalité	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/Web/JavaScript/Les_différents_tests_d_égalité_comment_les_utiliser	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-/fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference/About
+/fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference
+/fr/docs/Web/JavaScript/Reference/About	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/Classes/Class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /fr/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/fr/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /fr/docs/Web/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
@@ -4936,12 +4952,16 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Collator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 /fr/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
@@ -5194,7 +5214,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/setUTCSeconds	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/setYear	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/setYear
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toDateString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toGMTString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toGMTString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toISOString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toJSON	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toLocaleDateString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
@@ -5980,7 +6000,7 @@
 /fr/docs/WebRTC/Introduction	/fr/docs/Web/API/WebRTC_API/Session_lifetime
 /fr/docs/WebRTC/MediaStream_API	/fr/docs/Web/API/Media_Capture_and_Streams_API
 /fr/docs/WebRTC/Prendre_des_photos_avec_la_webcam	/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-/fr/docs/WebRTC/communication-de-pair-a-pair-avec-WebRTC	/fr/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
+/fr/docs/WebRTC/communication-de-pair-a-pair-avec-WebRTC	/fr/docs/Web/API/WebRTC_API
 /fr/docs/WebSockets	/fr/docs/Web/API/WebSockets_API
 /fr/docs/WebSockets/Writing_WebSocket_client_applications	/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /fr/docs/WebSockets/Writing_WebSocket_servers	/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
@@ -6232,7 +6252,7 @@
 /fr/docs/conflicting/MDN/Community/Contributing/Getting_started	/fr/docs/MDN/Community/Contributing/Getting_started
 /fr/docs/conflicting/MDN/Community/Issues	/fr/docs/MDN/Community/Issues
 /fr/docs/conflicting/MDN/Contribute	/fr/docs/MDN/Contribute
-/fr/docs/conflicting/MDN/Tools	/fr/docs/MDN/Tools
+/fr/docs/conflicting/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
 /fr/docs/conflicting/MDN/Writing_guidelines	/fr/docs/MDN/Writing_guidelines
 /fr/docs/conflicting/MDN/Writing_guidelines/Page_structures	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7	/fr/docs/MDN/Writing_guidelines/Page_structures
@@ -6292,6 +6312,7 @@
 /fr/docs/conflicting/Web/API/IDBTransaction/error_event	/fr/docs/Web/API/IDBTransaction/error_event
 /fr/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/conflicting/Web/API/MediaTrackConstraints	/fr/docs/Web/API/MediaTrackConstraints
+/fr/docs/conflicting/Web/API/Navigator	/fr/docs/Web/API/Navigator
 /fr/docs/conflicting/Web/API/Node	/fr/docs/Web/API/Node
 /fr/docs/conflicting/Web/API/Node/getRootNode	/fr/docs/Web/API/Node/getRootNode
 /fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556	/fr/docs/Web/API/Node
@@ -6301,6 +6322,7 @@
 /fr/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event	/fr/docs/Web/API/Performance/resourcetimingbufferfull_event
 /fr/docs/conflicting/Web/API/Pointer_events	/fr/docs/Web/API/Pointer_events
 /fr/docs/conflicting/Web/API/Selection	/fr/docs/Web/API/Selection_API
+/fr/docs/conflicting/Web/API/SharedWorkerGlobalScope	/fr/docs/Web/API/SharedWorkerGlobalScope
 /fr/docs/conflicting/Web/API/StorageManager/estimate	/fr/docs/Web/API/StorageManager/estimate
 /fr/docs/conflicting/Web/API/URL	/fr/docs/Web/API/URL
 /fr/docs/conflicting/Web/API/WebRTC_API	/fr/docs/Web/API/WebRTC_API
@@ -6324,6 +6346,8 @@
 /fr/docs/conflicting/Web/API/Window/online_event	/fr/docs/Web/API/Window/online_event
 /fr/docs/conflicting/Web/API/Window/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/conflicting/Web/API/Window/unload_event	/fr/docs/Web/API/Window/unload_event
+/fr/docs/conflicting/Web/API/XMLDocument	/fr/docs/Web/API/XMLDocument
+/fr/docs/conflicting/Web/API/XMLDocument_e7165fc663e6b211830a9ac924b0817e	/fr/docs/Web/API/XMLDocument
 /fr/docs/conflicting/Web/API/XSLTProcessor	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/conflicting/Web/API/btoa	/fr/docs/Web/API/btoa
@@ -6391,6 +6415,7 @@
 /fr/docs/conflicting/Web/HTTP/Headers/Content-Security-Policy	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/conflicting/Web/HTTP/Status/404	/fr/docs/Web/HTTP/Status/404
 /fr/docs/conflicting/Web/HTTP/Status/502	/fr/docs/Web/HTTP/Status/502
+/fr/docs/conflicting/Web/JavaScript	/fr/docs/Web/JavaScript
 /fr/docs/conflicting/Web/JavaScript/Equality_comparisons_and_sameness	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/conflicting/Web/JavaScript/Guide	/fr/docs/Web/JavaScript/Guide
 /fr/docs/conflicting/Web/JavaScript/Guide/Introduction	/fr/docs/Web/JavaScript/Guide/Introduction
@@ -6398,6 +6423,7 @@
 /fr/docs/conflicting/Web/JavaScript/Guide/Regular_Expressions/Assertions	/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
 /fr/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain	/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
+/fr/docs/conflicting/Web/JavaScript/Reference	/fr/docs/Web/JavaScript/Reference
 /fr/docs/conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type	/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects	/fr/docs/Web/JavaScript/Reference/Global_Objects
@@ -6408,6 +6434,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/DataView	/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
+/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/EvalError	/fr/docs/Web/JavaScript/Reference/Global_Objects/EvalError
@@ -6423,6 +6450,7 @@
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/JSON	/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON
+/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map	/fr/docs/Web/JavaScript/Reference/Global_Objects/Map
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number	/fr/docs/Web/JavaScript/Reference/Global_Objects/Number
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
@@ -6474,6 +6502,7 @@
 /fr/docs/orphaned/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques	/fr/docs/Glossary/Signature/Security
 /fr/docs/orphaned/MDN/Contribute/Documentation_priorities	https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/
+/fr/docs/orphaned/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
 /fr/docs/orphaned/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#debugger
 /fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#page_inspector
@@ -6539,6 +6568,6 @@
 /fr/docs/valeur_reelle	/fr/docs/Web/CSS/actual_value
 /fr/docs/window.closed	/fr/docs/Web/API/Window/closed
 /fr/docs/zineb_chengab_bonjour_bonsoir_merci	/fr/docs/Web
-/fr/docs/À_propos_de_JavaScript	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/À_propos_de_JavaScript	/fr/docs/Web/JavaScript
 /fr/docs/À_propos_du_Document_Object_Model	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Évènements_online_et_offline	/fr/docs/Web/API/Navigator/onLine

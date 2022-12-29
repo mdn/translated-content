@@ -1,35 +1,29 @@
 ---
 title: SourceBuffer.textTracks
 slug: Web/API/SourceBuffer/textTracks
+l10n:
+  sourceCommit: d0c960554ed347ba43fd56d258255152a2938b2b
 ---
 
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-{{domxref("SourceBuffer")}} インターフェイスの **`textTracks`** 読み取り専用プロパティは、`SourceBuffer` 内に現在含まれているテキストトラックのリストを返します。
+**`textTracks`** は {{domxref("SourceBuffer")}} インターフェイスの読み取り専用プロパティで、`SourceBuffer` 内に現在含まれているテキストトラックのリストを返します。
 
-## 構文
+## 値
 
-```
-var myTextTracks = sourceBuffer.textTracks;
-```
-
-### 値
-
-{{domxref("TextTrackList")}} オブジェクト。
+{{domxref("TextTrackList")}} オブジェクトです。
 
 ## 例
 
-未定
+TBD
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                     | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-texttracks', 'textTracks')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer.textTracks")}}
+{{Compat}}
 
 ## 関連情報
 

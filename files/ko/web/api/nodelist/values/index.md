@@ -3,6 +3,7 @@ title: NodeList.values()
 slug: Web/API/NodeList/values
 translation_of: Web/API/NodeList/values
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeList.values()`** 메서드는 이 객체에 포함된 모든 값을 통과할 수 있는 {{jsxref("Iteration_protocols",'iterator')}}를 반환합니다. 값은 {{domxref("Node")}} 객체 입니다.

@@ -220,7 +220,7 @@ let bigmouth = 'Je n\'ai pas eu droit à prendre place...';
 bigmouth;
 ```
 
-Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de la même manière, par ex. `\"`,  et il y a certains codes spéciaux à côté. Voyez  [Notations d'échappement](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) pour plus de détails.
+Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de la même manière, par ex. `\"`, et il y a certains codes spéciaux à côté. Voyez [Notations d'échappement](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) pour plus de détails.
 
 ## Concaténation de chaînes
 
@@ -235,7 +235,7 @@ Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de 
 
     Il en résulte que la variable nommée `joined` contient la valeur "Hello, comment allez‑vous&nbsp;?".
 
-2. Dans le dernier exemple, nous avons juste attaché deux chaînes ensemble, mais vous pouvez en attacher autant que vous voulez, pour autant que vous mettiez un signe  `+`  entre chacune. Essayez ceci&nbsp;:
+2. Dans le dernier exemple, nous avons juste attaché deux chaînes ensemble, mais vous pouvez en attacher autant que vous voulez, pour autant que vous mettiez un signe `+`  entre chacune. Essayez ceci&nbsp;:
 
     ```js
     let multiple = one + one + one + one + two;

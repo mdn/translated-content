@@ -13,7 +13,7 @@ API リファレンスページにカスタムサイドバーを追加して、�
 API サイドバーを作成するには、次の 3 つの手順を実行する必要があります。
 
 1. API リファレンスページを作成します。
-2. 特定の API の項目を  [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) ファイルに追加します。
+2. 特定の API の項目を [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) ファイルに追加します。
 3. [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) マクロを使用して、表示したい各ページにサイドバーを挿入します。
 
 これらのステップを順番に実行しましょう。この記事で参照する例は、[Fetch API](/ja/docs/Web/API/Fetch_API) です。

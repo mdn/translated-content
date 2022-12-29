@@ -1,11 +1,6 @@
 ---
 title: HTTP
 slug: Glossary/HTTP
-tags:
-  - Beginner
-  - Intro
-  - Web
-translation_of: Glossary/HTTP
 ---
 
 El protocolo de transferencia de hipertexto o HTTP (HyperText Transfer Protocol) es el protocolo de red que permite la transferencia de documentos de hipermedia en la red, generalmente entre un navegador y un servidor, para que los humanos puedan leerlos. La versión actual de la especificación se llama HTTP/2.

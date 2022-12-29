@@ -1,7 +1,6 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
-translation_of: Web/HTML/Element/input/checkbox
 original_slug: Web/HTML/Elemento/input/checkbox
 ---
 
@@ -37,4 +36,4 @@ Esto crea dos casillas de verificación, que se ven así:
 
 ## Compatibilidad en navegadores
 
-{{Compat("html.elements.input.input-checkbox")}}
+{{Compat}}
