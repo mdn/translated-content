@@ -255,7 +255,7 @@ let completedTodos = todos.filter((todo) => todo.completed).length
 
 可以告訴 Svelte 我們想要 `totalTodos` 和 `completedTodos` 等變數藉由前綴 `$:`，使其具有反應性。Svelte 將產生程式碼以在它們相依的資料發生變化時自動更新它們。
 
-> **注意：** Svelte 使用 `$:` [JavaScript 標記陳述語法](/zh-TW/docs/Web/JavaScript/Reference/Statements/label)來標記反應性陳述。像是用於宣告屬性的 `export` 關鍵字一樣，這可能看起來會有點陌生。但這是 Svelte 利用有效 JavaScript 語法並賦予其新用途的另一個例子——在這種情況下，意味著「每當任何參考的數值有變化時，則會重新執行此程式碼」。一旦習慣了，就無法回頭了。
+> **備註：** Svelte 使用 `$:` [JavaScript 標記陳述語法](/zh-TW/docs/Web/JavaScript/Reference/Statements/label)來標記反應性陳述。像是用於宣告屬性的 `export` 關鍵字一樣，這可能看起來會有點陌生。但這是 Svelte 利用有效 JavaScript 語法並賦予其新用途的另一個例子——在這種情況下，意味著「每當任何參考的數值有變化時，則會重新執行此程式碼」。一旦習慣了，就無法回頭了。
 
 更新 `src/components/Todos.svelte` 中的 `totalTodos` 和 `completedTodos` 變數定義，如下：
 
@@ -309,7 +309,7 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
    $: console.log('newTodoName: ', newTodoName)
    ```
 
-   > **注意：** 你可能已經注意到了，反應性陳述不僅限於變數宣告。你可以在 `$:` 符號之後放上 _任何_ JavaScript 陳述。
+   > **備註：** 你可能已經注意到了，反應性陳述不僅限於變數宣告。你可以在 `$:` 符號之後放上 _任何_ JavaScript 陳述。
 
 4. 現在嘗試回到 `localhost:5042`，按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> 來打開瀏覽器控制台並在輸入框中輸入一些內容。你應該就會看到你的輸入被記錄了。此時，你可以視情況刪除反應性 `console.log()`。
 5. 接下來，我們將建立一個函式來加入新的待辦事項—— `addTodo()` ——它會將一個新的 `todo` 物件塞入到 `todos` 陣列中。將此函式新增到 `src/components/Todos.svelte` 中 `<script>` 區塊的底部：
@@ -321,7 +321,7 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
    }
    ```
 
-   > **注意：** 目前我們為每個待辦事項都指定相同的 `id`，別擔心，我們會盡快解決這個問題。
+   > **備註：** 目前我們為每個待辦事項都指定相同的 `id`，別擔心，我們會盡快解決這個問題。
 
 6. 現在我們要更新我們的 HTML，以便每當表單被提交時來呼叫 `addTodo()`。更新新增待辦事項（NewTodo）表單的起始標籤如下：
 
