@@ -1,7 +1,6 @@
 ---
 title: Clients.claim()
 slug: Web/API/Clients/claim
-translation_of: Web/API/Clients/claim
 ---
 {{SeeCompatTable}}{{APIRef("Service Worker Clients")}}
 

@@ -1,14 +1,6 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - JavaScript
-  - Landing
-  - Landing page
-  - Learn
-  - l10n:priority
-  - 자바스크립트
-translation_of: Web/JavaScript
 ---
 
 {{JsSidebar}}
@@ -21,7 +13,11 @@ JavaScript의 표준은 [ECMAScript 언어 사양](https://tc39.es/ecma262/) (EC
 
 JavaScript와 [Java 프로그래밍 언어](<https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)>)를 혼동해서는 안 됩니다. "Java"와 "JavaScript" 는 모두 상표이자 미국 및 기타 국가에 등록된 Oracle의 상표입니다. 다만 두 프로그래밍 언어의 구문, 시맨틱 및 사용 방법이 매우 다릅니다.
 
-> **알림:** #### 프론트 엔드 웹 개발자가되고 싶으신가요?목표 달성에 필요한 모든 필수 정보가 포함된 과정을 마련했습니다.[**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> **참고:** **프론트 엔드 웹 개발자가 되고 싶으신가요?**
+>
+> 목표 달성에 필요한 모든 필수 정보가 포함된 과정을 마련했습니다.
+>
+> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
 
 ## 자습서
 

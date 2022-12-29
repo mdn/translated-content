@@ -1,12 +1,6 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - 메소드
-  - 문자열
-  - 자바스크립트
-  - 프로토타입
-translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
 
 {{JSRef}}

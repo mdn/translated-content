@@ -1,93 +1,118 @@
 ---
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
+l10n:
+  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
 {{APIRef("WebRTC")}}
 
-**`RTCDataChannel`** インターフェイスは、2 つのピア間で双方向に任意のデータを転送するためのネットワークチャンネルを表現します。すべてのデータチャンネルは {{domxref("RTCPeerConnection")}} に関連付けられており、それぞれのぴあコネクションは理論上、最大 65,534 個のデータチャンネルを持つことができます (実際の上限はブラウザーごとに異なります)。
+**`RTCDataChannel`** インターフェイスは、2 つのピア間で双方向に任意のデータを転送するためのネットワークチャンネルを表現します。すべてのデータチャンネルは {{DOMxRef("RTCPeerConnection")}} に関連付けられており、それぞれのぴあコネクションは理論上、最大 65,534 個のデータチャンネルを持つことができます（実際の上限はブラウザーごとに異なります）。
 
-データチャンネルを作成してリモートのピアに参加するかを問い合わせるには、{{domxref("RTCPeerConnection")}} の {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} メソッドを呼び出します。データ交換に招かれているピアは {{event("datachannel")}} イベント ({{domxref("RTCDataChannelEvent")}} 型) を受け取って、コネクションにデータチャンネルが追加されたことを知ります。
+データチャンネルを作成してリモートのピアに参加するかを問い合わせるには、{{DOMxRef("RTCPeerConnection")}} の {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}} メソッドを呼び出します。データ交換に招かれているピアは {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} イベント ({{DOMxRef("RTCDataChannelEvent")}} 型) を受け取って、コネクションにデータチャンネルが追加されたことを知ります。
 
-## プロパティ
+`RTCDataChannel` は{{glossary("Transferable objects","移譲可能オブジェクト")}}です。
 
-- {{domxref("RTCDataChannel.label")}} {{readOnlyInline}}
-  - : データチャネルを示す名前を含む{{domxref("DOMString")}}を返します。この値に関して固有でなければならない制約はありません。
-- {{domxref("RTCDataChannel.ordered")}} {{readOnlyInline}}
-  - : メッセージの配達順序を保証するかしないかを示す{{domxref("Boolean")}}を返します。
-- {{domxref("RTCDataChannel.protocol")}} {{readOnlyInline}}
-  - : 利用している副プロトコルの名前を含む{{Domxref("DOMString")}}を返します。ない場合は `""`を返します。
-- {{domxref("RTCDataChannel.id")}} {{readOnlyInline}}
-  - : このチャンネルの固有 ID を示す `unsigned short` を返します。この値は、{{domxref("RTCDataChannel")}}オブジェクトの作成時に設定されます。
-- {{domxref("RTCDataChannel.readyState")}} {{readOnlyInline}}
+{{InheritanceDiagram}}
 
-  - : 下位のデータコネクションの状態を表現する列挙型の `RTCDataChannelState` を返します。次のいずれかの値をとります。
+## インスタンスプロパティ
 
-    - `"connecting"`: 下位のコネクションがまだ確立されておらず有効でないことを示します。{{domxref("RTCPeerConnection.createDataChannel()")}}によって生成されたデータチャネルの初期状態です。
-    - `"open"`: 下位のコネクションが確立され動作中であることを示します。{{domxref("RTCDataChannelEvent")}} によって、データチャンネルがディスパッチされた時の初期状態です。
-    - `"closing"`: 下位のコネクションがシャットダウン処理中であることを示します。新しい送信タスクは受け付けませんが、送信または受信中のキャッシュされたメッセージは処理されます。
-    - `"closed"`: 下位のコネクションがシャットダウンされたこと(または、確立できなかったこと)を示します。
+_{{DOMxRef("EventTarget")}} からプロパティを継承しています。_
 
-- {{domxref("RTCDataChannel.bufferedAmount")}} {{readOnlyInline}}
-  - : 送信キューのバイト量を含む`unsigned long`を返します。これは、{{domxref("RTCDataChannel.send()")}}を介して送信要求され、まだ送信されていないデータの量です。チャンネルが閉じている場合、バッファリングは継続することに注意してください。
-- {{domxref("RTCDataChannel.binaryType")}}
-  - : コネクションによって送信されたバイナリデータの種類を示す{{domxref("DOMString")}}です。この値は、{{domxref("Blob")}}が利用されている場合は`"blob"、`{{domxref("ArrayBuffer")}}が利用されている場合は`"arraybuffer"`にすべきです。初期状態では、`"blob"`が設定されます。
-- {{domxref("RTCDataChannel.maxPacketLifeTime")}} {{readOnlyInline}}
-  - : 無信頼性モードでのメッセージングでの、ミリ秒単位のウィンドウ長を示す`unsigned shortです。`
-- {{domxref("RTCDataChannel.maxRetransmits")}} {{readOnlyInline}}
-  - : 無信頼性モードでのメッセージングでの、最大再送信回数を示す`unsigned shortです。`
-- {{domxref("RTCDataChannel.negotiated")}} {{readOnlyInline}}
-  - : アプリケーションによってチャンネルがネゴシエーションされたかされていなかを示す{{domxref("Boolean")}}です。
-- {{domxref("DataChannel.reliable")}} {{non-standard_inline}} {{readOnlyInline}}
-  - : コネクションはメッセージを無信頼性モードで送信可能かを示す{{domxref("Boolean")}}です。
-- {{domxref("DataChannel.stream")}} {{non-standard_inline}} {{readOnlyInline}}
-  - : 旧式です。{{domxref("RTCDataChannel.id")}}と同じ意味を持ちます。
+- {{DOMxRef("RTCDataChannel.binaryType", "binaryType")}}
+  - : 文字列で、 `RTCDataChannel` で受信したバイナリーデータを表現するために使用されるオブジェクトの種類を指定します。
+    値は {{DOMxRef("WebSocket.binaryType")}} プロパティで許可されているものと同じです。
+    {{DOMxRef("Blob")}} オブジェクトを使用する場合は `blob`、 {{jsxref("ArrayBuffer")}} オブジェクトを使用する場合は `arraybuffer` を指定します。
+    既定値は `blob` です。
+- {{DOMxRef("RTCDataChannel.bufferedAmount", "bufferedAmount")}} {{ReadOnlyInline}}
+  - : データチャンネルで送信するために現在キューイングされているデータのバイト数を返します。
+- {{DOMxRef("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}
+  - : バッファリングされた送信データのうち、 "low" とみなされるバイト数を指定します。
+    既定値は 0 です。
+- {{DOMxRef("RTCDataChannel.id", "id")}} {{ReadOnlyInline}}
+  - : `RTCDataChannel` を一意に識別するための ID 番号（0 から 65,534 の間）を返します。
+- {{DOMxRef("RTCDataChannel.label", "label")}} {{ReadOnlyInline}}
+  - : 文字列で、データチャンネルを記述している名前を返します。
+    このラベルは一意である必要はありません。
+- {{DOMxRef("RTCDataChannel.maxPacketLifeTime", "maxPacketLifeTime")}} {{ReadOnlyInline}}
+  - : データチャンネルが作成されたときに設定された、ブラウザーがメッセージの送信を試みるのにかかる許容時間 （ミリ秒単位）、または `null` を返します。
+- {{DOMxRef("RTCDataChannel.maxRetransmits", "maxRetransmits")}} {{ReadOnlyInline}}
+  - : データチャンネルが作成されたときに設定された、ブラウザーがあきらめる前にメッセージを再送信しようとする最大回数、または最大回数がないことを示す `null` を返します。
+- {{DOMxRef("RTCDataChannel.negotiated", "negotiated")}} {{ReadOnlyInline}}
+  - : `RTCDataChannel` の接続が、ウェブアプリケーションによって交渉されたのか (`true`) あるいは WebRTC レイヤーによって交渉されたのか (`false`) を示します。
+    既定値は `false` です。
+- {{DOMxRef("RTCDataChannel.ordered", "ordered")}} {{ReadOnlyInline}}
+  - : データチャンネルのメッセージが順番通りに配送されることを保証するかどうかを示します。
+    既定値は `true` で、データチャンネルが実際に順序どおりに配送されることを示します。
+- {{DOMxRef("RTCDataChannel.protocol", "protocol")}} {{ReadOnlyInline}}
+  - : 使用されているサブプロトコルの名前を格納した文字列を返します。
+    データチャンネルの作成時にプロトコルが指定されなかった場合、このプロパティの値は空文字列 (`""`) となります。
+- {{DOMxRef("RTCDataChannel.readyState", "readyState")}} {{ReadOnlyInline}}
+  - : データチャンネルの基盤となるデータ接続の状態を示す文字列を返します。
+    `connecting`, `open`, `closing`, `closed` の値のいずれかを持つ可能性があります。
 
-### イベントハンドラ
+### 古いプロパティ
 
-- {{domxref("RTCDataChannel.onopen")}}
-  - : {{event("open")}} イベントを受信した時に呼ばれるイベントハンドラです。このイベントは、データコネクションのための下位のデータトランスポートが確立された時に送信されます。
-- {{domxref("RTCDataChannel.onmessage")}}
-  - : {{event("message")}} イベントを受信した時に呼ばれるイベントハンドラです。このイベントは、データコネクション上でメッセージを受信した時に送信されます。
-- {{domxref("RTCDataChannel.onclose")}}
-  - : {{event("close")}} イベントを受信した時に呼ばれるイベントハンドラです。このイベントは、下位のデータトランスポートが閉じた時に送信されます。
-- {{domxref("RTCDataChannel.onerror")}}
-  - : {{event("error")}} イベントを受信した時に呼ばれるイベントハンドラです。このイベントは、エラーに遭遇した時に送信されます。
+- {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : データチャンネルが _reliable_ であるかどうかを示します。
 
-## メソッド
+## インスタンスメソッド
 
-- {{domxref("RTCDataChannel.close()")}}
-  - : チャンネルを閉じます。突然でない方法でチャンネルを閉じます。チャンネルの{{domxref("RTCDataChannel.readyState", "state")}} は `"closing"`に設定され、送信されていないメッセージは送信されてから、チャンネルを閉じます。
-- {{domxref("RTCDataChannel.send()")}}
-  - : チャンネルのパラメータに従いデータを送信します。送信可能なデータの型は {{domxref("DOMString")}}　または {{domxref("Blob")}}、 {{domxref("ArrayBuffer")}}、{{domxref("ArrayBufferView")}} です。
+_{{DOMxRef("EventTarget")}} からもメソッドを継承しています。_
+
+- {{DOMxRef("RTCDataChannel.close", "close()")}}
+  - : {{domxref("RTCDataChannel")}} を閉じました。
+    どちらのピアもこのメソッドを呼び出してチャンネルの閉鎖を開始することが許可されています。
+- {{DOMxRef("RTCDataChannel.send", "send()")}}
+  - : データチャンネルを経由してリモートピアーにデータを送信します。
+
+### イベント
+
+- {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}}
+  - : 送信データバッファー内のデータバイト数が {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}} で指定する値以下になると送信されます。
+- {{domxref("RTCDataChannel.close_event", "close")}}
+  - : 基盤となるデータトランスポートが閉じられたときに送信されます。
+- {{domxref("RTCDataChannel.closing_event", "closing")}}
+  - : 基盤となるデータトランスポートが閉じ始めようとするときに送られます。
+- {{domxref("RTCDataChannel.error_event", "error")}}
+  - : データチャンネルにエラーが発生したときに送信されます。
+- {{domxref("RTCDataChannel.message_event", "message")}}
+  - : リモートピアからメッセージを受信したときに送信されます。
+    メッセージのコンテンツは、イベントの {{domxref("MessageEvent.data", "data")}} プロパティで得ることができます。
+- {{domxref("RTCDataChannel.open_event", "open")}}
+  - : データチャンネルが最初に開かれたとき、または既存のデータチャンネルの基盤となる接続が再び開かれたときに送信されます。
+
+## データ形式
+
+基礎となるデータ形式は、 IEEE の仕様書 [SDP Offer/Answer Procedures for SCTP over DTLS Transport(RFC 8841)](https://datatracker.ietf.org/doc/rfc8841/) によって定義されています。現在の形式では、そのプロトコルを `"UDP/DTLS/SCTP"` (SCTP を運ぶ DTLS を運ぶ UDP) または `"TCP/DTLS/SCTP"` (SCTP を運ぶ DTLS を運ぶ TCP) のいずれかに指定する。古いブラウザーでは `"DTLS/SCTP"` のみを指定することができます。
 
 ## 例
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
-dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+dc.onmessage = (event) => {
+  console.log(`received: ${event.data}`);
 };
 
-dc.onopen = function () {
+dc.onopen = () => {
   console.log("datachannel open");
 };
 
-dc.onclose = function () {
+dc.onclose = () => {
   console.log("datachannel close");
 };
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
-{{Compat("api.RTCDataChannel")}}
+{{Compat}}
 
 ## 関連情報
 
-- [WebRTC](/ja/docs/Web/Guide/API/WebRTC)
+- [WebRTC API](/ja/docs/Web/API/WebRTC_API)

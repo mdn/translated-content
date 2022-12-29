@@ -1,15 +1,6 @@
 ---
 title: Comparadores de igualdad e identidad
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-tags:
-  - Comparación
-  - Identidad
-  - Intermedio
-  - JavaScript
-  - SameValue
-  - SameValueZero
-  - igualdad
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
 
 {{jsSidebar("Intermediate")}}

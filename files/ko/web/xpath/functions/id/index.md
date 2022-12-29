@@ -1,9 +1,6 @@
 ---
 title: id
 slug: Web/XPath/Functions/id
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/id
 ---
 {{ XsltRef() }}
 

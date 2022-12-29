@@ -1,11 +1,6 @@
 ---
 title: node-set
 slug: Web/EXSLT/exsl/node-set
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/exsl/node-set
 ---
 
 {{XsltRef}}

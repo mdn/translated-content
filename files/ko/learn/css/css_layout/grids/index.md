@@ -38,7 +38,7 @@ CSS 그리드 레이아웃은 웹페이지를 위한 이차원 레이아웃 시�
 
 하나의 그리드은 대게 **columns**, **rows**로 구성되며, 각 행과 열 사이에 공백이 있는데, 대게는 이를 일컬어 **gutters**라고 부릅니다.
 
-![](https://mdn.mozillademos.org/files/13899/grid.png)
+![](grid.png)
 
 ## CSS에서 그리드 생성하기
 
@@ -675,7 +675,7 @@ aside {
 
 [파이어폭스 그리드 검사기](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하여 당신의 디자인 상의 그리드 라인을 겹쳐놓으면 12개로 구성된 열 그리드가 작동하는 방법을 볼 수 있습니다.
 
-![A 12 column grid overlaid on our design.](https://mdn.mozillademos.org/files/16045/learn-grids-inspector.png)
+![A 12 column grid overlaid on our design.](learn-grids-inspector.png)
 
 ## 요약정리
 

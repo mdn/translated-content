@@ -1,9 +1,6 @@
 ---
 title: Template literals
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - Template
-translation_of: Web/JavaScript/Reference/Template_literals
 ---
 {{JsSidebar("More")}}
 

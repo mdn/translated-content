@@ -116,7 +116,7 @@ document.getElementById("button").addEventListener('click', simulateClick);
 
 Click on the button to see how the sample works:
 
-{{ EmbedLiveSample('Example', '', '', '') }}
+{{ EmbedLiveSample('範例') }}
 
 ## 規範
 

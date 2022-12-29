@@ -43,7 +43,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 > **メモ:** この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API に基づいています。Microsoft Edge の互換性データは Microsoft Corporation によって提供され、Creative Commons Attribution 3.0 United States License に含まれています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,4 +71,4 @@ browser.runtime.onMessage.addListener(handleMessage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

@@ -3,7 +3,7 @@ title: canvas 的优化
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 {{HTMLElement("canvas")}}元素是众多广泛使用的网络 2D 图像渲染标准之一。它被广泛用于游戏及复杂的图像可视化中。然而，随着网站和应用将 canvas 画布推至极限，性能开始成为问题。此文目标是给使用 canvas 画布元素的优化带来建议，去保证你的网站或者应用表现卓越。
 

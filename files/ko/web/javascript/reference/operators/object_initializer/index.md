@@ -1,19 +1,6 @@
 ---
 title: 객체 초기자
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-tags:
-  - ECMAScript 2015
-  - JSON
-  - JavaScript
-  - Language feature
-  - Literal
-  - Methods
-  - Object
-  - Primary Expression
-  - computed
-  - mutation
-  - properties
-browser-compat: javascript.operators.object_initializer
 ---
 
 {{JsSidebar("Operators")}}

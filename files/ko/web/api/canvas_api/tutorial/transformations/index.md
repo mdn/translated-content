@@ -1,20 +1,12 @@
 ---
 title: 변형 (transformations)
 slug: Web/API/Canvas_API/Tutorial/Transformations
-tags:
-  - CSS
-  - HTML
-  - 이동
-  - 축소
-  - 캔버스
-  - 크기변형
-  - 트랜스폼
-  - 확대
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
 original_slug: Web/HTML/Canvas/Tutorial/변형
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}이 튜토리얼에 앞서 [canvas 그리드](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes)와 **좌표 공간**에 대해 알아 보았습니다. 지금까지는 기본적인 그리드를 사용해 요구에 맞추어 전체 canvas의 크기를 바꾸기만 했습니다. Transformation(변형)에는 그리드를 원점에서 다른 위치로 옮기고, 회전하며, 확대·축소까지 하는 더 강력한 방법들이 있습니다.
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+
+이 튜토리얼에 앞서 [canvas 그리드](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes)와 **좌표 공간**에 대해 알아 보았습니다. 지금까지는 기본적인 그리드를 사용해 요구에 맞추어 전체 canvas의 크기를 바꾸기만 했습니다. Transformation(변형)에는 그리드를 원점에서 다른 위치로 옮기고, 회전하며, 확대·축소까지 하는 더 강력한 방법들이 있습니다.
 
 ## 상태(state)의 저장과 복원
 
@@ -75,11 +67,11 @@ draw();
 
 두 번째 `restore()`문이 호출될 때, 초기 상태( 처음으로 `save`를 호출하기 전에 설정한 상태)가 복원되고 마지막 사각형은 한번 더 검게 그려집니다.
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
 
 ## 이동(translating)
 
-![](https://mdn.mozillademos.org/files/234/Canvas_grid_translate.png)우리가 살펴볼 첫 번째 변형 메소드는 `translate()`입니다. 이 메소드는 그리드에서 canvas를 원점에서 다른 점으로 옮기는 데 사용됩니다.
+![](canvas_grid_translate.png)우리가 살펴볼 첫 번째 변형 메소드는 `translate()`입니다. 이 메소드는 그리드에서 canvas를 원점에서 다른 점으로 옮기는 데 사용됩니다.
 
 - {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
   - : 그리드에서 canvas와 그 원점을 이동합니다. `x`는 이동시킬 수평 거리를 가리키고, `y`는 그리드에서 수직으로 얼마나 멀리 떨어지는지를 표시합니다.
@@ -115,11 +107,11 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}
+{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
 
 ## 회전(rotating)
 
-![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)두 번째 변형 메소드는 `rotate()`입니다. canvas를 현재의 원점 둘레로 회전하는 데 사용합니다.
+![](canvas_grid_rotate.png)두 번째 변형 메소드는 `rotate()`입니다. canvas를 현재의 원점 둘레로 회전하는 데 사용합니다.
 
 - {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
   - : canvas를 현재 원점을 기준으로 라디안의 `angle` 숫자만큼 시계방향으로 회전시킵니다.
@@ -174,7 +166,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "https://mdn.mozillademos.org/files/9859/rotate.png")}}
+{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
 
 ## 확대·축소(scaling)
 
@@ -216,7 +208,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}
+{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
 
 ## 변형(transforms)
 
@@ -277,6 +269,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "https://mdn.mozillademos.org/files/255/Canvas_transform.png")}}
+{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "canvas_transform.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

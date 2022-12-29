@@ -1,14 +1,6 @@
 ---
 title: OffscreenCanvas.width
 slug: Web/API/OffscreenCanvas/width
-tags:
-  - API
-  - Canvas
-  - Experimental
-  - OffscreenCanvas
-  - Property
-  - Reference
-translation_of: Web/API/OffscreenCanvas/width
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 

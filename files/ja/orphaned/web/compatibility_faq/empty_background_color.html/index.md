@@ -9,7 +9,7 @@ original_slug: Web/Compatibility_FAQ/Empty_Background_Color.html
 他ブラウザで表示されるアイコンやバナーの色が、mobile 版 Firefox では表示されません。
 領域が真っ白な表示になっていたり、下レイヤーの要素の背景が表示される場合があります。
 
-![](https://mdn.mozillademos.org/files/9969/0202.jpg)
+![](0202.jpg)
 
 ## 要因
 

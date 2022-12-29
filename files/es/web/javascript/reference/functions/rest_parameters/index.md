@@ -1,11 +1,6 @@
 ---
 title: Parámetros Rest
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-tags:
-  - Funciones
-  - JavaScript
-  - Parametros Rest
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 original_slug: Web/JavaScript/Referencia/Funciones/parametros_rest
 ---
 

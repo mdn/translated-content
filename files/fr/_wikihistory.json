@@ -3637,17 +3637,9 @@
       "jswisher"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2019-01-16T18:23:52.592Z",
-    "contributors": ["wbamberg", "Porkepix", "Baball", "Sheppy"]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2020-09-03T03:23:25.806Z",
     "contributors": ["Voulto", "wbamberg", "jswisher"]
-  },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:48:32.947Z",
-    "contributors": ["chrisdavidmills", "Voulto", "wbamberg", "jswisher"]
   },
   "MDN/Writing_guidelines": {
     "modified": "2019-03-24T00:12:46.908Z",
@@ -8431,10 +8423,6 @@
     "modified": "2019-03-18T21:39:25.178Z",
     "contributors": ["loella16"]
   },
-  "Web/API/Document/mozSyntheticDocument": {
-    "modified": "2019-03-18T21:39:15.573Z",
-    "contributors": ["loella16"]
-  },
   "Web/API/Document/open": {
     "modified": "2019-03-23T23:45:31.773Z",
     "contributors": [
@@ -11049,10 +11037,6 @@
     "modified": "2019-03-23T23:05:32.482Z",
     "contributors": ["a-mt", "Nek-", "Eric013", "SuperStrong"]
   },
-  "Web/API/Navigator/mozIsLocallyAvailable": {
-    "modified": "2019-03-23T23:52:20.754Z",
-    "contributors": ["fscholz", "teoli", "jsx", "Mgjbot", "BenoitL"]
-  },
   "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2019-03-23T23:52:04.757Z",
     "contributors": [
@@ -11231,10 +11215,6 @@
   "Web/API/Node/isSameNode": {
     "modified": "2019-03-18T21:39:55.776Z",
     "contributors": ["loella16"]
-  },
-  "Web/API/Node/isSupported": {
-    "modified": "2019-03-18T21:15:15.385Z",
-    "contributors": ["loella16", "fscholz", "teoli", "jsx", "BenoitL"]
   },
   "Web/API/Node/lastChild": {
     "modified": "2020-10-15T21:15:08.719Z",
@@ -11892,10 +11872,6 @@
   "Web/API/SharedWorkerGlobalScope": {
     "modified": "2020-10-15T22:26:31.672Z",
     "contributors": ["SphinxKnight", "mfuji09"]
-  },
-  "Web/API/SharedWorkerGlobalScope/applicationCache": {
-    "modified": "2020-10-15T22:26:34.435Z",
-    "contributors": ["Arzak656"]
   },
   "Web/API/SharedWorkerGlobalScope/connect_event": {
     "modified": "2020-10-15T22:26:31.419Z",
@@ -13108,17 +13084,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/Window/openDialog": {
-    "modified": "2020-10-15T21:14:00.787Z",
-    "contributors": [
-      "velkro",
-      "fscholz",
-      "teoli",
-      "jsx",
-      "tregagnon",
-      "damien.flament"
-    ]
-  },
   "Web/API/Window/opener": {
     "modified": "2019-03-23T23:49:11.676Z",
     "contributors": ["fscholz", "teoli", "khalid32", "Mgjbot", "BenoitL"]
@@ -13417,14 +13382,6 @@
   },
   "Web/API/XMLDocument": {
     "modified": "2020-10-15T22:03:21.753Z",
-    "contributors": ["NemoNobobyPersonne"]
-  },
-  "Web/API/XMLDocument/async": {
-    "modified": "2019-04-24T21:08:31.361Z",
-    "contributors": ["ExE-Boss", "loella16"]
-  },
-  "Web/API/XMLDocument/load": {
-    "modified": "2020-10-15T22:04:13.899Z",
     "contributors": ["NemoNobobyPersonne"]
   },
   "Web/API/XMLHttpRequest": {
@@ -19683,17 +19640,6 @@
       "darnuria"
     ]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2020-03-31T11:01:50.986Z",
-    "contributors": [
-      "tristantheb",
-      "SphinxKnight",
-      "loella16",
-      "marie-ototoi",
-      "tregagnon",
-      "xaky"
-    ]
-  },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-03-24T00:03:04.501Z",
     "contributors": ["Jeremie", "fscholz", "BenoitL"]
@@ -19793,6 +19739,17 @@
   "Web/HTML/CORS_enabled_image": {
     "modified": "2019-04-04T15:03:02.054Z",
     "contributors": ["SphinxKnight", "Lotfire", "tregagnon"]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2020-03-31T11:01:50.986Z",
+    "contributors": [
+      "tristantheb",
+      "SphinxKnight",
+      "loella16",
+      "marie-ototoi",
+      "tregagnon",
+      "xaky"
+    ]
   },
   "Web/HTML/Date_and_time_formats": {
     "modified": "2019-07-21T04:39:30.291Z",
@@ -21269,10 +21226,6 @@
       "tomcodes"
     ]
   },
-  "Web/HTTP/Feature_Policy": {
-    "modified": "2020-11-02T18:21:06.120Z",
-    "contributors": ["JNa0"]
-  },
   "Web/HTTP/Headers": {
     "modified": "2020-11-11T18:57:53.286Z",
     "contributors": [
@@ -21528,14 +21481,6 @@
     "modified": "2020-10-15T21:57:22.458Z",
     "contributors": ["l-vo", "SphinxKnight", "GuiBret"]
   },
-  "Web/HTTP/Headers/Feature-Policy": {
-    "modified": "2020-11-11T14:08:38.730Z",
-    "contributors": ["JNa0"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/accelerometer": {
-    "modified": "2020-11-16T09:05:43.541Z",
-    "contributors": ["JNa0"]
-  },
   "Web/HTTP/Headers/Host": {
     "modified": "2020-10-15T21:58:12.642Z",
     "contributors": ["SphinxKnight", "ji-sser", "alpyr"]
@@ -21559,6 +21504,14 @@
   "Web/HTTP/Headers/Origin": {
     "modified": "2020-10-15T22:04:41.950Z",
     "contributors": ["Watilin"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy": {
+    "modified": "2020-11-11T14:08:38.730Z",
+    "contributors": ["JNa0"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/accelerometer": {
+    "modified": "2020-11-16T09:05:43.541Z",
+    "contributors": ["JNa0"]
   },
   "Web/HTTP/Headers/Referer": {
     "modified": "2020-10-15T21:59:09.222Z",
@@ -21706,6 +21659,10 @@
       "Hell_Carlito",
       "dattaz"
     ]
+  },
+  "Web/HTTP/Permissions_Policy": {
+    "modified": "2020-11-02T18:21:06.120Z",
+    "contributors": ["JNa0"]
   },
   "Web/HTTP/Redirections": {
     "modified": "2020-03-17T12:32:04.893Z",
@@ -21992,23 +21949,6 @@
       "Jean-Yves Cronier",
       "Anonymous",
       "Mario"
-    ]
-  },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:36:54.184Z",
-    "contributors": [
-      "SphinxKnight",
-      "Dralyab",
-      "Gasperowicz",
-      "tregagnon",
-      "teoli",
-      "Jeremie",
-      "Delapouite",
-      "fscholz",
-      "Mgjbot",
-      "BenoitL",
-      "Extra-Nitro",
-      "VincentN"
     ]
   },
   "Web/JavaScript/Closures": {
@@ -22381,10 +22321,6 @@
       "Mortys",
       "matteodelabre"
     ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:38:26.136Z",
-    "contributors": ["SphinxKnight", "teoli", "pchantry", "Goofy"]
   },
   "Web/JavaScript/Reference/Classes": {
     "modified": "2020-10-15T21:33:49.394Z",
@@ -23695,10 +23631,6 @@
   "Web/JavaScript/Reference/Global_Objects/Date/toDateString": {
     "modified": "2020-10-15T21:27:17.686Z",
     "contributors": ["SphinxKnight", "edspeedy", "teoli", "tregagnon"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Date/toGMTString": {
-    "modified": "2020-10-15T21:27:18.821Z",
-    "contributors": ["SphinxKnight", "teoli", "tregagnon"]
   },
   "Web/JavaScript/Reference/Global_Objects/Date/toISOString": {
     "modified": "2020-10-15T21:27:16.901Z",

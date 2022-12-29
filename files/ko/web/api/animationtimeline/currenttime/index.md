@@ -1,7 +1,6 @@
 ---
 title: AnimationTimeline.currentTime
 slug: Web/API/AnimationTimeline/currentTime
-translation_of: Web/API/AnimationTimeline/currentTime
 ---
 
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}

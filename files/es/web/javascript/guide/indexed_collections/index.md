@@ -1,13 +1,6 @@
 ---
 title: Colecciones indexadas
 slug: Web/JavaScript/Guide/Indexed_collections
-tags:
-  - Array
-  - Arreglo
-  - Guía
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Indexed_collections
 original_slug: Web/JavaScript/Guide/colecciones_indexadas
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: NodeFilter
 slug: Web/API/Document/createNodeIterator
-tags:
-  - API
-  - DOM
-  - Reference
-translation_of: Web/API/NodeFilter
 original_slug: Web/API/NodeFilter
 ---
 

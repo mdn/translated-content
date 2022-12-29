@@ -1,21 +1,25 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
+l10n:
+  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-**`FileReader()`** コンストラクタは、新しい FileReader を作成します。
+{{APIRef("File API")}}
 
-`FileReader` の使用方法の詳細については、[Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を参照してください。
+**`FileReader()`** コンストラクターは、新しい FileReader を作成します。
 
-## シンタックス
+`FileReader` の使用方法の詳細については、[ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)を参照してください。
 
-```js
-var reader = new FileReader();
+## 構文
+
+```js-nolint
+new FileReader()
 ```
 
-### パラメータ
+### 引数
 
-なし
+なし。
 
 ## 例
 
@@ -23,18 +27,22 @@ var reader = new FileReader();
 
 ```js
 function printFile(file) {
-  var reader = new FileReader();
-  reader.onload = function(evt) {
+  const reader = new FileReader();
+  reader.onload = (evt) => {
     console.log(evt.target.result);
   };
   reader.readAsText(file);
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## あわせて参照
+## ブラウザーの互換性
 
-- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+{{Compat}}
+
+## 関連情報
+
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

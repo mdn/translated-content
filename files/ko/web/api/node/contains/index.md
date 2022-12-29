@@ -1,7 +1,6 @@
 ---
 title: Node.contains()
 slug: Web/API/Node/contains
-translation_of: Web/API/Node/contains
 ---
 
 {{APIRef("DOM")}}

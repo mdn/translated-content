@@ -1,15 +1,6 @@
 ---
 title: AudioWorkletProcessor.port
 slug: Web/API/AudioWorkletProcessor/port
-tags:
-  - API
-  - Audio
-  - AudioWorkletProcessor
-  - Experimental
-  - Property
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletProcessor.port
 ---
 
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}

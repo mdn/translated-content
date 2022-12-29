@@ -1,13 +1,6 @@
 ---
 title: Gramática y Tipos
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - Guia(2)
-  - Guía
-  - JavaScript
-  - Variables
-  - literales
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}

@@ -1,7 +1,6 @@
 ---
 title: 함수
 slug: Web/JavaScript/Guide/Functions
-translation_of: Web/JavaScript/Guide/Functions
 original_slug: Web/JavaScript/Guide/함수
 ---
 

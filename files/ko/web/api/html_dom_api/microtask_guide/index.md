@@ -1,22 +1,6 @@
 ---
 title: JavaScript의 queueMicrotask()와 함께 마이크로태스크 사용하기
 slug: Web/API/HTML_DOM_API/Microtask_guide
-tags:
-  - API
-  - Batch
-  - Guide
-  - HTML DOM
-  - JavaScript
-  - Microtask
-  - Queue
-  - Reference
-  - ServiceWorker
-  - SharedWorker
-  - Window
-  - Worker
-  - asynchronous
-  - queueMicrotask
-translation_of: Web/API/HTML_DOM_API/Microtask_guide
 ---
 
 {{APIRef("HTML DOM")}}
@@ -29,7 +13,7 @@ JavaScript [프로미스](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promi
 
 ## 태스크 vs 마이크로태스크
 
-마이크로태스크를 올바르게 논하려면, 우선 JavaScript에서의 태스크란 무엇인지, 그리고 마이크로태스크가 태스크와 어떻게 다른지 아는 것이 유욯합니다. 다음은 짧고 간략한 설명이지만, 보다 자세히 알아보려면 [심층 탐구: 마이크로태스크와 JavaScript 런타임 환경](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth) 글을 확인해보세요.
+마이크로태스크를 올바르게 논하려면, 우선 JavaScript에서의 태스크란 무엇인지, 그리고 마이크로태스크가 태스크와 어떻게 다른지 아는 것이 유용합니다. 다음은 짧고 간략한 설명이지만, 보다 자세히 알아보려면 [심층 탐구: 마이크로태스크와 JavaScript 런타임 환경](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth) 글을 확인해보세요.
 
 ### 태스크
 

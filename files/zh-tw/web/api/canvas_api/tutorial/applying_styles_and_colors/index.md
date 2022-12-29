@@ -3,7 +3,7 @@ title: 套用樣式與顏色
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 在[繪畫圖形](/zh-TW/docs//zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes)章節中，我們只用了預設的線條與填滿樣式，而在本章，我們將進一步看看所有可用的樣式選項，畫出更吸引人的圖。
 
@@ -35,7 +35,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 > **備註：** 目前 Gecko 引擎並不支援 CSS3 全部的顏色值，例如 hsl(100%,25%,0)和 rgb(0,100%,0)就不被支援.
 
-### `fillStyle`範例
+### `fillStyle` 範例
 
 這裡我們利用兩個 for 迴圈來畫出一個矩形陣列，而且陣列中每一個矩形的顏色都不相同。下面程式碼透過改變 i 和 j 兩個變數來分別變換 RGB 中的紅色值和綠色值，然後為每一個矩形產生自己專屬的顏色值。透過改變 RGB 的各顏色值，我們可以產生各式各樣的調色盤，像是逐步調整顏色值，你也可以做出像 Photoshop 內建一樣的調色盤。
 
@@ -62,9 +62,9 @@ draw();
 
 結果如下:
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}
+{{EmbedLiveSample("fillStyle 範例", 160, 160, "canvas_fillstyle.png")}}
 
-### `strokeStyle`範例
+### `strokeStyle` 範例
 
 本例和前例相當類似，不同的是我們改用 arc()方法畫圓形而不是矩形、改設定 strokeStyle 變換圖形輪廓顏色。
 
@@ -93,7 +93,7 @@ draw();
 
 結果如下:
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
+{{EmbedLiveSample("strokeStyle 範例", "180", "180", "canvas_strokestyle.png")}}
 
 ## 透明度
 
@@ -115,7 +115,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 rgba()函數比 rgb()函數多出一個不透明度參數，允許值介於 0.0(全透明)到 1.0(不透明).
 
-### `globalAlpha`範例
+### `globalAlpha` 範例
 
 下面我們將在四個方格色塊背景上畫一系列半透明圓形。對於所有圓形，我們藉由設置 globalAlpha 屬性值為 0.2 使得圓形變成半透明，然後 for 迴圈裡我們逐一增加圓形繪圖半徑，最終結果看起來便像是輻射狀漸層圖案，而且圓形相互疊加在彼此之上後，又加深了重疊區域的不透明度，只要我們不斷增加圓形數量，最後圖片中央將被完全遮蓋，看不到背後的背景。
 
@@ -153,9 +153,9 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
+{{EmbedLiveSample("globalAlpha 範例", "180", "180", "canvas_globalalpha.png")}}
 
-### `rgba()`使用範例
+### `rgba()` 使用範例
 
 這個範例類似於上面的範例，但不同的是我們改畫半透明的矩形。rgba()在使用上會多一點彈性，因為我們可以分別設置勾勒和填滿圖形的不透明度。
 
@@ -191,7 +191,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "canvas_rgba.png")}}
+{{EmbedLiveSample("rgba_使用範例", "180", "180", "canvas_rgba.png")}}
 
 ## 線條樣式
 
@@ -208,7 +208,7 @@ draw();
 
 底下我們將一一示範這些屬性的用途。
 
-### `lineWidth`範例
+### `lineWidth` 範例
 
 此屬性決定線條寬度，必須為正數，預設值為 1.0 單位。
 
@@ -237,7 +237,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}
+{{EmbedLiveSample("lineWidth 範例", "180", "180", "canvas_linewidth.png")}}
 
 為了畫出清晰的直線，我們需要了解繪圖路徑是如何產生；如下方圖示，網格代表畫布座標軸，網格所框出的方格則代表螢幕上的像素，第一張圖片填滿了座標(2,1)到(5,5)的紅色區域，而這個紅色區域的邊際正好符合像素間的邊際，所以會產生出清晰的影像。
 
@@ -253,7 +253,7 @@ draw();
 
 雖然處裡 2D 繪圖縮放有些麻煩，但只要仔細計算像素格和繪圖路徑位置，縱使進行圖像縮放或變形，圖像輸出還是可以保持正確。一條寬 1.0 單位的直線，只要位置計算正確，放大兩倍後會變成一條 2 個像素寬的清晰直線，而且還是會保持正確位置。
 
-### `lineCap`範例
+### `lineCap` 範例
 
 這個屬性決定線條端點的樣式，總共有三種樣式可選:
 
@@ -305,9 +305,9 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}
+{{EmbedLiveSample("lineCap 範例", "180", "180", "canvas_linecap.png")}}
 
-### `lineJoin`範例
+### `lineJoin` 範例
 
 lineJoin 屬性決定兩個連接區端(如線條、弧形或曲線)如何連接(對於長度為零，亦即終點和控制點為同一點的圖形無效)。
 
@@ -350,9 +350,9 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}
+{{EmbedLiveSample("lineJoin 範例", "180", "180", "canvas_linejoin.png")}}
 
-### `miterLimit`屬性
+### `miterLimit` 屬性
 
 前面範例顯示出，當 lineJoin 值為 miter 時，兩條線的外緣會延伸相交，所以，當這兩條相交線的相交角度越小的話，他們的延伸交會點就會越遠離內緣連接點，而且隨著角度變小，距離呈指數型增長。
 
@@ -427,7 +427,7 @@ document.getElementById('miterLimit').value = document.getElementById('canvas').
 draw();
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}
+{{EmbedLiveSample("miterLimit 屬性", "400", "180", "canvas_miterlimit.png")}}
 
 ## 漸層
 
@@ -458,7 +458,7 @@ lineargradient.addColorStop(0, 'white');
 lineargradient.addColorStop(1, 'black');
 ```
 
-### `createLinearGradient`範例
+### `createLinearGradient` 範例
 
 本範例中，我們將建立兩種漸層，如範例所示，strokeStyle 和 fillSyle 屬性都可以接受 canvasGradient 物件作為屬性值。
 
@@ -500,9 +500,9 @@ draw();
 
 第二個漸層起始位置(position 0.0)的顏色並沒有被指定，所以下一個漸層顏色會自動被設為起始位置顏色，因此即使我們沒有指定漸層起始位置顏色也沒有關係，就像本範例自動會設定起始位置的顏色等於位置 0.5 的黑色。
 
-{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}
+{{EmbedLiveSample("createLinearGradient 範例", "180", "180", "canvas_lineargradient.png")}}
 
-### `createRadialGradient`範例
+### `createRadialGradient` 範例
 
 這邊我們定義了四種放射狀漸層，相較於一般在 Photoshop 看到的”經典”放射狀漸層圖案(漸層從一個圖案中心點向外呈圓心狀延伸)，因為我們可以控制漸層起始和終止點，我們可以做到更好的效果。
 
@@ -555,7 +555,7 @@ draw();
 
 每一個漸層圖案最後一個漸層色都是全透明的，如果希望倒數第二個漸層色能夠平順地轉換到這個最後一個漸層色，那麼兩者應該設定一樣的顏色值，像是程式碼範例中的漸層色 #019F62 其實就等於 rgba(1,159,98,1)。
 
-{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
+{{EmbedLiveSample("createRadialGradient 範例", "180", "180", "canvas_radialgradient.png")}}
 
 ## 樣式(Patterns)
 
@@ -590,7 +590,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 > **備註：** 不像 drawImage()方法，呼叫 createPattern()方法前影像必須要先載入完成，否則可能圖像的程生會有問題。
 
-### `createPattern`範例
+### `createPattern` 範例
 
 這個範例中我們把 fillStyle 屬性值存為樣式物件，比較值得注意的是影像 onload 事件處理器，這是為了確保影像載入完成後再進行。
 
@@ -622,7 +622,7 @@ draw();
 
 結果如下 :
 
-{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}
+{{EmbedLiveSample("createPattern 範例", "180", "180", "canvas_createpattern.png")}}
 
 ## 陰影
 
@@ -668,6 +668,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
+{{EmbedLiveSample("文字陰影範例", "180", "100", "shadowed-string.png")}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Using_images", "Web/Guide/HTML/Canvas_tutorial/Transformations")}}

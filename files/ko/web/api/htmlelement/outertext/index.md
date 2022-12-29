@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
-translation_of: Web/API/HTMLElement/outerText
 ---
 {{APIRef("DOM")}}
 

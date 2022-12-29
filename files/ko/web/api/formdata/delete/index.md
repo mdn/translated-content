@@ -1,9 +1,6 @@
 ---
 title: FormData.delete()
 slug: Web/API/FormData/delete
-page-type: web-api-instance-method
-browser-compat: api.FormData.delete
-translation_of: Web/API/FormData/delete
 ---
 
 {{APIRef("XMLHttpRequest")}}

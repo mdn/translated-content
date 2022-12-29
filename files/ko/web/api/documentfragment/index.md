@@ -1,16 +1,6 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Documents
-  - Interface
-  - Reference
-  - Web Components
-browser-compat: api.DocumentFragment
-translation_of: Web/API/DocumentFragment
 ---
 {{ APIRef("DOM") }}
 

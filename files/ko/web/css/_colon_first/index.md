@@ -1,13 +1,6 @@
 ---
 title: ':first'
 slug: Web/CSS/:first
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:first
 ---
 
 {{CSSRef}}

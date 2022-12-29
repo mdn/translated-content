@@ -25,15 +25,15 @@ translation_of: Web/HTML/Element/input/date
 
 날짜 선택을 위한 별도의 인터페이스를 갖춘 브라우저 중, Chrome과 Opera는 다음과 같은 모양의 달력을 보여줍니다.
 
-![A textbox containing “dd/mm/yyyy”, an increment/decrement button combo, and a downward arrow that opens into a calendar control.](https://mdn.mozillademos.org/files/14909/date-picker-chrome.png)
+![A textbox containing “dd/mm/yyyy”, an increment/decrement button combo, and a downward arrow that opens into a calendar control.](date-picker-chrome.png)
 
 구 Edge의 컨트롤입니다.
 
-![A textbox containing “mm/dd/yyyy”, but when interacted with, opens a tri-column date selector.](https://mdn.mozillademos.org/files/14911/date-picker-edge.png)
+![A textbox containing “mm/dd/yyyy”, but when interacted with, opens a tri-column date selector.](date-picker-edge.png)
 
 Firefox의 날짜 컨트롤입니다.
 
-![Another “dd/mm/yyyy” textbox that expands into a selectable calendar control.](https://mdn.mozillademos.org/files/15644/firefox_datepicker.png)
+![Another “dd/mm/yyyy” textbox that expands into a selectable calendar control.](firefox_datepicker.png)
 
 <table class="properties">
   <tbody>
@@ -218,7 +218,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 지원하지 않는 브라우저를 사용하시는 경우엔 다음 스크린샷을 참고하세요.
 
-![The input field has an overlaid speech balloon, with an orange exclamation mark icon and the message “Please fill in this field.”](https://mdn.mozillademos.org/files/14913/date-picker-chrome-error-message.png)
+![The input field has an overlaid speech balloon, with an orange exclamation mark icon and the message “Please fill in this field.”](date-picker-chrome-error-message.png)
 
 다음은 위 코드에서 사용한 CSS로, {{cssxref(":valid")}}와 {{cssxref(":invalid")}} 의사 클래스를 사용해 입력한 값의 유효성 여부에 따라 다른 스타일을 적용하고 있습니다. 구체적으로는, 유효성에 따라 입력 칸의 옆에 배치한 {{htmlelement("span")}}에 아이콘을 추가합니다.
 
@@ -247,7 +247,7 @@ input:valid+span::after {
 
 위에서 언급했듯, 현재 날짜 입력 칸의 큰 문제는 [브라우저 지원](#브라우저_호환성)입니다. 예를 하나 들자면, Firefox for Android의 날짜 입력기는 다음과 같은 모습입니다.
 
-![A popup calendar picker modal floats above the web page and browser UI.](https://mdn.mozillademos.org/files/14915/date-picker-fxa.png)
+![A popup calendar picker modal floats above the web page and browser UI.](date-picker-fxa.png)
 
 지원하지 않는 브라우저에서는 단순한 텍스트 입력 칸으로 우아하게 저하되긴 하지만, 이는 (보여지는 컨트롤이 다르므로) 사용자 인터페이스와 데이터 처리가 일관적이지 못하다는 문제를 만듭니다.
 

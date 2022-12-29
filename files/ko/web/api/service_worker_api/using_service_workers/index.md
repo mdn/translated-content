@@ -1,7 +1,6 @@
 ---
 title: Using Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
-translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}
@@ -139,7 +138,7 @@ This all happens asynchronously.
 
 To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [sw-test](https://github.com/mdn/sw-test), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We’ve kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
 
-![](https://mdn.mozillademos.org/files/8243/demo-screenshot.png)
+![](demo-screenshot.png)
 
 You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/). The one bit we’ll call out here is the promise (see [app.js lines 22-47](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47)), which is a modified version of what you read about above, in the [Promises test demo](https://github.com/mdn/promises-test). It is different in the following ways:
 
@@ -190,7 +189,7 @@ This could be for the following reasons:
 2. The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app’s root directory. In our example, the worker is at `https://mdn.github.io/sw-test/sw.js`, and the app’s root is `https://mdn.github.io/sw-test/`. But the path needs to be written as `/sw-test/sw.js`, not `/sw.js`.
 3. The service worker being pointed to is on a different origin to that of your app. This is also not allowed.
 
-![](https://mdn.mozillademos.org/files/12630/important-notes.png)
+![](important-notes.png)
 
 Also note:
 
@@ -243,7 +242,7 @@ this.addEventListener('install', function(event) {
 
 Now you’ve got your site assets cached, you need to tell service workers to do something with the cached content. This is easily done with the `fetch` event.
 
-![](https://mdn.mozillademos.org/files/12634/sw-fetch.png)
+![](sw-fetch.png)
 
 A `fetch` event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if `index.html` makes a cross origin request to embed an image, that still goes through its service worker.)
 
@@ -437,6 +436,6 @@ Firefox has also started to implement some useful tools related to service worke
 
 - [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- Download the [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
+- Download the [Service Workers 101 cheatsheet](sw101.png).
 - [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/ko/docs/Web/Guide/Performance/Using_web_workers)

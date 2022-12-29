@@ -1,11 +1,6 @@
 ---
 title: animation-direction
 slug: Web/CSS/animation-direction
-tags:
-  - CSS 속성
-  - CSS 애니메이션
-translation_of: Web/CSS/animation-direction
-browser-compat: css.properties.animation-direction
 ---
 
 {{CSSRef}}

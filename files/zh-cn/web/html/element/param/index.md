@@ -3,6 +3,8 @@ title: <param>
 slug: Web/HTML/Element/param
 ---
 
+{{HTMLSidebar}}{{Deprecated_Header}}
+
 ## 概要
 
 **HTML `<param>元素`**为{{ HTMLElement("object") }}元素定义参数

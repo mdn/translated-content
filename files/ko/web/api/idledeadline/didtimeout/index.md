@@ -1,7 +1,6 @@
 ---
 title: IdleDeadline.didTimeout
 slug: Web/API/IdleDeadline/didTimeout
-translation_of: Web/API/IdleDeadline/didTimeout
 ---
 
 {{APIRef("Background Tasks")}}

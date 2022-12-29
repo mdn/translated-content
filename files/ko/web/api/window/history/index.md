@@ -1,14 +1,6 @@
 ---
 title: Window.history
 slug: Web/API/Window/history
-tags:
-  - API
-  - HTML DOM
-  - History API
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/history
 ---
 {{APIRef}}
 

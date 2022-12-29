@@ -1,7 +1,6 @@
 ---
 title: 'Element: select event'
 slug: Web/API/HTMLInputElement/select_event
-translation_of: Web/API/Element/select_event
 original_slug: Web/API/Element/select_event
 ---
 

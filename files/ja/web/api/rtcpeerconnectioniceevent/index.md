@@ -1,47 +1,51 @@
 ---
 title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
+l10n:
+  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}
 
-**`RTCPeerConnectionIceEvent`** インタフェースは、通常 {{domxref("RTCPeerConnection")}}の ICE 候補に関連して発生するイベントを表現します。イベントのタイプは{{event("icecandidate")}}です。
+**`RTCPeerConnectionIceEvent`** インターフェイスは、通常 {{domxref("RTCPeerConnection")}}の ICE 候補に関連して発生するイベントを表現します。
 
-## プロパティ
+この型のイベントは、 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} の 1 つだけです。
 
-_{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}} であり, {{domxref("Event")}}のプロパティも実装されています。_
+{{InheritanceDiagram}}
 
-- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{readOnlyInline}}
-  - : このイベントに関連した候補を含む{{domxref("RTCIceCandidate")}}です。
+## インスタンスプロパティ
 
-## コンストラクタ
+_{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}} の一種であり、このイベントはそのプロパティも実装しています。_
+
+- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
+  - : イベントに関連付けられた候補を含む {{domxref("RTCIceCandidate")}} を格納し、このイベントがこれ以上来る候補がないことを示す場合は `null` を格納します。
+
+## コンストラクター
 
 - {{domxref("RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent()", "RTCPeerConnectionIceEvent()")}}
-  - : 新しい RTCPeerConnectionIceEvent を返します。このコンストラクタは 2 つの引数を持ち、最初の引数はイベントのタイプを表す{{domxref("DOMString")}}であり、二つ目の引数は、{{domxref("RTCIceCandidate")}}を含むディクショナリです。
+  - : 新しい `RTCPeerConnectionIceEvent` を返します。このコンストラクターは 2 つの引数を持ち、最初の引数はイベントの種類を表す文字列であり、 2 つ目は {{domxref("RTCIceCandidate")}} を含む辞書です。
 
-## メソッド
+## インスタンスメソッド
 
-_{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}}であり、このイベントは{{domxref("Event")}}のプロパティも実装します。具体的な _{{domxref("</em>RTCPeerConnectionIceEvent<em>")}}_ メソッドはありません。_
+_{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}} の一種であり、このイベントはそのプロパティも実装しています。 {{domxref("RTCDataChannelEvent")}} に固有のメソッドはありません。_
 
 ## 例
 
 ```js
-pc.onicecandidate = function( ev ) {
-                      alert("The ICE candidate (transport address: '" +
-                            ev.candidate.candidate +
-                            "') has been added to this connection.");
-                   }
+pc.onicecandidate = (ev) => {
+  console.log(`The ICE candidate (trsp addr: '${ev.candidate.candidate}') added to connection.`);
+};
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
-{{Compat("api.RTCPeerConnectionIceEvent")}}
+{{Compat}}
 
-## その他の記事
+## 関連情報
 
-- [WebRTC](/ja/docs/Web/Guide/API/WebRTC)
-- このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}.
+- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- このイベントの通常ターゲット: {{domxref("RTCPeerConnection")}}

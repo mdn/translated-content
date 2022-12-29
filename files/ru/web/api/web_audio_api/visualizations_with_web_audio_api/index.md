@@ -145,7 +145,7 @@ function draw() {
 
 Мы получаем изображение волны, обновляющееся несколько раз в секунду:
 
-![a black oscilloscope line, showing the waveform of an audio signal](https://mdn.mozillademos.org/files/7977/wave.png)
+![a black oscilloscope line, showing the waveform of an audio signal](wave.png)
 
 ## Создание частотной гистограммы
 
@@ -208,6 +208,6 @@ function draw() {
 
 Этот код даёт нам следующий результат:
 
-![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](https://mdn.mozillademos.org/files/7975/bar-graph.png)
+![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](bar-graph.png)
 
 > **Примечание:** Примеры, используемые в данной статье, используют {{ domxref("AnalyserNode.getByteFrequencyData()") }} и {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Примеры работы с {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} можно найти в демо [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) (Вы также можете посмотреть [исходный код](https://github.com/mdn/voice-change-o-matic-float-data)) — это то же самое, что и [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/), но здесь используются данные типа float, а не unsigned vyte.

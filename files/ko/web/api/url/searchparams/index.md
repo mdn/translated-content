@@ -1,14 +1,6 @@
 ---
 title: URL.searchParams
 slug: Web/API/URL/searchParams
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - URL
-  - URLSearchParams
-translation_of: Web/API/URL/searchParams
 ---
 
 {{APIRef("URL API")}}

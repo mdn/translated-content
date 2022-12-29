@@ -1,13 +1,6 @@
 ---
 title: 시작하기
 slug: Web/SVG/Tutorial/Getting_Started
-tags:
-  - SVG
-  - SVG:Tutorial
-  - 초보자
-  - 튜토리얼
-translation_of: Web/SVG/Tutorial/Getting_Started
-original_slug: Web/SVG/Tutorial/시작하기
 ---
 
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
@@ -31,9 +24,9 @@ original_slug: Web/SVG/Tutorial/시작하기
 </svg>
 ```
 
-코드를 복사하여 demo1.svg로 저장하고, 파이어폭스 에서 실행해 봅시다. 아래와 같은 화면이 그려질 것입니다.(파이어 폭스 사용자 : [링크](/@api/deki/files/4571/=svgdemo1.xml))
+코드를 복사하여 demo1.svg로 저장하고, 파이어폭스 에서 실행해 봅시다. 아래와 같은 화면이 그려질 것입니다.(Firefox 사용자 : [링크](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
-![svgdemo1.png](/@api/deki/files/4928/=svgdemo1.png)
+![빨간색 배경 중앙에 녹색 원이 있습니다. 원 가운데에 있는 흰색 텍스트는 SVG입니다.](svgdemo1.png)
 
 화면이 그려지는 과정은 다음과 같습니다.
 
@@ -69,9 +62,9 @@ original_slug: Web/SVG/Tutorial/시작하기
   - 이론적으로, img 요소로 사용될 수 있습니다만 4.0 이전의 Firefox에서는 작동하지 않습니다.
   - 마지막으로 SVG는 JavaScript로 동적으로 생성되어 HTML DOM에 삽입 될 수 있습니다. 이는 SVG를 처리 할 수없는 브라우저에서 대체하여 구현할 수 있다는 장점이 있습니다.
 
-  이 주제에 대해 깊이있게 다루기 위해 [이 문서](/ko/docs/SVG_In_HTML_Introduction)를 참조하십시오.
+  이 주제에 대해 깊이있게 다루기 위해 [이 문서](/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)를 참조하십시오.
 
-- SVG에서 크기와 단위를 처리하는 방법에 대해서는 [다음 페이지](/en-US/Web/SVG/Tutorial/Positions)에서 설명 할 것입니다.
+- SVG에서 크기와 단위를 처리하는 방법에 대해서는 [다음 페이지](/ko/docs/Web/SVG/Tutorial/Positions)에서 설명 할 것입니다.
 
 ### SVG 파일 형식
 

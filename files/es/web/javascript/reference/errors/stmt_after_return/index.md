@@ -1,7 +1,6 @@
 ---
 title: 'Advertencia: codigo inaccesible despues de sentencia de retorno'
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
-translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
 
 {{jsSidebar("Errors")}}

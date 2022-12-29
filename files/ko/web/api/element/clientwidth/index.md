@@ -1,13 +1,6 @@
 ---
 title: Element.clientWidth
 slug: Web/API/Element/clientWidth
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
-browser-compat: api.Element.clientWidth
 ---
 
 {{APIRef("DOM")}}

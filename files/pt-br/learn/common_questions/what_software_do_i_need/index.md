@@ -153,11 +153,11 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
 
 Aqui está uma captura de tela de um editor de texto avançado:
 
-![Screenshot of Notepad++.](https://mdn.mozillademos.org/files/8221/NotepadPlusPlus.png)
+![Screenshot of Notepad++.](notepadplusplus.png)
 
 Aqui está uma captura de tela de um editor de texto online:
 
-![Screenshot of ShiftEdit](https://mdn.mozillademos.org/files/15837/shiftedit.png)
+![Screenshot of ShiftEdit](shiftedit.png)
 
 ### Fazendo _upload_ de arquivos na _web_
 

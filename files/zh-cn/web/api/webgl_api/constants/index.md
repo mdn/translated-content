@@ -3,7 +3,7 @@ title: WebGL 相关常量
 slug: Web/API/WebGL_API/Constants
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 提供了一些常量，这些常量常作为参数传入函数调用，或常作为函数的返回值。所有这些常量都是 {{domxref("GLenum")}} 类型。
 

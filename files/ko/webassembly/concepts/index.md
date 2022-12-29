@@ -66,7 +66,7 @@ WebAssembly는 자바스크립트와는 다른 언어이지만, 자바스크립�
 
 웹어셈블리 생태계는 이제 막 태동하는 단계입니다. 더 많은 도구들이 앞으로 쏟아져나오겠죠. 현재 네가지 방법이 있습니다:
 
-- [엠스크립튼](/ko/docs/Mozilla/Projects/Emscripten)으로 c/c++ 애플리케이션 포팅하기.
+- [엠스크립튼](https://emscripten.org/)으로 c/c++ 애플리케이션 포팅하기.
 - 어셈블리 수준에서 바로 WebAssembly를 작성하거나 생성하기.
 - Rust 응용 프로그램을 작성하고 WebAssembly를 출력으로 지정합니다.
 - TypeScript와 비슷한 [AssemblyScript](https://www.assemblyscript.org/)를 사용하여 WebAssembly바이너리 컴파일.
@@ -75,7 +75,7 @@ WebAssembly는 자바스크립트와는 다른 언어이지만, 자바스크립�
 
 ### C/C++로부터 포팅하기
 
-WASM 코드를 작성하기위한 많은 옵션 중 두 가지는 온라인 Wasm 어셈블러 또는 [Emscripten](/ko/docs/Mozilla/Projects/Emscripten)입니다. 다음과 같은 수많은 WASM 어셈블러 선택 항목이 있습니다.
+WASM 코드를 작성하기위한 많은 옵션 중 두 가지는 온라인 Wasm 어셈블러 또는 [Emscripten](https://emscripten.org/)입니다. 다음과 같은 수많은 WASM 어셈블러 선택 항목이 있습니다.
 
 - [WasmFiddle](https://wasdk.github.io/WasmFiddle/)
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddle/)
@@ -85,7 +85,7 @@ WASM 코드를 작성하기위한 많은 옵션 중 두 가지는 온라인 Wasm
 
 Emscripten 도구를 사용하면 C/C++ 소스코드를 가져와서 .wasm 모듈로 컴파일하고, 이 모듈을 불러와서 돌리는데 필요한 자바스크립트 "접착제(glue)" 코드를 끼워넣고, HTML 문서에 코드의 실행결과를 출력할 수도 있습니다.
 
-![](https://mdn.mozillademos.org/files/14647/emscripten-diagram.png)
+![](emscripten-diagram.png)
 
 핵심만 요약하면 절차는 다음과 같습니다:
 

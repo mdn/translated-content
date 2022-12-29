@@ -1,55 +1,55 @@
 ---
-title: Web Periodic Background Synchronization API
+title: ウェブ定期バックグラウンド同期 API
 slug: Web/API/Web_Periodic_Background_Synchronization_API
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{securecontext_header}}
+{{DefaultAPISidebar("Periodic Background Sync")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{DefaultAPISidebar("Periodic Background Sync")}}
+ウェブ定期バックグラウンド同期 API (Web Periodic Background Synchronization API) は、{{domxref('Service Worker API','サービスワーカー', "", 1)}}上で定期的にネットワーク通信ができる状況で実行されるタスクを登録する機能を提供します。それらのタスクを定期バックグラウンド同期リクエスト (periodic background sync requests) と呼びます。
 
-Web Periodic Background Synchonization API は、 {{domxref('Service Worker API','service worker')}} 上で定期的にネットワーク通信ができる状況で走るタスクを登録する機能を提供します。それらのタスクを周期的なバックグラウンド同期リクエスト (periodic background sync requests) と呼びます。
+## ウェブ定期バックグラウンド同期の概念と用法
 
-## Web Periodic Background Synchronization の概念と用法
+定期バックグラウンド同期 API により、ウェブアプリケーションが定期的にサービスワーカーに更新を行うよう知らせることができます。利用法としては、端末が Wi-Fi に接続している間に最新のコンテンツを取得したり、アプリケーションをバックグラウンドで更新したりすることが挙げられます。
 
-Periodic Background Sync API により、ウェブアプリケーションが定期的にサービスワーカーにアップデートを行うよう知らせることができます。利用法としては、デバイスが WiFi に接続している間に最新のコンテンツを取得したり、アプリケーションをバックグラウンドでアップデートしたりすることが挙げられます。
+API が呼び出された際には最小の時間間隔が設定されますが、ユーザーエージェントはサービスワーカーがそのイベントを受け取るタイミングに影響を与える様々な要素を考慮します。その要素には、例えばウェブサイトのエンゲージメントや特定のネットワークへの接続などがあります。
 
-API が呼び出された際には最小の時間間隔がセットされますが、サービスワーカーがそのイベントを受け取るタイミングに影響を与える様々な要素をユーザーエージェントは考慮します。その要素には、例えばウェブサイトのエンゲージメントや特定のネットワークへの接続などがあります。
+{{domxref('PeriodicSyncManager')}} インターフェースは {{domxref('ServiceWorkerRegistration.periodicSync')}} によって提供されます。一意のタグが sync イベントの 'name' として設定され、これは {{domxref('ServiceWorker')}} スクリプト内で取得することができます。イベントを受け取った際には、キャッシュの更新や新たなリソースの取得といった任意の利用可能な機能を実行することができます
 
-{{domxref('PeriodicSyncManager')}} インターフェースは {{domxref('ServiceWorkerRegistration.periodicSync')}} によって提供されます。一意のタグが sync イベントの 'name' として設定され、これは {{domxref('ServiceWorker')}} スクリプト内で取得することができます。イベントを受け取った際には、キャッシュのアップデートや新たなリソースの取得といった任意の利用可能な機能を実行することができます
+この API はサービスワーカーに依存しているため、この API も安全なコンテキストでしか利用できません。
 
-この API はサービスワーカーに依存しているため、この API も安全なコンテクスト (secure context) でしか利用できません。
+> **メモ:** 執筆時点では、ウェブ定期バックグラウンド同期 API は、インストールされた[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)を介してのみ利用可能です。
 
-> **メモ:** At the time of writing, the Web Periodic Background Synchronization API is only available through an installed [Progressive Web App](/ja/docs/Web/Progressive_web_apps)
-
-## Web Periodic Background Synchronization Interfaces
+## ウェブ定期バックグラウンド同期インターフェイス
 
 - {{domxref('PeriodicSyncManager')}}
-  - : Registers tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.
+  - : ネットワーク接続がある状態で、定期的にサービスワーカーの中で実行されるタスクを登録します。これらのタスクは、定期バックグラウンド同期要求として参照されます。
 - {{domxref('PeriodicSyncEvent')}}
-  - : Represents a synchronization event, sent to the {{domxref('ServiceWorkerGlobalScope', 'global scope')}} of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker with network connectivity.
+  - : {{domxref('ServiceWorker')}} の{{domxref('ServiceWorkerGlobalScope', 'グローバルスコープ', "", 1)}}に送信される、同期イベントを表します。これは、ネットワーク接続があるサービスワーカーのタスクを実行する方法を指定されたものです。
 
-## Service Worker Additions
+## サービスワーカーへの追加
 
-The following additions to the {{domxref('Service Worker API')}} are specified in the Periodic Background Sync specification to provide an entry point for using Periodic Background Sync.
+定期バックグラウンド同期仕様では、定期バックグラウンド同期を使用するためのエントリーポイントを提供するために、{{domxref('Service Worker API', 'サービスワーカー API', '', 1)}} に以下のような追加項目を指定しています。
 
-- {{domxref("ServiceWorkerRegistration.periodicSync")}} {{readonlyinline}}
-  - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface for registering tasks to run at specific intervals.
-- {{domxref("ServiceWorkerGlobalScope.onperiodicsync")}}
-  - : An event handler fired whenever a {{Event("periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.
+- {{domxref("ServiceWorkerRegistration.periodicSync")}} {{ReadOnlyInline}}
+  - : 特定の間隔で実行するタスクを登録するための {{domxref("PeriodicSyncManager")}} インターフェイスへの参照を返します。
+- {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "onperiodicsync")}}
+  - : {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "periodicsync")}} イベントが発生したときに発行されるイベントハンドラーです。これは {{domxref('PeriodicSyncManager')}} を登録する際に指定した、時刻を指定した間隔で実行されます。
 
-## Examples
+## 例
 
-The following examples show how to use the interface.
+以下の例では、インターフェイスを使用する方法を示しています。
 
-### Requesting a Periodic Background Sync
+### 定期バックグラウンド同期のリクエスト
 
-The following asynchronous function registers a periodic background sync at a minimum interval of one day from a browsing context:
+次の非同期関数は、閲覧コンテキストから最小 1 日間隔の定期バックグラウンド同期を登録するものです。
 
 ```js
 async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
-    await registration.periodicSync.register('fetch-news', {
+    await registration.periodicSync.register('get-latest-news', {
       minInterval: 24 * 60 * 60 * 1000,
     });
   } catch {
@@ -58,50 +58,50 @@ async function registerPeriodicNewsCheck() {
 }
 ```
 
-### Verifying a Background Periodic Sync by Tag
+### 定期バックグラウンド同期をタグで検証
 
-This code checks to see if a Periodic Background Sync task with a given tag is registered.
+このコードは、指定されたタグを持つ定期バックグラウンド同期タスクが登録されているかどうかを調べるものです。
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
-  registration.periodicSync.getTags().then(tags => {
+navigator.serviceWorker.ready.then((registration) => {
+  registration.periodicSync.getTags().then((tags) => {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
   });
 });
 ```
 
-### Removing a Periodic Background Sync Task
+### 定期バックグラウンド同期タスクを削除
 
-The following code removes a Periodic Background Sync task to stop articles syncing in the background.
+以下のコードでは、定期バックグラウンド同期タスクを削除し、バックグラウンドでの記事の同期を停止しています。
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
+navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.unregister('get-latest-news');
 });
 ```
 
-### Listening for a Periodic Background Sync within a Service Worker
+### サービスワーカーの定期バックグラウンド同期の待ち受け
 
-The following example shows how to respond to a periodic sync event in the service worker.
+以下の例では、サービスワーカーの定期的な同期イベントに応答する方法を示しています。
 
 ```js
-self.addEventListener('periodicsync', event => {
-  if (event.tag == 'get-latest-news') {
+self.addEventListener('periodicsync', (event) => {
+  if (event.tag === 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("api.PeriodicSyncManager")}}
+{{Compat}}
 
-## See also
+## 関連情報
 
 - [An article on using Periodic Background Sync](https://web.dev/periodic-background-sync/)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

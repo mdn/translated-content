@@ -48,10 +48,10 @@ output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) 
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Node.isSameNode()")}}

@@ -1,14 +1,6 @@
 ---
 title: Add to home screen
 slug: Web/Progressive_web_apps/Add_to_home_screen
-tags:
-  - Manifest
-  - PWA
-  - Service Worker
-  - 아이콘
-  - 프로그레시브 웹 앱
-  - 홈 화면에 추가
-translation_of: Web/Progressive_web_apps/Add_to_home_screen
 ---
 
 Add to Home screen (or A2HS for short) is a feature available in modern smartphone browsers that allows developers to easily and conveniently add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
@@ -27,15 +19,15 @@ We've written a very simple example web site ([see our demo live](https://mdn.gi
 
 If you have Firefox for Android available, use it to navigate to our demo at `https://mdn.github.io/pwa-examples/a2hs/`. You'll see fox pictures, but more important, you'll see a "home" icon with a plus (+) icon inside it — this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.
 
-![](https://mdn.mozillademos.org/files/15762/add-to-home-screen-icon.png)
+![](add-to-home-screen-icon.png)
 
 Tapping this will show a confirmation banner — pressing the big + _ADD TO HOME SCREEN_ button completes the action, adding the app to the Home screen. (Note: In Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.)
 
-![](https://mdn.mozillademos.org/files/15772/fx-a2hs-banner.png)
+![](fx-a2hs-banner.png)
 
 If you have Mobile Chrome available, the experience is slightly different; upon loading our site, you'll see an install banner pop up asking whether you want to add this app to your Home screen.
 
-![](https://mdn.mozillademos.org/files/15771/chrome-a2hs-banner.png)
+![](chrome-a2hs-banner.png)
 
 > **참고:** You can find out a lot more about Chrome install banners from the article [Web App Install Banners](https://developers.google.com/web/fundamentals/app-install-banners/).
 
@@ -43,7 +35,7 @@ If you choose not to add it to your Home screen at this point, you can do so lat
 
 Regardless of which browser you are using, when you choose to add the app to your Home screen, you'll see it appear along with a short title, in the same way that native apps do.
 
-![](https://mdn.mozillademos.org/files/15770/a2hs-on-home-screen.png)
+![](a2hs-on-home-screen.png)
 
 Tapping this icon opens it up, but as a fullscreen app, you'll no longer see the browser UI around it.
 
@@ -193,11 +185,11 @@ The click handler contains the following steps:
 
 So when the button is clicked, the install prompt appears.
 
-![](https://mdn.mozillademos.org/files/16281/chrome-desktop-a2hs-banner.png)
+![](chrome-desktop-a2hs-banner.png)
 
 If the user selects _Install_, the app is installed (available as standalone desktop app), and the Install button no longer shows (the `onbeforeinstallprompt` event no longer fires if the app is already installed). When you open the app, it will appear in its own window:
 
-![](https://mdn.mozillademos.org/files/16280/a2hs-installed-desktop.png)
+![](a2hs-installed-desktop.png)
 
 If the user selects _Cancel_, the state of the app goes back to how it was before the button was clicked.
 

@@ -1,11 +1,6 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
-tags:
-  - 반복문
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Statements/while
-browser-compat: javascript.statements.while
 ---
 
 {{jsSidebar("Statements")}}

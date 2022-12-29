@@ -8,8 +8,6 @@ translation_of: Web/API/History_API/Working_with_the_History_API
 
 ## Добавление и изменение записей в истории
 
-{{ gecko_minversion_header("2") }}
-
 {{DOMxRef("History.pushState","pushState()")}} позволяет изменить referrer, который используется в HTTP-заголовке для {{domxref("XMLHttpRequest")}} объектов, созданных после изменения состояния. Значением referrer будет URL документа, окно которого является `this` на момент создания {{domxref("XMLHttpRequest")}} объекта.
 
 ### Пример метода pushState()

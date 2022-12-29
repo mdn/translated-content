@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 Vamos a llevar nuestro cuadrado hacia la tercera dimensión agregando cinco caras más para crear el cubo. Para hacer esto de manera eficiente, vamos a cambiar el dibujado por medio de vertices utilizando el método {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} por el uso de un arreglo de vértices como tabla, esto por medio del llamado hacia {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
 

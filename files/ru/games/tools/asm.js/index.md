@@ -9,7 +9,7 @@ translation_of: Games/Tools/asm.js
 original_slug: Games/Инструменты/asm.js
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 [Asm.js](http://asmjs.org/) - это подмножество JavaScript, имеющее более высокую оптимизацию. В этой статье описаны возможности asm.js, улучшения которые оно даёт, где и как это можно применять, а также дополнительные ресурсы и примеры.
 
