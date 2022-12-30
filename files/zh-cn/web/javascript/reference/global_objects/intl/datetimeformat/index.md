@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ## 静态方法
 
 - {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
-  - : 返回一个数组，其包含着那些被提供的受支持的区域（locale），而运行时的默认的区域不会出现在该数组。
+  - : 返回一个数组，其中包含所提供的区域（locale）中被运行时所支持的，而不必回退到运行时默认的区域。
 
 ## 实例方法
 
@@ -26,11 +26,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 - {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
   - : 返回一个对象{{jsxref("Array", "数组", "", 1)}}，代表日期字符串的各个部分，可用于自定义本地化格式。
 - {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-  - : 返回一个新对象，其属性能够反馈相应的 Intl 对象在初始化时决定的区域和格式化选项。
+  - : 返回一个新对象，其属性能够反映相应对象在初始化时计算所得的区域和格式化选项。
 - {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
   - : 此方法接收两个 [Date](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象，并根据实例化 {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} 时提供的区域和选项，以最简洁的方式格式化日期范围。
 - {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
-  - : 此方法接收两个 [Date](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象，并返回一个对象数组，该数组包含代表被格式化日期范围的每一部分特定于地区的词语标记。
+  - : 此方法接收两个 [Date](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象，并返回一个对象数组，该数组包含代表被格式化日期范围的每一部分特定于地区的词语元素对象。
 
 ## 示例
 
