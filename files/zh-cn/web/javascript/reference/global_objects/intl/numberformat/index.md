@@ -34,7 +34,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 
 ## 示例
 
-### 基本使用
+### 基础用例
 
 在不指定区域设置的基本使用中，返回默认区域设置中的格式化字符串和默认选项。
 
