@@ -1,6 +1,7 @@
 ---
 title: Document.origin
-slug: Web/API/Document/origin
+slug: conflicting/Web/API/origin
+original_slug: Web/API/Document/origin
 ---
 
 {{APIRef("DOM")}}{{deprecated_header}}

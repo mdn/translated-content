@@ -8381,10 +8381,6 @@
     "modified": "2020-10-15T21:52:24.168Z",
     "contributors": ["ridiculousjam", "JobWebNie", "luxp", "xgqfrms-GitHub"]
   },
-  "Web/API/Document/origin": {
-    "modified": "2019-03-18T21:43:47.737Z",
-    "contributors": ["nDos"]
-  },
   "Web/API/Document/plugins": {
     "modified": "2020-10-15T22:07:38.306Z",
     "contributors": ["SphinxKnight", "Sojourn2017"]
@@ -33714,5 +33710,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Web/API/origin": {
+    "modified": "2019-03-18T21:43:47.737Z",
+    "contributors": ["nDos"]
   }
 }
