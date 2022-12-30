@@ -385,16 +385,14 @@ for short quotations that don't require paragraph breaks.</q> -- <a href="https:
 ```html
 <p>我们使用 <abbr title="超文本标记语言（Hyper text Markup Language）">HTML</abbr> 来组织网页文档。</p>
 
-<p>第 33 届 <abbr title="夏季奥林匹克运动会">奥运会</abbr> 将于 2024 年 8 月在法国巴黎举行。</p>
+<p>第 33 届<abbr title="夏季奥林匹克运动会">奥运会</abbr>将于 2024 年 8 月在法国巴黎举行。</p>
 ```
 
 这些代码的显示效果如下（当光标移动到项目上时会出现提示）：
 
-我们使用 <abbr title="超文本标记语言（Hyper text Markup Language）">HTML</abbr> 来组织网页文档。
+{{EmbedLiveSample('缩略语', '100%', '150')}}
 
-第 33 届 <abbr title="夏季奥林匹克运动会">奥运会</abbr> 将于 2024 年 8 月在法国巴黎举行。
-
-> **备注：** 还有另一个元素\<acronym>，它基本上与\<abbr>相同，专门用于首字母缩略词而不是缩略语。然而，这已经被废弃了 - 它在浏览器的支持中不如\<abbr>，并且具有类似的功能，所以没有意义。只需使用\<abbr>。
+> **备注：** 还有另一个元素 {{htmlelement("acronym")}}，它基本上与 `<abbr>` 相同，专门用于首字母缩略词而不是缩略语。然而，这已经被废弃了——它在浏览器的支持中不如 `<abbr>`，并且具有类似的功能，所以没有意义。只需使用 `<abbr>`。
 
 ### 主动学习：标记一个缩略语
 
