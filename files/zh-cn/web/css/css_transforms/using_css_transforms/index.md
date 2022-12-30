@@ -24,7 +24,7 @@ CSS 变换通过一系列 CSS 属性实现，通过使用这些属性，可以�
 
 这是一个未经任何变换的 MDN 标志：
 
-![MDN Logo](screen_shot_2016-02-16_at_15.53.54.png)
+![MDN Logo](logo.png)
 
 ### 旋转
 
