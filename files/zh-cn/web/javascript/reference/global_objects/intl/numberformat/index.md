@@ -25,7 +25,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
   - : getter 函数，根据此 {{jsxref("Intl.NumberFormat")}} 对象的区域设置和格式化选项格式化数字。
 - {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
   - : 返回一个对象{{jsxref("Array", "数组", "", 1)}}，表示可以用于自定义区域设置感知格式的部分数字字符串。
-- {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}} {{experimental_inline}}
+- {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
   - : getter 函数，根据调用该方法的 {{jsxref("Intl.NumberFormat")}} 对象的区域设置和格式化选项格式化一个数字的范围。
 - {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
   - : 返回一个对象{{jsxref("Array", "数组", "", 1)}}，表示可以用于自定义区域设置感知格式的部分数字字符串范围。
