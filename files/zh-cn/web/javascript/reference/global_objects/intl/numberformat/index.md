@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ## 静态方法
 
 - {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
-  - : 返回一个数组，其包含着那些被提供的受支持的区域（local），而运行时的默认的区域不会回落到该数组。
+  - : 返回一个数组，其包含着那些被提供的受支持的区域（locale），而运行时的默认的区域不会出现在该数组。
 
 ## 实例方法
 
