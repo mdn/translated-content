@@ -30,7 +30,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 - {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
   - : 返回一个对象{{jsxref("Array", "数组", "", 1)}}，其中表示的是数字范围的字符串的各个部分，可以用于自定义本地化格式。
 - {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-  - : 返回一个新对象，其属性反映了对象对象初始化期间计算的区域设置和排序选项。
+  - : 返回一个新对象，其属性能够反映相应对象在初始化时计算所得的区域和格式化选项。
 
 ## 示例
 
