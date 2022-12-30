@@ -36,7 +36,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 
 ### 基础用例
 
-在不指定区域设置的基本使用中，返回默认区域设置中的格式化字符串和默认选项。
+在不指定区域设置的基本用例中，返回默认区域和默认选项中的格式化字符串。
 
 ```js
 const number = 3500;
