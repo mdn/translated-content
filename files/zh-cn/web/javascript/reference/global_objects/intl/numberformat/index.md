@@ -42,7 +42,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 const number = 3500;
 
 console.log(new Intl.NumberFormat().format(number));
-// '3,500' if in US English locale
+// 如果在美式英语区域 → '3,500'
 ```
 
 ### 使用 locales
