@@ -24,7 +24,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 - {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}
   - : getter 函数，根据 {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}} 对象的排序顺序来比较两个字符串。
 - {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
-  - : 返回一个新对象，其属性反映了在对象初始化期间计算的区域和一系列选项。
+  - : 返回一个新对象，其属性反映了在对象初始化期间计算所得的区域和一系列选项。
 
 ## 示例
 
