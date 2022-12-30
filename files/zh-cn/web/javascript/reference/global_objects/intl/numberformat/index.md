@@ -90,7 +90,7 @@ console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' 
 
 // 限制三位有效数字
 console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
-// → 1,23,000
+// 1,23,000
 
 // 带有单位的格式化
 console.log(new Intl.NumberFormat('pt-PT', {
