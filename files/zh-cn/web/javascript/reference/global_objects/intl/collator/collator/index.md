@@ -88,15 +88,11 @@ Intl.Collator(locales, options)
       - : 是否应忽略标点。可能的值为 `true` 和 `false`；默认值为 `false`。
     - `numeric`
 
-      - : 是否应使用数字对照，使得“1”<“2”<“10”。可能的值为 `true` 和 `false`；默认值为 `false`。
-
-        > **备注：** 此选项也可以通过 Unicode 扩展键 `kn` 设置；当两者同时设置时，`options` 属性的优先级更高。
+      - : 是否应使用数字对照，使得“1”<“2”<“10”。可能的值为 `true` 和 `false`；默认值为 `false`。此选项也可以通过 Unicode 扩展键 `kn` 设置；当两者同时设置时，`options` 属性的优先级更高。
 
     - `caseFirst`
 
-      - : 是否应该首先根据大小写排序。可能的值为 `"upper"`、`"lower"` 和 `"false"`（使用区域的默认设置）。
-
-        > **备注：** 此选项也可以通过 Unicode 扩展键 `kf` 设置；当两者同时设置时，`options` 属性的优先级更高。
+      - : 是否应该首先根据大小写排序。可能的值为 `"upper"`、`"lower"` 和 `"false"`（使用区域的默认设置）。此选项也可以通过 Unicode 扩展键 `kf` 设置；当两者同时设置时，`options` 属性的优先级更高。
 
     - `collation`
 
@@ -120,7 +116,7 @@ Intl.Collator(locales, options)
         - `unihan`（汉语、日语和韩语；在 Chrome 和 Edge 中不可用）
         - `zhuyin`（汉语）
 
-        > **备注：** 此选项也可以通过 Unicode 扩展键 `co` 设置；当两者同时设置时，`options` 属性的优先级更高。
+        此选项也可以通过 Unicode 扩展键 `co` 设置；当两者同时设置时，`options` 属性的优先级更高。
 
 ## 示例
 
