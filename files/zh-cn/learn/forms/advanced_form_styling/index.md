@@ -262,7 +262,7 @@ p+p {
 
 你可以在线查看结果：
 
-{{EmbedLiveSample("A_more_complex_example", 250, 130)}}
+{{EmbedLiveSample("更复杂的例子", 250, 130)}}
 
 ### Dealing with the select nightmare
 
