@@ -73,7 +73,7 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 // → 123.456,789
 ```
 
-### 可用的选项
+### 使用 options
 
 可以使用 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 参数自定义结果：
 
