@@ -1,6 +1,7 @@
 ---
 title: namespace
-slug: Web/XPath/Axes/namespace
+slug: orphaned/Web/XPath/Axes/namespace
+original_slug: Web/XPath/Axes/namespace
 ---
 
 _(지원 안 함)_
