@@ -13,13 +13,13 @@ slug: Web/HTML/Element/Input/radio
 
 它们被称为单选按钮，因为它们的外观和操作方式与老式无线电上的按钮类似，如下图所示。
 
-![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
+![旧时收音机上的按钮。](old-radio.jpg)
 
 > **备注：** [复选框](/zh-CN/docs/Web/HTML/Element/Input/checkbox)类似于单选按钮，但是有个重要的区别——单选按钮为选择集合中的其中一项而设计，然而复选框允许决定单个值的选定情况。当多个控件存在时，单选按钮允许选择其中的一个，而多选按钮允许选择其中多个。
 
 ## 值
 
-`value` 属性是包含该单选按钮值的字符串。这个值不会在用户的{{Glossary("user agent","代理")}}显示，而是用于辨别单选组中所选的单选按钮。
+`value` 属性是包含该单选按钮值的字符串。这个值不会在{{Glossary("user agent","用户代理")}}显示，而是用于辨别单选组中所选的单选按钮。
 
 ### 定义一个单选按钮组
 
@@ -52,9 +52,7 @@ slug: Web/HTML/Element/Input/radio
 </form>
 ```
 
-你可以在这里看到三个单选按钮，每个按钮的 `name` 属性都设置为 `contact`，并且都含有在单选按钮组中唯一的 `value` 属性。每一个单选按钮也有一个给 {{HTMLElement("label")}} 元素的 {{htmlattrxref("for", "label")}} 属性使用的 {{domxref("Element.id", "id")}}，将 label 元素和单选按钮关联。
-
-_译者注：你可以用 label 元素把 `input` 元素包裹起来，以减少 `id` 的使用。_
+你可以在这里看到三个单选按钮，每个按钮的 `name` 属性都设置为 `contact`，并且都含有在单选按钮组中唯一的 `value` 属性。每一个单选按钮也有一个给 {{HTMLElement("label")}} 元素的 {{htmlattrxref("for", "label")}} 属性使用的 {{domxref("Element.id", "id")}}，将标签（label）和单选按钮关联。
 
 你可以在这里查看这个例子：
 
@@ -62,13 +60,13 @@ _译者注：你可以用 label 元素把 `input` 元素包裹起来，以减少
 
 ### 单选组的数据表示
 
-当上面的表单在提交时选择了一个单选框，表单的数据就包括了 `contact=value` 项。例如，若用户点击”电话“单选按钮，然后提交表单，提交的数据中将包括 `contact=phone` 项。
+当上面的表单在提交时选择了一个单选框，表单的数据就包括了 `contact=value` 项。例如，若用户点击“电话”单选按钮，然后提交表单，提交的数据中将包括 `contact=phone` 项。
 
-如果你在 HTML 中省略了 `value` 属性，那么提交的表单数据就会将该值分配到 `on` 上。在这种情况下，如果用户选中了”电话“选项并提交了表单，提交的表单数据将是 `contact=on`，这并没有什么用。所以别忘了设置你的 `value` 属性！
+如果你在 HTML 中省略了 `value` 属性，那么提交的表单数据就会将该值分配到 `on` 上。在这种情况下，如果用户选中了“电话”选项并提交了表单，提交的表单数据将是 `contact=on`，这并没有什么用。所以别忘了设置你的 `value` 属性！
 
 > **备注：** 如果在提交表单时没有选择任何单选按钮，则提交的表单数据中根本不包括单选组，因为没有要报告的值。
 
-在没有选择任何一组单选按钮的情况下提交表单的情况并不多见，所以通常明智的做法是让一个单选按钮默认为”选中“状态。参见下面的[默认选择单选按钮](#selecting_a_radio_button_by_default)。
+在没有选择任何一组单选按钮的情况下提交表单的情况并不多见，所以通常明智的做法是让一个单选按钮默认为“选中”状态。参见下面的[默认选择单选按钮](#默认选择单选按钮)。
 
 让我们给我们的例子添加一点代码，这样我们就可以检查这个表单所产生的数据。对 HTML 进行修改，增加一个 {{HTMLElement("pre")}} 块，将表单数据输出到其中：
 
@@ -92,7 +90,7 @@ _译者注：你可以用 label 元素把 `input` 元素包裹起来，以减少
 <pre id="log"></pre>
 ```
 
-然后我们添加一些 [JavaScript](/zh-CN/docs/Web/JavaScript) 代码，设置监听 {{domxref("HTMLFormElement/submit_event", "submit")}} 事件的监听器，当用户点击”提交“按钮时会触发该事件：
+然后我们添加一些 [JavaScript](/zh-CN/docs/Web/JavaScript) 代码，设置监听 {{domxref("HTMLFormElement/submit_event", "submit")}} 事件的监听器，当用户点击“提交”按钮时会触发该事件：
 
 ```js
 const form = document.querySelector("form");
@@ -125,11 +123,11 @@ form.addEventListener(
 
   - : 一个布尔值属性，如果出现，代表这个单选按钮是组中被选中的那个。
 
-    不像其他浏览器那样，Firefox 默认在不同页面之间[保持了 `<input>` 动态选择的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) 。使用 {{htmlattrxref("autocomplete","input")}} 属性来控制这个特性。
+    不像其它浏览器那样，Firefox 默认在不同页面之间[保持了 `<input>` 动态选择的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。使用 {{htmlattrxref("autocomplete","input")}} 属性来控制这个特性。
 
 - {{htmlattrdef("value")}}
 
-  - : `value` 属性是所有 {{HTMLElement("input")}} 元素共有的属性之一；然而，对于 `radio` 类型的输入，有特殊用途：当表单提交时，只有当前选定的单选按钮才会提交到服务器，并且报告的值为 `value` 属性的值。如果没有指定 `value`，默认为字符串 `on`。这个行为已经在[值](#值)章节中描述。
+  - : `value` 属性是所有 {{HTMLElement("input")}} 元素共有的属性之一；然而，对于 `radio` 类型的输入，有特殊用途：当表单提交时，只有当前选定的单选按钮才会提交到服务器，并且报告的值为 `value` 属性的值。如果没有指定 `value`，默认为字符串 `on`。这个行为已经在[值](#值)这一节中描述。
 
 - {{htmlattrdef("required")}}
   - : `required` 属性是所有 {{HTMLElement("input")}} 元素共有的属性之一。如果含有相同 name 的单选按钮组中任意一个按钮包含 `required` 属性，那么该组的单选按钮必须被选定，即使它并不需要应用该属性。
@@ -286,7 +284,7 @@ button:active {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong><a href="#value">值</a></strong></td>
+      <td><strong><a href="#值">值</a></strong></td>
       <td>
         代表单选按钮值的字符串。
       </td>
@@ -334,4 +332,4 @@ button:active {
 
 - {{HTMLElement("input")}} 和实现它的 {{domxref("HTMLInputElement")}} 接口。
 - {{domxref("RadioNodeList")}}：描述一系列单选按钮的接口
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
