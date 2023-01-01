@@ -63,7 +63,7 @@ some(function (element, index, array) { /* … */ }, thisArg)
 - 이미 방문했던 인덱스를 변경해도 `callbackFn`은 해당 인덱스에 대해 `callbackFn`을 다시 실행하지 않습니다
 - 만약 존재하나 아직 방문하지 않은 배열의 요소는 `callbackFn`이 변경시킬 수 있습니다. 이 값은 `callbackFn`이 요소에 방문하는 시점에 `callbackFn`에 넘겨지는 값입니다. [삭제한](/ko/docs/Web/JavaScript/Reference/Operators/delete) 요소는 방문하지 않습니다.
 
-`some()` 메서드는 [제너릭](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)입니다. `this` 값에 `length` 속성과 정수 키 속성만 있으면 됩니다.
+`some()` 메서드는 [제너릭](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)입니다. `this` 값에 `length` 속성과 정수 키 속성만 있으면 됩니다.
 
 ## 예제
 
