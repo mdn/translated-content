@@ -11,9 +11,9 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 
 ### メモリーの割り当てと共有
 
-クラスター内のあるエージェントから別のエージェント (エージェントとは、ウェブページのメインプログラムまたはそのウェブワーカーのひとつ) へ、{{jsxref("SharedArrayBuffer")}} オブジェクトを使用してメモリーを共有するために、[`postMessage`](/ja/docs/Web/API/Worker/postMessage) と[構造化クローン](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用します。
+クラスター内のあるエージェントから別のエージェント (エージェントとは、ウェブページのメインプログラムまたはそのウェブワーカーのひとつ) へ、{{jsxref("SharedArrayBuffer")}} オブジェクトを使用してメモリーを共有するために、[`postMessage`](/ja/docs/Web/API/Worker/postMessage) と[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用します。
 
-構造化クローンアルゴリズムは `SharedArrayBuffer` と、`SharedArrayBuffer` にマッピングされた型付き配列を受け入れます。どちらの場合も `SharedArrayBuffer` オブジェクトは受信者に転送されて、受信側のエージェントで新たなプライベートの SharedArrayBuffer オブジェクトになります ({{jsxref("ArrayBuffer")}} と同じように)。しかし、2 つの `SharedArrayBuffer` オブジェクトから参照される共有データブロックは同一のデータブロックであり、あるエージェントによるブロックへの副作用は、結果的に他方のエージェントからも見えます。
+構造化複製アルゴリズムは `SharedArrayBuffer` と、`SharedArrayBuffer` にマッピングされた型付き配列を受け入れます。どちらの場合も `SharedArrayBuffer` オブジェクトは受信者に転送されて、受信側のエージェントで新たなプライベートの SharedArrayBuffer オブジェクトになります ({{jsxref("ArrayBuffer")}} と同じように)。しかし、2 つの `SharedArrayBuffer` オブジェクトから参照される共有データブロックは同一のデータブロックであり、あるエージェントによるブロックへの副作用は、結果的に他方のエージェントからも見えます。
 
 ```js
 var sab = new SharedArrayBuffer(1024);
