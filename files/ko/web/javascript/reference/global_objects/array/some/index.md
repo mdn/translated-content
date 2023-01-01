@@ -55,7 +55,7 @@ some(function (element, index, array) { /* … */ }, thisArg)
 
 `some()`은 수학에서 존재 한정자와 같은 역할을 합니다. 특히 빈 배열의 경우 모든 조건에 대해 `false`를 반환합니다.
 
-`callbackFn`는 값이 할당된 배열 인덱스에서만 실행됩니다. [희소 배열](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)의 빈 슬롯에서는 실행되지 않습니다.
+`callbackFn`는 값이 할당된 배열 인덱스에서만 실행됩니다. [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)의 빈 슬롯에서는 실행되지 않습니다.
 
 `some()`은 호출된 배열의 값을 변경하지 않지만, 제공된 `callbackFn`에서는 가능합니다. 그럼에도 배열의 길이는 `callbackFn`의 첫 실행 이전에 저정된다는 점을 명심하시기 바랍니다.
 
