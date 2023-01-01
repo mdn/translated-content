@@ -51,7 +51,7 @@ some(function (element, index, array) { /* … */ }, thisArg)
 
 ## 설명
 
-`some` 메서드는 [반복 메서드](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)입니다. 이 메서드는 주어진 `callbackFn`함수가 [참 같은 값](/ko/docs/Glossary/Truthy)을 반환할 때까지 배열 안에 있는 각각의 요소마다 한 번씩 호출합니다. 만약 그러한 요소를 찾았으면 `some()` 메서드는 그 즉시 `true`를 반환하며 배열 순회를 멈춥니다. 그렇지 않고 `callbackFn`이 모든 요소에 대해 [거짓같은 값](/ko/docs/Glossary/Falsy)을 반환하면 `some()`은 `false`를 반환합니다.
+`some` 메서드는 [반복 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)입니다. 이 메서드는 주어진 `callbackFn`함수가 [참 같은 값](/ko/docs/Glossary/Truthy)을 반환할 때까지 배열 안에 있는 각각의 요소마다 한 번씩 호출합니다. 만약 그러한 요소를 찾았으면 `some()` 메서드는 그 즉시 `true`를 반환하며 배열 순회를 멈춥니다. 그렇지 않고 `callbackFn`이 모든 요소에 대해 [거짓같은 값](/ko/docs/Glossary/Falsy)을 반환하면 `some()`은 `false`를 반환합니다.
 
 `some()`은 수학에서 존재 한정자와 같은 역할을 합니다. 특히 빈 배열의 경우 모든 조건에 대해 `false`를 반환합니다.
 
