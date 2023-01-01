@@ -31,4 +31,4 @@ console.log(navigator.userAgentData.mobile);
 
 ## 関連情報
 
-- {{HTTPHeader("Sec-CH-UA-Mobile")}} ヘッダー（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Client_hints#low_entropy_hints)）が同じ情報を保持しています。
+- {{HTTPHeader("Sec-CH-UA-Mobile")}} ヘッダー（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Client_hints#低エントロピーヒント)）が同じ情報を保持しています。
