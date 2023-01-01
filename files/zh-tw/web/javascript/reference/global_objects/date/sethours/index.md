@@ -25,7 +25,7 @@ setHours(hoursValue, minutesValue, secondsValue, msValue)
 - `minutesValue`
   - : 可選的。表示分鐘，理想上為介於 0 至 59 之間的整數。若傳入的值大於 59，溢出分鐘數會增加日期時間。
 - `secondsValue`
-  - : 可選的。表示秒，理想上為介於 0 至 59 之間的整數。若傳入的值大於 59，溢出秒數會增加日期時間。若給定 `secondsValue` ，則必須同時給定 `minutesValue` 參數值。
+  - : 可選的。表示秒，理想上為介於 0 至 59 之間的整數。若傳入的值大於 59，溢出秒數會增加日期時間。若給定 `secondsValue`，則必須同時給定 `minutesValue` 參數值。
 - `msValue`
   - : 可選的。表示毫秒，理想上為介於 0 至 999 之間的數。若傳入的值大於 999，溢出毫秒數會增加日期時間。若給定 `msValue` 的值，則必須同時給定 `minutesValue` 與 `secondsValue` 參數值。
 
@@ -35,9 +35,9 @@ setHours(hoursValue, minutesValue, secondsValue, msValue)
 
 ## 描述
 
-如果沒有指明 `minutesValue` 、 `secondsValue` 與 `msValue` 參數值，則會使用 {{jsxref("Date.prototype.getMinutes()", "getMinutes()")}} 、 {{jsxref("Date.prototype.getSeconds()", "getSeconds()")}} 、 {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} 方法回傳的值。
+如果沒有指明 `minutesValue`、`secondsValue` 與 `msValue` 參數值，則會使用 {{jsxref("Date.prototype.getMinutes()", "getMinutes()")}}、{{jsxref("Date.prototype.getSeconds()", "getSeconds()")}}、{{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} 方法回傳的值。
 
-如果給定的參數值超出預期範圍， `setHours()` 會相對應地更新 {{jsxref("Date")}} 物件的日期資訊。例如， `secondsValue` 傳入 100 ，分鐘數將增加 1 （ `minutesValue + 1` ）、其餘的 40 則計入秒數。
+如果給定的參數值超出預期範圍，`setHours()` 會相對應地更新 {{jsxref("Date")}} 物件的日期資訊。例如，`secondsValue` 傳入 100 ，分鐘數將增加 1（`minutesValue + 1`）、其餘的 40 則計入秒數。
 
 ## 範例
 

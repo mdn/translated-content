@@ -23,7 +23,7 @@ getUTCSeconds()
 
 ### 使用 getUTCSeconds()
 
-下列範例指派當前時間的秒數至變數 `seconds` 。
+下列範例指派當前時間的秒數至變數 `seconds`。
 
 ```js
 const today = new Date();

@@ -23,7 +23,7 @@ getMilliseconds()
 
 ### 使用 getMilliseconds()
 
-下列範例將當前時間的毫秒數指派給變數 `milliseconds` 。
+下列範例將當前時間的毫秒數指派給變數 `milliseconds`。
 
 ```js
 const today = new Date();

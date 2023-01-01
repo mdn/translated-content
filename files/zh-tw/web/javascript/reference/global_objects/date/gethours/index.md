@@ -23,7 +23,7 @@ getHours()
 
 ### 使用 getHours()
 
-下方第二行陳述式將 {{jsxref("Global_Objects/Date", "Date")}} 物件 `xmas95` 的值 23，指派給變數 `hours` 。
+下方第二行陳述式將 {{jsxref("Global_Objects/Date", "Date")}} 物件 `xmas95` 的值 23，指派給變數 `hours`。
 
 ```js
 const xmas95 = new Date("December 25, 1995 23:15:30");

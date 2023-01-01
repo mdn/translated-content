@@ -23,7 +23,7 @@ getUTCHours()
 
 ### 使用 getUTCHours()
 
-下列範例指派當前時間的小時至變數 `hours` 。
+下列範例指派當前時間的小時至變數 `hours`。
 
 ```js
 const today = new Date();

@@ -25,7 +25,7 @@ setUTCHours(hoursValue, minutesValue, secondsValue, msValue)
 - `minutesValue`
   - : 可選的。一個表示分鐘、介於 0 至 59 之間的整數。
 - `secondsValue`
-  - : 可選的。一個表示秒數、介於 0 至 59 之間的整數。若給定 `secondsValue` ，則必須同時給定 `minutesValue` 參數值。
+  - : 可選的。一個表示秒數、介於 0 至 59 之間的整數。若給定 `secondsValue`，則必須同時給定 `minutesValue` 參數值。
 - `msValue`
   - : 可選的。一個表示毫秒數、介於 0 至 999 之間的數。若給定 `msValue` 的值，則必須同時給定 `minutesValue` 與 `secondsValue` 參數值。
 
@@ -35,10 +35,9 @@ setUTCHours(hoursValue, minutesValue, secondsValue, msValue)
 
 ## 描述
 
-如果沒有指明 `minutesValue` 、 `secondsValue` 與 `msValue` 參數值，則會使用 {{jsxref("Date.prototype.getUTCMinutes()",
-  "getUTCMinutes()")}} 、 {{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}} 、 {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} 方法回傳的值。
+如果沒有指明 `minutesValue`、`secondsValue` 與 `msValue` 參數值，則會使用 {{jsxref("Date.prototype.getUTCMinutes()", "getUTCMinutes()")}}、{{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}}、{{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} 方法回傳的值。
 
-如果給定的參數值超出預期範圍， `setUTCHours()` 會相對應地更新 {{jsxref("Date")}} 物件的日期資訊。例如， `secondsValue` 傳入 100 ，分鐘數將增加 1 （ `minutesValue + 1` ）、其餘的 40 則計入秒數。
+如果給定的參數值超出預期範圍，`setUTCHours()` 會相對應地更新 {{jsxref("Date")}} 物件的日期資訊。例如，`secondsValue` 傳入 100 ，分鐘數將增加 1（`minutesValue + 1`）、其餘的 40 則計入秒數。
 
 ## 範例
 

@@ -23,7 +23,7 @@ getMinutes()
 
 ### 使用 getMinutes()
 
-下方第二行陳述式將 {{jsxref("Global_Objects/Date", "Date")}} 物件 `xmas95` 的值 15，指派給變數 `minutes` 。
+下方第二行陳述式將 {{jsxref("Global_Objects/Date", "Date")}} 物件 `xmas95` 的值 15，指派給變數 `minutes`。
 
 ```js
 const xmas95 = new Date("December 25, 1995 23:15:30");

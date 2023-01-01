@@ -23,7 +23,7 @@ getSeconds()
 
 ### 使用 getSeconds()
 
-下方第二行陳述式將 {{jsxref("Global_Objects/Date", "Date")}} 物件 `xmas95` 的值 30，指派給變數 `seconds` 。
+下方第二行陳述式將 {{jsxref("Global_Objects/Date", "Date")}} 物件 `xmas95` 的值 30，指派給變數 `seconds`。
 
 ```js
 const xmas95 = new Date("December 25, 1995 23:15:30");

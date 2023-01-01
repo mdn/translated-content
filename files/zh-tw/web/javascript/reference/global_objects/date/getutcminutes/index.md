@@ -23,7 +23,7 @@ getUTCMinutes()
 
 ### 使用 getUTCMinutes()
 
-下列範例指派當前時間的分鐘至變數 `minutes` 。
+下列範例指派當前時間的分鐘至變數 `minutes`。
 
 ```js
 const today = new Date();
