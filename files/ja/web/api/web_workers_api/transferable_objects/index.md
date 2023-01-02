@@ -1,8 +1,7 @@
 ---
 title: Transferable objects (移譲可能オブジェクト)
-slug: Glossary/Transferable_objects
-l10n:
-  sourceCommit: 04e75ce1f83a591a576f52b143f195133bfcbe96
+slug: Web/API/Web_Workers_API/Transferable_objects
+original_slug: Glossary/Transferable_objects
 ---
 
 **移譲可能オブジェクト** は、あるコンテキストから別のコンテキストへ _移譲_ することができるリソースを自分自身で所有するオブジェクトで、そのリソースが一度に1つのコンテキストでのみ利用できることを保証するものです。
