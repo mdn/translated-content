@@ -9,7 +9,7 @@ slug: Web/CSS/border-top-right-radius
 
 `border-top-right-radius` 属性设置元素的右上角弧形，这个圆弧可能是一个椭圆，或者其中一个值是 0 的话，就是没有圆弧，换句话就是说拐角是方形的。
 
-![border-top-right-radius.png](/@api/deki/files/6133/=border-top-right-radius.png)
+![border-top-right-radius.png](border-top-right-radius.png)
 
 一个背景通常以一张图片或者颜色开始，在边框处被剪切，更甚至就是一个圆形；剪切的额外定位通过一个 CSS 属性"background-clip"来定义。
 

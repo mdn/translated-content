@@ -7,7 +7,7 @@ slug: Web/CSS/border-top-left-radius
 
 **`border-top-left-radius`** 用来设置元素左上角的圆角效果。这段圆弧（角）可以是圆或椭圆的一部分。如果其中有一个值为 0，那么将无圆角效果（见 **`border-top-left-radius`** 取值方式)。
 
-![border-radius.png](/@api/deki/files/6132/=border-radius.png)
+![border-radius.png](border-radius.png)
 
 盒模型的背景，可以是一张图片或一种颜色，会在边框处被剪裁，更甚至可以是一个圆；剪切的额外定位通过另一个 CSS 属性"background-clip"来定义。
 
