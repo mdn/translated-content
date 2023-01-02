@@ -15,4 +15,3 @@ HTTP/2는 HTTP의 어플리케이션 의미를 수정하지 않습니다. HTTP �
 
   - {{glossary("HTTP")}}
   - {{glossary("Latency")}}
-  

@@ -103,7 +103,7 @@ typeof myNumber;
 ```
 
 올바른 계산 결과를 얻기 위해서는 다음과 같이 하면 됩니다.
-  
+
 ```js
 let myNumber = "74";
 myNumber = Number(myNumber) + 3;
