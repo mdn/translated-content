@@ -25,7 +25,7 @@ slug: Web/SVG/Tutorial/Getting_Started
 
 複製這段程式碼，在一個文件裡貼上，給該文件起名為 demo1.svg，然後用 Firefox 打開它，會渲染成下面截圖的樣子。(Firefox 用户: 點[這裡](/@api/deki/files/4571/=svgdemo1.xml))
 
-![svgdemo1.png](/@api/deki/files/4928/=svgdemo1.png)
+![svgdemo1.png](svgdemo1.png)
 
 渲染過程包括以下内容：
 
