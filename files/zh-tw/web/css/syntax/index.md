@@ -28,7 +28,7 @@ Declarations are grouped in **blocks**, that is in a structure delimited by an o
 
 Such blocks are naturally called **declaration blocks** and declarations inside them are separated by a semi-colon, '`;`' (`U+003B SEMICOLON`). A declaration block may be empty, that is containing null declaration. White spaces around declarations are ignored. The last declaration of a block doesn't need to be terminated by a semi-colon, though it is often considered _good style_ to do it as it prevents forgetting to add it when extending the block with another declaration.
 
-![css syntax - declarations block.png](/@api/deki/files/6166/=css_syntax_-_declarations_block.png)
+![css syntax - declarations block.png](declaration-block.png)
 
 > **備註：** The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML {{htmlattrxref("style")}} attribute.
 
@@ -38,7 +38,7 @@ If style sheets could only apply a declaration to each element of a Web page, th
 
 CSS allows this by associating conditions with declarations blocks. Each (valid) declaration block is preceded by one or more comma-separated **selectors** which are conditions selecting some elements of the page. The pair selector group-declarations block is called a **ruleset**, or often simply a **rule**.
 
-![css syntax - ruleset.png](/@api/deki/files/6167/=css_syntax_-_ruleset.png)
+![css syntax - ruleset.png](ruleset.png)
 
 As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance) algorithm.
 

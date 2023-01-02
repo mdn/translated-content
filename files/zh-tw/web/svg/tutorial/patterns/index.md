@@ -7,8 +7,6 @@ slug: Web/SVG/Tutorial/Patterns
 
 pattern（图案）是一个比较难理解的填充类型。同时，pattern 的作用很强大，所以在这里需要进行一些讨论，以便对填充模式有一个大致的了解。和渐变一样，[`<pattern>`](/zh-TW/SVG/Element/pattern)元素也需要放在 SVG 文件的`&ltldefs>`段落里。
 
-![](/@api/deki/files/350/=SVG_Pattern_Example.png)
-
 ```xml
 <?xml version="1.0" standalone="no"?>
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">

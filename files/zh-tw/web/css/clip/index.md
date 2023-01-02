@@ -42,46 +42,62 @@ clip: unset;
 
 ## Examples
 
-```css
-.dotted-border {
-   border: dotted;
-   position: relative;
-   width: 536px;
-   height: 350px;
-}
-
-#top-left, #middle, #bottom-right {
-   position: absolute;
-   top: 0px;
-}
-
-#top-left {
-   left: 360px;
-   clip: rect(0px, 175px, 113px, 0px);
-}
-
-
-#middle {
-   left: 280px;
-   clip: rect(119px, 255px, 229px, 80px);
-   /* standard syntax, unsupported by Internet Explorer 4-7 */
-}
-
-#bottom-right {
-   left: 200px;
-   clip: rect(235px 335px 345px 160px);
-   /* non-standard syntax, but supported by all major browsers*/
-}
-```
+### HTML
 
 ```html
 <p class="dotted-border">
-   <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original Graphic" />
-   <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left">
-   <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle">
-   <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+  <img
+    src="macarons.png"
+    title="Original graphic" />
+  <img
+    id="top-left"
+    src="macarons.png"
+    title="Graphic clipped to upper left" />
+  <img
+    id="middle"
+    src="macarons.png"
+    title="Graphic clipped towards middle" />
+  <img
+    id="bottom-right"
+    src="macarons.png"
+    title="Graphic clipped to bottom right" />
 </p>
 ```
+
+### CSS
+
+```css
+.dotted-border {
+  border: dotted;
+  position: relative;
+  width: 390px;
+  height: 400px;
+}
+
+#top-left,
+#middle,
+#bottom-right {
+  position: absolute;
+  top: 0;
+}
+
+#top-left {
+  left: 400px;
+  clip: rect(0, 130px, 90px, 0);
+}
+
+#middle {
+  left: 270px;
+  clip: rect(100px, 260px, 190px, 130px);
+}
+
+#bottom-right {
+  left: 140px;
+  clip: rect(200px, 390px, 290px, 260px);
+}
+```
+
+### 結果
 
 {{EmbedLiveSample('Examples', '689px', '410px')}}
 
