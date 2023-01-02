@@ -110,7 +110,7 @@ function getMyVideo() {
 
 ### 例子：一个简单的线图
 
-![](/@api/deki/files/58/=Canvas_backdrop.png)
+![](canvas_backdrop.png)
 
 下面一个例子我用一个外部图像作为一线性图的背景。用背景图我们就不需要绘制复杂的背景，省下不少代码。这里只用到一个 image 对象，于是就在它的 `onload` 事件响应函数中触发绘制动作。`drawImage` 方法将背景图放置在 canvas 的左上角 (0,0) 处。
 
@@ -152,7 +152,7 @@ function getMyVideo() {
 
 ### 例子：平铺图像
 
-![](/@api/deki/files/106/=Canvas_scale_image.png)
+![](canvas_scale_image.png)
 
 在这个例子里，我会用一张图片像背景一样在 canvas 中以重复平铺开来。实现起来也很简单，只需要循环铺开经过缩放的图片即可。见下面的代码，第一层 `for` 循环是做行重复，第二层是做列重复的。图像大小被缩放至原来的三分之一，50x38 px。这种方法可以用来很好的达到背景图案的效果，在下面的教程中会看到。
 
@@ -192,13 +192,13 @@ function draw() {
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)")}}
   - : 第一个参数和其它的是相同的，都是一个图像或者另一个 canvas 的引用。其它 8 个参数最好是参照右边的图解，前 4 个是定义图像源的切片位置和大小，后 4 个则是定义切片的目标显示位置和大小。
 
-![](/@api/deki/files/79/=Canvas_drawimage.jpg)
+![](canvas_drawimage.jpg)
 
 切片是个做图像合成的强大工具。假设有一张包含了所有元素的图像，那么你可以用这个方法来合成一个完整图像。例如，你想画一张图表，而手上有一个包含所有必需的文字的 PNG 文件，那么你可以很轻易的根据实际数据的需要来改变最终显示的图表。这方法的另一个好处就是你不需要单独装载每一个图像。
 
 ### 例子：相框
 
-![](/@api/deki/files/80/=Canvas_drawimage2.jpg)
+![](canvas_drawimage2.jpg)
 
 在这个例子里面我用到上面已经用过的犀牛图像，不过这次我要给犀牛头做个切片特写，然后合成到一个相框里面去。相框带有阴影效果，是一个以 24-bit PNG 格式保存的图像。因为 24-bit PNG 图像带有一个完整的 8-bit alpha 通道，与 GIF 和 8-bit PNG 不同，我可以将它放成背景而不必担心底色的问题。
 
