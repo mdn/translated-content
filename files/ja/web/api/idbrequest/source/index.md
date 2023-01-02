@@ -2,12 +2,12 @@
 title: IDBRequest.source
 slug: Web/API/IDBRequest/source
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: dcee5b3eed05921d697c4d3a8006725674da396b
 ---
 
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBRequest")}} インターフェイスの読み取り専用プロパティ **`source`** は、要求元 (インデックスやオブジェクトストアなど) を返します。({{domxref("indexedDB.open")}} を呼んだときなど) 要求元が存在しない場合、`null` を返します。
+{{domxref("IDBRequest")}} インターフェイスの読み取り専用プロパティ **`source`** は、要求元 (インデックスやオブジェクトストアなど) を返します。({{domxref("IDBFactory.open")}} を呼んだときなど) 要求元が存在しない場合、`null` を返します。
 
 {{AvailableInWorkers}}
 
