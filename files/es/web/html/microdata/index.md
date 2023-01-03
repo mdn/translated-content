@@ -145,7 +145,7 @@ _[itemref](/es/docs/Web/HTML/Global_attributes/itemref)_: las propiedades que no
 
 {{EmbedLiveSample('', '', '100')}}
 
-> **Nota:** una útil herramienta para extraer estructuras de microdatos a partir de HTML es la [Herramienta de pruebas de datos estructurados](<https://developers.google.com/structured-data/testing-tool/ Structured Data Testing Tool>) de Google. Ponla a prueba en el HTML mostrado más arriba.
+> **Nota:** una útil herramienta para extraer estructuras de microdatos a partir de HTML es la [Herramienta de pruebas de datos estructurados](https://developers.google.com/structured-data/testing-tool/) de Google. Ponla a prueba en el HTML mostrado más arriba.
 
 ## Véase también
 
