@@ -44,7 +44,7 @@ script.textContent = "code";
 document.body.appendChild(script);
 ```
 
-Les deux sont comptés comme des scripts "en ligne" et sont compilés puis exécutés immédiatement.
+Les deux sont comptés comme des scripts «&nbsp;en ligne&nbsp;»  (<i lang="en">inline</i>) et sont compilés puis exécutés immédiatement.
 
 Que faire si votre code est dans une chaîne JS&nbsp;? Au lieu d'utiliser `eval` ou `innerHTML`, qui déclenchent tous deux une compilation synchrone, vous devez utiliser un Blob avec une URL d'objet&nbsp;:
 
