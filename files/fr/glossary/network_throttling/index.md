@@ -1,12 +1,8 @@
 ---
-title: Network throttling
+title: Limitation de la bande passante
 slug: Glossary/Network_throttling
-tags:
-  - Glossary
-  - RUM
-  - Reference
-  - Synthetic monitoring
-  - Web Performance
+l10n:
+  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 **L'étranglement du réseau** est un ralentissement intentionnel de la vitesse d'Internet. Dans les performances Web, la limitation du réseau ou l'émulation de l'état du réseau, cela est utilisé afin d'émuler les conditions de faible bande passante probablement rencontrées par une large part des utilisateurs cibles d'un site.
 
