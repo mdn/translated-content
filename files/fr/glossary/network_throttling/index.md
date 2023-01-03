@@ -8,7 +8,15 @@ l10n:
 
 Il est important de ne pas négliger les conditions du réseau rencontrées par les personnes utilisant leur mobile. La bande passante utilisée par les équipes de développement d'une application web sur des ordinateurs puissants, depuis un immeuble de bureaux est assez élevée. C'est dans de bonnes conditions que les équipes de développement, conception et rédaction technique testent une application web. En revanche, pour une personne utilisant un mobile pour accéder à l'application, éventuellement en voyage ou depuis une région éloignée, avec une mauvaise couverture ou un faible forfait de données, cette bande passante sera probablement très réduite (si elle est déjà suffisante pour se connecter au préalable). La limitation de la bande passante permet aux équipes de développement d'émuler l'expérience d'une telle personne dans un scénario moins favorable. La plupart des outils de développement de navigateur, tels que l'inspecteur , fournissent une fonction permettant d'émuler différentes conditions de réseau. En émulant l'expérience de votre public via cette limitation, vous pouvez identifier et résoudre plus facilement les éventuels problèmes de temps de chargement.
 
-Les outils de développement du navigateur ont généralement des options de limitation du réseau, pour vous permettre de tester votre application dans des conditions de réseau lentes. Les outils de développement de Firefox, par exemple, ont un menu déroulant disponible à la fois dans le [Moniteur Réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) et la [Vue Adaptative](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) (en anglais) contenant les options de vitesse du réseau (par exemple Wi-Fi, bon 3G, 2G)
+Les outils de développement du navigateur ont généralement des options de limitation du réseau, pour vous permettre de tester votre application dans des conditions de réseau lentes.
+
+- Firefox (en anglais)
+  - [Moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
+  - [Vue adaptative](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) 
+- Chrome (en anglais)
+  - [Réseau](https://developer.chrome.com/docs/devtools/network/reference/#throttling)
+- Edge (en anglais)
+  - [Conditions réseau](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/network/reference#emulate-slow-network-connections-from-the-network-conditions-drawer)
 
 ## Voir aussi
 
