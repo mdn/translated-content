@@ -8436,10 +8436,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/Document/origin": {
-    "modified": "2019-03-18T21:39:14.796Z",
-    "contributors": ["loella16"]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2019-03-18T21:17:09.649Z",
     "contributors": ["wbamberg", "loella16", "redorff"]
@@ -27327,58 +27323,6 @@
     "modified": "2019-03-23T23:54:15.946Z",
     "contributors": ["ExE-Boss", "Delapouite", "Fredchat", "Mgjbot", "VincentN"]
   },
-  "Web/XPath/Axes/ancestor": {
-    "modified": "2019-01-16T16:12:07.983Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/ancestor-or-self": {
-    "modified": "2019-01-16T16:12:08.969Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/attribute": {
-    "modified": "2019-01-16T16:11:52.452Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/child": {
-    "modified": "2019-01-16T16:11:53.728Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/descendant": {
-    "modified": "2019-01-16T16:11:48.389Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/descendant-or-self": {
-    "modified": "2019-01-16T16:12:14.349Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/following": {
-    "modified": "2019-01-16T16:11:54.323Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/following-sibling": {
-    "modified": "2019-01-16T16:11:48.257Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/namespace": {
-    "modified": "2019-01-16T16:11:53.220Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/parent": {
-    "modified": "2019-01-16T16:11:45.464Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/preceding": {
-    "modified": "2019-01-16T16:11:48.527Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/preceding-sibling": {
-    "modified": "2019-01-16T16:11:01.463Z",
-    "contributors": ["ExE-Boss", "Fredchat"]
-  },
-  "Web/XPath/Axes/self": {
-    "modified": "2019-01-16T16:11:01.388Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Fredchat"]
-  },
   "Web/XPath/Comparison_with_CSS_selectors": {
     "modified": "2019-03-18T21:23:27.990Z",
     "contributors": ["SphinxKnight"]
@@ -27974,5 +27918,61 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "conflicting/Web/API/origin": {
+    "modified": "2019-03-18T21:39:14.796Z",
+    "contributors": ["loella16"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor": {
+    "modified": "2019-01-16T16:12:07.983Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor-or-self": {
+    "modified": "2019-01-16T16:12:08.969Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/attribute": {
+    "modified": "2019-01-16T16:11:52.452Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/child": {
+    "modified": "2019-01-16T16:11:53.728Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/descendant": {
+    "modified": "2019-01-16T16:11:48.389Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/descendant-or-self": {
+    "modified": "2019-01-16T16:12:14.349Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/following": {
+    "modified": "2019-01-16T16:11:54.323Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/following-sibling": {
+    "modified": "2019-01-16T16:11:48.257Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/namespace": {
+    "modified": "2019-01-16T16:11:53.220Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/parent": {
+    "modified": "2019-01-16T16:11:45.464Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/preceding": {
+    "modified": "2019-01-16T16:11:48.527Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/preceding-sibling": {
+    "modified": "2019-01-16T16:11:01.463Z",
+    "contributors": ["ExE-Boss", "Fredchat"]
+  },
+  "orphaned/Web/XPath/Axes/self": {
+    "modified": "2019-01-16T16:11:01.388Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Fredchat"]
   }
 }

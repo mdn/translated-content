@@ -1,7 +1,8 @@
 ---
 title: namespace
-slug: Web/XPath/Axes/namespace
+slug: orphaned/Web/XPath/Axes/namespace
 translation_of: Web/XPath/Axes/namespace
+original_slug: Web/XPath/Axes/namespace
 ---
 
 _(non supporté)_

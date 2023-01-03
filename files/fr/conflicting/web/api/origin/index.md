@@ -1,6 +1,6 @@
 ---
 title: Document.origin
-slug: Web/API/Document/origin
+slug: conflicting/Web/API/origin
 tags:
   - API
   - DOM
@@ -8,6 +8,7 @@ tags:
   - Propriétés
   - origine
 translation_of: Web/API/Document/origin
+original_slug: Web/API/Document/origin
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
