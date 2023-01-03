@@ -57,4 +57,4 @@ script.src = url;
 document.body.appendChild(script);
 ```
 
-Le réglage de `src` plutôt que `innerHTML` est ce qui rend ce script asynchrone.
+Dans ce dernier exemple, c'est l'utilisation de `src` plutôt que de `innerHTML` qui rend le chargement du script asynchrone.
