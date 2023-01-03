@@ -6,7 +6,7 @@ l10n:
 ---
 {{GamesSidebar}}
 
-Chaque jeu moyen ou volumineux doit compiler le code [asm.js](/en-US/docs/Games/Tools/asm.js) dans le cadre d'un script asynchrone afin de donner au navigateur le maximum de flexibilité pour optimiser le processus de compilation.
+Chaque jeu moyen ou volumineux doit compiler le code [asm.js](/fr/docs/Games/Tools/asm.js) dans le cadre d'un script asynchrone afin de donner au navigateur le maximum de flexibilité pour optimiser le processus de compilation.
 
 Dans Gecko, la compilation asynchrone permet au moteur JavaScript de compiler l'asm.js du fil d'exécution principal lors du chargement du jeu et de mettre en cache le code machine généré afin que le jeu n'ait pas besoin d'être compilé lors des chargements suivants (à partir de Firefox 28) . Pour voir la différence, basculez `javascript.options.parallel_parsing` dans `about:config`.
 
