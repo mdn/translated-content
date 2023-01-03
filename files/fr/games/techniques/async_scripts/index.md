@@ -30,7 +30,7 @@ document.body.appendChild(script);
 
 ## Attention aux `async` en réalité synchrones
 
-Deux situations courantes dans lesquelles un script n'est \*pas\* asynchrone (comme [défini par la spécification HTML](https://html.spec.whatwg.org/multipage/scripting.html)) sont&nbsp;:
+Il existe deux situations courantes où un script n'est \*pas\* asynchrone malgré l'utilisation d'`async` ou du chargement d'un script (voir [la spécification HTML à ce sujet](https://html.spec.whatwg.org/multipage/scripting.html))&nbsp;:
 
 ```html
 <script async>code</script>
