@@ -28,7 +28,7 @@ document.body.appendChild(script);
 
 (Les scripts créés à partir du script par défaut sont `async`.) Le shell HTML par défaut généré par Emscripten produit ce dernier.
 
-## Quand l'async n'est-il pas asynchrone&nbsp;?
+## Attention aux `async` en réalité synchrones
 
 Deux situations courantes dans lesquelles un script n'est \*pas\* asynchrone (comme [défini par la spécification HTML](https://html.spec.whatwg.org/multipage/scripting.html)) sont&nbsp;:
 
