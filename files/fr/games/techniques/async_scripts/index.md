@@ -12,7 +12,7 @@ Dans Gecko, la compilation asynchrone permet au moteur JavaScript de compiler l'
 
 ## Mettre l'asynchrone en action
 
-Obtenir une compilation asynchrone est facile&nbsp;: lors de l'écriture de votre JavaScript, utilisez simplement l'attribut "async" comme suit&nbsp;:
+Obtenir une compilation asynchrone est facile&nbsp;: lors de l'écriture de votre JavaScript, utilisez simplement l'attribut `async` comme suit&nbsp;:
 
 ```html
 <script async src="file.js"></script>
