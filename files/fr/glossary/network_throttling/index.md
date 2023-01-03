@@ -12,4 +12,4 @@ Les outils de développement du navigateur ont généralement des options de lim
 
 ## Voir aussi
 
-- [Surveillance synthétique](/en-US/docs/Glossary/Synthetic_monitoring) (en anglais)
+- [Surveillance synthétique](/fr/docs/Glossary/Synthetic_monitoring)
