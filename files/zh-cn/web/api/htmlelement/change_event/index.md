@@ -11,7 +11,7 @@ slug: Web/API/HTMLElement/change_event
 
 - 当 `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` 元素被选中或取消选中时（通过点击或使用键盘）；
 - 当 `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` 元素被选中时（但不是取消选中时）；
-- 当用户显式提交改变时（例如：通过鼠标点击了 {{HTMLElement("select")}} 中的一个下拉选项，通过  `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}` 元素选择了一个日期，通过  `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}` 元素上传了一个文件等）；
+- 当用户显式提交改变时（例如：通过鼠标点击了 {{HTMLElement("select")}} 中的一个下拉选项，通过 `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}` 元素选择了一个日期，通过 `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}` 元素上传了一个文件等）；
 - 当标签的值被修改并且失去焦点后，但未提交时（例如：对{{HTMLElement("textarea")}}、 `{{HTMLElement('input/text', 'text')}}`、`{{HTMLElement('input/search', 'search')}}`、`{{HTMLElement('input/url', 'url')}}`、`{{HTMLElement('input/tel', 'tel')}}`、`{{HTMLElement('input/email', 'email')}}` 或 `{{HTMLElement('input/password', 'password')}}` 类型的 {{HTMLElement('input')}} 元素进行编辑后）。
 
 HTML 标准列出了[应该触发 `change` 事件的 `<input>` 类型](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)。
