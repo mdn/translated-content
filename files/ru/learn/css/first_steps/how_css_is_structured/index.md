@@ -246,15 +246,15 @@ p {
 
 На изображении внизу выделены свойство и его значение. Здесь свойство — `color`, а его значение — `blue`.
 
-![A declaration highlighted in the CSS](https://mdn.mozillademos.org/files/16498/declaration.png)
+![A declaration highlighted in the CSS](declaration.png)
 
 Свойство вкупе со значением называется _CSS-объявлением_. CSS-объявления помещаются внутри _блока объявлений CSS_. Ниже показан наш CSS-код с выделенным блоком объявлений.
 
-![A highlighted declaration block](https://mdn.mozillademos.org/files/16499/declaration-block.png)
+![A highlighted declaration block](declaration-block.png)
 
 Наконец блок объявлений воссоединяется с _селекторами_, образуя _CSS-правила_. Наше изображение содержит два правила — одно для селектора `h1`, другое для селектора `p`. Правило для `h1` выделено.
 
-![The rule for h1 highlighted](https://mdn.mozillademos.org/files/16500/rules.png)
+![The rule for h1 highlighted](rules.png)
 
 Установление значений для CSS-свойств — вот суть языка CSS. Движок CSS определяет, какие объявления применять к каждому элементу на странице, чтобы соответствующим образом размещать и стилизовать его. Необходимо запомнить, что и свойства, и значения чувствительны к регистру. Пара свойство–значение разделяется двоеточием (`:`).
 

@@ -1,13 +1,6 @@
 ---
 title: AnalyserNode
 slug: Web/API/AnalyserNode
-tags:
-  - API
-  - AnalyserNode
-  - Interface
-  - Reference
-  - Web Audio API
-browser-compat: api.AnalyserNode
 ---
 
 {{APIRef("Web Audio API")}}

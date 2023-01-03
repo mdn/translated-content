@@ -1,7 +1,6 @@
 ---
 title: 'ServiceWorkerGlobalScope: notificationclick event'
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
-translation_of: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 ---
 {{APIRef}}
 

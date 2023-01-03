@@ -65,7 +65,7 @@ HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過
 </marquee>
 ```
 
-{{EmbedLiveSample("Examples", 600, 450)}}
+{{EmbedLiveSample("示例", 600, 450)}}
 
 ## 規範
 

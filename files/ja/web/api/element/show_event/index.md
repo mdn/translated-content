@@ -1,34 +1,29 @@
 ---
 title: 'Element: show イベント'
 slug: Web/API/Element/show_event
+l10n:
+  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
-{{APIRef}}{{deprecated_header}}
+{{APIRef}}{{deprecated_header}}{{Non-standard_header}}
 
 **`show`** イベントは、 {{domxref("Element/contextmenu_event", "contextmenu")}} イベントが [`contextmenu` 属性](/ja/docs/Web/HTML/Global_attributes/contextmenu)を持つ要素に発生またはバブリングしたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onshow", "onshow")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('show', (event) => {});
+
+onshow = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -39,22 +34,20 @@ slug: Web/API/Element/show_event
 </menu>
 
 <script>
-  document.getElementById("test").addEventListener("show", function(e){
-    alert("the context menu will be displayed");
-  }, false);
+  document.getElementById("test").addEventListener(
+    "show",
+    (e) => {
+      alert("the context menu will be displayed");
+    },
+    false
+  );
 </script>
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- |
-| {{SpecName("HTML5 W3C", "webappapis.html#handler-onshow", "show event")}} | {{Spec2('HTML5 W3C')}} |
+このイベントは標準化が行われていません。
 
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- {{domxref("GlobalEventHandlers.onshow", "onshow")}}

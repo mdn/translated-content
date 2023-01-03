@@ -83,7 +83,7 @@ function toLocaleDateStringSupportsLocales() {
 ```js
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-// f以下格式化输出均假设使用区域的本地时区；
+// 以下格式化输出均假设使用区域的本地时区；
 // 对于美国，为 America/Los_Angeles
 
 // 美式英语，使用 month-day-year 的顺序

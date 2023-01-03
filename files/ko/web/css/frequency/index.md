@@ -1,12 +1,6 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
-tags:
-  - CSS
-  - CSS Data Type
-  - Reference
-  - Web
-translation_of: Web/CSS/frequency
 ---
 {{CSSRef}}
 

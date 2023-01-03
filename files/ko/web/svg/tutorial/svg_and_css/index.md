@@ -1,9 +1,6 @@
 ---
 title: SVG graphics
 slug: Web/SVG/Tutorial/SVG_and_CSS
-tags:
-  - CSS:Getting_Started
-translation_of: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: Web/CSS/Getting_Started/SVG_graphics
 ---
 이 페이지는 그래픽을 만들기 위한 특별한 언어 SVG를 설명합니다.

@@ -1,14 +1,6 @@
 ---
 title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
-tags:
-  - API
-  - Constructor
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-browser-compat: api.IntersectionObserver.IntersectionObserver
-translation_of: Web/API/IntersectionObserver/IntersectionObserver
 ---
 
 {{APIRef("Intersection Observer API")}}

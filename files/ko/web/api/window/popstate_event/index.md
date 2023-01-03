@@ -1,13 +1,6 @@
 ---
 title: popstate
 slug: Web/API/Window/popstate_event
-tags:
-  - API
-  - Event
-  - History
-  - History API
-  - Reference
-translation_of: Web/API/Window/popstate_event
 ---
 
 {{APIRef}}

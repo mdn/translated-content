@@ -331,7 +331,7 @@ export default {
 
 接下来，将 `id` 绑定到复选框的 `id` 属性和标签的 `for` 属性，更新现有 `id` 和 `for` 属性，如下所示：
 
-```js
+```html
 <template>
   <div>
     <input type="checkbox" :id="id" :checked="isDone" />

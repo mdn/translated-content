@@ -1,13 +1,6 @@
 ---
 title: History.scrollRestoration
 slug: Web/API/History/scrollRestoration
-tags:
-  - API
-  - HTML DOM
-  - History API
-  - Property
-  - Reference
-translation_of: Web/API/History/scrollRestoration
 ---
 {{APIRef("HTML DOM")}}
 

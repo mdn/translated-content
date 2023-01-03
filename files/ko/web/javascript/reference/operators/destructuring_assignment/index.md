@@ -1,14 +1,6 @@
 ---
 title: 구조 분해 할당
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Destructuring
-  - ECMAScript 2015
-  - JavaScript
-  - Operator
-  - Reference
-  - 구조 분해
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 {{jsSidebar("Operators")}}
 

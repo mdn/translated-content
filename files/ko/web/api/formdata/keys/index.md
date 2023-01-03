@@ -1,9 +1,6 @@
 ---
 title: FormData.keys()
 slug: Web/API/FormData/keys
-page-type: web-api-instance-method
-browser-compat: api.FormData.keys
-translation_of: Web/API/FormData/keys
 ---
 
 {{APIRef("XMLHttpRequest")}}

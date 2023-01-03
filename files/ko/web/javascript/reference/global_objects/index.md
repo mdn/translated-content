@@ -1,11 +1,6 @@
 ---
 title: 표준 내장 객체
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - Overview
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects
 ---
 
 {{jsSidebar("Objects")}}

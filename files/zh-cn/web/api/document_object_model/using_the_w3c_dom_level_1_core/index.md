@@ -21,7 +21,7 @@ W3C 的 Dom Level 1 核心是一个用于修改文档内容树的强大的对象
 </html>
 ```
 
-![image:Using_the_W3C_DOM_Level_1_Core-doctree.jpg](/@api/deki/files/415/=Using_the_W3C_DOM_Level_1_Core-doctree.jpg)
+![image:Using_the_W3C_DOM_Level_1_Core-doctree.jpg](using_the_w3c_dom_level_1_core-doctree.jpg)
 
 当 Mozilla 解析文档的时候，它首先构建一个内容树然后用它来显示这个文档。
 

@@ -1,8 +1,6 @@
 ---
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-browser-compat: html.elements.allSettled
 ---
 
 {{JSRef}}

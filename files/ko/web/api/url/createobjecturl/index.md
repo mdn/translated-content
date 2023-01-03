@@ -1,13 +1,6 @@
 ---
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
-tags:
-  - API
-  - Method
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/createObjectURL
 ---
 
 {{APIRef("URL API")}}

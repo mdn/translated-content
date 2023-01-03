@@ -51,7 +51,7 @@ slug: Web/HTML/Element/track
 - {{htmlattrdef("kind")}}
 
   - : 定义了 text track 应该如何使用。如果省略了该属性，默认的 kind 值就是 `subtitles`。下面是允许的关键字：
-  
+
     - `subtitles`
 
       - 字幕给观影者看不懂的内容提供了翻译。比如英文电影里非英文的对话框或者文字。

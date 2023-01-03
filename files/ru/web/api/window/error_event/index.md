@@ -28,8 +28,8 @@ window.onerror = funcRef;
   - Сообщение ошибки (string)
   - Url, где произошла ошибка (string)
   - Номер строки, где произошла ошибка (number)
-  - Номер столбца для строки, в которой произошла ошибка (number) {{gecko_minversion_inline("31.0")}}
-  - [Error Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error) (object) {{gecko_minversion_inline("31.0")}}
+  - Номер столбца для строки, в которой произошла ошибка (number)
+  - [Error Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error) (object)
 
 ## Примеры
 

@@ -46,7 +46,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
 
 ## 示例
 
-![Example of stacking rules modified using z-index](/@api/deki/files/913/=Understanding_zindex_04.png)
+![Example of stacking rules modified using z-index](understanding_zindex_04.png)
 
 在这个例子中，每个被定位的元素都创建了独自的层叠上下文，因为他们被指定了定位属性和 `z-index` 值。我们把层叠上下文的层级列在下面：
 

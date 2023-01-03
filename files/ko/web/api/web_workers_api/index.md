@@ -1,14 +1,6 @@
 ---
 title: Web Workers API
 slug: Web/API/Web_Workers_API
-tags:
-  - API
-  - Overview
-  - Reference
-  - Web Workers
-  - 워커
-  - 웹 워커
-translation_of: Web/API/Web_Workers_API
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}

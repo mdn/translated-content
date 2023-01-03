@@ -7398,10 +7398,6 @@
     "modified": "2020-10-15T21:15:48.961Z",
     "contributors": ["mfuji09", "fscholz", "khalid32", "ethertank", "Potappo"]
   },
-  "Web/API/Document/origin": {
-    "modified": "2020-10-17T12:14:26.538Z",
-    "contributors": ["mfuji09", "YuichiNukiyama"]
-  },
   "Web/API/Document/paste_event": {
     "modified": "2020-10-15T22:27:22.949Z",
     "contributors": ["mfuji09"]
@@ -10272,10 +10268,6 @@
   "Web/API/Location/reload": {
     "modified": "2020-10-15T22:19:48.721Z",
     "contributors": ["mfuji09", "silverskyvicto"]
-  },
-  "Web/API/Long_Tasks_API": {
-    "modified": "2020-10-15T22:19:58.850Z",
-    "contributors": ["silverskyvicto", "Wind1808"]
   },
   "Web/API/MediaCapabilities/encodingInfo": {
     "modified": "2020-10-15T22:24:30.759Z",
@@ -30187,58 +30179,6 @@
     "modified": "2019-03-30T15:58:22.824Z",
     "contributors": ["silverskyvicto", "ExE-Boss", "Mgjbot", "Shoot"]
   },
-  "Web/XPath/Axes/ancestor": {
-    "modified": "2019-01-17T03:28:09.177Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/ancestor-or-self": {
-    "modified": "2019-03-18T21:28:03.767Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/attribute": {
-    "modified": "2019-03-30T16:06:16.122Z",
-    "contributors": ["silverskyvicto", "ExE-Boss"]
-  },
-  "Web/XPath/Axes/child": {
-    "modified": "2020-10-15T22:08:08.333Z",
-    "contributors": ["silverskyvicto", "ExE-Boss"]
-  },
-  "Web/XPath/Axes/descendant": {
-    "modified": "2019-01-17T03:28:56.581Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/descendant-or-self": {
-    "modified": "2019-01-17T03:28:36.654Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/following": {
-    "modified": "2019-01-17T03:29:05.424Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/following-sibling": {
-    "modified": "2019-01-17T03:29:25.545Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/namespace": {
-    "modified": "2019-03-18T21:27:59.706Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/parent": {
-    "modified": "2019-01-17T03:28:42.276Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/preceding": {
-    "modified": "2019-01-17T03:29:16.726Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/preceding-sibling": {
-    "modified": "2019-01-17T03:29:19.432Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/self": {
-    "modified": "2020-10-15T22:08:17.935Z",
-    "contributors": ["silverskyvicto", "ExE-Boss"]
-  },
   "Web/XPath/Comparison_with_CSS_selectors": {
     "modified": "2020-10-24T08:07:33.764Z",
     "contributors": ["silverskyvicto", "mfuji09"]
@@ -31002,54 +30942,13 @@
     "modified": "2019-03-18T21:40:37.855Z",
     "contributors": ["e53e04ac"]
   },
-  "conflicting/Web/API/MediaStreamTrack": {
-    "modified": "2019-03-18T21:45:15.928Z",
-    "contributors": ["e53e04ac"]
-  },
-  "conflicting/Web/API/Navigator": {
-    "modified": "2020-10-15T21:15:55.616Z",
-    "contributors": ["mfuji09", "fscholz", "AshfaqHossain", "Mgjbot", "Potappo"]
-  },
-  "conflicting/Web/API/Navigator/getBattery": {
-    "modified": "2020-10-15T21:22:04.664Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf",
-      "fscholz",
-      "jsx",
-      "ethertank",
-      "leaf0115"
-    ]
-  },
-  "conflicting/Web/API/Navigator/onLine": {
-    "modified": "2019-03-23T23:53:08.504Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ethertank",
-      "Marsf",
-      "Mgjbot",
-      "Koyamak"
-    ]
-  },
-  "conflicting/Web/API/Node": {
-    "modified": "2019-03-23T23:59:58.146Z",
-    "contributors": ["fscholz", "khalid32", "ethertank", "Marsf"]
-  },
-  "conflicting/Web/API/SourceBuffer": {
-    "modified": "2020-10-15T22:25:07.363Z",
-    "contributors": ["Wind1808"]
-  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
   },
-  "conflicting/Web/API/Window_a3adfa21c4e6890044eb2b73820c063d": {
-    "modified": "2020-10-15T22:34:01.917Z",
-    "contributors": ["eltociear"]
-  },
-  "conflicting/Web/API/XMLDocument": {
-    "modified": "2020-10-15T21:21:38.875Z",
-    "contributors": ["mfuji09", "satour", "fscholz", "ethertank"]
+  "conflicting/Web/API/origin": {
+    "modified": "2020-10-17T12:14:26.538Z",
+    "contributors": ["mfuji09", "YuichiNukiyama"]
   },
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T23:28:42.286Z",
@@ -31169,39 +31068,6 @@
     "modified": "2020-09-30T09:07:30.169Z",
     "contributors": ["chrisdavidmills", "mfuji09", "silverskyvicto"]
   },
-  "orphaned/MDN/Tools": {
-    "modified": "2020-09-30T16:50:20.175Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "silverskyvicto",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
-  "orphaned/MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:50:20.340Z",
-    "contributors": [
-      "chrisdavidmills",
-      "eltociear",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "hamasaki",
-      "ethertank"
-    ]
-  },
-  "orphaned/MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:50:20.455Z",
-    "contributors": [
-      "chrisdavidmills",
-      "eltociear",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
   "orphaned/Microsummary_XML_grammar_reference": {
     "modified": "2019-03-23T23:42:58.294Z",
     "contributors": ["teoli", "electrolysis"]
@@ -31248,10 +31114,6 @@
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2020-09-27T12:30:54.835Z",
     "contributors": ["mfuji09", "dskmori", "keeponbeat", "mikamikuh"]
-  },
-  "orphaned/Web/API/HTMLKeygenElement": {
-    "modified": "2019-03-23T22:35:55.345Z",
-    "contributors": ["YuichiNukiyama"]
   },
   "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
     "modified": "2019-03-24T00:06:18.208Z",
@@ -31382,10 +31244,6 @@
   "orphaned/Web/Guide/Localizations_and_character_encodings": {
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
-  },
-  "orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy": {
-    "modified": "2020-10-09T09:56:44.499Z",
-    "contributors": ["maechabin", "mfuji09", "dlwe"]
   },
   "orphaned/Web/JavaScript/Guide/Expressions": {
     "modified": "2019-03-24T00:01:13.077Z",
@@ -31556,6 +31414,58 @@
   "orphaned/Web/Web_Components/Status_in_Firefox": {
     "modified": "2019-03-23T22:35:08.421Z",
     "contributors": ["ueokande", "dskmori"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor": {
+    "modified": "2019-01-17T03:28:09.177Z",
+    "contributors": ["ExE-Boss", "silverskyvicto"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor-or-self": {
+    "modified": "2019-03-18T21:28:03.767Z",
+    "contributors": ["ExE-Boss", "silverskyvicto"]
+  },
+  "orphaned/Web/XPath/Axes/attribute": {
+    "modified": "2019-03-30T16:06:16.122Z",
+    "contributors": ["silverskyvicto", "ExE-Boss"]
+  },
+  "orphaned/Web/XPath/Axes/child": {
+    "modified": "2020-10-15T22:08:08.333Z",
+    "contributors": ["silverskyvicto", "ExE-Boss"]
+  },
+  "orphaned/Web/XPath/Axes/descendant": {
+    "modified": "2019-01-17T03:28:56.581Z",
+    "contributors": ["ExE-Boss", "silverskyvicto"]
+  },
+  "orphaned/Web/XPath/Axes/descendant-or-self": {
+    "modified": "2019-01-17T03:28:36.654Z",
+    "contributors": ["ExE-Boss", "silverskyvicto"]
+  },
+  "orphaned/Web/XPath/Axes/following": {
+    "modified": "2019-01-17T03:29:05.424Z",
+    "contributors": ["ExE-Boss", "silverskyvicto"]
+  },
+  "orphaned/Web/XPath/Axes/following-sibling": {
+    "modified": "2019-01-17T03:29:25.545Z",
+    "contributors": ["ExE-Boss", "silverskyvicto"]
+  },
+  "orphaned/Web/XPath/Axes/namespace": {
+    "modified": "2019-03-18T21:27:59.706Z",
+    "contributors": ["ExE-Boss", "silverskyvicto"]
+  },
+  "orphaned/Web/XPath/Axes/parent": {
+    "modified": "2019-01-17T03:28:42.276Z",
+    "contributors": ["ExE-Boss", "silverskyvicto"]
+  },
+  "orphaned/Web/XPath/Axes/preceding": {
+    "modified": "2019-01-17T03:29:16.726Z",
+    "contributors": ["ExE-Boss", "silverskyvicto"]
+  },
+  "orphaned/Web/XPath/Axes/preceding-sibling": {
+    "modified": "2019-01-17T03:29:19.432Z",
+    "contributors": ["ExE-Boss", "silverskyvicto"]
+  },
+  "orphaned/Web/XPath/Axes/self": {
+    "modified": "2020-10-15T22:08:17.935Z",
+    "contributors": ["silverskyvicto", "ExE-Boss"]
   },
   "orphaned/Working_with_windows_in_chrome_code": {
     "modified": "2019-01-16T17:12:27.632Z",

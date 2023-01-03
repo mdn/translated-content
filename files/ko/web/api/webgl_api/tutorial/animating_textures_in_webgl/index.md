@@ -1,16 +1,6 @@
 ---
 title: WebGL에서의 텍스쳐 애니메이션
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
-tags:
-  - Animation
-  - HTML5
-  - Texture
-  - Video
-  - WebGL
-  - 애니메이션
-  - 웹지엘
-  - 텍스쳐
-translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

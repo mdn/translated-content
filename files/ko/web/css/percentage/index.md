@@ -1,13 +1,6 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
-tags:
-  - CSS
-  - CSS Data Type
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/percentage
 ---
 {{CSSRef}}
 

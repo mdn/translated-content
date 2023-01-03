@@ -1,34 +1,61 @@
 ---
 title: CSSKeyframeRule
 slug: Web/API/CSSKeyframeRule
+l10n:
+  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
-**`CSSKeyframeRule`** インターフェイスは、指定された keyframe のスタイルセットを表すオブジェクトを提供します。[アット規則](/ja/docs/CSS/At-rule) の {{cssxref("@keyframes")}} の 1 つのキーフレームに対応しています。これはタイプ値 8 (`CSSRule.KEYFRAME_RULE`) の {{domxref("CSSRule")}} インターフェイスを実装しています。
+**`CSSKeyframeRule`** インターフェイスは、指定されたキーフレームのスタイルセットを表すオブジェクトを提供します。[アット規則](/ja/docs/CSS/At-rule) の {{cssxref("@keyframes")}} の 1 つのキーフレームに対応しています。
 
-## プロパティ
+{{InheritanceDiagram}}
 
-{{domxref("CSSRule")}} のように、`CSSKeyframeRule` もそのインターフェイスから継承したプロパティを実装しています。独自プロパティも 2 つ実装しています：
+## インスタンスプロパティ
 
-- {{domxref("CSSKeyframe.keyText")}}
-  - : `'10%'` や `'75%'` のように、keyframe のキーを表す。`from` キーワードは `'0%'` にマッピングされ、`to` キーワードは `'100%'` にマッピングされる。
-- {{domxref("CSSKeyframe.style")}} {{readOnlyInline}}
-  - : keyfrom に関連した CSS スタイルの {{domxref("CSSStyleDeclaration")}} を返す。
+_祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
 
-## メソッド
+- {{domxref("CSSKeyframeRule.keyText")}}
+  - : `'10%'` や `'75%'` のように、キーフレームのキーを表します。`from` キーワードは `'0%'` に対応付けられ、`to` キーワードは `'100%'` に対応づけられます。
+- {{domxref("CSSKeyframeRule.style")}} {{ReadOnlyInline}}
+  - : キーフレームに関連した CSS スタイルの {{domxref("CSSStyleDeclaration")}} を返します。
 
-{{domxref("CSSRule")}} のように、`CSSKeyframeRule` もそのインターフェイスのメソッドを継承しています。独自のメソッドはありません。
+## インスタンスメソッド
 
-## 仕様
+_固有のメソッドはありません。祖先である {{domxref("CSSRule")}} からメソッドを継承しています。_
+
+## 例
+
+この CSS には、 keyframes アットルールが含まれています。これは最初の {{domxref("CSSRule")}} となり、 `document.styleSheets[0].cssRules` で返されます。
+`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返し、その中に各キーフレームのための個別の `CSSKeyFrame` オブジェクトが格納されます。
+
+```css
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+```
+
+```js
+let myRules = document.styleSheets[0].cssRules;
+let keyframes = myRules[0]; // a CSSKeyframesRule
+console.log(keyframes[0]); // a CSSKeyframeRule representing an individual keyframe.
+```
+
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.CSSKeyframeRule")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{cssxref("@keyframes")}}
 - {{domxref("CSSKeyFramesRule")}}

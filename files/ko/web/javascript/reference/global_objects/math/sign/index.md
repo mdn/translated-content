@@ -1,14 +1,6 @@
 ---
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Math.sign
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
 {{JSRef}}
 

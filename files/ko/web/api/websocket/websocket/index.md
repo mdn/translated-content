@@ -1,14 +1,6 @@
 ---
 title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Web API
-  - WebSocket
-browser-compat: api.WebSocket.WebSocket
-translation_of: Web/API/WebSocket/WebSocket
 ---
 
 {{APIRef("Web Sockets API")}}

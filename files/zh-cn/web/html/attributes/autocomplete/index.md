@@ -1,5 +1,5 @@
 ---
-title: The HTML 自动完成属性
+title: HTML 属性：autocomplete
 slug: Web/HTML/Attributes/autocomplete
 original_slug: Web/HTML/Attributes/自动完成属性
 ---
@@ -191,7 +191,7 @@ TN99 8ZZ
 
 中国可以使用多达三个行政级别：省，市和区。
 
-## 技术指标
+## 规范
 
 {{Specifications}}
 
@@ -199,11 +199,11 @@ TN99 8ZZ
 
 {{Compat}}
 
-## 另请详见
+## 参见
 
-- The {{htmlelement("input")}} 元素。
-- The {{htmlelement("select")}} 元素。
-- The {{htmlelement("textarea")}} 元素。
-- The {{htmlelement("form")}} 元素。
-- [HTML 表单](/zh-CN/docs/Learn/HTML/Forms)
-- [全球属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+- {{htmlelement("input")}} 元素。
+- {{htmlelement("select")}} 元素。
+- {{htmlelement("textarea")}} 元素。
+- {{htmlelement("form")}} 元素。
+- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。

@@ -1,11 +1,6 @@
 ---
 title: Web Audio API 잘 사용하기
 slug: Web/API/Web_Audio_API/Best_practices
-tags:
-  - Audio
-  - Best practices
-  - Guide
-  - Web Audio API
 ---
 {{apiref("Web Audio API")}}
 

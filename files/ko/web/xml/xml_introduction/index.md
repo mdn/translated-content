@@ -1,9 +1,6 @@
 ---
 title: XML Introduction
 slug: Web/XML/XML_Introduction
-tags:
-  - XML
-translation_of: Web/XML/XML_introduction
 ---
 
 ### XML이란?

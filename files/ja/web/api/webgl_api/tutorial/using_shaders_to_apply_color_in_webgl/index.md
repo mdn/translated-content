@@ -3,7 +3,7 @@ title: シェーダーを用いた WebGL での色の指定
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
 [前のデモンストレーション](/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)で正方形を作り出すことができたら、次に明らかなステップは、それに色をつけることです。これは、シェーダーを変更することで実現できます。
 

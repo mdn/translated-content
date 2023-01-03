@@ -1,11 +1,6 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
-tags:
-  - 로컬 스토리지
-  - 세션 스토리지
-  - 웹 스토리지
-translation_of: Web/API/Storage/key
 ---
 
 {{APIRef("Web Storage API")}}

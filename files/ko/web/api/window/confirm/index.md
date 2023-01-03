@@ -1,13 +1,6 @@
 ---
 title: Window.confirm()
 slug: Web/API/Window/confirm
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/confirm
 ---
 {{ApiRef("Window")}}
 

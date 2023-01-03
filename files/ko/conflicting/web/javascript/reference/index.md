@@ -1,7 +1,6 @@
 ---
 title: 소개
 slug: conflicting/Web/JavaScript/Reference
-translation_of: Web/JavaScript/Reference/About
 original_slug: Web/JavaScript/Reference/About
 ---
 

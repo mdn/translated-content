@@ -1,15 +1,6 @@
 ---
 title: scroll
 slug: Web/API/Document/scroll_event
-tags:
-  - DOM
-  - Event
-  - Event Handler
-  - Reference
-  - 레퍼런스
-  - 이벤트
-  - 이벤트핸들링
-translation_of: Web/API/Document/scroll_event
 ---
 
 document view 나 element가 스크롤 될 때, **`scroll`** 이벤트가 발생합니다.

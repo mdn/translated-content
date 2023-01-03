@@ -1,8 +1,10 @@
 ---
 title: z-index가 없는 경우의 쌓임
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 ---
+
+{{CSSRef}}
+
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 
 ### z-index가 없는 경우의 쌓임
@@ -20,110 +22,95 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z
 > - 주어진 동일한 엘리먼트들의 그룹은 모두 z-index가 설정되지 않았다. DIV #1 부터 DIV #4 까지는 position 속성이 설정되었다. 엘리먼트의 position속성 값과는 상관 없이 HTML 계층 구조대로 쌓임을 알 수 있다.
 > - position 속성이 지정되지 않은 블록(DIV #5)은 항상 position이 지정된 엘리먼트 이전에 렌더링 된다. 따라서 position이 지정된 엘리먼트 아래에 보인다. 설령 HTML 문서상에서 먼저 나오더라도 position이 지정되지 않은 엘리먼트는 지정된 엘리먼트보다 아래에 보인다.
 
-![understanding_zindex_01.png](/@api/deki/files/910/=understanding_zindex_01.png)
+## 예제
 
-### 예제
+### HTML
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head><style type="text/css">
+<div id="abs1" class="absolute">
+  <strong>DIV #1</strong><br />position: absolute;
+</div>
+<div id="rel1" class="relative">
+  <strong>DIV #2</strong><br />position: relative;
+</div>
+<div id="rel2" class="relative">
+  <strong>DIV #3</strong><br />position: relative;
+</div>
+<div id="abs2" class="absolute">
+  <strong>DIV #4</strong><br />position: absolute;
+</div>
+<div id="sta1" class="static">
+  <strong>DIV #5</strong><br />position: static;
+</div>
+```
+
+### CSS
+
+```css
+strong {
+  font-family: sans-serif;
+}
 
 div {
-   font: 12px Arial;
+  padding: 10px;
+  border: 1px dashed;
+  text-align: center;
 }
 
-span.bold { font-weight: bold; }
-
-#normdiv {
-   height: 70px;
-   border: 1px dashed #999966;
-   background-color: #ffffcc;
-   margin: 0px 50px 0px 50px;
-   text-align: center;
+.static {
+  position: static;
+  height: 80px;
+  background-color: #ffc;
+  border-color: #996;
 }
 
-#reldiv1 {
-   opacity: 0.7;
-   height: 100px;
-   position: relative;
-   top: 30px;
-   border: 1px dashed #669966;
-   background-color: #ccffcc;
-   margin: 0px 50px 0px 50px;
-   text-align: center;
+.absolute {
+  position: absolute;
+  width: 150px;
+  height: 350px;
+  background-color: #fdd;
+  border-color: #900;
+  opacity: 0.7;
 }
 
-#reldiv2 {
-   opacity: 0.7;
-   height: 100px;
-   position: relative;
-   top: 15px;
-   left: 20px;
-   border: 1px dashed #669966;
-   background-color: #ccffcc;
-   margin: 0px 50px 0px 50px;
-   text-align: center;
+.relative {
+  position: relative;
+  height: 80px;
+  background-color: #cfc;
+  border-color: #696;
+  opacity: 0.7;
 }
 
-#absdiv1 {
-   opacity: 0.7;
-   position: absolute;
-   width: 150px;
-   height: 350px;
-   top: 10px;
-   left: 10px;
-   border: 1px dashed #990000;
-   background-color: #ffdddd;
-   text-align: center;
+#abs1 {
+  top: 10px;
+  left: 10px;
 }
 
-#absdiv2 {
-   opacity: 0.7;
-   position: absolute;
-   width: 150px;
-   height: 350px;
-   top: 10px;
-   right: 10px;
-   border: 1px dashed #990000;
-   background-color: #ffdddd;
-   text-align: center;
+#rel1 {
+  top: 30px;
+  margin: 0px 50px 0px 50px;
 }
 
-</style></head>
+#rel2 {
+  top: 15px;
+  left: 20px;
+  margin: 0px 50px 0px 50px;
+}
 
-<body>
+#abs2 {
+  top: 10px;
+  right: 10px;
+}
 
-<br /><br />
-
-<div id="absdiv1">
-   <br /><span class="bold">DIV #1</span>
-   <br />position: absolute;
-</div>
-
-<div id="reldiv1">
-   <br /><span class="bold">DIV #2</span>
-   <br />position: relative;
-</div>
-
-<div id="reldiv2">
-   <br /><span class="bold">DIV #3</span>
-   <br />position: relative;
-</div>
-
-<div id="absdiv2">
-   <br /><span class="bold">DIV #4</span>
-   <br />position: absolute;
-</div>
-
-<div id="normdiv">
-   <br /><span class="bold">DIV #5</span>
-   <br />no positioning
-</div>
-
-</body></html>
+#sta1 {
+  background-color: #ffc;
+  margin: 0px 50px 0px 50px;
+}
 ```
+
+## 결과
+
+{{EmbedLiveSample("예제", 600, 400)}}
 
 ### See also
 

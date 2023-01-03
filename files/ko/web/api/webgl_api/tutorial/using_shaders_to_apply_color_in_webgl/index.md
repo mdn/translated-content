@@ -1,12 +1,6 @@
 ---
 title: WebGL에서 셰이더를 사용하여 색상 적용하기
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
-tags:
-  - 색상
-  - 셰이더
-  - 웹지엘
-  - 컬러
-translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
@@ -100,6 +94,8 @@ gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
 
 이제 WebGL이 호환되는 브라우저에서 [샘플](/samples/webgl/sample3/index.html)을 보면, 검정색 바탕에 아래와 같은 정사각형이 그려지는 것을 볼 수 있습니다:
 
-<img alt="screenshot.png" class="default internal" src="/@api/deki/files/4081/=screenshot.png">
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
+
+[전체 코드 보기](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample3) | [새창에서 데모 실행하기](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample3/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}

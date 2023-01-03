@@ -1,15 +1,6 @@
 ---
 title: AnimationEvent.animationName
 slug: Web/API/AnimationEvent/animationName
-tags:
-  - API
-  - AnimationEvent
-  - CSSOM
-  - Property
-  - Reference
-  - Web Animations
-browser-compat: api.AnimationEvent.animationName
-translation_of: Web/API/AnimationEvent/animationName
 ---
 
 {{APIRef("Web Animations API")}}

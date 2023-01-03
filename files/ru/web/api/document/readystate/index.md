@@ -6,7 +6,7 @@ tags:
   - Property
 translation_of: Web/API/Document/readyState
 ---
-{{APIRef("DOM")}}{{gecko_minversion_header("1.9.2")}}
+{{APIRef("DOM")}}
 
 Свойство **`Document.readyState`** описывает состояние загрузки {{domxref("document")}}.
 

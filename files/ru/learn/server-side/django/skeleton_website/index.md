@@ -310,7 +310,7 @@ python3 manage.py runserver
 
 Когда сервер запустится, вы сможете посетить сайт по адресу `http://127.0.0.1:8000/` в вашем веб-браузере. Вы должны увидеть страницу с ошибкой, навроде этой:
 
-![Django debug page for a 404 not found error](https://mdn.mozillademos.org/files/14009/django_404_debug_page.png)
+![Django debug page for a 404 not found error](django_404_debug_page.png)
 
 Не волнуйтесь! Эта страница должна появиться и сообщить нам, что мы ещё не настроили ни одной страницы в модуле `catalogs.urls` (на который мы были перенаправлены запросили корневой URL сайта).
 

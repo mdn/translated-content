@@ -1,15 +1,6 @@
 ---
 title: DocumentOrShadowRoot.activeElement
 slug: Web/API/Document/activeElement
-tags:
-  - API
-  - Document
-  - DocumentOrShadowRoot
-  - Focus
-  - Property
-  - Reference
-  - ShadowRoot
-translation_of: Web/API/DocumentOrShadowRoot/activeElement
 original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
 

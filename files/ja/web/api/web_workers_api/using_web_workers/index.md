@@ -294,7 +294,7 @@ onmessage = (event) => {
 };
 ```
 
-[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムは JSON を受け入れることができ、循環参照など JSON ではできないものもいくつか受け入れることができます。
+[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)は JSON を受け入れることができ、循環参照など JSON ではできないものもいくつか受け入れることができます。
 
 ### データ引き渡しの例
 

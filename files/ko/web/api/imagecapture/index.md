@@ -1,14 +1,6 @@
 ---
 title: ImageCapture
 slug: Web/API/ImageCapture
-tags:
-  - API
-  - Experimental
-  - ImageCapture
-  - Interface
-  - MediaStream Image Capture API
-  - Reference
-translation_of: Web/API/ImageCapture
 ---
 
 {{APIRef("MediaStream Image")}}

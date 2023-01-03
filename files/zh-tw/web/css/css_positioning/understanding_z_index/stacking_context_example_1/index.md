@@ -13,15 +13,15 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 
 唯一的堆疊上下文是根上下文。如果沒有 Z-指標，要素依次層疊的發生。
 
-![堆疊環境範例1](/@api/deki/files/914/=Understanding_zindex_05a.png)
+![堆疊環境範例1](understanding_zindex_05a.png)
 
 如果 DIV＃2 被分配一個正的（非零和非自動）z 索引值，它是上述所有其他的 DIV 呈現。
 
-![堆疊環境範例1](/@api/deki/files/915/=Understanding_zindex_05b.png)
+![堆疊環境範例1](understanding_zindex_05b.png)
 
 然後，如果 DIV＃4 也被分配比 DIV＃2 的 Z 指數正 z 指數越大，它上面的所有其他的 DIV DIV，包括 2＃呈現。
 
-![堆疊環境範例1](/@api/deki/files/916/=Understanding_zindex_05c.png)
+![堆疊環境範例1](understanding_zindex_05c.png)
 
 在最後的例子，你可以看到，DIV＃2 和＃DIV 4 不兄弟姐妹，因為它們屬於不同的家長在 HTML 元素的層次結構。即便如此，DIV＃4 堆疊相的 DIV＃2 可以通過 z 索引來控制。碰巧的是，由於 DIV＃1 和＃DIV 3 不指定任何的 z-index 值，他們不創造一個堆疊環境。這意味著，所有的內容，包括 DIV＃2 和 DIV＃4 屬於相同根堆疊環境。
 

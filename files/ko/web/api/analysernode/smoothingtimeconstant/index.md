@@ -1,14 +1,6 @@
 ---
 title: AnalyserNode.smoothingTimeConstant
 slug: Web/API/AnalyserNode/smoothingTimeConstant
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - smoothingTimeConstant
-browser-compat: api.AnalyserNode.smoothingTimeConstant
 ---
 
 {{ APIRef("Web Audio API") }}

@@ -1,13 +1,6 @@
 ---
 title: 'SyntaxError: for-in loop head declarations may not have initializers'
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
-tags:
-  - for...in 구문
-  - 구문 에러
-  - 배열 반복
-  - 자바스크립트
-  - 초기화
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
 
 {{jsSidebar("Errors")}}
