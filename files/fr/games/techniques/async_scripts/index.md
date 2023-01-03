@@ -1,5 +1,5 @@
 ---
-title: Script asynchrones pour asm.js
+title: Scripts asynchrones pour asm.js
 slug: Games/Techniques/Async_scripts
 l10n:
   sourceCommit: f3ef176745e4875e42584df143fba15a63c7ad32
