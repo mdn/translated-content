@@ -10,7 +10,7 @@ Chaque jeu moyen ou volumineux doit compiler le code [asm.js](/fr/docs/Games/Too
 
 Dans Gecko, la compilation asynchrone permet au moteur JavaScript de compiler l'asm.js en dehors du fil d'exécution principal lors du chargement du jeu et de mettre en cache le code machine généré afin que le jeu n'ait pas besoin d'être compilé lors des chargements suivants (à partir de Firefox 28) . Pour voir la différence, basculez `javascript.options.parallel_parsing` dans `about:config`.
 
-## Mettre l'asynchrone en action
+## Passer à la compilation asynchrone
 
 Obtenir une compilation asynchrone est facile&nbsp;: lors de l'écriture de votre JavaScript, utilisez simplement l'attribut `async` comme suit&nbsp;:
 
