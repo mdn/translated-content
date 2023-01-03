@@ -12,7 +12,7 @@ Les outils de développement du navigateur ont généralement des options de lim
 
 - Firefox (en anglais)
   - [Moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
-  - [Vue adaptative](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) 
+  - [Vue adaptative](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
 - Chrome (en anglais)
   - [Réseau](https://developer.chrome.com/docs/devtools/network/reference/#throttling)
 - Edge (en anglais)
