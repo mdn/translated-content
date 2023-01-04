@@ -2,7 +2,7 @@
 title: IDBIndex
 slug: Web/API/IDBIndex
 l10n:
-  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
+  sourceCommit: 59a0a003281f70f55ac524bb3c370b19f0a7a14a
 ---
 
 {{APIRef("IndexedDB")}}
@@ -20,9 +20,9 @@ l10n:
 ## インスタンスプロパティ
 
 - {{domxref("IDBIndex.isAutoLocale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
-  - : インデックスの作成時に `locale` の値が `auto` に設定されたかを表す {{jsxref("boolean")}} 値を返します。([`createIndex()` の省略可能な引数](/ja/docs/Web/API/IDBObjectStore/createIndex#%E5%BC%95%E6%95%B0)を参照してください)
+  - : インデックスの作成時に `locale` の値が `auto` に設定されたかを表す {{jsxref("boolean")}} 値を返します。([`createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数 [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) を参照してください)
 - {{domxref("IDBIndex.locale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
-  - : 作成時に `locale` の値が指定されていれば、インデックスのロケール (たとえば `en-US` や `pl`) を返します。([`createIndex()` の省略可能な引数](/ja/docs/Web/API/IDBObjectStore/createIndex#%E5%BC%95%E6%95%B0)を参照してください)
+  - : 作成時に `locale` の値が指定されていれば、インデックスのロケール (たとえば `en-US` や `pl`) を返します。([`createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数 [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) を参照してください)
 - {{domxref("IDBIndex.name")}}
   - : このインデックスの名前です。
 - {{domxref("IDBIndex.objectStore")}} {{ReadOnlyInline}}
