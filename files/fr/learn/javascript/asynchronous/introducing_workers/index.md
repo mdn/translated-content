@@ -23,7 +23,7 @@ Dans ce dernier article de notre module sur le JavaScript asynchrone, nous prés
   </tbody>
 </table>
 
-Dans le premier article de ce module, nous avons vu ce qui se passe lorsque vous avez une tâche synchrone de longue durée dans votre programme — toute la fenêtre ne répond plus. Fondamentalement, la raison est que le programme est _monofilaire_. Un _fil_ est une séquence d'instructions suivie par un programme. Parce que le programme se compose d'un seul fil, il ne peut faire qu'une seule chose à la fois : donc s'il attend la réponse de notre appel synchrone de longue durée, il ne peut rien faire d'autre.
+Dans le premier article de ce module, nous avons vu ce qui se passe lorsque vous avez une tâche synchrone de longue durée dans votre programme&nbsp;: c'est toute la fenêtre ne répond plus. La raison principale de ce problème est l'exécution du programme au sein d'_un seul fil d'exécution_ (<i lang="en">thread</i>). Un _fil d'exécution_ est une séquence d'instructions suivie par un programme. Parce que le programme s'exécute sur un seul fil, il ne peut faire qu'une seule chose à la fois&nbsp;: il attend donc la réponse de notre appel synchrone de longue durée et ne peut rien faire d'autre.
 
 Les travailleurs vous donnent la possibilité d'exécuter certaines tâches dans un fil différent, vous pouvez donc démarrer la tâche, puis continuer avec d'autres traitements (comme la gestion des actions de l'utilisateur).
 
