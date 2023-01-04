@@ -86,7 +86,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 Dans ce programme, après avoir appelé `generatePrimes()`, le programme ne répond plus du tout.
 
-### Génération de nombres premiers avec un travailleur
+### Génération de nombres premiers avec un <i lang="en">worker</i>
 
 Pour cet exemple, commencez par faire une copie locale des fichiers sur <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/start>. Il y a quatre fichiers dans ce répertoire :
 
