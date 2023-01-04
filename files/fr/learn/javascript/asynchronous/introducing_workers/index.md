@@ -29,7 +29,7 @@ Les <i lang="en">workers</i> vous donnent la possibilité d'exécuter certaines 
 
 Mais il y a un prix à payer pour cela. Avec le code parallélisé, vous ne savez jamais quand votre fil sera suspendu et quand l'autre fil aura une chance de s'exécuter. Ainsi, si les deux fils ont accès aux mêmes variables, il est possible qu'une variable change de manière inattendue à tout moment, ce qui provoque des bogues difficiles à trouver.
 
-Pour éviter ces problèmes sur le Web, votre code principal et votre code de travail n'ont jamais un accès direct aux variables de l'autre. Les travailleurs et le code principal s'exécutent dans des mondes complètement séparés et n'interagissent qu'en s'envoyant des messages. En particulier, cela signifie que les travailleurs ne peuvent pas accéder au DOM (la fenêtre, le document, les éléments de la page, etc.).
+Pour éviter ces problèmes sur le Web, le code du fil principal et le code qui s'exécute dans le <i lang="en">worker</i> n'accèdent jamais directement aux variables de l'autre. Le code des <i lang="en">workers</i> et le code principal s'exécutent dans des mondes complètement séparés et n'interagissent qu'en s'envoyant des messages. Cela signifie notamment que les <i lang="en">workers</i> ne peuvent pas accéder au DOM (la fenêtre, le document, les éléments de la page, etc.).
 
 Il existe trois types de travailleurs différents :
 
