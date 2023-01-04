@@ -215,7 +215,7 @@ function generatePrimes(quota) {
   // incluant la quantité de nombres premiers générés.
   postMessage(primes.length);
 }
-N'oubliez pas que cela s'exécute dès que le script principal crée le travailleur.
+N'oubliez pas que ce code s'exécute dès que le script principal crée le <i lang="en">worker</i>.
 
 La première chose que fait le travailleur est de commencer à écouter les messages du script principal. Il le fait en utilisant `addEventListener()`, qui est une fonction globale dans un travailleur. À l'intérieur du gestionnaire d'événements `message`, la propriété `data` de l'événement contient une copie de l'argument transmis par le script principal. Si le script principal a passé la commande `generate`, nous appelons `generatePrimes()`, en transmettant la valeur `quota` de l'événement de message.
 
