@@ -164,6 +164,7 @@ document.querySelector('#reload').addEventListener('click', () => {
   document.querySelector('#user-input').value = 'Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"';
   document.location.reload();
 });
+```
 
 1. Tout d'abord, nous créons le <i lang="en">worker</i> en utilisant le constructeur [`Worker()`](/fr/docs/Web/API/Worker/Worker). Nous lui passons un lien pointant vers le script du <i lang="en">worker</i>. Dès que le <i lang="en">worker</i> est créé, le script correspondant est exécuté.
 
@@ -215,6 +216,8 @@ function generatePrimes(quota) {
   // incluant la quantité de nombres premiers générés.
   postMessage(primes.length);
 }
+```
+
 N'oubliez pas que ce code s'exécute dès que le script principal crée le <i lang="en">worker</i>.
 
 Le <i lang="en">worker</i> commence par écouter les messages provenant du script principal. Il le fait en utilisant `addEventListener()`, qui est une fonction globale dans un <i lang="en">worker</i>. À l'intérieur du gestionnaire d'évènements `message`, la propriété `data` de l'évènement contient une copie de l'argument transmis par le script principal. Si le script principal a passé la commande `generate`, nous appelons `generatePrimes()`, en transmettant la valeur `quota` des données de l'évènement `message`.
