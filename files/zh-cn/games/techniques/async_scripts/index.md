@@ -43,7 +43,7 @@ document.body.appendChild(script);
 
 两者都被视为“内联”脚本，阻塞其余所有任务，进行编译，编译完成后立即执行。
 
-如果你的代码是一个 JS 字符串呢？而不是使用 eval 或 innerHTML，这两者都会触发同步编译，您应该使用 Blob 和 URL 对象：
+如果你的代码是一个 JS 字符串呢？您应该使用 URL.createObjectURL 包装的 Blob 对象，而不是使用 eval 或 innerHTML，这两者都会触发同步编译：
 
 ```js
 var blob = new Blob([codeString]);
