@@ -11,7 +11,7 @@ slug: Glossary/Representation_header
 
 表示标头可能同时出现在 HTTP 请求和响应消息中。如果它们是作为 `HEAD` 请求的响应发送的，它们会描述如果实际请求资源时，*将*选择的主体内容。
 
-表示标头：{{HTTPHeader("Content-Type")}}、{{HTTPHeader("Content-Encoding")}}、{{HTTPHeader("Content-Language")}} 和 {{HTTPHeader("Content-Location")}}。
+表示标头包括：{{HTTPHeader("Content-Type")}}、{{HTTPHeader("Content-Encoding")}}、{{HTTPHeader("Content-Language")}} 和 {{HTTPHeader("Content-Location")}}。
 
 ## 参见
 
