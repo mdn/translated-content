@@ -27,7 +27,7 @@ Dans le premier article de ce module, nous avons vu ce qui se passe lorsque vous
 
 Les <i lang="en">workers</i> vous donnent la possibilité d'exécuter certaines tâches dans un fil d'exécution différent. Vous pouvez donc démarrer la tâche, puis continuer avec d'autres traitements (comme la gestion des actions de l'utilisateur).
 
-Mais il y a un prix à payer pour cela. Avec le code parallélisé, vous ne savez jamais quand votre fil sera suspendu et l'autre fil aura une chance de s'exécuter. Ainsi, si les deux fils ont accès aux mêmes variables, il est possible qu'une variable change de manière inattendue à tout moment, ce qui provoque des bogues difficiles à trouver.
+Mais il y a un prix à payer pour cela. Avec le code parallélisé, vous ne savez jamais quand votre fil sera suspendu et quand l'autre fil aura une chance de s'exécuter. Ainsi, si les deux fils ont accès aux mêmes variables, il est possible qu'une variable change de manière inattendue à tout moment, ce qui provoque des bogues difficiles à trouver.
 
 Pour éviter ces problèmes sur le Web, votre code principal et votre code de travail n'ont jamais un accès direct aux variables de l'autre. Les travailleurs et le code principal s'exécutent dans des mondes complètement séparés et n'interagissent qu'en s'envoyant des messages. En particulier, cela signifie que les travailleurs ne peuvent pas accéder au DOM (la fenêtre, le document, les éléments de la page, etc.).
 
