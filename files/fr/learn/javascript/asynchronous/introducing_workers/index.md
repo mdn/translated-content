@@ -239,7 +239,7 @@ Il existe cependant d'autres types de <i lang="en">workers</i>&nbsp;:
 
 Dans cet article, nous avons présenté les <i lang="en">web workers</i>, qui permettent à une application web de décharger des tâches sur un fil d'exécution séparé. Le fil d'exécution principal et le <i lang="en">worker</i> ne partagent pas de variables directement, mais communiquent avec des messages, reçus par l'autre côté en tant qu'évènements `message`.
 
-Les travailleurs peuvent être un moyen efficace de garder l'application principale réactive, bien qu'ils ne puissent pas accéder à toutes les API auxquelles l'application principale peut accéder, et en particulier ne peuvent pas accéder au DOM.
+Bien qu'ils ne puissent pas utiliser toutes les API auxquelles le document a accès (le DOM notamment), les <i lang="en">workers</i> peuvent être un moyen efficace de garder l'application principale réactive.
 
 ## Voir aussi
 
