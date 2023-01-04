@@ -110,7 +110,7 @@ Le fichier `index.html` et les fichiers `style.css` sont déjà complets&nbsp;:
 
   <body>
 
-    <label for="quota">Total de nombres premiers:</label>
+    <label for="quota">Quantité de nombres premiers à générer :</label>
     <input type="text" id="quota" name="quota" value="1000000">
 
     <button id="generate">Générer des nombre premiers</button>
