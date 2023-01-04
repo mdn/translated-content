@@ -1,9 +1,8 @@
 ---
-title: Introducing workers
+title: Introduction aux workers
 slug: Learn/JavaScript/Asynchronous/Introducing_workers
-tags:
-  - JavaScript
-  - Learn
+l10n:
+  sourceCommit: ca269eb6b25f792eeb4f53bbca3e7be3b8c0f350
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
