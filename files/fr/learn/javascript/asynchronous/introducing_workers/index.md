@@ -99,7 +99,7 @@ Le fichier `index.html` et les fichiers `style.css` sont déjà complets&nbsp;:
 
 ```html
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="fr-FR">
   <head>
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width">
