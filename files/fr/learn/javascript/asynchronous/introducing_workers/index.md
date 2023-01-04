@@ -18,7 +18,7 @@ Dans ce dernier article de notre module sur le JavaScript asynchrone, nous prés
     </tr>
     <tr>
       <th scope="row">Objectif&nbsp;:</th>
-      <td>Comprendre comment utiliser les web workers.</td>
+      <td>Comprendre comment utiliser les <i lang="en">web workers</i>.</td>
     </tr>
   </tbody>
 </table>
