@@ -136,7 +136,7 @@ Les fichiers "main.js" et "generate.js" sont vides. Nous allons ajouter le code 
 
 Donc, tout d'abord, nous pouvons voir que le code du travailleur est conservé dans un script séparé du code principal. Nous pouvons également voir, en regardant "index.html" ci-dessus, que seul le code principal est inclus dans un élément `<script>`.
 
-Copiez maintenant le code suivant dans "main.js":
+Copiez maintenant le code suivant dans `main.js`&nbsp;:
 
 ```js
 // On crée un nouveau worker en lui injectant le code présent dans le fichier "generate.js"
