@@ -144,7 +144,7 @@ background-size: contain;
 
 <!---->
 
-### Как встраивать SVG при помощи {{htmlelement("iframe")}}
+### Как встраивать SVG при помощи \<iframe>
 
 Вы можете открывать ваши SVG изображения в браузере просто как веб-страницы. Таким образом встраивание SVG документа с помощью `<iframe>` выполняется как мы изучали ранее в главе [От \<object> к \<iframe> — другие технологии внедрения](/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
 
