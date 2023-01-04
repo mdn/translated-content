@@ -217,7 +217,7 @@ function generatePrimes(quota) {
 }
 N'oubliez pas que ce code s'exécute dès que le script principal crée le <i lang="en">worker</i>.
 
-La première chose que fait le travailleur est de commencer à écouter les messages du script principal. Il le fait en utilisant `addEventListener()`, qui est une fonction globale dans un travailleur. À l'intérieur du gestionnaire d'événements `message`, la propriété `data` de l'événement contient une copie de l'argument transmis par le script principal. Si le script principal a passé la commande `generate`, nous appelons `generatePrimes()`, en transmettant la valeur `quota` de l'événement de message.
+Le <i lang="en">worker</i> commence par écouter les messages provenant du script principal. Il le fait en utilisant `addEventListener()`, qui est une fonction globale dans un <i lang="en">worker</i>. À l'intérieur du gestionnaire d'évènements `message`, la propriété `data` de l'évènement contient une copie de l'argument transmis par le script principal. Si le script principal a passé la commande `generate`, nous appelons `generatePrimes()`, en transmettant la valeur `quota` des données de l'évènement `message`.
 
 La fonction `generatePrimes()` est comme la version synchrone, sauf qu'au lieu de renvoyer une valeur, nous envoyons un message au script principal lorsque nous avons terminé. Nous utilisons la fonction {{domxref("DedicatedWorkerGlobalScope/postMessage", "postMessage()")}} pour cela, qui comme `addEventListener()` est une fonction globale dans un worker. Comme nous l'avons déjà vu, le script principal écoute ce message et mettra à jour le DOM lorsque le message sera reçu.
 
