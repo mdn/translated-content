@@ -25,7 +25,7 @@ Dans ce dernier article de notre module sur le JavaScript asynchrone, nous prés
 
 Dans le premier article de ce module, nous avons vu ce qui se passe lorsque vous avez une tâche synchrone de longue durée dans votre programme&nbsp;: c'est toute la fenêtre ne répond plus. La raison principale de ce problème est l'exécution du programme au sein d'_un seul fil d'exécution_ (<i lang="en">thread</i>). Un _fil d'exécution_ est une séquence d'instructions suivie par un programme. Parce que le programme s'exécute sur un seul fil, il ne peut faire qu'une seule chose à la fois&nbsp;: il attend donc la réponse de notre appel synchrone de longue durée et ne peut rien faire d'autre.
 
-Les travailleurs vous donnent la possibilité d'exécuter certaines tâches dans un fil différent, vous pouvez donc démarrer la tâche, puis continuer avec d'autres traitements (comme la gestion des actions de l'utilisateur).
+Les <i lang="en">workers</i> vous donnent la possibilité d'exécuter certaines tâches dans un fil d'exécution différent. Vous pouvez donc démarrer la tâche, puis continuer avec d'autres traitements (comme la gestion des actions de l'utilisateur).
 
 Mais il y a un prix à payer pour cela. Avec le code parallélisé, vous ne savez jamais quand votre fil sera suspendu et l'autre fil aura une chance de s'exécuter. Ainsi, si les deux fils ont accès aux mêmes variables, il est possible qu'une variable change de manière inattendue à tout moment, ce qui provoque des bogues difficiles à trouver.
 
