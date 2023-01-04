@@ -167,7 +167,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 1. Tout d'abord, nous créons le <i lang="en">worker</i> en utilisant le constructeur [`Worker()`](/fr/docs/Web/API/Worker/Worker). Nous lui passons un lien pointant vers le script du <i lang="en">worker</i>. Dès que le <i lang="en">worker</i> est créé, le script correspondant est exécuté.
 
-- Ensuite, comme dans la version synchrone, nous ajoutons un gestionnaire d'événements `click` au bouton "Générer des nombres premiers". Mais maintenant, plutôt que d'appeler une fonction `generatePrimes()`, nous envoyons un message au travailleur en utilisant {{domxref("Worker/postMessage", "worker.postMessage()")}}. Ce message peut prendre un argument, et dans ce cas nous transmettons un objet JSON contenant deux propriétés :
+2. Ensuite, comme dans la version synchrone, nous ajoutons un gestionnaire d'événements `click` au bouton "Générer des nombres premiers". En revanche, plutôt que d'appeler une fonction `generatePrimes()`, nous envoyons un message au travailleur en utilisant [`postMessage()`](/fr/docs/Web/API/Worker/postMessage). L'argument de cette fonction est le message à transmettre. Ici nous transmettons un objet JSON contenant deux propriétés&nbsp;:
 
   - `commande` : une chaîne identifiant la chose que nous voulons que le travailleur fasse (au cas où notre travailleur pourrait faire plus d'une chose)
   - `quota` : le nombre de nombres premiers à générer.
