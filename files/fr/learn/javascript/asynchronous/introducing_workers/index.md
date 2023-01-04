@@ -228,15 +228,12 @@ La fonction `generatePrimes()` est comme la version synchrone, sauf qu'au lieu d
 
 ## Autres types de travailleurs
 
-Le travailleur que nous venons de créer était ce qu'on appelle un _travailleur dédié_. Cela signifie qu'il est utilisé par une seule instance de script.
+Le <i lang="en">worker</i> que nous venons de créer était ce qu'on appelle un _<i lang="en">worker</i> dédié_ (<i lang="en">dedicated worker</i> en anglais). Cela signifie qu'il est utilisé par une seule instance de script.
 
-Il existe cependant d'autres types de travailleurs :
+Il existe cependant d'autres types de <i lang="en">workers</i>&nbsp;:
 
-- [_travailleurs partagés_](https://developer.mozilla.org/fr/docs/Web/API/SharedWorker) can be shared by several different scripts running in different windows.
-- [_Service workers_](/en-US/docs/Web/API/Service_Worker_API) act like proxy servers, caching resources so that web applications can work when the user is offline. They're a key component of [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps).
-
-- Des [_travailleurs partagés_](/fr/docs/Web/API/SharedWorker) qui peuvent être partagés par plusieurs scripts différents s'exécutant dans différentes fenêtres.
-- Des [_travailleurs de service](fr/docs/Web/API/Service_Worker_API) qui agissent comme des serveurs proxy, mettant en cache les ressources afin que les applications Web puissent fonctionner lorsque l'utilisateur est hors ligne. Il s'agit d'un élément clé des [Applications Web progressives](/fr/docs/Web/Progressive_web_apps/Introduction).
+- Les [<i lang="en">workers</i> partagés](/fr/docs/Web/API/SharedWorker) qui peuvent être partagés par plusieurs scripts différents s'exécutant dans différentes fenêtres.
+- Les [<i lang="en">](fr/docs/Web/API/Service_Worker_API) qui agissent comme des serveurs intermédiaires, mettant en cache les ressources afin que les applications web puissent fonctionner même hors ligne. Il s'agit d'un élément clé des [applications web progressives (PWA)](/fr/docs/Web/Progressive_web_apps).
 
 ## Conclusion
 
