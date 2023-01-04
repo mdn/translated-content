@@ -45,7 +45,7 @@ Vous souvenez-vous du premier article où nous avions une page qui calculait les
 
 ### Le générateur de nombres premiers synchrone
 
-Jetons d'abord un autre regard sur le JavaScript de notre exemple précédent :
+Revoyons d'abord le code JavaScript de notre exemple précédent&nbsp;:
 
 ```js
 function generatePrimes(quota) {
