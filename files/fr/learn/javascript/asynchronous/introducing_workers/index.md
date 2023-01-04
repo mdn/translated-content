@@ -181,15 +181,15 @@ document.querySelector('#reload').addEventListener('click', () => {
 Passons maintenant au code du <i lang="en">worker</i>. Copiez le code suivant dans `generate.js`&nbsp;:
 
 ```js
-// Écoutez les messages du fil principal.
-// Si la commande de message est "generate", appelez `generatePrimes()`
+// On écoute les messages du fil principal.
+// Si la commande de message est "generate", on appelle `generatePrimes()`
 addEventListener("message", (message) => {
   if (message.data.command === 'generate') {
     generatePrimes(message.data.quota);
   }
 });
 
-// Générer des nombres premiers (très inefficacement)
+// On génère des nombres premiers (très inefficacement)
 function generatePrimes(quota) {
 
   function isPrime(n) {
@@ -211,12 +211,10 @@ function generatePrimes(quota) {
     }
   }
 
-  // Lorsque nous avons terminé, envoyez un message au fil principal,
-  // incluant le nombre de nombres premiers que nous avons générés.
+  // Lorsque c'est terminé, on envoie un message au fil principal
+  // incluant la quantité de nombres premiers générés.
   postMessage(primes.length);
 }
-```
-
 N'oubliez pas que cela s'exécute dès que le script principal crée le travailleur.
 
 La première chose que fait le travailleur est de commencer à écouter les messages du script principal. Il le fait en utilisant `addEventListener()`, qui est une fonction globale dans un travailleur. À l'intérieur du gestionnaire d'événements `message`, la propriété `data` de l'événement contient une copie de l'argument transmis par le script principal. Si le script principal a passé la commande `generate`, nous appelons `generatePrimes()`, en transmettant la valeur `quota` de l'événement de message.
