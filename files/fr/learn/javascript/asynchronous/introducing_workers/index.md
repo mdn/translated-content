@@ -90,12 +90,12 @@ Avec ce programme, après avoir appelé `generatePrimes()`, le navigateur ne ré
 
 Pour cet exemple, commencez par faire une copie locale des fichiers présents dans<https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/start>. Quatre fichiers sont dans ce répertoire&nbsp;:
 
-- index.html
-- style.css
-- main.js
-- generate.js
+- `index.html`
+- `style.css`
+- `main.js`
+- `generate.js`
 
-Le fichier "index.html" et les fichiers "style.css" sont déjà complets :
+Le fichier `index.html` et les fichiers `style.css` sont déjà complets&nbsp;:
 
 ```html
 <!DOCTYPE html>
