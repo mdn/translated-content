@@ -17,6 +17,6 @@ slug: Glossary/Payload_header
   - {{HTTPHeader("Content-Range")}}
   - {{HTTPHeader("Trailer")}}
   - {{HTTPHeader("Transfer-Encoding")}}
-  - {{Glossary("Representation header")}}
+  - {{Glossary("Representation header", "表示标头")}}
 
 - [RFC 7231, section 3.3: Payload semantics](https://datatracker.ietf.org/doc/html/rfc7231#section-3.3)
