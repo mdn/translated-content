@@ -88,7 +88,7 @@ Avec ce programme, après avoir appelé `generatePrimes()`, le navigateur ne ré
 
 ### Génération de nombres premiers avec un <i lang="en">worker</i>
 
-Pour cet exemple, commencez par faire une copie locale des fichiers sur <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/start>. Il y a quatre fichiers dans ce répertoire :
+Pour cet exemple, commencez par faire une copie locale des fichiers présents dans<https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/start>. Quatre fichiers sont dans ce répertoire&nbsp;:
 
 - index.html
 - style.css
