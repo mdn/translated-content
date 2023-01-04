@@ -225,7 +225,7 @@ La fonction `generatePrimes()` utilise le même algorithme que la version synchr
 >
 > Si vous rencontrez des problèmes lors de la création ou de l'exécution de l'exemple, vous pouvez voir la version finale sur <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished> et l'essayer en direct sur <https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished>.
 
-## Autres types de travailleurs
+## Les autres types de <i lang="en">workers</i>
 
 Le <i lang="en">worker</i> que nous venons de créer était ce qu'on appelle un _<i lang="en">worker</i> dédié_ (<i lang="en">dedicated worker</i> en anglais). Cela signifie qu'il est utilisé par une seule instance de script.
 
