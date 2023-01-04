@@ -39,9 +39,9 @@ Il existe trois types de <i lang="en">workers</i>&nbsp;:
 
 Dans cet article, nous allons voir un exemple décrivant le premier type, puis discuter brièvement des deux autres.
 
-## Utiliser les travailleurs Web
+## Utiliser les <i lang="en>web workers</i>
 
-Vous vous souvenez du premier article, où nous avions une page qui calculait les nombres premiers ? Nous allons utiliser un travailleur pour exécuter le calcul des nombres premiers, afin que notre page reste réactive aux actions des utilisateurs.
+Vous souvenez-vous du premier article où nous avions une page qui calculait les nombres premiers&nbsp;? Nous allons ici utiliser un <i lang="en">worker</i> pour calculer les nombres premiers afin que notre page reste réactive aux actions des utilisatrices et utilisateurs.
 
 ### Le générateur de nombre premiers synchrone
 
