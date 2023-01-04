@@ -88,7 +88,7 @@ Avec ce programme, après avoir appelé `generatePrimes()`, le navigateur ne ré
 
 ### Génération de nombres premiers avec un <i lang="en">worker</i>
 
-Pour cet exemple, commencez par faire une copie locale des fichiers présents dans<https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/start>. Quatre fichiers sont dans ce répertoire&nbsp;:
+Pour cet exemple, commencez par faire une copie locale des fichiers présents dans <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/start>. Quatre fichiers sont dans ce répertoire&nbsp;:
 
 - `index.html`
 - `style.css`
@@ -113,7 +113,7 @@ Le fichier `index.html` et les fichiers `style.css` sont déjà complets&nbsp;:
     <label for="quota">Quantité de nombres premiers à générer :</label>
     <input type="text" id="quota" name="quota" value="1000000">
 
-    <button id="generate">Générer des nombre premiers</button>
+    <button id="generate">Générer des nombres premiers</button>
     <button id="reload">Recharger</button>
 
     <textarea id="user-input" rows="5" cols="62">Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"</textarea>
