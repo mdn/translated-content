@@ -243,9 +243,9 @@ Bien qu'ils ne puissent pas utiliser toutes les API auxquelles le document a acc
 
 ## Voir aussi
 
-- [Using web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Using service workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Web workers API](fr/docs/Web/API/Web_Workers_API)
+- [Utiliser les <i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [L'API <i lang="en">Web Workers</i>](fr/docs/Web/API/Web_Workers_API)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
