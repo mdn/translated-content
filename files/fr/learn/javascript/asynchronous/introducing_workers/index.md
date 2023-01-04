@@ -170,7 +170,8 @@ document.querySelector('#reload').addEventListener('click', () => {
 2. Ensuite, comme dans la version synchrone, nous ajoutons un gestionnaire d'événements `click` au bouton "Générer des nombres premiers". En revanche, plutôt que d'appeler une fonction `generatePrimes()`, nous envoyons un message au travailleur en utilisant [`postMessage()`](/fr/docs/Web/API/Worker/postMessage). L'argument de cette fonction est le message à transmettre. Ici nous transmettons un objet JSON contenant deux propriétés&nbsp;:
 
   - `commande` : une chaîne identifiant la chose que nous voulons que le travailleur fasse (au cas où notre travailleur pourrait faire plus d'une chose)
-  - `quota` : le nombre de nombres premiers à générer.
+  - `quota`
+    - : La quantité de nombres premiers à générer.
 
 - Ensuite, nous ajoutons un gestionnaire d'événements `message` au travailleur. C'est ainsi que le travailleur peut nous dire quand il a terminé et nous transmettre toutes les données résultantes. Notre gestionnaire prend les données de la propriété `data` du message et les écrit dans l'élément de sortie (les données sont exactement les mêmes que `quota`, donc c'est un peu inutile, mais cela montre le principe).
 
