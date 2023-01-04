@@ -139,12 +139,12 @@ Donc, tout d'abord, nous pouvons voir que le code du travailleur est conservé d
 Copiez maintenant le code suivant dans "main.js":
 
 ```js
-// Créez un nouveau travailleur en lui donnant le code dans "generate.js"
+// On crée un nouveau worker en lui injectant le code présent dans le fichier "generate.js"
 const worker = new Worker('./generate.js');
 
-// Lorsque l'utilisateur clique sur "Générer des nombres premiers", envoyez un message au travailleur.
-// La commande de message est "generate", et le message contient également "quota",
-// qui est le nombre de nombres premiers à générer.
+// Lorsque la personne clique sur "Générer des nombres premiers", on envoie un message au worker.
+// La commande portée par le message est "generate", et le message contient également "quota"
+// qui indique la quantité de nombres premiers à générer.
 document.querySelector('#generate').addEventListener('click', () => {
   const quota = document.querySelector('#quota').value;
   worker.postMessage({
@@ -153,18 +153,17 @@ document.querySelector('#generate').addEventListener('click', () => {
   });
 });
 
-// Lorsque le travailleur renvoie un message au fil principal,
-// mettez à jour la zone de sortie avec un message pour l'utilisateur, y compris le nombre de
-//  nombres premiers qui ont été générés, extrait des données du message.
+// Lorsque le worker renvoie un message au fil principal. Grâce aux données
+// du message, on met à jour la zone de sortie avec un texte, indiquant aussi 
+// le quantité de nombres premiers générés.
 worker.addEventListener('message', (message) => {
-  document.querySelector('#output').textContent = `Génération terminée de ${message.data} nombres premiers!`;
+  document.querySelector('#output').textContent = `Génération de ${message.data} nombres premiers terminée !`;
 });
 
 document.querySelector('#reload').addEventListener('click', () => {
   document.querySelector('#user-input').value = 'Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"';
   document.location.reload();
 });
-```
 
 - Tout d'abord, nous créons le travailleur en utilisant le constructeur {{domxref("Worker/Worker", "Worker()")}}. Nous lui passons un lien pointant vers le script du travailleur. Dès que le travailleur est créé, le script  du travailleur est exécuté.
 
