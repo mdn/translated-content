@@ -223,7 +223,7 @@ La fonction `generatePrimes()` utilise le même algorithme que la version synchr
 
 > **Note :** Pour exécuter ce site, vous devrez exécuter un serveur web local, car les URL de type `file://` ne sont pas autorisées à charger des <i lang="en">workers</i>. Consultez notre guide pour [configurer un serveur de test local](/fr/docs/Learn/Common_questions/set_up_a_local_testing_server). Une fois que cela aura été fait, vous devriez pouvoir cliquer sur "Générer des nombres premiers" et faire en sorte que votre page principale reste réactive.
 >
-> Si vous rencontrez des problèmes lors de la création ou de l'exécution de l'exemple, vous pouvez voir la version finale sur https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished et l'essayer en direct sur https : https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished.
+> Si vous rencontrez des problèmes lors de la création ou de l'exécution de l'exemple, vous pouvez voir la version finale sur <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished> et l'essayer en direct sur <https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished>.
 
 ## Autres types de travailleurs
 
