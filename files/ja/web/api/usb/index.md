@@ -19,7 +19,7 @@ USB インターフェイスは、{{domxref("EventTarget")}} を継承します�
 
 なし
 
-## インスタンス・メソッド
+## インスタンスメソッド
 
 - {{domxref("USB.getDevices()")}} {{Experimental_Inline}}
   - : 接続されたペア設定済みのデバイスを表す {{domxref("USBDevice")}} の配列で解決する {{jsxref("Promise")}} を返します。
