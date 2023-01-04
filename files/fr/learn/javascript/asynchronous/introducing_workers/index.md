@@ -103,7 +103,7 @@ Le fichier `index.html` et les fichiers `style.css` sont déjà complets&nbsp;:
   <head>
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width">
-    <title>Nombre Premiers</title>
+    <title>Nombres premiers</title>
     <script src="main.js" defer></script>
     <link href="style.css" rel="stylesheet">
   </head>
