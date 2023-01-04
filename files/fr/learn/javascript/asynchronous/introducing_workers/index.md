@@ -176,7 +176,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 3. Ensuite, nous ajoutons un gestionnaire d'évènements `message` au <i lang="en">worker</i>. C'est ainsi qu'il peut nous dire quand il a terminé et transmettre les données résultantes. Notre gestionnaire prend les données de la propriété `data` du message et les écrit dans l'élément de sortie (les données sont exactement les mêmes que `quota`, donc c'est un peu inutile, mais cela illustre le principe).
 
-- Enfin, nous implémentons le gestionnaire d'événements `click` pour le bouton "Recharger". C'est exactement la même chose que dans la version synchrone.
+4. Enfin, nous implémentons le gestionnaire d'événements `click` pour le bouton "Recharger". C'est la même chose que dans la version synchrone.
 
 Passons maintenant au code du travailleur. Copiez le code suivant dans "generate.js":
 
