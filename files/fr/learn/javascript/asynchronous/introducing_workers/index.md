@@ -6,7 +6,7 @@ l10n:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
-Dans ce dernier article de notre module "JavaScript asynchrone", nous présenterons les _travailleurs_ (<i lang="en">workers</i> en anglais), qui vous permettent d'exécuter certaines tâches dans un {{Glossary("Thread", "fil")}} d'exécution séparé.
+Dans ce dernier article de notre module sur le JavaScript asynchrone, nous présenterons les <i lang="en">workers</i> (qu'on pourrait traduire en français par _travailleurs_, moins usité), qui permettent d'exécuter certaines tâches dans un [fil d'exécution](/fr/docs/Glossary/Thread) séparé.
 
 <table>
   <tbody>
