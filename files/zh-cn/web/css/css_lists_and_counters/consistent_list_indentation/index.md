@@ -12,21 +12,21 @@ original_slug: Web/Guide/CSS/Consistent_list_indentation
 
 首先，来看一个简单，单独的列表项目。该列表项目没有标记符号（或称之为“着重号”），并且没有被列表包裹起来。如下图图 1 所示，单独的列表项是无效的，简单且没有任何装饰。
 
-![Figure 1](/@api/deki/files/619/=Consistent-list-indentation-figure1.gif)
+![Figure 1](consistent-list-indentation-figure1.gif)
 
 红色的虚线边框代表列表项目内容区域的外边界。记住，从这一点上看，这个列表项目没有内边距和边框。如果我们再添加两个列表项目，我们得到下面的结果，如图 2 所示。
 
-![Figure 2](/@api/deki/files/620/=Consistent-list-indentation-figure2.gif)
+![Figure 2](consistent-list-indentation-figure2.gif)
 
 现在我们在外面加上父元素；这个例子中，我们使用一个无序列表 (i.e., `<ul>`)。根据 CSS 盒子模型，列表项目的盒子必须显示在其父元素的内容区域里。因为这里的父元素既没有 padding 也没有 margin，所以我们得到下面的结果，如图 3 所示。
 
-![Figure 3](/@api/deki/files/621/=Consistent-list-indentation-figure3.gif)
+![Figure 3](consistent-list-indentation-figure3.gif)
 
 这里，蓝色的虚线边框表示 \<ul> 元素内容区域的边缘。因为我们没有给 \<ul> 元素添加内边距，所以它的内容的包裹层紧贴在三个列表项外。
 
 现在我们来添加列表项目标记，由于这是一个无序列表，我们添加传统的实心圆“着重标记”，如下图图 4 所示。
 
-![Figure 4](/@api/deki/files/622/=Consistent-list-indentation-figure4.gif)
+![Figure 4](consistent-list-indentation-figure4.gif)
 
 可以看到，这些标记符号在\<ul>内容区域的外面，但这无关紧要。重要的是，这些标记被放到主要的\<li>元素盒子外面了。它们有点像列表项目的附件，在\<li>的内容区域外游荡，但依然依附于\<li>。
 
@@ -52,11 +52,11 @@ As it turns out, nobody seems to have used the first option. The second option w
 
 Let's look at the two approaches for a moment. In Internet Explorer and Opera, the lists are indented by setting a left margin of 40 pixels on the `<ul>` element. If we apply a background color to the `<ul>` element and leave the list item and `<ul>` borders in place, we get the result shown in Figure 5.
 
-![Figure 5](/@api/deki/files/623/=Consistent-list-indentation-figure5.gif)
+![Figure 5](consistent-list-indentation-figure5.gif)
 
 Gecko, on the other hand, sets a left _padding_ of 40 pixels for the `<ul>` element, so given the exact same styles as were used to produce Figure 5, loading the example into a Gecko-based browser gives us Figure 6.
 
-![Figure 6](/@api/deki/files/624/=Consistent-list-indentation-figure6.gif)
+![Figure 6](consistent-list-indentation-figure6.gif)
 
 As we can see, the markers remain attached to the `<li>` elements, no matter where they are. The difference is entirely in how the `<ul>` is styled. We can only see the difference if we try to set a background or border on the `<ul>` element.
 

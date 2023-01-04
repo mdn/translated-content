@@ -139,7 +139,7 @@ Cet attribut peut prendre trois valeurs différentes&nbsp;:
   - : Similaire à `Strict`, mais le navigateur envoie également le cookie lorsque la personne _navigue_ vers le site d'origine du cookie (même si elle vient d'un site différent), par exemple lorsqu'elle suit un lien depuis un site externe.
 - `None`.
   - : Les cookies sont envoyés pour les requêtes du même site et pour les autres sites, mais _uniquement dans des contextes sécurisés_ (autrement dit, si on a `SameSite=None`, l'attribut `Secure` doit également être présent).
-  
+
 Si aucun attribut `SameSite` n'est indiqué, la valeur par défaut est `Lax`.
 
 Voici un exemple&nbsp;:

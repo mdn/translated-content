@@ -237,7 +237,7 @@ JavaScript 有一个内置对象的标准库。发现更多关于内置对象，
 
 如果值已经是原始值，则此操作不会进行任何转换。对象按以下顺序调用它的 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（将 hint 作为 `default`）、`valueOf()` 和 `toString()` 方法，将其转换为原始值。注意，原始值转换会在 `toString()` 方法之前调用 `valueOf()` 方法，这与[强制数字类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#强制数字类型转换)的行为相似，但与[强制字符串类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)不同。
 
-`[@@toPrimitive]()` 方法，如果存在，则必须返回原始值——返回对象，会导致 {{jsxref("TypeError")}}。对于 `valueOf()` 和 `toString()`，如果其中一个返回对象，则忽略其返回值，从而使用另一个的返回值；如果两者都不存在，或者两者都返回一个原始值，则抛出 {{jsxref("TypeError")}}。例如，以下代码：
+`[@@toPrimitive]()` 方法，如果存在，则必须返回原始值——返回对象，会导致 {{jsxref("TypeError")}}。对于 `valueOf()` 和 `toString()`，如果其中一个返回对象，则忽略其返回值，从而使用另一个的返回值；如果两者都不存在，或者两者都没有返回一个原始值，则抛出 {{jsxref("TypeError")}}。例如，以下代码：
 
 ```js
 console.log({} + []); // "[object Object]"

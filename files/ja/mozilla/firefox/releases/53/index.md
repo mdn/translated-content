@@ -47,7 +47,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 - 非標準の [String ジェネリック](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_generic_methods) について、コンソールで非推奨の警告を表示するようになりました。将来削除する予定ですので、今後は使用しないでください! ({{bug(1319926)}})
 - {{jsxref("TypedArray")}} オブジェクトの静的なプロパティ `length` の値を、ES2016 に従って 3 から 0 に変更しました ({{bug(1317306)}})。
 - {{jsxref("DataView")}} で {{jsxref("SharedArrayBuffer")}} が使用可能になりました ({{bug(1246597)}})。
-- 旧版の仕様書では、{{jsxref("SharedArrayBuffer")}} オブジェクトは [structured clone](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) の間に、明示的に転送しなければなりませんでした。新しい仕様では [移譲可能なオブジェクト](/ja/docs/Web/API/Transferable) ではなくなり、転送リストに含まれてはなりません。新しい動作について以前はコンソールで警告を表示するだけでしたが、今後はエラーが発生します ({{bug(1302037)}})。
+- 旧版の仕様書では、{{jsxref("SharedArrayBuffer")}} オブジェクトは[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)の間に、明示的に転送しなければなりませんでした。新しい仕様では[移譲可能なオブジェクト](/ja/docs/Web/API/Transferable)ではなくなり、転送リストに含まれてはなりません。新しい動作について以前はコンソールで警告を表示するだけでしたが、今後はエラーが発生します ({{bug(1302037)}})。
 - {{jsxref("ArrayBuffer")}} の長さを、{{jsxref("Number.MAX_SAFE_INTEGER")}}に制限しました (>= 2 \*\* 53) ({{bug(1255128)}})。
 - {{jsxref("Error")}} やほかのネイティブエラーオブジェクトのプロトタイプ ({{jsxref("RangeError")}} など) が、固有の Error オブジェクトではなく通常のオブジェクトになりました (特に、`Object.prototype.toString.call(Error.prototype)` は `"[object Error]"` ではなく `"[object Object]"` になります) ({{bug(1213341)}})。
 

@@ -19,8 +19,8 @@ slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 - {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
   - : 에러 이름, 기본값`AggregateError`.
 - `AggregateError`: `errors`
-  - : `AggregateError`와 함께 인스턴스화되는 반복 가능한 객체를 반영하는 배열. 예를 들면 `AggregateError`가 {{JSxRef("AggregateError/AggregateError", "AggregateError()")}} 생성자로 생성된다면, 반복가능한 어떤 객체로든 만들어진 배열이 생성자에 첫 번째 인자로 전달됩니다.  
-  
+  - : `AggregateError`와 함께 인스턴스화되는 반복 가능한 객체를 반영하는 배열. 예를 들면 `AggregateError`가 {{JSxRef("AggregateError/AggregateError", "AggregateError()")}} 생성자로 생성된다면, 반복가능한 어떤 객체로든 만들어진 배열이 생성자에 첫 번째 인자로 전달됩니다.
+
 ## 예제
 
 ### AggregateError 다루기

@@ -8,7 +8,7 @@ original_slug: Web/HTML/Elemento/applet
 
 - Permite añadir un applet Java en un documento HTML. Es un elemento [Desaprobado](/es/HTML/Elemento/Tipos_de_elementos#Desaprobado) En su lugar debe usarse el elemento [object](/es/HTML/Elemento/object), su uso solo es válido declarando el dtd transicional.
   - : **Sus etiquetas son**: \<applet> y \</applet> (ambas obligatorias)
-  
+
     **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
     **Está definido como**: [Elemento especial](/es/HTML/Elemento/Tipos_de_elementos#Especiales). [Desaprobado](/es/HTML/Elemento/Tipos_de_elementos#Desaprobado)

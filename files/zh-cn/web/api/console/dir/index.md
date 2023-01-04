@@ -9,7 +9,7 @@ slug: Web/API/Console/dir
 
 {{AvailableInWorkers}}
 
-![console-dir.png](/@api/deki/files/6081/=console-dir.png)
+![console-dir.png](console-dir.png)
 
 ## 语法
 
