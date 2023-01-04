@@ -2,12 +2,12 @@
 title: IDBLocaleAwareKeyRange
 slug: Web/API/IDBLocaleAwareKeyRange
 l10n:
-  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
+  sourceCommit: 59a0a003281f70f55ac524bb3c370b19f0a7a14a
 ---
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
-[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) の **`IDBLocaleAwareKeyRange`** は、{{domxref("IDBKeyRange")}} の Firefox 固有バージョンです。全く同じように動作し、同じプロパティとメソッドを持ちますが、`locale` の値を指定して生成したインデックスを表す {{domxref("IDBIndex")}} オブジェクトとともに使用することを意図しています。([`createIndex()` の省略可能な引数](/ja/docs/Web/API/IDBObjectStore/createIndex#%E5%BC%95%E6%95%B0)を参照してください) すなわち、[ロケールを意識した並べ替え](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB#%E3%83%AD%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%92%E6%84%8F%E8%AD%98%E3%81%97%E3%81%9F%E4%B8%A6%E3%81%B9%E6%9B%BF%E3%81%88)が有効になっています。
+[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) の **`IDBLocaleAwareKeyRange`** は、{{domxref("IDBKeyRange")}} の Firefox 固有バージョンです。全く同じように動作し、同じプロパティとメソッドを持ちますが、`locale` の値を指定して生成したインデックスを表す {{domxref("IDBIndex")}} オブジェクトとともに使用することを意図しています。([`createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数 [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) を参照してください) すなわち、[ロケールを意識した並べ替え](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB#%E3%83%AD%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%92%E6%84%8F%E8%AD%98%E3%81%97%E3%81%9F%E4%B8%A6%E3%81%B9%E6%9B%BF%E3%81%88)が有効になっています。
 
 ## インスタンスメソッド
 
