@@ -43,7 +43,7 @@ Dans cet article, nous allons voir un exemple décrivant le premier type, puis d
 
 Vous souvenez-vous du premier article où nous avions une page qui calculait les nombres premiers&nbsp;? Nous allons ici utiliser un <i lang="en">worker</i> pour calculer les nombres premiers afin que notre page reste réactive aux actions des utilisatrices et utilisateurs.
 
-### Le générateur de nombre premiers synchrone
+### Le générateur de nombres premiers synchrone
 
 Jetons d'abord un autre regard sur le JavaScript de notre exemple précédent :
 
