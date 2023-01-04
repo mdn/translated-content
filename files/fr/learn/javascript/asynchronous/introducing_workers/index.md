@@ -132,7 +132,7 @@ textarea {
 }
 ```
 
-Les fichiers "main.js" et "generate.js" sont vides. Nous allons ajouter le code principal à "main.js" et le code worker à "generate.js".
+Les fichiers `main.js` et `generate.js` sont vides. Nous allons ajouter le code s'exécutant dans le fil principal à `main.js` d'une part et celui qui s'exécute via le <i lang="en">worker</i> à `generate.js` d'autre part.
 
 Donc, tout d'abord, nous pouvons voir que le code du travailleur est conservé dans un script séparé du code principal. Nous pouvons également voir, en regardant "index.html" ci-dessus, que seul le code principal est inclus dans un élément `<script>`.
 
