@@ -178,7 +178,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 4. Enfin, nous implémentons le gestionnaire d'événements `click` pour le bouton "Recharger". C'est la même chose que dans la version synchrone.
 
-Passons maintenant au code du travailleur. Copiez le code suivant dans "generate.js":
+Passons maintenant au code du <i lang="en">worker</i>. Copiez le code suivant dans `generate.js`&nbsp;:
 
 ```js
 // Écoutez les messages du fil principal.
