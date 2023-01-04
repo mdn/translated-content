@@ -84,7 +84,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 });
 ```
 
-Dans ce programme, après avoir appelé `generatePrimes()`, le programme ne répond plus du tout.
+Avec ce programme, après avoir appelé `generatePrimes()`, le navigateur ne répond plus du tout.
 
 ### Génération de nombres premiers avec un <i lang="en">worker</i>
 
