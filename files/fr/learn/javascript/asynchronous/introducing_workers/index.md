@@ -17,7 +17,7 @@ Dans ce dernier article de notre module sur le JavaScript asynchrone, nous prés
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif:</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Comprendre comment utiliser les web workers.</td>
     </tr>
   </tbody>
