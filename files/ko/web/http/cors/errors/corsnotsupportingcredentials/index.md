@@ -24,7 +24,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 
 대신 서버의 동작을 조정해야 하는 경우 클라이언트가 로드되는 원본에 대한 액세스 권한을 부여하도록 `Access-Control-Allow-Origin`값을 변경해야 합니다.
 
-## 더 보기
+## 같이 보기
 
 - [CORS 에러](/en-US/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
