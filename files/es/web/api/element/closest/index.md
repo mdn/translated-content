@@ -9,18 +9,18 @@ l10n:
 
 {{APIRef('DOM')}}
 
-El método **`closest()`** de la interfaz {{domxef("Element")}} recorre el elemento y sus padres (dirigiéndose hacia la raiz del documento) hasta encontrar un nodo que coincida con el [CSS selector](/es/docs/Learn/CSS/Building_blocks/Selectors) especificado.
+El método **`closest()`** de la interfaz {{domxref("Element")}} recorre el elemento y sus padres (dirigiéndose hacia la raiz del documento) hasta encontrar un nodo que coincida con el [CSS selector](/es/docs/Learn/CSS/Building_blocks/Selectors) especificado.
 
 ## Sintaxis
 
-```js-nonlint
+```js-nolint
 closest(selectors)
 ```
 
 ### Parámetros
 
 - `selectors`
-  - : Una cadena de [CSS selector](/es/docs/Learn/CSS/Building_blocks/Selectors) con la que comparar el {{domxref("Element")}} y sus ancestros
+  - : Una cadena de [selector de CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) válido para comparar el {{domxref("Element","Elemento")}} y sus ancestros.
 
 ### Valor de retorno
 
@@ -55,13 +55,13 @@ const el = document.getElementById('div-03');
 // El ancestro más cercano con el id de "div-02"
 console.log(el.closest('#div-02')); // <div id="div-02">
 
-//  div antepasado más cercano que es un div dentro de un div
+//  El ancestro más cercano que es un div dentro de un div
 console.log(el.closest('div div')); // <div id="div-03">
 
-// El ancestro más cercano que es un div y tiene un artículo padre
+// El ancestro más cercano que es un div y tiene un padre article
 console.log(el.closest("article > div")); // <div id="div-01">
 
-// El antepasado más cercano que no sea un div
+// El ancestro más cercano que no sea un div
 console.log(el.closest(":not(div)")); // <article>
 ```
 
@@ -79,5 +79,5 @@ console.log(el.closest(":not(div)")); // <article>
 
 ## Véase también
 
-- [CSS selectors reference](/es/docs/Web/CSS/CSS_Selectors)
+- [Referencia de selectores CSS](/es/docs/Web/CSS/CSS_Selectors)
 - Otros métodos {{domxref("Element")}} que toman selectores: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}} y {{domxref("Element.matches()")}}.
