@@ -141,7 +141,7 @@ HTTP 请求的一个例子：
 - 要获取的资源的路径，通常是上下文中就很明显的元素资源的 URL，它没有 {{glossary("protocol")}}（`http://`），{{glossary("domain")}}（`developer.mozilla.org`），或是 TCP 的 {{glossary("port")}}（HTTP 一般在 80 端口）。
 - HTTP 协议版本号。
 - 为服务端表达其他信息的可选[标头](/zh-CN/docs/Web/HTTP/Headers)。
-- 对于一些像 POST 这样的方法，报文的 body 就包含了发送的资源，这与响应报文的 body 类似。
+- 对于一些像 POST 这样的方法，报文的主体（body）就包含了发送的资源，这与响应报文的主体类似。
 
 ### 响应
 
