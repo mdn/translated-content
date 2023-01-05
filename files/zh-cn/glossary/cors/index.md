@@ -7,7 +7,7 @@ slug: Glossary/CORS
 
 [同源安全策略](/zh-CN/docs/Web/Security/Same-origin_policy)默认阻止“跨源”获取资源。但是 CORS 给了 web 服务器这样的权限，即服务器可以选择，允许跨源请求访问到它们的资源。
 
-### CORS 标头
+## CORS 标头
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : 指示响应的资源是否可以被给定的来源共享。
