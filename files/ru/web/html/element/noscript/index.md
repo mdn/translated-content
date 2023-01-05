@@ -1,5 +1,5 @@
 ---
-title: <noscript>
+title: <noscript> - элемент для страниц с отключенным JS
 slug: Web/HTML/Element/noscript
 translation_of: Web/HTML/Element/noscript
 ---
@@ -8,15 +8,15 @@ translation_of: Web/HTML/Element/noscript
 
 ## Резюме
 
-Элемент HTML** `<noscript>` **определяет секцию html кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
+Элемент HTML **`<noscript>`** определяет секцию HTML кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
 
-- _[Content categories](/ru/docs/HTML/Content_categories)_ [Metadata content](/ru/docs/HTML/Content_categories#Metadata_content), [flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).
-- _Permitted content_ When scripting is disabled and when it is a descendant of the {{HTMLElement("head")}} element: in any order, zero or more {{HTMLElement("link")}} elements, zero or more {{HTMLElement("style")}} elements, and zero or more {{HTMLElement("meta")}} elements.
-  When scripting is disabled and when it isn't a descendant of the {{HTMLElement("head")}} element: any transparent content, but no `<noscript>` element must be among its descendants.
-  Otherwise: flow content or phrasing content.
-- _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), if there are no ancestor `<noscript>` element, or in a {{HTMLElement("head")}} element (but only for an HTML document), here again if there are no ancestor `<noscript>` element.
-- _DOM interface_ {{domxref("HTMLElement")}}
+- _[Категории контента](/ru/docs/HTML/Content_categories)_ [Содержание метаданных](/ru/docs/HTML/Content_categories#Metadata_content), [Содержание потока](/ru/docs/HTML/Content_categories#Flow_content), [Формулировка содержания](/ru/docs/HTML/Content_categories#Phrasing_content).
+- _Разрешенный контент_ Когда скриптинг отключен и когда он является потомком элемента {{HTMLElement("head")}}: в любом порядке, ноль или более элементов {{HTMLElement("link")}}, ноль или более элементов {{HTMLElement("style")}} и ноль или более элементов {{HTMLElement("meta")}}.
+Когда скриптинг отключен и когда он не является потомком элемента {{HTMLElement("head")}}: любое прозрачное содержимое, но среди его потомков не должно быть элемента `<noscript>`.
+  В противном случае: потоковое содержимое или формулировка содержимого.
+- _Пропуск тега_ {{no_tag_omission}}
+- _Разрешенные родительские элементы_ Любой элемент, который принимает [формулировку содержимого](/ru/docs/HTML/Content_categories#Phrasing_content), если нет элемента-предка `<noscript>` или в элементе {{HTMLElement("head")}} (но только для HTML-документа), здесь снова, если нет элемента-предка `<noscript>`.
+- _DOM интерфейс_ {{domxref("HTMLElement")}}
 
 ## Атрибуты
 
@@ -26,10 +26,10 @@ translation_of: Web/HTML/Element/noscript
 
 ```html
 <noscript>
-  <!-- anchor linking to external file -->
-  <a href="http://www.mozilla.com/">External Link</a>
+  <!-- привязка к внешнему файлу -->
+  <a href="http://www.mozilla.com/">Внешняя ссылка</a>
 </noscript>
-<p>Rocks!</p>
+<p>Камни!</p>
 ```
 
 ### Пример с включённым JavaScript
@@ -42,7 +42,7 @@ Rocks!
 
 Rocks!
 
-## Specifications
+## Спецификации
 
 | Specification                                                                                                        | Status                           | Comment |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
@@ -50,6 +50,6 @@ Rocks!
 | {{SpecName('HTML5 W3C', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
 | {{SpecName('HTML4.01', 'interact/scripts.html#h-18.3.1', '&lt;noscript&gt;')}}             | {{Spec2('HTML4.01')}}     |         |
 
-## Browser compatibility
+## Совместимость с браузером
 
 {{Compat}}
