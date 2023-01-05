@@ -1,5 +1,5 @@
 ---
-title: <noscript> - элемент для страниц с отключенным JS
+title: <noscript> - элемент для браузеров с отключенным JS
 slug: Web/HTML/Element/noscript
 translation_of: Web/HTML/Element/noscript
 ---
