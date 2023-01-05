@@ -82,4 +82,3 @@ console.log(el.closest(":not(div)")); // <article>
 
 - [CSS selectors reference](/es/docs/Web/CSS/CSS_Selectors)
 - Otros métodos {{domxref("Element")}} que toman selectores: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}} y {{domxref("Element.matches()")}}.
-
