@@ -20,7 +20,7 @@ closest(selectors)
 ### Parámetros
 
 - `selectors`
-  - : Una cadena de [selector de CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) válido para comparar el {{domxref("Element","Elemento")}} y sus ancestros.
+  - : Una cadena de [selector de CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) válido para comparar {{domxref("Element")}} y sus ancestros.
 
 ### Valor de retorno
 
