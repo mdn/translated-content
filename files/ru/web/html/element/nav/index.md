@@ -1,5 +1,5 @@
 ---
-title: <nav> - элемент навигации
+title: <nav> - Элемент навигации
 slug: Web/HTML/Element/nav
 tags:
   - Element
