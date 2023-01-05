@@ -122,11 +122,41 @@ draw();
 
 ### `rotate` 的例子
 
-![](/@api/deki/files/103/=Canvas_rotate.png)
-
-在这个例子里，见右图，我用 `rotate`方法来画圆并构成圆形图案。当然你也可以分别计算出 _x_ 和 _y_ 坐标（`x = r*Math.cos(a); y = r*Math.sin(a)`）。这里无论用什么方法都无所谓的，因为我们画的是圆。计算坐标的结果只是旋转圆心位置，而不是圆本身。即使用 `rotate`旋转两者，那些圆看上去还是一样的，不管它们绕中心旋转有多远。
+在这个例子里，我们将会使用 `rotate()` 方法来画圆并构成圆形图案。当然你也可以分别计算出 _x_ 和 _y_ 坐标（`x = r*Math.cos(a); y = r*Math.sin(a)`）。这里无论用什么方法都无所谓的，因为我们画的是圆。计算坐标的结果只是旋转圆心位置，而不是圆本身。即使用 `rotate`旋转两者，那些圆看上去还是一样的，不管它们绕中心旋转有多远。
 
 这里我们又用到了两层循环。第一层循环决定环的数量，第二层循环决定每环有多少个点。每环开始之前，我都保存一下 canvas 的状态，这样恢复起来方便。每次画圆点，我都以一定夹角来旋转 canvas，而这个夹角则是由环上的圆点数目的决定的。最里层的环有 6 个圆点，这样，每次旋转的夹角就是 360/6 = 60 度。往外每一环的圆点数目是里面一环的 2 倍，那么每次旋转的夹角随之减半。
+
+```js
+function draw() {
+  const ctx = document.getElementById("canvas").getContext("2d");
+
+  // left rectangles, rotate from canvas origin
+  ctx.save();
+  // blue rect
+  ctx.fillStyle = "#0095DD";
+  ctx.fillRect(30, 30, 100, 100);
+  ctx.rotate((Math.PI / 180) * 25);
+  // grey rect
+  ctx.fillStyle = "#4D4E53";
+  ctx.fillRect(30, 30, 100, 100);
+  ctx.restore();
+
+  // right rectangles, rotate from rectangle center
+  // draw blue rect
+  ctx.fillStyle = "#0095DD";
+  ctx.fillRect(150, 30, 100, 100);
+
+  ctx.translate(200, 80); // translate to rectangle center
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
+  ctx.rotate((Math.PI / 180) * 25); // rotate
+  ctx.translate(-200, -80); // translate back
+
+  // draw grey rect
+  ctx.fillStyle = "#4D4E53";
+  ctx.fillRect(150, 30, 100, 100);
+}
+```
 
 ```html hidden
 <canvas id="canvas" width="300" height="200"></canvas>
@@ -136,28 +166,7 @@ draw();
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
-
-```js
-function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.translate(75,75);
-
-  for (var i=1;i<6;i++){ // Loop through rings (from inside to out)
-    ctx.save();
-    ctx.fillStyle = 'rgb('+(51*i)+','+(255-51*i)+',255)';
-
-    for (var j=0;j<i*6;j++){ // draw individual dots
-      ctx.rotate(Math.PI*2/(i*6));
-      ctx.beginPath();
-      ctx.arc(0,i*12.5,5,0,Math.PI*2,true);
-      ctx.fill();
-    }
-
-    ctx.restore();
-  }
-}
-```
+{{EmbedLiveSample("rotate 的例子", "310", "260", "rotate.png")}}
 
 ## 缩放 Scaling
 
