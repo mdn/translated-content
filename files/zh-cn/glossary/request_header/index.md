@@ -7,7 +7,7 @@ slug: Glossary/Request_header
 
 根据规范，并非所有可以出现在请求中的标头都称为请求标头。例如，{{HTTPHeader("Content-Type")}} 标头被成为{{glossary("representation header", "表示标头")}}。
 
-此外，[跨源资源共享（CORS）](/zh-CN/docs/Glossary/CORS)定义了一个叫做 {{glossary('simple header', 'simple header')}} 的集合，它是请求头集合的一个子集。如果某次请求是只包含 {{glossary('simple header', 'simple header')}} 的话，则被认为是简单请求，不会触发请求预检（{{glossary("preflight request", "preflight")}}）。
+此外，[跨源资源共享（CORS）](/zh-CN/docs/Glossary/CORS)定义了一个叫做 {{glossary('simple header', 'simple header')}} 的集合，它是请求头集合的一个子集。如果某次请求是只包含 {{glossary('simple header', '简单标头')}} 的话，则被认为是简单请求，不会触发{{glossary("preflight request", "预检")}}请求。
 
 以下展示了 HTTP 消息在 {{HTTPMethod("GET")}} 请求之后的请求标头：
 
