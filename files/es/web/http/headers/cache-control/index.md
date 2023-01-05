@@ -63,63 +63,74 @@ Las directivas `Cache-Control` estándar están definidas a continuación.
 | -                | `stale-while-revalidate` |
 | `stale-if-error` | `stale-if-error`         |
 
-Nota: Comprueba la [tabla de compatibilidad](#browser_compatibility) para su soporte; los agentes de usuario que no las reconozcan podrían ignorarlas.
+Nota: Comprueba la [tabla de compatibilidad](#browser_compatibility) para su soporte; los agentes de usuario que no las reconozcan deberían ignorarlas.
 
 ## Vocabulario
 
-Los siguientes términos son usados en este documento; muchos pero no todos provienen de la especificación.
+Los siguientes términos son usados en este documento; algunos provienen de la especificación.
 
-- `Caché(HTTP)`
-  - : Implementación la cual mantiene peticiones y respuestas para reusarlas en peticiones posteriores. Puede ser tanto una cache privada como una compartida.
+- `Caché (HTTP)`
+  - : Implementación que mantiene peticiones y respuestas para reusarlas en peticiones posteriores. Puede ser tanto una cache privada como una compartida.
 - `Caché compartida`
   - : Caché existente entre el servidor de origen y los clientes (p. ej. Proxy, CDN). Almacena una sola respuesta para reutilizarla en multiples usuarios — por tanto los desarrolladores deberían evitar que el almacenamiento de contenidos personalizados sea cacheado en la caché compartida.
 - `Caché privada`
-  - : Caché existente en el cliente. También conocida como _caché local_, o _caché del navegador_, etc. Puede almacenar y reutilizar contenido personalizado para un único usuario.
+  - : Caché existente en el cliente. También conocida como _caché local_, o _caché del navegador_. Puede almacenar y reutilizar contenido personalizado para un único usuario.
 - `Respuesta almacenada`
-  - : Almacena una respuesta en caches cuando es cacheable. Pero no siempre es reutilizada en ese momento. (Normalmente "caché" significa almacenar una respuesta).
+  - : Almacena una respuesta en caches cuando es cacheable. Pero no siempre es reutilizada tal cual. (Normalmente "caché" significa almacenar una respuesta).
 - `Respuesta reutilizada`
-  - : Reutiliza respuestas cacheadas para las subsiguientes peticiones,
+  - : Reutiliza respuestas cacheadas para las subsiguientes peticiones.
 - `Revalidar respuesta`
-  - : Pregunta al servidor de origen si una respuesta almacenada sigue siendo reciente o no. Normalmente se realiza a través de una petición condicionada.
+  - : Pregunta al servidor de origen si una respuesta almacenada sigue siendo reciente o no ([fresh o stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)). Normalmente se realiza a través de una petición condicionada.
 - `Respuesta reciente`
-  - : Indica que una respuesa es reciente. Esto normalmente significa que la respuesta puede ser reutilizada para las subsiguientes peticiones, dependiendo de las directivas de petición.
+  - : Indica que una respuesa es reciente ([fresh](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)). Esto normalmente significa que la respuesta puede ser reutilizada para las subsiguientes peticiones, dependiendo de las directivas de petición.
 - `Respuesta pasada`
-  - : Indica que la respuestá está pasada. Normalmente significa que la respuesta ya no puede ser reutilizada. El almacenamiento caché no requiere que las respuestas pasadas sean eliminada inmediatamente, por que la revalidación puede cambiar la respuesta de pasada a reciente de nuevo.
+  - : Indica que la respuestá está pasada ([stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)). Normalmente significa que la respuesta ya no puede ser reutilizada. El almacenamiento caché no requiere que las respuestas pasadas sean eliminada inmediatamente, por que la revalidación puede cambiar la respuesta de pasada a reciente de nuevo.
 - `Edad`
-  - : El tiempo desde que una respuesta fue generada. Es un criterio para ver si una respuesta es reciente o pasada.
+  - : El tiempo desde que una respuesta fue generada. Es un criterio para ver si una respuesta es reciente o pasada ([fresh o stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)).
 
 ## Directivas
 
-Esta sección lista directivas que afectan al almacenamiento caché — directivas respuestas y directivas de peticiones.
+Esta sección lista directivas que afectan al almacenamiento caché — directivas de respuestas y directivas de peticiones.
 
-### `max-age`
+### Response Directives
+
+#### `max-age`
 
 La directiva de respuesta `max-age=N` indica que la respuesta es reciente hasta los _N_ segundos posteriores a su generación.
 
-```
+```http
 Cache-Control: max-age=604800
 ```
 
 Indica que las cachés pueden almacenar esta respuesta y reutilizarla para las peticiones subsecuentes mientras estas son recientes.
 
-Ten en cuenta que `max-age` no es el tiempo pasado desde que la respuesta fue recibida, sino el tiempo desde que la respuesta fue generada en el servidor de origen. Por tanto si la(s) otra(s) caché(s) — en la ruta de red son cogidas por las respuesta — la almacenan por 100 segundos (indicado usando el campo de la cabecera `Age` en la respuesta), el navegador descontará 100 segundos del periodo de validez de la caché respuesta.
+Ten en cuenta que `max-age` no es el tiempo pasado desde que la respuesta fue recibida, sino el tiempo desde que la respuesta fue generada en el servidor de origen.
+Por tanto si otra(s) caché(s) — en la ruta de red de la respuesta — la almacenan por 100 segundos (indicado usando el campo de la cabecera `Age` en la respuesta), el navegador descontará 100 segundos del periodo de validez de la caché de respuesta.
 
-```
+```http
 Cache-Control: max-age=604800
 Age: 100
 ```
 
-### `no-cache`
+#### `s-maxage`
+
+La directiva de respuesta `s-maxage` también indica por cuánto tiempo la respuesta es reciente (similar a `max-age`) — pero es específica para cachés compartidas, e ignorarán `max-age` cuando está presente.
+
+```http
+Cache-Control: s-maxage=604800
+```
+
+#### `no-cache`
 
 La driectiva de respuesta `no-cache` indica que la respuesta puede ser almacenada en cachés, pero debe ser validada con el servidor de origen antes de cada reutilización — incluso cuando la caché está desconectada del servidor de origen.
 
-```
+```http
 Cache-Control: no-cache
 ```
 
-Si quieres que las cachés siempre comprueben la actualización de contenido cuando reúsen el contenido almacenado, `no-cache` es la directiva a usar. Esta obliga a la cache a revalidarla con cada petición con el servidor de origen.
+Si quieres que las cachés siempre comprueben la actualización de contenido cuando reúsen el contenido almacenado, `no-cache` es la directiva a usar. Esta obliga a la cache a revalidarla con cada petición al servidor de origen.
 
-Ten en cuenta que `no-cache` no significa "no almacenes". `no-cache` permite almacenar una respuesta, pero les obliga a revalidarla antes de reusarla. En caso de que "no almacenes" sea lo que estabas buscando, entonces `no-store` es la directiva a usar.
+Ten en cuenta que `no-cache` no significa "no almacenar". `no-cache` permite almacenar una respuesta, pero les obliga a revalidarla antes de reusarla. En caso de que "no almacenar" sea lo que estabas buscando, entonces `no-store` es la directiva a usar.
 
 #### `must-revalidate`
 
@@ -127,7 +138,7 @@ La respuesta `must-revalidate` indica que la respuesta puede ser usada mientras 
 
 Tipicamente, `must-revalidate` es usada con `max-age`
 
-```
+```http
 Cache-Control: max-age=604800, must-revalidate
 ```
 
