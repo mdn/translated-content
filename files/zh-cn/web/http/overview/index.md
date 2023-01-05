@@ -167,4 +167,4 @@ HTTP 响应的一个例子：
 
 HTTP 是一种简单可扩展的协议，其 Client-Server 的结构以及轻松扩展标头信息的能力使得 HTTP 可以和 Web 共同发展。
 
-即使 HTTP/2 为了提高性能将 HTTP 报文嵌入到帧中这一举措增加了复杂度，但是从 Web 应用的角度看，报文的基本结构没有变化，从 HTTP/1.0 发布起就是这样的结构。会话流依旧简单，通过一个简单的 [HTTP 消息监视器](/zh-CN/docs/Tools/Network_Monitor)就可以查看和纠错。
+即使 HTTP/2 为了提高性能将 HTTP 报文嵌入到帧中这一举措增加了复杂度，但是从 Web 应用的角度看，报文的基本结构没有变化，从 HTTP/1.0 发布起就是这样的结构。会话流依旧简单，通过一个简单的 [HTTP 消息监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)就可以查看和纠错。
