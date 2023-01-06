@@ -27,7 +27,7 @@ onmouseleave = (event) => { };
 
 ## 事件属性
 
-_此接口也从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 集成属性。_
+_此接口也从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承属性。_
 
 - {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
   - : 在鼠标事件触发时，如果 <kbd>alt</kbd> 键被按下，则返回 `true`。
