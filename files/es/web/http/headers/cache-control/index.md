@@ -346,40 +346,22 @@ El cliente indica que la caché debe obtener una respuesta ya almacenada en cach
 
 ### Prevención del almacenamiento
 
-clear
-
-volume_up
-4.213 / 5.000
-Resultados de traducción
-
-### `sin transformación`
-
-El mismo significado que `no-transform` tiene para una respuesta, pero para una solicitud en su lugar.
-
-### `solo si está en caché`
-
-El cliente indica que el caché debe obtener una respuesta ya almacenada en caché. Si un caché ha almacenado una respuesta, se reutiliza.
-
-## Casos de uso
-
-### Prevención del almacenamiento
-
 Si no desea que una respuesta se almacene en las cachés, use la directiva `no-store`.
 
-```
+```http
 Cache-Control: no-store
 ```
 
 Tenga en cuenta que `no-cache` significa "se puede almacenar pero no reutilizar antes de validar" — por lo que no es para evitar que se almacene una respuesta.
 
-```plain ejemplo-malo
+```http example-bad
 Cache-Control: no-cache
 ```
 
 En teoría, si las directivas están en conflicto, se debe respetar la directiva más restrictiva. Así que el siguiente ejemplo básicamente no tiene sentido, porque `private`, `no-cache`, `max-age=0` y `must-revalidate` entran en conflicto con `no-store`.
 
-```plain ejemplo-malo
-# conflicted
+```http example-bad
+# conflicto
 Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 
 # equivalete a
@@ -388,14 +370,14 @@ Cache-Control: no-store
 
 ### Almacenamiento en caché de activos estáticos con “cache busting”
 
-Cuando crea activos estáticos con mecanismos de control de versiones/hashing, agregar una versión/hash al nombre de archivo o cadena de consulta es una buena manera de administrar el almacenamiento en caché
+Cuando crea activos estáticos con mecanismos de control de versiones/hashing, agregar una versión/hash al nombre de archivo o cadena de consulta es una buena manera de administrar el almacenamiento en caché.
 
 Por ejemplo:
 
 ```html
 <!-- index.html -->
-<guión src=/activos/react.min.js></guión>
-<img src=/assets/hero.png ancho=900 alto=400>
+<script src="/activos/react.min.js"></script>
+<img src="/assets/hero.png" width="900" height="400" />
 ```
 
 La versión de la biblioteca de React cambiará cuando actualices la biblioteca, y `hero.png` también cambiará cuando edites la imagen. Por lo tanto, son difíciles de almacenar en un caché con `max-age`.
@@ -404,47 +386,47 @@ En tal caso, podría abordar las necesidades de almacenamiento en caché utiliza
 
 ```html
 <!-- index.html -->
-<script src=/assets/react.0.0.0min.js></script>
-<img src=/assets/hero.png?hash=deadbeef ancho=900 alto=400>
+<script src="/assets/react.0.0.0min.js"></script>
+<img src="/assets/hero.png?hash=deadbeef" width="900" height="400" />
 ```
 
 Puede agregar un valor grande de `max-age` e `immutable`, porque el contenido nunca cambiará.
 
-```
+```http
 # /assets/*
 Cache-Control: max-age=31536000, immutable
 ```
 
-Cuando actualiza la biblioteca o edita la imagen, el nuevo contenido debe tener una nueva URL y los cachés no se reutilizan. Eso se llama el patrón de “cache busting”
+Cuando actualiza la biblioteca o edita la imagen, el nuevo contenido debe tener una nueva URL y los cachés no se reutilizan. Eso se llama el patrón “cache busting”.
 
 Utilice `no-cache` para asegurarse de que la respuesta HTML en sí misma no se almacene en caché. `no-cache` puede causar la revalidación y el cliente recibirá correctamente una nueva versión de la respuesta HTML y los activos estáticos.
 
-```
+```http
 # /index.html
 Cache-Control: no-cache
 ```
 
-Nota: si `index.html` se controla mediante autenticación básica o autenticación implícita, los archivos bajo `/assets` no se almacenan en la memoria caché compartida. Si los archivos `/assets/` son adecuados para almacenar en un caché compartido, también necesita uno de `public`, `s-maxage` o `must-revalidate`.
+Nota: si `index.html` se accede mediante Basic Authentication o Digest Authentication, los archivos bajo `/assets` no se almacenarán en la memoria caché compartida. Si los archivos `/assets/` son adecuados para almacenar en un caché compartido, también necesita uno de `public`, `s-maxage` o `must-revalidate`.
 
-### Contenidos actualizados siempre
+### Contenidos siempre actualizados
 
-Para el contenido que se genera dinámicamente, o que es estático pero se actualiza con frecuencia, deseas que un usuario reciba siempre la versión más actualizada.
+Para los contenidos que se generan dinámicamente, o que son estáticos pero se actualizan con frecuencia, deseas que un usuario reciba siempre la versión más actualizada.
 
-Si no agrega un encabezado `Cache-Control` porque la respuesta no está destinada para almacenarse en caché, podría causar un resultado inesperado. El almacenamiento en caché puede almacenarlo en caché heurísticamente — por lo que si tienes algún requisito para el almacenamiento en caché, siempre debes indicarlo explícitamente en el encabezado `Cache-Control`.
+Si no agrega un encabezado `Cache-Control` porque la respuesta no está destinada para almacenarse en caché, podría causar un resultado inesperado. El almacenamiento en caché puede almacenarlo heurísticamente — por lo que si tienes algún requisito para el almacenamiento en caché, siempre debes indicarlo explícitamente en el encabezado `Cache-Control`.
 
 Agregar `no-cache` a la respuesta provoca la revalidación en el servidor, por lo que puede entregar una respuesta nueva cada vez — o si el cliente ya tiene una nueva, simplemente responda `304 Not Modified`.
 
-```
+```http
 Cache-Control: no-cache
 ```
 
 La mayoría de las cachés HTTP/1.0 no son compatibles con las directivas `no-cache`, por lo que históricamente se usaba `max-age=0` como solución alternativa. Pero usar solo `max-age=0` podría hacer que se reutilice una respuesta obsoleta cuando los cachés se desconecten del servidor de origen. `must-revalidate` aborda eso. Es por eso que el siguiente ejemplo es equivalente a `no-cache`.
 
-```
+```http
 Cache-Control: max-age=0, must-revalidate
 ```
 
-Pero por ahora, simplemente puedes usar `no-cache` en su lugar.
+Pero hoy en día, puedes simplemente usar `no-cache` en su lugar.
 
 ### Borrar un caché ya almacenado
 
@@ -462,16 +444,12 @@ Alternativamente, `Clear-Site-Data` puede borrar la memoria caché del navegador
 
 {{Compat}}
 
-[HTTP Caching](https://httpwg.org/http-core/draft-ietf-httpbis-cache-latest.html)
-[RFC5861 - HTTP Cache-Control Extensions for Stale Content](https://datatracker.ietf.org/doc/html/rfc5861)
-[RFC8246 - HTTP Immutable Responses](https://datatracker.ietf.org/doc/html/rfc8246)
-
 ## Véase también
 
-- [HTTP Caching FAQ](/es/docs/Web/HTTP/Caching)
+- [HTTP caching](/es/docs/Web/HTTP/Caching)
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
 - [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 - [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)
-- {{HTTPHeader("Age")}}
-- {{HTTPHeader("Expires")}}
-- {{HTTPHeader("Pragma")}}
+- [RFC 9111 – HTTP Caching](https://httpwg.org/specs/rfc9111.html)
+- [RFC 5861 – HTTP Cache-Control Extensions for Stale Content](https://httpwg.org/specs/rfc5861.html)
+- [RFC 8246 – HTTP Immutable Responses](https://httpwg.org/specs/rfc8246.html)
