@@ -92,7 +92,7 @@ Los siguientes términos son usados en este documento; algunos provienen de la e
 
 Esta sección lista directivas que afectan al almacenamiento caché — directivas de respuestas y directivas de peticiones.
 
-### Response Directives
+### Directivas de Respuesta
 
 #### `max-age`
 
@@ -256,7 +256,7 @@ En el ejemplo anterior, la respuesta está actualizada durante 7 días (604800s)
 
 Después del período de tiempo de stale-if-error, la respuesta almacenada se vuelve obsoleta. Eso significa que el cliente recibirá una respuesta de error tal como el servidor de origen la envía.
 
-### Request Directives
+### Directivas de Peticiones
 
 #### `no-cache`
 
@@ -274,7 +274,7 @@ Los navegadores generalmente agregan `no-cache` a las solicitudes cuando los usu
 
 La directiva de petición `no-store` permite a un cliente solicitar que las cachés se abstengan de almacenar la petición y la respuesta correspondiente, incluso si la respuesta del servidor de origen pudiera almacenarse.
 
-```
+```http
 Cache-Control: no-store
 ```
 
@@ -282,9 +282,9 @@ Tenga en cuenta que los principales navegadores no admiten peticiones con `no-st
 
 #### `max-age`
 
-La directiva de petición `max-age=N` indica que el cliente permite una respuesta almacenada que es generada en el servidor de origen dentro de _N_ segundos.
+La directiva de petición `max-age=N` indica que el cliente permite una respuesta almacenada que es generada en el servidor de origen dentro de _N_ segundos, donde _N_ puede ser cualquier número entero positivo (incluyendo el `0`).
 
-```
+```http
 Cache-Control: max-age = 3600
 ```
 
@@ -292,17 +292,25 @@ En el caso anterior, si la respuesta con `Cache-Control: max-age=604800` se alma
 
 Muchos navegadores usan esta directiva para **recargar**, como se explica a continuación.
 
-```
+```http
 Cache-Control: max-age=0
 ```
 
 `max-age=0` es una solución alternativa para `no-cache`, porque muchas implementaciones de caché antiguas (HTTP/1.0) no son compatibles con `no-cache`. Los navegadores más recientes siguen usando `max-age=0` en "recargas" (por compatibilidad con versiones anteriores) y, alternativamente, usan `no-cache` para provocar una "recarga forzada".
 
+Si el valor de `max-age` no es positivo (por ejemplo, `-1`) o no es entero (por ejemplo, `3599.99`), el comportamiento del cache es indefinido. Sin embargo, la sección [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) de las especificaciones HTTP establece:
+
+> Caches are encouraged to consider responses that have invalid freshness information to be stale.
+
+> Traducción: Se recomienda a los caches considerar una respuesta como antigua si la información de edad es inválida.
+
+En otras palabras, para cualquier valor de `max-age` que no es un entero positivo, el comportamiento de cache recomendado es de tratar el valor como si fuera `0`.
+
 #### `max-stale`
 
 La directiva de solicitud `max-stale=N` indica que el cliente permite una respuesta almacenada que está obsoleta hasta _N_ segundos.
 
-```
+```http
 Cache-Control: max-stale=3600
 ```
 
@@ -316,7 +324,7 @@ Tenga en cuenta que los principales navegadores no admiten solicitudes con `max-
 
 La directiva de petición `min-fresh=N` indica que el cliente permite una respuesta almacenada que está actualizada durante al menos _N_ segundos.
 
-```
+```http
 Cache-Control: min-fresh=600
 ```
 
