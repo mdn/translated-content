@@ -238,7 +238,7 @@ Basically, the idea is to trigger JavaScript on some form field event (like **on
 
 The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
 
-> **备注：**This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
+> **备注：** This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
 
 As an example, we will add a script checking the constraint validation for this simple form:
 
@@ -307,8 +307,6 @@ window.onload = function () {
 }
 ```
 
-You can see a [live example](/@api/deki/files/4744/=constraint.html) of the postal code validation.
-
 ### Limiting the size of a file before its upload
 
 Another common constraint is to limit the size of a file to be uploaded. Checking this on the client side before the file is transmitted to the server requires combining the Constraint API, and especially the field.setCustomValidity() method, with another JavaScript API, here the HTML5 File API.
@@ -350,8 +348,6 @@ window.onload = function () {
   document.getElementById("FS").onchange = checkFileSize;
 }
 ```
-
-You can see a [live example](/@api/deki/files/4745/=fileconstraint.html) of the File size constraint validation.
 
 ## Visual styling of constraint validation
 

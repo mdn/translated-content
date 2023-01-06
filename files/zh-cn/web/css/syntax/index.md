@@ -5,14 +5,14 @@ slug: Web/CSS/Syntax
 
 {{cssref}}
 
-层叠样式表（Cascading Stylesheet，简称[CSS](/zh-CN/CSS) ），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色，定位，装饰。CSS 的语法反映了这个目标，由下面两个部分构建：
+层叠样式表（Cascading Stylesheet，简称 [CSS](/zh-CN/docs/Web/CSS)），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色、定位、装饰。CSS 的语法反映了这个目标，由下面两个部分构建：
 
-- 属性（ **property）**是一个标识符，用可读的名称来表示其特性。
-- 值（**value）**则描述了浏览器引擎如何处理该特性。每个属性都包含一个有效值的集合，它有正式的语法和语义定义，被浏览器引擎实现。
+- **属性**（property）是一个标识符，用可读的名称来表示其特性。
+- **值**（value）则描述了浏览器引擎如何处理该特性。每个属性都包含一个有效值的集合，它有正式的语法和语义定义，被浏览器引擎实现。
 
 ## CSS 声明
 
-CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值的键值对被称为”声明“（declaration） 。CSS 引擎会计算页面上每个元素都有哪些声明，并且会根据结果绘制元素，排布样式。
+CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值的键值对被称为“声明”（declaration） 。CSS 引擎会计算页面上每个元素都有哪些声明，并且会根据结果绘制元素，排布样式。
 
 在 CSS 中，无论是属性名还是属性值都是对大小写不敏感的。属性与值之间以英文冒号 ':' （U+003A COLON）隔开。属性与值前面、后面与两者之间的空白不是必需的，会被自动忽略。
 
@@ -28,7 +28,7 @@ CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值�
 
 **声明块**里面的声明之间使用英文分号（';' U+003B SEMICOLON）隔开。声明块可能为空，也就是包含空的声明。声明之间的空格会被忽略，声明块里最后一个声明可以不用分号，不过建议加上，以方便扩展声明块。
 
-![css syntax - declarations block.png](/@api/deki/files/6166/=css_syntax_-_declarations_block.png)
+![css syntax - declarations block.png](declaration-block.png)
 
 > **备注：** 声明块的内容—开始与结束大括号之间的声明，可以放在 HTML [`style`](/zh-CN/HTML/Global_attributes#attr-style) 特性里。
 
@@ -38,7 +38,7 @@ CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值�
 
 为此，CSS 可以在声明块前面放置选择器（selector)，选择器用来选择页面多个元素的条件。一对选择器与声明块称为规则集（ruleset)，常简称为规则（rule)。
 
-![css syntax - ruleset.png](/@api/deki/files/6167/=css_syntax_-_ruleset.png)
+![css syntax - ruleset.png](ruleset.png)
 
 一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为 [层叠（cascade)](/zh-CN/CSS/Getting_Started/Cascading_and_inheritance) 算法。
 
