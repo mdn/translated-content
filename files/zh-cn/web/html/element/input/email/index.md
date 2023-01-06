@@ -33,13 +33,13 @@ slug: Web/HTML/Element/Input/email
 
 用户可以输入到 `email` 输入框中的最大字符数（以 UTF-16 代码单元为单位）。必须为大于等于 0 的整数。如果未指定 `maxlength` 或指定了无效的值，则 `email` 输入框将没有最大长度。这个值也必须大于等于 `minlength` 的值。
 
-如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
+如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### minlength
 
 用户可以输入到 `email` 输入框中的最小字符数（以 UTF-16 代码单元为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则 `email` 输入将没有最小长度。
 
-如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
+如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### multiple
 
@@ -49,7 +49,7 @@ slug: Web/HTML/Element/Input/email
 
 ### pattern
 
-如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
 如果没有指定模式，或指定了无效的模式，则不会应用任何正则表达式，且该属性将被完全忽略。
 
@@ -63,7 +63,7 @@ slug: Web/HTML/Element/Input/email
 
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-> 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见{{SectionOnPage("/zh-CN/docs/Web/HTML/Element/input", "标签与占位符")}}以获取更多信息。
+> **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见{{SectionOnPage("/zh-CN/docs/Web/HTML/Element/input", "标签与占位符")}}以获取更多信息。
 
 ### readonly
 
@@ -144,7 +144,7 @@ slug: Web/HTML/Element/Input/email
 
 #### 输入框物理大小
 
-输入框的物理尺寸可以用 {{htmlattrxref("size", "input")}} 属性来控制。通过它，你可以指定输入框一次可以显示的字符数。在这个例子中，`email'编辑框有15个字符宽：
+输入框的物理尺寸可以用 {{htmlattrxref("size", "input")}} 属性来控制。通过它，你可以指定输入框一次可以显示的字符数。在这个例子中，`email` 编辑框有 15 个字符宽：
 
 ```html
 <input type="email" size="15" />
@@ -216,95 +216,129 @@ slug: Web/HTML/Element/Input/email
 
 ### 模式验证
 
-If you need the entered email address to be restricted further than just "any string that looks like an email address," you can use the {{htmlattrxref("pattern", "input")}} attribute to specify a [regular expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions) the value must match for it to be valid. If the {{htmlattrxref("multiple", "input")}} attribute is specified, each individual item in the comma-delineated list of values must match the {{jsxref("regexp")}}.
+如果你需要进一步限制输入的邮件地址，不仅仅需要“任何看起来像邮件地址的字符串”，你可以使用 {{htmlattrxref("pattern", "input")}} 属性来指定一个{{Glossary("regular expression","正则表达式")}}，该值必须与之匹配才有效。如果指定了 {{htmlattrxref("multiple", "input")}} 属性，每个由逗号分开的值必须满足该{{Glossary("regular expression","正则表达式")}}。
 
-For example, let's say you're building a page for employees of Best Startup Ever, Inc. which will let them contact their IT department for help. In our simplified form, the user needs to enter their email address and a message describing the problem they need help with. We want to ensure that not only does the user provide a valid email address, but for security purposes, we require that the address be an internal corporate email address.
+例如，假设你正在为 Best Startup Ever, Inc. 公司的员工建立一个支持页面，如果他们的某个页面出现问题，他们可以联系 IT 部门寻求帮助。在我们的简化表单中，用户需要输入出现他们的邮箱地址，以及描述遇到的问题。为了安全起见，我们希望用户不仅提供了有效的邮箱地址，而且还是一个内部邮件地址。
 
-Since inputs of type `"email"` validate against both the standard email address validation _and_ the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:
-
-```css hidden
-body {
-  font: 16px sans-serif;
-}
-
-.emailBox {
-  padding-bottom: 20px;
-}
-
-.messageBox {
-  padding-bottom: 20px;
-}
-
-label {
-  line-height: 22px;
-}
-
-label::after {
-  content: ":";
-}
-```
+由于 `email` 类型的输入会对标准邮箱地址*和*自定义 {{htmlattrxref("pattern", "input")}} 同时进行校验，你可以很方便地实现这些。我们来看看如何这样做：
 
 ```html
 <form>
- <div class="emailBox">
-   <label for="emailAddress">Your email address</label><br>
-   <input id="emailAddress" type="email" size="64" maxLength="64" required
-          placeholder="username@beststartupever.com" pattern=".+@beststartupever.com"
-          title="Please provide only a Best Startup Ever corporate email address">
- </div>
+  <div class="emailBox">
+    <label for="emailAddress">你的邮箱地址</label><br />
+    <input
+      id="emailAddress"
+      type="email"
+      size="64"
+      maxlength="64"
+      required
+      placeholder="username@beststartupever.com"
+      pattern=".+@beststartupever\.com"
+      title="请仅提供 Best Startup Ever 公司邮件地址" />
+  </div>
 
- <div class="messageBox">
-   <label for="message">Request</label><br>
-   <textarea id="message" cols="80" rows="8" required
-             placeholder="My shoes are too tight, and I have forgotten how to dance."></textarea>
- </div>
-  <input type="submit" value="Send Request">
+  <div class="messageBox">
+    <label for="message">请求</label><br />
+    <textarea
+      id="message"
+      cols="80"
+      rows="8"
+      required
+      placeholder="我的鞋子太紧了，而且我忘记如何跳舞了。"></textarea>
+  </div>
+  <input type="submit" value="发送请求" />
 </form>
 ```
 
-{{EmbedLiveSample("Pattern_validation", 700, 275)}}
+{{EmbedLiveSample("模式验证", 700, 275)}}
 
-Our {{HTMLElement("form")}} contains one {{HTMLElement("input")}} of type `"email"` for the user's email address, a {{HTMLElement("textarea")}} to enter their message for IT into, and an `<input>` of type [`"submit"`](/zh-CN/docs/Web/HTML/Element/input/submit), which creates a button to submit the form. Each text entry box has a {{HTMLElement("label")}} associated with it to let the user know what's expected of them.
+我们的 {{HTMLElement("form")}} 表单包含一个 `email` 类型的 {{HTMLElement("input")}}，用于用户电子邮件地址，一个 {{HTMLElement("textarea")}}，用来输入他们的 IT 信息，以及一个 `<input>` 类型为 [`"submit"`](/zh-CN/docs/Web/HTML/Element/Input/submit) 的按钮，用来创建一个提交表单。每个文本输入框都有一个 {{HTMLElement("label")}} 与之相关，让用户知道对他们的期望。
 
-Let's take a closer look at the email address entry box. Its {{htmlattrxref("size", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes are both set to 64 in order to show room for 64 characters worth of email address, and to limit the number of characters actually entered to a maximum of 64. The {{htmlattrxref("required", "input")}} attribute is specified, making it mandatory that a valid email address be provided.
+让我们仔细看看电子邮件地址输入框。它的 {{htmlattrxref("size", "input")}} 和 {{htmlattrxref("maxlength", "input")}} 属性都被设置为 64，以便为 64 个字符的电子邮件地址提供空间，并将实际输入的字符数限制在最大 64 个。这里还指定了 {{htmlattrxref("required", "input")}} 属性，使得用户必须提供一个有效的电子邮件地址。
 
-An appropriate {{htmlattrxref("placeholder", "input")}} is provided—`"username@beststartupever.com"`—to demonstrate what constitutes a valid entry. This string demonstrates both that an email address should be entered, and suggests that it should be a corporate beststartupever.com account. This is in addition to the fact that using type `"email"` will validate the text to ensure that it's formatted like an email address. If the text in the input box isn't an email address, you'll get an error message that looks something like this:
+表单中提供了一个适当的 {{htmlattrxref("placeholder", "input")}}——`username@beststartupever.com`，以证明什么是有效的条目。这个字符串表明，应该输入一个电子邮件地址，并建议它应该是一个企业的 beststartupever.com 账户。此外，使用 `email` 类型将验证文本以确保它的格式像一个电子邮件地址。如果输入框中的文本不是电子邮件地址，你会得到一个错误信息，看起来像这样：
 
-![](enter-valid-email-address.png)
+![Invalid email address in error state with a popout from the input reading 'please enter an email address'.](enter-valid-email-address.png)
 
-If we left things at that, we would at least be validating on legitimate email addresses. But we want to go one step farther: we want to make sure that the email address is in fact in the form "_username_\@beststartupever.com". This is where we'll use {{htmlattrxref("pattern", "input")}}. We set `pattern` to `".+@beststartupever.com"`. This simple regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".
+如果我们让事情停留在这个阶段，我们至少会在合法的电子邮件地址上进行验证。但我们想走得更远：我们想确保电子邮件地址实际上是“_username_@beststartupever.com”的形式。这就是我们要使用 {{htmlattrxref("pattern", "input")}} 的地方。我们将`pattern` 设置为 `.+@beststartupever.com`。这个简单的正则表达式要求一个至少由一个任何类型的字符组成的字符串，然后是“@”，后面是域名“beststartupever.com”。
 
-Note that this is not even close to an adequate filter for valid email addresses; it would allow things such as " @beststartupever.com" (note the leading space) or "@@beststartupever.com", neither of which is valid. However, the browser runs both the standard email address filter _and_ our custom pattern against the specified text. As a result, we wind up with a validation which says "make sure this is a valid email address, and if it is, make sure it's also a beststartupever.com address."
+请注意，这根本不是一个有效的电子邮件地址过滤器；它允许诸如“ @beststartupever.com”（注意前面的空格）或“@@beststartupever.com”这样的东西，它们都是无效的。然而，浏览器对指定的文本同时运行标准的电子邮件地址过滤器*和*我们的自定义模式。结果，我们的验证结果是：”确保这类似于一个有效的电子邮件地址，如果是的话，确保它也是一个 beststartupever.com 的地址。“
 
-It's advisable to use the {{htmlattrxref("title")}} attribute along with `pattern`. If you do, the `title` _must_ describe the pattern. That is, it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "Email address", the result would be the message "The entered text doesn't match the required pattern. Email address", which isn't very good.
+建议在使用 `pattern` 属性的同时使用 {{htmlattrxref("title")}}。如果你这样做，`title` *必须*描述该模式。也就是说，它应该解释数据应该采取什么格式，而不是任何其他信息。这是因为 `title` 可以作为验证错误信息的一部分被显示或说出。例如，浏览器可能会显示”输入的文本不符合要求的模式。“，随后是你指定的 `title`。如果你的 `title` 是类似于”Email address“的字符串，结果将是”输入的文本不符合要求的模式。Email address“，这不太通顺。
 
-That's why, instead, we specify the string "Please provide only a Best Startup Ever corporate email address" By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate email address."
+这就是为什么我们指定字符串”请只提供 Best Startup Ever 公司的电子邮件地址“。通过这样做，所产生的完整错误信息可能是这样的：”输入的文本不符合要求的模式。请只提供 Best Startup Ever 公司的电子邮件地址“。
 
-![](email-pattern-match-bad.png)
+![A valid email address, but the input is in error state with a popout from the input reading 'The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate email address.'](email-pattern-match-bad.png)
 
-> **备注：** If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.
+> **备注：** 如果你在编写验证正则表达式时遇到麻烦，它们不能正常工作，请检查你的浏览器控制台；那里可能有有用的错误信息来帮助你解决问题。
 
-## Examples
+## 示例
 
-Here we have an email input with the ID `"emailAddress"` which is allowed to be up to a maximum of 256 characters long. The input box itself is physically 64 characters wide, and displays the text `"user@example.gov"` as a placeholder anytime the field is empty. In addition, by using the {{htmlattrxref("multiple", "input")}} attribute, the box is configured to allow the user to enter zero or more email addresses, separated by commas, as described in [Allowing multiple email addresses](#allowing_multiple_email_addresses). As a final touch, the {{htmlattrxref("list", "input")}} attribute contains the ID of a {{HTMLElement("datalist")}} whose {{HTMLElement("option")}}s specify a set of suggested values the user can choose from.
+这里我们有一个 ID 为 `emailAddress` 的电子邮件输入框，它最多可以有 256 个字符长。输入框本身的宽度为 64 个字符，并在字段为空时显示文本 `user@example.gov` 作为占位符。此外，通过使用[`multiple`](/zh-CN/docs/Web/HTML/Attributes/multiple)属性，该框被配置为允许用户输入零个或多个电子邮件地址，用逗号分隔，如[允许多个电子邮件地址](#允许多个电子邮件地址)中所述。最后，[`list`](/zh-CN/docs/Web/HTML/Attributes/list) 属性包含一个 {{HTMLElement("datalist")}} 的 ID，其 {{HTMLElement("option")}} 指定一组建议值，供用户选择。
 
-As an added touch, the {{HTMLElement("label")}} element is used to establish a label for the email entry box, with its {{htmlattrxref("for", "label")}} attribute referencing the `"emailAddress"` ID of the {{HTMLElement("input")}} element. By associating the two elements in this way, clicking on the label will focus the input element.
+作为补充，{{HTMLElement("label")}} 元素被用来为电子邮件输入框建立一个标签，其 {{htmlattrxref("for", "label")}} 属性引用了 {{HTMLElement("input")}} 元素的 `emailAddress` ID。通过这种方式将这两个元素联系起来，点击标签将聚焦输入元素。
 
 ```html
-<label for="emailAddress">Email</label><br/>
-<input id="emailAddress" type="email" placeholder="user@example.gov"
-       list="defaultEmails" size="64" maxlength="256" multiple>
+<label for="emailAddress">电子邮件</label><br />
+<input
+  id="emailAddress"
+  type="email"
+  placeholder="user@example.gov"
+  list="defaultEmails"
+  size="64"
+  maxlength="256"
+  multiple />
 
 <datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk">
-  <option value="jbourne@unknown.net">
-  <option value="nfury@shield.org">
-  <option value="tony@starkindustries.com">
-  <option value="hulk@grrrrrrrr.arg">
+  <option value="jbond007@mi6.defence.gov.uk"></option>
+  <option value="jbourne@unknown.net"></option>
+  <option value="nfury@shield.org"></option>
+  <option value="tony@starkindustries.com"></option>
+  <option value="hulk@grrrrrrrr.arg"></option>
 </datalist>
 ```
 
 {{EmbedLiveSample('示例', 600, 50)}}
+
+## 技术总结
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">值</a></strong></td>
+      <td>
+        代表电子邮件地址的字符串，或为空
+      </td>
+    </tr>
+    <tr>
+      <td><strong>事件</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} 和
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>支持的通用属性</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("maxlength", "input")}}、{{htmlattrxref("minlength", "input")}}、{{htmlattrxref("multiple", "input")}}、{{htmlattrxref("name", "input")}}、{{htmlattrxref("pattern", "input")}}、{{htmlattrxref("placeholder", "input")}}、{{htmlattrxref("readonly", "input")}}、{{htmlattrxref("required", "input")}}、{{htmlattrxref("size", "input")}} 和 {{htmlattrxref("type", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>list</code> 和 <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM 接口</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>方法</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -316,10 +350,10 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/HTML/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
-- [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/Input/tel)
+- [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/Input/url)
 - 属性：
 
   - [`list`](/zh-CN/docs/Web/HTML/Attributes/list)
