@@ -134,7 +134,7 @@ Ten en cuenta que `no-cache` no significa "no almacenar". `no-cache` permite alm
 
 #### `must-revalidate`
 
-La respuesta `must-revalidate` indica que la respuesta puede ser usada mientras sea reciente pero que una vez el recurso se vuelve obsoleto, la cache no debe usar su copia obsoleta sin correctamente validar en el servidor de origen.
+La directiva `must-revalidate` indica que la respuesta puede ser usada mientras sea reciente, pero que una vez el recurso se vuelve obsoleto, la cache no debe usar su copia obsoleta sin correctamente validar en el servidor de origen.
 
 Tipicamente, `must-revalidate` es usada con `max-age`
 
@@ -142,17 +142,17 @@ Tipicamente, `must-revalidate` es usada con `max-age`
 Cache-Control: max-age=604800, must-revalidate
 ```
 
-HTTP permite a las caches reutilizar respuesteas obsoletas cuando están desconectados del servidor de origen. `must-revalidate` es una forma de prevenirlo, de esta forma la cache o revalida la respuesta almacenada con el servidor de origen, o si no es posible genera una respuesta 504(Gateway Timeout).
+HTTP permite a las caches reutilizar respuesteas obsoletas cuando están desconectados del servidor de origen. `must-revalidate` es una forma de prevenirlo, o la cache revalida la respuesta almacenada con el servidor de origen, o si no es posible genera una respuesta 504 (Gateway Timeout).
 
 #### `proxy-revalidate`
 
-`proxy-revalidate` es similar a `must-revalidate`, pero es especifico para caches compartidos (es decir, proxies). Ignorado por caches privados.
+`proxy-revalidate` es similar a `must-revalidate`, pero es especifico para caches compartidos.
 
 #### `no-store`
 
 La directiva de respuesta `no-store` indica que cualquier caché de cualquier tipo (privado o compartido) no debe almacenar esta respuesta.
 
-```
+```http
 Cache-Control: no-store
 ```
 
@@ -160,7 +160,7 @@ Cache-Control: no-store
 
 La directiva de respuesta `private` indica que la respuesta solo puede ser almacenada por cachés privadas (p. ej. cachés locales en navegadores).
 
-```
+```http
 Cache-Control: private
 ```
 
@@ -170,17 +170,17 @@ Si olvidas añadir `private` a una respuesta con contenido personalizado, entonc
 
 #### `public`
 
-Las respuestas para peticiones con el campo de la cabecera `Authorization` no debe ser almacenadas en cache compartida. Pero la directiva `public` causará que dichas respuestas se almacenen en la caché compartida.
+La directiva `public` indica que la respuesta puede ser almacenada en un cache compartido. Las respuestas para peticiones con el campo de la cabecera `Authorization` no debe ser almacenadas en cache compartida, pero la directiva `public` causará que dichas respuestas se almacenen en la caché compartida.
 
-```
+```http
 Cache-Control: public
 ```
 
-En general, cuando las paginas estan bajo Basic Auth o Disgest Auth, el navegador enviará peticiones con la cabecera `Authorization`. Esto significa que la respuesta es acceso-controlada para usuarios restringidos (quienes tienen cuenta), y esto es no compartidamente almacenado , incluso si tiene `max-age`.
+En general, cuando las paginas estan bajo Basic Auth o Digest Auth, el navegador enviará peticiones con la cabecera `Authorization`. Esto significa que la respuesta es de acceso-controlado para usuarios restringidos (quienes tienen cuenta), y esto es no compartidamente almacenado, incluso si tiene `max-age`.
 
 Puedes usar la directiva `public` para desbloquear esa restricción.
 
-```
+```http
 Cache-Control: public, max-age=604800
 ```
 
@@ -190,55 +190,55 @@ Si una petición no tiene la cabecera `Authorization`, o si ya estás usando `s-
 
 #### `must-understand`
 
-La directiva de respuesta `must-understand` indica que una caché debería de almacenar la respuesta solo si entiende que los requisitos para la cachear basado en el codigo de estado.
+La directiva de respuesta `must-understand` indica que una caché debería de almacenar la respuesta solo si entiende los requisitos de almacenamiento basado en el codigo de estado.
 
 `must-understand` debe ir emparejada con `no-store`, para un comportamiento como solución alternativa.
 
-```
+```http
 Cache-Control: must-understand, no-store
 ```
 
-Si una caché no soporta `must-understand`, será ignorada. Si `no-store` está tambíen presente, la respuesta no es almacenada.
+Si una caché no soporta `must-understand`, será ignorada. Si `no-store` está también presente, la respuesta no es almacenada.
 
 Si una caché soporta `must-understand`, almacena la respuesta de acuerdo con los requisitos de cache basados en su código de estado.
 
 #### `no-transform`
 
-Algunos intermediarios transforman el contenido para diversas razones. Por ejemplo, algunas convierten las imagenes para reducir el tamaño de transferencia. En algunos casos, esto no es deseable para el proveedor de contenidos.
+Algunos intermediarios transforman el contenido por diversas razones. Por ejemplo, algunos convierten las imagenes para reducir el tamaño de transferencia. En algunos casos, esto no es deseable para el proveedor de contenidos.
 
-`no-transform` indica que cualquier intermediario (sin importar si implementa cache)
+`no-transform` indica que cualquier intermediario (sin importar si implementa cache) no debería transformar los contenidos de la respuesta.
 
-Nota:[Web Light de Google](https://support.google.com/webmasters/answer/6211428) es un intermediario de este tipo. Convirte las imagenes para minimizar los datos para almacenar en cache o para conexiones lentas, y soporta `no-transform` como una opción para evitar dicha función.
+Nota: [Web Light de Google](https://support.google.com/webmasters/answer/6211428) es un intermediario de este tipo. Convirte las imagenes para minimizar los datos para almacenar en cache o para conexiones lentas, y soporta `no-transform` como una opción para evitar dicha función.
 
 #### `immutable`
 
 La directiva de respuesta `immutable` indica que la respuesta no será actualizada mientras sea reciente.
 
-```
+```http
 Cache-Control: public, max-age=604800, immutable
 ```
 
 Una buena practica moderna para contenidos estáticos es incluir versión/hashes en sus URLs, mientras nunca se modifiquen los contenidos — pero en su lugar, cuando es necesario, _actualizar_ las fuentes con nuevas versiones que tienen nuevos números de versión/hashes, de forma que las URLs son diferentes.
-Es es conocido como el patrón de **cache-busting**.
+Esto es conocido como el patrón **cache-busting**.
 
-```
+```html
 <script src=https://example.com/react.0.0.0.js></script>
 ```
 
-Cuando un usuario recarga el navegador, el navegador le mandará una petición condicional para validar el servidor de origen. Pero esto no es necesariamente para revalidar esos tipos de fuentes estáticas incluso cuando un usuario rcarga el navegador, por que no son nunca modificados.
-`immutable` indica a una cache que una respuesta es inmutable mientras es reciente, y evita que ese tipo de innecesarias peticiones condicionales al servidor.
+Cuando un usuario recarga el navegador, el navegador le mandará una petición condicional para validar el servidor de origen. Pero no es necesario revalidar estos tipos de fuentes estáticas incluso cuando un usuario recarga el navegador, porque nunca son modificados.
+`immutable` indica a una cache que una respuesta es inmutable mientras es reciente, y evita ese tipo de peticiones condicionales innecesarias al servidor.
 
-Cuando tu usas un patrón de cache-busting para fuentes y las aplicas a un largo `max-age`, puedes también añadir `immutable` para evitar la revalidación.
+Cuando usas un patrón de cache-busting para fuentes y les aplicas un largo `max-age`, puedes también añadir `immutable` para evitar la revalidación.
 
 #### `stale-while-revalidate`
 
 La directiva de respuesta `stale-while-revalidate` indica que la cache puede reusar una respuesta antigua mientras se revalida en una caché.
 
-```
+```http
 Cache-Control: max-age=604800, stale-while-revalidate=86400
 ```
 
-En el ejemplo anterior, la respuesta está actualizada durante 7 días (604800s). Después de 7 días, se vuelve obsoleto, pero la caché puede reutilizarla para cualquier solicitud que se realice al día siguiente (86400s) — siempre que revaliden la respuesta en segundo plano.
+En el ejemplo anterior, la respuesta está actualizada durante 7 días (604800s). Después de 7 días se vuelve obsoleto, pero la caché puede reutilizarla para cualquier solicitud que se realice al día siguiente (86400s) — siempre que revalide la respuesta en segundo plano.
 
 La revalidación hará que la memoria caché vuelva a estar actualizada, de modo que a los clientes les parezca que siempre estuvo actualizada durante ese período — Ocultando de forma efectiva la penalización por latencia de la revalidación.
 
@@ -246,31 +246,31 @@ Si no se produjo ninguna petición durante ese período, la caché se vuelve obs
 
 #### `stale-if-error`
 
-La directiva de respuesta `stale-if-error` indica que la memoria caché puede reutilizar una respuesta obsoleta cuando un servidor de origen responde con un error (500, 502, 503 o 504).
+La directiva de respuesta `stale-if-error` indica que la memoria caché puede reutilizar una respuesta obsoleta cuando un servidor de origen responde con un error, o el error es generado localmente. Un error es cualquier respuesta con código de estado 500, 502, 503 o 504.
 
-```
+```http
 Cache-Control: max-age=604800, stale-if-error=86400
 ```
 
 En el ejemplo anterior, la respuesta está actualizada durante 7 días (604800s). Después de 7 días, se vuelve obsoleta, pero se puede usar durante 1 día adicional (86400s) si el servidor responde con un error.
 
-Después de un período de tiempo, la respuesta almacenada normalmente se vuelve obsoleta. Eso significa que el cliente recibirá una respuesta de error tal como está si el servidor de origen la envía.
+Después del período de tiempo de stale-if-error, la respuesta almacenada se vuelve obsoleta. Eso significa que el cliente recibirá una respuesta de error tal como el servidor de origen la envía.
 
-## Request Directives
+### Request Directives
 
-### `no-cache`
+#### `no-cache`
 
 La directiva de petición `no-cache` pide a las cachés que validen la respuesta con el servidor de origen antes de volver a usarla.
 
-```
-Cache-Control: sin caché
+```http
+Cache-Control: no-cache
 ```
 
 `no-cache` permite a los clientes solicitar la respuesta más actualizada incluso si la caché tiene una respuesta reciente.
 
 Los navegadores generalmente agregan `no-cache` a las solicitudes cuando los usuarios **fuerzan la recarga** de una página.
 
-### `no-store`
+#### `no-store`
 
 La directiva de petición `no-store` permite a un cliente solicitar que las cachés se abstengan de almacenar la petición y la respuesta correspondiente, incluso si la respuesta del servidor de origen pudiera almacenarse.
 
@@ -280,7 +280,7 @@ Cache-Control: no-store
 
 Tenga en cuenta que los principales navegadores no admiten peticiones con `no-store`.
 
-### `max-age`
+#### `max-age`
 
 La directiva de petición `max-age=N` indica que el cliente permite una respuesta almacenada que es generada en el servidor de origen dentro de _N_ segundos.
 
@@ -298,7 +298,7 @@ Cache-Control: max-age=0
 
 `max-age=0` es una solución alternativa para `no-cache`, porque muchas implementaciones de caché antiguas (HTTP/1.0) no son compatibles con `no-cache`. Los navegadores más recientes siguen usando `max-age=0` en "recargas" (por compatibilidad con versiones anteriores) y, alternativamente, usan `no-cache` para provocar una "recarga forzada".
 
-### `max-stale`
+#### `max-stale`
 
 La directiva de solicitud `max-stale=N` indica que el cliente permite una respuesta almacenada que está obsoleta hasta _N_ segundos.
 
@@ -312,7 +312,7 @@ Los clientes pueden usar este encabezado cuando el servidor de origen está inac
 
 Tenga en cuenta que los principales navegadores no admiten solicitudes con `max-stale`.
 
-### `min-fresh`
+#### `min-fresh`
 
 La directiva de petición `min-fresh=N` indica que el cliente permite una respuesta almacenada que está actualizada durante al menos _N_ segundos.
 
@@ -326,11 +326,11 @@ Los clientes pueden usar este encabezado cuando el usuario requiere que la respu
 
 Tenga en cuenta que los principales navegadores no admiten peticiones con `min-fresh`.
 
-### `no-transform`
+#### `no-transform`
 
 El mismo significado que `no-transform` tiene para una respuesta, pero para una petición en su lugar.
 
-### `only-if-cached`
+#### `only-if-cached`
 
 El cliente indica que la caché debe obtener una respuesta ya almacenada en caché. Si una caché ha almacenado una respuesta, se reutiliza.
 
