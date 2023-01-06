@@ -1,15 +1,6 @@
 ---
 title: WebGL에서 조명 효과 적용하기
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
-tags:
-  - WebGL
-  - 방향광
-  - 빛
-  - 웹지엘
-  - 점광
-  - 조명
-  - 주변광
-translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}

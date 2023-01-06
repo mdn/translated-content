@@ -1,11 +1,6 @@
 ---
 title: 반복기 및 생성기
 slug: Web/JavaScript/Guide/Iterators_and_Generators
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}

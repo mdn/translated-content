@@ -1,11 +1,6 @@
 ---
 title: new operator
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/new
 ---
 
 {{jsSidebar("Operators")}}

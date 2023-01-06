@@ -1,15 +1,6 @@
 ---
 title: MediaStreamTrack.muted
 slug: Web/API/MediaStreamTrack/muted
-tags:
-  - API
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/MediaStreamTrack/muted
 ---
 
 {{APIRef("Media Capture and Streams")}}

@@ -1,7 +1,6 @@
 ---
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
 {{JSRef}}
 

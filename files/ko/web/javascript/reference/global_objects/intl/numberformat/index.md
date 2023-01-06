@@ -1,16 +1,6 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-tags:
-  - Class
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - NumberFormat
-  - Reference
-browser-compat: javascript.builtins.Intl.NumberFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
 
 {{JSRef}}

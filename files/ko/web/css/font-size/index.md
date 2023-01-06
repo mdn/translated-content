@@ -1,7 +1,6 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
-translation_of: Web/CSS/font-size
 ---
 {{CSSRef}}
 

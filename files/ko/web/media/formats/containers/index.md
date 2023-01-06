@@ -1,7 +1,6 @@
 ---
 title: 미디어 컨테이너 포맷 (파일 타입)
 slug: Web/Media/Formats/Containers
-translation_of: Web/Media/Formats/Containers
 original_slug: Web/Media/Formats/컨테이너
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.removeTrack()
 slug: Web/API/RTCPeerConnection/removeTrack
-translation_of: Web/API/RTCPeerConnection/removeTrack
 ---
 
 {{APIRef("WebRTC")}}

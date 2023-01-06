@@ -1,13 +1,6 @@
 ---
 title: '@supports'
 slug: Web/CSS/@supports
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/@supports
 ---
 
 {{CSSRef}}

@@ -1,13 +1,6 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/frameElement
 ---
 {{ApiRef}}
 

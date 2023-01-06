@@ -1,13 +1,6 @@
 ---
 title: '@page'
 slug: Web/CSS/@page
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/@page
 ---
 {{CSSRef}}
 

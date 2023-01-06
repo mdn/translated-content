@@ -1,14 +1,6 @@
 ---
 title: PeriodicWave()
 slug: Web/API/PeriodicWave/PeriodicWave
-tags:
-  - API
-  - Audio
-  - Constructor
-  - PeriodicWave
-  - Reference
-  - Web Audio API
-browser-compat: api.PeriodicWave.PeriodicWave
 ---
 
 {{APIRef("Web Audio API")}}

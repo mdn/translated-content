@@ -84,9 +84,9 @@ slug: Web/HTML/Element/ul
     - `circle`
     - `disc`
     - `square`
-  
+
     存在第四种定义于 WebTV 接口的着重号样式，但并不是所有浏览器都支持：`triangle`。
-  
+
     如果未设置此 HTML 属性且没有 [CSS](/zh-CN/docs/Web/CSS) {{ cssxref("list-style-type") }} 属性作用于这个元素，用户代理会决定使用哪种着重号样式，一般来说这也和嵌套的层级数有关。
 
     > **警告：** 不要使用这个属性，它已经被废弃了：请使用 [CSS](/zh-CN/docs/Web/CSS) {{ cssxref("list-style-type") }} 属性作为代替。

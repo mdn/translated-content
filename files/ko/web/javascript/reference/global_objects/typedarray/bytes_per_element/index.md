@@ -1,12 +1,6 @@
 ---
 title: TypedArray.BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
-tags:
-  - JavaScript
-  - Property
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 ---
 
 {{JSRef}}

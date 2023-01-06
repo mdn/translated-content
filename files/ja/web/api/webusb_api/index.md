@@ -24,7 +24,7 @@ WebUSB は、これらの標準化されていない USB デバイスサービ�
 - {{domxref("USB")}}
   - : ウェブページが USB デバイスを検出し、接続するためのプロパティとメソッドを提供します。
 - {{domxref("USBConnectionEvent")}}
-  - : ユーザーエージェントが新しい USB デバイスのホストへの接続や切断を検出した時、{{domxref("USB.onconnect")}} や {{domxref("USB.ondisconnect")}} に渡されるイベント型です。
+  - : ユーザーエージェントが新しい USB デバイスのホストへの接続や切断を検出した時、{{domxref("USB.connect_event", "USB.onconnect")}} や {{domxref("USB.disconnect_event", "USB.ondisconnect")}} に渡されるイベント型です。
 - {{domxref("USBDevice")}}
   - : ペアリングした USB デバイスのメタデータと、制御用のメソッドを提供します。
 - {{domxref("USBInTransferResult")}}

@@ -51,7 +51,7 @@ performance.now();
 // ...
 
 
-// 降低时间经度 当 `privacy.resistFingerprinting` 启用
+// 降低时间精度 当 `privacy.resistFingerprinting` 启用
 performance.now();
 // 8865400
 // 8866200

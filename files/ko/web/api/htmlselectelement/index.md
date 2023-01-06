@@ -1,15 +1,6 @@
 ---
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLSelectElement
 ---
 
 {{APIRef("HTML DOM")}}

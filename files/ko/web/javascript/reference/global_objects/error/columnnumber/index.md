@@ -1,12 +1,6 @@
 ---
 title: Error.prototype.columnNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-browser-compat: javascript.builtins.Error.columnNumber
 ---
 
 {{JSRef}} {{non-standard_header}}

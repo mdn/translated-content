@@ -1,11 +1,6 @@
 ---
 title: table
 slug: Web/API/HTMLTableElement
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/HTMLTableElement
 ---
 
 {{ ApiRef() }}

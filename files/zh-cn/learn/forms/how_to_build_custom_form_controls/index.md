@@ -12,7 +12,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 > **备注：** 我们将专注于构建小部件，而不是怎样让代码更通用或可复用；那会涉及一些非基础的 JavaScript 代码和未知环境下的 DOM 操作，这超过了这篇文章的范围。
 
-## 设计，结构，和语义
+## 设计、结构和语义
 
 在构建一个自定义控件之前，首先你要确切的知道你要什么。这将为您节省宝贵的时间。特别地，清楚地定义控件的所有状态非常重要。为了做到这一点，从状态和行为表现都众所周知的现有小控件开始是很好的选择，这样你可以轻松的尽量模仿这些控件。
 
@@ -282,13 +282,13 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("基本状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("活动状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("展开状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
@@ -388,10 +388,10 @@ window.addEventListener("load", function () {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
+        {{EmbedLiveSample("不使用 JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
+        {{EmbedLiveSample("使用 JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
@@ -564,7 +564,7 @@ window.addEventListener('load', function () {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}
+        {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}
       </td>
     </tr>
     <tr>
@@ -682,7 +682,7 @@ window.addEventListener('load', function () {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}
+        {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}
       </td>
     </tr>
     <tr>
@@ -767,7 +767,7 @@ function updateValue(select, index) {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}
+        {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}
       </td>
     </tr>
     <tr>

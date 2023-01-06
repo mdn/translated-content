@@ -186,7 +186,7 @@ Fetch API 基本上是 XHR 的一个现代替代品——它是最近在浏览�
 
 #### 那么 Fetch 代码中发生了什么呢？
 
-首先，我们调用了[`fetch()`](/zh-CN/docs/Web/API/WorkerOrWindowGlobalScope/fetch)方法，将我们要获取的资源的 URL 传递给它。这相当于现代版的 XHR 中的`request.open()`,另外，您不需要任何等效的`send()`方法。
+首先，我们调用了 {{domxref("fetch", "fetch()")}} 方法，将我们要获取的资源的 URL 传递给它。这相当于现代版的 XHR 中的 `request.open()`，另外，你不需要任何等效的 `send()` 方法。
 
 然后，你可以看到`.then()`方法连接到了`fetch()`末尾 - 这个方法是[`Promises`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)的一部分，是一个用于执行异步操作的现代 JavaScript 特性。`fetch()`返回一个 promise，它将解析从服务器发回的响应。我们使用`then()`来运行一些后续代码，这是我们在其内部定义的函数。这相当于 XHR 版本中的`onload`事件处理程序。
 

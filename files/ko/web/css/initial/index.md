@@ -1,17 +1,6 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Layout
-  - Reference
-  - Web
-  - 초기값
-  - 초기화
-  - 초깃값
-translation_of: Web/CSS/initial
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.skipWaiting()
 slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
-translation_of: Web/API/ServiceWorkerGlobalScope/skipWaiting
 ---
 {{APIRef("Service Workers API")}}
 

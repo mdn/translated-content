@@ -1,14 +1,6 @@
 ---
 title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-tags:
-  - Add-ons
-  - DOM
-  - Extensions
-  - Transforming_XML_with_XSLT
-  - Web Development
-  - XPath
-translation_of: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 original_slug: Introduction_to_using_XPath_in_JavaScript
 ---
 이 문서는 JavaScript 안, 확장기능, 웹사이트에서 [XPath](/ko/XPath)를 사용하기 위한 인터페이스를 설명합니다. Mozilla는 [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)를 상당량 구현합니다. 이것은 XPath 식이 HTML과 XML 문서 모두에서 잘 돌아간다는 것을 뜻합니다.

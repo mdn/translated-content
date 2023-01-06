@@ -72,9 +72,9 @@ Pero esto no tiene sentido, solo hace que el navegador trabaje más buscando la 
 
 > **Advertencia:** La mayoría de imágenes tienen derechos de autor. **No** muestres una imagen en tu página web a menos que:
 >
-> 1\) seas dueño de la imagen,  
-> 2\) tengas permiso escrito explícito del dueño de la imagen o  
-> 3\) tengas suficientes pruebas de que la imagen es de dominio público.  
+> 1. seas dueño de la imagen,
+> 2. tengas permiso escrito explícito del dueño de la imagen o
+> 3. tengas suficientes pruebas de que la imagen es de dominio público
 >
 > El incumplimiento de las normas de los derechos de autor es un acto ilegal y poco ético. Por lo tanto, no apuntes **nunca** tu atributo `src` a una imagen que esté alojada en un sitio web si no tienes el permiso para hacerlo. Esto se llama _hotlinking_. Asimismo es ilegal robar el ancho de banda de alguien. Además, ralentiza tu página y te deja sin control sobre la imagen si la eliminan o reemplazan por otra que incluso podría resultar embarazosa.
 

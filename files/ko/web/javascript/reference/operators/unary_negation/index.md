@@ -1,12 +1,6 @@
 ---
 title: 단항 부정 (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.unary_negation
 ---
 {{jsSidebar("Operators")}}
 

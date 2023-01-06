@@ -8,7 +8,7 @@ original_slug: Web/HTML/Elemento/i
 
 - Muestra el texto marcado con un estilo en cursiva o italica.
   - : **Sus etiquetas son**: \<i> y \</i> (Ambas obligatorias)
-  
+
     **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
     **Está definido como**: [Elemento de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).

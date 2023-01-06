@@ -1,11 +1,6 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-tags:
-  - CSS 속성
-  - CSS 애니메이션
-translation_of: Web/CSS/animation-fill-mode
-browser-compat: css.properties.animation-fill-mode
 ---
 {{CSSRef}}
 

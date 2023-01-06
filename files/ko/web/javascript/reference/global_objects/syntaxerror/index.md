@@ -1,14 +1,6 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
-browser-compat: javascript.builtins.SyntaxError
 ---
 
 {{JSRef}}

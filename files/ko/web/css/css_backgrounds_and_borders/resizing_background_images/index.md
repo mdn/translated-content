@@ -1,15 +1,6 @@
 ---
 title: 배경 이미지 크기 조정하기
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-tags:
-  - CSS
-  - CSS Background
-  - Example
-  - Guide
-  - Intermediate
-  - Reference
-  - Web
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
-translation_of: Web/API/RTCPeerConnection/createDataChannel
 ---
 {{APIRef("WebRTC")}}
 

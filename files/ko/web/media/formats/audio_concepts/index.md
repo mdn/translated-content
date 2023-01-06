@@ -1,21 +1,6 @@
 ---
 title: 디지털 오디오 개요
 slug: Web/Media/Formats/Audio_concepts
-tags:
-  - AAC
-  - Audio
-  - Codecs
-  - Coding
-  - Compressed
-  - Guide
-  - MPEG
-  - Media
-  - Music
-  - compression
-  - formats
-  - mp3
-  - mp4
-  - sound
 ---
 {{QuickLinksWithSubpages("/ko/docs/Web/Media")}}
 

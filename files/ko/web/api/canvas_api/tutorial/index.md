@@ -1,15 +1,6 @@
 ---
 title: 캔버스 튜토리얼
 slug: Web/API/Canvas_API/Tutorial
-tags:
-  - Canvas
-  - Graphic
-  - Guide
-  - HTML
-  - HTML5
-  - Intermediate
-  - Web
-translation_of: Web/API/Canvas_API/Tutorial
 original_slug: Web/HTML/Canvas/Tutorial
 ---
 

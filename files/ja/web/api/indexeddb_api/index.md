@@ -15,7 +15,7 @@ IndexedDB は、ファイルや blob を含む大量の構造化データをク�
 
 ## 主要概念と使用法
 
-IndexedDB は SQL ベースの RDBMS に似たトランザクショナルデータベースシステムです。しかし、SQL ベース の RDBMS が固定された列を持つテーブルを使用するのに対して、IndexedDB は JavaScript ベースのオブジェクト指向データベースです。IndexedDB では、**キー**でインデックス付けされたオブジェクトを保存および取り出すことができます。[構造化クローンアルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)に対応した、任意のオブジェクトを保存することができます。データベースのスキーマを定義し、データベースへの接続を確立し、そして一連の**トランザクション**でデータの取り出しや更新を行う必要があります。
+IndexedDB は SQL ベースの RDBMS に似たトランザクショナルデータベースシステムです。しかし、SQL ベース の RDBMS が固定された列を持つテーブルを使用するのに対して、IndexedDB は JavaScript ベースのオブジェクト指向データベースです。IndexedDB では、**キー**でインデックス付けされたオブジェクトを保存および取り出すことができます。[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)に対応した、任意のオブジェクトを保存することができます。データベースのスキーマを定義し、データベースへの接続を確立し、そして一連の**トランザクション**でデータの取り出しや更新を行う必要があります。
 
 - [IndexedDB の主な特徴と基本用語](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology)についてはこちらをご覧ください。
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)のガイドで、で、非同期的に IndexedDB を使用する方法を基本原理から学びます。

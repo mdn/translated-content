@@ -1,14 +1,6 @@
 ---
 title: 설정자
 slug: Web/JavaScript/Reference/Functions/set
-tags:
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
-browser-compat: javascript.functions.set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
 {{jsSidebar("Functions")}}
 

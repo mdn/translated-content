@@ -1,18 +1,6 @@
 ---
 title: CanvasCaptureMediaStreamTrack
 slug: Web/API/CanvasCaptureMediaStreamTrack
-tags:
-  - CanvasCaptureMediaStreamTrack
-  - Experimental
-  - Frame Capture
-  - Interface
-  - Media
-  - Media Capture
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web
-translation_of: Web/API/CanvasCaptureMediaStreamTrack
 ---
 
 {{APIRef("Media Capture and Streams")}}

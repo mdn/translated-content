@@ -1,12 +1,6 @@
 ---
 title: order
 slug: Web/CSS/order
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/order
 ---
 
 {{CSSRef}}

@@ -1,12 +1,6 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-tags:
-  - 레퍼런스
-  - 메소드
-  - 수학
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
 
 {{JSRef}}

@@ -1,9 +1,6 @@
 ---
 title: NetworkInformation
 slug: Web/API/NetworkInformation
-tags:
-  - API
-translation_of: Web/API/NetworkInformation
 ---
 
 {{APIRef("Network Information API")}}{{SeeCompatTable}}

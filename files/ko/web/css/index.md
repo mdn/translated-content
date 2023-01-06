@@ -1,15 +1,6 @@
 ---
 title: 'CSS: Cascading Style Sheets'
 slug: Web/CSS
-tags:
-  - CSS
-  - Design
-  - Landing
-  - Layout
-  - Reference
-  - l10n:priority
-  - 스타일시트
-translation_of: Web/CSS
 ---
 
 {{CSSRef}}
