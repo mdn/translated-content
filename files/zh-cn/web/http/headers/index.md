@@ -16,7 +16,7 @@ slug: Web/HTTP/Headers
 - {{Glossary("Representation header", "表示标头")}}包含资源主体的信息，例如主体的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)或者应用的编码/压缩方案。
 - {{Glossary("Payload header","有效负荷标头")}}包含有关有效载荷数据表示的单独信息，包括内容长度和用于传输的编码。
 
-标头也可以根据{{Glossary("Proxy_server", "代理")}}代理处理它们的方式进行分组：
+标头也可以根据{{Glossary("Proxy_server", "代理")}}处理它们的方式进行分组：
 
 - {{ httpheader("Connection") }}
 - {{ httpheader("Keep-Alive") }}
