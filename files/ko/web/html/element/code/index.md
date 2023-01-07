@@ -1,13 +1,6 @@
 ---
 title: '<code>: 인라인 코드 요소'
 slug: Web/HTML/Element/code
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/code
 ---
 
 {{HTMLSidebar}}

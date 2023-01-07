@@ -1,14 +1,8 @@
 ---
 title: Link types
 slug: Web/HTML/Link_types
-tags:
-  - Attribute
-  - HTML
-  - Link
-  - Link types
-  - Reference
-translation_of: Web/HTML/Link_types
 ---
+
 {{HTMLSidebar}}
 
 다음 표에 나열된 링크 타입 속성은 HTML에서 두 문서간의 관계를 명시할 때 사용합니다. 이 때 {{HTMLElement("a")}}, {{HTMLElement("area")}}, 또는 {{HTMLElement("link")}} 요소를 사용해 한 쪽에서 다른 쪽으로 향하는 연결고리를 만듭니다.

@@ -1,13 +1,6 @@
 ---
-title: "MDN Web Docs 용어 사전: 웹 용어 정의"
+title: 'MDN Web Docs 용어 사전: 웹 용어 정의'
 slug: Glossary
-tags:
-  - Beginner
-  - Definitions
-  - Dictionary
-  - Index
-  - Landing
-  - Terminology
 ---
 
 웹 기술은 문서화 또는 코딩에서 사용되는 전문 용어 및 약어를 많이 포함하고 있습니다. 이 용어 사전은 웹을 성공적으로 이해하고 구축하기 위해 알아야 하는 단어와 약어의 정의를 제공합니다.

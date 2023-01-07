@@ -1,9 +1,6 @@
 ---
 title: transform
 slug: Web/XSLT/Element/transform
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/transform
 original_slug: Web/XSLT/transform
 ---
 

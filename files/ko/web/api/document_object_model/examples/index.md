@@ -1,10 +1,6 @@
 ---
 title: Examples
 slug: Web/API/Document_Object_Model/Examples
-page-type: guide
-tags:
-  - DOM
-  - DOM Reference
 ---
 
 {{DefaultAPISidebar("DOM")}}

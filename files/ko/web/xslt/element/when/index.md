@@ -1,11 +1,9 @@
 ---
 title: when
 slug: Web/XSLT/Element/when
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/when
 original_slug: Web/XSLT/when
 ---
+
 {{ XsltRef() }}
 
 `<xsl:when>` 요소는 항상 case 문처럼 동작하는 `<xsl:choose>` 요소 안에 나타납니다.

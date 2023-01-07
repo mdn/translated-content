@@ -1,11 +1,6 @@
 ---
 title: Web standards
 slug: Glossary/Web_standards
-tags:
-  - Infrastructure
-  - Web Standards
-  - standards
-  - web specifications
 ---
 
 웹 표준은 여러 국제 표준 기구가 정한 규칙으로서 {{Glossary("World Wide Web", "Web")}}이 작동하는 방식을 정의합니다. (때로는 {{Glossary("Internet")}}을 제어하기도 합니다)

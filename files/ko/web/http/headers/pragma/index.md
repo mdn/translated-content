@@ -1,14 +1,6 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-tags:
-  - Deprecated
-  - HTTP
-  - 삭제됨
-  - 요청
-  - 캐싱
-  - 헤더
-translation_of: Web/HTTP/Headers/Pragma
 ---
 
 {{HTTPSidebar}}

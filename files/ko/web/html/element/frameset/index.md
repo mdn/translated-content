@@ -1,8 +1,8 @@
 ---
 title: <frameset>
 slug: Web/HTML/Element/frameset
-translation_of: Web/HTML/Element/frameset
 ---
+
 {{Deprecated_header}}
 
 ## 요약

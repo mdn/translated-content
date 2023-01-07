@@ -1,14 +1,8 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
-tags:
-  - Entity header
-  - HTTP
-  - HTTP Header
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Allow
 ---
+
 {{HTTPSidebar}}
 
 **`Allow`** 헤더는 리소스가 지원하는 메소드 집합을 나열합니다.

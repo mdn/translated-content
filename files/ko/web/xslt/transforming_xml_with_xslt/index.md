@@ -1,13 +1,8 @@
 ---
 title: Transforming XML with XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
-tags:
-  - MDC Project
-  - NeedsMigration
-  - Transforming_XML_with_XSLT
-  - XSLT
-translation_of: Web/XSLT/Transforming_XML_with_XSLT
 ---
+
 ### [개요](/ko/Transforming_XML_with_XSLT/An_Overview)
 
 내용과 겉모양의 분리가 [XML](/ko/XML)의 중요한 설계 특징입니다. XML 문서 구조는 결국 이 데이터를 어떻게 표시하는 게 좋을지에 관한 어떤 암시를 줄 필요로 방해받지 않은 내용 자체의 서로 다른 면(aspect) 사이의 중요한 관계를 반영하고 명확히 하기 위해 설계했습니다. 이 지적인 구조화는 데이터 전송이 더욱 자동화되는 것만큼 특히 중요하고 네트워크로 연결된 매우 이질적인 컴퓨터 사이에 일어난다.

@@ -1,11 +1,6 @@
 ---
 title: HTTP 요청 메서드
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - Methods
-  - Reference
-translation_of: Web/HTTP/Methods
 ---
 
 {{HTTPSidebar}}

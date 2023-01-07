@@ -1,11 +1,6 @@
 ---
 title: HTTP 범위 요청
 slug: Web/HTTP/Range_requests
-tags:
-  - HTTP
-  - HTTP 범위 요청
-  - 가이드
-translation_of: Web/HTTP/Range_requests
 ---
 
 {{HTTPSidebar}}

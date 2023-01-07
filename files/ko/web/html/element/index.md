@@ -1,14 +1,6 @@
 ---
 title: HTML 요소 참고서
 slug: Web/HTML/Element
-tags:
-  - Basic
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - l10n:priority
-translation_of: Web/HTML/Element
 ---
 
 {{HTMLSidebar("Elements")}}
