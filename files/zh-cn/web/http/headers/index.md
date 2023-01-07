@@ -284,7 +284,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : 提供一种允许 Web 应用程序隔离其来源的机制。
 - {{HTTPHeader("Permissions-Policy")}}
-  - : 提供一种机制来允许和拒绝在网站自己的框架和它嵌入的 {{htmlelement("iframe")}} 中使用浏览器功能。
+  - : 提供一种机制来允许和拒绝在网站自己的框架和它嵌入的 {{htmlelement("iframe")}} 中使用浏览器特性。
 - {{HTTPHeader("Strict-Transport-Security")}}（{{Glossary("HSTS")}}）
   - : 强制使用 HTTPS 而不是 HTTP 进行通信。
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
