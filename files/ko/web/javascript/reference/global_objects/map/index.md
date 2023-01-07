@@ -18,13 +18,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 [`set()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/set) 메서드로 맵에 처음
 삽입한 각각의 키-값 쌍 순서와 대응됩니다. (`set()`이 호출되었을때 맵에서 해당 키가 없었을 경우입니다)
 
-`map()`의 명세는 "평균적으로 집합 내 요소의 수에 따라 하위 선형인 접근 시간을 제공하는" 맵을 구현해야 한다고 기술되어 있습니다.
+`Map`의 명세는 "평균적으로 집합 내 요소의 수에 따라 하위 선형인 접근 시간을 제공하는" 맵을 구현해야 한다고 기술되어 있습니다.
 따라서 복잡성이 O(N)보다 더 나은 경우 내부적으로 해시 테이블(O(1) 룩업), 검색 트리(O(log(N)) 룩업) 또는 기타 데이터
 구조로 표현될 수 있습니다.
 
 ### 키 동일성
 
-값 동일성은 [`sameValueZero`](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)을
+값 동일성은 [`SameValueZero`](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)을
 기반으로 합니다.(`0`과 `-0`을 다르게 취급하는 [등가 같음](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is)을
 사용하였습니다. [브라우저 호환성](#browser_compatibility)을 확인해보세요). 즉, `NaN !== NaN`에도 불구하고
 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며, 다른 모든 값은 `===` 연산자의 의미론에 따라 동일하게 간주됩니다.
@@ -64,6 +64,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
       </td>
     </tr>
     <tr>
+      <th scope="row">보안</th>
+      <td>
+        <code>Map</code>은 사용자가 제공하는 키와 값에 대해서 안전하게 사용할 수 있습니다.
+      </td>
+      <td>
+        <p>
+          사용자가 제공한 키-값 쌍을 <code>Object</code>에 설정하면 공격자가 객체의 프로토타입을 재정의하여 <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">객체 주입 공격</a>을 발생시킬 수 있습니다. 돌발적인 키 문제와 마찬가지로 <code>null</code> 프로토타입 객체를 사용하여 이 문제를 해결할 수도 있습니다.
+        </p>
+      </td>
+    </tr>
+    <tr>
       <th scope="row">키 유형</th>
       <td>
         <code>Map</code>의 키는 모든 값(함수, 객체 또는 원시값 포함)이 될 수 있습니다.
@@ -95,7 +106,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
           ({{jsxref("Statements/for...in", "for-in")}}은 오직 열거 가능한 문자열 키 속성만 포함합니다.
           {{jsxref("Object.keys")}}은 열거 가능한 자체 문자열 키 속성만 포함합니다.
           {{jsxref("Object.getOwnPropertyNames")}}은 열거 불가능하더라도 자체 문자열 키 속성을 포함합니다.
-          {{jsxref("Object.getOwnPropertySymbols")}}은 <code>Symbol</code>-키 속성에 대해 동일합니다.
+          {{jsxref("Object.getOwnPropertySymbols")}}은 <code>Symbol</code>-키 속성에 대해 동일합니다.)
         </p>
       </td>
     </tr>
