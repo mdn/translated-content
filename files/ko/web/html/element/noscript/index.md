@@ -1,13 +1,6 @@
 ---
 title: <noscript>
 slug: Web/HTML/Element/noscript
-tags:
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/noscript
 ---
 
 {{HTMLSidebar}}

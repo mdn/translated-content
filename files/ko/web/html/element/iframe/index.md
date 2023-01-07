@@ -1,14 +1,8 @@
 ---
 title: '<iframe>: 인라인 프레임 요소'
 slug: Web/HTML/Element/iframe
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/iframe
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<iframe>` 요소**는 중첩 {{glossary("browsing context", "브라우징 맥락")}}을 나타내는 요소로, 현재 문서 안에 다른 HTML 페이지를 삽입합니다.

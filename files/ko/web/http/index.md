@@ -1,14 +1,6 @@
 ---
 title: HTTP
 slug: Web/HTTP
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - TCP/IP
-  - Web
-  - l10n:priority
-translation_of: Web/HTTP
 ---
 
 {{HTTPSidebar}}

@@ -1,14 +1,8 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-translation_of: Web/HTML/Element/base
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<base>` 요소**는 문서 안의 모든 상대 {{glossary("URL")}}이 사용할 기준 URL을 지정합니다. 문서에는 하나의 `<base>` 요소만 존재할 수 있습니다.

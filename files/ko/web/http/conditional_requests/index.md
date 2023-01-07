@@ -1,8 +1,8 @@
 ---
 title: HTTP 조건부 요청
 slug: Web/HTTP/Conditional_requests
-translation_of: Web/HTTP/Conditional_requests
 ---
+
 {{HTTPSidebar}}
 
 영향을 받는 리소스들을 _검사기_ 값을 이용해 비교함으로써, HTTP는, 성공인 경우라도, 요청의 결과가 변경될 수 있는 *조건부 요청*의 컨셉을 가지고 있습니다. 그런 요청들은 캐시 컨텐츠와 쓸모없는 컨트롤 회피를 검증하고, 다운로드를 이어서 하거나 서버 상의 문서를 업로드 또는 수정할 때 수정된 내용을 잃지 않도록 할 때처럼, 문서의 무결성을 확증하는데 유용할 수 있습니다.

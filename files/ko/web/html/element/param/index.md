@@ -1,13 +1,6 @@
 ---
 title: '<param>: 객체 매개변수 요소'
 slug: Web/HTML/Element/param
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/param
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <menu>
 slug: Web/HTML/Element/menu
-translation_of: Web/HTML/Element/menu
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: <applet>
 slug: Web/HTML/Element/applet
-translation_of: Web/HTML/Element/applet
 ---
 
 ## 개요
