@@ -27,6 +27,8 @@ slug: Web/HTTP/Headers
 - {{ httpheader("Transfer-Encoding") }}
 - {{ httpheader("Upgrade") }}（另见[协议升级机制](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism)）。
 
+<!---->
+
 - 端到端（End-to-end）标头
   - : 这类标头*必须*被传输到最终的消息接收者：请求的服务器或者响应的客户端。中间的代理必须重新转发这些未经修改的标头，并且必须缓存它们。
 - 逐跳（Hop-by-hop）标头
