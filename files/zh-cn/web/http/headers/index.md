@@ -126,7 +126,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
   - : 一个布尔值，指示用户代理对减少数据使用量的偏好。
 
-## 条件句（Conditional）
+## 条件（Conditional）
 
 - {{HTTPHeader("Last-Modified")}}
   - : 资源的最后修改日期，用于比较同一个资源的多个版本。它不如 {{HTTPHeader("ETag")}} 准确，但在某些环境中更容易计算。使用 {{HTTPHeader("If-Modified-Since")}} 和 {{HTTPHeader("If-Unmodified-Since")}} 的条件请求可以使用此值来更改请求的行为。
