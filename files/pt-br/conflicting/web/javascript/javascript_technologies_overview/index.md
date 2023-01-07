@@ -1,10 +1,6 @@
 ---
 title: Recursos de linguagem JavaScript
 slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
-tags:
-  - Avançado
-  - Recursos
-translation_of: Web/JavaScript/Language_Resources
 original_slug: Web/JavaScript/Language_Resources
 ---
 

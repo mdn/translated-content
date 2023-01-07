@@ -1,15 +1,6 @@
 ---
 title: AnimationEvent.initAnimationEvent()
 slug: conflicting/Web/API/AnimationEvent/AnimationEvent
-tags:
-  - AnimationEvent
-  - Apps
-  - CSSOM
-  - Método(2)
-  - Não-padrão
-  - Obsolento
-  - Web Animations
-translation_of: Web/API/AnimationEvent/initAnimationEvent
 original_slug: Web/API/AnimationEvent/initAnimationEvent
 ---
 
