@@ -37,7 +37,7 @@ UTC 시간대를 사용하여 지정된 날짜를 나타내는 문자열입니�
 
 ### 별칭
 
-JavaScript의 `Date` API는 Java의 `java.util.Date` 라이브러리의 영감을 받았습니다 (1997년 Java 1.1 이후로 사실상 유산이 될지라도). JavaScript의 날짜는 항상 UTC 시간에 의해 작동하는 반면, [Greenwich Mean Time](https://en.wikipedia.org/wiki/Greenwich_Mean_Time)는 [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)와 동일하지 않기 때문에, Java의 `Date` 클래스에는 `toGMTString`이라는 형편없는 이름의 메서드가 있었습니다. 웹 호환성의 이유로 `toGMTSring`은 `toUTCString`의 별칭으로 남아 있으며, 이들은 정확히 동일한 함수 개체를 참조합니다. 아래와 같습니다.
+JavaScript의 `Date` API는 Java의 `java.util.Date` 라이브러리의 영감을 받았습니다 (1997년 Java 1.1 이후로 사실상 유산이 될지라도). 특히 JavaScript의 날짜는 항상 UTC 시간에 의해 작동하는 반면, [Greenwich Mean Time](https://en.wikipedia.org/wiki/Greenwich_Mean_Time)는 [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)와 동일하지 않기 때문에, Java의 `Date` 클래스에는 `toGMTString`이라는 형편없는 이름의 메서드가 있었습니다. 웹 호환성의 이유로 `toGMTSring`은 `toUTCString`의 별칭으로 남아 있으며, 이들은 정확히 동일한 함수 개체를 참조합니다. 아래와 같습니다.
 
 ```js
 Date.prototype.toGMTString.name === "toUTCString";
