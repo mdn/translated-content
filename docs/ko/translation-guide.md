@@ -369,6 +369,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | Rendering | 렌더링 | |
 | Section | 구획 | |
 | Statement | 명령문 또는 문 | |
+| short-circuit | 
 | User agent | 사용자 에이전트 | |
 
 ### CSS
@@ -428,6 +429,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | Settled | 처리 | | |
 | Scope | 스코프 | | |
 | Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) |
+| TypedArray | 형식화 배열 | | |
 
 ### HTTP
 
@@ -485,25 +487,27 @@ issue: [#1008](https://github.com/mdn/translated-content/issues/1008)
 
 <https://developer.mozilla.org/en-US/docs/Web/HTML> 와같이 영문 페이지라면 중간에 en-US만 <https://developer.mozilla.org/ko/docs/Web/HTML> 와같이 ko로 바꿔주시면 번역본으로 보실 수 있습니다.
 
-페이지가 존재하지 않는 경우 번역을 통해 기여를 하실 수 있습니다. 번역 기준 버전은 en-US입니다.
+페이지가 존재하지 않는 경우 번역을 통해 기여를 하실 수 있습니다. 한국 페이지로 노출되더라도 동일한 방법으로 영문 페이지로 전환하실 수 있습니다.
 
 **2. MDN 강의를 보면서 공부를 하고 있는데 다음과 같은 문장을 보게 되었습니다. 번역이 이상합니다.**
 
-특정기간 MDN 문서의 편집이 자유로워서 이상한 번역이 많습니다. 괜찮으시다면 PR을 보내주시거나 issue를 생성해서 해당 페이지가 조치 받게 해주실 수 있으신가요?
+MDN 문서의 편집이 자유로운 특정 기간으로 인해 이상한 번역이 많습니다. PR이나 issue 생성 혹은 직접적인 기여로 해당 페이지를 수정하실 수 있습니다.
 
 **3. 제가 초보라서 번역에 어떻게 기여하는지, 또 따라야 할 공식 지침 같은 것이 있는지 몰라서 손을 못 대고 있는 상황입니다.**
 
-단순한 제보는 <https://github.com/mdn/translated-content/issues> 다음 페이지에서 New issue를 눌러서 이슈 작성을 해주시면 됩니다! 혹시 직접 수정해서 기여하고 싶으시면 <https://github.com/mdn/translated-content/issues/827> 이 절차대로 진행해주실 수 있으신가요? 기여해주셔서 감사합니다.
+단순한 제보는 <https://github.com/mdn/translated-content/issues> 에서 **New issue를** 통해 제보 할 수 있습니다. 직접 문제를 해결하는 것을 원하신다면, <https://github.com/mdn/translated-content/issues/827> 의 절차를 참고하여 진행하실 수 있습니다.
 
 **4. Issue의 라벨은 어떻게 붙이나요?**
 
-라벨은 레파지토리 관리자분들께서 확인 후 붙여주십니다.
+라벨은 Git Action으로 [labeler.yml](https://github.com/mdn/translated-content/blob/main/.github/labeler.yml) 설정 파일을 통해 자동으로 PR을 생성하여 리뷰 요청 시 붙여지고 있습니다. label을 붙이는 권한은 `@mdn/yari-content-ko` 팀에게 있으므로, 오류가 있다면 배정 받은 리뷰어에게 말씀드려서 해결하실 수 있습니다.
 
 **5. content(en) 레포에는 index.md 파일로 저장되어 있는데, translated-content(ko) 레포에는 index.html 으로 되어 있습니다. 이런 경우에는 translated-content 레포의 index.html 파일이 번역된 index.md 파일로 교체되어도 되는건가요? 꼭 .html 포멧을 지켜야 한다 같은 규칙이 있는지 궁금합니다.**
 
-2021년 10월 17일 기준, html 형식에서 md 형식으로 옮겨가고 있는 과도기에있습니다. 자세한 내용은 [다음 링크](https://egas.tistory.com/m/52)를 참고해주세요.
+2021년 10월 17일 기준 html 형식에서 md 형식으로 옮겨가고 있는 과도기에 있습니다. 자세한 내용은 [다음 링크](https://egas.tistory.com/m/52)를 참고해주세요.
 
-md, html 확장자 중 어느 하나를 사용하더라도 괜찮습니다. 다만, md 확장자를 사용하실 경우 [MDN ko locale Markdown 번역에 대한 일반 지침](https://github.com/mdn/translated-content/blob/main/docs/ko/markdown-guide.md)을 지켜서 기여해주시면 됩니다!
+> 2022.11월부터 모든 .html 파일들이 .md 파일로 변환 되었습니다. (참고: [[MDN] Markdown 변환 완료 및 앞으로의 방향성](https://egas.tistory.com/168))
+
+현재는 md 확장자만 사용해서 기여 부탁드립니다.
 
 ## 맺음말
 
@@ -511,4 +515,4 @@ md, html 확장자 중 어느 하나를 사용하더라도 괜찮습니다. 다�
 
 번역을 보내 주시면 검토자가 디버깅을 돕고 부주의 한 부분이 무엇인지 알아낼 것입니다. 문제가 해결되면 번역을 병합합니다.
 
-번역에 직접 기여할 준비가 되지 않은 경우에는 문제가되지 않습니다. MDN에서 결함이있는 번역을 찾아 issue를 통해 알릴 수 있습니다. 또는, 너무 어렵지 않고 해결되지 않은 문제를 찾아서 해결해보세요. 이것은 번역 기여의 첫 단계를 수행하는 비교적 간단한 방법입니다. 여러분의 기여를 진심으로 기대합니다.
+번역에 직접 기여할 준비가 되지 않은 경우에는 문제가되지 않습니다. MDN에서 결함이있는 번역을 찾아 issue를 통해 알릴 수 있습니다. 또는, 너무 어렵지 않고 해결되지 않은 문제를 찾아서 해결해보세요. 이것은 번역 기여의 첫 단계를 수행하는 비교적 간단한 방법입니다. 여러분의 기여를 진심으로 환영합니다.
