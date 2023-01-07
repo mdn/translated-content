@@ -82,7 +82,7 @@ The HTML specification doesn't define where the baseline of a `<textarea>` is, s
 
 In most browsers, `<textarea>`s are resizable — you'll notice the drag handle in the right hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a `resize` value of `none`:
 
-```plain
+```css
 textarea {
   resize: none;
 }
@@ -92,7 +92,7 @@ textarea {
 
 Valid and invalid values of a `<textarea>` element (e.g. those within, and outside the bounds set by `minlength`, `maxlength`, or `required`) can be highlighted using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. For example, to give your textarea a different border depending on whether it is valid or invalid:
 
-```plain
+```css
 textarea:invalid {
   border: 2px dashed red;
 }
@@ -104,36 +104,36 @@ textarea:valid {
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
 
-{{ EmbedLiveSample('Example','600','200') }}
+{{ EmbedLiveSample('HTML','600','200') }}
 
 ### 基本示例
 
 The following example show a very simple textarea, with a set numbers of rows and columns and some default content.
 
-```plain
+```html
 <textarea name="textarea"
    rows="10" cols="50">Write something here</textarea>
 ```
 
-{{ EmbedLiveSample('Basic_example','600','150') }}
+{{ EmbedLiveSample('基本示例','600','150') }}
 
 ### 最小和最大长度
 
 This example has a minimum and maximum number of characters — of 10 and 20 respectively. Try it and see.
 
-```plain
+```html
 <textarea name="textarea"
    rows="5" cols="30"
    minlength="10" maxlength="20">Write something here</textarea>
 ```
 
-{{ EmbedLiveSample('Min_and_max_length','600','80') }}
+{{ EmbedLiveSample('最小和最大长度','600','80') }}
 
 Note that `minlength` doesn't stop the user from removing characters so that the number entered goes past the minimum, but it does make the value entered into the `<textarea>` invalid. Also note that even if you have a `minlength` value set (3, for example), an empty `<textarea>` is still considered valid unless you also have the `required` attribute set.
 
@@ -166,7 +166,7 @@ This example shows two `<textarea>`s — one of which is `disabled`, and one of 
    readonly>I am a readonly textarea</textarea>
 ```
 
-{{ EmbedLiveSample('Disabled_and_readonly','600','80') }}
+{{ EmbedLiveSample('禁用和只读','600','80') }}
 
 ## 技术概览
 
