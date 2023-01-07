@@ -106,15 +106,15 @@ new Object([value])
 Следующий пример сохраняет пустой объект `Object` в переменную `o`:
 
 ```js
-var o = new Object();
+let o = new Object();
 ```
 
 ```js
-var o = new Object(undefined);
+let o = new Object(undefined);
 ```
 
 ```js
-var o = new Object(null);
+let o = new Object(null);
 ```
 
 ### Пример: использование `Object` для создания объектов `Boolean`
@@ -123,12 +123,12 @@ var o = new Object(null);
 
 ```js
 // эквивалентно o = new Boolean(true);
-var o = new Object(true);
+let o = new Object(true);
 ```
 
 ```js
 // эквивалентно o = new Boolean(false);
-var o = new Object(Boolean());
+let o = new Object(Boolean());
 ```
 
 ## Спецификации
