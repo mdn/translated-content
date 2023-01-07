@@ -192,9 +192,9 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Access-Control-Max-Age")}}
   - : 指示预检请求的结果能被缓存多久。
 - {{HTTPHeader("Access-Control-Request-Headers")}}
-  - :用于发起一个预检请求，告知服务器正式请求会使用哪些 HTTP 标头。
+  - : 用于发起一个预检请求，告知服务器正式请求会使用哪些 HTTP 标头。
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - :用于发起一个预检请求，告知服务器正式请求会使用哪一种 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)。
+  - : 用于发起一个预检请求，告知服务器正式请求会使用哪一种 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)。
 - {{HTTPHeader("Origin")}}
   - : 指示获取资源的请求是从什么源发起的。
 - {{HTTPHeader("Timing-Allow-Origin")}}
