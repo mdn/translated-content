@@ -50,7 +50,7 @@ slug: Web/HTTP/Headers
 - {{HTTPHeader("Age")}}
   - : 对象在代理缓存中的时间（以秒为单位）。
 - {{HTTPHeader("Cache-Control")}}
-  - : 请求和响应中混村机制的指令。
+  - : 请求和响应中缓存机制的指令。
 - {{HTTPHeader("Clear-Site-Data")}}
   - : 清除与请求网站相关联的浏览器数据（例如 cookie、storage、cache）。
 - {{HTTPHeader("Expires")}}
