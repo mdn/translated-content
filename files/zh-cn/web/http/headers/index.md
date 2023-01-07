@@ -280,7 +280,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Content-Security-Policy")}}（{{Glossary("CSP")}}）
   - : 控制允许用户代理能够为给定页面加载哪些资源。
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-  - : 允许 Web 开发人员通过监控而不是强制执行其效果来试验策略。这些违规报告包含通过 HTTP `POST` 请求发送到指定 URI 的 {{Glossary("JSON")}} 文档。
+  - : 允许 Web 开发人员通过监控而不是强制执行其效果来试验策略。这些由 {{Glossary("JSON")}} 文档组成的违规报告包含通过 HTTP `POST` 请求发送到指定的 URI 。
 - {{HTTPHeader("Expect-CT")}}
   - : 允许网站选择报告和/或执行证书透明度要求，这可以让你注意到该网站使用了欺诈性证书。当站点启用 Expect-CT 标头时，他们将请求 Chrome 检查该站点的任何证书是否出现在公共证书透明度日志中。
 - {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
