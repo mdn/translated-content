@@ -22,7 +22,7 @@
 
 MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습니다. 한국 로케일[(translated-content)](https://github.com/mdn/translated-content)도 `en-us`[(content)](https://github.com/mdn/content)를 기반으로 번역이 진행되고 있습니다. **따라서, `ko`와 `en-us` 문서 사이에 차이가 있다면, 마크업을 포함하여 `en-us` 문서를 기준으로 번역하여 `translated-content` 저장소에 기여할 수 있습니다.**
 
-[번역 가이드](#번역-가이드)와 [용어 지침](#용어-지침)을 숙지 후 기여해주세요.
+[번역 지침](#번역-지침)와 [용어 지침](#용어-지침)을 숙지 후 기여해주세요.
 
 ### PR 규칙
 
@@ -279,7 +279,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | Description | 설명 | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description)
 | Example | 예제 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 | Examples | 예제 | [링크](https://github.com/mdn/translated-content/blob/main/files/ko/web/javascript/reference/global_objects/proxy/proxy/apply/index.md) |
-| Guides | 가이드 | |
+| Guides | 지침 | |
 | In this module | 이번 과정에서는 | [링크](https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#in_this_module) |
 | Learn More | 더 알아보기 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/Mutable) |
 | Next steps | 다음 단계 | [링크](https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_breakout_game_Phaser#%EB%8B%A4%EC%9D%8C_%EB%8B%A8%EA%B3%84) |
