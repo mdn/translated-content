@@ -313,7 +313,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Sec-Fetch-User")}}
   - : 它是一个请求标头，指示导航请求是否由用户激活触发。它是一个结构化标头（Structured Header），其值为布尔值，因此可能的值为 `?0` 表​​示 false，`?1` 表示true。
 - {{HTTPHeader("Sec-Fetch-Dest")}}
-  - : 它是一个请求标头，指示请求到服务器的目的地。它是一个结构化标头（Structured Header），其值为具有可能值的标记 `audio`、`audioworklet`、`document`、`embed`、`empty`、`font`、`image`、`manifest`、`object`、`paintworklet`、`report`、`script`、`serviceworker`、`sharedworker`、`style`、`track`、`video`、`worker` 和 `xslt`.
+  - : 它是一个请求标头，指示请求到服务器的目的地。它是一个结构化标头（Structured Header），其值为具有可能值的标记 `audio`、`audioworklet`、`document`、`embed`、`empty`、`font`、`image`、`manifest`、`object`、`paintworklet`、`report`、`script`、`serviceworker`、`sharedworker`、`style`、`track`、`video`、`worker` 和 `xslt`。
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
   - : 在 service worker 启动期间以抢占式请求发送到 {{domxref("fetch()")}} 资源的请求标头。该值由 {{domxref("NavigationPreloadManager.setHeaderValue()")}} 设置，可用于通知服务器应返回与正常 `fetch()` 操作不同的资源。
 
