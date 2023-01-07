@@ -111,7 +111,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{experimental_inline}}
   - : 一个数字，表示以 CSS 像素为单位的布局视口宽度。提供的像素值是四舍五入到最小整数（即上限值）的数字。
 - {{HTTPHeader("Width")}} {{deprecated_inline}} {{experimental_inline}}
-  - : 一个数字，表示以物理像素为单位的所需资源宽度（即图像的固有大小）。
+  - : 一个数字，表示以物理像素为单位的所需资源宽度（即图像的固有尺寸）。
 
 ### 网络客户端提示
 
