@@ -65,7 +65,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 服务器使用 {{HTTPHeader("Accept-CH")}} 主动向客户端请求它们感兴趣的客户端提示标头。客户端可以选择在后续的请求中包含请求的标头。
 
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
-  - : 服务器可以使用 `Accept-CH` 标头字段或具有 `http-equiv` 属性的等效 HTML `<meta>` 元素来宣传对客户端提示的支持。
+  - : 服务器可以使用 `Accept-CH` 标头字段或具有 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#attr-http-equiv) 属性的等效 HTML `<meta>` 元素来宣告对客户端提示的支持。
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
   - : 服务器可以要求客户端记住服务器在指定时间段内支持的客户端提示集合，以便在后续请求到服务器源时能够传送客户端提示。
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
