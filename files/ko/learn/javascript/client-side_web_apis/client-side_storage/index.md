@@ -12,24 +12,22 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
-        JavaScript basics (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
-          >building blocks</a
-        >,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
-        the
+        JavaScript에 대한 기본 (<a href="/ko/docs/Learn/JavaScript/First_steps">첫걸음</a>,
+        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
+          >구성 요소</a
+        >
+        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript 객체</a> 참고),
         <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >basics of Client-side APIs</a
+          >Client-side API의 기본</a
         >
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">목표:</th>
       <td>
-        To learn how to use client-side storage APIs to store application data.
+        데이터를 저장하기 위해 client-side storage API를 어떻게 사용하는지 배우기.
       </td>
     </tr>
   </tbody>

@@ -3,7 +3,9 @@ title: DOM 概述
 slug: Web/API/Document_Object_Model/Introduction
 ---
 
-{{APIRef}}本节提供了一个简单的概念性的 DOM 介绍：DOM 是什么，它是如何组织 [HTML](/zh-CN/docs/HTML) 及 [XML](/zh-CN/docs/XML) 文档，你要如何访问它，这个 API 提供了哪些参考信息和实例。
+{{APIRef}}
+
+本节提供了一个简单的概念性的 DOM 介绍：DOM 是什么，它是如何组织 [HTML](/zh-CN/docs/HTML) 及 [XML](/zh-CN/docs/XML) 文档，你要如何访问它，这个 API 提供了哪些参考信息和实例。
 
 ## 什么是 DOM?
 
@@ -249,21 +251,10 @@ table.summary = "note: increased border";
 </html>
 ```
 
-为了在单个页面内测试大量接口，比如会影响网页颜色的一系列属性，你可以创建一个类似的测试页面，里面有一个全面控制台，包含了 button、textfield 和其他 HTML 元素。下面的截图可以给你一些启发如何来组合使用这些接口。
-
-图 0.1 简单的 DOM 测试页面
-
-![Image:DOM_Ref_Introduction_to_the_DOM.gif](/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif)
+为了在单个页面内测试大量接口，比如会影响网页颜色的一系列属性，你可以创建一个类似的测试页面，里面有一个全面控制台，包含了 button、textfield 和其他 HTML 元素。
 
 在这个例子中，下拉菜单可以动态更新 DOM 可以改变的网页部件，比如背景颜色（`bgColor`），链接的颜色（`aLink`），文字的颜色（text）。当然，设计你的测试页面，测试这些你看到的接口，对你学习使用 DOM 更有重要意义。
 
 ## 规范
 
 {{Specifications}}
-
-## Subnav
-
-- [DOM Reference](/zh-CN/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/zh-CN/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/zh-CN/docs/Web/API/Document_Object_Model/Events)
-- [Examples](/zh-CN/docs/Web/API/Document_Object_Model/Examples)

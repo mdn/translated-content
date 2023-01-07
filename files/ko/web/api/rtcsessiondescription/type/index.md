@@ -1,7 +1,6 @@
 ---
 title: RTCSessionDescription.type
 slug: Web/API/RTCSessionDescription/type
-translation_of: Web/API/RTCSessionDescription/type
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

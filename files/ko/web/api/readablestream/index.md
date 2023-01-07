@@ -1,7 +1,6 @@
 ---
 title: ReadableStream
 slug: Web/API/ReadableStream
-translation_of: Web/API/ReadableStream
 ---
 
 {{APIRef("Streams")}}

@@ -1,7 +1,6 @@
 ---
 title: OffscreenCanvas.getContext()
 slug: Web/API/OffscreenCanvas/getContext
-translation_of: Web/API/OffscreenCanvas/getContext
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 

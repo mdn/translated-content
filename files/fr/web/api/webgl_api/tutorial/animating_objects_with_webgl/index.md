@@ -8,7 +8,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Animer_des_objets_avec_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
 
 Dans cet exemple, nous allons faire tourner notre carré 2D.
 

@@ -1,13 +1,6 @@
 ---
 title: 프로그레시브 웹 앱 소개
 slug: Web/Progressive_web_apps/Introduction
-tags:
-  - PWA
-  - js13kGames
-  - 소개
-  - 프로그레시브
-  - 프로그레시브 웹 앱
-translation_of: Web/Progressive_web_apps/Introduction
 original_slug: Web/Progressive_web_apps/소개
 ---
 

@@ -13,12 +13,12 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在[HTML 
       <th scope="row">预备知识：</th>
       <td>
         熟悉 HTML 基础（包含在
-        <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >开始学习 HTML</a
         >
         中）、HTML 文本格式（包含在
         <a
-          href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML 文字处理初步</a
         >
         中）。
@@ -33,7 +33,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在[HTML 
 
 ## 描述列表
 
-在 HTML 基础部分，我们讨论了如何在 HTML 中[标记基本的列表](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表_Lists)，但是我们没有提到你偶尔会遇到的第三种类型的列表—**描述列表** (description list) **。**这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
+在 HTML 基础部分，我们讨论了如何在 HTML 中[标记基本的列表](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表_lists)，但是我们没有提到你偶尔会遇到的第三种类型的列表——**描述列表**（description list）。这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
 
 ```
 内心独白
@@ -44,7 +44,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在[HTML 
 戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
 ```
 
-描述列表使用与其他列表类型不同的闭合标签— {{htmlelement("dl")}}; 此外，每一项都用 {{htmlelement("dt")}} (description term) 元素闭合。每个描述都用 {{htmlelement("dd")}} (description definition) 元素闭合。让我们来完成下面的标记例子：
+描述列表使用与其他列表类型不同的闭合标签——{{htmlelement("dl")}}；此外，每一项都用 {{htmlelement("dt")}}（description term）元素闭合。每个描述都用 {{htmlelement("dd")}}（description definition）元素闭合。让我们来完成下面的标记例子：
 
 ```html
 <dl>
@@ -57,7 +57,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在[HTML 
 </dl>
 ```
 
-浏览器的默认样式会在**描述列表的描述部分**（description definition）和**描述术语**（description terms）之间产生缩进。MDN 非常严密地遵循这一惯例，同时也鼓励关于术语的其他更多的定义（but also embolden the terms for extra definition）。
+浏览器的默认样式会在**描述列表的描述部分**（description definition）和**描述术语**（description terms）之间产生缩进。MDN 非常严密地遵循这一惯例，同时也鼓励关于术语的其他更多的定义。
 
 下面是前述代码的显示结果：
 
@@ -380,21 +380,23 @@ for short quotations that don't require paragraph breaks.</q> -- <a href="https:
 
 ## 缩略语
 
-另一个你在 web 上看到的相当常见的元素是{{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释（包含在{{htmlattrxref("title")}}属性中）。让我们看看下面两个例子：
+另一个你在 web 上看到的相当常见的元素是{{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释（包含在{{htmlattrxref("title")}}属性中）。
+
+### 缩略语示例
+
+让我们一起看一个示例。
 
 ```html
 <p>我们使用 <abbr title="超文本标记语言（Hyper text Markup Language）">HTML</abbr> 来组织网页文档。</p>
 
-<p>第 33 届 <abbr title="夏季奥林匹克运动会">奥运会</abbr> 将于 2024 年 8 月在法国巴黎举行。</p>
+<p>第 33 届<abbr title="夏季奥林匹克运动会">奥运会</abbr>将于 2024 年 8 月在法国巴黎举行。</p>
 ```
 
-这些代码的显示效果如下（当光标移动到项目上时会出现提示）：
+这些代码的显示效果如下：
 
-我们使用 HTML 来组织网页文档。
+{{EmbedLiveSample('缩略语示例', '100%', '150')}}
 
-第 33 届 奥运会 将于 2024 年 8 月在法国巴黎举行。
-
-> **备注：** 还有另一个元素\<acronym>，它基本上与\<abbr>相同，专门用于首字母缩略词而不是缩略语。然而，这已经被废弃了 - 它在浏览器的支持中不如\<abbr>，并且具有类似的功能，所以没有意义。只需使用\<abbr>。
+> **备注：** 还有另一个元素 {{htmlelement("acronym")}}，它基本上与 `<abbr>` 相同，专门用于首字母缩略词而不是缩略语。然而，这已经被废弃了——它在浏览器的支持中不如 `<abbr>`，并且具有类似的功能，所以没有意义。只需使用 `<abbr>`。
 
 ### 主动学习：标记一个缩略语
 

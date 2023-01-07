@@ -8,7 +8,7 @@ original_slug: Web/HTML/Elemento/map
 
 - descripción de uno o dos párrafos
   - : **Sus etiquetas son**: \<map> y \</map> (ambas obligatorias).
-  
+
     **Crea una caja**: [En bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Está definido como**: [Elemento especial](/es/HTML/Elemento/Tipos_de_elementos#especial).

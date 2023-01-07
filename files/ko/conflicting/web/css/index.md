@@ -1,16 +1,6 @@
 ---
 title: '@viewport'
 slug: conflicting/Web/CSS
-tags:
-  - Adaptation
-  - At-rule
-  - CSS
-  - Device
-  - NeedsContent
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/@viewport
 original_slug: Web/CSS/@viewport
 ---
 

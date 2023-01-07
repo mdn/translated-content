@@ -1,12 +1,6 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/content
 ---
 {{CSSRef}}
 

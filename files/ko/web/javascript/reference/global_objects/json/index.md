@@ -1,12 +1,6 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
 
 {{JSRef}}

@@ -1,6 +1,8 @@
 ---
 title: Notification.permission
 slug: Web/API/Notification/permission
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -24,29 +26,27 @@ slug: Web/API/Notification/permission
 
 ```js
 function notifyMe() {
-  // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
-    console.log("This browser does not support desktop notification");
-  }
-
-  // Let's check whether notification permissions have already been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    let notification = new Notification("Hi there!");
-  }
-
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied' || Notification.permission === "default") {
-    Notification.requestPermission(function (permission) {
-      // If the user accepts, let's create a notification
+    // ブラウザーが通知に対応しているかどうかをチェックする
+    alert("このブラウザーはデスクトップ通知に対応していません。");
+  } else if (Notification.permission === "granted") {
+    // 通知の許可が既に得られているかどうかをチェックする
+    // それならば、通知を作成する
+    const notification = new Notification("こんにちは！");
+    // …
+  } else if (Notification.permission !== "denied") {
+    // そうでなければ、ユーザーに許可を求める必要がある
+    Notification.requestPermission().then((permission) => {
+      // ユーザーが許可したら、通知を作成する
       if (permission === "granted") {
-        let notification = new Notification("Hi there!");
+        const notification = new Notification("こんにちは！");
+        // …
       }
     });
   }
 
-  // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them any more.
+  // 最後に、ユーザーが通知を拒否していて、あなたが敬意を
+  // 払いたい場合は、これ以上相手を煩わせることはありません。
 }
 ```
 

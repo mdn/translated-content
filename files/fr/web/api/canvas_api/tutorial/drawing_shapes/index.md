@@ -13,7 +13,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
 
 Maintenant que nous avons défini notre [environnement de canevas](/fr/docs/Tutoriel_canvas/Utilisation_de_base), nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.
 
@@ -206,14 +206,14 @@ function draw() {
   const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     const ctx = canvas.getContext('2d');
-    
+
     // Triangle plein
     ctx.beginPath();
     ctx.moveTo(25, 25);
     ctx.lineTo(105, 25);
     ctx.lineTo(25, 105);
     ctx.fill();
-    
+
     // Triangle filaire
     ctx.beginPath();
     ctx.moveTo(125, 125)
@@ -329,7 +329,7 @@ function draw() {
   const canevas = document.getElementById('canvas');
   if (canevas.getContext) {
     const ctx = canevas.getContext('2d');
-    
+
     // Exemples de courbes quadratiques
     ctx.beginPath();
     ctx.moveTo(75, 25);
@@ -363,7 +363,7 @@ function draw() {
   const canevas = document.getElementById('canvas');
   if (canevas.getContext) {
     const ctx = canevas.getContext('2d');
-    
+
     // Exemple de courbes cubiques
     ctx.beginPath();
     ctx.moveTo(75, 40);
@@ -406,31 +406,31 @@ function draw() {
   const canevas = document.getElementById('canvas');
   if (canevas.getContext) {
     const ctx = canevas.getContext('2d');
-    
+
     rectArrondi(ctx, 12, 12, 150, 150, 15);
     rectArrondi(ctx, 19, 19, 150, 150, 9);
     rectArrondi(ctx, 53, 53, 49, 33, 10);
     rectArrondi(ctx, 53, 119, 49, 16, 6);
     rectArrondi(ctx, 135, 53, 49, 33, 10);
     rectArrondi(ctx, 135, 119, 25, 49, 10);
-    
+
     ctx.beginPath();
     ctx.arc(37, 37, 13, Math.PI/7, -Math.PI/7, false);
     ctx.lineTo(31, 37);
     ctx.fill();
-    
+
     for(let i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 35, 4, 4);
     }
-    
+
     for(i = 0; i < 6; i++) {
         ctx.fillRect(115, 51 + i * 16, 4, 4);
     }
-    
+
     for(i = 0; i < 8; i++) {
     ctx.fillRect(51 + i * 16, 99, 4, 4);
     }
-    
+
     ctx.beginPath();
     ctx.moveTo(83, 116);
     ctx.lineTo(83, 102);
@@ -444,7 +444,7 @@ function draw() {
     ctx.lineTo(87.666, 111.333);
     ctx.lineTo(83, 116);
     ctx.fill();
-    
+
     ctx.fillStyle = 'white';
     ctx.beginPath();
     ctx.moveTo(91, 96);
@@ -458,12 +458,12 @@ function draw() {
     ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
     ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
     ctx.fill();
-       
+
     ctx.fillStyle = "black";
     ctx.beginPath();
     ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
-       
+
     ctx.beginPath();
     ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();

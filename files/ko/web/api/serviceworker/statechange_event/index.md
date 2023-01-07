@@ -1,7 +1,6 @@
 ---
 title: ServiceWorker.onstatechange
 slug: Web/API/ServiceWorker/statechange_event
-translation_of: Web/API/ServiceWorker/onstatechange
 original_slug: Web/API/ServiceWorker/onstatechange
 ---
 

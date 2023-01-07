@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.close()
 slug: Web/API/RTCPeerConnection/close
-translation_of: Web/API/RTCPeerConnection/close
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}

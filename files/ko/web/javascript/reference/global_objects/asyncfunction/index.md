@@ -1,9 +1,6 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 
 {{JSRef}}

@@ -531,6 +531,7 @@
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
 /zh-CN/docs/Glossary/Symbol	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol
+/zh-CN/docs/Glossary/Transferable_objects	/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects
 /zh-CN/docs/Glossary/主轴	/zh-CN/docs/Glossary/Main_Axis
 /zh-CN/docs/Glossary/交叉轴	/zh-CN/docs/Glossary/Cross_Axis
 /zh-CN/docs/Glossary/代理服务器	/zh-CN/docs/Glossary/Proxy_server
@@ -1384,6 +1385,7 @@
 /zh-CN/docs/Web/API/Document/ononline	/zh-CN/docs/Web/API/Window/online_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
+/zh-CN/docs/Web/API/Document/origin	/zh-CN/docs/Web/API/origin
 /zh-CN/docs/Web/API/Document/selectstart_event	/zh-CN/docs/Web/API/Node/selectstart_event
 /zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/Document/touchend_event	/zh-CN/docs/Web/API/Element/touchend_event
@@ -1608,6 +1610,7 @@
 /zh-CN/docs/Web/API/LocalFileSystemSync	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
 /zh-CN/docs/Web/API/LockedFile	/zh-CN/docs/Web/API/IDBFileHandle
+/zh-CN/docs/Web/API/Long_Tasks_API	/zh-CN/docs/Web/API/PerformanceLongTaskTiming
 /zh-CN/docs/Web/API/MediaCapabilitiesInfo	/zh-CN/docs/Web/API/MediaCapabilities/encodingInfo
 /zh-CN/docs/Web/API/MediaDevices/ondevicechange	/zh-CN/docs/Web/API/MediaDevices/devicechange_event
 /zh-CN/docs/Web/API/MediaRecorder/ondataavailable	/zh-CN/docs/Web/API/MediaRecorder/dataavailable_event

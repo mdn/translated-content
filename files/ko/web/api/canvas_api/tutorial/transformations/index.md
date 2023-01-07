@@ -1,16 +1,6 @@
 ---
 title: 변형 (transformations)
 slug: Web/API/Canvas_API/Tutorial/Transformations
-tags:
-  - CSS
-  - HTML
-  - 이동
-  - 축소
-  - 캔버스
-  - 크기변형
-  - 트랜스폼
-  - 확대
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
 original_slug: Web/HTML/Canvas/Tutorial/변형
 ---
 

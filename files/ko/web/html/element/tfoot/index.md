@@ -1,14 +1,6 @@
 ---
 title: '<tfoot>: 표 바닥글 요소'
 slug: Web/HTML/Element/tfoot
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-browser-compat: html.elements.tfoot
 ---
 
 {{HTMLSidebar}}

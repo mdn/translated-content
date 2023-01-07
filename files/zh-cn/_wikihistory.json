@@ -8381,10 +8381,6 @@
     "modified": "2020-10-15T21:52:24.168Z",
     "contributors": ["ridiculousjam", "JobWebNie", "luxp", "xgqfrms-GitHub"]
   },
-  "Web/API/Document/origin": {
-    "modified": "2019-03-18T21:43:47.737Z",
-    "contributors": ["nDos"]
-  },
   "Web/API/Document/plugins": {
     "modified": "2020-10-15T22:07:38.306Z",
     "contributors": ["SphinxKnight", "Sojourn2017"]
@@ -11792,10 +11788,6 @@
     "modified": "2020-10-19T03:38:36.478Z",
     "contributors": ["Sxxxx-x"]
   },
-  "Web/API/Long_Tasks_API": {
-    "modified": "2020-10-15T22:18:48.616Z",
-    "contributors": ["Li-saltair", "koolc"]
-  },
   "Web/API/MIDIAccess": {
     "modified": "2020-10-15T21:53:29.345Z",
     "contributors": ["bershanskiy", "tlos142857", "micblo"]
@@ -12969,6 +12961,10 @@
   "Web/API/PerformanceEntry/toJSON": {
     "modified": "2020-10-15T21:53:01.195Z",
     "contributors": ["fscholz", "xgqfrms-GitHub"]
+  },
+  "Web/API/PerformanceLongTaskTiming": {
+    "modified": "2020-10-15T22:18:48.616Z",
+    "contributors": ["Li-saltair", "koolc"]
   },
   "Web/API/PerformanceNavigation": {
     "modified": "2020-10-15T22:04:14.850Z",

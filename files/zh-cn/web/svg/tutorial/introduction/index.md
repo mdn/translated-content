@@ -5,13 +5,15 @@ slug: Web/SVG/Tutorial/Introduction
 
 {{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
-![](/@api/deki/files/348/=SVG_Overview.png)[SVG](/zh-CN/SVG)是一种[XML](/zh-CN/XML)语言，类似 XHTML，可以用来绘制矢量图形，例如右面展示的图形。SVG 可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以形变（be transformed）、合成、或者通过滤镜完全改变外观。
+[SVG](/zh-CN/docs/Web/SVG) 是一种 [XML](/zh-CN/docs/Web/XML) 语言，类似 [XHTML](/zh-CN/docs/Glossary/XHTML)，可以用来绘制矢量图形，例如右面展示的图形。SVG 可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以形变（be transformed）、合成、或者通过滤镜完全改变外观。
 
-SVG 诞生于 1999 年，之前有几个相互竞争的格式规范被提交到[W3C](http://www.w3.org)，但是都没有获得批准。主流浏览器均支持 SVG。加载慢是 SVG 的一个缺点。但是 SVG 也有自身的优点，比如它实现了 DOM 接口（比 Canvas 方便），不需要安装第三方扩展 (extensions，原文有误，应该是插件 plugins，类似 flash)。当然，是否使用 SVG 还要取决于你要实现什么。
+![Mozilla dino logo](dino.svg)
+
+SVG 诞生于 1999 年，之前有几个相互竞争的格式规范被提交到[W3C](https://www.w3.org)，但是都没有获得批准。主流浏览器均支持 SVG。加载慢是 SVG 的一个缺点。但是 SVG 也有自身的优点，比如它实现了 DOM 接口（比 Canvas 方便），不需要安装第三方扩展 (extensions，原文有误，应该是插件 plugins，类似 flash)。当然，是否使用 SVG 还要取决于你要实现什么。
 
 ### 基本要素
 
-HTML 提供了定义标题、段落、表格等等内容的元素。与此类似，SVG 也提供了一些元素，用于定义圆形、矩形、简单或复杂的曲线。一个简单的 SVG 文档由`{{ SVGElement('svg') }}`根元素和基本的形状元素构成。另外还有一个`g`元素，它用来把若干个基本形状编成一个组。
+HTML 提供了定义标题、段落、表格等等内容的元素。与此类似，SVG 也提供了一些元素，用于定义圆形、矩形、简单或复杂的曲线。一个简单的 SVG 文档由 {{ SVGElement('svg') }} 根元素和基本的形状元素构成。另外还有一个`g`元素，它用来把若干个基本形状编成一个组。
 
 从这些开始，SVG 可以变得更加复杂。SVG 支持渐变、旋转、动画、滤镜效果、与 JavaScript 交互等等功能，但是所有这些额外的语言特性，都需要在一个定义好的图形区域内实现。
 

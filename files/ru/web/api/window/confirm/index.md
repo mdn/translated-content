@@ -26,7 +26,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 Результат:
 
-![firefox confirm](https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png)
+![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
 
 ## Примечания
 
@@ -36,7 +36,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 Начиная с Chrome 46.0 этот метод заблокирован в {{htmlelement("iframe")}} до тех пор, пока атрибут sandbox не установлен в значение `allow-modal`.
 
-{{gecko_minversion_inline("23.0")}} Аргумент является опциональным и необязательным согласно спецификации.
+Аргумент является опциональным и необязательным согласно спецификации.
 
 ## Спецификация
 

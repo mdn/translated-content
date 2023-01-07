@@ -1,7 +1,6 @@
 ---
 title: 웹 소켓
 slug: Web/API/WebSockets_API
-translation_of: Web/API/WebSockets_API
 original_slug: WebSockets
 ---
 

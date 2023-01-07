@@ -1,9 +1,6 @@
 ---
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
-page-type: web-api-instance-method
-browser-compat: api.FormData.getAll
-translation_of: Web/API/FormData/getAll
 ---
 
 {{APIRef("XMLHttpRequest")}}

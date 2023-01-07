@@ -142,7 +142,7 @@ function base64DecToArr (sBase64, nBlocksSize) {
         taBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
       }
       nUint24 = 0;
-      
+
     }
   }
 

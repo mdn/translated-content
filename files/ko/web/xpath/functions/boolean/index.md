@@ -1,9 +1,6 @@
 ---
 title: boolean
 slug: Web/XPath/Functions/boolean
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/boolean
 ---
 
 {{ XsltRef() }}

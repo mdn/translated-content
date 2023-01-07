@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
 
 {{JSRef}}

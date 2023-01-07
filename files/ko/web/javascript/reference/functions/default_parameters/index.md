@@ -1,13 +1,6 @@
 ---
 title: 기본값 매개변수
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript2015
-  - ECMAScript6
-  - Functions
-  - JavaScript
-  - 기본값 매개변수
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 
 {{jsSidebar("Functions")}}

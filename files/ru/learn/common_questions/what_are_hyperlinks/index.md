@@ -30,7 +30,7 @@ original_slug: Learn/Understanding_links_on_the_web
 
 По умолчанию голубого цвета и подчёркнутые, ссылки выделяются из общего текста. Кликните на ссылку, чтобы активировать её, или, если вы используете клавиатуру, перейдите на ссылку при помощи Tab и нажмите Enter.
 
-![Example of a basic display and effect of a link in a web page](https://mdn.mozillademos.org/files/8625/link-1.png)
+![Example of a basic display and effect of a link in a web page](link-1.png)
 
 Ссылки стали прорывом, который сделал Веб таким полезным и популярным. В остальной части этой статьи мы обсудим различные типы ссылок и их важность в современном Веб-дизайне.
 
@@ -59,7 +59,7 @@ _В данном разделе нет контента. [Please, consider contr
 
 В большинстве случаев ссылки связывают две страницы вместе. **Якоря** (**Anchors)** же связывают две области одного документа. Когда вы следуете по ссылке указывающей на якорь, ваш браузер переходит с одной части текущего документа на другую, вместо загрузки нового документа. Хотя вы создаёте и используете якоря точно так же, как любые другие ссылки.
 
-![Example of a basic display and effect of an anchor in a web page](https://mdn.mozillademos.org/files/8627/link-2.png)
+![Example of a basic display and effect of an anchor in a web page](link-2.png)
 
 ### Ссылки и поисковые системы
 

@@ -1,15 +1,6 @@
 ---
 title: Document.all
 slug: Web/API/Document/all
-tags:
-  - API
-  - DOM
-  - Document
-  - HTMLAllCollection
-  - Property
-  - Reference
-  - all
-translation_of: Web/API/Document/all
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 

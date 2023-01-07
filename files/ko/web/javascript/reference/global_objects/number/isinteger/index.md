@@ -1,12 +1,6 @@
 ---
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
 
 {{JSRef}}

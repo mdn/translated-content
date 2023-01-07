@@ -1,11 +1,6 @@
 ---
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
-tags:
-  - Constructor
-  - Reference
-browser-compat: api.CustomEvent.CustomEvent
-translation_of: Web/API/CustomEvent/CustomEvent
 ---
 
 {{APIRef("DOM")}}

@@ -8,7 +8,7 @@ original_slug: Web/HTML/Elemento/u
 
 - Muestra el texto subrayado.
   - : **Sus etiquetas son**: \<u> y \</u> (Ambas obligatorias)
-  
+
     **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
     - **Está definido como**

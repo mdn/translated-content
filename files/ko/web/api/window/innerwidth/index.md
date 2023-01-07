@@ -1,11 +1,6 @@
 ---
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
-tags:
-  - API
-  - Property
-  - Reference
-translation_of: Web/API/Window/innerWidth
 ---
 
 {{APIRef}}

@@ -1,11 +1,6 @@
 ---
 title: WebGL을 사용한 객체 애니메이션
 slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
-tags:
-  - WebGL
-  - 애니메이션
-  - 회전
-translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}

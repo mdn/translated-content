@@ -1,13 +1,6 @@
 ---
 title: <url>
 slug: Web/CSS/url
-tags:
-  - CSS
-  - CSS Data Type
-  - Layout
-  - Reference
-translation_of: Web/CSS/url()
-translation_of_original: Web/CSS/url
 original_slug: Web/CSS/url()
 ---
 

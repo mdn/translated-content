@@ -1,13 +1,6 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/background-repeat
 ---
 {{CSSRef}}
 
@@ -44,7 +37,7 @@ background-repeat: unset;
 
 - `<repeat-style>`
   - : 한 개 값 구문은 두 개 값 구문의 단축 형태입니다.
-  
+
     <table class="standard-table">
       <tbody>
         <tr>

@@ -21,7 +21,7 @@ W3C 的 Dom Level 1 核心是一个用于修改文档内容树的强大的对象
 </html>
 ```
 
-![image:Using_the_W3C_DOM_Level_1_Core-doctree.jpg](/@api/deki/files/415/=Using_the_W3C_DOM_Level_1_Core-doctree.jpg)
+![image:Using_the_W3C_DOM_Level_1_Core-doctree.jpg](using_the_w3c_dom_level_1_core-doctree.jpg)
 
 当 Mozilla 解析文档的时候，它首先构建一个内容树然后用它来显示这个文档。
 
@@ -31,11 +31,11 @@ W3C 的 Dom Level 1 核心是一个用于修改文档内容树的强大的对象
 
 W3C 的 DOM Level 1 允许你随意改变内容树。其功能之强大足以从零构建出任何 HTML 文档。它允许作者在任何时候，都可以通过脚本来修改文档里的任何内容。这是网页制作者通过 JavaScript 动态改变 DOM 的最简单途径。在版本较旧的浏览器里，使用 JavaScript 都是通过访问全局对象 `document` 属性来得到文档。文档对象实现了 W3C 的 DOM Level 1 规定的[文档接口](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#i-Document)。
 
-## 一个简单例子
+## 一个简单的示例
 
 假设作者改变上面文档的头部内容，并且使用两段段落取代一段段落。实现代码如下：
 
-### HTML Content
+### HTML
 
 ```html
 <body>
@@ -45,7 +45,7 @@ W3C 的 DOM Level 1 允许你随意改变内容树。其功能之强大足以从
 </body>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
   function change() {
@@ -72,9 +72,9 @@ W3C 的 DOM Level 1 允许你随意改变内容树。其功能之强大足以从
   }
 ```
 
-{{ EmbedLiveSample('A_simple_example', 800, 300) }}
+{{ EmbedLiveSample('一个简单的示例', 800, 300) }}
 
-可以看完整的[示例代码](/@api/deki/files/2866/=example.html)。
+可以看完整的[示例代码](/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/using_the_w3c_dom_level_1_core-doctree.jpg)。
 
 ## 想学习更多？
 

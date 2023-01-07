@@ -1,15 +1,6 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - 정규 표현식
-  - 정규식
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
 
 {{JSRef}}

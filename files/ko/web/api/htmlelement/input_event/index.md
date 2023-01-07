@@ -1,7 +1,6 @@
 ---
 title: 'HTMLElement: input event'
 slug: Web/API/HTMLElement/input_event
-translation_of: Web/API/HTMLElement/input_event
 ---
 {{APIRef}}
 

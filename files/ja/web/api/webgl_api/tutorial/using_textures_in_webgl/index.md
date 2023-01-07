@@ -3,7 +3,7 @@ title: WebGL でのテクスチャの使用
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 現在、サンプルプログラムは回転する 3D キューブを描画します。今回はキューブの表面を単色で塗りつぶすのではなく、テクスチャをマッピングしてみましょう。
 

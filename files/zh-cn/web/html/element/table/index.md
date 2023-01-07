@@ -102,7 +102,7 @@ slug: Web/HTML/Element/table
     > **备注：** 不要使用这个属性，因为它已经被废弃。{{HTMLElement("table")}} 元素应该使用 [CSS](/zh-CN/docs/CSS) 定制样式。在 {{HTMLElement("table")}} 元素上使用 CSS 的属性 {{cssxref("border-spacing")}} ，以达到类似于 cellspacing 的效果。
 - {{htmlattrdef("frame")}} {{Deprecated_inline}}
   - : 这个枚举属性定义了包围在表格周围的框架的哪个边必须显示。它可能有下列值：
-  
+
     - above
     - below
     - hsides

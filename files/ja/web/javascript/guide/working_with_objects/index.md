@@ -324,7 +324,7 @@ var myObj = {
 };
 ```
 
-ここで `objectName` は既存のオブジェクトを、`methodname` はメソッドを割り当てたい名前を、`function_name` は関数の名前を指しています。
+ここで `objectName` は既存のオブジェクトを、`methodname` はメソッドを割り当てたい名前を、`functionName` は関数の名前を指しています。
 
 そして次のようにオブジェクトに続けてメソッドを呼び出します。
 

@@ -4,7 +4,7 @@ slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 v etioi tutorial we’ll go through the process of building an HTML5 mobile game that uses the [Device Orientation](/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) and [Vibration](/ru/docs/Web/Guide/API/Vibration) **APIs** to enhance the gameplay and is built using the [Phaser](http://phaser.io/) framework. Basic JavaScript knowledge is recommended to get the most from this tutorial.
 
@@ -12,7 +12,7 @@ v etioi tutorial we’ll go through the process of building an HTML5 mobile game
 
 By the end of the tutorial you will have a fully functional demo game: [Cyber Orb](http://orb.enclavegames.com/). It will look something like this:
 
-![A 2D game board featuring a small yellow ball. There is a large black hole for the ball to escape down, and a number of barriers blocking the ball from escaping.](https://mdn.mozillademos.org/files/10297/cyber-orb.png)
+![A 2D game board featuring a small yellow ball. There is a large black hole for the ball to escape down, and a number of barriers blocking the ball from escaping.](cyber-orb.png)
 
 ## Phaser framework
 
@@ -22,7 +22,7 @@ By the end of the tutorial you will have a fully functional demo game: [Cyber Or
 
 You can see [Cyber Orb source code](https://github.com/EnclaveGames/Cyber-Orb) on GitHub. The folder structure is quite straightforward: the starting point is the `index.html` file where we initialize the framework and set up an {{htmlelement("canvas")}} to render the game on.
 
-![Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure.](https://mdn.mozillademos.org/files/10357/cyber-orb-github.png)
+![Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure.](cyber-orb-github.png)
 
 You can open the index file in your favourite browser to launch the game and try it. There are also three folders in the directory:
 
@@ -292,7 +292,7 @@ handleOrientation: function(e) {
 
 The more you tilt the device, the more force is applied to the ball, therefore the faster it moves (the velocity is higher).
 
-![An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen.](https://mdn.mozillademos.org/files/10369/cyber-orb-flame-orientation.png)
+![An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen.](cyber-orb-flame-orientation.png)
 
 > **Примечание:** To find more out about implementing device orientation and what raw code would look like, read [Keep it level: responding to device orientation changes](/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes).
 
@@ -395,7 +395,7 @@ That's all — loading and playing the sounds is easy with Phaser.
 
 When collision detection works as expected let's add some special effects with the help from the Vibration API.
 
-![A visualization of the vibrations of a Flame mobile device with the Cyber Orb game demo on the screen.](https://mdn.mozillademos.org/files/10371/cyber-orb-flame-vibration.png)
+![A visualization of the vibrations of a Flame mobile device with the Cyber Orb game demo on the screen.](cyber-orb-flame-vibration.png)
 
 The best way to use it in our case is to vibrate the phone every time the ball hits the walls — inside the `wallCollision` function:
 

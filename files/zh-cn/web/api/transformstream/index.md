@@ -11,7 +11,7 @@ slug: Web/API/TransformStream
 
 转换算法可以作为构造函数对象的可选参数提供。如果没有提供，数据在通过管道传输流时，不会被修改。
 
-`TransformStream` 是一个{{glossary("Transferable objects","可转移对象")}}。
+`TransformStream` 是一个[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。
 
 ## 构造函数
 

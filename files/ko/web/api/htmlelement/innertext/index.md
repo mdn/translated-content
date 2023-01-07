@@ -1,13 +1,6 @@
 ---
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - Property
-  - Reference
-translation_of: Web/API/HTMLElement/innerText
 original_slug: Web/API/Node/innerText
 ---
 {{APIRef("HTML DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
-translation_of: Web/API/WebGL_API/WebGL_best_practices
 ---
 
 {{DefaultAPISidebar("WebGL")}}

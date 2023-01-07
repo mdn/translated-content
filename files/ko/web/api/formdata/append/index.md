@@ -1,9 +1,6 @@
 ---
 title: FormData.append()
 slug: Web/API/FormData/append
-page-type: web-api-instance-method
-browser-compat: api.FormData.append
-translation_of: Web/API/FormData/append
 ---
 
 {{APIRef("XMLHttpRequest")}}

@@ -1,11 +1,6 @@
 ---
 title: Node.replaceChild()
 slug: Web/API/Node/replaceChild
-tags:
-  - 노드 교체
-  - 돔 조작
-  - 자바스크립트
-translation_of: Web/API/Node/replaceChild
 ---
 {{APIRef("DOM")}}
 

@@ -1,11 +1,6 @@
 ---
 title: Private class fields
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-tags:
-  - Class
-  - JavaScript
-  - Private Field
-translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
 
 {{JsSidebar("Classes")}}

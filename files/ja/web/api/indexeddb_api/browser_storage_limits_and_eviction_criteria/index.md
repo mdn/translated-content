@@ -1,13 +1,13 @@
 ---
 title: ブラウザーのストレージ制限と削除基準
 slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
+l10n:
+  sourceCommit: cbfee97866847077a5c7feb3b337ed7d4f3d3424
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
 
 クライアント側 (すなわちローカルディスク) に何らかのデータを保存するウェブ技術は何種類かがあります。ブラウザーがどれだけの容量をウェブデータストレージに割り当てるかや、容量の上限に達したときにどのデータを削除するかのプロセスは単純ではなく、またブラウザーにより異なります。この記事では、必要なローカルストレージの容量を確保するために、いつどのローカルコンテンツを破棄するのかをどうやって特定するのかを説明します。
-
-> **メモ:** 以下の情報はほとんどの最新ブラウザーではおおむね正確ですが、ブラウザー固有の注意事項も知られています。 Opera と Chrome は、すべての場合において同じ動作になるでしょう。 [Opera Mini](http://www.opera.com/mobile/mini) (Presto ベースで、サーバー側でレンダリングする) は、クライアントにデータを保存しません。
 
 ## ブラウザーのデータストレージを使用する技術は何か?
 
@@ -24,7 +24,7 @@ Firefox では以下の技術が、必要なデータを保存するためにブ
 
 オリジンの「最終アクセス日時」はこれらのうちの何れかがアクティブ化/非アクティブ化されたときに更新されます。オリジン立ち退き (origin eviction) によって、すべてのクォータクライアントでデータ削除が行われたときに更新されます。
 
-Chrome/Opera では、 Quota Management API が [AppCache](/ja/docs/Web/HTML/Using_the_application_cache), [IndexedDB](/ja/docs/Web/API/IndexedDB_API), WebSQL, [File System API](/ja/docs/Web/API/File_and_Directory_Entries_API) のクォータ管理を制御しています。
+Chrome/Opera では、 Quota Management API が [IndexedDB](/ja/docs/Web/API/IndexedDB_API)、Web SQL（非推奨）、[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) のクォータ管理を制御しています。
 
 ## さまざまな種類のデータストレージ
 
@@ -33,7 +33,7 @@ Chrome/Opera では、 Quota Management API が [AppCache](/ja/docs/Web/HTML/Usi
 ストレージは 2 種類に分けられます。
 
 - 永続的なもの。長期間保存されることを意図したデータです。これは、ユーザーが選択した場合にのみ削除されます (たとえば、Firefox では、*設定*に進み、*プライバシーとセキュリティ > Cookie とサイトデータ*のオプションを使用することで、すべての保存データを削除するか、または選択したオリジンからの保存データのみを削除するかを選択できます)。
-- 一時的なもの。長期間にわたって維持する必要がないデータです。[ストレージの容量制限](#storage_limits)に達すると、 [LRU ポリシー](#lru_policy)によりもっとも古く使用されたものから削除されます。
+- 一時的なもの。長期間にわたって維持する必要がないデータです。[ストレージの容量制限](#ストレージの容量制限)に達すると、 [LRU ポリシー](#lru_ポリシー)によりもっとも古く使用されたものから削除されます。
 
 Firefox では、永続的なストレージが使用されると、ユーザーにはデータが永続的になることを警告するポップアップが表示され、それが良いかどうかを尋ねます。一時的データストレージは明示的にユーザーにプロンプトを表示しません。
 
@@ -48,9 +48,9 @@ Firefox では、永続的なストレージが使用されると、ユーザー
 - `<profile>/storage/temporary` — 一時的なデータストレージのリポジトリーです。
 - `<profile>/storage/default` — 既定のデータストレージのリポジトリーです。
 
-> **メモ:** [Storage API](/ja/docs/Web/API/Storage_API) の導入後は、"permanent" フォルダーは廃止されると考えられます。"permanent" フォルダーは IndexedDB の永続的な種類のデータベースのみ保存します。ボックスモードが "best-effort" や "persistent" であっても、データは \<profile>/storage/default 以下に保存されます。
+> **メモ:** [ストレージ API](/ja/docs/Web/API/Storage_API) の導入後は、"permanent" フォルダーは廃止されると考えられます。"permanent" フォルダーは IndexedDB の永続的な種類のデータベースのみ保存します。ボックスモードが "best-effort" や "persistent" であっても、データは \<profile>/storage/default 以下に保存されます。
 
-> **メモ:** Firefox では URL バーに `about:support` と入力して移動して、_プロファイルフォルダー_ の隣にある _フォルダーを開く_ ボタン (Mac OS X では _Finder で開く_) を押下すると、プロファイルのフォルダーを見つけることができます。
+> **メモ:** Firefox では URL バーに `about:support` と入力して移動して、_プロファイルフォルダー_ の隣にある _フォルダーを開く_ ボタン (macOS では _Finder で開く_) を押下すると、プロファイルのフォルダーを見つけることができます。
 
 > **メモ:** プロファイルフォルダーでデータを保存する場所を見ていると、第 4 のフォルダー `persistent` が見つかるかもしれません。本来は更新や移行を単純化するため、少し前に `persistent` フォルダーを `permanent` フォルダーに改名しました。
 
@@ -90,5 +90,5 @@ Firefox では、永続的なストレージが使用されると、ユーザー
 
 ## 関連情報
 
-- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](http://blog.agektmr.com) モバイルブラウザーのクライアント側ストレージについて詳しく分析した記事。
-- [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), by[Eiji Kitamura.](http://blog.agektmr.com) Chrome/Blink (Opera も含まれるでしょう) の Quota Management API について見ていく記事。
+- [Working with quota on mobile browsers](https://web.dev/storage-for-the-web/), by [Eiji Kitamura](https://blog.agektmr.com) モバイルブラウザーのクライアント側ストレージについて詳しく分析した記事。
+- [ウェブのストレージ](https://web.dev/storage-for-the-web/)

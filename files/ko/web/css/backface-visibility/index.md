@@ -1,13 +1,6 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/backface-visibility
 ---
 {{CSSRef}}
 

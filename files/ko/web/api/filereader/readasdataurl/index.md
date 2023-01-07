@@ -1,9 +1,6 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
-page-type: web-api-instance-method
-browser-compat: api.FileReader.readAsDataURL
-translation_of: Web/API/FileReader/readAsDataURL
 ---
 {{APIRef("File API")}}
 
@@ -98,7 +95,12 @@ function previewFiles() {
 }
 ```
 
-> **참고**: [`FileReader()`](/ko/docs/Web/API/FileReader) 생성자는 Internet Explorer 10 이전 버전에서는 지원하지 않는 기능입니다. 정상적으로 지원하는 코드를 확인하기 위해서는 다음 링크를 참조하시기 바랍니다. [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html). 또는 [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
+> **참고:**
+>
+> [`FileReader()`](/ko/docs/Web/API/FileReader) 생성자는 Internet Explorer 10 이전 버전에서는 지원하지 않는 기능입니다.
+>
+> 정상적으로 지원하는 코드를 확인하기 위해서는 다음 링크를 참조하시기 바랍니다. [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html).
+> 또는 [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
 
 ## 명세
 

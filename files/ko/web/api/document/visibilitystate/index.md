@@ -1,14 +1,6 @@
 ---
 title: Document.visibilityState
 slug: Web/API/Document/visibilityState
-tags:
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference
-  - Web
-translation_of: Web/API/Document/visibilityState
 ---
 {{ ApiRef("DOM") }}
 
