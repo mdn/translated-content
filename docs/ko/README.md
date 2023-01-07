@@ -3,7 +3,7 @@
 1. **[MDN 번역 콘텐츠에 대한 일반 지침](#MDN-번역-콘텐츠에-대한-일반-지침)**
 2. **[첫 기여자들을 위한 지침 안내](#첫-기여자들을-위한-지침-안내)**
 3. **[yari 빠른 사용법](#yari-빠른-사용법)**
-4. **[지침 안내](#지침-안내)**
+4. **[여러 지침 안내](#여러-지침-안내)**
 7. **[기타](#기타)**
 8. **[자주 묻는 질문](#자주-묻는-질문)**
 9. **[맺음말](#맺음말)**
@@ -20,7 +20,7 @@
 
 MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습니다. 한국 로케일[(translated-content)](https://github.com/mdn/translated-content)도 `en-us`[(content)](https://github.com/mdn/content)를 기반으로 번역이 진행되고 있습니다. **따라서, `ko`와 `en-us` 문서 사이에 차이가 있다면, 마크업을 포함하여 `en-us` 문서를 기준으로 번역하여 `translated-content` 저장소에 기여할 수 있습니다.**
 
-[번역 지침](./translation-guide.md), [용어 지침](./glossary-guide.md) 및 [macro 지침](./macro-guide.md)을 숙지 후 기여해주세요.
+[번역 지침](./guides/translation-guide.md), [용어 지침](./guides/glossary-guide.md) 및 [macro 지침](./guides/macro-guide.md)을 숙지 후 기여해주세요.
 
 ### PR 규칙
 
@@ -60,18 +60,26 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 다음과 같이 진행하면 아래와 같이 실시간으로 반영사항을 확인할 수 있고 4가지 편집 버튼으로 편집할 수 있습니다.
 ![image](https://user-images.githubusercontent.com/22424891/117309001-002e0500-aebd-11eb-9842-8f78a99e8873.png)
 
-## 지침 안내
+## 여러 지침 안내
 
 지침은 기여 과정을 원활하고 효율적으로 만드는 데 매우 유용합니다. 기여하기 전에 다음 지침들을 주의 깊게 읽어주세요.
 
-- [번역 지침](./translation-guide.md)
-- [용어 지침](./glossary-guide.md)
-- [macro 지침](./macro-guide.md)
-- [기타 지침](./etc-guide.md)
+- [번역 지침](./guides/translation-guide.md)
+- [용어 지침](./guides/glossary-guide.md)
+- [macro 지침](./guides/macro-guide.md)
+- [기타 지침](./guides/etc-guide.md)
+
+다음은 리뷰어를 위한 지침입니다.
+
+- [MDN yari-content-ko 팀 지침](./guides/organizer-guide.md)
+
+다음은 보관된 지침입니다.
+
+- [마크다운 변환 지침](./guides/markdown-conversion-guide.md)
 
 ## 자주 묻는 질문
 
-[FAQ](./faq.md) 페이지 참고 부탁드립니다.
+[FAQ](./faq.md) 참고 부탁드립니다.
 
 ## 맺음말
 
