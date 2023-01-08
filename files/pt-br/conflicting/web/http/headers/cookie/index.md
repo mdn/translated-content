@@ -1,14 +1,6 @@
 ---
 title: Cookie2
 slug: conflicting/Web/HTTP/Headers/Cookie
-tags:
-  - Cabeçalho de requisição
-  - HTTP
-  - Obsoleto
-  - Referencia
-  - cabeçalho
-  - requisição
-translation_of: Web/HTTP/Headers/Cookie2
 original_slug: Web/HTTP/Headers/Cookie2
 ---
 
