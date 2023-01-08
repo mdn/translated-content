@@ -105,7 +105,7 @@ Sec-WebSocket-Key: key
 
 #### {{HTTPHeader("Sec-WebSocket-Protocol")}}
 
-`Sec-WebSocket-Protocol` 标头按优先顺序指定你希望用的一个或者多个 WebSocket 协议。由服务器支持的第一个 WebSocket 协议，将由服务器在响应中包含的 `Sec-WebSocket-Protocol` 标头中选择并返回它。你可以在标头中多次使用它；结果与在单个标头中使用逗号分隔的子协议标识符列表相同。
+`Sec-WebSocket-Protocol` 标头按优先顺序指定你希望用的一个或者多个 WebSocket 协议。将服务器支持的第一个 WebSocket 协议，由服务器在响应中包含的 `Sec-WebSocket-Protocol` 标头中选择并返回它。你可以在标头中多次使用它；结果与在单个标头中使用逗号分隔的子协议标识符列表相同。
 
 ```http
 Sec-WebSocket-Protocol: subprotocols
