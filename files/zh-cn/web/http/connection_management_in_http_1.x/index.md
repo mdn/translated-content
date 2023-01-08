@@ -17,7 +17,7 @@ HTTP 的传输协议主要依赖于 TCP 来提供从客户端到服务器端之�
 
 > **备注：** HTTP/2 新增了其它连接管理模型。
 
-要注意的一个重点是 HTTP 的连接管理适用于两个连续节点之间的连接，它是[逐跳（Hop-by-hop）标头](/zh-CN/docs/Web/HTTP/Headers#逐跳（Hop-by-hop）标头)，而不是[端到端（End-to-end）标头](/zh-CN/docs/Web/HTTP/Headers#端到端（End-to-end）标头)。当模型用于从客户端到第一个代理服务器的连接和从代理服务器到目标服务器之间的连接时（或者任意中间代理）效果可能是不一样的。HTTP 协议头受不同连接模型的影响，比如 {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}}，就是[逐跳（Hop-by-hop）标头](/zh-CN/docs/Web/HTTP/Headers#逐跳Hop-by-hop标头)标头，它们的值是可以被中间节点修改的。
+要注意的一个重点是 HTTP 的连接管理适用于两个连续节点之间的连接，它是[逐跳（Hop-by-hop）标头](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)，而不是[端到端（End-to-end）标头](/zh-CN/docs/Web/HTTP/Headers#端到端（end-to-end）标头)。当模型用于从客户端到第一个代理服务器的连接和从代理服务器到目标服务器之间的连接时（或者任意中间代理）效果可能是不一样的。HTTP 协议头受不同连接模型的影响，比如 {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}}，就是[逐跳标头](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)标头，它们的值是可以被中间节点修改的。
 
 一个相关的话题是 HTTP 连接升级的概念，其中 HTTP/1.1 连接升级为一个不同的协议，比如 TLS/1.0、Websocket、甚至明文形式的 HTTP/2。更多细节参阅[协议升级机制](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism)。
 
@@ -49,15 +49,15 @@ HTTP/1.0 里默认并不使用长连接。把 {{HTTPHeader("Connection")}} 设�
 >
 > - 有缺陷的[代理服务器](https://zh.wikipedia.org/wiki/代理服务器)仍然很常见，这些会导致 Web 开发人员无法预见和轻松诊断的奇怪和不稳定行为。
 > - 正确的实现流水线是复杂的：传输中的资源大小、多少有效的 [RTT](https://zh.wikipedia.org/wiki/來回通訊延遲) 会被用到以及有效带宽都会直接影响到流水线提供的改善。不知道这些的话，重要的消息可能被延迟到不重要的消息后面。这个重要性的概念甚至会演变为影响到页面布局！因此 HTTP 流水线在大多数情况下带来的改善并不明显。
-> - 流水线受制于[队头阻塞（HOL）](https://zh.wikipedia.org/wiki/队头阻塞)问题。由于这些原因，流水线已经被更好的算法给代替，如 _multiplexing_，已经用在 HTTP/2。
+> - 流水线受制于[队头阻塞（HOL）](https://zh.wikipedia.org/wiki/队头阻塞)问题。
 >
-> 由于这些原因，流水线已被 HTTP/2 中更好的算法*多路复用*所取代。
+> 由于这些原因，流水线已被 HTTP/2 中更好的算法——*多路复用*（multiplexing）所取代。
 
 默认情况下，[HTTP](/zh-CN/docs/Web/HTTP) 请求是按顺序发出的。下一个请求只有在当前请求收到响应过后才会被发出。由于会受到网络延迟和带宽的限制，在下一个请求被发送到服务器之前，可能需要等待很长时间。
 
 流水线是在同一条长连接上发出连续的请求，而不用等待应答返回。这样可以避免连接延迟。理论上讲，性能还会因为两个 HTTP 请求有可能被打包到一个 TCP 消息包中而得到提升。就算 HTTP 请求不断的继续，尺寸会增加，但设置 TCP 的[最大分段大小（MSS）](https://zh.wikipedia.org/wiki/最大分段大小)选项，仍然足够包含一系列简单的请求。
 
-并不是所有类型的 HTTP 请求都能用到流水线：只有{{glossary("idempotent", "幂等")}}方式，比如 {{HTTPMethod("GET")}}、{{HTTPMethod("HEAD")}}、{{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 能够被安全的重试。如果有故障发生时，流水线的内容要能被轻易的重试。
+并不是所有类型的 HTTP 请求都能用到流水线：只有{{glossary("idempotent", "幂等")}}方式，比如 {{HTTPMethod("GET")}}、{{HTTPMethod("HEAD")}}、{{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 能够被安全地重试。如果有故障发生时，流水线的内容要能被轻易的重试。
 
 今天，所有遵循 HTTP/1.1 标准的代理和服务器都应该支持流水线，虽然实际情况中还是有很多限制：一个很重要的原因是，目前没有现代浏览器默认启用这个特性。
 
