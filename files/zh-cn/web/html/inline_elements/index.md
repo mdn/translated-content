@@ -23,7 +23,7 @@ HTML (超文本标记语言) 元素大多数都是行内元素或[块级元素](
 span { background-color: #8ABB55; }
 ```
 
-{{ EmbedLiveSample('Inline_example') }}
+{{ EmbedLiveSample('行内元素示例') }}
 
 ## 行内元素与块级元素对比
 
