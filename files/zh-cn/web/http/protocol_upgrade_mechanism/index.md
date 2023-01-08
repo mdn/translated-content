@@ -9,7 +9,7 @@ slug: Web/HTTP/Protocol_upgrade_mechanism
 
 这个机制是可选的；它并不能强制协议的更改（通常来说这一机制总是由客户端发起的）。如果它们支持新协议，实现甚至可以不利用 upgrade，在实践中，这种机制主要用于引导 WebSocket 连接。
 
-注意：HTTP/2 明确禁止使用此机制；这个机制只属于 HTTP/1.1
+注意：HTTP/2 明确禁止使用此机制；这个机制只属于 HTTP/1.1。
 
 ## 升级 HTTP/1.1 的链接
 
