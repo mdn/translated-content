@@ -102,7 +102,7 @@ u.spelling {
 
 任何使用过今天比较流行的文字处理器的人都应该熟悉结果。
 
-{{EmbedLiveSample("Indicating_a_spelling_error", 650, 80)}}
+{{EmbedLiveSample("表示拼写错误", 650, 80)}}
 
 ### 避免使用 \<u>
 
@@ -114,7 +114,7 @@ u.spelling {
 
 ##### HTML
 
-```plain
+```html
 <span class="underline">Today's Special</span>
 <br>
 Chicken Noodle Soup With Carrots
@@ -122,7 +122,7 @@ Chicken Noodle Soup With Carrots
 
 ##### CSS
 
-```plain
+```css
 .underline {
   text-decoration: underline;
 }
@@ -130,7 +130,7 @@ Chicken Noodle Soup With Carrots
 
 ##### 结果
 
-{{EmbedLiveSample("Non-semantic_underlines", 650, 80)}}
+{{EmbedLiveSample("非语义下划线", 650, 80)}}
 
 #### 表示书名
 
@@ -138,17 +138,23 @@ Chicken Noodle Soup With Carrots
 
 ##### HTML
 
-```plain
+```html
 <p>The class read <cite>Moby Dick</cite> in the first term.</p>
 ```
 
 ##### 默认样式的结果
 
-{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}
+{{EmbedLiveSample("表示书名", 650, 80)}}
+
+##### 为 cite 元素添加样式
 
 请注意， `<cite>` 元素的默认样式会以斜体显示文本。如果您愿意，可以使用 CSS 覆盖它：
 
-```plain
+```html
+<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+```
+
+```css
 cite {
   font-style: normal;
   text-decoration: underline;
@@ -157,7 +163,7 @@ cite {
 
 ##### 定制样式的结果
 
-{{EmbedLiveSample("Presenting_a_book_title", 650, 80)}}
+{{EmbedLiveSample("为 cite 元素添加样式", 650, 80)}}
 
 ## 规范
 
