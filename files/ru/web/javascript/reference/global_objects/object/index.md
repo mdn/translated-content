@@ -93,7 +93,8 @@ new Object([value])
 
 ### Свойства
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties')}}
+{{jsxref("Object/Object", "Object()")}}
+    : Превращает входные данные в объект.
 
 ### Методы
 
