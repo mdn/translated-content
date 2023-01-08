@@ -51,7 +51,7 @@ CSS 视觉格式化模型（*visual formatting model）*是用来处理和在视
 
 主块级盒子包含由后代元素生成的盒子以及内容，同时它也会参与[定位方案](/zh-CN/docs/CSS/Positioning_scheme)。
 
-![venn_blocks.png](/@api/deki/files/5995/=venn_blocks.png)一个块级盒子可能也是一个块容器盒子。块容器盒子（*block container box）要么*只包含其它块级盒子，要么只包含行内盒子并同时创建一个行内[格式化上下文（inline formatting context）](/zh-CN/docs/CSS/Inline_formatting_context)。
+一个块级盒子可能也是一个块容器盒子。块容器盒子（*block container box）要么*只包含其它块级盒子，要么只包含行内盒子并同时创建一个行内[格式化上下文（inline formatting context）](/zh-CN/docs/CSS/Inline_formatting_context)。
 
 能够注意到块级盒子与块容器盒子是不同的这一点很重要。前者描述了元素与其父元素和兄弟元素之间的行为，而后者描述了元素跟其后代之间的行为。有些块级盒子并不是块容器盒子，比如表格；而有些块容器盒子也不是块级盒子，比如非替换行内块和非替换表格单元格。
 
@@ -65,25 +65,7 @@ CSS 选择器不能作用于匿名盒子 (_anonymous boxes_)，所以它不能�
 
 块包含盒子可能只包含行内级盒子，也可能只包含块级盒子，但通常的文档都会同时包含两者，在这种情况下，就会在相邻的行内级盒子外创建匿名块盒子。
 
-### 示例
-
-考虑下面的 HTML 代码，假设 {{ HTMLElement("div") }} 和 {{ HTMLElement("p") }} 都保持默认的样式（即它们的 `display` 为 `block`）：
-
-```html
-<div>Some inline text <p>followed by a paragraph</p> followed by more inline text.</div>
-```
-
-此时会产生两个匿名块盒子：一个是 `<p>` 元素前面的那些文本（`Some inline text`），另一个是 \<p> 元素后面的文本（`followed by more inline text.`）。此时会生成下面的块结构：
-
-![](/@api/deki/files/5996/=anonymous_block-level_boxes.png)
-
-显示为：
-
-```
-Some inline text
-followed by a paragraph
-followed by more inline text.
-```
+{{EmbedGHLiveSample("css-examples/visual-formatting/anonymous-flex.html", '100%', 720)}}
 
 对这两个匿名盒子来说，程序员无法像 {{ HTMLElement("p") }} 元素那样控制它们的样式，因此它们会从 {{ HTMLElement("div") }} 那里继承那些可继承的属性，如 {{ cssxref("color") }}。其他不可继承的属性则会设置为 `initial`，比如，因为没有为它们指定 {{ cssxref("background-color") }}，因此其具有默认的透明背景，而 `<p>` 元素的盒子则能够用 CSS 指定背景颜色。类似地，两个匿名盒子的文本颜色总是一样的。
 
@@ -91,31 +73,11 @@ followed by more inline text.
 
 如果有多个块盒子，而它们中间又没有行内元素，则会在这些盒子的前面和后面创建两个匿名块盒子。
 
-### 示例
-
-考虑下面的 HTML 代码，假设 {{ HTMLElement("p") }} 的 `display` 为 inline，{{ HTMLElement("span") }} 的 `display` 为 `block`：
-
-```html
-<p>Some <em>inline</em> text <span>followed by a paragraph</span> followed by more inline text.</p>
-```
-
-此时会产生两个匿名块盒子：一个是 `<span>` 元素前面的文本（`Some inline text`），另一个是其之后的文本（`followed by more inline text.`）。此时会生成下面的块结构：
-
-![](anonymous_block_box_break.png)
-
-显示为：
-
-```
-Some inline text
-followed by a paragraph
-followed by more inline text.
-```
+{{EmbedGHLiveSample("css-examples/visual-formatting/anonymous-block.html", '100%', 720)}}
 
 ### 行内级元素和行内盒子
 
 如果一个元素的 {{ cssxref("display") }} 属性为 `inline`、`inline-block` 或 `inline-table`，则称该元素为行内级元素。显示时，它不会生成内容块，但是可以与其他行内级内容一起显示为多行。一个典型的例子是包含多种格式内容（如强调文本、图片等）的段落，就可以由行内级元素组成。
-
-![](/@api/deki/files/6008/=venn_inlines.png)
 
 > **警告：** 该图使用了过时的术语，见下面的“注意”（译注：指图中的“Atomic inline boxes”）。除此之外该图还有一个错误，右边的黄色部分应该完全包含左侧的椭圆（类似于数学上的超集），因为标准所说的是“如果行内级元素生成的盒子参与行内格式化上下文的创建，则该盒子为一个行内级盒子”，见“CSS 2.2 标准的 9.2.2 节”。
 
@@ -123,46 +85,7 @@ followed by more inline text.
 
 > **备注：** 开始的时候，原子行内级盒子叫做原子行内盒子，这并不准确，因为它们并不是行内盒子。后来在一次勘误时修正了这一问题。不过，当你见到某些文章中使用了“原子行内盒子”的时候，你尽可以将其理解为“原子行内级盒子”，因为这仅仅是一个名字的修改。
 
-> **备注：** 在同一个行内格式化上下文中，原子行内级盒子不能拆分成多行：
->
-> ```html
-> <style>
->   span {
->     display:inline; /* default value*/
->   }
-> </style>
-> <div style="width:20em;">
->    The text in the span <span>can be split in several
->    lines as it</span> is an inline box.
-> </div>
-> ```
->
-> 可能会显示为：
->
-> The text in the span can be split into several
-> lines as it is an inline box.
->
-> 而：
->
-> ```html
-> <style>
->   span {
->     display:inline-block;
->   }
-> </style>
-> <div style="width:20em;">
->    The text in the span <span>cannot be split in several
->    lines as it</span> is an inline-block box.
-> </div>
-> ```
->
-> 则可能显示为：
->
-> The text in the span
-> cannot be split into several lines as it is an
-> inline-block box.
->
-> 其中的“cannot be split into several lines as it”永远不会换行。
+{{EmbedGHLiveSample("css-examples/visual-formatting/line-boxes.html", '100%', 720)}}
 
 #### 匿名行内盒子
 

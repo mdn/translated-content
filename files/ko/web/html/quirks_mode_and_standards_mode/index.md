@@ -1,8 +1,8 @@
 ---
 title: 호환 모드와 표준 모드
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
+
 과거 웹 페이지는 넷스케이프 내비게이터(Netscape Navigator)용과 마이크로소프트 인터넷 익스플로러(Microsoft Internet Explorer)용의 두 가지 버전으로 만들어졌다. W3C에서 웹 표준을 제정할 당시, 기존 브라우저들은 새롭게 만들어진 표준을 기반으로 대부분의 웹 사이트들을 제대로 표현할 수 없었다. 따라서, 브라우저들은 새로운 표준으로 제작된 사이트와 예전 방식으로 제작된 사이트를 렌더링하기 위한 두 가지 모드를 제공했다.
 
 웹 브라우저의 레이아웃 엔진으로 호환 모드(quirks mode), 거의 표준 모드(almost standards mode), 표준 모드(standards mode)의 세 가지 방식이 존재한다. **호환 모드**(quirks mode)에서는 기존 방식으로 제작된 웹사이트들을 표현하기 위해 내비게이터 4(Navigator 4)와 인터넷 익스플로러 5의 비표준 동작들을 에뮬레이션한다. **완전 표준 모드**(full standards mode; 이하 표준 모드)에서는 (아마도) HTML과 CSS에 의해 웹 페이지가 표시된다. **거의 표준 모드**(almost standards mode)는 소수의 호환 모드 요소만 지원한다.

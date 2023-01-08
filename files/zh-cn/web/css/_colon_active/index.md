@@ -22,7 +22,9 @@ a:active {
 
 ## 语法
 
-{{csssyntax}}
+```
+:active
+```
 
 ## 示例
 

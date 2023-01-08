@@ -1,13 +1,8 @@
 ---
 title: <figure>
 slug: Web/HTML/Element/figure
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/figure
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<figure>` 요소**는 독립적인 콘텐츠를 표현합니다. {{htmlelement("figcaption")}} 요소를 사용해 설명을 붙일 수 있습니다. 피규어, 설명, 콘텐츠는 하나의 단위로 참조됩니다.

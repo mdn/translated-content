@@ -7,6 +7,8 @@ slug: Web/HTML/Element/meter
 
 HTML **`<meter>`** 元素用来显示已知范围的标量值或者分数值。
 
+{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
+
 <table class="properties">
  <tbody>
   <tr>
@@ -59,41 +61,43 @@ HTML **`<meter>`** 元素用来显示已知范围的标量值或者分数值。
 
 ## 示例
 
-### 简单例子
+### 简单示例
 
-#### HTML content
+#### HTML
 
 ```html
-<p>Heat the oven to <meter min="200" max="500"
-  value="350">350 degrees</meter>.</p>
+<p>
+  Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.
+</p>
 ```
 
-#### 输出
+#### 结果
 
-{{EmbedLiveSample("Simple_example", 300, 60)}}
+{{EmbedLiveSample("简单示例", 300, 60)}}
 
 在 Google Chrome 浏览器上，计量器结果如下：
 
-![meter1.png](/@api/deki/files/4940/=meter1.png)
+![current look of \<meter> in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
 
 ### 高低值区间示例
 
 注意本例中 min 属性被省略，这是允许的，默认值为 0。
 
-#### HTML content
+#### HTML
 
 ```html
-<p>He got a <meter low="69" high="80" max="100"
-  value="84">B</meter> on the exam.</p>
+<p>
+  He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.
+</p>
 ```
 
-#### 输出
+#### 结果
 
-{{EmbedLiveSample("High_and_Low_range_example", 300, 60)}}
+{{EmbedLiveSample("高低值区间示例", 300, 60)}}
 
 Google Chrome 浏览器中，计量器显示效果如下：
 
-![meter2.png](/@api/deki/files/4941/=meter2.png)
+![red meter in Google Chrome](screen_shot_2020-10-12_at_10.11.52_pm.png)
 
 ## 规范
 

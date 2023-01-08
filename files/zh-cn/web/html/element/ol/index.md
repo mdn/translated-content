@@ -95,7 +95,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("简单示例", 400, 100)}}
 
 ### 使用小写罗马数字编号
 
@@ -109,7 +109,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Using_Roman_Numeral_type", 400, 100)}}
+{{EmbedLiveSample("使用小写罗马数字编号", 400, 100)}}
 
 ### 使用 `start` 属性
 
@@ -125,7 +125,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Using_the_start_attribute", 400, 100)}}
+{{EmbedLiveSample("使用 start 属性", 400, 100)}}
 
 ### 嵌套列表
 
@@ -145,7 +145,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Nesting_lists", 400, 150)}}
+{{EmbedLiveSample("嵌套列表", 400, 150)}}
 
 ### 嵌套有序列表和无序列表
 
@@ -165,7 +165,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Unordered_list_inside_ordered_list", 400, 150)}}
+{{EmbedLiveSample("嵌套有序列表和无序列表", 400, 150)}}
 
 ## 规范
 

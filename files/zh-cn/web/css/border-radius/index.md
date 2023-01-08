@@ -7,8 +7,6 @@ slug: Web/CSS/border-radius
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-radius`** 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个（椭）圆与边框的交集形成圆角效果。
 
-![Images of CSS3 rounded corners: no rounding, rounding w/ an arc of circle, rounding w/ an arc of ellipse](/files/3638/border-radius-sh.png)
-
 {{EmbedInteractiveExample("pages/css/border-radius.html")}}
 
 该属性是一个 [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，是为了将这四个属性 {{Cssxref("border-top-left-radius")}}、{{Cssxref("border-top-right-radius")}}、{{Cssxref("border-bottom-right-radius")}}，和 {{Cssxref("border-bottom-left-radius")}} 简写为一个属性。
@@ -33,7 +31,7 @@ _top-right_
 ![top-right.png](top-right.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框右上角的圆角半径。只在四值语法中使用。
 _bottom-right_
-![bottom-rigth.png](/@api/deki/files/6140/=bottom-rigth.png)
+![bottom-rigth.png](bottom-right.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框右下角的圆角半径。只在三值或四值语法中使用。
 _bottom-left_
 ![bottom-left.png](bottom-left.png)

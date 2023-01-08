@@ -117,36 +117,17 @@ Afin d'éviter les variables globales, on encapsule le script dans une fonction 
 
 ### Obtenir la vidéo
 
-Maintenant, nous devons récupérer la vidéo de la webcam. Pour l'instant c'est préfixé par les différents navigateurs, nous devons donc tester quelle forme est supportée:
+Maintenant, nous devons récupérer la vidéo de la webcam. Nous demandons au navigateur de nous donner la vidéo sans le son et de récupérer le flux dans une fonction callback:
 
 ```js
-  navigator.getMedia = ( navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia ||
-                         navigator.msGetUserMedia);
-```
-
-Nous demandons au navigateur de nous donner la vidéo sans le son et de récupérer le flux dans une fonction callback:
-
-```js
-  navigator.getMedia(
-    {
-      video: true,
-      audio: false
-    },
-    function(stream) {
-      if (navigator.mozGetUserMedia) {
-        video.mozSrcObject = stream;
-      } else {
-        var vendorURL = window.URL || window.webkitURL;
-        video.src = vendorURL.createObjectURL(stream);
-      }
-      video.play();
-    },
-    function(err) {
-      console.log("An error occured! " + err);
-    }
-  );
+navigator.mediaDevices
+      .getUserMedia({ video: true, audio: false })
+      .then((stream) => {
+        video.srcObject = stream;
+        video.play();
+      }).catch((err) => {
+        console.error(`An error occurred: ${err}`);
+      });
 ```
 
 Firefox Nightly nécessite de définir la propriété `mozSrcObject` de l'élément vidéo pour pouvoir le jouer; pour les autres navigateurs, définissez l'attribut `src`. Alors que Firefox peut utiliser les flux directement, Webkit et Opera ont besoin de créer un objet URL. Cela sera standardisé dans un futur proche.

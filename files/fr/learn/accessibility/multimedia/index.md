@@ -248,7 +248,7 @@ Nous avons également créé un exemple avancé pour montrer comment créer un s
 
 ## Transcriptions audio
 
-Pour permettre aux sourds d'accéder au contenu audio, vous devez créer des transcriptions de texte. Ceux-ci peuvent être soit inclus sur la même page que l'audio d'une manière ou d'une autre, soit inclus sur une page séparée et liés à.
+Pour permettre aux sourds d'accéder au contenu audio, vous devez créer des transcriptions de texte. Ceux-ci peuvent être soit inclus sur la même page que l'audio d'une manière ou d'une autre, soit inclus sur une page séparée et liée à la page principale.
 
 En termes de création de la transcription, vos options sont les suivantes:
 
