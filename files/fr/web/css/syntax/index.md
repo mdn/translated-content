@@ -1,0 +1,95 @@
+---
+title: Syntax
+slug: Web/CSS/Syntax
+---
+{{CSSRef}}
+
+L'objectif fondamental du langage <i lang="en">Cascading Stylesheet</i> ([CSS](/fr/docs/Web/CSS)) est de permettre à un moteur de navigation d'associer des fonctionnalités spécifiques, comme les couleurs, le positionnement ou les décorations à des éléments de la page. La _syntaxe CSS_ reflète cet objectif et ses éléments de base sont :
+
+- La **propriété** est un identifiant, c'est-à-dire un _nom_ lisible par l'homme, qui définit quelle fonctionnalité est ciblée.
+- La **valeur** décrit comment la fonctionnalité doit être gérée par le moteur. Chaque propriété a un ensemble de valeurs valides, définies par une grammaire formelle, ainsi qu'une signification sémantique, implémentées par le moteur du navigateur.
+
+## déclarations CSS 
+
+La définition des propriétés CSS sur des valeurs spécifiques est la fonction principale du langage CSS. Une paire de propriété et de valeur s'appelle une **déclaration**, et tout moteur CSS calcule quelles déclarations s'appliquent à chaque élément d'une page afin de la mettre en page de manière appropriée et de la styliser.
+
+Les propriétés et les valeurs sont insensibles à la casse par défaut dans CSS. La paire est séparée par deux-points, '`:`' (`U+003A COLON`), et les espaces blancs avant, entre et après les propriétés et les valeurs, mais pas nécessairement à l'intérieur, sont ignorés.
+
+![css syntax - declaration.png](css_syntax_-_declaration.png)
+
+Il existe plus de [100 propriétés différentes](/fr/docs/Web/CSS/Reference) en CSS et un nombre quasi infini de valeurs différentes. Toutes les paires de propriétés et de valeurs ne sont pas autorisées et chaque propriété définit les valeurs valides. Lorsqu'une valeur n'est pas valide pour une propriété donnée, la déclaration est considérée comme _invalide_ et est totalement ignorée par le moteur CSS.
+
+## Blocs de déclaration CSS
+
+Les déclarations sont regroupées en **blocs**, c'est-à-dire dans une structure délimitée par une accolade d'ouverture, '`{`' (`U+007B LEFT CURLY BRACKET`), et de fermeture, '`}`' (`U +007D CROCHET DROITE`). Les blocs peuvent parfois être imbriqués, les accolades ouvrantes et fermantes doivent donc correspondre.
+
+![css syntax - block.png](css_syntax_-_block.png)
+
+Ces blocs sont naturellement appelés **blocs de déclaration** et les déclarations à l'intérieur sont séparées par un point-virgule, '`;`' (`U+003B SEMICOLON`). Un bloc de déclaration peut être vide, c'est-à-dire contenir une déclaration nulle. Les espaces blancs autour des déclarations sont ignorés. La dernière déclaration d'un bloc n'a pas besoin d'être terminée par un point-virgule, bien qu'il soit souvent considéré comme un _bon style_ de le faire car cela évite d'oublier de l'ajouter lors de l'extension du bloc avec une autre déclaration.
+
+Un bloc de déclaration CSS est visualisé dans le schéma ci-dessous.
+
+![css syntax - declarations block.png](declaration-block.png)
+
+> **Note:** The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML {{htmlattrxref("style")}} attribute.
+
+> **Remarque :** Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML {{htmlattrxref("style")}}.
+
+## Ensembles de règles CSS
+
+Si les feuilles de style ne pouvaient appliquer qu'une déclaration à chaque élément d'une page Web, elles seraient plutôt inutiles. Le véritable objectif est d'appliquer différentes déclarations à différentes parties du document.
+
+Le CSS permet cela en associant des conditions à des blocs de déclarations. Chaque bloc de déclaration (valide) est précédé d'un ou plusieurs [**sélecteurs**](/fr/docs/Web/CSS/CSS_Selectors) séparés par des virgules, qui sont des conditions sélectionnant certains éléments de la page. Un [<i lang="en">groupe de sélecteurs</i>](/en-US/docs/Web/CSS/Selector_list) et un bloc de déclarations associé, ensemble, sont appelés un **ensemble de règles**, ou souvent une **règle**.
+
+Un ensemble de règles CSS (ou règle) est visualisé dans le diagramme ci-dessous.
+
+![css syntax - ruleset.png](ruleset.png)
+
+Comme un élément de la page peut être mis en correspondance par plusieurs sélecteurs, et donc par plusieurs règles contenant potentiellement plusieurs fois une même propriété, avec des valeurs différentes, la norme CSS définit laquelle a priorité sur l'autre et doit être appliquée : c'est ce qu'on appelle la [cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+
+> **Note:** It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
+
+<!-- Je comprends le sens de ce paragraphe mais la syntaxe mérite vraiment d'être simplifiée. Peut être proposé une reformulation sur la version EN --> 
+
+> **Remarque :** Il est important de noter que même si un ensemble de règles caractérisé par un groupe de sélecteurs est une sorte de raccourci remplaçant les règles individuellement définies, cela ne s'applique pas à la validité de l'ensemble de règles lui-même.
+>
+> Cela conduit à une conséquence importante : si un seul sélecteur de base est invalide, comme lors de l'utilisation d'un pseudo-élément ou d'une pseudo-classe inconnus, l'ensemble du _sélecteur_ est invalide et donc la règle entière est ignorée (également invalide).
+
+## Instructions CSS
+
+Les ensembles de règles sont les principaux éléments constitutifs d'une feuille de style, qui se compose souvent d'une longue liste de ceux-ci. Mais il y a d'autres informations qu'un auteur Web veut transmettre dans la feuille de style, comme le jeu de caractères, d'autres feuilles de style externes à importer, les descriptions des polices de caractères ou des compteurs de liste et bien d'autres. Il utilisera d'autres types d'instructions spécifiques pour ce faire.
+
+Une **instruction** est un bloc de construction qui commence par n'importe quel caractère autre qu'un espace et se termine à la première accolade ou point-virgule fermant (en dehors d'une chaîne, sans échappement et non inclus dans un autre {}, () ou \[ ] paire).
+
+![css syntax - statements Venn diag.png](css_syntax_-_statements_venn_diag.png)
+
+Il existe deux types de déclarations :
+
+- Les **ensembles de règles** (ou _règles_) qui, comme on le voit, associent une collection de déclarations CSS à une condition décrite par un [sélecteur](/fr/docs/Web/CSS/CSS_Selectors).
+- Les **règles @** qui commencent par un arobase, '`@`' (`U+0040 COMMERCIAL AT`), suivi d'un identifiant et se poursuivant jusqu'à la fin de l'instruction, c'est-à-dire jusqu'à au prochain point-virgule (;) en dehors d'un bloc, ou à la fin du bloc suivant. Chaque type de [règles @](/fr/docs/Web/CSS/At-rule), défini par l'identifiant, peut avoir sa propre syntaxe interne, et bien sûr sa sémantique. Ils sont utilisés pour transmettre des informations de métadonnées (comme {{ cssxref("@charset") }} ou {{ cssxref("@import") }}), des informations conditionnelles (comme {{ cssxref("@media") } } ou {{ cssxref("@document") }}), ou des informations descriptives (comme {{ cssxref("@font-face") }}).
+
+Toute instruction qui n'est pas un ensemble de règles ou une règle-at est invalide et ignorée.
+
+### Instructions imbriquées
+
+Il existe un autre groupe d'instructions : les **instructions imbriquées**. Ce sont des instructions qui peuvent être utilisées dans un sous-ensemble spécifique de règles @ - les _règles de groupe conditionnelles_. Ces déclarations ne s'appliquent que si une condition spécifique est satisfaite : le contenu de la règle @ `@media` est appliqué uniquement si l'appareil sur lequel le navigateur s'exécute correspond à la condition exprimée ; le contenu de la règle at `@document` n'est appliqué que si la page actuelle correspond à certaines conditions, et ainsi de suite. Dans CSS1 et CSS2.1, seuls les _ensembles de règles_ pouvaient être utilisés dans les règles de groupe conditionnelles. C'était très restrictif et cette restriction a été levée dans [_CSS Conditionals Level 3_](/en-US/docs/Web/CSS/CSS_Conditional_Rules). Aujourd'hui, bien qu'encore expérimentales et non prises en charge par tous les navigateurs, les règles de groupe conditionnelles peuvent contenir un plus large éventail de contenus : des ensembles de règles mais aussi certaines règles @, mais pas toutes.
+
+## Voir aussi
+
+- Concepts clés CSS:
+  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
+  - [Commentaires](/fr/docs/Web/CSS/Comments)
+  - [Specificité](/fr/docs/Web/CSS/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/inheritance)
+  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Mode de mise en page](/fr/docs/Web/CSS/Layout_mode)
+  - [Modèle de mise en forme visuelles](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Valeur initiale](/fr/docs/Web/CSS/initial_value)
+    - [Valeur calculée](/fr/docs/Web/CSS/computed_value)
+    - [Valeur utilisée](/fr/docs/Web/CSS/used_value)
+    - [Valeur réelle](/fr/docs/Web/CSS/actual_value)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
+  - [Élément remplacé](/fr/docs/Web/CSS/Replaced_element)
