@@ -11,7 +11,7 @@ slug: Glossary/Site
 
 根据这个定义，`support.mozilla.org` 和 `developer.mozilla.org` 是同一站点的一部分，因为 `mozilla.org` 是一个可注册域。
 
-在某些情况下，在区分不同的站点时，也会考虑站点的协议（scheme）。这将使 `http://vpl.ca` 和 `https://vpl.ca` 成为不同的站点。包含协议（scheme）的情况可以防止不安全的（HTTP）站点被视为与安全（HTTPS）站点为相同的站点。考虑协议（scheme）的定义有时被称为 *schemeful same-site*。这个更严格的定义适用于处理[同站](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) cookie。
+在某些情况下，在区分不同的站点时，也会考虑站点的协议（scheme）。这将使 `http://vpl.ca` 和 `https://vpl.ca` 成为不同的站点。包含协议（scheme）的情况可以防止不安全的（HTTP）站点被视为与安全（HTTPS）站点为相同的站点。考虑协议（scheme）的定义有时被称为 *schemeful same-site*。这个更严格的定义适用于处理 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) cookie。
 
 ## 示例
 
