@@ -424,7 +424,7 @@ If you accepted the "challenge" in [Django Tutorial Part 8: User authentication 
 
 > **備註：** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
 
-You can alternatively manually construct a test URL like this — [http://127.0.0.1:8000/catalog/book/*\<bookinstance_id>*/renew/](<http://127.0.0.1:8000/catalog/book/\<bookinstance id\>/renew/>) (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the `id` field).
+You can alternatively manually construct a test URL like this — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the `id` field).
 
 ### What does it look like?
 
