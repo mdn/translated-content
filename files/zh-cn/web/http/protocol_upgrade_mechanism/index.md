@@ -24,21 +24,7 @@ Connection: upgrade
 Upgrade: example/1, foo/2
 ```
 
-- [`Connection: Upgrade`](/zh-CN/docs/Web/HTTP/Headers/Connection)
-  - : 设置 `Connection` 头的值为 `"Upgrade"` 来指示这是一个升级请求。
-- [`Upgrade: protocols`](/zh-CN/docs/Web/HTTP/Headers/Upgrade)
-  - : `Upgrade` 头指定一项或多项协议名，按优先级排序，以逗号分隔。
-
-一个典型的包含升级请求的例子差不多是这样的：
-
-```plain
-GET /index.html HTTP/1.1
-Host: www.example.com
-Connection: upgrade
-Upgrade: example/1, foo/2
-```
-
-根据之前的请求的协议，可能需要其他头部信息，例如：从 HTTP/1.1 升级到 [WebSocket](/zh-CN/docs/Web/API/WebSocket) 允许配置有关 WebSocket 连接的头部详细信息，以及在连接时提供一定程度的安全性。查看[升级到 WebSocket 协议的连接](#升级到_websocket_协议的连接) 获取更多信息。
+根据之前的请求的协议，可能需要其他标头信息，例如：从 HTTP/1.1 升级到 [WebSocket](/zh-CN/docs/Web/API/WebSocket) 允许配置有关 WebSocket 连接的标头详细信息，以及在连接时提供一定程度的安全性。查看[升级到 WebSocket 协议的连接](#升级到_websocket_协议的连接)获取更多信息。
 
 如果服务器决定升级这次连接，就会返回一个 {{HTTPStatus(101, "101 Switching Protocols")}} 响应状态码，和一个要切换到的协议的标头字段 Upgrade。如果服务器没有（或者不能）升级这次连接，它会忽略客户端发送的 `Upgrade` 标头字段，返回一个常规的响应：例如一个 {{HTTPStatus(200, "200 OK")}}).
 
@@ -151,7 +137,7 @@ Sec-WebSocket-Accept: hash
 ```
 
 - `hash`
-  - : 如果 {{HTTPHeader("Sec-WebSocket-Key")}} 标头被提供，则该标头的值是通过获取密钥的值、将字符串“258EAFA5-E914-47DA-95CA-C5AB0DC85B11”连接到它、采用 [SHA-1](https://zh.wikipedia.org/wiki/SHA-1) 哈希来计算的连接字符串，产生一个 20 字节的值。然后对该值进行 [base64](/zh-CN/docs/Glossary/Base64) 编码以获得该属性的值。
+  - : 如果提供了 {{HTTPHeader("Sec-WebSocket-Key")}} 标头，则该标头的值是通过获取密钥的值、将字符串“258EAFA5-E914-47DA-95CA-C5AB0DC85B11”连接到它、采用 [SHA-1](https://zh.wikipedia.org/wiki/SHA-1) 哈希来计算的连接字符串，产生一个 20 字节的值。然后对该值进行 [base64](/zh-CN/docs/Glossary/Base64) 编码以获得该属性的值。
 
 ## 参见
 
