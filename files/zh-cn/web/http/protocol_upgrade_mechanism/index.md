@@ -11,7 +11,7 @@ slug: Web/HTTP/Protocol_upgrade_mechanism
 
 注意：HTTP/2 明确禁止使用此机制；这个机制只属于 HTTP/1.1。
 
-## 升级 HTTP/1.1 的链接
+## 升级 HTTP/1.1 连接
 
 客户端使用 {{HTTPHeader("Upgrade")}} 标头字段请求服务器，以降序优先的顺序切换到其中列出的一个协议。
 
