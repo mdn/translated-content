@@ -33,22 +33,22 @@ JavaScript 程序本来很小——在早期，它们大多被用来执行独立
 
 ```plain
 index.html
-main.mjs
+main.js
 modules/
-    canvas.mjs
-    square.mjs
+    canvas.js
+    square.js
 ```
 
 > **备注：** 在这个指南的全部示例项目的文件结构是基本相同的；需要熟悉上面的内容
 
 modules 目录下的两个模块的描述如下：
 
-- `canvas.mjs` — 包含与设置画布相关的功能：
+- `canvas.js` — 包含与设置画布相关的功能：
 
   - `create()` — 在指定 ID 的包装器 {{htmlelement("div")}} 内创建指定 `width` 和 `height` 的画布，该 ID 本身附加在指定的父元素内。返回包含画布的 2D 上下文和包装器 ID 的对象。
   - `createReportList()` — 创建一个附加在指定包装器元素内的无序列表，该列表可用于将报告数据输出到。返回列表的 ID。
 
-- `square.mjs` — 包含：
+- `square.js` — 包含：
 
   - `name` — 包含字符串 'square' 的常量。
   - `draw()` — 在指定画布上绘制一个正方形，具有指定的大小，位置和颜色。返回包含正方形大小，位置和颜色的对象。
@@ -112,7 +112,7 @@ export { name, draw, reportArea, reportPerimeter };
 你想在模块外面使用一些功能，那你就需要导入他们才能使用。最简单的就像下面这样的：
 
 ```plain
-import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/basic-modules/modules/square.mjs';
+import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/basic-modules/modules/square.js';
 ```
 
 使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，然后你被花括号包围的用逗号分隔的你想导入的功能列表，然后是关键字 from，然后是模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 应该是 `/js-examples/modules/basic-modules`。
@@ -122,20 +122,20 @@ import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/ba
 那么看看例子吧：
 
 ```plain
-/js/examples/modules/basic-modules/modules/square.mjs
+/js/examples/modules/basic-modules/modules/square.js
 ```
 
 变成了
 
 ```plain
-./modules/square.mjs
+./modules/square.js
 ```
 
-你可以在 [`main.mjs`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js) 中看到这些。
+你可以在 [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js) 中看到这些。
 
 > **备注：** 在一些模块系统中你可以忽略文件扩展名（比如 `'/model/squre'`）。这在原生 JavaScript 模块系统中不工作。~~此外，记住你需要包含最前面的正斜杠。~~ （修订版 1889482）
 
-因为你导入了这些功能到你的脚本文件，你可以像定义在相同的文件中的一样去使用它。下面展示的是在 `main.mjs` 中的 import 语句下面的内容。
+因为你导入了这些功能到你的脚本文件，你可以像定义在相同的文件中的一样去使用它。下面展示的是在 `main.js` 中的 import 语句下面的内容。
 
 ```js
 let myCanvas = create('myCanvas', document.body, 480, 320);
@@ -148,12 +148,12 @@ reportPerimeter(square1.length, reportList);
 
 ## 应用模块到你的 HTML
 
-现在我们只需要将 main.mjs 模块应用到我们的 HTML 页面。这与我们将常规脚本应用于页面的方式非常相似，但有一些显着的差异。
+现在我们只需要将 main.js 模块应用到我们的 HTML 页面。这与我们将常规脚本应用于页面的方式非常相似，但有一些显着的差异。
 
 首先，你需要把 `type="module"` 放到 {{htmlelement("script")}} 标签中，来声明这个脚本是一个模块：
 
 ```plain
-<script type="module" src="main.mjs"></script>
+<script type="module" src="main.js"></script>
 ```
 
 你导入模块功能的脚本基本是作为顶级模块。如果省略它，Firefox 就会给出错误“SyntaxError: import declarations may only appear at top level of a module。
@@ -175,7 +175,7 @@ reportPerimeter(square1.length, reportList);
 
 还有一种导出类型叫做 **default export** —- 这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) by Jason Orendorff 的模块中所解释的那样；搜索“默认导出”）。
 
-看个例子来解释它如何工作。在我们的基本模块 `square.mjs` 中，您可以找到一个名为 `randomSquare()` 的函数，它创建一个具有随机颜色，大小和位置的正方形。我们想作为默认导出，所以在文件的底部我们这样写：
+看个例子来解释它如何工作。在我们的基本模块 `square.js` 中，您可以找到一个名为 `randomSquare()` 的函数，它创建一个具有随机颜色，大小和位置的正方形。我们想作为默认导出，所以在文件的底部我们这样写：
 
 ```js
 export default randomSquare;
@@ -191,16 +191,16 @@ export default function(ctx) {
 }
 ```
 
-在我们的 `main.mjs` 文件中，我们使用以下行导入默认函数：
+在我们的 `main.js` 文件中，我们使用以下行导入默认函数：
 
 ```js
-import randomSquare from './modules/square.mjs';
+import randomSquare from './modules/square.js';
 ```
 
 同样，没有大括号，因为每个模块只允许有一个默认导出，我们知道 `randomSquare` 就是需要的那个。上面的那一行相当于下面的缩写：
 
 ```js
-import {default as randomSquare} from './modules/square.mjs';
+import {default as randomSquare} from './modules/square.js';
 ```
 
 > **备注：** 重命名导出项的 as 语法在下面的 [重命名导出与导入](#重命名导出与导入) 部分中进行了说明。
@@ -216,26 +216,26 @@ import {default as randomSquare} from './modules/square.mjs';
 在你的 `import` 和 `export` 语句的大括号中，可以使用 `as` 关键字跟一个新的名字，来改变你在顶级模块中将要使用的功能的标识名字。因此，例如，以下两者都会做同样的工作，尽管方式略有不同：
 
 ```js
-// inside module.mjs
+// inside module.js
 export {
   function1 as newFunctionName,
   function2 as anotherNewFunctionName
 };
 
-// inside main.mjs
-import { newFunctionName, anotherNewFunctionName } from '/modules/module.mjs';
+// inside main.js
+import { newFunctionName, anotherNewFunctionName } from '/modules/module.js';
 ```
 
 ```js
-// inside module.mjs
+// inside module.js
 export { function1, function2 };
 
-// inside main.mjs
+// inside main.js
 import { function1 as newFunctionName,
-         function2 as anotherNewFunctionName } from '/modules/module.mjs';
+         function2 as anotherNewFunctionName } from '/modules/module.js';
 ```
 
-让我们看一个真实的例子。在我们的 [重命名](https://github.com/mdn/js-examples/tree/master/module-examples/renaming) 目录中，您将看到与上一个示例中相同的模块系统，除了我们添加了 `circle.mjs` 和 `triangle.mjs` 模块以绘制和报告圆和三角形。
+让我们看一个真实的例子。在我们的 [重命名](https://github.com/mdn/js-examples/tree/master/module-examples/renaming) 目录中，您将看到与上一个示例中相同的模块系统，除了我们添加了 `circle.js` 和 `triangle.js` 模块以绘制和报告圆和三角形。
 
 在每个模块中，我们都有 `export` 相同名称的功能，因此每个模块底部都有相同的导出语句：
 
@@ -243,12 +243,12 @@ import { function1 as newFunctionName,
 export { name, draw, reportArea, reportPerimeter };
 ```
 
-将它们导入 `main.mjs` 时，如果我们尝试使用
+将它们导入 `main.js` 时，如果我们尝试使用
 
 ```js
-import { name, draw, reportArea, reportPerimeter } from './modules/square.mjs';
-import { name, draw, reportArea, reportPerimeter } from './modules/circle.mjs';
-import { name, draw, reportArea, reportPerimeter } from './modules/triangle.mjs';
+import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
+import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
 ```
 
 浏览器会抛出一个错误，例如“SyntaxError: redeclaration of import name”（Firefox）。
@@ -259,23 +259,23 @@ import { name, draw, reportArea, reportPerimeter } from './modules/triangle.mjs'
 import { name as squareName,
          draw as drawSquare,
          reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter } from './modules/square.mjs';
+         reportPerimeter as reportSquarePerimeter } from './modules/square.js';
 
 import { name as circleName,
          draw as drawCircle,
          reportArea as reportCircleArea,
-         reportPerimeter as reportCirclePerimeter } from './modules/circle.mjs';
+         reportPerimeter as reportCirclePerimeter } from './modules/circle.js';
 
 import { name as triangleName,
         draw as drawTriangle,
         reportArea as reportTriangleArea,
-        reportPerimeter as reportTrianglePerimeter } from './modules/triangle.mjs';
+        reportPerimeter as reportTrianglePerimeter } from './modules/triangle.js';
 ```
 
 请注意，您可以在模块文件中解决问题，例如
 
 ```js
-// in square.mjs
+// in square.js
 export { name as squareName,
          draw as drawSquare,
          reportArea as reportSquareArea,
@@ -283,8 +283,8 @@ export { name as squareName,
 ```
 
 ```js
-// in main.mjs
-import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from '/js-examples/modules/renaming/modules/square.mjs';
+// in main.js
+import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from '/js-examples/modules/renaming/modules/square.js';
 ```
 
 它也会起作用。你使用什么样的风格取决于你，但是单独保留模块代码并在导入中进行更改可能更有意义。当您从没有任何控制权的第三方模块导入时，这尤其有意义。
@@ -294,10 +294,10 @@ import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from 
 上面的方法工作的挺好，但是有一点点混乱、亢长。一个更好的解决方是，导入每一个模块功能到一个模块功能对象上。可以使用以下语法形式：
 
 ```js
-import * as Module from '/modules/module.mjs';
+import * as Module from '/modules/module.js';
 ```
 
-这将获取 `module.mjs` 中所有可用的导出，并使它们可以作为对象模块的成员使用，从而有效地为其提供自己的命名空间。例如：
+这将获取 `module.js` 中所有可用的导出，并使它们可以作为对象模块的成员使用，从而有效地为其提供自己的命名空间。例如：
 
 ```js
 Module.function1()
@@ -314,11 +314,11 @@ export { name, draw, reportArea, reportPerimeter };
 另一方面，导入看起来像这样：
 
 ```js
-import * as Canvas from './modules/canvas.mjs';
+import * as Canvas from './modules/canvas.js';
 
-import * as Square from '/./modules/square.mjs';
-import * as Circle from './modules/circle.mjs';
-import * as Triangle from './modules/triangle.mjs';
+import * as Square from '/./modules/square.js';
+import * as Circle from './modules/circle.js';
+import * as Triangle from './modules/triangle.js';
 ```
 
 在每种情况下，您现在可以访问指定对象名称下面的模块导入。
@@ -335,7 +335,7 @@ Square.reportPerimeter(square1.length, reportList);
 
 正如我们之前提到的那样，您还可以导出和导入类；这是避免代码冲突的另一种选择，如果您已经以面向对象的方式编写了模块代码，那么它尤其有用。
 
-您可以在我们的 [classes](https://github.com/mdn/js-examples/tree/master/module-examples/classes) 目录中看到使用 ES 类重写的形状绘制模块的示例。例如，[`square.mjs`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js) 文件现在包含单个类中的所有功能：
+您可以在我们的 [classes](https://github.com/mdn/js-examples/tree/master/module-examples/classes) 目录中看到使用 ES 类重写的形状绘制模块的示例。例如，[`square.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js) 文件现在包含单个类中的所有功能：
 
 ```js
 class Square {
@@ -357,10 +357,10 @@ class Square {
 export { Square };
 ```
 
-在 [`main.mjs`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js) 中，我们像这样导入它：
+在 [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js) 中，我们像这样导入它：
 
 ```js
-import { Square } from './modules/square.mjs';
+import { Square } from './modules/square.js';
 ```
 
 然后使用该类绘制我们的方块：
@@ -377,22 +377,22 @@ square1.reportPerimeter();
 有时你会想要将模块聚合在一起。您可能有多个级别的依赖项，您希望简化事物，将多个子模块组合到一个父模块中。这可以使用父模块中以下表单的导出语法：
 
 ```js
-export * from 'x.mjs'
-export { name } from 'x.mjs'
+export * from 'x.js'
+export { name } from 'x.js'
 ```
 
-> **备注：** 这实际上是导入后跟导出的简写，即“我导入模块 `x.mjs`，然后重新导出部分或全部导出”。
+> **备注：** 这实际上是导入后跟导出的简写，即“我导入模块 `x.js`，然后重新导出部分或全部导出”。
 
-有关示例，请参阅我们的 [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation)。在这个例子中（基于我们之前的类示例），我们有一个名为 `shapes.mjs` 的额外模块，它将 `circle.mjs`，`square.mjs` 和 `riangle.mjs` 中的所有功能聚合在一起。我们还将子模块移动到名为 shapes 的 modules 目录中的子目录中。所以模块结构现在是这样的：
+有关示例，请参阅我们的 [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation)。在这个例子中（基于我们之前的类示例），我们有一个名为 `shapes.js` 的额外模块，它将 `circle.js`，`square.js` 和 `riangle.mjs` 中的所有功能聚合在一起。我们还将子模块移动到名为 shapes 的 modules 目录中的子目录中。所以模块结构现在是这样的：
 
 ```plain
 modules/
-  canvas.mjs
-  shapes.mjs
+  canvas.js
+  shapes.js
   shapes/
-    circle.mjs
-    square.mjs
-    triangle.mjs
+    circle.js
+    square.js
+    triangle.js
 ```
 
 在每个子模块中，输出具有相同的形式，例如，
@@ -401,32 +401,32 @@ modules/
 export { Square };
 ```
 
-接下来是聚合部分。在 [`shapes.mjs`](https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js) 里面，我们包括以下几行：
+接下来是聚合部分。在 [`shapes.js`](https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js) 里面，我们包括以下几行：
 
 ```js
-export { Square } from '/js-examples/modules/module-aggregation/modules/shapes/square.mjs';
-export { Triangle } from '/js-examples/modules/module-aggregation/modules/shapes/triangle.mjs';
-export { Circle } from '/js-examples/modules/module-aggregation/modules/shapes/circle.mjs';
+export { Square } from '/js-examples/modules/module-aggregation/modules/shapes/square.js';
+export { Triangle } from '/js-examples/modules/module-aggregation/modules/shapes/triangle.js';
+export { Circle } from '/js-examples/modules/module-aggregation/modules/shapes/circle.js';
 ```
 
-它们从各个子模块中获取导出，并有效地从 `shapes.mjs` 模块中获取它们。
+它们从各个子模块中获取导出，并有效地从 `shapes.js` 模块中获取它们。
 
-> **备注：** 即使 `shapes.mjs` 文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些 URL，因此需要 `/modules/`。这是使用 JavaScript 模块时混淆的常见原因。
+> **备注：** 即使 `shapes.js` 文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些 URL，因此需要 `/modules/`。这是使用 JavaScript 模块时混淆的常见原因。
 
-> **备注：** `shapes.mjs` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此您将无法在同一文件中编写任何有用的相关代码。
+> **备注：** `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此您将无法在同一文件中编写任何有用的相关代码。
 
-所以现在在 `main.mjs` 文件中，我们可以通过替换来访问所有三个模块类
+所以现在在 `main.js` 文件中，我们可以通过替换来访问所有三个模块类
 
 ```js
-import { Square } from './modules/square.mjs';
-import { Circle } from './modules/circle.mjs';
-import { Triangle } from './modules/triangle.mjs';
+import { Square } from './modules/square.js';
+import { Circle } from './modules/circle.js';
+import { Triangle } from './modules/triangle.js';
 ```
 
 使用以下单行：
 
 ```js
-import { Square, Circle, Triangle } from './modules/shapes.mjs';
+import { Square, Circle, Triangle } from './modules/shapes.js';
 ```
 
 ## 动态加载模块
@@ -436,7 +436,7 @@ import { Square, Circle, Triangle } from './modules/shapes.mjs';
 这个新功能允许您将 `import()` 作为函数调用，将其作为参数传递给模块的路径。它返回一个 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它用一个模块对象来实现（参见[创建模块对象](#创建模块对象)），让你可以访问该对象的导出，例如
 
 ```js
-import('/modules/myModule.mjs')
+import('/modules/mymodule.js')
   .then((module) => {
     // Do something with the module.
   });
@@ -444,9 +444,9 @@ import('/modules/myModule.mjs')
 
 我们来看一个例子。在 [dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports) 目录中，我们有另一个基于类示例的示例。但是这次我们在示例加载时没有在画布上绘制任何东西。相反，我们包括三个按钮 -- “圆形”，“方形”和“三角形” -- 按下时，动态加载所需的模块，然后使用它来绘制相关的形状。
 
-在这个例子中，我们只对 [index.html](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) 和 [main.mjs](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) 文件进行了更改 -- 模块导出保持与以前相同。
+在这个例子中，我们只对 [index.html](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) 和 [main.js](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) 文件进行了更改 -- 模块导出保持与以前相同。
 
-在`main.mjs`中，我们使用[`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector)调用获取了对每个按钮的引用，例如：
+在`main.js`中，我们使用[`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector)调用获取了对每个按钮的引用，例如：
 
 ```js
 let squareBtn = document.querySelector('.square');
@@ -456,7 +456,7 @@ let squareBtn = document.querySelector('.square');
 
 ```js
 squareBtn.addEventListener('click', () => {
-  import('/js-examples/modules/dynamic-module-imports/modules/square.mjs').then((Module) => {
+  import('/js-examples/modules/dynamic-module-imports/modules/square.js').then((Module) => {
     let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
     square1.draw();
     square1.reportArea();
