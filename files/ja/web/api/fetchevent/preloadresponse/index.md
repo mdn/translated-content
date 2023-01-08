@@ -1,55 +1,66 @@
 ---
 title: FetchEvent.preloadResponse
-slug: Web/API/FetchEvent/PreloadResponse
+slug: Web/API/FetchEvent/preloadResponse
+l10n:
+  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
 {{APIRef("Service Workers API")}}
 
-{{domxref("FetchEvent")}} インターフェイスの **`preloadResponse`** 読み取り専用プロパティは、ナビゲーションプリロードがトリガーされた場合はナビゲーションプリロード {{domxref("Response")}} に解決され、それ以外の場合は `undefined` に解決される {{jsxref("Promise")}} を返します。
+**`preloadResponse`** は {{domxref("FetchEvent")}} インターフェイスの読み取り専用プロパティで、 {{jsxref("Promise")}} を返します。これは、[ナビゲーション先読み](/ja/docs/Web/API/NavigationPreloadManager)が発生した場合はナビゲーション先読みの {{domxref("Response")}} に解決し、れ以外の場合は `undefined` に解決します。
 
-## 構文
+ナビゲーション先読みは、[ナビゲーション先読みが有効](/ja/docs/Web/API/NavigationPreloadManager/enable)であり、リクエストが `GET` リクエストであり、かつナビゲーションリクエスト（ページや iframe を読み込むときにブラウザーが生成）である場合に起動します。
 
-```
-var expectedResponse = fetchEvent.preloadResponse;
-```
+サービスワーカーは、 fetch イベントハンドラーでこのプロミスを待機することで、サービスワーカーの起動中に行われた読み込みリクエストの完了を追跡することができます。
 
-### 値
+## 値
 
-{{domxref("Response")}} に解決されるか、それ以外の場合は `undefined` に解決される {{jsxref("Promise")}}。
+{{jsxref("Promise")}} で、 {{domxref("Response")}} に解決するか、それ以外の場合は `undefined` に解決します。
 
 ## 例
 
-このコードスニペットは、[ナビゲーションプリロードのページ](https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution)（英語）からのものです。 {{domxref("ServiceWorkerGlobalScope.onfetch")}} イベントハンドラーは、`fetch` イベントをリッスンします。 起動したら、{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} に、制御されたページに戻す Promise を渡します。 この Promise は、{{domxref("Cache")}} オブジェクトで最初に一致した URL リクエストに解決されます。 一致が見つからない場合、コードはプリロード済みのレスポンスをチェックします。 それ以外の場合は、ネットワークからレスポンスをフェッチします。
+このコードスニペットは、 [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/) （英語）からのものです。
+
+{{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} イベントハンドラーは、`fetch` イベントを待ち受けします。
+起動したら、{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} に、制御されたページに戻すプロミスを渡します。
+このプロミスは、リクエストされたリソースに解決します。
+
+もし {{domxref("Cache")}} オブジェクトの中に一致する URL リクエストがあれば、コードはキャッシュからレスポンスを返すためのプロミスを返します。
+キャッシュに一致するものが見つからなかった場合、コードは `preloadResponse` にあるプロミスを返します。
+キャッシュや先読みされたレスポンスに一致するものがない場合、コードはネットワークからレスポンスをフェッチし、関連するプロミスを返します。
 
 ```js
-addEventListener('fetch', event => {
-  event.respondWith(async function() {
-    // 可能な場合はキャッシュから応答します
-    const cachedResponse = await caches.match(event.request);
-    if (cachedResponse) return cachedResponse;
+addEventListener("fetch", (event) => {
+  event.respondWith(
+    (async () => {
+      // 可能な場合はキャッシュから応答します
+      const cachedResponse = await caches.match(event.request);
+      if (cachedResponse) return cachedResponse;
 
-    // それ以外の場合は、プリロード済みのレスポンスがあればそれを使用します
-    const response = await event.preloadResponse;
-    if (response) return response;
+      // それ以外の場合は、プリロード済みのレスポンスがあればそれを使用します
+      const response = await event.preloadResponse;
+      if (response) return response;
 
-    // それ以外の場合は、ネットワークを試します。
-    return fetch(event.request);
-  }());
+      // それ以外の場合は、ネットワークを試します。
+      return fetch(event.request);
+    })()
+  );
 });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.FetchEvent.preloadResponse")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
-- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
+- [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/)（英語）
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)（英語）
 - {{jsxref("Promise")}}
-- [Web worker の使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
