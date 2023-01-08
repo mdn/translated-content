@@ -94,51 +94,51 @@ new Object([value])
 ### Свойства
 
 {{jsxref("Object/Object", "Object()")}}
-  - Превращает входные данные в объект.
+  - : Превращает входные данные в объект.
 
 ### Методы
 
-    {{jsxref("Object.assign","Object.assign()")}}
+    - {{jsxref("Object.assign","Object.assign()")}}
         - Копирует значения всех перечислимых собственных свойств из одного или нескольких исходных объектов в целевой объект.
-    {{jsxref("Object.create","Object.create()")}}
+    - {{jsxref("Object.create","Object.create()")}}
         - Создает новый объект с указанным объектом-прототипом и свойствами.
-    {{jsxref("Object.defineProperty","Object.defineProperty()")}}
+    - {{jsxref("Object.defineProperty","Object.defineProperty()")}}
         - Добавляет к объекту именованное свойство, описываемое данным дескриптором.
-    {{jsxref("Object.defineProperties","Object.defineProperties()")}}
+    - {{jsxref("Object.defineProperties","Object.defineProperties()")}}
         - Добавляет к объекту именованные свойства, описываемые заданными дескрипторами.
-    {{jsxref("Object.entries","Object.entries()")}}
+    - {{jsxref("Object.entries","Object.entries()")}}
         - Возвращает массив, содержащий все пары [key, value] собственных перечислимых строковых свойств данного объекта.
-    {{jsxref("Object.freeze","Object.freeze()")}}
+    - {{jsxref("Object.freeze","Object.freeze()")}}
         - Замораживает объект. Другой код не может удалить или изменить его свойства.
-    {{jsxref("Object.fromEntries","Object.fromEntries()")}}
+    - {{jsxref("Object.fromEntries","Object.fromEntries()")}}
         - Возвращает новый объект из повторяющихся пар [key, value]. (Это противоположно {{jsxref("Object.entries")}}).
-    {{jsxref("Object.getOwnPropertyDescriptor","Object.getOwnPropertyDescriptor()")}}
+    - {{jsxref("Object.getOwnPropertyDescriptor","Object.getOwnPropertyDescriptor()")}}
         - Возвращает дескриптор свойства для именованного свойства объекта.
-    {{jsxref("Object.getOwnPropertyDescriptors","Object.getOwnPropertyDescriptors()")}}
+    - {{jsxref("Object.getOwnPropertyDescriptors","Object.getOwnPropertyDescriptors()")}}
         - Возвращает объект, содержащий все собственные дескрипторы свойств для объекта.
-    {{jsxref("Object.getOwnPropertyNames","Object.getOwnPropertyNames()")}}
+    - {{jsxref("Object.getOwnPropertyNames","Object.getOwnPropertyNames()")}}
         - Возвращает массив, содержащий имена всех собственных перечислимых и неисчислимых свойств данного объекта.
-    {{jsxref("Object.getOwnPropertySymbols","Object.getOwnPropertySymbols()")}}
+    - {{jsxref("Object.getOwnPropertySymbols","Object.getOwnPropertySymbols()")}}
         - Возвращает массив всех свойств символа, найденных непосредственно на данном объекте.
-    {{jsxref("Object.getPrototypeOf","Object.getPrototypeOf()")}}
+    - {{jsxref("Object.getPrototypeOf","Object.getPrototypeOf()")}}
         - Возвращает прототип (внутреннее свойство [[Prototype]]) указанного объекта.
-    {{jsxref("Object.is","Object.is()")}}
+    - {{jsxref("Object.is","Object.is()")}}
         - Сравнивает, если два значения являются одинаковыми. Приравнивает все значения NaN (которые отличаются от обоих, которые не строго равны(==) и строго равны (===) ).
-    {{jsxref("Object.isExtensible","Object.isExtensible()")}}
+    - {{jsxref("Object.isExtensible","Object.isExtensible()")}}
         - Определяет, разрешено ли расширение объекта.
-    {{jsxref("Object.isFrozen","Object.isFrozen()")}}
+    - {{jsxref("Object.isFrozen","Object.isFrozen()")}}
         - Определяет, был ли объект заморожен.
-    {{jsxref("Object.isSealed","Object.isSealed()")}}
+    - {{jsxref("Object.isSealed","Object.isSealed()")}}
         - Определяет, запечатан ли объект.
-    {{jsxref("Object.keys","Object.keys()")}}
+    - {{jsxref("Object.keys","Object.keys()")}}
         - Возвращает массив, содержащий имена всех собственных перечислимых строковых свойств данного объекта.
-    {{jsxref("Object.preventExtensions","Object.preventExtensions()")}}
+    - {{jsxref("Object.preventExtensions","Object.preventExtensions()")}}
         - Предотвращает любые расширения объекта.
-    {{jsxref("Object.seal","Object.seal()")}}
+    - {{jsxref("Object.seal","Object.seal()")}}
         - Предотвращает удаление свойств объекта другим кодом.
-    {{jsxref("Object.setPrototypeOf","Object.setPrototypeOf()")}}
+    - {{jsxref("Object.setPrototypeOf","Object.setPrototypeOf()")}}
         - Задает прототип объекта (его внутреннее свойство [[Prototype]]).
-    {{jsxref("Object.values","Object.values()")}}
+    - {{jsxref("Object.values","Object.values()")}}
         - Возвращает массив, содержащий значения, соответствующие всем собственным перечисляемым строковым свойствам данного объекта.
 
 ## Примеры
