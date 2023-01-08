@@ -4,7 +4,9 @@ slug: conflicting/Web/JavaScript/Reference
 original_slug: Web/JavaScript/Reference/About
 ---
 
-{{JsSidebar}}A referência de JavaScript serve como um repositório para fatos sobre a linguagem JavaScript. A linguagem é inteiramente descrita aqui em detalhes. Quando você escreve códigos fontes em JavaScript, muitas vezes você irá precisar de referências ( por isto o titulo "Referência de JavaScript" ). Se você estiver aprendendo sobre JavaScript, ou precisa de ajuda para entender alguma das suas capacidades ou recursos, você pode conferir o [Guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide) !
+{{JsSidebar}}
+
+A referência de JavaScript serve como um repositório para fatos sobre a linguagem JavaScript. A linguagem é inteiramente descrita aqui em detalhes. Quando você escreve códigos fontes em JavaScript, muitas vezes você irá precisar de referências ( por isto o titulo "Referência de JavaScript" ). Se você estiver aprendendo sobre JavaScript, ou precisa de ajuda para entender alguma das suas capacidades ou recursos, você pode conferir o [Guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide) !
 O JavaScript é uma linguagem interpretada que se destina a ser utilizado dentro de algum ambiente maior, seja ele um script de um navegador, do lado do servidor, ou algo similar. Para a maior parte, esta referência se distinta à um ambiente agnóstico, e não somente ao ambiente de um navegador.
 
 ## Onde encontrar mais informações sobre JavaScript ?
