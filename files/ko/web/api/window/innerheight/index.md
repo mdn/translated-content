@@ -73,7 +73,7 @@ updateSize();
 window.addEventListener("resize", updateSize);
 ```
 
-### Result
+### 결과
 
 {{EmbedLiveSample('Demo')}}
 
