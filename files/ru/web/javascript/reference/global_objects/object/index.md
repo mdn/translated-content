@@ -70,7 +70,7 @@ new Object([value])
   - : Возвращает прототип указанного объекта.
 - {{jsxref("Object.is()")}}
   - : Определяет, являются ли два значения различимыми (то есть, одинаковыми)
- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.isExtensible()")}}
   - : Определяет, разрешено ли расширение объекта.
 - {{jsxref("Object.isFrozen()")}}
   - : Определяет, был ли объект заморожен.
@@ -111,7 +111,7 @@ new Object([value])
 - [`Object.prototype.__lookupSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
   - : Возвращает функцию, привязанную в качестве установщика к указанному свойству.
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
-  - : Returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain.
+  - : Возвращает логическое значение, указывающее, содержит ли объект указанное свойство как прямое свойство этого объекта, а не унаследованное через цепочку прототипов.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
   - : Возвращает логическое значение, указывающее, содержит ли объект указанное свойство как прямое свойство этого объекта, а не унаследованное через цепочку прототипов.
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
