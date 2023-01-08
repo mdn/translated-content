@@ -12,11 +12,11 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 ## Introduction et demo
 
-Ceci est un tutoriel rapide pour apprendre comment accéder à la caméra sur votre ordinateur et prendre des photos avec. Vous pouvez voir [le code final en action dans JSFiddle](http://jsfiddle.net/codepo8/agaRe/4/). Il y a aussi une version plus avancée pour charger des photos sur **imgur** en JavaScript, disponible en [code source sur GitHub](https://github.com/codepo8/interaction-cam/) ou [en demo](http://codepo8.github.com/interaction-cam/).
+Ceci est un tutoriel rapide pour apprendre comment accéder à la caméra sur votre ordinateur et prendre des photos avec. Vous pouvez voir [le code final en action dans JSFiddle](https://jsfiddle.net/BaguetteSeeker/jchezp01/).
 
 ## Les balises HTML
 
-La première chose dont vous avez besoin pour accéder à la webcam en utilisant WebRTC est un élément {{HTMLElement("video")}} et un élément {{HTMLElement("canvas")}} dans la page. L'élément video reçoit un flux de WebRTC et l'élément canvas est nécessaire pour capture l'image de la vidéo. Nous ajoutons aussi une image qui sera par la suite remplacée par la capture de la webcam.
+La première chose dont vous avez besoin pour accéder à la webcam en utilisant WebRTC est un élément {{HTMLElement("video")}} et un élément {{HTMLElement("canvas")}} dans la page. L'élément video reçoit un flux de WebRTC et l'élément canvas est nécessaire pour capturer l'image de la vidéo. Nous ajoutons aussi une image qui sera par la suite remplacée par la capture de la webcam.
 
 ```html
 <video id="video"></video>
@@ -27,7 +27,7 @@ La première chose dont vous avez besoin pour accéder à la webcam en utilisant
 
 ## Le script complet
 
-Voice le JavaScript complet en un seul morceau. Nous allons expliquer chaque section en détail ci-après.
+Voici le JavaScript complet en un seul morceau. Nous allons expliquer chaque section en détail ci-après.
 
 ```js
 (function() {
@@ -41,29 +41,15 @@ Voice le JavaScript complet en un seul morceau. Nous allons expliquer chaque sec
       width = 320,
       height = 0;
 
-  navigator.getMedia = ( navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia ||
-                         navigator.msGetUserMedia);
-
-  navigator.getMedia(
-    {
-      video: true,
-      audio: false
-    },
-    function(stream) {
-      if (navigator.mozGetUserMedia) {
-        video.mozSrcObject = stream;
-      } else {
-        var vendorURL = window.URL || window.webkitURL;
-        video.src = vendorURL.createObjectURL(stream);
-      }
-      video.play();
-    },
-    function(err) {
-      console.log("An error occured! " + err);
-    }
-  );
+  navigator.mediaDevices
+      .getUserMedia({ video: true, audio: false })
+      .then((stream) => {
+        video.srcObject = stream;
+        video.play();
+      })
+      .catch((err) => {
+        console.error(`An error occurred: ${err}`);
+      });
 
   video.addEventListener('canplay', function(ev){
     if (!streaming) {
@@ -113,24 +99,27 @@ Voici ce qui se passe.
 
 Afin d'éviter les variables globales, on encapsule le script dans une fonction anonyme. Nous capturons les éléments du HTML dont nous avons besoin et nous définissons une largeur de vidéo à 320 et une hauteur à 0. La hauteur appropriée sera calculée plus tard.
 
-> **Attention :** À l'heure actuelle, il y a une différence dans les tailles de vidéo offertes par getUserMedia. Firefox Nightly utilise une résolution de 352x288 alors que Opera et Chrome utilisent une résolution de 640x400. Celà changera dans le futur, mais redimensionner avec le rapport comme nous le faisons nous épargnera des mauvaises surprises.
-
 ### Obtenir la vidéo
 
-Maintenant, nous devons récupérer la vidéo de la webcam. Nous demandons au navigateur de nous donner la vidéo sans le son et de récupérer le flux dans une fonction callback:
+Maintenant, nous devons récupérer le flux vidéo de la webcam:
 
 ```js
-navigator.mediaDevices
+  navigator.mediaDevices
       .getUserMedia({ video: true, audio: false })
       .then((stream) => {
         video.srcObject = stream;
         video.play();
-      }).catch((err) => {
+      })
+      .catch((err) => {
         console.error(`An error occurred: ${err}`);
       });
 ```
+      
+Dans le code ci-dessus, l'on fait appel à la méthode [MediaDevices.getUserMedia()](https://developer.mozilla.org/fr/docs/Web/API/MediaDevices/getUserMedia) pour demander au navigateur le flux vidéo (sans le son). Cette méthode retourne une réponse de type [Promise](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) à laquelle on attache un callback de succès `then` et d'échec `catch`.
 
-Firefox Nightly nécessite de définir la propriété `mozSrcObject` de l'élément vidéo pour pouvoir le jouer; pour les autres navigateurs, définissez l'attribut `src`. Alors que Firefox peut utiliser les flux directement, Webkit et Opera ont besoin de créer un objet URL. Cela sera standardisé dans un futur proche.
+Le callback de succès reçoit un objet `stream` (flux) comme paramètre. Cet objet est ensuite assigné comme source à notre balise {{HTMLElement("video")}} via la propriété `srcObject`.
+
+Si le navigateur échoue à acceder au flux vidéo, le callback d'échec est invoqué; ce qui se produira si aucune caméra fonctionnelle n'est accessible par le navigateur, ou si tout simplement l'utilisateur en a interdit l'accès.
 
 ### Redimensionner la vidéo
 
@@ -178,11 +167,4 @@ Dans cette fonction nous re-assignons la taille du canvas à la taille de la vid
 })();
 ```
 
-C'est tout ce qu'il faut pour afficher un flux de la webcam et en prendre une photo, que ce soit sur Chrome, Opera ou Firefox.
-
-## Support
-
-Actuellement, l'accès à la caméra via WebRTC est supporté dans Chrome, Opera et Firefox Nightly 18. Activer WebRTC dans Firefox Nightly demande que vous positionnez une valeur dans la configuration:
-
-- Entrez "about:config" dans la barre d'adresse et confirmez les changements
-- Trouver l'entrée "media.navigator.enabled" et positionnez la à true
+Vous savez désormais tout ce qu'il faut pour obtenir le flux d'une caméra et en retirer des clichés instantanés, quelque soit le navigateur !
