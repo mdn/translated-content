@@ -1,11 +1,6 @@
 ---
 title: Border-radius 생성기
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
-tags:
-  - CSS
-  - CSS Borders
-  - Tools
-translation_of: Web/CSS/CSS_Background_and_Borders/Border-radius_generator
 original_slug: Web/CSS/CSS_Background_and_Borders/Border-radius_generator
 ---
 

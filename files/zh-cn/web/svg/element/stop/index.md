@@ -36,7 +36,7 @@ slug: Web/SVG/Element/stop
 
 示例输出：
 
-{{EmbedLiveSample("Example",160,95)}}
+{{EmbedLiveSample("示例",160,95)}}
 
 ## 属性
 

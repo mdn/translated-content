@@ -1,7 +1,6 @@
 ---
 title: keydown
 slug: Web/API/Element/keydown_event
-translation_of: Web/API/Document/keydown_event
 original_slug: Web/API/Document/keydown_event
 ---
 

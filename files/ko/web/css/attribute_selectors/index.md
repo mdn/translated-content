@@ -1,11 +1,6 @@
 ---
 title: 특성 선택자
 slug: Web/CSS/Attribute_selectors
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Attribute_selectors
 ---
 
 {{CSSRef("Selectors")}}

@@ -1,11 +1,6 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
-tags:
-  - BigInt
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 {{JSRef}}
 

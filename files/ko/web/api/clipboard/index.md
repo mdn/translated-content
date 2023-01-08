@@ -1,16 +1,6 @@
 ---
 title: Clipboard
 slug: Web/API/Clipboard
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - Interface
-  - Reference
-  - 인터페이스
-  - 클립보드
-  - 클립보드 API
-translation_of: Web/API/Clipboard
 ---
 
 {{SeeCompatTable}}{{APIRef("Clipboard API")}}

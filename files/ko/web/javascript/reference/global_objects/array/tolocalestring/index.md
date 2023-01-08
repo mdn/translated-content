@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-tags:
-  - Array
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
 
 {{JSRef}}

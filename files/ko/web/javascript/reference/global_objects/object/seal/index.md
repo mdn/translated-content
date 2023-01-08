@@ -1,14 +1,6 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - 봉인
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 ---
 {{JSRef}}
 

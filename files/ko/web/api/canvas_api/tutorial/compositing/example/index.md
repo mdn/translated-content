@@ -1,12 +1,6 @@
 ---
 title: 도형 합성 예제
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
-tags:
-  - HTML5
-  - 그래픽
-  - 예제
-  - 캔버스
-translation_of: Web/API/Canvas_API/Tutorial/Compositing/Example
 original_slug: Web/HTML/Canvas/Tutorial/Compositing/Example
 ---
 

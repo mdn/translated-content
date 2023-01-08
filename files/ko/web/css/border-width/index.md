@@ -1,13 +1,6 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-translation_of: Web/CSS/border-width
 ---
 
 {{CSSRef}}

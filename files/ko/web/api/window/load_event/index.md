@@ -1,10 +1,6 @@
 ---
 title: load
 slug: Web/API/Window/load_event
-tags:
-  - Event
-  - 이벤트
-translation_of: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
 

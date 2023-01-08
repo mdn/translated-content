@@ -22,7 +22,7 @@ void gradient.addColorStop(offset, color);
 
 ## 示例
 
-### 使用`addColorStop`方法
+### 使用 `addColorStop` 方法
 
 一个使用{{domxref("CanvasGradient")}}对象的`addColorStop` 方法的简单例子
 
@@ -87,7 +87,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('使用 addColorStop 方法', 700, 360) }}
 
 ## 标准
 
@@ -97,7 +97,7 @@ window.addEventListener("load", drawCanvas);
 
 {{Compat}}
 
-## 请参阅
+## 参见
 
 - 接口定义 {{domxref("CanvasGradient")}}
 - {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}

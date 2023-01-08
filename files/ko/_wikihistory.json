@@ -10456,58 +10456,6 @@
     "modified": "2019-03-23T23:41:54.185Z",
     "contributors": ["ExE-Boss", "teoli", "Netaras"]
   },
-  "Web/XPath/Axes/ancestor": {
-    "modified": "2019-03-23T23:41:51.868Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/ancestor-or-self": {
-    "modified": "2019-03-23T23:41:53.193Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/attribute": {
-    "modified": "2019-01-16T16:16:10.374Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/child": {
-    "modified": "2019-01-16T16:16:18.107Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/descendant": {
-    "modified": "2019-01-16T16:16:11.286Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/descendant-or-self": {
-    "modified": "2019-01-16T16:16:11.121Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/following": {
-    "modified": "2019-01-16T16:16:17.035Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/following-sibling": {
-    "modified": "2019-01-16T16:16:13.970Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/namespace": {
-    "modified": "2019-03-23T23:41:52.884Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/parent": {
-    "modified": "2019-01-16T16:16:10.076Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/preceding": {
-    "modified": "2019-01-16T16:16:13.085Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/preceding-sibling": {
-    "modified": "2019-01-16T16:16:15.097Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/self": {
-    "modified": "2019-01-16T16:16:15.156Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
   "Web/XPath/Functions": {
     "modified": "2019-03-23T23:41:49.260Z",
     "contributors": ["ExE-Boss", "teoli", "mete0r", "Netaras"]
@@ -11954,6 +11902,58 @@
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2019-03-23T22:05:46.762Z",
     "contributors": ["daebum-lee"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor": {
+    "modified": "2019-03-23T23:41:51.868Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor-or-self": {
+    "modified": "2019-03-23T23:41:53.193Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/attribute": {
+    "modified": "2019-01-16T16:16:10.374Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/child": {
+    "modified": "2019-01-16T16:16:18.107Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/descendant": {
+    "modified": "2019-01-16T16:16:11.286Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/descendant-or-self": {
+    "modified": "2019-01-16T16:16:11.121Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/following": {
+    "modified": "2019-01-16T16:16:17.035Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/following-sibling": {
+    "modified": "2019-01-16T16:16:13.970Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/namespace": {
+    "modified": "2019-03-23T23:41:52.884Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/parent": {
+    "modified": "2019-01-16T16:16:10.076Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/preceding": {
+    "modified": "2019-01-16T16:16:13.085Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/preceding-sibling": {
+    "modified": "2019-01-16T16:16:15.097Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/self": {
+    "modified": "2019-01-16T16:16:15.156Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
   },
   "orphaned/WebAssembly/Caching_modules": {
     "modified": "2019-03-18T21:26:57.835Z",

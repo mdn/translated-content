@@ -1,11 +1,6 @@
 ---
 title: Axes
 slug: Web/XPath/Axes
-tags:
-  - XPath
-  - XPath_Reference
-  - XSLT_Reference
-translation_of: Web/XPath/Axes
 ---
 {{ XsltRef() }} [XPath](/ko/XPath) 명세에는 축이 13가지가 있습니다. 축은 문맥 노드와의 관계를 나타내고 트리 위에 문맥 노드에 대응하여 노드를 위치시킬 때 씁니다. 다음은 이용가능한 축 13가지와 [Gecko](/ko/Gecko)에서 가능한 지원 정도에 대한 매우 짧은 설명입니다.
 

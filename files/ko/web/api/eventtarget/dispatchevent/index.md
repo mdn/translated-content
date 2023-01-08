@@ -1,11 +1,6 @@
 ---
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
-tags:
-  - Method
-  - Reference
-browser-compat: api.EventTarget.dispatchEvent
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
 
 {{APIRef("DOM")}}

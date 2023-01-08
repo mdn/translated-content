@@ -1,7 +1,6 @@
 ---
 title: 메타 프로그래밍
 slug: Web/JavaScript/Guide/Meta_programming
-translation_of: Web/JavaScript/Guide/Meta_programming
 original_slug: Web/JavaScript/Guide/메타_프로그래밍
 ---
 

@@ -1,15 +1,6 @@
 ---
 title: Web Audio API의 기본 개념
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
-tags:
-  - 가이드
-  - 미디어
-  - 오디오
-  - 웹오디오API
-  - 웹오디오API이론
-  - 이론
-  - 컨셉
-translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
 
 오디오가 어떻게 여러분의 앱을 통해서 전송(route)되는지를 설계하는 동안 여러분이 적절한 결정을 내리는 것을 돕기 위해, 이 문서는 Web Audio API의 기능이 어떻게 동작하는가를 뒷받침하는 얼마간의 오디오 이론을 설명합니다. 이 문서를 읽는다고 해서 여러분이 숙련된 사운드 엔지니어가 될 수는 없지만, 왜 Web Audio API가 이렇게 동작하는지를 이해하기에 충분한 배경지식을 줄 것입니다.

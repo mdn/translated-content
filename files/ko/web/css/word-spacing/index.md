@@ -1,13 +1,6 @@
 ---
 title: word-spacing
 slug: Web/CSS/word-spacing
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/word-spacing
 ---
 {{CSSRef}}
 

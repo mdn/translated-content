@@ -1,7 +1,6 @@
 ---
 title: Escolhendo a abordagem correta
 slug: conflicting/Learn/JavaScript/Asynchronous
-translation_of: Learn/JavaScript/Asynchronous/Choosing_the_right_approach
 original_slug: Learn/JavaScript/Asynchronous/Choosing_the_right_approach
 ---
 

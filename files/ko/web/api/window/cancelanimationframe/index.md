@@ -1,15 +1,6 @@
 ---
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
-tags:
-  - API
-  - DOM
-  - 레퍼런스
-  - 메소드
-  - 실험적
-  - 애니메이션
-  - 윈도우
-translation_of: Web/API/Window/cancelAnimationFrame
 ---
 {{APIRef}}
 

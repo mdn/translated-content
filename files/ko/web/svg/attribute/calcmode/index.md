@@ -1,7 +1,6 @@
 ---
 title: calcMode
 slug: Web/SVG/Attribute/calcMode
-translation_of: Web/SVG/Attribute/calcMode
 ---
 
 « [SVG Attribute reference home](/en/SVG/Attribute)

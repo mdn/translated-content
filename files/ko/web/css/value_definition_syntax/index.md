@@ -1,14 +1,6 @@
 ---
 title: 값 정의 구문
 slug: Web/CSS/Value_definition_syntax
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Syntax
-  - 구문
-  - 문법
-translation_of: Web/CSS/Value_definition_syntax
 ---
 
 {{CSSRef}}

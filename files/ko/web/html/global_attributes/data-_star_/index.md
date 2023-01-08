@@ -1,12 +1,8 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/data-*
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`data-*`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 **사용자 지정 데이터 특성**(custom data attributes)이라는 특성 클래스를 형성함으로써 임의의 데이터를 스크립트로 [HTML](/ko/docs/Web/HTML)과 [DOM](/ko/docs/Web/API/Document_Object_Model) 사이에서 교환할 수 있는 방법입니다.

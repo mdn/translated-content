@@ -1,20 +1,7 @@
 ---
 title: 'Document: drag 이벤트'
 slug: Web/API/HTMLElement/drag_event
-page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Document
-  - Drag
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-translation_of: Web/API/Document/drag_event
 original_slug: Web/API/Document/drag_event
-browser-compat: api.Document.drag_event
 ---
 
 {{APIRef}}

@@ -1,7 +1,6 @@
 ---
 title: 일반 미디어 타입에서 "codecs" 파라미터 사용하기
 slug: Web/Media/Formats/codecs_parameter
-translation_of: Web/Media/Formats/codecs_parameter
 original_slug: Web/Media/Formats/코덱파라미터
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

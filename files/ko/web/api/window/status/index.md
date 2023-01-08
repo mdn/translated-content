@@ -1,7 +1,6 @@
 ---
 title: Window.status
 slug: Web/API/Window/status
-translation_of: Web/API/Window/status
 ---
 {{APIRef}}
 

@@ -1,13 +1,6 @@
 ---
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
-tags:
-  - API
-  - Channel messaging
-  - HTML API
-  - Overview
-  - Reference
-translation_of: Web/API/Channel_Messaging_API
 ---
 
 {{DefaultAPISidebar("Channel Messaging API")}}

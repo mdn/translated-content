@@ -1,14 +1,6 @@
 ---
 title: MediaStreamTrack.enabled
 slug: Web/API/MediaStreamTrack/enabled
-tags:
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaStreamTrack/enabled
 ---
 {{APIRef("Media Capture and Streams")}}
 

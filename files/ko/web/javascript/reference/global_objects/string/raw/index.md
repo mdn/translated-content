@@ -1,19 +1,11 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- String
-- Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
 {{JSRef}}
 
-`String.raw()`메서드는 [템플릿 리터럴](/ko/docs/Web/JavaScript/Reference/Template_literals)의 태그 함수입니다.  
-이는 Pyhon의 `r` 접두사 또는 C#의 문자열 리터럴의 `@` 접두사와 유사합니다.(그러나 동일 하지는 않습니다. 이 문제에 관해서는 여기 [이슈](https://bugs.chromium.org/p/v8/issues/detail?id=5016)를 참조하십시오.)  
+`String.raw()`메서드는 [템플릿 리터럴](/ko/docs/Web/JavaScript/Reference/Template_literals)의 태그 함수입니다.
+이는 Pyhon의 `r` 접두사 또는 C#의 문자열 리터럴의 `@` 접두사와 유사합니다.(그러나 동일 하지는 않습니다. 이 문제에 관해서는 여기 [이슈](https://bugs.chromium.org/p/v8/issues/detail?id=5016)를 참조하십시오.)
 이 메서드는 템플릿 리터럴의 윈시 문자열을 가져오는데 사용됩니다. 즉, 대체(예: `${foo}`)는 처리되지만 이스케이프(예: `\n`)는 처리되지 않습니다.
 
 {{EmbedInteractiveExample("pages/js/string-raw.html")}}
@@ -46,7 +38,7 @@ String.raw`templateString`
 
 ## 설명
 
-`String.raw()`의 경우 보통 템플릿 리터럴과 많이 사용하고, 첫번째 구문의 경우 잘 사용되지 않습니다.  
+`String.raw()`의 경우 보통 템플릿 리터럴과 많이 사용하고, 첫번째 구문의 경우 잘 사용되지 않습니다.
 왜냐하면 자바스크립트 엔진이 당신을 위해서 자동으로 적절한 인수로 호출해주기 때문입니다. ( 다른 [태그 메서드](/ko/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals) 들과 마찬가지로).
 
 `String.raw()`은 템플릿 리터럴의 유일한 내장 함수입니다. 기본 템플릿 기능과 동일하게 작동하며 연결을 수행합니다. JavaScript 코드를 사용하여 다시 구현할 수도 있습니다.
@@ -100,7 +92,7 @@ String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
 
 ## 같이 보기
 
-- `String.raw`의 폴리필은 여기를 참고[`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)  
+- `String.raw`의 폴리필은 여기를 참고[`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [Template literals](/ko/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("String")}}
 - [Lexical grammar](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)

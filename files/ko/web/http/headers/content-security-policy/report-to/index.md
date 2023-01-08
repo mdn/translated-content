@@ -1,8 +1,8 @@
 ---
 title: report-to
 slug: Web/HTTP/Headers/Content-Security-Policy/report-to
-translation_of: Web/HTTP/Headers/Content-Security-Policy/report-to
 ---
+
 `Report-To` HTTP 응답 해더 필드는 사용자 에이전트(브라우저)가 레포트를 저장하기 위한 origin의 엔드포인트를 지정합니다.
 
 ```

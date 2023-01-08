@@ -238,10 +238,10 @@ human-signals@^3.0.1:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-3.0.1.tgz#c740920859dafa50e5a3222da9d3bf4bb0e5eef5"
   integrity sha512-rQLskxnM/5OCldHo+wNXbpVgDn5A17CUoKX+7Sokwaknlq7CdSnphy0W39GU8dw59XiCXmFXDg4fRuckQRKewQ==
 
-husky@8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-8.0.2.tgz#5816a60db02650f1f22c8b69b928fd6bcd77a236"
-  integrity sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==
+husky@8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-8.0.3.tgz#4936d7212e46d1dea28fef29bb3a108872cd9184"
+  integrity sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==
 
 ignore@^5.2.0:
   version "5.2.0"
@@ -373,17 +373,17 @@ markdownlint-cli2@0.5.1:
     strip-json-comments "5.0.0"
     yaml "2.1.1"
 
-markdownlint-rule-helpers@~0.17.2:
-  version "0.17.2"
-  resolved "https://registry.yarnpkg.com/markdownlint-rule-helpers/-/markdownlint-rule-helpers-0.17.2.tgz#64d6e8c66e497e631b0e40cf1cef7ca622a0b654"
-  integrity sha512-XaeoW2NYSlWxMCZM2B3H7YTG6nlaLfkEZWMBhr4hSPlq9MuY2sy83+Xr89jXOqZMZYjvi5nBCGoFh7hHoPKZmA==
+markdownlint-rule-helpers@~0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/markdownlint-rule-helpers/-/markdownlint-rule-helpers-0.18.0.tgz#aafa3ea6437333c711ba04c520a3df4e511dbcc1"
+  integrity sha512-UEdWfsoLr8ylXxfh4fzY5P6lExN+7Un7LbfqDXPlq5VLwwEDFdcZ7EMXoaEKNzncBKG/KWrt2sVt7KiCJgPyMQ==
 
-markdownlint-rule-search-replace@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/markdownlint-rule-search-replace/-/markdownlint-rule-search-replace-1.0.5.tgz#20cc1681e3c162dd43d19614e3d1515e75cf0299"
-  integrity sha512-PXpHZuZrqaPA0kpkPSsTPVndxtoM+wgG95V9vzL5sZl+SQUp8hJIHSqOnNJOwd85ykgjbnripZYf0IN40ADkdw==
+markdownlint-rule-search-replace@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/markdownlint-rule-search-replace/-/markdownlint-rule-search-replace-1.0.8.tgz#5e893b4fe33cfce64b897829d011a8654114e341"
+  integrity sha512-wGZDm3yQBMIdRZXT2EOjnPp0WBByQLrmPPCU0HqGym1qsZlhElwsYHMt7c7TCXOQX8HHqKV+qC54OhTH3Q2+Qw==
   dependencies:
-    markdownlint-rule-helpers "~0.17.2"
+    markdownlint-rule-helpers "~0.18.0"
 
 markdownlint@0.26.2:
   version "0.26.2"

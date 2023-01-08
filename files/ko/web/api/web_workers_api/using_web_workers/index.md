@@ -1,7 +1,6 @@
 ---
 title: 웹 워커 사용하기
 slug: Web/API/Web_Workers_API/Using_web_workers
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: Web/API/Web_Workers_API/basic_usage
 ---
 

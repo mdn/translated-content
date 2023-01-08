@@ -74,7 +74,7 @@ slug: Web/HTML/Element/optgroup
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

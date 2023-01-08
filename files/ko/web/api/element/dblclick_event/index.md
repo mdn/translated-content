@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.ondblclick
 slug: Web/API/Element/dblclick_event
-tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/ondblclick
 original_slug: Web/API/GlobalEventHandlers/ondblclick
 ---
 {{ApiRef("HTML DOM")}}

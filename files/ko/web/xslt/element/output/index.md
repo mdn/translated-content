@@ -1,9 +1,6 @@
 ---
 title: output
 slug: Web/XSLT/Element/output
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/output
 original_slug: Web/XSLT/output
 ---
 

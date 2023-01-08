@@ -139,7 +139,7 @@ slug: Web/HTML/Element/select
 
 #### 结果
 
-{{EmbedLiveSample("Basic_select", "", "100")}}
+{{EmbedLiveSample("基本选择", "", "100")}}
 
 ### 使用多选的进阶选择
 
@@ -162,7 +162,7 @@ slug: Web/HTML/Element/select
 </label>
 ```
 
-{{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
+{{EmbedLiveSample("使用多选的进阶选择", "", "100")}}
 
 你会看见：
 

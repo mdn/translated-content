@@ -26,7 +26,7 @@ border-bottom-right-radius: inherit;
 
 The rounding can be a circle or an ellipse, or if one of the value is `0` no rounding is done and the corner is square.
 
-![border-bottom-right-radius.png](/@api/deki/files/6134/=border-bottom-right-radius.png)
+![border-bottom-right-radius.png](border-bottom-right-radius.png)
 
 A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.
 

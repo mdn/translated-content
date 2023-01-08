@@ -1,13 +1,6 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - CSS
-  - CSS Data Type
-  - Reference
-  - 블렌드 모드
-  - 혼합 모드
-translation_of: Web/CSS/blend-mode
 ---
 
 {{CSSRef}}

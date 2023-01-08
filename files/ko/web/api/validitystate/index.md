@@ -1,13 +1,6 @@
 ---
 title: ValidityState
 slug: Web/API/ValidityState
-tags:
-  - API
-  - Constraint Validation API
-  - Forms
-  - HTML DOM
-  - Interface
-translation_of: Web/API/ValidityState
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,8 +1,8 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-translation_of: Web/HTTP/Headers/Cache-Control
 ---
+
 {{HTTPSidebar}}
 
 **`Cache-Control`** 일반 헤더 필드는 요청과 응답 내의 캐싱 메커니즘을 위한 디렉티브를 정하기 위해 사용됩니다. 캐싱 디렉티브는 단방향성이며, 이는 요청 내에 주어진 디렉티브가 응답 내에 주어진 디렉티브와 동일하다는 것을 뜻하지는 않는다는 것을 의미합니다.

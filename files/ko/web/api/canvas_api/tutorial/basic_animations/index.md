@@ -1,11 +1,6 @@
 ---
 title: 기본 애니메이션
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-tags:
-  - HTML5
-  - 그래픽
-  - 캔버스
-translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 original_slug: Web/HTML/Canvas/Tutorial/Basic_animations
 ---
 
