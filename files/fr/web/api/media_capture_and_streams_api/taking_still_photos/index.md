@@ -115,7 +115,7 @@ Maintenant, nous devons récupérer le flux vidéo de la webcam:
       });
 ```
 
-Dans le code ci-dessus, l'on fait appel à la méthode [MediaDevices.getUserMedia()](https://developer.mozilla.org/fr/docs/Web/API/MediaDevices/getUserMedia) pour demander au navigateur le flux vidéo (sans le son). Cette méthode retourne une réponse de type [Promise](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) à laquelle on attache un callback de succès `then` et d'échec `catch`.
+Dans le code ci-dessus, l'on fait appel à la méthode [MediaDevices.getUserMedia()](/fr/docs/Web/API/MediaDevices/getUserMedia) pour demander au navigateur le flux vidéo (sans le son). Cette méthode retourne une réponse de type [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) à laquelle on attache un callback de succès `then` et d'échec `catch`.
 
 Le callback de succès reçoit un objet `stream` (flux) comme paramètre. Cet objet est ensuite assigné comme source à notre balise {{HTMLElement("video")}} via la propriété `srcObject`.
 
