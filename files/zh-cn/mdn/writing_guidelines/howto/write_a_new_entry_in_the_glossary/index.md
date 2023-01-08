@@ -1,5 +1,5 @@
 ---
-title: 如何撰写和引用一个词汇表中的条目
+title: 如何撰写和引用一个术语表中的条目
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 ---
 
@@ -19,7 +19,7 @@ slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 
 ### 撰写概要
 
-任何词汇表页面的第一段是对该术语的简单和简短描述（最好不超过两个句子）。确保阅读说明的人能够立即了解定义的术语。
+任何术语表页面的第一段是对该术语的简单和简短描述（最好不超过两个句子）。确保阅读说明的人能够立即了解定义的术语。
 
 > **备注：** 请不要直接从其它地方复制和粘贴定义（尤其是维基百科，因为许可证版本范围较小，与 MDN 不兼容）。你的术语条目应该是自己撰写的内容。
 
