@@ -83,10 +83,10 @@ Los siguientes términos son usados en este documento; algunos provienen de la e
   - : Pregunta al servidor de origen si una respuesta almacenada sigue siendo reciente o no ([fresh o stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)). Normalmente se realiza a través de una petición condicionada.
 - `Respuesta reciente`
   - : Indica que una respuesa es reciente ([fresh](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)). Esto normalmente significa que la respuesta puede ser reutilizada para las subsiguientes peticiones, dependiendo de las directivas de petición.
-- `Respuesta pasada`
-  - : Indica que la respuestá está pasada ([stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)). Normalmente significa que la respuesta ya no puede ser reutilizada. El almacenamiento caché no requiere que las respuestas pasadas sean eliminada inmediatamente, por que la revalidación puede cambiar la respuesta de pasada a reciente de nuevo.
+- `Respuesta obsoleta`
+  - : Indica que la respuestá está obsoleta ([stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)). Normalmente significa que la respuesta ya no puede ser reutilizada. El almacenamiento caché no requiere que las respuestas obsoletas sean eliminadas inmediatamente, por que la revalidación puede cambiar la respuesta de obsoleta a reciente de nuevo.
 - `Edad`
-  - : El tiempo desde que una respuesta fue generada. Es un criterio para ver si una respuesta es reciente o pasada ([fresh o stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)).
+  - : El tiempo desde que una respuesta fue generada. Es un criterio para ver si una respuesta es reciente u obsoleta ([fresh o stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)).
 
 ## Directivas
 
@@ -302,7 +302,7 @@ Si el valor de `max-age` no es positivo (por ejemplo, `-1`) o no es entero (por 
 
 > Caches are encouraged to consider responses that have invalid freshness information to be stale.
 
-> Traducción: Se recomienda a los caches considerar una respuesta como antigua si la información de edad es inválida.
+Traducción: Se recomienda a las caches considerar una respuesta como antigua si la información de edad es inválida.
 
 En otras palabras, para cualquier valor de `max-age` que no es un entero positivo, el comportamiento de cache recomendado es de tratar el valor como si fuera `0`.
 
@@ -446,10 +446,10 @@ Alternativamente, `Clear-Site-Data` puede borrar la memoria caché del navegador
 
 ## Véase también
 
-- [HTTP caching](/es/docs/Web/HTTP/Caching)
-- [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
-- [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
-- [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)
-- [RFC 9111 – HTTP Caching](https://httpwg.org/specs/rfc9111.html)
-- [RFC 5861 – HTTP Cache-Control Extensions for Stale Content](https://httpwg.org/specs/rfc5861.html)
-- [RFC 8246 – HTTP Immutable Responses](https://httpwg.org/specs/rfc8246.html)
+- [Caché en HTTP](/es/docs/Web/HTTP/Caching)
+- [Tutorial de almacenamiento en caché para autores web y webmasters](https://www.mnot.net/cache_docs/)
+- [Prácticas recomendadas de almacenamiento en caché y trucos de edad máxima](https://jakearchibald.com/2016/caching-best-practices/)
+- [Control de caché para civiles](https://csswizardry.com/2019/03/cache-control-for-civilians/)
+- [RFC 9111 – Caché en HTTP](https://httpwg.org/specs/rfc9111.html)
+- [RFC 5861 – Extensiones de control de caché HTTP para contenido obsoleto](https://httpwg.org/specs/rfc5861.html)
+- [RFC 8246 – Respuestas HTTP inmutables](https://httpwg.org/specs/rfc8246.html)
