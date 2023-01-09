@@ -4,12 +4,12 @@ slug: Web/CSS/Syntax
 ---
 {{CSSRef}}
 
-L'objectif fondamental du langage <i lang="en">Cascading Stylesheet</i> ([CSS](/fr/docs/Web/CSS)) est de permettre à un moteur de navigation d'associer des fonctionnalités spécifiques, comme les couleurs, le positionnement ou les décorations à des éléments de la page. La _syntaxe CSS_ reflète cet objectif et ses éléments de base sont :
+L'objectif fondamental du langage <i lang="en">Cascading Stylesheet</i> ([CSS](/fr/docs/Web/CSS)) est de permettre à un moteur de navigation d'associer des fonctionnalités spécifiques, comme les couleurs, le positionnement ou les décorations à des éléments de la page. La _syntaxe CSS_ reflète cet objectif et ses éléments de base sont&nbsp;:
 
 - La **propriété** est un identifiant, c'est-à-dire un _nom_ lisible par l'homme, qui définit quelle fonctionnalité est ciblée.
 - La **valeur** décrit comment la fonctionnalité doit être gérée par le moteur. Chaque propriété a un ensemble de valeurs valides, définies par une grammaire formelle, ainsi qu'une signification sémantique, implémentées par le moteur du navigateur.
 
-## déclarations CSS 
+## déclarations CSS
 
 La définition des propriétés CSS sur des valeurs spécifiques est la fonction principale du langage CSS. Une paire de propriété et de valeur s'appelle une **déclaration**, et tout moteur CSS calcule quelles déclarations s'appliquent à chaque élément d'une page afin de la mettre en page de manière appropriée et de la styliser.
 
@@ -33,7 +33,7 @@ Un bloc de déclaration CSS est visualisé dans le schéma ci-dessous.
 
 > **Note:** The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML {{htmlattrxref("style")}} attribute.
 
-> **Remarque :** Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML {{htmlattrxref("style")}}.
+> **Remarque&nbsp;:** Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML {{htmlattrxref("style")}}.
 
 ## Ensembles de règles CSS
 
@@ -49,11 +49,11 @@ Comme un élément de la page peut être mis en correspondance par plusieurs sé
 
 > **Note:** It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
 
-<!-- Je comprends le sens de ce paragraphe mais la syntaxe mérite vraiment d'être simplifiée. Peut être proposé une reformulation sur la version EN --> 
+<!-- Je comprends le sens de ce paragraphe mais la syntaxe mérite vraiment d'être simplifiée. Peut être proposé une reformulation sur la version EN -->
 
-> **Remarque :** Il est important de noter que même si un ensemble de règles caractérisé par un groupe de sélecteurs est une sorte de raccourci remplaçant les règles individuellement définies, cela ne s'applique pas à la validité de l'ensemble de règles lui-même.
+> **Remarque&nbsp;:** Il est important de noter que même si un ensemble de règles caractérisé par un groupe de sélecteurs est une sorte de raccourci remplaçant les règles individuellement définies, cela ne s'applique pas à la validité de l'ensemble de règles lui-même.
 >
-> Cela conduit à une conséquence importante : si un seul sélecteur de base est invalide, comme lors de l'utilisation d'un pseudo-élément ou d'une pseudo-classe inconnus, l'ensemble du _sélecteur_ est invalide et donc la règle entière est ignorée (également invalide).
+> Cela conduit à une conséquence importante&nbsp;: si un seul sélecteur de base est invalide, comme lors de l'utilisation d'un pseudo-élément ou d'une pseudo-classe inconnus, l'ensemble du _sélecteur_ est invalide et donc la règle entière est ignorée (également invalide).
 
 ## Instructions CSS
 
@@ -72,7 +72,7 @@ Toute instruction qui n'est pas un ensemble de règles ou une règle-at est inva
 
 ### Instructions imbriquées
 
-Il existe un autre groupe d'instructions : les **instructions imbriquées**. Ce sont des instructions qui peuvent être utilisées dans un sous-ensemble spécifique de règles @ - les _règles de groupe conditionnelles_. Ces déclarations ne s'appliquent que si une condition spécifique est satisfaite : le contenu de la règle @ `@media` est appliqué uniquement si l'appareil sur lequel le navigateur s'exécute correspond à la condition exprimée ; le contenu de la règle at `@document` n'est appliqué que si la page actuelle correspond à certaines conditions, et ainsi de suite. Dans CSS1 et CSS2.1, seuls les _ensembles de règles_ pouvaient être utilisés dans les règles de groupe conditionnelles. C'était très restrictif et cette restriction a été levée dans [_CSS Conditionals Level 3_](/en-US/docs/Web/CSS/CSS_Conditional_Rules). Aujourd'hui, bien qu'encore expérimentales et non prises en charge par tous les navigateurs, les règles de groupe conditionnelles peuvent contenir un plus large éventail de contenus : des ensembles de règles mais aussi certaines règles @, mais pas toutes.
+Il existe un autre groupe d'instructions&nbsp;: les **instructions imbriquées**. Ce sont des instructions qui peuvent être utilisées dans un sous-ensemble spécifique de règles @ - les _règles de groupe conditionnelles_. Ces déclarations ne s'appliquent que si une condition spécifique est satisfaite&nbsp;: le contenu de la règle @ `@media` est appliqué uniquement si l'appareil sur lequel le navigateur s'exécute correspond à la condition exprimée ; le contenu de la règle at `@document` n'est appliqué que si la page actuelle correspond à certaines conditions, et ainsi de suite. Dans CSS1 et CSS2.1, seuls les _ensembles de règles_ pouvaient être utilisés dans les règles de groupe conditionnelles. C'était très restrictif et cette restriction a été levée dans [_CSS Conditionals Level 3_](/en-US/docs/Web/CSS/CSS_Conditional_Rules). Aujourd'hui, bien qu'encore expérimentales et non prises en charge par tous les navigateurs, les règles de groupe conditionnelles peuvent contenir un plus large éventail de contenus&nbsp;: des ensembles de règles mais aussi certaines règles @, mais pas toutes.
 
 ## Voir aussi
 
