@@ -14,9 +14,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 此 Symbol 用于 {{jsxref("String.prototype.matchAll()")}} 特别是 {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}。下面两个例子返回相同的结果：
 
 ```js
-'abc'.matchAll(/a/g);
-
-/a/[Symbol.matchAll]('abc');
+const str = "2016-01-02|2019-03-07";
+const numbers = {
+  *[Symbol.matchAll](str) {
+    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
+  },
+};
+console.log(Array.from(str.matchAll(numbers)));
+// ["2016", "01", "02", "2019", "03", "07"]
 ```
 
 此方法用于自定义 {{jsxref("RegExp")}} 子类中的匹配行为。
