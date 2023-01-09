@@ -76,7 +76,7 @@ Los siguientes términos son usados en este documento; algunos provienen de la e
 - `Caché privada`
   - : Caché existente en el cliente. También conocida como _caché local_, o _caché del navegador_. Puede almacenar y reutilizar contenido personalizado para un único usuario.
 - `Respuesta almacenada`
-  - : Almacena una respuesta en caches cuando es cacheable. Pero no siempre es reutilizada tal cual. (Normalmente "caché" significa almacenar una respuesta).
+  - : Almacena una respuesta en caches cuando es _cacheable_. Pero no siempre es reutilizada tal cual. (Normalmente "caché" significa almacenar una respuesta).
 - `Respuesta reutilizada`
   - : Reutiliza respuestas cacheadas para las subsiguientes peticiones.
 - `Revalidar respuesta`
