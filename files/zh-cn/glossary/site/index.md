@@ -39,4 +39,4 @@ slug: Glossary/Site
 
 - [URL 是什么](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)
 - {{Glossary("Origin")}}
-- [同源政策](/zh-CN/docs/Web/Security/Same-origin_policy)
+- [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)
