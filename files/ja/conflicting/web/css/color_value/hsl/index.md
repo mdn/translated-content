@@ -1,8 +1,7 @@
 ---
 title: hsla()
-slug: Web/CSS/color_value/hsla
-l10n:
-  sourceCommit: 6be1b954a117202d7635caeec74ebbbde984d3f3
+slug: conflicting/Web/CSS/color_value/hsl
+original_slug: Web/CSS/color_value/hsla
 ---
 
 {{CSSRef}}

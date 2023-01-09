@@ -1,8 +1,7 @@
 ---
 title: rgba()
-slug: Web/CSS/color_value/rgba
-l10n:
-  sourceCommit: bae7124fe07f87884fcdc594ed0964ccd0fc9e1c
+slug: conflicting/Web/CSS/color_value/rgb
+original_slug: Web/CSS/color_value/rgba
 ---
 
 {{CSSRef}}
