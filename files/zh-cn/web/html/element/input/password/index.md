@@ -25,7 +25,7 @@ slug: Web/HTML/Element/Input/password
 
 ## 额外属性
 
-除了所有 {{HTMLElement("input")}} 元素支持的属性外，密码域输入还支持以下属性：
+除了所有 {{HTMLElement("input")}} 元素支持的属性外，密码字段输入还支持以下属性：
 
 ### maxlength
 
@@ -47,7 +47,7 @@ slug: Web/HTML/Element/Input/password
 
 > **备注：** 使用 {{htmlattrxref("title", "input")}} 属性来指定大多数浏览器将作为工具提示的文本，以解释匹配该模式的要求是什么。还应该在附近包括其他解释性的文本。
 
-强烈建议在密码输入中使用模式，以帮助确保用户选择和使用有效的密码，并使用广泛的字符类别。通过一个模式，你可以规定大小写规则，要求使用一些数字和/或标点符号，等等。参阅[验证](#验证)一节以获取详细说明和示例。
+强烈建议在密码输入中使用模式，以帮助确保用户选择和使用有效的密码，并使用广泛的字符类别。通过一个模式，你可以规定大小写规则、要求使用一些数字和/或标点符号，等等。参阅[验证](#验证)一节以获取详细说明和示例。
 
 ### placeholder
 
@@ -65,7 +65,7 @@ slug: Web/HTML/Element/Input/password
 
 ### size
 
-`size` 属性是一个数字值，指示输入字段应有多少个字符宽。该值必须是一个大于零的数字，默认值是 20。由于字符宽度各不相同，这可能是也可能不是精确的，不应依赖于此；结果输入可能比指定的字符数更窄或更宽，这取决于字符和字体（{{cssxref("font")}} 使用中的设置）。
+`size` 属性是一个数字值，指示输入字段应有多少个字符宽。该值必须是一个大于零的数字，默认值是 20。由于字符宽度各不相同，这可能是也可能不是精确的，不应依赖于此；结果输入可能比指定的字符数更窄或更宽，这取决于字符和字体（使用的 {{cssxref("font")}} 设置）。
 
 这并*不*限制用户可以在该字段中输入多少个字符，仅能指定一次可以看到多少个。要设置输入数据长度的上限，请使用 [`maxlength`](#maxlength) 属性。
 
@@ -146,7 +146,7 @@ slug: Web/HTML/Element/Input/password
 
 ### 选中字符
 
-与其他文本输入控件一样，你可以使用 {{domxref("HTMLInputElement.select", "select()")}} 方法来选择密码域的所有字符。
+与其他文本输入控件一样，你可以使用 {{domxref("HTMLInputElement.select", "select()")}} 方法来选择密码字段的所有字符。
 
 #### HTML
 
@@ -192,7 +192,7 @@ document.getElementById("selectAll").onclick = () => {
 
 ### 申请社会安全号码
 
-此示例仅接受与[有效的美国社会安全号码](https://en.wikipedia.org/wiki/Social_Security_number#Structure)格式相匹配的输入。这些用于美国税务和识别目的的数字的格式为“123-45-6789”。还存在针对每个组中允许的值的各种规则。
+此示例仅接受与[有效的美国社会安全号码](https://zh.wikipedia.org/zh-cn/社會安全號碼)格式相匹配的输入。这些用于美国税务和识别目的的数字的格式为“123-45-6789”。还存在针对每个组中允许的值的各种规则。
 
 #### HTML
 
@@ -212,13 +212,13 @@ document.getElementById("selectAll").onclick = () => {
 <span id="current"></span>
 ```
 
-此示例使用了 {{htmlattrxref("pattern", "input")}} 属性，限制了输入为一个合法的社会安全号码。很显然，这个正则表达式并不能保证有效的 SSN（因为我们没有访问到社会保障局的数据库），但它确实保证输入的值可能是合法值之一。它通常会避免无效的值。此外，它允许三组数字由空格，短划线（“-”）分隔，或者没有分隔符。
+此示例使用了 {{htmlattrxref("pattern", "input")}} 属性，限制了输入为一个合法的社会安全号码。很显然，这个正则表达式并不能保证有效的 SSN（因为我们没有访问到社会保障局的数据库），但它确实保证输入的值可能是合法值之一。它通常会避免无效的值。此外，它允许三组数字由空格、短划线（“-”）分隔，或者没有分隔符。
 
 {{htmlattrxref("inputmode", "input")}} 被设置为 `numeric`，以鼓励有虚拟键盘的设备切换到数字键盘布局，以方便输入。{{htmlattrxref("minlength", "input")}} 和 {{htmlattrxref("maxlength", "input")}}属性分别设置为 9 和 12，以要求值的长度至少为 9 个，不超过 12 个字符（前者在数字组之间没有分隔符，后者则有）。{{htmlattrxref("required", "input")}} 属性被用来表示该控件必须有一个值。最后，{{htmlattrxref("autocomplete", "input")}} 被设置为 `off`，以避免密码管理器和会话恢复功能试图设置其值，因为这根本就不是一个密码。
 
 #### JavaScript
 
-这只是一些简单的代码，用于在屏幕上显示输入的 SSN，以便您可以看到它。显然这会破坏密码字段的目的，但它有助于试验 `pattern`。
+这只是一些简单的代码，用于在屏幕上显示输入的 SSN，以便你可以看到它。显然这会破坏密码字段的目的，但它有助于试验 `pattern`。
 
 ```js
 const ssn = document.getElementById("ssn");
