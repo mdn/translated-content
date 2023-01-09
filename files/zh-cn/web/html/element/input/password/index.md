@@ -253,15 +253,7 @@ ssn.oninput = (event) => {
     <tr>
       <td><strong>支持的通用属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}}、
-        {{htmlattrxref("inputmode", "input")}}、
-        {{htmlattrxref("maxlength", "input")}}、
-        {{htmlattrxref("minlength", "input")}}、
-        {{htmlattrxref("pattern", "input")}}、
-        {{htmlattrxref("placeholder", "input")}}、
-        {{htmlattrxref("readonly", "input")}}、
-        {{htmlattrxref("required", "input")}} 和
-        {{htmlattrxref("size", "input")}}
+        {{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("inputmode", "input")}}、{{htmlattrxref("maxlength", "input")}}、{{htmlattrxref("minlength", "input")}}、{{htmlattrxref("pattern", "input")}}、{{htmlattrxref("placeholder", "input")}}、{{htmlattrxref("readonly", "input")}}、{{htmlattrxref("required", "input")}} 和 {{htmlattrxref("size", "input")}}
       </td>
     </tr>
     <tr>
