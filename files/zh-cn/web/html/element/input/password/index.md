@@ -59,7 +59,7 @@ If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content 
 <input id="userPassword" type="password">
 ```
 
-{{EmbedLiveSample("A_simple_password_input", 600, 40)}}
+{{EmbedLiveSample("一个简单的密码输入框", 600, 40)}}
 
 ### 允许自动补全
 
@@ -79,7 +79,7 @@ If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content 
 <input id="userPassword" type="password" autocomplete="current-password">
 ```
 
-{{EmbedLiveSample("Autocomplete_sample1", 600, 40)}}
+{{EmbedLiveSample("允许自动补全", 600, 40)}}
 
 ### 让密码必须输入
 
@@ -91,7 +91,7 @@ To tell the user's browser that the password field must have a valid value befor
 <input type="submit" value="Submit">
 ```
 
-{{EmbedLiveSample("Making_the_password_mandatory", 600, 40)}}
+{{EmbedLiveSample("让密码必须输入", 600, 40)}}
 
 ### 指定输入模式
 
@@ -102,7 +102,7 @@ If your recommended (or required) password syntax rules would benefit from an al
 <input id="pin" type="password" inputmode="numeric">
 ```
 
-{{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}
+{{EmbedLiveSample("指定输入模式", 600, 40)}}
 
 ### 设置长度要求
 
@@ -114,7 +114,7 @@ As usual, you can use the {{htmlattrxref("minlength", "input")}} and {{htmlattrx
        maxlength="8" size="8">
 ```
 
-{{EmbedLiveSample("Setting_length_requirements", 600, 40)}}
+{{EmbedLiveSample("设置长度要求", 600, 40)}}
 
 ### 选中字符
 
@@ -138,7 +138,7 @@ document.getElementById("selectAll").onclick = function() {
 
 #### 结果：
 
-{{EmbedLiveSample("Selecting_text", 600, 40)}}
+{{EmbedLiveSample("选中字符", 600, 40)}}
 
 You can also use {{domxref("HTMLInputElement.selectionStart", "selectionStart")}} and {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}} to get (or set) what range of characters in the control are currently selected, and {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}} to know which direction selection occurred in (or will be extended in, depending on your platform; see its documentation for an explanation). However, given that the text is obscured, the usefulness of these is somewhat limited.
 
@@ -154,12 +154,12 @@ If your application has character set restrictions or any other requirement for 
        title="Enter an ID consisting of 4-8 hexadecimal digits">
 ```
 
-{{EmbedLiveSample("Validation_sample1", 600, 40)}}
+{{EmbedLiveSample("验证", 600, 40)}}
 
 - {{htmlattrdef("disabled")}}
   - : 此布尔属性指示密码字段不可用于交互。此外，禁用的字段值不会与表单一起提交。
 
-## 实例
+## 示例
 
 ### 申请社会安全号码
 
@@ -198,7 +198,7 @@ ssn.oninput = function(event) {
 
 #### 结果：
 
-{{EmbedLiveSample("Requesting_a_Social_Security_number", 600, 60)}}
+{{EmbedLiveSample("申请社会安全号码", 600, 60)}}
 
 ## 规格
 

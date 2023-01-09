@@ -1,16 +1,6 @@
 ---
 title: '<sub>: 아래 첨자 요소'
 slug: Web/HTML/Element/sub
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/sub
 ---
 
 {{HTMLSidebar}}

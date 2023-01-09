@@ -1,13 +1,6 @@
 ---
 title: Set-Cookie2
 slug: conflicting/Web/HTTP/Headers/Set-Cookie
-tags:
-  - Cookies
-  - HTTP
-  - Obsoleto
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Set-Cookie2
 original_slug: Web/HTTP/Headers/Set-Cookie2
 ---
 

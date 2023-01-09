@@ -1,8 +1,8 @@
 ---
 title: HTTP/1.x의 커넥션 관리
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
+
 {{HTTPSidebar}}
 
 커넥션 관리는 HTTP의 주요 주제입니다: 대규모로 커넥션을 열고 유지하는 것은 웹 사이트 혹은 웹 애플리케이션의 성능에 많은 영향을 줍니다. HTTP/1.x에는 몇 가지 모델이 존재합니다: 단기 커넥션, 영속적인 커넥션, 그리고 _HTTP 파이프라이닝._

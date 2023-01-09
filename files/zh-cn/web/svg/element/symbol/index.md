@@ -31,7 +31,7 @@ slug: Web/SVG/Element/symbol
 </svg>
 ```
 
-{{EmbedLiveSample("Example", 150, 110)}}
+{{EmbedLiveSample("示例", 150, 110)}}
 
 ## 属性
 

@@ -571,6 +571,7 @@
 /pt-BR/docs/Web/API/Document/keydown_event	/pt-BR/docs/Web/API/Element/keydown_event
 /pt-BR/docs/Web/API/Document/keypress_event	/pt-BR/docs/Web/API/Element/keypress_event
 /pt-BR/docs/Web/API/Document/keyup_event	/pt-BR/docs/conflicting/Web/API/Element/keyup_event_c3958d9a752bb3f2d72ac974b4e226ea
+/pt-BR/docs/Web/API/Document/origin	/pt-BR/docs/Web/API/origin
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/pt-BR/docs/Web/API/Document/elementFromPoint
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/getSelection	/pt-BR/docs/Web/API/Document/getSelection

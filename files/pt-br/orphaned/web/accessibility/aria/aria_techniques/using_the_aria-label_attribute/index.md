@@ -1,12 +1,6 @@
 ---
 title: Usando o atributo aria-label
 slug: orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
-tags:
-  - ARIA
-  - Acessibilidade
-  - Conteúdo
-  - Referencia
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 ---
 

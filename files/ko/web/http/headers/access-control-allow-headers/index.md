@@ -1,12 +1,6 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - 헤더
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 
 {{HTTPSidebar}}

@@ -1,15 +1,16 @@
 ---
-title: Transferable objects (移譲可能オブジェクト)
+title: 移譲可能オブジェクト
 slug: Web/API/Web_Workers_API/Transferable_objects
 original_slug: Glossary/Transferable_objects
+l10n:
+  sourceCommit: b4abbb2165f43c02130dbe68833052613fd16e05
 ---
-
-**移譲可能オブジェクト** は、あるコンテキストから別のコンテキストへ _移譲_ することができるリソースを自分自身で所有するオブジェクトで、そのリソースが一度に1つのコンテキストでのみ利用できることを保証するものです。
-移譲が終わると、元のオブジェクトはもう使えません。移譲されたリソースをもう指しておらず、オブジェクトの読み書きをしようとすると例外が発生します。
+**移譲可能オブジェクト** (Transferable objects) は、あるコンテキストから別のコンテキストへ _移譲_ することができるリソースを自分自身で所有するオブジェクトで、そのリソースが一度に 1 つのコンテキストでのみ利用できることを保証するものです。
+移譲が終わると、元のオブジェクトは使えなくなります。移譲されたリソースをもう指しておらず、オブジェクトの読み書きをしようとすると例外が発生します。
 
 移譲可能なオブジェクトは一般的に、一度に単一のJavaScriptスレッドにしか安全に公開されないリソースを共有するために使用されます。
 例えば、{{jsxref("ArrayBuffer")}} はメモリーブロックを自分自身で所有する移譲可能なオブジェクトです。
-このようなバッファーがスレッド間で転送されるとき、関連するメモリーリソースは元のバッファーから切り離され、新しいスレッドで作成されたバッファーオブジェクトに装着されます。
+このようなバッファーがスレッド間で移譲されるとき、関連するメモリーリソースは元のバッファーから切り離され、新しいスレッドで作成されたバッファーオブジェクトに装着されます。
 元のスレッドのバッファーオブジェクトは、もはやメモリリソースを所有していないため、使用できなくなります。
 
 移譲は {{domxref("structuredClone()")}} でオブジェクトのディープコピーを作成するときにも使用されるかもしれません。
@@ -24,9 +25,9 @@ original_slug: Glossary/Transferable_objects
 
 ## オブジェクトのスレッド間の移譲
 
-以下のコードは、メインスレッドから {{domxref("Web Workers API", "ウェブワーカースレッド","","true")}} にメッセージを送信する際に、転送がどのように動作するのかを示しています。
+以下のコードは、メインスレッドから{{domxref("Web Workers API", "ウェブワーカースレッド","","true")}}にメッセージを送信する際に、移譲がどのように動作するのかを示しています。
 {{jsxref("Uint8Array")}} は、バッファーが移譲されている間、ワーカー内でコピーされます（複製されます）。
-転送後、メインスレッドから `uInt8Array` を読み書きしようとするとエラーが発生しますが、`byteLength` を調べるとゼロになったことが確認できます。
+移譲後、メインスレッドから `uInt8Array` を読み書きしようとするとエラーが発生しますが、`byteLength` を調べるとゼロになったことが確認できます。
 
 ```js
 // 8MB の "file" を作成して中身を埋めます。 8MB = 1024 * 1024 * 8 B
@@ -38,9 +39,9 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength); // 0
 ```
 
-> **メモ:** [型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) {{jsxref("Int32Array")}} や {{jsxref("Uint8Array")}} は{{Glossary("serializable object", "シリアライズ可能")}}ですが、転送は行えません。
+> **メモ:** [型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) {{jsxref("Int32Array")}} や {{jsxref("Uint8Array")}} は{{Glossary("serializable object", "シリアライズ可能")}}ですが、移譲は行えません。
 > しかし、その下にあるバッファーは {{jsxref("ArrayBuffer")}} であり、これは移譲可能なオブジェクトです。
-> data 引数に `uInt8Array.buffer` を設定しても、転送配列に `uInt8Array` を保有しなくても、送ることができます。
+> data 引数に `uInt8Array.buffer` を設定すれば、移譲する配列に `uInt8Array` がなくても、送ることができます。
 
 ### 複製操作中の移譲について
 
@@ -69,7 +70,7 @@ console.log(original.byteLength); // 0
 
 ## 対応しているオブジェクト
 
-各種仕様書が示す委譲可能な項目は以下の通りです。
+各種仕様書が示す移譲可能な項目は以下の通りです。
 
 - {{jsxref("ArrayBuffer")}}
 - {{domxref("MessagePort")}}
@@ -83,9 +84,9 @@ console.log(original.byteLength); // 0
 - {{domxref("RTCDataChannel")}}
 
 ブラウザーの対応は、それぞれのオブジェクトの互換性情報の `transferable` サブ機能で示す必要があります（例として [`RTCDataChannel`](/ja/docs/Web/API/RTCDataChannel#ブラウザーの互換性) を参照してください）。
-この記事を書いている時点では、すべての移譲可能なオブジェクトがこの情報に更新されているわけではありません。
+この記事を書いている時点では、すべての移譲可能なオブジェクトでこの情報が更新されているわけではありません。
 
-> **メモ:** 移譲可能なオブジェクトは [Web IDL ファイル](https://github.com/w3c/webref/tree/main/ed/idl) の中で `[Transferable]` という属性でマークアップされます。
+> **メモ:** 移譲可能なオブジェクトは [Web IDL ファイル](https://github.com/w3c/webref/tree/main/ed/idl) の中で `[Transferable]` という属性でマークアップされています。
 
 ## 関連情報
 
