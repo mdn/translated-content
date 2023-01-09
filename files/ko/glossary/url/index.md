@@ -11,7 +11,6 @@ slug: Glossary/URL
 
 URL은 파일 전송({{glossary("FTP")}}), 이메일({{glossary("SMTP")}}) 등 다른 응용 프로그램에서도 사용할 수 있습니다.
 
-
 ## 같이 보기
 
 - [URL](https://en.wikipedia.org/wiki/URL) on Wikipedia
