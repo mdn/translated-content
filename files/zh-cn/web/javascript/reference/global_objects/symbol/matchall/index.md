@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 此 Symbol 用于 {{jsxref("String.prototype.matchAll()")}} 特别是 {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}。下面两个例子返回相同的结果：
 
 ```js
-'abc'.matchAll(/a/);
+'abc'.matchAll(/a/g);
 
 /a/[Symbol.matchAll]('abc');
 ```
