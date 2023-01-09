@@ -2902,10 +2902,6 @@
     "modified": "2019-03-23T22:22:06.393Z",
     "contributors": ["HugoBex"]
   },
-  "Web/API/Document/origin": {
-    "modified": "2020-10-15T22:14:43.600Z",
-    "contributors": ["Rondinelly"]
-  },
   "Web/API/Document/querySelector": {
     "modified": "2019-08-15T13:21:36.389Z",
     "contributors": [
@@ -4444,6 +4440,10 @@
   "Web/API/fetch": {
     "modified": "2019-03-23T22:06:21.567Z",
     "contributors": ["dowgssss"]
+  },
+  "Web/API/origin": {
+    "modified": "2020-10-15T22:14:43.600Z",
+    "contributors": ["Rondinelly"]
   },
   "Web/API/performance_property": {
     "modified": "2019-03-23T22:44:28.136Z",
