@@ -1,7 +1,6 @@
 ---
 title: Timeouts e intervalos
 slug: conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
-translation_of: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 original_slug: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 ---
 

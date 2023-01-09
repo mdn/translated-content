@@ -265,7 +265,7 @@ function greeting() {
 
 Обе функции, которые вы хотите вызвать, называются `greeting()`, но вы можете получить доступ только к функции `greeting()` файла `first.js` (функция файла `second.js` игнорируется). Кроме того, попытка объявить переменную `name` второй раз через `let` в файле `second.js` приведёт к ошибке.
 
-> **Примечание:** Этот пример можно увидеть в режиме [Live на GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (см. также [исходный код](/ru/docs/https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
+> **Примечание:** Этот пример можно увидеть в режиме [Live на GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (см. также [исходный код](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
 
 Хранение частей вашего кода, заблокированных функциями, позволяет избежать таких проблем и считается наилучшей практикой.
 

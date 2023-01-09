@@ -1,11 +1,6 @@
 ---
 title: Linguagem de programação dinâmica
 slug: orphaned/Glossary/Dynamic_programming_language
-tags:
-  - Glossário
-  - Iniciante
-  - ScriptingDeCodificação
-translation_of: Glossary/Dynamic_programming_language
 original_slug: Glossary/Dynamic_programming_language
 ---
 
