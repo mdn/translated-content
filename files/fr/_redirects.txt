@@ -4437,8 +4437,8 @@
 /fr/docs/Web/CSS/calc()	/fr/docs/Web/CSS/calc
 /fr/docs/Web/CSS/clamp()	/fr/docs/Web/CSS/clamp
 /fr/docs/Web/CSS/color-adjust	/fr/docs/Web/CSS/print-color-adjust
-/fr/docs/Web/CSS/color_value/hsla	/fr/docs/conflicting/Web/CSS/color_value/hsl
-/fr/docs/Web/CSS/color_value/rgba	/fr/docs/conflicting/Web/CSS/color_value/rgb
+/fr/docs/Web/CSS/color_value/hsla	/fr/docs/Web/CSS/color_value/hsl
+/fr/docs/Web/CSS/color_value/rgba	/fr/docs/Web/CSS/color_value/rgb
 /fr/docs/Web/CSS/conic-gradient	/fr/docs/Web/CSS/gradient/conic-gradient
 /fr/docs/Web/CSS/conic-gradient()	/fr/docs/Web/CSS/gradient/conic-gradient
 /fr/docs/Web/CSS/counter()	/fr/docs/Web/CSS/counter
@@ -6405,6 +6405,8 @@
 /fr/docs/conflicting/Web/CSS/border-collapse	/fr/docs/Web/CSS/border-collapse
 /fr/docs/conflicting/Web/CSS/box-ordinal-group	/fr/docs/Web/CSS/box-ordinal-group
 /fr/docs/conflicting/Web/CSS/color_value	/fr/docs/Web/CSS/color_value
+/fr/docs/conflicting/Web/CSS/color_value/hsl	/fr/docs/Web/CSS/color_value/hsl
+/fr/docs/conflicting/Web/CSS/color_value/rgb	/fr/docs/Web/CSS/color_value/rgb
 /fr/docs/conflicting/Web/CSS/column-gap	/fr/docs/Web/CSS/column-gap
 /fr/docs/conflicting/Web/CSS/cursor	/fr/docs/Web/CSS/cursor
 /fr/docs/conflicting/Web/CSS/float	/fr/docs/Web/CSS/float
