@@ -82,7 +82,111 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 如果你犯了某些错误，你可以点击*重置*按钮以重置编辑器。如果你确实被卡住了，按下*显示答案*按钮以借鉴答案。
 
 ```html hidden
-<!DOCTYPE html> <html lang="zh-CN"> <head> <meta charset="utf-8"> <style> body { font-family: '微软雅黑', Helvetica, Arial, sans-serif; margin: 10px; background: #f5f9fa; } h2 { font-size: 16px; } code, textarea { font-family: Consolas, Menlo, monospace; } .output { min-height: 200px; } .input { min-height: 100px; width: 95%; } .a11y-label { margin: 0; text-align: right; font-size: 0.7rem; width: 98%; } .controls { width: 96%; text-align: right; } </style> </head> <body> <h2>实时输出</h2> <div class="output"></div> <h2>可编辑代码</h2> <p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> </p> <textarea id="code" class="input"></textarea> <div class="controls"> <button id="btn-reset">重置</button> <button id="btn-solution">显示答案</button> </div> <script> const btnReset = document.getElementById('btn-reset'); const btnSolution = document.getElementById('btn-solution'); const blockOutput = document.querySelector('.output'); const blockInput = document.querySelector('.input'); const original = '<p>改革春风吹满地</p>'; const answer = `<iframe src="https://player.bilibili.com/player.html?aid=19390801&cid=31621681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> <p>改革春风吹满地</p>`; let userEntry = ""; init(); btnReset.addEventListener('click', init); btnSolution.addEventListener('click', () => { if (btnSolution.textContent === '显示答案') { blockInput.value = blockOutput.innerHTML = answer; btnSolution.textContent = '隐藏答案'; } else { blockInput.value = blockOutput.innerHTML = userEntry; btnSolution.textContent = '显示答案'; } }); blockInput.addEventListener('keydown', (e) => { switch (e.key) { case 'Tab': e.preventDefault(); insertAtCursor('\t'); break; case "Escape": blockInput.blur(); break; } }); blockInput.addEventListener('keyup', () => { userEntry = blockInput.value; blockOutput.innerHTML = blockInput.value; if (btnSolution.textContent === '隐藏答案') { btnSolution.textContent = '显示答案'; } }); function init() { userEntry = blockOutput.innerHTML = blockInput.value = original; btnSolution.textContent = '显示答案'; } function insertAtCursor(text) { const scrollPos = blockInput.scrollTop; const cursorPos = blockInput.selectionStart; const front = blockInput.value.substring(0, cursorPos); const back = blockInput.value.substring( blockInput.selectionEnd, blockInput.value.length); blockInput.value = front + text + back; blockInput.selectionStart = blockInput.selectionEnd = cursorPos + text.length; blockInput.focus(); blockInput.scrollTop = scrollPos; } </script> </body> </html>
+<p>可以试着引入B站（哔哩哔哩视频网站）的“改革春风吹满地”视频吗？（其BV号为BV1bW411n7fY）</p>
+<h2>实时输出</h2>
+<div class="output" style="min-height: 250px;"></div>
+<h2>可编辑代码</h2>
+<p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符
+  <code>'\t'</code>
+</p>
+<textarea
+  id="code"
+  class="input"
+  style="width: 95%;min-height: 100px;"></textarea>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="重置" />
+  <input id="solution" type="button" value="显示答案" />
+</div>
+```
+
+```css hidden
+html {
+  font-family: sans-serif;
+}
+h2 {
+  font-size: 16px;
+}
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
+let code = textarea.value;
+let userEntry = textarea.value;
+function updateCode() {
+  output.innerHTML = textarea.value;
+}
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "显示答案";
+  updateCode();
+});
+solution.addEventListener("click", function () {
+  if (solution.value === "显示答案") {
+    textarea.value = solutionEntry;
+    solution.value = "隐藏答案";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "显示答案";
+  }
+  updateCode();
+});
+const htmlSolution =
+  '<iframe src="//player.bilibili.com/player.html?aid=19390801&bvid=BV1bW411n7fY&cid=31621681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>';
+let solutionEntry = htmlSolution;
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+function insertAtCaret(text) {
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
+  textarea.value = front + text + back;
+  caretPos += text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+// Update the saved userCode every time the user updates the text area code
+textarea.onkeyup = function () {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "显示答案") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+  updateCode();
+};
 ```
 
 {{ EmbedLiveSample('自主学习：嵌入类型的使用', 700, 600) }}
