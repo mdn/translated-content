@@ -5,7 +5,7 @@ slug: Web/API/MessageChannel
 
 {{APIRef("HTML DOM")}}
 
-Channel Messaging API 的**`MessageChannel`** 接口允许我们创建一个新的消息通道，并通过它的两个{{domxref("MessagePort")}} 属性发送数据。
+Channel Messaging API 的 **`MessageChannel`** 接口允许我们创建一个新的消息通道，并通过它的两个 {{domxref("MessagePort")}} 属性发送数据。
 
 {{AvailableInWorkers}}
 
