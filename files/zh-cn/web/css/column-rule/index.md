@@ -31,18 +31,22 @@ column-rule: unset;
 
 ### 取值
 
-`column-rule` 属性可以按任何顺序指定为下面列出的一个，两个或三个值。
+`column-rule` 属性可以按任何顺序指定为下面列出的一个、两个或三个值。
 
 - `<'column-rule-width'>`
-  - : 定义为 {{cssxref("&lt;length&gt;")}} 或是 `thin`，`medium`，`thick` 关键字的其中一个。请参阅 {{cssxref("border-width")}} 。
+  - : 定义为 {{cssxref("&lt;length&gt;")}} 或是 `thin`、`medium`、`thick` 关键字的其中一个。请参阅 {{cssxref("border-width")}}。
 - `<'column-rule-style'>`
   - : 请参阅 {{cssxref("border-style")}} 以获取可能的值和详细信息。
 - `<'column-rule-color'>`
   - : 一个 {{cssxref("&lt;color&gt;")}} 值。
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ### 示例
 
