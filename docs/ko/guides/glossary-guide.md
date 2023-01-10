@@ -36,32 +36,32 @@
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Accessibility concerns | 접근성 고려사항 | |
-| Advantages | 장점 | [링크](https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development) |
+| Advantages | 장점 | [링크][Introduction_to_HTML5_Game_Development] |
 | Aliasing | 별칭 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
-| Brief history | 간략한 역사 | [링크](https://developer.mozilla.org/ko/docs/Glossary/HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC) |
+| Brief history | 간략한 역사 | [링크][HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC] |
 | Browser compatibility | 브라우저 호환성 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Browser support | 브라우저 지원 | [링크](http://localhost:5042/en-us/docs/Web/API/Web_Audio_API/Using_IIR_filters#browser_support) |
 | Concept | 개념 | |
 | Conclusion | 결론 | |
 | Contact us | 문의하기 | |
-| Demo | 데모 | [링크](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders#demo)
-| Description | 설명 | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description)
-| Example | 예제 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Demo | 데모 | [링크][GLSL_Shaders]
+| Description | 설명 | [링크][Array]
+| Example | 예제 | [링크][target] |
 | Examples | 예제 | [링크](https://github.com/mdn/translated-content/blob/main/files/ko/web/javascript/reference/global_objects/proxy/proxy/apply/index.md) |
 | Guides | 지침 | |
-| In this module | 이번 과정에서는 | [링크](https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#in_this_module) |
-| Learn More | 더 알아보기 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/Mutable) |
-| Next steps | 다음 단계 | [링크](https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_breakout_game_Phaser#%EB%8B%A4%EC%9D%8C_%EB%8B%A8%EA%B3%84) |
+| In this module | 이번 과정에서는 | [링크][React_getting_started] |
+| Learn More | 더 알아보기 | [링크][Mutable] |
+| Next steps | 다음 단계 | [링크][2D_breakout_game_Phaser] |
 | Polyfill | 폴리필 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Reference | 참고서 | |
-| See also | 같이 보기 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| See also | 같이 보기 | [링크][target] |
 | Specifications | 명세서 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Summary | 요약 | |
-| Syntax | 구문 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
-| Tools & resources | 도구 & 리소스 | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
+| Syntax | 구문 | [링크][target] |
+| Tools & resources | 도구 & 리소스 | [링크][JavaScript] |
 | Tutorial | 자습서 | |
 | Usage notes | 사용 일람 | |
-| Web Technologies | 웹 기술들 | [링크](https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development) |
+| Web Technologies | 웹 기술들 | [링크][Introduction_to_HTML5_Game_Development] |
 
 ## Section Subtitle
 
@@ -71,9 +71,9 @@
 
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
-| Compatibility notes | 호환성 참고 사항 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Compatibility notes | 호환성 참고 사항 | [링크][target] |
 | Parameters | 매개변수 | [링크](http://localhost:5042/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode#parameters) |
-| Value | 값 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Value | 값 | [링크][target] |
 
 ## 안내 문구
 
@@ -86,8 +86,8 @@
 | Note | 참고 | |
 | Warning | 경고 | |
 | Callout | 알림 | |
-| Objective | 목표 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
-| Prerequisites | 필요한 사전 지식 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
+| Objective | 목표 | [링크][What_is_accessibility] |
+| Prerequisites | 필요한 사전 지식 | [링크][What_is_accessibility] |
 
 - callout
 
@@ -138,7 +138,7 @@
 | Rendering | 렌더링 | |
 | Section | 구획 | |
 | Statement | 명령문 또는 문 | |
-| short-circuit | 
+| short-circuit |
 | User agent | 사용자 에이전트 | |
 
 ### CSS
@@ -168,7 +168,7 @@
 | Layout | 레이아웃 | | |
 | Longhand property | 본디 속성 | | |
 | Margin | 바깥 여백 | | |
-| Padding | 안쪽 여백(패딩) | | [CSS 기본 박스 모델 입문](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) |
+| Padding | 안쪽 여백(패딩) | | [CSS 기본 박스 모델 입문][] |
 | Shorthand property | 단축 속성 | | |
 
 ### API/JavaScript
@@ -208,3 +208,15 @@
 | Payload | 페이로드 | | [참고 링크](https://github.com/mdn/translated-content/pull/2737) |
 | Request Body | 요청 본문 | | |
 | Response Body | 응답 본문 | | |
+
+[CSS 기본 박스 모델 입문]: https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+[Introduction_to_HTML5_Game_Development]: https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development
+[HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC]: https://developer.mozilla.org/ko/docs/Glossary/HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC
+[What_is_accessibility]: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility
+[target]: https://developer.mozilla.org/en-US/docs/Web/API/Event/target
+[GLSL_Shaders]: https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders#demo
+[Array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description
+[JavaScript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[React_getting_started]: https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#in_this_module
+[Mutable]: https://developer.mozilla.org/en-US/docs/Glossary/Mutable
+[2D_breakout_game_Phaser]: https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_breakout_game_Phaser#%EB%8B%A4%EC%9D%8C_%EB%8B%A8%EA%B3%84

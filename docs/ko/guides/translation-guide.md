@@ -125,7 +125,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 대비 65:60 (65 대 60)
 ```
 
-- 원문 [(참고 링크)](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/parameterDescriptors)
+- 원문 [(참고 링크)][]
 
 ```
 The properties of these objects are as follows:
@@ -164,3 +164,5 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 ```
 오류가 발생되기 때문입니다. 이 값은 양수일 필요가 있습니다.
 ```
+
+[(참고 링크)]: https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/parameterDescriptors

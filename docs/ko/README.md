@@ -11,7 +11,7 @@
 
 ## MDN 번역 콘텐츠에 대한 일반 지침
 
-이 문서는 한국(ko) 지역에 대한 번역 지침입니다. 몇 가지 특정 지침을 문서화하는 페이지를 추가하고 싶은 경우, 현재 경로에 추가하거나  [Locale Teams](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams)에 문의해주세요.
+이 문서는 한국(ko) 지역에 대한 번역 지침입니다. 몇 가지 특정 지침을 문서화하는 페이지를 추가하고 싶은 경우, 현재 경로에 추가하거나 [Locale Teams](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams)에 문의해주세요.
 
 마찬가지로 추가하려는 일반 지침에 대한 좋은 아이디어가 있는 경우 환영합니다. Issue를 열고 문제에 대해 이야기해주세요. 다음은 한국어 번역 지침 원칙의 주요 내용입니다.
 
@@ -23,7 +23,7 @@ MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습
 
 ### PR 규칙
 
-- `ko-locale`에 존재하지 않는 새로운 파일에 대한 번역을 진행할 때, **파일 전체 번역**을 원칙으로 합니다. (단, [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)와 같이 분량이 많은 파일에 대해서는 부분 번역을 허용합니다. 이때, 번역되지 않은 부분은 `en-us locale` 원본으로 대체합니다.)
+- `ko-locale`에 존재하지 않는 새로운 파일에 대한 번역을 진행할 때, **파일 전체 번역**을 원칙으로 합니다. (단, [CORS][] 와 같이 분량이 많은 파일에 대해서는 부분 번역을 허용합니다. 이때, 번역되지 않은 부분은 `en-us locale` 원본으로 대체합니다.)
 - `PR`의 `Merge` 우선 순위는 관련 이슈에서 가장 처음 언급된 `PR`이 병합 우선권을 갖습니다. 리뷰어는 우선 순위가 있는 PR을 먼저 병합하는것을 원칙으로 합니다. 따라서, 번역을 진행하기 전에, `PR`과 관련된 이슈가 없다면 이슈를 생성하는 것을 권장합니다. [ko-locale PR 목록](https://github.com/mdn/translated-content/pulls?q=is%3Apr+is%3Aopen+label%3Al10n-ko+)
 - 위 규칙들로 우선 순위를 정하기 힘든 경우 리뷰어는 기여자에게 충돌 해결을 요청 드릴 수 있습니다. 이 경우에는 충돌 해결 후 병합을 진행합니다.
 
@@ -87,3 +87,5 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 번역을 보내 주시면 검토자가 디버깅을 돕고 부주의 한 부분이 무엇인지 알아낼 것입니다. 문제가 해결되면 번역을 병합합니다.
 
 번역에 직접 기여할 준비가 되지 않은 경우에는 문제가되지 않습니다. MDN에서 결함이있는 번역을 찾아 issue를 통해 알릴 수 있습니다. 또는, 너무 어렵지 않고 해결되지 않은 문제를 찾아서 해결해보세요. 이것은 번역 기여의 첫 단계를 수행하는 비교적 간단한 방법입니다. 여러분의 기여를 진심으로 환영합니다.
+
+[CORS]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
