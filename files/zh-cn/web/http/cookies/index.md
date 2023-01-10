@@ -151,7 +151,7 @@ cookie 的机制使得服务器无法确认 cookie 是在安全来源上设置�
 
 > **备注：** 在应用程序服务器上，Web 应用程序**必须**检查完整的 cookie 名称。用户代理程序在将其发送到请求的 {{HTTPHeader("Cookie")}} 标头之前，**不会**从 cookie 中剥离前缀。
 
-有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅[Set-Cookie 参考文章的前缀部分。](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Cookie_前缀)。
+有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅[Set-Cookie 参考文章的前缀部分](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Cookie_前缀)。
 
 #### JavaScript 通过 Document.cookie 访问 Cookie
 
