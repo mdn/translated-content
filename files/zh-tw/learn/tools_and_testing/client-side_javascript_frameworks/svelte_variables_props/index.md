@@ -346,11 +346,11 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
    }
    ```
 
-## Giving each to-do a unique ID
+## 給每個待辦事項唯一的 ID
 
-If you try to add new to-dos in your app now, you'll be able to add a new to-do and have it appear in the UI — once. If you try it a second time, it won't work, and you'll get a console message saying "Error: Cannot have duplicate keys in a keyed each". We need unique IDs for our to-dos.
+如果現在嘗試在你的應用程式中加入新的待辦事項，你將可以加入新的待辦事項並讓它出現在使用者介面中——一次。假如你嘗試第二次，它將無作用並且你會得到一條控制台訊息「Error: Cannot have duplicate keys in a keyed each」。所以我們的待辦事項需要唯一的 ID。
 
-1. Let's declare a `newTodoId` variable calculated from the number of to-dos plus 1, and make it reactive. Add the following snippet to the `<script>` section:
+1. 讓我們宣告一個由待辦事項數量加 1 計算得出的 `newTodoId` 變數並使其具有反應性。將以下程式碼片段新增到 `<script>` 區塊：
 
    ```js
    let newTodoId
@@ -363,11 +363,11 @@ If you try to add new to-dos in your app now, you'll be able to add a new to-do 
      }
    ```
 
-   > **Note:** As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
+   > **備註：** 如你所見，反應式陳述不僅限於單行。以下程式碼也有作用，但可讀性較差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
-2. How does Svelte achieve this? The compiler parses the whole reactive statement, and detects that it depends on the `totalTodos` variable and the `todos` array. So whenever either of them is modified, this code is re-evaluated, updating `newTodoId` accordingly.
+2. Svelte 是如何做到這一點的？編譯器會解析整個反應式陳述並檢測到它依賴於 `totalTodos` 變數和 `todos` 陣列。所以每當它們中任何一個被修改時，都會重新評估程式碼並相應地更新 `newTodoId`。
 
-   Let's use this in our `addTodo()` function. Update it like so:
+   讓我們在 `addTodo()` 函式中使用它。像這樣更新它：
 
    ```js
    function addTodo() {
