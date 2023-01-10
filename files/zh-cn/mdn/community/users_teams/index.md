@@ -53,7 +53,7 @@ MDN Web 文档的成功和发展在很大程度上归功于我们的贡献者社
 要成为团队成员，你需要：
 
 - 同意遵守我们的[社区参与准则](https://www.mozilla.org/zh-CN/about/governance/policies/participation/)。
-- 同意 Mozilla 的[提交访问权限的要求](https://www.mozilla.org/zh-CN/about/governance/policies/commit/requirements/)（Commit Access Requirements）。
+- 同意 Mozilla 的[提交访问权限的要求](https://www.mozilla.org/zh-CN/about/governance/policies/commit/requirements/)（Commit Access Requirement）。
 - 在你的 GitHub 账户上配置[双重身份验证](https://docs.github.com/zh/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)。
 
 如果你想成为团队的一员，你应首先在[这个仓库提交一个议题](https://github.com/mdn/mdn/issues/new/choose)。
@@ -73,7 +73,7 @@ MDN Web 文档的成功和发展在很大程度上归功于我们的贡献者社
 特邀专家需要：
 
 - 同意遵守我们的[社区参与准则](https://www.mozilla.org/zh-CN/about/governance/policies/participation/)。
-- 同意 Mozilla 的[提交访问权限的要求](https://www.mozilla.org/zh-CN/about/governance/policies/commit/requirements/)（Commit Access Requirements）。
+- 同意 Mozilla 的[提交访问权限的要求](https://www.mozilla.org/zh-CN/about/governance/policies/commit/requirements/)（Commit Access Requirement）。
 - 在你的 GitHub 账户上配置[双重身份验证](https://docs.github.com/zh/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)。
 
 作为特邀专家小组的成员，会被：
@@ -92,7 +92,7 @@ MDN Web 文档也有志愿者和合作伙伴，他们被分配了某些仓库的
 维护者应该：
 
 - 同意遵守我们的[社区参与准则](https://www.mozilla.org/zh-CN/about/governance/policies/participation/)。
-- 同意 Mozilla 的[提交访问权限的要求](https://www.mozilla.org/zh-CN/about/governance/policies/commit/requirements/)（Commit Access Requirements）。
+- 同意 Mozilla 的[提交访问权限的要求](https://www.mozilla.org/zh-CN/about/governance/policies/commit/requirements/)（Commit Access Requirement）。
 - 在你的 GitHub 账户上配置[双重身份验证](https://docs.github.com/zh/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)。
 - 在 [NDA 小组](https://people.mozilla.org/a/nda/)中拥有可靠的 [Mozillians](https://people.mozilla.org/) 个人资料。
 
