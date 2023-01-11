@@ -114,11 +114,11 @@ new Uint8Array([257, -257]); // Uint8Array(1) [ 1, 255 ]
 - {{jsxref("Number.MAX_VALUE")}}
   - : 能表示的最大正数。
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
-  - : JavaScript 中最小的安全整数（-(2<sup>53</sup> - 1)）.
+  - : JavaScript 中最小的安全整数（-(2<sup>53</sup> - 1)）。
 - {{jsxref("Number.MIN_VALUE")}}
   - : 能表示的最小正数即最接近 0 的正数（实际上不会变成 0）。
 - {{jsxref("Number.NaN")}}
-  - : 特殊的“**非数字**”值。
+  - : 特殊的“**N**ot **a** **N**umber”（非数字）值。
 - {{jsxref("Number.NEGATIVE_INFINITY")}}
   - : 特殊的负无穷大值，在溢出时返回该值。
 - {{jsxref("Number.POSITIVE_INFINITY")}}
