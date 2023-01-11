@@ -1,6 +1,8 @@
 ---
-title: Syntax
+title: Syntaxe
 slug: Web/CSS/Syntax
+l10n:
+  sourceCommit: 71c4bc0b6329ec40ddbefd8d3124547e91cfa612
 ---
 {{CSSRef}}
 
