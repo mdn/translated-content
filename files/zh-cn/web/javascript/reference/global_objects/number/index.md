@@ -103,7 +103,7 @@ new Uint8Array([257, -257]); // Uint8Array(1) [ 1, 255 ]
 
 当 `Number` 作为一个构造函数（用 `new`）调用时，它会创建一个 {{jsxref("Number")}} 对象，该对象**不是**一个原始值。例如，`typeof new Number(42) === "object"`，并且 `new Number(42) !== 42`（尽管 `new Number(42) == 42`）。
 
-> **警告：** 你应该尽量少的将 `Number` 作为构造函数使用。
+> **警告：** 你应该很少发现自己将 `Number` 作为构造函数使用。
 
 ## 静态属性
 
