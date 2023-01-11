@@ -50,7 +50,7 @@ const s = Boolean(myString);          // true
 
 > **警告:** コンストラクターとして `Boolean` を使うことは滅多にありません。
 
-### 論理値 型強制
+### 論理値への型強制
 
 論理値を期待する多くの組み込み演算は、まず引数を論理値に[型強制 (Type coercion)](https://developer.mozilla.org/ja/docs/Glossary/Type_coercion)します。[この変換](https://tc39.es/ecma262/#sec-tostring)は次のように要約されます。
 
