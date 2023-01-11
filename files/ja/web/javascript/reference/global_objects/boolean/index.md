@@ -58,8 +58,8 @@ const s = Boolean(myString);          // true
 - [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) は `false` に変換されます。
 - [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) は `false` に変換されます。
 - `0`, `-0`, `NaN` は `false` に、それ以外の数値は `true` に変換されます。
-- `0n` は `false` に、その他の [BigInts](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) は `true` に変換されます。
-- [Symbols](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) は `true` になります。
+- `0n` は `false` に、その他の [`BigInt`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) は `true` に変換されます。
+- [`Symbol`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) は `true` になります。
 - すべてのオブジェクトは `true` になります。
 
 > **メモ:** 非推奨のプロパティ [`document.all`](/ja/docs/Web/API/Document/all) はオブジェクトであるにもかかわらず、論理値に変換されると `false` になります。このプロパティはレガシーで非標準であるため、使用しないでください。
