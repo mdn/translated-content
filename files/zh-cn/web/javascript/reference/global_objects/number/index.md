@@ -49,7 +49,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 只有在 -2<sup>53</sup> + 1 到 2<sup>53</sup> - 1 范围内的整数才能在不丢失精度的情况下被表示（可通过 {{jsxref("Number.MIN_SAFE_INTEGER")}} 和 {{jsxref("Number.MAX_SAFE_INTEGER")}} 获得），因为尾数只能容纳 53 位（包括前导 1）。
 
-有关这一点的更多详细信息，请参阅 [ECMAScript标准](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type)。
+有关这一点的更多详细信息，请参阅 [ECMAScript 标准](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type)。
 
 ### Number 强制转换
 
