@@ -1,0 +1,131 @@
+---
+title: WebGLRenderingContext.readPixels()
+slug: Web/API/WebGLRenderingContext/readPixels
+page-type: web-api-instance-method
+tags:
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
+browser-compat: api.WebGLRenderingContext.readPixels
+---
+
+{{APIRef("WebGL")}}
+
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.readPixels()`** 方法从当前color framebuffer中读取指定矩形的像素矩阵并转换为 {{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 对象。
+
+## 语法
+
+```js-nolint
+// WebGL1:
+readPixels(x, y, width, height, format, type, pixels)
+
+// WebGL2:
+readPixels(x, y, width, height, format, type, offset)
+readPixels(x, y, width, height, format, type, pixels)
+readPixels(x, y, width, height, format, type, pixels, dstOffset)
+```
+
+### 参数
+
+- `x`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} 指定从矩形像素块的左下角读取的第一水平像素。（注：WebGL的y轴从下方向上为正方向）
+- `y`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} 指定从矩形像素块的左下角读取的第一垂直像素。
+- `width`
+  - : {{domxref("WebGL_API/Types", "GLsizei")}} 指定矩形的宽度。
+- `height`
+  - : {{domxref("WebGL_API/Types", "GLsizei")}} 指定矩形的高度。
+- `format`
+
+  - : {{domxref("WebGL_API/Types", "GLenum")}} 指定像素数据的格式，可能的值：
+
+    - `gl.ALPHA`
+      - : 放弃红，绿，蓝，通道读取alpha通道的数据。
+    - `gl.RGB`
+      - : 放弃alpha通道读取红、绿、蓝通道的数据。
+    - `gl.RGBA`
+      - : 从颜色缓存区读取红、绿、蓝以及alpha通道的数据。
+
+    WebGL2 增加的
+
+    - `gl.RED`
+    - `gl.RG`
+    - `gl.RED_INTEGER`
+    - `gl.RG_INTEGER`
+    - `gl.RGB_INTEGER`
+    - `gl.RGBA_INTEGER`
+
+- `type`
+
+  - : {{domxref("WebGL_API/Types", "GLenum")}} 指定像素数据的数据类型，可能的值有：
+
+    - `gl.UNSIGNED_BYTE`
+    - `gl.UNSIGNED_SHORT_5_6_5`
+    - `gl.UNSIGNED_SHORT_4_4_4_4`
+    - `gl.UNSIGNED_SHORT_5_5_5_1`
+    - `gl.FLOAT`
+
+    WebGL2 增加的
+
+    - `gl.BYTE`
+    - `gl.UNSIGNED_INT_2_10_10_10_REV`
+    - `gl.HALF_FLOAT`
+    - `gl.SHORT`
+    - `gl.UNSIGNED_SHORT`
+    - `gl.INT`
+    - `gl.UNSIGNED_INT`
+    - `gl.UNSIGNED_INT_10F_11F_11F_REV`
+    - `gl.UNSIGNED_INT_5_9_9_9_REV`
+
+- `pixels`
+
+  - : 存储像素数据的目标对象，必须和指定的类型相匹配:
+
+    - {{jsxref("Uint8Array")}}： `gl.UNSIGNED_BYTE`.
+    - {{jsxref("Uint16Array")}}： `gl.UNSIGNED_SHORT_5_6_5`,
+      `gl.UNSIGNED_SHORT_4_4_4_4`： `gl.UNSIGNED_SHORT_5_5_5_1`.
+    - {{jsxref("Float32Array")}}： `gl.FLOAT`.
+
+- `dstOffset` {{optional_inline}}
+  - : 偏移量，默认为0
+
+### 返回值
+
+无返回值 ({{jsxref("undefined")}})。
+
+### 异常
+
+- `gl.INVALID_ENUM` 如果`format`或`type`不是可接受的值，则会引发此错误。
+- `gl.INVALID_OPERATION` 抛出此错误可能是因为
+
+  - `type` 是 `gl.UNSIGNED_SHORT_5_6_5` 并且
+    `format` 不是 `gl.RGB`。
+  - `type` 是 `gl.UNSIGNED_SHORT_4_4_4_4` 并且
+    `format` 不是 `gl.RGBA`。
+  - `type` 和 `pixels`不匹配。
+
+- `gl.INVALID_FRAMEBUFFER_OPERATION` 如果当前绑定的帧缓冲区未完成，则引发错误。
+
+## 示例
+
+```js
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const pixels = new Uint8Array(gl.drawingBufferWidth * gl.drawingBufferHeight * 4);
+gl.readPixels(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+console.log(pixels); // Uint8Array
+```
+
+## 规格
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 另请参见
+
+- [Typed Arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
