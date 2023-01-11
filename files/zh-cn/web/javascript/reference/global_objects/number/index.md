@@ -72,7 +72,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 有两种方法可以在 JavaScript 中实现几乎相同的效果。
 
-- [一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus): `+x` 完全按照上面的数值强制转换步骤来转换 `x`。
+- [一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)：`+x` 完全按照上面的数值强制转换步骤来转换 `x`。
 - [`Number()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 函数：`Number(x)` 使用相同的算法转换 `x`，除了 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 不会抛出 {{jsxref("TypeError")}}，而是返回它的 Number 值，并且可能损失精度。
 
 {{jsxref("Number.parseFloat()")}} 和 {{jsxref("Number.parseInt()")}} 与 `Number()` 相似，但只转换字符串，并且解析规则略有不同。例如，`parseInt()` 无法识别小数点，`parseFloat()` 无法识别 `0x` 前缀。
