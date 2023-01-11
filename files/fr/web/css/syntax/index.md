@@ -45,7 +45,7 @@ Un ensemble de règles CSS (ou règle) est visualisé dans le diagramme ci-desso
 
 ![css syntax - ruleset.png](ruleset.png)
 
-Comme un élément de la page peut être mis en correspondance par plusieurs sélecteurs, et donc par plusieurs règles contenant potentiellement plusieurs fois une même propriété, avec des valeurs différentes, la norme CSS définit laquelle a priorité sur l'autre et doit être appliquée : c'est ce qu'on appelle la [cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+Comme un élément de la page peut correspondre à plusieurs sélecteurs, et donc par plusieurs règles contenant potentiellement plusieurs fois une même propriété, avec des valeurs différentes, la norme CSS définit laquelle a priorité sur l'autre et doit être appliquée&nbsp;: c'est ce qu'on appelle la [cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
 > **Note:** It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
 
