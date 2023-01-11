@@ -109,11 +109,11 @@ Also indicate that your team agrees to adhere by our Code of Conduct and License
 
 If the application is been successful you can start work on your locale. See the [guidelines for set up in the README](README.md).
 
-You can add your team to the [localizing MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize) page.
+You can add your team to the [localizing MDN][] page.
 
 ## Get in touch
 
-If you want to ask questions or talk to us about forming a new community maintenance team, see [ask for help](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+If you want to ask questions or talk to us about forming a new community maintenance team, see [ask for help][].
 
 ---
 
@@ -125,4 +125,5 @@ Everyone participating in this project is expected to follow our [Code of Conduc
 
 When contributing to the content you agree to license your contributions according to [our license](LICENSE.md).
 
----
+[ask for help]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help
+[localizing MDN]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize
