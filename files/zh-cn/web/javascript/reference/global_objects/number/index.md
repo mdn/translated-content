@@ -152,7 +152,7 @@ new Uint8Array([257, -257]); // Uint8Array(1) [ 1, 255 ]
 - {{jsxref("Number.prototype.toPrecision()")}}
   - : 返回数值使用定点表示法或指数表示法至指定精度的字符串。
 - {{jsxref("Number.prototype.toString()")}}
-  - : 返回一个代表给定对象的字符串，基于指定的*基数*。覆盖 {{jsxref("Object.prototype.toString()")}} 方法。
+  - : 返回一个代表给定对象的字符串，基于指定的*基数*（radix）。覆盖 {{jsxref("Object.prototype.toString()")}} 方法。
 - {{jsxref("Number.prototype.valueOf()")}}
   - : 返回指定对象的原始值。覆盖 {{jsxref("Object.prototype.valueOf()")}} 方法。
 
