@@ -6,7 +6,7 @@ l10n:
 ---
 {{CSSRef}}
 
-L'objectif fondamental du langage <i lang="en">Cascading Stylesheet</i> ([CSS](/fr/docs/Web/CSS)) est de permettre à un moteur de navigation d'associer des fonctionnalités spécifiques, comme les couleurs, le positionnement ou les décorations à des éléments de la page. La _syntaxe CSS_ reflète cet objectif et ses éléments de base sont&nbsp;:
+L'objectif fondamental du langage <i lang="en">Cascading Style Sheets</i> ([CSS](/fr/docs/Web/CSS)) est de permettre à un moteur de navigation d'associer des fonctionnalités spécifiques, comme les couleurs, le positionnement ou les décorations à des éléments de la page. La _syntaxe CSS_ reflète cet objectif et ses éléments de base sont&nbsp;:
 
 - La **propriété** est un identifiant, c'est-à-dire un _nom_ lisible par l'homme, qui définit quelle fonctionnalité est ciblée.
 - La **valeur** décrit comment la fonctionnalité doit être gérée par le moteur. Chaque propriété a un ensemble de valeurs valides, définies par une grammaire formelle, ainsi qu'une signification sémantique, implémentées par le moteur du navigateur.
