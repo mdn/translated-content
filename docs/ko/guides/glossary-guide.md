@@ -1,9 +1,9 @@
-## 용어 지침
+# 용어 지침
 
 새로운 용어를 추가할 때, 기존 문서의 레거시와 [국립 국어원 한국어 어문 규범](https://kornorms.korean.go.kr/main/main.do)을 고려해 추가할 것을 권장합니다.
 [국립 국어원 온라인가나다](https://www.korean.go.kr/front/onlineQna/onlineQnaList.do?mn_id=216)에서 어문 규범, 어법, 표준국어대사전 내용 등에 대하여 문의할 수 있습니다.
 
-### 공통
+## 공통
 
 - 브랜드 이름은 번역하지 않습니다.
 
@@ -21,7 +21,7 @@
   - 예: 정수 값, 소수 값, 반환 값, 기본 값
   - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
 
-### 용어 지침 `참고 링크` 우선 순위
+## 용어 지침 `참고 링크` 우선 순위
 
 - 1. 해당 단어에 대한 의견을 나눈 PR 링크
 - 2. 적절한 ko MDN 문서 링크
@@ -141,7 +141,7 @@
 | short-circuit | 
 | User agent | 사용자 에이전트 | |
 
-### CSS
+## CSS
 
 명세 이름은 번역하지 않습니다.
 
@@ -171,7 +171,7 @@
 | Padding | 안쪽 여백(패딩) | | [CSS 기본 박스 모델 입문](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) |
 | Shorthand property | 단축 속성 | | |
 
-### API/JavaScript
+## API/JavaScript
 
 **사전 순으로 용어집을 편집해주세요.**
 
@@ -200,7 +200,7 @@
 | Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) |
 | TypedArray | 형식화 배열 | | |
 
-### HTTP
+## HTTP
 
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |

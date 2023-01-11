@@ -15,7 +15,7 @@ html 파일에 대한 commit은 오로지 확장자를 바꾸는 것만 허용�
 
 현재 진행 사항은 [[ko] Markdown conversion for ko RoadMap](https://github.com/mdn/translated-content/issues/2894)을 참고 부탁드립니다.
 
-### 리뷰
+## 리뷰
 
 리뷰로 인해 수정사항이 발생할 경우, 예외적으로 **수정 사항에 대해서 commit의 개수를 1개를 추가적으로 허용합니다.**
 
