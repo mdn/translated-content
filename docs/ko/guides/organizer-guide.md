@@ -4,13 +4,13 @@
 
 1. 구성원 변경 요청.
 2. [PEERS_GUIDELINES.md](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md) 페이지의 `Korea (ko) content — the @yari-content-ko team, which consists of:` 수정.
-3. [Localizing MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize) 페이지의 `Active locales/Korea (ko)/Current contributors` 수정.
+3. [Localizing MDN][] 페이지의 `Active locales/Korea (ko)/Current contributors` 수정.
 
 ## 리뷰어 지침
 
 1. 최대 2주 이내에 모든 pull request를 검토하고 조치한다.
-2. [MDN ko locale Markdown 번역에 대한 일반 지침](https://github.com/mdn/translated-content/blob/main/docs/ko/markdown-guide.md)과 [MDN 번역 콘텐츠에 대한 일반 지침](https://github.com/mdn/translated-content/blob/main/docs/ko/translation-guide.md)을 숙지한다.
-3. [용어 지침](https://github.com/mdn/translated-content/blob/main/docs/ko/translation-guide.md#%EC%9A%A9%EC%96%B4-%EC%A7%80%EC%B9%A8)을 숙지하여 일관된 용어를 사용한다.
+2. [MDN 번역 콘텐츠에 대한 일반 지침](/docs/ko/README.md#여러-지침-안내)을 숙지한다.
+3. [용어 지침](./glossary-guide.md)을 숙지하여 일관된 용어를 사용한다.
 
 ## yari-content-ko 팀 지침
 
@@ -34,3 +34,5 @@
 ## 참고 사항
 
 - [mozilla mdn chat](https://chat.mozilla.org/#/room/#mdn:mozilla.org) 채널 및 [yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)에서 질문 및 토론을 할 수 있습니다.
+
+[Localizing MDN]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize

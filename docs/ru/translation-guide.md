@@ -1,6 +1,6 @@
 # Участие в переводе
 
-Для начала ознакомьтесь с [общими правилами](https://developer.mozilla.org/en-US/docs/MDN/Guidelines), в частности, со страницей ["Writing style guide"](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).
+Для начала ознакомьтесь с [общими правилами][], в частности, со страницей ["Writing style guide"][].
 
 Основная тема — [Перевод MDN на русский язык](https://github.com/mdn/translated-content/issues/276)
 
@@ -37,3 +37,6 @@
 | technical reference | технические материалы (при использовании в качестве заголовка) |
 
 \* — по возможности лучше избежать прямого перевода, используя синонимы или лучше раскрывая смысл.
+
+[общими правилами]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines
+["Writing style guide"]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
