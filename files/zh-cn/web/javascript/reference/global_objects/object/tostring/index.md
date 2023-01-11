@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 
 {{JSRef}}
 
-**`toString()`** 方法返回一个表示该对象的字符串。该方法旨在重写（自定义）派生类对象的[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#类型转换)的逻辑。
+**`toString()`** 方法返回一个表示该对象的字符串。该方法旨在重写（自定义）派生类对象的[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)的逻辑。
 
 {{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 
@@ -25,7 +25,7 @@ toString()
 
 ## 描述
 
-JavaScript 调用 `toString` 方法[将对象转换为一个原始值](/zh-CN/docs/Web/JavaScript/Data_structures#类型转换)。你很少需要自己去调用 `toString` 方法；当遇到需要原始值的对象时，JavaScript 会自己调用它。
+JavaScript 调用 `toString` 方法[将对象转换为一个原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)。你很少需要自己去调用 `toString` 方法；当遇到需要原始值的对象时，JavaScript 会自己调用它。
 
 该方法由[字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)优先调用，但是[数字的强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制数字类型转换)和[原始值的强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)会优先调用 `valueOf()`。然而，因为基本的 [`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 方法返回一个对象，`toString()` 方法通常在结束时调用，除非对象重写了 `valueOf()`。例如，`+[1]` 返回 `1`，因为它的 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 方法返回 `"1"`，然后将其转换为数字。
 
