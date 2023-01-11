@@ -137,7 +137,7 @@ Sec-WebSocket-Accept: hash
 ```
 
 - `hash`
-  - : 如果提供了 {{HTTPHeader("Sec-WebSocket-Key")}} 标头，则该标头的值是通过获取密钥的值、将字符串“258EAFA5-E914-47DA-95CA-C5AB0DC85B11”连接到它、采用 [SHA-1](https://zh.wikipedia.org/wiki/SHA-1) 哈希来计算的连接字符串，产生一个 20 字节的值。然后对该值进行 [base64](/zh-CN/docs/Glossary/Base64) 编码以获得该属性的值。
+  - : 如果提供了 {{HTTPHeader("Sec-WebSocket-Key")}} 标头，那么将通过以下流程计算此标头的值：首先取密钥的值，然后将该值与“258EAFA5-E914-47DA-95CA-C5AB0DC85B11”进行拼接，再取拼接后的字符串的 [SHA-1](https://zh.wikipedia.org/wiki/SHA-1) 哈希。最后对得出的 20 字节的值进行 [base64](/zh-CN/docs/Glossary/Base64) 编码以获得该属性的值。
 
 ## 参见
 
