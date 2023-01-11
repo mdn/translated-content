@@ -74,7 +74,7 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
 
 ### 능동적 학습: 예제 코드 탐색
 
-위에서 본 예제는 다음 코드로 표시됩니다([Github 리포지토리에서 예제를 찾아보세요](<https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html >)). 위의 예를 살펴본 다음 아래 목록을 살펴보고 어떤 부분이 시각적 개체의 어떤 섹션을 구성하는지 확인하시기 바랍니다.
+위에서 본 예제는 다음 코드로 표시됩니다([Github 리포지토리에서 예제를 찾아보세요](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). 위의 예를 살펴본 다음 아래 목록을 살펴보고 어떤 부분이 시각적 개체의 어떤 섹션을 구성하는지 확인하시기 바랍니다.
 
 ```html
 <!DOCTYPE html>
