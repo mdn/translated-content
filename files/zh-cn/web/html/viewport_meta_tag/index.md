@@ -1,6 +1,6 @@
 ---
-title: HTML 参考
-slug: Web/HTML/Reference
+title: viewport meta 标记
+slug: Web/HTML/Viewport_meta_tag
 ---
 
 {{HTMLSidebar}}
