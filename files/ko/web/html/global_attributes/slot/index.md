@@ -1,11 +1,6 @@
 ---
 title: slot
 slug: Web/HTML/Global_attributes/slot
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/slot
 ---
 
 {{HTMLSidebar("Global_attributes")}}

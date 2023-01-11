@@ -1,8 +1,8 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-translation_of: Web/HTTP/Headers/Content-Location
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Location`** 헤더는 반환된 데이터에 대한 대체 위치을 가르킵니다. 주된 유스케이스는 [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)의 결과로써 전달되는 리소스의 URL을 가르키는 것입니다.

@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.onkeyup
 slug: conflicting/Web/API/Element/keyup_event
-tags:
-  - API
-  - HTML DOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/onkeyup
 original_slug: Web/API/GlobalEventHandlers/onkeyup
 ---
 

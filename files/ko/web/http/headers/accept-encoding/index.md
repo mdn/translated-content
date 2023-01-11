@@ -1,7 +1,6 @@
 ---
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
-translation_of: Web/HTTP/Headers/Accept-Encoding
 ---
 
 {{HTTPSidebar}}

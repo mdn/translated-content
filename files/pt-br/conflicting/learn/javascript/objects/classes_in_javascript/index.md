@@ -1,7 +1,6 @@
 ---
 title: JavaScript orientado a objetos para iniciantes
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
-translation_of: Learn/JavaScript/Objects/Object-oriented_JS
 original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
 

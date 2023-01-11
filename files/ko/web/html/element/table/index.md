@@ -1,14 +1,6 @@
 ---
 title: <table>
 slug: Web/HTML/Element/table
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-  - 표
-translation_of: Web/HTML/Element/table
 ---
 
 {{HTMLSidebar}}

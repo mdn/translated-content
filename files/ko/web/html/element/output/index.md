@@ -1,15 +1,8 @@
 ---
 title: '<output>: 출력 요소'
 slug: Web/HTML/Element/output
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML:Flow content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/output
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<output>` 요소**는 웹 사이트나 앱에서 계산이나 사용자 행동의 결과를 삽입할 수 있는 컨테이너 요소입니다.

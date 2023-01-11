@@ -64,7 +64,7 @@ HTML marquee 元素（`<marquee>`） 用来插入一段滚动的文字。你可�
 </marquee>
 ```
 
-{{EmbedLiveSample("Examples", 600, 450)}}
+{{EmbedLiveSample("示例", 600, 450)}}
 
 ## 规范
 

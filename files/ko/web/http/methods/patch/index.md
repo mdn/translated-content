@@ -1,7 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-translation_of: Web/HTTP/Methods/PATCH
 ---
 
 {{HTTPSidebar}}

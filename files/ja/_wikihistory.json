@@ -30946,10 +30946,6 @@
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
   },
-  "conflicting/Web/API/origin": {
-    "modified": "2020-10-17T12:14:26.538Z",
-    "contributors": ["mfuji09", "YuichiNukiyama"]
-  },
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T23:28:42.286Z",
     "contributors": ["yyss", "teoli"]
@@ -31414,58 +31410,6 @@
   "orphaned/Web/Web_Components/Status_in_Firefox": {
     "modified": "2019-03-23T22:35:08.421Z",
     "contributors": ["ueokande", "dskmori"]
-  },
-  "orphaned/Web/XPath/Axes/ancestor": {
-    "modified": "2019-01-17T03:28:09.177Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "orphaned/Web/XPath/Axes/ancestor-or-self": {
-    "modified": "2019-03-18T21:28:03.767Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "orphaned/Web/XPath/Axes/attribute": {
-    "modified": "2019-03-30T16:06:16.122Z",
-    "contributors": ["silverskyvicto", "ExE-Boss"]
-  },
-  "orphaned/Web/XPath/Axes/child": {
-    "modified": "2020-10-15T22:08:08.333Z",
-    "contributors": ["silverskyvicto", "ExE-Boss"]
-  },
-  "orphaned/Web/XPath/Axes/descendant": {
-    "modified": "2019-01-17T03:28:56.581Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "orphaned/Web/XPath/Axes/descendant-or-self": {
-    "modified": "2019-01-17T03:28:36.654Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "orphaned/Web/XPath/Axes/following": {
-    "modified": "2019-01-17T03:29:05.424Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "orphaned/Web/XPath/Axes/following-sibling": {
-    "modified": "2019-01-17T03:29:25.545Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "orphaned/Web/XPath/Axes/namespace": {
-    "modified": "2019-03-18T21:27:59.706Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "orphaned/Web/XPath/Axes/parent": {
-    "modified": "2019-01-17T03:28:42.276Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "orphaned/Web/XPath/Axes/preceding": {
-    "modified": "2019-01-17T03:29:16.726Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "orphaned/Web/XPath/Axes/preceding-sibling": {
-    "modified": "2019-01-17T03:29:19.432Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "orphaned/Web/XPath/Axes/self": {
-    "modified": "2020-10-15T22:08:17.935Z",
-    "contributors": ["silverskyvicto", "ExE-Boss"]
   },
   "orphaned/Working_with_windows_in_chrome_code": {
     "modified": "2019-01-16T17:12:27.632Z",

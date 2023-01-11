@@ -1,9 +1,6 @@
 ---
 title: jQuery
 slug: orphaned/Glossary/jQuery
-tags:
-  - Jquery em português
-translation_of: Glossary/jQuery
 original_slug: Glossary/jQuery
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: Detalhes do modelo de objeto
 slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - Entidade
-  - Modelo
-  - Objeto
-  - Orientação á Objeto
-translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 

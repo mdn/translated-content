@@ -1,8 +1,8 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-translation_of: Web/HTTP/Headers/Content-Disposition
 ---
+
 {{HTTPSidebar}}
 일반적인 HTTP 응답에서 **`Content-Disposition`** 헤더는 컨텐츠가 브라우저에 _inline_ 되어야 하는 웹페이지 자체이거나 웹페이지의 일부인지, 아니면 *attachment*로써 다운로드 되거나 로컬에 저장될 용도록 쓰이는 것인지를 알려주는 헤더입니다.
 

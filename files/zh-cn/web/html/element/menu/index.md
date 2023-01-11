@@ -61,7 +61,7 @@ An HTML menu can be used to create context menus (typically activated by right-c
 
 这个元素在 HTML4 中被弃用，但在 HTML 5.1 和 HTML living standard 中被重新推荐使用。这份文档描述的是当前 Firefox 上的实现。根据 HTML 5.1 的规定，{{HTMLElement("list")}} 元素的类型可能会更改为{{HTMLElement("toolbar")}}。
 
-## 例子
+## 示例
 
 ### 右键菜单
 
@@ -95,7 +95,7 @@ div {
 
 #### 结果
 
-{{EmbedLiveSample("Context_menu", "100%", 80)}}
+{{EmbedLiveSample("右键菜单", "100%", 80)}}
 
 ### 菜单按钮
 
@@ -119,9 +119,9 @@ div {
 </menu>
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Menu_button", "100%", 50)}}
+{{EmbedLiveSample("菜单按钮", "100%", 50)}}
 
 ### Toolbar
 

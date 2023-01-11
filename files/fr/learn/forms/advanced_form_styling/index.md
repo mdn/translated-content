@@ -93,9 +93,9 @@ input {
 
 > **Note :** Mieux vaut utiliser les deux déclarations (celle avec le préfixe et celle sans) lorsqu'on utilise une propriété préfixée. En effet, la version préfixée signifie généralement que du travail de standardisation est en cours et qu'il pourrait y avoir plus tard un consensus pour abandonner la version préfixée. Dans l'exemple qui précède, on se prémunit ainsi contre une telle situation.
 
-L'aperçu qui suit montre&nbsp;: le rendu avec les styles système à gauche et le rendu avec `appearance: none` à droite ([vous pouvez également voir cet exemple sur cette page](https://mdn.github.io/learning-area/html/forms/styling-examples/appearence-tester.html) si vous voulez le tester sur d'autres systèmes).
+L'aperçu qui suit montre&nbsp;: le rendu avec les styles système à gauche et le rendu avec `appearance: none` à droite ([vous pouvez également voir cet exemple sur cette page](https://mdn.github.io/learning-area/html/forms/styling-examples/appearance-tester.html) si vous voulez le tester sur d'autres systèmes).
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearence-tester.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearance-tester.html", '100%', 400)}}
 
 Dans la plupart des cas, l'effet correspond au retrait de la mise en forme de la bordure, ce qui rend l'application de CSS plus simple, mais ce n'est pas réellement essentiel. Pour d'autres en revanche, comme les champs de recherche, les boutons radio et les cases à cocher, cela s'avère beaucoup plus utile. Voyons de quoi il en retourne.
 
@@ -114,7 +114,7 @@ input[type="search"] {
 
 Dans l'exemple qui suit, on peut voir deux champs de recherche identiques. Celui de droite est mis en forme avec `appearance: none;` et celui de gauche n'utilise pas cette propriété. Si vous consultez cet exemple sur Chrome sur macOS, vous verrez que l'exemplaire à gauche n'est pas dimensionné correctement.
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearence.html", '100%', 200)}}
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearance.html", '100%', 200)}}
 
 De façon intéressante, définir la boardule ou l'arrière-plan du champ de recherche permet aussi de résoudre ce problème, car cela [désactive](https://webkit.org/blog/28/buttons/) ou «&nbsp;casse&nbsp;» l'apparence Aqua. L'exemple qui suit n'utilise pas du tout `appearance: none;`, mais, sur Chrome pour macOS, on peut voir qu'il ne souffre pas du même problème que l'exemple précédent.
 
