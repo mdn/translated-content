@@ -18,5 +18,5 @@ slug: Glossary/Immutable
 
 ## 参见
 
-- 在维基百科中的[不可变的](https://zh.wikipedia.org/wiki/不可變物件)
+- 在维基百科中的[不可变对象](https://zh.wikipedia.org/wiki/不可變物件)
 - {{glossary("Mutable", "可变的")}}
