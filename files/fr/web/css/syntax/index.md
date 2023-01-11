@@ -1,15 +1,17 @@
 ---
-title: Syntax
+title: Syntaxe
 slug: Web/CSS/Syntax
+l10n:
+  sourceCommit: 71c4bc0b6329ec40ddbefd8d3124547e91cfa612
 ---
 {{CSSRef}}
 
-L'objectif fondamental du langage <i lang="en">Cascading Stylesheet</i> ([CSS](/fr/docs/Web/CSS)) est de permettre à un moteur de navigation d'associer des fonctionnalités spécifiques, comme les couleurs, le positionnement ou les décorations à des éléments de la page. La _syntaxe CSS_ reflète cet objectif et ses éléments de base sont&nbsp;:
+L'objectif fondamental du langage <i lang="en">Cascading Style Sheets</i> ([CSS](/fr/docs/Web/CSS)) est de permettre à un moteur de navigation d'associer des fonctionnalités spécifiques, comme les couleurs, le positionnement ou les décorations à des éléments de la page. La _syntaxe CSS_ reflète cet objectif et ses éléments de base sont&nbsp;:
 
-- La **propriété** est un identifiant, c'est-à-dire un _nom_ lisible par l'homme, qui définit quelle fonctionnalité est ciblée.
+- La **propriété** est un identifiant, c'est-à-dire un _nom_ compréhensible par un être humain, qui définit quelle fonctionnalité est ciblée.
 - La **valeur** décrit comment la fonctionnalité doit être gérée par le moteur. Chaque propriété a un ensemble de valeurs valides, définies par une grammaire formelle, ainsi qu'une signification sémantique, implémentées par le moteur du navigateur.
 
-## déclarations CSS
+## Déclarations CSS
 
 La définition des propriétés CSS sur des valeurs spécifiques est la fonction principale du langage CSS. Une paire de propriété et de valeur s'appelle une **déclaration**, et tout moteur CSS calcule quelles déclarations s'appliquent à chaque élément d'une page afin de la mettre en page de manière appropriée et de la styliser.
 
@@ -25,7 +27,7 @@ Les déclarations sont regroupées en **blocs**, c'est-à-dire dans une structur
 
 ![css syntax - block.png](css_syntax_-_block.png)
 
-Ces blocs sont naturellement appelés **blocs de déclaration** et les déclarations à l'intérieur sont séparées par un point-virgule, '`;`' (`U+003B SEMICOLON`). Un bloc de déclaration peut être vide, c'est-à-dire contenir une déclaration nulle. Les espaces blancs autour des déclarations sont ignorés. La dernière déclaration d'un bloc n'a pas besoin d'être terminée par un point-virgule, bien qu'il soit souvent considéré comme un _bon style_ de le faire car cela évite d'oublier de l'ajouter lors de l'extension du bloc avec une autre déclaration.
+Ces blocs sont naturellement appelés **blocs de déclaration** et les déclarations à l'intérieur sont séparées par un point-virgule, '`;`' (`U+003B SEMICOLON`). Un bloc de déclaration peut être vide, c'est-à-dire contenir une déclaration nulle. Les espaces blancs autour des déclarations sont ignorés. La dernière déclaration d'un bloc n'a pas besoin d'être terminée par un point-virgule, bien que faire ainsi soit considéré comme une bonne pratique (cela évite d'oublier de l'ajouter lors de l'extension du bloc avec une autre déclaration).
 
 Un bloc de déclaration CSS est visualisé dans le schéma ci-dessous.
 
@@ -66,7 +68,7 @@ Une **instruction** est un bloc de construction qui commence par n'importe quel 
 Il existe deux types de déclarations :
 
 - Les **ensembles de règles** (ou _règles_) qui, comme on le voit, associent une collection de déclarations CSS à une condition décrite par un [sélecteur](/fr/docs/Web/CSS/CSS_Selectors).
-- Les **règles @** qui commencent par un arobase, '`@`' (`U+0040 COMMERCIAL AT`), suivi d'un identifiant et se poursuivant jusqu'à la fin de l'instruction, c'est-à-dire jusqu'à au prochain point-virgule (;) en dehors d'un bloc, ou à la fin du bloc suivant. Chaque type de [règles @](/fr/docs/Web/CSS/At-rule), défini par l'identifiant, peut avoir sa propre syntaxe interne, et bien sûr sa sémantique. Ils sont utilisés pour transmettre des informations de métadonnées (comme {{ cssxref("@charset") }} ou {{ cssxref("@import") }}), des informations conditionnelles (comme {{ cssxref("@media") }} ou {{ cssxref("@document") }}), ou des informations descriptives (comme {{ cssxref("@font-face") }}).
+- Les **règles @** qui commencent par une arobase, '`@`' (`U+0040 COMMERCIAL AT`), suivie d'un identifiant et se poursuivant jusqu'à la fin de l'instruction, c'est-à-dire jusqu'à au prochain point-virgule (;) en dehors d'un bloc, ou à la fin du bloc suivant. Chaque type de [règles @](/fr/docs/Web/CSS/At-rule), défini par l'identifiant, peut avoir sa propre syntaxe interne, et bien sûr sa sémantique. Ils sont utilisés pour transmettre des informations de métadonnées (comme [`@charset`](/fr/docs/Web/CSS/@charset) ou [`@import`](/fr/docs/Web/CSS/@import)), des informations conditionnelles (comme [`@media`](/fr/docs/Web/CSS/@media) ou [`@document`](/fr/docs/Web/CSS/@document)), ou des informations descriptives (comme [`@font-face`](/fr/docs/Web/CSS/@font-face)).
 
 Toute instruction qui n'est pas un ensemble de règles ou une règle-at est invalide et ignorée.
 
