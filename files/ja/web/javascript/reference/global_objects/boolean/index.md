@@ -31,7 +31,7 @@ if (x) {
 }
 ```
 
-オブジェクトを論理値でない値から論理値へ変換するために `new` を使って `Boolean()` コンストラクタを使わないでください。代わりに、 `Boolean()` を関数として使ったり、[二重否定](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT#二重否定_!!)を使用したりすることで同じことが行えます。
+オブジェクトを論理値でない値から論理値へ変換するために `new` を使って `Boolean()` コンストラクターを使わないでください。代わりに、 `Boolean()` を関数として使ったり、[二重否定](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT#二重否定_!!)を使用したりすることで同じことが行えます。
 
 ```js
 const good = Boolean(expression);    // これか、もしくは…
@@ -48,7 +48,7 @@ const myString = new String('Hello'); // Stringオブジェクト
 const s = Boolean(myString);          // true
 ```
 
-> **警告:** コンストラクタとして `Boolean` を使うことは滅多にありません。
+> **警告:** コンストラクターとして `Boolean` を使うことは滅多にありません。
 
 ### 論理値 型強制
 
