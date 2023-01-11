@@ -85,7 +85,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 #### 固定宽度数值转换
 
-JavaScript 有一些较低级别的函数，用于处理整数的二进制编码，最值得注意的是[按位运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators)和 {{jsxref("TypedArray")}} 对象。按位运算符总是将操作数转换为 32 位整数。在这些情况下，将值转换为数值后，然后首先[截断](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)小数部分，然后在整数的二进制的补码编码中取最低位，将数值归一化为给定的宽度。
+JavaScript 有一些较低级别的函数，用于处理整数的二进制编码，最值得注意的是[按位运算](/zh-CN/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators)和 {{jsxref("TypedArray")}} 对象。按位运算总是将操作数转换为 32 位整数。在这些情况下，将值转换为数值后，然后首先[截断](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)小数部分，然后在整数的二进制的补码编码中取最低位，将数值归一化为给定的宽度。
 
 ```js
 new Int32Array([1.1, 1.9, -1.1, -1.9]); // Int32Array(4) [ 1, 1, -1, -1 ]
