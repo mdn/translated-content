@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean
 
 {{JSRef}}
 
-**`Boolean`** オブジェクトは論理値（`true`または`false`）を表します。
+**`Boolean`** オブジェクトは論理値（`true` または `false`）を表します。
 
 ## 解説
 
@@ -66,7 +66,7 @@ const s = Boolean(myString);          // true
 
 > **注意:** [string型強制](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) や [number型強制](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) などの他の型の変換とは異なり、boolean型強制はオブジェクトからプリミティブに変換しようとするわけではありません。
 
-言い換えれば、`false`に強制される値はほんの一握りで、これらは [falsy (偽値)](/ja/docs/Glossary/Falsy) と呼ばれる値です。それ以外の値は [truthy (真値)](/ja-US/docs/Glossary/Truthy) と呼ばれます。値が truthy (真値)であるかどうかは、論理演算子や条件文と共に使われるとき、あるいはあらゆる真偽値の文脈で使われるときに重要です。
+言い換えれば、`false` に強制される値はほんの一握りで、これらは [falsy (偽値)](/ja/docs/Glossary/Falsy) と呼ばれる値です。それ以外の値は [truthy (真値)](/ja-US/docs/Glossary/Truthy) と呼ばれます。値が truthy (真値)であるかどうかは、論理演算子や条件文と共に使われるとき、あるいはあらゆる真偽値の文脈で使われるときに重要です。
 
 JavaScriptで型強制と同じ効果を得るには、2つの方法があります。
 
