@@ -39,7 +39,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 - 11 比特*指数位*（exponent）（-1022 到 1023）
 - 52 比特*尾数位*（mantissa）（表示 0 和 1 之间的数值）
 
-尾数（也称为*有效位数*）是表示实际值的数值（有效数值）部分。指数是尾数应乘以的 2 的幂。将其视为科学符号：
+尾数（也称为*有效位数*）是表示实际值的数值（有效数值）部分。指数是尾数应乘以的 2 的幂。将其视为科学计数法：
 
 <math display="block"><semantics><mrow><mtext>Number</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>sign</mtext></msup><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>mantissa</mtext><mo stretchy="false">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{sign}} \cdot (1 + \text{mantissa}) \cdot 2^{\text{exponent}}</annotation></semantics></math>
 
