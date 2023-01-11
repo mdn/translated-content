@@ -57,7 +57,7 @@ Une **instruction** est un bloc de construction qui commence par n'importe quel 
 
 ![css syntax - statements Venn diag.png](css_syntax_-_statements_venn_diag.png)
 
-Il existe deux types de déclarations :
+Il existe deux types de déclarations&nbsp;:
 
 - Les **ensembles de règles** (ou _règles_) qui, comme on le voit, associent une collection de déclarations CSS à une condition décrite par un [sélecteur](/fr/docs/Web/CSS/CSS_Selectors).
 - Les **règles @** qui commencent par une arobase, '`@`' (`U+0040 COMMERCIAL AT`), suivie d'un identifiant et se poursuivant jusqu'à la fin de l'instruction, c'est-à-dire jusqu'à au prochain point-virgule (;) en dehors d'un bloc, ou à la fin du bloc suivant. Chaque type de [règles @](/fr/docs/Web/CSS/At-rule), défini par l'identifiant, peut avoir sa propre syntaxe interne, et bien sûr sa sémantique. Ils sont utilisés pour transmettre des informations de métadonnées (comme [`@charset`](/fr/docs/Web/CSS/@charset) ou [`@import`](/fr/docs/Web/CSS/@import)), des informations conditionnelles (comme [`@media`](/fr/docs/Web/CSS/@media) ou [`@document`](/fr/docs/Web/CSS/@document)), ou des informations descriptives (comme [`@font-face`](/fr/docs/Web/CSS/@font-face)).
