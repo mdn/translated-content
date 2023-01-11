@@ -27,7 +27,7 @@ Les déclarations sont regroupées en **blocs**, c'est-à-dire dans une structur
 
 ![css syntax - block.png](css_syntax_-_block.png)
 
-Ces blocs sont naturellement appelés **blocs de déclaration** et les déclarations à l'intérieur sont séparées par un point-virgule, '`;`' (`U+003B SEMICOLON`). Un bloc de déclaration peut être vide, c'est-à-dire contenir une déclaration nulle. Les espaces blancs autour des déclarations sont ignorés. La dernière déclaration d'un bloc n'a pas besoin d'être terminée par un point-virgule, bien qu'il soit souvent considéré comme un _bon style_ de le faire car cela évite d'oublier de l'ajouter lors de l'extension du bloc avec une autre déclaration.
+Ces blocs sont naturellement appelés **blocs de déclaration** et les déclarations à l'intérieur sont séparées par un point-virgule, '`;`' (`U+003B SEMICOLON`). Un bloc de déclaration peut être vide, c'est-à-dire contenir une déclaration nulle. Les espaces blancs autour des déclarations sont ignorés. La dernière déclaration d'un bloc n'a pas besoin d'être terminée par un point-virgule, bien que faire ainsi soit considéré comme une bonne pratique (cela évite d'oublier de l'ajouter lors de l'extension du bloc avec une autre déclaration).
 
 Un bloc de déclaration CSS est visualisé dans le schéma ci-dessous.
 
