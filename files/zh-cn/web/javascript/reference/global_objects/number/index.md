@@ -58,7 +58,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 - 对于 Number 则总是返回自己
 - [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 变成了 [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)。
 - [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 变成了 `0`。
-- `true` 变成了 `1`；`false` 变成了 `0`.
+- `true` 变成了 `1`；`false` 变成了 `0`。
 - 如果它们包含[数字字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#数字字面量)，字符串通过解析它们来转换。如果解析失败，返回的结果为 `NaN`。与实际数字字面量相比，它们有一些细微的差别。
   - 忽略前导和尾随空格/行终止符。
   - 前导数值 `0` 不会导致该数值成为八进制文本（或在严格模式下被拒绝）。
