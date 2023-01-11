@@ -1,5 +1,5 @@
 ---
-title: 不可变的
+title: 不可变的（Immutable）
 slug: Glossary/Immutable
 ---
 
