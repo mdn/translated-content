@@ -78,16 +78,16 @@ Il existe un autre groupe d'instructions&nbsp;: les **instructions imbriquées**
 
 ## Voir aussi
 
-- Concepts clés CSS:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
+- Concepts clés CSS&nbsp;:
+  - **Syntaxe CSS**
   - [Commentaires](/fr/docs/Web/CSS/Comments)
-  - [Specificité](/fr/docs/Web/CSS/Specificity)
+  - [Spécificité](/fr/docs/Web/CSS/Specificity)
   - [Héritage](/fr/docs/Web/CSS/inheritance)
   - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Mode de mise en page](/fr/docs/Web/CSS/Layout_mode)
   - [Modèle de mise en forme visuelles](/fr/docs/Web/CSS/Visual_formatting_model)
   - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
-  - Values
+  - Valeurs
     - [Valeur initiale](/fr/docs/Web/CSS/initial_value)
     - [Valeur calculée](/fr/docs/Web/CSS/computed_value)
     - [Valeur utilisée](/fr/docs/Web/CSS/used_value)
