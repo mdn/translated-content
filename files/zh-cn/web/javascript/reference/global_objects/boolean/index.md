@@ -107,5 +107,5 @@ const bObjProto = new Boolean({});
 ## 参见
 
 - [Boolean](/zh-CN/docs/Glossary/Boolean)
-- [基本类型：布尔类型](/zh-CN/docs/Web/JavaScript/Data_structures#布尔类型)
+- [基本类型：布尔类型](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)
 - [布尔类型（维基百科）](https://zh.wikipedia.org/wiki/布林_(資料類型))

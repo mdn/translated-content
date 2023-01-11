@@ -76,7 +76,7 @@ Undefined 类型只有一个值：[`undefined`](/zh-CN/docs/Web/JavaScript/Refer
 
 ### Number 类型
 
-{{jsxref("Number")}} 类型是一种[基于 IEEE 754 标准的双精度 64 位二进制格式的值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)。它能够存储 2<sup>-1074</sup>（{{jsxref("Number.MIN_VALUE")}}）和 2<sup>1024</sup>（{{jsxref("Number.MAX_VALUE")}}）之间的正浮点数，以及 -2<sup>-1074</sup> 和 -2<sup>1024</sup> 之间的负浮点数，但是它仅能安全地存储在 -(2<sup>53</sup> − 1)（{{jsxref("Number.MIN_SAFE_INTEGER")}}）到 2<sup>53</sup> − 1（{{jsxref("Number.MAX_SAFE_INTEGER")}}）范围内的整数。超出这个范围，JavaScript 将不能安全地表示整数；相反，它们将由双精度浮点近似表示。你可以使用 {{jsxref("Number.isSafeInteger()")}} 检查一个数是否在安全的整数范围内。
+{{jsxref("Number")}} 类型是一种[基于 IEEE 754 标准的双精度 64 位二进制格式的值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_编码)。它能够存储 2<sup>-1074</sup>（{{jsxref("Number.MIN_VALUE")}}）和 2<sup>1024</sup>（{{jsxref("Number.MAX_VALUE")}}）之间的正浮点数，以及 -2<sup>-1074</sup> 和 -2<sup>1024</sup> 之间的负浮点数，但是它仅能安全地存储在 -(2<sup>53</sup> − 1)（{{jsxref("Number.MIN_SAFE_INTEGER")}}）到 2<sup>53</sup> − 1（{{jsxref("Number.MAX_SAFE_INTEGER")}}）范围内的整数。超出这个范围，JavaScript 将不能安全地表示整数；相反，它们将由双精度浮点近似表示。你可以使用 {{jsxref("Number.isSafeInteger()")}} 检查一个数是否在安全的整数范围内。
 
 ±(2<sup>-1074</sup> 到 2<sup>1024</sup>) 范围之外的值会自动转换：
 
@@ -125,7 +125,7 @@ BigInt 值并不总是更精确的，也不总是比 number 精确，因为 BigI
 
 ### String 类型
 
-{{jsxref("String")}} 类型表示文本数据并编码为 [UTF-16 代码单位](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters)的 16 位无符号整数值序列。字符串中的每个元素在字符串中占据一个位置。第一个元素的索引为 `0`，下一个是索引 `1`，依此类推。字符串的长度是它的元素的数量。字符串的[长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)是其中的 UTF-16 代码单元的数量，这可能与 Unicode 字符的实际数量不符；更多细节参见 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) 参考页面。
+{{jsxref("String")}} 类型表示文本数据并编码为 [UTF-16 代码单位](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）)的 16 位无符号整数值序列。字符串中的每个元素在字符串中占据一个位置。第一个元素的索引为 `0`，下一个是索引 `1`，依此类推。字符串的长度是它的元素的数量。字符串的[长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)是其中的 UTF-16 代码单元的数量，这可能与 Unicode 字符的实际数量不符；更多细节参见 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）) 参考页面。
 
 JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就不可能修改它。字符串方法基于当前字符串的内容创建一个新的字符串——例如：
 
