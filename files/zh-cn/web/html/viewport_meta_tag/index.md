@@ -99,10 +99,10 @@ slug: Web/HTML/Viewport_meta_tag
 
 如果你想知道哪些移动和平板设备有哪些视口宽度，这里有一个全面的移动和平板视口尺寸列表。它提供的信息包括纵向和横向的视口宽度，以及物理屏幕尺寸、操作系统和设备的像素密度。
 
-## Especificaciones
+## 规范
 
 {{Specifications}}
 
-## See also
+## 参见
 
 - Article: [Prepare for viewport resize behavior changes coming to Chrome on Android](https://developer.chrome.com/blog/viewport-resize-behavior/)
