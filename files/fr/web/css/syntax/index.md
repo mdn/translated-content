@@ -33,9 +33,7 @@ Un bloc de déclaration CSS est visualisé dans le schéma ci-dessous.
 
 ![css syntax - declarations block.png](declaration-block.png)
 
-> **Note:** The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML {{htmlattrxref("style")}} attribute.
-
-> **Remarque&nbsp;:** Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML {{htmlattrxref("style")}}.
+> **Note :** Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style).
 
 ## Ensembles de règles CSS
 
