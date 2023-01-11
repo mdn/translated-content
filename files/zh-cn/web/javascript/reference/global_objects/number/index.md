@@ -43,7 +43,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 <math display="block"><semantics><mrow><mtext>Number</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>sign</mtext></msup><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>mantissa</mtext><mo stretchy="false">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{sign}} \cdot (1 + \text{mantissa}) \cdot 2^{\text{exponent}}</annotation></semantics></math>
 
-尾数使用 52 比特存储，在二进制小数中解释为 `1.…` 之后的数值。因此，尾数的精度是 2<sup>-52</sup>（可以通过 {{jsxref("Number.EPSILON")}} 获得），或者十进制小数点后大约 15 到 17 位；高于该精度级别的算术需要[四舍五入](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding)。
+尾数使用 52 比特存储，在二进制小数中解释为 `1.…` 之后的数值。因此，尾数的精度是 2<sup>-52</sup>（可以通过 {{jsxref("Number.EPSILON")}} 获得），或者十进制小数点后大约 15 到 17 位；高于该精度级别的算术需要[舍入](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding)。
 
 一个数值可以容纳的最大值是 2<sup>1024</sup> - 1（基于二进制的指数为 1023，尾数为 0.1111...），这可以通过 {{jsxref("Number.MAX_VALUE")}} 获得。高于该值的数值，被特殊数常数 {{jsxref("Infinity")}} 取代。
 
