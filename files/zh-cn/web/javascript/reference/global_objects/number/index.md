@@ -45,7 +45,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 尾数使用 52 比特存储，在二进制小数中解释为 `1.…` 之后的数值。因此，尾数的精度是 2<sup>-52</sup>（可以通过 {{jsxref("Number.EPSILON")}} 获得），或者十进制小数点后大约 15 到 17 位；高于该精度级别的算术需要[舍入](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding)。
 
-一个数值可以容纳的最大值是 2<sup>1024</sup> - 1（基于二进制的指数为 1023，尾数为 0.1111...），这可以通过 {{jsxref("Number.MAX_VALUE")}} 获得。高于该值的数值，被特殊数常数 {{jsxref("Infinity")}} 取代。
+一个数值可以容纳的最大值是 2<sup>1024</sup> - 1（基于二进制的指数为 1023，尾数为 0.1111...），这可以通过 {{jsxref("Number.MAX_VALUE")}} 获得。大于该值的数值，被特殊数常数 {{jsxref("Infinity")}} 取代。
 
 只有在 -2<sup>53</sup> + 1 到 2<sup>53</sup> - 1 范围内的整数才能在不丢失精度的情况下被表示（可通过 {{jsxref("Number.MIN_SAFE_INTEGER")}} 和 {{jsxref("Number.MAX_SAFE_INTEGER")}} 获得），因为尾数只能容纳 53 位（包括前导 1）。
 
