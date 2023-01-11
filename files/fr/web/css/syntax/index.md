@@ -11,7 +11,7 @@ L'objectif fondamental du langage <i lang="en">Cascading Style Sheets</i> ([CSS]
 - La **propriété** est un identifiant, c'est-à-dire un _nom_ lisible par l'homme, qui définit quelle fonctionnalité est ciblée.
 - La **valeur** décrit comment la fonctionnalité doit être gérée par le moteur. Chaque propriété a un ensemble de valeurs valides, définies par une grammaire formelle, ainsi qu'une signification sémantique, implémentées par le moteur du navigateur.
 
-## déclarations CSS
+## Déclarations CSS
 
 La définition des propriétés CSS sur des valeurs spécifiques est la fonction principale du langage CSS. Une paire de propriété et de valeur s'appelle une **déclaration**, et tout moteur CSS calcule quelles déclarations s'appliquent à chaque élément d'une page afin de la mettre en page de manière appropriée et de la styliser.
 
