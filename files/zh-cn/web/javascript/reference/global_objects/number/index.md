@@ -63,7 +63,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
   - 忽略前导和尾随空格/行终止符。
   - 前导数值 `0` 不会导致该数值成为八进制文本（或在严格模式下被拒绝）。
   - `+` 和 `-` 允许在字符串的开头指示其符号。（在实际代码中，它们“看起来像”文字的一部分，但实际上是单独的一元运算符。）然而，该标志只能出现一次，不得后跟空格。
-  - `Infinity` 和 `-Infinity` 被认为是字面意思。在实际代码中，它们是全局变量。
+  - `Infinity` 和 `-Infinity` 被当作是字面量。在实际代码中，它们是全局变量。
   - 空字符串或仅空格字符串转换为 `0`。
   - 不允许使用[数字分隔符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators)。
 - [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 抛出 {{jsxref("TypeError")}}，以防止意外的强制隐式转换损失精度。
