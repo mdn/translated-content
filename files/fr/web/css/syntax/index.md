@@ -47,13 +47,7 @@ Une règle CSS est visualisé dans le diagramme ci-dessous.
 
 Comme un élément de la page peut correspondre à plusieurs sélecteurs, et donc par plusieurs règles contenant potentiellement plusieurs fois une même propriété, avec des valeurs différentes, la norme CSS définit laquelle a priorité sur l'autre et doit être appliquée&nbsp;: c'est ce qu'on appelle la [cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
-> **Note:** It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
-
-<!-- Je comprends le sens de ce paragraphe mais la syntaxe mérite vraiment d'être simplifiée. Peut être proposé une reformulation sur la version EN -->
-
-> **Remarque&nbsp;:** Il est important de noter que même si un ensemble de règles caractérisé par un groupe de sélecteurs est une sorte de raccourci remplaçant les règles individuellement définies, cela ne s'applique pas à la validité de l'ensemble de règles lui-même.
->
-> Cela conduit à une conséquence importante&nbsp;: si un seul sélecteur de base est invalide, comme lors de l'utilisation d'un pseudo-élément ou d'une pseudo-classe inconnus, l'ensemble du _sélecteur_ est invalide et donc la règle entière est ignorée (également invalide).
+> **Note :** Même si on peut utiliser une règle utilisant un groupe de sélecteurs afin d'éviter de dupliquer une même règle pour chaque sélecteur distinct de ce groupe, cela n'a pas exactement le même effet. En effet, si on utilise un groupe de sélecteurs contenant un sélecteur invalide, c'est tout le groupe qui sera invalide et la règle sera ignoré. Si on utilise plusieurs règles pour chacun des sélecteurs individuels, seule celle du sélecteur invalide ne sera pas appliquée.
 
 ## Instructions CSS
 
