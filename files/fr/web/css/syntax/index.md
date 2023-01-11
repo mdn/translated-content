@@ -41,7 +41,7 @@ Si les feuilles de style ne pouvaient appliquer qu'une déclaration à chaque é
 
 Le CSS permet cela en associant des conditions à des blocs de déclarations. Chaque bloc de déclaration (valide) est précédé d'un ou plusieurs [**sélecteurs**](/fr/docs/Web/CSS/CSS_Selectors) séparés par des virgules, qui sont des conditions sélectionnant certains éléments de la page. Un [<i lang="en">groupe de sélecteurs</i>](/fr/docs/Web/CSS/Selector_list) et un bloc de déclarations associé, ensemble, forment ce qu'on appelle une **règle** (en anglais, le terme formel est <i lang="en">ruleset</i>, mais <i lang="en">rule</i> est également usité).
 
-Un ensemble de règles CSS (ou règle) est visualisé dans le diagramme ci-dessous.
+Une règle CSS est visualisé dans le diagramme ci-dessous.
 
 ![css syntax - ruleset.png](ruleset.png)
 
