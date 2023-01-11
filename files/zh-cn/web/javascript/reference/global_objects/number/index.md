@@ -31,7 +31,7 @@ Number("unicorn"); // NaN
 Number(undefined); // NaN
 ```
 
-### 编码 Number 类型
+### Number 编码
 
 JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754](https://zh.wikipedia.org/wiki/雙精度浮點數) 值，类似于 Java 或者 C# 中的 `double`。这意味着它可以表示小数值，但是存储数值的大小和精度有一些限制。简而言之，IEEE 754 双精度数值使用 64 位来表示 3 个部分：
 
