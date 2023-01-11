@@ -55,7 +55,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 许多期望数值的内置操作是将它们的参数转换为数值（这在很大程度上就是为什么 `Number` 对象的行为与数值原始值相似的原因）。该[操作](https://tc39.es/ecma262/#sec-tonumber)可以总结如下：
 
-- Number 总是返回自己。
+- 对于 Number 则总是返回自己
 - [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 变成了 [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)。
 - [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 变成了 `0`。
 - `true` 变成了 `1`；`false` 变成了 `0`.
