@@ -1,6 +1,6 @@
-## 번역 지침
+# 번역 지침
 
-### 메타데이터
+## 메타데이터
 
 문서의 상단에 있는 메타데이터는 `title`, `slug`, `original_slug` 그리고 `l10n.*`만 번역해줍니다. (참고: [#7412](https://github.com/mdn/translated-content/issues/7412))
 
@@ -36,7 +36,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
   :
 ```
 
-### heading ID 번역
+## heading ID 번역
 
 기사 제목에는 거의 항상 ID가 주어지는데, 기사 내에서 네비게이션을 자동으로 생성하고 실시간 샘플을 생성하기 위한 코드 블록을 식별하는 등의 이유가 있습니다. 제목을 번역 할 때 ID도 같이 번역 할 필요가 없습니다. 나머지 슬러그는 번역되지 않으므로 모든 것이 일관되게 유지됩니다.
 
@@ -54,7 +54,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 
 일반적으로 모든 ID를 소문자로 작성하는 것이 좋습니다. 플랫폼은 어쨌든 렌더링시 자동으로 변환하지만 소문자로 유지하면 변환으로 인해 수동으로 만든 앵커 링크가 작동하지 않을 가능성이 적습니다.
 
-### code block 번역
+## code block 번역
 
 코드 블록을 번역 할 때 주석, 문자열, 변수 이름 및 출력물을 번역하는 것이 좋습니다.
 
@@ -62,7 +62,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 
 또한, 예제 번역을 고려할 때, 일부 예제는 별도의 저장소에 있는 라이브 버전 또는 소스 코드에 연결된다는 점을 염두에 두십시오. 여러분은 또한 번역 된 페이지에서 링크 할 외부 코드 예제의 번역 된 버전을 만드는 것을 고려할 수도 있습니다.
 
-### HTML 소스의 줄 바꿈
+## HTML 소스의 줄 바꿈
 
 일부 기사 소스 코드에서, 반드시 필요하지 않은 블록 수준 요소에서 줄 바꿈을 찾을 수 있습니다. 예를 들면 다음과 같습니다.
 
@@ -78,12 +78,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 
 일반적으로 소스 코드에서 이와 같은 줄 바꿈을 사용하지 않으므로 원하는 경우 자유롭게 제거 할 수 있으며 새 번역을 만들 때 추가하지 마십시오. 그러나 최종 렌더링 결과에 영향을 미치지 않으므로 이를 제거하는 데 너무 많은 시간을 소비하지 마십시오.
 
-### 역주/역자주
+## 역주/역자주
 
 그동안의 MDN 문서에서는 역주로 인한 자의적인 해석이 많았고, 전체적인 문서의 품질을 낮췄습니다. 역주가 꼭 필요한 상황이 아니라면 역주는 남기지 않으며, 남기더라도 따로 역주를 표시하지 않고 본문에 포함합니다.
 예시: [다음 링크 참고](https://github.com/mdn/translated-content/pull/1385#discussion_r667509255)
 
-### 기울임꼴
+## 기울임꼴
 
 한글은 기울임꼴에 적합하지 않습니다. 전용 이탤릭체가 없다는 것이 첫 이유이고, 문자의 조형이 (정)사각형인 것이 두 번째 이유입니다. [세부 내용 다음 링크 참고](https://github.com/mdn/translated-content/issues/1537)
 
@@ -93,7 +93,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 
 다만 진짜 강조를 해야하는 상황에는, 따옴표로 강조하고 PR로 소명합니다.
 
-### `:` 쌍점, `;` 쌍반점 지침
+## `:` 쌍점, `;` 쌍반점 지침
 
 뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-964241518)
 
@@ -143,7 +143,7 @@ The properties of these objects are as follows:
 이 객체들의 속성은 다음과 같습니다.
 ```
 
-### `—` 대시 지침
+## `—` 대시 지침
 
 `: 쌍점,  ; 쌍반점 지침`과 같은 맥락에서 `. 온점`으로 치환하는 것을 권장합니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-965500282)
 
