@@ -52,13 +52,13 @@ Access-Control-Expose-Headers: Content-Encoding
 Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision
 ```
 
-有凭证信息的请求，可以指定一个配置符：
+有凭证信息的请求，可以指定一个通配符：
 
 ```plain
 Access-Control-Expose-Headers: *
 ```
 
-但是，”*“ 对 [Authorization 头](/zh-CN/docs/Web/HTTP/Headers/Authorization) 不生效，需要显式指定：
+但是，“*” 对 [Authorization 头](/zh-CN/docs/Web/HTTP/Headers/Authorization) 不生效，需要显式指定：
 
 ```plain
 Access-Control-Expose-Headers: *, Authorization
@@ -73,7 +73,7 @@ Access-Control-Expose-Headers: *, Authorization
 {{Compat}}
 
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
