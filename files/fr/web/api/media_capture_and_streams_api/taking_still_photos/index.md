@@ -17,6 +17,8 @@ translation_of: Web/API/WebRTC_API/Taking_still_photos
 original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
 
+{{DefaultAPISidebar("Media Capture and Streams")}}
+
 ## Introduction et demo
 
 Ceci est un tutoriel rapide pour apprendre comment accéder à la caméra sur votre ordinateur et prendre des photos avec. Vous pouvez voir [le code final en action dans JSFiddle](https://jsfiddle.net/BaguetteSeeker/jchezp01/).
