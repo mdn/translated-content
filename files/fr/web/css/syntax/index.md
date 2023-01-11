@@ -53,7 +53,7 @@ Comme un élément de la page peut correspondre à plusieurs sélecteurs, et don
 
 Les ensembles de règles sont les principaux éléments constitutifs d'une feuille de style, qui se compose souvent d'une longue liste de ceux-ci. Mais il y a d'autres informations qu'on peut transmettre dans la feuille de style, comme le jeu de caractères, d'autres feuilles de style externes à importer, les descriptions des polices de caractères ou des compteurs de liste et bien d'autres. On utilisera alors d'autres types d'instructions spécifiques.
 
-Une **instruction** est un bloc de construction qui commence par n'importe quel caractère autre qu'un espace et se termine à la première accolade ou point-virgule fermant (en dehors d'une chaîne, sans échappement et non inclus dans un autre {}, () ou \[ ] paire).
+Une **instruction** est un bloc de construction qui commence par n'importe quel caractère autre qu'un espace et se termine à la première accolade ou point-virgule fermant (en dehors d'une chaîne, sans échappement et qui ne soit pas inclus dans une autre paire d'accolades (`{}`), de parenthèses (`()`), ou de crochets (`[]`)).
 
 ![css syntax - statements Venn diag.png](css_syntax_-_statements_venn_diag.png)
 
