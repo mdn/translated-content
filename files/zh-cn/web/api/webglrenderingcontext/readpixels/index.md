@@ -13,7 +13,7 @@ browser-compat: api.WebGLRenderingContext.readPixels
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.readPixels()`** 方法从当前color framebuffer中读取指定矩形的像素矩阵并转换为 {{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 对象。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的 **`WebGLRenderingContext.readPixels()`** 方法从当前color framebuffer中读取指定矩形的像素矩阵并转换为 {{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 对象。
 
 ## 语法
 
@@ -30,16 +30,16 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 ### 参数
 
 - `x`
-  - : A {{domxref("WebGL_API/Types", "GLint")}} 指定从矩形像素块的左下角读取的第一水平像素。（注：WebGL的y轴从下方向上为正方向）
+  - : {{domxref("WebGL_API/Types", "GLint")}} 指定从矩形像素块的左下角读取的第一水平像素。（注：WebGL的y轴从下方向上为正方向）
 - `y`
-  - : A {{domxref("WebGL_API/Types", "GLint")}} 指定从矩形像素块的左下角读取的第一垂直像素。
+  - : {{domxref("WebGL_API/Types", "GLint")}} 指定从矩形像素块的左下角读取的第一垂直像素。
 - `width`
   - : {{domxref("WebGL_API/Types", "GLsizei")}} 指定矩形的宽度。
 - `height`
   - : {{domxref("WebGL_API/Types", "GLsizei")}} 指定矩形的高度。
 - `format`
 
-  - : {{domxref("WebGL_API/Types", "GLenum")}} 指定像素数据的格式，可能的值：
+  - : {{domxref("WebGL_API/Types", "GLenum")}} 指定像素数据的格式，可能的值有：
 
     - `gl.ALPHA`
       - : 放弃红，绿，蓝，通道读取alpha通道的数据。
@@ -106,7 +106,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
     `format` 不是 `gl.RGBA`。
   - `type` 和 `pixels`不匹配。
 
-- `gl.INVALID_FRAMEBUFFER_OPERATION` 如果当前绑定的帧缓冲区未完成，则引发错误。
+- `gl.INVALID_FRAMEBUFFER_OPERATION` 如果当前绑定的帧缓冲区未完成，则引发此错误。
 
 ## 示例
 
@@ -126,6 +126,6 @@ console.log(pixels); // Uint8Array
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
 - [Typed Arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
