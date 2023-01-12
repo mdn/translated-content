@@ -110,7 +110,7 @@ gl.readPixels(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight, gl.RGBA, gl.U
 console.log(pixels); // Uint8Array
 ```
 
-## 规格
+## 规范
 
 {{Specifications}}
 
