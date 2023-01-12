@@ -52,7 +52,7 @@ const s = Boolean(myString);          // true
 
 ### 論理値への型強制
 
-論理値を期待する多くの組み込み演算は、まず引数を論理値に[型強制 (Type coercion)](https://developer.mozilla.org/ja/docs/Glossary/Type_coercion)します。[この変換](https://tc39.es/ecma262/#sec-tostring)は次のように要約されます。
+論理値を期待する多くの組み込み演算は、まず引数を論理値に[型強制 (Type coercion)](/ja/docs/Glossary/Type_coercion)します。[この変換](https://tc39.es/ecma262/#sec-tostring)は次のように要約されます。
 
 - 論理値（boolean）はそのまま返されます。
 - [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) は `false` に変換されます。
@@ -66,7 +66,7 @@ const s = Boolean(myString);          // true
 
 > **注意:** [文字列への型強制](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)や[数値への型強制](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)などの他の型の変換とは異なり、論理値への型強制はオブジェクトからプリミティブに変換しようとするわけではありません。
 
-言い換えれば、`false` に強制される値はほんの一握りで、これらは [falsy (偽値)](/ja/docs/Glossary/Falsy) と呼ばれる値です。それ以外の値は [truthy (真値)](/ja-US/docs/Glossary/Truthy) と呼ばれます。値が truthy (真値)であるかどうかは、論理演算子や条件文と共に使われるとき、あるいはあらゆる真偽値の文脈で使われるときに重要です。
+言い換えれば、`false` に強制される値はほんの一握りで、これらは [falsy (偽値)](/ja/docs/Glossary/Falsy) と呼ばれる値です。それ以外の値は [truthy (真値)](/ja/docs/Glossary/Truthy) と呼ばれます。値が truthy (真値)であるかどうかは、論理演算子や条件文と共に使われるとき、あるいはあらゆる真偽値の文脈で使われるときに重要です。
 
 JavaScriptで型強制と同じ効果を得るには、2つの方法があります。
 
