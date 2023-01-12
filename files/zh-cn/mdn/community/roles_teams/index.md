@@ -1,6 +1,7 @@
 ---
 title: 所有者和团队
-slug: MDN/Community/Users_teams
+slug: MDN/Community/Roles_teams
+original_slug: MDN/Community/Users_teams
 ---
 
 {{MDNSidebar}}

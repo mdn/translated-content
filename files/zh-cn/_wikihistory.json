@@ -15306,10 +15306,6 @@
     "modified": "2019-03-23T22:13:47.101Z",
     "contributors": ["fscholz", "wbamberg", "chen4w", "bigfat", "yxxgoogle"]
   },
-  "Web/API/WebRTC_API/adapter.js": {
-    "modified": "2020-04-17T09:34:28.178Z",
-    "contributors": ["charliex2", "physihan"]
-  },
   "Web/API/WebSocket": {
     "modified": "2020-10-15T21:37:01.958Z",
     "contributors": [
@@ -33710,5 +33706,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "orphaned/Web/API/WebRTC_API/adapter.js": {
+    "modified": "2020-04-17T09:34:28.178Z",
+    "contributors": ["charliex2", "physihan"]
   }
 }
