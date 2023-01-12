@@ -90,7 +90,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 ### 异常
 
 - `gl.INVALID_ENUM` 如果`format`或`type`不是可接受的值，则会引发此错误。
-- `gl.INVALID_OPERATION` 抛出此错误可能是因为
+- `gl.INVALID_OPERATION` 抛出此错误可能的原因：
 
   - `type` 是 `gl.UNSIGNED_SHORT_5_6_5` 并且
     `format` 不是 `gl.RGB`。
