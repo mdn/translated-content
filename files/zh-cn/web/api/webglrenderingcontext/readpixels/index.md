@@ -85,7 +85,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 
 ### 返回值
 
-无返回值 ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ### 异常
 
