@@ -1113,6 +1113,7 @@
 /zh-CN/docs/Localization	/zh-CN/docs/Glossary/Localization
 /zh-CN/docs/MDN/About	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
+/zh-CN/docs/MDN/Community/Users_teams	/zh-CN/docs/MDN/Community/Roles_teams
 /zh-CN/docs/MDN/Contribute/Content	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/Contribute/Content/CSS_style_guide	/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /zh-CN/docs/MDN/Contribute/Content/Custom_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
