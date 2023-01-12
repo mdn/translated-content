@@ -120,4 +120,4 @@ console.log(pixels); // Uint8Array
 
 ## 参见
 
-- [Typed Arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
