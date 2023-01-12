@@ -1,6 +1,6 @@
 ---
-title: 所有者和团队
-slug: MDN/Community/Users_teams
+title: MDN Web 文档角色和团队
+slug: MDN/Community/Roles_teams
 ---
 
 {{MDNSidebar}}
