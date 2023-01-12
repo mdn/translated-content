@@ -13,5 +13,5 @@ slug: Glossary/BigInt
 
 ### 参阅
 
-- JavaScript 数据结构：[BigInt](/zh-CN/docs/Web/JavaScript/Data_structures#BigInt_type)
+- JavaScript 数据结构：[BigInt](/zh-CN/docs/Web/JavaScript/Data_structures#bigint_类型)
 - JavaScript 全局对象 {{jsxref("BigInt")}}
