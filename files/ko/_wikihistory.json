@@ -4294,10 +4294,6 @@
     "modified": "2020-04-05T10:19:30.624Z",
     "contributors": ["peacekimjapan"]
   },
-  "Web/API/WebRTC_API/adapter.js": {
-    "modified": "2020-08-14T03:48:29.087Z",
-    "contributors": ["breadfit"]
-  },
   "Web/API/WebSocket": {
     "modified": "2020-10-15T21:42:28.844Z",
     "contributors": ["alattalatta", "TaeYoon2", "pjc0247"]
@@ -11656,6 +11652,10 @@
   "orphaned/Web/API/RTCPeerConnection/onidentityresult": {
     "modified": "2020-10-15T22:22:07.358Z",
     "contributors": ["chansbro"]
+  },
+  "orphaned/Web/API/WebRTC_API/adapter.js": {
+    "modified": "2020-08-14T03:48:29.087Z",
+    "contributors": ["breadfit"]
   },
   "orphaned/Web/API/WindowEventHandlers": {
     "modified": "2020-10-15T21:46:21.497Z",
