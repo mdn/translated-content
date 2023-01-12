@@ -1,7 +1,6 @@
 ---
-title: "aria-label"
+title: aria-label
 slug: Web/Accessibility/ARIA/Attributes/aria-label
-spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 
 O atributo `aria-label` define um valor de string que rotula um elemento interativo.

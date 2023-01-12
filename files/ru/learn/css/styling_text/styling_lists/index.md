@@ -76,7 +76,7 @@ paragraph for reference, paragraph for reference, paragraph for reference.</p>
 CSS, используемый для оформления текста и интервалов, выглядит следующим образом:
 
 ```css
-/* General styles */
+/* Базовые стили */
 
 html {
   font-family: Helvetica, Arial, sans-serif;
@@ -95,7 +95,7 @@ li, p {
   line-height: 1.5;
 }
 
-/* Description list styles */
+/* Задаём стили для списка описаний */
 
 
 dd, dt {

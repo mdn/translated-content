@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onload
 slug: conflicting/Web/API/Window/load_event
-translation_of: Web/API/GlobalEventHandlers/onload
 original_slug: Web/API/GlobalEventHandlers/onload
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: Public-Key-Pins-Report-Only
 slug: conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
-tags:
-  - Depreciado
-  - HPKP
-  - HTTP
-  - Obsoleto
-  - Segurança
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Public-Key-Pins-Report-Only
 original_slug: Web/HTTP/Headers/Public-Key-Pins-Report-Only
 ---
 

@@ -62,29 +62,134 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 ## 自主学习：嵌入类型的使用
 
-在这篇文章中，我们将直接进入自主学习部分，让你立即体会到嵌入技术的实用性。大家都非常熟悉[Youtube](https://www.youtube.com/)，但很多人不了解它所提供的一些分享功能。让我们来看看
-Youtube 如何让我们通过[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)在页面中嵌入喜欢的视频。
+> **备注：** 考虑到中国大陆学习者可能无法访问英文原文的某些示例网站，下文的部分示例已经替换为更易于访问和实践的网站。
 
-1. 首先，去 Youtube 找一个喜欢的视频。
-2. 在视频下方，你会看到一个*共享*按钮 - 点击查看共享选项。
-3. 选择“ *嵌入”*选项卡，你将得到一些 `<iframe>` 代码——复制一下。
-4. 粘贴到下面的*输入*框里，看看*输出*结果是什么。
+在这篇文章中，我们将直接进入自主学习部分，让你立即体会到嵌入技术的实用性。大家都非常熟悉 [Bilibili](https://www.bilibili.com/)，但很多人不了解它所提供的一些分享功能。让我们来看看 Bilibili 如何让我们通过 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 在页面中嵌入喜欢的视频。
 
-此外，你还可以试试在示例中嵌入 [Google 地图](https://www.google.com/maps/)：
+1. 首先，去 Bilibili 找一个喜欢的视频。
+2. 在视频下方，你会看到一个*分享*按钮（样式为一个向右箭头），鼠标停留在那个按钮上，可以看到一些分享选项。
+3. 选择“嵌入代码”选项，会出现“成功复制到剪贴板”的提示。
+4. 将复制的代码粘贴到下面的*输入*框里，看看*输出*结果是什么。
 
-1. 去 Google 地图找一个喜欢的地图。
-2. 点击 UI 左上角的“汉堡菜单”（三条水平线）。
-3. 选择*共享或嵌入地图*选项。
-4. 选择嵌入地图选项，这将给你一些`<iframe>`代码 - 复制一下。
-5. 粘贴到下面的*输入*框，看看*输出*结果是什么。
+此外，你还可以试试在示例中嵌入 [Bing 地图](https://cn.bing.com/maps)：
 
-如果你犯了某些错误，你可以点击 _Reset_ 按钮以重置编辑器。如果你确实被卡住了，按下 _Show solution_ 按钮以借鉴答案。
+1. 去 Bing 地图找一个喜欢的地图。
+2. 鼠标移动到 UI 上方的“更多”处。
+3. 选择*嵌入地图*选项。
+4. 在新打开的网页中，指定你喜欢的地图大小、类型、风格和链接，点击“生成代码”按钮，代码会复制到剪贴板中。
+5. 将复制的代码粘贴到下面的*输入*框，看看*输出*结果是什么。
+
+如果你犯了某些错误，你可以点击*重置*按钮以重置编辑器。如果你确实被卡住了，按下*显示答案*按钮以借鉴答案。
 
 ```html hidden
-<!DOCTYPE html> <html lang="zh-CN"> <head> <meta charset="utf-8"> <style> body { font-family: '微软雅黑', Helvetica, Arial, sans-serif; margin: 10px; background: #f5f9fa; } h2 { font-size: 16px; } code, textarea { font-family: Consolas, Menlo, monospace; } .output { min-height: 200px; } .input { min-height: 100px; width: 95%; } .a11y-label { margin: 0; text-align: right; font-size: 0.7rem; width: 98%; } .controls { width: 96%; text-align: right; } </style> </head> <body> <h2>实时输出</h2> <div class="output"></div> <h2>可编辑代码</h2> <p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> </p> <textarea id="code" class="input"></textarea> <div class="controls"> <button id="btn-reset">重置</button> <button id="btn-solution">显示答案</button> </div> <script> const btnReset = document.getElementById('btn-reset'); const btnSolution = document.getElementById('btn-solution'); const blockOutput = document.querySelector('.output'); const blockInput = document.querySelector('.input'); const original = '<p>改革春风吹满地</p>'; const answer = `<iframe src="https://player.bilibili.com/player.html?aid=19390801&cid=31621681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> <p>改革春风吹满地</p>`; let userEntry = ""; init(); btnReset.addEventListener('click', init); btnSolution.addEventListener('click', () => { if (btnSolution.textContent === '显示答案') { blockInput.value = blockOutput.innerHTML = answer; btnSolution.textContent = '隐藏答案'; } else { blockInput.value = blockOutput.innerHTML = userEntry; btnSolution.textContent = '显示答案'; } }); blockInput.addEventListener('keydown', (e) => { switch (e.key) { case 'Tab': e.preventDefault(); insertAtCursor('\t'); break; case "Escape": blockInput.blur(); break; } }); blockInput.addEventListener('keyup', () => { userEntry = blockInput.value; blockOutput.innerHTML = blockInput.value; if (btnSolution.textContent === '隐藏答案') { btnSolution.textContent = '显示答案'; } }); function init() { userEntry = blockOutput.innerHTML = blockInput.value = original; btnSolution.textContent = '显示答案'; } function insertAtCursor(text) { const scrollPos = blockInput.scrollTop; const cursorPos = blockInput.selectionStart; const front = blockInput.value.substring(0, cursorPos); const back = blockInput.value.substring( blockInput.selectionEnd, blockInput.value.length); blockInput.value = front + text + back; blockInput.selectionStart = blockInput.selectionEnd = cursorPos + text.length; blockInput.focus(); blockInput.scrollTop = scrollPos; } </script> </body> </html>
+<p>可以试着引入B站（哔哩哔哩视频网站）的“改革春风吹满地”视频吗？（其BV号为BV1bW411n7fY）</p>
+<h2>实时输出</h2>
+<div class="output" style="min-height: 250px;"></div>
+<h2>可编辑代码</h2>
+<p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符
+  <code>'\t'</code>
+</p>
+<textarea
+  id="code"
+  class="input"
+  style="width: 95%;min-height: 100px;"></textarea>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="重置" />
+  <input id="solution" type="button" value="显示答案" />
+</div>
 ```
 
-{{ EmbedLiveSample('自主学习：嵌入类型的使用', 700, 600, "", "", "hide-codepen-jsfiddle") }}
+```css hidden
+html {
+  font-family: sans-serif;
+}
+h2 {
+  font-size: 16px;
+}
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
+let code = textarea.value;
+let userEntry = textarea.value;
+function updateCode() {
+  output.innerHTML = textarea.value;
+}
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "显示答案";
+  updateCode();
+});
+solution.addEventListener("click", function () {
+  if (solution.value === "显示答案") {
+    textarea.value = solutionEntry;
+    solution.value = "隐藏答案";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "显示答案";
+  }
+  updateCode();
+});
+const htmlSolution =
+  '<iframe src="//player.bilibili.com/player.html?aid=19390801&bvid=BV1bW411n7fY&cid=31621681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>';
+let solutionEntry = htmlSolution;
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+function insertAtCaret(text) {
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
+  textarea.value = front + text + back;
+  caretPos += text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+// Update the saved userCode every time the user updates the text area code
+textarea.onkeyup = function () {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "显示答案") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+  updateCode();
+};
+```
+
+{{ EmbedLiveSample('自主学习：嵌入类型的使用', 700, 600) }}
 
 ## Iframe 详解
 

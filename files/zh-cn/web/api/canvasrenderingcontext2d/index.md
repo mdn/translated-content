@@ -20,8 +20,8 @@ slug: Web/API/CanvasRenderingContext2D
 要获取画布的 2D 渲染上下文，请在`<canvas>`元素上调用{{domxref("HTMLCanvasElement.getContext()", "getContext()")}}，并提供`'2d'`作为参数：
 
 ```js
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("my-house");
+const ctx = canvas.getContext("2d");
 ```
 
 有了上下文，您就可以绘制任何喜欢的东西。此代码绘制了一个房子：
@@ -47,32 +47,7 @@ ctx.stroke();
 
 生成的图形如下所示：
 
-```html hidden
-<canvas id="my-house" width="300" height="300"></canvas>
-```
-
-```js hidden
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
-// Set line width
-ctx.lineWidth = 10;
-
-// Wall
-ctx.strokeRect(75, 140, 150, 110);
-
-// Door
-ctx.fillRect(130, 190, 40, 60);
-
-// Roof
-ctx.beginPath();
-ctx.moveTo(50, 140);
-ctx.lineTo(150, 60);
-ctx.lineTo(250, 140);
-ctx.closePath();
-ctx.stroke();
-```
-
-{{EmbedLiveSample('Basic_example', 700, 330)}}
+{{EmbedLiveSample('基础示例', 700, 330)}}
 
 ## 绘制矩形
 
