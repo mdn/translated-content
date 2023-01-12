@@ -22,7 +22,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 ### 参数
 
 - `x`
-  - : {{domxref("WebGL_API/Types", "GLint")}} 指定从矩形像素块的左下角读取的第一水平像素。（注：WebGL的y轴从下方向上为正方向）
+  - : {{domxref("WebGL_API/Types", "GLint")}} 指定从矩形像素块的左下角读取的第一水平像素。（注：WebGL的y轴从下方，向上为正方向）
 - `y`
   - : {{domxref("WebGL_API/Types", "GLint")}} 指定从矩形像素块的左下角读取的第一垂直像素。
 - `width`
@@ -34,11 +34,11 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
   - : {{domxref("WebGL_API/Types", "GLenum")}} 指定像素数据的格式，可能的值有：
 
     - `gl.ALPHA`
-      - : 放弃红，绿，蓝，通道读取alpha通道的数据。
+      - : 放弃 红，绿，蓝 通道读取alpha通道的数据。
     - `gl.RGB`
-      - : 放弃alpha通道读取红、绿、蓝通道的数据。
+      - : 放弃alpha通道读取 红、绿、蓝 通道的数据。
     - `gl.RGBA`
-      - : 从颜色缓存区读取红、绿、蓝以及alpha通道的数据。
+      - : 从颜色缓存区读取 红、绿、蓝以及alpha 通道的数据。
 
     WebGL2 增加的
 
