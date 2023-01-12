@@ -25,9 +25,9 @@ L'API Web Speech a une interface principale de contrôle — {{domxref("SpeechRe
 
 ### Demo
 
-Pour montrer une simple utilisation de la reconnaissance vocale Web speech, nous avons écrit une demo appelée [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer). Quand l'écran est touché ou cliqué, vous pouvez dire un mot clé de couleur HTML et la couleur d'arrière plan de l'application sera modifié par la couleur choisie.
+Pour montrer une simple utilisation de la reconnaissance vocale Web speech, nous avons écrit une demo appelée [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer). Quand l'écran est touché ou cliqué, vous pouvez dire un mot clé de couleur HTML et la couleur d'arrière plan de l'application sera modifié par la couleur choisie.
 
-Pour lancer la demo, vous pouvez cloner (ou [directement télécharger](https://github.com/mdn/web-speech-api/archive/master.zip)) le dépôt Github dont elle fait partie, ouvrir le fichier d'index HTML dans un navigateur pour ordinateur de bureau le supportant comme Chrome, ou naviguer vers [l'URL de démonstration live](https://mdn.github.io/web-speech-api/speech-color-changer/), sur un navigateur pour mobile le supportant comme Chrome.
+Pour lancer la demo, vous pouvez cloner (ou [directement télécharger](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip)) le dépôt Github dont elle fait partie, ouvrir le fichier d'index HTML dans un navigateur pour ordinateur de bureau le supportant comme Chrome, ou naviguer vers [l'URL de démonstration live](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/), sur un navigateur pour mobile le supportant comme Chrome.
 
 ### Support des navigateurs
 
@@ -178,9 +178,9 @@ The Web Speech API has a main controller interface for this — {{domxref("Speec
 
 ### Demo
 
-To show simple usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://mdn.github.io/web-speech-api/speak-easy-synthesis/). This includes a set of form controls for entering text to be synthesised, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
+To show simple usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/). This includes a set of form controls for entering text to be synthesised, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
 
-To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
+To run the demo, you can clone (or [directly download](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
 
 ### Browser support
 
