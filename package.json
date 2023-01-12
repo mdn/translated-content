@@ -14,7 +14,6 @@
     "url": "git+https://github.com/mdn/translated-content.git"
   },
   "scripts": {
-    "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
     "fix:json": "prettier -w \"**/*.json\"",
     "fix:md": "markdownlint-cli2-fix \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
