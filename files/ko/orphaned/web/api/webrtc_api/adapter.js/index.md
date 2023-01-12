@@ -1,6 +1,7 @@
 ---
 title: Improving compatibility using WebRTC adapter.js
-slug: Web/API/WebRTC_API/adapter.js
+slug: orphaned/Web/API/WebRTC_API/adapter.js
+original_slug: Web/API/WebRTC_API/adapter.js
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
