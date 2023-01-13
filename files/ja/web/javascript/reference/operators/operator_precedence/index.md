@@ -484,7 +484,7 @@ a?.b.c;        // 最初に `a` を評価し、 `a` が `null` または `undefi
     <tr>
       <td>3</td>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件演算子（三項演算子）</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件（三項）演算子</a>
       </td>
       <td>右から左</td>
       <td><code>… ? … : …</code></td>
