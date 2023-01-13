@@ -101,7 +101,7 @@ body {
 
 ### Результат
 
-{{EmbedLiveSample("Примеры", 600, 400)}}
+{{EmbedLiveSample("Examples", 600, 400)}}
 
 ## Спецификации
 
