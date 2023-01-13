@@ -5,7 +5,7 @@ slug: Web/API/SubtleCrypto/decrypt
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-{{domxref("SubtleCrypto")}} 接口的 **`decrypt()`** 方法用于解密加密数据。它以用于解密的{{glossary("key", "密钥")}}、一些可选的额外参数，以及需要解密的数据（也称为“密文”）为参数；返回一个 {{jsxref("Promise")}}，会兑现解密后的数据（也称为“明文”）。
+{{domxref("SubtleCrypto")}} 接口的 **`decrypt()`** 方法用于解密加密数据。它以用于解密的{{glossary("key", "密钥")}}、一些可选的额外参数，以及待解密的数据（也称为“密文”）为参数；返回一个 {{jsxref("Promise")}}，会兑现解密后的数据（也称为“明文”）。
 
 ## 语法
 
@@ -34,7 +34,7 @@ decrypt(algorithm, key, data)
 
 ### 异常
 
-Promise 将会在以下的异常被触发时返回被拒绝：
+当遇到以下异常时，promise 将会被拒绝：
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : 当提供的密钥无法执行请求的操作时（如：解密算法无效，或对指定的解密算法提供了无效的密钥）。
@@ -47,7 +47,7 @@ Promise 将会在以下的异常被触发时返回被拒绝：
 
 ## 示例
 
-> **备注：** 你可以在 GitHub 上尝试[这个可用的示例](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
+> **备注：** 你可以在 GitHub 上[尝试这个可用的示例](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
 
 ### RSA-OAEP
 
@@ -65,7 +65,7 @@ function decryptMessage(privateKey, ciphertext) {
 
 ### AES-CTR
 
-以下代码使用 CTR 模式的 AES 解密 `ciphertext`。请注意，`counter` 必须与加密时使用的值相匹配。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-ctr.js)
+以下代码使用计数器（CTR）模式的 AES 解密 `ciphertext`。请注意，`counter` 必须与加密时使用的值相匹配。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-ctr.js)
 
 ```js
 function decryptMessage(key, ciphertext) {
@@ -79,7 +79,7 @@ function decryptMessage(key, ciphertext) {
 
 ### AES-CBC
 
-以下代码使用 CBC 模式的 AES 解密 `ciphertext`。请注意，`iv` 必须与加密时使用的值相匹配。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-cbc.js)
+以下代码使用密码块链接（CBC）模式的 AES 解密 `ciphertext`。请注意，`iv` 必须与加密时使用的值相匹配。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-cbc.js)
 
 ```js
 function decryptMessage(key, ciphertext) {
@@ -89,7 +89,7 @@ function decryptMessage(key, ciphertext) {
 
 ### AES-GCM
 
-以下代码使用 GCM 模式的 AES 解密 `ciphertext`。请注意，`iv` 必须与加密时使用的值相匹配。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
+以下代码使用伽罗瓦/计数器（GCM）模式的 AES 解密 `ciphertext`。请注意，`iv` 必须与加密时使用的值相匹配。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
 
 ```js
 function decryptMessage(key, ciphertext) {
