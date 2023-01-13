@@ -363,9 +363,9 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
      }
    ```
 
-   > **備註：** 如你所見，反應式陳述不僅限於單行。以下程式碼也有作用，但可讀性較差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
+   > **備註：** 如你所見，反應性陳述不僅限於單行。以下程式碼也有作用，但可讀性較差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
-2. Svelte 是如何做到這一點的？編譯器會解析整個反應式陳述並檢測到它依賴於 `totalTodos` 變數和 `todos` 陣列。所以每當它們中任何一個被修改時，都會重新評估程式碼並相應地更新 `newTodoId`。
+2. Svelte 是如何做到這一點的？編譯器會解析整個反應性陳述並檢測到它依賴於 `totalTodos` 變數和 `todos` 陣列。所以每當它們中任何一個被修改時，都會重新評估程式碼並相應地更新 `newTodoId`。
 
    讓我們在 `addTodo()` 函式中使用它。像這樣更新它：
 
@@ -439,50 +439,50 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
 > **備註：** 反應性有時會很棘手。Svelte 將 `filter` 識別為依賴，是因為我們在 `filterTodos(filter, todo)` 表達式中參考它。而 `filter` 是一個頂層變數，所以我們可能會想把它從輔助函式參數（params）中刪除，然後像這樣呼叫它：`filterTodos(todo)`。這雖會起作用，但現在 Svelte 會無法發現 `{#each filterTodos(todos) }` 依賴於 `filter` 並且當過濾器變更時，過濾完的待辦事項清單不會再被更新。切記 Svelte 會分析我們的程式碼以找出依賴關係，所以最好明確解釋它，而不是依賴於頂層變數的可見性。此外，讓我們的程式碼清晰並明確地解釋它正在使用的資訊是一個很好的做法。
 
-## The code so far
+## 到目前為止的程式碼
 
 ### Git
 
-To see the state of the code as it should be at the end of this article, access your copy of our repo like this:
+若想要看到本文結束後程式碼所呈現的最終結果，你可以參照下列的方式存取我們已經複製下來的儲存庫：
 
 ```bash
 cd mdn-svelte-tutorial/04-componentizing-our-app
 ```
 
-Or directly download the folder's content:
+或直接下載資料夾內容：
 
 ```bash
 npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app
 ```
 
-Remember to run `npm install && npm run dev` to start your app in development mode.
+記得執行 `npm install && npm run dev` 以開發模式來運行你的應用程式。
 
 ### REPL
 
-To see the current state of the code in a REPL, visit:
+若要在 REPL 看見當前程式碼狀態，請點擊如下連結：
 
 <https://svelte.dev/repl/99b9eb228b404a2f8c8959b22c0a40d3?version=3.23.2>
 
-## Summary
+## 總結
 
-That will do for now! In this article we already implemented most of our desired functionality. Our app can display, add, and delete to-dos, toggle their completed status, show how many of them are completed, and apply filters.
+截至目前為止做得好！在本篇文章中，我們已經實現了大部分想要的功能。我們的應用程式可以顯示、新增和刪除待辦事項，切換其完成狀態、顯示已完成的數量和使用多個過濾器。
 
-To recap, we covered the following topics:
+回顧一下，我們涵蓋了以下主題：
 
-- Creating and using components
-- Turning static markup into a live template
-- Embedding JavaScript expressions in our markup
-- Iterating over lists using the `{#each}` directive
-- Passing information between components with props
-- Listening to DOM events
-- Declaring reactive statements
-- Basic debugging with `console.log()` and reactive statements
-- Binding HTML properties with the `bind:property` directive
-- Triggering reactivity with assignments
-- Using reactive expressions to filter data
-- Explicitly defining our reactive dependencies
+- 建立和使用元件
+- 轉換靜態標記為動態範本
+- 在標記語言嵌入 JavaScript 表達式
+- 使用 `{#each}` 指令迭代清單
+- 透過屬性在元件之間傳遞資訊
+- 監聽 DOM 事件
+- 宣告反應性陳述
+- 使用 `console.log()` 和反應性陳述進行基本偵錯
+- 使用 `bind:property` 指令綁定 HTML 屬性
+- 透過指定觸發反應性
+- 使用反應性表達式過濾資料
+- 明確定義我們的反應依賴關係
 
-In the next article we will add further functionality, which will allow users to edit to-dos.
+在下一篇文章中，我們將新增更多功能，允許使用者編輯待辦事項。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
