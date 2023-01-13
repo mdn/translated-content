@@ -140,3 +140,4 @@ OSP に取り組んでいる多くの人々は、無報酬で自分の時間を�
 - [オープンソースにコントリビュートする方法](https://opensource.guide/ja/how-to-contribute/)
 - [More general freeCodeCamp "How to contribute to open source" list](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
 - [Getting started with contributing to open source](https://stackoverflow.blog/2020/08/03/getting-started-with-contributing-to-open-source/)
+- [Best Practices to Manage Pull Request Creation and Feedback](https://doordash.engineering/2022/08/23/6-best-practices-to-manage-pull-request-creation-and-feedback/)
