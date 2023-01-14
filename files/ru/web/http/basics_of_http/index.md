@@ -1,5 +1,5 @@
 ---
-title: Basics of HTTP
+title: Основы HTTP
 slug: Web/HTTP/Basics_of_HTTP
 tags:
   - HTTP
@@ -21,27 +21,27 @@ HTTP удобный расширяемый протокол. Он опирает
   - : HTTP был создан в начале 1990-х годов и несколько раз был расширен. Эта статья даёт обзор его истории и описывает HTTP/0.9, HTTP/1.0, HTTP/1.1, и современный HTTP/2, а также незначительные нововведения представленные в последние несколько лет.
 - [Обсуждение версии HTTP](/ru/docs/Web/HTTP/Basics_of_HTTP/Negotiating_an_HTTP_version)
   - : Описывает, как клиент и сервер могут договориться о конкретной версии HTTP и в конечном счёте перейти на более новую версию протокола.
-- [Resources and URIs](/ru/docs/Web/HTTP/Resources_and_URIs)
-  - : A brief introduction of the notion of resources, identifiers, and locations on the Web.
-- [Identifying resources on the Web](/ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-  - : Describes how Web resources are referenced and how to locate them.
+- [Рсурсы и URIs](/ru/docs/Web/HTTP/Resources_and_URIs)
+  - : Краткий обзор и определение ресурсов, идентификаторов и местоположений в Интернете.
+- [Обнаружение ресурсов в Инетрнете](/ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+  - : Описывает, как ссылаются на веб-ресурсы и как их найти.
 - [Data URIs](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
-  - : A specific kind of URIs that directly embeds the resource it represents. Data URIs are very convenient, but have some caveats.
-- Separating identity and location of a resource: the Alt-Svc HTTP header
-  - : Most of the time identity and location of a Web resource are shared, this can be changed with the {{HTTPHeader("Alt-Svc")}} header.
-- [MIME types](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
-  - : Since HTTP/1.0, different types of content can be transmitted. This article explains how this is done using the {{HTTPHeader("Content-Type")}} header and the MIME standard.
-- [Choosing between www and non-www URLs](/ru/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)
-  - : Advice on using a www-prefixed domain or not, this article explains the consequences of the choice as well as how to make it.
-- Flow of an HTTP session
-  - : This fundamental article describes a typical HTTP session: what happens under the hood when you click on a link in your browser…
-- [HTTP Messages](/ru/docs/Web/HTTP/Messages)
-  - : HTTP Messages transmitted during requests or responses have a very clear structure; this introductory article describes this structure, its purpose and its possibilities.
-- Frame and message structure in HTTP/2
-  - : HTTP/2 encapsulates and represents HTTP/1.x messages in a binary frame. This article explains the frame structure, its purpose and the way it is encoded.
-- [Connection management in HTTP/1.x](/ru/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
-  - : HTTP/1.1 was the first version of HTTP to support persistent connection and pipelining. This article explains these two concepts.
-- Connection management in HTTP/2
-  - : HTTP/2 completely revisited how connections are created and maintained: this article explains how HTTP frames allow multiplexing and solve the 'head-of-line' blocking problem of former HTTP versions.
-- [Content Negotiation](/ru/docs/Web/HTTP/Content_negotiation)
-  - : HTTP introduces a set of headers, starting with `Accept-` as a way for a browser to announce the format, language, or encoding it prefers. This article explains how this advertisement happens, how the server is expected to react and how it will choose the most adequate response.
+  - : Определенный тип URI, который непосредственно встраивает ресурс, который он представляет. Data URI очень удобны, но есть нюансы.
+- Разделение идентификатора и местоположения ресурса: HTTP-заголовок Alt-Svc
+  - : В большинстве случаев идентификация и местоположение веб-ресурса являются общими, это можно изменить с помощью заголовка {{HTTPHeader("Alt-Svc")}}.
+- [MIME типы](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
+  - : Начиная с HTTP/1.0, можно передавать различные типы контента. В этой статье объясняется, как это делается с помощью заголовка {{HTTPHeader("Content-Type")}} и стандарта MIME.
+- [Выбор между URL-адресами с www и без www](/ru/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)
+  - :Советы по использованию домена с префиксом www или же без него. В этой статье объясняются последствия выбора, а также то, как его сделать.
+- Поток HTTP-сессии
+  - : В этой фундаментальной статье описывается типичный сеанс HTTP: что происходит внутри, когда вы нажимаете на ссылку в браузере…
+- [HTTP собщения](/ru/docs/Web/HTTP/Messages)
+  - : Сообщения HTTP, передаваемые во время запросов или ответов, имеют очень четкую структуру; эта вводная статья описывает эту структуру, ее назначение и возможности.
+- Структура фрейма и сообщения в HTTP/2
+  - : HTTP/2 инкапсулирует и представляет сообщения HTTP/1.x в двоичном фрейме. В этой статье объясняется структура фрейма, его назначение и способ кодирования.
+- [Управление соединениями в HTTP/1.x](/ru/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+  - : HTTP/1.1 был первой версией HTTP, поддерживающей постоянное соединение и конвейерную обработку. В этой статье объясняются эти две концепции.
+- Управление соединениями в HTTP/2
+  - : В HTTP/2 полностью пересмотрено создание и поддержка соединения: в этой статье объясняется, как кадры HTTP позволяют мультиплексировать и решают проблему блокировки «заголовка строки» предыдущих версий HTTP.
+- [Объявления о содержимом](/ru/docs/Web/HTTP/Content_negotiation)
+  - : HTTP вводит набор заголовков, начиная с `Accept-`, как способ для браузера объявить предпочтительный формат, язык или кодировку. В этой статье объясняется, как происходит это объявление, как ожидается реакция сервера и как он выберет наиболее адекватный ответ.
