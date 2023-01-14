@@ -173,7 +173,7 @@ translation_of: Web/HTML/Element/meta
 <!-- В HTML5 -->
 <meta charset="utf-8">
 
-<!-- Переход на другую страницу через 3-и секунды -->
+<!-- Переход на другую страницу через три секунды -->
 <meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
 ```
 
