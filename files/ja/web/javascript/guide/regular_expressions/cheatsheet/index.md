@@ -234,7 +234,7 @@ l10n:
       </td>
       <td>
         <p>
-          <strong>論理和: </strong>"x" または "y" に一致します。パイプ (<code>|<code>) で区切られた各成分は、代替 (<em>alternative</em>)と呼ばれます。例えば、<code>/green|red/</code> は "green apple" の "green" と "red apple" の "red" に一致します。
+          <strong>論理和: </strong>"x" または "y" に一致します。パイプ (<code>|</code>) で区切られた各成分は、代替 (<em>alternative</em>)と呼ばれます。例えば、<code>/green|red/</code> は "green apple" の "green" と "red apple" の "red" に一致します。
         </p>
         <div class="notecard note">
           <p>
