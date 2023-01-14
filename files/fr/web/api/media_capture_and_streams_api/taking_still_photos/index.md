@@ -11,7 +11,6 @@ Dans cet article, nous verrons comment utiliser [`navigator.mediaDevices.getUser
 
 ![Une capture d'écran d'une application de capture d'image basée sur getUserMedia(). À gauche, on peut voir un flux vidéo provenant de la webcam et un bouton pour prendre une photo. Sur la droite, on voit le cliché correspondant à la photo prise.](web-rtc-demo.png)
 
-
 Vous pouvez directement aller voir [la démo](#démonstration) si vous préférez.
 
 ## Le balisage HTML
