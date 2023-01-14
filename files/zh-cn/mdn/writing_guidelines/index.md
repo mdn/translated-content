@@ -91,4 +91,4 @@ MDN Web 文档是一个开源项目。下面的概述部分描述了有关我们
 
 - [如何标记一项技术](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
 
-  - : 本节涵盖了我们对过时、弃用和实验性术语的定义，并提供了关于何时从 MDN Web 文档中删除相应内容的指南。
+  - : 本节涵盖了我们对过时、弃用和实验性术语的定义以及使用这些术语去标记一项技术的情形，并提供了关于何时从 MDN Web 文档中删除相应内容的指南。
