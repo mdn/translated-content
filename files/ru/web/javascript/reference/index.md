@@ -182,7 +182,7 @@ translation_of: Web/JavaScript/Reference
 
 ## Выражения и операторы
 
-[JavaScript expressions and operators](/en-US/docs/Web/JavaScript/Reference/Operators).
+[JavaScript expressions and operators](/ru-RU/docs/Web/JavaScript/Reference/Operators).
 
 ### Основные выражения
 
@@ -233,13 +233,13 @@ translation_of: Web/JavaScript/Reference
 - {{JSxRef("Operators/Multiplication", "*")}}
 - {{JSxRef("Operators/Division", "/")}}
 - {{JSxRef("Operators/Remainder", "%")}}
-- {{JSxRef("Operators/Addition", "+")}} (Plus)
+- {{JSxRef("Operators/Addition", "+")}} (Плюс)
 - {{JSxRef("Operators/Subtraction", "-")}}
 
 ### Реляционные операторы
 
-- {{JSxRef("Operators/Less_than", "&lt;")}} (Less than)
-- {{JSxRef("Operators/Greater_than", "&gt;")}} (Greater than)
+- {{JSxRef("Operators/Less_than", "&lt;")}} (Меньше чем)
+- {{JSxRef("Operators/Greater_than", "&gt;")}} (Больше чем)
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
 - {{JSxRef("Operators/instanceof", "instanceof")}}
@@ -311,24 +311,24 @@ translation_of: Web/JavaScript/Reference
 
 [JavaScript функции.](/ru-RU/docs/Web/JavaScript/Reference/Functions)
 
-- {{JSXRef("Functions/Arrow_functions", "Arrow Functions", "", 1)}}
-- {{JSxRef("Functions/Default_parameters", "Default parameters", "", 1)}}
-- {{JSxRef("Functions/rest_parameters", "Rest parameters", "", 1)}}
+- {{JSXRef("Functions/Arrow_functions", "Стрелочные функции", "", 1)}}
+- {{JSxRef("Functions/Default_parameters", "Стандартные параметры", "", 1)}}
+- {{JSxRef("Functions/rest_parameters", "Остальные параметры", "", 1)}}
 - {{JSxRef("Functions/arguments", "arguments")}}
-- {{JSxRef("Functions/Method_definitions", "Method definitions", "", 1)}}
+- {{JSxRef("Functions/Method_definitions", "Определения методов", "", 1)}}
 - {{JSxRef("Functions/get", "getter", "", 1)}}
 - {{JSxRef("Functions/set", "setter", "", 1)}}
 
 ## Классы
 
-[JavaScript классы.](/en-US/docs/Web/JavaScript/Reference/Classes)
+[JavaScript классы.](/ru-RU/docs/Web/JavaScript/Reference/Classes)
 
 - {{JSxRef("Classes/Constructor", "constructor")}}
 - {{JSxRef("Classes/extends", "extends")}}
-- [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
-- [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [Особенности приватных классов](/ru-RU/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Поля открытого класса](/ru-RU/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{JSxRef("Classes/static", "static")}}
-- [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- [Статические блоки инициализации](/ru-RU/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
 ## Дополнительные справочные страницы
 
