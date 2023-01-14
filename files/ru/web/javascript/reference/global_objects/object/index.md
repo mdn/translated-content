@@ -127,17 +127,11 @@ new Object([value])
 
 ### Пример: использование `Object` с типами `undefined` и `null`
 
-Следующий пример сохраняет пустой объект `Object` в переменную `o`:
+Следующие примеры сохраняют пустой объект `Object` в переменную `o`:
 
 ```js
 const o = new Object();
-```
-
-```js
 const o = new Object(undefined);
-```
-
-```js
 const o = new Object(null);
 ```
 
