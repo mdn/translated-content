@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference
 
 {{JsSidebar}}
 
-этот раздел служит хранилищем фактов о языке JavaScript. Весь язык подробно описан здесь. При написании кода JavaScript вы будете часто ссылаться на эти страницы (отсюда и название "Справочник по JavaScript").
+Этот раздел MDN служит хранилищем фактов о языке JavaScript. Весь язык подробно описан здесь. При написании кода JavaScript вы будете часто ссылаться на эти страницы (отсюда и название "Справочник по JavaScript").
 
 Язык JavaScript предназначен для использования в какой-либо более крупной среде, будь то браузер, серверные скрипты или что-то подобное. По большей части, этот справочник пытается быть независимым от среды и не ориентирован на среду веб-браузера.
 
@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference
 
 ## Встроенные модули
 
-Эта глава описывает все [стандартные встроенные объекты JavaScript](/ru/docs/Web/JavaScript/Reference/Global_Objects) вместе с их методами и свойствами.
+Эта глава описывает все [стандартные встроенные объекты JavaScript](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects) вместе с их методами и свойствами.
 
 ### Значения свойств
 
@@ -195,7 +195,7 @@ translation_of: Web/JavaScript/Reference
 - {{JSxRef("Operators/function*", "function*")}}
 - {{JSxRef("Operators/async_function", "async function")}}
 - {{JSxRef("Operators/async_function*", "async function*")}}
-- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
+- {{JSxRef("Global_Objects/RegExp", "/abc/i")}}
 - {{JSxRef("Template_literals", "`string`")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
 
@@ -233,7 +233,7 @@ translation_of: Web/JavaScript/Reference
 - {{JSxRef("Operators/Multiplication", "*")}}
 - {{JSxRef("Operators/Division", "/")}}
 - {{JSxRef("Operators/Remainder", "%")}}
-- {{JSxRef("Operators/Addition", "+")}} (Плюс)
+- {{JSxRef("Operators/Addition", "+")}}
 - {{JSxRef("Operators/Subtraction", "-")}}
 
 ### Реляционные операторы
