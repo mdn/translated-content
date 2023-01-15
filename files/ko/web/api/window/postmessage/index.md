@@ -28,7 +28,7 @@ targetWindow.postMessage(message, targetOrigin, [transfer]);
 - `targetOrigin`
   - : `targetWindow`의 origin을 지정합니다. 이는 전송되는 이벤트에서 사용되며, 문자열 `"*"`(별도로 지정하지 않음을 나타냄) 혹은 URI이어야 합니다. 이벤트를 전송하려 할 때에 `targetWindow`의 스키마, 호스트 이름, 포트가 `targetOrigin`의 정보와 맞지 않다면, 이벤트는 전송되지 않습니다. 세 가지 모두 일치해야 이벤트가 전송됩니다. 이는 메세지를 보내는 곳을 제안하기 위함입니다. 예를 들어, `postMessage()`를 통해 비밀번호가 전송된다면, 악의적인 제 3자가 가로채지 못하도록, `targetOrigin`을 반드시 지정한 수신자와 동일한 URI를 가지도록 설정하는 것이 정말 중요합니다. **다른 window의 document의 위치를 알고 있다면, 항상 `targetOrigin`에 `*` 말고 특정한 값을 설정하세요. 특정한 대상을 지정하지 않으면 악의적인 사이트에 전송하는 데이터가 공개되어 버립니다.**
 - `transfer` {{optional_Inline}}
-  - : 일련의 {{Glossary("transferable objects", "transfer")}} 객체들. 메세지와 함께 전송됩니다. 이 객체들의 소유권은 수신 측에게 전달되며, 더 이상 송신 측에서 사용할 수 없습니다.
+  - : 일련의 {{Glossary("transferable objects", "transfer 객체")}}. 메세지와 함께 전송됩니다. 이 객체들의 소유권은 수신 측에게 전달되며, 더 이상 송신 측에서 사용할 수 없습니다.
 
 ## 디스페치 이벤트(The dispatched event)
 
