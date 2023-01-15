@@ -172,7 +172,6 @@ const data = Promise.race([
 
 `data` のプロミスが履行された場合は、 `/api` から取得されたデータが格納されます。そうでない場合は、 `fetch` が 5 秒間待機していた場合に拒否され、 `setTimeout` タイマーとの競争に負けたことになります。
 
-
 ### Promise.race() を使用してプロミスの状態を検出
 
 `Promise.race()` は反復可能オブジェクトの中で最初に待機していないプロミスに解決するため、待機しているかどうかを含めてプロミスの状態を調べることができます。この例は [`promise-status-async`](https://github.com/kudla/promise-status-async/blob/master/lib/promiseState.js) から引用しています。
@@ -220,7 +219,7 @@ setTimeout(() => {
 // { status: 'rejected', reason: 300 }
 ```
 
-> **メモ:** `promiseState` 関数は非同期で実行されます。プロミスの値を同期的に取得する方法がないからです（つまり、 `then()` や `await` がない場合）、たとえプロミスが既に決定されていたとしてもです。しかし、`promiseState()` は常に 1 tick 以内に履行され、実際にプロミスの決定を待つことはありません。
+> **メモ:** `promiseState` 関数は非同期で実行されます。プロミスの値を同期的に取得する方法がないからです（つまり、 `then()` や `await` がない場合）、たとえプロミスが既に決定されていたとしてもです。しかし、`promiseState()` は常に 1 ティック以内に履行され、実際にプロミスの決定を待つことはありません。
 
 ### Promise.any() との比較
 
