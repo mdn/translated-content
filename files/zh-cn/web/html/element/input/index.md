@@ -261,39 +261,40 @@ slug: Web/HTML/Element/Input
 
 `<input>` 元素包含的属性包含[全局的 HTML 属性](/zh-CN/docs/Web/HTML/Global_attributes)和以下这些额外属性：
 
-| 属性                           | 类型                                                           | 描述                                                                           |
-| ----------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [`accept`](#accept)                 | `file`                                                                  | 文件上传控件中预期文件类型的提示                                   |
-| [`alt`](#alt)                       | `image`                                                                 | 图片类型的alt属性。对无障碍是必需的                           |
-| [`autocomplete`](#autocomplete)     | 除了 `checkbox`、`radio` 和按钮以外                             | 表单自动填充特性提示                                                        |
-| [`capture`](#capture)               | `file`                                                                  | 文件上传控件中媒体捕获方法的提示                                    |
-| [`checked`](#checked)               | `checkbox`、`radio`                                                     | 控件是否选中                                             |
-| [`dirname`](#dirname)               | `search`、`text`                                                        | 表单字段的名称，用于在提交表单时发送元素的方向性 |
-| [`disabled`](#disabled)             | 所有类型                                                                     | 表单控件是否禁用                                                  |
-| [`form`](#form)                     | 所有类型                                                                     | 将控件联系到表单元素中                                            |
-| [`formaction`](#formaction)         | `image`、`submit`                                                       | 要提交表单的 URL 地址                                                        |
-| [`formenctype`](#formenctype)       | `image`、`submit`                                                       | 提交表单时使用的表单数据编码类型                               |
-| [`formmethod`](#formmethod)         | `image`、`submit`                                                       | 提交表单时所使用的 HTTP 方法                                                |
-| [`formnovalidate`](#formnovalidate) | `image`、`submit`                                                       | 绕过表单提交时的表单控件验证                                    |
-| [`formtarget`](#formtarget)         | `image`、`submit`                                                       | 提交表单时的浏览上下文                                                  |
-| [`height`](#height)                 | `image`                                                                 | 与 {{htmlelement('img')}} 元素的 height 属性有相同含义，垂直方向上的维度值               |
-| [`list`](#list)                     | 除了 `hidden`、`password`、`checkbox`、`radio` 和按钮以外       | 自动完成选项的 {{htmlelement('datalist')}} 的 id 属性的值  |
-| [`max`](#max)                       | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range`    | 最大值                                                                         |
-| [`maxlength`](#maxlength)           | `text`、`search`、`url`、`tel`、`email`、`password`                     | `value` 的最大长度（字符数）                                      |
-| [`min`](#min)                       | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range`    | 最小值                                                                         |
-| [`minlength`](#minlength)           | `text`、`search`、`url`、`tel`、`email`、`password`                     | `value` 的最小长度（字符数）                                      |
-| [`multiple`](#multiple)             | `email`、`file`                                                         | 布尔值。是否允许多个值                                             |
-| [`name`](#name)                     | 所有类型                                                                     | 表单的控件名称，作为键值对的一部分与表单一同提交        |
-| [`pattern`](#pattern)               | `text`、`search`、`url`、`tel`、`email`、`password`                     | 为了使得 `value` 有效，必须符合的模式                                            |
-| [`placeholder`](#placeholder)       | `text`、`search`、`url`、`tel`、`email`、`password`、`number`           | 当没有值设定时，出现在表单控件上的文字                        |
-| [`readonly`](#readonly)             | 除了 `hidden`、`range`、`color`、`checkbox`、`radio` 和按钮以外 | 布尔值。如果存在，其中的值将不可编辑。                                                    |
-| [`required`](#required)             | 除了 `hidden`、`range`、`color` 和按钮以外                      | 布尔值。如果存在，一个值是必需的，或者必须勾选该值才能提交表格。          |
-| [`size`](#size)                     | `text`、`search`、`url`、`tel`、`email`、`password`                     | 控件的尺寸                                                                   |
-| [`src`](#src)                       | `image`                                                                 | 与 {{htmlelement('img')}} 元素的 `src` 属性含义相同，图片资源的地址         |
-| [`step`](#step)                     | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range`    | 有效的增量值                                                     |
-| [`type`](#type)                     | 所有类型                                                                     | 表单控件的类型                                                                  |
-| [`value`](#value)                   | 所有类型                                                                     | 表单控件的初始值                                                      |
-| [`width`](#width)                   | `image`                                                                 | 与 {{htmlelement('img')}} 元素的 `width` 属性含义相同                                  |
+| 属性                                | 类型                                                                 | 描述                                                                       |
+| ----------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [`accept`](#accept)                 | `file`                                                               | 文件上传控件中预期文件类型的提示                                           |
+| [`alt`](#alt)                       | `image`                                                              | 图片类型的 alt 属性。对无障碍是必需的                                      |
+| [`autocomplete`](#autocomplete)     | 除了 `checkbox`、`radio` 和按钮以外                                  | 表单自动填充特性提示                                                       |
+| [`capture`](#capture)               | `file`                                                               | 文件上传控件中媒体捕获方法的提示                                           |
+| [`checked`](#checked)               | `checkbox`、`radio`                                                  | 控件是否选中                                                               |
+| [`dirname`](#dirname)               | `search`、`text`                                                     | 表单字段的名称，用于在提交表单时发送元素的方向性                           |
+| [`disabled`](#disabled)             | 所有类型                                                             | 表单控件是否禁用                                                           |
+| [`form`](#form)                     | 所有类型                                                             | 将控件联系到表单元素中                                                     |
+| [`formaction`](#formaction)         | `image`、`submit`                                                    | 要提交表单的 URL 地址                                                      |
+| [`formenctype`](#formenctype)       | `image`、`submit`                                                    | 提交表单时使用的表单数据编码类型                                           |
+| [`formmethod`](#formmethod)         | `image`、`submit`                                                    | 提交表单时所使用的 HTTP 方法                                               |
+| [`formnovalidate`](#formnovalidate) | `image`、`submit`                                                    | 绕过表单提交时的表单控件验证                                               |
+| [`formtarget`](#formtarget)         | `image`、`submit`                                                    | 提交表单时的浏览上下文                                                     |
+| [`height`](#height)                 | `image`                                                              | 与 {{htmlelement('img')}} 元素的 height 属性有相同含义，垂直方向上的维度值 |
+| [`list`](#list)                     | 除了 `hidden`、`password`、`checkbox`、`radio` 和按钮以外            | 自动完成选项的 {{htmlelement('datalist')}} 的 id 属性的值                  |
+| [`max`](#max)                       | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` | 最大值                                                                     |
+| [`maxlength`](#maxlength)           | `text`、`search`、`url`、`tel`、`email`、`password`                  | `value` 的最大长度（字符数）                                               |
+| [`min`](#min)                       | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` | 最小值                                                                     |
+| [`minlength`](#minlength)           | `text`、`search`、`url`、`tel`、`email`、`password`                  | `value` 的最小长度（字符数）                                               |
+| [`multiple`](#multiple)             | `email`、`file`                                                      | 布尔值。是否允许多个值                                                     |
+| [`name`](#name)                     | 所有类型                                                             | 表单的控件名称，作为键值对的一部分与表单一同提交                           |
+| [`pattern`](#pattern)               | `text`、`search`、`url`、`tel`、`email`、`password`                  | 为了使得 `value` 有效，必须符合的模式                                      |
+| [`placeholder`](#placeholder)       | `text`、`search`、`url`、`tel`、`email`、`password`、`number`        | 当没有值设定时，出现在表单控件上的文字                                     |
+| [`readonly`](#readonly)             | 除了 `hidden`、`range`、`color`、`checkbox`、`radio` 和按钮以外      | 布尔值。如果存在，其中的值将不可编辑。                                     |
+| [`required`](#required)             | 除了 `hidden`、`range`、`color` 和按钮以外                           | 布尔值。如果存在，一个值是必需的，或者必须勾选该值才能提交表格。           |
+| [`size`](#size)                     | `text`、`search`、`url`、`tel`、`email`、`password`                  | 控件的尺寸                                                                 |
+| [`src`](#src)                       | `image`                                                              | 与 {{htmlelement('img')}} 元素的 `src` 属性含义相同，图片资源的地址        |
+| [`step`](#step)                     | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` | 有效的增量值                                                               |
+| [`type`](#type)                     | 所有类型                                                             | 表单控件的类型                                                             |
+| [`value`](#value)                   | 所有类型                                                             | 表单控件的初始值                                                           |
+| [`width`](#width)                   | `image`                                                              | 与 {{htmlelement('img')}} 元素的 `width` 属性含义相同                      |
+
 
 一些额外的非标准属性被列在标准属性的描述之后。
 
