@@ -190,7 +190,7 @@ function addClientRectsOverlay(elt) {
 
 ### 结果
 
-{{ EmbedLiveSample('Element_getClientRects_sample', 680, 650) }}
+{{ EmbedLiveSample('示例', 680, 650) }}
 
 ## 规范
 
