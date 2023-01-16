@@ -61,7 +61,7 @@ X-Cache-Info: cached
   - {{Glossary("Response header", "响应标头")}}
   - {{Glossary("Representation header", "表示标头")}}
   - {{Glossary("Fetch metadata request header", "Fetch 元数据请求标头")}}
-  - {{Glossary("Forbidden header name", "被禁止的标头名称")}}
-  - {{Glossary("Forbidden response header name", "被禁止的响应标头名称")}}
+  - {{Glossary("Forbidden header name", "禁止修改的标头")}}
+  - {{Glossary("Forbidden response header name", "禁止修改的响应标头")}}
   - {{Glossary("CORS-safelisted request header", "CORS 安全列出的请求标头的名称")}}
   - {{Glossary("CORS-safelisted response header", "CORS 安全列出的响应标头的名称")}}
