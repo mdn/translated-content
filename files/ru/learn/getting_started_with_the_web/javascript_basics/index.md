@@ -37,7 +37,7 @@ JavaScript сам по себе довольно компактный, но оч
 
 Тем не менее, с JavaScript немного более сложно освоиться, чем с HTML и CSS. Вам придётся начать с малого, продолжая изучение небольшими шагами. Для начала мы покажем вам, как добавить некоторые основы JavaScript на вашу страницу, чтобы создать "hello world!" пример ([стандарт в начальных примерах программирования](https://ru.wikipedia.org/wiki/Hello,_world!)).
 
-> **Предупреждение:** **Важно**: Если вы не следили за остальным нашим курсом, [скачайте этот пример кода](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) и используйте его в качестве стартовой точки.
+> **Предупреждение:** Если вы не следили за остальным нашим курсом, [скачайте этот пример кода](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) и используйте его в качестве стартовой точки.
 
 1. Для начала перейдите на ваш тестовый сайт и создайте папку с именем 'scripts' (без кавычек). Затем, в новой папке скриптов, которую вы только что создали, создайте новый файл с именем `main.js`. Сохраните его в вашей папке `scripts`.
 2. Далее перейдите в ваш `index.html` файл и введите следующий элемент на новой строке прямо перед закрывающим тегом `</body>`:
@@ -50,7 +50,7 @@ JavaScript сам по себе довольно компактный, но оч
 4. Теперь добавьте следующий код в файл `main.js`:
 
     ```js
-    var myHeading = document.querySelector('h1');
+    const myHeading = document.querySelector('h1');
     myHeading.textContent = 'Hello world!';
     ```
 
@@ -68,11 +68,11 @@ JavaScript сам по себе довольно компактный, но оч
 
 Давайте познакомимся с некоторыми основными возможностями языка JavaScript, чтобы дать вам больше понимания, как это всё работает. Более того, эти возможности являются общими для всех языков программирования. Если вы сможете понять эти основы, вы будете в состоянии начать программировать, как ни в чём не бывало!
 
-> **Предупреждение:** **Важно**: В этой статье попробуйте вводить примеры строк кода в вашей JavaScript консоли, чтобы увидеть, что происходит. Для более подробной информации о JavaScript консоли смотрите статью [Откройте для себя браузерные инструменты разработчика](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools).
+> **Предупреждение:** В этой статье попробуйте вводить примеры строк кода в вашей JavaScript консоли, чтобы увидеть, что происходит. Для более подробной информации о JavaScript консоли смотрите статью [Откройте для себя браузерные инструменты разработчика](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
 ### Переменные
 
-{{Glossary("Variable", "Переменные")}} — это контейнеры, внутри которых вы можете хранить значения. Вы начинаете с того, что объявляете переменную с помощью ключевого слова [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var) (не рекомендуется, продолжайте читать, чтобы получить объяснения) или [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let), за которым следует любое имя, которым вы захотите её назвать:
+{{Glossary("Variable", "Переменные")}} — это контейнеры, внутри которых вы можете хранить значения. Вы начинаете с того, что объявляете переменную с помощью ключевого слова [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let), за которым следует любое имя, которым вы захотите её назвать:
 
 ```js
 let myVariable;
@@ -92,10 +92,10 @@ let myVariable;
 myVariable = 'Bob';
 ```
 
-Вы можете сделать обе эти операции на одной и той же строке, если вы захотите:
+Вы можете задать переменной значение сразу при ее объявлении:
 
 ```js
-var myVariable = 'Bob';
+let myVariable = 'Bob';
 ```
 
 Вы можете получить значение, просто вызвав переменную по имени:
@@ -160,22 +160,22 @@ myVariable = 'Steve';
 Условия — это конструкции в коде, которые позволяют проверить истинность или ложность выражения и выполнить другой код в зависимости от полученного результата. Самая распространённая форма условия — инструкция `if ... else`. Например:
 
 ```js
-var iceCream = 'chocolate';
-if (iceCream === 'chocolate') {
-  alert('Yay, I love chocolate ice cream!');
+let iceCream = 'шоколадное';
+if (iceCream === 'шоколадное') {
+  alert('Ура, я люблю шоколадное мороженое!');
 } else {
-  alert('Awwww, but chocolate is my favorite...');
+  alert('Ммм, но шоколадное мороженное моё любимое');
 }
 ```
 
-Выражение внутри `if ( ... )` — это проверка, которая использует тождественный оператор (как описано выше), чтобы сравнить переменную `iceCream` со строкой `chocolate` и увидеть равны ли они. Если это сравнение возвращает `true`, выполнится первый блок кода. Если нет, этот код пропустится и выполнится второй блок кода, после инструкции `else`.
+Выражение внутри `if ( ... )` — это проверка, которая использует тождественный оператор (как описано выше), чтобы сравнить переменную `iceCream` со строкой `шоколадное` и увидеть равны ли они. Если это сравнение возвращает `true`, выполнится первый блок кода. Если нет, этот код пропустится и выполнится второй блок кода, после инструкции `else`.
 
 ### Функции
 
 {{Glossary("Function", "Функции")}} - способ упаковки функциональности, которую вы хотите использовать повторно. Всякий раз, когда вам нужна определённая процедура, вы можете просто вызвать функцию по её имени, а не переписывать весь код каждый раз. Вы уже видели некоторые функции, описанные выше, например:
 
 ```js
-var myVariable = document.querySelector('h1');
+let myVariable = document.querySelector('h1');
 ```
 
 ```js
@@ -192,7 +192,7 @@ alert('hello!');
 
 ```js
 function multiply(num1,num2) {
-  var result = num1 * num2;
+  let result = num1 * num2;
   return result;
 }
 ```
@@ -213,26 +213,19 @@ multiply(0.5,3);
 
 ```js
 document.querySelector('html').onclick = function() {
-    alert('Ouch! Stop poking me!');
+    alert('Ай! Перестань тыкать на меня!');
 }
 ```
 
 Существуют множество способов прикрепить событие к элементу. Здесь мы выбираем {{htmlelement("html")}} элемент и устанавливаем ему обработчик свойства [`onclick`](/ru/docs/Web/API/GlobalEventHandlers.onclick) анонимной функцией (т.е. безымянной) которая содержит код, который мы хотим запустить для события клика.
 
-Обратите внимание, что
+Функция, которую мы только что передали `addEventListener()` здесь, называется анонимной функцией, потому что у нее нет имени. Существует альтернативный способ написания анонимных функций, который мы называем стрелочные функции. Функция со стрелкой использует `() =>` вместо `function ()`:
 
 ```js
-document.querySelector('html').onclick = function() {};
+document.querySelector('html').addEventListener('click', () => {
+  alert('Ouch! Stop poking me!');
+});
 ```
-
-эквивалентно
-
-```js
-var myHTML = document.querySelector('html');
-myHTML.onclick = function() {};
-```
-
-Просто так короче.
 
 ## Прокачаем пример нашего веб-сайта
 
@@ -248,10 +241,10 @@ myHTML.onclick = function() {};
 4. Перейдите в ваш файл `main.js` и введите следующий JavaScript. (Если ваш "hello world" JavaScript по-прежнему существует, удалите его.)
 
     ```js
-    var myImage = document.querySelector('img');
+    const myImage = document.querySelector('img');
 
     myImage.onclick = function() {
-        var mySrc = myImage.getAttribute('src');
+        const mySrc = myImage.getAttribute('src');
         if(mySrc === 'images/firefox-icon.png') {
           myImage.setAttribute ('src','images/firefox2.png');
         } else {
@@ -283,15 +276,15 @@ myHTML.onclick = function() {};
 2. В `main.js`, добавьте следующий код в конец файла, точно так, как написано - он захватит ссылки на новую кнопку и заголовок, и сохранит их в переменные:
 
     ```js
-    var myButton = document.querySelector('button');
-    var myHeading = document.querySelector('h1');
+    let myButton = document.querySelector('button');
+    let myHeading = document.querySelector('h1');
     ```
 
 3. Теперь добавьте следующую функцию для установки персонализированного приветствия - она ничего не будет делать, но мы будем использовать её позже:
 
     ```js
     function setUserName() {
-      var myName = prompt('Please enter your name.');
+      const myName = prompt('Please enter your name.');
       localStorage.setItem('name', myName);
       myHeading.textContent = 'Mozilla is cool, ' + myName;
     }
@@ -305,7 +298,7 @@ myHTML.onclick = function() {};
     if(!localStorage.getItem('name')) {
       setUserName();
     } else {
-      var storedName = localStorage.getItem('name');
+      const storedName = localStorage.getItem('name');
       myHeading.textContent = 'Mozilla is cool, ' + storedName;
     }
     ```
@@ -330,7 +323,14 @@ myHTML.onclick = function() {};
 
 Если вы застряли, вы всегда можете сравнить свою работу с нашим [готовым примером кода на Github](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js).
 
-Здесь мы узнали только самую поверхность JavaScript. Если вам понравился этот язык и вы хотите изучить его поглубже, перейдите к нашему разделу [изучение JavaScript](/ru/docs/Learn/JavaScript).
+Мы только что коснулись поверхности языка JavaScript. Если вам понравился язык и вы хотите пойти дальше, воспользуйтесь ресурсами, перечисленными ниже.
+
+## Смотрите также
+
+- [Динамическое выполнение JavaScript скриптов на стороне клиента ](/ru-RU/docs/Learn/JavaScript)
+  - : Погрузитесь в JavaScript гораздо более подробно..
+- [Изучайте JavaScript](https://learnjavascript.online/)
+  - : Это отличный ресурс для начинающих веб-разработчиков! Изучайте JavaScript в интерактивной среде, с короткими уроками и интерактивными тестами, руководствуясь автоматизированной оценкой. Первые 40 уроков бесплатны. Полный курс доступен за небольшую единовременную оплату.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
