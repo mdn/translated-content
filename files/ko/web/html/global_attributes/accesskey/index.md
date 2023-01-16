@@ -103,7 +103,7 @@ slug: Web/HTML/Global_attributes/accesskey
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.accesskey")}}
+{{compat}}
 
 ## 함께 보기
 

@@ -437,7 +437,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.itemprop")}}
+{{compat}}
 
 ## 같이 보기
 
