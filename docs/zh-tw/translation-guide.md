@@ -8,7 +8,7 @@
 
 基於自動產生文章內的導覽、識別程式碼區塊用於建立實際範例、以及其他的原因，我們的文章會使用到 HTML ID。而對於 Markdown 文件，其渲染得到的 HTML 文件的 ID 則與 Markdown 文件中的標題相對應（但這並不意味著兩者相同，yari 平台對於空格、半角標點等有特殊處理）。
 
-> 對於 [Live Sample](https://developer.mozilla.org/docs/MDN/Writing_guidelines/Page_structures/Live_samples) 等需要用到 HTML ID 的地方，可以透過查看網頁原始碼的方式確定標題對應的 ID。
+> 對於 [Live Sample](/docs/MDN/Writing_guidelines/Page_structures/Live_samples) 等需要用到 HTML ID 的地方，可以透過查看網頁原始碼的方式確定標題對應的 ID。
 
 例如：
 
