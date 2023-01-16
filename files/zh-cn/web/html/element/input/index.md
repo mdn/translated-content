@@ -404,7 +404,7 @@ slug: Web/HTML/Element/Input
 
 - `max`
 
-  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最大值。如果输入到元素中的 [`value`](#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
+  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最大值。如果输入到元素中的 [`value`](#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
 
     有一种特殊情况：如果数据类型是周期性的（如日期或时间），`max` 的值可能低于 `min` 的值，这表明范围可以环绕；例如，这允许你指定一个从晚上 10 点到凌晨 4 点的时间范围。
 
@@ -412,11 +412,11 @@ slug: Web/HTML/Element/Input
 
   - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最大字符数（以 UTF-16 码点为单位）。必须为大于等于 `0` 的整数。如果未指定 `maxlength` 或指定了无效的值，则该字段将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
-    如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。默认情况下，浏览器将阻止用户输入超过 `maxlength` 属性所指定的值的字符。参见[客户端验证](#客户端验证)一节以了解更多信息。
+    如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。默认情况下，浏览器将阻止用户输入超过 `maxlength` 属性所指定的值的字符。参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `min`
 
-  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最小值。如果输入到元素的 [`value`](#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 指定的值不是数字，则输入没有最小值。
+  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最小值。如果输入到元素的 [`value`](#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 指定的值不是数字，则输入没有最小值。
 
     该值必须小于或等于 `max` 属性的值。如果 `min` 属性存在但没有指定或无效，则不应用 `min` 值。如果 `min` 属性有效，并且非空值小于 `min` 属性所允许的最小值，约束验证将阻止表单提交。参见[客户端验证](#客户端验证)一节以获取更多信息。
 
@@ -426,7 +426,7 @@ slug: Web/HTML/Element/Input
 
   - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最小字符数（以 UTF-16 码点为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则该字段将没有最小值。
 
-    如果输入字段的文本长度小于 `minlength` UTF-16 代码单元的长度，输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，阻止表单提交。参见[客户端验证](#客户端验证)一节以了解更多信息。
+    如果输入字段的文本长度小于 `minlength` UTF-16 代码单元的长度，输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，阻止表单提交。参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `multiple`
 
@@ -464,7 +464,7 @@ slug: Web/HTML/Element/Input
     > **警告：** 避免给表单元素一个与表单内置属性相对应的 `name`，因为这样你就会用这个对相应输入的引用来覆盖预定义的属性或方法。
 - `pattern`
 
-  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足 `pattern` 属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足 `pattern` 属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
     如果 `pattern` 属性存在，但是未指定模式或无效，则不应用任何正则表达式，并且将完全忽略此属性。如果模式属性是有效的，并且该非空值与模式不匹配，约束验证将阻止表单提交。
 
@@ -503,7 +503,7 @@ slug: Web/HTML/Element/Input
     如果没有明确包含它：
 
     - `step` 对于类型为 `number` 和 `range` 的默认值为 1。
-    - 每一种日期/事件输入类型有一个适合的默认 `step` 值，请查阅相关的页面以获取：[`date`](/zh-CN/docs/Web/HTML/Element/input/date#step)、[`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local#step)、[`month`](/zh-CN/docs/Web/HTML/Element/input/month#step)、[`time`](/zh-CN/docs/Web/HTML/Element/input/time#step) 和 [`week`](/zh-CN/docs/Web/HTML/Element/input/week#step)。
+    - 每一种日期/事件输入类型有一个适合的默认 `step` 值，请查阅相关的页面以获取：[`date`](/zh-CN/docs/Web/HTML/Element/Input/date#step)、[`datetime-local`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local#step)、[`month`](/zh-CN/docs/Web/HTML/Element/input/month#step)、[`time`](/zh-CN/docs/Web/HTML/Element/Input/time#step) 和 [`week`](/zh-CN/docs/Web/HTML/Element/Input/week#step)。
 
     值必须为一个正数（整数或小数）或特殊值 `any`（意味着不指定任何步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#min) 之外））。
 
@@ -895,7 +895,7 @@ input.custom {
 
 > **警告：** 客户端验证是有用的，但它并*不能*保证服务器会收到有效的数据。如果数据必须是特定的格式，*总是*应该在服务器端进行验证，如果格式无效，则返回一个 [`400` HTTP 响应](/zh-CN/docs/Web/HTTP/Status/400)。
 
-除了如上文 [UI 伪类](#UI_伪类)部分所述，使用 CSS 根据 {{cssxref(":valid")}} 或 {{cssxref(":invalid")}} 每个输入的当前状态来设计输入的样式之外，浏览器还在（试图）提交表单时提供了客户端验证。在表单提交时，如果有一个表单控件没有通过约束验证，支持的浏览器将在第一个无效的表单控件上显示一个错误信息；根据错误类型显示一个默认信息，或者由你设置的信息。
+除了如上文 [UI 伪类](#ui_伪类)部分所述，使用 CSS 根据 {{cssxref(":valid")}} 或 {{cssxref(":invalid")}} 每个输入的当前状态来设计输入的样式之外，浏览器还在（试图）提交表单时提供了客户端验证。在表单提交时，如果有一个表单控件没有通过约束验证，支持的浏览器将在第一个无效的表单控件上显示一个错误信息；根据错误类型显示一个默认信息，或者由你设置的信息。
 
 某些输入类型和其他属性对特定输入的有效值进行了限制。例如，`<input type="number" min="2" max="10" step="2">` 意味着只有数字2、4、6、8 或 10 有效。某些错误可能发生，当值小于 2 时会发生 `rangeUnderflow` 错误，值大于 10 时会发生 `rangeOverflow` 错误，当值在 2 至 10 之间，但不是偶数（不满足 `step` 属性的需求）时会发生 `stepMismatch` 错误，如果值不是一个数字时会发生 `typeMismatch` 错误。
 
@@ -1019,7 +1019,7 @@ function validate(input) {
 
 #### 自定义验证错误示例
 
-如果你想在一个字段验证失败时显示一个自定义的错误信息，你需要使用[约束验证 API](/zh-CN/docs/Learn/Form_validation#使用_JavaScript_校验表单)，在 `<input>`（及相关）元素上可用。以下面的表格为例：
+如果你想在一个字段验证失败时显示一个自定义的错误信息，你需要使用[约束验证 API](/zh-CN/docs/Learn/Forms/Form_validation#使用_javascript_校验表单)，在 `<input>`（及相关）元素上可用。以下面的表格为例：
 
 ```html
 <form>
@@ -1204,7 +1204,7 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
 像表单输入这样的互动元素应该提供一个足够大的区域，以便于激活它们。这有助于各种人，包括有运动控制问题的人和使用非精确形式的输入（如手写笔或手指）的人。建议最小互动尺寸为 44×44 [CSS 像素](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)。
 
 - [了解成功标准 2.5.5：目标尺寸 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [目标尺寸和 2.5.5 | Adrian Roselli](http://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [目标尺寸和 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
 - [快速测试：大型点击目标——The A11Y Project](https://a11yproject.com/posts/large-touch-targets/)
 
 ## 规范
