@@ -26,16 +26,16 @@ slug: Web/API/Window/innerHeight
 ### 프레임셋 가정
 
 ```js
-console.log(window.innerHeight); // or
+console.log(window.innerHeight); // 혹은
 
 console.log(self.innerHeight);
-// will log the height of the frame viewport within the frameset
+// 프레임셋 내의 프레임 뷰포트의 높이 로그를 기록합니다.
 
 console.log(parent.innerHeight);
-// will log the height of the viewport of the closest frameset
+// 가장 가까운 프레임셋 뷰포트의 높이 로그를 기록합니다.
 
 console.log(top.innerHeight);
-// will log the height of the viewport of the outermost frameset
+// 가장 바깥쪽 프레임셋 뷰포트의 높이 로그를 기록합니다.
 ```
 
 창의 크기를 변경하려면 {{domxref("window.resizeBy()")}}와 {{domxref("window.resizeTo()")}}를 참고하십시오.
