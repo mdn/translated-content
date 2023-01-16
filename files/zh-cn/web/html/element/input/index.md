@@ -78,7 +78,7 @@ slug: Web/HTML/Element/Input
     </tr>
     <tr>
       <td>{{HTMLElement("input/email", "email")}}</td>
-      <td>	编辑邮箱地址的区域。类似 <code>text</code> 输入，但在支持的浏览器和带有动态键盘的设备上会有验证参数和相应的键盘。</td>
+      <td>编辑邮箱地址的区域。类似 <code>text</code> 输入，但在支持的浏览器和带有动态键盘的设备上会有验证参数和相应的键盘。</td>
       <td id="exampleemail">
         <pre class="brush: html hidden">
 &#x3C;input type="email" name="email"/></pre>
@@ -295,7 +295,6 @@ slug: Web/HTML/Element/Input
 | [`value`](#value)                   | 所有类型                                                             | 表单控件的初始值                                                           |
 | [`width`](#width)                   | `image`                                                              | 与 {{htmlelement('img')}} 元素的 `width` 属性含义相同                      |
 
-
 一些额外的非标准属性被列在标准属性的描述之后。
 
 ### 属性各论
@@ -303,22 +302,21 @@ slug: Web/HTML/Element/Input
 - `accept`
 
   - : 仅对 `file` 输入类型有效。`accept` 属性定义了 `file` 上传控件可选择文件类型的列表。参见 {{HTMLElement("input/file", "file")}} 输入类型以了解更多信息。
-    
+
 - `alt`
 
   - : 仅对 `image` 类型有效。`alt` 属性提供了图片的替代文字，在图片的 [`src`](#src) 属性缺失或对应资源加载失败时，会显示该属性的值。参见 {{HTMLElement("input/image", "image")}} 输入类型以了解更多信息。
 
-
 - [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete)
 
   - : （**不是**一个布尔属性！）[`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性将一个空格分隔的字符串作为其值，描述输入应该提供什么类型的自动完成功能。一个典型的自动完成的实现是回忆以前在同一输入字段中输入的值，但也可能存在更复杂的自动完成形式。例如，浏览器可以与设备的联系人列表集成，在电子邮件输入栏中自动完成 `email` 地址。请参阅{{SectionOnPage("/zh-CN/docs/Web/HTML/Attributes/autocomplete", "值")}}了解允许的值。
-  
+
     `autocomplete` 属性对 `hidden`、`text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`range`、`color` 和 `password` 类型的输入有效。该属性对于那些不返回数值或文本数据的输入控件没有效果，对除了 `checkbox`、`radio`、`file` 和任何按钮类型的所有输入类型均有效。
-    
+
     查看 [HTML autocomplete 属性](/zh-CN/docs/Web/HTML/Attributes/autocomplete)以了解额外信息，包括密码安全和对于 `hidden` 来说，`autocomplete` 的方式与其他输入类型略有不同。
- 
+
 - `autofocus`
-  
+
   - : 这个布尔属性允许指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。
 
     > **备注：** 具有 `autofocus` 属性的元素可能在 {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} 事件触发前获得焦点。
@@ -332,7 +330,7 @@ slug: Web/HTML/Element/Input
     在应用 `autofocus` 属性时，要仔细考虑无障碍问题。自动聚焦于一个控件会导致页面在加载时滚动。焦点也会导致动态键盘在某些触摸设备上显示。虽然屏幕阅读器会宣布收到焦点的表单控件的标签，但屏幕阅读器不会宣布标签之前的任何内容，在小设备上的视力良好的用户同样会错过前面的内容所创造的背景。
 
 - `capture`
-  
+
   - : 在 HTML 媒体捕获规范中引入，仅对 `file` 输入类型有效，`capture` 属性定义了应该使用哪种媒体（如麦克风、视频或相机）来捕获一个新文件，以便在支持场景中用 `file` 上传控件上传。参见 {{HTMLElement("input/file", "file")}} 输入类型。
 
 - `checked`
@@ -398,7 +396,7 @@ slug: Web/HTML/Element/Input
 
     在 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` 和 `color` 上均有效。
 
-    根据规范，`hidden'、`password'、`checkbox'、`radio'、`file` 或任何按钮类型不支持 `list` 属性。
+    根据规范，`hidden`、`password'、`checkbox`、`radio`、`file` 或任何按钮类型不支持 `list` 属性。
 
     根据浏览器的不同，用户可能会看到一个建议的自定义调色板、沿着一个范围的跳动标记、甚至是一个像选择一样打开但允许非列表值的输入。查看[浏览器兼容性表](/zh-CN/docs/Web/HTML/Element/datalist#浏览器兼容性)，了解其他输入类型。
 
@@ -1091,8 +1089,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
           >流式内容</a
         >、列表元素、可提交元素、可重设元素、表单相关元素<a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
           >短语内容</a
-        >。如果 
-        <code
+        >。如果 <code
           ><a href="/zh-CN/docs/Web/HTML/Element/input#attr-type">type</a></code
         > 不是 <code>hidden</code> 的，则也是可标签元素、可感知内容。
       </td>
