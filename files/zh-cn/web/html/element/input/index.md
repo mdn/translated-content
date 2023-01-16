@@ -406,54 +406,54 @@ slug: Web/HTML/Element/Input
 
 - `max`
 
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the greatest value in the range of permitted values. If the [`value`](#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
+  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最大值。如果输入到元素中的 [`value`](#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
 
-    There is a special case: if the data type is periodic (such as for dates or times), the value of `max` may be lower than the value of `min`, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.
+    有一种特殊情况：如果数据类型是周期性的（如日期或时间），`max` 的值可能低于 `min` 的值，这表明范围可以环绕；例如，这允许你指定一个从晚上 10 点到凌晨 4 点的时间范围。
 
 - `maxlength`
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the maximum number of characters (as UTF-16 code units) the user can enter into the field. This must be an integer value `0` or higher. If no `maxlength` is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
+  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最大字符数（以 UTF-16 码点为单位）。必须为大于等于 `0` 的整数。如果未指定 `maxlength` 或指定了无效的值，则该字段将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
-    The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the `maxlength` attribute. See [Client-side validation](#client-side_validation) for more information.
+    如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。默认情况下，浏览器将阻止用户输入超过 `maxlength` 属性所指定的值的字符。参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `min`
 
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the most negative value in the range of permitted values. If the [`value`](#value) entered into the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `min` attribute isn't a number, then the element has no minimum value.
+  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最小值。如果输入到元素的 [`value`](#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 指定的值不是数字，则输入没有最小值。
 
-    This value must be less than or equal to the value of the `max` attribute. If the `min` attribute is present but is not specified or is invalid, no `min` value is applied. If the `min` attribute is valid and a non-empty value is less than the minimum allowed by the `min` attribute, constraint validation will prevent form submission. See [Client-side validation](#client-side_validation) for more information.
+    该值必须小于或等于 `max` 属性的值。如果 `min` 属性存在但没有指定或无效，则不应用 `min` 值。如果 `min` 属性有效，并且非空值小于 `min` 属性所允许的最小值，约束验证将阻止表单提交。参见[客户端验证](#客户端验证)一节以获取更多信息。
 
-    There is a special case: if the data type is periodic (such as for dates or times), the value of `max` may be lower than the value of `min`, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.
+    有一种特殊情况：如果数据类型是周期性的（如日期或时间），`min` 的值可能高于 `max` 的值，这表明范围可以环绕；例如，这允许你指定一个从晚上 10 点到凌晨 4 点的时间范围。
 
 - `minlength`
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
+  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最小字符数（以 UTF-16 码点为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则该字段将没有最小值。
 
-    The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. See [Client-side validation](#client-side_validation) for more information.
+    如果输入字段的文本长度小于 `minlength` UTF-16 代码单元的长度，输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，阻止表单提交。参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `multiple`
 
-  - : The Boolean `multiple` attribute, if set, means the user can enter comma separated email addresses in the email widget or can choose more than one file with the `file` input. See the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input type.
+  - : 如果设置了布尔值 `multiple` 属性，意味着用户可以在电子邮件部件中输入逗号分隔的电子邮件地址，或者可以通过 `file` 输入选择多个文件。参见 {{HTMLElement("input/email", "email")}} 和 {{HTMLElement("input/file", "file")}} 输入类型。
 
 - `name`
 
-  - : A string specifying a name for the input control. This name is submitted along with the control's value when the form data is submitted.
+  - : 一个指定输入控件名称的字符串。当表单数据被提交时，这个名字会和控件的值一起提交。
 
-    Consider the `name` a required attribute (even though it's not). If an input has no `name` specified, or `name` is empty, the input's value is not submitted with the form! (Disabled controls, unchecked radio buttons, unchecked checkboxes, and reset buttons are also not sent.)
+    通常把 `name` 看作是一个必需的属性（即使它不是）。如果一个输入没有指定 `name`，或者 `name` 是空的，那么这个输入的值就不会和表单一起提交！禁用的控件、未选中的单选按钮、未选中的复选框和重置按钮也不会被发送。
 
-    There are two special cases:
+    考虑这两个特殊情况：
 
-    1. `_charset_` : If used as the name of an `<input>` element of type {{HTMLElement("input/hidden", "hidden")}}, the input's `value` is automatically set by the {{Glossary("user agent")}} to the character encoding being used to submit the form.
-    2. `isindex`: For historical reasons, the name [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) is not allowed.
+    1. `_charset_`：如果被用作 {{HTMLElement("input/hidden", "hidden")}} 类型的 `<input>` 元素的名称，该输入的 `value` 会被{{Glossary("user agent","用户代理")}}自动设置为提交表单时使用的字符编码。
+    2. `isindex`：由于历史原因，不允许使用 [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) 这个名字。
 
-    The [`name`](#name) attribute creates a unique behavior for radio buttons.
+    [`name`](#name) 属性对单选按钮的行为完全不同。
 
-    Only one radio button in a same-named group of radio buttons can be checked at a time. Selecting any radio button in that group automatically deselects any currently-selected radio button in the same group. The value of that one checked radio button is sent along with the name if the form is submitted,
+    在一个同名的单选按钮组中，一次只能选中一个单选按钮。选择该组中的任何一个单选按钮会自动取消对同一组中当前被选中的单选按钮的选择。如果表单被提交，这一个被选中的单选按钮的值会和名称一起被发送。
 
-    When tabbing into a series of same-named group of radio buttons, if one is checked, that one will receive focus. If they aren't grouped together in source order, if one of the group is checked, tabbing into the group starts when the first one in the group is encountered, skipping all those that aren't checked. In other words, if one is checked, tabbing skips the unchecked radio buttons in the group. If none are checked, the radio button group receives focus when the first button in the same name group is reached.
+    当标签进入一系列同名的单选按钮组时，如果有一个被选中，将聚焦该单选按钮。如果它们没有按源顺序分组，如果组中有一个被选中，当遇到组中的第一个时，标签进入组开始，跳过所有没有选中的。换句话说，如果有一个被选中，标签就会跳过该组中未被选中的单选按钮。如果没有勾选，当到达同名组中的第一个按钮时，就会聚焦该单选按钮组。
 
-    Once one of the radio buttons in a group has focus, using the arrow keys will navigate through all the radio buttons of the same name, even if the radio buttons are not grouped together in the source order.
+    一旦组中的一个单选按钮有了焦点，使用箭头键将浏览所有同名的单选按钮，即使这些单选按钮在源顺序中没有被分组。
 
-    When an input element is given a `name`, that name becomes a property of the owning form element's {{domxref("HTMLFormElement.elements")}} property. If you have an input whose `name` is set to `guest` and another whose `name` is `hat-size`, the following code can be used:
+    如果一个输入元素具有 `name`，该名称成为包含它的表单元素的 {{domxref("HTMLFormElement.elements")}} 属性。如果有两个 `name` 分别设置为 `guest` 和 `hat-size` 的输入元素，可以使用如下代码：
 
     ```js
     let form = document.querySelector("form");
@@ -461,82 +461,81 @@ slug: Web/HTML/Element/Input
     let hatSize = form.elements["hat-size"];
     ```
 
-    When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} for the `guest` field, and `hatSize` the object for the `hat-size` field.
+    此段代码运行后，`guestName` 将成为 `guest` 字段的 {{domxref("HTMLInputElement")}}，`hatSize` 将成为 `hat-size` 字段的 {{domxref("HTMLInputElement")}}。
 
-    > **Warning:** Avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
+    > **警告：** 避免给表单元素一个与表单内置属性相对应的 `name`，因为这样你就会用这个对相应输入的引用来覆盖预定义的属性或方法。
 - `pattern`
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute defines a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足 `pattern` 属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
-    If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.
+    如果 `pattern` 属性存在，但是未指定模式或无效，则不应用任何正则表达式，并且将完全忽略此属性。如果模式属性是有效的，并且该非空值与模式不匹配，约束验证将阻止表单提交。
 
-    > **Note:** If using the `pattern` attribute, inform the user about the expected format by including explanatory text nearby. You can also include a [`title`](#title) attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.
-    See [Client-side validation](#client-side_validation) for more information.
+    > **备注：** 如果使用了 `pattern` 属性，要在附近告知用户所期望的输入格式。你可以包含 [`title`](#title) 属性来解释满足模式的需求说明，大多数浏览器将它们显示为工具提示（tooltip）。对于无障碍来说，视觉的解释是必要的，工具提示是一种改进点。
+    参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `placeholder`
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, `password`, and `number`, the `placeholder` attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text _must not_ include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g. Mustafa".
+  - : 对 `text`、`search`、`url`、`tel`、`email`、`password` 和 `number` 有效。`placeholder` 属性可向用户提供有关该字段中需要什么样的信息的简短提示。它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。文本中*不得*包含回车符或换行符。例如，某个字段需要收集用户的姓氏，其标签为“First Name”，一个适合的占位文字可能是“如 Mustafa”。
 
-    > **Note:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels](#labels) for more information.
+    > **备注：** `placeholder` 属性在语义上不如其他解释表单的方式有用，而且会对你的内容造成意想不到的技术问题。参见[标签](#标签)以获得更多信息。
 - `readonly`
 
-  - : A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input. The `readonly` attribute is supported by the `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `password` input types.
+  - : 一个布尔属性，如果存在，则表示该字段不能由用户编辑。`readonly` 属性支持 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `password` 输入类型。
 
-    See the [HTML attribute: `readonly`](/en-US/docs/Web/HTML/Attributes/readonly) for more information.
+    参见 [HTML 属性：`readonly`](/zh-CN/docs/Web/HTML/Attributes/readonly) 以了解更多信息。
 
 - `required`
 
-  - : `required` is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. The `required` attribute is supported by `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, and `file` inputs.
+  - : `required` 是一个布尔属性，如果存在，则表示用户必须在提交表单之前指定一个非空值。`required` 属性支持 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`password`、`checkbox`、`radio` 和 `file` 输入类型。
 
-    See [Client-side validation](#client-side_validation) and the [HTML attribute: `required`](/en-US/docs/Web/HTML/Attributes/required) for more information.
+    参见[客户端验证](#客户端验证)和 [HTML 属性：`required`](/zh-CN/docs/Web/HTML/Attributes/required)以了解更多信息。
 
 - `size`
 
-  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
+  - : 对 `email`、`password`、`tel`、`url` 和 `text` 有效。`size` 属性指示显示输入控件的多少。基本上创建了与设置 CSS [`width`](/zh-CN/docs/Web/CSS/width)属性相同的结果，但有一些特殊性，值的具体单位取决于输入类型。对于 `password` 和 `text`，它是字符数量（或 `em` 单位大小），默认值是 `20`。对于其他情况，是像素值（或 `px` 单位大小）。CSS `width` 的优先级会高于 `size` 属性。
 
 - `src`
 
-  - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
+  - : 仅对 `image` 输入按钮有效。指定将要在提交按钮上显示的图像的 URL。参见 {{HTMLElement("input/image", "image")}} 输入类型。
 
 - `step`
 
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
+  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效。[`step`](/zh-CN/docs/Web/HTML/Attributes/step) 属性指定了值必须满足的粒度。
 
-    If not explicitly included:
+    如果没有明确包含它：
 
-    - `step` defaults to 1 for `number` and `range`.
-    - Each date/time input type has a default `step` value appropriate for the type; see the individual input pages: [`date`](/en-US/docs/Web/HTML/Element/input/date#step), [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local#step), [`month`](/en-US/docs/Web/HTML/Element/input/month#step), [`time`](/en-US/docs/Web/HTML/Element/input/time#step), and [`week`](/en-US/docs/Web/HTML/Element/input/week#step).
+    - `step` 对于类型为 `number` 和 `range` 的默认值为 1。
+    - 每一种日期/事件输入类型有一个适合的默认 `step` 值，请查阅相关的页面以获取：[`date`](/zh-CN/docs/Web/HTML/Element/input/date#step)、[`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local#step)、[`month`](/zh-CN/docs/Web/HTML/Element/input/month#step)、[`time`](/zh-CN/docs/Web/HTML/Element/input/time#step) 和 [`week`](/zh-CN/docs/Web/HTML/Element/input/week#step)。
 
-    The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
+    值必须为一个正数（整数或小数）或特殊值 `any`（意味着不指定任何步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#min) 之外））。
 
-    If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping — the [`min`](#min) value and increments of the step value, up to the [`max`](#max) value, if specified.
+    如果没有明确设置 `any`，`number`、日期/时间输入类型和 `range` 输入类型的有效值等于步进的基础——[`min`](#min)值和步进值的增量，如果指定的话，最高为[`max`](#max)值。
 
-    For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`
+    例如，如果存在这样一个元素 `<input type="number" min="10" step="2">`，那么任何大于等于 `10` 的偶整数都是有效的。如果省略（`<input type="number">`），任何整数都有效，但浮点数（如 `4.2`）无效，因为 `step` 默认为`1`。为了使 `4.2` 有效，`step` 必须被设置为 `any`、0.1、0.2 或任何 `min` 值以 `.2` 结尾的数字，例如 `<input type="number" min="-5.2">`。
 
-    > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
-    See [Client-side validation](#client-side_validation) for more information.
+    > **备注：** 当用户输入的数据不符合步进配置时，该值在约束验证中被认为是无效的，将匹配 `:invalid` 伪类。
+    参见[客户端验证](#客户端验证)以获取更多信息。
 
 - `tabindex`
 
-  - : Global attribute valid for all elements, including all the input types, an integer attribute indicating if the element can take input focus (is focusable), if it should participate to sequential keyboard navigation. As all input types except for input of type hidden are focusable, this attribute should not be used on form controls, because doing so would require the management of the focus order for all elements within the document with the risk of harming usability and accessibility if done incorrectly.
-
+  - : 对所有元素有效的全局属性，包括所有的输入类型，是一个整数属性，表示该元素如果参与顺序键盘导航，是否可以接受输入焦点（可聚焦）。由于除了隐藏类型的输入外，所有的输入类型都是可聚焦的，这个属性不应该用在表单控件上，因为这样做需要管理文档中所有元素的聚焦顺序，如果设置错误，就有可能损害可用性和无障碍性。
 - `title`
 
-  - : Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a `for` attribute set to the form control's [`id`](#id) attribute. See [Labels](#labels) below.
+  - : 对所有元素有效的全局属性，包括所有的输入类型，包含一个代表与它所属的元素相关的咨询信息的文本。这样的信息通常以工具提示的形式呈现给用户（但不必要）。标题不应作为表单控件用途的主要解释。相反，可以使用 {{htmlelement('label')}} 元素，其 `for` 属性设置为表单控件的 [`id`](#id) 属性。参见下面的[标签](#标签)。
 
 - `type`
 
-  - : A string specifying the type of control to render. For example, to create a checkbox, a value of `checkbox` is used. If omitted (or an unknown value is specified), the input type `text` is used, creating a plaintext input field.
+  - : 一个字符串，指定要渲染的控件的类型。例如，要创建一个复选框，使用 `checkbox` 的值。如果省略（或指定一个未知值），则使用输入类型 `text`，创建一个纯文本输入字段。
 
-    Permitted values are listed in [Input types](#input_types) above.
+    允许的值列在了上方的 [Input 类型](#input_类型)中。
 
 - `value`
 
-  - : The input control's value. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `value` property. The `value` attribute is always optional, though should be considered mandatory for `checkbox`, `radio`, and `hidden`.
+  - : 输入控件的值。当在 HTML 中指定时，这是初始值。从那时起，它可以在任何时候用 JavaScript 访问相应的 {{domxref("HTMLInputElement")}} 对象的 `value` 属性，用于改变或检索。`value` 属性总是可选的，不过对于 `checkbox'、`radio` 和 `hidden` 来说，应该被认为是必须的。
 
 - `width`
 
-  - : Valid for the `image` input button only, the `width` is the width of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
+  - : 仅对 `image` 输入按钮有效。`width` 是呈现在图片提交按钮上的图片宽度。参见 {{HTMLElement("input/image", "image")}} 输入类型。
 
 ### 非标准属性
 
@@ -545,45 +544,40 @@ slug: Web/HTML/Element/Input
 <table class="no-markdown">
   <thead>
     <tr>
-      <th scope="col">Attribute</th>
-      <th scope="col">Description</th>
+      <th scope="col">属性</th>
+      <th scope="col">描述</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><a href="#autocorrect"><code>autocorrect</code></a></td>
       <td>
-        A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
+        指定 autocorrect 状态的字符串，状态为 code>on</code> 或 <code>off</code>。<strong>仅 Safari 适用。</strong>
       </td>
     </tr>
     <tr>
       <td><a href="#incremental"><code>incremental</code></a></td>
       <td>
-        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}}
-        events to allow updating live search results while the user is still editing the value of the field.
-        <strong>WebKit and Blink only (Safari, Chrome, Opera, etc.).</strong>
+        是否重复发送 {{domxref("HTMLInputElement/search_event", "search")}} 事件，以便在用户仍在编辑字段值时更新实时搜索结果。<strong>WebKit 和 Blink 适用（Safari、Chrome、Opera 等）。</strong>
       </td>
     </tr>
     <tr>
       <td><code>mozactionhint</code></td>
       <td>
-        <p>A string indicating the type of action that will be taken when the user
-        presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the
-        field; this is used to determine an appropriate label for that key on a
-        virtual keyboard.</p>
-        <p><strong>Deprecated: use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
+        <p>当用户在编辑字段时按下键盘的 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键时，所需要进行的动作的字符串表示，这用于决定虚拟键盘上那个键的合适的标签。</p>
+        <p><strong>已弃用，请使用 <a href="/zh-CN/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> 替代。</strong></p>
       </td>
     </tr>
     <tr>
       <td><a href="#orient"><code>orient</code></a></td>
       <td>
-        Sets the orientation of the range slider. <strong>Firefox only</strong>.
+        设置范围滑块的呈现方向。<strong>仅 Firefox 适用。</strong>
       </td>
     </tr>
     <tr>
       <td><a href="#results"><code>results</code></a></td>
       <td>
-        The maximum number of items that should be displayed in the drop-down list of previous search queries. <strong>Safari only.</strong>
+       下拉菜单显示的最大查找结果数量。<strong>仅 Safari 适用。</strong>
       </td>
     </tr>
     <tr>
@@ -591,7 +585,7 @@ slug: Web/HTML/Element/Input
         <a href="#webkitdirectory"><code>webkitdirectory</code></a>
       </td>
       <td>
-        A Boolean indicating whether to only allow the user to choose a directory (or directories, if <a href="#multiple"><code>multiple</code></a> is also present)
+        一个布尔值，表示是否只允许用户选择一个目录（或多个目录，如果同时存在 <a href="#multiple"><code>multiple</code></a> 属性）。
       </td>
     </tr>
   </tbody>
@@ -599,199 +593,165 @@ slug: Web/HTML/Element/Input
 
 - `autocorrect` {{non-standard_inline}}
 
-  - : (Safari only). A string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
+  - : （仅 Safari 适用）。一个字符串，表示是否在用户编辑该字段时激活自动更正。允许的值为：
 
     - `on`
-      - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
+      - : 启用自动更正，如果配置了文字替换，则一同处理它们。
     - `off`
-      - : Disable automatic correction and text substitutions.
+      - : 禁用自动更正和文字替换。
 
 - `incremental` {{non-standard_inline}}
 
-  - : The Boolean attribute `incremental` is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{domxref("HTMLInputElement/search_event", "search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.
+  - : 布尔属性 `incremental` 是 WebKit 和 Blink 的扩展（所以 Safari、Opera、Chrome 等都支持），如果存在的话，就会告诉{{Glossary("user agent","用户代理")}}将输入作为实时搜索处理。当用户编辑该字段的值时，用户代理将 {{domxref("HTMLInputElement/search_event", "search")}} 事件发送到代表搜索框的 {{domxref("HTMLInputElement")}} 对象。这使得你的代码能够在用户编辑搜索时实时更新搜索结果。
 
-    If `incremental` is not specified, the {{domxref("HTMLInputElement/search_event", "search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).
+    如果没有指定 `incremental` 属性，则仅当用户明确发起搜索（如按下键盘上 <kbd>Enter</kbd> 或 <kbd>Return</kbd>）时，才会发送 {{domxref("HTMLInputElement/search_event", "search")}} 事件。
 
-    The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
+    `search` 事件是限速的，因此它的发送频率不会超过实施定义的间隔。
 
 - `orient` {{non-standard_inline}}
 
-  - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
+  - : 类似于影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素的非标准 CSS 属性 -moz-orient，`orient` 属性定义范围滑块的方向。值包括 `horizontal`，代表范围滑块水平呈现；和 `vertical`，代表范围滑块垂直呈现。
 
 - `results` {{non-standard_inline}}
 
-  - : The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.
+  - : 只有 Safari 支持的 `results` 属性是一个数值，可以让你覆盖 {{HTMLElement("input")}} 元素原生提供的先前搜索查询下拉菜单中显示的最大条目数。
 
-    The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.
+    该值必须是一个非负的十进制数字。如果没有提供，或者提供了一个无效的值，则使用浏览器的默认最大条目数。
 
 - `webkitdirectory` {{non-standard_inline}}
 
-  - : The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
+  - : 布尔属性 `webkitdirectory` 如果存在，表示在文件选取界面中，只有目录可供用户选择。参见 {{domxref("HTMLInputElement.webkitdirectory")}} 以了解更多细节和例子。
 
-    Though originally implemented only for WebKit-based browsers, `webkitdirectory` is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.
+    虽然最初只为基于 WebKit 的浏览器实现，但 `webkitdirectory` 也可以在 Microsoft Edge 以及 Firefox 50 和更高版本中使用。然而，尽管它有相对广泛的支持，它仍然不是标准的，除非你没有其他选择，否则不应该使用。
 
 ## 方法
 
-The following methods are provided by the {{domxref("HTMLInputElement")}} interface which represents `<input>` elements in the DOM. Also available are those methods specified by the parent interfaces, {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}.
+以下方法由 DOM 中代表 `<input>` 元素的 {{domxref("HTMLInputElement")}} 接口提供。还有一些方法是由父接口 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node")}} 和 {{domxref("EventTarget")}} 提供的。
 
 - {{domxref("HTMLInputElement.checkValidity", "checkValidity()")}}
-  - : Returns `true` if the element's value passes validity checks; otherwise, returns `false` and fires an {{domxref("HTMLInputElement.invalid_event", "invalid")}} event at the element.
+  - : 如果元素的值通过了有效性检查，返回 `true`；否则，返回 `false` 并在该元素上触发 {{domxref("HTMLInputElement.invalid_event", "invalid")}} 事件。
 - {{domxref("HTMLInputElement.reportValidity", "reportValidity()")}}
-  - : Returns `true` if the element's value passes validity checks; otherwise, returns `false`, fires an {{domxref("HTMLInputElement.invalid_event", "invalid")}} event at the element, and (if the event isn't canceled) reports the problem to the user.
+  - : 如果元素的值通过了有效性检查，返回 `true`；否则，返回 `false` 并在该元素上触发 {{domxref("HTMLInputElement.invalid_event", "invalid")}} 事件，如果事件没有取消，将问题报告给用户。
 - {{domxref("HTMLInputElement.select", "select()")}}
-  - : Selects the entire content of the `<input>` element, if the element's content is selectable. For elements with no selectable text content (such as a visual color picker or calendar date input), this method does nothing.
+  - : 如果 `<input>` 元素中的内容可选择，则选择其中的全部内容。对于没有可供选择的文字内容的元素（如可视化颜色选择器或日历日期输入），这个方法不做任何事情。
 - {{domxref("HTMLInputElement.setCustomValidity", "setCustomValidity()")}}
-  - : Sets a custom message to display if the input element's value isn't valid.
+  - : 如果输入元素的值不合法，设置显示的自定义信息。
 - {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
-  - : Sets the contents of the specified range of characters in the input element to a given string. A `selectMode` parameter is available to allow controlling how the existing content is affected.
+  - : 将输入元素中指定的字符范围的内容设置为一个给定的字符串。`selectMode` 参数可以控制现有内容如何被影响。
 - {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-  - : Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields.
+  - : 在一个文本输入元素中选择指定的字符范围。对不以文本输入字段形式出现的输入没有任何作用。
 - {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-  - : Decrements the value of a numeric input by one, by default, or by the specified number of units.
+  - : 默认情况下，将一个数字输入的值减少 1，或减少指定的单位数量。
 - {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-  - : Increments the value of a numeric input by one or by the specified number of units.
+  - : 默认情况下，将一个数字输入的值增加 1，或增加指定的单位数量。
 
 ## CSS
 
-Inputs, being replaced elements, have a few features not applicable to non form elements. There are CSS selectors that can specifically target form controls based on their UI features, also known as UI pseudo-classes. The input element can also be targeted by type with attribute selectors. There are some properties that are especially useful as well.
+输入元素作为被替换的元素，有一些功能不适用于非表单元素。有一些 CSS 选择器可以根据表单控件的 UI 特征专门针对它们，也被称为 UI 伪类。输入元素也可以用属性选择器按类型定位。有一些属性也是特别有用的。
 
-### UI pseudo-classes
+### UI 伪类
 
 <table class="no-markdown">
   <caption>
-    Captions super relevant to the
-    <code>&#x3C;input></code>
-    element:
+  与<code>&#x3C;input></code>元素非常相关的标题：
   </caption>
   <thead>
     <tr>
-      <th>Pseudo-class</th>
-      <th>Description</th>
+      <th>伪类</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>{{Cssxref(":enabled")}}</td>
       <td>
-        Any currently enabled element that can be activated (selected, clicked
-        on, typed into, etc.) or accept focus and also has a disabled state, in
-        which it can't be activated or accept focus.
+        任何当前启用的元素，可以被激活（选择、点击、输入等）或接受焦点；也有一个禁用状态，在这个状态下，它不能被激活或接受焦点。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":disabled")}}</td>
       <td>
-        Any currently disabled element that has an enabled state, meaning it
-        otherwise could be activated (selected, clicked on, typed into, etc.) or
-        accept focus were it not disabled.
+        任何当前禁用的元素都有一个启用的状态，这意味着如果它没有被禁用，它可以被激活（选择、点击、输入等等）或接受焦点。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":read-only")}}</td>
-      <td>Element not editable by the user</td>
+      <td>不能被用户编辑的元素。</td>
     </tr>
     <tr>
       <td>{{Cssxref(":read-write")}}</td>
-      <td>Element that is editable by the user.</td>
+      <td>可以被用户编辑的元素。</td>
     </tr>
     <tr>
       <td>{{Cssxref(":placeholder-shown")}}</td>
       <td>
-        Element that is currently displaying <a href="#placeholder"><code>placeholder</code> text</a>,
-        including <code>&#x3C;input></code> and {{HTMLElement("textarea")}} elements with the <a href="#placeholder"><code>placeholder</code></a> attribute present that has, as yet, no value.
+        当前显示<a href="#placeholder"><code>placeholder</code> 文字</a>的元素，包括有 <a href="#placeholder"><code>placeholder</code></a> 显示，尚未拥有值的 <code>&#x3C;input></code> 和 {{HTMLElement("textarea")}} 元素。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":default")}}</td>
       <td>
-        Form elements that are the default in a group of related elements.
-        Matches {{HTMLElement("input/checkbox", "checkbox")}} and
-        {{HTMLElement("input/radio", "radio")}} input types that
-        were checked on page load or render.
+        在一组相关元素中属于默认的表单元素。匹配 {{HTMLElement("input/checkbox", "checkbox")}} 和  {{HTMLElement("input/radio", "radio")}} 在页面加载或渲染时被选中的输入类型。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":checked")}}</td>
       <td>
-        Matches {{HTMLElement("input/checkbox", "checkbox")}} and
-        {{HTMLElement("input/radio", "radio")}} input types that
-        are currently checked (and the ({{HTMLElement("option")}} in a
-        {{HTMLElement("select")}} that is currently selected).
+        匹配当前被选中的 {{HTMLElement("input/checkbox", "checkbox")}} 和 {{HTMLElement("input/radio", "radio")}} 输入类型（以及当前被选中的 {{HTMLElement("select")}} 中的 {{HTMLElement("option")}}）。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":indeterminate")}}</td>
       <td>
-        {{HTMLElement("input/checkbox", "checkbox")}} elements
-        whose indeterminate property is set to true by JavaScript,
-        {{HTMLElement("input/radio", "radio")}} elements, when all
-        radio buttons with the same name value in the form are unchecked, and
-        {{HTMLElement("progress")}} elements in an indeterminate state
+        indeterminate 属性被 JavaScript 设置为真的 {{HTMLElement("input/checkbox", "checkbox")}} 元素，表单中所有具有相同名称值的单选按钮被取消选中的 {{HTMLElement("input/radio", "radio")} 元素，以及处于不确定状态的 {{HTMLElement("progress")}} 元素。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":valid")}}</td>
       <td>
-        Form controls that can have constraint validation applied and are
-        currently valid.
+        可以应用约束验证的表单控件，并且当前是有效的。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":invalid")}}</td>
       <td>
-        Form controls that have constraint validation applied and are currently
-        not valid. Matches a form control whose value doesn't match the
-        constraints set on it by its attributes, such as
-        <a href="#required"><code>required</code></a>,
-        <a href="#pattern"><code>pattern</code></a>,
-        <a href="#step"><code>step</code></a> and <a href="#max"><code>max</code></a>.
+        应用了约束条件验证的表单控件，并且当前是无效的。匹配一个表单控件，它的值与它的属性设置的约束条件不一致，如 <a href="#required"><code>required</code></a>、<a href="#pattern"><code>pattern</code></a>、<a href="#step"><code>step</code></a> 和 <a href="#max"><code>max</code></a>。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":in-range")}}</td>
       <td>
-        A non-empty input whose current value is within the range limits
-        specified by the <a href="#min"><code>min</code></a> and <a href="#max"><code>max</code></a> attributes and the <a href="#step"><code>step</code></a>.
+        一个非空的输入，其当前值在 <a href="#min"><code>min</code></a> 和 <a href="#max"><code>max</code></a> 属性以及 <a href="#step"><code>step</code> 指定的范围限制内。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":out-of-range")}}</td>
       <td>
-        A non-empty input whose current value is NOT within the range limits
-        specified by the <a href="#min"><code>min</code></a>
-        and <a href="#max"><code>max</code></a> attributes or
-        does not adhere to the <a href="#step"><code>step</code></a> constraint.
+        一个非空的输入，其当前值不在 <a href="#min"><code>min</code></a> 和 <a href="#max"><code>max</code></a> 属性以及 <a href="#step"><code>step</code> 指定的范围限制内。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":required")}}</td>
       <td>
-        <code>&#x3C;input></code>, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the <a href="#required"><code>required</code></a> attribute set on it.
-        Only matches elements that can be required.
-        The attribute included on a non-requirable element will not make for a match.
+        有 <a href="#required"><code>required</code></a> 属性设置的 <code>&#x3C;input></code>、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素。只匹配可以被 required 的元素，不匹配不能被 required 的元素。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":optional")}}</td>
       <td>
-        <code>&#x3C;input></code>, {{HTMLElement("select")}}, or
-        {{HTMLElement("textarea")}} element that does NOT have the <a href="#required"><code>required</code></a> attribute set on it.
-        Does not match elements that can't be required.
+        没有 <a href="#required"><code>required</code></a> 属性设置的 <code>&#x3C;input></code>、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素。只匹配可以被 required 的元素，不匹配不能被 required 的元素。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":blank")}}</td>
       <td>
-        <code>&#x3C;input></code> and {{HTMLElement("textarea")}} elements that currently have no value.
+        没有值的 <code>&#x3C;input></code> 和 {{HTMLElement("textarea")}} 元素。
       </td>
     </tr>
     <tr>
       <td>{{Cssxref(":user-invalid")}}</td>
       <td>
-        Similar to <code>:invalid</code>, but is activated on blur. Matches
-        invalid input but only after the user interaction, such as by focusing
-        on the control, leaving the control, or attempting to submit the form
-        containing the invalid control.
+        与 <code>:invalid</code> 相似，但是在失焦的情况下激活。匹配无效的输入，但只在用户交互之后，例如关注该控件、离开该控件或试图提交包含无效控件的表单。
       </td>
     </tr>
   </tbody>
@@ -799,7 +759,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
 
 #### 伪类示例
 
-We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the {{cssxref('color')}} and {{cssxref('font-weight')}} of the {{htmlelement('label')}} that comes immediately after a checked input. We haven't applied any styles if the `input` is not checked.
+我们可以根据复选框是否被选中来为复选框的标签添加样式。在这个例子中，我们对紧跟在复选输入之后的 {{cssxref('color')}} 和 {{cssxref('font-weight')}} 的 {{htmlelement('label')}} 进行样式设置。如果 `input` 没有选中，我们没有应用任何样式。
 
 ```html hidden
 <input id="checkboxInput" type="checkbox" />
@@ -817,23 +777,23 @@ input:checked + label {
 
 ### 属性选择器
 
-It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
+使用[属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)，可以根据表单控件的 [`type`](#type) 来锁定不同类型的表单控件。CSS 属性选择器只需根据一个属性的存在或一个给定属性的值来匹配元素。
 
 ```css
-/* matches a password input */
+/* 匹配密码输入 */
 input[type="password"] {
 }
-/* matches a form control whose valid values are limited to a range of values*/
+/* 匹配合法值限制在一个范围内的表单控件 */
 input[min][max] {
 }
-/* matches a form control with a pattern attribute */
+/* 匹配含有 pattern 属性的表单控件 */
 input[pattern] {
 }
 ```
 
 ### ::placeholder
 
-By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's [`placeholder` text](#placeholder). It can be styled with a limited subset of CSS properties.
+默认情况下，占位符文本的外观是半透明或浅灰色。{{cssxref('::placeholder')}} 伪元素是输入的 [`placeholder` 文本](#placeholder)。可以使用有限的 CSS 属性子集为其赋予样式。
 
 ```css
 ::placeholder {
@@ -841,24 +801,24 @@ By default, the appearance of placeholder text is a translucent or light gray. T
 }
 ```
 
-Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
+只有适用于 {{cssxref("::first-line")}} 伪元素的 CSS 属性子集可以在选择器中使用 `::placeholder` 的规则。
 
 ### appearance
 
-The {{cssxref("appearance")}} property enables the displaying of (almost) any element as a platform-native style based on the operating system's theme as well as the removal of any platform-native styling with the `none` value.
+{{cssxref("appearance")}} 属性可以将（几乎）任何元素显示为基于操作系统主题的平台原生样式，也可以用 `none` 值去除任何平台原生样式。
 
-You could make a `<div>` look like a radio button with `div {appearance: radio;}` or a radio look like a checkbox with `[type="radio"] {appearance: checkbox;}`, but don't.
+你可以用 `div {appearance: radio;}` 使 `<div>` 看起来像一个单选按钮，或者用 `[type="radio"] {appearance: checkbox;}` 使一个单选看起来像一个复选框，但不要这样做。
 
-Setting `appearance: none` removes platform native borders, but not functionality.
+设置 `appearance: none` 移除了平台原生的边框，但没有移除其功能。
 
 ### caret-color
 
-A property specific to text entry-related elements is the CSS {{cssxref("caret-color")}} property, which lets you set the color used to draw the text input caret:
+一个专门针对文本输入相关元素的属性是 CSS {{cssxref("caret-color")}} 属性，它可以让你设置用于绘制文本输入光标的颜色：
 
 #### HTML
 
 ```html
-<label for="textInput">Note the red caret:</label>
+<label for="textInput">请注意红色光标：</label>
 <input id="textInput" class="custom" size="32" />
 ```
 
@@ -877,19 +837,19 @@ input.custom {
 
 ### object-position and object-fit
 
-In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties
+在某些情况下（通常涉及非文本输入和专门的界面），`<input>` 元素是一个[被替换的元素](/zh-CN/docs/Web/CSS/Replaced_element)。当它为替换元素时，该元素在其框架内的位置和大小可以使用 CSS {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 属性来调整。
 
-### Styling
+### 赋予样式
 
-For more information about adding color to elements in HTML, see:
+关于在 HTML 中为元素添加颜色的更多信息，参见：
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
+- [使用 CSS 为 HTML 元素添加颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)。
 
-Also see:
+还可以参考：
 
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling) and
-- the [compatibility table of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
+- [为 HTML 表单赋予样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [HTML 表单高级样式化](/zh-CN/docs/Learn/Forms/Advanced_form_styling) 和
+- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)。
 
 ## 额外特性
 
