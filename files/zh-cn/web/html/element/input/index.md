@@ -701,7 +701,7 @@ slug: Web/HTML/Element/Input
     <tr>
       <td>{{Cssxref(":indeterminate")}}</td>
       <td>
-        indeterminate 属性被 JavaScript 设置为真的 {{HTMLElement("input/checkbox", "checkbox")}} 元素，表单中所有具有相同名称值的单选按钮被取消选中的 {{HTMLElement("input/radio", "radio")} 元素，以及处于不确定状态的 {{HTMLElement("progress")}} 元素。
+        indeterminate 属性被 JavaScript 设置为真的 {{HTMLElement("input/checkbox", "checkbox")}} 元素，表单中所有具有相同名称值的单选按钮被取消选中的 {{HTMLElement("input/radio", "radio")}} 元素，以及处于不确定状态的 {{HTMLElement("progress")}} 元素。
       </td>
     </tr>
     <tr>
@@ -853,69 +853,69 @@ input.custom {
 
 ### 标签
 
-Labels are needed to associate assistive text with an `<input>`. The {{HTMLElement("label")}} element provides explanatory information about a form field that is _always_ appropriate (aside from any layout concerns you have). It's never a bad idea to use a `<label>` to explain what should be entered into an `<input>` or {{HTMLElement("textarea")}}.
+需要标签来将辅助性文本与 `<input>` 联系起来。{{HTMLElement("label")}} 元素提供了关于一个表单字段的适合的解释信息（除了任何布局方面的考虑）。使用 `<label>` 解释输入至 `<input>` 或 {{HTMLElement("textarea")}} 的内容总是好的。
 
 #### 关联标签
 
-The semantic pairing of `<input>` and `<label>` elements is useful for assistive technologies such as screen readers. By pairing them using the `<label>`'s [`for`](/en-US/docs/Web/HTML/Element/label#for) attribute, you bond the label to the input in a way that lets screen readers describe inputs to users more precisely.
+`<input>` 和 `<label>` 元素的语义配对对于屏幕阅读器等辅助技术是很有用的。通过使用 `<label>` 的 [`for`](/zh-CN/docs/Web/HTML/Element/label#for) 属性对它们进行配对，可以将标签与输入结合起来，让屏幕阅读器更精确地描述输入。
 
-It does not suffice to have plain text adjacent to the `<input>` element. Rather, usability and accessibility requires the inclusion of either implicit or explicit {{HTMLElement("label")}}:
+仅仅在 `<input>` 元素旁边有纯文本是不够的。相反，可用性和无障碍性要求包含隐式或显式 {{HTMLElement("label")}}：
 
 ```html
-<!-- inaccessible -->
-<p>Enter your name: <input id="name" type="text" size="30" /></p>
+<!-- 非无障碍的 -->
+<p>输入你的名字：<input id="name" type="text" size="30" /></p>
 
-<!-- implicit label -->
+<!-- 隐式标签 -->
 <p>
-  <label>Enter your name: <input id="name" type="text" size="30" /></label>
+  <label>输入你的名字：<input id="name" type="text" size="30" /></label>
 </p>
 
-<!-- explicit label -->
+<!-- 显式标签 -->
 <p>
-  <label for="name">Enter your name: </label>
+  <label for="name">输入你的名字：</label>
   <input id="name" type="text" size="30" />
 </p>
 ```
 
-The first example is inaccessible: no relationship exists between the prompt and the `<input>` element.
+第一个示例没有无障碍性：提示和 `<input>` 元素没有关系。
 
-In addition to an accessible name, the label provides a larger 'hit' area for mouse and touch screen users to click on or touch. By pairing a `<label>` with an `<input>`, clicking on either one will focus the `<input>`. If you use plain text to "label" your input, this won't happen. Having the prompt part of the activation area for the input is helpful for people with motor control conditions.
+除了无障碍名称外，标签还提供了一个更大的“命中”区域，供鼠标和触摸屏用户点击或触摸。通过将 `<label>` 和 `<input>` 配对，点击任何一个元素将聚焦 `<input>` 元素。如果你使用纯文本来给你的输入元素作“标签”，将不会享受到以上特性。将激活区的提示部分用于输入，对有运动控制条件的人是有帮助的。
 
-As web developers, it's important that we never assume that people will know all the things that we know. The diversity of people using the web—and by extension your website—practically guarantees that some of your site's visitors will have some variation in thought processes and/or circumstances that leads them to interpret your forms very differently from you without clear and properly-presented labels.
+作为 web 开发者，我们永远不要假定使用者知道所有的事情。使用 web 的人的多样性——可能延伸到你的网站中——实际上保证了你的网站的一些访问者在思维过程和/或情况上会有一些变化，导致他们在没有明确和适当的标签的情况下对你的表单有非常不同的解释。
 
 #### 占位符不具有无障碍性
 
-The [`placeholder`](#placeholder) attribute lets you specify text that appears within the `<input>` element's content area itself when it is empty. The placeholder should never be required to understand your forms. It is not a label, and should not be used as a substitute, because it isn't. The placeholder is used to provide a hint as to what an inputted value should look like, not an explanation or prompt.
+[`placeholder`](#placeholder) 属性可以让你指定在 `<input>` 元素的内容区域本身为空时出现的文本。不应该依靠占位符去理解表单。它不是一个标签，也不应该被用来替代。占位符是用来提示输入的值应该是什么样子，而不是解释。
 
-Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, the placeholder disappears. Browsers with automatic page translation features may skip over attributes when translating, meaning the `placeholder` may not get translated.
+不仅屏幕阅读器无法访问占位符，而且一旦用户在表单控件中输入任何文本，或者如果表单控件已经有一个值，占位符就会消失。具有自动页面翻译功能的浏览器在翻译时可能会跳过属性，这意味着 `placeholder` 可能不会被翻译。
 
-> **备注：** Don't use the [`placeholder`](#placeholder) attribute if you can avoid it. If you need to label an `<input>` element, use the {{HTMLElement("label")}} element.
+> **备注：** 尽可能不要使用 [`placeholder`](#placeholder) 属性。如果需要标记 `<input>` 元素，请使用 {{HTMLElement("label")}} 元素。
 
 ### 客户端验证
 
-> **Warning:** Client-side validation is useful, but it does _not_ guarantee that the server will receive valid data. If the data must be in a specific format, _always_ verify it also on the server-side, and return a [`400` HTTP response](/en-US/docs/Web/HTTP/Status/400) if the format is invalid.
-In addition to using CSS to style inputs based on the {{cssxref(":valid")}} or {{cssxref(":invalid")}} UI states based on the current state of each input, as noted in the [UI pseudo-classes](#ui_pseudo-classes) section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if there is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.
+> **警告：** 客户端验证是有用的，但它并*不能*保证服务器会收到有效的数据。如果数据必须是特定的格式，*总是*应该在服务器端进行验证，如果格式无效，则返回一个 [`400` HTTP 响应](/zh-CN/docs/Web/HTTP/Status/400)。
 
-Some input types and other attributes place limits on what values are valid for a given input. For example, `<input type="number" min="2" max="10" step="2">` means only the number 2, 4, 6, 8, or 10 are valid. Several errors could occur, including a `rangeUnderflow` error if the value is less than 2, `rangeOverflow` if greater than 10, `stepMismatch` if the value is a number between 2 and 10, but not an even integer (does not match the requirements of the `step` attribute), or `typeMismatch` if the value is not a number.
+除了如上文 [UI 伪类](#UI_伪类)部分所述，使用 CSS 根据 {{cssxref(":valid")}} 或 {{cssxref(":invalid")}} 每个输入的当前状态来设计输入的样式之外，浏览器还在（试图）提交表单时提供了客户端验证。在表单提交时，如果有一个表单控件没有通过约束验证，支持的浏览器将在第一个无效的表单控件上显示一个错误信息；根据错误类型显示一个默认信息，或者由你设置的信息。
 
-For the input types whose domain of possible values is periodic (that is, at the highest possible value, the values wrap back around to the beginning rather than ending), it's possible for the values of the [`max`](#max) and [`min`](#min) properties to be reversed, which indicates that the range of permitted values starts at `min`, wraps around to the lowest possible value, then continues on until `max` is reached. This is particularly useful for dates and times, such as when you want to allow the range to be from 8 PM to 8 AM:
+某些输入类型和其他属性对特定输入的有效值进行了限制。例如，`<input type="number" min="2" max="10" step="2">` 意味着只有数字2、4、6、8 或 10 有效。某些错误可能发生，当值小于 2 时会发生 `rangeUnderflow` 错误，值大于 10 时会发生 `rangeOverflow` 错误，当值在 2 至 10 之间，但不是偶数（不满足 `step` 属性的需求）时会发生 `stepMismatch` 错误，如果值不是一个数字时会发生 `typeMismatch` 错误。
+
+对于可能的值域是周期性的输入类型（也就是说，在可能的最高值时，值会绕回开始而不是结束），[`max`](#max) 和 [`min`](#min) 属性的值有可能是相反的，这表明允许的值范围从 `min` 开始，绕到可能的最低值，然后继续下去直到达到 `max`。这对日期和时间特别有用，比如你想让范围从晚上 8 点到早上 8 点：
 
 ```html
 <input type="time" min="20:00" max="08:00" name="overnight" />
 ```
 
-Specific attributes and their values can lead to a specific error {{domxref('ValidityState')}}:
+特定的属性和它们的值会导致一个特定的错误 {{domxref('ValidityState')}}：
 
 <table class="no-markdown">
   <caption>
-    Validity object errors depend on the {{htmlelement('input')}}
-    attributes and their values:
+    Validity 对象的错误取决于 {{htmlelement('input')}} 的属性及其值：
   </caption>
   <thead>
     <tr>
-      <th scope="col">Attribute</th>
-      <th scope="col">Relevant property</th>
-      <th scope="col">Description</th>
+      <th scope="col">属性</th>
+      <th scope="col">相关属性</th>
+      <th scope="col">描述</th>
     </tr>
   </thead>
   <tbody>
@@ -923,68 +923,66 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
       <td><a href="#max"><code>max</code></a></td>
       <td>{{domxref('validityState.rangeOverflow')}}</td>
       <td>
-        Occurs when the value is greater than the maximum value as defined by
-        the <code>max</code> attribute
+        当值大于 <code>max</code> 属性所定义的最大值时发生
       </td>
     </tr>
     <tr>
       <td><a href="#maxlength"><code>maxlength</code></a></td>
       <td>{{domxref('validityState.tooLong')}}</td>
       <td>
-        Occurs when the number of characters is greater than the number allowed by the <code>maxlength</code> property
+        当字符数大于 <code>maxlength</code> 属性所允许的数量时发生
       </td>
     </tr>
     <tr>
       <td><a href="#min"><code>min</code></a></td>
       <td>{{domxref('validityState.rangeUnderflow')}}</td>
       <td>
-        Occurs when the value is less than the minimum value as defined by the <code>min</code> attribute
+        当值小于 <code>min</code> 属性所定义的最小值时发生
       </td>
     </tr>
     <tr>
       <td><a href="#minlength"><code>minlength</code></a></td>
       <td>{{domxref('validityState.tooShort')}}</td>
       <td>
-        Occurs when the number of characters is less than the number required by the <code>minlength</code> property
+        当字符数小于 <code>minlength</code> 属性所允许的数量时发生
       </td>
     </tr>
     <tr>
       <td><a href="#pattern"><code>pattern</code></a></td>
       <td>{{domxref('validityState.patternMismatch')}}</td>
       <td>
-        Occurs when a pattern attribute is included with a valid regular expression and the <code>value</code> does not match it.
+        当模式属性包含一个有效的正则表达式，而 <code>value</code> 与之不匹配时发生
       </td>
     </tr>
     <tr>
       <td><a href="#required"><code>required</code></a></td>
       <td>{{domxref('validityState.valueMissing')}}</td>
       <td>
-        Occurs when the <code>required</code> attribute is present but the value is <code>null</code> or radio or checkbox is not checked.
+        当 <code>required</code> 存在时，但是值为 <code>null</code> 或单选钮、复选框未选中时发生
       </td>
     </tr>
     <tr>
       <td><a href="#step"><code>step</code></a></td>
       <td>{{domxref('validityState.stepMismatch')}}</td>
       <td>
-        The value doesn't match the step increment. Increment default is <code>1</code>, so only integers are valid on<code> type="number"</code>
-        is step is not included. <code>step="any"</code> will never throw this error.
+        值不满足步进增量。增量默认值为 <code>1</code>，所以对于 <code>type="number"</code> 来说，只有整数才有效，<code>step="any"</code> 永远不会抛出这个错误。
       </td>
     </tr>
     <tr>
       <td><a href="#type"><code>type</code></a></td>
       <td>{{domxref('validityState.typeMismatch')}}</td>
       <td>
-        Occurs when the value is not of the correct type, for example an email does not contain an <code>@</code> or a url doesn't contain a protocol.
+        当值的类型不正确时发生，例如，电子邮件不包含 <code>@</code>，或者不包含协议的 url。
       </td>
     </tr>
   </tbody>
 </table>
 
-If a form control doesn't have the `required` attribute, no value, or an empty string, is not invalid. Even if the above attributes are present, with the exception of `required`, and empty string will not lead to an error.
+如果一个表单控件没有 `required` 属性，没有值，或者是一个空字符串，都不是无效的。即使上述属性存在，除了 `required` 之外，和空字符串也不会导致错误。
 
-We can set limits on what values we accept, and supporting browsers will natively validate these form values and alert the user if there is a mistake when the form is submitted.
+我们可以对接受的值进行限制，支持的浏览器会对这些表单的数值进行原生验证，并在表单提交时提醒用户是否有错误。
 
-In addition to the errors described in the table above, the `validityState` interface contains the `badInput`, `valid`, and `customError` boolean readonly properties. The validity object includes:
+除了上表中描述的错误外，`validityState` 接口还包含 `badInput`、`valid` 和 `customError` 布尔值只读属性。有效性对象包括：
 
 - {{domxref('validityState.valueMissing')}}
 - {{domxref('validityState.typeMismatch')}}
@@ -998,42 +996,42 @@ In addition to the errors described in the table above, the `validityState` inte
 - {{domxref('validityState.valid')}}
 - {{domxref('validityState.customError')}}
 
-For each of these Boolean properties, a value of `true` indicates that the specified reason validation may have failed is true, with the exception of the `valid` property, which is `true` if the element's value obeys all constraints.
+对于这些布尔属性中的每一个，值为 `true` 表示指定的验证可能失败的原因是真实的，但 `valid` 属性除外，如果元素的值服从所有的约束，则为 `true`。
 
-If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or `null`), the form will be prevented from being submitted. If there is no custom error message, and none of the other properties return true, `valid` will be true, and the form can be submitted.
+如果有错误，支持的浏览器会提醒用户，并阻止表单的提交。需要注意的是：如果自定义错误被设置为一个真值（除了空字符串或 `null` 以外的任何值），表单将被阻止提交。如果没有自定义错误信息，并且其他属性都没有返回真值，那么 `valid` 将为真，表单可以被提交。
 
 ```js
 function validate(input) {
   let validityState_object = input.validity;
   if (validityState_object.valueMissing) {
-    input.setCustomValidity("A value is required");
+    input.setCustomValidity("需要一个值");
   } else if (validityState_object.rangeUnderflow) {
-    input.setCustomValidity("Your value is too low");
+    input.setCustomValidity("值太小了");
   } else if (validityState_object.rangeOverflow) {
-    input.setCustomValidity("Your value is too high");
+    input.setCustomValidity("值太大了");
   } else {
     input.setCustomValidity("");
   }
 }
 ```
 
-The last line, setting the custom validity message to the empty string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all the values are valid, until the message is `null`.
+最后一行，将自定义的有效性信息设置为空字符串是至关重要的。如果用户出错，而有效性被设置，即使所有的值都是有效的，也会提交失败，直到消息为 `null`。
 
 #### 自定义验证错误示例
 
-If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
+如果你想在一个字段验证失败时显示一个自定义的错误信息，你需要使用[约束验证 API](/zh-CN/docs/Learn/Form_validation#使用_JavaScript_校验表单)，在 `<input>`（及相关）元素上可用。以下面的表格为例：
 
 ```html
 <form>
-  <label for="name">Enter username (upper and lowercase letters): </label>
+  <label for="name">输入用户名（允许使用大小写字母）：</label>
   <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
-  <button>Submit</button>
+  <button>提交</button>
 </form>
 ```
 
-The basic HTML form validation features will cause this to produce a default error message if you try to submit the form with either no valid filled in, or a value that does not match the `pattern`.
+如果你试图提交的表单没有填写有效的内容，或者是一个不符合 `pattern` 的值，基本的 HTML 表单验证功能将使其产生一个默认的错误信息。
 
-If you wanted to instead display custom error messages, you could use JavaScript like the following:
+如果你想转而显示自定义的错误信息，你可以使用下面这样的 JavaScript 代码：
 
 ```js
 const nameInput = document.querySelector("input");
@@ -1043,38 +1041,38 @@ nameInput.addEventListener("input", () => {
 });
 nameInput.addEventListener("invalid", () => {
   if (nameInput.value === "") {
-    nameInput.setCustomValidity("Enter your username!");
+    nameInput.setCustomValidity("输入一个用户名！");
   } else {
     nameInput.setCustomValidity(
-      "Usernames can only contain upper and lowercase letters. Try again!"
+      "用户名只能包含大写或小写字母，请再试一遍。"
     );
   }
 });
 ```
 
-The example renders like so:
+此示例会像这样渲染：
 
 {{EmbedLiveSample('自定义验证错误示例')}}
 
-In brief:
+简单来说：
 
-- We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
-- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if ()` block, and set a custom validity error message.
-- As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
-- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it currently contains a valid value on submission.
+- 每次输入元素的值发生变化时，我们通过 `input` 事件处理程序运行 `checkValidity()` 方法来检查其有效状态。
+- 如果值是无效的，会引发 `invalid` 事件，运行 `invalid` 事件处理函数。在这个函数中，我们使用 `if()` 块来决定值无效是因为它是空的，还是因为它不符合模式，并设置一个自定义的有效性错误信息。
+- 因此，如果在按下提交按钮时，输入值是无效的，将显示其中一个自定义错误信息。
+- 如果它是有效的，它就会像你所期望的那样提交。要做到这一点，必须取消自定义的有效性，通过使用空字符串调用 `setCustomValidity()` 来实现。我们在每次 `input` 事件发生时都要这样做。如果你不这样做，并且之前设置了一个自定义的有效性，那么输入将会认为无效，即使它目前包含一个有效的提交值。
 
-> **Note:** Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.
-> **Note:** Firefox supported a proprietary error attribute — `x-moz-errormessage` — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see {{bug(1513890)}}).
+> **备注：** 始终在客户端和服务器端验证输入约束。约束验证并不能消除在*服务器端*进行验证的必要性。无效的值仍然可以由旧的浏览器或坏的行为者发送。
+> **备注：** Firefox 在许多版本中支持一个专有的错误属性——`x-moz-errormessage`，它允许你以类似的方式设置自定义错误信息。从第 66 版开始，这个属性已被移除（见{{bug(1513890)}}）。
 
 ### 本地化
 
-The allowed inputs for certain `<input>` types depend on the locale. In some locales, 1,000.00 is a valid number, while in other locales the valid way to enter this number is 1.000,00.
+某些 `<input>` 类型所允许的输入方式取决于当地的语言。在某些地区，1,000.00 是一个有效的数字，而在其他地区，输入这个数字的有效方式是 1.000,00。
 
-Firefox uses the following heuristics to determine the locale to validate the user's input (at least for `type="number"`):
+Firefox 使用以下启发式方法来确定验证用户输入的语言（至少对于 `type="number"`）。
 
-- Try the language specified by a `lang`/`xml:lang` attribute on the element or any of its parents.
-- Try the language specified by any `Content-Language` HTTP header. Or,
-- If none specified, use the browser's locale.
+- 尝试该元素或其任何父元素上的 `lang`/`xml:lang` 属性所指定的语言。
+- 尝试任何 `Content-Language` HTTP 头所指定的语言。或者，
+- 如果没有指定，则使用浏览器的区域设置。
 
 ### 技术总结
 
@@ -1192,22 +1190,22 @@ Firefox uses the following heuristics to determine the locale to validate the us
 
 ### 标签
 
-When including inputs, it is an accessibilty requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. this is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#Labels) .
+当包括输入元素时，在旁边添加标签是一项无障碍要求，这样那些使用辅助技术的人就可以知道输入的内容是什么。另外，点击或触摸一个标签会将焦点集中到该标签的相关表单控件上。这提高了视力用户的可及性和可用性，增加了用户可以点击或触摸以激活表单控件的区域。这对单选按钮和复选框特别有用（甚至非常必要），因为它们很小。关于标签的更多信息，请参见[标签](#标签)一节。
 
-The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
+以下示例是将 `<label>` 和一个 `<input>` 元素建立联系。你需要赋予 `<input>` 元素一个 `id` 属性。 `<label>` 需要一个 `for` 属性，其值与输入的 `id` 相同。
 
 ```html
-<label for="peas">Do you like peas?</label>
+<label for="peas">你喜欢豌豆吗？</label>
 <input type="checkbox" name="peas" id="peas">
 ```
 
 ### 尺寸
 
-Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+像表单输入这样的互动元素应该提供一个足够大的区域，以便于激活它们。这有助于各种人，包括有运动控制问题的人和使用非精确形式的输入（如手写笔或手指）的人。建议最小互动尺寸为 44×44 [CSS 像素](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)。
 
-- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5 | Adrian Roselli](http://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets - The A11Y Project](https://a11yproject.com/posts/large-touch-targets/)
+- [了解成功标准 2.5.5：目标尺寸 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [目标尺寸和 2.5.5 | Adrian Roselli](http://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [快速测试：大型点击目标——The A11Y Project](https://a11yproject.com/posts/large-touch-targets/)
 
 ## 规范
 
