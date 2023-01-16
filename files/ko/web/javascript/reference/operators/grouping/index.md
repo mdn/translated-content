@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 {{jsSidebar("Operators")}}
 
-**그룹 연산자 `()`**는 표현식 내에서 평가의 우선순위를 제어합니다.
+**그룹 연산자 `()`** 는 표현식 내에서 평가의 우선순위를 제어합니다.
 
 {{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
 
