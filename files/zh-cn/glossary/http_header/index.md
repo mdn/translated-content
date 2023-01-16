@@ -45,7 +45,7 @@ X-Cache: Hit from cloudfront
 X-Cache-Info: cached
 ```
 
-> **备注:** 规范的旧版本指的是：
+> **备注：** 规范的旧版本指的是：
 >
 > - {{Glossary("General header")}}：该标头同时适用于请求和响应，但是与在主体中传输的数据无关。
 > - {{Glossary("Entity header")}}: 该标头含有与消息主体相关的附加信息，比如长度或者 MIME 类型（这是现在被称为表示（Representation）元数据标头的超集）。
