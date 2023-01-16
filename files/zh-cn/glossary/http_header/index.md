@@ -9,7 +9,7 @@ original_slug: Glossary/Header
 HTTP 和 Fetch 规范指的是许多标头类别，包括：
 
 - {{Glossary("Request header", "请求标头")}}：该标头包含要获取的资源或者客户端自身的更多信息。
-- {{Glossary("Response header", "响应标头")}}：该标头包含有关响应的额外信息，例如它的位置或者关于服务器自身（名字、版本...）。
+- {{Glossary("Response header", "响应标头")}}：该标头包含有关响应的额外信息，例如它的位置或者关于服务器自身的信息（名字、版本...）。
 - {{Glossary("Representation header", "表示标头")}}：该标头包含消息主体中资源的元数据（例如，编码、媒体类型等）。
 - {{Glossary("Fetch metadata request header", "Fetch 元数据请求标头")}}：该标头关于消息主体中资源等元数据（例如，编码、媒体类型等）。
 
