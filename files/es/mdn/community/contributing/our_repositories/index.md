@@ -59,7 +59,7 @@ Un proyecto de nivel 3 necesita 1 administrador.
 
 [//]: # "TODO: UPDATE WITH REPO TRIAGE"
 
-La organización MDN Web Docs en GitHub contiene una gran cantidad de repositorios de ejemplo. Por lo general, contienen ejemplos de código independientes que a menudo están vinculados desde nuestras páginas, pero ocasionalmente encontrará uno de estos ejemplos incrustado en una página mediante una llamada de macro como esta: `{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}`.
+La organización MDN Web Docs en GitHub contiene una gran cantidad de repositorios de ejemplo. Por lo general, contienen ejemplos de código independientes que a menudo están vinculados desde nuestras páginas, pero ocasionalmente encontrará uno de estos ejemplos incrustado en una página mediante una llamada de macro como esta: `\{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}`.
 
 Recuerde siempre que si está actualizando el código en una página determinada, también deberá actualizar el repositorio de ejemplo correspondiente.
 
