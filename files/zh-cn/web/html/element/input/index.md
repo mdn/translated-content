@@ -689,7 +689,7 @@ slug: Web/HTML/Element/Input
     <tr>
       <td>{{Cssxref(":default")}}</td>
       <td>
-        在一组相关元素中属于默认的表单元素。匹配 {{HTMLElement("input/checkbox", "checkbox")}} 和  {{HTMLElement("input/radio", "radio")}} 在页面加载或渲染时被选中的输入类型。
+        在一组相关元素中属于默认的表单元素。匹配 {{HTMLElement("input/checkbox", "checkbox")}} 和 {{HTMLElement("input/radio", "radio")}} 在页面加载或渲染时被选中的输入类型。
       </td>
     </tr>
     <tr>
