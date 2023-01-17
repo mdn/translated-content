@@ -439,7 +439,7 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
 
 ### Résultat
 
-{{EmbedLiveSample('', '100%', 30)}}
+{{EmbedLiveSample('Démonstration', '100%', 30)}}
 
 ## S'amuser avec les filtres
 
