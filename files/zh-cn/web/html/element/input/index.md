@@ -309,7 +309,7 @@ slug: Web/HTML/Element/Input
 
 - [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete)
 
-  - : （**不是**一个布尔属性！）[`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性将一个空格分隔的字符串作为其值，描述输入应该提供什么类型的自动完成功能。一个典型的自动完成的实现是回忆以前在同一输入字段中输入的值，但也可能存在更复杂的自动完成形式。例如，浏览器可以与设备的联系人列表集成，在电子邮件输入栏中自动完成 `email` 地址。请参阅{{SectionOnPage("/zh-CN/docs/Web/HTML/Attributes/autocomplete", "值")}}了解允许的值。
+  - : （**不是**一个布尔属性！）[`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性将一个空格分隔的字符串作为其值，描述输入应该提供什么类型的自动完成功能。一个典型的自动完成的实现是回忆以前在同一输入字段中输入的值，但也可能存在更复杂的自动完成形式。例如，浏览器可以与设备的联系人列表集成，在电子邮件输入栏中自动完成 `email` 地址。请参阅 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete#值) 以了解允许的值。
 
     `autocomplete` 属性对 `hidden`、`text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`range`、`color` 和 `password` 类型的输入有效。该属性对于那些不返回数值或文本数据的输入控件没有效果，对除了 `checkbox`、`radio`、`file` 和任何按钮类型的所有输入类型均有效。
 
