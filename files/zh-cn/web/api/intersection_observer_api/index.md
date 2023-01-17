@@ -280,7 +280,7 @@ intersectionCallback = (entries) => {
 startup();
 ```
 
-{{EmbedLiveSample("Threshold_example", 500, 500)}}
+{{EmbedLiveSample("Thresholds", 500, 500)}}
 
 #### Clipping and the intersection rectangle
 
