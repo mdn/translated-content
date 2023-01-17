@@ -31,6 +31,6 @@ jobs:
 
       - name: AutoCorrect changed content
         if: ${{ env.DIFF_DOCUMENTS }}
-        uses: huacnlee/autocorrect-action@v2.5.4
+        uses: huacnlee/autocorrect-action@v2.6.0
         with:
-          args: ${{ env.DIFF_DOCUMENTS }} --lint
+          args: ${{ env.DIFF_DOCUMENTS }} --lint --no-diff-bg-color
