@@ -41,7 +41,7 @@ Estos son repositorios utilizados para la planificación de proyectos, la docume
 - [mdn/mdn](https://github.com/mdn/mdn)
 - [content-team-projects](https://github.com/mdn/content-team-projects).
 
-Un proyecto de nivel 3 necesita 1 administrador.
+Un proyecto de nivel 3 necesita al menos 1 administrador.
 
 ## Repositorios principales
 
