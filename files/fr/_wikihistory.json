@@ -27914,9 +27914,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Web/HTML/Attributes/rel": {
-    "modified": "2020-10-15T21:26:15.592Z",
-    "contributors": ["SphinxKnight", "cdr", "louuis", "jcbita"]
   }
 }

@@ -4751,7 +4751,7 @@
 /fr/docs/Web/HTML/Introduction	/fr/docs/Learn/HTML/Introduction_to_HTML
 /fr/docs/Web/HTML/Introduction_to_HTML5	/fr/docs/Learn/HTML
 /fr/docs/Web/HTML/La_vérification_orthographique_dans_les_formulaires	/fr/docs/Web/HTML/Global_attributes/spellcheck
-/fr/docs/Web/HTML/Link_types	/fr/docs/conflicting/Web/HTML/Attributes/rel
+/fr/docs/Web/HTML/Link_types	/fr/docs/Web/HTML/Attributes/rel
 /fr/docs/Web/HTML/Link_types/dns-prefetch	/fr/docs/Web/HTML/Attributes/rel/dns-prefetch
 /fr/docs/Web/HTML/Link_types/manifest	/fr/docs/Web/HTML/Attributes/rel/manifest
 /fr/docs/Web/HTML/Link_types/me	/fr/docs/Web/HTML/Attributes/rel/me
@@ -4768,7 +4768,7 @@
 /fr/docs/Web/HTML/Précharger_du_contenu	/fr/docs/Web/HTML/Attributes/rel/preload
 /fr/docs/Web/HTML/Reglages_des_attributs_CORS	/fr/docs/Web/HTML/Attributes/crossorigin
 /fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/fr/docs/Web/HTML/Element/Heading_Elements
-/fr/docs/Web/HTML/Types_de_lien	/fr/docs/conflicting/Web/HTML/Attributes/rel
+/fr/docs/Web/HTML/Types_de_lien	/fr/docs/Web/HTML/Attributes/rel
 /fr/docs/Web/HTML/Utiliser_DASH_avec_les_vidéos_en_HTML	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /fr/docs/Web/HTML/formats_media_support	/fr/docs/Web/Media/Formats
 /fr/docs/Web/HTML/Éléments_en_bloc	/fr/docs/Web/HTML/Block-level_elements
@@ -6436,6 +6436,7 @@
 /fr/docs/conflicting/Web/Guide	/fr/docs/Web/Guide
 /fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/conflicting/Web/HTML	/fr/docs/Web/HTML
+/fr/docs/conflicting/Web/HTML/Attributes/rel	/fr/docs/Web/HTML/Attributes/rel
 /fr/docs/conflicting/Web/HTML/Element	/fr/docs/Web/HTML/Element
 /fr/docs/conflicting/Web/HTML/Element/input/datetime-local	/fr/docs/Web/HTML/Element/input/datetime-local
 /fr/docs/conflicting/Web/HTML/Global_attributes	/fr/docs/Web/HTML/Global_attributes
