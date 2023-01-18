@@ -3,7 +3,7 @@ title: Document 下的 selectionchange 事件
 slug: Web/API/Document/selectionchange_event
 ---
 
-当前 {{domxref("Document")}} 上的 {{domxref("Selection")}} 改变时触发[Selection API](/zh-CN/docs/Web/API/Selection) 的 **`selectionchange`** 事件。
+当前 {{domxref("Document")}} 上的 {{domxref("Selection")}} 改变时触发 [Selection API](/zh-CN/docs/Web/API/Selection) 的 **`selectionchange`** 事件。
 
 此事件不可取消，也不会冒泡。
 
