@@ -130,7 +130,7 @@ console.log(browserType);  // "vanilla"
 
 Также обратите внимание, что теперь мы должны объявить `BrowserType`, используя `let`, а не `const`, потому что мы переназначаем его.
 
-Имейте в виду, что `replace()` в этой форме изменяет только первое вхождение подстроки. Если вы хотите изменить все вхождения, вы можете использовать {{js xref("String.prototype.replaceAll()", "replaceAll()")}}:
+Имейте ввиду, что `replace()` в этой форме изменяет только первое вхождение подстроки. Если вы хотите изменить все вхождения, вы можете использовать {{js xref("String.prototype.replaceAll()", "replaceAll()")}}:
 
 ```js
 let quote = 'Быть или не быть';
@@ -174,8 +174,8 @@ const greetings = ['С днём рождения!',
                  'Поправляйся скорее'];
 
 for (const greeting of greetings) {
-  // Ваше решение должно быть в фигурных скобках
-  // ниже: вы должны что-то добавить
+  // Ваше решение должно быть в фигурных скобках ниже
+  
   if (greetings[i]) {
     const listItem = document.createElement('li');
     listItem.textContent = result;
