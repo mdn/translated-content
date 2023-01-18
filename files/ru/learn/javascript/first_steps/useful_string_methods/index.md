@@ -119,7 +119,7 @@ console.log(updated);      // "vanilla"
 console.log(browserType);  // "mozilla"
 ```
 
-Обратите внимание, что `replace()`, как и многие строковые методы, не изменяет строку, для которой он был вызван, но возвращает новую строку. Если вы хотите обновить исходную переменную `BrowserType`, вам придется сделать что-то вроде этого:
+Обратите внимание, что `replace()`, как и многие строковые методы, не изменяет строку, для которой он был вызван, но возвращает новую строку. Если вы хотите обновить исходную переменную `browserType`, вам придется сделать что-то вроде этого:
 
 ```js
 let browserType = 'mozilla';
@@ -130,7 +130,7 @@ console.log(browserType);  // "vanilla"
 
 Также обратите внимание, что теперь мы должны объявить `BrowserType`, используя `let`, а не `const`, потому что мы переназначаем его.
 
-Имейте ввиду, что `replace()` в этой форме изменяет только первое вхождение подстроки. Если вы хотите изменить все вхождения, вы можете использовать {{js xref("String.prototype.replaceAll()", "replaceAll()")}}:
+Имейте ввиду, что `replace()` в этой форме изменяет только первое вхождение подстроки. Если вы хотите изменить все вхождения, вы можете использовать {{jsxref("String.prototype.replaceAll()", "replaceAll()")}}:
 
 ```js
 let quote = 'Быть или не быть';
@@ -242,11 +242,29 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-let jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'С днём рождения!\',\n \'С Рождеством, любовь моя\',\n \'Счастливого Рождества всей твоей семье\',\n \'Ты — та, кто нужен мне на Рождество\',\n \'Поправляйся скорее\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Рождеств\') !== -1) {\n var result = input;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}';
-var solutionEntry = jsSolution;
+const jsSolution = 'const list = document.querySelector(\'.output ul\');
+list.innerHTML = '';
+const solutionEntry = jsSolution;
+
+for (const city of cities) {
+  // пишите код тут
+
+  const lower = city.toLowerCase();
+  const firstLetter = lower.slice(0,1);
+  const capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());
+  const result = capitalized;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}`;
+
+let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
+
+// остановите вывод клавиши tab из текстовой области и
+// заставьте его вместо этого написать табуляцию в позиции курсора
 
 // остановить вывод клавиши tab из текстовой области и
 // заставьте его вместо этого написать табуляцию в позиции курсора
