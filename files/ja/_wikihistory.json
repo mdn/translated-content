@@ -30978,10 +30978,6 @@
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
   },
-  "conflicting/Web/HTML/Attributes/rel": {
-    "modified": "2020-10-15T21:36:59.711Z",
-    "contributors": ["mfuji09", "yyss", "marmot1123"]
-  },
   "conflicting/Web/HTML/Global_attributes/contenteditable": {
     "modified": "2019-05-13T11:13:31.486Z",
     "contributors": ["mfuji09", "yyss", "ethertank"]
