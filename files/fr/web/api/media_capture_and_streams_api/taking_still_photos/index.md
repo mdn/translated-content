@@ -35,8 +35,8 @@ Pour le second panneau, nous avons un élément [`<canvas>`](/fr/docs/Web/HTML/E
 
 Nous avons également un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) sur lequel nous afficherons l'image, dans sa version finale.
 
-Enfin nous avons un élement [`<a>`](/fr/docs/Web/CSS/a), doté d'un attribut `download`, dont nous mettrons à jour l'attribut `href` à chaque capture d'image. Cela permettra le téléchargement de la dernière photo prise en cliquant sur le lien.
-
+Enfin nous avons un élement [`<a>`](/fr/docs/Web/CSS/a), doté d'un attribut `download`, dont nous metterons à jour l'attribut `href` à chaque capture d'image, ce qui permettra le téléchargement de la dernière photo en cliquant sur le lien.
+  
 ```html
 <canvas id="canvas"> </canvas>
 <div class="output">
