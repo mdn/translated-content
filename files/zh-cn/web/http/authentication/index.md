@@ -29,7 +29,7 @@ HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通
 
 ### 禁止访问
 
-如果（代理）服务器收到无效的凭据，它应该响应 {{HTTPStatus("401")}} `Unauthorized` 或需要 {{HTTPStatus("407")}} `Proxy Authentication Required`，用户可以发送新请求标头或替换标 {{HTTPHeader("Authorization")}} 头字段。
+如果（代理）服务器收到*无效*的凭据，它应该响应 {{HTTPStatus("401")}} `Unauthorized` 或 {{HTTPStatus("407")}} `Proxy Authentication Required`，用户可以发送新的请求或替换 {{HTTPHeader("Authorization")}} 标头字段。
 
 如果（代理）服务器接受的有效凭据**不足以**访问给定的资源，服务器将响应 {{HTTPStatus("403")}} `Forbidden` 状态码。与 {{HTTPStatus("401")}} `Unauthorized` 或 {{HTTPStatus("407")}} `Proxy Authentication Required` 不同的是，该用户无法进行身份验证并且浏览器不会提出新的的尝试。
 
