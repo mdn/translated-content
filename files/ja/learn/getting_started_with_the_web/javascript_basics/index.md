@@ -113,7 +113,6 @@ myVariable = 'Steve';
 
 なお、変数は様々な[データ型](/ja/docs/Web/JavaScript/Data_structures)の値を保持することもできます。
 
-| {{Glossary("Object")}}     | | `let myVariable = document.querySelector('h1');` 上記の例も同様です。                                                            |
 <table class="standard-table">
   <thead>
     <tr>
@@ -176,7 +175,7 @@ myVariable = 'Steve';
 */
 ```
 
-コメントに改行が含まれていない場合、次のように 2 つのスラッシュの後ろに記載する方が簡単です :
+コメントに改行が含まれていない場合、次のように 2 つのスラッシュの後ろに記載する方が簡単です。
 
 ```js
 // これはコメントです
@@ -186,7 +185,6 @@ myVariable = 'Steve';
 
 {{Glossary("operator", "演算子")}}は、2 つの値 (または変数) に基づいて結果を生成する数学的な記号です。次の表では、JavaScript コンソールで試してみるいくつかの例とともに、最も単純な演算子をいくつか見ることができます。
 
-| 否定、非等価     | その後にあるものと論理的に反対の値を返します。たとえば `true` を `false` に換えます。等価演算子と一緒に使用されると、否定演算子は 2 つの値が等しく*ない*かどうかをテストします。 | `!`, `!==`    | "Not" の場合、基本式は `true` ですが、それを否定しているので比較結果は `false` になります。`let myVariable = 3; !(myVariable === 3);`「等しくない」は、基本的に同じ結果を異なる構文で与えます。ここでは「`myVariable` が 3 とは等しくない」ことをテストします。 `myVariable` は 3 と等しいので、`false` を返します。`let myVariable = 3; myVariable !== 3;` |
 <table class="standard-table">
   <thead>
     <tr>
@@ -246,7 +244,7 @@ myVariable = 'Steve';
           <code>let myVariable = 3;<br />!(myVariable === 3);</code>
         </p>
         <p>
-          「非透過」は異なる構文ですが、基本的に同じ結果になります。ここでは「<code>myVariable</code> が 3 と等しくない」ことを調べます。次の例では <code>false</code> を返します。 <code>myVariable</code> は 3 と等しいからです。
+          「非等価」は異なる構文ですが、基本的に同じ結果になります。ここでは「<code>myVariable</code> が 3 と等しくない」ことを調べます。次の例では <code>false</code> を返します。 <code>myVariable</code> は 3 と等しいからです。
         </p>
         <p>
           <code>let myVariable = 3;<br />myVariable !== 3;</code>
