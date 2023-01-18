@@ -2272,6 +2272,9 @@
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Web/HTML/Inline_elements
 /zh-CN/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
+/zh-CN/docs/Web/HTML/Link_types	/zh-CN/docs/Web/HTML/Attributes/rel
+/zh-CN/docs/Web/HTML/Link_types/prefetch	/zh-CN/docs/Web/HTML/Attributes/rel/prefetch
+/zh-CN/docs/Web/HTML/Link_types/preload	/zh-CN/docs/Web/HTML/Attributes/rel/preload
 /zh-CN/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/zh-CN/docs/Glossary/speculative_parsing
 /zh-CN/docs/Web/HTML/全局属性	/zh-CN/docs/Web/HTML/Global_attributes
 /zh-CN/docs/Web/HTML/内联元素	/zh-CN/docs/Web/HTML/Inline_elements
