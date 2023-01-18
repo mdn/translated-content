@@ -1,5 +1,5 @@
 ---
-title: Document: selectionchange event
+title: Document 下的 selectionchange 事件
 slug: Web/API/Document/selectionchange_event
 ---
 
