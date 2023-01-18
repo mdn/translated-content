@@ -66,7 +66,7 @@ window.addEventListener("resize", updateSize);
 
 {{EmbedLiveSample('Demo')}}
 
-당신은 또한 {{LiveSampleLink('Demo', 'view the results of the demo code in a separate page')}}에 방문하여 데모 코드 결과를 볼 수 있습니다.
+당신은 또한 {{LiveSampleLink('Demo', '별도의 페이지에서 데모 코드의 결과를 볼 수 있습니다')}}.
 
 ## 명세서
 
