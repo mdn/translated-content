@@ -1,7 +1,7 @@
 ---
 title: MDN コンテンツのバグのトリアージ手順
-slug: MDN/Community/Issues/Issue_triage
-original_slug: MDN/Contribute/Processes/Content_bug_triage
+slug: conflicting/MDN/Community/Issues_656e5f33c8fc7cabe2be48c0ae96891a
+original_slug: MDN/Community/Issues/Issue_triage
 ---
 
 {{MDNSidebar}}
