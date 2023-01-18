@@ -35,12 +35,10 @@ Pour le second panneau, nous avons un élément [`<canvas>`](/fr/docs/Web/HTML/E
 
 Nous avons également un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) sur lequel nous afficherons l'image, dans sa version finale.
 
-Enfin nous avons un élement [`<a>`](/fr/docs/Web/CSS/a), doté d'un attribut `download`, dont nous metterons à jour l'attribut `href` à chaque capture d'image, ce qui permettra le téléchargement de la dernière photo en cliquant sur le lien.
 ```html
 <canvas id="canvas"> </canvas>
 <div class="output">
   <img id="photo" alt="L'image capturée sera affichée dans cette boîte.">
-  <a id="photoDownload" download><button id="downloadButton">Télécharger</button></a>
 </div>
 ```
 
@@ -65,7 +63,6 @@ On commence par envelopper l'ensemble du script dans une fonction anonyme afin d
   let canvas = null;
   let photo = null;
   let startbutton = null;
-  let photoDownload = null;
 ```
 
 Les variables seront utilisées ainsi&nbsp;:
@@ -84,8 +81,6 @@ Les variables seront utilisées ainsi&nbsp;:
   - : Contiendra une référence à l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img) lorsque le chargement de la page aura été effectué.
 - `startbutton`
   - : Contiendra une référence à l'élément [`<button>`](/fr/docs/Web/HTML/Element/Button) utilisé pour déclencher la capture. Elle sera obtenue lorsque la page aura été chargée.
-- `photoDownload`
-  - : Contiendra une référence à l'élément [`<a>`](/fr/docs/Web/HTML/Element/a) utilisé pour télécharger la dernière photo capturée. Ce qui ne sera possible qu'une fois une photo aura été prise.
 
 ### La fonction `startup()`
 
@@ -101,7 +96,6 @@ Au début de cette fonction, on récupère des références aux éléments princ
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
-    photoDownload = document.getElementById("photoDownload");
 ```
 
 #### Obtenir le flux vidéo
@@ -196,7 +190,6 @@ function clearphoto() {
 
   const data = canvas.toDataURL("image/png");
   photo.setAttribute("src", data);
-  photoDownload.setAttribute("href", "");
 }
 ```
 
@@ -206,7 +199,7 @@ Enfin, on convertit le canevas en image PNG puis on appelle [`photo.setAttribute
 
 ### Capturer une image à partir du flux
 
-Il nous reste une fonction à définir, et c'est la plus intéressante de cette démonstration&nbsp; la fonction `takepicture()`. Son rôle est de capturer l'image actuellement affichée dans le flux vidéo, de la convertir en fichier PNG, puis de l'afficher dans le cadre de résultat. Elle se charge enfin de mettre à jour le lien de téléchargement de l'image capturée. Voici son code&nbsp;:
+Il nous reste une fonction à définir, et c'est la plus intéressante de cette démonstration&nbsp; la fonction `takepicture()`. Son rôle est de capturer l'image actuellement affichée dans le flux vidéo, de la convertir en fichier PNG, puis de l'afficher dans le cadre de résultat. Voici son code&nbsp;:
 
 ```js
 function takepicture() {
@@ -218,7 +211,6 @@ function takepicture() {
 
     const data = canvas.toDataURL("image/png");
     photo.setAttribute("src", data);
-    photoDownload.setAttribute("href", data);
   } else {
     clearphoto();
   }
@@ -252,7 +244,6 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
   <canvas id="canvas"> </canvas>
   <div class="output">
     <img id="photo" alt="L'image capturée apparaîtra ici.">
-    <a id="photoDownload" download><button id="downloadButton">Télécharger</button></a>
   </div>
   <p>
     Consultez l'article <a href="https://developer.mozilla.org/fr/docs/Web/API/WebRTC_API/Taking_still_photos">Prendre des photos avec <code>getUserMedia()</code></a> pour en savoir plus sur les technologies utilisées ici.
@@ -292,7 +283,7 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
   vertical-align: top;
 }
 
-#startbutton, #downloadButton {
+#startbutton {
   display: block;
   position: relative;
   margin-left: auto;
@@ -336,7 +327,6 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
   let canvas = null;
   let photo = null;
   let startbutton = null;
-  let photoDownload = null;
 
   function showViewLiveResultButton() {
     if (window.self !== window.top) {
@@ -362,7 +352,6 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
     canvas = document.getElementById("canvas");
     photo = document.getElementById("photo");
     startbutton = document.getElementById("startbutton");
-    photoDownload = document.getElementById("photoDownload");
 
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: false })
@@ -410,8 +399,7 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
   }
 
   // On remplit le cadre de la photo pour indiquer l'absence
-  // d'image capturée. On vide l'attribut `href` de notre élement
-  // photoDownload pour empêcher le téléchargement d'une image inexistante.
+  // d'image capturée.
 
   function clearphoto() {
     const context = canvas.getContext("2d");
@@ -420,7 +408,6 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
 
     const data = canvas.toDataURL("image/png");
     photo.setAttribute("src", data);
-    photoDownload.setAttribute("href", "");
   }
 
   // On capture une photo en récupérant le contenu courant de la
@@ -429,8 +416,6 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
   // En utilisant un canevas en dehors de l'écran, on peut
   // modifier sa taille et/ou appliquer d'autres modifications
   // avant de l'afficher à l'écran.
-  // On défini également l'attribut `href` du lien de téléchargement
-  // d'après la même URL de données contenant notre image.
 
   function takepicture() {
     const context = canvas.getContext("2d");
@@ -441,7 +426,6 @@ S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` v
 
       const data = canvas.toDataURL("image/png");
       photo.setAttribute("src", data);
-      photoDownload.setAttribute("href", data);
     } else {
       clearphoto();
     }
