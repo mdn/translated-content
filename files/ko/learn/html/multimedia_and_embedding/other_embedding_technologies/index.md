@@ -6,7 +6,6 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 이제 웹 페이지에 이미지와 비디오, 오디오를 추가하는 방법을 이해하셨을 겁니다. 이 시점에서 옆으로 한발 비켜서서, 웹 페이지에 다양한 형태의 콘텐츠를 넣을 수 있는 {{htmlelement("iframe")}} 요소와 {{htmlelement("embed")}} 요소, {{htmlelement("object")}} 요소를 살펴보겠습니다. `<iframe>` 요소는 다른 웹 페이지를 삽입하기 위해, 다른 두 요소는 PDF 파일과 같은 외부 자원을 웹 페이지에 추가하기 위해 사용합니다.
-
 <table>
   <tbody>
     <tr>
@@ -29,9 +28,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
     <tr>
       <th scope="row">목표:</th>
       <td>
-        {{htmlelement("object")}} 요소, {{htmlelement("embed")}} 요소, 
-        {{htmlelement("iframe")}} 요소를 사용하여
-        웹 페이지에 PDF 문서나 다른 웹 페이지를 삽입하는 방법을 배워봅니다.
+        {{htmlelement("object")}} 요소, {{htmlelement("embed")}} 요소, {{htmlelement("iframe")}} 요소를 사용하여 웹 페이지에 PDF 문서나 다른 웹 페이지를 삽입하는 방법을 배워봅니다.
       </td>
     </tr>
   </tbody>
@@ -65,7 +62,6 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 5. 아래에 있는 입력 상자에 복사한 코드를 붙여 넣은 후 결과 화면을 살펴보세요.
 
 잘못 입력했다면 언제든 _Reset_ 버튼을 눌러 초기화할 수 있습니다. 도저히 모르겠다면 _Show solution_ 버튼을 눌러 답을 확인해보세요.
-
 
 ```html hidden
 <h2>실시간 결과</h2>
@@ -288,7 +284,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 #### CSP 지시어를 설정하세요
 
-{{Glossary("CSP")}}는 **[콘텐츠 보안 정책](/en-US/docs/Web/HTTP/CSP)**을 나타내며 HTML 문서 보안을 개선하기 위해 고안된 일련의 HTTP 헤더를 제공합니다. HTTP 헤더란 웹 서버에서 웹페이지가 전송될 때 동반되는 메타데이터입니다. `<iframe>` 보안과 연관 지어 말씀드리자면, [적절한 `X-Frame-Options` 헤더를 전송하도록 설정할 수 있습니다](/en-US/docs/Web/HTTP/Headers/X-Frame-Options). 이렇게 하면 다른 웹사이트에서 여러분의 웹페이지를 삽입하지 못하도록 만들어서 [클릭재킹](/en-US/docs/Glossary/Clickjacking)이나 다른 공격의 대상이 되는 일을 막을 수 있습니다. 이전 예시에서 보셨듯이 이것이 바로 MDN 개발자들이 설정해 둔 것입니다.
+{{Glossary("CSP")}}는 **[콘텐츠 보안 정책](/en-US/docs/Web/HTTP/CSP)** 을 나타내며 HTML 문서 보안을 개선하기 위해 고안된 일련의 HTTP 헤더를 제공합니다. HTTP 헤더란 웹 서버에서 웹페이지가 전송될 때 동반되는 메타데이터입니다. `<iframe>` 보안과 연관 지어 말씀드리자면, [적절한 `X-Frame-Options` 헤더를 전송하도록 설정할 수 있습니다](/en-US/docs/Web/HTTP/Headers/X-Frame-Options). 이렇게 하면 다른 웹사이트에서 여러분의 웹페이지를 삽입하지 못하도록 만들어서 [클릭재킹](/en-US/docs/Glossary/Clickjacking)이나 다른 공격의 대상이 되는 일을 막을 수 있습니다. 이전 예시에서 보셨듯이 이것이 바로 MDN 개발자들이 설정해 둔 것입니다.
 
 > **참고:** 프레데리크 브라운의 게시글 [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)에서 이 주제와 관련된 배경지식을 더 찾아볼 수 있습니다. 자세한 설명을 다루기에는 이 글의 범위를 벗어납니다.
 
@@ -296,7 +292,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 {{htmlelement("embed")}}와 {{htmlelement("object")}}요소는 {{htmlelement("iframe")}}와 다른 기능을 제공합니다. 이 요소들은 PDF 같은 외부 콘텐츠를 포함하기 위한 일반적인 임베딩 도구입니다.
 
-하지만 이 요소를 사용하는 경우는 별로 없습니다. PDF를 표시하려면 웹페이지에 포함하기보다 보통 파일을 링크로 연결하는 편이 좋습니다. 
+하지만 이 요소를 사용하는 경우는 별로 없습니다. PDF를 표시하려면 웹페이지에 포함하기보다 보통 파일을 링크로 연결하는 편이 좋습니다.
 
 역사적으로 이 요소들은 {{Glossary("Adobe Flash")}}처럼 브라우저 {{Glossary("Plugin", "plugins")}}이 제어하는 콘텐츠를 삽입하는 데도 사용되었습니다. 하지만 이 기술은 이제 최신 브라우저에서 지원하지 않습니다.
 
@@ -338,14 +334,14 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
       <td>플러그인으로 넘길 매개변수의 이름과 값</td>
       <td>동일한 이름과 값을 가진 특성</td>
       <td>
-        단일 태그 {{htmlelement("param")}}요소, <code>&#x3C;object></code>태그 안에 포함 
+        단일 태그 {{htmlelement("param")}}요소, <code>&#x3C;object></code>태그 안에 포함
       </td>
     </tr>
     <tr>
       <td>이용 불가 리소스에 대한 대체 HTML 콘텐츠</td>
       <td>지원하지 않음 (<code>&#x3C;noembed></code>는 더 이상 사용되지 않음)</td>
       <td>
-        <code>&#x3C;object></code>태그 안에 포함, 
+        <code>&#x3C;object></code>태그 안에 포함,
         <code>&#x3C;param></code> 요소 다음
       </td>
     </tr>
@@ -371,7 +367,7 @@ PDF는 종이와 디지털을 연결하는 필수적인 징검다리 역할을 �
 
 ## 요약
 
-웹 문서에 다른 콘텐츠를 삽입하는 주제는 복잡한 이야기로 빠지기 쉽습니다. 그래서 이번 글에서는 고급 기능에 대한 힌트도 있으면서 간단하고 친숙한 형태로 소개했습니다. 처음에는 지도나 영상 외에 외부 콘텐츠를 웹페이지에 삽입할 일은 많지 않을 겁니다. 하지만 점점 경험이 많아지면서 더 많은 용도를 알게 될 겁니다. 
+웹 문서에 다른 콘텐츠를 삽입하는 주제는 복잡한 이야기로 빠지기 쉽습니다. 그래서 이번 글에서는 고급 기능에 대한 힌트도 있으면서 간단하고 친숙한 형태로 소개했습니다. 처음에는 지도나 영상 외에 외부 콘텐츠를 웹페이지에 삽입할 일은 많지 않을 겁니다. 하지만 점점 경험이 많아지면서 더 많은 용도를 알게 될 겁니다.
 
 여기서 다룬 것 외에도 외부 콘텐츠를 삽입하는 기술은 여럿 존재합니다. 이전 글에서 다룬 {{htmlelement("video")}}나 {{htmlelement("audio")}}, {{htmlelement("img")}} 등이 있으며, 아직 살펴보지 않은 기술로는 JavaScript로 생성한 2D, 3D 그래픽을 삽입하는 {{htmlelement("canvas")}}, 벡터 그래픽을 삽입하는 {{SVGElement("svg")}} 등이 있습니다. 이 과정의 다음 글에서 [SVG](/en-US/docs/Web/SVG)를 살펴보겠습니다.
 
