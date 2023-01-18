@@ -175,7 +175,7 @@ const greetings = ['С днём рождения!',
 
 for (const greeting of greetings) {
   // Ваше решение должно быть в фигурных скобках ниже
-  
+
   if (greetings[i]) {
     const listItem = document.createElement('li');
     listItem.textContent = result;
