@@ -68,7 +68,7 @@ console.log("Failed to open the specified link")
 - {{domxref("Console.warn()")}}
   - : 打印一个警告信息，可以使用 [string substitution](/zh-CN/docs/Web/API/console#Using_string_substitutions) 和额外的参数。
 
-## 用法
+## 示例
 
 ### 输出文本到控制台
 

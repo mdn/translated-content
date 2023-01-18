@@ -52,7 +52,7 @@ Edge 的 `month` 控制器看起来像这样的：
 
 ## 值
 
-一个以 YYYY-MM 形式（4 个或更多位数的年，接一个连字符 `-`，再接一个两位数月份）表示月份和年份的字符串。月份字符串的格式在{{SectionOnPage("/zh-CN/docs/Web/HTML/Date_and_time_formats", "合法的月份字符串")}}中有描述。
+一个以 YYYY-MM 形式（4 个或更多位数的年，接一个连字符 `-`，再接一个两位数月份）表示月份和年份的字符串。月份字符串的格式在[月份字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#月份字符串)中有描述。
 
 ### 设置默认值
 
