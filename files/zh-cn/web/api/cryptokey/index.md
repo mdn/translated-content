@@ -70,6 +70,6 @@ slug: Web/API/CryptoKey
 ## 参见
 
 - [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API)
-- [Web 完全](/zh-CN/docs/Web/Security)
+- [Web 安全](/zh-CN/docs/Web/Security)
 - [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)
 - {{domxref("Crypto")}} 和 {{domxref("Crypto.subtle")}}。
