@@ -31,7 +31,7 @@ Si le script qui génère les évènements est hébergé sur une origine différ
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-Une fois que la source d'évènement a été instanciée, on peut écouter les messages sans *event* `provenant du serveur en attachant un gestionnaire d'évènement pour [`message`](/fr/docs/Web/API/MessageEvent)&nbsp;:
+Une fois que la source d'évènement a été instanciée, on peut écouter les messages *sans propriété `event`* provenant du serveur en attachant un gestionnaire d'évènement pour [`message`](/fr/docs/Web/API/MessageEvent)&nbsp;:
 
 ```js
 evtSource.onmessage = function(event) {
@@ -45,7 +45,7 @@ evtSource.onmessage = function(event) {
 
 Ce code écoute les messages entrants (plus précisément, les notifications venant du serveur qui n'ont pas de champ `event` attaché) et ajoute le texte des messages à une liste dans le contenu HTML du document.
 
-On peut écouter les messages de type évènements (*avec* `event`) avec `addEventListener()`&nbsp;:
+On peut écouter les évènements de message *avec* un champ `event` grâce à `addEventListener()`&nbsp;:
 
 ```js
 evtSource.addEventListener("ping", function(event) {
