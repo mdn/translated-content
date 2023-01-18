@@ -267,7 +267,7 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
   const front = (textarea.value).substring(0, caretPos);
   const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-  
+
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -322,7 +322,7 @@ list.innerHTML = '';
 const cities = ['лонДон', 'МанЧЕСТёр', 'БиРминГЕМ', 'лиВЕРпуЛЬ'];
 for (const city of cities) {
   // пишите код тут
-  
+
   const result = input;
   const listItem = document.createElement('li');
   listItem.textContent = result;
@@ -394,7 +394,7 @@ const solutionEntry = jsSolution;
 
 for (const city of cities) {
   // пишите код тут
-  
+
   const lower = city.toLowerCase();
   const firstLetter = lower.slice(0,1);
   const capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());
@@ -428,7 +428,7 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
   const front = (textarea.value).substring(0, caretPos);
   const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-  
+
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -610,7 +610,7 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
   const front = (textarea.value).substring(0, caretPos);
   const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-  
+
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
