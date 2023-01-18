@@ -14,8 +14,8 @@ HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通
 质询与响应的工作流程如下：
 
 1. 服务器端向客户端返回 {{HTTPStatus("401")}}（Unauthorized，未被授权的）响应状态码，并在 {{HTTPHeader("WWW-Authenticate")}} 响应标头提供如何进行验证的信息，其中至少包含有一种质询方式。
-2. 之后有意向证明自己身份的客户端可以在新的请求中添加 {{HTTPHeader("Authorization")}} 标头字段进行验证，字段值为身份验证凭据信息。
-3. 通常客户端会弹出一个密码框让用户填写，然后发送包含有恰当的 `Authorization` 标头的请求。
+2. 之后，想要使用服务器对自己身份进行验证的客户端，可以通过包含凭据的 {{HTTPHeader("Authorization")}} 请求标头进行验证。
+3. 通常，客户端会向用户显示密码提示，然后发送包含正确的 `Authorization` 标头的请求。
 
 ![](http-auth-sequence-diagram.png)
 
