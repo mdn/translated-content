@@ -20,7 +20,7 @@ MDN 是一個 wiki，**每個人**都可以添加、編撰內容。您不必得�
 
 加入貢獻的第一步是要有 MDN 帳號，請參考[建立帳號說明](/docs/MDN/Contribute/Howto/Create_an_MDN_account)。注意，在建立 MDN 帳號之前，您需要有一個 [GitHub 帳號](https://github.com/join)，因為我們已經使用 GitHub 作為登入驗證。
 
-如果你想創建一個新的頁面，請參考{{SectionOnPage("/zh-TW/docs/MDN/Contribute/Howto/Create_and_edit_pages", "新增一個新頁面")}}，這裏有關於如何獲得創建新頁面許可的重要信息；出於安全考慮，新賬戶默認沒有此功能。
+如果你想創建一個新的頁面，請參考[編輯以及新增頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#新增一個新頁面)，這裏有關於如何獲得創建新頁面許可的重要信息；出於安全考慮，新賬戶默認沒有此功能。
 
 ### 步驟 2：找件事來完成
 
