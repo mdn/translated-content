@@ -6166,6 +6166,10 @@
     "modified": "2020-10-15T22:29:00.912Z",
     "contributors": ["ahnzaz"]
   },
+  "Web/HTML/Attributes/rel": {
+    "modified": "2020-10-15T21:56:00.564Z",
+    "contributors": ["alattalatta", "limjungmok", "young-gratia"]
+  },
   "Web/HTML/Block-level_elements": {
     "modified": "2020-01-20T08:47:15.147Z",
     "contributors": [
@@ -6861,10 +6865,6 @@
   "Web/HTML/Inline_elements": {
     "modified": "2020-02-12T03:45:21.056Z",
     "contributors": ["SphinxKnight", "alattalatta", "teoli", "Gilchris"]
-  },
-  "Web/HTML/Link_types": {
-    "modified": "2020-10-15T21:56:00.564Z",
-    "contributors": ["alattalatta", "limjungmok", "young-gratia"]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-18T20:35:03.733Z",

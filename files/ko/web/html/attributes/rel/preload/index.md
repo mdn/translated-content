@@ -1,6 +1,7 @@
 ---
 title: '링크 유형: preload'
-slug: Web/HTML/Link_types/preload
+slug: Web/HTML/Attributes/rel/preload
+original_slug: Web/HTML/Link_types/preload
 ---
 
 {{HTMLSidebar}}
