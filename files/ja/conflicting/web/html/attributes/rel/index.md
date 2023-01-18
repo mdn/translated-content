@@ -1,6 +1,7 @@
 ---
 title: リンク種別
-slug: Web/HTML/Link_types
+slug: conflicting/Web/HTML/Attributes/rel
+original_slug: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}

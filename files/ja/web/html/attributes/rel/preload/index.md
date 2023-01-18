@@ -1,8 +1,7 @@
 ---
 title: 'リンク種別: preload'
-slug: Web/HTML/Link_types/preload
-l10n:
-  sourceCommit: ac9ddbf93e602885b9b8be8a6c48aad97eb2fcab
+slug: Web/HTML/Attributes/rel/preload
+original_slug: Web/HTML/Link_types/preload
 ---
 
 {{HTMLSidebar}}
