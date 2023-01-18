@@ -1,6 +1,7 @@
 ---
 title: 链接类型
-slug: Web/HTML/Link_types
+slug: Web/HTML/Attributes/rel
+original_slug: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}

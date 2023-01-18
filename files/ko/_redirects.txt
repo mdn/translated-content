@@ -691,6 +691,8 @@
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
 /ko/docs/Web/HTML/Index	/ko/docs/Web/HTML
 /ko/docs/Web/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
+/ko/docs/Web/HTML/Link_types	/ko/docs/Web/HTML/Attributes/rel
+/ko/docs/Web/HTML/Link_types/preload	/ko/docs/Web/HTML/Attributes/rel/preload
 /ko/docs/Web/HTTP/Access_control_CORS	/ko/docs/Web/HTTP/CORS
 /ko/docs/Web/HTTP/Access_control_CORS/Errors	/ko/docs/Web/HTTP/CORS/Errors
 /ko/docs/Web/HTTP/Access_control_CORS/Errors/CORSDidNotSucceed	/ko/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed

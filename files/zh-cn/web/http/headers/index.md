@@ -304,9 +304,9 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("X-XSS-Protection")}}
   - : 启用跨站点脚本过滤。
 
-### 获取元数据请求标头
+### fetch 元数据请求标头
 
-{{Glossary("Fetch metadata request header", "获取元数据请求标头")}}提供有关发起请求的上下文的信息。这允许服务器根据请求的来源和资源将如何使用来决定是否允许请求。
+{{Glossary("Fetch metadata request header", "fetch 元数据请求标头")}}提供有关发起请求的上下文的信息。这允许服务器根据请求的来源和资源将如何使用来决定是否允许请求。
 
 - {{HTTPHeader("Sec-Fetch-Site")}}
   - : 它是一个请求标头，指示请求发起者的源与其目标源之间的关系。它是一个结构化标头（Structured Header），其值是一个标记，可能的值有 `cross-site`、`same-origin`、`same-site` 和 `none`。
