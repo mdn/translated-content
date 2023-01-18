@@ -183,7 +183,7 @@ button.onclick = function() {
       ```
 
     Эти конструкции могут быть действительно полезны в некоторых ситуациях. Например, если пользователь вводит число в текстовое поле формы, данные будут распознаны как строка. Однако, если вы хотите добавить это число к чему-то, вам понадобится его значение, поэтому вы можете передать его через `Number()`, чтобы справиться с этим. Именно это мы сделали в нашей [Number Guessing Game](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L63), в строке 59.
-    
+  
 ## Совмещение строк с различными выражениями
 
 Вы можете совмещать выражения JavaScript в литералы шаблона, а также простые переменные, и результаты будут включены в конечный результат:
@@ -237,7 +237,7 @@ button.onclick = function() {
 ## В этом модуле
 
 - [Что такое JavaScript?](/ru/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Первыая теория о JavaScript ](/ru/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [Первыая теория о JavaScript](/ru/docs/Learn/JavaScript/First_steps/A_first_splash)
 - [Что пошло не так? Устранение ошибок JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong)
 - [Хранение необходимой вам информации — Переменные](/ru/docs/Learn/JavaScript/First_steps/Variables)
 - [Основы математики в JavaScript — числа и операторы](/ru/docs/Learn/JavaScript/First_steps/Math)
