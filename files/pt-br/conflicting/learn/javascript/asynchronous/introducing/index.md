@@ -1,7 +1,6 @@
 ---
 title: Conceitos gerais da programação assíncrona
 slug: conflicting/Learn/JavaScript/Asynchronous/Introducing
-translation_of: Learn/JavaScript/Asynchronous/Concepts
 original_slug: Learn/JavaScript/Asynchronous/Concepts
 ---
 
@@ -34,7 +33,7 @@ Normalmente, o código de um programa é executado de forma direta, com uma cois
 
 Usuários do Mac, por exemplo, conseguem ver isso como o cursor giratório em arco-íris (ou "beachball", como normalmente é chamado). Este cursor é o jeito do sistema operacional dizer: "o programa atual que você está usando teve que parar e esperar algo terminar de ser executado, e estava demorando tanto que fiquei preocupado se você estava pensando no que aconteceu."
 
-![Multi-colored macOS beachball busy spinner](https://mdn.mozillademos.org/files/16577/beachball.jpg)
+![Multi-colored macOS beachball busy spinner](beachball.jpg)
 
 Essa é uma situação frustrante, e não faz bom uso do poder de processamento do computador — especialmente em uma era em que computadores tem múltiplos núcleos de processamento disponíveis. Não há sentido em ficar esperando por algo quando você pode deixar outra tarefa ser executada em um núcleo de processador diferente e deixar que ele te avise quando terminar. Isso te permite fazer mais coisas por enquanto, o que é a base da **programação assincrona**. Depende do ambiente de programação que você está usando (navegadores da Web, no caso de desenvolvimento da Web) para fornecer APIs que permitem executar essas tarefas de forma assíncrona.
 

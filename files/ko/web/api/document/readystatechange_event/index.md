@@ -1,7 +1,6 @@
 ---
 title: 'Document: readystatechange event'
 slug: Web/API/Document/readystatechange_event
-translation_of: Web/API/Document/readystatechange_event
 ---
 {{APIRef}}
 

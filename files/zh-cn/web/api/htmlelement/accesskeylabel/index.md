@@ -38,19 +38,19 @@ node.onclick = function () {
 <button accesskey="h" title="Caption" id="btn1">Hover me</button>
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('示例') }}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("element.accessKey")}}
 - The [accesskey](/zh-CN/docs/Web/HTML/Global_attributes/accesskey) global attribute.

@@ -58,7 +58,7 @@ En comparación, View Source es simplemente el código fuente HTML tal como est�
 
 Selecciona un elemento de tu página, ya sea haciendo clic con el botón derecho o pulsando la tecla ctrl para seleccionar la opción _Inspect_, o seleccionándolo del árbol HTML que hay a la izquierda de la pantalla de la interfaz DevTools. Selecciona el elemento con la clase `box1`; este es el primer elemento de la página con una caja alrededor.
 
-![La página de ejemplo para este tutorial con DevTools abiertas.](https://mdn.mozillademos.org/files/16606/inspecting1.png)
+![La página de ejemplo para este tutorial con DevTools abiertas.](inspecting1.png)
 
 Si observasla [vista de reglas](/es/docs/Tools/Page_Inspector/UI_Tour#Panel_CSS), que está a la derecha de tu HTML, deberías poder ver las propiedades y los valores CSS aplicados sobre ese elemento. Verás las reglas aplicadas directamente a la clase `box1` y también el CSS que la caja hereda de su elemento padre, en este caso `<body>`. Esto es útil para cuando ves que se aplica un CSS que no esperabas. Tal vez se esté heredando de un elemento padre y necesites añadir una regla para sobrescribirlo en el contexto de este elemento.
 
@@ -76,7 +76,7 @@ Además de activar y desactivar las propiedades, puedes editar sus valores. ¿Qu
 
 **Selecciona `box1` y haz clic en la muestra (el pequeño círculo de color) que muestra el color aplicado al borde. Se abrirá un selector de color y puedes probar con colores diferentes, que se actualizarán en tiempo real en la página. De manera similar puedes cambiar el ancho o el estilo del borde.**
 
-![Ventana de aplicación de estilos de DevTools con un selector de color abierto.](https://mdn.mozillademos.org/files/16607/inspecting2-color-picker.png)
+![Ventana de aplicación de estilos de DevTools con un selector de color abierto.](inspecting2-color-picker.png)
 
 ## Añadir una propiedad nueva
 
@@ -84,7 +84,7 @@ Puedes añadir propiedades usando las DevTools. ¿Te has dado cuenta de que quiz
 
 **Puedes hacer clic en la llave de cierre de la regla para comenzar a introducir una declaración nueva, y en ese momento puedes comenzar a escribir la nueva propiedad y DevTools te mostrará una lista de propiedades coincidentes que se completará automáticamente. Después de seleccionar `font-size`, introduce el valor que deseas probar. También puede hacer clic en el botón + para añadir una regla adicional con el mismo selector y tus reglas nuevas.**
 
-![La ventana DevTools, que añade una propiedad nueva a las reglas, con el autocompletado para font-open](https://mdn.mozillademos.org/files/16608/inspecting3-font-size.png)
+![La ventana DevTools, que añade una propiedad nueva a las reglas, con el autocompletado para font-open](inspecting3-font-size.png)
 
 > **Nota:** También hay otras funciones útiles en la vista de reglas; por ejemplo, las declaraciones con valores no válidos están tachadas. Puedes obtener más información en [Examinar y editar CSS](/es/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS).
 
@@ -100,7 +100,7 @@ En esta ventana, una de las propiedades que se detallan es la propiedad `box-siz
 
 El elemento con una clase `box2` usa `border-box`, por lo que aquí el área de relleno y el borde se restan del tamaño que has asignado al elemento. Esto significa que el espacio que la caja ocupa en la página es el tamaño exacto que se ha especificado, en nuestro caso `width: 400px`.
 
-![La ventana de diseño de DevTools](https://mdn.mozillademos.org/files/16609/inspecting4-box-model.png)
+![La ventana de diseño de DevTools](inspecting4-box-model.png)
 
 > **Nota:** Descubre más en [Examinar e inspeccionar el modelo de cajas](/es/docs/Tools/Page_Inspector/How_to/Examinar_y_editar_el_modelo_de_cajasmodel).
 
@@ -129,7 +129,7 @@ Como recordarás del artículo sobre [cascada y herencia](/es/docs/Learn/CSS/Bui
 
 **Inspecciona `<em>` con la clase `.special` y DevTools te mostrará que el naranja es el color que se aplica, y también te muestra la propiedad `color` aplicada al em tachado. Aquí puedes ver que la clase anula el selector de elemento.**
 
-![Selecciona un em y mira en DevTools qué solapa el color.](https://mdn.mozillademos.org/files/16610/inspecting5-specificity.png)
+![Selecciona un em y mira en DevTools qué solapa el color.](inspecting5-specificity.png)
 
 ## Descubre más sobre las DevTools de Firefox
 
@@ -154,7 +154,7 @@ Los navegadores esperan que tu CSS y HTML estén escritos correctamente, sin emb
 
 Los navegadores simplemente ignoran el CSS que no entienden. Si la propiedad o el valor que utilizas no es compatible con el navegador en el que lo pruebas, no se romperá nada, pero ese CSS no se aplicará. Las DevTools en general destacan de alguna manera las propiedades y los valores que no son compatibles. En la captura de pantalla siguiente, el navegador no admite el valor de subcuadrícula {{cssxref ("grid-template-columns")}}.
 
-![Imagen de las DevTools del navegador con la cuadrícula-plantilla-columnas: subcuadrícula tachada porque el valor de la subcuadrícula no es compatible.](https://mdn.mozillademos.org/files/16641/no-support.png)
+![Imagen de las DevTools del navegador con la cuadrícula-plantilla-columnas: subcuadrícula tachada porque el valor de la subcuadrícula no es compatible.](no-support.png)
 
 También puedes echar un vistazo a las tablas de compatibilidad de navegadores en la parte inferior de cada página de propiedades del proyecto MDN. Te muestran la compatibilidad de cada navegador para esa propiedad, a menudo desglosado si hay compatibilidad para un uso de la propiedad y no para otros. La tabla siguiente muestra los datos de compatibilidad para la propiedad {{cssxref ("shape-outside")}}.
 

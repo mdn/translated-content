@@ -42,7 +42,3 @@ Si sirves contenido XHTML usando el MIME `text/html`, los navegadores lo leeran 
 En Firefox, selecciona _Ver Información de Página_ en el menú contextual, y selecciona la opción _Modo de Renderizado_ (Render Mode).
 
 En Internet Explorer, pulsa _F12_, y buscar _Modo de Documento_ (Document Mode)
-
-## ¿Cuáles son las diferencias entre los modos?
-
-Lee la [lista de quirks](/es/docs/Mozilla_Quirks_Mode_Behavior) y [modo casi estándar](/es/docs/Gecko's_"Almost_Standards"_Mode) para ver las diferencias entre los modos.

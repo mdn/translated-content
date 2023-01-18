@@ -23,7 +23,7 @@ Web Audio API 使用户可以在**音频上下文**（AudioContext）中进行�
 4. 为音频选择一个目的地，例如你的系统扬声器
 5. 连接源到效果器，对目的地进行效果输出
 
-![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/12241/webaudioAPI_en.svg)
+![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](audio-context_.png)
 
 使用这个 API，时间可以被非常精确地控制，几乎没有延迟，这样开发人员可以准确地响应事件，并且可以针对采样数据进行编程，甚至是较高的采样率。这样，鼓点和节拍是准确无误的。
 

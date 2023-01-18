@@ -1,13 +1,6 @@
 ---
 title: MediaStreamTrack.applyConstraints()
 slug: Web/API/MediaStreamTrack/applyConstraints
-tags:
-  - API
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Method
-translation_of: Web/API/MediaStreamTrack/applyConstraints
 ---
 {{APIRef("Media Capture and Streams")}}
 

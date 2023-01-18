@@ -37,7 +37,7 @@ Com uma API baseada em promises, a função assíncrona inicia a operação e re
 
 Neste exemplo, vamos baixar o seguinte arquivo JSON <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> e registrar algumas informações sobre ele.
 
-Para isso, vamos fazer uma **Requisição HTTP** para o servidor. Em uma requisição HTTP, enviamos uma solicitação para o servidor e ele nos envia uma resposta de volta. Neste caso, vamos enviar uma solicitação para obeter um arquivo JSON do servidor. Relembre o último artigo, onde fizamos requisições HTTP usando a API {{domxref("XMLHttpRequest")}}? Bem, neste artigo, usaremos a API {{domxref("fetch", "fetch()")}}, que é a substituição moderna baseada em promise para XMLHttpRequest.
+Para isso, vamos fazer uma **Requisição HTTP** para o servidor. Em uma requisição HTTP, enviamos uma solicitação para o servidor e ele nos envia uma resposta de volta. Neste caso, vamos enviar uma solicitação para obter um arquivo JSON do servidor. Relembre o último artigo, onde fizamos requisições HTTP usando a API {{domxref("XMLHttpRequest")}}? Bem, neste artigo, usaremos a API {{domxref("fetch", "fetch()")}}, que é a substituição moderna baseada em promise para XMLHttpRequest.
 
 Cole o seguinte código no console do seu navegador:
 
@@ -57,7 +57,7 @@ Aqui estamos:
 
 1. chamando a API `fetch()`, e atribuindo o valor de retorno a variável `fetchPromise`.
 2. imediatamente depois, exibimos no console a variável `fetchPromise`. Você deve ver algo parecido com: `Promise { <state>: "pending" }`, nos dizendo que temos um objeto `Promise`, ele tem uma propriedade `state` cujo valor no momento em que foi impresso é `"pending"` (`"pendente"`). O estado `"pending"` significa que a busca pela resposta ainda está ocorrendo.
-3. passando uma função manipuladora dentro do método da Promise **`then()`**. Qunado (e se) a operação de busca tiver exito a Promise vai chamar a função manipuladora, passando um objeto {{domxref("Response")}}, que contém a resposta do servidor.
+3. passando uma função manipuladora dentro do método da Promise **`then()`**. Quando (e se) a operação de busca tiver exito a Promise vai chamar a função manipuladora, passando um objeto {{domxref("Response")}}, que contém a resposta do servidor.
 4. imprimindo um log dizendo que iniciamos a requisição.
 
 A saída completa deve ser algo parecido com:

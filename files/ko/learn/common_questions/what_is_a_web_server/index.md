@@ -8,20 +8,20 @@ slug: Learn/Common_questions/What_is_a_web_server
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">선수 지식:</th>
+      <th scope="row">선수 지식</th>
       <td>
         <a href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine"
-          >web page와 web site, web server, 그리고 search engine의 차이점</a
+          >웹 페이지와 웹 사이트, 웹 서버, 그리고 검색 엔진의 차이점</a
         >에 대해 이해하고
         <a href="/en-US/docs/Learn/How_the_Internet_works"
           >인터넷이 어떻게 동작하는지</a
-        >를 이미 알아야 합니다.
+        > 알고있으면 좋습니다.
       </td>
     </tr>
     <tr>
-      <th scope="row">목표:</th>
+      <th scope="row">목표</th>
       <td>
-        web server가 무엇인지를 배우고, 어떻게 동작하는지에 대한 전반적인 이해를
+        웹 서버가 무엇인지를 배우고, 어떻게 동작하는지에 대한 전반적인 이해를
         얻을 것입니다.
       </td>
     </tr>
@@ -30,14 +30,14 @@ slug: Learn/Common_questions/What_is_a_web_server
 
 ## 요약
 
-"Web server"는 하드웨어, 소프트웨어 혹은 두 개가 같이 동작하는 것을 의미할 수 있습니다.
+"웹 서버"는 하드웨어, 소프트웨어 혹은 두 개가 같이 동작하는 것을 의미할 수 있습니다.
 
-1. 하드웨어 측면에서, web server는 web server의 소프트웨어와 website의 컴포넌트 파일들을 저장하는 컴퓨터입니다. (컴포넌트 파일에는 HTML 문서, images, CSS stylesheets, 그리고 JavaScript files가 있습니다.) Web server는 인터넷에 연결되어 웹에 연결된 다른 기기들이 웹 서버의 데이터(컴포넌트 파일들)를 주고받을 수 있도록 합니다.
-2. 소프트웨어 측면에서, web server는 기본적으로 웹 사용자가 어떻게 호스트 파일들에 접근하는지를 관리합니다. 이 문서에서 web server는 HTTP서버로 국한합니다. HTTP 서버는 URL(Web addresses)과 HTTP(당신의 브라우저가 웹 페이지를 보여주기 위해 사용하는 프로토콜)의 소프트웨어 일부입니다.
+1. 하드웨어 측면에서, 웹 서버는 웹 서버의 소프트웨어와 website의 컴포넌트 파일들을 저장하는 컴퓨터입니다. (컴포넌트 파일에는 HTML 문서, images, CSS stylesheets, 그리고 JavaScript files가 있습니다.) 웹 서버는 인터넷에 연결되어 웹에 연결된 다른 기기들이 웹 서버의 데이터(컴포넌트 파일들)를 주고받을 수 있도록 합니다.
+2. 소프트웨어 측면에서, 웹 서버는 기본적으로 웹 사용자가 어떻게 호스트 파일들에 접근하는지를 관리합니다. 이 문서에서 웹 서버는 HTTP서버로 국한합니다. HTTP 서버는 URL(Web addresses)과 HTTP(당신의 브라우저가 웹 페이지를 보여주기 위해 사용하는 프로토콜)의 소프트웨어 일부입니다.
 
 가장 기본적인 단계에서, 브라우저가 웹 서버에서 불려진 파일을 필요로 할때, 브라우저는 HTTP를 통해 파일을 요청합니다. 요청이 올바른 웹 서버(하드웨어)에 도달하였을 때, HTTP 서버(software)는 요청된 문서를 HTTP를 이용해 보내줍니다.
 
-![Basic representation of a client/server connection through HTTP](https://mdn.mozillademos.org/files/8659/web-server.svg)
+![Basic representation of a client/server connection through HTTP](web-server.svg)
 
 웹 사이트를 공개하기 위해서는, 당신은 정적 혹은 동적 웹 서버가 필요합니다.
 
@@ -46,10 +46,6 @@ slug: Learn/Common_questions/What_is_a_web_server
 동적 웹 서버는 정적 웹 서버와 추가적인 소프트웨어(대부분 일반적인 애플리케이션 서버와 데이터베이스)로 구성되어 있습니다. 애플리케이션 서버가 HTTP 서버를 통해 당신의 브라우저에게 불려진 파일들을 전송하기 전에, 애플리케이션 서버가 업데이트하기 때문에 우리는 이것을 동적이라고 부릅니다.
 
 예를 들어, 당신이 브라우저에서 보는 최종 웹페이지들을 생성하기 위해, 애플리케이션 서버는 아마 데이터베이스로 온 컨텐츠들로 이루어진 HTML 템플릿을 채울지 모릅니다. MDN 혹은 Wikipedia와 같은 사이트들은 수 천개의 웹페이지들을 가지고 있지만, 그것들은 실제의 HTML 문서가 아니라 오직 약간의 HTML 템플릿과 엄청 큰 데이터베이스로 되어있습니다. 이 구성은 내용들을 전달하고 관리하기 쉽고 빠르게 만들어 줍니다.
-
-## 활발한 교육
-
-아직 자료가 없습니다. 부디 [기여하여주세요](/ko/docs/MDN/Getting_started).
 
 ## 더 깊은 부분
 
@@ -87,7 +83,7 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 - HTTP를 통해 파일을 요청할때, 클라이언트는 반드시 {{Glossary("URL")}} 파일들을 제공해야 합니다.
 - 웹 서버는 반드시 최소한의 에러 메시지를 포함하여 모든 HTTP 요청에 응답해야합니다.
 
-[![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](/en-US/404)웹 서버에서, HTTP 서버는 들어오는 요청들에 대해 응답하고, 처리해야 합니다.
+[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/en-US/404)웹 서버에서, HTTP 서버는 들어오는 요청들에 대해 응답하고, 처리해야 합니다.
 
 1. 요청을 받으면, HTTP 서버는 먼저 요청받은 URL이 존재하는 파일과 매칭이 되는지를 확인합니다.
 2. 만약 매칭된다면, 웹 서버는 그 파일 내용을 브라우저에게 되돌려줍니다. 만약 그렇지 않다면, 애플리케이션 서버는 필요한 파일을 구축합니다.

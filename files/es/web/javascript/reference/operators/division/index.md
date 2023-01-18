@@ -1,13 +1,6 @@
 ---
 title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
-tags:
-  - JS
-  - JavaScript
-  - Operador de Division
-  - Operadores
-  - Referências
-translation_of: Web/JavaScript/Reference/Operators/Division
 original_slug: Web/JavaScript/Referencia/Operadores/Division
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.setTimeout
 slug: Web/API/setTimeout
-tags:
-  - API
-  - HTML DOM
-  - WindowOrWorkerGlobalScope
-  - setTimeout
-translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
 

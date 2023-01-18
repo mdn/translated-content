@@ -229,7 +229,7 @@ Node는 싱글 스레드 이벤트 기반 환경이기 때문에 non-blocking �
 
 > **참고:** **Tip:** 순서대로 수행해야하는 종속적인 비동기 작업들이 있을 경우, 콜백을 사용하는 것은 꽤 복잡할 수 있습니다. 중첩된 여러 단계의 콜백이 생성되기 때문입니다. 이 문제는 흔히 'callback hell'이라고 일컬어집니다. 이 문제는 good coding practices(<http://callbackhell.com/> 참고), [async](https://www.npmjs.com/package/async)와 같은 모듈의 사용, [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)와 같은 ES6 기능을 사용함으로써 개선될 수 있습니다.
 
-> **참고:** Node와 Express의 일반적인 규칙은 error-first callbacks을 사용하는 것입니다. 이 규칙에서 콜백 함수의 첫번 째 값은 에러값이고, 다음 인자에는 성공 데이터가 포함됩니다. 이 방법에 대한 좋은 설명은 이 블로그에서 확인할 수 있습니다.:: [The Node.js Way - Understanding Error-First Callbacks](<http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/ >) (fredkschott.com).
+> **참고:** Node와 Express의 일반적인 규칙은 error-first callbacks을 사용하는 것입니다. 이 규칙에서 콜백 함수의 첫번 째 값은 에러값이고, 다음 인자에는 성공 데이터가 포함됩니다. 이 방법에 대한 좋은 설명은 이 블로그에서 확인할 수 있습니다.:: [The Node.js Way - Understanding Error-First Callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (fredkschott.com).
 
 ### 라우트 핸들러의 사용
 

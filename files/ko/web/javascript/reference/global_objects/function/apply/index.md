@@ -1,12 +1,6 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
 
 {{JSRef}}
@@ -124,12 +118,12 @@ Function.prototype.construct = function(aArgs) {
 
 > **참고:** **알림:** 위에서 사용된 `Object.create()` 메소드는 상대적으로 새로운 것입니다. 대안으로, 다음 접근법 중 하나를 고려하세요.
 
-{{jsxref("Object/__proto__", "Object.__proto__")}} 사용:
+[`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 사용:
 
 ```js
 Function.prototype.construct = function (aArgs) {
   var oNew = {};
-  oNew.**proto** = this.prototype;
+  oNew.__proto__ = this.prototype;
   this.apply(oNew, aArgs);
   return oNew;
   };

@@ -517,9 +517,9 @@ SomeModel.find(callback_function);
 
 登录后将进入 [mLab 主屏幕](https://mlab.com/home)：
 
-1. 单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+1. 单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](mlabcreatenewdeployment.png)
 2. 将打开 Cloud Provider（云服务提供商）选择屏幕。
-    ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
+    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
     - 在 Plan Type（方案类型）部分中，选择 SANDBOX（Free）免费沙箱方案。
     - 从 _Cloud Provider_（云服务提供商）部分选择任意提供商。不同地区适用不同提供商（显示在选定的计划类型下面）。
@@ -527,29 +527,29 @@ SomeModel.find(callback_function);
 
 3. 此时将打开 _Select Region_（选择区域）屏幕。
 
-    ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
+    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
     - 选择离你最近的地区，然后 **Continue**。
 
 4. 将打开 Final Details（最后的细节）屏幕。
-    ![New deployment database name](https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png)
+    ![New deployment database name](mlab_new_deployment_final_details.png)
 
     - 输入新数据库的名称 `local_library`，然后 **Continue**。
 
 5. 将打开 _Order Confirmation_（订单确认）屏幕。
-    ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
+    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
     - 点击 **Submit Order（提交订单）**以创建数据库。
 
 6. 将返回到主屏幕。点击刚创建的新数据库可以打开详细信息屏幕。当前数据库还没有任何数据。
 
-    ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
+    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
 
     表单显示了访问数据库的 URL（上图的红框）。此时可以创建一个用户，并在 URL 中指定用户名，就可以访问这个 URL 了。
 
 7. 点击 **Users** 选项卡，点击 **Add database user** 按钮。
 8. 输入用户名和密码（两次），然后按 **Create**。不要选择 Make _read-only_。
-    ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
+    ![](mlab_database_users.png)
 
 现在数据库已经创建好了，并且有一个可访问的 URL（带有用户名和密码）：`mongodb://<dbuser>:<dbpassword>@ds019038.mlab.com:19038/local_library`
 

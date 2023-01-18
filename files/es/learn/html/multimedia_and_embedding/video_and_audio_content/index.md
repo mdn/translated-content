@@ -70,7 +70,7 @@ Las características a notar son:
 
 El video incrustado se verá así:
 
-![A simple video player showing a video of a small white rabbit](https://mdn.mozillademos.org/files/12794/simple-video.png)
+![A simple video player showing a video of a small white rabbit](simple-video.png)
 
 Puedes [probar el ejemplo](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) aquí (también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)).
 
@@ -84,7 +84,7 @@ Repasemos la terminología rápidamente. Formatos como MP3, MP4 y WebM son llama
 
 Un archivo WebM contiene una película que tiene una pista principal de video y otra pista con un ángulo alternativo, junto con audio en inglés y español, además de una pista con comentarios en inglés, lo que puede ser conceptualizado en el siguiente diagrama. También se incluyeron pistas de texto que contienen los subtítulos de la película en inglés, español y para el comentario.
 
-![](https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg)
+![](containersandtracks.png)
 
 Las pistas de audio y video dentro del contenedor mantienen los datos en un formato adecuado para el codec usado para codificar ese medio. Se usan diferentes formatos para pistas de audio versus de video. Cada pista de audio es codificada usando un codec de audio mientras que las pistas de video son codificadas (como probablemente ya has adivinado) usando un codec de video. Así como hemos hablado previamente, diferentes navegadores soportan diferentras formatos de audio y video, y diferentes formatos contenedores (como MP3, MP4 y WebM, que pueden contener diferentes tipos de video y audio).
 
@@ -134,7 +134,9 @@ Hay varias otras características que puede incluir en un vídeo HTML5. Eche un 
 
 Esto nos dará un resultado que se parece a esto:
 
-![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](https://mdn.mozillademos.org/files/12796/extra-video-features.png)Las nuevas características son:
+![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](poster_screenshot_updated.png)
+
+Las nuevas características son:
 
 - {{htmlattrxref("width","video")}} y {{htmlattrxref("height","video")}}
   - : Puede controlar el tamanño con estos atributos o con [CSS](/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamañis establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
@@ -170,7 +172,7 @@ El elemento {{htmlelement("audio")}} funciona exactamente de la misma forma que 
 
 Esto produce algo como lo siguiente en un navegador:
 
-![A simple audio player with a play button, timer, volume control, and progress bar](https://mdn.mozillademos.org/files/12798/audio-player.png)
+![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
 > **Nota:** Puedes [reproducir este ejemplo de audio](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) en Github (también, puedes ver el [código fuente del reproductor de audio](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
@@ -257,7 +259,7 @@ Here's an example:
 
 This will result in a video that has subtitles displayed, kind of like this:
 
-![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 For more details, please read [Adding captions and subtitles to HTML5 video](/es/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can [find the example](http://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on Github, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 

@@ -1,13 +1,6 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - JavaScript
-  - Matriz unidimensional
-  - Referencia
-  - Vector
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array
 ---
 

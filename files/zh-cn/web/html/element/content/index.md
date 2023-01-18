@@ -3,9 +3,9 @@ title: <content>
 slug: Web/HTML/Element/content
 ---
 
-{{Deprecated_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
-**HTML `<content>` 元素**— [Web 组件](/zh-CN/docs/Web/Web_Components) 的技术套件的废弃部分 — 用于 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM) 内部作为 {{glossary("insertion point")}}，并且不可用于任何正常的 HTML，现在已被 {{HTMLElement("slot")}} 元素代替，它在 DOM 中创建一个位置，Shadow DOM 会插入这里。
+**HTML `<content>` 元素**——[Web 组件](/zh-CN/docs/Web/Web_Components) 的技术套件的废弃部分 — 用于 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM) 内部作为 {{glossary("insertion point")}}，并且不可用于任何正常的 HTML，现在已被 {{HTMLElement("slot")}} 元素代替，它在 DOM 中创建一个位置，Shadow DOM 会插入这里。
 
 > **备注：** 虽然在规范的草案中出现，并且在多个浏览器中实现，这个元素依然会在规范的之后版本中移除。
 
@@ -48,26 +48,27 @@ slug: Web/HTML/Element/content
 > **备注：** 为了使这个代码有效，你使用的浏览器必须支持 Web 组件，请见 [Enabling Web Components in Firefox](/zh-CN/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox)。
 
 ```html
-<html>
+<html lang="en">
   <head></head>
   <body>
-  <!-- The original content accessed by <content> -->
-  <div>
-    <h4>My Content Heading</h4>
-    <p>My content text</p>
-  </div>
+    <!-- The original content accessed by <content> -->
+    <div>
+      <h4>My Content Heading</h4>
+      <p>My content text</p>
+    </div>
 
-  <script>
-  // Get the <div> above.
-  var myContent = document.querySelector('div');
-  // Create a shadow DOM on the <div>
-  var shadowroot = myContent.createShadowRoot();
-  // Insert into the shadow DOM a new heading and
-  // part of the original content: the <p> tag.
-  shadowroot.innerHTML =
-   '<h2>Inserted Heading</h2> <content select="p"></content>';
-  </script>
+    <script>
+      // Get the <div> above.
+      const myContent = document.querySelector("div");
 
+      // Create a shadow DOM on the <div>
+      const shadowroot = myContent.createShadowRoot();
+
+      // Insert into the shadow DOM a new heading and
+      // part of the original content: the <p> tag.
+      shadowroot.innerHTML =
+        '<h2>Inserted Heading</h2> <content select="p"></content>';
+    </script>
   </body>
 </html>
 ```
@@ -84,9 +85,7 @@ slug: Web/HTML/Element/content
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [Web 组件](/zh-CN/docs/Web/Web_Components)
 - {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
-
-{{HTMLSidebar}}

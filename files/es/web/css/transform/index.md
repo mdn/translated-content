@@ -1,14 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - Compatibilidad con los navegadores
-  - Experimental
-  - Propiedad CSS
-  - Referencia
-  - Transformación
-translation_of: Web/CSS/transform
 ---
 
 {{CSSRef}}

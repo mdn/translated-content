@@ -16,7 +16,7 @@ En los artículos anteriores se explicó lo fundamental de la teoría de los obj
 
 Es éste artículo escribiremos un programa demo del juego clásico de pelotas que rebotan para mostrar la gran útilidad de los objetos en JavaScript. En éste demo las pelotas rebotaran en la pantalla y cambiaran de color cuando choquen unas con otras. Así, al final del ejemplo tendremos algo como esto:
 
-![](https://mdn.mozillademos.org/files/13865/bouncing-balls.png)
+![](bouncing-balls.png)
 
 En este ejemplo se utilizará [Canvas API](/es/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) para dibujar las pelotas en la pantalla y la API [requestAnimationFrame](/es/docs/Web/API/window/requestAnimationFrame) para animar todo el contenido de la pantalla. No es necesario que conozca estas funciones previamente. Esperamos que al final de este artículo, quizás pueda estar interesado en explorar su uso y capacidades más en detalle. Durante este desarrollo usaremos objetos y algunas técnicas para hacer que las pelotas puedan rebotar en los bordes y comprobar cuando choquen entre ellas (ésto se conoce como **detección de colisiones**).
 

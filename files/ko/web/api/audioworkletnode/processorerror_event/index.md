@@ -1,18 +1,7 @@
 ---
 title: AudioWorkletNode.onprocessorerror
 slug: Web/API/AudioWorkletNode/processorerror_event
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Event Handler
-  - Property
-  - Reference
-  - Web Audio API
-  - onprocessorerror
 original_slug: Web/API/AudioWorkletNode/onprocessorerror
-browser-compat: api.AudioWorkletNode.onprocessorerror
 ---
 
 {{ APIRef("Web Audio API") }}

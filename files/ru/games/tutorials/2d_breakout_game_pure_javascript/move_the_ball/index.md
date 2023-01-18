@@ -12,9 +12,8 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
 Это **2й шаг** из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код для данного урока по ссылке [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html).
 
@@ -91,7 +90,7 @@ function draw() {
 
 Сохраните ваш код и откройте страницу в браузере. Всё работает хорошо, вот только мяч оставляет позади след:
 
-![](https://mdn.mozillademos.org/files/10430/ball-trail.png)
+![](ball-trail.png)
 
 ## Очищение объекта после каждого кадра
 

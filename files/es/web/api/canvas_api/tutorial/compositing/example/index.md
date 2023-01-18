@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 original_slug: Web/API/Canvas_API/Tutorial/Compositing/Ejemplo
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 Este programa de ejemplo muestra una cantidad de [operaciones de composición](/es/docs/Web/API/CanvasRenderingContext2D.globalCompositeOperation). La salida se ve así:
 

@@ -15,7 +15,7 @@ En este tutorial iremos a través del proceso de construcción de un juego en HT
 
 Al finalizar este tutorial tendrás un juego _demo_ completamente funcional: [Cyber Orb](http://orb.enclavegames.com/). Se verá más o menos así:
 
-![](https://mdn.mozillademos.org/files/10297/cyber-orb.png)
+![](cyber-orb.png)
 
 ## Phaser framework
 
@@ -25,7 +25,7 @@ Al finalizar este tutorial tendrás un juego _demo_ completamente funcional: [Cy
 
 Puedes ver [el código fuente de Cyber Orb](https://github.com/EnclaveGames/Cyber-Orb) en GitHub. La estructura de carpetas no es nada complicada: el punto de partida es el archivo `index.html` donde inicializaremos el _framework_ y configuraremos el canvas donde correrá el juego.
 
-![](https://mdn.mozillademos.org/files/10357/cyber-orb-github.png)
+![](cyber-orb-github.png)
 
 Puedes hacer clic en el archivo index desde tu navegador favorito para iniciar el juego y probarlo. También hay tres carpetas en el directorio:
 
@@ -278,7 +278,7 @@ handleOrientation: function(e) {
 
 Mientras más inclines el dispositivo, más fuerza se aplica a la pelota y la velocidad en la que se mueve es mayor.
 
-![](https://mdn.mozillademos.org/files/10369/cyber-orb-flame-orientation.png)
+![](cyber-orb-flame-orientation.png)
 
 > **Nota:** Para encontrar más sobre implementar la orientación de los dispositivos y cómo se vé en código crudo, lee [Keep it level: responding to device orientation changes](/es/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes).
 
@@ -387,7 +387,7 @@ Eso es todo: cargar y reproducir sonidos es sencillo con Phaser.
 
 #### Implementando la API de Vibración
 
-Cuando la detección de colisión funcione como es esperado, añadamos algunos efectos especiales con la ayuda de la API de Vibración.![](https://mdn.mozillademos.org/files/10371/cyber-orb-flame-vibration.png)
+Cuando la detección de colisión funcione como es esperado, añadamos algunos efectos especiales con la ayuda de la API de Vibración.![](cyber-orb-flame-vibration.png)
 
 La mejor forma de usarla en nuestro caso es haciendo que el teléfono vibre cada vez que la pelota golpee las paredes: dentro de la función `wallCollision`:
 

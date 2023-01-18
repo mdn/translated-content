@@ -1,14 +1,6 @@
 ---
 title: Funciones
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Funciones
-  - Guía
-  - JavaScript
-  - Novato
-  - Principiante
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Functions
 original_slug: Web/JavaScript/Guide/Funciones
 ---
 

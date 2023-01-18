@@ -169,7 +169,7 @@ const buttons = document.getElementsByTagName('button');
 let stopTime = 0;
 
 for (const button of buttons) {
-  button.addEventListener('click', () => {  
+  button.addEventListener('click', () => {
     myAudio.currentTime = button.getAttribute("data-start");
     stopTime = button.getAttribute("data-stop");
     myAudio.play();

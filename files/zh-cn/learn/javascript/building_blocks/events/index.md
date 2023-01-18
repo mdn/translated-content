@@ -90,7 +90,7 @@ btn.onclick = function() {
 
 比如，[Node.js](/zh-CN/docs/Learn/Server-side/Express_Nodejs) 是一种非常流行的允许开发者使用 JavaScript 来建造网络和服务器端应用的运行环境。[Node.js event model](https://nodejs.org/docs/latest-v5.x/api/events.html) 依赖定期监听事件的监听器和定期处理事件的处理器——虽然听起来好像差不多，但是实现两者的代码是非常不同的，Node.js 使用像 on ( ) 这样的函数来注册一个事件监听器，使用 once ( ) 这样函数来注册一个在运行一次之后注销的监听器。 [HTTP connect event docs](https://nodejs.org/docs/latest-v5.x/api/http.html#http_event_connect) 提供了很多例子。
 
-另外一个例子：您可以使用 JavaScript 来开发跨浏览器的插件（使用 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 开发技术。事件模型和网站的事件模型是相似的，仅有一点点不同——事件监听属性是大驼峰的（如`onMessage`而不是`onmessage`），还需要与 `addListener` 函数结合，参见 [runtime.onMessage page](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage#Examples) 上的一个例子。
+另外一个例子：您可以使用 JavaScript 来开发跨浏览器的插件（使用 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 开发技术。事件模型和网站的事件模型是相似的，仅有一点点不同——事件监听属性使用驼峰命名法（如`onMessage`而不是`onmessage`），还需要与 `addListener` 函数结合，参见 [runtime.onMessage page](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage#Examples) 上的一个例子。
 
 您现在不需要掌握这些，我们只想表明不同的编程环境下事件机制是不同的，
 

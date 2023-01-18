@@ -1,12 +1,8 @@
 ---
 title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/spellcheck
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`spellcheck`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소의 맞춤법 검사 여부를 지정하는 열거형 특성입니다.

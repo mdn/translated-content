@@ -1,7 +1,6 @@
 ---
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
-translation_of: Web/API/Document/createElementNS
 ---
 
 {{ApiRef("DOM")}}
@@ -84,7 +83,7 @@ This creates a new `<div>` element in the [XHTML](/ko/docs/XHTML) namespace and 
 
 ## See also
 
-- [document.createElement](createElement)
-- [document.createTextNode](createTextNode)
-- [Node.namespaceURI](../Node/namespaceURI)
-- [Namespaces in XML](http://www.w3.org/TR/1999/REC-xml-names-19990114)
+- {{DOMxRef("document.createElement()")}}
+- {{DOMxRef("document.createTextNode()")}}
+- {{DOMxRef("Element.namespaceURI")}}
+- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

@@ -1,15 +1,6 @@
 ---
 title: console.warn()
 slug: Web/API/console/warn
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
-browser-compat: api.console.warn
-translation_of: Web/API/Console/warn
 ---
 
 {{APIRef("Console API")}}

@@ -1,12 +1,6 @@
 ---
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-tags:
-  - Funciones
-  - JavaScript
-  - Propiedades
-  - argumentos
-translation_of: Web/JavaScript/Reference/Functions/arguments/length
 original_slug: Web/JavaScript/Referencia/Funciones/arguments/length
 ---
 

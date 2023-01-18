@@ -1,15 +1,17 @@
 ---
 title: Notification.maxActions
 slug: Web/API/Notification/maxActions
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 **`maxActions`** は {{domxref("Notification")}} インターフェイスの属性で、端末とユーザーエージェントが対応するアクションの最大数を返します。実質的には、これはユーザーエージェントが尊重する {{domxref("Notification.actions")}} 配列の最大数です。
 
 ## 値
 
-整数ので、ユーザ－エージェントと端末がユーザーに提示することができるできる通知アクションの最大数を示します。
+整数で、ユーザ－エージェントと端末がユーザーに提示することができるできる通知アクションの最大数を示します。
 
 ## 例
 
@@ -17,7 +19,7 @@ slug: Web/API/Notification/maxActions
 
 ```js
 const maxActions = Notification.maxActions;
-console.log('This device can display at most ' + maxActions + ' actions on each notification.');
+console.log(`This device can display at most ${maxActions} actions on each notification.`);
 ```
 
 ## 仕様書

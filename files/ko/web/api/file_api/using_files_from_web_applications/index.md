@@ -1,7 +1,6 @@
 ---
 title: 웹 어플리케이션에서 파일 사용하기
 slug: Web/API/File_API/Using_files_from_web_applications
-translation_of: Web/API/File/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
 {{APIRef("File API")}}

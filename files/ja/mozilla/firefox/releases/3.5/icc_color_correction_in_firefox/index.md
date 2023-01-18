@@ -9,7 +9,7 @@ slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 
 下の画像は 3 つのセクションに分割されています。 左上隅には、Firefox 2 でレンダリングされた画像が表示されます。右上隅には、Firefox 3 での画像のレンダリング方法が表示されます。下には、Photoshop でレンダリングされた画像が表示されます。
 
-![iccsample.jpg](/@api/deki/files/3218/=iccsample.jpg)
+![iccsample.jpg](iccsample.jpg)
 
 ご覧のように、Firefox 3 と Photoshop は埋め込まれた色補正プロファイルをサポートしているため、イメージを同じようにレンダリングします。 Firefox 2 はプロファイルを無視し、色が一致しません。
 

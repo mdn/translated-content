@@ -49,11 +49,11 @@ var person1 = new Persona('Bob', 'Smith', 32, 'hombre', ['music', 'skiing']);
 
 Si escribe "person1." en su consola JavaScript, debería ver que el navegador intenta completarlo automáticamente con los nombres de miembro disponibles en este objeto:
 
-![](https://mdn.mozillademos.org/files/13853/object-available-members.png)
+![](object-available-members.png)
 
 En esta lista, podra ver los miembros definidos en el objeto prototipo de person1, que es la Persona() (Persona() es el constructor) - nombre, edad, género, intereses, biografía y saludos. Sin embargo, también verá algunos otros miembros - watch, valueOf, etc - que están definidos en el objeto prototipo de Persona() 's, que es un Objeto (Object). Esto demuestra que el prototipo cadena funciona.
 
-![](https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png)
+![](mdn-graphics-person-person-object-2.png)
 
 Entonces, ¿qué sucede si llama a un método en `person1`, que está definido en `Object`? Por ejemplo:
 

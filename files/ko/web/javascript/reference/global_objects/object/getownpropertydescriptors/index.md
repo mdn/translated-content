@@ -1,12 +1,6 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
-browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 ---
 {{JSRef}}
 

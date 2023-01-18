@@ -1,22 +1,9 @@
 ---
 title: WebGL
 slug: Web/API/WebGL_API
-tags:
-  - 3D
-  - 3D Graphics
-  - API
-  - Advanced
-  - Graphics
-  - JavaScript
-  - Media
-  - Overview
-  - Reference
-  - WebGL
-  - WebGL API
-translation_of: Web/API/WebGL_API
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 **WebGL**(Web Graphics Library)은 플러그인을 사용하지 않고 웹 브라우저에서 상호작용 가능한 3D와 2D 그래픽을 표현하기 위한 JavaScript API입니다. WebGL은 HTML5 {{HTMLElement("canvas")}} 요소에서 사용할 수 있는, OpenGL ES 2.0을 대부분 충족하는 API를 제공합니다.
 
@@ -109,34 +96,13 @@ WebGL 2는 {{domxref("WebGL2RenderingContext")}} 인터페이스를 통해 제�
 - [three.js](https://threejs.org/) is an open-source, fully featured 3D WebGL library.
 - [Phaser](https://phaser.io/) is a fast, free and fun open source framework for Canvas and WebGL powered browser games
 
-<h2 class="명세" id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 class="Related_Topics" id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-### WebGL 1
-
-{{Compat("api.WebGLRenderingContext", 0)}}
-
-### WebGL 2
-
-{{Compat("api.WebGL2RenderingContext", 0)}}
-
-### 호환성 노트
-
-브라우저 이외에 GPU 자체도 기능을 제공합니다. 따라서 예를들면 S3 텍스처 압축(S3TC)은 오직 테그라 기반 테블렛에서 사용가능합니다.
-
-### 게코 노트
-
-#### WebGL 디버깅과 테스팅
-
-Gecko 10.0 {{geckoRelease("10.0")}}을 사용하면 WebGL의 호환성을 테스트 목적으로 제어할수 있도록 두 가지 환경설정을 할 수 있습니다.
-
-- `webgl.min_capability_mode`
-  - : Boolean 속성으로 참일 경우 최소 호환성 모드로 사용 가능합니다. 이 모드에서 WebGL는 오직 최소한의 기능만 설정하고 WebGL 명세에서 필요한 기능만 지원하도록 설정되어 집니다. 이는 WebGL코드가 어떠한 디바이스나 브라우저에서 작동이 된다는 것을 보장합니다. 기본값으로는 거짓으로 설정되어 있습니다.
-- `webgl.disable_extensions`
-  - : Boolean 속성으로 참일 경우 WebGL 확장을 비활성화 하고 기본값은 거짓입니다.
+{{Compat}}
 
 ## 같이 보기
 

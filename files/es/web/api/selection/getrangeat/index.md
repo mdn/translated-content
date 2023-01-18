@@ -1,9 +1,6 @@
 ---
 title: getRangeAt
 slug: Web/API/Selection/getRangeAt
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/getRangeAt
 ---
 
 {{ ApiRef("DOM") }}

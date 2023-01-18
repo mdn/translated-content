@@ -1,7 +1,6 @@
 ---
 title: Using channel messaging
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
-translation_of: Web/API/Channel_Messaging_API/Using_channel_messaging
 ---
 {{DefaultAPISidebar("Channel Messaging API")}}
 
@@ -23,7 +22,7 @@ To get your started, we have published a couple of demos on Github. First up, ch
 
 We'll be focusing on the latter example in this article. It looks like so:
 
-![](https://mdn.mozillademos.org/files/10075/channel-messaging-demo.png)
+![](channel-messaging-demo.png)
 
 ## Creating the channel
 

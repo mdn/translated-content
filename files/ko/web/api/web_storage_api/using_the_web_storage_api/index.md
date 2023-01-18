@@ -1,7 +1,6 @@
 ---
 title: Web Storage API 사용하기
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 
@@ -85,11 +84,11 @@ else {
 
 To illustrate some typical web storage usage, we have created a simple example, imaginatively called **Web Storage Demo**. The [landing page](https://mdn.github.io/dom-examples/web-storage/) provides controls that can be used to customize the color, font, and decorative image:
 
-![](https://mdn.mozillademos.org/files/9685/landing.png)다른 색상을 선택하면, 페이지에 바로 적용됩니다. 또한 선택한 값을 `localStorage`에 저장했다면, 페이지를 나갔다가 나중에 다시 들어왔을 떄 이전에 저장한 값을 기억하고 있습니다.
+![](landing.png)다른 색상을 선택하면, 페이지에 바로 적용됩니다. 또한 선택한 값을 `localStorage`에 저장했다면, 페이지를 나갔다가 나중에 다시 들어왔을 떄 이전에 저장한 값을 기억하고 있습니다.
 
 We have also provided an [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — if you load this page in another tab, then make changes to your choices in the landing page, you'll see the updated storage information outputted as a {{domxref("StorageEvent")}} is fired.
 
-![](https://mdn.mozillademos.org/files/9687/event-output.png)
+![](event-output.png)
 
 > **참고:** As well as viewing the example pages live using the above links, you can also [check out the source code](https://github.com/mdn/dom-examples/tree/master/web-storage).
 

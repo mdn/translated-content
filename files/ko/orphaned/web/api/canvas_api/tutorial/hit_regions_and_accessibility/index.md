@@ -1,11 +1,12 @@
 ---
 title: 히트(Hit) 영역과 접근성
 slug: orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
-translation_of: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 original_slug: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 ---
 
-{{CanvasSidebar}} {{ PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas") }}{{HTMLElement("canvas")}} 엘리먼트는 비트맵이며 그려진 객체에 대한 정보는 제공하지 않습니다. 캔버스 컨텐츠는 시멘틱 HTML과 같은 접근성 도구에 노출되지 않습니다. 일반적으로 접근성을 위한 웹 사이트 또는 앱에서는 캔버스를 사용하지 않는 것이 좋습니다. 본 가이드라인은 접근성이 향상된 캔버스를 만드는데 도움이 될 것입니다.
+{{DefaultAPISidebar("Canvas API")}} {{ PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas") }}{{HTMLElement("canvas")}} 
+
+엘리먼트는 비트맵이며 그려진 객체에 대한 정보는 제공하지 않습니다. 캔버스 컨텐츠는 시멘틱 HTML과 같은 접근성 도구에 노출되지 않습니다. 일반적으로 접근성을 위한 웹 사이트 또는 앱에서는 캔버스를 사용하지 않는 것이 좋습니다. 본 가이드라인은 접근성이 향상된 캔버스를 만드는데 도움이 될 것입니다.
 
 ## 대체 컨텐츠
 

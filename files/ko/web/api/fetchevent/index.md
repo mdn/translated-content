@@ -1,17 +1,6 @@
 ---
 title: FetchEvent
 slug: Web/API/FetchEvent
-tags:
-  - API
-  - FetchEvent
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - TopicStub
-  - Workers
-translation_of: Web/API/FetchEvent
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

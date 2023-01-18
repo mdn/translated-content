@@ -1,12 +1,6 @@
 ---
 title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/name
-browser-compat: javascript.builtins.Error.name
 ---
 
 {{JSRef}}

@@ -28,4 +28,3 @@ slug: Web/CSS/CSS_Positioning
 ## 仕様書
 
 {{Specifications}}
-

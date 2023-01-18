@@ -1,13 +1,6 @@
 ---
 title: Usar promesas
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Asíncrono
-  - Guía
-  - Intermedio
-  - Promesa
-  - Promesas
-translation_of: Web/JavaScript/Guide/Using_promises
 original_slug: Web/JavaScript/Guide/Usar_promesas
 ---
 

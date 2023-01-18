@@ -1,11 +1,10 @@
 ---
 title: 캔버스 최적화
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 original_slug: Web/HTML/Canvas/Tutorial/Optimizing_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 {{HTMLElement("canvas")}} 엘리먼트는 웹에서 2D 그래픽을 렌더링하는 데 가장 널리 사용되는 도구 중 하나입니다. 그러나 웹 사이트와 앱이 Canvas API를 최대한으로 밀면 성능이 저하되기 시작합니다. 그러나 웹 사이트 및 앱이 Canvas API를 한계치까지 사용하면 성능이 저하되기 시작합니다. 이 글에서는 그래픽이 잘 동작하도록 보장하기 위해 캔버스 엘리먼트의 사용을 최적화하기위한 제안 사항을 제공합니다.
 

@@ -3,7 +3,7 @@ title: WebGL モデル ビュー 射影
 slug: Web/API/WebGL_API/WebGL_model_view_projection
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 この記事では、[WebGL](/ja/docs/Web/API/WebGL_API) プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3D シーンを構成するときに通常使用される中心的な 3 つの行列である、モデル、ビュー、射影行列について説明します。
 

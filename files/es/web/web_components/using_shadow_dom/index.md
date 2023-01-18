@@ -31,11 +31,11 @@ Este artículo asume que usted está familiarizado con el concepto de [DOM (Docu
 
 Este fragmento produce la siguientre estructura de DOM:
 
-![](https://mdn.mozillademos.org/files/14559/dom-screenshot.png)
+![](dom-screenshot.png)
 
 _Shadow_ DOM permite adjuntar arboles DOM ocultos a elementos en el arbol DOM regular — este arbol shadow DOM comienza con un elemento **shadow root,** debajo del cual se puede adjuntar cualquier elemento que desee, de la misma manera que el DOM normal.
 
-![](https://mdn.mozillademos.org/files/15788/shadow-dom.png)
+![](shadowdom.svg)
 
 Hay algunos conceptos de Shadow DOM que deben ser tomados en cuenta:
 

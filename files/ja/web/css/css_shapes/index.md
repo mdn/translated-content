@@ -46,4 +46,3 @@ slug: Web/CSS/CSS_Shapes
 ## 仕様書
 
 {{Specifications}}
-

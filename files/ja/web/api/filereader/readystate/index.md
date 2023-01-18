@@ -1,6 +1,8 @@
 ---
 title: FileReader.readyState
 slug: Web/API/FileReader/readyState
+l10n:
+  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
 {{APIRef("File API")}}
@@ -23,27 +25,29 @@ slug: Web/API/FileReader/readyState
 ## 例
 
 ```js
-var reader = new FileReader();
+const reader = new FileReader();
 console.log('EMPTY', reader.readyState); // readyState は 0 になります。
+
 reader.readAsText(blob);
 console.log('LOADING', reader.readyState); // readyState は 1 になります。
 
-reader.onloadend = function () {
-  console.log('DONE', reader.readyState); // readyState は 2 になります。};
+reader.onloadend = () => {
+  console.log('DONE', reader.readyState); // readyState は 2 になります。
+};
 ```
 
 ## 値
 
-{{domxref("FileReader")}} API のために定義されている 3 つの状態定数のうちの 1 つです。
+{{domxref("FileReader")}} API のために定義されている、状態を表す 3 つの定数のうちの 1 つです。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
-{{Compat("api.FileReader.readyState")}}
+{{Compat}}
 
-## あわせて参照
+## 関連情報
 
 - {{domxref("Blob")}}

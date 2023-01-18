@@ -1,12 +1,6 @@
 ---
 title: Error() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Error
-browser-compat: javascript.builtins.Error.Error
 ---
 
 {{JSRef}}

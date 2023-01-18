@@ -1,18 +1,11 @@
 ---
 title: '::after (:after)'
 slug: Web/CSS/::after
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Web
-translation_of: Web/CSS/::after
 ---
 
 {{CSSRef}}
 
-CSS에서, **`::after`**는 선택한 요소의 맨 마지막 자식으로 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 하나 생성합니다. 보통 {{cssxref("content")}} 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다. 기본값은 인라인입니다.
+CSS에서, **`::after`** 는 선택한 요소의 맨 마지막 자식으로 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 하나 생성합니다. 보통 {{cssxref("content")}} 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다. 기본값은 인라인입니다.
 
 ```css
 /* 링크 뒤에 화살표 추가 */

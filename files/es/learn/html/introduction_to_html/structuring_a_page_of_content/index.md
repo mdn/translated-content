@@ -84,7 +84,7 @@ También debería:
 
 La siguiente captura de pantalla muestra un ejemplo de cómo podría verse la letra después de haber sido marcada.
 
-![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](https://mdn.mozillademos.org/files/12449/example-page.png)
+![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](example-page.png)
 
 ## Evaluación
 

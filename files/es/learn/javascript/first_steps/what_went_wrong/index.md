@@ -35,7 +35,7 @@ En este punto, consultemos la consola del desarrollador para ver si podemos ver 
 
 Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript simples en la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) (si no recuerdas cómo abrirla en tu navegador, sigue el enlace anterior para descubrirlo). Lo más útil es que la consola te brinda mensajes de error cada vez que ocurre algún error de sintaxis dentro del JavaScript que alimenta al motor JavaScript del navegador. Ahora vayamos a cazar.
 
-1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](https://mdn.mozillademos.org/files/13496/not-a-function.png)
+1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](not-a-function.png)
 2. Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
 
     - Una "x" roja para indicar que se trata de un error.
@@ -58,7 +58,7 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 ### Errores sintácticos, segunda ronda
 
 1. Guarda tu página y refréscala, ahora deberías ver que el error ha desaparecido.
-2. Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](https://mdn.mozillademos.org/files/13498/variable-is-null.png)
+2. Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](variable-is-null.png)
 3. Esta vez, el error que se informa es "`TypeError: lowOrHi es nulo`", en la línea 78.
 
     > **Nota:** [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
@@ -85,7 +85,7 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 
     > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
 
-7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](https://mdn.mozillademos.org/files/13494/console-log-output.png)Efectivamente, el valor de `lowOrHi` es `null` en este punto, así que definitivamente hay un problema con la línea 48.
+7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](console-log-output.png)Efectivamente, el valor de `lowOrHi` es `null` en este punto, así que definitivamente hay un problema con la línea 48.
 8. Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
 
     ```js

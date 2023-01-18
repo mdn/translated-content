@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 3c67eed7b0d2c91198ec95bcc9b1a570f6c0f585
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 Dans tous nos [exemples précédents](/fr/docs/Web/API/Canvas_API/Tutorial/Transformations), les formes étaient toujours dessinées les unes au-dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété `globalCompositeOperation`. En complément, la propriété `clip` nous permet de cacher les parties des formes que nous ne désirons pas.
 

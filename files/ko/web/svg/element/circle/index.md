@@ -1,7 +1,6 @@
 ---
 title: <circle>
 slug: Web/SVG/Element/circle
-translation_of: Web/SVG/Element/circle
 ---
 {{SVGRef}}
 
@@ -33,7 +32,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-» [circle.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
+» [circle.svg](circle2.svg)
 
 ## 속성들
 

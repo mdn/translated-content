@@ -5,7 +5,7 @@ slug: Web/API/EventTarget/dispatchEvent
 
 {{APIRef("DOM Events")}}
 
-Dispara um {{domxref("Event")}} para o {{domxref("EventTarget")}} especificado, invocando os {{domxref("EventListener")}}s especificados, em uma ordem apropriada. O processamento normal das regras (including the capturing and optional bubbling phase) aplica-se a eventos disparados manualmente com `dispatchEvent()`.
+Dispara um {{domxref("Event")}} para o {{domxref("EventTarget")}} especificado, invocando os {{domxref("EventListener")}}s especificados, em uma ordem apropriada. O processamento normal das regras (incluindo a captura e a fase opcional de [bubbling](https://javascript.info/bubbling-and-capturing)) aplica-se a eventos disparados manualmente com `dispatchEvent()`.
 
 ## Sintaxe
 

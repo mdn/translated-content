@@ -11,7 +11,7 @@ Todos los navegadores web modernos incluyen un potente conjunto de herramientas 
 
 Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador en una subventana que se ve más o menos así, dependiendo del navegador que estés utilizando:
 
-![Devtools](https://mdn.mozillademos.org/files/16205/DevTools_63_inspector.png)
+![Devtools](devtools_63_inspector.png)
 
 ¿Cómo la levantas? Existen tres distintas maneras:
 
@@ -25,7 +25,7 @@ Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador 
 
 - _**Barra de menú:**_
 
-  - **Firefox**: Menú ![Devtools](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png)
+  - **Firefox**: Menú ![Devtools](2014-01-10-13-08-08-f52b8c.png)
 
     _➤ Desarrollador web ➤ Alternar herramientas,_ o _➤ Herramientas_
 
@@ -37,13 +37,13 @@ Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador 
 
 - **_Menú contextual:_** Presiona y mantén presionado / haz clic con el botón derecho en un elemento en una página web (Ctrl-clic en Mac) y elige _Inspeccionar elemento_ en el menú contextual que aparece. (_Una ventaja adicional:_ este método, inmediatamente resalta el código del elemento en el que hiciste clic con el botón derecho).
 
-![Inspector](https://mdn.mozillademos.org/files/16206/inspector_context.png)
+![Inspector](inspector_context.png)
 
 ## El inspector: explorador del DOM y editor CSS
 
 Las herramientas del desarrollador, generalmente se abren de forma predeterminada en el inspector, parecido a la siguiente captura de pantalla. Esta herramienta muestra cómo se ve el HTML en tu página en tiempo de ejecución, así como qué CSS se aplica a cada elemento de la página. También te permite modificar instantáneamente el HTML y CSS y ver los resultados de tus cambios reflejados en vivo en la ventana del navegador.
 
-![Inspector resaltado](https://mdn.mozillademos.org/files/16208/inspector_highlighted.png)
+![Inspector resaltado](inspector_highlighted.png)
 
 Si _no_ ves al inspector,
 
@@ -65,7 +65,7 @@ Si _no_ ves al inspector,
 
 Para empezar, haz clic con el botón derecho (Ctrl+clic) en un elemento HTML en el inspector del DOM y observa el menú contextual. Las opciones disponibles en el menú varían según el navegador, pero en su mayoría, las más importantes son las mismas:
 
-![Inspector del DOM](https://mdn.mozillademos.org/files/16209/dom_inspector.png)
+![Inspector del DOM](dom_inspector.png)
 
 - **Eliminar nodo** (A veces _Eliminar elemento_). Elimina el elemento actual.
 - **Editar como HTML** (A veces _Agregar atributo_/_Editar texto_). Te permite cambiar el HTML y ver los resultados en tiempo real. Muy útil para depurar y probar.
@@ -79,7 +79,7 @@ Intenta editar algo de tu DOM ahora. Haz doble clic en un elemento o haz clic co
 
 De manera predeterminada, el editor CSS muestra las reglas CSS aplicadas al elemento seleccionado actualmente:
 
-![Inspector CSS](https://mdn.mozillademos.org/files/16211/CSS_Inspector.png)
+![Inspector CSS](css_inspector.png)
 
 Estas características son especialmente útiles:
 
@@ -113,11 +113,11 @@ Obtén más información sobre el Inspector en diferentes navegadores:
 
 El depurador de JavaScript te permite observar el valor de las variables y establecer puntos de interrupción, lugares en tu código en los que deseas pausar la ejecución e identificar los problemas que impiden que tu código se ejecute correctamente.
 
-![Depurador de Firefox](https://mdn.mozillademos.org/files/16239/firefox_debugger.png)
+![Depurador de Firefox](firefox_debugger.png)
 
 Para llegar al depurador:
 
-**Firefox**: Selecciona ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) ➤ _Desarrollador Web_ ➤ _Depurador_ o presiona <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>S</kbd> para abrir el depurador de JavaScript. Si ya estás viendo las herramientas, haz clic en la pestaña **Depurador**.
+**Firefox**: Selecciona ![](2014-01-10-13-08-08-f52b8c.png) ➤ _Desarrollador Web_ ➤ _Depurador_ o presiona <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>S</kbd> para abrir el depurador de JavaScript. Si ya estás viendo las herramientas, haz clic en la pestaña **Depurador**.
 
 **Chrome**: Abre las herramientas para desarrolladores y luego selecciona la pestaña **Fuentes**. (Opera funciona de la misma manera).
 
@@ -133,13 +133,13 @@ En Firefox hay tres paneles en el depurador de JavaScript.
 
 El primer panel de la izquierda contiene la lista de archivos asociados con la página que estás depurando. Selecciona el archivo con el que deseas trabajar de esta lista. Haz clic en un archivo para seleccionarlo y ver su contenido en el panel central del depurador.
 
-![Lista de archivos](https://mdn.mozillademos.org/files/16240/File_List.png)
+![Lista de archivos](file_list.png)
 
 #### Código fuente
 
 Establece puntos de interrupción donde desees pausar la ejecución. En la siguiente imagen, el resaltado del número 18 muestra que la línea tiene un punto de interrupción establecido.
 
-![Código fuente](https://mdn.mozillademos.org/files/16241/Source_code.png)
+![Código fuente](source_code.png)
 
 #### Ver expresiones y puntos de interrupción
 
@@ -155,7 +155,7 @@ La sección **Pila de llamadas** muestra qué código se ejecutó para llegar a 
 
 La sección final, **Alcances**, muestra qué valores son visibles desde varios puntos dentro de tu código. Por ejemplo, en la siguiente imagen, puedes ver los objetos disponibles para el código en la función `addItemClick`.
 
-![ver elementos](https://mdn.mozillademos.org/files/16242/watch_items.png)
+![ver elementos](watch_items.png)
 
 ### Conocer más
 
@@ -172,11 +172,11 @@ La consola de JavaScript es una herramienta increíblemente útil para depurar J
 
 Si las herramientas para desarrolladores ya están abiertas, haz clic o presiona la pestaña Consola.
 
-De lo contrario, Firefox te permite abrir la consola directamente usando <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>K</kbd> o usando el comando del menú: Menú ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ Desarrollador web ➤ Consola web,_ o _Herramientas ➤ Desarrollador web ➤ Consola web._ En otro navegador, abre las herramientas para desarrolladores y luego haz clic en la pestaña Consola.
+De lo contrario, Firefox te permite abrir la consola directamente usando <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>K</kbd> o usando el comando del menú: Menú ![](2014-01-10-13-08-08-f52b8c.png) _➤ Desarrollador web ➤ Consola web,_ o _Herramientas ➤ Desarrollador web ➤ Consola web._ En otro navegador, abre las herramientas para desarrolladores y luego haz clic en la pestaña Consola.
 
 Esto te dará una ventana como la siguiente:
 
-![Sólo consola](https://mdn.mozillademos.org/files/16212/console_only.png)
+![Sólo consola](console_only.png)
 
 Para ver qué sucede, intenta ingresar los siguientes fragmentos de código en la consola uno por uno (y luego presiona Intro):
 

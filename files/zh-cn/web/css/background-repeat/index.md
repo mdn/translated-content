@@ -89,7 +89,7 @@ background-repeat: inherit;
 /* Shared for all DIVS in example */
 li {margin-bottom: 12px;}
 div {
-    background-image: url(https://mdn.mozillademos.org/files/12005/starsolid.gif);
+    background-image: url(starsolid.gif);
     width: 144px;
     height: 84px;
 }
@@ -110,8 +110,8 @@ div {
 
 /* Multiple images */
 .five {
-    background-image:  url(https://mdn.mozillademos.org/files/12005/starsolid.gif),
-                       url(https://developer.mozilla.org/static/img/favicon32.png);
+    background-image:  url(starsolid.gif),
+                       url(favicon32.png);
     background-repeat: repeat-x,
                        repeat-y;
     height: 144px;
@@ -120,7 +120,7 @@ div {
 
 ### 结果
 
-在这个例子中，每一个列表项都使用了不同的`background-repeat 语法。`
+在这个例子中，每一个列表项都使用了不同的`background-repeat` 语法。
 
 {{EmbedLiveSample("例子", 240, 360)}}
 

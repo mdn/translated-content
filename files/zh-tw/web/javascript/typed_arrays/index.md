@@ -27,7 +27,17 @@ JavaScript 型別陣列提供了存取二進制資料更有效率的機制。
 
 型別陣列視圖具有自述性名稱，並為所有常用的數字類型（如 `Int8`, `Uint32`, `Float64` 等）提供視圖。 有一個特殊的型別陣列視圖 `Uint8ClampedArray`。 它的範圍值在 0 到 255 之間。它對於 [Canvas 的資料處理](/zh-TW/docs/Web/API/Canvas_API/Tutorial)非常有用。
 
-{{page("/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
+| Type                                     | Value Range               | Size in bytes | Description                                                               | Web IDL type          | Equivalent C type |
+| ---------------------------------------- | ------------------------- | ------------- | ------------------------------------------------------------------------- | --------------------- | ----------------- |
+| {{jsxref("Int8Array")}}         | -128 to 127               | 1             | 8-bit two's complement signed integer                                     | `byte`                | `int8_t`          |
+| {{jsxref("Uint8Array")}}         | 0 to 255                  | 1             | 8-bit unsigned integer                                                    | `octet`               | `uint8_t`         |
+| {{jsxref("Uint8ClampedArray")}} | 0 to 255                  | 1             | 8-bit unsigned integer (clamped)                                          | `octet`               | `uint8_t`         |
+| {{jsxref("Int16Array")}}         | -32768 to 32767           | 2             | 16-bit two's complement signed integer                                    | `short`               | `int16_t`         |
+| {{jsxref("Uint16Array")}}         | 0 to 65535                | 2             | 16-bit unsigned integer                                                   | `unsigned short`      | `uint16_t`        |
+| {{jsxref("Int32Array")}}         | -2147483648 to 2147483647 | 4             | 32-bit two's complement signed integer                                    | `long`                | `int32_t`         |
+| {{jsxref("Uint32Array")}}         | 0 to 4294967295           | 4             | 32-bit unsigned integer                                                   | `unsigned long`       | `uint32_t`        |
+| {{jsxref("Float32Array")}}     | 1.2x10^-38 to 3.4x10^38   | 4             | 32-bit IEEE floating point number ( 7 significant digits e.g. 1.1234567)  | `unrestricted float`  | `float`           |
+| {{jsxref("Float64Array")}}     | 5.0x10^-324 to 1.8x10^308 | 8             | 64-bit IEEE floating point number (16 significant digits e.g. 1.123...15) | `unrestricted double` | `double`          |
 
 ### DataView
 

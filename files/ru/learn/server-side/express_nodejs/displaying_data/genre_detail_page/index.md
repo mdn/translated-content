@@ -95,7 +95,7 @@ The view is very similar to all our other templates. The main difference is that
 
 Run the application and open your browser to <http://localhost:3000/>. Select the _All genres_ link, then select one of the genres (e.g. "Fantasy"). If everything is set up correctly, your page should look something like the following screenshot.
 
-![Genre Detail Page - Express Local Library site](https://mdn.mozillademos.org/files/14462/LocalLibary_Express_Genre_Detail.png)
+![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
 
 > **Примечание:** You might get an error similar to this:
 >

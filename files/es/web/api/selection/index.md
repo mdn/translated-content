@@ -1,10 +1,6 @@
 ---
 title: Selection
 slug: Web/API/Selection
-tags:
-  - DOM
-  - Todas_las_Categorías
-translation_of: Web/API/Selection
 ---
 
 {{ ApiRef("DOM") }}

@@ -1,7 +1,6 @@
 ---
 title: touchcancel
 slug: Web/API/Element/touchcancel_event
-translation_of: Web/API/Element/touchcancel_event
 ---
 
 `touchcancel` 이벤트는 터치포인트가 현재 구현된 방식안에서 방해 받을때 ( 예를들어 너무 많은 터치 포인트) 발생한다.

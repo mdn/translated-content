@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 ## 可迭代协议
 
-**可迭代协议**允许 JavaScript 对象定义或定制它们的迭代行为，例如，在一个 {{jsxref("Statements/for...of", "for..of")}} 结构中，哪些值可以被遍历到。一些内置类型同时是[内置可迭代对象](#内置可迭代对象)，并且有默认的迭代行为，比如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}，而其他内置类型则不是（比如 {{jsxref("Object")}}）。
+**可迭代协议**允许 JavaScript 对象定义或定制它们的迭代行为，例如，在一个 {{jsxref("Statements/for...of", "for..of")}} 结构中，哪些值可以被遍历到。一些内置类型同时是[内置的可迭代对象](#内置的可迭代对象)，并且有默认的迭代行为，比如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}，而其他内置类型则不是（比如 {{jsxref("Object")}}）。
 
 要成为**可迭代**对象，该对象必须实现 **`@@iterator`** 方法，这意味着对象（或者它[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)上的某个对象）必须有一个键为 `@@iterator` 的属性，可通过常量 {{jsxref("Symbol.iterator")}} 访问该属性：
 

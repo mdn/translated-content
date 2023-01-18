@@ -39,11 +39,20 @@ new URIError([message[, fileName[, lineNumber]]])
 
 ### 屬性
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Properties')}}
-
-### 方法
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Methods')}}
+- {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
+  - : Error message. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "URIError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}} {{non-standard_inline}}
+  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}} {{non-standard_inline}}
+  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}} {{non-standard_inline}}
+  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}} {{non-standard_inline}}
+  - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## 範例
 

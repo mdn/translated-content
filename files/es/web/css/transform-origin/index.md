@@ -1,7 +1,6 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
-translation_of: Web/CSS/transform-origin
 ---
 
 {{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}

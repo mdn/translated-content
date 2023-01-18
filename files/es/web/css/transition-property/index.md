@@ -1,12 +1,6 @@
 ---
 title: transition-property
 slug: Web/CSS/transition-property
-tags:
-  - CSS
-  - Propiedad CSS
-  - Referencia
-  - Transiciones CSS
-translation_of: Web/CSS/transition-property
 ---
 
 {{CSSRef("CSS Transitions")}}

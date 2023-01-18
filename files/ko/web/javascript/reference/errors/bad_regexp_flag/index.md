@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
-tags:
-  - 구문 에러
-  - 자바스크립트
-  - 정규식
-  - 플래그
-translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
 
 {{jsSidebar("Errors")}}

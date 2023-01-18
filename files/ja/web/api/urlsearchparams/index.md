@@ -96,9 +96,7 @@ searchParams3.has("query") // true
 
 ## 仕様書
 
-| 仕様書                                                                       | 状態                 | 備考     |
-| ---------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#urlsearchparams', "URLSearchParams")}} | {{Spec2('URL')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

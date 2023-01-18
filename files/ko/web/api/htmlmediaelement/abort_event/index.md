@@ -1,14 +1,6 @@
 ---
 title: abort
 slug: Web/API/HTMLMediaElement/abort_event
-tags:
-  - DOM
-  - Event
-  - Reference
-  - 레퍼런스
-  - 이벤트
-translation_of: Web/API/HTMLMediaElement/abort_event
-translation_of_original: Web/Events/abort
 original_slug: Web/Events/abort
 ---
 

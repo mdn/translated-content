@@ -1,14 +1,6 @@
 ---
 title: File.name
 slug: Web/API/File/name
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.File.name
-translation_of: Web/API/File/name
 ---
 
 {{APIRef("File API")}}

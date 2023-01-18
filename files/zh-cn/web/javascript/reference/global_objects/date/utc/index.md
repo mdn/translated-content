@@ -25,7 +25,7 @@ Date.UTC(year, month, day, hour, minute, second, millisecond)
 
 - `year`
   - : 一个表示年份的整数值。
-  
+
     从 `0` 到 `99` 的值会被映射到 `1900` 至 `1999` 年。其它的值则代表实际的年份。参见[示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#例子：将两位数年份映射为_1900_-_1999_年)。
 - `month` {{optional_inline}}
   - : `0`（一月）到 `11`（十二月）之间的一个整数，表示月份。从 ECMAScript 2017 开始，如果忽略该值，则默认为 `0`。_（直到 ECMAScript 2016，`month` 都是必须的参数。而从 ES2017 开始，它不再是必须的。）_

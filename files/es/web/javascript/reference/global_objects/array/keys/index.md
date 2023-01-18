@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Matriz
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/keys
 ---
 

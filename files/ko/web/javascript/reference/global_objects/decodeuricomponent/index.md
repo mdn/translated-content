@@ -1,10 +1,6 @@
 ---
 title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
 {{jsSidebar("Objects")}}
 

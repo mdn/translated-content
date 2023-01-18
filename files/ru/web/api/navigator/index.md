@@ -101,7 +101,7 @@ translation_of: Web/API/Navigator
   - : Разрешает веб-сайту зарегистрировать себя в качестве возможного обработчика для данного протокола.
 - {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline("1.7.8")}} {{obsolete_inline("9.0")}} {{experimental_inline}}
   - : Возвращает `false`. JavaScript taint/untaint функции отключены в JavaScript 1.2.
-- {{domxref("Navigator.vibrate()")}} {{gecko_minversion_inline("11.0")}}
+- {{domxref("Navigator.vibrate()")}}
   - : Причина вибрации устройства с поддержкой её. Не делает ничего, если нет поддержки вибрации.
 
 ### Не стандартизированные

@@ -22,7 +22,7 @@ tokenList.contains(token);
 
 {{domxref("Boolean")}}类型，当`token`包含在列表中时返回`true`，否则返回`false`。
 
-## 例子
+## 示例
 
 在下面的列子中，我们通过{{domxref("Element.classList")}}方法从 {{htmlelement("span")}} 元素中获取`DOMTokenList` 对象。然后测试验证`"c"` 是否包含在列表中，结果输出到 `<span>`标签的内容 {{domxref("Node.textContent")}}。
 
@@ -47,7 +47,7 @@ if (result) {
 
 结果如下：
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('示例', '100%', 60) }}
 
 ## 规范
 

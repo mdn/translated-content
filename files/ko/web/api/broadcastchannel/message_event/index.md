@@ -1,7 +1,6 @@
 ---
 title: message
 slug: Web/API/BroadcastChannel/message_event
-translation_of: Web/API/BroadcastChannel/message_event
 original_slug: Web/Events/message
 ---
 

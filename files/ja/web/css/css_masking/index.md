@@ -35,4 +35,3 @@ slug: Web/CSS/CSS_Masking
 ## 仕様書
 
 {{Specifications}}
-

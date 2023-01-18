@@ -347,7 +347,7 @@ def renew_book_librarian(request, pk):
   else:
     proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
     form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
-  
+
   context = {
     'form': form,
     'book_instance': book_instance,
@@ -435,7 +435,7 @@ Pour plus d'exemples sur la manière de rendre manuellement des formulaires dans
 Si vous avez accepté le "challenge" dans [Django didactique - section 8&nbsp;: Authentification des utilisateurs et permissions](/fr/docs/Learn/Server-side/Django/Authentication#challenge_yourself), vous avez une liste de tous les livres empruntés dans la bibliothèque, ce qui n'est visible que pour le staff de la bibliothèque. Nous pouvons ajouter un lien vers notre page de renouvellement après chaque élément, en utilisant le code de template suivant.
 
 ```html
-{% if perms.catalog.can_mark_returned %} <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a> {% endif %}  
+{% if perms.catalog.can_mark_returned %} <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a> {% endif %}
 ```
 
 > **Note :** Souvenez-vous que votre login de test devra avoir la permission "`catalog.can_mark_returned`" pour pouvoir accéder à la page de renouvellement de livre (utilisez peut-être votre compte superuser).

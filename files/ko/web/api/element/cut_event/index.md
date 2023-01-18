@@ -1,15 +1,6 @@
 ---
 title: 'Element: cut 이벤트'
 slug: Web/API/Element/cut_event
-tags:
-  - API
-  - Clipboard API
-  - Cut
-  - Element
-  - Event
-  - Reference
-  - Web
-browser-compat: api.Element.cut_event
 ---
 
 {{APIRef}}

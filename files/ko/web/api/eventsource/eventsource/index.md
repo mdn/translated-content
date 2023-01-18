@@ -1,13 +1,6 @@
 ---
 title: EventSource()
 slug: Web/API/EventSource/EventSource
-tags:
-  - API
-  - EventSource
-  - 레퍼런스
-  - 생성자
-  - 서버 전송 이벤트
-translation_of: Web/API/EventSource/EventSource
 ---
 
 {{APIRef('WebSockets API')}}

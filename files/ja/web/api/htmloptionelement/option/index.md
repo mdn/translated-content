@@ -81,4 +81,3 @@ options.forEach(function(element, key) {
 ## 仕様書
 
 {{Specifications}}
-

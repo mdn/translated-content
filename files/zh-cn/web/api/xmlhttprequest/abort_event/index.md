@@ -91,7 +91,7 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener('click', () => {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg');
+    runXHR('dgszyjnxcaipwzy.jpg');
 });
 
 xhrButtonError.addEventListener('click', () => {
@@ -99,7 +99,7 @@ xhrButtonError.addEventListener('click', () => {
 });
 
 xhrButtonAbort.addEventListener('click', () => {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg').abort();
+    runXHR('dgszyjnxcaipwzy.jpg').abort();
 });
 ```
 

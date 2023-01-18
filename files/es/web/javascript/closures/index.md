@@ -1,7 +1,6 @@
 ---
 title: Closures
 slug: Web/JavaScript/Closures
-translation_of: Web/JavaScript/Closures
 original_slug: Web/JavaScript/Closures
 ---
 
@@ -215,11 +214,11 @@ const makeCounter = function () {
     increment() {
       changeBy(1);
     },
-    
+
     decrement() {
       changeBy(-1);
     },
-    
+
     value() {
       return privateCounter;
     },
@@ -383,7 +382,7 @@ function setupHelp() {
     { id: 'name', help: 'Tu nombre completo' },
     { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
   ];
-  
+
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
     document.getElementById(item.id).onfocus = function () {
@@ -422,7 +421,7 @@ function setupHelp() {
     { id: 'name', help: 'Tu nombre completo' },
     { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
   ];
-  
+
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
     document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
@@ -503,7 +502,7 @@ function setupHelp() {
     { id: 'name', help: 'Tu nombre completo' },
     { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
   ];
-  
+
   helpText.forEach(function (text) {
     document.getElementById(text.id).onfocus = function () {
       showHelp(text.help);
@@ -529,7 +528,7 @@ function MyObject(name, message) {
   this.getName = function () {
     return this.name;
   };
-  
+
   this.getMessage = function () {
     return this.message;
   };

@@ -1,14 +1,6 @@
 ---
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
-tags:
-  - API
-  - Almacenamiento
-  - Almacenamiento web
-  - Storage
-  - Web Storage
-  - metodo
-translation_of: Web/API/Storage/setItem
 ---
 
 {{APIRef("Web Storage API")}}
@@ -49,7 +41,7 @@ function populateStorage() {
 }
 ```
 
-> **Nota:** Para ver un ejemplo real, vea nuestro [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> **Nota:** Para ver un ejemplo real, vea nuestro [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Especificaciones
 

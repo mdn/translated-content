@@ -1,13 +1,6 @@
 ---
 title: Window.scrollX
 slug: Web/API/Window/scrollX
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - 스크롤
-translation_of: Web/API/Window/scrollX
 ---
 
 {{APIRef("CSSOM View")}}

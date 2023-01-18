@@ -1,15 +1,6 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-tags:
-  - Clase
-  - Class
-  - Declaración
-  - Expresión
-  - Function
-  - JavaScript
-  - función
-translation_of: Web/JavaScript/Reference/Global_Objects/Function
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function
 ---
 

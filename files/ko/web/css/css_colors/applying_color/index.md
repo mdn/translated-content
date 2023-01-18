@@ -1,16 +1,6 @@
 ---
 title: CSS로 HTML 요소에 색 입히기
 slug: Web/CSS/CSS_Colors/Applying_color
-tags:
-  - Beginner
-  - CSS
-  - CSS Colors
-  - Guide
-  - HTML
-  - HTML Colors
-  - color
-  - 색
-translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
 

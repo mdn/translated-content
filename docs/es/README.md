@@ -1,6 +1,6 @@
 # Bienvenido a la localización de MDN en español
 
-Puedes comenzar en la siguiente [guía de contribución](https://developer.mozilla.org/es/docs/MDN/Contribute)
+Puedes comenzar en la siguiente [guía de contribución][]
 
 ## Pasos para configurar el entorno local
 
@@ -115,3 +115,5 @@ Guía de markdown
 </details>
 
 Más información [aqui](https://github.com/mdn/translated-content/discussions/4029)
+
+[guía de contribución]: https://developer.mozilla.org/es/docs/MDN/Contribute

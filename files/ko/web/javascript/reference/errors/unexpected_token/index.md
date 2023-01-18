@@ -1,10 +1,6 @@
 ---
 title: 'SyntaxError: Unexpected token'
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
-tags:
-  - 에러
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
 
 {{jsSidebar("Errors")}}

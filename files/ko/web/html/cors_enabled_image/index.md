@@ -1,8 +1,8 @@
 ---
 title: 교차 출처 이미지와 캔버스 허용하기
 slug: Web/HTML/CORS_enabled_image
-translation_of: Web/HTML/CORS_enabled_image
 ---
+
 HTML은 이미지 처리를 위해 {{Glossary("CORS")}} header를 포함하고 있는 {{ htmlattrxref("crossorigin", "img") }} 속성을 제공합니다. 이는 {{ HTMLElement("img") }} 요소에서 정의된, 외부 origin으로 부터 가져오는 이미지가 {{HTMLElement("canvas")}}에서 사용할 수 있도록 해줍니다. 마치 현재 origin에서 가져온 것처럼 말입니다
 
 `crossorigin` 속성이 어떻게 사용되는지 자세히 알고 싶다면, [CORS settings attributes](/ko/docs/Web/HTML/CORS_settings_attributes) 를 참고하세요.

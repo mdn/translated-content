@@ -1,21 +1,12 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Función CSS
-  - Referencia
-translation_of: Web/CSS/transform-function/translate()
 original_slug: Web/CSS/transform-function/translate()
 ---
 
 {{CSSRef}}
 
 La function de [CSS](/es/docs/Web/CSS) **`translate()`** recoloca un elemento en el eje horizontal y/o vertical. Su resultado es de tipo {{cssxref("&lt;transform-function&gt;")}}.
-
-![](https://mdn.mozillademos.org/files/12121/translate.png)
 
 Esta transformacion esta compuesta por un vector bidimensional cuyas coordenadas definen cuanto se movera el elemente en cada dirección.
 

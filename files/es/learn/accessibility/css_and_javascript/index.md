@@ -149,9 +149,9 @@ a:active {
 
 Las convenciones de enlace estándar son subrayado y un color diferente (predeterminado: azul) en su estado estándar, otra variación de color cuando el enlace ha sido visitado anteriormente (predeterminado: púrpura) y otro color más cuando el enlace está activado (predeterminado: rojo) . Además, el puntero del ratón cambia a un ícono de puntero cuando se pasa el ratón sobre los enlaces, y el enlace recibe un resaltado cuando se enfoca (por ejemplo, mediante tabulación) o se activa. La siguiente imagen muestra el resaltado tanto en Firefox (contorno punteado) como en Chrome (contorno azul):
 
-![](https://mdn.mozillademos.org/files/14371/focus-highlight-firefox.png)
+![](focus-highlight-firefox.png)
 
-![](https://mdn.mozillademos.org/files/14369/focus-highlight-chrome.png)
+![](focus-highlight-chrome.png)
 
 Puedes ser creativo con los estilos de enlaces, siempre y cuando sigas dando información a los usuarios cuando interactúan con los enlaces. Definitivamente, algo debería suceder cuando los estados cambian, y no debes deshacerte del cursor del puntero o del contorno; ambos son ayudas de accesibilidad muy importantes para quienes usan los controles del teclado.
 
@@ -194,7 +194,7 @@ Otro consejo es no confiar solo en el color para las señales / información, ya
 
 Hay muchos casos en los que un diseño visual requerirá que no se muestre todo el contenido a la vez. Por ejemplo, en nuestro ejemplo de [cuadro de información con pestañas](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (ver [código fuente](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) tenemos tres paneles de información, pero los colocamos uno encima del otro y proporcionamos pestañas en las que se puede hacer clic para mostrar cada uno (también es accesible desde el teclado - pues usar alternativamente Tab y Enter / Return para seleccionarlos).
 
-![](https://mdn.mozillademos.org/files/13368/tabbed-info-box.png)
+![](tabbed-info-box.png)
 
 A los usuarios de lectores de pantalla no les importa nada de esto: están contentos con el contenido siempre que el orden del código fuente tenga sentido y puedan acceder a todo. El posicionamiento absoluto (como se usa en este ejemplo) generalmente se considera uno de los mejores mecanismos para ocultar contenido para lograr un efecto visual, porque no impide que los lectores de pantalla accedan a él.
 

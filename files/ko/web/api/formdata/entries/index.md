@@ -1,9 +1,6 @@
 ---
 title: FormData.entries()
 slug: Web/API/FormData/entries
-page-type: web-api-instance-method
-browser-compat: api.FormData.entries
-translation_of: Web/API/FormData/entries
 ---
 
 {{APIRef("XMLHttpRequest")}}

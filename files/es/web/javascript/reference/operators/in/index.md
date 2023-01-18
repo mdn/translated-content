@@ -1,11 +1,6 @@
 ---
 title: in
 slug: Web/JavaScript/Reference/Operators/in
-tags:
-  - JavaScript
-  - Operator
-  - Relational Operators
-translation_of: Web/JavaScript/Reference/Operators/in
 original_slug: Web/JavaScript/Referencia/Operadores/in
 ---
 

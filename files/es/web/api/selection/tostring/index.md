@@ -1,9 +1,6 @@
 ---
 title: toString
 slug: Web/API/Selection/toString
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/toString
 ---
 
 {{ ApiRef("DOM") }}

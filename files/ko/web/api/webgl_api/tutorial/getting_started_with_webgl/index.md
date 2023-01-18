@@ -1,13 +1,9 @@
 ---
 title: Getting started with WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-tags:
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
 [WebGL](http://www.khronos.org/webgl/)은 플러그인을 사용하지 않고 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 기반 API를 이용하여 브라우저의 HTML [`canvas`](/en/HTML/Canvas)에 렌더링하여 3D 웹 콘텐츠 제작을 가능하게 합니다. WebGL 프로그램은 컴퓨터의 그래픽 처리 장치(GPU)에서 실행되는 자바스크립트나 특수 효과(셰이더 코드)코드로 구성됩니다. WebGL 요소들은 다른 HTML 요소들과 혼합될 수 있고 페이지나 페이지 배경의 다른 부분과 합성될 수 있습니다.
 
