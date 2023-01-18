@@ -1,7 +1,8 @@
 ---
-title: "Types de liens : prerender"
-slug: Web/HTML/Link_types/prerender
+title: 'Types de liens : prerender'
+slug: Web/HTML/Attributes/rel/prerender
 translation_of: Web/HTML/Link_types/prerender
+original_slug: Web/HTML/Link_types/prerender
 browser-compat: html.elements.link.rel.prerender
 ---
 

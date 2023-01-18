@@ -1,7 +1,8 @@
 ---
-title: "Types de liens : dns-prefetch"
-slug: Web/HTML/Link_types/dns-prefetch
+title: 'Types de liens : dns-prefetch'
+slug: Web/HTML/Attributes/rel/dns-prefetch
 translation_of: Web/HTML/Link_types/dns-prefetch
+original_slug: Web/HTML/Link_types/dns-prefetch
 browser-compat: html.elements.link.rel.dns-prefetch
 ---
 

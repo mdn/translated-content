@@ -1,7 +1,8 @@
 ---
-title: "Types de liens : prefetch"
-slug: Web/HTML/Link_types/prefetch
+title: 'Types de liens : prefetch'
+slug: Web/HTML/Attributes/rel/prefetch
 translation_of: Web/HTML/Link_types/prefetch
+original_slug: Web/HTML/Link_types/prefetch
 browser-compat: html.elements.link.rel.prefetch
 ---
 

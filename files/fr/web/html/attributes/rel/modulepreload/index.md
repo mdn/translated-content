@@ -1,7 +1,8 @@
 ---
 title: 'Link types: modulepreload'
-slug: Web/HTML/Link_types/modulepreload
+slug: Web/HTML/Attributes/rel/modulepreload
 translation_of: Web/HTML/Link_types/modulepreload
+original_slug: Web/HTML/Link_types/modulepreload
 browser-compat: html.elements.link.rel.modulepreload
 ---
 

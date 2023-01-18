@@ -1,7 +1,8 @@
 ---
-title: "Types de liens : preload"
-slug: Web/HTML/Link_types/preload
+title: 'Types de liens : preload'
+slug: Web/HTML/Attributes/rel/preload
 translation_of: Web/HTML/Link_types/preload
+original_slug: Web/HTML/Link_types/preload
 browser-compat: html.elements.link.rel.preload
 ---
 

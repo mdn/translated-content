@@ -1,7 +1,8 @@
 ---
-title: "Types de liens : preconnect"
-slug: Web/HTML/Link_types/preconnect
+title: 'Types de liens : preconnect'
+slug: Web/HTML/Attributes/rel/preconnect
 translation_of: Web/HTML/Link_types/preconnect
+original_slug: Web/HTML/Link_types/preconnect
 browser-compat: html.elements.link.rel.preconnect
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: 'Types de liens : noopener'
-slug: Web/HTML/Link_types/noopener
+slug: Web/HTML/Attributes/rel/noopener
 translation_of: Web/HTML/Link_types/noopener
+original_slug: Web/HTML/Link_types/noopener
 browser-compat: html.elements.a.rel.noopener
 ---
 
