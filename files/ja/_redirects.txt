@@ -2681,7 +2681,7 @@
 /ja/docs/MDN/About/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
 /ja/docs/MDN/Community/Conversations	/ja/docs/orphaned/MDN/Community/Conversations
 /ja/docs/MDN/Community/Doc_sprints	/ja/docs/orphaned/MDN/Community/Doc_sprints
-/ja/docs/MDN/Community/Issues/Issue_triage	/ja/docs/conflicting/MDN/Community/Issues_656e5f33c8fc7cabe2be48c0ae96891a
+/ja/docs/MDN/Community/Issues/Issue_triage	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Community/Whats_happening	/ja/docs/orphaned/MDN/Community/Whats_happening
 /ja/docs/MDN/Community/Working_in_community	/ja/docs/orphaned/MDN/Community/Working_in_community
 /ja/docs/MDN/Contribute/Changelog	/ja/docs/MDN/Changelog
@@ -2727,7 +2727,7 @@
 /ja/docs/MDN/Contribute/Localize	/ja/docs/MDN/Community/Contributing/Translated_content
 /ja/docs/MDN/Contribute/Markdown_in_MDN	/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /ja/docs/MDN/Contribute/Open_source_etiquette	/ja/docs/MDN/Community/Open_source_etiquette
-/ja/docs/MDN/Contribute/Processes/Content_bug_triage	/ja/docs/conflicting/MDN/Community/Issues_656e5f33c8fc7cabe2be48c0ae96891a
+/ja/docs/MDN/Contribute/Processes/Content_bug_triage	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Contribute/Processes/Short_surveys	/ja/docs/MDN/Contribute
 /ja/docs/MDN/Contribute/Structures	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Contribute/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
@@ -4460,7 +4460,7 @@
 /ja/docs/Web/HTML/HTML_Elements/var	/ja/docs/Web/HTML/Element/var
 /ja/docs/Web/HTML/Index	/ja/docs/Web/HTML
 /ja/docs/Web/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
-/ja/docs/Web/HTML/Link_types	/ja/docs/conflicting/Web/HTML/Attributes/rel
+/ja/docs/Web/HTML/Link_types	/ja/docs/Web/HTML/Attributes/rel
 /ja/docs/Web/HTML/Link_types/dns-prefetch	/ja/docs/Web/HTML/Attributes/rel/dns-prefetch
 /ja/docs/Web/HTML/Link_types/manifest	/ja/docs/Web/HTML/Attributes/rel/manifest
 /ja/docs/Web/HTML/Link_types/modulepreload	/ja/docs/Web/HTML/Attributes/rel/modulepreload
