@@ -31,7 +31,7 @@ original_slug: Learn/JavaScript/Первые_шаги/Useful_string_methods
 Почти всё в JavaScript является объектами. Когда вы создаёте строку, например:
 
 ```
-let string = 'This is my string';
+const string = 'Это строка';
 ```
 
 ваша переменная становится строковым объектом, и, как результат, ей доступно множество свойств и методов. Можете убедиться в этом, перейдя на страницу {{jsxref ("String")}} и просмотрев на ней список свойств и методов!
@@ -45,7 +45,7 @@ let string = 'This is my string';
 Это легко — вы просто используете свойство {{jsxref ("String.prototype.length", "length")}}. Попробуйте ввести следующие строки:
 
 ```
-let browserType = 'mozilla';
+const browserType = 'mozilla';
 browserType.length;
 ```
 
@@ -67,79 +67,77 @@ browserType[0];
 
 Длина слова «mozilla» равна 7, но, поскольку счёт начинается с 0, позиция последнего символа равна 6, поэтому нам нужна `length-1`. Такой способ можно использовать, чтобы найти первую букву ряда строк и упорядочить их по алфавиту.
 
-### Поиск подстроки внутри строки и её извлечение
+## Извлечение подстроки из строки
 
-1. Иногда вам может понадобиться выяснить, присутствует ли меньшая строка внутри большей (обычно мы говорим, что внутри строки есть подстрока). Это можно сделать с помощью метода {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, который принимает одну {{glossary ("parameter")}} - подстроку, которую вы хотите найти. Введите:
+Вы можете извлечь подстроку из строки, используя метод {{jsxref("String.prototype.slice()", "slice()")}}. Метод принимает следующие параметры:
 
-    ```
-    browserType.indexOf('zilla');
-    ```
+- индекс, с которого следует начать извлечение
+- индекс, при котором следует прекратить извлечение. При этом извлечение не учитывает сам индекс, который ты передаешь.
 
-    Это даёт нам результат 2, потому что подстрока «zilla» начинается в позиции 2 ("m" — 0, "o" — 1, "z" — 2) внутри «mozilla». Такой код можно использовать для фильтрации строк. Например, если есть список веб-адресов и вы хотите распечатать только те, которые содержат «mozilla».
+For example:
 
-2. Это можно сделать по-другому, что, возможно, ещё более эффективно. Введите следующее:
-
-    ```
-    browserType.indexOf('vanilla');
-    ```
-
-    Это должно дать вам результат -1. Такое значение возвращается, когда подстрока, в данном случае «vanilla», не найдена в основной строке.
-
-    Вы можете использовать это, чтобы найти все экземпляры строк, которые не содержат подстроку «mozilla» (для обратного эффекта, используйте оператор отрицания):
-
-    ```
-    if(browserType.indexOf('mozilla') === -1) {
-      // сделать что-то, если 'mozilla'
-      // не является частью этой строки
-    }
-
-    if(browserType.indexOf('mozilla') !== -1) {
-      // сделать что-то, если 'mozilla'
-      // является частью этой строки
-    }
-    ```
-
-3. Когда вы знаете, где подстрока начинается внутри строки, и вы знаете, на каком символе вы хотите её завершить, можно использовать {{jsxref ("String.prototype.slice ()", "slice ()")}} для извлечения. Попробуйте следующее:
-
-    ```
-    browserType.slice(0,3);
-    ```
-
-    Это возвращает «moz». Первым параметром является позиция символа, с которого начинается извлечение, а второй параметр — позиция последнего символа, перед которым нужно отсечь строку*.* Таким образом, срез происходит с первой позиции, вплоть до последней позиции, но не включая её *(*помним, что _счёт идёт с 0, а не с 1)_. Также можно сказать, что второй параметр равен длине возвращаемой строки.
-
-4. Кроме того, если вы знаете, что хотите извлечь все остальные символы в строке после определённого символа, вам не нужно включать второй параметр. Достаточно включить только положение символа, с которого вы хотите начать извлечение оставшихся символов в строке. Введите:
-
-    ```
-    browserType.slice(2);
-    ```
-
-    Этот код возвращает «zilla» — это потому, что позиция символа 2 — это буква z, и поскольку вы не указали второй параметр, возвращаемая подстрока состояла из всех остальных символов в строке.
-
-> **Примечание:** второй параметр `slice()` не обязателен: если вы его не включите в код, обрезание закончится на конце оригинальной строки. Есть и другие варианты; изучите страницу {{jsxref ("String.prototype.slice ()", "slice ()")}}, чтобы узнать, что ещё вы можете узнать.
-
-### Изменение регистра
-
-Строковые методы {{jsxref ("String.prototype.toLowerCase ()", "toLowerCase ()")}} и {{jsxref ("String.prototype.toUpperCase ()", "toUpperCase ()")}} преобразовывают все символы в строке в нижний или верхний регистр соответственно. Этот способ можно применить, если вы хотите нормализовать все введённые пользователем данные перед их сохранением в базе данных.
-
-Попробуем ввести следующие строки, чтобы узнать, что происходит:
-
+```js
+const browserType = 'mozilla';
+console.log(browserType.slice(1, 4)); // "ozi"
 ```
-var radData = 'My NaMe Is MuD';
-radData.toLowerCase();
-radData.toUpperCase();
+
+Символ с индексом `1` - это `o`, а символ с индексом 4 - `l`. Итак, мы извлекаем все символы, начинающиеся с `o` и заканчивающиеся непосредственно перед `l`, что дает нам "ozi".
+
+Если вы знаете, что хотите извлечь все оставшиеся символы в строке после определенного символа, вам не обязательно включать второй параметр. Вместо этого вам нужно только указать позицию символа, из которой вы хотите извлечь остальные символы в строке. Попробуйте следующее:
+
+```js
+browserType.slice(2); // "zilla"
+```
+
+Это возвращает `"zilla"` потому, что позиция символа 2 - это буква `"z"`, и поскольку вы не включили второй параметр, подстрока, которая была возвращена, была всеми оставшимися символами в строке.
+
+> **Примечание:** `slice()` имеет другие варианты для; смотри статью {{jsxref("String.prototype.slice()", "slice()")}}, чтобы посмотреть остальные возможности метода.
+
+## Изменение регистра
+
+Методы {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} и {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} берут строку и меняют все символы в нижний или верхний регистр соответственно. Это может быть полезно, например, если вы хотите нормализовать все введенные пользователем данные перед сохранением их в базе данных.
+
+Давайте попробуем ввести следующие строки, чтобы посмотреть на изменения:
+
+```js
+const radData = 'Меня ЗоВуТ ВаСЯ';
+console.log(radData.toLowerCase());
+console.log(radData.toUpperCase());
 ```
 
 ### Обновление частей строки
 
 Вы можете заменить одну подстроку внутри строки на другую подстроку, используя метод {{jsxref ("String.prototype.replace ()", "replace ()")}}. Этот метод работает очень просто на базовом уровне, но у него есть некоторые продвинутые свойства, но мы пока не будем вдаваться в детали.
 
-Он принимает два параметра — строку, которую вы хотите заменить, и строку, которую вы хотите вставить вместо заменяемой. Попробуйте этот пример:
+В этом примере мы предоставляем два параметра — строку, которую мы хотим заменить, и строку, на которую мы хотим ее заменить:
 
-```
-browserType.replace('moz','van');
+```js
+const browserType = 'mozilla';
+const updated = browserType.replace('moz','van');
+
+console.log(updated);      // "vanilla"
+console.log(browserType);  // "mozilla"
 ```
 
-Обратите внимание, что для фактического получения обновлённого значения, отражённого в переменной browserType в реальной программе, вам нужно будет установить значение переменной в результате операции; он не просто обновляет значение подстроки автоматически. Таким образом, вы должны были бы написать это: `browserType = browserType.replace('moz','van');`
+Обратите внимание, что `replace()`, как и многие строковые методы, не изменяет строку, для которой он был вызван, но возвращает новую строку. Если вы хотите обновить исходную переменную `BrowserType`, вам придется сделать что-то вроде этого:
+
+```js
+let browserType = 'mozilla';
+browserType = browserType.replace('moz','van');
+
+console.log(browserType);  // "vanilla"
+```
+
+Также обратите внимание, что теперь мы должны объявить `BrowserType`, используя `let`, а не `const`, потому что мы переназначаем его.
+
+Имейте в виду, что `replace()` в этой форме изменяет только первое вхождение подстроки. Если вы хотите изменить все вхождения, вы можете использовать {{js xref("String.prototype.replaceAll()", "replaceAll()")}}:
+
+```js
+let quote = 'Быть или не быть';
+quote = quote.replaceAll('быть','писать код');
+
+console.log(quote);  // "Писать код или не писать код"
+```
 
 ## Активные примеры обучения
 
@@ -159,11 +157,8 @@ browserType.replace('moz','van');
 <h2>Результат</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul>
+  </ul>
 </div>
 
 <h2>Редактируемый код</h2>
@@ -172,19 +167,17 @@ browserType.replace('moz','van');
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
-var greetings = ['С днём рождения!',
+const greetings = ['С днём рождения!',
                  'С Рождеством, любовь моя',
                  'Счастливого Рождества всей твоей семье',
                  'Ты — та, кто нужен мне на Рождество',
                  'Поправляйся скорее'];
 
-for (var i = 0; i < greetings.length; i++) {
-  var input = greetings[i];
+for (const greeting of greetings) {
   // Ваше решение должно быть в фигурных скобках
   // ниже: вы должны что-то добавить
   if (greetings[i]) {
-    var result = input;
-    var listItem = document.createElement('li');
+    const listItem = document.createElement('li');
     listItem.textContent = result;
     list.appendChild(listItem);
   }
@@ -220,11 +213,11 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+let code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
@@ -249,14 +242,14 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'С днём рождения!\',\n \'С Рождеством, любовь моя\',\n \'Счастливого Рождества всей твоей семье\',\n \'Ты — та, кто нужен мне на Рождество\',\n \'Поправляйся скорее\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Рождеств\') !== -1) {\n var result = input;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}';
+let jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'С днём рождения!\',\n \'С Рождеством, любовь моя\',\n \'Счастливого Рождества всей твоей семье\',\n \'Ты — та, кто нужен мне на Рождество\',\n \'Поправляйся скорее\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Рождеств\') !== -1) {\n var result = input;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// остановить вывод клавиши tab из текстовой области и
+// заставьте его вместо этого написать табуляцию в позиции курсора
 
 textarea.onkeydown = function(e){
   if (e.keyCode === 9) {
@@ -270,11 +263,11 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
-
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = (textarea.value).substring(0, caretPos);
+  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -283,11 +276,11 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// Обновляйте сохраненный код пользователя каждый раз, когда пользователь обновляет текстовый код области
 
 textarea.onkeyup = function(){
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
+  // Мы хотим сохранить состояние только при отображении пользовательского кода,
+  // а не решение, чтобы это решение не сохранялось поверх пользовательского кода
   if(solution.value === 'Показать решение') {
     userEntry = textarea.value;
   } else {
@@ -315,26 +308,23 @@ textarea.onkeyup = function(){
 <h2>Результат</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
-var list = document.querySelector('.output ul');
+const list = document.querySelector('.output ul');
 list.innerHTML = '';
-var cities = ['лонДон', 'МанЧЕСТёр', 'БиРминГЕМ', 'лиВЕРпуЛЬ'];
-for(var i = 0; i < cities.length; i++) {
-  var input = cities[i];
-  // пишите код ниже
-
-  var result = input;
-  var listItem = document.createElement('li');
+const cities = ['лонДон', 'МанЧЕСТёр', 'БиРминГЕМ', 'лиВЕРпуЛЬ'];
+for (const city of cities) {
+  // пишите код тут
+  
+  const result = input;
+  const listItem = document.createElement('li');
   listItem.textContent = result;
   list.appendChild(listItem);
 }
@@ -369,11 +359,11 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+let code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
@@ -398,14 +388,29 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'лонДон\', \'МанЧЕСТёр\', \'БиРминГЕМ\', \'лиВЕРпуЛЬ\'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
-var solutionEntry = jsSolution;
+const jsSolution = 'const list = document.querySelector(\'.output ul\');
+list.innerHTML = '';
+const solutionEntry = jsSolution;
+
+for (const city of cities) {
+  // пишите код тут
+  
+  const lower = city.toLowerCase();
+  const firstLetter = lower.slice(0,1);
+  const capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());
+  const result = capitalized;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}`;
+
+let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// остановите вывод клавиши tab из текстовой области и
+// заставьте его вместо этого написать табуляцию в позиции курсора
 
 textarea.onkeydown = function(e){
   if (e.keyCode === 9) {
@@ -419,11 +424,11 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
-
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = (textarea.value).substring(0, caretPos);
+  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -432,11 +437,11 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// Обновляйте сохраненный код пользователя каждый раз, когда пользователь обновляет текстовый код области
 
 textarea.onkeyup = function(){
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
+  // Мы хотим сохранить состояние только при отображении пользовательского кода,
+  // а не решение, чтобы это решение не сохранялось поверх пользовательского кода
   if(solution.value === 'Показать решение') {
     userEntry = textarea.value;
   } else {
@@ -486,20 +491,19 @@ MAN: Manchester Piccadilly
 <p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
 
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
-var list = document.querySelector('.output ul');
+const list = document.querySelector('.output ul');
 list.innerHTML = '';
-var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                 'GNF576746573fhdg4737dh4;Greenfield',
                 'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
                 'SYB4f65hf75f736463;Stalybridge',
                 'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-for (var i = 0; i < stations.length; i++) {
-  var input = stations[i];
+for (const station of stations) {
   // пишите ваш код ниже
 
-  var result = input;
-  var listItem = document.createElement('li');
+  const result = input;
+  const listItem = document.createElement('li');
   listItem.textContent = result;
   list.appendChild(listItem);
 }
@@ -534,11 +538,11 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+let code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
@@ -563,14 +567,32 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n \'GNF576746573fhdg4737dh4;Greenfield\',\n \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n \'SYB4f65hf75f736463;Stalybridge\',\n \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var result = code + \': \' + name;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
-var solutionEntry = jsSolution;
+const jsSolution = `const list = document.querySelector('.output ul');
+list.innerHTML = '';
+const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                  'GNF576746573fhdg4737dh4;Greenfield',
+                  'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                  'SYB4f65hf75f736463;Stalybridge',
+                  'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+for (const station of stations) {
+  // пишите свой код тут
+  const code = station.slice(0,3);
+  const semiColon = station.indexOf(';');
+  const name = station.slice(semiColon + 1);
+  const result = \`\${code}: \${name}\`;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}`;
+
+let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// остановить вывод клавиши tab из текстовой области и
+// заставьте его вместо этого написать табуляцию в позиции курсора
 
 textarea.onkeydown = function(e){
   if (e.keyCode === 9) {
@@ -584,11 +606,11 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
-
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = (textarea.value).substring(0, caretPos);
+  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -597,7 +619,7 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// Обновляйте сохраненный код пользователя каждый раз, когда пользователь обновляет текстовый код области
 
 textarea.onkeyup = function(){
   // We only want to save the state when the user code is being shown,
