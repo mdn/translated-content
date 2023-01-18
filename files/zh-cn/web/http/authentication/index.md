@@ -147,7 +147,7 @@ location /status {
 https://username:password@www.example.com/
 ```
 
-**这种 URL 是不赞成使用的**。在 Chrome 中，URL 中的 `username:password@` 部分甚至会因为安全原因而被[移除](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)。Firefox 则会检查该站点是否真的需要身份验证，假如不是，则会弹出一个警告窗口：你即将使用用户名“username”登录“www\.example.com”站点，但是该站点不需要进行身份验证。这可能是在试图进行欺诈。
+**这种 URL 已被弃用**。在 Chrome 中，URL 中的 `username:password@` 部分甚至会因为安全原因而被[移除](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)。Firefox 则会检查该站点是否真的需要身份验证，假如不是，则会弹出一个警告窗口：你即将使用用户名“username”登录“www\.example.com”站点，但是该站点不需要进行身份验证。这可能是在试图进行欺诈。
 
 ## 参见
 
