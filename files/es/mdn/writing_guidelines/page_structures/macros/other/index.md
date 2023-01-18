@@ -37,5 +37,4 @@ Estas macros han sido reemplazadas por otras formas de hacer lo mismo y ya no de
 
 ### Enlaces
 
-- La macro [`SectionOnPage`](https://github.com/mdn/yari/blob/main/kumascript/macros/SectionOnPage.ejs) crea una frase que enlaza con el nombre de una sección y el artículo que contiene esa sección. Por ejemplo, `\{{SectionOnPage("/es/docs/Mozilla/Firefox/Releases/21", "Cambios para desarrolladores web")}}` genera lo siguiente: _{{SectionOnPage("/es/docs/ Mozilla/Firefox/Releases/21", "Cambios para desarrolladores web")}}_.
 - La macro [`Link`](https://github.com/mdn/yari/blob/main/kumascript/macros/Link.ejs) inserta un enlace a la página especificada en MDN, utilizando el título de la página como la cadena visible para hacer clic y la información sobre herramientas extraída del resumen de SEO de la página.
