@@ -1,7 +1,8 @@
 ---
-title: "Types de liens : manifest"
-slug: Web/HTML/Link_types/manifest
+title: 'Types de liens : manifest'
+slug: Web/HTML/Attributes/rel/manifest
 translation_of: Web/HTML/Link_types/manifest
+original_slug: Web/HTML/Link_types/manifest
 browser-compat: html.elements.link.rel.manifest
 ---
 

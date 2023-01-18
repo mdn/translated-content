@@ -1,7 +1,8 @@
 ---
-title: "Types de liens : noreferrer"
-slug: Web/HTML/Link_types/noreferrer
+title: 'Types de liens : noreferrer'
+slug: Web/HTML/Attributes/rel/noreferrer
 translation_of: Web/HTML/Link_types/noreferrer
+original_slug: Web/HTML/Link_types/noreferrer
 browser-compat: html.elements.a.rel.noreferrer
 ---
 

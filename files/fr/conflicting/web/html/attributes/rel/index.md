@@ -1,6 +1,6 @@
 ---
 title: Types de lien
-slug: Web/HTML/Link_types
+slug: conflicting/Web/HTML/Attributes/rel
 tags:
   - Attribute
   - HTML
@@ -8,7 +8,7 @@ tags:
   - Link types
   - Reference
 translation_of: Web/HTML/Link_types
-original_slug: Web/HTML/Types_de_lien
+original_slug: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,8 @@
 ---
 title: 'Types de lien : me'
-slug: Web/HTML/Link_types/me
+slug: Web/HTML/Attributes/rel/me
 translation_of: Web/HTML/Link_types/me
+original_slug: Web/HTML/Link_types/me
 browser-compat: html.elements.link.rel.me
 ---
 

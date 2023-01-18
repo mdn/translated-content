@@ -21018,10 +21018,6 @@
     "modified": "2019-04-06T13:04:18.081Z",
     "contributors": ["SphinxKnight", "KhalilSnaake", "numahell", "wakka27"]
   },
-  "Web/HTML/Link_types": {
-    "modified": "2020-10-15T21:26:15.592Z",
-    "contributors": ["SphinxKnight", "cdr", "louuis", "jcbita"]
-  },
   "Web/HTML/Microdata": {
     "modified": "2019-07-30T02:49:00.444Z",
     "contributors": ["SphinxKnight", "Emmanuel.KWENE"]
@@ -27918,5 +27914,9 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "conflicting/Web/HTML/Attributes/rel": {
+    "modified": "2020-10-15T21:26:15.592Z",
+    "contributors": ["SphinxKnight", "cdr", "louuis", "jcbita"]
   }
 }
