@@ -1,7 +1,7 @@
 ---
 title: Tipos de enlaces
-slug: Web/HTML/Link_types
-original_slug: Web/HTML/Tipos_de_enlaces
+slug: Web/HTML/Attributes/rel
+original_slug: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}

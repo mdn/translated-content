@@ -8904,6 +8904,17 @@
     "modified": "2020-09-08T01:48:55.405Z",
     "contributors": ["Nachec"]
   },
+  "Web/HTML/Attributes/rel": {
+    "modified": "2019-03-23T22:46:17.969Z",
+    "contributors": [
+      "cmmp0112",
+      "_delta_",
+      "moisesalmonte",
+      "alvaromontoro",
+      "ivansx",
+      "vltamara"
+    ]
+  },
   "Web/HTML/Block-level_elements": {
     "modified": "2019-03-18T20:44:10.775Z",
     "contributors": [
@@ -9769,17 +9780,6 @@
   "Web/HTML/Inline_elements": {
     "modified": "2019-03-23T22:46:15.359Z",
     "contributors": ["juanbrujo", "raecillacastellana", "vltamara"]
-  },
-  "Web/HTML/Link_types": {
-    "modified": "2019-03-23T22:46:17.969Z",
-    "contributors": [
-      "cmmp0112",
-      "_delta_",
-      "moisesalmonte",
-      "alvaromontoro",
-      "ivansx",
-      "vltamara"
-    ]
   },
   "Web/HTML/Microdata": {
     "modified": "2019-03-23T22:12:50.480Z",
