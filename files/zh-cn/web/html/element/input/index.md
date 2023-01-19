@@ -5,7 +5,7 @@ slug: Web/HTML/Element/Input
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<input>`** 元素用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据。取决于设备和{{Glossary("user agent", "用户代理")}}不同，表单可以使用各种类型的输入数据和控件小部件。`<input>` 元素是目前是 HTML 中最强大、最复杂的元素之一，因为它有大量的输入类型和属性组合。
+[HTML](/zh-CN/docs/Web/HTML) **`<input>`** 元素用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据。取决于设备和{{Glossary("user agent", "用户代理")}}不同，表单可以使用各种类型的输入数据和控件。`<input>` 元素是目前是 HTML 中最强大、最复杂的元素之一，因为它有大量的输入类型和属性组合。
 
 {{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
 
@@ -78,7 +78,7 @@ slug: Web/HTML/Element/Input
     </tr>
     <tr>
       <td>{{HTMLElement("input/email", "email")}}</td>
-      <td>编辑邮箱地址的区域。类似 <code>text</code> 输入，但在支持的浏览器和带有动态键盘的设备上会有验证参数和相应的键盘。</td>
+      <td>编辑邮箱地址的字段。类似 <code>text</code> 输入，但在支持的浏览器和带有动态键盘的设备上会有验证参数和相应的键盘。</td>
       <td id="exampleemail">
         <pre class="brush: html hidden">
 &#x3C;input type="email" name="email"/></pre>
@@ -337,11 +337,11 @@ slug: Web/HTML/Element/Input
 
   - : 布尔属性，对于 `radio` 和 `checkbox` 类型有效。如果在 `radio` 类型上出现，代表该单选按钮是当前同名称组中所选定的那一个。如果在 `checkbox` 类型上出现，代表页面加载时，默认选择该复选框，这并*不*代表复选框当前是否选择：如果复选框状态改变，该内容属性不会反馈这种改变，只会更新 [`HTMLInputElement` 的 `checked` IDL 属性](/zh-CN/docs/Web/API/HTMLInputElement)。
 
-    > **备注：** 与其他输入控件不同，复选框和单选按钮的值只会在 `checked` 状态时才会包括在提交的数据中。如果当前是 `checked` 状态，复选框的名称和值就会被提交。
+    > **备注：** 与其它输入控件不同，复选框和单选按钮的值只会在 `checked` 状态时才会包括在提交的数据中。如果当前是 `checked` 状态，复选框的名称和值就会被提交。
     >
     > 例如，`name` 为 `fruit` 的复选框含有 `value` 为 `cherry` 的一项，且该复选框为选中状态，提交的表单数据将包含 `fruit=cherry`；如果复选框为非活动状态，它不会列入到表单数据中。复选框和单选按钮的默认 `value` 值为 `on`。
 
-- {{htmlattrdef("dirname")}}
+- `dirname`
 
   - : 仅对 `text` 和 `search` 输入类型有效。`dirname` 属性允许提交元素的方向。当包含这个属性时，表单控件将提交两个名称/值对：第一个是 [`name`](#name) 和 [`value`](#value)，第二个是 `dirname` 作为名称，其值为浏览器设置的 `ltr` 或 `rtl`。
 
@@ -651,7 +651,7 @@ slug: Web/HTML/Element/Input
 
 <table class="no-markdown">
   <caption>
-  与<code>&#x3C;input></code>元素非常相关的标题：
+  与 <code>&#x3C;input></code> 元素非常相关的标题：
   </caption>
   <thead>
     <tr>
@@ -683,7 +683,7 @@ slug: Web/HTML/Element/Input
     <tr>
       <td>{{Cssxref(":placeholder-shown")}}</td>
       <td>
-        当前显示<a href="#placeholder"><code>placeholder</code> 文字</a>的元素，包括有 <a href="#placeholder"><code>placeholder</code></a> 显示，尚未拥有值的 <code>&#x3C;input></code> 和 {{HTMLElement("textarea")}} 元素。
+        当前显示 <a href="#placeholder"><code>placeholder</code> 文字</a>的元素，包括有 <a href="#placeholder"><code>placeholder</code></a> 显示，尚未拥有值的 <code>&#x3C;input></code> 和 {{HTMLElement("textarea")}} 元素。
       </td>
     </tr>
     <tr>
@@ -833,7 +833,7 @@ input.custom {
 
 {{EmbedLiveSample('caret-color', 500, 80)}}
 
-### object-position and object-fit
+### object-position 和 object-fit
 
 在某些情况下（通常涉及非文本输入和专门的界面），`<input>` 元素是一个[被替换的元素](/zh-CN/docs/Web/CSS/Replaced_element)。当它为替换元素时，该元素在其框架内的位置和大小可以使用 CSS {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 属性来调整。
 
