@@ -47,7 +47,7 @@ document.onselectionchange = () => {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{domxref("Node/selectstart_event", "selectstart")}}
 - {{domxref("Document.getSelection()")}}
