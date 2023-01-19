@@ -124,7 +124,6 @@ A API WebRTC inclui várias interfaces para gerenciar segurança e identidade.
   - : Representa a identidade de um ponto remoto da conexão atual. Se nenhum par ainda foi definido e verificado, esta interface retorna `null`. Uma vez definido, não pode ser alterado.
 - {{domxref("RTCIdentityProviderRegistrar")}}
   - : Registra um provedor de identidade (idP).
-  - : Representa uma asserção de identidade gerada por um provedor de identidade (idP). Isso geralmente é para um {{domxref("RTCPeerConnection")}}. O único evento enviado com este tipo é {{event("identityresult")}}.
 - {{domxref("RTCIdentityErrorEvent")}}
   - : Representa um erro associado ao provedor de identidade (idP). Isso geralmente é para um {{domxref("RTCPeerConnection")}}. Dois eventos são enviados com este tipo: {{event("idpassertionerror")}} e {{event("idpvalidationerror")}}.
 - {{domxref("RTCCertificate")}}
