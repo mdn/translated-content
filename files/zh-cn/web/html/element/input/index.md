@@ -396,7 +396,7 @@ slug: Web/HTML/Element/Input
 
     在 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` 和 `color` 上均有效。
 
-    根据规范，`hidden`、`password'、`checkbox`、`radio`、`file` 或任何按钮类型不支持 `list` 属性。
+    根据规范，`hidden`、`password`、`checkbox`、`radio`、`file` 或任何按钮类型不支持 `list` 属性。
 
     根据浏览器的不同，用户可能会看到一个建议的自定义调色板、沿着一个范围的跳动标记、甚至是一个像选择一样打开但允许非列表值的输入。查看[浏览器兼容性表](/zh-CN/docs/Web/HTML/Element/datalist#浏览器兼容性)，了解其他输入类型。
 
