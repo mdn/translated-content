@@ -153,7 +153,7 @@ Essas interfaces estão relacionadas à interatividade com redes telefônicas p�
 - [Usando canais de dados WebRTC](/pt-BR/docs/Web/API/WebRTC_API/Using_data_channels)
   - : Este guia aborda como você pode usar uma conexão de mesmo nível e um {{DOMxRef("RTCDataChannel")}} associado para trocar dados arbitrários entre dois pares.
 - [Usando DTMF com WebRTC](/pt-BR/docs/Web/API/WebRTC_API/Using_DTMF)
-  - : o suporte do WebRTC para interagir com gateways que se conectam a sistemas telefônicos antigos inclui suporte para enviar tons DTMF usando a interface {{DOMxRef("RTCDTMFSender")}}. Este guia mostra como fazer isso.
+  - : O suporte do WebRTC para interagir com gateways que se conectam a sistemas telefônicos antigos inclui suporte para enviar tons DTMF usando a interface {{DOMxRef("RTCDTMFSender")}}. Este guia mostra como fazer isso.
 
 ## Tutoriais
 
