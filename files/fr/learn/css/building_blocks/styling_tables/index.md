@@ -6,6 +6,7 @@ original_slug: Apprendre/CSS/Building_blocks/Styling_tables
 l10n:
   sourceCommit: 916af5e72ce683c6f7795755830c11677ca0f529
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 Mettre en forme un tableau HTML n'est pas le travail le plus passionnant au monde, mais c'est parfois un passage obligé. Dans cet article, nous verrons comment donner un bel aspect aux tableaux HTML, notamment avec certaines techniques de mise en forme.

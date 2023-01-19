@@ -2,6 +2,7 @@
 title: WeakSet.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 ---
+
 {{JSRef}}
 
 **`add()`** メソッドは、新しい要素を `WeakSet` オブジェクトの最後に追加します。
@@ -42,9 +43,7 @@ ws.add(1);
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

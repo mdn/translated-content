@@ -1,18 +1,8 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-tags:
-  - Class
-  - ECMAScript 2015
-  - Global Objects
-  - JavaScript
-  - Object
-  - Reference
-  - set
-  - Polyfill
-browser-compat: javascript.builtins.Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
+
 {{JSRef}}
 
 **`Set`** 객체는 자료형에 관계 없이 {{Glossary("Primitive", "원시 값")}}과 객체 참조 모두 유일한 값을 저장할 수 있습니다.

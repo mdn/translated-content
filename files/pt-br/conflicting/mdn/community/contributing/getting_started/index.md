@@ -1,14 +1,9 @@
 ---
 title: GitHub para iniciantes
 slug: conflicting/MDN/Community/Contributing/Getting_started
-tags:
-  - Boas práticas
-  - Comunidade
-  - GitHub
-  - MDN
-  - Iniciantes
 original_slug: MDN/Contribute/GitHub_beginners
 ---
+
 {{MDNSidebar}}
 
 [Git](https://git-scm.com/) e [GitHub](https://github.com/) são ferramentas desafiadoras para aprender e dominar, mas com alguns poucos comandos simples e alguns bons conselhos, você deve ser capaz de fazer o suficiente para contribuir para o MDN sem muitos problemas. O intuito deste artigo não é te ajudar a dominar Git ou GitHub, mas te dar o bastante para ser produtivo com eles em um nível básico e contribuir para o MDN.

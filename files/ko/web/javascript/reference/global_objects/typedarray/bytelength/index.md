@@ -1,46 +1,36 @@
 ---
 title: TypedArray.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 ---
+
 {{JSRef}}
 
-**`byteLength`** 접근자(accessor) 속성(property)은 형식화 배열의 길이(바이트 단위)를 나타냅니다.
+**`byteLength`** 접근자 속성은 형식화 배열의 길이(바이트)를 나타냅니다.
 
-## 구문
-
-```js
-typedarray.byteLength
-```
+{{EmbedInteractiveExample("pages/js/typedarray-bytelength.html","shorter")}}
 
 ## 설명
 
-`byteLength` 속성은 접근자 함수가 `undefined`인 접근자 속성입니다, 이 속성을 읽을 수만 있음을 뜻하는. 그 값은 *TypedArray*가 만들어질 때 수립되어 변경될 수 없습니다. *TypedArray*에 `byteOffset` 또는 `length`를 지정하지 않은 경우, 참조되는 `ArrayBuffer`의 `length`가 반환됩니다. *TypedArray*는 [TypedArray 객체 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_객체) 중 하나입니다.
+`byteLength` 속성은 접근자 설정 함수가 `undefined`인 접근자 속성으로 이 속성은 읽을 수만 있습니다. 값은 *TypedArray*가 생성될 때 설정되며 변경할 수 없습니다. *TypedArray*가 `byteOffset` 또는 `length`를 지정하지 않으면 참조된 `ArrayBuffer`의 `length`가 반환됩니다. *TypedArray*는 [TypedArray 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_객체) 중 하나입니다.
 
 ## 예제
 
-### `byteLength` 속성 사용
+### byteLength 속성 사용하기
 
 ```js
-var buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(8);
 
-var uint8 = new Uint8Array(buffer);
-uint8.byteLength; // 8 (버퍼의 byteLength와 일치)
+const uint8 = new Uint8Array(buffer);
+uint8.byteLength; // 8 (buffer의 byteLength와 일치)
 
-var uint8 = new Uint8Array(buffer, 1, 5);
-uint8.byteLength; // 5 (Uint8Array를 만들 때 지정된 대로)
+const uint8newLength = new Uint8Array(buffer, 1, 5);
+uint8newLength.byteLength; // 5 (Uint8Array를 만들 때 지정된 대로)
 
-var uint8 = new Uint8Array(buffer, 2);
-uint8.byteLength; // 6 (만든 Uint8Array의 오프셋으로 인해)
+const uint8offSet = new Uint8Array(buffer, 2);
+uint8offSet.byteLength; // 6 (생성된 Uint8Array의 오프셋으로 인해)
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

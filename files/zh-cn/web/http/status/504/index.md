@@ -2,6 +2,7 @@
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
 ---
+
 {{HTTPSidebar}}
 
 **`504 Gateway Timeout`** 是一种 HTTP 协议的服务器端错误状态代码，表示扮演网关或者代理的服务器无法在规定的时间内获得想要的响应。

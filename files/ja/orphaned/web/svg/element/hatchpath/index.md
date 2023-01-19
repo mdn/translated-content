@@ -1,15 +1,9 @@
 ---
 title: <hatchpath>
 slug: orphaned/Web/SVG/Element/hatchpath
-tags:
-  - Element
-  - Experimental
-  - Filters
-  - Reference
-  - SVG
-translation_of: Web/SVG/Element/hatchpath
 original_slug: Web/SVG/Element/hatchpath
 ---
+
 {{SVGRef}}{{SeeCompatTable}}
 
 **`<hatchpath>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGElement("hatch")}} 要素で使用されるハッチパスを定義します。

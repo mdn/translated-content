@@ -1,17 +1,6 @@
 ---
 title: 'HTML 属性: minlength'
 slug: Web/HTML/Attributes/minlength
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - HTML
-  - Input
-  - リファレンス
-  - minlength
-  - textarea
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-minlength
-translation_of: Web/HTML/Attributes/minlength
 ---
 
 {{HTMLSidebar}}

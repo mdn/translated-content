@@ -1,15 +1,8 @@
 ---
 title: update
 slug: Web/CSS/@media/update-frequency
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-browser-compat: css.at-rules.media.update
-translation_of: Web/CSS/@media/update-frequency
 ---
+
 {{CSSRef}}
 
 **`update`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力端末がどれだけの頻度でコンテンツの表示を更新することができるかを調べるために使用することができます。

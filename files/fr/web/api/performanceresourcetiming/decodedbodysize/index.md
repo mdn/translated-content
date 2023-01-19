@@ -11,6 +11,7 @@ tags:
   - decodedBodySize
 translation_of: Web/API/PerformanceResourceTiming/decodedBodySize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`decodedBodySize`** renvoie la taille (en octets) reçue de la récupération (HTTP ou cache) du corps du message, après suppression de tout codage de contenu appliqué. Si la ressource est récupérée à partir d'un cache d'application ou de ressources locales, elle renvoie la taille de la donnée utile après suppression de tous les codages de contenu appliqués.

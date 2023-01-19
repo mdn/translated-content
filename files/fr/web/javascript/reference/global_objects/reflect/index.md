@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect
 ---
+
 {{JSRef}}
 
 **`Reflect`** est un objet natif qui fournit des méthodes pour les opérations qui peuvent être interceptées en JavaScript (via les proxies). Les méthodes de cet objet sont les mêmes que celles des [gestionnaires de proxy](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Proxy/handler). `Reflect` n'est pas une fonction (y compris pour construire un objet).
@@ -24,7 +25,7 @@ L'objet `Reflect` fournit des fonctions statiques qui ont les mêmes noms que le
 - {{jsxref("Reflect.apply()")}}
   - : Appelle une fonction cible avec les arguments définis par le paramètres `args`. Voir aussi {{jsxref("Function.prototype.apply()")}}.
 - {{jsxref("Reflect.construct()")}}
-  - :  L'opérateur {{jsxref("Opérateurs/L_opérateur_new","new")}} comme fonction. C'est équivalent à `new cible(...args)`. Cette méthode permet également d'indiquer un prototype différent.
+  - : L'opérateur {{jsxref("Opérateurs/L_opérateur_new","new")}} comme fonction. C'est équivalent à `new cible(...args)`. Cette méthode permet également d'indiquer un prototype différent.
 - {{jsxref("Reflect.defineProperty()")}}
   - : Semblable à {{jsxref("Object.defineProperty()")}}. Renvoie un {{jsxref("Boolean")}}.
 - {{jsxref("Reflect.deleteProperty()")}}
@@ -50,14 +51,11 @@ L'objet `Reflect` fournit des fonctions statiques qui ont les mêmes noms que le
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                   |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------ |
-| {{SpecName('ES2015', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ES2015')}}     | Définition initiale.           |
-| {{SpecName('ESDraft', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ESDraft')}} | Retrait de `Reflect.enumerate` |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect")}}
+{{Compat}}
 
 ## Voir aussi
 

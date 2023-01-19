@@ -7,6 +7,7 @@ browser-compat: api.BroadcastChannel
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
+
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
 L'**API <i lang="en">Broadcast Channel</i>** permet la communication entre des [contextes de navigation](/fr/docs/Glossary/Browsing_context) (c'est-à-dire des _fenêtres_, _onglets_, _cadres_, ou _iframes_) et <i lang="en">workers</i> d'une même [origine](/fr/docs/Glossary/Origin).

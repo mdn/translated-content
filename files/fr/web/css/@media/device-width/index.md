@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/device-width
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`device-width`** est une caractéristique média dépréciée dont la valeur représente la largeur de la surface de rendu de l'appareil d'affichage.
@@ -26,11 +27,8 @@ Ce code HTML applique une feuille de style pour pour les appareils plus étroits
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#device-width', 'device-width')}} | {{Spec2('CSS4 Media Queries')}} | Dépréciation dans la spécification de niveau 4 pour les requêtes média. |
-| {{SpecName('CSS3 Media Queries', '#device-width', 'device-width')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale.                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.device-width")}}
+{{Compat}}

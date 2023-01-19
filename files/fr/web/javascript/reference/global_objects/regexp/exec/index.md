@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/exec
 ---
+
 {{JSRef}}
 
 La méthode **`exec()`** exécute la recherche d'une correspondance sur une chaîne de caractères donnée. Elle renvoie un tableau contenant les résultats ou {{jsxref("null")}}.
@@ -173,16 +174,11 @@ Cela affichera 'coucou monde !'.
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.21', 'RegExp.exec')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-regexp.prototype.exec', 'RegExp.exec')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.exec', 'RegExp.exec')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.exec")}}
+{{Compat}}
 
 ## Voir aussi
 

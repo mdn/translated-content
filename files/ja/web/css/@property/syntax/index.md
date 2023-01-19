@@ -1,15 +1,8 @@
 ---
 title: syntax
 slug: Web/CSS/@property/syntax
-tags:
-  - CSS
-  - リファレンス
-  - ウェブ
-  - プロパティ
-  - Houdini
-browser-compat: css.at-rules.property.syntax
-translation_of: Web/CSS/@property/syntax
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`syntax`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用する上で必要であり、そのプロパティで許可される構文を記述します。

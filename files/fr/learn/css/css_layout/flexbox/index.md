@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Flexbox
 translation_of: Learn/CSS/CSS_layout/Flexbox
 original_slug: Apprendre/CSS/CSS_layout/Flexbox
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
 [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) est une méthode de mise en page selon un axe principal, permettant de disposer des éléments en ligne ou en colonne. Les éléments se dilatent ou se rétractent pour occuper l'espace disponible. Cet article en explique tous les fondamentaux.
@@ -53,7 +54,7 @@ Qu'avons‑nous&nbsp;? Un élément [`<header>`](/fr/docs/Web/HTML/Element/heade
 
 ## Détermination des éléments à disposer en boîtes flexibles
 
-Pour commencer, sélectionnons les éléments devant être présentés sous forme de boîtes flexibles. Pour ce faire, donnons une valeur spéciale à la propriété  [`display`](/fr/docs/Web/CSS/display) du parent de ces éléments à disposer. Dans ce cas, comme cela concerne les éléments [`<article>`](/fr/docs/Web/HTML/Element/article), nous affectons la valeur `flex` à l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) (qui devient un conteneur flex)&nbsp;:
+Pour commencer, sélectionnons les éléments devant être présentés sous forme de boîtes flexibles. Pour ce faire, donnons une valeur spéciale à la propriété [`display`](/fr/docs/Web/CSS/display) du parent de ces éléments à disposer. Dans ce cas, comme cela concerne les éléments [`<article>`](/fr/docs/Web/HTML/Element/article), nous affectons la valeur `flex` à l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) (qui devient un conteneur flex)&nbsp;:
 
 ```css
 section {

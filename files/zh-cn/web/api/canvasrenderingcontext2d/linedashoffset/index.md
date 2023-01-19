@@ -2,9 +2,10 @@
 title: CanvasRenderingContext2D.lineDashOffset
 slug: Web/API/CanvasRenderingContext2D/lineDashOffset
 ---
+
 {{APIRef}}
 
-**`CanvasRenderingContext2D.lineDashOffset`** 是 Canvas 2D API 设置虚线偏移量的属性，例如可以实现“[蚂蚁线](http://en.wikipedia.org/wiki/Marching_ants)“ 的效果。
+**`CanvasRenderingContext2D.lineDashOffset`** 是 Canvas 2D API 设置虚线偏移量的属性，例如可以实现“[蚂蚁线](http://en.wikipedia.org/wiki/Marching_ants)“的效果。
 
 ## 语法
 
@@ -13,11 +14,11 @@ ctx.lineDashOffset = value;
 ```
 
 - `value`
-  - : 偏移量是 float 精度的数字。初始值为 `0.0。`
+  - : 偏移量是 float 精度的数字。初始值为 `0.0`。
 
 ## 示例
 
-### 使用 `lineDashOffset` 属性
+### 偏移虚线
 
 这是一段简单的代码片段，使用 `lineDashOffset` 属性绘制虚线。
 
@@ -30,67 +31,35 @@ ctx.lineDashOffset = value;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 ctx.setLineDash([4, 16]);
-ctx.lineDashOffset = 2;
 
+// Dashed line with no offset
 ctx.beginPath();
-ctx.moveTo(0,100);
-ctx.lineTo(400, 100);
+ctx.moveTo(0, 50);
+ctx.lineTo(300, 50);
+ctx.stroke();
+
+// Dashed line with offset of 4
+ctx.beginPath();
+ctx.strokeStyle = 'red';
+ctx.lineDashOffset = 4;
+ctx.moveTo(0, 100);
+ctx.lineTo(300, 100);
 ctx.stroke();
 ```
 
-修改下面的代码并在线查看 canvas 变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code" style="height: 120px">
-ctx.setLineDash([4, 16]);
-ctx.lineDashOffset = 2;
+带有偏移的虚线用红色绘制。
 
-ctx.beginPath();
-ctx.moveTo(0,100);
-ctx.lineTo(400, 100);
-ctx.stroke();</textarea>
-```
+{{ EmbedLiveSample('偏移虚线', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+### 蚂蚁线
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 380) }}
-
-### “蚂蚁线”
-
-”蚂蚁线“效果是一种动画技巧，经常出现在计算机绘图程序的套索工具中。 它能帮助用户根据图片背景动态变化的边界来区分选择的边界。
+“蚂蚁线”效果是一种动画技巧，经常出现在计算机绘图程序的套索工具中。它能帮助用户根据图片背景动态变化的边界来区分选择的边界。
 
 ```html hidden
 <canvas id="canvas" class="playable-canvas"></canvas>
@@ -120,15 +89,15 @@ function march() {
 march();
 ```
 
-{{ EmbedLiveSample('Marching_ants', 700, 200) }}
+{{ EmbedLiveSample('蚂蚁线', 700, 200) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.lineDashOffset")}}
+{{Compat}}
 
 ## 参见
 

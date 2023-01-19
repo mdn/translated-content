@@ -1,28 +1,9 @@
 ---
 title: '<bdo>: 双方向文字列上書き要素'
 slug: Web/HTML/Element/bdo
-tags:
-  - BiDi
-  - 双方向テキスト
-  - 要素
-  - HTML
-  - HTML 文字レベルの意味付け
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - 左書き
-  - リファレンス
-  - テキスト
-  - 右書き
-  - 書字方向
-  - テキスト描画
-  - Web
-  - ltr
-  - rtl
-translation_of: Web/HTML/Element/bdo
-browser-compat: html.elements.bdo
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **`<bdo>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在のテキストの書字方向を上書きし、中のテキストが異なる書字方向で描画されるようにします。
 

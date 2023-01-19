@@ -2,11 +2,12 @@
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
 ---
+
 {{APIRef("High Resolution Time")}}
 
 **`DOMHighResTimeStamp`** 型は `double` であり、時間の値を保存するために使用します。この値は別々の時点や、2 つの別々の時点の間の時間を表すことができます。単位はミリ秒であり、精度は 5 µs (マイクロ秒) であるべきです。ただし、ブラウザーが 5 マイクロ秒精度の時間の値を提供できない場合 (例えば、ハードウェアやソフトウェアの制約により) は、1 ミリ秒精度の時間として表すことができます。
 
-> **Note:** ユーザーエージェントを実行するデバイスやオペレーティングシステムがマイクロ秒レベルのクロックを持たない場合は、ミリ秒精度に制限されます。
+> **メモ:** ユーザーエージェントを実行するデバイスやオペレーティングシステムがマイクロ秒レベルのクロックを持たない場合は、ミリ秒精度に制限されます。
 
 ## プロパティ
 
@@ -35,10 +36,7 @@ slug: Web/API/DOMHighResTimeStamp
 
 ## 仕様
 
-| 仕様書                                                                                                               | 策定状況                                     | コメント                                 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------- |
-| {{SpecName('Highres Time Level 2', '#dom-domhighrestimestamp', 'DOMHighResTimeStamp')}} | {{Spec2('Highres Time Level 2')}} | インターフェイスや型を、より厳密に定義。 |
-| {{SpecName('Highres Time', '#sec-DOMHighResTimeStamp', 'DOMHighResTimeStamp')}}             | {{Spec2('Highres Time')}}             | 初期定義                                 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

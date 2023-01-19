@@ -1,8 +1,8 @@
 ---
 title: circle
 slug: Web/SVG/Element/circle
-translation_of: Web/SVG/Element/circle
 ---
+
 {{SVGRef}}
 
 **`<circle>`** [SVG](/ja/docs/Web/SVG) 要素は SVG の基本的な図形を表すものであり、中心座標と半径を指定して円を描画します。
@@ -50,10 +50,7 @@ translation_of: Web/SVG/Element/circle
 
 ## 仕様
 
-| 仕様書                                                                                       | 策定状況                 | 備考     |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("SVG2", "shapes.html#CircleElement", "&lt;circle&gt;")}}     | {{Spec2("SVG2")}} |          |
-| {{SpecName("SVG1.1", "shapes.html#CircleElement", "&lt;circle&gt;")}} | {{Spec2("SVG1.1")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

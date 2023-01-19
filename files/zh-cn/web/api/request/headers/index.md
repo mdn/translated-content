@@ -2,6 +2,7 @@
 title: Request.headers
 slug: Web/API/Request/headers
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}}接口的只读属性 **`headers`** 包含与当前请求关联的{{domxref("Headers")}}对象。
@@ -47,7 +48,7 @@ myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.headers")}}
+{{Compat}}
 
 ## See also
 

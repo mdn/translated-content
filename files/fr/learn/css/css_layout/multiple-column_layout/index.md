@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 
 Une mise en page à colonnes multiples est une méthode de disposition du contenu sur plusieurs colonnes juxtaposées, telle dans un journal. Cet article explique comment utiliser cette fonction.
@@ -40,7 +41,7 @@ Une mise en page à colonnes multiples est une méthode de disposition du conten
 
 ## Un exemple élémentaire
 
-Nous allons maintenant explorer la disposition du contenu sur plusieurs colonnes, souvent nommée  «&nbsp;*multicol* ». Vous pourrez effectuer le suivi de cet article en  [téléchargeant le fichier de depart multicol](https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html) et en ajoutant la CSS aux emplacements appropriés. En fin de section, vous verrez un exemple en direct de ce à quoi le code final peut ressembler.
+Nous allons maintenant explorer la disposition du contenu sur plusieurs colonnes, souvent nommée «&nbsp;*multicol* ». Vous pourrez effectuer le suivi de cet article en [téléchargeant le fichier de depart multicol](https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html) et en ajoutant la CSS aux emplacements appropriés. En fin de section, vous verrez un exemple en direct de ce à quoi le code final peut ressembler.
 
 Notre point de départ contient un HTML très simple&nbsp;; une enveloppe de la classe `container` dans laquelle nous avons placé un en‑tête et quelques paragraphes.
 
@@ -139,7 +140,7 @@ En utilisant l'exemple ci‑dessus, changeons la taille de l'espacement entre co
 }
 ```
 
-Vous pouvez tester diverses valeurs — la propriété accepte n'importe quelle unité de longueur. Ajoutons maintenant une règle entre colonnes avec `column-rule`. De la même manière qu'avec la propriété {{cssxref("border")}} rencontrée dans les articles précédents, `column-rule`, forme abrégée de {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}} et  {{cssxref("column-rule-width")}}, accepte les mêmes valeurs.
+Vous pouvez tester diverses valeurs — la propriété accepte n'importe quelle unité de longueur. Ajoutons maintenant une règle entre colonnes avec `column-rule`. De la même manière qu'avec la propriété {{cssxref("border")}} rencontrée dans les articles précédents, `column-rule`, forme abrégée de {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}} et {{cssxref("column-rule-width")}}, accepte les mêmes valeurs.
 
 ```css
 .container {
@@ -184,7 +185,7 @@ body {
 
 {{ EmbedLiveSample('Style_des_colonnes', '100%', 400) }}
 
-Notez que la règle ne prend pas de largeur en soi. Elle se place dans l'espace créé avec  `column-gap`. Pour faire un peu plus d'espace d'un côté ou de l'autre de la règle, vous devez augmenter la taille de l'espace entre les colonnes.
+Notez que la règle ne prend pas de largeur en soi. Elle se place dans l'espace créé avec `column-gap`. Pour faire un peu plus d'espace d'un côté ou de l'autre de la règle, vous devez augmenter la taille de l'espace entre les colonnes.
 
 ## Colonnes et coupures
 

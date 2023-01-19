@@ -1,7 +1,6 @@
 ---
 title: Head
 slug: Glossary/Head
-translation_of: Glossary/Head
 ---
 **Head** 란 {{glossary("HTML")}} 문서의 일부분으로써 해당 문서의 {{glossary("metadata")}} 를 포함하는데, 예를 들면 저자, 설명, 그리고 HTML에 적용될 수 있는 {{glossary("CSS")}} 또는 {{glossary("JavaScript")}} 파일들로 연결되는 것들이 이에 해당될 수 있다.
 

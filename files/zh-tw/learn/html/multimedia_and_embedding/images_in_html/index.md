@@ -3,6 +3,7 @@ title: HTML中的圖片
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從 [element embeds an image into the document.">`<img>`](/zh-TW/docs/Web/HTML/Element/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
@@ -32,7 +33,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 為了在網頁上放置一個簡單的圖像，我們使用\<img>元素。 這是一個空元素（意味著它沒有文本內容或結束標記），並需要至少一個屬性（src）（有時稱為其完整標題，source）才有用。 src 屬性包含指向要嵌入頁面的圖像的路徑，該路徑可以是相對路徑或絕對路徑 URL，與\<a>元素中的 href 屬性相同。
 
-> **備註：** 在繼續之前，您應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
+> **備註：** 在繼續之前，您應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
 
 舉例來說, 如果您的圖片名為 dinosaur.jpg 且與 HTML 檔案位於同一資料夾中，可以這樣嵌入圖片：
 
@@ -72,7 +73,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 > **備註：** \<img>和\<video>之類的元素有時也稱為替換元素。 這是因為元素的內容和圖片大小是由外部（例如圖片或影音檔）所定義的，而不是由元素的內容定義。
 
-> **備註：** 您可以從在[Github](/zh-TW/docs/https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)上找到本節完成的示例（參見[開源碼](/zh-TW/docs/https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)。）
+> **備註：** 您可以從在 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 上找到本節完成的示例（參見[開源碼](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)。）
 
 ### 替代性文字
 
@@ -96,7 +97,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 您應該在`alt`屬性中確切寫些什麼？ 這取決於圖片為何而出現；也就是說，如果圖片不顯示，您將損失什麼：
 
-- **裝飾：** 你可以用 [CSS\_背景圖片](#css_背景圖片) 加入裝飾圖片，但如果必須使用 HTML，可以添加一個空的 `alt=""`。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。
+- **裝飾：** 你可以用 [CSS 背景圖片](#css_背景圖片) 加入裝飾圖片，但如果必須使用 HTML，可以添加一個空的 `alt=""`。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。
 - **內容：** 如果您的圖片提供了重要的資訊，請在簡短的`alt`文字中提供相同的資訊，甚至最好在所有人都能看到的主要文字中提供相同的資訊。請不要撰寫冗餘替代文字，試想如果所有段落都在主要內容中寫了兩次，對於用視力觀看的使用者有多煩人。如果圖像在正文中已充分敘述，請使用 `alt=""`。
 - **連結：** 如果你在{{htmlelement("a")}} 標籤中放了圖片使其轉入連結，你仍應該提供[明確的字詞](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#%E4%BD%BF%E7%94%A8%E6%98%8E%E7%A2%BA%E7%9A%84%E5%AD%97%E8%A9%9E)。在这种情况下，您可以根據適合你的情況，将其写在相同的`<a>`元素内，或是写在图像的`alt` 属性内。
 - **文字：** 請不要在圖片中寫字。如果你的主要目的是為標題加上下拉式陰影，你可以[使用 CSS](/zh-TW/docs/Web/CSS/text-shadow)更甚於在圖片中描繪文字。 但如果你無法避免這麼做，也請將文字敘述加在`alt` 属性内。
@@ -152,7 +153,9 @@ It is better to include such supporting information in the main article text, ra
 
 It is now your turn to play! This active learning section will have you up and running with a simple embedding exercise. You are provided with a basic {{htmlelement("img")}} tag; we'd like you to embed the image located at the following URL:
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 Earlier we said to never hotlink to images on other servers, but this is just for learning purposes, so we'll let you off this one time.
 

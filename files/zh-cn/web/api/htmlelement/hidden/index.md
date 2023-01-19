@@ -2,6 +2,7 @@
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
 ---
+
 {{ APIRef("HTML DOM") }}
 
 {{domxref("HTMLElement", "HTML 元素")}}的 **`hidden`** 属性是一个 {{jsxref("Boolean")}} 类型的值，如果想要隐藏元素，就将值设置为 `true`，否则就将值设置为`false`。这完全不同于使用 CSS 属性 {{cssxref("display")}} 来控制一个元素的可见性。
@@ -104,17 +105,17 @@ h1 {
 }
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('示例', 560, 200) }}
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.HTMLElement.hidden")}}
+{{Compat}}
 
 ## 参见
 

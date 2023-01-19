@@ -1,14 +1,8 @@
 ---
 title: '@charset'
 slug: Web/CSS/@charset
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/@charset
 ---
+
 {{CSSRef}}
 
 **`@charset`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule) で、スタイルシートで使う文字エンコーディングを定義します。このルールはスタイルシートの最初の要素でなければならず、これより前には文字を一切記述してはいけません。[入れ子の文](/ja/docs/CSS/Syntax#nested_statements)でないとしても、[条件付きグループルール](/ja/docs/CSS/At-rule#条件付きグループルール)の中で使うことはできません。複数の `@charset` アットルールが定義されると、最初のものだけが使われます。HTML 要素の `style` 属性や、HTML ページの文字セットが関係している {{ HTMLElement("style") }} 要素の中では使えません。

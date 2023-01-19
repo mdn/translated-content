@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-rule-style
 ---
+
 {{CSSRef}}
 
 La propriété **`column-rule-style`** permet de définir le style de la ligne tracée entre plusieurs colonnes lorsqu'on utilise une disposition en colonnes.
@@ -41,9 +42,13 @@ La propriété `column-rule-style` avec une valeur unique de type `<br-style>`.
 - `<br-style>`
   - : Un mot-clé (défini comme pour {{cssxref("border-style")}}) qui permet de définir le style appliqué au trait. Les épaisseurs résultantes sont calculées avec la même méthode que pour les bordures (cf. _[collapsing border model](https://www.w3.org/TR/CSS2/tables.html#collapsing-borders)_).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -83,12 +88,8 @@ La propriété `column-rule-style` avec une valeur unique de type `<br-style>`.
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol', '#crs', 'column-rule-style')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.column-rule-style")}}
+{{Compat}}

@@ -1,14 +1,8 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-tags:
-  - CSS
-  - CSS Cascade
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/inherit
 ---
+
 {{CSSRef}}
 
 CSS **`inherit`** 키워드를 사용한 속성은 부모 요소로부터 해당 속성의 [계산값](/ko/docs/Web/CSS/computed_value)을 받아 사용합니다. CSS {{cssxref("all")}} 단축 속성을 포함한 모든 속성에 사용할 수 있습니다.

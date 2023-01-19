@@ -2,6 +2,7 @@
 title: SpeechGrammar.weight
 slug: Web/API/SpeechGrammar/weight
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechGrammar")}} 接口的可选属性 **`weight`** 设置并返回了一个 `SpeechGrammar` 对象的权重。
@@ -36,7 +37,7 @@ console.log(speechRecognitionList[0].weight); // 应该返回 1 - 与上面第�
 
 ## 浏览器兼容性
 
-{{Compat("api.SpeechGrammar.weight")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -1,14 +1,8 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-tags:
-  - Constructor
-  - JavaScript
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 **`SharedArrayBuffer`** 객체는 제네릭, 고정된 길이의 원시 바이너리 데이터 버퍼를 표현하는데 사용됩니다. {{jsxref("ArrayBuffer")}} 객체와 유사하지만, 공유된 메모리상의 뷰를 생성하는데 사용될 수 있습니다. `ArrayBuffer` 와는 달리, `SharedArrayBuffer` 는 분리될 수 없습니다.
@@ -36,7 +30,7 @@ new SharedArrayBuffer(length)
 
 ### 할당 및 메모리 공유
 
-{{jsxref("SharedArrayBuffer")}} 객체를 사용해 메모리를 하나의 agent(agent 는 웹 페이지의 메인 프로그램 또는 웹 워커 중 하나입니다)와 다른 agent 에서 공유하기 위해, [`postMessage`](https://developer.mozilla.org/ko/docs/Web/API/Worker/postMessage) 와 [structured cloning](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 이 사용됩니다.
+{{jsxref("SharedArrayBuffer")}} 객체를 사용해 메모리를 하나의 agent(agent 는 웹 페이지의 메인 프로그램 또는 웹 워커 중 하나입니다)와 다른 agent 에서 공유하기 위해, [`postMessage`](/ko/docs/Web/API/Worker/postMessage) 와 [structured cloning](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 이 사용됩니다.
 
 Structured clone 알고리즘은 `SharedArrayBuffer` 와 `SharedArrayBuffer` 상에 맵핑된 `TypedArray` 를 받아들입니다. 이 두 경우에서, `SharedArrayBuffer` 객체는 수신자(receiver)에게 전달되어 수신 agent(예, {{jsxref("ArrayBuffer")}})의 새로운 비공개의 SharedArrayBuffer 객체를 생성합니다. 하지만, 두 `SharedArrayBuffer` 에 의해 참조되는 공유 데이터 블록은 같은 블록이며, 부수적인 효과로, 하나의 agent 가 다른 agent 에서 보이게 됩니다.
 
@@ -82,12 +76,12 @@ var sab = new SharedArrayBuffer(1024);
 
 ### 속성
 
-- [](/ko/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength)`SharedArrayBuffer.prototype.byteLength`
+- [`SharedArrayBuffer.prototype.byteLength`](/ko/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength)
   - : 배열의 크기 (바이트)입니다. 이것은 배열이 구성 될 때 설정되며 변경할 수 없습니다. 읽기 전용입니다.
 
 ### 메소드
 
-- [](/ko/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)`SharedArrayBuffer.prototype.slice(begin, end)`
+- [`SharedArrayBuffer.prototype.slice(begin, end)`](/ko/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)
   - : Returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `begin`, inclusive, up to `end`, exclusive. `begin` 또는 `end` 중 하나가 음수이면 처음부터가 아니라 배열 끝의 인덱스를 참조합니다.
 
 ## 명세

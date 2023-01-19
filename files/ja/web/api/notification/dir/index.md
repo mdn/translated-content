@@ -1,7 +1,10 @@
 ---
 title: Notification.dir
 slug: Web/API/Notification/dir
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `dir` は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `dir` オプションで指定されたテキストの書字方向を示します。
@@ -17,7 +20,7 @@ slug: Web/API/Notification/dir
 - `rtl`
   - : 右書き。
 
-> **Note:** 多くのブラウザーは明示的な ltr や rtl の設定を無視し、ブラウザー全体の設定どおりに実行するようです。
+> **メモ:** 多くのブラウザーは明示的な ltr や rtl の設定を無視し、ブラウザー全体の設定どおりに実行するようです。
 
 ## 例
 

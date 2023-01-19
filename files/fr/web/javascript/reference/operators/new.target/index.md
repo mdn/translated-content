@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/new.target
 original_slug: Web/JavaScript/Reference/Opérateurs/new.target
 ---
+
 {{JSSidebar("Operators")}}
 
 La syntaxe **`new.target`** est disponible dans toutes les fonctions et permet entre autres de tester si une fonction ou un constructeur a été appelé avec `new`. Dans les constructeurs, il fait référence au constructeur invoqué par [`new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new). Dans les appels de fonction « normaux », `new.target` vaut {{jsxref("undefined")}}.
@@ -76,14 +77,11 @@ var d = new D(); // function D()
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.new_target")}}
+{{Compat}}
 
 ## Voir aussi
 

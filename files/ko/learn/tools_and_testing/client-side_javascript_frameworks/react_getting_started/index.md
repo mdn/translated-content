@@ -3,6 +3,7 @@ title: React 시작하기
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
+
 <div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
@@ -63,8 +64,7 @@ const header = (
 );
 ```
 
-<div class="notecard note">
-    <p><strong>참고</strong>: 위의 스니펫에 있는 괄호는 JSX에 유일하지도 않고, 여러분의 애플리케이션에 어떠한 영향을 주지도 않습니다. 이들은 여러 줄의 코드가 동일한 표현식의 부분이라는 것을 당신(과 컴퓨터)에게 알려줍니다. header 표현식은 다음과 같이도 쓸 수도 있습니다.</p>
+> **참고:** 위의 스니펫에 있는 괄호는 JSX에 유일하지도 않고, 여러분의 애플리케이션에 어떠한 영향을 주지도 않습니다. 이들은 여러 줄의 코드가 동일한 표현식의 부분이라는 것을 당신(과 컴퓨터)에게 알려줍니다. header 표현식은 다음과 같이도 쓸 수도 있습니다.
 
 ```js
 const header = <header>
@@ -127,8 +127,7 @@ npx create-react-app moz-todo-react
 - 기본적인 앱 아키텍처를 정의하는 파일과 디렉토리의 구조를 만듭니다.
 - 컴퓨터에 깃이 설치되어있다면, 디렉토리를 깃 레포지토리로 초기화합니다.
 
-<div class="notecard note">
-    <p><strong>참고</strong>: yarn package manager를 설치했다면, create-react-app은 그것을 npm 대신 기본으로 사용할 것입니다. 두 패키지 매니저가 모두 설치되어있고 NPM을 명시적으로 사용하길 원한다면, create-react-app을 실행할 때 플래그 <code>--use-npm</code>을 사용하면 됩니다.</p>
+> **참고:** yarn package manager를 설치했다면, create-react-app은 그것을 npm 대신 기본으로 사용할 것입니다. 두 패키지 매니저가 모두 설치되어있고 NPM을 명시적으로 사용하길 원한다면, create-react-app을 실행할 때 플래그 `--use-npm`을 사용하면 됩니다.
 
 ```bash
 npx create-react-app moz-todo-react --use-npm
@@ -283,7 +282,7 @@ function App() {
 
 ### Export 문
 
-`App.js` 파일의 최하단에 있는  `export default App`라는 명령문은 `App` 컴포넌트들을 다른 모듈에서 사용할 수 있게 합니다.
+`App.js` 파일의 최하단에 있는 `export default App`라는 명령문은 `App` 컴포넌트들을 다른 모듈에서 사용할 수 있게 합니다.
 
 ## Interrogating the index
 
@@ -318,9 +317,7 @@ serviceWorker.unregister();
 
 이 모든 것이 React에게 우리가 루트로서, 혹은 첫 번째 컴포넌트로서 `App` 컴포넌트를 렌더링하길 원한다고 알려줍니다.
 
-<div class="notecard note">
-    <p><strong>참고</strong>: JSX에서, React 컴포넌트와 HTML 요소는 반드시 닫는 태그가 있어야 합니다. <code>&lt;App&gt;</code> 혹은 <code>&lt;img&gt;</code>라고만 쓰는 것은 오류를 발생시킬 것입니다.</p>
-</div>
+> **참고:** JSX에서, React 컴포넌트와 HTML 요소는 반드시 닫는 태그가 있어야 합니다. `<App>` 혹은 `<img>`라고만 쓰는 것은 오류를 발생시킬 것입니다.
 
 [Service workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)는 앱 성능에 도움이 되고 오프라인에서 일할 수 있는 웹 애플리케이션의 기능을 제공하는 특별한 코드들이지만, 이 기사에서 다루는 범위는 아닙니다. 다섯 번째 줄과 코드 가장 아래에 있는 것은 지울 수 있습니다.
 

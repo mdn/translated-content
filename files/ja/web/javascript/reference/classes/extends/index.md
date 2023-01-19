@@ -2,6 +2,7 @@
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 ---
+
 {{jsSidebar("Classes")}}
 
 **`extends`** キーワードは[クラス宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)や[クラス式](/ja/docs/Web/JavaScript/Reference/Operators/class)の中で、他のクラスの子であるクラスを生成するために使用します。
@@ -59,9 +60,7 @@ class myDate extends Date {
 
 ## 仕様書
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'extends')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: DataView.prototype.getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 ---
+
 {{JSRef}}
 
 **`getUint8()`** メソッドは、符号なし 8 ビット整数 (unsigned byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
@@ -44,9 +45,7 @@ dataview.getUint8(1); // 0
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getuint8', 'DataView.prototype.getUint8')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

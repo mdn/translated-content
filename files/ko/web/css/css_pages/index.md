@@ -1,13 +1,8 @@
 ---
 title: CSS Paged Media
 slug: Web/CSS/CSS_Pages
-tags:
-  - CSS
-  - CSS Paged Media
-  - CSS Reference
-  - Overview
-translation_of: Web/CSS/CSS_Pages
 ---
+
 {{CSSRef}}
 
 **CSS Paged Media**는 페이지 전환을 처리하는 방법을 정의하는 CSS 모듈입니다.

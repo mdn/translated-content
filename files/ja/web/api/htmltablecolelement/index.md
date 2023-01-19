@@ -2,6 +2,7 @@
 title: HTMLTableColElement
 slug: Web/API/HTMLTableColElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTableColElement`** インターフェイスは、表の単一またはグループの列要素を操作するプロパティを提供します。

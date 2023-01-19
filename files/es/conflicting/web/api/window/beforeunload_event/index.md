@@ -1,9 +1,9 @@
 ---
 title: Window.onbeforeunload
 slug: conflicting/Web/API/Window/beforeunload_event
-translation_of: Web/API/WindowEventHandlers/onbeforeunload
 original_slug: Web/API/WindowEventHandlers/onbeforeunload
 ---
+
 {{ApiRef}}
 
 ## Introducción
@@ -40,11 +40,9 @@ Se _puede_ y se _debería_ controlar este evento con {{domxref("EventTarget.addE
 
 {{Compat("api.WindowEventHandlers.onbeforeunload")}}
 
-## Especificación
+## Especificaciones
 
-Este evento fue introducido originalmente por Microsoft en Internet Explorer 4 y estandarizado en la especificación HTML5.
-
-- {{spec("http://dev.w3.org/html5/spec-LC/history.html#unloading-documents", "Especificación HTML5: <em>Browsing the Web, Unloading documents</em>", "LC")}} (en inglés)
+{{Specifications}}
 
 ## Ver también
 

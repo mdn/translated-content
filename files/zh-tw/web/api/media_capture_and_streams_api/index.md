@@ -3,6 +3,7 @@ title: Media Capture and Streams API (Media Stream)
 slug: Web/API/Media_Capture_and_Streams_API
 original_slug: Web/API/Media_Streams_API
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 該**媒體捕獲和流**API，通常被稱為**媒體流 API**或者乾脆**MediaStream API**，是關係到一個 API[的 WebRTC](/zh-TW/docs/Web/API/WebRTC_API)提供流式音頻和視頻數據的支持。它提供了用於處理流及其組成軌道的接口和方法，與數據格式關聯的約束，異步使用數據時的成功和錯誤回調以及在此過程中觸發的事件。
@@ -45,13 +46,12 @@ Early versions of the Media Capture and Streams API specification included separ
 
 ## Events
 
-- {{event("addtrack")}}
-- {{event("ended")}}
-- {{event("muted")}}
-- {{event("overconstrained")}}
-- {{event("removetrack")}}
-- {{event("started")}}
-- {{event("unmuted")}}
+- {{domxref("MediaStream/addtrack_event", "addtrack")}}
+- {{domxref("MediaStreamTrack/ended_event", "ended")}}
+- {{domxref("MediaStreamTrack/mute_event", "mute")}}
+- {{domxref("MediaStreamTrack.overconstrained_event", "overconstrained")}}
+- {{domxref("MediaStream/removetrack_event", "removetrack")}}
+- {{domxref("MediaStreamTrack/unmute_event", "unmute")}}
 
 ## Guides and tutorials
 
@@ -61,7 +61,7 @@ The articles below provide additional guidance and how-to information that will 
 
 ## Browser compatibility
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## 也可以看看
 

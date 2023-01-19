@@ -2,6 +2,7 @@
 title: Node.nodeName
 slug: Web/API/Node/nodeName
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.nodeName`** 唯讀屬性會回傳目前節點名稱的字串。

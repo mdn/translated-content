@@ -2,6 +2,7 @@
 title: Video and audio content
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 Now that we are comfortable with adding simple images to a webpage, the next step is to start adding video and audio players to your HTML documents! In this article we'll look at doing just that with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements; we'll then finish off by looking at how to add captions/subtitles to your videos.
@@ -108,7 +109,7 @@ The codecs described in the previous section exist to compress video and audio i
 
 Things become slightly more complicated because not only does each browser support a different set of container file formats, they also each support a different selection of codecs. In order to maximize the likelihood that your web site or app will work on a user's browser, you may need to provide each media file you use in multiple formats. If your site and the user's browser don't share a media format in common, your media simply won't play.
 
-Due to the intricacies of ensuring your app's media is viewable across every combination of browsers, platforms, and devices you wish to reach, choosing the best combination of codecs and container can be a complicated task. See {{SectionOnPage("/zh-TW/docs/Web/Media/Formats/Containers", "Choosing the right container")}} for help selecting the container file format best suited for your needs; similarly, see {{SectionOnPage("/zh-TW/docs/Web/Media/Formats/Video_codecs", "Choosing a video codec")}} and {{SectionOnPage("/zh-TW/docs/Web/Media/Formats/Audio_codecs", "Choosing an audio codec")}} for help selecting the first media codecs to use for your content and your target audience.
+Due to the intricacies of ensuring your app's media is viewable across every combination of browsers, platforms, and devices you wish to reach, choosing the best combination of codecs and container can be a complicated task. See [Choosing the right container](/zh-TW/docs/Web/Media/Formats/Containers#choosing_the_right_container) for help selecting the container file format best suited for your needs; similarly, see [Choosing a video codec](/zh-TW/docs/Web/Media/Formats/Video_codecs#choosing_a_video_codec) and [Choosing an audio codec](/zh-TW/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec) for help selecting the first media codecs to use for your content and your target audience.
 
 One additional thing to keep in mind: mobile browsers may support additional formats not supported by their desktop equivalents, just like they may not support all the same formats the desktop version does. On top of that, both desktop and mobile browsers _may_ be designed to offload handling of media playback (either for all media or only for specific types it can't handle internally). This means media support is partly dependent on what software the user has installed.
 
@@ -204,7 +205,7 @@ mediaElem.load();
 
 ### Detecting track addition and removal (requires JavaScript)
 
-You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the {{event("addtrack")}} event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:
+You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the [`addtrack`](/zh-TW/docs/Web/API/RTCPeerConnection/addTrack) event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:
 
 ```js
 const mediaElem = document.querySelector("video");

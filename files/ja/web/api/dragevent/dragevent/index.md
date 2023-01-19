@@ -2,6 +2,7 @@
 title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 このコンストラクターは、合成した {{domxref("DragEvent")}} オブジェクトを作成するために使用します。

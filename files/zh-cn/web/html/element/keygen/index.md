@@ -2,6 +2,9 @@
 title: <keygen>
 slug: Web/HTML/Element/keygen
 ---
+
+{{HTMLSidebar}}
+
 {{deprecated_header}}
 
 HTML `<keygen>` 元素是为了方便生成密钥材料和提交作为 [HTML form](/zh-CN/docs/Web/Guide/HTML/Forms) 的一部分的公钥。这种机制被用于设计基于 Web 的证书管理系统。按照预想，`<keygen>` 元素将用于 HTML 表单与其他的所需信息一起构造一个证书请求，该处理的结果将是一个带有签名的证书。
@@ -103,4 +106,4 @@ Here is an example form submission as it would be delivered to a CGI program by 
 
 ## Browser compatibility
 
-{{Compat("html.elements.keygen")}}
+{{Compat}}

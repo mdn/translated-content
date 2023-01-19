@@ -2,6 +2,7 @@
 title: Link
 slug: Web/HTTP/Headers/Link
 ---
+
 {{HTTPSidebar}}
 
 HTTP 实体报头 **`Link`** 提供了序列化 HTTP 头部链接的方法。它在语义上与 HTML 元素 {{HTMLElement("link")}} 相等。

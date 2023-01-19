@@ -11,6 +11,7 @@ tags:
   - W
 translation_of: Web/API/DOMPointReadOnly/w
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`w`** de l'interface **`DOMPointReadOnly`** représente la perspective d'un point.

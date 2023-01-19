@@ -2,6 +2,7 @@
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 {{domxref("MutationObserver")}} の **`observe()`** メソッドは、`MutationObserver` コールバックを設定し、与えられたオプションに適合する DOM への変更の通知の受信を開始します。設定によっては、オブザーバーは DOM ツリー内の単一の {{domxref("Node", "ノード")}} を監視したり、そのノードとその子孫ノードの一部またはすべてを監視したりします。
@@ -55,7 +56,7 @@ MutationObserver は、ノード間の直接接続が切断されても、時間
 
 ## 例
 
-この例では、{{domxref("MutationObserver")}} のインスタンス上で**`observe()`** メソッドを呼び出す方法を示します。一度設定したら、ターゲット要素と {{domxref("MutationObserverInit")}} オプションオブジェクトを渡します。
+この例では、{{domxref("MutationObserver")}} のインスタンス上で **`observe()`** メソッドを呼び出す方法を示します。一度設定したら、ターゲット要素と {{domxref("MutationObserverInit")}} オプションオブジェクトを渡します。
 
 ```js
 // identify an element to observe
@@ -74,9 +75,7 @@ observer.observe(elementToObserve, {subtree: true, childList: true});
 
 ## 仕様
 
-| Specification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('DOM WHATWG', '#dom-mutationobserver-observe', 'MutationObserver.observe()')}} | {{ Spec2('DOM WHATWG') }} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-submit-invalid
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) CSS **`:-moz-submit-invalid`** représente tout bouton {{HTMLElement("input")}} de type `submit` présent sur un formulaire dont le contenu n'est pas valide compte-tenu de ses [contraintes de validation](/fr/docs/Web/Guide/HTML/Forms_in_HTML#Constraint_Validation).

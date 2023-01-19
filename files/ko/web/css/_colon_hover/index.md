@@ -1,14 +1,8 @@
 ---
 title: ':hover'
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:hover
 ---
+
 {{ CSSRef }}
 
 **`:hover`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 사용자가 포인팅 장치를 사용해 상호작용 중인 요소를 선택합니다. 보통 사용자의 커서(마우스 포인터)가 요소 위에 올라가 있으면 선택됩니다.

@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.toDataURL()`** メソッドは、 `type` パラメータ（デフォルトは[PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)形式）で指定される画像フォーマット形式の [data URI](/ja/docs/Web/HTTP/data_URIs) を返すメソッドです。返り値となる画像の解像度は 96 dpi です。
@@ -117,11 +118,7 @@ function removeColors() {
 
 ## 仕様書
 
-| Specification                                                                                                                    | Status                           | Comment                                                                                 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML WHATWG')}} | No change since the latest snapshot, {{SpecName('HTML5 W3C')}}                   |
-| {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML5.1')}}     |                                                                                         |
-| {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML5 W3C')}}     | Snapshot of the {{SpecName('HTML WHATWG')}} containing the initial definition. |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

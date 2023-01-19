@@ -1,8 +1,8 @@
 ---
 title: 접근성
 slug: Learn/Accessibility
-original_slug: Learn/접근성
 ---
+
 {{LearnSidebar}}
 
 웹 개발자가 되기위해서 HTML, CSS 및 JavaScript를 배우는 것이 필요하지만 배운 지식을 효과적으로 사용하기위해서는 지식이상의 기술이 필요로 합니다. 이 기술을 사용해서 웹사이트에 접근하려는 모든 사용자를 차별없이 접근할수 있도록 해야합니다. 이를 위하여 모범 사례([HTML](/ko/docs/Learn/HTML), [CSS](/ko/docs/Learn/CSS) 및 [JavaScript](/ko/docs/Learn/JavaScript) 항목에서 설명) 를 준수하고 [브라우저 호환성 테스트를 거치며](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing) 처음부터 접근성을 고려해야합니다. 이 문서에서는 후자에 대해 자세히 다룰 것입니다.
@@ -11,7 +11,9 @@ original_slug: Learn/접근성
 
 이 문서를 최대한 활용하려면 최소한 [HTML](/ko/docs/Learn/HTML), [CSS](/ko/docs/Learn/CSS) 및 [JavaScript](/ko/docs/Learn/JavaScript) 항목 중 처음 두 문서를 통해 작업하거나 또는 접근성 문서와 관련된 기술을 통해 개선해 나가는것이 좋습니다.
 
-> **참고:** **참고** : 당신은 당신이 당신의 자신의 파일을 생성 할 수있는 기능이없는 컴퓨터 / 태블릿 / 다른 장치에서 작업하는 경우, 당신은 [JSBin](http://jsbin.com/) 또는 [Thimble](https://thimble.mozilla.org/) 같은 온라인 코딩 프로그램에서 코드 예제의 대부분을 테스트 할수 있습니다.
+> **참고:**
+>
+> 당신은 당신이 당신의 자신의 파일을 생성 할 수 있는 기능이 없는 컴퓨터 / 태블릿 / 다른 장치에서 작업하는 경우, 당신은 [JSBin](http://jsbin.com/) 또는 [Thimble](https://thimble.mozilla.org/) 같은 온라인 코딩 프로그램에서 코드 예제의 대부분을 테스트 할 수 있습니다.
 
 ## 가이드
 
@@ -37,4 +39,4 @@ original_slug: Learn/접근성
 
 - [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today) — an excellent series of video tutorials by Marcy Sutton.
 - [Deque University resources](https://dequeuniversity.com/resources/) — includes code examples, screen reader references, and other useful resources.
-- [WebAIM resources](http://webaim.org/resources/) — includes guides, checklists, tools, and more.
+- [WebAIM resources](https://webaim.org/resources/) — includes guides, checklists, tools, and more.

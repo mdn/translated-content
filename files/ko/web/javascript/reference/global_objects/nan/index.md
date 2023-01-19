@@ -1,12 +1,8 @@
 ---
 title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
-tags:
-  - JavaScript
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 ---
+
 {{jsSidebar("Objects")}}
 
 전역 **`NaN`** 속성은 Not-A-Number(숫자가 아님)를 나타냅니다.

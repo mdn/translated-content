@@ -2,6 +2,7 @@
 title: 大なりイコール (>=)
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
 大なりイコール演算子 (`>=`) は、左辺のオペランドが右辺のオペランド以上の場合は `true` を返し、それ以外の場合は `false` を返します。

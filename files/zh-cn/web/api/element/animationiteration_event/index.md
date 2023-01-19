@@ -2,9 +2,10 @@
 title: GlobalEventHandlers.onanimationiteration
 slug: Web/API/Element/animationiteration_event
 ---
+
 {{APIRef("CSS3 Animations")}}
 
-{{event("animationiteration")}}事件的处理器 . 当 [CSS Animation](/zh-CN/docs/Web/CSS/CSS_Animations) 运动到最后一帧时触发。 An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.
+[`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event)事件的处理器 . 当 [CSS Animation](/zh-CN/docs/Web/CSS/CSS_Animations) 运动到最后一帧时触发。An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.
 
 ## 语法
 
@@ -16,9 +17,9 @@ target.onanimationiteration = {{jsxref("Function")}}
 
 ### Value
 
-A {{jsxref("Function")}} to be called when an {{event("animationiteration")}} event occurs indicating that a CSS animation has reached the end of an iteration while running on the _`target`_, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: an {{domxref("AnimationEvent")}} object describing the event which occurred.
+A {{jsxref("Function")}} to be called when an [`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event) event occurs indicating that a CSS animation has reached the end of an iteration while running on the _`target`_, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: an {{domxref("AnimationEvent")}} object describing the event which occurred.
 
-## 实例
+## 示例
 
 Let's create an animation which automatically pauses at the end of each iteration, allowing the user to choose whether or not to start the next iteration. Much of this code is the same as in other examples of animation events, so it may look familiar.
 
@@ -34,7 +35,7 @@ Let's create an animation which automatically pauses at the end of each iteratio
 </div>
 ```
 
-### CSS content
+### CSS
 
 ```css hidden
 :root {
@@ -107,7 +108,7 @@ The animation's keyframes are defined next; they describe an animation which cau
 }
 ```
 
-### JavaScript content
+### JavaScript
 
 Some JavaScript code will need to be written to handle the click on the button to start the next iteration. Let's have a look.
 
@@ -136,11 +137,11 @@ document.getElementById("play").addEventListener("click", function(event) {
 
 This sets the box element's {{cssxref("animation-play-state")}} to "running" and increments the iteration counter. That's all there is to it!
 
-### Result
+### 结果
 
 Assembled together, you get this:
 
-{{ EmbedLiveSample('Example', 500, 400) }}
+{{ EmbedLiveSample('示例', 500, 400) }}
 
 Each time the box reaches the opposing corner, it stops, with the button reflecting which iteration number is up next, until you click the button to run the next iteration.
 
@@ -154,5 +155,5 @@ Each time the box reaches the opposing corner, it stops, with the button reflect
 
 ## 参见
 
-- The {{event("animationiteration")}} event this event handler is triggered by.
+- The [`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event) event this event handler is triggered by.
 - {{domxref("AnimationEvent")}}

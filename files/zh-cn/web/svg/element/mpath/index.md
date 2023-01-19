@@ -2,6 +2,7 @@
 title: mpath
 slug: Web/SVG/Element/mpath
 ---
+
 {{SVGRef}}
 
 {{ SVGElement("animateMotion") }} 元素的`mpath`子元素使{{ SVGElement("animateMotion") }} 元素能够引用一个外部的{{ SVGElement("path") }}元素作为运动路径的定义。
@@ -43,14 +44,14 @@ slug: Web/SVG/Element/mpath
 
 实时输出：
 
-{{EmbedLiveSample("Example",250,165)}}
+{{EmbedLiveSample("示例",250,165)}}
 
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### 专有属性
@@ -59,7 +60,7 @@ slug: Web/SVG/Element/mpath
 
 ## DOM 接口
 
-该元素实现了[`SVGMPathElement`](/en/DOM/SVGMPathElement)接口。
+该元素实现了[`SVGMPathElement`](/zh-CN/DOM/SVGMPathElement)接口。
 
 ## 相关的内容
 

@@ -2,6 +2,7 @@
 title: GeolocationCoordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates.latitude`** は読み取り専用のプロパティであり、 `double` 値でその位置の緯度を 10 進形式で表します。

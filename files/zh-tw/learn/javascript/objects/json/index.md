@@ -2,6 +2,7 @@
 title: 使用 JSON 資料
 slug: Learn/JavaScript/Objects/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript Object Notation (JSON) 為將結構化資料 (structured data) 呈現為 JavaScript 物件的標準格式，常用於網站上的資料呈現、傳輸 (例如將資料從伺服器送至用戶端，以利顯示網頁)。你應該會常常遇到，因此本文將說明 JavaScript 搭配 JSON 時所應知道的觀念，包含如何在 JSON 物件中存取資料項目，並寫出你自己的 JSON。
@@ -282,12 +283,12 @@ function showHeroes(jsonObj) {
 
 接著我們以 [for 迴圈](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop)循環陣列中的各個物件。針對每個物件都會：
 
-1. 建立數個新的元素：1 組 `<article>`、1 組 `<h2>、3 組` `<p>、1 組` `<ul>。`
-2. 讓 \<h2> 納入目前超級英雄的 `name`。
-3. 接著 3 個段落分別是英雄的 `secretIdentity`、`age、Superpowers`，在列表中帶出相關資訊。
+1. 建立數個新的元素：1 組 `<article>`、1 組 `<h2>`、3 組 `<p>`、1 組 `<ul>`。
+2. 讓 `<h2>` 納入目前超級英雄的 `name`。
+3. 接著 3 個段落分別是英雄的 `secretIdentity`、`age`、`Superpowers`，在列表中帶出相關資訊。
 4. 另以新變數 `superPowers` 儲存 `powers` 屬性 — 其中包含 1 組陣列以列出目前英雄的超能力。
 5. 再用另一個 `for` 迴圈逐一巡過目前英雄的超能力。針對每一項超能力，我們再建立 1 組 `<li>` 元素，把超能力放進該元素之中，再透過 `appendChild()` 把 `listItem` 放入 `<ul>` 元素之內 (`myList`)。
-6. 最後就是在 `<article>` (`myArticle`) 之內附加 ` <h2>、``<p>、``<ul> `；再把 `<article>` 附加於 `<section>` 之內。這附加的順序極為重要，因為這也會是 HTML 中的顯示順序。
+6. 最後就是在 `<article>` (`myArticle`) 之內附加 `<h2>`、`<p>`、`<ul>`；再把 `<article>` 附加於 `<section>` 之內。這附加的順序極為重要，因為這也會是 HTML 中的顯示順序。
 
 > **備註：** 如果你無法讓此範例運作，可參閱我們的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 原始碼 (亦可看到[實際執行情況](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)。)
 

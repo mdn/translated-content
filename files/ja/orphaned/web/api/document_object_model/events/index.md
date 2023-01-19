@@ -3,6 +3,7 @@ title: イベントと DOM
 slug: orphaned/Web/API/Document_Object_Model/Events
 original_slug: Web/API/Document_Object_Model/Events
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 ## はじめに
@@ -32,7 +33,7 @@ function greet(event){
 
 これが最近のウェブページで使われる方法です。
 
-> **Note:** **注:** Internet Explorer 6 から 8 はこの方法をサポートせず、 {{domxref("EventTarget.attachEvent")}} という似た API を代わりにサポートします。ブラウザー間の互換性を確保するには、数多くある JavaScript ライブラリのうちの一つを使用してください。
+> **メモ:** Internet Explorer 6 から 8 はこの方法をサポートせず、 {{domxref("EventTarget.attachEvent")}} という似た API を代わりにサポートします。ブラウザー間の互換性を確保するには、数多くある JavaScript ライブラリのうちの一つを使用してください。
 
 さらに詳細を知りたい場合は {{domxref("EventTarget.addEventListener")}} のリファレンスを参照してください。
 
@@ -44,7 +45,7 @@ function greet(event){
 
 HTML 属性に書かれたこの JavaScript コードには、 `event` 引数を通してイベントオブジェクトが渡されます。[返値は HTML の仕様で定義された特別な方法で処理されます](http://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm)。
 
-> **Warning:** **警告:** この方法は避けてください。これはマークアップを増加させ、可読性を下げます。コンテンツと振る舞いが正しく分離されておらず、バグの発見が困難になります。
+> **警告:** この方法は避けてください。これはマークアップを増加させ、可読性を下げます。コンテンツと振る舞いが正しく分離されておらず、バグの発見が困難になります。
 
 ### DOM 要素のプロパティ
 

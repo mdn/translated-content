@@ -14,6 +14,7 @@ tags:
   - Sécurité
 translation_of: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`plugin-types`** restreint l'ensemble des greffons pouvant être intégrés dans un document en limitant les types de ressources pouvant être chargées.
@@ -87,14 +88,11 @@ Content-Security-Policy: plugin-types application/x-java-applet
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-plugin-types", "plugin-types")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-plugin-types", "plugin-types")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.plugin-types")}}
+{{Compat}}
 
 ## Voir aussi
 

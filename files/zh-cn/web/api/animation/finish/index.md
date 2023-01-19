@@ -2,9 +2,10 @@
 title: Animation.finish()
 slug: Web/API/Animation/finish
 ---
+
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-The **`finish()` **method of the [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} Interface sets the current playback time to the end of the animation corresponding to the current playback direction. That is, if the animation is playing forward, it sets the playback time to the length of the animation sequence, and if the animation is playing in reverse (having had its {{domxref("Animation.reverse", "reverse()")}} method called), it sets the playback time to 0.
+The **`finish()`** method of the [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} Interface sets the current playback time to the end of the animation corresponding to the current playback direction. That is, if the animation is playing forward, it sets the playback time to the length of the animation sequence, and if the animation is playing in reverse (having had its {{domxref("Animation.reverse", "reverse()")}} method called), it sets the playback time to 0.
 
 ## 语法
 
@@ -57,7 +58,7 @@ elem.getAnimations().forEach(
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation.finish")}}
+{{Compat}}
 
 ## 更多参考
 

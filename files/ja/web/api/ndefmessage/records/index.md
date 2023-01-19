@@ -2,6 +2,7 @@
 title: NDEFMessage.records
 slug: Web/API/NDEFMessage/records
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 `records` は {{DOMxRef("NDEFMessage")}} インターフェイスのプロパティで、 NDEF メッセージに現れる {{DOMxRef("NDEFRecord")}} のリストを表します。

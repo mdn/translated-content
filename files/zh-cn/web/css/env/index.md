@@ -3,6 +3,7 @@ title: env()
 slug: Web/CSS/env
 original_slug: Web/CSS/env()
 ---
+
 {{CSSRef}}
 
 **`env()`** [CSS](/zh-CN/docs/Web/CSS) 函数以类似于 {{cssxref("var")}} 函数和 [custom properties](/zh-CN/docs/Web/CSS/--*) 的方式将用户代理定义的环境变量值插入你的 CSS 中。区别在于，环境变量除了由用户代理定义而不是由用户定义外，还被全局作用在文档中，而自定义属性则限定在声明它们的元素中。为了告诉浏览器使用屏幕上所有的可用空间，并以此使用`env()`变量，我们需要添加一个新的视口元值：
@@ -59,7 +60,7 @@ env(safe-area-inset-left, 1.4rem);
 ```html
 <p>
   If the <code>env()</code> function is supported in your browser,
-  this paragraph’s text will have 50px of padding between it and
+  this paragraph's text will have 50px of padding between it and
   the left border — but not the top, right and bottom.
   This is because the accompanying CSS is the equivalent of
   <code>padding: 0 0 0 50px</code>, because, unlike other CSS
@@ -100,7 +101,7 @@ padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padd
 
 ## Browser compatibility
 
-{{Compat("css.properties.custom-property.env")}}
+{{Compat}}
 
 ## See also
 
@@ -108,4 +109,3 @@ padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padd
 - [CSS Custom Properties for Cascading Variables](/zh-CN/docs/Web/CSS/CSS_Variables)
 - [Custom Properties (--\*)](/zh-CN/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/zh-CN/docs/Web/CSS/Using_CSS_variables)
-- {{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}

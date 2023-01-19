@@ -1,12 +1,9 @@
 ---
 title: 브라우징 맥락
 slug: Glossary/Browsing_context
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Browsing_context
 original_slug: Glossary/브라우저-컨텍스트
 ---
+
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 
 **브라우징 맥락**은 {{glossary("browser", "브라우저")}}가 {{domxref("Document")}}를 표시하는 환경을 말합니다. 오늘날에는 보통 탭이지만, 브라우저 창이나 페이지 내의 프레임도 가능합니다.

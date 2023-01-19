@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image-source
 ---
+
 {{CSSRef}}
 
 La propriété **`border-image-source`** définit l'image (type {{cssxref("&lt;image&gt;")}}) qu'on souhaite utiliser pour mettre en forme la bordure. Si la valeur de cette propriété vaut `none`, ce sera la mise en forme définie par la propriété {{cssxref("border-style")}} qui sera utilisée.
@@ -40,9 +41,13 @@ La propriété {{cssxref("border-image-slice")}} peut être utilisée afin de di
 - `<image>`
   - : Une référence vers l'Image qu'on souhaite utiliser pour dessiner la bordure. Voir {{cssxref("&lt;image&gt;")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -50,15 +55,11 @@ Voir la page de la propriété raccourcie {{cssxref("border-image")}} et les dif
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-image-source', 'border-image-source')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-image-source")}}
+{{Compat}}
 
 ## Voir aussi
 

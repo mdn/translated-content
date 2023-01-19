@@ -1,14 +1,8 @@
 ---
 title: 한 번에 여러 배경 사용하기
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-tags:
-  - CSS
-  - CSS Background
-  - Example
-  - Guide
-  - Reference
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 ---
+
 {{CSSRef}}
 
 **여러 개의 배경**을 한 번에 적용할 수도 있습니다. 첫 번째 배경이 맨 위에, 마지막 배경이 맨 밑에 위치하는 레이어 구조를 사용하게 됩니다. 마지막 배경에만 배경색을 적용할 수 있습니다.
@@ -39,8 +33,8 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 .multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png),
-      url(https://mdn.mozillademos.org/files/11307/bubbles.png),
+  background-image: url(firefox.png),
+      url(bubbles.png),
       linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat,
       no-repeat,

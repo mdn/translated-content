@@ -1,15 +1,8 @@
 ---
 title: Vary
 slug: Web/HTTP/Headers/Vary
-tags:
-  - HTTP
-  - Reference
-  - ヘッダー
-  - リファレンス
-  - レスポンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Vary
 ---
+
 {{HTTPSidebar}}
 
 **`Vary`** HTTP レスポンスヘッダーは、オリジンのサーバーから新しく要求するのではなく、キャッシュされたレスポンスを使用できるかどうかを決定するために将来のリクエストヘッダーをどのように一致させるかを決定します。これは、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)アルゴリズムでリソースの表現を選択するときにどのヘッダーを使用したかを示すためにサーバーによって使用されます。

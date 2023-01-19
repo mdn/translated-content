@@ -1,26 +1,27 @@
 ---
-title: 小于或等于
+title: 小于等于（<=）
 slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
-The less than or equal operator (`<=`) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
+小于等于运算符（`<=`）在左操作数小于等于右操作数时返回 `true`，否则返回 `false`。
 
 {{EmbedInteractiveExample("pages/js/expressions-less-than-or-equal.html")}}
 
-## Syntax
+## 语法
 
-```plain
- x <= y
+```js-nolint
+x <= y
 ```
 
-## Description
+## 描述
 
-The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm. See the documentation for the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator for a summary of this algorithm.
+操作数比较使用与[小于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than)运算符相同的算法，除了相等的值（在尝试转换后）会返回 `true`。
 
-## Examples
+## 示例
 
-### String to string comparison
+### 字符串与字符串比较
 
 ```js
 console.log("a" <= "b");     // true
@@ -28,7 +29,7 @@ console.log("a" <= "a");     // true
 console.log("a" <= "3");     // false
 ```
 
-### String to number comparison
+### 字符串与数值比较
 
 ```js
 console.log("5" <= 3);       // false
@@ -39,7 +40,7 @@ console.log("hello" <= 5);   // false
 console.log(5 <= "hello");   // false
 ```
 
-### Number to Number comparison
+### 数值与数值比较
 
 ```js
 console.log(5 <= 3);         // false
@@ -47,7 +48,7 @@ console.log(3 <= 3);         // true
 console.log(3 <= 5);         // true
 ```
 
-### Number to BigInt comparison
+### 数值与大整型比较
 
 ```js
 console.log(5n <= 3);        // false
@@ -55,7 +56,7 @@ console.log(3 <= 3n);        // true
 console.log(3 <= 5n);        // true
 ```
 
-### Comparing Boolean, null, undefined, NaN
+### 比较 Boolean、null、undefined 和 NaN
 
 ```js
 console.log(true <= false);  // false
@@ -75,16 +76,16 @@ console.log(3 <= NaN);       // false
 console.log(NaN <= 3);       // false
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Greater than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [Less than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
+- [大于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [大于等于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [小于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than)

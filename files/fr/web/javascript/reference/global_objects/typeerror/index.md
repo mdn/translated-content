@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypeError
 browser-compat: javascript.builtins.TypeError
 ---
+
 {{JSRef}}
 
 Un objet **`TypeError`** représente une erreur qui se produit généralement (mais pas toujours) lorsqu'une opération n'a pu avoir lieu parce qu'une valeur n'a pas le type attendu.

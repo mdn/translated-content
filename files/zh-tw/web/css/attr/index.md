@@ -3,6 +3,7 @@ title: attr
 slug: Web/CSS/attr
 original_slug: Web/CSS/attr()
 ---
+
 {{CSSRef}}
 
 ## 概要
@@ -76,7 +77,7 @@ p::before {
 
 ### 結果
 
-{{EmbedLiveSample("Examples", '100%', '80')}}
+{{EmbedLiveSample("範例", '100%', '80')}}
 
 ## 規範
 
@@ -84,4 +85,4 @@ p::before {
 
 ## 瀏覽器相容性
 
-{{Compat("css.types.attr")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: 你的第二個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
+
 {{AddonSidebar}}
 
 假如你已經讀過了 [你的第一個 WebExtension](/zh-TW/Add-ons/WebExtensions/Your_first_WebExtension)，你也已經知道該如何寫一個 extension（外掛），在這篇文章中我們將會教你寫一個稍微複雜一點的 extension，來 demo 一些 API 的使用。
@@ -101,7 +102,7 @@ cd beastify
 
 一個 extension 應該要有一個 icon。icon 將會顯示在 Add-ons Manager 的 extension 列表中。（在 Firefox 網址列輸入 "about:addons" 開啟 Add-ons Manager）。
 
-在 beastify 下建立一個名為 "icons" 的資料夾，並準備一個命名為 "beasts-48.png" 的 icon 並存在 "beastify/icons" 的資料夾中（可以使用我們的[範例圖檔](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png)，圖檔來源：[Free Retina Icon Set](https://www.iconfinder.com/iconsets/free-retina-icon-set)，遵照[使用條款](http://www.aha-soft.com/free-icons/free-retina-icon-set/)來使用）。並在 manifest.json 裡告訴他要使用 "icons/beasts-48.png" 路徑下的 icon。
+在 beastify 下建立一個名為 "icons" 的資料夾，並準備一個命名為 "beasts-48.png" 的 icon 並存在 "beastify/icons" 的資料夾中（可以使用我們的[範例圖檔](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-48.png)，圖檔來源：[Aha-Soft's Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/)，遵照使用條款來使用）。並在 manifest.json 裡告訴他要使用 "icons/beasts-48.png" 路徑下的 icon。
 
 如果你想要使用自己的 icon，icon 大小必須是 48x48 pixels，另外也可使用 96x96 pixel 來支援較高解析度的顯示。
 

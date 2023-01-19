@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.scale()`** 是 Canvas 2D API 根据 x 水平方向和 y 垂直方向，为 canvas 单位添加缩放变换的方法。
@@ -60,7 +61,7 @@ ctx.fillRect(10, 10, 8, 20);
 
 The scaled rectangle is red, and the non-scaled rectangle is gray.
 
-{{ EmbedLiveSample('Scaling_a_shape', 700, 180) }}
+{{ EmbedLiveSample('使用 scale 方法', 700, 180) }}
 
 ### 使用 scale 水平或竖直翻转
 
@@ -86,17 +87,17 @@ ctx.fillText('Hello world!', -280, 90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Flipping_things_horizontally_or_vertically', 700, 180) }}
+{{ EmbedLiveSample('使用 scale 水平或竖直翻转', 700, 180) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.scale")}}
+{{Compat}}
 
 ## 参见
 

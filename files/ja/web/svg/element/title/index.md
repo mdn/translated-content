@@ -1,13 +1,8 @@
 ---
 title: title
 slug: Web/SVG/Element/title
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Descriptive
-translation_of: Web/SVG/Element/title
 ---
+
 {{SVGRef}}
 
 SVG における各コンテナ要素またはグラフィックス要素の描画は、説明がテキストのみの文字列を含む **`<title>`** 要素を供給することができます。文書フラグメントが SVG 視覚メディアとしてレンダリングされるとき、`<title>` 要素は、グラフィックスの一部としてはレンダリングされません。しかし、一部のユーザーエージェントは、例えば、ツールチップとして `<title>`要素を表示するかもしれません。 `<title>` 要素を表示するが `path` 要素または他のグラフィックス要素を表示しない、視覚と聴覚の両方の代替プレゼンテーションが可能です。`<title>` 要素は一般に SVG 文書のアクセシビリティを向上させます。
@@ -48,10 +43,7 @@ _この要素には専用属性はありません。_
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                     | コメント   |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'struct.html#TitleElement', '&lt;title&gt;')}}                     | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'struct.html#DescriptionAndTitleElements', '&lt;title&gt;')}} | {{Spec2('SVG1.1')}} | 初期の定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEntry/duration
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La propriété **`duration`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) qui correspond à la durée de l'[entrée de performance](/fr/docs/Web/API/PerformanceEntry).

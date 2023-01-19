@@ -2,6 +2,7 @@
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 ---
+
 {{APIRef("DOM")}}{{domxref("Element")}} インターフェイスの **`scrollIntoView()`** メソッドは、 `scrollIntoView()` が呼び出された要素がユーザーに見えるところまで、要素の親コンテナーをスクロールします。
 
 ## 構文
@@ -52,9 +53,7 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}} | {{Spec2("CSSOM View")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: find
 slug: Mozilla/Add-ons/WebExtensions/API/find
 ---
+
 {{AddonSidebar}}
 
 在网页中查找文本，并突出显示匹配项。
@@ -19,4 +20,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/find
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.find", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}}

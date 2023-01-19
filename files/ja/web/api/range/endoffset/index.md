@@ -2,6 +2,7 @@
 title: Range.endOffset
 slug: Web/API/Range/endOffset
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.endOffset`** は読み取り専用プロパティで、 {{domxref("Range.endContainer")}} の {{domxref("Range")}} が終了する場所を表す数値を返します。

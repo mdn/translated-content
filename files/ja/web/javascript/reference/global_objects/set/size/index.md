@@ -2,6 +2,7 @@
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
 ---
+
 {{JSRef}}
 
 **`size`** アクセサープロパティは {{jsxref("Set")}} オブジェクト内の（固有の）要素の数を返します。

@@ -12,6 +12,7 @@ tags:
   - openSearchResultsInNewTabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
 ---
+
 {{AddonSidebar()}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est un booléen.

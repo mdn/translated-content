@@ -2,6 +2,7 @@
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
+
 {{JSRef}}
 
 **`has()`** 方法根据 `WeakSet` 是否存在相应对象返回布尔值。
@@ -15,7 +16,7 @@ ws.has(value);
 ### 参数
 
 - value
-  - : 必须。 测试 `WeakSet 中是否存在该对象。`
+  - : 必须。测试 `WeakSet` 中是否存在该对象。
 
 ### 返回值
 

@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/CSS/:is
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:is()`** prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.
@@ -272,13 +273,11 @@ et cette dernière version sera plus rapide :
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#matches-pseudo", ":is()")}} | {{Spec2('CSS4 Selectors')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.is")}}
+{{Compat}}
 
 ## Voir aussi
 

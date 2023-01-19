@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.minimize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.minimize()`** メソッドは、 {{jsxref("Intl/Locale/maximize", "Locale.maximize()")}} を呼び出したことで追加されるロケールに関する情報を削除しようとします。

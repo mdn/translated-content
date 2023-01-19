@@ -2,6 +2,7 @@
 title: URL.toJSON()
 slug: Web/API/URL/toJSON
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URL")}}接口的 **toJSON()** 方法返回一个{{domxref("USVString")}}，其中包含一个序列化的 URL 版本，尽管在实践中它似乎与{{domxref("URL.toString()")}}有相同的效果。
@@ -31,4 +32,4 @@ url.toJSON(); // 应该以字符串形式返回 URL
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.toJSON")}}
+{{Compat}}

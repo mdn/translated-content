@@ -13,6 +13,7 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/get
 ---
+
 {{AddonSidebar}}
 
 Cette méthode permet d'obtenir une alarme en fonction de son nom. Cette fonction est une fonction asynchrone qui renvoie une promesse ({{jsxref("Promise")}}).

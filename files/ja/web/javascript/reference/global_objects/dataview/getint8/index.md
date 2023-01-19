@@ -2,6 +2,7 @@
 title: DataView.prototype.getInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
 ---
+
 {{JSRef}}
 
 **`getInt8()`** メソッドは、符号付き 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
@@ -44,9 +45,7 @@ dataview.getInt8(1); // 0
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getint8', 'DataView.prototype.getInt8')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

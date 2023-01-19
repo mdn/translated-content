@@ -2,6 +2,7 @@
 title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定した {{jsxref("BigInt")}} オブジェクトを表す文字列を返します。末尾の "n" は文字列の一部にはなりません。

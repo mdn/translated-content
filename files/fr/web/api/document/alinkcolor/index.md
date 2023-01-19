@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/alinkColor
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 Retourne ou définit la couleur d'un lien actif dans le corps du document. Un lien hypertexte est actif durant le temps entre les événements `mousedown` et `mouseup`.

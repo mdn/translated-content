@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/form-action
 translation_of: Web/HTTP/Headers/Content-Security-Policy/form-action
 browser-compat: http.headers.csp.Content-Security-Policy.form-action
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`form-action`** restreint les URL pouvant être utilisées comme cibles d'envoi de formulaire depuis un contexte donné.

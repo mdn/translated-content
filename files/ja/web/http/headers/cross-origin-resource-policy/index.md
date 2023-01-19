@@ -1,19 +1,11 @@
 ---
 title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - HTTP ヘッダー
-  - Reference
-  - Response Header
-  - header
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 ---
+
 {{HTTPSidebar}}
 
-> **Note:** **注:** [Chrome のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261)のため、 Cross-Origin-Resource-Policy を設定すると PDF のレンダリングが中断され、一部の PDF の最初のページを超えて読むことができなくなることがあります。 [Firefox のバグ](https://bugzilla.mozilla.org/show_bug.cgi?id=1638323)のため、Cross-Origin-Resource-Policy を設定すると、状況によっては一部のリソース（PDF など）のダウンロードができなくなることがあります。本番環境では、このヘッダーの使用に注意してください。
+> **メモ:** [Chrome のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261)のため、 Cross-Origin-Resource-Policy を設定すると PDF のレンダリングが中断され、一部の PDF の最初のページを超えて読むことができなくなることがあります。 [Firefox のバグ](https://bugzilla.mozilla.org/show_bug.cgi?id=1638323)のため、Cross-Origin-Resource-Policy を設定すると、状況によっては一部のリソース（PDF など）のダウンロードができなくなることがあります。本番環境では、このヘッダーの使用に注意してください。
 
 HTTP の **`Cross-Origin-Resource-Policy`** レスポンスヘッダーは、ブラウザーが指定されたリソースへの no-cors のクロスオリジン/クロスサイトのリクエストをブロックするという要望を伝えます。
 
@@ -52,9 +44,7 @@ Cross-Origin-Resource-Policy: same-origin
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                                                                         | 備考     |
-| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------- |
-| {{SpecName("Fetch", '#cross-origin-resource-policy-header')}} | {{Spec2("Fetch", '#cross-origin-resource-policy-header')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: FormData()
 slug: Web/API/FormData/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData()`** 构造函数用于创建一个新的{{domxref("FormData")}}对象。
@@ -33,7 +34,7 @@ var formData = new FormData(); // 当前为空
 formData.append('username', 'Chris');
 ```
 
-或者你可以使用可选的`form参数来创建一个带预置数据的FormData对象`:
+或者你可以使用可选的 `form` 参数来创建一个带预置数据的 FormData 对象：
 
 ```html
 <form id="myForm" name="myForm">
@@ -66,11 +67,11 @@ formData = new FormData(myForm);
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.FormData")}}
+{{Compat}}
 
 ## 附注
 
-在 Gecko 7.0 {{geckoRelease("7.0")}}之前，如果你将{{domxref("Blob")}}作为数据添加到 form 对象中，文件名就是空的，这可能导致服务器在 HTTP 头的 Content-Disposition 中设置的文件名为空而引起错误。从 Gecko 7.0 开始，将会使用"blob"作为 Blob 数据的文件名。
+在 Gecko 7.0 之前，如果你将{{domxref("Blob")}}作为数据添加到 form 对象中，文件名就是空的，这可能导致服务器在 HTTP 头的 Content-Disposition 中设置的文件名为空而引起错误。从 Gecko 7.0 开始，将会使用"blob"作为 Blob 数据的文件名。
 
 ## 相关链接
 

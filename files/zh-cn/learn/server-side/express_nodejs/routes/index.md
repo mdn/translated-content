@@ -2,6 +2,7 @@
 title: Express 教程 4：路由和控制器
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 本节将为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 站点中所需的资源端点（Endpoint）配置路由。先用空的处理函数搭建起路由处理的模块结构（下节会将它们扩充为真实的处理函数）。并详细介绍了 Express 路由模块的创建方法。
@@ -12,10 +13,10 @@ slug: Learn/Server-side/Express_Nodejs/routes
       <th scope="row">预备知识：</th>
       <td>
         回顾
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"
           >Express/Node 入门</a
         >。完成本教程之前小节（<a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose"
+          href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose"
           >Express 教程 3：使用数据库 (Mongoose)</a
         >
         等）。了解服务器端编程，了解正则表达式。
@@ -40,7 +41,7 @@ slug: Learn/Server-side/Express_Nodejs/routes
 - 控制器：从模型中获取请求的数据，创建一个 HTML 页面显示出数据，并将页面返回给用户，以便在浏览器中查看。
 - 视图（模板）：供控制器用来渲染数据。
 
-![Express HTTP 请求/响应 路径](https://mdn.mozillademos.org/files/16453/Express_MVC.png)
+![Express HTTP 请求/响应 路径](mvc_express.png)
 
 因此我们需要页面来显示藏书、藏书种类、作者、藏书副本的列表和详细信息，还需要页面来创建、更新和删除记录。这些内容对于本节来说不算少，因此本节将主要集中在路由和控制器设置。本节编写的这些函数都只有框架，后续章节再扩展控制器方法，以使用模型数据。
 
@@ -171,7 +172,7 @@ app.get('/users/:userId/books/:bookId', (req, res) => {
 以下是站点页面的完整 URL 列表。`<object>` 是模型名称（`book`、`bookinstance`、`genre`、`author`），`<objects>` 是一组模型，`<id>` 是每个 Mongoose 模型实例默认的标识字段（`_id`）。
 
 - `catalog/`：主页。
-- `catalog/<objects>/`：模型（藏书、藏书副本、藏书种类、作者）的完整列表（例如 /`catalog/books/`、/`catalog/genres/` 等）
+- `catalog/<objects>/`：模型（藏书、藏书副本、藏书种类、作者）的完整列表（例如 `/catalog/books/`、`/catalog/genres/` 等）
 - `catalog/<object>/<id>`_：具有_ `_id` 字段值的特定模型的详细信息页面（例如 `/catalog/book/584493c1f4887f06c0e67d37`）。
 - `catalog/<object>/create`：添加新模型的表单（例如 `/catalog/book/create`）。
 - `catalog/<object>/<id>/update`：更新具有 `_id` 字段值的特定模型的表单（例如 `/catalog/book/584493c1f4887f06c0e67d37/update`）。

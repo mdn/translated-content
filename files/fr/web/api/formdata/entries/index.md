@@ -11,6 +11,7 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData/entries
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La methode **FormData.entries()** retourne un {{jsxref("Les_protocoles_iteration",'iterateur')}} permettant d'accéder aux paires clefs/valeurs contenues dans cet objet.

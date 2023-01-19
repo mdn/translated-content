@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 translation_of: MDN/Structures/Macros/Commonly-used_macros
 original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
+
 {{MDNSidebar}}
 
 Cette page énumère les différentes macros utilisées sur MDN. Pour plus d'informations sur leur utilisation, voir [Utiliser les macros](/fr/docs/MDN/Structures/Macros).
@@ -196,7 +197,7 @@ Pour la macro [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/
 Pour chaque grand ensemble de pages, on a des macros qui aident à la navigation sous la forme d'une barre à gauche. Elles permettent généralement de remonter à la page racine de la référence/du guide/du tutoriel et placent l'article dans la catégorie correspondante au sein de cette barre.
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) génère la barre latérale pour les pages de la référence CSS.
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) génère la barre latérale pour les pages de la référence HTML.
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs) génère la barre latérale pour les pages de la référence HTML.
 - [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) génère la barre latérale pour les pages des références des API web.
 
 ## Mise en forme

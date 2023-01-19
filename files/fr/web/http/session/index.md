@@ -7,6 +7,7 @@ tags:
   - Session HTTP
 translation_of: Web/HTTP/Session
 ---
+
 {{HTTPSidebar}}
 
 Dans les protocoles client-serveur, comme HTTP, les sessions se composent de trois phases :
@@ -39,7 +40,7 @@ Une fois la connexion établie, l'agent utilisateur peut envoyer la demande (un 
 
 ### Demandes d'exemple
 
-Obtenir la page racine de developer.mozilla.org, c'est-à-dire [http://developer.mozilla.org/](https://developer.mozilla.org), et dire au serveur que l'utilisateur-agent préférerait la page en français si possible :
+Obtenir la page racine de developer.mozilla.org, c'est-à-dire [http://developer.mozilla.org/](/), et dire au serveur que l'utilisateur-agent préférerait la page en français si possible :
 
 ```
 GET / HTTP/1.1

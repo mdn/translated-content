@@ -6,6 +6,7 @@ browser-compat: css.types.abs
 l10n:
   sourceCommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`abs()`** contient un calcul et renvoie la valeur absolue de l'argument, avec le même type que l'argument.
@@ -29,7 +30,7 @@ La fonction `abs()` prend une seule expression comme argument.
 
 ### Variables positives
 
-La fonction `abs()` peut être utilisée afin de s'assurer qu'une valeur est toujours positive. Dans l'exemple suivant, on a une propriété personnalisée,`--font-size`, qui est utilisée comme valeur pour [`font-size`](/fr/docs/Web/CSS/font-size). Envelopper cette propriété dans un appel à la fonction `abs()` convertira une valeur négative en une valeur positive.
+La fonction `abs()` peut être utilisée afin de s'assurer qu'une valeur est toujours positive. Dans l'exemple suivant, on a une propriété personnalisée, `--font-size`, qui est utilisée comme valeur pour [`font-size`](/fr/docs/Web/CSS/font-size). Envelopper cette propriété dans un appel à la fonction `abs()` convertira une valeur négative en une valeur positive.
 
 ```css
 h1 {

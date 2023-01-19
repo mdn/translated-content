@@ -2,6 +2,7 @@
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 ---
+
 {{JSRef}}
 
 **`Math.acos()`** 関数は、引数として与えた数値の逆余弦 (アークコサイン) をラジアン単位で返します。
@@ -48,9 +49,7 @@ Math.acos(2);   // NaN
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.acos', 'Math.acos')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

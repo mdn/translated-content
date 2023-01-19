@@ -2,6 +2,7 @@
 title: CanvasPattern
 slug: Web/API/CanvasPattern
 ---
+
 {{APIRef("Canvas API")}}
 
 **`CanvasPattern`** インターフェースは、{{domxref("CanvasRenderingContext2D.createPattern()")}} メソッドによって（画像、 canvas 要素、video 要素をもとに）生成される不透明なオブジェクトです。
@@ -19,9 +20,7 @@ _継承されたメソッドはありません。_
 
 ## 仕様
 
-| 仕様                                                                                                             | ステータス                       | コメント                                |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| {{SpecName('HTML WHATWG', "the-canvas-element.html#canvaspattern", "CanvasPattern")}} | {{Spec2('HTML WHATWG')}} | v5 で `setTransform()` メソッドを追加。 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

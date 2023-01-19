@@ -3,6 +3,9 @@ title: border-image
 slug: Web/CSS/border-image
 original_slug: Web/CSS/border-image/border-image
 ---
+
+{{CSSRef}}
+
 CSS 屬性 `border-image` 可以讓你在元素的邊框上擺上圖片。這讓呈現看似很複雜的一個網頁的小單元簡單很多，它可以省最多九個元素。
 
 > **警告：** 官方的 CSS3 規範描述的 border-image 屬性在這個功能被凍結並出現在 Gecko 1.9.1 的釋出版之後改變很多。因此，這項功能的語法跟呈現方法很可能在未來 Gecko 的釋出版改變。特別是選擇性的 `border-width` 參數，它覆蓋既有 `border-width` 取值的這項特性已經從規範移除了，因此勢必也會在未來的 Gecko 被拿掉。

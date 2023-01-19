@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:host
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host`** permet de cibler l'hôte d'un _[shadow DOM](/fr/docs/Web/Web_Components/Using_shadow_DOM)_ contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé (_custom element_) depuis l'intérieur du _shadow DOM_.
@@ -57,13 +58,11 @@ La règle `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` permet de c
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('CSS Scope', '#host-selector', ':host')}} | {{Spec2('CSS Scope')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.host")}}
+{{Compat}}
 
 ## Voir aussi
 

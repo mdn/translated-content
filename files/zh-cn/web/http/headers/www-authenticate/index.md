@@ -2,6 +2,7 @@
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`WWW-Authenticate`** 响应头定义了使用何种验证方式去获取对资源的连接。
@@ -21,7 +22,7 @@ WWW-Authenticate: <type> realm=<realm>
 ## 指令
 
 - \<type>
-  - : [Authentication type](/zh-CN/docs/Web/HTTP/Authentication#Authentication_schemes)，一个通用类型 ["Basic"](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme)。 IANA 维护了一个 [list of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)。
+  - : [Authentication type](/zh-CN/docs/Web/HTTP/Authentication#Authentication_schemes)，一个通用类型 ["Basic"](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme)。IANA 维护了一个 [list of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)。
 - realm=\<realm>
   - : 一个保护区域的描述。如果未指定 realm，客户端通常显示一个格式化的主机名来替代。
 - charset=\<charset>

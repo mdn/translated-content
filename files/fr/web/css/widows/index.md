@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/widows
 ---
+
 {{CSSRef}}
 
 La propriété **`widows`** définit le nombre minimum de lignes qui peuvent être laissées en haut de la [page](/fr/docs/Web/CSS/Medias_paginés), région ou [colonne](/fr/docs/Web/CSS/Colonnes_CSS) suivante. En utilisant la propriété `widows`, on évite d'avoir des veuves sur une seule ligne.
@@ -32,9 +33,13 @@ widows: unset;
 - `<integer>`
   - : Cet entier indique le nombre minimum de lignes qui peuvent apparaître en haut d'une nouvelle page, région ou colonne lorsqu'une rupture intervient. Si la valeur est négative, la déclaration est invalide.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemple
 
@@ -72,17 +77,11 @@ p:first-child {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires                                                                                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Fragmentation', '#widows-orphans', 'widows')}} | {{Spec2('CSS3 Fragmentation')}} | Extension de `widows` qui peut désormais être appliqué à n'importe quel type de fragment : pages, régions ou colonnes. |
-| {{SpecName('CSS3 Multicol', '#filling-columns', 'widows')}}     | {{Spec2('CSS3 Multicol')}}     | Recommandation d'utiliser `widows` avec les colonnes.                                                                  |
-| {{SpecName('CSS2.1', 'page.html#break-inside', 'widows')}}         | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.widows")}}
+{{Compat}}
 
 ## Voir aussi
 

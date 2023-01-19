@@ -2,6 +2,7 @@
 title: ゲームパッド API を使用したコントロールの実装
 slug: Games/Techniques/Controls_Gamepad_API
 ---
+
 {{GamesSidebar}}
 
 この記事では、ゲームパッド API を使用してウェブゲーム用の効果的なクロスブラウザー制御システムを実装し、ゲーム機のゲームコントローラーを使用してウェブゲームを制御できるようにします。 [Enclave Games](http://enclavegames.com/) によって作成されたケーススタディゲーム Hungry Fridge を掲載しています。
@@ -34,7 +35,7 @@ Hungry Fridge ゲームのフルバージョンが最初に構築され、次に
 
 以下に説明するコードは、Hungry Fridge ゲームのフルバージョンからのものですが、デモのものとほぼ同じです。唯一の違いは、フルバージョンでは、スーパーターボモードを使用してゲームを起動するかどうかを決定する`ターボ`変数。 これは独立して機能するので、ゲームパッドが接続されていなくてもオンにすることができます。
 
-> **Note:** イースターエッグの時間: ゲームパッドを接続せずにデスクトップで Super Turbo Hungry Fridge を起動する隠しオプションがあります。スクリーンの右上にあるゲームパッドアイコンをクリックします。 それはスーパーターボモードでゲームを起動し、あなたはキーボードで冷蔵庫を制御することができます。タレットを左右に回すたには A と D、撃つためには W、移動の多面実は矢印キーを使います。
+> **メモ:** イースターエッグの時間: ゲームパッドを接続せずにデスクトップで Super Turbo Hungry Fridge を起動する隠しオプションがあります。スクリーンの右上にあるゲームパッドアイコンをクリックします。 それはスーパーターボモードでゲームを起動し、あなたはキーボードで冷蔵庫を制御することができます。タレットを左右に回すたには A と D、撃つためには W、移動の多面実は矢印キーを使います。
 
 ## 実装
 
@@ -117,15 +118,15 @@ disconnect(evt) {
 update() {
   // Clear the buttons cache
   gamepadAPI.buttonsCache = [];
-  
+
   // Move the buttons status from the previous frame to the cache
   for (let k = 0; k < gamepadAPI.buttonsStatus.length; k++) {
     gamepadAPI.buttonsCache[k] = gamepadAPI.buttonsStatus[k];
   }
-  
+
   // Clear the buttons status
   gamepadAPI.buttonsStatus = [];
-  
+
   // Get the gamepad object
   const c = gamepadAPI.controller || {};
 
@@ -138,7 +139,7 @@ update() {
       }
     }
   }
-  
+
   // Loop through axes and push their values to the array
   const axes = [];
   if (c.axes) {
@@ -146,11 +147,11 @@ update() {
       axes.push(c.axes[a].toFixed(2));
     }
   }
-  
+
   // Assign received values
   gamepadAPI.axesStatus = axes;
   gamepadAPI.buttonsStatus = pressed;
-  
+
   // Return buttons for debugging purposes
   return pressed;
 },
@@ -165,14 +166,14 @@ update() {
 ```js
 buttonPressed(button, hold) {
   let newPress = false;
-  
+
   // Loop through pressed buttons
   for (let i = 0; i < gamepadAPI.buttonsStatus.length; i++) {
     // If we found the button we're looking for
     if (gamepadAPI.buttonsStatus[i] === button) {
       // Set the boolean variable to true
       newPress = true;
-      
+
       // If we want to check the single press
       if (!hold) {
         // Loop through the cached states from the previous frame

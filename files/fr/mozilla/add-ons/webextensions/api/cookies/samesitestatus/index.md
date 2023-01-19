@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/SameSiteStatus
 ---
+
 {{AddonSidebar()}}
 
 Le type `SameSiteStatus` de l'API {{WebExtAPIRef("cookies")}} représente des informations sur l'état `SameSite` d'un cookie.

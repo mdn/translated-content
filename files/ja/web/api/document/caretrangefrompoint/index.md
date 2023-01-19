@@ -2,6 +2,7 @@
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 **`caretRangeFromPoint()`** は {{domxref("Document")}} インターフェイスのメソッドで、指定された座標にある文書フラグメントの {{domxref("Range")}} オブジェクトを返します。

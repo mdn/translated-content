@@ -1,0 +1,48 @@
+---
+title: Асинхронный JavaScript
+slug: Learn/JavaScript/Asynchronous
+tags:
+  - Beginner
+  - CodingScripting
+  - Guide
+  - JavaScript
+  - Landing
+  - Promises
+  - async
+  - asynchronous
+  - await
+  - callbacks
+  - requestAnimationFrame
+  - setInterval
+  - setTimeout
+  - Асинхронность
+  - асинхронное программирование
+translation_of: Learn/JavaScript/Asynchronous
+---
+
+{{LearnSidebar}}
+
+В этом модуле мы рассмотрим {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}, почему это важно, и как это поможет эффективно справляться с потенциальной блокировкой операций, таких как получение ресурсов с сервера или запись в файл.
+
+## Необходимые знания
+
+Асинхронный JavaScript довольно сложная тема, и мы советуем пройти [Первые шаги в JavaScript](/ru/docs/Learn/JavaScript/First_steps) и [Блоки в JavaScript](/ru/docs/Learn/JavaScript/Building_blocks) прежде чем начать эту тему.
+
+Если вы ещё не знакомы с концепциями асинхронного программирования, вам стоит начать со статьи [Основные концепции асинхронного программирования](/ru/docs/Learn/JavaScript/Asynchronous/Concepts) в этом модуле. А если уже знакомы, то можете сразу переходить к статье [Введение в асинхронный JavaScript](/ru/docs/Learn/JavaScript/Asynchronous/Introducing).
+
+> **Примечание:** Если вы работаете за компьютером/планшетом/другим устройством где у вас нет возможности создавать собственные файлы, вы можете попробовать(почти все) примеры кода в одном из веб-приложений, таких, как [JSBin](http://jsbin.com/) или [Thimble](https://thimble.mozilla.org/).
+
+## Руководства
+
+- [Введение в асинхронный JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
+  - : В этой статье мы кратко расскажем о различиях между синхронным и асинхронным программированием, проблемах, связанных с синхронным JavaScript-ом, и взглянем на различные техники асинхронного программирования, с которыми вы столкнётесь. Покажем как эти техники помогают решать проблемы синхронного JavaScript.
+- [Обработка асинхронных операций с помощью Промисов](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+  - : Расскажем о промисах и том, как использовать API на их основе, а также объясним как работает функция с <code>async</code> и оператор <code>await</code>.
+- [Реализация API на основе Промисов](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+  - : Статья о том, как реализовать собственный API на основе промисов.
+- [Введение в воркеры](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+  - : Воркеры позволяют запускать код в отдельном потоке и не блокировать основной поток, чтобы код в нём оставался отзывчивым. В статье мы перепишем «тяжелую» синхронную функцию с использованием воркера.
+
+## Смотрите также
+
+- [Асинхронное программирование](https://eloquentjavascript.net/11_async.html) из фантастической онлайн книги Марина Хавербеке, [Выразительный JavaScript](https://karmazzin.gitbooks.io/eloquentjavascript_ru/).

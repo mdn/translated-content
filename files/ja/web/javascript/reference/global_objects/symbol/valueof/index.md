@@ -2,6 +2,7 @@
 title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、 Symbol オブジェクトのプリミティブ値を返します。
@@ -33,9 +34,7 @@ sym === sym.valueOf(); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.prototype.valueof', 'Symbol.prototype.valueOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

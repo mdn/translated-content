@@ -2,6 +2,7 @@
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定した {{jsxref("Error")}} オブジェクトを表す文字列を返します。
@@ -69,9 +70,7 @@ console.log(e.toString()); // 'hello'
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

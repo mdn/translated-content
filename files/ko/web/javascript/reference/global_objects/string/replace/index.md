@@ -1,8 +1,6 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
-browser-compat: javascript.builtins.String.replace
 ---
 {{JSRef}}
 
@@ -48,7 +46,7 @@ var newStr = str.replace(regexp|substr, newSubstr|function)
 | `$$`     | "`$`" 기호를 삽입합니다.                                                                                                                                             |
 | `$&`     | 매치된 문자열을 삽입합니다.                                                                                                                                          |
 | `` $` `` | 매치된 문자열 앞쪽까지의 문자열을 삽입합니다.                                                                                                                        |
-| `$'`     | 매치된 문자열의 문자열을 삽입합니다.                                                                                                                                 |
+| `$'`     | 매치된 문자열 이후의 문자열을 삽입합니다.                                                                                                                                 |
 | `$n`     | *`n`*이 1이상 99이하의 정수라면, 첫번째 매개변수로 넘겨진 {{jsxref("RegExp")}}객체에서 소괄호로 묶인 *`n`*번째의 부분 표현식으로 매치된 문자열을 삽입합니다. |
 
 ### 매개변수가 `function`으로 지정되었을 때

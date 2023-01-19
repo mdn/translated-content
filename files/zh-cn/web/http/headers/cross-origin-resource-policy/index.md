@@ -2,6 +2,7 @@
 title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 ---
+
 {{HTTPSidebar}}
 
 > **备注：** 由于[Chrome 浏览器中的一个 Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=952834), 设置 Cross-Origin-Resource-Policy（跨域资源策略）会使文件下载失败：当从设置了 CORP 请求头的资源服务器下载资源时，浏览器会阻止用户使用“保存”或“另存为”按钮将文件保存到本地。在决定生产环境中是否使用这一特性（CORP）之前需要慎重考虑。

@@ -3,6 +3,7 @@ title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
 translation_of: Web/API/Range/surroundContents
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Range.surroundContents()`** déplace le contenu du {{ domxref("Range") }} dans un nouveau nœud, plaçant le nouveau nœud au début du `range` spécifié.

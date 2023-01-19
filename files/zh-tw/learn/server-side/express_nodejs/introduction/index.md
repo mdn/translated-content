@@ -2,6 +2,7 @@
 title: Express/Node introduction
 slug: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{LearnSidebar}}
 
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
@@ -224,7 +225,7 @@ The callback function takes a request and a response object as arguments. In thi
 
 > **備註：** You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.
 
-The _Express application_ object also provides methods to define route handlers for all the other HTTP verbs, which are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
+The _Express application_ object also provides methods to define route handlers for all the other HTTP verbs, which are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
 
 There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/api/http.html#http_http_methods)).
 
@@ -281,7 +282,7 @@ Most apps will use _third-party_ middleware in order to simplify common web deve
 To use third party middleware you first need to install it into your app using NPM. For example, to install the [morgan](http://expressjs.com/en/resources/middleware/morgan.html) HTTP request logger middleware, you'd do this:
 
 ```bash
-$ npm install morgan
+npm install morgan
 ```
 
 You could then call `use()` on the _Express application object_ to add the middleware to the stack:
@@ -396,7 +397,7 @@ _Express_ apps can use any database mechanism supported by _Node_ (_Express_ its
 In order to use these you have to first install the database driver using NPM. For example, to install the driver for the popular NoSQL MongoDB you would use the command:
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.

@@ -2,6 +2,7 @@
 title: PromiseRejectionEvent.PromiseRejectionEvent()
 slug: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`PromiseRejectionEvent()`** 构造器返回一个新创建的 {{domxref("PromiseRejectionEvent")}}，代表一个 JavaScript {{jsxref("Promise")}}被 rejected 时触发的事件。
@@ -20,7 +21,7 @@ new PromiseRejectionEvent(type, {
 _`PromiseRejectionEvent()` 构造函数继承了 {{domxref("Event.Event", "Event()")}}的参数。_
 
 - `type`
-  - : 一个代表 PromiseRejectionEvent 的类型名称的字符串。这是区分大小写的同时必须是{{event("rejectionhandled", '"rejectionhandled"')}} 或者 {{event("unhandledrejection", '"unhandledrejection"')}} 其中之一。
+  - : 一个代表 PromiseRejectionEvent 的类型名称的字符串。这是区分大小写的同时必须是 `rejectionhandled` 或者 `unhandledrejection` 其中之一。
 - `promise`
   - : 代表被 rejected 的{{jsxref("Promise")}}。
 - `reason`
@@ -41,7 +42,7 @@ var myRejectionEvent = new PromiseRejectionEvent('unhandledrejection', {
 
 ## 浏览器兼容性
 
-{{Compat("api.PromiseRejectionEvent.PromiseRejectionEvent")}}
+{{Compat}}
 
 ## 另请参阅
 

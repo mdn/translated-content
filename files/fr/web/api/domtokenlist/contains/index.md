@@ -3,6 +3,7 @@ title: DOMTokenList.contains()
 slug: Web/API/DOMTokenList/contains
 translation_of: Web/API/DOMTokenList/contains
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`contains()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {{domxref("Boolean")}} (_booléen_) — `true` (_vrai_) si la liste sous-jacente contient le symbole donné, sinon `false` (_faux_).

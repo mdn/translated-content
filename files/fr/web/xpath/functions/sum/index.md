@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/sum
 original_slug: Web/XPath/Fonctions/sum
 ---
+
 {{ XsltRef() }}
 
 La fonction `sum` retourne un nombre qui est la somme des valeurs numériques de chaque nœud d'un ensemble de nœuds donné.
@@ -19,7 +20,7 @@ sum( ensemble-de-nœuds )
 ### Arguments
 
 - `ensemble-de-nœuds`
-  - : L'ensemble de nœuds à évaluer. Chaque nœud de l'ensemble est évalué comme s'il était passé à la fonction [`number()`](fr/XPath/Fonctions/number), et la somme des nombres résultants est retournée.
+  - : L'ensemble de nœuds à évaluer. Chaque nœud de l'ensemble est évalué comme s'il était passé à la fonction [`number()`](/fr/XPath/Fonctions/number), et la somme des nombres résultants est retournée.
 
 ### Retour
 

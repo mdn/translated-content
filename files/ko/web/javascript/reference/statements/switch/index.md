@@ -1,8 +1,8 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-translation_of: Web/JavaScript/Reference/Statements/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`switch` statement** evaluates an [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators), matching the expression's value to a `case` clause, and executes [statements](/en-US/docs/Web/JavaScript/Reference/Statements) associated with that case, as well as statements in cases that follow the matching case.

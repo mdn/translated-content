@@ -2,6 +2,7 @@
 title: Node.hasAttributes
 slug: Web/API/Element/hasAttributes
 ---
+
 {{ApiRef}}
 
 ## 概述

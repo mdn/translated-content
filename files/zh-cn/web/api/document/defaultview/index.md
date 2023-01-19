@@ -2,6 +2,7 @@
 title: Document.defaultView
 slug: Web/API/Document/defaultView
 ---
+
 {{ ApiRef() }}
 
 ### 概述

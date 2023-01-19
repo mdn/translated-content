@@ -1,17 +1,9 @@
 ---
 title: '<code>: 行内コード要素'
 slug: Web/HTML/Element/code
-tags:
-  - Code
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Code
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/code
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<code>` 要素**は、コンピューターコードの短い断片の文字列であると識別できるような外見のコンテンツを表示します。既定では、中の文字列が{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントを使用して表示されます。
 
@@ -100,11 +92,7 @@ CSS の規則によって、 `code` セレクターを定義して、ブラウ�
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-code-element', '&lt;code&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-code-element', '&lt;code&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;code&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

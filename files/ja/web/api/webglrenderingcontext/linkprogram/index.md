@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.linkProgram()`** メソッドは、与えられた {{domxref("WebGLProgram")}} に接続された頂点とフラグメントのシェーダーをリンクします。
@@ -40,10 +41,7 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
 
 ## 仕様策定状況
 
-| 仕様                                                                                     | 策定状況                             | コメント                        |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "linkProgram")}}                         | {{Spec2('WebGL')}}             | 初回定義。                      |
-| {{SpecName('OpenGL ES 2.0', "glLinkProgram.xml", "glLinkProgram")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

@@ -2,6 +2,7 @@
 title: web_accessible_resources
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -99,4 +100,4 @@ Make the file at "images/my-image.png" web accessible.
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.web_accessible_resources")}}
+{{Compat}}

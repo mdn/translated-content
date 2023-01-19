@@ -2,6 +2,7 @@
 title: dblclick
 slug: Web/API/Element/dblclick_event
 ---
+
 在单个元素上单击两次鼠标的指针设备按钮 (通常是小鼠的主按钮) 时，将触发 `dblclick` 事件。
 
 ## 常规信息
@@ -49,17 +50,17 @@ slug: Web/API/Element/dblclick_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.dblclick_event")}}
+{{Compat}}
 
 ## 相关链接
 
-- {{event("mousedown")}}
-- {{event("mouseup")}}
-- {{event("mousemove")}}
-- {{event("click")}}
-- {{event("dblclick")}}
-- {{event("mouseover")}}
-- {{event("mouseout")}}
-- {{event("mouseenter")}}
-- {{event("mouseleave")}}
-- {{event("contextmenu")}}
+- [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event)
+- [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event)
+- [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)
+- [`click`](/zh-CN/docs/Web/API/Element/click_event)
+- [`dblclick`](/zh-CN/docs/Web/API/Element/dblclick_event)
+- [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)
+- [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event)
+- [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event)
+- [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event)
+- [`contextmenu`](/zh-CN/docs/Web/API/Element/contextmenu_event)

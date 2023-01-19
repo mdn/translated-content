@@ -2,6 +2,7 @@
 title: 使用触摸事件
 slug: Web/API/Touch_events/Using_Touch_Events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 今天，大多数 Web 内容是为键盘和鼠标输入而设计的。然而，具有触摸屏（特别是便携式设备）的设备是主流的，Web 应用程序可以使用 {{domxref("Touch_events","Touch Events")}} 直接处理基于触摸的输入，或者应用程序可以使用可解释的鼠标事件以处理应用程序的输入。使用鼠标事件的缺点是它们不支持并发用户输入，而触摸事件支持多个同时输入（可能在触摸面上的不同位置），从而增强用户体验。
@@ -12,10 +13,10 @@ slug: Web/API/Touch_events/Using_Touch_Events
 
 触摸事件有三个接口 ({{domxref("Touch")}}, {{domxref("TouchEvent")}} 和 {{domxref("TouchList")}}) 和以下事件类型：
 
-- {{event("touchstart")}} - 当触摸点放置在触摸面上时触发。
-- {{event("touchmove")}} - 当触摸点沿触摸表面移动时触发。
-- {{event("touchend")}} - 当触摸点从触摸表面移除时触发。
-- {{event("touchcancel")}} - 当触摸点以实现特定的方式中断（例如，创建的触摸点太多）时触发。
+- [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) - 当触摸点放置在触摸面上时触发。
+- [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) - 当触摸点沿触摸表面移动时触发。
+- [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event) - 当触摸点从触摸表面移除时触发。
+- [`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event) - 当触摸点以实现特定的方式中断（例如，创建的触摸点太多）时触发。
 
 {{domxref("Touch")}} 接口表示触敏设备上的单个接触点。接触点通常被称为触摸点或仅仅是触摸点。触摸通常由触摸屏，笔或触控板上的手指或触控笔产生。触摸点的属性包括唯一标识符，触摸点的目标元素以及触摸点相对于视口，页面和屏幕的位置的 X 和 Y 坐标。
 
@@ -27,9 +28,9 @@ slug: Web/API/Touch_events/Using_Touch_Events
 - {{domxref("TouchEvent.targetTouches","targetTouches")}} - 目标 DOM 元素上的触摸点列表。
 - {{domxref("TouchEvent.changedTouches","changedTouches")}} - 依赖于关联的触摸事件类型的触摸点列表：
 
-  - 对于 {{event("touchstart")}} 事件，它是当前事件变为活动的触摸点的列表。
-  - 对于 {{event("touchmove")}} 事件，它是自上次事件以来更改的触摸点列表。
-  - 对于 {{event("touchend")}} 事件，它是从表面移除的触摸点的列表（即，与手指不再接触表面的触摸点集合）。
+  - 对于 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 事件，它是当前事件变为活动的触摸点的列表。
+  - 对于 [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 事件，它是自上次事件以来更改的触摸点列表。
+  - 对于 [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event) 事件，它是从表面移除的触摸点的列表（即，与手指不再接触表面的触摸点集合）。
 
 这些接口一起定义了相对较低级别的功能，但它们支持多种基于触摸的交互，包括熟悉的多点触控手势，如多指手指滑动，旋转，捏和缩放。
 
@@ -37,7 +38,7 @@ slug: Web/API/Touch_events/Using_Touch_Events
 
 在定义手势的语义时，应用程序可能会考虑不同的因素。例如，当触摸结束时，触摸点从其起始位置行进到其位置的距离。另一个潜在因素是时间;例如，触摸开始和触摸结束之间经过的时间，或者用于创建双击手势的两个同时敲击之间的时间间隔。滑动的方向性（例如从左到右，从左到右等）是另一个要考虑的因素。
 
-应用程序使用的触摸列表取决于应用程序手势的语义。例如，如果应用程序在一个元素上支持单一触摸（点击），则它将使用 {{event("touchstart")}} 中的 {{domxref("TouchEvent.targetTouches","targetTouches")}} 列表事件处理程序以特定应用程序处理触摸点。如果应用程序支持任意两个触摸点的双指滑动，它将使用 {{event("touchmove")}} 事件处理程序中的 {{domxref("TouchEvent.changedTouches","changedTouches")}} 列表确定两个触摸点是否已移动，然后以应用程序特定的方式实现该手势的语义。
+应用程序使用的触摸列表取决于应用程序手势的语义。例如，如果应用程序在一个元素上支持单一触摸（点击），则它将使用 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 中的 {{domxref("TouchEvent.targetTouches","targetTouches")}} 列表事件处理程序以特定应用程序处理触摸点。如果应用程序支持任意两个触摸点的双指滑动，它将使用 [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 事件处理程序中的 {{domxref("TouchEvent.changedTouches","changedTouches")}} 列表确定两个触摸点是否已移动，然后以应用程序特定的方式实现该手势的语义。
 
 当只有一个活动的触摸点时，浏览器通常会分派仿真的鼠标和点击事件。涉及两个或多个活动触摸点的多点触控交互通常只会产生触摸事件。为了防止模拟的鼠标事件被发送，请在触摸事件处理程序中使用 {{domxref("Event.preventDefault()","preventDefault()")}} 方法。有关鼠标和触摸事件之间的交互的详细信息，请参阅 {{domxref("Touch_events.Supporting_both_TouchEvent_and_MouseEvent", "Supporting both TouchEvent and MouseEvent")}}。
 
@@ -99,7 +100,7 @@ function process_touchmove(ev) {
 
 - 最大限度地减少在触摸处理程序中完成的工作量。
 - 将触摸事件处理程序添加到特定目标元素（而不是整个文档或文档树中较高的节点）。
-- 在 {{event("touchstart")}} 中添加 {{event("touchend")}}， {{event("touchcancel")}} 和 {{event("touchmove")}} 事件处理程序。
+- 在 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 中添加 [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event)， [`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event) 和 [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 事件处理程序。
 - 目标元素应足够大以适应手指触摸。如果目标区域太小，触摸它可能会导致相邻元素发射其他事件。
 
 ## Implementation and deployment status

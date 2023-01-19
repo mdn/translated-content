@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Operators/import
 l10n:
   sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
 ---
+
 {{jsSidebar("Operators")}}
 
 L'appel `import()`, généralement appelé _import dynamique_, est une expression semblable à une fonction qui permet de charger un module ECMAScript de façon asynchrone et dynamique dans un environnement qui peut ne pas être un module.

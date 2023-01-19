@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/Pointer_Lock_API
 original_slug: WebAPI/Pointer_Lock
 ---
+
 {{DefaultAPISidebar("Pointer Lock API")}}
 
 **Pointer lock** (en français _Verrouillage du pointeur_, précedement appelé mouse lock) permet d'obtenir des informations sur le déplacement de la souris à travers le temps, et ne se cantonne pas à fournir la position absolue du curseur sur l'écran. Cette interface donne accès aux données brutes de la souris, permet de verrouiller la cible des évènements à un élément unique, limiter jusqu'où le mouvement de la souris peut aller dans une direction donnée et cacher le curseur de la vue.
@@ -46,9 +47,9 @@ canvas.requestPointerLock()
 
 ### pointerLockElement et exitPointerLock()
 
-L'API Pointer Lock étend également l'interface {{domxref("Document")}}, ajoutant à la fois une nouvelle propriété et une nouvelle méthode. La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utilisée pour accéder à l'élément actuellement verrouillé (s'il y en a). La méthode {{domxref("Document.exitPointerLock","exitPointerLock()")}}  est utilisée pour libérer le verrou du pointeur.
+L'API Pointer Lock étend également l'interface {{domxref("Document")}}, ajoutant à la fois une nouvelle propriété et une nouvelle méthode. La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}} est utilisée pour accéder à l'élément actuellement verrouillé (s'il y en a). La méthode {{domxref("Document.exitPointerLock","exitPointerLock()")}} est utilisée pour libérer le verrou du pointeur.
 
-La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utile pour déterminer si un élément est actuellement verrouillé (pour une vérification booléenne par exemple) et également pour obtenir une référence vers l'élément s'il existe.
+La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}} est utile pour déterminer si un élément est actuellement verrouillé (pour une vérification booléenne par exemple) et également pour obtenir une référence vers l'élément s'il existe.
 
 Voici un exemple d'utilisation de `pointerLockElement`:
 

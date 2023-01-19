@@ -2,6 +2,7 @@
 title: 'Express 教學 4: 路由與控制器'
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 在本教程中，我們將為最終在 本地圖書館 網站中需要的所有資源端點，搭配 "空殼" 處理函式來配置路由 (URL handling code) 。完成後，我們的路由處理源碼將會有模組化結構，在接下來的文章中，我們可以用真實的處理函式加以擴充。我們也會對如何使用 Express 創建模組化路由，有更好的理解。
@@ -112,7 +113,7 @@ router.get('/about', function (req, res) {
 
 ### HTTP 動詞
 
-上面的示例路由使用`Router.get()`方法，響應具有特定路徑的 HTTP GET 請求。路由器`Router`還為所有其他 HTTP 動詞提供路由方法，這些方法多數以完全相同的方式使用：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`​​​​​​, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`,和`connect()`。
+上面的示例路由使用`Router.get()`方法，響應具有特定路徑的 HTTP GET 請求。路由器`Router`還為所有其他 HTTP 動詞提供路由方法，這些方法多數以完全相同的方式使用：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`​​​​​​, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`,和`connect()`。
 
 例如，下面的代碼就像上一個`/about`路由一樣，但只響應 HTTP POST 請求。
 
@@ -145,7 +146,7 @@ app.get(/.*fish$/, function (req, res) {
 
 ### 路由參數
 
-路徑參數是命名的 URL 段，用於捕獲在 URL 中的位置指定的值。命名段以冒號為前綴，然後是名稱（例如。捕獲的值，使用參數名稱作為鍵，存在對像中（例如）。` /:your_parameter_name/``req.params``req.params.your_parameter_name `
+路徑參數是命名的 URL 段，用於捕獲在 URL 中的位置指定的值。命名段以冒號為前綴，然後是名稱（例如。捕獲的值，使用參數名稱作為鍵，存在對像中（例如）。`/:your_parameter_name/` `req.params` `req.params.your_parameter_name`
 
 例如，考慮一個編碼的 URL，其中包含有關用戶和書本的信息：`http://localhost:3000/users/34/books/8989`。我們可以使用`userId`和`bookId`路徑參數，提取如下所示的信息：
 

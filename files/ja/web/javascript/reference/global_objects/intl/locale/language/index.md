@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.language
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.language`** プロパティは、ロケールに関連付けられた言語を返すアクセサープロパティです。

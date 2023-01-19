@@ -1,14 +1,8 @@
 ---
 title: 의사 클래스
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - Overview
-  - Pseudo-class
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Pseudo-classes
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **의사 클래스**(가상 클래스)는 선택자에 추가하는 키워드로, 선택한 요소가 특별한 상태여야 만족할 수 있습니다. 예를 들어 {{cssxref(":hover")}}를 사용하면 포인터를 올렸을 때에만 글씨 색을 바꾸고 싶을 때 사용할 수 있습니다.

@@ -1,16 +1,8 @@
 ---
 title: 'CSP: prefetch-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
-tags:
-  - CSP
-  - Content Security Policy
-  - Directive
-  - HTTP
-  - Reference
-  - prefetch-src
-browser-compat: http.headers.Content-Security-Policy.prefetch-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`prefetch-src`** ディレクティブは、事前読み込みまたは事前描画することができる有効なリソースを指定します。

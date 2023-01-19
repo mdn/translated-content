@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/:-webkit-autofill
 original_slug: Web/CSS/:-webkit-autofill
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La pseudo-classe **`:-webkit-autofill`** correspond à un élément {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur.
@@ -21,7 +22,7 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à WebKit/Blink et
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-autofill")}}
+{{Compat}}
 
 ## Voir aussi
 

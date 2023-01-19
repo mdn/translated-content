@@ -1,10 +1,8 @@
 ---
 title: Algorithm
 slug: Glossary/Algorithm
-tags:
-  - 알고리즘
-translation_of: Glossary/Algorithm
 ---
+
 알고리즘(Algorithm)은 기능을 수행하기 위한 독립된 명령어들의 집합이다.
 
 즉, 알고리즘은 인간이나 기계에 의해 반복적으로 해결할 수 있도록 문제를 해결하는 방법을 기술하는 수단이다. 컴퓨터 과학자들은 "알고리즘의 복잡성"이나 "빅 O" 표기법이라는 개념을 통해 알고리즘의 효율성을 비교한다.

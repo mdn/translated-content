@@ -1,7 +1,6 @@
 ---
 title: 웹 비디오 코덱 가이드
 slug: Web/Media/Formats/Video_codecs
-translation_of: Web/Media/Formats/Video_codecs
 original_slug: Web/Media/Formats/비디오코덱
 ---
 압축되지 않은 비디오 데이터는 그 크기가 엄청나기 때문에, 저장하거나 네트워크를 통해 전송하기 위해서는 아주 작게 압축해야 합니다. 압축되지 않은 비디오를 저장하는 과정을 상상해 봅시다:
@@ -97,10 +96,10 @@ original_slug: Web/Media/Formats/비디오코덱
         </p>
       </td>
       <td>
-        <a href="https://mdn.mozillademos.org/files/16680/moire-pattern.jpg"
+        <a href="moire-pattern.jpg"
           ><img
             alt=""
-            src="https://mdn.mozillademos.org/files/16680/moire-pattern.jpg"
+            src="moire-pattern.jpg"
             style="height: 250px; width: 205px"
         /></a>
       </td>
@@ -115,10 +114,10 @@ original_slug: Web/Media/Formats/비디오코덱
         </p>
       </td>
       <td>
-        <a href="https://mdn.mozillademos.org/files/16681/staircase-effect.jpg"
+        <a href="staircase-effect.jpg"
           ><img
             alt=""
-            src="https://mdn.mozillademos.org/files/16681/staircase-effect.jpg"
+            src="staircase-effect.jpg"
             style="height: 250px; width: 206px"
         /></a>
       </td>
@@ -143,10 +142,10 @@ original_slug: Web/Media/Formats/비디오코덱
       </td>
       <td>
         <a
-          href="https://mdn.mozillademos.org/files/16682/stroboscopic-effect.gif"
+          href="stroboscopic-effect.gif"
           ><img
             alt=""
-            src="https://mdn.mozillademos.org/files/16682/stroboscopic-effect.gif"
+            src="stroboscopic-effect.gif"
         /></a>
       </td>
     </tr>
@@ -167,7 +166,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 손실 압축 알고리즘은 링잉 효과 **[ringing artifacts](https://en.wikipedia.org/wiki/Ringing_artifacts)**를 일으킬 수 있습니다. 링잉 효과는 압축 알고리즘에 의해 오브젝트의 경계면에 픽셀이 오염되는 현상을 의미합니다. 압축 알고리즘이 오브젝트와 배경의 경계면이 포함된 블럭을 사용했을 때 발생할 수 있습니다. 보통 압축율이 높을 때 주로 발생합니다.
 
-[![Example of the ringing effect](https://mdn.mozillademos.org/files/16684/Ringing-effects.png)](https://mdn.mozillademos.org/files/16684/Ringing-effects.png)
+[![Example of the ringing effect](ringing-effects.png)](ringing-effects.png)
 
 위 별 모양의 경계 부분에 파랑 및 분홍 부분을 보세요 (계단 현상 등 다른 압축 아티팩트도 나타남). 저 부분이 링잉 효과입니다. 링잉은 어떤 면에서는 [mosquito noise](#mosquito_noise)와 비슷합니다, 다만 모기 효과는 일렁거리거나 움직이는데 반해 링잉 효과는 정지한 채로 변하지 않습니다.
 
@@ -177,7 +176,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 **포스터리제이션**은 압축된 결과물이 그라디언트 부분에서 색상 디테일을 잃는 현상을 의미합니다. 그라디언트 영역이 부드럽게 색상이 변하지 않고 원본과 비슷한 색상의 블록 형태로 얼룩이 묻은 듯한 이미지로 표현 됩니다.
 
-[![](https://mdn.mozillademos.org/files/16686/posterize-effect.jpg)](https://mdn.mozillademos.org/files/16686/posterize-effect.jpg)
+[![](posterize-effect.jpg)](posterize-effect.jpg)
 
 위 이미지상 흰머리 수리의 깃털 부분의 색상이 블록처럼 보이는 것을 보세요(배경의 흰색 올빼미도요). 포스터리제이션 효과로 인해 깃털의 디테일을 상당 부분 잃었습니다.
 
@@ -185,7 +184,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 **컨투어링** 또는 **컬러 밴딩**은 포스터리제이션의 특별한 형태로 이미지에서 색상 블록이 줄무늬 형태로 나타나는 현상을 의미합니다. 이는 비디오 인코딩 시 양자화 설정이 제대로 이뤄지지 않은 경우 발생할 수 있습니다. 결과적으로 부드럽게 변해야 할 그라디언트 부분에 "층"이 생긴 것처럼 줄무늬가 보입니다.
 
-[![Example of an image whose compression has introduced contouring](https://mdn.mozillademos.org/files/16685/contouring-effect.jpg)](https://mdn.mozillademos.org/files/16685/contouring-effect.jpg)
+[![Example of an image whose compression has introduced contouring](contouring-effect.jpg)](contouring-effect.jpg)
 
 위 이미지를 보시면 하늘에서 지평선으로 부드럽게 변해야 하는데 파란색이 층층이 져 있는 것을 볼 수 있습니다. 이 것이 컨투어링 효과입니다.
 
@@ -193,7 +192,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 **모스키토 노이즈**는 시간적 아티팩트 중 하나로 배경과 물체의 경계면의 차이가 큰 부분에서 노이즈나 **edge busyness**가 흐릿하게 일렁거리는 현상을 의미합니다. 시각적으로는 [ringing](#ringing) 효과와 유사합니다.
 
-![](https://mdn.mozillademos.org/files/16687/mosquito-effect-sm.png)
+![](mosquito-effect-sm.png)
 
 위 이미지상 다리 여러군데의 주변 하늘에서 모스키토 노이즈를 볼 수 있습니다. 우측 상단에 모스키토 노이즈가 발생한 부분을 확대해 놓았습니다.
 
@@ -218,21 +217,21 @@ original_slug: Web/Media/Formats/비디오코덱
       <td>
         <img
           alt="Original frame of video"
-          src="https://mdn.mozillademos.org/files/16688/motion-comp-orig.jpg"
+          src="motion-comp-orig.jpg"
           style="height: 102px; width: 182px"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/16689/motion-comp-diff.jpg"
+          src="motion-comp-diff.jpg"
           style="height: 102px; width: 182px"
         />
       </td>
       <td>
         <img
           alt="Differences between the frames after shifting two pixels right"
-          src="https://mdn.mozillademos.org/files/16690/motion-comp-compensated.jpg"
+          src="motion-comp-compensated.jpg"
           style="height: 102px; width: 182px"
         />
       </td>
@@ -1715,13 +1714,13 @@ Safari 지원이 빠져있지만 WebM 컨테이너를 쓸 수 있고 Safari 사�
 
 우선 블로그나 정보형 사이트, 소규모 기업 웹사이트 등 상품을 설명하기 위한 비디오(비디오 자체가 상품은 아닌)를 위한 옵션을 알아봅시다.
 
-1.  **[WebM](/ko/docs/Web/Media/Formats/Containers#WebM)** 컨테이너에 비디오는 **[VP8](#vp8), 오디오는** **[Opus](/ko/docs/Web/Media/Formats/Audio_codecs#Opus)** 코덱을 사용합니다. 이들은 로열티-프리 오픈 포맷이지만 최근 브라우저에서만 폭넓게 지원하는 경향이 있어 폴백 지원이 필수적입니다.
+1. **[WebM](/ko/docs/Web/Media/Formats/Containers#WebM)** 컨테이너에 비디오는 **[VP8](#vp8), 오디오는** **[Opus](/ko/docs/Web/Media/Formats/Audio_codecs#Opus)** 코덱을 사용합니다. 이들은 로열티-프리 오픈 포맷이지만 최근 브라우저에서만 폭넓게 지원하는 경향이 있어 폴백 지원이 필수적입니다.
 
     ```js
     <video controls src="filename.webm"></video>
     ```
 
-2.  **[MP4](/ko/docs/Web/Media/Formats/Containers#MP4)** 컨테이너에 비디오 코덱은 **[AVC](#avc)** (**H.264**) 오디오 코덱은 **[AAC](/ko/docs/Web/Media/Formats/Audio_codecs#AAC)** 를 사용합니다. MP4 컨테이너에 AVC, AAC 조합은 모든 주요 브라우저에서 폭넓게 지원하는 조합이며 대부분의 유즈케이스에서 좋은 품질을 보여주기 때문입니다. 하지만 라이선스 요구사항에 대해 컴플라이언스 이슈는 없는 지 확인이 필요하죠.
+2. **[MP4](/ko/docs/Web/Media/Formats/Containers#MP4)** 컨테이너에 비디오 코덱은 **[AVC](#avc)** (**H.264**) 오디오 코덱은 **[AAC](/ko/docs/Web/Media/Formats/Audio_codecs#AAC)** 를 사용합니다. MP4 컨테이너에 AVC, AAC 조합은 모든 주요 브라우저에서 폭넓게 지원하는 조합이며 대부분의 유즈케이스에서 좋은 품질을 보여주기 때문입니다. 하지만 라이선스 요구사항에 대해 컴플라이언스 이슈는 없는 지 확인이 필요하죠.
 
     ```html
     <video controls>
@@ -1738,13 +1737,13 @@ Safari 지원이 빠져있지만 WebM 컨테이너를 쓸 수 있고 Safari 사�
 
 여러분의 목표가 최대한 높은 품질의 비디오를 재생하는 것이라면 가능한한 다양한 포맷으로 제공할 수 있는 방법을 모색해야합니다. 최신의 코덱일수록 고품질 비디오를 지원하지만 반대로 브라우저 호환성은 떨어집니다.
 
-1.  WebM 컨테이너에 비디오 코덱은 AV1, 오디오 코덱은 Opus. AV1 인코딩 시 6.3 High level 같은 높은 전문 프로파일을 사용할 수 있다면 훌륭한 품질의 비디오를 4K/8K 해상도로 제공할 수 있습니다. 오디오 인코딩 시 Opus Fullband 프로파일로 48 kHz 샘플링 레이트를 사용한다면 사람이 들을 수 있는 거의 모든 주파수를 캡쳐할 수 있죠.
+1. WebM 컨테이너에 비디오 코덱은 AV1, 오디오 코덱은 Opus. AV1 인코딩 시 6.3 High level 같은 높은 전문 프로파일을 사용할 수 있다면 훌륭한 품질의 비디오를 4K/8K 해상도로 제공할 수 있습니다. 오디오 인코딩 시 Opus Fullband 프로파일로 48 kHz 샘플링 레이트를 사용한다면 사람이 들을 수 있는 거의 모든 주파수를 캡쳐할 수 있죠.
 
     ```js
     <video controls src="filename.webm"></video>
     ```
 
-2.  MP4 컨테이너에 비디오 코덱으로 [HEVC](#hevc) 를 쓰되 프로파일은 Main 4:2:2 10/12 bit 색 깊이, 최대 Main 4:4:4 16 bit 색 깊이 수준의 고급 Main 프로파일을 사용합니다. 비트레이트를 높이면 놀라운 색 재현과 훌륭한 그래픽 퀄리티를 보여줄 것입니다. 또한 하이 다이나믹 레인지 비디오를 위한 HDR 메타데이터도 추가할 수 있습니다. 오디오는 ACC 인코딩 시 높은 샘플링 레이트(최소 48 kHz, 96 kHz 권장)에 fast-encoding이 아닌 complex-encoding을 사용합니다.
+2. MP4 컨테이너에 비디오 코덱으로 [HEVC](#hevc) 를 쓰되 프로파일은 Main 4:2:2 10/12 bit 색 깊이, 최대 Main 4:4:4 16 bit 색 깊이 수준의 고급 Main 프로파일을 사용합니다. 비트레이트를 높이면 놀라운 색 재현과 훌륭한 그래픽 퀄리티를 보여줄 것입니다. 또한 하이 다이나믹 레인지 비디오를 위한 HDR 메타데이터도 추가할 수 있습니다. 오디오는 ACC 인코딩 시 높은 샘플링 레이트(최소 48 kHz, 96 kHz 권장)에 fast-encoding이 아닌 complex-encoding을 사용합니다.
 
     ```html
     <video controls>

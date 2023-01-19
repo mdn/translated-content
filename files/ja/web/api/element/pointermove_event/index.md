@@ -1,54 +1,85 @@
 ---
-title: GlobalEventHandlers.onpointermove
+title: 'Element: pointermove イベント'
 slug: Web/API/Element/pointermove_event
-original_slug: Web/API/GlobalEventHandlers/onpointermove
+original_slug: Web/API/Document/pointermove_event
+l10n:
+  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
 ---
-{{ApiRef("HTML DOM")}}
 
-**`onpointermove`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{event("pointermove")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。
+{{APIRef}}
+
+`pointermove` はポインターの座標が変化し、かつブラウザーの[タッチ操作](/ja/docs/Web/CSS/touch-action)によってポインターが[キャンセル](/ja/docs/Web/API/Element/pointercancel_event)されていないときに発生します。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('pointermove', (event) => {});
+
+onpointermove = (event) => { };
 ```
-targetElement.onpointermove = moveHandler;
 
-var moveHandler = targetElement.onpointermove;
-```
+## イベント型
 
-### 値
+{{domxref("PointerEvent")}} です。 {{domxref("Event")}} を継承しています。
 
-- `moveHandler`
-  - : 要素 `targetElement` の `pointermove` イベントハンドラー。
+{{InheritanceDiagram("PointerEvent")}}
+
+## イベントプロパティ
+
+_このインターフェイスは {{domxref("MouseEvent")}} および {{domxref("Event")}} からプロパティを継承しています。_
+
+- {{ domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
+  - : イベントを発生させたポインターの固有の識別子です。
+- {{ domxref('PointerEvent.width')}} {{ReadOnlyInline}}
+  - : ポインターが接触するジオメトリーの幅（X 軸の大きさ、CSS ピクセル単位）。
+- {{ domxref('PointerEvent.height')}} {{ReadOnlyInline}}
+  - : ポインターが接触するジオメトリーの高さ（Y 軸の大きさ、CSS ピクセル単位）。
+- {{ domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
+  - : ポインター入力の正規化された圧力で、範囲は `0` から `1` です。ここで `0` と `1` は、それぞれハードウェアが検出可能な最小圧力と最大圧力を表します。
+- {{ domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
+  - : ポインタ入力の正規化された接線圧力（バレル圧力またはシリンダー応力（[cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)）とも呼ばれます）で、 `-1` から `1` の範囲であり、 `0` はコントロールの中立位置です。
+- {{ domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
+  - : Y-Z 平面と、ポインター（ペンスタイラスなど）の軸と Y 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
+- {{ domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
+  - : X-Z 平面と、ポインター（ペンスタイラスなど）の軸と X 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
+- {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
+  - : ポインター（ペンスタイラスなど）の長軸を中心とした時計回りの回転の度数（`0` から `359` の範囲の値）。
+- {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
+  - : イベントの原因となった機器の種類（マウス、ペン、タッチなど）を示します。
+- {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
+  - : このポインターがこのポインター種別の主ポインターを表すかどうかを示します。
+
+## 使用上のメモ
+
+このイベントは {{domxref("PointerEvent")}} 型で、位置、移動距離、ボタンの状態など、ユーザーとポインティングデバイスとの対話について知る必要のあるすべての情報を提供します。
 
 ## 例
 
-この例では、`onpointermove` を使用して要素の `pointermove` イベントハンドラを設定する 2 つの方法を示します。
+`addEventListener()` を使用した例です。
 
 ```js
-<html>
-<script>
-function moveHandler(ev) {
-  // pointermove イベントの処理
-}
-function init() {
-  let el=document.getElementById('target1');
-  el.onpointermove = moveHandler;
-}
-</script>
+const para = document.querySelector('p');
 
-<body onload="init();">
-  <div id="target1"> Touch me ... </div>
-  <div id="target2" onpointermove="moveHandler(event)"> Touch me ... </div>
-</body>
-</html>
+para.addEventListener('pointermove', (event) => {
+  console.log('Pointer moved');
+});
+```
+
+`onpointermove` イベントハンドラープロパティを使用した例です。
+
+```js
+const para = document.querySelector('p');
+
+para.onpointermove = (event) => {
+  console.log('Pointer moved');
+};
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                                     | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointermove', 'onpointermove')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointermove', 'onpointermove')}} | {{Spec2('Pointer Events')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -56,5 +87,16 @@ function init() {
 
 ## 関連情報
 
-- [`Document: pointermove`](/ja/docs/Web/API/Document/pointermove_event) イベント
-- [`HTMLElement: pointermove`](/ja/docs/Web/API/HTMLElement/pointermove_event) イベント
+- 関連イベント
+
+  - [`gotpointercapture`](/ja/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/ja/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/ja/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/ja/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/ja/docs/Web/API/Element/pointerdown_event)
+  - [`pointerup`](/ja/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/ja/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/ja/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/ja/docs/Web/API/Element/pointerleave_event)
+
+Internet Explorer は、以前は `MSPointerHover` というイベントにも対応していました。これは、接点（通常はペン）が表面に触れることなく要素の上を移動したときに発行されるイベントです。この専用メソッドは Internet Explorer 固有のもので、Internet Explorer 11 で非推奨となりました。IE11 からは `pointermove` イベントがすべてのペンの動きに対して（ホバリングしているかどうかに関係なく）発行されるようになりました。

@@ -2,6 +2,7 @@
 title: IDBDatabase.deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 **`deleteObjectStore()`** 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。

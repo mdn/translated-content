@@ -2,6 +2,7 @@
 title: WindowTimers.clearInterval()
 slug: Web/API/clearInterval
 ---
+
 {{ApiRef("HTML DOM")}}
 
 `WindowOrWorkerGlobalScope` mixin 的 **`clearInterval()`** 方法可取消先前通过 {{domxref("setInterval()")}} 设置的重复定时任务。

@@ -2,6 +2,7 @@
 title: 'Element: error イベント'
 slug: Web/API/Element/error_event
 ---
+
 {{APIRef}}
 
 `error` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合に {{domxref("Element")}} オブジェクトに発生します。例えば、スクリプトの実行エラーがあったり、画像が見つからないか無効であった場合などです。
@@ -108,9 +109,7 @@ imgError.addEventListener('click', () => {
 
 ## 仕様書
 
-| 仕様書                                                       | 状態                         |
-| ------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-error')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

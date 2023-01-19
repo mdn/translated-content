@@ -2,6 +2,9 @@
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
 ---
+
+{{HTTPSidebar}}
+
 **`Referrer-Policy`** 首部用来监管哪些访问来源信息——会在 {{HTTPHeader("Referer")}} 中发送——应该被包含在生成的请求当中。
 
 | Header type                                      | {{Glossary("Response header")}} |
@@ -30,7 +33,7 @@ Referrer-Policy: unsafe-url
 - no-referrer-when-downgrade（默认值）
   - : 在没有指定任何策略的情况下用户代理的默认行为。在同等安全级别的情况下，引用页面的地址会被发送 (HTTPS->HTTPS)，但是在降级的情况下不会被发送 (HTTPS->HTTP)。
 - origin
-  - : 在任何情况下，仅发送文件的源作为引用地址。例如 `https://example.com/page.html` 会将 `https://example.com/ 作为引用地址。`
+  - : 在任何情况下，仅发送文件的源作为引用地址。例如 `https://example.com/page.html` 会将 `https://example.com/ 作为引用地址`。
 - origin-when-cross-origin
   - : 对于同源的请求，会发送完整的 URL 作为引用地址，但是对于非同源请求仅发送文件的源。
 - same-origin
@@ -111,7 +114,7 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 {{Compat}}
 
-**注意：** 从版本 53 起，Gecko 在 about:config 中提供了一项偏好设置，使得用户可以自行设定默认的 Referrer-Policy 值 —— network.http.referer.userControlPolicy 。可选的值包括：
+**注意：** 从版本 53 起，Gecko 在 about:config 中提供了一项偏好设置，使得用户可以自行设定默认的 Referrer-Policy 值 —— network.http.referer.userControlPolicy。可选的值包括：
 
 - 0 — `no-referrer`
 - 1 — `same-origin`

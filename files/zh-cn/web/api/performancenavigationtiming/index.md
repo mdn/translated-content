@@ -2,9 +2,10 @@
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-**`PerformanceNavigationTiming`** 提供了用于存储和检索有关浏览器文档事件的指标的方法和属性。 例如，此接口可用于确定加载或卸载文档需要多少时间。
+**`PerformanceNavigationTiming`** 提供了用于存储和检索有关浏览器文档事件的指标的方法和属性。例如，此接口可用于确定加载或卸载文档需要多少时间。
 
 {{InheritanceDiagram}}
 
@@ -65,7 +66,7 @@ slug: Web/API/PerformanceNavigationTiming
 
 ## 浏览器兼容性
 
-{{Compat("api.PerformanceNavigationTiming")}}
+{{Compat}}
 
 ## 参见
 

@@ -12,6 +12,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::part
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part`** représente n’importe quel élément dans un [arbre fantôme](/fr/docs/Web/Web_Components/Using_shadow_DOM) qui a un attribut {{HTMLAttrxRef("part")}} correspondant.
@@ -85,13 +86,11 @@ tabbed-custom-element::part(active tab) {
 
 ## Spécifications
 
-| Spécification                                                        | État                                    | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS Shadow Parts", "#part", "::part")}} | {{Spec2("CSS Shadow Parts")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.part")}}
+{{Compat}}
 
 ## Voir aussi
 

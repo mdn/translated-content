@@ -5,6 +5,7 @@ page-type: web-api-interface
 translation_of: Web/API/HTMLQuoteElement
 browser-compat: api.HTMLQuoteElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLQuoteElement`** fournit des propriétés et méthodes (en complément de celles fournies par l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) dont elle hérite) pour manipuler les éléments de citation comme [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) et [`<q>`](/fr/docs/Web/HTML/Element/q), mais pas [`<cite>`](/fr/docs/Web/HTML/Element/cite).

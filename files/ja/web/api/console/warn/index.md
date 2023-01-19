@@ -4,13 +4,14 @@ slug: Web/API/console/warn
 i10n:
   sourceCommit: d19d68bf6078c23d527b6e1355925795e745d124
 ---
+
 {{APIRef("Console API")}}
 
 **`console.warn()`** メソッドは、ウェブコンソールに警告メッセージを出力します。
 
 {{AvailableInWorkers}}
 
-> **Note:** Chrome と Firefox では、警告メッセージはウェブコンソール上で小さな感嘆符の隣に表示されます。
+> **メモ:** Chrome と Firefox では、警告メッセージはウェブコンソール上で小さな感嘆符の隣に表示されます。
 
 ## 構文
 

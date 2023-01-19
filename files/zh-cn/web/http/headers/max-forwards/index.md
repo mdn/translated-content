@@ -2,9 +2,10 @@
 title: Max-Forwards
 slug: Web/HTTP/Headers/Max-Forwards
 ---
+
 {{HTTPSidebar}}
 
-**`Max-Forwards`** 请求标头被用于限制 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 方法可经过的服务器（通常指代理服务器）数目。 它的值是一个整数，指定可经过的服务器最大数目。服务器在转发 `TRACE` 请求之前，将递减 `Max-Forwards` 的值，直到到达目标服务器，或服务器接收到 `Max-Forwards` 的值为 0 的请求。而后直接返回一个 `200 OK` 的响应（可以包含一些标头）。
+**`Max-Forwards`** 请求标头被用于限制 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 方法可经过的服务器（通常指代理服务器）数目。它的值是一个整数，指定可经过的服务器最大数目。服务器在转发 `TRACE` 请求之前，将递减 `Max-Forwards` 的值，直到到达目标服务器，或服务器接收到 `Max-Forwards` 的值为 0 的请求。而后直接返回一个 `200 OK` 的响应（可以包含一些标头）。
 
 如果 `TRACE` 请求中没有 `Max-Forwards` 标头，就可以认为，不限制可经过的服务器最大数目。
 

@@ -2,6 +2,7 @@
 title: with
 slug: Web/JavaScript/Reference/Statements/with
 ---
+
 > **警告：** 不建议使用`with`语句，因为它可能是混淆错误和兼容性问题的根源。有关详细信息，请参阅下面“描述”一节中的“语意不明的弊端”部分。
 
 {{jsSidebar("Statements")}}**with 语句** 扩展一个语句的作用域链。
@@ -60,7 +61,7 @@ function f(foo, values) {
 
 ### Example: Using `with`
 
-下面的`with`语句指定[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)对象作为默认对象。`with`语句里面的变量，分別指向`Math`对象的[`PI`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) 、`cos和`[`sin`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin)函数，不用在前面添加命名空间。后续所有引用都指向`Math`对象。
+下面的`with`语句指定[`Math`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)对象作为默认对象。`with`语句里面的变量，分別指向`Math`对象的[`PI`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) 、`cos` 和 [`sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) 函数，不用在前面添加命名空间。后续所有引用都指向`Math`对象。
 
 ```js
 var a, x, y;
@@ -84,6 +85,6 @@ with (Math) {
 ## 相关链接
 
 - {{jsxref("Statements/block", "block")}}
-- [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+- [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}

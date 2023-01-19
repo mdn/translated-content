@@ -1,26 +1,32 @@
 ---
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
+l10n:
+  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
+
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStream")}} インターフェイスの **`tee()`** メソッドは、現在の読み取り可能なストリームを[ティーイング](https://streams.spec.whatwg.org/#tee-a-readable-stream)し、結果の 2 つの分岐を新しい {{domxref("ReadableStream")}} インスタンスとして含む 2 要素配列を返します。
+{{domxref("ReadableStream")}} インターフェイスの **`tee()`** メソッドは、現在の読み取り可能なストリームを[分配](https://streams.spec.whatwg.org/#tee-a-readable-stream)し、結果の 2 つの分岐を新しい {{domxref("ReadableStream")}} インスタンスとして含む 2 つの要素の配列を返します。
 
-これは、2 つのリーダーがストリームを同時に、おそらく異なる速度で読み取ることができるようにする場合に便利です。 例えば、サーバーから応答を取得してブラウザーにストリームしたいが、ServiceWorker キャッシュにもストリームしたい場合は、ServiceWorker でこれを行うことができます。 応答のボディを複数回使用することはできないため、これを行うには 2 つのコピーが必要です。
+これは、2 つのリーダーがストリームを同時に、おそらく異なる速度で読み取ることができるようにする場合に便利です。 例えば、サーバーからレスポンスを取得してブラウザーにストリーム入力したいが、サービスワーカーのキャッシュにもストリーム入力したい場合は、サービスワーカーでこれを行うことができます。レスポンスの本体を複数回使用することはできないため、これを行うには 2 つのコピーが必要です。
 
-ストリームをキャンセルするには、結果の両方の分岐をキャンセルする必要があります。 ストリームをティーイングすると、通常、その間はストリームがロックされ、他のリーダーがロックできなくなります。
+分配したストリームは、 2 つの `ReadableStream` の分岐のうち、消費速度の速い方の速度で部分的に背圧の信号を出し、未読データは、制限や背圧なしに消費速度の遅い方の `ReadableStream` に内部で待ち行列に入れられます。
+つまり、両方の分岐の内部キューに未読の要素がある場合、元の `ReadableStream` のコントローラの内部キューが埋まり始め、その {{domxref("ReadableStreamDefaultController.desiredSize", "desiredSize")}} ≤ 0 またはバイトストリームのコントローラーの {{domxref("ReadableByteStreamController.desiredSize", "desiredSize")}} ≤ 0 になると、コントローラーは `pull(controller)` を呼び出すのを、新しい {{domxref("ReadableStream.ReadableStream", "new ReadableStream()")}} に渡された元の入力に対して停止します。一方の分岐のみが消費される場合、本文全体がメモリー上の待ち行列に入れられます。したがって、非常に大きなストリームを並列に異なる速度で読み込むために、組み込みの `tee()` を使用するべきではありません。その代わり、消費速度の遅い方の分岐の速度に完全に背圧するような実装を探しましょう。
+
+ストリームを取り消すには、結果の分岐をどちらも取り消す必要があります。ストリームを分配すると、一般に、その間はそのストリームがロックされ、他のリーダーがロックするのを防ぎます。
 
 ## 構文
 
-```
-var teedStreams = readableStream.tee();
+```js-nolint
+tee()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
 2 つの {{domxref("ReadableStream")}} インスタンスを含む {{jsxref("Array")}}。
 
@@ -44,9 +50,9 @@ function fetchStream(stream, list) {
   const reader = stream.getReader();
   let charsReceived = 0;
 
-  // read() は、値を受け取ったときに解決する promise を返します
+  // read() は、値を受け取ったときに解決するプロミスを返します
   reader.read().then(function processText({ done, value }) {
-    // 結果オブジェクトには2つのプロパティが含まれます。
+    // 結果オブジェクトには 2 つのプロパティが含まれます。
     // done  - ストリームがすべてのデータを既に提供している場合は true。
     // value - 一部のデータ。 done が true の場合、常に undefined。
     if (done) {
@@ -58,7 +64,7 @@ function fetchStream(stream, list) {
     charsReceived += value.length;
     const chunk = value;
     let listItem = document.createElement('li');
-    listItem.textContent = 'Read ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list.appendChild(listItem);
 
     // さらに読み、この関数を再度呼び出します
@@ -67,12 +73,10 @@ function fetchStream(stream, list) {
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                     | 状態                         | コメント |
-| -------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rs-tee","tee()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ReadableStream.tee")}}
+{{Compat}}

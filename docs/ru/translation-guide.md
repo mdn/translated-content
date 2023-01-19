@@ -1,6 +1,6 @@
 # Участие в переводе
 
-Для начала ознакомьтесь с [общими правилами](https://developer.mozilla.org/en-US/docs/MDN/Guidelines), в частности, со страницей ["Writing style guide"](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).
+Для начала ознакомьтесь с [общими правилами][], в частности, со страницей ["Writing style guide"][].
 
 Основная тема — [Перевод MDN на русский язык](https://github.com/mdn/translated-content/issues/276)
 
@@ -26,7 +26,7 @@
 | ------------------ | ---------- |
 | cache | кеш |
 | feature | возможность (_менее предпочтительный синоним: функциональность_) |
-| functionality | функциональность (или в зависимости от контекста — _возможность_) __*__ |
+| functionality | функциональность (или в зависимости от контекста — _возможность_) \* |
 | general knowledge | общие сведения (при использовании в качестве заголовка) |
 | learn more | дополнительные ресурсы (при использовании в качестве заголовка) |
 | listener | обработчик (события) |
@@ -36,4 +36,7 @@
 | see also | смотрите также |
 | technical reference | технические материалы (при использовании в качестве заголовка) |
 
-__*__ — по возможности лучше избежать прямого перевода, используя синонимы или лучше раскрывая смысл.
+\* — по возможности лучше избежать прямого перевода, используя синонимы или лучше раскрывая смысл.
+
+[общими правилами]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines
+["Writing style guide"]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`writing-mode`** définit si les lignes d'un texte sont écrites horizontalement ou verticalement et la direction selon laquelle le bloc grandit. Lorsque cette propriété est définie pour un document entier, elle devrait être appliquée à la racine (soit l'élément {{HTMLElement("html")}} pour les documents HTML).
@@ -55,9 +56,13 @@ writing-mode: unset;
 - `tb-rl` {{deprecated_inline}}
   - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-rl`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemple
 
@@ -166,16 +171,11 @@ Voici un aperçu du résultat avec un navigateur qui prend en charge `writing-mo
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                      |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------- |
-| {{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS3 Writing Modes")}} | Définition initiale                               |
-| {{SpecName("CSS4 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS4 Writing Modes")}} | Ajout des valeurs `sideways-lr` et `sideways-rl`. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.writing-mode")}}
+{{Compat}}
 
 ## Voir aussi
 

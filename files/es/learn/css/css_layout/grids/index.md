@@ -1,8 +1,8 @@
 ---
 title: Cuadrículas
 slug: Learn/CSS/CSS_layout/Grids
-translation_of: Learn/CSS/CSS_layout/Grids
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 
 La compaginación en cuadrícula con CSS es un método de diseño de páginas web en dos dimensiones. Te permite distribuir el contenido en filas y columnas, y tiene muchas características que facilitan la creación de diseños complejos. Este artículo te proporciona todo lo que necesitas saber para comenzar con el diseño de páginas web.
@@ -36,7 +36,7 @@ Una cuadrícula es un conjunto de líneas horizontales y verticales que crean un
 
 Una cuadrícula en general tiene **columnas**, **filas** y luego espacios entre cada fila y cada columna, conocidos comúnmente como **canales**.
 
-![](https://mdn.mozillademos.org/files/13899/grid.png)
+![](grid.png)
 
 ## Crear tu cuadrícula con CSS
 
@@ -668,7 +668,7 @@ border-right: 1px solid #999;
 
 Si usas el [inspector de cuadrícula de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) para ver una superposición de las líneas de cuadrícula sobre tu diseño, puedes observar cómo funciona nuestra cuadrícula de 12 columnas.
 
-![Una superposición de la cuadrícula de 12 columnas de nuestro diseño de página.](https://mdn.mozillademos.org/files/16045/learn-grids-inspector.png)
+![Una superposición de la cuadrícula de 12 columnas de nuestro diseño de página.](learn-grids-inspector.png)
 
 ## ¡Pon a prueba tus conocimientos!
 

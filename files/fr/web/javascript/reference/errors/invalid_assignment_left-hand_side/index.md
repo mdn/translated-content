@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 original_slug: Web/JavaScript/Reference/Erreurs/Invalid_assignment_left-hand_side
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

@@ -1,13 +1,8 @@
 ---
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
-tags:
-  - 메소드
-  - 스토리지
-  - 웹 스토리지
-  - 참고
-translation_of: Web/API/Storage/removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} 인터페이스의 removeItem() 메소드에 키 이름을 파라미터로 전달하면 스토리지에서 해당 키를 삭제합니다.

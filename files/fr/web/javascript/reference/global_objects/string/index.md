@@ -11,6 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 original_slug: Web/JavaScript/Reference/Objets_globaux/String
 browser-compat: javascript.builtins.String
 ---
+
 {{JSRef}}
 
 Un objet **`String`** est utilisé afin de représenter et de manipuler une chaîne de caractères.

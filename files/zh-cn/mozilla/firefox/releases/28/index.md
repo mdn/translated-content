@@ -2,6 +2,7 @@
 title: Firefox 28 for developers
 slug: Mozilla/Firefox/Releases/28
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 28 was released on March 18, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -58,7 +59,7 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 
 ### MathML
 
-- Support of “mathvariant” attribute ({{bug("114365")}}).
+- Support of "mathvariant" attribute ({{bug("114365")}}).
 
 ### SVG
 

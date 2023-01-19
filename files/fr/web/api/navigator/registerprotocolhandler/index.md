@@ -4,6 +4,7 @@ slug: Web/API/Navigator/registerProtocolHandler
 translation_of: Web/API/Navigator/registerProtocolHandler
 browser-compat: api.Navigator.registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 La méthode **`registerProtocolHandler()`**, rattachée à l'interface **[`Navigator`](/fr/docs/Web/API/Navigator)**, permet aux sites de déclarer leur capacité à gérer certains schémas d'URL particuliers (autrement dit les protocoles).

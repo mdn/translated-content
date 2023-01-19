@@ -1,10 +1,6 @@
 ---
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
-tags:
-  - DOM
-  - Gecko
-translation_of: Web/API/Document/createTextNode
 ---
 {{APIRef("DOM")}}
 

@@ -3,6 +3,7 @@ title: 模板字符串
 slug: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Reference/template_strings
 ---
+
 {{JsSidebar("More")}}
 
 模板字面量 是允许嵌入表达式的字符串字面量。你可以使用多行字符串和字符串插值功能。它们在 ES2015 规范的先前版本中被称为“模板字符串”。
@@ -73,7 +74,7 @@ not ${2 * a + b}.`);
 
 ### 嵌套模板
 
-在某些时候，嵌套模板是具有可配置字符串的最简单也是更可读的方法。 在模板中，只需在模板内的占位符 `${ }` 内使用它们，就可以轻松地使用内部反引号。 例如，如果条件 a 是真的，那么返回这个模板化的文字。
+在某些时候，嵌套模板是具有可配置字符串的最简单也是更可读的方法。在模板中，只需在模板内的占位符 `${ }` 内使用它们，就可以轻松地使用内部反引号。例如，如果条件 a 是真的，那么返回这个模板化的文字。
 
 ES5:
 
@@ -227,6 +228,6 @@ let bad = `bad escape sequence: \unicode`;
 
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
 - [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
 - ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)

@@ -2,6 +2,7 @@
 title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
 ---
+
 {{APIRef("Clipboard API")}}
 
 **`ClipboardEvent.clipboardData`** プロパティは、{{domxref("DataTransfer")}} オブジェクトを保持し、次のように使用します。

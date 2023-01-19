@@ -2,6 +2,7 @@
 title: element.setAttributeNodeNS
 slug: Web/API/Element/setAttributeNodeNS
 ---
+
 \<breadcrumbs>\</breadcrumbs>{{ ApiRef("DOM") }}== Summary ==
 
 ### 概要

@@ -1,14 +1,6 @@
 ---
 title: HTML 要素リファレンス
 slug: Web/HTML/Element
-tags:
-  - Basic
-  - 要素
-  - HTML
-  - リファレンス
-  - ウェブ
-  - l10n:priority
-translation_of: Web/HTML/Element
 ---
 
 {{HTMLSidebar("Elements")}}
@@ -17,7 +9,7 @@ translation_of: Web/HTML/Element
 
 この一覧は、考えているものを見つけやすいように、機能別にグループ化しています。アルファベット順のすべての要素の一覧は、このページと同様に各要素ページのサイドバーにあります。
 
-> **Note:** HTML 要素や属性の基礎について詳しくは、 [HTML 入門の記事で要素の節](/ja/docs/Learn/HTML/Introduction_to_HTML#elements_%e2%80%94_the_basic_building_blocks)をご覧ください。
+> **メモ:** HTML 要素や属性の基礎について詳しくは、 [HTML 入門の記事で要素の節](/ja/docs/Learn/HTML/Introduction_to_HTML#elements_%e2%80%94_the_basic_building_blocks)をご覧ください。
 
 ## メインルート
 
@@ -124,6 +116,6 @@ HTML には、インタラクティブなユーザーインターフェイスを
 
 ## 廃止または非推奨の要素
 
-> **Warning:** 以下は非推奨の古い HTML 要素であり、使用するべきものではありません。 **新たなプロジェクトではこれらを使用せず、また既存のプロジェクトでも可能な限りこれらを置き換えてください。** この一覧は、情報提供のために記載しています。
+> **警告:** 以下は非推奨の古い HTML 要素であり、使用するべきものではありません。 **新たなプロジェクトではこれらを使用せず、また既存のプロジェクトでも可能な限りこれらを置き換えてください。** この一覧は、情報提供のために記載しています。
 
 {{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}

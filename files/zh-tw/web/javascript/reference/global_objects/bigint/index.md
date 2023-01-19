@@ -2,6 +2,7 @@
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 `BigInt` 是一個內建的物件，提供了表示大於 2^53 的整數的功能 (2^53 是 JavaScript 原生的{{JSxRef("Number")}}能夠表示的最大值)
@@ -203,7 +204,12 @@ All `BigInt` instances inherit from `BigInt.prototype`. The prototype object of 
 
 ### 方法
 
-{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype", "Methods")}}
+- [`BigInt.prototype.toLocaleString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString)
+  - : Returns a string with a language-sensitive representation of this BigInt value. Overrides the [`Object.prototype.toLocaleString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) method.
+- [`BigInt.prototype.toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString)
+  - : Returns a string representing this BigInt value in the specified radix (base). Overrides the [`Object.prototype.toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) method.
+- [`BigInt.prototype.valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf)
+  - : Returns this BigInt value. Overrides the [`Object.prototype.valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) method.
 
 ## 建議用法
 

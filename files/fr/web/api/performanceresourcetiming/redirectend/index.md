@@ -11,6 +11,7 @@ tags:
   - redirectEnd
 translation_of: Web/API/PerformanceResourceTiming/redirectEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`redirectEnd`** retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après la réception du dernier octet de la réponse de la dernière redirection.

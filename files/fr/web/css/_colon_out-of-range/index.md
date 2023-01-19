@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:out-of-range
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:out-of-range`** cible un élément {{HTMLElement("input")}} lorsque la valeur de son attribut `value` est en dehors de l'intervalle autorisé par les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max","input")}} attributes. Ceci permet d'informer l'utilisateur que la valeur actuellement renseignée dans l'élément est hors des limites acceptables.
@@ -77,14 +78,11 @@ input:out-of-range + label::after {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                 | Commentaires                                                                |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}     | Définition de la correspondance entre `:out-of-range` et les éléments HTML. |
-| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}                 | {{Spec2('CSS4 Selectors')}} | Définition initiale.                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.out-of-range")}}
+{{Compat}}
 
 ## Voir aussi
 

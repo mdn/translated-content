@@ -2,6 +2,7 @@
 title: delete 演算子
 slug: Web/JavaScript/Reference/Operators/delete
 ---
+
 {{jsSidebar("Operators")}}
 
 JavaScript の **`delete` 演算子**は、オブジェクトからプロパティを削除します。同じプロパティへの参照がそれ以上保持されていない場合は、自動的に解放されます。

@@ -1,14 +1,8 @@
 ---
 title: SVG プレゼンテーション属性
 slug: Web/SVG/Attribute/Presentation
-tags:
-  - 属性
-  - 初心者
-  - 草稿
-  - リファレンス
-  - SVG
-browser-compat: svg.attributes.presentation
 ---
+
 SVG プレゼンテーション属性は、SVG 要素の属性として使用される CSS プロパティです。
 
 - [alignment-baseline](#attr-alignment-baseline)

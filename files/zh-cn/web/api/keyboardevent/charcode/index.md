@@ -2,6 +2,7 @@
 title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
 ---
+
 {{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
 
 {{domxref("KeyboardEvent.charCode")}} 只读属性，返回 {{ domxref("element.onkeypress", "keypress") }} 事件触发时按下的字符键的字符 Unicode 值。
@@ -46,7 +47,7 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 ## 注意
 
-在{{ domxref("element.onkeypress", "keypress") }} 事件中，按键的 Unicode 值保存在 `{{ domxref("event.keyCode", "keyCode") }}` 或 `{{ domxref("event.charCode", "charCode") }}` 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), `charCode` 被设置为字符的代码值，并区分大小写。（即 `charCode` 会考虑 `Shift` 键是否被按下）。 否则，被按下的键的代码被存储在 `keyCode` 中。
+在 {{ domxref("element.onkeypress", "keypress") }} 事件中，按键的 Unicode 值保存在 {{ domxref("event.keyCode", "keyCode") }} 或 {{ domxref("event.charCode", "charCode") }} 属性其中之一，不会二者同时都有。如果按下的是字符键 (例如 'a'), `charCode` 被设置为字符的代码值，并区分大小写。（即 `charCode` 会考虑 `Shift` 键是否被按下）。否则，被按下的键的代码被存储在 `keyCode` 中。
 
 如果有一个或多个修饰键被按下，有一些复杂的规则来产生 `charCode` 的值，细节可参考 [Gecko Keypress 事件](/zh-CN/Gecko_Keypress_Event) 。
 
@@ -64,4 +65,4 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.charCode")}}
+{{Compat}}

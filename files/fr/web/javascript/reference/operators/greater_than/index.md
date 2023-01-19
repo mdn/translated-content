@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.greater_than
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur supérieur strict (`>`) renvoie `true` si l'opérande gauche est strictement supérieur à l'opérande droit et `false` sinon.

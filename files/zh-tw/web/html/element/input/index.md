@@ -2,7 +2,8 @@
 title: <input>
 slug: Web/HTML/Element/input
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **HTML `<input>` element** is used to create interactive controls for web-based forms in order to accept data from the user.
 
@@ -313,7 +314,7 @@ You can find multiple examples of `<input>` element usage on the pages covering 
 
 ## Browser compatibility
 
-{{Compat("html.elements.input")}}
+{{Compat}}
 
 ## Notes
 
@@ -350,19 +351,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
 - Try the language specified by any Content-Language HTTP header or
 - If none specified, use the browser's locale.
 
-### Using mozactionhint on Firefox mobile
-
-You can use the {{htmlattrxref("mozactionhint", "input")}} attribute to specify the text for the label of the enter key on the virtual keyboard when your form is rendered on Firefox mobile. For example, to have a "Next" label, you can do this:
-
-```html
-<input type="text" mozactionhint="next">
-```
-
-The result is:
-
-![mozactionhint.png](/@api/deki/files/4970/=mozactionhint.png?size=webview)
-
-## See also
+## 參見
 
 - Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)

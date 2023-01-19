@@ -2,6 +2,7 @@
 title: ':visited'
 slug: Web/CSS/:visited
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -23,14 +24,14 @@ a:visited {
 
 - 允许使用的 CSS 属性为{{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("column-rule-color") }}, 和{{ cssxref("outline-color") }}。
 - 允许使用的 SVG 属性为{{SVGAttr("fill")}} 和 {{SVGAttr("stroke")}}。
-- 允许使用的样式的 αlpha 分量 (透明度) 将被忽略。 设置在`:visited`中的样式将使用元素的非`:visited` 访问状态的 αlpha 分量， 如果该分量为 0，这个样式将被完全忽略。
+- 允许使用的样式的 αlpha 分量 (透明度) 将被忽略。设置在`:visited`中的样式将使用元素的非`:visited` 访问状态的 αlpha 分量，如果该分量为 0，这个样式将被完全忽略。
 - 虽然这些样式可以改变用户最终的颜色外观，但 {{domxref("window.getComputedStyle")}} 方法将存在并且始终返回非访问颜色的值。
 
 > **备注：** 有关这些限制及其背后原因的更多信息，请参阅 [Privacy and the :visited selector](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)。
 
 ## 示例
 
-未设置颜色或透明的属性不能使用`:visited`。 在可以使用此伪类设置的属性中，浏览器可能只有`color`和`column-rule-color`两个默认值。 因此，对于其他属性，在使用`:visited`选择器前，应该先为这些属性设置基础样式。
+未设置颜色或透明的属性不能使用`:visited`。在可以使用此伪类设置的属性中，浏览器可能只有`color`和`column-rule-color`两个默认值。因此，对于其他属性，在使用`:visited`选择器前，应该先为这些属性设置基础样式。
 
 ### HTML
 
@@ -65,7 +66,7 @@ a:visited {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.visited")}}
+{{Compat}}
 
 ## 参见
 

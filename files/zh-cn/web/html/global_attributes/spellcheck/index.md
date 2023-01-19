@@ -2,6 +2,7 @@
 title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
 spellcheck [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是枚举属性，定义是否可以检查元素的拼写错误。它可以具有以下值：
@@ -13,7 +14,7 @@ spellcheck [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是枚举属性
 
 你可以参考这篇文章的例子来使用这个属性。
 
-这个属性是枚举型而不是布尔类型。这意味着显式设置其中一个值 true 或 false 是强制性的，如果使用简写 `<label spellcheck>Example Label</label>` 是不行的。 正确的用法是`<label spellcheck="true">Example Label</label>`.
+这个属性是枚举型而不是布尔类型。这意味着显式设置其中一个值 true 或 false 是强制性的，如果使用简写 `<label spellcheck>Example Label</label>` 是不行的。正确的用法是`<label spellcheck="true">Example Label</label>`.
 
 这个属性仅仅是浏览器上的提示：浏览器并不会强制去检查拼写错误，通常不可编辑的元素是不会去检查拼写错误的，就算它的 spellcheck 属性被设置为 true 而且浏览器支持拼写检查。
 

@@ -2,6 +2,7 @@
 title: CSS セレクター
 slug: Learn/CSS/Building_blocks/Selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 {{Glossary("CSS")}}では、ウェブページ上の {{glossary("HTML")}} 要素にスタイルを設定するためにセレクターが使用されます。CSS セレクターにはさまざまな種類があり、きめ細かにスタイルを設定する要素を選択できます。この記事とそのサブ記事では、さまざまなタイプについて、どのように機能するかを詳しく見ていきます。

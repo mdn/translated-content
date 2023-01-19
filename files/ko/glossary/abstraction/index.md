@@ -1,12 +1,6 @@
 ---
 title: 추상화
 slug: Glossary/Abstraction
-tags:
-  - Abstraction
-  - CodingScripting
-  - Glossary
-  - 추상화
-translation_of: Glossary/Abstraction
 ---
 {{Glossary("computer programming", "컴퓨터 프로그래밍")}}에서의 **추상화**란 복잡한 소프트웨어 시스템을 효율적으로 설계하고 구현할 수 있는 방법입니다. 추상화는 뒷편 시스템의 기술적 복잡함을 단순한 {{Glossary("API")}} 뒤에 숨깁니다.
 

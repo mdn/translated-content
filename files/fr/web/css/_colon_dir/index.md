@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:dir
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:dir`** permet de cibler un élément selon la direction du texte qu'il contient. En HTML, la direction est définie grâce à l'attribut {{htmlattrxref("dir", "html")}}. Pour les autres types de document, cela peut être déterminé autrement.
@@ -76,14 +77,11 @@ La pseudo-classe `:dir()` nécessite un paramètre qui indique la direction du t
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-ltr', ':dir(ltr)')}} | {{Spec2('HTML WHATWG')}}     | Aucune modification. |
-| {{SpecName('CSS4 Selectors', '#the-dir-pseudo', ':dir()')}}                 | {{Spec2('CSS4 Selectors')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.dir")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: Firefox 22 for developers
 slug: Mozilla/Firefox/Releases/22
 ---
+
 {{FirefoxSidebar}}
 
 ## Web 开发者需要注意的变化
@@ -37,7 +38,7 @@ slug: Mozilla/Firefox/Releases/22
 - WebRTC: the Media Stream API and Peer Connection API are now supported by default.
 - Web Components: the {{domxref("Document.register")}} method has been implemented ({{bug("783129")}}).
 - The {{domxref("ProgressEvent.initProgressEvent()")}} constructor method has been removed. Uses the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construc and initialize {{domxref("ProgressEvent")}} ({{bug("843489")}}).
-- Manipulated data associated with a {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ({{bug("407983")}}).
+- Manipulated data associated with a [`cut`](/zh-CN/docs/Web/API/Element/cut_event), [`copy`](/zh-CN/docs/Web/API/Element/copy_event), or [`paste`](/zh-CN/docs/Web/API/Element/paste_event) event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ({{bug("407983")}}).
 - The {{domxref("HTMLTimeElement")}} interface has been implemented ({{bug("629801")}}).
 - When a {{domxref("Worker")}} constructor is passed an invalid URL, it now throws {{domxref("DOMException")}} of type `SECURITY_ERR` ({{bug("587251")}}).
 

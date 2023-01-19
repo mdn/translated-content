@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBRequest/source
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`source`** est une propriété en lecture seule, rattachée à l'interface {{domxref("IDBRequest")}}, et qui indique la source de la requête (c'est-à-dire l'index ou le magasin d'objets utilisé). Si aucune source n'existe (par exemple car on a appelé {{domxref("indexedDB.open")}}), la propriété vaut `null`.
@@ -25,7 +26,7 @@ var IDBObjectStore = request.source;
 
 ### Valeur
 
-Un objet qui représente la source de la requête. Ce peut être un objet {{domxref("IDBIndex")}}, {{domxref("IDBObjectStore")}} ou un objet  {{domxref("IDBCursor")}}.
+Un objet qui représente la source de la requête. Ce peut être un objet {{domxref("IDBIndex")}}, {{domxref("IDBObjectStore")}} ou un objet {{domxref("IDBCursor")}}.
 
 ## Exemples
 

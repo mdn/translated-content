@@ -2,6 +2,7 @@
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
+
 {{JSRef}}
 
 **`Number.isInteger()`** メソッドは、渡された値が整数かどうかを判定します。

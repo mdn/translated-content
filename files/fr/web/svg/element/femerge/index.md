@@ -6,6 +6,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feMerge
 ---
+
 {{SVGRef}}
 
 La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de différentes opérations de filtre les uns par dessus les autres. La liste des images à empiler est définit par une liste d'élément {{ SVGElement("feMergeNode") }} à l'intérieur de la balise. Pour y parvenir, stocker au préalable les résultats des filtres voulus dans un buffer temporaire grâce à l'attribut {{ SVGAttr("result") }}.

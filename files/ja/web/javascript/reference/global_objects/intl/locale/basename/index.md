@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.baseName`** プロパティは、 `Locale` の文字列表現の部分文字列を返し、そこには `Locale` についての中核情報が含まれています。

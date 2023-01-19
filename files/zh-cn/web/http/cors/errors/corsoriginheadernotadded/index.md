@@ -1,7 +1,8 @@
 ---
-title: 'Reason: CORS header ‘Origin’ cannot be added'
+title: "Reason: CORS header 'Origin' cannot be added"
 slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 ---
+
 {{HTTPSidebar}}
 
 ## 原因
@@ -12,7 +13,7 @@ slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 
 ## 哪里错了？
 
-{{Glossary("user agent")}} 不能把 {{HTTPHeader("Origin")}} 头字段添加到 {{Glossary("HTTP")}} 请求中。 所有的 CORS 请求必须有 `Origin` 头字段。
+{{Glossary("user agent")}} 不能把 {{HTTPHeader("Origin")}} 头字段添加到 {{Glossary("HTTP")}} 请求中。所有的 CORS 请求必须有 `Origin` 头字段。
 
 例如，如果 JavaScript 代码以增强的权限运行，允许它访问多个域名的内容，则会发生这种情况。
 

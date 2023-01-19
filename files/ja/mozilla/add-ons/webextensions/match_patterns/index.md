@@ -2,6 +2,7 @@
 title: マッチパターン
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
+
 {{AddonSidebar}}
 
 マッチパターンは URL のグループを指定する方法です。マッチパターンはいくつかの URL にマッチします。マッチパターンは WebExtensions API を使う拡張機能向けに、いくつかの場所で使用されます。特に[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)をロードする文書を指定するときや、[`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) リスナーを追加する URL を指定する時に使用します。
@@ -10,8 +11,8 @@ slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 ## マッチパターンの構造
 
-> **Note:** **記:** ブラウザーによってはサポートしていないスキームがあります。
-> 詳しくは[ブラウザー互換性テーブル](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns$edit#Browser_compatibility)を見てください。
+> **メモ:** ブラウザーによってはサポートしていないスキームがあります。
+> 詳しくは[ブラウザー互換性テーブル](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#Browser_compatibility)を見てください。
 
 すべてのマッチパターンは文字列で指定します。特別な値 [`<all_urls>`](/ja/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) を除き、マッチパターンは３つの部分から成り立っています。 _scheme_, _host_, _path_ です。 scheme と host の間は `://` で句切られます。
 
@@ -54,7 +55,7 @@ _path_ の値は、URL パスに [URL クエリーストリング](https://en.wi
 
 [URL フラグメント識別子](https://en.wikipedia.org/wiki/Fragment_identifier)や、`#` の後についているものは、_path_ とみなされません。
 
-> **Note:** **注**: path パターン文字列にポート番号を含めるべきではありません。`http://localhost:1234/*` のようにポート番号を追加するとマッチパターンは無視されます。しかし、`http://localhost:1234` は `http://localhost/*` にマッチします。
+> **メモ:** path パターン文字列にポート番号を含めるべきではありません。`http://localhost:1234/*` のようにポート番号を追加するとマッチパターンは無視されます。しかし、`http://localhost:1234` は `http://localhost/*` にマッチします。
 
 ### \<all_urls>
 

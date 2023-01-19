@@ -3,6 +3,7 @@ title: document.createElement
 slug: Web/API/Document/createElement
 translation_of: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 Dans un document [HTML](/fr/docs/Web/HTML), la méthode **`document.createElement()`** crée un élément HTML du type spécifié par `tagName` ou un {{domxref("HTMLUnknownElement")}} si `tagName` n’est pas reconnu.
@@ -91,7 +92,7 @@ Si nous cherchons à créer une instance de cet élément par programmation, nou
 let expandingList = document.createElement('ul', { is : 'expanding-list' })
 ```
 
-Le nouvel élément donnera un attribut [`is`](/docs/Web/HTML/Global_attributes/is) dont la valeur est la balise de nom de l’élément personnalisé.
+Le nouvel élément donnera un attribut [`is`](/fr/docs/Web/HTML/Global_attributes/is) dont la valeur est la balise de nom de l’élément personnalisé.
 
 > **Note :** Pour la rétrocompatibilité avec les versions précédentes de la [spécification des éléments personnalisés](https://www.w3.org/TR/custom-elements/), quelques navigateurs permettent de passer une chaîne de caractères ici, à la place d’un objet, dont la valeur est la balise de nom de l’élément personnalisé.
 

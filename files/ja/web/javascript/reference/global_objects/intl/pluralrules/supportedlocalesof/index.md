@@ -2,6 +2,7 @@
 title: Intl.PluralRules.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 **`Intl.PluralRules.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールのうち、代替する必要なく複数形の書式で対応されているものが入った配列を返します。

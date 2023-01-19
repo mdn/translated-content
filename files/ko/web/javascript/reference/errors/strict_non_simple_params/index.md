@@ -1,8 +1,8 @@
 ---
 title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
 slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
-translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

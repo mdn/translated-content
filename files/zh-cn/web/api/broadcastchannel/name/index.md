@@ -2,6 +2,7 @@
 title: BroadcastChannel.name
 slug: Web/API/BroadcastChannel/name
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 **`BroadcastChannel.name`** 是类型为 {{domxref("DOMString")}} 的只读属性，是频道的唯一标识。属性 name 是在创建时传入 {{domxref("BroadcastChannel.BroadCastChannel", "BroadcastChannel()")}} 构造函数的，所以是只读的。
@@ -35,7 +36,7 @@ bc.close();
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel.name")}}
+{{Compat}}
 
 ## 参见
 

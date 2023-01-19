@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers/Content-Encoding
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête **`Content-Encoding`** indique la compression utilisée sur le média contenu dans le corps de la requête. Il permet au client de savoir comment décoder le contenu afin d'obtenir le type de média référencé par l'entête `Content-Type`.

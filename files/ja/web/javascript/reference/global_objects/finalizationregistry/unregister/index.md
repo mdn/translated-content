@@ -2,6 +2,7 @@
 title: FinalizationRegistry.prototype.unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
 ---
+
 {{JSRef}}
 
 `unregister` は対象のオブジェクトを {{jsxref("FinalizationRegistry")}} インスタンスから登録解除します。
@@ -101,9 +102,7 @@ class Thingy {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-finalization-registry.prototype.unregister', 'FinalizationRegistry.prototype.unregister')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

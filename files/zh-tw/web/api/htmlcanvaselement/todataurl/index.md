@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.toDataURL()`** 方法回傳含有圖像和參數設置特定格式的 [data URIs](/zh-TW/docs/Web/HTTP/data_URIs) (預設 [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). 回傳的圖像解析度為 96 dpi.
@@ -116,7 +117,7 @@ function removeColors() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLCanvasElement.toDataURL")}}
+{{Compat}}
 
 ## 參見
 

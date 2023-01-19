@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/backface-visibility
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`backface-visibility`** indique si la face arrière d'un élément doit être visible lorsqu'elle est orientée vers l'utilisateur. La face arrière d'un élément est un arrière-plan transparent qui, lorsqu'il est visible, permet de voir un reflet symétrique de la face avant de l'élément.
@@ -40,9 +41,13 @@ La propriété `backface-visibility` est définie avec l'un des mots-clés suiva
 - `hidden`
   - : Ce mot-clé indique que la face arrière n'est pas visible. La face avant est donc cachée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -187,15 +192,11 @@ th, p, td {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#propdef-backface-visibility', 'backface-visibility')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.backface-visibility")}}
+{{Compat}}
 
 ## Voir aussi
 

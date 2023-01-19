@@ -1,9 +1,6 @@
 ---
 title: Localization
 slug: Glossary/Localization
-tags:
-  - Localization
-translation_of: Glossary/Localization
 original_slug: Localization
 ---
 

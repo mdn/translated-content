@@ -1,15 +1,8 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/gap
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`gap`** 속성은 행과 열 사이의 간격(거터)을 설정합니다. {{CSSxRef("row-gap")}}과 {{CSSxRef("column-gap")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
@@ -103,7 +96,6 @@ gap: unset;
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 

@@ -2,6 +2,7 @@
 title: Element.lastElementChild
 slug: Web/API/Element/lastElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 只读属性 **`Element.lastElementChild`** 返回对象的最后一个子{{domxref("Element", "元素")}}，如果没有子元素，则返回 `null`。
@@ -61,7 +62,7 @@ console.log(foo.lastElementChild.textContent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.lastElementChild")}}
+{{Compat}}
 
 ## 参见
 

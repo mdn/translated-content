@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultController.desiredSize
 slug: Web/API/ReadableStreamDefaultController/desiredSize
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} インターフェイスの **`desiredSize`** 読み取り専用プロパティは、ストリームの内部キューを満たすために必要な希望サイズを返します。
@@ -22,9 +23,7 @@ var desiredSize = readableStreamDefaultController.desiredSize;
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rs-default-controller-desired-size","desiredSize")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

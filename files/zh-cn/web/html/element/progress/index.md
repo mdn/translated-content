@@ -2,6 +2,9 @@
 title: <progress>：进度指示元素
 slug: Web/HTML/Element/progress
 ---
+
+{{HTMLSidebar}}
+
 ## 概述
 
 **HTML**中的 **`<progress>`** 元素用来显示一项任务的完成进度。虽然规范中没有规定该元素具体如何显示，浏览器开发商可以自己决定，但通常情况下，该元素都显示为一个进度条形式。
@@ -46,7 +49,7 @@ DOM 接口                {{domxref("HTMLProgressElement")}}
 
 该元素实现了[`HTMLProgressElement`](/zh-CN/DOM/HTMLProgressElement)接口。
 
-## 例子
+## 示例
 
 ```html
 <progress value="70" max="100">70 %</progress>
@@ -54,15 +57,7 @@ DOM 接口                {{domxref("HTMLProgressElement")}}
 
 ### 结果
 
-{{ EmbedLiveSample("Examples", 200, 50) }}
-
-在 Mac OS X 上，显示的进度条如下：
-
-![progress-1.png](/@api/deki/files/4946/=progress-1.png)
-
-在 Windows 上，显示的进度条如下：
-
-![progress-firefox.JPG](/@api/deki/files/6031/=progress-firefox.JPG)
+{{ EmbedLiveSample("示例", 200, 50) }}
 
 ## 规范
 
@@ -72,13 +67,12 @@ DOM 接口                {{domxref("HTMLProgressElement")}}
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{htmlelement("meter")}}
 - {{ cssxref(":indeterminate") }}
 - {{ cssxref("-moz-orient") }}
 - {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}
 - {{ cssxref("::-webkit-progress-bar") }}
 - {{ cssxref("::-webkit-progress-value") }}
 - {{ cssxref("::-webkit-progress-inner-element") }}

@@ -11,6 +11,7 @@ tags:
   - browserSettings
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings
 ---
+
 {{AddonSidebar}}Permet à une extension de modifier certaines paramètres globaux du navigateur. Chaque propriété de cette API est un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}, fournissant la possibilité de modifier un paramètre particulier.Parce que ce sont les paramètres globaux, il est possible d'étendre les conflits des extensions. voir la documentation de [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/types/BrowserSetting/set) pour plus détails sur la façon dont les conflits sont traités.
 
 Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "browserSettings".
@@ -46,7 +47,7 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("browserSettings.useDocumentFonts")}}
   - : Contrôle si le navigateur utilisera les polices spécifiées par une page Web ou n'utilisera que des polices intégrées.
 - {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}
-  - : Empêche les sites Web d'afficher des notifications à l'aide de la web API  [`Notification`](/fr/docs/Web/API/notification).
+  - : Empêche les sites Web d'afficher des notifications à l'aide de la web API [`Notification`](/fr/docs/Web/API/notification).
 - {{WebExtAPIRef("browserSettings.zoomFullPage")}}
   - : Contrôle si le zoom est appliqué à la page entière ou seulement au texte.
 - {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}

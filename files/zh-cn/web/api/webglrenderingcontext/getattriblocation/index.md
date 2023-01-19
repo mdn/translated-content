@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.getAttribLocation()`** 方法返回了给定{{domxref("WebGLProgram")}}对象中某属性的下标指向位置。
@@ -21,7 +22,7 @@ GLint gl.getAttribLocation(program, name);
 
 ### 返回值
 
-表明属性位置的下标 {{domxref("GLint")}} 数字，如果找不到该属性则返回-1。
+表明属性位置的下标 {{domxref("GLint")}} 数字，如果找不到该属性则返回 -1。
 
 ## 示例
 
@@ -35,7 +36,7 @@ gl.getAttribLocation(program, 'vColor');
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.getAttribLocation")}}
+{{Compat}}
 
 ## 相关资料
 

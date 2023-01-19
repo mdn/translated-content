@@ -12,6 +12,7 @@ tags:
   - sendBeacon
 translation_of: Web/API/Navigator/sendBeacon
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode **`navigator.sendBeacon()`** peut être utilisée pour transférer une petite quantité de données de façon asynchrone via {{Glossary("HTTP")}} vers un serveur web.

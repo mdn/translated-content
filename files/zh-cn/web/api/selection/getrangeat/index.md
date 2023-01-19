@@ -2,6 +2,7 @@
 title: Selection.getRangeAt()
 slug: Web/API/Selection/getRangeAt
 ---
+
 {{APIRef}}**概述**
 
 返回一个包含当前选区内容的区域对象。

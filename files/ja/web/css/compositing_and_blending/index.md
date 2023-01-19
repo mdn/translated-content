@@ -2,6 +2,7 @@
 title: 合成と混合
 slug: Web/CSS/Compositing_and_Blending
 ---
+
 {{CSSRef}}
 
 **合成と混合** (Compositing and Blending) は CSS モジュールの一つで、様々な要素のシェイプを単一の画像に合成する方法を定義します。
@@ -20,9 +21,7 @@ slug: Web/CSS/Compositing_and_Blending
 
 ## 仕様書
 
-| 仕様書                      | 状態                     | 備考     |
-| --------------------------- | ------------------------ | -------- |
-| {{SpecName("Compositing")}} | {{Spec2("Compositing")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

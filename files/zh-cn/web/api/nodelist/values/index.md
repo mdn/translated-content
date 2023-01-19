@@ -2,6 +2,7 @@
 title: NodeList.values()
 slug: Web/API/NodeList/values
 ---
+
 该方法返回一个 iterator 迭代器，可以利用迭代器遍历所有 value。
 
 ## Syntax
@@ -44,7 +45,7 @@ The result is:
 
 ## Browser compatibility
 
-{{Compat("api.NodeList.values")}}
+{{Compat}}
 
 ## See also
 

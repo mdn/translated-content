@@ -1,13 +1,8 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
+
 {{JSRef}}
 
 **`Promise.reject(reason)`** 메서드는 주어진 이유(reason)로 거부된 `Promise` 객체를 반환합니다.

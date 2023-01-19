@@ -3,7 +3,8 @@ title: 使用 CSS 为 HTML 元素应用颜色
 slug: Web/CSS/CSS_Colors/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Element) 添加颜色，以创建所需的外观。本文是一篇入门文章，介绍了 CSS 颜色在 HTML 中的各种使用方法。
 
@@ -28,7 +29,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 - {{cssxref("background-color")}}
   - : The text's background color.
 - {{cssxref("text-shadow")}}
-  - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See {{SectionOnPage("/en-US/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} to learn more.
+  - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See [Text drop shadows](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#文字阴影) to learn more.
 - {{cssxref("text-decoration-color")}}
   - : By default, text decorations (such as underlines, strikethroughs, etc) use the `color` property as their colors. However, you can override that behavior and use a different color for them with the `text-decoration-color` property.
 - {{cssxref("text-emphasis-color")}}
@@ -51,7 +52,7 @@ Every element is a box with some sort of content, and has a background and a bor
 
 ### 边框
 
-Any element can have a [border](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) drawn around it. A basic element border is a line drawn around the edges of the element's content. See {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) to learn more about applying styles to borders.
+Any element can have a [border](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) drawn around it. A basic element border is a line drawn around the edges of the element's content. See [Margins, padding, and borders](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#盒子模型和内联盒子) to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) to learn more about applying styles to borders.
 
 You can use the {{cssxref("border")}} shorthand property, which lets you configure everything about the border in one shot (including non-color features of borders, such as its [width](/zh-CN/docs/Web/CSS/border-width), [style](/zh-CN/docs/Web/CSS/border-style) (solid, dashed, etc.), and so forth.
 
@@ -85,7 +86,7 @@ For more detailed discussion of each of the color value types, see the reference
 
 A set of standard color names have been defined, letting you use these keywords instead of numeric representations of colors if you choose to do so and there's a keyword representing the exact color you want to use. Color keywords include the standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`.
 
-See {{SectionOnPage("/en-US/docs/Web/CSS/color_value", "Color keywords", "code")}} for a list of all available color keywords.
+See [Named colors](/zh-CN/docs/Web/CSS/named-color) for more information on color keywords.
 
 ### RGB 值
 
@@ -125,7 +126,7 @@ For example, a bright red that's 50% opaque can be represented as `rgb(255, 0, 0
 
 Designers and artists often prefer to work using the [HSL](https://zh.wikipedia.org/wiki/HSL_and_HSV) (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The `hsl()` CSS function is very similar to the `rgb()` function in usage otherwise.
 
-![HSL color cylinder](https://mdn.mozillademos.org/files/15445/1200px-HSL_color_solid_cylinder_alpha_lowgamma.png)
+![HSL color cylinder](1200px-hsl_color_solid_cylinder_alpha_lowgamma.png)
 
 _**Figure 1. An HSL color cylinder.** Hue defines the actual color based on the position along a circular color wheel representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). Image courtesy of user [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) on [Wikipedia](https://www.wikipedia.org/), distributed under the [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) license._
 
@@ -366,9 +367,9 @@ colorPicker.addEventListener("change", function(event) {
 }, false);
 ```
 
-The {{event("input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
+The [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
 
-The {{event("change")}} event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
+The [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
 
 ## 机智地运用颜色
 

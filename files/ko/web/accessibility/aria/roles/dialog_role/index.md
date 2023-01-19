@@ -1,12 +1,8 @@
 ---
 title: 'ARIA: dialog role'
 slug: Web/Accessibility/ARIA/Roles/dialog_role
-tags:
-  - ARIA
-  - Web Development
-  - 접근성
-translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 ---
+
 {{draft()}}
 
 {{ariaref}}

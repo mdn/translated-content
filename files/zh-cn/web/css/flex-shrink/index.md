@@ -2,6 +2,7 @@
 title: flex-shrink
 slug: Web/CSS/flex-shrink
 ---
+
 {{ CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`flex-shrink`** 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值。
@@ -22,7 +23,7 @@ flex-shrink: unset
 
 ## 语法
 
-`flex-shrink` 属性只能是一个 `<number>。`
+`flex-shrink` 属性只能是一个 `<number>`。
 
 ### 取值
 
@@ -82,7 +83,7 @@ flex-shrink: unset
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## 参考
 

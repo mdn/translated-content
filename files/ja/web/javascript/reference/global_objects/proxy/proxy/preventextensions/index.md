@@ -2,6 +2,7 @@
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 ---
+
 {{JSRef}}
 
 **`handler.preventExtensions()`** は {{jsxref("Object.preventExtensions()")}} に対するトラップです。
@@ -78,9 +79,7 @@ Object.preventExtensions(p); // TypeError is thrown
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

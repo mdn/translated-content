@@ -8,7 +8,8 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/pre
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **Элемент HTML `<pre>` **представляет собой предварительно отформатированный текст, который должен быть представлен точно так, как написано в HTML-файле. Текст обычно отображается с использованием непропорционального ("[monospace](/ru/docs/XUL/Style/monospace)") шрифта. Пробелы внутри этого элемента отображаются как записанные.
 
@@ -61,21 +62,23 @@ body {
 
 ### Пример
 
-    <figure role="img" aria-labelledby="cow-caption">
-      <pre>
-      ____________________________
-    <  Я эксперт в своей области.  >
-      ----------------------------
-             \   ^__^
-              \  (oo)\_______
-                 (__)\       )\/\
-                     ||----w |
-                     ||     ||
-      </pre>
-      <figcaption id="cow-caption">
-         Корова говорит: «Я эксперт в своей области». Корова проиллюстрирована с использованием предварительно отформатированных текстовых символов.
-      </figcaption>
-    </figure>
+```html
+<figure role="img" aria-labelledby="cow-caption">
+  <pre>
+  ____________________________
+<  Я эксперт в своей области.  >
+  ----------------------------
+         \   ^__^
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+  </pre>
+  <figcaption id="cow-caption">
+     Корова говорит: «Я эксперт в своей области». Корова проиллюстрирована с использованием предварительно отформатированных текстовых символов.
+  </figcaption>
+</figure>
+```
 
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content)
 - [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)

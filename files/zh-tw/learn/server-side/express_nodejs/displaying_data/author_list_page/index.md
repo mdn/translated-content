@@ -2,6 +2,7 @@
 title: Author list page and Genre list page challenge
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
+
 作者列表頁面，需要呈現數據庫中所有作者的列表，有每位作者的名字，並連結到作者詳細內容頁面。出生與死亡日期應該在名字後面，並且在同一列。
 
 ## Controller 控制器
@@ -59,7 +60,7 @@ Run the application and open your browser to <http://localhost:3000/>. Then sele
 >
 > `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
-## Genre list page—challenge\![Edit](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!)
+## Genre list page—challenge!
 
 In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.
 

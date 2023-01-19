@@ -2,7 +2,7 @@
 title: クライアント側のフォーム検証
 slug: Learn/Forms/Form_validation
 l10n:
-  sourceCommit: edabd5d383369f30c31d0710145ebe29f8ad7978
+  sourceCommit: 8e16e19d3ee35157c81b299c0ccb9d5effd2ac22
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -57,7 +57,7 @@ l10n:
 - **ユーザーのデータを保護したい。** ユーザーに安全なパスワードを入力させることで、アカウント情報を保護しやすくなります。
 - **自分たちを守りたい。** 悪意のあるユーザーが保護のないフォームを悪用して、そのフォームを一部に持つアプリケーションに危害を加える方法がたくさんあります。[ウェブサイトセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)を参照してください。
 
-  > **Warning:** クライアントからサーバーに渡されたデータを信用しないでください。フォームが正しく検証を行い、クライアント側で悪意のある入力を防いでいるとしても、悪意のあるユーザーはネットワークリクエストを改ざんすることができます。
+  > **警告:** クライアントからサーバーに渡されたデータを信用しないでください。フォームが正しく検証を行い、クライアント側で悪意のある入力を防いでいるとしても、悪意のあるユーザーはネットワークリクエストを改ざんすることができます。
 
 ## 様々な種類のフォーム検証
 
@@ -92,7 +92,7 @@ l10n:
 - 要素が CSS の {{cssxref(":invalid")}} 擬似クラスに一致し、エラーによっては他の UI 擬似クラス（{{cssxref(":out-of-range")}} など）に一致することもあります。これにより、不正な要素に特定のスタイルを適用することができます。
 - ユーザーがデータを送信しようとすると、ブラウザーはフォームをブロックしてエラーメッセージを表示します。
 
-> **Note:** サーバーへの送信を中断するエラーがいくつかあります。 {{domxref('validityState.badInput', 'badInput')}}、{{domxref('validityState.patternMismatch','patternMismatch')}}、{{domxref('validityState.rangeOverflow','rangeOverflow')}} または{{domxref('validityState.rangeUnderflow','rangeUnderflow')}}、{{domxref('validityState.stepMismatch','stepMismatch')}}、{{domxref('validityState.tooLong','tooLong')}} または{{domxref('validityState.tooShort','tooShort')}}、{{domxref('validityState.typeMismatch','typeMismatch')}}、{{domxref('validityState.valueMissing','valueMissing')}}、または {{domxref('validityState.customError','customError')}} が含まれます。
+> **メモ:** サーバーへの送信を中断するエラーがいくつかあります。 {{domxref('validityState.badInput', 'badInput')}}、{{domxref('validityState.patternMismatch','patternMismatch')}}、{{domxref('validityState.rangeOverflow','rangeOverflow')}} または{{domxref('validityState.rangeUnderflow','rangeUnderflow')}}、{{domxref('validityState.stepMismatch','stepMismatch')}}、{{domxref('validityState.tooLong','tooLong')}} または{{domxref('validityState.tooShort','tooShort')}}、{{domxref('validityState.typeMismatch','typeMismatch')}}、{{domxref('validityState.valueMissing','valueMissing')}}、または {{domxref('validityState.customError','customError')}} が含まれます。
 
 ## 入力要素の制約の検証
 
@@ -162,13 +162,13 @@ input:valid {
 
 {{EmbedLiveSample("The_required_attribute", "100%", 80)}}
 
-> **Note:** この例は GitHub の [fruit-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) で見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-required.html)も見てください）。
+> **メモ:** この例は GitHub の [fruit-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) で見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-required.html)も見てください）。
 
 値のないままフォームを送信してみましょう。妥当ではない入力がどのようにフォーカスされるか注意しましょう。デフォルトのエラーメッセージ（「このフィールドは入力必須です。」）が表示され、フォームの送信を抑止します。
 
 `required` 属性に対応している要素にこの属性がある場合、その要素に値があるかないかによって、要素が {{cssxref(':required')}} 擬似クラスに一致するかどうかが決まります。もし {{HTMLElement("input")}} に値がなければ、`input` は{{cssxref(':invalid')}} 擬似クラスに一致します。
 
-> **Note:** 使い勝手を良くするために、フォームのフィールドが必要なときにはユーザーに通知しましょう。
+> **メモ:** 使い勝手を良くするために、フォームのフィールドが必要なときにはユーザーに通知しましょう。
 > これは使い勝手だけに良いというわけではなく、WCAG [アクセシビリティ](/ja/docs/Learn/Accessibility) ガイドラインで求められています。
 > また、本当に必要とする場合にのみ必須にしましょう。例えば誰かの性別や肩書などの情報は本当に必要でしょうか？
 
@@ -182,8 +182,8 @@ input:valid {
 
 - `a` — `a` の 1 文字に一致する (`b` や `aa` などではない)。
 - `abc` — `a` と、その次の `b` と、その次の `c` の並びに一致する。
-- `ab?c`— `a` と、その次にひとつだけ `b` があるかないかと、その次の `c` の並びに一致する ( `ac` または `abc`)
-- `ab*c`— `a` と、その次に任意の数の `b` が続き、その次に `c` のある並びに一致する。( `ac` , `abc`, `abbbbbc`, 等)
+- `ab?c` — `a` と、その次にひとつだけ `b` があるかないかと、その次の `c` の並びに一致する ( `ac` または `abc`)
+- `ab*c` — `a` と、その次に任意の数の `b` が続き、その次に `c` のある並びに一致する。( `ac`, `abc`, `abbbbbc`, 等)
 - `a|b` — 一文字の `a` または `b` に一致する
 - `abc|xyz` — `abc` の並びまたは `xyz` の並びに一致する。これは `abcxyz` や `a` や `y` などには一致しない。
 
@@ -213,7 +213,7 @@ input:valid {
 
 {{EmbedLiveSample("Validating_against_a_regular_expression", "100%", 80)}}
 
-> **Note:** GitHub の [fruit-pattern.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html) でライブ例を見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-pattern.html)も見てください）。
+> **メモ:** GitHub の [fruit-pattern.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html) でライブ例を見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-pattern.html)も見てください）。
 
 この例では、{{HTMLElement("input")}} 要素は "banana"、"Banana"、"cherry"、"Cherry" という 4 つの文字列値のうち 1 つを受け付けます。正規表現は大文字小文字を区別しますが、中括弧にはさまれた "Aa" のパターンを使って小文字と同様に先頭が大文字のバージョンをサポートします。
 
@@ -223,9 +223,9 @@ input:valid {
 
 もし {{HTMLElement("input")}} の空ではない値が正規表現パターンに一致しなかった場合、この `input` は {{cssxref(':invalid')}} 擬似クラスに一致します。
 
-> **Note:** {{HTMLElement("input")}} 要素の型によっては、検証のために [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性が必要ないことがあります。例えば `email` 型を指定すると、入力された文字列を、妥当な形式のメールアドレスまたは、 [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 属性がある場合はカンマで区切られたメールアドレスのリストであることを確認する正規表現で検証します。
+> **メモ:** {{HTMLElement("input")}} 要素の型によっては、検証のために [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性が必要ないことがあります。例えば `email` 型を指定すると、入力された文字列を、妥当な形式のメールアドレスまたは、 [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 属性がある場合はカンマで区切られたメールアドレスのリストであることを確認する正規表現で検証します。
 
-> **Note:** {{HTMLElement("textarea")}} 要素は [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性に対応していません。
+> **メモ:** {{HTMLElement("textarea")}} 要素は [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性に対応していません。
 
 ### 入力欄の長さの制約
 
@@ -289,9 +289,9 @@ div {
 
 {{EmbedLiveSample("Constraining_the_values_of_your_entries", "100%", 100)}}
 
-> **Note:** GitHub の [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) でライブサンプルを見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-length.html)も見てください）
+> **メモ:** GitHub の [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) でライブサンプルを見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-length.html)も見てください）
 
-> **Note:** `<input type="number">` （オヨビ `range` や `date` のような他の型）は [`step`](/ja/docs/Web/HTML/Attributes/step) 属性を取ることもでき、入力コントロール（数値の増加・減少ボタンなど）を使用するときに上げ下げすることができる値の刻みを設定することができます。上の例では `step` 属性を入れていませんので、既定値の `1` となります。つまり 3.2 のような浮動小数でも、不正になります。
+> **メモ:** `<input type="number">` （オヨビ `range` や `date` のような他の型）は [`step`](/ja/docs/Web/HTML/Attributes/step) 属性を取ることもでき、入力コントロール（数値の増加・減少ボタンなど）を使用するときに上げ下げすることができる値の刻みを設定することができます。上の例では `step` 属性を入れていませんので、既定値の `1` となります。つまり 3.2 のような浮動小数でも、不正になります。
 
 ### サンプル全体
 
@@ -383,7 +383,7 @@ input:focus:invalid {
 
 入力値と、それをサポートする入力タイプの制約に使える属性の完全なリストは、[検証関連属性](/ja/docs/Web/Guide/HTML/Constraint_validation#検証関連属性)を見てください。
 
-> **Note:** GitHub の [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) でライブサンプルを見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-pattern.html)も見てください)
+> **メモ:** GitHub の [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) でライブサンプルを見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-pattern.html)も見てください)
 
 ## JavaScript を使用したフォーム検証
 
@@ -392,7 +392,7 @@ input:focus:invalid {
 
 ### 制約検証 API
 
-多くのブラウザーが [制約検証 API](/ja/docs/Web/API/Constraint_validation) に対応しています。以下のフォーム要素 DOM インターフェイスで利用できるメソッドとプロパティのセットで構成されています。
+多くのブラウザーが制約検証 API に対応しています。以下のフォーム要素 DOM インターフェイスで利用できるメソッドとプロパティのセットで構成されています。
 
 - [`HTMLButtonElement`](/ja/docs/Web/API/HTMLButtonElement) ([`<button>`](/ja/docs/Web/HTML/Element/button) 要素を表現)
 - [`HTMLFieldSetElement`](/ja/docs/Web/API/HTMLFieldSetElement) ([`<fieldset>`](/ja/docs/Web/HTML/Element/fieldset) 要素を表現)
@@ -420,6 +420,7 @@ input:focus:invalid {
 また、制約検証 API では、上記の要素や [`form`](/ja/docs/Web/HTML/Element/form) 要素に対して、以下のメソッドを利用することが可能です。
 
 - `checkValidity()`: 要素の値で妥当性の問題がない場合に `true` を返します。そうでない場合は `false` を返します。要素が不正である場合、このメソッドは要素で [`invalid` イベント](/ja/docs/Web/API/HTMLInputElement/invalid_event)を発生させます。
+- `reportValidity()`: イベントを使用して、無効なフィールドを報告します。このメソッドは `onSubmit` イベントハンドラーでは `preventDefault()` と組み合わせて使用すると有益です。
 - `setCustomValidity(message)`: 要素に独自のエラーメッセージを追加します。独自のエラーメッセージを設定すると、要素が不正であるとみなされる場合に指定したエラーが表示されます。これにより JavaScript で、標準の HTML 制約検証 API で提供されるもの以外の検証不合格状態を作り出すことができます。ユーザーに問題を報告する際に、メッセージが表示されます。
 
 #### 独自のエラーメッセージを実装する
@@ -433,7 +434,7 @@ input:focus:invalid {
 
 ![Example of an error message with Firefox in French on an English page](error-firefox-win7.png)
 
-これらのメッセージの外見やテキストを変更するには、[制約検証 API](/ja/docs/Web/API/Constraint_validation) の最も一般的なユースケースです。この使用法を例で詳しく見てみましょう。
+これらのメッセージの外見やテキストを変更するには、制約検証 API の最も一般的なユースケースです。この使用法を例で詳しく見てみましょう。
 
 いくつかの簡単な HTML で開始します (空の HTML ファイルにこれを入力します; もしよければ、[fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) を基礎としてもいいでしょう):
 
@@ -470,7 +471,7 @@ email.addEventListener("input", (event) => {
 
 {{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
 
-> **Note:** この例は GitHub の [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) で見ることができます （[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/custom-error-message.html)も見てください）。
+> **メモ:** この例は GitHub の [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) で見ることができます （[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/custom-error-message.html)も見てください）。
 
 #### より詳細な例
 
@@ -491,13 +492,13 @@ email.addEventListener("input", (event) => {
 </form>
 ```
 
-この簡単なフォームでは、ブラウザーの自動検証を無効にするために [`novalidate`](/ja/docs/Web/HTML/Attributes/novalidate) 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の擬似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。
+この簡単なフォームでは、ブラウザーの自動検証を無効にするために [`novalidate`](/ja/docs/Web/HTML/Element/form#attr-novalidate) 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の擬似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。
 
 検証する入力は [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)で、これは `required` (入力必須) で、8 文字の `minlength` があります。これをわれわれのコードで確認して、それぞれカスタムエラーメッセージを表示させてみましょう。
 
 `<span>` 要素の中にエラーメッセージを表示させようとしています。 `<span>`にセットされた [`aria-live`](/ja/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性は、画面リーダーのような支援技術を使用している人々を含む皆に、独自のエラーメッセージを提示するようにします。
 
-> **Note:** ここでの要点は、フォームに `novalidate` 属性をつけると、フォームがエラーメッセージのバブルを表示するのを停止して、その代わり DOM 内にカスタムエラーメッセージを選択した方法で表示させられることです。
+> **メモ:** ここでの要点は、フォームに `novalidate` 属性をつけると、フォームがエラーメッセージのバブルを表示するのを停止して、その代わり DOM 内にカスタムエラーメッセージを選択した方法で表示させられることです。
 
 この CSS はフォームの見栄えを少し良くして、入力データが無効なときの見た目のフィードバックを提供します。
 
@@ -622,11 +623,9 @@ function showError() {
 
 {{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}
 
-> **Note:** GitHub の [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) に例があります（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/detailed-custom-validation.html)見てください）。
+> **メモ:** GitHub の [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) に例があります（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/detailed-custom-validation.html)見てください）。
 
 制約検証 API はフォーム検証を制御するための強力なツールであり、HTML および CSS のみで検証を行うよりもはるかにユーザーインターフェイスをコントロールできます。
-
-> **Note:** さらなる情報は、[制約検証ガイド](/ja/docs/Web/Guide/HTML/Constraint_validation)と[制約検証 API](/ja/docs/Web/API/Constraint_validation) リファレンスを見てください。
 
 ### 組み込み API を使用しないフォーム検証
 
@@ -646,10 +645,9 @@ function showError() {
     明確なエラーメッセージはもちろん、ユーザーが何を求められているか理解できるように前向きの提案をするべきです。
     フォーム検証のユーザーインターフェイスの要件について深く知りたいのであれば、ぜひ読むべきである有用な記事があります（英語）。
 
-    - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](https://www.smashingmagazine.com/2012/06/form-field-validation-errors-only-approach/)
-    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](https://www.smashingmagazine.com/2009/07/web-form-validation-best-practices-and-tutorials/)
-    - WebFX: [10 Tips for Optimizing Web Form Submission Usability](https://www.webfx.com/blog/web-design/10-tips-for-optimizing-web-form-submission-usability/)
-    - A List Apart: [Inline Validation in Web Forms](https://alistapart.com/article/inline-validation-in-web-forms/)
+    - [Help users enter the right data in forms](https://web.dev/learn/forms/validation/)
+    - [Validating input](https://www.w3.org/WAI/tutorials/forms/validation/)
+    - [How to Report Errors in Forms: 10 Design Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
 
 #### 制約検証 API を使用しない例
 
@@ -661,7 +659,7 @@ function showError() {
 <form>
   <p>
     <label for="mail">
-        <span>メールアドレスを入力してください。</span>
+      <span>メールアドレスを入力してください。</span>
       <input type="text" id="mail" name="mail" />
       <span class="error" aria-live="polite"></span>
     </label>
@@ -809,7 +807,7 @@ form.addEventListener("submit", (event) => {
 - [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
 - [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
 - [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- **クライアント側のフォーム検証**
 - [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 上級トピック

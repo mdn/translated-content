@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/frameElement
 ---
+
 {{ApiRef}}
 
 La propriété **`Window.frameElement`** renvoie l'élément (tel que {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}) dans lequel la fenêtre est intégrée.

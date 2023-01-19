@@ -1,7 +1,6 @@
 ---
 title: Loading and running WebAssembly code
 slug: WebAssembly/Loading_and_running
-translation_of: WebAssembly/Loading_and_running
 ---
 {{WebAssemblySidebar}}
 
@@ -81,7 +80,7 @@ JavaScript에서 WebAssembly 인스턴스를 사용할 수있게되면 {{jsxref(
 
 ## Using XMLHttpRequest
 
-[`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)는 Fetch보다 다소 오래된 방법이지만 형식화 된 배열을 얻는 데 부족함이 없습니다. `simple.wasm`을 그대로 사용하여 진행하겠습니다.
+[`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest)는 Fetch보다 다소 오래된 방법이지만 형식화 된 배열을 얻는 데 부족함이 없습니다. `simple.wasm`을 그대로 사용하여 진행하겠습니다.
 
 1. 새로운 {{domxref("XMLHttpRequest()")}} 인스턴스를 만들고 {{domxref("XMLHttpRequest.open","open()")}} 메서드를 사용하여 요청을 열고 요청 메서드를 GET으로 설정합니다. , 가져올 파일의 경로를 선언하십시오.
 2. 핵심 부분은 {{domxref("XMLHttpRequest.responseType","responseType")}} 속성을 사용하여 응답 유형을 `'arraybuffer'`로 설정하는 것입니다.

@@ -2,6 +2,7 @@
 title: 'Warning: Date.prototype.toLocaleFormat is deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の警告 "Date.prototype.toLocaleFormat is deprecated; consider using

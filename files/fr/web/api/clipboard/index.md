@@ -13,6 +13,7 @@ tags:
   - Reference
 translation_of: Web/API/Clipboard
 ---
+
 {{APIRef("Clipboard API")}}
 
 > **Note :** Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d’une [mémoire tampon](https://fr.wikipedia.org/wiki/M%C3%A9moire_tampon) temporaire, parfois appelée «&nbsp;tampon de collage&nbsp;», qui peut être accédé par la plupart ou tous les programmes de l’environnement via des [interfaces de programmation](https://fr.wikipedia.org/wiki/Interface_de_programmation) définies.
@@ -23,7 +24,7 @@ L’interface **`Clipboard`** implémente l’[API clipboard](/fr/docs/Web/API/C
 
 Le presse-papiers du système est exposé via la propriété globale {{domxref("Navigator.clipboard")}}.
 
-Les appels aux méthodes de l’objet `Clipboard` échoueront si l’utilisateur ou l’utilisatrice n’a pas accordé les permissions requises en utilisant l’[API permissions](/docs/Web/API/Permissions_API), et la permission `"clipboard-read"` ou `"clipboard-write"` selon le besoin.
+Les appels aux méthodes de l’objet `Clipboard` échoueront si l’utilisateur ou l’utilisatrice n’a pas accordé les permissions requises en utilisant l’[API permissions](/fr/docs/Web/API/Permissions_API), et la permission `"clipboard-read"` ou `"clipboard-write"` selon le besoin.
 
 > **Note :** En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section [Disponibilité du presse-papiers](#disponibilité_du_presse-papiers) pour plus de détails.
 

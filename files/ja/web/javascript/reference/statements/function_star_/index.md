@@ -2,6 +2,7 @@
 title: function* 宣言
 slug: Web/JavaScript/Reference/Statements/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 **`function*`** 宣言 (`function` キーワードにアスタリスクが付いたもの) は、 {{jsxref("Global_Objects/Generator","Generator")}} オブジェクトを返すジェネレーター関数を定義します。
@@ -216,9 +217,7 @@ for(let power of powers(2)){
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

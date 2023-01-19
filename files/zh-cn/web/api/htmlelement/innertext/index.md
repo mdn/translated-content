@@ -2,11 +2,12 @@
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
 ---
+
 {{APIRef("DOM")}}
 
-**`innerText`** 属性表示一个节点及其后代的“渲染”文本内容。 As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
+**`innerText`** 属性表示一个节点及其后代的“渲染”文本内容。As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
 
-> **备注：** `innerText` 很容易与{{domxref("Node.textContent")}}混淆，但这两个属性间实际上有很重要的区别。大体来说，`innerText` 可操作已被渲染的内容， 而 `textContent` 则不会。
+> **备注：** `innerText` 很容易与{{domxref("Node.textContent")}}混淆，但这两个属性间实际上有很重要的区别。大体来说，`innerText` 可操作已被渲染的内容，而 `textContent` 则不会。
 
 ## 语法
 
@@ -62,7 +63,7 @@ innerTextOutput.innerHTML = source.innerText;
 
 {{Compat}}
 
-此特性最初由 Internet Explorer 引入。 被所有主要的浏览器供应商（vendor）采用后，它于 2016 年正式进入 HTML 标准。
+此特性最初由 Internet Explorer 引入。被所有主要的浏览器供应商（vendor）采用后，它于 2016 年正式进入 HTML 标准。
 
 ## 参见
 

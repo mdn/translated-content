@@ -11,6 +11,7 @@ tags:
   - Window
 translation_of: Web/API/Window/event
 ---
+
 {{APIRef("DOM")}}
 
 L'événement de propriété {{domxref("Window")}} en lecture seule renvoie le {{domxref("Event")}} qui est actuellement géré par le code du site. En dehors du contexte d'un gestionnaire d'événements, la valeur est toujours `undefined`.

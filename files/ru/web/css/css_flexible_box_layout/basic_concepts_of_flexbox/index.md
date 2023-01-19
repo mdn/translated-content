@@ -3,6 +3,7 @@ title: Основные понятия Flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 ---
+
 {{CSSRef}}
 
 **CSS модуль раскладки Flexible Box**, обычно называемый флексбокс или flexbox или просто flex (флекс), был разработан как модель одномерного-направленного макета и как один из методов распределения пространства между элементами в интерфейсе, с мощными возможностями выравнивания. В этой статье даётся краткое описание основных функций flexbox, которые мы рассмотрим более подробно в остальных руководствах.
@@ -24,21 +25,21 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 Если вы выберете `row` или `row-reverse`, ваша главная ось будет проходить в горизонтальном направлении **(inline direction)**.
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](https://mdn.mozillademos.org/files/15614/Basics1.png)
+![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.png)
 
 Если вы выберете `column` или `column-reverse`, ваша главная ось будет проходить в вертикальном направлении **(block direction)**.
 
-![If flex-direction is set to column the main axis runs in the block direction.](https://mdn.mozillademos.org/files/15615/Basics2.png)
+![If flex-direction is set to column the main axis runs in the block direction.](basics2.png)
 
 ### Побочная ось
 
 Побочная ось проходит перпендикулярно главной оси, поэтому, если свойство `flex-direction` (главная ось) задано как `row` или `row-reverse`, побочная ось будет проходить в вертикальном направлении.
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](https://mdn.mozillademos.org/files/15616/Basics3.png)
+![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.png)
 
 Если свойство `flex-direction` задано как `column` или `column-reverse`, побочная ось будет проходить в горизонтальном направлении.
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](https://mdn.mozillademos.org/files/15617/Basics4.png)
+![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.png)
 
 Понимание того, с какой осью вы работаете (главная или побочная) очень важно для дальнейшего изучения Flexbox.
 
@@ -50,11 +51,11 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 Если свойству `flex-direction` задано значение `row` и вы работаете с английским языком, то начало главной оси будет слева, а конец главной оси – справа.
 
-![Working in English the start edge is on the left.](https://mdn.mozillademos.org/files/15618/Basics5.png)
+![Working in English the start edge is on the left.](basics5.png)
 
 Если бы вы работаете с арабским языком, то начало главной оси будет справа, а конец главной оси – слева.
 
-![The start edge in a RTL language is on the right.](https://mdn.mozillademos.org/files/15619/Basics6.png)
+![The start edge in a RTL language is on the right.](basics6.png)
 
 В обоих случаях начало побочной оси находится вверху flex контейнера, а конец – внизу, поскольку оба языка имеют режим горизонтальной записи.
 
@@ -83,7 +84,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 Если изменить значение свойства `flex-direction` на `column`, главная ось изменится, и наши элементы будут отображаются в столбец. При установке параметра `column-reverse`, начало и конец столбца поменяются местами.
 
-В приведённом ниже примере значение свойства `flex-direction` установлено как `row-reverse`. Попробуйте другие значения — `row`, `column` и`column-reverse`, чтобы посмотреть как изменятся элементы контейнера.
+В приведённом ниже примере значение свойства `flex-direction` установлено как `row-reverse`. Попробуйте другие значения — `row`, `column` и `column-reverse`, чтобы посмотреть как изменятся элементы контейнера.
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/flex-direction.html", '100%', 350)}}
 
@@ -119,13 +120,13 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 Если наш контейнер шириной 500 пикселей содержит три элемента шириной 100 пикселей каждый, для их размещения нам потребуется пространство шириной в 300 пикселей. Остаётся 200 пикселей свободного пространства. Если мы не изменим исходные значения этих свойств, флексбокс разместит это пространство за последним элементом.
 
-![This flex container has available space after laying out the items.](https://mdn.mozillademos.org/files/15620/Basics7.png)
+![This flex container has available space after laying out the items.](basics7.png)
 
 Если вместо этого мы хотим чтобы элементы росли и заполняли собой свободное пространство, нам нужно указать способ распределения оставшегося пространства между элементами. Это как раз то для чего предназначены `flex` свойства.
 
 ### Свойство `flex-basis`
 
-Свойство `flex-basis` определяет размер доступного пространства элемента. Начальное значение этого свойства - `auto `- в этом случае браузер проверяет, имеют ли элементы размер. В приведённом выше примере все элементы имеют ширину 100px, и этот размер читается браузером как `flex-basis`.
+Свойство `flex-basis` определяет размер доступного пространства элемента. Начальное значение этого свойства - `auto` - в этом случае браузер проверяет, имеют ли элементы размер. В приведённом выше примере все элементы имеют ширину 100px, и этот размер читается браузером как `flex-basis`.
 Если элементы не имеют размера, то для размера `flex-basis` используется размер контента. Вот почему, когда мы просто объявляем `display: flex` на родительском элементе для создания flex-элементов, все элементы перемещаются в ряд и занимают столько места, сколько им нужно для отображения их содержимого.
 
 ### Свойство `flex-grow`

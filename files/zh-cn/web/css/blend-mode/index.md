@@ -2,6 +2,7 @@
 title: <blend-mode>
 slug: Web/CSS/blend-mode
 ---
+
 {{CSSRef}}
 
 **`<blend-mode>`** 是一种 [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)，用于描述当元素重叠时，颜色应当如何呈现。它被用于 {{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}} 属性。
@@ -26,8 +27,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: normal;
       }
       ```
@@ -48,8 +49,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: multiply;
       }
       ```
@@ -69,8 +70,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: screen;
       }
       ```
@@ -89,8 +90,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: overlay;
       }
       ```
@@ -108,8 +109,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: darken;
       }
       ```
@@ -127,8 +128,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: lighten;
       }
       ```
@@ -148,8 +149,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: color-dodge;
       }
       ```
@@ -169,8 +170,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: color-burn;
       }
       ```
@@ -190,8 +191,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: hard-light;
       }
       ```
@@ -211,8 +212,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: soft-light;
       }
       ```
@@ -231,8 +232,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: difference;
       }
       ```
@@ -251,8 +252,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: exclusion;
       }
       ```
@@ -270,8 +271,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: hue;
       }
       ```
@@ -290,8 +291,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: saturation;
       }
       ```
@@ -310,8 +311,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: color;
       }
       ```
@@ -330,8 +331,8 @@ slug: Web/CSS/blend-mode
       #div {
         width: 300px;
         height: 300px;
-        background: url('https://mdn.mozillademos.org/files/8543/br.png'),
-                    url('https://mdn.mozillademos.org/files/8545/tr.png');
+        background: url('br.png'),
+                    url('tr.png');
         background-blend-mode: luminosity;
       }
       ```
@@ -348,7 +349,7 @@ slug: Web/CSS/blend-mode
 
 ## 浏览器兼容性
 
-{{Compat("css.types.blend-mode")}}
+{{Compat}}
 
 ## 另请参阅
 

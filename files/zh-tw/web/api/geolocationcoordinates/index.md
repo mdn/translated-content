@@ -2,6 +2,7 @@
 title: Coordinates
 slug: Web/API/GeolocationCoordinates
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`Coordinates`** 這個介面用來存取裝置的經緯度，速度以及這些數值的準確度。
@@ -35,7 +36,7 @@ _`Coordinates` 這個介面沒有繼承任何屬性_。
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationCoordinates")}}
+{{Compat}}
 
 ## 請參考
 

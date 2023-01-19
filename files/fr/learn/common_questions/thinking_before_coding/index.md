@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/Common_questions/Thinking_before_coding
 original_slug: Apprendre/Commencez_votre_projet_web
 ---
+
 Cette article présente l'étape primordiale de n'importe quel projet définir ce qu'on souhaite accomplir avec.
 
 <table class="standard-table">
@@ -189,5 +190,5 @@ Comme vous pouvez le voir, l'idée simple: « Je veux faire un site » génère 
 
 ## Prochaines étapes
 
-- Commencer à apprendre la technique  [Comment fonctionne l'Internet ?](/fr/Apprendre/Fonctionnement_Internet)
-- Approfondir le design et la conception  [Conception d'une page web](/fr/Apprendre/Concevoir_page_web)
+- Commencer à apprendre la technique [Comment fonctionne l'Internet ?](/fr/Apprendre/Fonctionnement_Internet)
+- Approfondir le design et la conception [Conception d'une page web](/fr/Apprendre/Concevoir_page_web)

@@ -2,6 +2,7 @@
 title: text-align
 slug: Web/CSS/text-align
 ---
+
 {{CSSRef}}
 
 `text-align` CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己的对齐，只控制它的行内内容的对齐。
@@ -164,9 +165,9 @@ text-align 属性指定为从以下值列表中选择的单个关键字。
   - : 第一个出现的该（单字符）字符串被用来对齐。跟随的关键字定义对齐的方向。例如，可用于让数字值根据小数点对齐。
 - `justify`
   - : 文字向两侧对齐，对最后一行无效。
-- `justify-all`
+- `justify-all` {{experimental_inline}}
   - : 和 justify 一致，但是强制使最后一行两端对齐。
-- `match-parent` {{experimental_inline}}
+- `match-parent`
   - : 和`inherit`类似，区别在于`start`和`end`的值根据父元素的{{cssxref("direction")}}确定，并被替换为恰当的`left`或`right`。
 
 ### 指示语法
@@ -308,7 +309,7 @@ The standard-compatible way to center a block itself without centering its inlin
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-align")}}
+{{Compat}}
 
 ## 参见
 

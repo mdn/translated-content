@@ -3,6 +3,7 @@ title: inset()
 slug: Web/CSS/basic-shape/inset
 original_slug: Web/CSS/basic-shape/inset()
 ---
+
 {{CSSRef}}
 
 **`inset()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。内部の矩形を定義します。

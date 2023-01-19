@@ -1,11 +1,8 @@
 ---
 title: 例
 slug: Web/SVG/Namespaces_Crash_Course/Example
-tags:
-  - SVG
-  - XML
-translation_of: Web/SVG/Namespaces_Crash_Course/Example
 ---
+
 この例で、私達は [XHTML](/ja/docs/XHTML) 、 [SVG](/ja/docs/Web/SVG) 、 [JavaScript](/ja/docs/Web/JavaScript) と [DOM](/ja/docs/DOM) 2 を「ほこり」の群れを動かすのにつかっています。これらのほこりは 2 つの簡単な法則によって制御されています。1 つめは、それぞれのほこりがマウスカーソルの方向に向かって移動しようとします。2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。組み合わせることで、このとても自然に見える動きができます。
 
 これは完全に Flash やその他のベンダ特有の拡張を用いずに、 W3C 標準- XHTML と SVG と JavaScript で実現されています。これは Firefox 1.5 以上で動作します。

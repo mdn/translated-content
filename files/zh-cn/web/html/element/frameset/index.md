@@ -2,6 +2,7 @@
 title: <frameset>
 slug: Web/HTML/Element/frameset
 ---
+
 {{Deprecated_header}}
 
 ## 概述
@@ -12,7 +13,7 @@ slug: Web/HTML/Element/frameset
 
 ## 属性
 
-像所有其他的 HTML 元素一样，这个元素支持[全局属性](/en-US/HTML/Global_attributes)。
+像所有其他的 HTML 元素一样，这个元素支持[全局属性](/zh-CN/HTML/Global_attributes)。
 
 - {{htmlattrdef("cols")}}
   - : 这个属性指定一个框架集中列的数目和尺寸。
@@ -30,11 +31,11 @@ slug: Web/HTML/Element/frameset
 
 ## Browser compatibility
 
-{{Compat("html.elements.frameset")}}
+{{Compat}}
 
 ## 参见
 
 - {{HTMLElement("frame")}}
 - {{HTMLElement("iframe")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

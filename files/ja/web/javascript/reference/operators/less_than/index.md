@@ -2,6 +2,7 @@
 title: 小なり (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
 ---
+
 {{jsSidebar("Operators")}}
 
 小なり演算子 (`<`) は、左辺のオペランドが右辺のオペランドより小さい場合は `true` を返し、それ以外の場合は `false` を返します。

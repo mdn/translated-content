@@ -2,6 +2,7 @@
 title: Symbol.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 ---
+
 {{JSRef}}
 
 **`[@@toPrimitive]()`** メソッドは、 Symbol オブジェクトをプリミティブ値に変換します。
@@ -33,9 +34,7 @@ sym === sym[Symbol.toPrimitive](); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.prototype-@@toprimitive', 'Symbol.prototype.@@toPrimitive')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

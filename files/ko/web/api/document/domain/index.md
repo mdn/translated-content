@@ -1,14 +1,8 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/domain
 ---
+
 {{ApiRef}}
 
 {{domxref("Document")}} 인터페이스의 **`domain`** 속성은 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)에서 사용하는 현재 문서의 {{glossary("origin", "출처")}}에서 도메인 부분을 설정하거나 가져옵니다.

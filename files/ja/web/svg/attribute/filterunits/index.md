@@ -1,8 +1,8 @@
 ---
 title: filterUnits
 slug: Web/SVG/Attribute/filterUnits
-translation_of: Web/SVG/Attribute/filterUnits
 ---
+
 « [SVG Attribute reference home](/ja/SVG/Attribute)
 
 `filterUnits`属性は、 {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} そして {{ SVGAttr("height") }} の座標系を定義します。

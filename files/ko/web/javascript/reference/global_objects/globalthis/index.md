@@ -1,11 +1,8 @@
 ---
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 전역 **`globalThis`** 속성은 전역 `this` 값을 가진 전역 객체를 반환합니다.

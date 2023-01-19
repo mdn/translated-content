@@ -2,7 +2,10 @@
 title: SVGElement
 slug: Web/API/SVGElement
 ---
-{{APIRef("SVG")}}所有 SVG DOM 类的父类.
+
+{{APIRef("SVG")}}
+
+所有 SVG DOM 类的父类。
 
 {{InheritanceDiagram}}
 
@@ -21,7 +24,7 @@ slug: Web/API/SVGElement
 
 ## 方法
 
-_`SVGElement`类本身没有方法, 但拥有从父类{{domxref("Element")}}继承的方法._
+_`SVGElement` 类本身没有方法，但拥有从父类 {{domxref("Element")}} 继承的方法。_
 
 ## 规范
 
@@ -29,7 +32,7 @@ _`SVGElement`类本身没有方法, 但拥有从父类{{domxref("Element")}}继�
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGElement")}}
+{{Compat}}
 
 ## 相关链接
 

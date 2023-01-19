@@ -1,12 +1,6 @@
 ---
 title: DOMContentLoaded
 slug: Web/API/Window/DOMContentLoaded_event
-tags:
-  - Event
-  - Reference
-  - Web
-  - Window
-translation_of: Web/API/Window/DOMContentLoaded_event
 original_slug: Web/Events/DOMContentLoaded
 ---
 {{APIRef}}

@@ -2,6 +2,7 @@
 title: 媒体流 (MediaStream)
 slug: Web/API/MediaStream
 ---
+
 {{APIRef("Media Capture and Streams")}} **`MediaStream`** 接口是一个媒体内容的流.。一个流包含几个*轨道*，比如视频和音频轨道。
 
 ## 属性
@@ -9,7 +10,7 @@ slug: Web/API/MediaStream
 - {{domxref("MediaStream.active")}} {{readonlyinline}}
   - : 布尔型。如果这个流处于活动状态值为 true，反之为 false
 - {{domxref("MediaStream.ended")}} {{readonlyInline}}{{Deprecated_Inline}}
-  - : 布尔型。如果 {{event("ended (MediaStream)", "ended")}} 事件在这个对象上触发了，也就是说这个流已经被完全读取，值为 true。 如果还没有到达这个流的尾部，值为 false。
+  - : 布尔型。如果 `ended` 事件在这个对象上触发了，也就是说这个流已经被完全读取，值为 true。如果还没有到达这个流的尾部，值为 false。
 
 - {{domxref("MediaStream.id")}} {{readonlyInline}}
   - : 这是一个包含 36 个字符的 {{domxref("DOMString")}} ，用来作为这个对象的唯一标识符 (GUID) 。
@@ -17,17 +18,16 @@ slug: Web/API/MediaStream
 ### 事件处理
 
 - {{domxref("MediaStream.onaddtrack")}}
-  - : 这是{{event("addtrack")}}事件在这个对象上触发时调用的事件处理器 \[{{event("Event_handlers",
-    "eventhandler")}}]，这时一个{{domxref("MediaStreamTrack")}}对象被添加到这个流。
+  - : 这是 `addtrack` 事件在这个对象上触发时调用的事件处理器，这时一个{{domxref("MediaStreamTrack")}}对象被添加到这个流。
 - {{domxref("MediaStream.onended")}}
-  - : 这是当流终止 \[{{event("ended (MediaStream)","ended")}}] 时触发的事件。
+  - : 这是当流终止 `ended` 时触发的事件。
 - {{domxref("MediaStream.onremovetrack")}}
-  - : 这是{{event("removetrack")}}事件在这个对象上触发事调用的事件处理器 \[{{event("Event_handlers", "event handler")}}]，这时一个对象从流上移除。
+  - : 这是 `removetrack` 事件在这个对象上触发事调用的事件处理器，这时一个对象从流上移除。
 
 ## 方法
 
 - {{domxref("MediaStream.addTrack()")}}
-  - : 存储传入参数 {{domxref("MediaStreamTrack")}} 的一个副本。如果这个轨道已经被添加到了这个媒体流，什么也不会发生; 如果目标轨道为“完成”状态（也就是已经到尾部了），一个INVALID_STATE_RAISE 异常会产生。
+  - : 存储传入参数 {{domxref("MediaStreamTrack")}} 的一个副本。如果这个轨道已经被添加到了这个媒体流，什么也不会发生; 如果目标轨道为“完成”状态（也就是已经到尾部了），一个 INVALID_STATE_RAISE 异常会产生。
 
 - {{domxref("MediaStream.clone()")}}
   - 返回这个 `MediaStream 对象的克隆版本。返回的版本会有一个新的 ID`。
@@ -46,7 +46,7 @@ slug: Web/API/MediaStream
   - : 返回流中 kind 属性为"video"的{{domxref("MediaStreamTrack")}}列表。顺序是不确定的，不同浏览器间会有不同，每次调用也有可能不同。
 
 - {{domxref("MediaStream.removeTrack()")}}
-  - : 移除作为参数传入的 {{domxref("MediaStreamTrack")}}。 如果这个轨道不在`MediaStream 对象中什么也不会发生；`
+  - : 移除作为参数传入的 {{domxref("MediaStreamTrack")}}。如果这个轨道不在 `MediaStream` 对象中什么也不会发生；
     如果目标轨道为“完成”状态，一个 INVALID_STATE_RAISE 异常会产生。
 
 ## 规范
@@ -55,7 +55,7 @@ slug: Web/API/MediaStream
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## 相关内容
 

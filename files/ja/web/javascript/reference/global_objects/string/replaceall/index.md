@@ -2,6 +2,7 @@
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
+
 {{JSRef}}
 
 **`replaceAll()`** メソッドは、`pattern` にマッチしたすべての文字列を `replacement` で置き換えた新しい文字列を返します。`pattern` は文字列または {{jsxref("RegExp")}} を指定することができ、`replacement` は文字列または各マッチに対して呼び出される関数を指定することができます。
@@ -16,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Note:** \`_regexp_\`を使用する場合は、グローバル("g")フラグを設定する必要があります。それ以外の場合は、`TypeError` が投げられます："replaceAll must be called with a global RegExp".
+> **メモ:** \`_regexp_\`を使用する場合は、グローバル("g")フラグを設定する必要があります。それ以外の場合は、`TypeError` が投げられます："replaceAll must be called with a global RegExp".
 
 ### 引数
 
@@ -93,9 +94,7 @@ TypeError: replaceAll must be called with a global RegExp
 
 ## 仕様
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

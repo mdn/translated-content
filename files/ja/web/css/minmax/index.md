@@ -3,6 +3,7 @@ title: minmax()
 slug: Web/CSS/minmax
 original_slug: Web/CSS/minmax()
 ---
+
 {{CSSRef}}
 
 **`minmax()`** は [CSS](/ja/docs/Web/CSS) の関数で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)で使用されます。

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/ignoreCase
 ---
+
 {{JSRef}}
 
 La propriété **`ignoreCase`** indique si le drapeau (_flag_) "`i`" est utilisé ou non pour cette expression rationnelle. `ignoreCase` est une propriété accessible en lecture seule d'une instance d'expression rationnelle donnée.
@@ -32,16 +33,11 @@ console.log(regex.ignoreCase); // true
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                       | Commentaires                                                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. Avec JavaScript 1.5 : `ignoreCase` est une propriété d'une instance de {{jsxref("RegExp")}} et pas une propriété de l'objet `RegExp`. |
-| {{SpecName('ES5.1', '#sec-15.10.7.3', 'RegExp.prototype.ignoreCase')}}                                 | {{Spec2('ES5.1')}}     |                                                                                                                                                                                                     |
-| {{SpecName('ES6', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}}     | {{Spec2('ES6')}}         | `ignoreCase` est désormais une propriété du prototype sous forme d'accesseur plutôt qu'une propriété directe de l'instance.                                                                         |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.ignoreCase")}}
+{{Compat}}
 
 ## Voir aussi
 

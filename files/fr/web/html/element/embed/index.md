@@ -15,7 +15,8 @@ tags:
 translation_of: Web/HTML/Element/embed
 browser-compat: html.elements.embed
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<embed>`** permet d'intégrer du contenu externe à cet endroit dans le document. Le contenu peut être fourni par une application externe ou une autre source telle qu'un _plugin_ du navigateur.
 

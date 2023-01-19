@@ -4,6 +4,7 @@ slug: Web/SVG/Element/radialGradient
 translation_of: Web/SVG/Element/radialGradient
 browser-compat: svg.elements.radialGradient
 ---
+
 {{SVGRef}}
 
 L'élément SVG **`<radialGradient>`** permet de définir des dégradés radiaux qui peuvent être appliqués aux éléments de remplissage ou de contour des éléments graphiques.

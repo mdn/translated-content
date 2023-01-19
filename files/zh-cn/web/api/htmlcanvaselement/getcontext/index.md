@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.getContext()`** 方法返回{{jsxref("canvas")}} 的上下文，如果上下文没有定义则返回 {{jsxref("null")}} .
@@ -26,7 +27,7 @@ var ctx = canvas.getContext(contextType, contextAttributes);
     - "`webgl2`" (或 "`experimental-webgl2`") 这将创建一个 {{domxref("WebGL2RenderingContext")}} 三维渲染上下文对象。只在实现 [WebGL](/zh-CN/docs/Web/WebGL) 版本 2 (OpenGL ES 3.0) 的浏览器上可用。{{experimental_inline}}
     - `"bitmaprenderer"` 这将创建一个只提供将 canvas 内容替换为指定{{domxref("ImageBitmap")}}功能的{{domxref("ImageBitmapRenderingContext")}} 。
 
-    > **备注：** 标识符 "`experimental-webgl`" 或 "`experimental-webgl2`" 用于新 [WebGL](/zh-CN/docs/Web/WebGL)的实现。 这些实现还没有达到测试套件一致性或图形驱动程序平台局势尚不稳定。[Khronos Group](https://www.khronos.org/) 集团认证[WebGL](/zh-CN/docs/Web/WebGL) 实现在某些[一致性规则](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)。
+    > **备注：** 标识符 "`experimental-webgl`" 或 "`experimental-webgl2`" 用于新 [WebGL](/zh-CN/docs/Web/WebGL)的实现。这些实现还没有达到测试套件一致性或图形驱动程序平台局势尚不稳定。[Khronos Group](https://www.khronos.org/) 集团认证[WebGL](/zh-CN/docs/Web/WebGL) 实现在某些[一致性规则](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)。
 
 - `上下文属性 (contextAttributes)`
 
@@ -50,7 +51,7 @@ var ctx = canvas.getContext(contextType, contextAttributes);
     - **`antialias`**: {{jsxref("boolean")}}值表明是否开启抗锯齿。
     - **`depth`**: {{jsxref("boolean")}}值表明绘制缓冲区包含一个深度至少为 16 位的缓冲区。
     - **`failIfMajorPerformanceCaveat`**: 表明在一个系统性能低的环境是否创建该上下文的{{jsxref("boolean")}}值。
-    - **`powerPreference`**: 指示浏览器在运行 WebGL 上下文时使用相应的 GPU 电源配置。 可能值如下：
+    - **`powerPreference`**: 指示浏览器在运行 WebGL 上下文时使用相应的 GPU 电源配置。可能值如下：
 
       - `"default"`:自动选择，默认值。
       - `"high-performance"`: 高性能模式。
@@ -95,10 +96,10 @@ console.log(ctx); // CanvasRenderingContext2D { ... }
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.getContext")}}
+{{Compat}}
 
 ## 另请参阅
 
 - {{domxref("HTMLCanvasElement")}}.
 - {{domxref("OffscreenCanvas.getContext()")}}
-- 可用的上下文: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} 和 {{domxref("WebGL2RenderingContext")}} and {{domxref("ImageBitmapRenderingContext")}}.
+- 可用的上下文：{{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} 和 {{domxref("WebGL2RenderingContext")}} and {{domxref("ImageBitmapRenderingContext")}}.

@@ -1,37 +1,35 @@
 ---
 title: HTMLFormElement.name
 slug: Web/API/HTMLFormElement/name
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
-## 概要
 
-form の `name` 属性は、その `form` 要素の名前を文字列として返します。
+{{APIRef("HTML DOM")}}
 
-## 構文
+**`HTMLFormElement.name`** プロパティは、現在の {{HtmlElement("form")}} 要素の名前を文字列で表します。
 
-```
-string = form.name; //取得
-form.name = string; //設定
-```
+{{HTMLElement("Form")}} 要素の中に _name_ という名前の要素があると、その要素は `form.name` プロパティを上書きするので、それにアクセスすることはできません。
+Internet Explorer (IE) は `createElement()` を使用して作成された要素の name 属性を `name` プロパティで設定したり変更したりすることを許可していません。
+
+## 値
+
+文字列です。
 
 ## 例
 
 ```js
-var form1_Name = document.getElementById("form1").name;
+const form1name = document.getElementById('form1').name;
 
-if (form1_Name != document.form.name) {
-   // browser doesn't support this form of reference
+if (form1name !== document.form.form1) {
+  // ブラウザーがこの形の参照に対応していない
 }
 ```
 
-## 注意
-
-この属性は読み書きともに可能であり、フォーム名の読取り及び設定に使用できます。
-
-もしフォーム内に "name" と名付けられた要素を含めてしまった場合、その要素が優先され、`name` 属性でのフォームオーナーへのアクセスが出来なくなってしまいます。
-
-Internet Explorer (IE) では、`createElement()` メソッドによって作成された要素に対する `name` 属性を用いての名前の設定 / 書換は許可されていません。
-
 ## 仕様書
 
-- [HTML5, Section 4.10.3, The form Element](http://www.w3.org/TR/html5/forms.html#dom-form-name)
-- [DOM Level 2 HTML: name](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-22051454)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

@@ -2,6 +2,7 @@
 title: MediaSource.isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 **`MediaSource.isTypeSupported()`** 静态方法返回一个布尔值，如果给定的 MIME 类型和（可选的）编解码器*可能*被当前的{{Glossary("user agent", "用户代理")}}支持，则返回 `true`。

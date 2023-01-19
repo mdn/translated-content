@@ -2,6 +2,7 @@
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
 ---
+
 小结
 
 **elements** 返回一个 {{domxref("HTMLFormControlsCollection")}} ([`HTMLCollection`](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)) 其中包含 FORM 的所有控件。需要注意的是，其中不包括 `type` 等于 `image` 的 [`input`](/zh-CN/docs/HTML/Element/Input) 元素。

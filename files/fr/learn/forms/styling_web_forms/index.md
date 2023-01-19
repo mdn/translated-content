@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Forms/Styling_web_forms
 original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 > Dans cet article, nous allons apprendre comment utiliser [les CSS](/fr/docs/CSS) avec les formulaires [HTML](/fr/docs/HTML) pour (espérons-le) améliorer leur apparence. Étonnamment, ceci peut être délicat. Pour des raisons techniques et historiques, les widgets de formulaires ne s'allient pas très bien avec CSS. À cause de ces difficultés, de nombreux développeurs préfèrent [construire leurs propres widgets HTML](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés) pour avoir plus de maîtrise sur leur apparence. Toutefois, avec les navigateurs modernes, les web designers ont de plus en plus d'emprise sur l'apparence de leurs formulaires. Voyons cela de plus près.
@@ -130,7 +131,7 @@ Le positionnement des formulaires HTML n'est pas un problème de manière géné
 
 L'apparence de l'élément {{HTMLElement("legend")}} est facile à modifier à l'exception de sa position. Dans chaque navigateur, l'élément {{HTMLElement("legend")}} est positionné au-dessus de la bordure supérieure de son élément {{HTMLElement("fieldset")}} parent. Il n'existe aucune manière de changer sa position dans le flux HTML. Vous pouvez toutefois le positionner de manière absolue ou relative en utilisant la propriété {{cssxref("position")}}, sinon, ce sera une partie de la bordure de l'élément `fieldset`.
 
-Comme l'élément {{HTMLElement("legend")}} est très important pour des raisons d'accessibilité (nous parlerons des techniques pour l'assistance à propos de l'attribut  `label` de chaque élément de formulaire du `fieldset`), il est souvent associé à un intitulé, puis caché à l'accessibilité, comme ceci :
+Comme l'élément {{HTMLElement("legend")}} est très important pour des raisons d'accessibilité (nous parlerons des techniques pour l'assistance à propos de l'attribut `label` de chaque élément de formulaire du `fieldset`), il est souvent associé à un intitulé, puis caché à l'accessibilité, comme ceci :
 
 ##### HTML
 

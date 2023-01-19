@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/preventExtensions
 ---
+
 {{JSRef}}
 
 La méthode **`handler.preventExtensions()`** est une trappe pour {{jsxref("Object.preventExtensions()")}}.
@@ -84,14 +85,11 @@ Object.preventExtensions(p); // TypeError est levée
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.preventExtensions")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,14 +1,9 @@
 ---
 title: 컨테이닝 블록의 모든 것
 slug: Web/CSS/Containing_block
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Position
-translation_of: Web/CSS/Containing_block
 original_slug: Web/CSS/All_About_The_Containing_Block
 ---
+
 {{cssref}}
 
 요소의 크기와 위치는 **컨테이닝 블록**(containing block)의 영향을 받곤 합니다. 대부분의 경우, 어떤 요소의 컨테이닝 블록은 가장 가까운 [블록 레벨](/ko/docs/Web/HTML/Block-level_elements) 조상의 [콘텐츠 영역](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)이나, 항상 그런 것은 아닙니다. 이 글에서는 요소의 컨테이닝 블록을 결정하는 요인을 살펴보겠습니다.
@@ -20,7 +15,7 @@ original_slug: Web/CSS/All_About_The_Containing_Block
   - 테두리 영역
   - 바깥 여백(마진) 영역
 
-![Diagram of the box model](https://mdn.mozillademos.org/files/16558/box-model.png)
+![Diagram of the box model](box-model.png)
 
 많은 개발자들은 요소의 컨테이닝 블록이 언제나 부모 요소의 콘텐츠 영역이라고 생각하지만, 사실 꼭 그렇지는 않습니다. 어떤 항목이 컨테이닝 블록을 결정짓나 알아보겠습니다.
 

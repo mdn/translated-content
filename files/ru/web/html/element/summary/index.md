@@ -3,7 +3,8 @@ title: '<summary>: The Disclosure Summary element'
 slug: Web/HTML/Element/summary
 translation_of: Web/HTML/Element/summary
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the `<summary>` element toggles the state of the parent `<details>` element open and closed.
 

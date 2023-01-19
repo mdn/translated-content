@@ -1,17 +1,10 @@
 ---
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
 {{JSRef}}
 
-**`Reflect`\*\***`.construct()`\*\* 정적 메서드는 [`new` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)처럼 동작하는 함수입니다. `new target(...args)`를 호출하는 것과 같습니다. 추가 기능으로 다른 프로토타입을 지정할 수도 있습니다.
+**`Reflect.construct()`** 정적 메서드는 [`new` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)처럼 동작하는 함수입니다. `new target(...args)`를 호출하는 것과 같습니다. 추가 기능으로 다른 프로토타입을 지정할 수도 있습니다.
 
 {{EmbedInteractiveExample("pages/js/reflect-construct.html")}}
 

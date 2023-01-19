@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.useProgram()
 slug: Web/API/WebGLRenderingContext/useProgram
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.useProgram()`** メソッドは、指定した {{domxref("WebGLProgram")}} を現在の描画ステートの一部として設定します。
@@ -36,10 +37,7 @@ gl.useProgram(program);
 
 ## 仕様策定状況
 
-| 仕様                                                                                     | 策定状況                             | コメント                        |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "useProgram")}}                             | {{Spec2('WebGL')}}             | 初回定義。                      |
-| {{SpecName('OpenGL ES 2.0', "glUseProgram.xml", "glUseProgram")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

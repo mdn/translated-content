@@ -14,6 +14,7 @@ tags:
   - Héritage
 translation_of: Web/API/PerformanceNavigation/type
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.type`](/fr/docs/Web/API/PerformanceNavigationTiming/type) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.

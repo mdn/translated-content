@@ -1,18 +1,9 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-tags:
-  - Element
-  - HTML
-  - HTML edits
-  - Inserted Text
-  - Insertion
-  - Reference
-  - Web
-  - ins
-translation_of: Web/HTML/Element/ins
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<ins>` 要素**は、文書に追加されたテキストの範囲を表します。同様に、 {{HTMLElement("del")}} 要素を使用して文書から削除されたテキストの範囲を表すことができます。
 
@@ -124,11 +115,7 @@ ins::after {
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'edits.html#the-ins-element', '&lt;ins&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'edits.html#the-ins-element', '&lt;ins&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.4', '&lt;ins&gt;')}}         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

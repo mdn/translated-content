@@ -2,6 +2,7 @@
 title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.isExtensible()`** メソッドは 、オブジェクトを拡張できるかを測定します (オブジェクトに追加された新しいプロパティを持てるかどうか)。これは {{jsxref("Object.isExtensible()")}} に似ていますが、いくつかの[違いがあります](#Difference_to_Object.isExtensible)。
@@ -69,9 +70,7 @@ Object.isExtensible(1)
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

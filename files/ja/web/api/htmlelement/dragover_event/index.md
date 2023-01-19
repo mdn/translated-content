@@ -2,6 +2,7 @@
 title: 'HTMLElement: dragover イベント'
 slug: Web/API/HTMLElement/dragover_event
 ---
+
 {{APIRef}}
 
 `dragover` イベントは、要素または選択されたテキストが、妥当なドロップターゲットの上にあるときに（数百ミリ秒間隔で）発生します。

@@ -2,6 +2,7 @@
 title: Element.previousElementSibling
 slug: Web/API/Element/previousElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.previousElementSibling`** は読み取り専用のプロパティで、この要素 ({{domxref("Element")}}) の親の子リスト内ですぐ前にある要素を返します。このノードがリストの最初のノードであった場合は `null` を返します。
@@ -35,7 +36,7 @@ element = el.previousElementSibling;
 </script>
 ```
 
-この例は読み込み時に、ぺ0時に以下のような出力を行います。
+この例は読み込み時に、ページに以下のような出力を行います。
 
 ```
 Siblings of div-03

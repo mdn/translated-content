@@ -1,21 +1,15 @@
 ---
 title: Proxy() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-tags:
-  - Constructor
-  - JavaScript
-  - Proxy
-  - Reference
-browser-compat: javascript.builtins.Proxy.Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 ---
+
 {{JSRef}}
 
- **`Proxy`** 생성자는 {{jsxref("Proxy")}} 객체를 만드는 데 사용됩니다.
+**`Proxy`** 생성자는 {{jsxref("Proxy")}} 객체를 만드는 데 사용됩니다.
 
- ## 구문
+## 구문
 
- ```js
+```js
 new Proxy(target, handler)
 ```
 
@@ -25,7 +19,7 @@ new Proxy(target, handler)
 
 - `target`
   - : `Proxy`로 래핑할 대상 객체입니다. 네이티브 배열, 함수 또는 다른 프록시를 포함한 모든 종류의 객체가 될 수 있습니다.
-  
+
 - `handler`
   - : 작업이 수행될 때 프록시의 동작을 정의하는 속성이 함수인 객체입니다.
 

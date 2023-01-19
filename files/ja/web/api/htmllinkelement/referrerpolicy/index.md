@@ -2,6 +2,7 @@
 title: HTMLLinkElement.referrerPolicy
 slug: Web/API/HTMLLinkElement/referrerPolicy
 ---
+
 {{APIRef}}
 
 **`HTMLLinkElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("link")}} 要素の HTML {{htmlattrxref("referrerpolicy","link")}} 属性を反映します。

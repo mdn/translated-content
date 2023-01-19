@@ -3,6 +3,7 @@ title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/onShown
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser has shown a menu.

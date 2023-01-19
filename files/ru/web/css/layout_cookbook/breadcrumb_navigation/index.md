@@ -7,7 +7,7 @@ translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 Навигация по хлебным крошкам помогает пользователю понять своё местоположение на веб-сайте, обеспечивая обратный путь к начальной странице.
 
-![Links displayed inline with separators](https://mdn.mozillademos.org/files/16228/breadcrumb-navigation.png)
+![Links displayed inline with separators](breadcrumb-navigation.png)
 
 ## Требование
 
@@ -29,7 +29,7 @@ translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 ## Проблемы доступности
 
-Я использовал атрибуты `aria-label `и `aria-current`, чтобы помочь пользователям понять, что это за навигация и где в структуре находится текущая страница.
+Я использовал атрибуты `aria-label` и `aria-current`, чтобы помочь пользователям понять, что это за навигация и где в структуре находится текущая страница.
 Смотреть связанные ссылки для получения дополнительной информации.
 
 ## Совместимость с браузером

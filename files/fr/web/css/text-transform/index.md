@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-transform
 ---
+
 {{CSSRef}}
 
 La propriété **`text-transform`** définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations [Ruby](/fr/docs/Web/HTML/Element/ruby).
@@ -61,9 +62,13 @@ text-transform: unset;
 - `full-size-kana`
   - : Cette valeur est généralement utilisée pour [les annotations Ruby](/fr/docs/Web/HTML/Element/ruby). Ce mot-clé convertit les caractères Kana de petite taille en leur équivalent de grande taille. Cela permet de compenser les problèmes de lisibilité des tailles de police généralement utilisées pour le Ruby.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -134,17 +139,11 @@ De grandes portions de texte utilisant `text-transform` avec la valeur `uppercas
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Text', '#text-transform', 'text-transform')}} | {{Spec2('CSS3 Text')}} | Par rapport à {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}}, la spécification s'étend aux caractères Unicode des catégories générales Nombre et Lettre. Le comportement de `capitalize` est modifié pour ignorer les éventuels symboles ou caractères de ponctuations utilisés. Les mots-clés `full-width` et `full-size-kana` sont ajoutés afin de pouvoir mélanger harmonieusement les caractères alphabétiques et les caractères idéographiques. |
-| {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}} | {{Spec2('CSS2.1')}}     | Par rapport à {{SpecName('CSS1', '#text-transform', 'text-transform')}}, étend la spécifications aux lettres non latines et aux scripts bicaméraux.                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('CSS1', '#text-transform', 'text-transform')}}         | {{Spec2('CSS1')}}     | Définition initiale.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-transform")}}
+{{Compat}}
 
 ## Voir aussi
 

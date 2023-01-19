@@ -2,6 +2,7 @@
 title: Attr.localName
 slug: Web/API/Attr/localName
 ---
+
 {{APIRef("DOM")}}
 
 **`Attr.localName`** 为只读属性，返回一个属性限定名称的本名部分（去除命名空间前缀的名字）。
@@ -22,13 +23,13 @@ name = attribute.localName
 
 下面的例子将弹出一个有“id”文字的警告窗口。
 
-### HTML 代码
+### HTML
 
 ```html
 <button id="example">Click me</button>
 ```
 
-### JavaScript 代码
+### JavaScript
 
 ```js
 const element = document.querySelector("#example");
@@ -38,7 +39,7 @@ element.addEventListener("click", function() {
 });
 ```
 
-{{ EmbedLiveSample('Example','100%',30) }}
+{{ EmbedLiveSample('示例','100%',30) }}
 
 ## 注意
 
@@ -52,7 +53,7 @@ element.addEventListener("click", function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Attr.localName")}}
+{{Compat}}
 
 ## 参考
 

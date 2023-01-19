@@ -3,6 +3,7 @@ title: WebExtensions
 slug: Mozilla/Add-ons/WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Les extensions, ou modules complémentaires, peuvent étendre et modifier les fonctionnalités d'un navigateur. Les extensions pour Firefox sont construites avec l'API WebExtensions qui fonctionnent pour les différents navigateurs.

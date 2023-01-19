@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt
 browser-compat: javascript.builtins.BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt`** est [une enveloppe objet](/fr/docs/Glossary/Primitive#primitives_javascript_encapsulées_dans_des_objets) utilisée pour représenter et manipuler les valeurs [primitives](/fr/docs/Glossary/Primitive) `bigint` (grands entiers) qui permettent de représenter des valeurs [plus grandes que celles correctement représentables](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) par une valeur primitive numérique (`number`).

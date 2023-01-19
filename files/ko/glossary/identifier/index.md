@@ -1,12 +1,9 @@
 ---
 title: 식별자
 slug: Glossary/Identifier
-tags:
-  - Beginner
-  - Glossary
-translation_of: Glossary/Identifier
 original_slug: Glossary/식별자
 ---
+
 **식별자**는 코드 내의 {{glossary("variable", "변수")}}, {{glossary("function", "함수")}}, 혹은 {{glossary("property", "속성")}}을 식별하는 문자열입니다.
 
 {{glossary("JavaScript")}}의 식별자는 대소문자를 구별하며 {{glossary("Unicode", "유니코드")}} 글자, `$`, `_`, 숫자(0-9)로 구성할 수 있지만, 숫자로 시작할 수는 없습니다.

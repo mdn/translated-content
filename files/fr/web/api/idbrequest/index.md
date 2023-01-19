@@ -12,13 +12,14 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBRequest`** de l'API IndexedDB donne accès par ses gestionnaires d'événements aux résultats des requêtes asynchrones sur la base de données, les magasins d'objets ou les index. Chaque opération d'écriture ou lecture sur la base de données utilise une requête.
 
 Cet objet **`IDBRequest`** ne contient aucune information sur le résultat de l'opération, mais dès qu'une information est disponible un événement est déclenché. L'objet **`IDBRequest`** utilise ses gestionnaires d'événements pour le capter et mettre l'information à disposition.
 
-Toute les opération asynchrone retourne immédiatement une instance **`IDBRequest`** avec une propriété `readyState` défini à `'pending'` qui passe à  `'done'` lorsque la requête réussie ou échoue. Quand l'état passe à `done`, chaque requête retourne `result` et `error`, et un évènement est envoyé sur la requête. Quand l'état est sur `pending`, chaque accès à `result` ou `error` lève une exception `InvalidStateError`.
+Toute les opération asynchrone retourne immédiatement une instance **`IDBRequest`** avec une propriété `readyState` défini à `'pending'` qui passe à `'done'` lorsque la requête réussie ou échoue. Quand l'état passe à `done`, chaque requête retourne `result` et `error`, et un évènement est envoyé sur la requête. Quand l'état est sur `pending`, chaque accès à `result` ou `error` lève une exception `InvalidStateError`.
 
 Pour faire simple, chaque méthode asynchrome retourne un objet de requête. Si l'opération réussi, le résultat est disponible dans la propriété `result` et un évènement `success` est lancé ({{domxref("IDBRequest.onsuccess")}}). Si une erreur est rencontrée, une exeption est disponible dans la propriété `error` et un évènement `error` est lancé ({{domxref("IDBRequest.onerror")}}).
 

@@ -2,6 +2,7 @@
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`451 Unavailable For Legal Reasons`** 用戶端錯誤回應碼表明用戶請求的資源，出於法律原因而無法使用，例如遭受法律訴訟的網頁。
@@ -47,7 +48,7 @@ Content-Type: text/html
 
 The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.451")}}
+{{Compat}}
 
 ## 參見
 

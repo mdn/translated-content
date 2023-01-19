@@ -2,6 +2,7 @@
 title: 'Window: orientationchange イベント'
 slug: Web/API/Window/orientationchange_event
 ---
+
 {{APIRef}}
 
 `orientationchange` イベントは、端末の向きが変化した時に発生します。
@@ -49,9 +50,7 @@ window.onorientationchange = function() {
 
 ## 仕様書
 
-| Specification                                                                                    | Status                   |
-| ------------------------------------------------------------------------------------------------ | ------------------------ |
-| {{SpecName('Compat', '#event-orientationchange', 'orientationchange')}} | {{Spec2('Compat')}} |
+{{Specifications}}
 
 ## ブラウザーの対応
 

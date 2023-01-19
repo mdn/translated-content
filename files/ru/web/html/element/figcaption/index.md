@@ -8,7 +8,8 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/figcaption
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML-элемент `<figcaption>` или элемент подписи иллюстрации** представляет собой подпись (заголовок) или легенду, описывающую остальную часть содержимого родительского элемента {{HTMLElement("figure")}}.
 

@@ -2,6 +2,7 @@
 title: File.lastModified
 slug: Web/API/File/lastModified
 ---
+
 {{APIRef("File API")}}
 
 只读属性 **`File.lastModified`** 返回所引用文件最后修改日期，为自 1970 年 1 月 1 日 0:00 以来的毫秒数。没有已知的最后修改时间则会返回当前时间。
@@ -39,7 +40,7 @@ fileInput.addEventListener('change', function(event) {
 
 结果：
 
-{{ EmbedLiveSample('Reading_from_file_input', 300, 50) }}
+{{ EmbedLiveSample('从 INPUT 标签读取文件', 300, 50) }}
 
 ### 动态创建文件
 
@@ -61,7 +62,7 @@ console.log(fileWithoutDate.lastModified); //returns current time
 
 ## 浏览器兼容性
 
-{{Compat("api.File.lastModified")}}
+{{Compat}}
 
 ## 参见
 

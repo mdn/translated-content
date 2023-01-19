@@ -2,7 +2,8 @@
 title: <pre>
 slug: Web/HTML/Element/pre
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML \<pre>** 元素表示预定义格式文本。在该元素中的文本通常按照原文件中的编排，以等宽字体的形式展现出来，文本中的空白符（比如空格和换行符）都会显示出来。(紧跟在 \<pre> 开始标签后的换行符也会被省略)
 
@@ -65,7 +66,7 @@ body {
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 无障碍
 
@@ -104,7 +105,7 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.pre")}}
+{{Compat}}
 
 ## 参见
 

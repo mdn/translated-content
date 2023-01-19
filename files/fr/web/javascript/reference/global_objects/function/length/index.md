@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/length
 ---
+
 {{JSRef}}
 
 La propriété **`length`** définit le nombre de paramètres attendus par la fonction.
@@ -44,16 +45,11 @@ console.log((function(a, b = 1, c) {}).length);
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                                        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1.               |
-| {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}                         | {{Spec2('ES5.1')}}     |                                                                     |
-| {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}     | {{Spec2('ES6')}}         | L'attribut `configurable` de cette propriété vaut `true` désormais. |
-| {{SpecName('ESDraft', '#sec-function-instances-length', 'Function.length')}} | {{Spec2('ESDraft')}} |                                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.length")}}
+{{Compat}}
 
 ## Voir aussi
 

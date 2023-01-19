@@ -1,14 +1,8 @@
 ---
 title: CSS Images
 slug: Web/CSS/CSS_Images
-tags:
-  - CSS
-  - CSS Images
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Images
 ---
+
 {{CSSRef}}
 
 **CSS Images**는 사용할 수 있는 이미지의 유형({{cssxref("&lt;image&gt;")}} 자료형, 포함하는 URL, 그레이디언트 및 그 외의 다른 유형 이미지), 이미지의 크기 조정 방법, 그리고 이미지 및 다른 대체 콘텐츠가 각기 다른 레이아웃 모델과 상호작용하는 법을 정의하는 CSS 모듈입니다.

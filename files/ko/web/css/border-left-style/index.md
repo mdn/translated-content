@@ -1,13 +1,8 @@
 ---
 title: border-left-style
 slug: Web/CSS/border-left-style
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-left-style
 ---
+
 {{CSSRef}}
 
 **`border-left-style`** [CSS](/ko/docs/Web/CSS) 속성은 요소 테두리의 왼쪽 스타일을 지정합니다.

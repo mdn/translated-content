@@ -2,6 +2,7 @@
 title: Response.statusText
 slug: Web/API/Response/statusText
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} 接口的 **`statusText`**只读属性包含与状态代码相对应的状态消息（例如，对于 200 可以确定）。
@@ -42,7 +43,7 @@ fetch(myRequest).then(function(response) {
 
 ## Browser compatibility
 
-{{Compat("api.Response.statusText")}}
+{{Compat}}
 
 ## See also
 

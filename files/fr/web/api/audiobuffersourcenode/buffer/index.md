@@ -4,6 +4,7 @@ slug: Web/API/AudioBufferSourceNode/buffer
 translation_of: Web/API/AudioBufferSourceNode/buffer
 browser-compat: api.AudioBufferSourceNode.buffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 La propriété **`buffer`** de l'interface [`AudioBufferSourceNode`](/fr/docs/Web/API/AudioBufferSourceNode) donne la possibilité de lire un son en utilisant un objet [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) comme ressource audio.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/matchAll
 ---
+
 {{JSRef}}
 
 La méthode **`matchAll()`** renvoie un itérateur contenant l'ensemble des correspondances entre une chaîne de caractères d'une part et une expression rationnelle d'autre part (y compris les groupes capturants).
@@ -94,13 +95,11 @@ array[1];
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}} | {{Spec2('ESDraft')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.matchAll")}}
+{{Compat}}
 
 ## Voir aussi
 

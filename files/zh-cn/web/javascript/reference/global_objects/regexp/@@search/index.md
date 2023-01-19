@@ -2,6 +2,7 @@
 title: RegExp.prototype[@@search]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
+
 {{JSRef}}
 
 **`[@@search]()`** 方法执行了一个在给定字符串中的一个搜索以取得匹配正则模式的项。
@@ -20,7 +21,7 @@ regexp[Symbol.search](str)
 ### 返回值
 
 - 整数
-  - : 如果成功的话，`[@@search]()` 返回该正则模式的第一个匹配项的在字符串中的位置索引。否则将返回-1。
+  - : 如果成功的话，`[@@search]()` 返回该正则模式的第一个匹配项的在字符串中的位置索引。否则将返回 -1。
 
 ## 描述
 

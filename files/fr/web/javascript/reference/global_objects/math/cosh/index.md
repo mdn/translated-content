@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/cosh
 ---
+
 {{JSRef}}
 
 La fonction **`Math.cosh()`** renvoie le cosinus hyperbolique d'un nombre, défini par :
@@ -71,14 +72,11 @@ Math.cosh = Math.cosh || function(x) {
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-math.cosh', 'Math.cosh')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.cosh")}}
+{{Compat}}
 
 ## Voir aussi
 

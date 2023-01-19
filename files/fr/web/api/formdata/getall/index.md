@@ -11,6 +11,7 @@ tags:
   - getAll
 translation_of: Web/API/FormData/getAll
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode **`getAll()`** de l'interface {{domxref("FormData")}} renvoie toutes les valeurs associées à une clé donnée à partir d'un objet `FormData`.

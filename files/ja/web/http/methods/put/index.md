@@ -1,13 +1,8 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.PUT
-translation_of: Web/HTTP/Methods/PUT
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `PUT` リクエストメソッド**は、新しいリソースを作成するか、指定したリソースの表現をリクエストのペイロードで置き換えます。

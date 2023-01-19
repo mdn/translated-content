@@ -1,14 +1,8 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/431
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`431 Request Header Fields Too Large`** レスポンスステータスコードは、リクエストの [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)が長すぎるためにサーバーがリクエストの処理を拒否したことを示します。ヘッダーフィールドを縮小した上で、リクエストを再送信する*ことができます*。

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/user-modify
 ---
+
 {{Non-standard_header}}{{CSSRef}}{{deprecated_header}}
 
 La propriété **`user-modify`** n'a aucun effet. Elle était initialement conçue pour déterminer si le contenu d'un élément peut être édité ou non par l'utilisateur.

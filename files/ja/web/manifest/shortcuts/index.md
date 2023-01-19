@@ -2,7 +2,8 @@
 title: shortcuts
 slug: Web/Manifest/shortcuts
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
   <tbody>
@@ -56,7 +57,7 @@ slug: Web/Manifest/shortcuts
     <tr>
       <td><code>icons</code></td>
       <td>
-        ショートカットを表すアイコンのセットです。コンテキストメニューなどで使用することができます。このアイコンを指定する場合、 96x96 ピクセルのアイコンを指定する必要があります。
+        ショートカットを表すアイコンのセットです。コンテキストメニューなどで使用することができます。この値を指定する場合、アイコンのセットには 96x96 ピクセルのアイコンを含める必要があります。
       </td>
     </tr>
   </tbody>

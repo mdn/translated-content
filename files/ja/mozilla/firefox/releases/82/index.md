@@ -2,11 +2,12 @@
 title: Firefox 82 for developers
 slug: Mozilla/Firefox/Releases/82
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 82 の変更点をまとめています。Firefox 82 は、2020 年 10 月 20 日にリリースされました。
 
-> **Note:** Mozilla Hacks の [Coming through with Firefox 82](https://hacks.mozilla.org/2020/10/coming-through-with-firefox-82/) もご覧ください。
+> **メモ:** Mozilla Hacks の [Coming through with Firefox 82](https://hacks.mozilla.org/2020/10/coming-through-with-firefox-82/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 

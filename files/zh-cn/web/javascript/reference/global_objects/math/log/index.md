@@ -2,6 +2,7 @@
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

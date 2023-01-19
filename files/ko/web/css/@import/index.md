@@ -1,12 +1,8 @@
 ---
 title: '@import'
 slug: Web/CSS/@import
-tags:
-  - At-rule
-  - CSS
-  - Reference
-translation_of: Web/CSS/@import
 ---
+
 {{CSSRef}}
 
 **`@import`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/At-rule)은 다른 스타일 시트에서 스타일 규칙을 가져올 때 쓰입니다. 이 규칙은 {{cssxref("@charset")}} 규칙을 제외하고 모든 다른 종류의 규칙보다 선행해야 합니다. `@import`는 [중첩 명령문](/ko/docs/Web/CSS/Syntax#nested_statements)이 아니기 때문에 [조건부 그룹 @규칙](/ko/docs/Web/CSS/At-rule#Conditional_Group_Rules) 내에 사용할 수 없습니다.

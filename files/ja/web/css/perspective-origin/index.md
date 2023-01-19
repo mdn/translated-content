@@ -2,6 +2,7 @@
 title: perspective-origin
 slug: Web/CSS/perspective-origin
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`perspective-origin`** プロパティは、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって*消失点*として使われます。

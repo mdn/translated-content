@@ -8,6 +8,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/author
 original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/auteur
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

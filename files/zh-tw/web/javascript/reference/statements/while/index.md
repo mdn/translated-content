@@ -3,6 +3,7 @@ title: while 語法
 slug: Web/JavaScript/Reference/Statements/while
 original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/while_語法
 ---
+
 `while` 語法會執行他的語句，只要指定的條件的求值結果為 true。`while` 語法如下︰
 
 ```js

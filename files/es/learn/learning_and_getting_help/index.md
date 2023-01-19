@@ -1,15 +1,9 @@
 ---
 title: Aprender y obtener ayuda
 slug: Learn/Learning_and_getting_help
-tags:
-  - Aprender
-  - Desarrollo web
-  - Principiante
-  - conseguir ayuda
-  - obtener ayuda
-translation_of: Learn/Learning_and_getting_help
 original_slug: Learn/Aprender_y_obtener_ayuda
 ---
+
 {{learnsidebar}}
 
 Es genial que dediques algo de tiempo a aprender un nuevo conjunto de habilidades, pero puedes emplear algunas buenas prácticas que harán que tu aprendizaje sea más efectivo. También hay momentos en los que te atascarás y te sentirás frustrado, incluso los desarrolladores web profesionales se sienten así regularmente, y vale la pena conocer las formas más efectivas de tratar de obtener ayuda para que puedas progresar en tu trabajo. Este artículo proporciona algunos consejos y sugerencias en ambas áreas que te ayudarán a obtener más provecho del aprendizaje del desarrollo web, así como una lectura adicional para que puedas obtener más información sobre cada subtema si lo deseas.
@@ -205,7 +199,7 @@ Si realmente eres un principiante en el desarrollo web, tendrás que estudiar y 
 
 Cuando encuentres soluciones a tales problemas, vale la pena escribir notas sobre lo que hiciste y mantener algunos ejemplos de código mínimos en un directorio en algún lugar para que puedas mirar hacia atrás en el trabajo anterior.
 
-Además, la web tiene {{web.link("/es/docs/Learn/Common_questions/What_are_browser_developer_tools", "herramientas de desarrollo")}} que te permiten ver el código utilizado para crear cualquier sitio en la web, si no tienes una solución a mano, un buen método de investigación es encontrar sitios web con características similares en la naturaleza y averiguar cómo lo hicieron.
+Además, la web tiene [herramientas de desarrollo](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) que te permiten ver el código utilizado para crear cualquier sitio en la web, si no tienes una solución a mano, un buen método de investigación es encontrar sitios web con características similares en la naturaleza y averiguar cómo lo hicieron.
 
 > **Nota:** Observa cómo hablamos antes sobre el problema que estamos tratando de resolver primero, y la tecnología utilizada para resolverlo, en segundo lugar. Esta, casi siempre es la mejor manera de hacerlo — no comiences con una tecnología nueva y genial que desees usar, e intenta adaptarla a tu caso de uso.
 

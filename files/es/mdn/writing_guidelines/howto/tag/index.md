@@ -1,16 +1,9 @@
 ---
 title: Cómo etiquetar correctamente las páginas
 slug: MDN/Writing_guidelines/Howto/Tag
-tags:
-  - Colaborar
-  - Etiquetas
-  - Guia(2)
-  - Guía
-  - MDN
-  - Principiante
-translation_of: MDN/Contribute/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
+
 {{MDNSidebar}}
 
 **"Article tags"** Las etiquetas del artículo son una forma importante para poner a los visitantes en contacto con contenido útil. Cada página normalmente debería contener varias etiquetas para ayudar a mantener organizado el contenido. En esta página se explica la mejor manera de marcar las páginas para que así nuestros lectores puedan encontrar la información y podamos mantenernos organizados.
@@ -179,9 +172,9 @@ Para cada página debes asignar distintos tipos de etiquetas, por ejemplo:
 
 **Un tutorial sobre WebGL para principiantes:** `WebGL, Gráficos, Guía, Principiante`
 
-**Página de referencia para `{{HTMLElement ("Canvas")}}:`** `Canvas, HTML, elemento, gráficos`
+**Página de referencia para {{HTMLElement ("Canvas")}}:** `Canvas, HTML, elemento, gráficos`
 
-**Una página de inicio de herramientas para desarrolladores de Firefox OS**`: Herramientas, Firefox OS, Inicio`
+**Una página de inicio de herramientas para desarrolladores de Firefox OS**: `Herramientas, Firefox OS, Inicio`
 
 ## Filtros de etiquetas y búsqueda
 

@@ -2,6 +2,7 @@
 title: animation-play-state
 slug: Web/CSS/animation-play-state
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概述
@@ -51,7 +52,7 @@ animation-play-state: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation-play-state")}}
+{{Compat}}
 
 ## 参见
 

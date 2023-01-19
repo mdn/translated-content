@@ -3,6 +3,7 @@ title: 使用 JavaScript 发送表单
 slug: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms")}}
 
 正如在[前面的文章](/zh-CN/docs/HTML/Forms/Sending_and_retrieving_form_data)中讲到的，HTML 表单可以声明式地发送一个 HTTP 请求。但也可以通过 JavaScript 来为表单准备用于发送的 HTTP 请求。本文探讨如何做到这一点。
@@ -201,7 +202,7 @@ window.addEventListener("load", function () {
 
 {{EmbedLiveSample("使用绑定到表单元素上的_FormData", "100%", 50)}}
 
-你甚至可以通过使用表单的{{domxref("HTMLFormElement.elements", "elements")}} 属性来更多的参与此过程，来得到一个包含表单里所有数据元素的列表，并且逐一手动管理他们。想了解更多，请参阅这里的例子：{{SectionOnPage("/en-US/docs/Web/API/HTMLFormElement.elements", "Accessing the element list's contents")}}
+你甚至可以通过使用表单的{{domxref("HTMLFormElement.elements", "elements")}} 属性来更多的参与此过程，来得到一个包含表单里所有数据元素的列表，并且逐一手动管理他们。想了解更多，请参见示例[访问表单控件](/zh-CN/docs/Web/API/HTMLFormElement/elements#访问表单控件)。
 
 ### 在隐藏的 iframe 中构建 DOM
 

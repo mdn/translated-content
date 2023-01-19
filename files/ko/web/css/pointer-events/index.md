@@ -1,12 +1,6 @@
 ---
 title: pointer-events
 slug: Web/CSS/pointer-events
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - SVG
-translation_of: Web/CSS/pointer-events
 ---
 {{CSSRef}}
 
@@ -104,7 +98,7 @@ img {
 
 ### 링크 비활성화하기
 
-다음 예제는 https\://example.com으로 통하는 링크의 포인터 이벤트를 비활성화합니다.
+다음 예제는 `https://example.com` 으로 통하는 링크의 포인터 이벤트를 비활성화합니다.
 
 #### HTML
 

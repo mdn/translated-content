@@ -3,6 +3,7 @@ title: Stratégies pour mener à bien vos tests
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Cet article commence en donnant un aperçu sur le sujet des tests sur navigateurs (croisé), répondant aux questions telles que "qu'est-ce que le test en navigateur croisé ?", "Quels sont les problèmes les plus communs que vous allez rencontrer ?", et "quelles sont les principales approches pour tester, identifier, et fixer les problèmes ?"

@@ -1,18 +1,9 @@
 ---
 title: '<pre>: 整形済みテキスト要素'
 slug: Web/HTML/Element/pre
-tags:
-  - HTML
-  - HTML コンテンツグループ化
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - ウェブ
-  - リファレンス
-  - 要素
-translation_of: Web/HTML/Element/pre
-browser-compat: html.elements.pre
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **`<pre>`** は [HTML](/ja/docs/Web/HTML) の要素で、整形済みテキスト (preformatted text) を表します。この要素内のテキストは一般的に、ファイル内でのレイアウトをそのまま反映して[等幅フォント](https://ja.wikipedia.org/wiki/等幅フォント)で表示されます。この要素内のホワイトスペース文字はそのまま表示します。
 

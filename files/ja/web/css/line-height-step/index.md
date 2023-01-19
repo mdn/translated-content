@@ -4,6 +4,7 @@ slug: Web/CSS/line-height-step
 l10n:
   sourceCommit: 293c903f50ef81458e5e1df61887abaf8b4d7bb9
 ---
+
 {{CSSRef}}
 
 {{SeeCompatTable}}

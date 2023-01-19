@@ -2,6 +2,7 @@
 title: 属性访问器
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
+
 {{jsSidebar("Operators")}}
 
 属性访问器提供了两种方式用于访问一个对象的属性，它们分别是点号和方括号。
@@ -105,7 +106,7 @@ console.log(object[bar]);
 x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
 ```
 
-[`eval`](https://www.nczonline.net/blog/2013/06/25/eval-isnt-evil-just-misunderstood/) 的性能较差，且有安全风险。在任何时候都应该避免使用。而且，此时 `strFormControl` 必须是一个合法的标识符， 这在一些表单控件的 name、ID 值之中并不是必要的。所以，使用括号来代替会更好一些：
+[`eval`](https://www.nczonline.net/blog/2013/06/25/eval-isnt-evil-just-misunderstood/) 的性能较差，且有安全风险。在任何时候都应该避免使用。而且，此时 `strFormControl` 必须是一个合法的标识符，这在一些表单控件的 name、ID 值之中并不是必要的。所以，使用括号来代替会更好一些：
 
 ```js
 x = document.forms["form_name"].elements[strFormControl].value;

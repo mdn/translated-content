@@ -2,9 +2,10 @@
 title: HTMLTemplateElement.content
 slug: Web/API/HTMLTemplateElement/content
 ---
+
 {{APIRef("Web Components")}}
 
-The **`HTMLTemplateElement.content`**属性返回`<template>`元素的模板内容(一个 {{domxref("DocumentFragment")}}).
+The **`HTMLTemplateElement.content`**属性返回`<template>`元素的模板内容 (一个 {{domxref("DocumentFragment")}}).
 
 ## 语法
 
@@ -25,7 +26,7 @@ var documentFragment = templateElement.content.cloneNode(true);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLTemplateElement.content")}}
+{{Compat}}
 
 ## 相关链接
 

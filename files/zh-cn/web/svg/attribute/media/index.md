@@ -2,6 +2,7 @@
 title: media
 slug: Web/SVG/Attribute/media
 ---
+
 {{SVGRef}}
 
 **`media`** 属性指定只有符合{{Glossary("media query")}}的样式表才会被应用。
@@ -34,7 +35,7 @@ html, body, svg {
 
 ## Usage notes
 
-| Value         | [`<media-query-list>`](/en-US/docs/Web/CSS/@media#media-query-list) |
+| Value         | [`<media-query-list>`](/zh-CN/docs/Web/CSS/@media#media-query-list) |
 | ------------- | ------------------------------------------------------------------- |
 | Default value | `all`                                                               |
 | Animatable    | Yes                                                                 |

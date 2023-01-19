@@ -2,9 +2,10 @@
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 ---
+
 {{JSRef}}
 
-`TypedArray.from()` 方法 从一个类数组或者可迭代对象中创建一个新[类型数组](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)。 这个方法和 {{jsxref("Array.from()")}} 类似。
+`TypedArray.from()` 方法 从一个类数组或者可迭代对象中创建一个新[类型数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)。这个方法和 {{jsxref("Array.from()")}} 类似。
 
 ## 语法
 
@@ -56,8 +57,8 @@ TypedArray.from(source[, mapFn[, thisArg]])
 {{jsxref("Array.from()")}} 和 `TypedArray.from()` 之间有一些微妙的区别：
 
 - 如果 `|this|` 的值传递给 `TypedArray.from` 不是一个构造器，`TypedArray.from` 将抛出{jsxref("TypeError")}}, 而 `Array.from` 默认将创建一个 {{jsxref("Array")}}.
-- `TypedArray.from` 使用`[Put]` 而 `rray.from` 使用`[DefineProperty]]`. 因此， 当和 {{jsxref("Proxy")}} 对象一起时， 它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建一个新的元素而非 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}.
-- 当 `from` 获得一个迭代器时，`TypedArray` 一开始收集迭代器中的所有值， 此时创建一个 `|this|` 的实例用于计数， 然后在实例中设置值。 `Array.from` 设置每个从迭代器其中获取的值，最后设置它的长度。
+- `TypedArray.from` 使用`[Put]` 而 `rray.from` 使用`[DefineProperty]]`. 因此，当和 {{jsxref("Proxy")}} 对象一起时，它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建一个新的元素而非 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}.
+- 当 `from` 获得一个迭代器时，`TypedArray` 一开始收集迭代器中的所有值，此时创建一个 `|this|` 的实例用于计数，然后在实例中设置值。 `Array.from` 设置每个从迭代器其中获取的值，最后设置它的长度。
 - 当 `Array.from` 获得一个不可迭代的类数组时，it respects holes, 而 `TypedArray.from` 将确保结果是 dense.
 
 ## 示例

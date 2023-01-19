@@ -3,6 +3,7 @@ title: スコアと勝ち負けを記録する
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
@@ -90,7 +91,7 @@ function collisionDetection() {
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/b3z2Lpu9/","","395")}}
 
-> **Note:** ブロックに当たるたびにより多くのポイントを追加し、ゲームの終わりに集めたポイントの数を表示するようにしましょう。
+> **メモ:** ブロックに当たるたびにより多くのポイントを追加し、ゲームの終わりに集めたポイントの数を表示するようにしましょう。
 
 ## 次のステップ
 

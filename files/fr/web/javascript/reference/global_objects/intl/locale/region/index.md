@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/region
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.region`** est fournie par un accesseur qui renvoie la région du monde (il s'agit généralement d'un pays) associée à la locale courante.

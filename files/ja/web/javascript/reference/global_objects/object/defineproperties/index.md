@@ -2,6 +2,7 @@
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
+
 {{JSRef}}
 
 **`Object.defineProperties()`** メソッドは、オブジェクトに直接新しいプロパティを定義し、あるいは既存のプロパティを変更して、そのオブジェクトを返します。
@@ -142,9 +143,7 @@ function defineProperties(obj, properties) {
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

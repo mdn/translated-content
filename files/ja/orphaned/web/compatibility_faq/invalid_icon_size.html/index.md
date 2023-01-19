@@ -3,6 +3,7 @@ title: アイコン、画像が期待と異なるサイズで表示される
 slug: orphaned/Web/Compatibility_FAQ/Invalid_Icon_Size.html
 original_slug: Web/Compatibility_FAQ/Invalid_Icon_Size.html
 ---
+
 ## 概要
 
 アイコンや画像が期待と異なるサイズで表示されます。
@@ -11,7 +12,7 @@ original_slug: Web/Compatibility_FAQ/Invalid_Icon_Size.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9971/0105.jpg)
+![](0105.jpg)
 
 ## 要因
 

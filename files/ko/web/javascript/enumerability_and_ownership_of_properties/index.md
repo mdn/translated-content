@@ -1,11 +1,8 @@
 ---
 title: Enumerability and ownership of properties
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
+
 {{JsSidebar("More")}}
 
 'Enumerable properties'(열거 가능한 속성)는 내부 열거 형 플래그가 true로 설정된 property로, 이는 간단한 할당 또는 property initializer ([Object.defineProperty](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)를 통해 정의 된 특성 및 이러한 기본 열거 형을 false로 정의한 특성)를 통해 작성된 property의 기본값입니다.

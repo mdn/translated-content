@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/Polymorphism
 original_slug: Glossaire/Polymorphisme
 ---
+
 Le polymorphisme est la présentation d'une unique interface pour plusieurs types de données.
 
 Par exemple, les entiers, flottants et doubles sont implicitement polymorphiques : il est possible de les ajouter, soustraire, multiplier etc. sans se préoccuper de leurs différents types.

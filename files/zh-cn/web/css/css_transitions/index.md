@@ -2,6 +2,7 @@
 title: CSS 变换
 slug: Web/CSS/CSS_Transitions
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **CSS Transitions** 是一个 CSS 模块，定义了如何创建一个平滑地变换 CSS 属性值的方法。它不仅允许创建变换方法，同时也允许通过定时函数来控制变换方法。

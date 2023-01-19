@@ -2,9 +2,10 @@
 title: WebGL model view projection
 slug: Web/API/WebGL_API/WebGL_model_view_projection
 ---
-{{WebGLSidebar}}
 
-本文探讨如何在 WebGL 项目中获取数据，并将其投影到适当的空间以在屏幕上显示。 它假定了你具备用于平移，缩放和旋转的基本矩阵数学知识。它解释了组成 3D 场景时通常使用的三个核心矩阵：模型，视图和投影矩阵。
+{{DefaultAPISidebar("WebGL")}}
+
+本文探讨如何在 WebGL 项目中获取数据，并将其投影到适当的空间以在屏幕上显示。它假定了你具备用于平移，缩放和旋转的基本矩阵数学知识。它解释了组成 3D 场景时通常使用的三个核心矩阵：模型，视图和投影矩阵。
 
 > **备注：** 本文还可作为 [MDN 内容套件](https://github.com/TatumCreative/mdn-model-view-projection) 提供。它还使用 `MDN`全局对象下可用的 [实用函数](https://github.com/TatumCreative/mdn-webgl) 集合。
 
@@ -417,7 +418,7 @@ vec4 transformedPosition = model * vec4(position, 1.0);
 // 透视有多大的影响？
 float scaleFactor = 0.5;
 
-// 通过采用介于-1 到 1 之间的 z 值来设置 w
+// 通过采用介于 -1 到 1 之间的 z 值来设置 w
 // 然后进行缩放为 0 到某个数，在这种情况下为 0 到 1
 float w = (1.0 + transformedPosition.z) * scaleFactor;
 
@@ -574,7 +575,7 @@ MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
 - `aspectRatio`
   - : 场景的宽高比，等于其宽度除以其高度。在本示例中，就是窗口的宽度除以窗口的高度。此参数的引入最终解决了当画布调整大小和形状时模型的变形问题。
 - `nearClippingPlaneDistance`
-  - : 一个正数，表示到屏幕的距离是垂直于地板的平面的距离，该距离比将所有内容都裁剪的距离更近。它在裁剪空间中映射为-1，并且不应设置为 0。
+  - : 一个正数，表示到屏幕的距离是垂直于地板的平面的距离，该距离比将所有内容都裁剪的距离更近。它在裁剪空间中映射为 -1，并且不应设置为 0。
 - `farClippingPlaneDistance`
   - : 一个正数，表示与平面之间的距离，超出该距离将裁剪几何体。它在裁剪空间中映射为 1.该值应保持合理的距离以接近几何图形的距离，以免在渲染时出现精度误差。
     在最新版本的盒子 demo 中， `computeSimpleProjectionMatrix()` 函数已替换为 `computePerspectiveMatrix()` 函数。

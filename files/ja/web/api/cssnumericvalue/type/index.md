@@ -2,6 +2,7 @@
 title: CSSNumericValue.type()
 slug: Web/API/CSSNumericValue/type
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`type()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、 `CSSNumericValue` の型をf `angle`, `flex`,

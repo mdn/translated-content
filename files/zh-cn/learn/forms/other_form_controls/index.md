@@ -2,6 +2,7 @@
 title: 其他表单控件
 slug: Learn/Forms/Other_form_controls
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
 现在我们来具体看看非 `<input>` 表单控件的功能，从下拉列表菜单（drop-down list）、多行文本域（multi-line text field）到其他有用的表单功能，如我们在前一篇文章看到的 {{htmlelement('output')}} 元素和进度条（progress bar）元素。

@@ -2,6 +2,7 @@
 title: object-position
 slug: Web/CSS/object-position
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`object-position`** 规定了[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`）**，在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景（{{cssxref("background")}}）。
@@ -43,8 +44,8 @@ Here we see HTML that includes two {{HTMLElement("img")}} elements, each display
 这里我们看到包含两个 img 元素的 HTML，分别展示了 MDN 的 logo
 
 ```html
-<img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
 ```
 
 ### CSS
@@ -84,7 +85,7 @@ img {
 
 ## Browser compatibility
 
-{{Compat("css.properties.object-position")}}
+{{Compat}}
 
 ## 参见
 

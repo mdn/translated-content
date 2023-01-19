@@ -1,12 +1,8 @@
 ---
 title: 클래스 선택자
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Class_selectors
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **클래스 선택자**는 요소의 {{htmlattrxref("class")}} 특성에 기반해 요소를 선택합니다.

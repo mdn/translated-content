@@ -2,9 +2,10 @@
 title: feComponentTransfer
 slug: Web/SVG/Element/feComponentTransfer
 ---
+
 {{SVGRef}}
 
-**`<feComponentTransfer>`** [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)滤镜基元对每个像素执行颜色分量的数据重映射。它允许进行像亮度调整，对比度调整，色彩平衡或阈值的操作。
+**`<feComponentTransfer>`** [SVG](/zh-CN/docs/Web/SVG)滤镜基元对每个像素执行颜色分量的数据重映射。它允许进行像亮度调整，对比度调整，色彩平衡或阈值的操作。
 
 计算是使用非预乘色值进行执行的.(译者：什么是非预乘数据：非预乘数据可以理解为例如 rgba(180,160,130,0.8)) 中的 180,160,130，它们没有被除以 255 以及乘以透明度 0.8 而转化为 0\~1 范围的值，当被除以 255 并且乘以 0.8 而转化为 0\~1 范围中的值的预处理被称为 premultiplied color value(预乘数据)).颜色值在每一个通道 (R,G,B,A) 中被分别修改然后输出，这些通道分别是 {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, and {{SVGElement("feFuncA")}}.
 
@@ -12,15 +13,13 @@ slug: Web/SVG/Element/feComponentTransfer
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [滤镜属性](/en/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -30,13 +29,13 @@ slug: Web/SVG/Element/feComponentTransfer
 
 ## DOM 接口
 
-该元素实现了[`SVGFEComponentTransferElement`](/en/DOM/SVGFEComponentTransferElement)接口。
+该元素实现了[`SVGFEComponentTransferElement`](/zh-CN/DOM/SVGFEComponentTransferElement)接口。
 
 ## 示例
 
 ### SVG
 
-```plain
+```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
   <defs>
     <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
@@ -95,15 +94,15 @@ slug: Web/SVG/Element/feComponentTransfer
 
 ### CSS
 
-```plain
+```css
 rect {
   fill: url(#rainbow);
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", "100%", 340)}}
+{{EmbedLiveSample("示例", "100%", 340)}}
 
 ## 参见
 
@@ -127,4 +126,4 @@ rect {
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

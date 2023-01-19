@@ -2,6 +2,7 @@
 title: ':last-of-type'
 slug: Web/CSS/:last-of-type
 ---
+
 {{CSSRef}}
 
 **`:last-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最後の要素を表します。
@@ -13,11 +14,13 @@ p:last-of-type {
 }
 ```
 
-> **Note:** 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
+> **メモ:** 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
 
 ## 構文
 
-{{csssyntax}}
+```
+:last-of-type
+```
 
 ## 例
 

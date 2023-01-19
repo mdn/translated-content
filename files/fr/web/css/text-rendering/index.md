@@ -8,6 +8,7 @@ tags:
   - SVG
 translation_of: Web/CSS/text-rendering
 ---
+
 {{CSSRef}}
 
 La propriété **`text-rendering`** donne de l'information au moteur de rendu sur ce qu'il doit optimiser lors de l'affichage du texte.
@@ -51,9 +52,13 @@ Un effet très visible est : `text-rendering : optimizeLegibility;` qui active l
 
     WebKit applique précisément la valeur définie, mais Gecko traite la valeur de la même manière que `optimizeLegibility`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -105,13 +110,8 @@ p { font: 1.5em "Times New Roman", "Georgia", "Palatino", serif }
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                   | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('SVG2', 'painting.html#TextRenderingProperty', 'text-rendering')}} | {{Spec2('SVG2')}} | Aucune modification. |
-| {{SpecName('SVG1.1', 'painting.html#TextRenderingProperty', 'text-rendering')}} | {{Spec2('SVG1.1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-rendering")}}
+{{Compat}}

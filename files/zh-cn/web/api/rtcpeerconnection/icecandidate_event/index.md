@@ -2,6 +2,7 @@
 title: 'RTCPeerConnection: icecandidate 事件'
 slug: Web/API/RTCPeerConnection/icecandidate_event
 ---
+
 {{APIRef("WebRTC")}}
 
 当 {{domxref("RTCPeerConnection")}} 通过 {{domxref("RTCPeerConnection.setLocalDescription()")}} 方法更改本地描述之后，该 {{domxref("RTCPeerConnection")}} 会抛出 **`icecandidate`** 事件。该事件的监听器需要将更改后的描述信息传送给远端 {{domxref("RTCPeerConnection")}}，以更新远端的备选源。

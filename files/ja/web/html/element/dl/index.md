@@ -1,21 +1,9 @@
 ---
 title: '<dl>: 説明リスト要素'
 slug: Web/HTML/Element/dl
-tags:
-  - 定義リスト
-  - 説明リスト
-  - 要素
-  - HTML
-  - HTML グループ化コンテンツ
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.dl
-translation_of: Web/HTML/Element/dl
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<dl>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リストを表します。この要素は、一連の用語（{{HTMLElement("dt")}} 要素を使用して指定）と説明（{{HTMLElement("dd")}} 要素によって提供）をリスト化したものです。一般的な使用例として、用語集の作成やメタデータ（キーと値のペアのリスト）の表示が挙げられます。
 

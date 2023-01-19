@@ -5,6 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.print
 translation_of: Web/API/Window/print
 ---
+
 {{APIRef}}
 
 Ouvre la boîte de dialogue pour imprimer le document actuel.

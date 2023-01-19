@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.getUniform()
 slug: Web/API/WebGLRenderingContext/getUniform
 ---
+
 {{APIRef("WebGL")}}[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 `WebGLRenderingContext.getUniform()` 方法返回指定位置的全局变量的值。
 
 ## 语法

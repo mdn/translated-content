@@ -1,81 +1,123 @@
 ---
 title: Héritage
 slug: Web/CSS/inheritance
-tags:
-  - CSS
-  - Guide
-  - Reference
-translation_of: Web/CSS/inheritance
-original_slug: Web/CSS/Héritage
+l10n:
+  sourceCommit: e7a4b5d88a8cd280bb56132aa386990154aa1beb
 ---
+
 {{CSSRef}}
 
-Pour [chaque propriété CSS](fr/R%c3%a9f%c3%a9rence_CSS), la spécification indique si, par défaut, cette propriété est héritée ou non. Cela permet de définir le comportement qu'on observera lorsqu'aucune valeur n'est spécifiée pour une propriété pour un élément donné.
+En CSS, **l'héritage** contrôle ce qui se produit lorsqu'aucune valeur n'est indiquée pour une propriété d'un élément.
+
+Les propriétés CSS peuvent être rangées dans deux catégories&nbsp;:
+
+- **Les propriétés héritées**, qui prennent par défaut [la valeur calculée](/fr/docs/Web/CSS/computed_value) de leur élément parent.
+- **Les propriétés non-héritées**, qui prennent par défaut [la valeur initiale](/fr/docs/Web/CSS/initial_value) de la propriété.
+
+Voyez sur [les pages des différentes propriétés CSS dans la référence](/fr/docs/Web/CSS/Reference#index_des_mots-clés) la définition qui indique si une propriété donnée hérite par défaut («&nbsp;Héritée&nbsp;: oui&nbsp;») ou non («&nbsp;Héritée&nbsp;: non&nbsp;»).
 
 ## Propriétés héritées
 
-Lorsqu'aucune valeur n'est spécifiée pour une _propriété héritée_ sur un élément, l'élément récupère la [valeur calculée](/fr/docs/Web/CSS/Valeur_calculée) de cette propriété appliquée à son élément parent. Seul l'élément racine du document possède [la valeur initiale](/fr/docs/Web/CSS/Valeur_initiale) donnée via la spécification.
+Lorsqu'aucune valeur n'a été fournie pour une **propriété héritée** sur un élément, celle-ci utilise [la valeur calculée](/fr/docs/Web/CSS/computed_value) de la propriété sur l'élément parent. Seul l'élément racine du document récupère [la valeur initiale](/fr/docs/Web/CSS/initial_value) indiquée dans le résumé de la propriété.
 
-Un exemple caractéristique d'une propriété héritée est la propriété {{cssxref("color")}}. En définissant la règle de style&nbsp;:
-
-```css
- p { color: green; }
-```
-
-Sur le fragment HTML suivant&nbsp;:
-
-```html
- <p>Ce paragraphe contient du <em>texte mis en emphase text</em>.</p>
-```
-
-On obtient le résultat suivant :
-
-{{EmbedLiveSample("Propriétés_héritées")}}
-
-Les mots «&nbsp;texte mis en emphase&nbsp;» apparaîtront en vert, car l'élément `em` a hérité de la valeur de la propriété {{cssxref("color")}} de l'élément `p`. Il n'obtient pas la valeur initiale de la propriété (qui est la couleur utilisée par l'élément racine lorsque la page ne spécifie aucune couleur).
-
-## Propriétés non héritées
-
-Lorsqu'aucune valeur n'est définie pour un élément, pour une _propriété non héritée_, l'élément prendra [la valeur initiale](/fr/docs/Web/CSS/Valeur_initiale) de cette propriété (telle qu'indiquée par la spécification).
-
-Un exemple caractéristique de propriété non héritée est la propriété {{cssxref("border")}}. En définissant la règle de style&nbsp;:
+Un exemple caractéristique de propriété héritée est la propriété [`color`](/fr/docs/Web/CSS/color). Prenons la règle et le fragment de document suivants&nbsp;:
 
 ```css
- p { border: medium solid; }
+p {
+  color: green;
+}
 ```
-
-Sur le fragment de code HTML :
 
 ```html
- <p>Ce paragraphe contient du <em>texte mis en emphase text</em>.</p>
+<p>Ce paragraphe a <em>du texte en emphase</em> à l'intérieur.</p>
 ```
 
-On obtient le résultat suivant :
+{{EmbedLiveSample("")}}
 
-{{EmbedLiveSample("Propriétés_non_héritées")}}
+Les mots «&nbsp;du texte en emphase&nbsp;» apparaissent en vert, car l'élément `<em>` a hérité de la valeur de la propriété [`color`](/fr/docs/Web/CSS/color) de l'élément `<p>`. Il _n'utilise pas_ la valeur initiale de la propriété (ici, il s'agirait de la couleur utilisée pour l'élément racine lorsque la page n'indique pas de couleur).
 
-Les mots «&nbsp;texte mis en emphase&nbsp;» n'auront pas de bordure (car la valeur initiale de la propriété {{cssxref("border-style") }} est `none`).
+## Propriétés non-héritées
+
+Lorsqu'aucune valeur n'est fournie pour une **propriété non-héritée** sur un élément, celle-ci utilise [la valeur initiale](/fr/docs/Web/CSS/initial_value) (indiquée dans le résumé de la propriété).
+
+Un exemple caractéristique de propriété non-héritée est la propriété [`border`](/fr/docs/Web/CSS/border). Prenons la règle et le fragment de document suivants&nbsp;:
+
+```css
+p {
+  border: medium solid;
+}
+```
+
+```html
+<p>Ce paragraphe a <em>du texte en emphase</em> à l'intérieur.</p>
+```
+
+{{EmbedLiveSample("")}}
+
+Les mots «&nbsp;du texte en emphase&nbsp;» n'ont pas de bordure *en plus* (car la valeur initiale de [`border-style`](/fr/docs/Web/CSS/border-style) est `none`).
 
 ## Notes
 
-Le mot-clé {{cssxref("inherit") }} permet aux auteurs de pages web de définir l'héritage de façon explicite. Il fonctionne aussi bien pour les propriétés héritées que pour celles qui ne sont pas héritées.
+Le mot-clé [`inherit`](/fr/docs/Web/CSS/inherit) permet d'indiquer explicitement l'héritage et fonctionne sur les propriétés héritées comme sur les propriétés non-héritées.
 
-Il est possible de contrôler l'héritage de toutes les propriétés grâce à la propriété raccourcie {{cssxref("all")}} afin d'appliquer la valeur indiquée sur toutes les propriétés.
-
-Ainsi :
+Il est possible de contrôler l'héritage de l'ensemble des propriétés d'un coup en utilisant la propriété raccourcie [`all`](/fr/docs/Web/CSS/all), qui applique sa valeur à toutes les propriétés. Par exemple&nbsp;:
 
 ```css
-font: {
+p {
   all: revert;
   font-size: 200%;
   font-weight: bold;
 }
 ```
 
-permettra d'annuler la mise en forme de l'agent utilisateur pour l'ensemble des propriétés sauf si celles-ci sont fournies via une feuille de styles de l'utilisateur (qui sont alors utilisées). Ensuite, la taille du texte est doublée et celui-ci est mis en gras.
+Cela réinitialisera le style des paragraphes pour la propriété [`font`](/fr/docs/Web/CSS/font) avec la valeur par défaut de l'agent utilisateur (à moins qu'une feuille de style de l'utilisatrice ou de l'utilisateur existe et indique une police, qui sera alors utilisée). Ensuite, la taille de la police est doublée et on applique un niveau de graisse [`font-weight`](/fr/docs/Web/CSS/font-weight) à `bold` pour mettre en gras.
+
+### Surcharger l'héritage, un exemple
+
+Si on reprend l'exemple précédent avec [`border`](/fr/docs/Web/CSS/border) et qu'on impose l'héritage explicitement avec `inherit`, voici ce qu'on obtient&nbsp;:
+
+```css
+p {
+  border: medium solid;
+}
+
+em {
+  border: inherit;
+}
+```
+
+```html
+<p>Ce paragraphe a <em>du texte en emphase</em> à l'intérieur.</p>
+```
+
+{{EmbedLiveSample("")}}
+
+On voit ici la bordure supplémentaire autour du texte en emphase.
 
 ## Voir aussi
 
-- {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("unset")}} et {{cssxref("revert")}}
-- [La notion de valeur calculée](/fr/docs/Web/CSS/Valeur_calculée)
-- [La notion de valeur initiale](/fr/docs/Web/CSS/Valeur_initiale)
+- Les valeurs CSS qui contrôlent l'héritage&nbsp;:
+  - [`inherit`](/fr/docs/Web/CSS/inherit)
+  - [`initial`](/fr/docs/Web/CSS/initial)
+  - [`revert`](/fr/docs/Web/CSS/revert)
+  - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
+  - [`unset`](/fr/docs/Web/CSS/unset)
+- [Introduction à la cascade CSS](/fr/docs/Web/CSS/Cascade)
+- [La cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- Concepts clés de CSS&nbsp;:
+  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
+  - [Règles-at](/fr/docs/Web/CSS/At-rule)
+  - [Commentairess](/fr/docs/Web/CSS/Comments)
+  - [Spécificité](/fr/docs/Web/CSS/Specificity)
+  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
+  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Valeurs
+    - [Initiales](/fr/docs/Web/CSS/initial_value)
+    - [Calculées](/fr/docs/Web/CSS/computed_value)
+    - [Utilisées](/fr/docs/Web/CSS/used_value)
+    - [Effectives](/fr/docs/Web/CSS/actual_value)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
+  - [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)

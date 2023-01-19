@@ -3,11 +3,12 @@ title: 下線の色が相違している
 slug: orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
 original_slug: Web/Compatibility_FAQ/Underline_Color_Diffrence.html
 ---
+
 ## 概要
 
 mobile 版 Firefox と他ブラウザで、文字列の下に引かれる下線の色が相違します。
 
-![](https://mdn.mozillademos.org/files/10005/0203.jpg)
+![](0203.jpg)
 
 ## 要因
 

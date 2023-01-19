@@ -2,6 +2,7 @@
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`KeyboardEvent`** objects 用來詳述使用者和網頁之間，經由鍵盤產生的互動。每個事件（`event`）都記錄著一次鍵盤動作。事件類型（`keydown` 、 `keypress` 和 `keyup`）用來表示鍵盤執行哪種動作。
@@ -126,7 +127,7 @@ KeyboardEvent 有 `keydown` 、 `keypress` 、 `keyup` 三種事件。對大多�
 
 #### Gecko 5.0 以前的自動迴圈
 
-Gecko 5.0 {{geckoRelease('5.0')}} 以前，在不同平台上，鍵盤的處理與現在相比較不統一。
+Gecko 5.0 以前，在不同平台上，鍵盤的處理與現在相比較不統一。
 
 - Windows
   - : 自動迴圈的結果與 Gecko 4.0 或更新的版本類似
@@ -190,4 +191,4 @@ More compatibility data is available on other pages:
 - `.key`：請參考《瀏覽器支援度》的 {{domxref("KeyboardEvent.key")}} 部分。
 - `.getModifierState()` ：請參考《瀏覽器支援度》的 {{domxref("KeyboardEvent.getModifierState")}} 部分。
 
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}

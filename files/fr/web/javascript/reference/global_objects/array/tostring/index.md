@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaine de caractères représentant le tableau spécifié et ses éléments.
@@ -38,16 +39,11 @@ JavaScript appelle la méthode `toString()` automatiquement lorsqu'un tableau do
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.4.4.2', 'Array.prototype.toString')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.tostring', 'Array.prototype.toString')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.tostring', 'Array.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

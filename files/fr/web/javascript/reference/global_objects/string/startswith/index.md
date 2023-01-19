@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/startsWith
 ---
+
 {{JSRef}}
 
 La méthode **`startsWith()`** renvoie un booléen indiquant si la chaine de caractères commence par la deuxième chaine de caractères fournie en argument.
@@ -51,14 +52,11 @@ console.log(str.startsWith("pas être", 12)); // true
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.startsWith")}}
+{{Compat}}
 
 ## Voir aussi
 

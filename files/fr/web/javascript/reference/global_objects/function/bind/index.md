@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/bind
 ---
+
 {{JSRef}}
 
 La méthode **`bind()`** crée une nouvelle fonction qui, lorsqu'elle est appelée, a pour contexte [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) la valeur passée en paramètre et éventuellement une suite d'arguments qui précéderont ceux fournis à l'appel de la fonction créée.
@@ -58,7 +59,7 @@ Une fonction liée peut également être construite à l'aide de l'opérateur {{
 
 ### Créer une fonction liée
 
-La façon la plus simple d'utiliser `bind()`est de faire une fonction qui, peu importe la façon dont elle est appellée, le sera avec une certaine valeur `this` donnée.
+La façon la plus simple d'utiliser `bind()` est de faire une fonction qui, peu importe la façon dont elle est appellée, le sera avec une certaine valeur `this` donnée.
 
 Une erreur courante lorsqu'on débute en JavaScript est d'extraire une méthode d'un objet, puis plus tard d'appeler cette méthode depuis un objet et de s'attendre à utiliser l'objet original en tant que valeur de `this` (par exemple en utilisant cette méthode dans un _callback_). Sans précaution, cependant, l'objet original est perdu. Créer une fonction liée depuis la méthode, en utilisant l'objet original, résout simplement le problème :
 
@@ -210,15 +211,11 @@ slice(arguments);
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES2015', '#sec-function.prototype.apply', 'Function.prototype.bind')}} | {{Spec2('ES2015')}}     |                                                        |
-| {{SpecName('ESDraft', '#sec-function.prototype.bind', 'Function.prototype.bind')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.bind")}}
+{{Compat}}
 
 ## Voir aussi
 

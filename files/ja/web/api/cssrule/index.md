@@ -2,6 +2,7 @@
 title: CSSRule
 slug: Web/API/CSSRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSRule`** インターフェイスは、1 つの CSS ルールを表します。 `CSSRule` からプロパティを継承しているルールを表す型がいくつかあります。

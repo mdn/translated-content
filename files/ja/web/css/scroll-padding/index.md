@@ -2,6 +2,7 @@
 title: scroll-padding
 slug: Web/CSS/scroll-padding
 ---
+
 {{CSSRef}}
 
 **`scroll-padding`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のすべての辺にに一度にスクロールパディングを設定します。 {{cssxref("padding")}} プロパティで要素のパディングを設定するのとよく似ています。

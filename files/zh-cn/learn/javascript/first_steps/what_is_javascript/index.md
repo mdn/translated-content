@@ -2,6 +2,7 @@
 title: 什么是 JavaScript？
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 欢迎来到 MDN 的 JavaScript 初学者课程！本节将在一定高度俯瞰 JavaScript，回答一些诸如“它是什么？”和“它能做什么？”的问题。并使你熟悉 JavaScript 的用途。
@@ -137,7 +138,7 @@ JavaScript 能做的远不止这些。让我们来仔细探索。
 
 - 在变量中储存有用的值。比如上文的示例中，我们请求客户输入一个新名字，然后将其储存到 `name` 变量中。
 - 操作一段文本（在编程中称为“字符串”（string））。上文的示例中，我们取字符串 "玩家 1："，然后把它和 `name` 变量连结起来，创造出完整的文本标签，比如："玩家 1：小明"。
-- 运行代码以响应网页中发生的特定事件。上文的示例中，我们用一个 {{Event("click")}} 事件来检测按钮什么时候被点击，然后运行代码更新文本标签。
+- 运行代码以响应网页中发生的特定事件。上文的示例中，我们用一个 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件来检测按钮什么时候被点击，然后运行代码更新文本标签。
 - 以及更多！
 
 JavaScript 语言核心之上所构建的功能更令人兴奋。**应用程序接口（Application Programming Interfaces**（**API**））将为你的代码提供额外的超能力。
@@ -467,7 +468,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 恭喜你，迈出了探索 JavaScript 世界的第一步。我们从理论开始，介绍为什么要使用 JavaScript，以及用它能做什么事情。过程中穿插了一些代码示例并讲解了 JavaScript 如何与网站中其他代码适配，等等。
 
-现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将 [全力投入实战](/zh-CN/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
+现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将[全力投入实战](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 

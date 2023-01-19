@@ -6,6 +6,7 @@ page-type: web-api-global-function
 original_slug: Web/API/WindowOrWorkerGlobalScope/queueMicrotask
 browser-compat: api.queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode **`queueMicrotask()`**, exposée par l'interface [`Window`](/fr/docs/Web/API/Window) ou l'ou [`Worker`](/fr/docs/Web/API/Worker), met en file d'attente une micro-tâche qui doit être exécutée à un moment sûr avant que le contrôle soit retourné à la boucle d'évènements du navigateur.

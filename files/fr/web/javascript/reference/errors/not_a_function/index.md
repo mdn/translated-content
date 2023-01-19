@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 original_slug: Web/JavaScript/Reference/Erreurs/Not_a_function
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -31,7 +32,7 @@ Il existe de nombreuses fonctions natives qui fonctionnent à l'aide d'une fonct
 
 - Pour les objets {{jsxref("Array")}} ou {{jsxref("TypedArray")}}, voici les fonctions qui utilisent une fonction en argument :
 
-  - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
+  - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - Pour les objets {{jsxref("Map")}} et {{jsxref("Set")}}, voici les méthodes concernées :
 

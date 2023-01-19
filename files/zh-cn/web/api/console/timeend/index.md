@@ -2,6 +2,7 @@
 title: Console.timeEnd()
 slug: Web/API/Console/timeEnd
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 ## 概述

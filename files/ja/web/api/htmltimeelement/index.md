@@ -2,6 +2,7 @@
 title: HTMLTimeElement
 slug: Web/API/HTMLTimeElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTimeElement`** インターフェイスは、 {{HTMLElement("time")}} 要素を操作するための特別なプロパティを提供します (通常の {{domxref("HTMLElement")}} インターフェイスに加え、継承によっても利用できます。) 。
@@ -21,11 +22,7 @@ _特定の関数無し; 親である {{domxref("HTMLElement")}} から関数を�
 
 ## 仕様書
 
-| 仕様                                                                                                                     | ステータス                       | 備考                                               |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#htmltimeelement", "HTMLTimeElement")}}                                 | {{Spec2('HTML WHATWG')}} |                                                    |
-| {{SpecName('HTML5.1', "text-level-semantics.html#the-time-element", "HTMLTimeElement")}}     | {{Spec2('HTML5.1')}}     | {{SpecName("HTML5 W3C")}}. からの変更なし。 |
-| {{SpecName('HTML5 W3C', "text-level-semantics.html#the-time-element", "HTMLTimeElement")}} | {{Spec2('HTML5 W3C')}}     | 初回定義。                                         |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

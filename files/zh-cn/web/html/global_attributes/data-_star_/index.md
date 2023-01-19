@@ -2,6 +2,7 @@
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **data-\*** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 是一类被称为**自定义数据属性**的属性，它赋予我们在所有 HTML 元素上嵌入自定义数据属性的能力，并可以通过脚本在 [HTML](/zh-CN/docs/Web/HTML) 与 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 表现之间进行专有数据的交换。
@@ -28,7 +29,7 @@ slug: Web/HTML/Global_attributes/data-*
 </img>
 ```
 
-有关使用 HTML 数据属性的更深入的教程，请参阅[使用数据属性](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)。
+有关使用 HTML 数据属性的更深入的教程，请参阅[使用数据属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)。
 
 ## 规范
 
@@ -42,4 +43,4 @@ slug: Web/HTML/Global_attributes/data-*
 
 - 所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.dataset")}} 属性允许访问和修改这些值
-- [使用数据属性](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+- [使用数据属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)

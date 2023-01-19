@@ -2,11 +2,12 @@
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBObjectStore")}} 接口的 **`put()`** 方法更新一条给定的数据库记录，如果给出的值不存在，则插入一个新的记录
 
-它返回一个 {{domxref("IDBRequest")}} 对象，并且在一个单独的线程 ,创建一个值的 [structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) ,并且把它的值储存在对象仓库 (object store) 中. 当事务的模式是`readwrite 时，`这个方法用来添加新的记录，或者更新一条对象仓库 (object store) 中已存在的记录 . 如果记录被成功储存，then a success event is fired on the returned request object with the `result` set to the key for the stored record, and the `transaction` set to the transaction in which this object store is opened.
+它返回一个 {{domxref("IDBRequest")}} 对象，并且在一个单独的线程 ,创建一个值的 [structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) ,并且把它的值储存在对象仓库 (object store) 中。当事务的模式是`readwrite 时，`这个方法用来添加新的记录，或者更新一条对象仓库 (object store) 中已存在的记录 . 如果记录被成功储存，then a success event is fired on the returned request object with the `result` set to the key for the stored record, and the `transaction` set to the transaction in which this object store is opened.
 
 put 方法是一个插入或更新对象仓库的方法。参考仅用于插入的方法 {{domxref("IDBObjectStore.add")}} 方法。
 
@@ -48,7 +49,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
       <td><code>ReadOnlyError</code></td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>

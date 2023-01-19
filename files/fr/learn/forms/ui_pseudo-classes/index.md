@@ -3,6 +3,7 @@ title: Pseudo-classes relatives à l'interface utilisateur
 slug: Learn/Forms/UI_pseudo-classes
 translation_of: Learn/Forms/UI_pseudo-classes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 Dans les articles précédents, nous avons vu la mise en forme des différents contrôles de formulaire de façon générale. Cela inclut l'utilisation de certaines pseudo-classes, telles que `:checked` qui permet de cibler une case à cocher seulement lorsqu'elle est sélectionnée. Dans cet article, nous verrons en détails les différentes pseudo-classes disponibles et qui ont trait à l'interface utilisateur et qui permettent de mettre en forme les formulaires dans différents états.

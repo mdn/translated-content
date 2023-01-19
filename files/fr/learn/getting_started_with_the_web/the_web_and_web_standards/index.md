@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
 original_slug: Apprendre/Commencer_avec_le_web/The_web_and_web_standards
 ---
+
 {{learnsidebar}}
 
 Cet article apporte des connaissances générales sur le Web — Comment il est né, quelles sont les technologies usuelles du web, comment interagissent-elles ensemble, pourquoi "développeur web" est un excellent choix de carrière, et quels types de bonnes pratiques pourrez-vous apprendrez au fil de ce cours.

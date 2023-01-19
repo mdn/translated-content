@@ -2,6 +2,7 @@
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Option()`** コンストラクターは、新しい {{domxref("HTMLOptionElement")}} を生成します。
@@ -79,6 +80,4 @@ options.forEach(function(element, key) {
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG','#dom-option','Option()')}} |
+{{Specifications}}

@@ -1,19 +1,15 @@
 ---
 title: 画像とキャンバスをオリジン間で利用できるようにする
 slug: Web/HTML/CORS_enabled_image
-tags:
-  - Advanced
-  - CORS
-  - Canvas
-  - HTML
-  - セキュリティ
-  - リファレンス
-  - 上級者
-translation_of: Web/HTML/CORS_enabled_image
+l10n:
+  sourceCommit: 730d99b6f2830adccce4bd61e81e79ad5a87c941
 ---
+
+{{HTMLSidebar}}
+
 HTML では画像に {{ htmlattrxref("crossorigin", "img") }} 属性を提供し、適切な {{Glossary("CORS")}} ヘッダーと組み合わせることで、 {{ HTMLElement("img") }} 要素で定義されている他のオリジンから読み込まれた画像を、 {{HTMLElement("canvas")}} の中で現在のオリジンから読み込まれた画像であるかのように扱うことができます。
 
-`crossorigin` 属性の使い方については [CORS 設定属性](/ja/docs/Web/HTML/CORS_settings_attributes)をご覧ください。
+`crossorigin` 属性の使い方については [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)をご覧ください。
 
 ## セキュリティと汚染されたキャンバス
 
@@ -28,8 +24,7 @@ CORS による許可なしに他のオリジンから読み込んだ何らかの
 汚染されたキャンバスで以下の呼び出しを行うと、エラーが発生します。
 
 - キャンバスのコンテキストに対する {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} の呼び出し
-- {{HTMLElement("canvas")}} 要素自身に対する {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}} の呼び出し
-- キャンバスに対する {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} の呼び出し
+- {{domxref("HTMLCanvasElement.toBlob", "toBlob()")}}、{{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}}、{{domxref("HTMLCanvasElement.captureStream", "captureStream()")}} の {{HTMLElement("canvas")}} 要素自身に対する呼び出し
 
 キャンバスが汚染されていた場合にこれらの何れかを行うと、 `SecurityError` が発生します。これによって、外部のウェブサイトが許可なしに情報を引き出すために、画像を使用して個人的なデータを暴露することからユーザーを守ります。
 
@@ -46,7 +41,7 @@ CORS による許可なしに他のオリジンから読み込んだ何らかの
 ```xml
 <IfModule mod_setenvif.c>
   <IfModule mod_headers.c>
-    <FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp)$">
+    <FilesMatch "\.(avifs?|bmp|cur|gif|ico|jpe?g|jxl|a?png|svgz?|webp)$">
       SetEnvIf Origin ":" IS_CORS
       Header set Access-Control-Allow-Origin "*" env=IS_CORS
     </FilesMatch>
@@ -54,7 +49,7 @@ CORS による許可なしに他のオリジンから読み込んだ何らかの
 </IfModule>
 ```
 
-つまり、この構成はサーバーにグラフィックのファイル (拡張子が ".bmp", ".cur", ".gif", ".ico", ".jpg", ".jpeg", ".png", ".svg", ".svgz", ".webp" であるもの) を、インターネットのどこからでもオリジン間のアクセスができるようにします。
+つまり、この構成はサーバーにグラフィックのファイル（拡張子が ".bmp", ".cur", ".gif", ".ico", ".jpg", ".jpeg", ".png", ".svg", ".svgz", ".webp" であるもの）を、インターネットのどこからでもオリジン間のアクセスができるようにします。
 
 ### 保存機能の実装
 
@@ -69,15 +64,17 @@ CORS による許可なしに他のオリジンから読み込んだ何らかの
 ```js
 function startDownload() {
   let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
+  let imageDescription = "The Mozilla logo";
 
-  downloadedImg = new Image;
+  downloadedImg = new Image();
   downloadedImg.crossOrigin = "Anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
+  downloadedImg.alt = imageDescription;
   downloadedImg.src = imageURL;
 }
 ```
 
-ここではハードコーディングされた URL (`imageURL`) を使用していますが、どこからでも持ってくるのは簡単でしょう。画像のダウンロードを始めるために、 {{domxref("HTMLImageElement.Image", "Image()")}} コンストラクターを使用することで新しい {{domxref("HTMLImageElement")}} を生成します。それから画像は `crossOrigin` 属性を `"Anonymous"` (つまり、認証のないオリジン間の画像のダウンロード) に設定することで、オリジン間のダウンロードができるように構成します。 image 要素で {{event("load")}} イベントが発火した場合、つまり画像データが受信された場合のイベントリスナーを追加します。
+ここではハードコーディングされた URL (`imageURL`) を使用していますが、どこからでも持ってくるのは簡単でしょう。画像のダウンロードを始めるために、新しい {{domxref("HTMLImageElement")}} を {{domxref("HTMLImageElement.Image", "Image()")}} コンストラクターを使用して生成します。それから画像は `crossOrigin` 属性を `"Anonymous"` (つまり、認証のないオリジン間の画像のダウンロード) に設定することで、オリジン間のダウンロードができるように構成します。画像要素で {{domxref("Window/load_event", "load")}} イベントが発生した場合、つまり画像データが受信された場合のイベントリスナーを追加します。
 
 最後に、画像の {{domxref("HTMLImageElement.src", "src")}} 属性をダウンロードする画像に設定します。これがダウンロードを始める引き金になります。
 
@@ -87,20 +84,20 @@ function startDownload() {
 
 ```js
 function imageReceived() {
-  let canvas = document.createElement("canvas");
-  let context = canvas.getContext("2d");
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
 
   canvas.width = downloadedImg.width;
   canvas.height = downloadedImg.height;
+  canvas.innerText = downloadedImg.alt;
 
   context.drawImage(downloadedImg, 0, 0);
   imageBox.appendChild(canvas);
 
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-  }
-  catch(err) {
-    console.log("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
 }
 ```
@@ -111,12 +108,8 @@ function imageReceived() {
 
 実際に画像をローカルに保存する時になりました。このためにはウェブストレージ API のローカルストレージの仕組みを使用し、 {{domxref("Window.localStorage", "localStorage")}} グローバル変数を通してアクセスします。キャンバスのメソッド {{domxref("HTMLCanvasElement.toDataURL", "toDataURL()")}} を使用して画像を data:// URL が表す PNG 画像に変換し、それから {{domxref("Storage.setItem", "setItem()")}} を用いてローカルストレージに保存します。
 
-この例は Glitch で[試用](https://cors-image-example.glitch.me/)または[リミックス](https://glitch.com/edit/#!/remix/cors-image-example)することができます。
-
 ## 関連情報
 
-- [Using Cross-domain images in WebGL and Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
-- [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
-- [Web Storage API](/ja/docs/Web/API/Web_Storage_API)
-
-{{QuickLinksWithSubpages("/ja/docs/Web/HTML/")}}
+- [Using Cross-domain images in WebGL and Chrome 13](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [HTML Specification - the `crossorigin` attribute](https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin)
+- [ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API)

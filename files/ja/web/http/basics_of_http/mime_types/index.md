@@ -1,19 +1,8 @@
 ---
 title: MIME タイプ (IANA メディアタイプ)
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - Content-Type
-  - Guide
-  - HTTP
-  - MIME Types
-  - Meta
-  - Request header
-  - Response Header
-  - application/javascript
-  - application/json
-  - application/xml
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
+
 {{HTTPSidebar}}
 
 **メディアタイプ** (別名 **Multipurpose Internet Mail Extensions または MIME タイプ**) は、文書、ファイル、またはバイト列の性質や形式を示します。
@@ -21,7 +10,7 @@ MIME タイプは IETF の {{RFC(6838)}} で定義され、標準化されてい
 
 [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) はすべての公式の MIME タイプを管理しており、[Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) ページで最新の完全なリストを見つけることができます。
 
-> **Warning:** ブラウザーは URL を処理する方法を決定するために、*ファイル拡張子ではなく* MIME タイプを使用しますので、ウェブサーバーは正しい MIME タイプをレスポンスの {{HTTPHeader("Content-Type")}} ヘッダーで送信することが重要です。これが正しく構成されていないと、ブラウザーはファイルの中身を誤って解釈し、サイトが正しく動作しなかったり、ダウンロードファイルが誤って扱われたりすることがあります。
+> **警告:** ブラウザーは URL を処理する方法を決定するために、*ファイル拡張子ではなく* MIME タイプを使用しますので、ウェブサーバーは正しい MIME タイプをレスポンスの {{HTTPHeader("Content-Type")}} ヘッダーで送信することが重要です。これが正しく構成されていないと、ブラウザーはファイルの中身を誤って解釈し、サイトが正しく動作しなかったり、ダウンロードファイルが誤って扱われたりすることがあります。
 
 ## MIME タイプの構造
 
@@ -113,7 +102,7 @@ HTTP は `multipart/form-data` が [HTML フォーム](/ja/docs/Learn/Forms)の 
 
 これは、テキスト形式のファイルの既定です。実際には「未知のテキスト形式」のファイルを表すものではありますが、ブラウザーは表示可能であると推測します。
 
-> **Note:** `text/plain` は「任意のテキスト形式データ」を表すものではありませんので注意してください。特定の種類のテキスト形式のデータを想定している場合は、おそらくそのとおりに判断されないでしょう。特に、CSS ファイルを宣言する {{HTMLElement("link")}} 要素から `text/plain` 形式のファイルをダウンロードすると、 `text/plain` で示されたファイルは正しい CSS ファイルであると認識されません。 CSS の MIME タイプである `text/css` を使用しなければなりません。
+> **メモ:** `text/plain` は「任意のテキスト形式データ」を表すものではありませんので注意してください。特定の種類のテキスト形式のデータを想定している場合は、おそらくそのとおりに判断されないでしょう。特に、CSS ファイルを宣言する {{HTMLElement("link")}} 要素から `text/plain` 形式のファイルをダウンロードすると、 `text/plain` で示されたファイルは正しい CSS ファイルであると認識されません。 CSS の MIME タイプである `text/css` を使用しなければなりません。
 
 ### text/css
 
@@ -123,7 +112,7 @@ HTTP は `multipart/form-data` が [HTML フォーム](/ja/docs/Learn/Forms)の 
 
 すべての HTML コンテンツは、このタイプで提供するべきです。 XHTML 向けの新たな MIME タイプ (`application/xhtml+xml` など) は、現在ではほぼ無用です。
 
-> **Note:**  `application/xml` や `application/xhtml+xml` は、 XML の厳密な解釈ルールや、 [`<![CDATA[…]]>`](/ja/docs/Web/API/CDATASection) セクション、 HTML/SVG/MathML の名前空間に含まれない要素を使用したい場合に使用してください。
+> **メモ:** `application/xml` や `application/xhtml+xml` は、 XML の厳密な解釈ルールや、 [`<![CDATA[…]]>`](/ja/docs/Web/API/CDATASection) セクション、 HTML/SVG/MathML の名前空間に含まれない要素を使用したい場合に使用してください。
 
 ### text/javascript
 
@@ -152,7 +141,7 @@ JavaScript のコンテンツの中には、 `charset` 引数を MIME タイプ�
 - `text/x-ecmascript` {{Non-standard_Inline}}
 - `text/x-javascript` {{Non-standard_Inline}}
 
-> **Note:** ある{{Glossary("user agent", "ユーザーエージェント")}}がこれらのいずれか、またはすべてに対応していても、 `text/javascript` だけを使用するようにしてください。
+> **メモ:** ある{{Glossary("user agent", "ユーザーエージェント")}}がこれらのいずれか、またはすべてに対応していても、 `text/javascript` だけを使用するようにしてください。
 > このタイプは、現在および将来にわたって動作が保証されている唯一の MIME タイプです。
 
 ### 画像タイプ

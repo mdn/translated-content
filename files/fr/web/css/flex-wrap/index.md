@@ -3,6 +3,7 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 translation_of: Web/CSS/flex-wrap
 ---
+
 {{CSSRef}}
 
 La propriété **`flex-wrap`** indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.
@@ -32,13 +33,17 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 - `nowrap`
   - : Les éléments flexibles sont disposés sur une seule ligne. Cela peut entraîner un dépassement du conteneur. La ligne **cross-start** est équivalente à **start** ou à **before** selon la valeur de {{cssxref("flex-direction")}}. Cette valeur est la valeur par défaut.
 - `wrap`
-  - : Les éléments flexibles sont disposé sur plusieurs lignes. La ligne **cross-start** est équivalente à  **start** ou **before** en fonction de la valeur de `flex-direction` et la ligne **cross-end** est à l'opposée **cross-start**.
+  - : Les éléments flexibles sont disposé sur plusieurs lignes. La ligne **cross-start** est équivalente à **start** ou **before** en fonction de la valeur de `flex-direction` et la ligne **cross-end** est à l'opposée **cross-start**.
 - `wrap-reverse`
   - : Se comporte comme `wrap` mais **cross-start** et **cross-end** sont permutées.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -117,15 +122,11 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 
 ## Spécifications
 
-| Spécification                                    | État               | Commentaires |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap')}} | {{Spec2('CSS3 Flexbox')}} |        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex-wrap")}}
+{{Compat}}
 
 ## Voir aussi
 

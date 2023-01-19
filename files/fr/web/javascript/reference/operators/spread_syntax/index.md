@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 original_slug: Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition
 ---
+
 {{jsSidebar("Operators")}}
 
 La **syntaxe de décomposition** permet d'étendre un itérable (par exemple une expression de tableau ou une chaîne de caractères) en lieu et place de plusieurs arguments (pour les appels de fonctions) ou de plusieurs éléments (pour les littéraux de tableaux) ou de paires clés-valeurs (pour les littéraux d'objets).
@@ -238,16 +239,11 @@ La syntaxe des paramètres du reste ressemble à la syntaxe de décomposition ma
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                                                                                                                                                                                                                       |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-array-initializer')}}     | {{Spec2('ES2015')}}     | Définie dans plusieurs sections de la spécification : [initialisateur de tableau](http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer), [listes d'argument](http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists). |
-| {{SpecName('ES2018', '#sec-object-initializer')}}     | {{Spec2('ES2018')}}     | Définie dans la section sur les [initialisateurs d'objet.](http://www.ecma-international.org/ecma-262/9.0/#sec-object-initializer)                                                                                                                 |
-| {{SpecName('ESDraft', '#sec-array-initializer')}}     | {{Spec2('ESDraft')}} | Aucune modification.                                                                                                                                                                                                                               |
-| {{SpecName('ESDraft', '#sec-object-initializer')}} | {{Spec2('ESDraft')}} | Aucune modification.                                                                                                                                                                                                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.spread")}}
+{{Compat}}
 
 ## Voir aussi
 

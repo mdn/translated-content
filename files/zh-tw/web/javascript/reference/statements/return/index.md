@@ -2,6 +2,7 @@
 title: return
 slug: Web/JavaScript/Reference/Statements/return
 ---
+
 {{jsSidebar("Statements")}}
 
 **`return` 表達式**會終止函式執行，並指明函式呼叫器（function caller）要回傳的數值。
@@ -59,7 +60,7 @@ a + b;
 
 主控台會警告「unreachable code after return statement」（在 return 宣告後面有無法抵達的程式碼）。
 
-> **備註：** 從 Gecko 40 {{geckoRelease(40)}} 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。
+> **備註：** 從 Gecko 40 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。
 
 要避免 ASI 問題，可以添加括號：
 
@@ -120,7 +121,7 @@ answer(1337); // 56154
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.return")}}
+{{Compat}}
 
 ## 參見
 

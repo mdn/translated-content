@@ -2,6 +2,7 @@
 title: 'Window：deviceorientation 事件'
 slug: Web/API/Window/deviceorientation_event
 ---
+
 {{APIRef}}
 
 **`deviceorientation`** 事件在方向传感器输出新数据的时候触发。其数据系传感器与地球坐标系相比较所得，也就是说在设备上可能会采用设备地磁计的数据。

@@ -2,6 +2,7 @@
 title: get Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
 ---
+
 {{JSRef}}
 
 **`Set[Symbol.species]`** アクセサープロパティは、`Set` コンストラクターを返します。

@@ -2,6 +2,7 @@
 title: homepage_url
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -39,4 +40,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 
 ## 瀏覽器兼容性
 
-{{Compat("webextensions.manifest.homepage_url")}}
+{{Compat}}

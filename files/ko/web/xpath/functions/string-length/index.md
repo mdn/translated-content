@@ -1,10 +1,8 @@
 ---
 title: string-length
 slug: Web/XPath/Functions/string-length
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/string-length
 ---
+
 {{ XsltRef() }}
 
 `string-length` 함수는 인수로 준 문자열의 문자수를 반환합니다.
@@ -17,7 +15,7 @@ string-length( [string] )
 
 ### 인수
 
-- _`string`_
+- `string`
   (선택사항)
   - : 평가할 문자열. 빼면, 쓰는 문자열은 문자열로 변환된 문맥 노드와 같습니다.
 

@@ -2,6 +2,7 @@
 title: Node.contains
 slug: Web/API/Node/contains
 ---
+
 {{ApiRef}}
 
 ## 概述
@@ -33,7 +34,7 @@ function isInPage(node) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.contains")}}
+{{Compat}}
 
 ## 规范
 

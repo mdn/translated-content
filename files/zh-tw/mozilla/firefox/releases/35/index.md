@@ -2,6 +2,7 @@
 title: Firefox 35 技術文件
 slug: Mozilla/Firefox/Releases/35
 ---
+
 {{FirefoxSidebar}}{{ ReleaseChannelInfo("35", "35", "January 2015", "Aurora") }}
 
 Want to help document Firefox 35? See the [list of bugs that need to be written about](http://beta.elchi3.de/doctracker/#list=fx&version=35.0) and pitch in!

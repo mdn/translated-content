@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/import
 original_slug: Web/XSLT/import
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:import>` est un élément de haut niveau qui sert à importer le contenu d'une feuille de styles dans une autre. Généralement, le contenu importé a une priorité inférieure à celui de la feuille qui effectue l'importation. Ceci contraste avec [\<xsl:include>](/fr/docs/Web/XSLT/include) où les contenus des deux feuilles ont exactement la même priorité.

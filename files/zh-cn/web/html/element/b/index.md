@@ -2,6 +2,7 @@
 title: <b>
 slug: Web/HTML/Element/b
 ---
+
 **HTML 提醒注意（Bring Attention To）元素（`<b>`）**用于吸引读者的注意到该元素的内容上（如果没有另加特别强调）。这个元素过去被认为是**粗体（Boldface）元素**，并且大多数浏览器仍然将文字显示为粗体。尽管如此，你不应将 `<b>` 元素用于显示粗体文字；替代方案是使用 CSS {{cssxref("font-weight")}} 属性来创建粗体文字。
 
 <table class="properties">
@@ -68,11 +69,11 @@ Keywords are displayed with the default style of the \<b> element, likely in bol
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.b")}}
+{{Compat}}
 
 ## 相关链接
 
 - Others elements conveying [text-level semantics](/zh-CN/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 - [Using \<b> and \<i> elements (W3C)](http://www.w3.org/International/questions/qa-b-and-i-tags)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

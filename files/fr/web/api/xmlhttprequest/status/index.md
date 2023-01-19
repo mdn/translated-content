@@ -3,6 +3,7 @@ title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
 translation_of: Web/API/XMLHttpRequest/status
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propriété en lecture seule XMLHttpRequest.status renvoie le code d'état HTTP numérique de la réponse de XMLHttpRequest.

@@ -3,6 +3,7 @@ title: How to properly tag pages
 slug: MDN/Writing_guidelines/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
+
 {{MDNSidebar}}
 
 **Article tags** are an important way to put visitors in touch with helpful content. Each page should normally have several tags to help keep content organized. This page explains the best way to tag pages so that our readers can find information and we can keep ourselves organized.

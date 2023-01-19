@@ -2,6 +2,7 @@
 title: 理解 WebAssembly 文本格式
 slug: WebAssembly/Understanding_the_text_format
 ---
+
 {{WebAssemblySidebar}}
 
 为了能够让人类阅读和编辑 WebAssembly，wasm 二进制格式提供了相应的文本表示。这是一种用来在文本编辑器、浏览器开发者工具等工具中显示的中间形式。本文用基本语法的方式解释了这种文本表示是如何工作的，以及它是如何与它表示的底层字节码，及在 JavaScript 中表示 wasm 的封装对象关联起来的。
@@ -358,7 +359,7 @@ fetchAndInstantiate('logger2.wasm', importObject).then(function(instance) {
 
 WebAssembly 需要一种做到这一点的调用指令，因此，我们有了接受一个动态函数操作数的 call_indirect 指令。问题是，在 WebAssembly 中，当前操作数的仅有的类型是 i32/i64/f32/f64。
 
-WebAssembly 可以增加一个 anyfunc 类型（"any"的含义是该类型能够持有任何签名的函数），但是，不幸的是，由于安全原因，这个 anyfunc 类型不能存储在线性内存中。**_`线性内存会把存储的原始内容作为字节暴露出去，并且这会使得wasm内容能够任意的查看和修改原始函数地址`_**，而这在网络上是不被允许的。
+WebAssembly 可以增加一个 anyfunc 类型（"any"的含义是该类型能够持有任何签名的函数），但是，不幸的是，由于安全原因，这个 anyfunc 类型不能存储在线性内存中。**_`线性内存会把存储的原始内容作为字节暴露出去，并且这会使得 wasm 内容能够任意的查看和修改原始函数地址`_**，而这在网络上是不被允许的。
 
 解决方案是在一个表格中存储函数引用，然后作为 代替，传递表格索引——它们只是 i32 类型值。因此，call_indirect 的操作数可以是一个 i32 类型索引值。
 

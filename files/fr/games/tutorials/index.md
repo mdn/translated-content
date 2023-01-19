@@ -9,6 +9,7 @@ tags:
 translation_of: Games/Tutorials
 original_slug: Games/Workflows
 ---
+
 {{GamesSidebar}}
 
 Cette page contient plusieurs séries de tutoriels qui mettent en évidence différentes démarches pour créer efficacement différents types de jeux Web.

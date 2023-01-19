@@ -3,6 +3,7 @@ title: "[[Prototype]] の変更の性能上の危険性"
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 original_slug: Web/JavaScript/The_performance_hazards_of_prototype_mutation
 ---
+
 {{jsSidebar("Advanced")}}
 
 すべての JavaScript オブジェクトは `[[Prototype]]` を持っています。 オブジェクトのプロパティを取得するには、まずそのオブジェクトを検索し、次にそのオブジェクトの `[[Prototype]]` を検索し、さらにそのオブジェクトの `[[Prototype]]` を検索し、プロパティが見つかるかチェーンが終了するまで検索します。 `[[Prototype]]` チェーンは特に[オブジェクトの継承](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)に有用です。

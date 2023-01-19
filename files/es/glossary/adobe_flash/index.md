@@ -1,13 +1,8 @@
 ---
 title: Adobe Flash
 slug: Glossary/Adobe_Flash
-tags:
-  - CodingScripting
-  - Flash
-  - Glossary
-  - Infrastructure
-translation_of: Glossary/Adobe_Flash
 ---
+
 Flash es una tecnología obsolescente desarrollada por Adobe que hace posible crear aplicaciones Web ricas, gráficos vectoriales y multimedia. Para utilizar Flash dentro de un {{Glossary("Browser","web browser")}} es necesario instalar el complemento adecuado.
 
 ## Aprende más

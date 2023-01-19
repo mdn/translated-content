@@ -2,6 +2,7 @@
 title: 'Window: focus event'
 slug: Web/API/Window/focus_event
 ---
+
 {{APIRef}}
 
 当元素获得焦点时， **`focus`** 事件就会触发。
@@ -82,7 +83,7 @@ window.addEventListener('focus', play);
 
 #### 结果
 
-{{EmbedLiveSample("Live_example")}}
+{{EmbedLiveSample("在线示例")}}
 
 ## 规范
 
@@ -90,9 +91,9 @@ window.addEventListener('focus', play);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.focus_event")}}
+{{Compat}}
 
 ## 参考
 
 - 相关联事件： {{domxref("Window/blur_event", "blur")}}
-- `Element` 目标上的这个事件: {{domxref("Element/focus_event", "focus")}} 事件
+- `Element` 目标上的这个事件：{{domxref("Element/focus_event", "focus")}} 事件

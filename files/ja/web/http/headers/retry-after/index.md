@@ -1,14 +1,8 @@
 ---
 title: Retry-After
 slug: Web/HTTP/Headers/Retry-After
-tags:
-  - HTTP
-  - ヘッダー
-  - リファレンス
-  - レスポンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Retry-After
 ---
+
 {{HTTPSidebar}}
 
 **`Retry-After`** レスポンス HTTP ヘッダーは、ユーザーエージェントがフォローアップリクエストを行う前にどれくらい待つべきかを示します。このヘッダーが使用される主なケースは 3 つあります。

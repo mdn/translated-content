@@ -2,6 +2,7 @@
 title: Blob
 slug: Web/API/Blob
 ---
+
 {{APIRef("File API")}}
 
 `Blob` 对象表示一个不可变、原始数据的类文件对象。它的数据可以按文本或二进制的格式进行读取，也可以转换成 {{DOMxRef("ReadableStream")}} 来用于数据操作。
@@ -50,7 +51,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 
 ### 创建一个指向类型化数组的 URL
 
-以下代码创建了一个  JavaScript [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)，并创建一个新的，包含类型化数组中的数据的 `Blob`。然后调用 {{DOMxRef("URL.createObjectURL()")}} 方法，将 blob 转换为一个 {{glossary("URL")}}。
+以下代码创建了一个 JavaScript [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)，并创建一个新的，包含类型化数组中的数据的 `Blob`。然后调用 {{DOMxRef("URL.createObjectURL()")}} 方法，将 blob 转换为一个 {{glossary("URL")}}。
 
 #### HTML
 

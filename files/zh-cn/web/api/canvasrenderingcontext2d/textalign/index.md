@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.textAlign`** 是 Canvas 2D API 描述绘制文本时，文本的对齐方式的属性。注意，该对齐是基于 CanvasRenderingContext2D.fillText 方法的 x 的值。所以如果 textAlign="center"，那么该文本将画在 x-50%\*width。
@@ -27,15 +28,15 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 - start
   - : 文本对齐界线开始的地方（左对齐指本地从左向右，右对齐指本地从右向左）。
 - end
-  - : 文本对齐界线结束的地方 （左对齐指本地从左向右，右对齐指本地从右向左）。
+  - : 文本对齐界线结束的地方（左对齐指本地从左向右，右对齐指本地从右向左）。
 
-默认值是 `start。`
+默认值是 `start`。
 
-> `译者注：direction 属性会对此属性产生影响。如果 direction 属性设置为 ltr，则 left 和 start 的效果相同，right 和 end 的效果相同；如果 direction 属性设置为 rtl，则 left 和 end 的效果相同，right 和 start 的效果相同。`
+> 译者注：`direction` 属性会对此属性产生影响。如果 `direction` 属性设置为 `ltr`，则 left 和 `start` 的效果相同，`right` 和 end 的效果相同；如果 direction 属性设置为 `rtl`，则 `left` 和 `end` 的效果相同，`right` 和 `start` 的效果相同。
 
 ## 示例
 
-### 使用 `textAlign` 属性
+### 简单文本对齐
 
 这是一段简单的代码片段，使用 `textAlign` 属性设置文本的不同对齐方式。
 
@@ -48,63 +49,39 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+canvas.width = 350;
+const ctx = canvas.getContext('2d');
+const x = canvas.width / 2;
 
-ctx.font = "48px serif";
-ctx.textAlign = "left";
-ctx.strokeText("Hello world", 0, 100);
+ctx.beginPath();
+ctx.moveTo(x, 0);
+ctx.lineTo(x, canvas.height);
+ctx.stroke();
+
+ctx.font = '30px serif';
+
+ctx.textAlign = 'left';
+ctx.fillText('left-aligned', x, 40);
+
+ctx.textAlign = 'center';
+ctx.fillText('center-aligned', x, 85);
+
+ctx.textAlign = 'right';
+ctx.fillText('right-aligned', x, 130);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.font = "48px serif";
-ctx.textAlign = "left";
-ctx.strokeText("Hello world", 0, 100);</textarea>
-```
+{{ EmbedLiveSample('简单文本对齐', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.textAlign")}}
+{{Compat}}
 
 ## 参见
 

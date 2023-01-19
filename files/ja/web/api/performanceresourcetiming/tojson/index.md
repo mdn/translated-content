@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.toJSON()
 slug: Web/API/PerformanceResourceTiming/toJSON
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`toJSON()`** メソッドは、{{domxref("PerformanceResourceTiming")}} オブジェクトの JSON 表現を返すシリアライザです。
@@ -36,9 +37,7 @@ console.log("PerformanceEntry.toJSON = " + s);
 
 ## 仕様書
 
-| 仕様書                                                                       | ステータス                           | コメント |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#serializer', 'toJSON')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

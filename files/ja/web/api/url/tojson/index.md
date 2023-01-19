@@ -2,6 +2,7 @@
 title: URL.toJSON()
 slug: Web/API/URL/toJSON
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`toJSON()`** メソッドは、URL のシリアル化されたバージョンを含む {{domxref("USVString")}} を返しますが、実際には {{domxref("URL.toString()")}} と同じ効果があるようです。
@@ -33,9 +34,7 @@ url.toJSON()
 
 ## 仕様
 
-| 仕様                                                                 | 状態                 | コメント |
-| -------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-tojson', 'toJSON()')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

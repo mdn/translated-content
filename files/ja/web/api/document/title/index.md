@@ -2,6 +2,7 @@
 title: Document.title
 slug: Web/API/Document/title
 ---
+
 {{APIRef("DOM")}}
 
 **`document.title`** プロパティは、現在の文書の[題名](/ja/docs/Web/HTML/Element/title)を取得または設定します。
@@ -40,19 +41,9 @@ document.title = newTitle;
 </html>
 ```
 
-## 注
-
-Gecko では、このプロパティは HTML, SVG, XUL, その他の文書に適用されます。
-
-HTML 文書では、 `document.title` の初期値は `<title>` 要素のテキストの内容です。 XUL では、 {{XULElem("window")}} またはその他の最上位 XUL 要素の {{XULAttr("title")}} 属性の値です。
-
-XUL では、文書の読み込みが完了する前に `document.title` にアクセスした時の動作は未定義です。 `document.title` が空文字を返す場合があり、また `document.title` を設定しても効果が表れないかもしれません。
-
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG','#document.title','document.title')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

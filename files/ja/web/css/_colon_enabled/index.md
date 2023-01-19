@@ -2,6 +2,7 @@
 title: ':enabled'
 slug: Web/CSS/:enabled
 ---
+
 {{CSSRef}}
 
 **`:enabled`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、すべての有効な要素を表します。有効な要素とは、アクティブ化 (選択、クリック、入力など) したりフォーカスを得たりすることができるものです。要素には無効な状態、つまりアクティブ化したりフォーカスを得たりすることができない状態もあります。
@@ -15,7 +16,9 @@ input:enabled {
 
 ## 構文
 
-{{csssyntax}}
+```
+:enabled
+```
 
 ## 例
 

@@ -1,21 +1,15 @@
 ---
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
-tags:
-  - Content Negotiation
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-translation_of: Web/HTTP/Headers/Accept-Charset
 ---
+
 {{HTTPSidebar}}
 
 **`Accept-Charset`** は HTTP のリクエストヘッダーで、クライアントが理解できる{{glossary("character encoding", "文字エンコーディング")}}を広報します。[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)を使用して、サーバーは提案の 1 つを選択、使用し、クライアントに選択結果を {{HTTPHeader("Content-Type")}} レスポンスヘッダー内、ふつうは `charset=` 引数の中で通知します。通常はそれぞれのリソースの既定値が正しく、これを送信すると[フィンガープリンティング](/ja/docs/Mozilla/Firefox/Privacy/Tracking_Protection)を許してしまうことがあるため、ブラウザーは通常、このヘッダーを設定しません。
 
 サーバーが一致する文字エンコーディングを提供できない場合、理論的には {{HTTPStatus("406", "406 Not Acceptable")}} エラーコードを返すことができます。しかし、より使い勝手をよくするために、これはめったに行われず、 `Accept-Charset` ヘッダーは無視されます。
 
-> **Note:** HTTP/1.1 の初期のバージョンでは、既定の文字エンコーディングを ISO-8859-1 と定義していました。これはすでに推奨されなくなっており、コンテンツ型ごとに個別に既定値が設定されるようになりました。
+> **メモ:** HTTP/1.1 の初期のバージョンでは、既定の文字エンコーディングを ISO-8859-1 と定義していました。これはすでに推奨されなくなっており、コンテンツ型ごとに個別に既定値が設定されるようになりました。
 >
 > UTF-8 への対応が進み、圧倒的に推奨される文字エンコーディングになっています。[設定に基づいたエントロピーを減少させることでより良いプライバシーを保証する](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy)ために、すべてのブラウザーが `Accept-Charset` ヘッダーを省略しています。 Internet Explorer 8 以降、 Safari 5 以降、 Opera 11 以降、 Firefox 10 以降、 Chrome 27 以降は送信しなくなりました。
 

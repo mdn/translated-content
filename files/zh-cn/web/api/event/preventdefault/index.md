@@ -2,6 +2,7 @@
 title: event.preventDefault
 slug: Web/API/Event/preventDefault
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Event")}} 接口的 **`preventDefault()`**方法，告诉{{Glossary("user agent")}}：如果此事件没有被显式处理，它默认的动作也不应该照常执行。此事件还是继续传播，除非碰到事件侦听器调用{{domxref("Event.stopPropagation", "stopPropagation()")}} 或{{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}，才停止传播。
@@ -52,7 +53,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 你可以看到如下的行为：
 
-{{EmbedLiveSample("Blocking_default_click_handling")}}
+{{EmbedLiveSample("阻止默认的点击事件执行")}}
 
 ### 在编辑域中阻止按键
 
@@ -89,7 +90,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 #### JavaScript
 
-这里是相关的 JavaScript 代码。首先，监听{{event("keypress")}}事件：
+这里是相关的 JavaScript 代码。首先，监听[`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)事件：
 
 ```js
 var myTextbox = document.getElementById('my-textbox');
@@ -141,7 +142,7 @@ function displayWarning(msg) {
 
 这里就是代码的执行结果：
 
-{{ EmbedLiveSample('Stopping_keystrokes_from_reaching_an_edit_field', 600, 200) }}
+{{ EmbedLiveSample('在编辑域中阻止按键', 600, 200) }}
 
 ## 备注
 
@@ -153,6 +154,6 @@ function displayWarning(msg) {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.Event.preventDefault")}}
+{{Compat}}

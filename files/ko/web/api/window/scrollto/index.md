@@ -1,8 +1,8 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
-translation_of: Web/API/Window/scrollTo
 ---
+
 {{ APIRef }}
 
 ## 요약

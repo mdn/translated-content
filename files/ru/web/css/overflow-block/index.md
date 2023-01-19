@@ -3,6 +3,7 @@ title: overflow-block
 slug: Web/CSS/overflow-block
 translation_of: Web/CSS/overflow-block
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`overflow-block`** устанавливает, что будет отображаться, когда содержимое переполняет начальные и конечные края блока. Это может быть ничего, полоса прокрутки или содержимое переполнения.

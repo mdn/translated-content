@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/output
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<output>`** représente un conteneur dans lequel un site ou une application peut injecter le résultat d'un calcul ou d'une action utilisateur.
 

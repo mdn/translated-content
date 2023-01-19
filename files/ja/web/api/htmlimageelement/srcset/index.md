@@ -2,6 +2,7 @@
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`srcset`** プロパティは、文字列で 1 つ以上の**画像候補文字列**を表します。それぞれはカンマ (`,`) で区切り、指定された状況下で使用する画像リソースを指定します。

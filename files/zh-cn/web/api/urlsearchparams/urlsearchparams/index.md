@@ -2,9 +2,10 @@
 title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 
-**`URLSearchParams()`** 构造器创建并返回一个新的{{domxref("URLSearchParams")}} 对象。 开头的`'?'` 字符会被忽略。
+**`URLSearchParams()`** 构造器创建并返回一个新的{{domxref("URLSearchParams")}} 对象。开头的`'?'` 字符会被忽略。
 
 ## 语法
 
@@ -44,4 +45,4 @@ var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.URLSearchParams")}}
+{{Compat}}

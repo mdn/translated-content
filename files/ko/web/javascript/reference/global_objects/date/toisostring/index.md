@@ -1,15 +1,8 @@
 ---
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
+
 {{JSRef}}
 
 **`toISOString()`** 메서드는 단순화한 확장 ISO 형식([ISO 8601](http://en.wikipedia.org/wiki/ISO_8601))의 문자열을 반환합니다. 반환값은 언제나 24글자 또는 27글자(각각 **`YYYY-MM-DDTHH:mm:ss.sssZ`** 또는 **`±YYYYYY-MM-DDTHH:mm:ss.sssZ`**)입니다. 시간대는 언제나 UTC이며 접미어 "`Z`"로 표현합니다.

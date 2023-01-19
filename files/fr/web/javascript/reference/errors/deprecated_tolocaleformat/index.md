@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_toLocaleFormat
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

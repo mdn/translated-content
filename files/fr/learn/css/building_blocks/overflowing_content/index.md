@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
 translation_of: Learn/CSS/Building_blocks/Overflowing_content
 original_slug: Apprendre/CSS/Building_blocks/Overflowing_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
 Dans ce cours nous allons étudier un autre concept important en CSS : les **débordements** (<i lang="en">overflows</i> en anglais). Un débordement de contenu correspond à ce qui se produit lorsque le contenu à insérer dans une boîte occupe trop d'espace pour s'y insérer confortablement. Dans ce guide vous allez apprendre à gérer cela.

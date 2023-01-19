@@ -2,6 +2,7 @@
 title: 'Element: touchend イベント'
 slug: Web/API/Element/touchend_event
 ---
+
 {{APIRef}}
 
 `touchend` イベントは、タッチ面から 1 つ以上のタッチ点が取り除かれた場合に発生します。
@@ -35,9 +36,7 @@ slug: Web/API/Element/touchend_event
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Touch Events', '#event-touchend')}} | {{Spec2('Touch Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,7 +2,8 @@
 title: <input type="datetime-local">
 slug: Web/HTML/Element/Input/datetime-local
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar("Input_types")}}
 
 {{htmlelement("input")}} 元素的 **`datetime-local`** 类型创建让用户便捷输入日期和时间的输入控件，包括“年”、“月”、“日”，以及“时”和“分”。
 
@@ -59,7 +60,7 @@ slug: Web/HTML/Element/Input/datetime-local
 
 ## 取值
 
-一个输入到控件上的表示日期的字符串。关于此类型的输入控件使用的日期和的输入格式在 {{SectionOnPage("/zh-CN/docs/Web/HTML/Date_and_time_formats", "Local date and time strings")}} 中描述了。
+一个输入到控件上的表示日期的字符串。[本地日期时间字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#本地日期时间字符串)中描述了关于此类型的输入控件使用的日期和的输入格式。
 
 你可以将一个包含日期和时间的值放在 {{htmlattrxref("value", "input")}} 属性中以为控件设置一个默认值，像这样：
 
@@ -145,7 +146,7 @@ Date/time 输入控件乍看非常实用；它们提供了方便的用户接口�
 
 结果如下：
 
-- 只有“2017 年 6 月” 可供选择——只有“日期”部分的值可修改，并且 6 月以外的日期不能被选到日期控件内。
+- 只有“2017 年 6 月”可供选择——只有“日期”部分的值可修改，并且 6 月以外的日期不能被选到日期控件内。
 - 视你所使用的浏览器，你或许会发现时间选择控件中特定值以外的时间可能不可选（如 Edge），或是无效（参见[校验](#校验)）但仍可选（如 Chrome）
 
 > **备注：** 你可以使用 {{htmlattrxref("step", "input")}} 属性设置不同值来控制日期每次增减的天数（例如，或许你希望只有星期六可选）。但是，截止到本文档编写之时，好像还没有浏览器实现此功能。

@@ -1,14 +1,8 @@
 ---
 title: Expect-CT
 slug: Web/HTTP/Headers/Expect-CT
-tags:
-  - HTTP
-  - Reference
-  - ヘッダー
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Expect-CT
-browser-compat: http.headers.Expect-CT
 ---
+
 {{HTTPSidebar}}
 
 `Expect-CT` ヘッダーは、サイトが[証明書の透明性](/ja/docs/Web/Security/Certificate_Transparency)の要件の報告や強制に参加して、サイトの不正な認証情報の使用が通知されない状態を防ぐことができます。
@@ -19,11 +13,11 @@ CT の要件は、以下のいずれかの仕組みで満たすことができ�
 - ハンドシェイク中に送信される `signed_certificate_timestamp` 型の TLS 拡張
 - OCSP ステープリング (つまり、 `status_request` TLS 拡張) に対応し、 `SignedCertificateTimestampList` を提供すること
 
-> **Note:** サイトが `Expect-CT` ヘッダーを有効にすると、ブラウザーが**[公開 CT ログ](https://www.certificate-transparency.org/known-logs)**に現れるサイトのすべての認証情報をチェックするよう要求します。
+> **メモ:** サイトが `Expect-CT` ヘッダーを有効にすると、ブラウザーが**[公開 CT ログ](https://www.certificate-transparency.org/known-logs)**に現れるサイトのすべての認証情報をチェックするよう要求します。
 
-> **Note:** **メモ:** ブラウザーは、 HTTP では `Expect-CT` ヘッダーを**無視**し、 HTTPS 接続でのみ効果を発揮します。
+> **メモ:** ブラウザーは、 HTTP では `Expect-CT` ヘッダーを**無視**し、 HTTPS 接続でのみ効果を発揮します。
 
-> **Note:** **メモ:** `Expect-CT` は 2021 年 6 月に廃止される可能性が高いです。 2018 年 5 月以降、新しい証明書は既定で SCT に対応することが期待されています。 2018 年 3 月以前の証明書は 39 ヶ月の有効期限が認められていましたが、それらが 2021 年 6 月にすべて失効します。
+> **メモ:** `Expect-CT` は 2021 年 6 月に廃止される可能性が高いです。 2018 年 5 月以降、新しい証明書は既定で SCT に対応することが期待されています。 2018 年 3 月以前の証明書は 39 ヶ月の有効期限が認められていましたが、それらが 2021 年 6 月にすべて失効します。
 
 <table class="properties">
   <tbody>

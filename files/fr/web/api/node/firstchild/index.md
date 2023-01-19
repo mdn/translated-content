@@ -9,9 +9,10 @@ tags:
   - Propriété
 translation_of: Web/API/Node/firstChild
 ---
+
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Node.firstChild` r**envoie le premier nœud enfant de l'arbre ou `null` s'il n'en a pas. Si le noeud est un `Document` , il renvoie le premier noeud de la liste de ses enfants directs.
+La propriété en lecture seule **`Node.firstChild`** renvoie le premier nœud enfant de l'arbre ou `null` s'il n'en a pas. Si le noeud est un `Document` , il renvoie le premier noeud de la liste de ses enfants directs.
 
 ## Syntaxe
 
@@ -51,7 +52,7 @@ Si ces espaces sont retirés du code source, les nœuds `#text` n'apparaîtront 
 
 À présent, l'alerte affichera «&nbsp;SPAN&nbsp;».
 
-Pour éviter le problème avec `node.firstChild`  renvoyant des noeuds `#text` ou `#comment`,  {{domxref("ParentNode.firstElementChild")}}  peut être utilisé pour renvoyer seulement le premier noeud élément. Toutefois,  `node.firstElementChild` nécessite un "shim" pour Internet Explorer 9 et antérieurs.
+Pour éviter le problème avec `node.firstChild`  renvoyant des noeuds `#text` ou `#comment`, {{domxref("ParentNode.firstElementChild")}} peut être utilisé pour renvoyer seulement le premier noeud élément. Toutefois, `node.firstElementChild` nécessite un "shim" pour Internet Explorer 9 et antérieurs.
 
 ## Spécifications
 

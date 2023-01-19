@@ -2,6 +2,7 @@
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
+
 {{JSRef}}
 
 静态 **`String.fromCharCode()`** 方法返回由指定的 UTF-16 代码单元序列创建的字符串。
@@ -35,7 +36,7 @@ String.fromCharCode(num1[, ...[, numN]])
 
 因为 `fromCharCode()` 只作用于 16 位的值 (跟 `\u` 转义序列一样)，为了返回一个补充字符，一个代理对是必须的。例如，`String.fromCharCode(0xD83C, 0xDF03)` 和 `\uD83C\uDF03` 返回码点 `U+1F303` "Night with Stars"。
 
-While there is a mathematical relationship between the supplementary code point value (e.g. `0x1F303`) and both surrogate values that represent it (e.g., `0xD83C` and `0xDF03`), it does require an extra step to either calculate or look up the surrogate pair values every time a supplementary code point is to be used. 因此，使用 {{jsxref("String.fromCodePoint()")}}（ES2015 标准下的一个方法）更方便， 这个方法允许你基于真实的码点返回补充字符。例如 `String.fromCodePoint(0x1F303)` 返回码点 `U+1F303` "Night with Stars"。
+While there is a mathematical relationship between the supplementary code point value (e.g. `0x1F303`) and both surrogate values that represent it (e.g., `0xD83C` and `0xDF03`), it does require an extra step to either calculate or look up the surrogate pair values every time a supplementary code point is to be used. 因此，使用 {{jsxref("String.fromCodePoint()")}}（ES2015 标准下的一个方法）更方便，这个方法允许你基于真实的码点返回补充字符。例如 `String.fromCodePoint(0x1F303)` 返回码点 `U+1F303` "Night with Stars"。
 
 ## 示例
 

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/then
 ---
+
 {{JSRef}}
 
 La méthode **`then()`** renvoie un objet {{jsxref("Promise")}}. Elle peut prendre jusqu'à deux arguments qui sont deux fonctions _callback_ à utiliser en cas de complétion ou d'échec de la `Promise`.
@@ -235,14 +236,11 @@ p3.then(function(v) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                    |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.prototype.then', 'Promise.prototype.then')}}     | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.then")}}
+{{Compat}}
 
 ## Voir aussi
 

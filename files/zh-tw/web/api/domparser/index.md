@@ -2,6 +2,7 @@
 title: DOMParser
 slug: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 `DOMParser可以將XML或是HTML格式的字串轉成`DOM [文件](/zh-TW/docs/DOM/document). `DOMParser`的規格請參閱[DOM 解譯與串流化](http://html5.org/specs/dom-parsing.html).
@@ -38,7 +39,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ## 解譯 SVG 或 HTML 文件
 
-`DOMParser` 也可以用來解譯 SVG 文件 {{geckoRelease("10.0")}} 或是 HTML 文件 {{geckoRelease("12.0")}}. 可以依 MIME 格式，輸出三種不同格式. 如果 MIME 格式是 `text/xml`,輸出的格式為 `XMLDocument`, 如果 MIME 格式是 `image/svg+xml`, 輸出格式為 `SVGDocument,` 如果 MIME 格式是 `text/html`, 輸出格式則為 `HTMLDocument`.
+`DOMParser` 也可以用來解譯 SVG 文件或是 HTML 文件。可以依 MIME 格式，輸出三種不同格式. 如果 MIME 格式是 `text/xml`,輸出的格式為 `XMLDocument`, 如果 MIME 格式是 `image/svg+xml`, 輸出格式為 `SVGDocument,` 如果 MIME 格式是 `text/html`, 輸出格式則為 `HTMLDocument`.
 
 ```js
 var parser = new DOMParser();
@@ -111,7 +112,7 @@ See article here: [nsIDOMParser](/zh-TW/docs/nsIDOMParser)
 
 ## 瀏覽器相容性
 
-{{Compat("api.DOMParser")}}
+{{Compat}}
 
 ## 參考資料
 

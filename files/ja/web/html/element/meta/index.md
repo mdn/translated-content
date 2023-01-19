@@ -1,22 +1,11 @@
 ---
 title: '<meta>: メタデータ要素'
 slug: Web/HTML/Element/meta
-tags:
-  - Document
-  - Element
-  - HTML
-  - HTML charset
-  - HTML document metadata
-  - Reference
-  - Web
-  - charset
-  - http-equiv
-  - metadata
-browser-compat: html.elements.meta
-translation_of: Web/HTML/Element/meta
+l10n:
+  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<meta>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("Metadata","メタデータ")}}を表します。これは、他のメタ関連要素 ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}) で表すことができないものを表します。
 
@@ -94,7 +83,7 @@ translation_of: Web/HTML/Element/meta
 `<meta>` 要素で提供されるメタデータの型は、以下のいずれかになります。
 
 - {{htmlattrxref("name", "meta")}} 属性が設定されている場合、`<meta>` 要素は _文書レベルメタデータ_ を提供し、ページ全体に適用されます。
-- {{htmlattrxref("http-equiv", "meta")}} 属性が設定されている場合、 `<meta>` 要素は _プラグ魔ディレクティブ_ であり、同様の名前の HTTP ヘッダーによって与えられるものと同等の情報を提供します。
+- {{htmlattrxref("http-equiv", "meta")}} 属性が設定されている場合、 `<meta>` 要素は _プラグマディレクティブ_ であり、同様の名前の HTTP ヘッダーによって与えられるものと同等の情報を提供します。
 - {{htmlattrxref("charset", "meta")}} 属性が設定されている場合、 `<meta>` 要素は _文字セット宣言_ であり、文書がどの文字エンコーディングでエンコードされているかを指定します。
 - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性が設定されている場合、`<meta>` 要素は _ユーザー定義のメタデータ_ を提供します。
 
@@ -102,7 +91,7 @@ translation_of: Web/HTML/Element/meta
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **Note:** {{htmlattrxref("name", "meta")}} 属性は `<meta>` 要素において特別な意味を持ちます。また、 [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性は、 `<meta>` 要素にすでに {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}}, {{htmlattrxref("charset", "meta")}} のいずれかがある場合は設定してはいけません。
+> **メモ:** {{htmlattrxref("name", "meta")}} 属性は `<meta>` 要素において特別な意味を持ちます。また、 [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性は、 `<meta>` 要素にすでに {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}}, {{htmlattrxref("charset", "meta")}} のいずれかがある場合は設定してはいけません。
 
 - {{htmlattrdef("charset")}}
   - : この属性は、文書の文字エンコーディングを宣言します。この属性が存在する場合、その値は大文字小文字の区別なく "`utf-8`" という ASCII 文字列と一致する必要があります。 UTF-8 が HTML5 文書で唯一の有効なエンコーディングだからです。文字エンコーディングを宣言する `<meta>` 要素は、文書の最初の 1024 バイトの中に完全に収まっている必要があります。
@@ -114,7 +103,7 @@ translation_of: Web/HTML/Element/meta
 
     - `content-security-policy`
 
-      この値により、ページ作者がページの[コンテンツポリシー](/ja/docs/Web/Security/CSP/CSP_policy_directives)を定義できます。いくつかの例外を除き、ポリシーはサーバーオリジンやスクリプトのエンドポイントの指定に関与します。これは、クロスサイトスクリプティング攻撃の対策になります。
+      この値により、ページ作者がページの[コンテンツポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)を定義できます。いくつかの例外を除き、ポリシーはサーバーオリジンやスクリプトのエンドポイントの指定に関与します。これは、クロスサイトスクリプティング攻撃の対策になります。
 
     - `content-type`
 
@@ -133,15 +122,15 @@ translation_of: Web/HTML/Element/meta
       - {{htmlattrxref("content", "meta")}} 属性に正の整数が 1 つだけ含まれている場合は、ページを再読み込みするまでの秒数。
       - {{htmlattrxref("content", "meta")}} 属性に正の整数と、その後に文字列 '`;url=`' と有効な URL がある場合は、別のページにリダイレクトするまでの秒数。
 
-      ##### アクセシビリティの考慮
-
-      `refresh` の値で設定されたページは、時間間隔が短すぎになるという危険性があります。画面の内側から読み上げるような支援技術を利用している人は、自動的にリダイレクトされる前にページの内容を読み、理解することができないかもしれません。また、弱視の人にとっても、突然に予告なくページ内容が更新されると、混乱させる可能性があります。
-
-      - [MDN Understanding WCAG, Guideline 2.1 explanations](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
-      - [MDN Understanding WCAG, Guideline 3.1 explanations](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
-      - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
-      - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
-      - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
+      > **警告:**
+      >
+      > `refresh` の値で設定されたページは、時間間隔が短すぎになるという危険性があります。画面の内側から読み上げるような支援技術を利用している人は、自動的にリダイレクトされる前にページの内容を読み、理解することができないかもしれません。また、弱視の人にとっても、突然に予告なくページ内容が更新されると、混乱させる可能性があります。
+      >
+      > - [MDN WCAG を理解する、ガイドライン 2.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.1_—_キーボードアクセス可能_キーボードから全ての機能を利用可能にする)
+      > - [MDN WCAG を理解する、ガイドライン 3.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#ガイドライン_3.2_—_予測可能_ウェブページを予測可能な方法で表示して操作させる)
+      > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
+      > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
+      > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
 - {{htmlattrdef("name")}}
 
@@ -152,10 +141,10 @@ translation_of: Web/HTML/Element/meta
 ## 例
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- 3 秒後にページをリダイレクト -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## 仕様書
@@ -169,5 +158,5 @@ translation_of: Web/HTML/Element/meta
 ## 関連情報
 
 - [標準メタデータ名](/ja/docs/Web/HTML/Element/meta/name)
-- [学習: `<meta>`](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [学習: `<meta>`](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#メタデータ_meta要素)
 - [viewport メタタグ](/ja/docs/Web/HTML/Viewport_meta_tag)

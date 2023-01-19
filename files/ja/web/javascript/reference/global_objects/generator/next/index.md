@@ -2,6 +2,7 @@
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
+
 {{JSRef}}
 
 **`next()`** メソッドは、2 つのプロパティ `done` と `value` を持つオブジェクトを返します。 `next` メソッドに引数を提供して、ジェネレーターへ値を送ることもできます。
@@ -103,9 +104,7 @@ g.next(2);
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator.prototype.next', 'Generator.prototype.next')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

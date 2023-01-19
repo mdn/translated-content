@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Attributes/max
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`max`** définit la valeur maximale acceptable et valide pour le champ de saisie contenant l'attribut. Si la [`valeur`](/fr/docs/Web/HTML/Element/Input#attr-value) de l'élément est supérieure à cette valeur, l'élément échoue à [la validation des contraintes](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation). Cette valeur doit être supérieure ou égale à la valeur de l'attribut [`min`](min). Si l'attribut `max` est présent mais n'est pas spécifié ou est invalide, aucune valeur `max` n'est appliquée. Si l'attribut `max` est valide et qu'une valeur non vide est supérieure au maximum autorisé par l'attribut `max`, la validation des contraintes empêchera la soumission du formulaire.

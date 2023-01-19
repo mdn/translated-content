@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader.releaseLock()
 slug: Web/API/ReadableStreamDefaultReader/releaseLock
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} 接口的 **`releaseLock()`** 方法用于释放 reader 对流的锁定。

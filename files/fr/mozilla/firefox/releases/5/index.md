@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/5
 original_slug: Mozilla/Firefox/Versions/5
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 5, basé sur Gecko 5.0, est sorti le 21 juin 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.
@@ -99,7 +100,7 @@ Pour des conseils utiles sur la mise à jour des extensions pour Firefox 5, voir
 ### Changements dans les interfaces
 
 - L'interface `nsIHttpChannelInternal` a maintenant de nouveaux attributs donnant accès à des informations sur les points finaux des canaux des adresses et des ports. Ces informations sont fournies principalement à des fins de débogage.
-- Les attribut {{htmlattrxref("width", "canvas")}} et {{htmlattrxref("height", "canvas")}} de l'élément {{HTMLElement("canvas")}} sont désormais inclus dans IDL comme des entiers non signés au lieu d'être signés (voir [`HTMLCanvasElement`](/en/DOM/HTMLCanvasElement)).
+- Les attributs {{htmlattrxref("width", "canvas")}} et {{htmlattrxref("height", "canvas")}} de l'élément {{HTMLElement("canvas")}} sont désormais inclus dans IDL comme des entiers non signés au lieu d'être signés (voir [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement)).
 - Les interfaces `nsIAppStartup2` et `nsIAppStartup_MOZILLA_2_0` ont été fusionnées avec l'interface `nsIAppStartup`.
 - L'interface `nsIDocShell_MOZILLA_2_0_BRANCH` a été fusionnée avec l'interface `nsIDocShell`.
 - L'interface `nsIFocusManager_MOZILLA_2_0_BRANCH` a été fusionnée avec l'interface `nsIFocusManager`.

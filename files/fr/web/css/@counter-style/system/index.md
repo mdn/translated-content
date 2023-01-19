@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/system
 ---
+
 {{CSSRef}}
 
 La descripteur **`system`**, utilisé avec [la règle @](/fr/docs/Web/CSS/R%C3%A8gles_@) {{cssxref("@counter-style")}}, permet de définir l'algorithme utilisé pour convertir la valeur entière d'un compteur en une chaîne de caractères.
@@ -53,9 +54,13 @@ Ce descripteur peut prendre l'une de ces trois formes :
 - `extends`
   - : Ce mot-clé permet aux auteurs d'utiliser l'algorithme d'un autre style de compteur et de modifier ses autres caractéristiques. Si une règle d'un style de compteur utilise le système `extends` et que certains de ces descripteurs ne font pas définis, leurs valeurs seront prises depuis le style de compteur indiqué. Si le nom du style référencé n'existe pas, le style de secours (décimal) sera utilisé. Pour que le style de compteur soit valide, il ne doit pas contenir de descripteur `symbols` ou `additive-symbols`. Si, selon les différents styles de compteur, on a un cycle de référence (A qui pointe vers B qui pointe vers C qui pointe vers A par exemple), l'agent utilisateur considèrera que tous les styles étendent le style décimal. Dans l'exemple final, le style de compteur utiliser les valeurs du système de compteur `lower-alpha` mais retire le point comme suffixe et entour les caractères entre parenthèses (pour obtenir `(a)` `(b)` etc).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -315,15 +320,11 @@ Ce descripteur peut prendre l'une de ces trois formes :
 
 ## Spécifications
 
-| Spécification                                                                                | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-system', 'system')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.system")}}
+{{Compat}}
 
 ## Voir aussi
 

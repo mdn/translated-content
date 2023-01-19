@@ -1,12 +1,6 @@
 ---
 title: <ellipse>
 slug: Web/SVG/Element/ellipse
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Grahpics
-translation_of: Web/SVG/Element/ellipse
 ---
 {{SVGRef}}
 
@@ -44,7 +38,7 @@ html,body,svg { height:100% }
   - : This attribute lets specify the total length for the path, in user units.
     _Value type_: [**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Default value_: _none_; _Animatable_: **yes**
 
-> **참고:** Starting with SVG2 `cx`, `cy`, `rx` and `ry` are \_Geometry Propertie_s, meaning those attributes can also be used as CSS properties for that element.
+> **참고:** Starting with SVG2 `cx`, `cy`, `rx` and `ry` are Geometry Properties, meaning those attributes can also be used as CSS properties for that element.
 
 ### Global attributes
 

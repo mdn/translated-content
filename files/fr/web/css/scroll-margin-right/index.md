@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-margin-right
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-margin-right`** définit la marge de défilement de l'élément sur le côté droit. La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
@@ -32,18 +33,18 @@ scroll-margin-right: unset;
 - `<length>`
   - : Un décalage par rapport au côté correspondant du conteneur de défilement.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin-right", "scroll-margin-right")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-margin-right")}}
+{{Compat}}

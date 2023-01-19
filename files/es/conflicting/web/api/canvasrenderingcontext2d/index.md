@@ -1,14 +1,9 @@
 ---
 title: CanvasImageSource
 slug: conflicting/Web/API/CanvasRenderingContext2D
-tags:
-  - API
-  - Auxiliar
-  - Canvas
-  - Referencia
-translation_of: Web/API/CanvasImageSource
 original_slug: Web/API/CanvasImageSource
 ---
+
 {{APIRef("Canvas API")}}
 
 El tipo auxiliar **`CanvasImageSource`** representa cualquiera de los siguientes tipos:
@@ -25,6 +20,4 @@ Este es un tipo auxiliar usado para simplificar la especificación, no es una in
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#canvasimagesource", "CanvasImageSource")}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |
+{{Specifications}}

@@ -1,33 +1,30 @@
 ---
 title: 'Document: pointerlockchange イベント'
 slug: Web/API/Document/pointerlockchange_event
+original_slug: Web/API/Element/pointerlockchange_event
+l10n:
+  sourceCommit: d4619276d67ca1ee02bd964d884ec52c2aa2ad4b
 ---
+
 {{APIRef}}
 
 `pointerlockchange` イベントは、ポインターがロックされたり解除されたりしたときに発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
-      <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("Document/onpointerlockchange", "onpointerlockchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可です。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('pointerlockchange', (event) => { });
+
+onpointerlockchange = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -39,7 +36,7 @@ document.addEventListener('pointerlockchange', (event) => {
 });
 ```
 
-`onpointerlockerror` イベントハンドラープロパティを使用した場合
+`onpointerlockchange` イベントハンドラープロパティを使用した場合
 
 ```js
 document.onpointerlockchange = (event) => {
@@ -49,9 +46,7 @@ document.onpointerlockchange = (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Pointer Lock', '#pointerlockchange-and-pointerlockerror-events')}} | {{Spec2('Pointer Lock')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -59,4 +54,4 @@ document.onpointerlockchange = (event) => {
 
 ## 関連情報
 
-- [Pointer Lock API の使用](/ja/docs/API/Pointer_Lock_API)
+- [ポインターロック API の使用](/ja/docs/Web/API/Pointer_Lock_API)

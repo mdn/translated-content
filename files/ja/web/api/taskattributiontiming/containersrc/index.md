@@ -2,6 +2,7 @@
 title: TaskAttributionTiming.containerSrc
 slug: Web/API/TaskAttributionTiming/containerSrc
 ---
+
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
 {{domxref("TaskAttributionTiming")}} インターフェイスの **`containerSrc`** 読み取り専用プロパティは、コンテナの `src` 属性を返します。 コンテナは、全体として長いタスクに関係している iframe、embed、object などです。
@@ -18,9 +19,7 @@ var containerSrc = TaskAttributionTiming.containerSrc;
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#dom-taskattributiontiming-containersrc','containerSrc')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

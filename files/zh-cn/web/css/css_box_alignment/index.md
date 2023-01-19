@@ -2,6 +2,7 @@
 title: CSS 盒子对齐
 slug: Web/CSS/CSS_Box_Alignment
 ---
+
 {{CSSRef}}
 
 CSS 盒子对齐 (Box Alignment) 模块指定了在各种 CSS 盒子布局模型，如块布局，表布局，弹性布局和网格布局中，与盒子对齐有关的 CSS 功能。该模块旨在建立一种能一致地在 CSS 中指定对齐的方法。这份文档详述了出现在该规范中的一般概念。

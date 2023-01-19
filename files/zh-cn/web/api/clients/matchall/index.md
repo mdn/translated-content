@@ -2,6 +2,7 @@
 title: Clients.matchAll()
 slug: Web/API/Clients/matchAll
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("Clients")}} 接口的 **`matchAll()`** 方法返回 service worker {{domxref("Client")}} 对象列表的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) . 包含 `options` 参数以返回域与关联的 service worker 的域相同所有 service worker 的 clients. 如果未包含 options，该方法仅返回由 service worker 控制的 service worker clients.
@@ -46,4 +47,4 @@ clients.matchAll(options).then(function(clientList) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clients.matchAll")}}
+{{Compat}}

@@ -2,9 +2,10 @@
 title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 ---
+
 {{JSRef}}
 
-**`forEach()`**方法对类型化数组的每个元素调用提供的函数。 这个方法的算法和 {{jsxref("Array.prototype.forEach()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`forEach()`**方法对类型化数组的每个元素调用提供的函数。这个方法的算法和 {{jsxref("Array.prototype.forEach()")}} _相同_。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
 
 ## 语法
 
@@ -34,7 +35,7 @@ typedarray.forEach(callback[, thisArg])
 
 ## 描述
 
-`forEach`方法对类型化数组中的元素按升序调用提供的 `callback`函数。 它不会对删除或者省略的下标调用，但是会对存在并且值为{{jsxref("undefined")}}的元素调用。
+`forEach`方法对类型化数组中的元素按升序调用提供的 `callback`函数。它不会对删除或者省略的下标调用，但是会对存在并且值为{{jsxref("undefined")}}的元素调用。
 
 `callback` 以 **三个参数**调用：
 
@@ -42,9 +43,9 @@ typedarray.forEach(callback[, thisArg])
 - the **元素下标**
 - the **被遍历的类型化数组**
 
-如果将`thisArg`参数提供给`forEach`，它会在调用时传递给`callback`，作为它的 `this`值。否则，会传递`undefined` 作为它的`this` 值。 `callback`最终观测到的`this`值由 [用于决定函数可见的`this`值的一般规则](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)来决定。
+如果将`thisArg`参数提供给`forEach`，它会在调用时传递给`callback`，作为它的 `this`值。否则，会传递`undefined` 作为它的`this` 值。 `callback`最终观测到的`this`值由 [用于决定函数可见的`this`值的一般规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)来决定。
 
-由 `forEach`处理的元素范围在`callback`调用之前就确定了。 在 `forEach`调用之后添加到数组的元素不会由 `callback`访问。 如果类型化数组的现有元素被改变，或被删除，它们传给`callback`的值是`forEach` 访问它们时候的值。已删除的元素不会被访问。
+由 `forEach`处理的元素范围在`callback`调用之前就确定了。在 `forEach`调用之后添加到数组的元素不会由 `callback`访问。如果类型化数组的现有元素被改变，或被删除，它们传给`callback`的值是`forEach` 访问它们时候的值。已删除的元素不会被访问。
 
 `forEach()`对每个数组元素执行一次`callback` 函数；不像 {{jsxref("TypedArray.prototype.every()", "every()")}} 和{{jsxref("TypedArray.prototype.some()", "some()")}}，它始终返回 {{jsxref("undefined")}}。
 

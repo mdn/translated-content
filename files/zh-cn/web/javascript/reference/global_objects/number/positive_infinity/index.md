@@ -2,6 +2,7 @@
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## 概述
@@ -31,7 +32,7 @@ You might use the `Number.POSITIVE_INFINITY` property to indicate an error condi
 
 ## 示例
 
-下例中，赋值给变量 `bigNumber` 一个大于 JavaScript 中最大值的值。当 `if` 语句执行时，变量 `bigNumber` 值为 "`Infinity`"， 因此在继续执行代码前，为变量 `bigNumber` 设置一个容易管理的值。
+下例中，赋值给变量 `bigNumber` 一个大于 JavaScript 中最大值的值。当 `if` 语句执行时，变量 `bigNumber` 值为 "`Infinity`"，因此在继续执行代码前，为变量 `bigNumber` 设置一个容易管理的值。
 
 ```js
 var bigNumber = Number.MAX_VALUE * 2

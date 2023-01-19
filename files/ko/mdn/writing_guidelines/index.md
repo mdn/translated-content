@@ -1,15 +1,6 @@
 ---
 title: MDN Web Docs에 대해
 slug: MDN/Writing_guidelines
-tags:
-  - Collaborating
-  - Community
-  - Copyright
-  - Documentation
-  - Guide
-  - Licenses
-  - MDN Meta
-translation_of: MDN/About
 original_slug: MDN/About
 ---
 {{MDNSidebar}}
@@ -68,7 +59,7 @@ MDN 콘텐츠를 재사용할 땐 다음의 두 가지를 기억해주세요.
 2010년 8월 20일 또는 그 이후 추가된 코드 예제는
 [퍼블릭 도메인](https://creativecommons.org/publicdomain/zero/1.0/)(CC0)이며, 별도의 라이선스 표기가
 필요하지 않습니다. 그러나 표기를 해야 하는 경우 "모든 저작권을 퍼블릭 도메인으로 양도합니다.
-http\://creativecommons.org/publicdomain/zero/1.0/"을 추가하세요.
+"http://creativecommons.org/publicdomain/zero/1.0/" 을 추가하세요.
 
 2010년 8월 20일 이전에 추가된 코드 예제는
 [MIT 라이선스](https://opensource.org/licenses/mit-license.php)의 적용을 받으니, 반드시 다음의 저작자

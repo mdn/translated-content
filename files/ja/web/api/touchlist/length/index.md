@@ -2,6 +2,7 @@
 title: TouchList.length
 slug: Web/API/TouchList/length
 ---
+
 {{ApiRef}}
 
 ## 概要

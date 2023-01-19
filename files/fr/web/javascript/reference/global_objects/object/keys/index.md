@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/keys
 ---
+
 {{JSRef}}
 
 La méthode **`Object.keys()`** renvoie un tableau contenant les noms des propriétés propres à un objet (qui ne sont pas héritées via la chaîne de prototypes) et qui sont énumérables. L'ordre de ce tableau est le même que celui obtenu par une boucle {{jsxref("Instructions/for...in","for...in")}} (à la différence qu'une boucle for-in liste également les propriétés héritées).
@@ -83,15 +84,11 @@ Object.keys("toto");
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                           |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ES2015')}}     |                                                        |
-| {{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.keys")}}
+{{Compat}}
 
 ## Voir aussi
 

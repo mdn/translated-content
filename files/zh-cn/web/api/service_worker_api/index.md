@@ -2,7 +2,8 @@
 title: Service Worker API
 slug: Web/API/Service_Worker_API
 ---
-{{ServiceWorkerSidebar}}
+
+{{DefaultAPISidebar("Service Workers API")}}
 
 Service workers 本质上充当 Web 应用程序、浏览器与网络（可用时）之间的代理服务器。这个 API 旨在创建有效的离线体验，它会拦截网络请求并根据网络是否可用来采取适当的动作、更新来自服务器的的资源。它还提供入口以推送通知和访问后台同步 API。
 
@@ -65,7 +66,7 @@ Service workers 也可以用来做这些事情：
 - 自定义模板用于特定 URL 模式
 - 性能增强，比如预取用户可能需要的资源，比如相册中的后面数张图片
 
-未来 service workers 能够用来做更多使 web 平台接近原生应用的事。 值得关注的是，其他标准也能并且将会使用 service worker，例如：
+未来 service workers 能够用来做更多使 web 平台接近原生应用的事。值得关注的是，其他标准也能并且将会使用 service worker，例如：
 
 - [后台同步](https://github.com/slightlyoff/BackgroundSync)：启动一个 service worker 即使没有用户访问特定站点，也可以更新缓存
 - [响应推送](/zh-CN/docs/Web/API/Push_API)：启动一个 service worker 向用户发送一条信息通知新的内容可用
@@ -85,7 +86,7 @@ Service workers 也可以用来做这些事情：
 - {{domxref("ExtendableEvent") }} {{Experimental_Inline}}
   - : 扩展被分发到{{domxref("ServiceWorkerGlobalScope")}}的`install 和 activate`事件时序，作为 service worker 生命周期的一部分。这会确保任何功能型事件（如{{domxref("FetchEvent")}}）不被分发到{{domxref("ServiceWorker")}}，直到它更新了数据库架构、删除过期缓存项等等以后。
 - {{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}
-  - : The event object of a {{event("message_(ServiceWorker)","message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
+  - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 - {{domxref("FetchEvent") }}{{Experimental_Inline}}
   - : 传递给{{domxref("ServiceWorkerGlobalScope.onfetch")}}处理函数的参数，FetchEvent 代表一个在{{domxref("ServiceWorker")}}的{{domxref("ServiceWorkerGlobalScope")}}中分发的请求动作。它包含关于请求和响应的结果信息，并且提供{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}方法，这个方法允许我们提供任意的响应返回到控制页面。
 - {{domxref("InstallEvent") }}{{Experimental_Inline}}
@@ -121,7 +122,7 @@ Service workers 也可以用来做这些事情：
 
 ## 参见
 
-- [ServiceWorker Cookbook](https://serviceworke.rs/)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

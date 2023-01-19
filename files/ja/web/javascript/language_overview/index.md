@@ -1,17 +1,9 @@
 ---
 title: JavaScript 「再」入門
 slug: Web/JavaScript/Language_Overview
-tags:
-  - CodingScripting
-  - Guide
-  - Intermediate
-  - Intro
-  - JavaScript
-  - Learn
-  - Tutorial
-translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 {{jsSidebar}}
 
 なぜ「再」入門なのでしょうか。それは、 [JavaScript](/ja/docs/Glossary/JavaScript) が誤解されていることで有名だからです。しばしばおもちゃだと馬鹿にされながら、しかしその嘘のような単純さの下に、強力な言語機能が隠されているのです。 JavaScript はとても多くの著名なアプリケーションで使用されるようになっており、この技術の深い知識が、あらゆるウェブやモバイルの開発者にとって重要なスキルであることを示しています。
@@ -20,7 +12,7 @@ original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 
 その数か月後、 Microsoft は Internet Explorer 3 とともに JScript をリリースしました。これはほぼ互換性のある JavaScript の互換品でした。さらに数か月後、 Netscape はこの言語をヨーロッパの標準化団体である [Ecma International](https://www.ecma-international.org/) に提出し、その結果、同年に [ECMAScript](/ja/docs/Glossary/ECMAScript) という標準の第 1 版が生まれました。この標準は 1999 年に [ECMAScript 第 3 版](https://www.ecma-international.org/publications/standards/Ecma-262.htm)として大幅に更新され、それ以降はほぼ安定しています。第 4 版は、言語の複雑化に関する政治的な見解の相違から放棄されました。第 4 版の多くの部分は、 2009 年 12 月に発行された新しい ECMAScript 第 5 版と、 2015 年 6 月に発行された第 6 版の基礎になりました。
 
-> **Note:** **注:** より馴染んでいるため、ここからは ECMAScript を "JavaScript" と呼ぶことにします。
+> **メモ:** より馴染んでいるため、ここからは ECMAScript を "JavaScript" と呼ぶことにします。
 
 大部分のプログラミング言語と違って、 JavaScript という言語には入出力の概念がありません。この言語はあるホスト環境でのスクリプト言語として実行されるよう設計されており、外部の世界とコミュニケーションするための機構はそのホスト環境が提供するものとしているのです。もっとも一般的なホスト環境はブラウザーですが、JavaScript のインタープリターは Adobe Acrobat や Photoshop、SVG 画像、Yahoo! ウィジェットエンジン、さらには [Node.js](https://nodejs.org/) といったサーバーサイド環境、オープンソースの [Apache CouchDB](https://couchdb.apache.org/) のような NoSQL データベース、組み込みコンピューター、[GNOME](https://www.gnome.org/) (GNU/Linux オペレーティングシステムでもっとも人気がある GUI 環境のひとつ) のようなデスクトップ環境など、さまざまなところでみられます。
 
@@ -167,7 +159,7 @@ isFinite(-Infinity); // false
 isFinite(NaN); // false
 ```
 
-> **Note:** **注:** {{jsxref("Global_Objects/parseInt", "parseInt()")}} および {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 関数は文字列を、規定の数値書式に該当しない文字が現れるまで解釈し、その箇所までの数値を返します。一方、"+" 演算子は適切でない文字を含む文字列を `NaN` に変換します。コンソールから、文字列 "10.2abc" をそれぞれの方法で解釈させるとその違いがよくわかるでしょう。
+> **メモ:** {{jsxref("Global_Objects/parseInt", "parseInt()")}} および {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 関数は文字列を、規定の数値書式に該当しない文字が現れるまで解釈し、その箇所までの数値を返します。一方、"+" 演算子は適切でない文字を含む文字列を `NaN` に変換します。コンソールから、文字列 "10.2abc" をそれぞれの方法で解釈させるとその違いがよくわかるでしょう。
 
 ## 文字列
 
@@ -504,11 +496,11 @@ obj.for = 'Simon'; // 構文エラー。'for' が予約語であるため
 obj['for'] = 'Simon'; // うまく動きます
 ```
 
-> **Note:** **注:** ECMAScript 第 5 版より、予約語をオブジェクトのプロパティ名として「そのまま」使用できます。つまりオブジェクトリテラルの定義時に引用符で「括る」必要はありません。 ES5 の[仕様](https://es5.github.io/#x7.6.1)を確認してください。
+> **メモ:** ECMAScript 第 5 版より、予約語をオブジェクトのプロパティ名として「そのまま」使用できます。つまりオブジェクトリテラルの定義時に引用符で「括る」必要はありません。 ES5 の[仕様](https://es5.github.io/#x7.6.1)を確認してください。
 
 オブジェクトやプロトタイプについて、詳しくは [Object.prototype](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object) をご覧ください。オブジェクトプロトタイプやオブジェクトプロトタイプチェーンの説明は、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) をご覧ください。
 
-> **Note:** ECMAScript 2015 より、オブジェクトのキーがブラケット記法を使った変数で定義できるようになりました。 `{[phoneType]: 12345}` が `var userPhone = {}; userPhone[phoneType] = 12345` の代わりにできます。
+> **メモ:** ECMAScript 2015 より、オブジェクトのキーがブラケット記法を使った変数で定義できるようになりました。 `{[phoneType]: 12345}` が `var userPhone = {}; userPhone[phoneType] = 12345` の代わりにできます。
 
 ## 配列
 
@@ -769,7 +761,7 @@ JavaScript の関数自体が (他のものすべてと同様に) オブジェ�
 
 ## カスタムオブジェクト
 
-> **Note:** JavaScript でのオブジェクト指向プログラミングの詳細な論考については、[オブジェクト指向 JavaScript 入門](/ja/docs/Learn/JavaScript/Objects) をご覧ください。
+> **メモ:** JavaScript でのオブジェクト指向プログラミングの詳細な論考については、[オブジェクト指向 JavaScript 入門](/ja/docs/Learn/JavaScript/Objects) をご覧ください。
 
 古典的なオブジェクト指向プログラミングにおいて、オブジェクトとはデータとそのデータを操作するメソッドの集まりです。JavaScript は、C++ や Java に見られる class 文を持たない、プロトタイプベースの言語です (これは、 class 文を持つ言語に慣れたプログラマーを混乱させることがあります)。代わりに、 JavaScript は関数をクラスとして用います。ファーストネームとラストネームのフィールドを持つ person オブジェクトを考えてみましょう。その名前を表示させる方法には、 "first last" と "last, first" の 2 種類が考えられます。ここまでで論じた関数とオブジェクトを使ってみると、以下のようにデータを表示できるでしょう。
 

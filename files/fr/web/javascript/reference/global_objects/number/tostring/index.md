@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractère représentant l'objet Number.
@@ -71,16 +72,11 @@ console.log((-0xff).toString(2)); // affiche "-11111111"
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée par JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.4.2', 'Number.prototype.tostring')}}                             | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-number.prototype.tostring', 'Number.prototype.tostring')}}         | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-number.prototype.tostring', 'Number.prototype.tostring')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

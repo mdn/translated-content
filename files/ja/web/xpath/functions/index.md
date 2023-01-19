@@ -1,14 +1,8 @@
 ---
 title: Functions
 slug: Web/XPath/Functions
-tags:
-  - Transforming_XML_with_XSLT
-  - XPath
-  - XPath_Reference
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions
 ---
+
 {{ XsltRef() }}
 
 以下はコア [XPath](/ja/docs/XPath) 関数及び [XSLT](/ja/docs/XSLT) 固有の追加 XPath 関数の、解説、構文、引数一覧、返される型、該当する W3C 勧告の原典、及び [Gecko](/ja/docs/Gecko) での現在の対応状況を含む注釈付きの一覧です。 XPath/XSLT 関数の使用に関するより詳しい情報は、[より詳しい読み物](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading)のページをご覧ください。
@@ -48,6 +42,6 @@ translation_of: Web/XPath/Functions
 - [system-property()](/ja/docs/XPath/Functions/system-property) _XSLT 固有_
 - [translate()](/ja/docs/XPath/Functions/translate)
 - [true()](/ja/docs/XPath/Functions/true)
-- [unparsed-entity-url()](/ja/docs/XPath/Functions/unparsed-entity-url) _XSLT 固有\_\_(未対応)_
+- [unparsed-entity-url()](/ja/docs/XPath/Functions/unparsed-entity-url) _XSLT 固有 (未対応)_
 
 {{QuickLinksWithSubpages("/ja/docs/Web/XPath")}}

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/speak-as
 ---
+
 {{CSSRef}}
 
 Le descripteur **`speak-as`**, rattaché à la règle @ {{cssxref("@counter-style")}}, permet d'indiquer la représentation sonore du compteur qui doit être utilisée par l'agent utilisateur si nécessaire. Ainsi, on peut utiliser ce descripteur pour que le compteur soit énoncé comme un nombre ou avec un signal audio particulier.
@@ -49,9 +50,13 @@ speak-as: <counter-style-name>;
 - `<counter-style-name>`
   - : Si la valeur du descripteur est le nom d'un autre style de compteur, ce sera la valeur de `speak-as` de ce style qui sera utilisée. Si la style visé n'existe pas, cette valeur sera alors synonyme de `auto`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -95,15 +100,11 @@ La prise en charge de cette fonctionnalité par les outils d'assistance est actu
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-speak-as', 'speak-as')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.speak-as")}}
+{{Compat}}
 
 ## Voir aussi
 

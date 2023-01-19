@@ -2,6 +2,7 @@
 title: Element.hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} インターフェイスの **`hasPointerCapture()`** メソッドは、それを呼び出した要素が、与えられたポインタ ID によって識別されるポインタに対するポインタキャプチャを持つかどうかを示します。
@@ -55,9 +56,7 @@ targetElement.hasPointerCapture(pointerId);
 
 ## 仕様
 
-| 仕様                                                                                                                 | 状態                                     | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#dom-element-haspointercapture', 'hasPointerCapture()')}} | {{Spec2('Pointer Events 2')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

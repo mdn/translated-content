@@ -4,7 +4,8 @@ slug: Web/HTML/Element/td
 translation_of: Web/HTML/Element/td
 browser-compat: html.elements.td
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<td>`** définit une cellule d'un tableau qui contient des données. Cet élément fait partie du _modèle de tableau_.
 

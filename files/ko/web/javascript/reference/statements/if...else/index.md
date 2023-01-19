@@ -1,12 +1,8 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
+
 {{jsSidebar("Statements")}}
 
 **`if` 문**은 지정한 조건이 {{glossary("truthy", "참")}}인 경우 명령문(statement)을 실행합니다. 조건이 {{glossary("falsy", "거짓")}}인 경우 또 다른 명령문이 실행 될 수 있습니다.
@@ -72,7 +68,7 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
     }
 ```
 
-원시 불리언 값인 true (참) 과 false (거짓) 을 불리언 객체의 truthiness (참으로 보이는 것) 과 falsiness (거짓으로 보이는 것)으로 혼동하면 안된다. false, undefined, null, 0, NaN, 또는 빈 스트링 ("") 이 아닌 모든 값, 그리고 false 값인 불리언 객체를 포함하는 모든 객체는 조건으로 사용될 때 [truthy](https://developer.mozilla.org/ko/docs/Glossary/Truthy) 로 간주된다. 예:
+원시 불리언 값인 true (참) 과 false (거짓) 을 불리언 객체의 truthiness (참으로 보이는 것) 과 falsiness (거짓으로 보이는 것)으로 혼동하면 안된다. false, undefined, null, 0, NaN, 또는 빈 스트링 ("") 이 아닌 모든 값, 그리고 false 값인 불리언 객체를 포함하는 모든 객체는 조건으로 사용될 때 [truthy](/ko/docs/Glossary/Truthy) 로 간주된다. 예:
 
 ```js
 var b = new Boolean(false);

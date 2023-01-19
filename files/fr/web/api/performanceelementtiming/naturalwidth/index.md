@@ -10,6 +10,7 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/naturalWidth
 ---
+
 {{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`naturalWidth`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie la largeur intrinsèque de l'élément image.

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::spelling-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le pseudo-élément **`::spelling-error`** représente une portion de texte que le navigateur signale comme étant mal orthographiée.
@@ -60,13 +61,11 @@ p::spelling-error { color:red }
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-spelling-error', '::spelling-error')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.spelling-error")}}
+{{Compat}}
 
 ## Voir aussi
 

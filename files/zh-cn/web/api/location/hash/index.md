@@ -2,6 +2,7 @@
 title: 'Location: hash'
 slug: Web/API/Location/hash
 ---
+
 {{ APIRef("Location") }}
 
 {{domxref("Location")}} 接口的 **`hash`** 属性返回一个 {{domxref("USVString")}}，其中会包含 URL 标识中的 `'#'` 和 后面 URL 片段标识符。
@@ -18,7 +19,7 @@ object.hash = string;
 ## Examples
 
 ```html
-<a id="myAnchor" href="/en-US/docs/Location.href#Examples">Examples</a>
+<a id="myAnchor" href="/zh-CN/docs/Location.href#Examples">Examples</a>
 <script>
   var anchor = document.getElementById("myAnchor");
   console.log(anchor.hash); // 返回'#Examples'
@@ -31,4 +32,4 @@ object.hash = string;
 
 ## Browser compatibility
 
-{{Compat("api.Location.hash")}}
+{{Compat}}

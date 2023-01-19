@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/pow
 ---
+
 {{JSRef}}
 
 La fonction **`Math.pow()`** renvoie un nombre à une certaine puissance, c'est-à-dire `base^exposant`.
@@ -59,16 +60,11 @@ Math.pow(-7, 1/3); // NaN
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.13', 'Math.pow')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.pow', 'Math.pow')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.pow', 'Math.pow')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.pow")}}
+{{Compat}}
 
 ## Voir aussi
 

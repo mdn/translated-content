@@ -2,6 +2,9 @@
 title: <marquee>：捲動元素（已過時）
 slug: Web/HTML/Element/marquee
 ---
+
+{{Deprecated_Header}}
+
 HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過屬性，控制文字在到達邊緣後的應對動作。
 
 | DOM 介面 | {{DOMxRef("HTMLMarqueeElement")}} |
@@ -62,7 +65,7 @@ HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過
 </marquee>
 ```
 
-{{EmbedLiveSample("Examples", 600, 450)}}
+{{EmbedLiveSample("示例", 600, 450)}}
 
 ## 規範
 
@@ -70,7 +73,7 @@ HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.marquee")}}
+{{Compat}}
 
 ## 參見
 

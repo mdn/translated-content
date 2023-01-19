@@ -1,356 +1,275 @@
 ---
-title: サーバからのデータ取得
+title: サーバーからのデータ取得
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
+l10n:
+  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-モダンな Web サイトやアプリケーションでしょっちゅう必要になる仕事は、サーバから個々のデータを取ってきて、新しいページ全体を読んでくることなしに、ページの一部を書き換える事です。この一見ちょっとした事が、サイトのパフォーマンスや振舞いに巨大なインパクトを与えました。この記事ではそのコンセプトを解説し、これを可能にした技術 XMLHttpRequest や Fetch API について見ていきます。
+現代のウェブサイトやアプリケーションでとても一般的なもう一つのタスクは、新しいページ全体を読み込むことなくウェブページの一部を更新するために、サーバーから個々のデータ項目を取得することです。この一見小さなことが、サイトのパフォーマンスや動作に大きな影響を与えてきました。そこでこの記事では、この概念を説明し、これを可能にする技術、特に [Fetch API](/ja/docs/Web/API/Fetch_API) を見ていきます。
 
-| 前提条件: | JavaScript の基本 ([最初のステップ](/ja/docs/Learn/JavaScript/First_steps)、[ビルディングブロック](/ja/docs/Learn/JavaScript/Building_blocks)、[JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)を参照)、[クライアントサイド API の基本](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目標:     | サーバからデータを取得し、それを使用して Web ページのコンテンツを更新する方法を習得する。                                                                                                                                                                                                                        |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        JavaScript の基本
+        （<a href="/ja/docs/Learn/JavaScript/First_steps">第一歩</a>、
+        <a href="/ja/docs/Learn/JavaScript/Building_blocks"
+          >構成要素</a
+        >,
+        <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript のオブジェクト</a>）、
+        <a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+          >クライアントサイド API の基本</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        サーバーからデータを取得し、そのデータを使用してウェブページのコンテンツを更新する方法を習得する。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## これの問題は何か?
+## ここでの問題
 
-もともと Web のページ読み込みは単純でした — Web サイトのデータをサーバにリクエストすると、何も問題がなければ、ページを構成するいろいろなものがダウンロードされてあなたのコンピュータに表示されていました。
+ウェブページは、 HTML ページと、（通常は）スタイルシート、スクリプト、画像など、その他のさまざまなファイルから構成されています。ウェブでのページ読み込みの基本モデルは、ブラウザーがページを表示するために必要なファイルをサーバーに 1 回以上の HTTP リクエストを行い、サーバーが要求されたファイルで応答することです。別のページにアクセスすると、ブラウザーは新しいファイルを要求し、サーバーはそのファイルを応答します。
 
-![A basic representation of a web site architecture](web-site-architechture@2x.png)
+![伝統的なページの読み込み](traditional-loading.svg)
 
-このモデルの問題は、どこかページの一部を書き換えたい場合、例えば新しい商品の一群を表示したり新しいページを読み込ませたりをする毎に、ページ全体を読み直さなければならない事です。これはとても無駄が多くてユーザ体験が悪化します、とりわけページが大きくて複雑になってくるにつれて。
+このモデルは、多くのサイトにとって完璧に動作するものです。しかし、データ駆動型のウェブサイトを考えてみましょう。例えば、 [Vancouver Public Library](https://www.vpl.ca/) のような図書館のウェブサイトです。このようなサイトは、特にデータベースへのユーザーインターフェイスと考えることができます。特定のジャンルの本を検索したり、以前に借りた本をもとに、あなたが好きそうな本を推薦してくれるかもしれません。このような場合、表示する本の新しい設定をして、ページを更新する必要があります。しかし、ページのヘッダー、サイドバー、フッターなど、ほとんどのページコンテンツはそのままであることに注意してください。
 
-### Ajax の登場
+従来のモデルでは、ページの一部分だけを更新する必要がある場合でも、ページ全体を取得して読み込まなければならないことが問題でした。これでは効率が悪く、使い勝手が損なわれてしまいます。
 
-上述の問題を解決すべく、Web ページから細かいデータ ([HTML](/ja/docs/Web/HTML)、{{glossary("XML")}}、[JSON](/ja/docs/Learn/JavaScript/Objects/JSON) やプレーンテキストのような) をリクエストし、それを必要な時だけ表示するという技術の誕生へと繋がりました。
+そこで、従来のモデルの代わりに、多くのウェブサイトでは JavaScript API を使用してサーバーにデータをリクエストし、ページを読み込むことなくページコンテンツを更新しています。そのため、ユーザーが新製品を検索した場合、ブラウザーはページの更新に必要なデータ、たとえば表示する新刊書籍の設定のみをリクエストするのです。
 
-これは {{domxref("XMLHttpRequest")}} や、最近では [Fetch API](/ja/docs/Web/API/Fetch_API) の利用によって実現されます。これらの技術は、Web ページがサーバにある特定のリソースを直接 [HTTP](/ja/docs/Web/HTTP) リクエストし、必要があれば結果のデータを表示する前に整形する事を可能にしました。
+![フェッチを使用したページ更新](fetch-update.svg)
 
-> **Note:** これらのテクニック一般はかつて Ajax (Asynchronous JavaScript and XML)と呼ばれていましたが、これは {{domxref("XMLHttpRequest")}} を使って XML データを要求するものが多かったためです。今日ではそういうものばかりではありませんが (`XMLHttpRequest` や Fetch を使って JSON を要求する場合の方が多いでしょう)、結果としては同じであり、"Ajax" という用語はしばしば今でもこのテクニックを説明するのに使われます。
+ここでの主な API は、[Fetch API](/ja/docs/Web/API/Fetch_API) です。これは、ページ内で動作する JavaScript が、サーバーに対して [HTTP](/ja/docs/Web/HTTP) リクエストを行い、特定のリソースを取得できるようにするものです。サーバーがこれを提供すると、 JavaScript はそのデータを使用してページを更新することができます。通常は [DOM 操作 API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) を使用することになります。リクエストされるデータは、多くの場合 [JSON](/ja/docs/Learn/JavaScript/Objects/JSON)で、これは構造化データの転送に適した形式ですが、 HTML や単なるテキストであっても構いません。
 
-![A simple modern architecture for web sites](moderne-web-site-architechture@2x.png)
+これは Amazon、YouTube、eBay など、データ駆動型のサイトによく見られるパターンです。このモデルを使うと次のようなことが実現できます。
 
-Ajax モデルには、ブラウザーにページ全体をリロードされるのではなく、もっと賢くデータをリクエストするために Web API をプロキシとして使うという事も含まれます。これの重要性を考えてみて下さい:
+- ページの更新が非常に速く、ページの更新を待つ必要がないため、サイトがより速く、より応答的に感じられることになります。
+- 更新のたびにダウンロードされるデータがいくらか減るので、帯域の無駄が少なくなります。これは、ブロードバンド接続のデスクトップではそれほど大きな問題ではないかもしれませんが、モバイル端末や高速なインターネットサービスを持たない国では大きな問題です。
 
-1. お気に入りの情報に富んだサイト、アマゾンとか YouTube とか CNN とかに行って読み込みます。
-2. さて新しい商品だか何だかを検索します。メインのコンテンツは変わるでしょうが、周りに表示されている情報、ヘッダーやフッター、ナビゲーションメニューなど、大半はそのままでしょう。
+> **メモ:** 初期の頃、この一般的な技術は [Asynchronous](/ja/docs/Glossary/Asynchronous) JavaScript and XML ([Ajax](/ja/docs/Glossary/AJAX)) と呼ばれていましたが、これは XML データをリクエストする傾向があるためでした。最近では通常このようなことはありませんが（JSON をリクエストすることの方が多いでしょう）、結果的には同じことであり、 "Ajax" という用語は今でもこの技術を説明するのによく使用されています。
 
-これはとても良いことで、それは:
+さらに高速化するために、一部のサイトでは、最初にリクエストされたときにユーザーのコンピューターに資産や データを保存しています。つまり、その後の訪問では、ページを最初に読み込むたびに新しいコピーをダウンロードせずに、 ローカルバージョンを使用するのです。コンテンツは、更新されたときだけサーバーから再読み込みされます。
 
-- ページの更新がずっと素早く、切り替わるのを待つ必要もないので、サイトがずっと早くて反応の良いものに感じられます。
-- 更新毎にダウンロードされるデータが少ないので、帯域の無駄が少なくなります。ブロードバンドに接続されたデスクトップではさして問題ではないかもしれませんが、モバイルデバイスからや、どこでも高速インターネット接続が使えるわけではない開発途上国ではとても重要な問題です。
+## Fetch API
 
-さらなる高速化のために、サイトの中には必要なものやデータを最初にリクエストされた時にユーザのコンピュータに保存してしまい、以降の訪問では保存ずみのものを、サーバから最新版のダウンロードさせる事なく使用するものもあります。コンテンツはそれが更新された時だけサーバから再読み込みされます。
+それでは、 Fetch API の例をいくつか見てみましょう。
 
-![A basic web app data flow architecture](web-app-architecture@2x.png)
+### テキストコンテンツの読み取り
 
-## 基本的な Ajax リクエスト
+この例では、いくつかの異なるテキストファイルからデータをリクエストし、それらを使用してコンテンツエリアにデータを入力します。
 
-{{domxref("XMLHttpRequest")}} と [Fetch](/ja/docs/Web/API/Fetch_API) それぞれを使って、そのようなリクエストをどうやるのか見ていきましょう。それらの例では、いくつかの異なるテキストファイルから取り出したデータをリクエストし、コンテンツ領域に埋め込みます。
+実際のアプリケーションでは、PHP、Python、Node などのサーバーサイドの言語を使用して、データベースからデータを要求したほうが良いでしょう。しかし、ここではシンプルに、クライアント側の部分に集中したいと思います。
 
-この一連のファイルは疑似データベースとして働きます。実際のアプリケーションでは、PHP や Python、Node のようなサーバサイド言語を使ってデータベースから取り出したデータをリクエストする場合が多いでしょう。ですがここでは簡単にしておき、クライアント側のパートに集中します。
+この例を始めるには、 [fetch-start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/fetch-start.html) と 4 つのテキストファイル（[verse1.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse3.txt), [verse4.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse4.txt)）のローカルコピーを、自分のコンピューターの新しいディレクトリーに作ってください。この例では、ドロップダウンメニューで選択されたときに、詩の異なる連（よくご存じのもの）を取得することにしています。
 
-### XMLHttpRequest
-
-`XMLHttpRequest` (よく XHR と略記されます) は今となってはかなり古い技術です — Microsoft によって 1990 年代に発明され、非常に長い間ブラウザーを超えて標準化されてきました。
-
-1. この例題を始めるにあたり、[ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) と 4 つのテキストファイル — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt)、[verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt)、[verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt) と [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — のローカルコピーを、あなたのコンピュータの新しいディレクトリーに作って下さい。この例題では、ドロップダウンメニューから選択されたら、詩 (ご存知の詩かも) のこれら異なる節を XHR を使って読み込みます。
-2. {{htmlelement("script")}} 要素のすぐ内側に、下のコードを書き足して下さい。これは {{htmlelement("select")}} と {{htmlelement("pre")}} 要素への参照を定数に保存し、{{domxref("GlobalEventHandlers.onchange","onchange")}} イベントハンドラ関数を定義していて、これは select の値が変わったら、その値が呼び出される関数 `updateDisplay()` の引数となるようにします。
-
-    ```js
-    const verseChoose = document.querySelector('select');
-    const poemDisplay = document.querySelector('pre');
-
-    verseChoose.onchange = function() {
-      const verse = verseChoose.value;
-      updateDisplay(verse);
-    };
-    ```
-
-3. `updateDisplay()` 関数を定義しましょう。まずはさっきのコードブロックの下に以下を書き足します — これは関数のからっぽのガワです。 注: ステップ 4 から 9 はすべて、この関数*内で*実施します。
-
-    ```js
-    function updateDisplay(verse) {
-
-    }
-    ```
-
-4. 関数を、後から必要になる読み込みたいテキストファイルを指す相対 URL を作るところからはじめます。{{htmlelement("select")}} 要素の値は常に、選択されている {{htmlelement("option")}} の内側テキスト、例えば"Verse 1"とか、に一致します (value 属性で異なる値を設定していなければ)。これに相当するテキストファイルは "verse1.txt" で HTML と同じディレクトリーにあるので、ファイル名だけで十分です。
-
-    ただ、Web サーバはたいてい大文字小文字を区別しますし、今回のファイル名にスペースは含まれていません。"Verse 1" を "verse1.txt" に変換するためには、V を小文字にして、スペースを取り除き、.txt を末尾に追加しなければなりません。これは{{jsxref("String.replace", "replace()")}} に {{jsxref("String.toLowerCase", "toLowerCase()")}}、あと単なる [文字列の結合](/ja/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings) で実現できます。以下のコードをあなたの `updateDisplay()` 関数の内側に追加して下さい:
-
-    ```js
-    verse = verse.replace(" ", "");
-    verse = verse.toLowerCase();
-    let url = verse + '.txt';
-    ```
-
-5. XHR リクエストを作り始めるため、リクエストオブジェクトを {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} コンストラクタを使って作成しなければなりません。このオブジェクトには好きな名前を付けられますが、単純にするため `request` を使います。`updateDisplay()` 関数の内側で、先の行の下に以下を追加します:
-
-    ```js
-    let request = new XMLHttpRequest();
-    ```
-
-6. 次に {{domxref("XMLHttpRequest.open","open()")}} メソッドを使ってどの [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods) を使ってリソースをネットワークから取得するか、URL はどこかを指定しなければなりません。ここでは単に [`GET`](/ja/docs/Web/HTTP/Methods/GET) メソッドを使い、URL には `url` 変数の値をセットします。先の行の下に以下を追加します:
-
-    ```js
-    request.open('GET', url);
-    ```
-
-7. 次はレスポンスにどのような形式にしたいか指定 — これはリクエストの {{domxref("XMLHttpRequest.responseType", "responseType")}} プロパティで指定します — `text` にします。厳密に言えばこの場合は必須の指定ではありません — XHR はデフォルトで text を返します — が、いつの日か他のデータ形式を指定したくなる場合にそなえて、この設定をする習慣をつけておくと良いと思います。次を追加して下さい:
-
-    ```js
-    request.responseType = 'text';
-    ```
-
-8. ネットワークからリソースを取得する処理は非同期{{glossary("asynchronous")}} 処理なので、戻りを使って何かをする前に、あなたは処理が完了(リソースがネットワークから返ってくる)するのを待たなければならず、さもないとエラーが投げられます。XHR では {{domxref("XMLHttpRequest.onload", "onload")}} イベントハンドラを使ってこの問題をさばけます — これは {{event("load")}} イベントが発火(レスポンスが返ってきた)した時に実行されます。このイベントが起きた後は、レスポンスデータは XHR リクエストオブジェクトの `response` プロパティとして取得できます。
-
-    さっき追加した行の後に以下を追加して下さい。`onload` イベントハンドラの中で、`poemDisplay` ({{htmlelement("pre")}}要素) の [`textContent`](/ja/docs/Web/API/Node/textContent) プロパティに {{domxref("XMLHttpRequest.response", "request.response")}} プロパティの値を設定しているのがお判りでしょう。
-
-    ```js
-    request.onload = function() {
-      poemDisplay.textContent = request.response;
-    };
-    ```
-
-9. 以上は全部、XHR リクエストの設定です — 実は私たちがやれと指示するまで動作はしません。やれと指示するには、{{domxref("XMLHttpRequest.send","send()")}} メソッドを使います。さっき追加した行の後に以下を追加して、関数を完成させます。この行は、`updateDisplay()` 関数の閉じ中括弧のすぐ上に置く必要があります。
-
-    ```js
-    request.send();
-    ```
-
-10. 今の時点でのこの例題にある問題の一つは、最初に読み込まれた時点ではなにも詩が表示されないことです。これを直すには、あなたのコードの一番下 (`</script>` 閉じタグのすぐ上) に以下の二行を追加し、デフォルトで 1 番の詩を読み込みませ、{{htmlelement("select")}} 要素に適切な値を指させます:
-
-    ```js
-    updateDisplay('Verse 1');
-    verseChoose.value = 'Verse 1';
-    ```
-
-### サーバからあなたの例題を送らせる
-
-今時のブラウザー (Chrome も含まれます) は、ローカルファイルとして例題を実行しても XHR リクエストを行ないません。これはセキュリティの制限によるものです (Web のセキュリティにより詳しくは [Web サイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)を読んで下さい)。
-
-これをどうにかするため、例題をローカルの Web サーバを使って実行しなければなりません。どうやるのかは、 [テスト用のローカルサーバを設定するにはどうすればいい?](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server) を読んで下さい。
-
-### Fetch
-
-Fetch API は、基本的には XHR の今風の代替品です — 最近になってブラウザーに組込まれたもので、非同期 HTTP リクエストを JavaScript で、開発者や他の Fetch の上に組まれた API から簡単に行なえるようにするためのものです。
-
-先の例を Fetch を使うように書き換えてみましょう!
-
-1. さっき完成させた例題のディレクトリーのコピーを作ります(前の例題を完成させていないなら、新しいディレクトリーを作成して、そこに [xhr-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html) と 4 つのテキストファイル — ([verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt)、[verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt)、[verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt) と [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt)) のコピーを作って下さい。
-2. `updateDisplay()` 関数の中から、XHR のコードを探し出します:
-
-    ```js
-    let request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'text';
-
-    request.onload = function() {
-      poemDisplay.textContent = request.response;
-    };
-
-    request.send();
-    ```
-
-3. XHR のコードを次のように置き換えます:
-
-    ```js
-    fetch(url).then(function(response) {
-      response.text().then(function(text) {
-        poemDisplay.textContent = text;
-      });
-    });
-    ```
-
-4. 例題をブラウザーに読み込むと(Web サーバから読んで下さい)、XHR 版と同様に動作するするはずです。今時のブラウザーを使っていれば。
-
-#### Fetch のコードでは何が起きている?
-
-まず最初に、{{domxref("fetch()")}} メソッドが呼ばれ、取得したいリソースの URL が渡されています。これは XHR の {{domxref("XMLHttpRequest.open","request.open()")}} の今時な同等品で、さらに言えば `.send()` に相当するものは必要ありません。
-
-その後に、{{jsxref("Promise.then",".then()")}} メソッドが `fetch()` の後に連鎖されているのがわかるでしょう — このメソッドは {{jsxref("Promise","Promises")}} の一部で、非同期処理を行なうための今風な JavaScript に備わる機能です。`fetch()` はプロミスを返し、これはサーバから送られたレスポンスによって解決されます — `.then()` を使ってプロミスが解決された後にある種後始末のコードを走らせるようにし、そのコードとは内側で定義した関数にあたります。これは XHR 版の `onload` イベントハンドラに相当します。
-
-この関数には、`fetch()` のプロミスが解決された際に、自動的にサーバからのレスポンスが引数として渡されます。関数の中で、レスポンスをつかまえてその {{domxref("Body.text","text()")}} メソッド、これは基本的にレスポンスを生のテキストで返すもの、を走らせます。これは XHR 版の `request.responseType = 'text'` 部分と等価です。
-
-`text()` もプロミスを返しているのがおわかりでしょう、ですのでそれに別の `.then()` を連鎖させ、その中で `text()` のプロミスが解決する生テキストを受けとるよう、関数を定義します。
-
-内側のプロミスの関数の中で、XHR 版でやったのとほとんど同じ事をやっています — {{htmlelement("pre")}} 要素のテキストコンテントにテキスト値を設定しています。
-
-### Aside on promises
-
-プロミスは初めて見るとちょっと混乱させられますが、今はひとまずそんなに心配しなくて大丈夫です。ちょっとすれば慣れます、とくに今風の JavaScript API を学んでいけば — 新しい部分の大半がこのプロミスに強く依存しています。
-
-上の例のプロミスの構造を見直してみましょう、もうちょっと意味が通じてくるかもしれません:
+{{htmlelement("script")}} 要素のすぐ内側に、以下のコードを追加してください。これは、 {{htmlelement("select")}} 要素と {{htmlelement("pre")}} 要素への参照を格納し、 `<select>` 要素にリスナーを追加して、ユーザーが新しい値を選択したときに、新しい値が引数として `updateDisplay()` という関数に渡されるようにするものです。
 
 ```js
-fetch(url).then(function(response) {
-  response.text().then(function(text) {
-    poemDisplay.textContent = text;
-  });
+const verseChoose = document.querySelector('select');
+const poemDisplay = document.querySelector('pre');
+
+verseChoose.addEventListener('change', () => {
+  const verse = verseChoose.value;
+  updateDisplay(verse);
 });
 ```
 
-最初の行で言っているのは、「url にあるリソースを取ってこい(fetch)」(`fetch(url)`)で、「それから(then)プロミスが解決したら指定した関数を実行しろ」(`.then(function() { ... })`)です。「解決」とは、「この先どこかの時点で、指定された処理の実行を終える」事を意味します。この場合だと指定された処理とは、指定の URL からリソースを取ってきて(HTTP リクエストを使って)、そのレスポンスを私たちがどうにかできるように返せ、です。
-
-実際のところ、`then()`に渡される関数は、すぐには実行されないコードの塊です — すぐにではなく、未来のどこかの時点でレスポンスが返って来た時に実行されます。頭に入れておいて下さい、プロミスは変数に保存する事もできて、変数に {{jsxref("Promise.then",".then()")}} を連鎖する事ができます。次のコードがやっているのも同じ事です:
+`updateDisplay()` 関数を定義しましょう。まずはさっきのコードブロックの下に以下を書き足します。これは関数の空の箱です。
 
 ```js
-let myFetch = fetch(url);
+function updateDisplay(verse) {
 
-myFetch.then(function(response) {
-  response.text().then(function(text) {
-    poemDisplay.textContent = text;
-  });
-});
-```
-
-`fetch()` メソッドは HTTP レスポンスによって解決されるプロミスを返し、その後ろに連鎖された `.then()` の中にどのような関数を定義しても、それには引数としてレスポンスが自動で渡されます。引数にどんな名前を付けるのもご自由です — 下の例もちゃんと動きます:
-
-```js
-fetch(url).then(function(dogBiscuits) {
-  dogBiscuits.text().then(function(text) {
-    poemDisplay.textContent = text;
-  });
-});
-```
-
-ですがパラメータにはその中身がわかる名前を付けた方がいいですよね!
-
-今度は関数だけに着目しましょう:
-
-```js
-function(response) {
-  response.text().then(function(text) {
-    poemDisplay.textContent = text;
-  });
 }
 ```
 
-レスポンスオブジェクトには {{domxref("Body.text","text()")}} メソッドがあって、これはレスポンスボディにある生データを受けて、プレインテキスト(これが私たちの必要とする形式です)、に変換します。このメソッドもプロミス(これは結果となるテキスト文字列で解決します)を返すので、ここでまた別の {{jsxref("Promise.then",".then()")}} を使い、この内部で、テキスト文字列を使って私たちがやりたい事を行うための別の関数を定義します。私たちがやるのは、ただ詩用の {{htmlelement("pre")}} 要素の [`textContent`](/ja/docs/Web/API/Node/textContent) プロパティをテキスト文字列と同じに設定だけなので、これはとても単純です。
+この関数は、後で必要になるので、読み込むテキストファイルを指し示す関連 URL を構築することから開始します。 {{htmlelement("select")}} 要素の値は、選択されている {{htmlelement("option")}} の中のテキストと常に同じです（value 属性で異なる値を指定しない限り）。対応する連のテキストファイルは "verse1.txt" で、 HTML ファイルと同じディレクトリーにあるので、ファイル名だけで十分です。
 
-これも覚えておく価値があります、それぞれのブロックの結果を次のブロックに渡していくように、直接複数のプロミスブロック(`.then()`ブロック以外の種類もあります)を次から次へと連鎖する事ができます、あたかも鎖を下にたどっていくように。このおかげで、プロミスはとても強力なのです。
-
-次のブロックはもとの例題と同じ事をしますが、違うやり方で書かれています:
+ただ、ウェブサーバーはたいてい大文字小文字を区別しますし、今回のファイル名にスペースが含まれていません。 "Verse 1" を "verse1.txt" に変換するためには、 V を小文字にして、スペースを取り除き、 .txt を末尾に追加しなければなりません。これは {{jsxref("String.replace", "replace()")}} と {{jsxref("String.toLowerCase", "toLowerCase()")}}、あと単なる[文字列の結合](/ja/docs/Learn/JavaScript/First_steps/Strings#文字列を連結する)で実現できます。以下のコードを `updateDisplay()` 関数の内側に追加してください。
 
 ```js
-fetch(url).then(function(response) {
-  return response.text()
-}).then(function(text) {
-  poemDisplay.textContent = text;
-});
+verse = verse.replace(' ', '').toLowerCase();
+const url = `${verse}.txt`;
 ```
 
-多くの開発者はこの書き方の方が好きです、なぜなら平らで、間違いなく長大なプロミス連鎖も読みやすいからです — それぞれのプロミスが、前のやつの内側に来る(これは扱いづらくなる場合があります)のではなく、前のやつから順々に続いています。違うのは [`return`](/ja/docs/Learn/JavaScript/Building_blocks/Return_values) 文を response.text() の前に書いて、それが出した結果を次の鎖に渡すようにしなければならないところだけです。
-
-### どっちの機構を使うべき?
-
-これは本当に、あなたがどんなプロジェクトを進めているかによります。XHR は長いこと存在しているので、様々なブラウザーで非常によくサポートされています。一方 Fetch とプロミスは Web プラットフォームに最近追加されたものなので、ブラウザー界では結構サポートされているんですが、IE はサポートしていません。
-
-古いブラウザーをサポートする必要があるのならば、XHR の方が良いでしょう。ですがあなたがもっと先進的なプロジェクトで働いて、古いブラウザーの事でさして悩まないなら、Fetch が良い選択になるでしょう。
-
-本当はどっちも学ぶべきです — Fetch は IE が消えていくにつれ(IE は、Microsoft の新しい Edge ブラウザーのおかげで開発が終了しています)どんどん一般的になっていくでしょうが、もうしばらくは XHR が必要でしょう。
-
-## もっとややこしい例題
-
-この記事のまとめとして、Fetch のより興味深い使い方を示す、ちょっとばかり難しい例題を見ていきましょう。例題用に缶詰屋というサイトを作成しました — これは缶詰だけを売る仮想のお店です。これの [GitHub でのライブ実行](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/) と [ソースコード](https://github.com/mdn/learning-area/tree/master/javascript/apis/fetching-data/can-store) が見られます。
-
-![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](can-store.png)
-
-デフォルトではサイトには全ての商品が表示されますが、左側のカラムにあるフォームコントロールからカテゴリから、検索語から、あるいはその両方によってフィルタリングをかけられます。
-
-商品をカテゴリや検索語によってフィルタリングする処理をし、UI でデータが正しく表示されるように文字列を操作するためなどに、けっこうな量の複雑なコードがあります。この記事のなかでそれら全てについて解説しませんが、ソースコードのコメントに詳しいことがたくさん書いてあります([can-script.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js)を見て下さい)。
-
-ですが、Fetch のコードについては説明していきます。
-
-Fetch を使うブロックの最初は、JavaScript の初めの方にあります:
+ついに Fetch API を使用する準備ができました。
 
 ```js
-fetch('products.json').then(function(response) {
-  return response.json();
-}).then(function(json) {
-  let products = json;
-  initialize(products);
-}).catch(function(err) {
-  console.log('Fetch problem: ' + err.message);
-});
+// `fetch()` を呼び出し、 URL を渡します。
+fetch(url)
+  // fetch() はプロミスを返します。サーバーからレスポンスを受け取ると、
+  // プロミスの `then()` ハンドラーがそのレスポンスとともに呼び出されます。
+  .then((response) => {
+    // このハンドラーは、リクエストが成功しなかった場合にエラーを報告します。
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    // そうでない場合（レスポンスが成功した場合）、ハンドラーは
+    // response.text() を呼び出してレスポンスをテキストとして取得し、
+    // 直ちに `response.text()` が返すプロミスを返します。
+    return response.text();
+  })
+  // response.text() が成功したら、そのテキストで `then()` ハンドラーが
+  // 呼び出され、それを `poemDisplay` ボックスにコピーします。
+  .then((text) => poemDisplay.textContent = text)
+  // 起こりうるエラーをキャッチし、`poemDisplay` ボックスにメッセージを
+  // 表示します。
+  .catch((error) => poemDisplay.textContent = `Could not fetch verse: ${error}`);
+```
+
+ここでは、かなり多くのことを解説します。
+
+まず、 Fetch API のエントリーポイントは {{domxref("fetch", "fetch()")}} というグローバル関数で、URL を引数として呼び出します（カスタム設定のために別のオプションの引数を取りますが、ここでは使用しません）。
+
+次に、 `fetch()` はプロミス ({{jsxref("Promise")}}) を返す非同期 API で す。もしこれが何かわからない場合は、[非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)のモジュール、特に[プロミス](/ja/docs/Learn/JavaScript/Asynchronous/Promises)を読んでからこの記事に戻ってきてください。この記事には `fetch()` API についても書かれていることが分かると思います。
+
+つまり、 `fetch()` はプロミスを返すので、返されたプロミスの {{jsxref("Promise/then", "then()")}} メソッドに関数を渡します。このメソッドは、 HTTP リクエストがサーバーからレスポンスを保有したときに呼び出されます。ハンドラーでは、リクエストが成功したかどうかを調べ、成功しなかった場合はエラーを発生させます。そうでない場合は {{domxref("Response/text", "response.text()")}} を呼び出して、レスポンスの本文をテキストで取得します。
+
+`response.text()` も非同期であることがわかったので、それが返すプロミスを返し、この新しいプロミスの `then()` メソッドに関数を渡します。この関数は、レスポンスのテキストの準備ができたときに呼び出され、その中で `<pre>` ブロックをそのテキストで更新します。
+
+最後に {{jsxref("Promise/catch", "catch()")}} ハンドラーを最後に連結し、呼び出された非同期関数やそのハンドラーで発生したエラーを捕捉しています。
+
+この例の問題点として、最初に読み込んだときに詩が表示されないことが挙げられます。これを修正するには、コードの一番下（閉じられた `</script>` タグのすぐ上）に以下の 2 行を追加して、既定で 1 節を読み込み、 {{htmlelement("select") }} 要素が常に正しい値を示していることを確認します。
+
+```js
+updateDisplay('Verse 1');
+verseChoose.value = 'Verse 1';
+```
+
+#### 例はサーバーから提供すること
+
+現代のブラウザーは、ローカルファイルから例を実行しただけでは、 HTTP リクエストを動作させません。これは、セキュリティ上の制約があるためです（ウェブセキュリティについては、[ウェブサイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)をお読みください)。
+
+これを回避するには、ローカルのウェブサーバーでこの例を動作させてテストする必要があります。この方法を探すには、[ローカルのテストサーバーを設定するためのガイド](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server)を読んでください。
+
+### 缶詰屋
+
+この例では、 The Can Store というサンプルサイトを作成しました。これは、缶詰だけを販売する架空のスーパーマーケットです。この例は [GitHub 上でライブ実行](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)することができ、[ソースコード](https://github.com/mdn/learning-area/tree/main/javascript/apis/fetching-data/can-store)も見ることができます。
+
+![左列に検索オプション、右列に商品検索結果を示した擬似eコマースサイト。](can-store.png)
+
+既定で、サイトにはすべての製品が表示されますが、左列のフォームコントロールを使用して、カテゴリー、または検索語、またはその両方で製品をフィルタリングすることができます。
+
+カテゴリーや検索キーワードによる商品のフィルタリング、データが UI に正しく表示されるように文字列を操作するなど、かなり多くの複雑なコードが存在します。この記事ではそのすべてについて説明しませんが、コードの中に広範なコメントがあります。（[can-script.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/can-store/can-script.js)を見てください）。
+
+ですが、 Fetch のコードについては説明していきます。
+
+Fetch を使用できる最初のブロックは、 JavaScript で開始されたところにあります。
+
+```js
+fetch('products.json')
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then((json) => initialize(json))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 `fetch()` 関数はプロミスを返します。これが成功裏に完了すると、一つ目の `.then()` ブロックの中にある関数は、ネットワークから返された `response` を受け取ります。
 
-この関数の中で、{{domxref("Body.text","text()")}} ではなくて {{domxref("Body.json","json()")}} を実行しています。プレインテキストではなく、構造化された JSON データとしてレスポンスを返してほしいからです。
+この関数の中では、以下のようなことを行っています。
 
-次に、別の `.then()` を最初の `.then()` の後に連鎖させています。これに、`response.json()` プロミスから返された `json` を含む成功時の関数を渡しています。この `json` を `products` 変数の値として代入してから、`initialize(products)` を実行します。すべての商品をユーザーインターフェイスに表示する処理が開始されます。
+- サーバがエラー（[`404 Not Found`](/ja/docs/Web/HTTP/Status/404) のような値）を返さなかったかどうか調べます。もしエラーが発生した場合は、そのエラーを報告します。
+- レスポンスに対して {{domxref("Response.json", "json()")}} を呼び出します。これにより、データは [JSON オブジェクト](/ja/docs/Learn/JavaScript/Objects/JSON)として取得されます。`response.json()` が返すプロミス値を返します。
 
-エラーを処理するために、連鎖の最後に `.catch()` ブロックを連鎖させています。これは、何らかの理由でプロミスが失敗した場合に実行されます。その中には、引数として渡される関数、`error` オブジェクトが含まれています。この `error` オブジェクトを使用して、発生したエラーがどういうものかを伝えられます。ここでは単純な `console.log()` を使用して伝えています。
+次に、返されたプロミスの `then()` メソッドに、関数を渡します。この関数には、レスポンスデータを JSON として含むオブジェクトが渡され、それを `initialize()` 関数に渡します。この関数は、ユーザーインターフェースにすべての製品を表示する処理を開始します。
 
-ただし、完全な Web サイトでは、ユーザの画面にメッセージを表示し、状況を改善する選択肢を提供することで、このエラーをより適切に処理するでしょう。とは言え、ここでは単純な `console.log()` 意外は必要ありません。
+エラーを処理するために、連鎖の最後に `.catch()` ブロックを連鎖させています。これは、何らかの理由でプロミスが失敗した場合に実行されます。その中には、引数として渡される関数、 `err` オブジェクトが含まれています。この `err` オブジェクトを使用して、発生したエラーがどういうものかを伝えられます。ここでは単純な `console.log()` を使用して伝えています。
 
-あなたは自分でも失敗した場合のテストができます:
+しかし、完全なウェブサイトであれば、ユーザーの画面にメッセージを表示したり、状況を改善するためのオプションを提供したりして、より上品にこのエラーを処理しますが、ここでは、単純な `console.error()` 以上のものは必要ありません。
 
-1. 例題のファイルのローカルコピーを作成して下さい([缶詰屋の ZIP ファイル](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true)をダウンロードして展開して下さい)。
-2. コードを Web サーバから読んで走らせるようにします(方法は前に [Serving your example from a server](#serving_your_example_from_a_server)で解説しました)。
-3. fetch するファイルのパスを、'produc.json' のようなものに変更します(誤ったファイル名にして下さい)。
-4. ここでインデックスファイルをブラウザーに読み込んで( `localhost:8000` から)、あなたのブラウザーの開発者コンソールを見ます。次の行のようなメッセージが表示されるはずです「Network request for produc.json failed with response 404: File not found」。
+失敗のケースを自分でテストすることができます。
 
-二つ目の Fetch ブロックは `fetchBlob()` 関数の中にあります:
+1. 例のファイルのローカルコピーを作成してください。
+2. コードをウェブサーバーを通して実行するようにします（上記の[例はサーバーから提供すること](#例はサーバーから提供すること)で説明した通り）。
+3. 読み取るファイルのパスを、 'produc.json' のようなものに変更します（誤ったファイル名にして下さい）。
+4. ここでインデックスファイルをブラウザーに読み込んで（`localhost:8000` から）、ブラウザーの開発者コンソールを見ます。 "Fetch problem: HTTP error: 404" のようなメッセージが表示されるはずです。
+
+2 つ目の Fetch ブロックは `fetchBlob()` 関数の中にあります。
 
 ```js
-fetch(url).then(function(response) {
+fetch(url)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
     return response.blob();
-}).then(function(blob) {
-  // Convert the blob to an object URL — this is basically a temporary internal URL
-  // that points to an object stored inside the browser
-  let objectURL = URL.createObjectURL(blob);
-  // invoke showProduct
-  showProduct(objectURL, product);
-});
+  })
+  .then((blob) => showProduct(blob, product))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
-これも前のとおおよそ同じように動作しますが、{{domxref("Body.json","json()")}} ではなくて {{domxref("Body.blob","blob()")}} を使っているところが違います — 今回の場合は画像ファイルを返したいので、これ用に使うデータ形式は [Blob](/ja/docs/Web/API/Blob) — これは "**B**inary **L**arge **Ob**ject" の略で、たいていは巨大なファイルのようなオブジェクト、画像や動画のようなものを示すのに使われます。
+これは、 {{domxref("Response.json","json()")}} を使用する代わりに {{domxref("Response.blob","blob()")}} を使用することを除いて、前のものとほとんど同じ方法で動作します。この場合、レスポンスを画像ファイルとして返したいので、そのために使用するデータ形式は [Blob](/ja/docs/Web/API/Blob) です（この用語は "Binary Large Object" の省略形であり、基本的に画像や動画ファイルなど、大きなファイルのようなオブジェクトを表すために使用できます）。
 
-blob を成功裏に受信したら、{{domxref("URL.createObjectURL()", "createObjectURL()")}}を使ってそこからオブジェクト URL を取り出します。これはそのブラウザーの中でのみ有効なオブジェクトを示す一時的な URL を返します。あまり読み易いものではありませんが、缶詰屋アプリを開いて画像を Ctrl クリックもしくは右クリックして、メニューから「画像を表示」を選択する(これはあなたが使っているブラウザーによって異なる場合があります)と見ることができます。オブジェクト URL はブラウザーのアドレスバーに表示され、こんな感じになるでしょう:
+Blob を正常に受信したら、それを `showProduct()` 関数に渡して、表示させます。
 
+## The XMLHttpRequest API
+
+時々、特に古いコードでは、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) (しばしば "XHR" と略されます) という別の API を使って、HTTP リクエストを行っているのを見かけることがあります。これは Fetch よりも前にあり、AJAX を実装するために実際に広く使用された最初の API でした。できれば Fetch を使用することをお勧めします。`XMLHttpRequest` よりもシンプルな API で、より多くの機能を有しています。ここでは、`XMLHttpRequest` を使用する例については紹介しませんが、最初の缶詰屋のリクエストの `XMLHttpRequest` バージョンがどのようになるかを示します。
+
+```js
+const request = new XMLHttpRequest();
+
+try {
+  request.open('GET', 'products.json');
+
+  request.responseType = 'json';
+
+  request.addEventListener('load', () => initialize(request.response));
+  request.addEventListener('error', () => console.error('XHR error'));
+
+  request.send();
+
+} catch (error) {
+  console.error(`XHR error ${request.status}`);
+}
 ```
-blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
-```
 
-### 課題: XHR 版の缶詰屋
+ここには 5 つの段階があります。
 
-ちょっとした練習として、アプリの Fetch 版を XHR を使うように書き換えて下さい。[ZIP ファイル](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true) のコピーを作って、上手く JavaScript を書き換えてみて下さい。
+1. 新しい `XMLHttpRequest` オブジェクトを作成します。
+2. [`open()`](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを呼び出して、初期化します。
+3. [`load`](/ja/docs/Web/API/XMLHttpRequest/load_event) イベントにイベントリスナーを追加します。このイベントは、レスポンスが正常に完了したときに発行されます。リスナーでは、データを指定して `initialize()` を呼び出します。
+4. [`error`](/ja/docs/Web/API/XMLHttpRequest/error_event) イベントにイベントリスナーを追加し、リクエストがエラーになったときに発行されるようにします。
+5. リクエストを送信します。
 
-ちょっとしたヒントです:
+また、 `open()` や `send()` で発生したエラーを処理するために、全体を [try...catch](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックで囲む必要があります。
 
-- {{domxref("XMLHttpRequest")}} のリファレンス記事が役に立つでしょう。
-- 基本的には、初めの方の [XHR-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html) の例で見たのと同じようなパターンを使う必要があります。
-- ただし、Fetch 版の缶詰屋でお見せしたのと同様なエラー処理を追加する必要があります:
-
-  - `load` イベントが発火した後は、プロミスの `then()` の中ではなく、`request.response` の中にレスポンスはあります。
-  - XHR において、Fetch の `response.ok` に相当する一番良いやり方は、{{domxref("XMLHttpRequest.status","request.status")}} が 200 であるか、{{domxref("XMLHttpRequest.readyState","request.readyState")}} が 4 である事をチェックする事です。
-  - ステータスとステータスメッセージを取得するためのプロパティは一緒ですが、これは `response` オブジェクトの中ではなく `request`(XHR)オブジェクトの中にあります。
-
-> **Note:** 上手くいかないときは、我々の GitHub にある完成版のコード ([ソースコードはこちらから](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js)、[ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)もどうぞ) と比べてみて下さい。
+Fetch API がこれより改善されていると思うことを期待します。特に、 2 つの異なる場所でエラーを処理しなければならない点を見てください。
 
 ## まとめ
 
-私たちのサーバからのデータ取得に関する記事は以上です。ここまでくれば、どう XHR と Fetch を使って進めていけばいいのか理解できたことでしょう。
+この記事では、 Fetch を使ってサーバーからデータを取得する作業を開始する方法を示しました。
 
-## あわせて参照
+## 関連情報
 
-この記事には様々なほんのさわりしか説明していない事項がたくさんあります。これらの事項についてもっと詳しくは、以下の記事を見て下さい:
+この記事では、さまざまなテーマを取り上げましたが、実際に表面をこすったに過ぎません。このようなテーマについては、以下の記事でより詳しく説明しています。
 
 - [Ajax — 始めましょう](/ja/docs/Web/Guide/AJAX/Getting_Started)
 - [Fetch を使う](/ja/docs/Web/API/Fetch_API/Using_Fetch)
-- [Promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [JSON データの操作](/ja/docs/Learn/JavaScript/Objects/JSON)
 - [HTTP の概要](/ja/docs/Web/HTTP/Overview)
-- [サーバサイド Web サイトプログラミング](/ja/docs/Learn/Server-side)
+- [サーバーサイドウェブサイトプログラミング](/ja/docs/Learn/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 ## このモジュール
 
 - [Web API の紹介](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [ドキュメントの操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [サーバからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- **サーバーからのデータ取得**
 - [サードパーティ API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
 - [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)

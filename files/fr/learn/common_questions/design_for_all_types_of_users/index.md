@@ -4,6 +4,7 @@ slug: Learn/Common_questions/Design_for_all_types_of_users
 l10n:
   sourceCommit: 640cfcb6344a6cac776bae0723041f924d782ece
 ---
+
 Cet article aborde les concepts de bases pour vous aider à construire des sites web accessibles à tous.
 
 <table class="standard-table">

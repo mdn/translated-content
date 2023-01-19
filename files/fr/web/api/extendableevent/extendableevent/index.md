@@ -10,6 +10,7 @@ tags:
   - ServiceWorker
 translation_of: Web/API/ExtendableEvent/ExtendableEvent
 ---
+
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
 Le contructeur **`ExtendableEvent()`** crée un nouvel objet {{domxref("ExtendableEvent")}}.
@@ -23,7 +24,7 @@ var myExtendableEvent = new ExtendableEvent(type, init);
 ### Paramètres
 
 - _type_
-  - : Le type de l'ExtendableEvent, par exemple {{Event("install")}}, {{Event("activate")}}.
+  - : Une chaîne de caractères avec le nom de l'évènement, sensible à la casse.
 - _init_ {{optional_inline}}
   - : Un objet d'options contenant n'importe quelle configuration personnalisée que vous voulez appeler à un objet d'évènement. Pour le moment, il n'existe pas d'option dans la spécification, mais il a été défini pour une compatibilité future pour les différents évènements dérivés.
 

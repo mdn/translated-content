@@ -10,6 +10,7 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/identifier
 ---
+
 {{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`identifier`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie la valeur de l'attribut [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming) sur l'élément.

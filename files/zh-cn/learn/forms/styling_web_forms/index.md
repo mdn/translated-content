@@ -3,6 +3,7 @@ title: 样式化 HTML 表单
 slug: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 在这篇文章中，用户将学习如何使用 HTML 表单和 CSS 以使页面更加美观。令人惊讶的是，这可能有点棘手。由于历史和技术的原因，表单部件不能很好地与 CSS 配合工作。由于这些困难，许多开发人员选择[构建自己的 HTML 小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)以获得更好的控制和视觉观感。然而，在现代浏览器中，web 设计者越来越多地控制表单元素的设计。让我们深入研究。
@@ -94,7 +95,7 @@ button, input, select, textarea {
 
 ### 盒子模型
 
-所有文本字段都完全支持与 CSS 盒模型相关的每个属性 ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, 和 {{cssxref("border")}})。但是，像以前一样，浏览器在显示这些小部件时依赖于系统默认的样式。您需要定义如何将其融入到您的内容中。 如果你既想保持小部件的原生外观和感觉，又想给他们一个一致的尺寸，那么你会遇到一些困难 (如果你想保持组件的原生观感，又想给它们一致的大小，你会面临一些困难)。
+所有文本字段都完全支持与 CSS 盒模型相关的每个属性 ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, 和 {{cssxref("border")}})。但是，像以前一样，浏览器在显示这些小部件时依赖于系统默认的样式。您需要定义如何将其融入到您的内容中。如果你既想保持小部件的原生外观和感觉，又想给他们一个一致的尺寸，那么你会遇到一些困难 (如果你想保持组件的原生观感，又想给它们一致的大小，你会面临一些困难)。
 
 **这是因为每个小部件都有自己的边框，填充和边距的规则。** 所以如果你想给几个不同的小部件相同的大小，你必须使用{{cssxref("box-sizing")}} 属性：
 
@@ -121,7 +122,7 @@ HTML 表单部件的定位通常不是问题; 但是，您应该特别注意两�
 
 {{HTMLElement("legend")}}元素易于应用 CSS，除了定位。在所有浏览器中， {{HTMLElement("legend")}} 元素定位是其 {{HTMLElement("fieldset")}} 父元素的上边框的最顶端。在 HTML 流中无法改变它的绝对位置，无法让其远离顶部边框。然而，你可以使用 {{cssxref("position")}} 属性将其位置设置为绝对或相对。除此之外，它近几年是 fieldset 边框的一部分。
 
-由于{{HTMLElement("legend")}}元素对无障碍非常重要，因为它能被无障碍技术作为每个 fieldset 中的表单元素的标签读出来，它通常与标题配对，并且在无障碍中被隐藏 。例如：
+由于{{HTMLElement("legend")}}元素对无障碍非常重要，因为它能被无障碍技术作为每个 fieldset 中的表单元素的标签读出来，它通常与标题配对，并且在无障碍中被隐藏。例如：
 
 ##### HTML
 

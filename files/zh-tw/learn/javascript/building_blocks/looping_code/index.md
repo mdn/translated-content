@@ -2,6 +2,7 @@
 title: 循環代碼
 slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 編程語言對於快速完成重複性任務非常有用，從多個基本計算到幾乎任何其他需要完成大量類似工作的情況。 在這裡，我們將看看 JavaScript 中可用於處理此類需求的循環結構。
@@ -30,7 +31,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 
 讓我們考慮一個農民的例子，他要確保他有足夠的食物來養家糊口。 他可能使用以下循環來實現此目的：
 
-![](https://mdn.mozillademos.org/files/13755/loop_js-02-farm.png)
+![](loop_js-02-farm.png)
 
 循環通常具有以下一項或多項功能：
 

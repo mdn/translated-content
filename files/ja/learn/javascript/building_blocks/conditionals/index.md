@@ -2,6 +2,7 @@
 title: コードでの意思決定 — 条件文
 slug: Learn/JavaScript/Building_blocks/conditionals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
 どのプログラミング言語でも、コードは様々な入力に応じた決定を迫られ、その結果として動作を起こします。例えば、ゲームではプレイヤーの残機が 0 になった場合、ゲームオーバーとなります。天気アプリは朝に起動された場合は日の出の画像を表示し、夜に起動された場合は星や月の画像を表示します。この記事では、JavaScript において、条件文と呼ばれるものがどのように動作するかを説明します。
@@ -81,7 +82,7 @@ if (shoppingDone === true) {
 
 このコードは常に `shoppingDone` 変数が `false` なので、かわいそうな子供は追加のお小遣いを受け取れません。両親が子供がお使いを完了した場合に `shoppingDone` 変数を `true` にセットしてあげるかどうかはプログラム次第です (つまり私たち次第です。)
 
-> **Note:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)でも確認できます。)
+> **メモ:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)でも確認できます。)
 
 ### else if
 
@@ -132,7 +133,7 @@ function setWeather() {
 3. この関数が実行されると、まずは `choice` という変数に、`<select>` 要素の現在選択されている値を入れます。そして、条件文を使い、`choice` の値に応じた文字列が段落に設定されます。最初の `if() {...}` のブロックを除いて、どのように `else if() {...}` のブロックで判定しているか注目してください。
 4. 一番下の `else {...}` 選択肢は、「最後の手段」となるオプションで、この中のコードは、どの条件にも一致しなかった場合 (`true` とならなかった場合) に実行されます。今回の場合選択されていない場合に、段落を空にしています。何も選択されていない場合というのは、ユーザーが再度最初に表示されていた「--選択してください--」というオプションを選んだ場合です。
 
-> **Note:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)でも確認できます。)
+> **メモ:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)でも確認できます。)
 
 ### 比較演算子に関するメモ
 
@@ -142,7 +143,7 @@ function setWeather() {
 - `<` と `>` は、ある値がもう一方の値より大きいか、より小さいかを判定します。
 - `<=` と `>=` は、ある値がもう一方の値以上か、以下かを判定します。
 
-> **Note:** もし記憶があいまいならば、上記のリンク先を見て復習しましょう。
+> **メモ:** もし記憶があいまいならば、上記のリンク先を見て復習しましょう。
 
 真偽 (`true`/`false`) の値を判定する場合には少しの配慮が必要であることを付け加えさせてください。おそらく何度か躓くであろう、よくあるパターンです。`false`、`undefined`、`null`、`0`、`NaN`、空文字列 (`''`) 以外の値は条件文で使った場合に `true` となります。ですから、その値が `true` であるか判定したい場合や、その値が存在するか (例えば、`undefined` ではないこと) 判定したい場合は単に変数名を使用するだけです。
 
@@ -282,7 +283,7 @@ switch ( 式 ) {
 6. `case` 節 (上記 3. から 5. ) は好きなだけ書くことができます。
 7. 上記 3. から 5.の `case` 節と全く同じコードパターンで書かれている `default` キーワードがあります。違いは `default` の後ろに選択肢が書かれていないことです。また、後ろに続くコードがないので、ここには `break` ステートメントが必要ありません。もし、選択肢のどれにもマッチするものがない場合に既定のオプションとして実行されます。
 
-> **Note:** 評価する式の値が不明な値にならないのであれば、`default` 節は書く必要はありません。しかし、式が不明な値となり、それに対処する必要があるのなら、`default` 節を書くことで対応が可能です。
+> **メモ:** 評価する式の値が不明な値にならないのであれば、`default` 節は書く必要はありません。しかし、式が不明な値となり、それに対処する必要があるのなら、`default` 節を書くことで対応が可能です。
 
 ### switch を使用する例
 
@@ -332,7 +333,7 @@ function setWeather() {
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note:** [このサンプルを GitHub で見る](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html)ことができます。([実行可能なデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)もあります。)
+> **メモ:** [このサンプルを GitHub で見る](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html)ことができます。([実行可能なデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)もあります。)
 
 ## 三項演算子
 
@@ -385,7 +386,7 @@ select.onchange = function() {
 
 さらに、三項演算子を含む [onchange](/ja/docs/Web/API/GlobalEventHandlers/onchange) イベントリスナーがあります。`select.value === 'black'` という条件式で始まっています。この式が `true` であるならば、`update()` 関数を引数に `'black'`、`'white'` を指定して実行します (つまり、背景色を黒、文字色を白に設定します)。この式が `false` であるならば、`update()` 関数を引数に `'white'`、`'black'` を指定して実行します (つまり、背景色を逆にします)。
 
-> **Note:** この例は [GitHub でも公開しています](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (または、[動くデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)もあります。)
+> **メモ:** この例は [GitHub でも公開しています](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (または、[動くデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)もあります。)
 
 ## アクティブ学習: 単純なカレンダー
 

@@ -2,44 +2,60 @@
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 ---
-{{JSRef("Global_Objects", "Math")}}
 
-**`Math.abs(x)`** 函数返回指定数字 “x“ 的绝对值。如下：
+{{JSRef}}
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.abs</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>≥</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&#x3C;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(x)}} = {|x|} = \begin{cases} x &#x26; \text{if} \quad x \geq 0 \\ -x &#x26; \text{if} \quad x &#x3C; 0 \end{cases}</annotation></semantics></math>
+**`Math.abs(x)`** 函数返回一个数字的绝对值。
+
+{{EmbedInteractiveExample("pages/js/math-abs.html")}}
 
 ## 语法
 
-```plain
-Math.abs(x);
+```js-nolint
+Math.abs(x)
 ```
 
 ### 参数
 
 - `x`
-  - : 一个数值
+  - : 一个数字。
 
-## 说明
+### 返回值
 
-由于 `Math.abs()` 是 `Math` 中的一个静态方法，你应该通过 `Math.abs()` 调用。（Math 不是构造器）
+`x` 的绝对值。如果 `x` 是负数（包括 `-0`），则返回 `-x`。否则，返回 `x`。
+
+## 描述
+
+由于 `abs()` 是 `Math` 中的一个静态方法，所以你应该通过 `Math.abs()` 调用，而不是作为你创建的 `Math` 对象的方法（`Math` 不是构造器）。
 
 ## 示例
 
-### Math.abs() 函数的行为
-
-传入一个非数字形式的字符串或者 {{jsxref("undefined")}}/empty 变量，将返回 {{jsxref("NaN")}}。传入 {{jsxref("null")}} 将返回 0。
+### 使用 Math.abs()
 
 ```js
-Math.abs('-1');     // 1
-Math.abs(-2);       // 2
-Math.abs(null);     // 0
-Math.abs('');       // 0
-Math.abs([]);       // 0
-Math.abs([2]);      // 2
-Math.abs([1,2]);    // NaN
-Math.abs({});       // NaN
-Math.abs('string'); // NaN
-Math.abs();         // NaN
+Math.abs(-Infinity); // Infinity
+Math.abs(-1); // 1
+Math.abs(-0); // 0
+Math.abs(0); // 0
+Math.abs(1); // 1
+Math.abs(Infinity); // Infinity
+```
+
+### 强制转换参数
+
+`Math.abs()` 将其参数强制转换为数字。无法强制转换的值将变成 `NaN`，使 `Math.abs()` 也返回 `NaN`。
+
+```js
+Math.abs("-1"); // 1
+Math.abs(-2); // 2
+Math.abs(null); // 0
+Math.abs(""); // 0
+Math.abs([]); // 0
+Math.abs([2]); // 2
+Math.abs([1, 2]); // NaN
+Math.abs({}); // NaN
+Math.abs("string"); // NaN
+Math.abs(); // NaN
 ```
 
 ## 规范
@@ -50,9 +66,10 @@ Math.abs();         // NaN
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}
 - {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

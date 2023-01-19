@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/Pointer_events/Pinch_zoom_gestures
 original_slug: Web/API/Pointer_events/gestes_pincer_zoom
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 Ajouter la gestion des _gestes_ à une application peut améliorer de manière significative l'expérience utilisateur. Il existe de nombreux types de gestes, du simple geste _swipe_ (balayage de l'écran) aux gestes plus complexes avec plusieurs doigts comme le _twist_ (rotation), où les points de contact (dits _pointeurs_) bougent dans des directions différentes.
@@ -18,7 +19,7 @@ Cet exemple montre comment détecter les gestes de _pinch/zoom_ (pincer/zoomer),
 
 ## Exemple
 
-Dans cet exemple, on utilise les {{domxref("Pointer_events","événement de pointeur")}} pour détecter simultanément plusieurs appareils de pointage quel qu'en soit le type, comme les doigts, la souris, et le stylet. Le geste de pincer (zoomer), qui consiste à déplacer deux pointeurs plus près l'un vers l'autre, change la couleur d'arrière-plan de l'élément cible en  `lightblue`. Le geste d'étirer (dézoomer), qui consiste à déplacer deux pointeur plus loin l'un de l'autre, change la couleur d'arrière-plan de l'élément cible en `pink`.
+Dans cet exemple, on utilise les {{domxref("Pointer_events","événement de pointeur")}} pour détecter simultanément plusieurs appareils de pointage quel qu'en soit le type, comme les doigts, la souris, et le stylet. Le geste de pincer (zoomer), qui consiste à déplacer deux pointeurs plus près l'un vers l'autre, change la couleur d'arrière-plan de l'élément cible en `lightblue`. Le geste d'étirer (dézoomer), qui consiste à déplacer deux pointeur plus loin l'un de l'autre, change la couleur d'arrière-plan de l'élément cible en `pink`.
 
 ### Définir la cible du toucher
 
@@ -49,7 +50,7 @@ var prevDiff = -1;
 
 ### Enregistrer les gestionnaires d'événement
 
-Les gestionnaires d'événement sont enregistrés pour les événements de pointeur suivants: {{event("pointerdown")}}, {{event("pointermove")}} et {{event("pointerup")}}. Le gestionnaire pour {{event("pointerup")}} est utilisé pour les événements {{event("pointercancel")}}, {{event("pointerout")}} et {{event("pointerleave")}} puisque ces quatre événements ont la même sémantique dans cette application.
+Les gestionnaires d'événement sont enregistrés pour les événements de pointeur suivants: [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event), [`pointermove`](/fr/docs/Web/API/Element/pointermove_event) et [`pointerup`](/fr/docs/Web/API/Element/pointerup_event). Le gestionnaire pour [`pointerup`](/fr/docs/Web/API/Element/pointerup_event) est utilisé pour les événements [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event), [`pointerout`](/fr/docs/Web/API/Element/pointerout_event) et [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event) puisque ces quatre événements ont la même sémantique dans cette application.
 
 ```js
 function init() {
@@ -69,7 +70,7 @@ function init() {
 
 ### Pointer down
 
-L'événement {{event("pointerdown")}} est déclenché quand un pointeur (souris, stylo/stylet ou point de contact sur un écran tactile) entre en contact avec la _surface de contact_. Dans cette application, l'état de l'événement doit être mis en cache dans le cas où il fait partie d'un geste à deux pointeurs pour pincer/zoomer.
+L'événement [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event) est déclenché quand un pointeur (souris, stylo/stylet ou point de contact sur un écran tactile) entre en contact avec la _surface de contact_. Dans cette application, l'état de l'événement doit être mis en cache dans le cas où il fait partie d'un geste à deux pointeurs pour pincer/zoomer.
 
 ```js
 function pointerdown_handler(ev) {
@@ -82,7 +83,7 @@ function pointerdown_handler(ev) {
 
 ### Pointer move
 
-Le gestionnaire d'événement {{event("pointermove")}} détecte si un utilisateur est en train d'effectuer le geste de pincer/zoomer. Si deux pointeurs sont utilisés, et que la distance entre les pointeurs augmente (ce qui signifie qu'on étire ou dézoome), la couleur d'arrière-plan est changée en `pink`, et si la distance entre les pointeurs diminue (ce qui signifie qu'on pince ou dézoome), la couleur d'arrière-plan est changée en `lightblue`. Dans une application plus sophistiquée, le pincement ou l'étirement pourrait être utilisé pour appliquer une sémantique spécifique à l'application.
+Le gestionnaire d'événement [`pointermove`](/fr/docs/Web/API/Element/pointermove_event) détecte si un utilisateur est en train d'effectuer le geste de pincer/zoomer. Si deux pointeurs sont utilisés, et que la distance entre les pointeurs augmente (ce qui signifie qu'on étire ou dézoome), la couleur d'arrière-plan est changée en `pink`, et si la distance entre les pointeurs diminue (ce qui signifie qu'on pince ou dézoome), la couleur d'arrière-plan est changée en `lightblue`. Dans une application plus sophistiquée, le pincement ou l'étirement pourrait être utilisé pour appliquer une sémantique spécifique à l'application.
 
 Quand cet événement est traité, la bordure de la cible est définie à `dashed` pour fournir une indication visuelle claire que l'élément a reçu un événement de déplacement.
 
@@ -133,9 +134,9 @@ function pointermove_handler(ev) {
 
 ### Pointer up
 
-L'événement {{event("pointerup")}} est déclenché quand le pointeur est levé de la _surface de contact_. Quand cela arrive, l'événement est retiré du cache et la couleur d'arrière-plan et bordure de la cible sont rétablies à leur valeur d'origine.
+L'événement [`pointerup`](/fr/docs/Web/API/Element/pointerup_event) est déclenché quand le pointeur est levé de la _surface de contact_. Quand cela arrive, l'événement est retiré du cache et la couleur d'arrière-plan et bordure de la cible sont rétablies à leur valeur d'origine.
 
-Dans cette application, ce gestionnaire est également utilisé pour les événements {{event("pointercancel")}}, {{event("pointerleave")}} et {{event("pointerout")}}.
+Dans cette application, ce gestionnaire est également utilisé pour les événements [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event), [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event) et [`pointerout`](/fr/docs/Web/API/Element/pointerout_event).
 
 ```js
 function pointerup_handler(ev) {

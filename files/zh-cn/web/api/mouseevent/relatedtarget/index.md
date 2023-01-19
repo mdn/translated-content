@@ -2,18 +2,20 @@
 title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
 ---
-{{APIRef("DOM Events")}}只读属性**`MouseEvent.relatedTarget`** 是鼠标事件的次要目标（如果存在），它包括：
+
+{{APIRef("DOM Events")}}
+
+只读属性 **`MouseEvent.relatedTarget`** 是鼠标事件的次要目标（如果存在），它包括：
 
 | 事件名称                         | `target`                                          | `relatedTarget`                                   |
 | -------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| {{Event("focusin")}}     | {{domxref("EventTarget")}} 获取焦点     | {{domxref("EventTarget")}} 失去焦点     |
-| {{Event("focusout")}}     | {{domxref("EventTarget")}} 失去焦点     | The {{domxref("EventTarget")}} 获取焦点 |
-| {{Event("mouseenter")}} | 指针设备进入{{domxref("EventTarget")}}  | 指针设备离开{{domxref("EventTarget")}}  |
-| {{Event("mouseleave")}} | 指针设备离开 {{domxref("EventTarget")}} | 指针设备进入 {{domxref("EventTarget")}} |
-| {{Event("mouseout")}}     | 指针设备离开 {{domxref("EventTarget")}} | The {{domxref("EventTarget")}}          |
-| {{Event("mouseover")}}     | 指针设备进入 {{domxref("EventTarget")}} | 指针设备离开 {{domxref("EventTarget")}} |
-| {{Event("dragenter")}}     | 指针设备进入 {{domxref("EventTarget")}} | 指针设备离开 {{domxref("EventTarget")}} |
-| {{Event("dragexit")}}     | 指针设备离开 {{domxref("EventTarget")}} | 指针设备进入 {{domxref("EventTarget")}} |
+| [`focusin`](/zh-CN/docs/Web/API/Element/focusin_event)     | {{domxref("EventTarget")}} 获取焦点     | {{domxref("EventTarget")}} 失去焦点     |
+| [`focusout`](/zh-CN/docs/Web/API/Element/focusout_event)     | {{domxref("EventTarget")}} 失去焦点     | The {{domxref("EventTarget")}} 获取焦点 |
+| [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event) | 指针设备进入{{domxref("EventTarget")}}  | 指针设备离开{{domxref("EventTarget")}}  |
+| [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event) | 指针设备离开 {{domxref("EventTarget")}} | 指针设备进入 {{domxref("EventTarget")}} |
+| [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event)     | 指针设备离开 {{domxref("EventTarget")}} | The {{domxref("EventTarget")}}          |
+| [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)     | 指针设备进入 {{domxref("EventTarget")}} | 指针设备离开 {{domxref("EventTarget")}} |
+| [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)     | 指针设备进入 {{domxref("EventTarget")}} | 指针设备离开 {{domxref("EventTarget")}} |
 
 如果事件没有次要目标，`relatedTarget` 将返回 `null`.
 
@@ -93,9 +95,9 @@ function overListener(event) {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", 700, 280)}}
+{{EmbedLiveSample("示例", 700, 280)}}
 
 ## 规范
 
@@ -103,9 +105,9 @@ function overListener(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.relatedTarget")}}
+{{Compat}}
 
-## 另见
+## 参见
 
 - {{ domxref("MouseEvent") }}
 - [Comparison of Event Targets](/zh-CN/docs/DOM/event/Comparison_of_Event_Targets)

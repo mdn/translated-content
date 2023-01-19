@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-style
 ---
+
 {{CSSRef}}
 
 Le descripteur **`font-style`**, associé à [la règle @](/fr/docs/Web/CSS/At-rule) {{cssxref("@font-face")}}, permet d'indiquer le style de police pour la police définie via la règle.
@@ -36,9 +37,13 @@ font-style: oblique 30deg 50deg;
 - `oblique` avec un intervalle d'angle
   - : Utilise une fonte comme `oblique` et indique un intervalle d'angles possibles pour la pente du texte. On notera que l'intervalle est uniquement pris en compte pour la valeur `oblique`, aucune autre valeur n'est autorisée après `normal` ou `italic`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -72,13 +77,8 @@ En revanche, si on dispose d'une vraie version italique, on peut l'indiquer via 
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires                                                                          |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Fonts', '#font-prop-desc', 'font-style')}} | {{Spec2('CSS4 Fonts')}} | Ajoute la possibilité d'utiliser le mot-clé `oblique` suivi par une valeur angulaire. |
-| {{SpecName('CSS3 Fonts', '#font-prop-desc', 'font-style')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale.                                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-style")}}
+{{Compat}}

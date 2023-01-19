@@ -2,6 +2,7 @@
 title: 'ReferenceError: deprecated caller or arguments usage'
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)独自の例外 "deprecated caller or arguments usage" は、非推奨の {{jsxref("Function.caller")}} または {{jsxref("Function.arguments")}} プロパティが使用されたときに発生します。

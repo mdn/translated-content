@@ -3,6 +3,7 @@ title: 'Document: drop イベント'
 slug: conflicting/Web/API/HTMLElement/drop_event_21b7ebf04561093fe90276329e9bddff
 original_slug: Web/API/Document/drop_event
 ---
+
 {{APIRef}}
 
 **`drop`** イベントは、要素または選択されたテキストが、妥当なドロップターゲットにドロップされたときに発生します。

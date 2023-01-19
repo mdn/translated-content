@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/img-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
 browser-compat: http.headers.csp.Content-Security-Policy.img-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`img-src`** spécifie les sources valides d'images et d'icônes.

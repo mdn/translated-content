@@ -2,6 +2,7 @@
 title: Selection.setBaseAndExtent()
 slug: Web/API/Selection/setBaseAndExtent
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 **`setBaseAndExtent()`** 方法是 {{domxref("Selection")}} 接口用来选中并设置在两个特定的 DOM 节点中文本选中的范围，并且选中的任何内容都位于两个节点之间。
@@ -93,7 +94,7 @@ button.onclick = function() {
 
 在下面在线运行实例，设置不同的偏移值去观察它怎么去影响选中内容的。
 
-{{ EmbedLiveSample('Examples', '100%', 370) }}
+{{ EmbedLiveSample('示例', '100%', 370) }}
 
 > **备注：** 实例在这里 [example on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
 
@@ -103,7 +104,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.setBaseAndExtent")}}
+{{Compat}}
 
 ## 相关链接
 

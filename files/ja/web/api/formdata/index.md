@@ -2,13 +2,14 @@
 title: FormData
 slug: Web/API/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData`** インターフェイスは、{{domxref("XMLHttpRequest.send()")}} メソッドを用いることで簡単に送信が可能な、フォームフィールドおよびそれらの値から表現されるキーと値のペアのセットを簡単に構築する手段を提供します。これは、エンコーディングタイプを `"multipart/form-data"` に設定した場合にフォームが使用するものと同じ形式を使用します。
 
 `FormData` を実装したオブジェクトは、{{domxref('FormData.entries()', 'entries()')}} の代わりに {{jsxref("Statements/for...of", "for...of")}} 構造の内部で直接使用できます。`for (var p of myFormData)` は `for (var p of myFormData.entries())` と等価です。
 
-> **Note:** **注記**: この機能は [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+> **メモ:** この機能は [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
 ## コンストラクタ
 
@@ -38,9 +39,7 @@ slug: Web/API/FormData
 
 ## 仕様
 
-| 仕様書                                                                               | 策定状況                             | コメント                     |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------- |
-| {{SpecName('XMLHttpRequest','#interface-formdata','FormData')}} | {{Spec2('XMLHttpRequest')}} | XHR 仕様書で FormData を定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

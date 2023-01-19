@@ -2,9 +2,10 @@
 title: TouchEvent.targetTouches
 slug: Web/API/TouchEvent/targetTouches
 ---
+
 {{ APIRef("Touch Events") }}
 
-**`targetTouches`** 是一个只读的 {{ domxref("TouchList") }} 列表，包含仍与触摸面接触的所有触摸点的 {{ domxref("Touch") }} 对象。{{event("touchstart")}}事件触发在哪个{{ domxref("element") }}内，它就是当前目标元素。
+**`targetTouches`** 是一个只读的 {{ domxref("TouchList") }} 列表，包含仍与触摸面接触的所有触摸点的 {{ domxref("Touch") }} 对象。[`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event)事件触发在哪个{{ domxref("element") }}内，它就是当前目标元素。
 
 ## 语法
 
@@ -15,7 +16,7 @@ var touches = touchEvent.targetTouches;
 ### 返回值
 
 - `touches`
-  - : 一个 {{ domxref("TouchList") }}，包含仍与触摸面接触的所有触摸点的 {{ domxref("Touch") }} 对象，{{event("touchstart")}}事件触发在哪个{{ domxref("element") }}内，它就是当前目标元素。
+  - : 一个 {{ domxref("TouchList") }}，包含仍与触摸面接触的所有触摸点的 {{ domxref("Touch") }} 对象，[`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event)事件触发在哪个{{ domxref("element") }}内，它就是当前目标元素。
 
 ## 例子
 
@@ -37,4 +38,4 @@ function touches_in_target(ev) {
 
 ## 浏览器兼容性
 
-{{Compat("api.TouchEvent.targetTouches")}}
+{{Compat}}

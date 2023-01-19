@@ -2,6 +2,7 @@
 title: ':disabled'
 slug: Web/CSS/:disabled
 ---
+
 {{ CSSRef() }}
 
 `:disabled` CSS [伪类](/zh-CN/CSS/Pseudo-classes)表示任何被禁用的元素。如果一个元素不能被激活（如选择、点击或接受文本输入）或获取焦点，则该元素处于被禁用状态。元素还有一个启用状态（enabled state），在启用状态下，元素可以被激活或获取焦点。
@@ -19,7 +20,7 @@ input:disabled {
 
 ## 示例
 
-这个例子显示基本的购物表单。通过使用 [JavaScript](/zh-CN/docs/Web/JavaScript) {{event("change")}} 事件让用户启用/禁用付款字段。
+这个例子显示基本的购物表单。通过使用 [JavaScript](/zh-CN/docs/Web/JavaScript) [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件让用户启用/禁用付款字段。
 
 ### HTML
 
@@ -82,7 +83,7 @@ function toggleBilling() {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.disabled")}}
+{{Compat}}
 
 ## 相关链接
 

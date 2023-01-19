@@ -9,6 +9,7 @@ tags:
   - évènements
 translation_of: Web/API/Event/bubbles
 ---
+
 {{ ApiRef("DOM") }}
 
 Indique si l'événement donné se propage à travers le DOM ou non.
@@ -39,7 +40,7 @@ function goInput(e) {
 }
 ```
 
-> **Note :** Certains évènements seulement peuvent se propager. Ceux dont cette propriété est définie à  `true`. Vous pouvez utiliser cette propriété pour vérifier si un évènement est autorisé à se propager ou non.
+> **Note :** Certains évènements seulement peuvent se propager. Ceux dont cette propriété est définie à `true`. Vous pouvez utiliser cette propriété pour vérifier si un évènement est autorisé à se propager ou non.
 
 ## Spécifications
 

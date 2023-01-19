@@ -2,6 +2,7 @@
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## 概述
@@ -27,7 +28,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 - `NEGATIVE_INFINITY` 除以 `NEGATIVE_INFINITY` 或 `POSITIVE_INFINITY` 是 `NaN`。
 - 任何数除以 `NEGATIVE_INFINITY` 为 0。
 
-为了成功返回一个有限值，你可能会使用 `Number.NEGATIVE_INFINITY` 属性来判断是否显示一个条件错误 。然而 {{jsxref("Global_Objects/isFinite", "isFinite")}} 方法更适合这种情况。
+为了成功返回一个有限值，你可能会使用 `Number.NEGATIVE_INFINITY` 属性来判断是否显示一个条件错误。然而 {{jsxref("Global_Objects/isFinite", "isFinite")}} 方法更适合这种情况。
 
 ## 示例
 

@@ -2,6 +2,7 @@
 title: box-sizing
 slug: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}
 
 **`box-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全体の幅と高さをどのように計算するのかを設定します。
@@ -17,7 +18,7 @@ slug: Web/CSS/box-sizing
 
   `box-sizing: border-box` はブラウザーが {{htmlelement("table")}}, {{htmlelement("select")}}, {{htmlelement("button")}} の各要素、また {{htmlelement("input")}} 要素のうち type が `{{htmlelement("input/radio", "radio")}}`, `{{htmlelement("input/checkbox", "checkbox")}}`, `{{htmlelement("input/reset", "reset")}}`, `{{htmlelement("input/button", "button")}}`, `{{htmlelement("input/submit", "submit")}}`, `{{htmlelement("input/color", "color")}}`, `{{htmlelement("input/search", "search")}}` であるものに対して使用する既定のスタイル付けです。
 
-> **Note:** 要素をレイアウトする際には、 `box-sizing` を `border-box` に設定しておくと便利です。これにより、要素の寸法の扱いがとても簡単になり、一般的にコンテンツをレイアウトする際につまずく可能性のあるいくつかの落とし穴を排除することができます。 一方、 `position: relative` または `position: absolute` を使用する場合、 `box-sizing: content-box` を使用することで、コンテンツに対する相対的な位置の値を設定することができ、境界やパディングの幅の変更に依存しなくなり、これが望ましい場合もあります。
+> **メモ:** 要素をレイアウトする際には、 `box-sizing` を `border-box` に設定しておくと便利です。これにより、要素の寸法の扱いがとても簡単になり、一般的にコンテンツをレイアウトする際につまずく可能性のあるいくつかの落とし穴を排除することができます。 一方、 `position: relative` または `position: absolute` を使用する場合、 `box-sizing: content-box` を使用することで、コンテンツに対する相対的な位置の値を設定することができ、境界やパディングの幅の変更に依存しなくなり、これが望ましい場合もあります。
 
 ## 構文
 

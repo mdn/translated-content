@@ -2,6 +2,7 @@
 title: URLSearchParams.forEach()
 slug: Web/API/URLSearchParams/forEach
 ---
+
 {{APIRef("URL API")}}
 
 URLSearchParams 的实例对象上的方法 forEach 允许通过回调函数来遍历 URLSearchParams 实例对象上的键值对
@@ -58,7 +59,7 @@ undefined  // 即没有返回值
 
 ## Browser compatibility
 
-{{Compat("api.URLSearchParams.forEach")}}
+{{Compat}}
 
 ## See also
 

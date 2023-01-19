@@ -2,6 +2,7 @@
 title: <xsl:when>
 slug: Web/XSLT/Element/when
 ---
+
 {{ XsltRef() }}
 
 `<xsl:when>` 要素は `<xsl:choose>` 要素内に常に表示され、case 文のように動作します。

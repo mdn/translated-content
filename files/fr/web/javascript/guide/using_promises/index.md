@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Using_promises
 original_slug: Web/JavaScript/Guide/Utiliser_les_promesses
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}
 
 Une promesse est un objet ({{jsxref("Promise")}}) qui représente la complétion ou l'échec d'une opération asynchrone. La plupart du temps, on « consomme » des promesses et c'est donc ce que nous verrons dans la première partie de ce guide pour ensuite expliquer comment les créer.
@@ -241,13 +242,13 @@ window.addEventListener("unhandledrejection", event => {
 
 ## Envelopper les _callbacks_ des API
 
-Il est possible de créer un objet  {{jsxref("Promise")}} grâce à son constructeur. Et même si, idéalement, cela ne devrait pas être nécessaire, certaines API fonctionnent toujours avec des _callbacks_ passés en arguments. C'est notamment le cas de la méthode  {{domxref("WindowTimers.setTimeout", "setTimeout()")}} :
+Il est possible de créer un objet {{jsxref("Promise")}} grâce à son constructeur. Et même si, idéalement, cela ne devrait pas être nécessaire, certaines API fonctionnent toujours avec des _callbacks_ passés en arguments. C'est notamment le cas de la méthode {{domxref("WindowTimers.setTimeout", "setTimeout()")}} :
 
 ```js
 setTimeout(() => saySomething("10 seconds passed"), 10 * 1000);
 ```
 
-Si on mélange des _callbacks_ et des promesses, cela sera problématique. Si  `saySomething` échoue ou contient des erreurs, rien n'interceptera l'erreur.
+Si on mélange des _callbacks_ et des promesses, cela sera problématique. Si `saySomething` échoue ou contient des erreurs, rien n'interceptera l'erreur.
 
 Pour ces fonctions, la meilleure pratique consiste à les _envelopper_ dans des promesses au plus bas niveau possible et de ne plus les appeler directement :
 
@@ -280,7 +281,7 @@ Il est possible de construire une composition séquentielle de la façon suivant
 
 Dans ce fragment de code, on réduit un tableau de fonctions asynchrones en une chaîne de promesse équivalente à : `Promise.resolve().then(func1).then(func2);`
 
-On peut également accomplir cela avec une fonction de composition réutilisable  :
+On peut également accomplir cela avec une fonction de composition réutilisable :
 
 ```js
 const applyAsync = (acc, val) => acc.then(val);
@@ -312,7 +313,7 @@ Promise.resolve().then(() => console.log(2));
 console.log(1); // 1, 2
 ```
 
-En fait, la fonction passée à ` then``() ` est placée dans une file de micro-tâches qui sont exécutées lorsque cette file est vidée à la fin de la boucle d'évènements JavaScript :
+En fait, la fonction passée à `then()` est placée dans une file de micro-tâches qui sont exécutées lorsque cette file est vidée à la fin de la boucle d'évènements JavaScript :
 
 ```js
 var wait = ms => new Promise(resolve => setTimeout(resolve, ms));

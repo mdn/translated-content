@@ -2,6 +2,7 @@
 title: AudioDestinationNode.maxChannelCount
 slug: Web/API/AudioDestinationNode/maxChannelCount
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioDestinationNode") }}インターフェースの`maxchannelCount`プロパティは、`unsigned long`で表された物理的なデバイスが扱えるチャンネルの最大数です。
@@ -36,9 +37,7 @@ gainNode.connect(audioCtx.destination);
 
 ## 使用
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioDestinationNode-maxChannelCount', 'maxChannelCount')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

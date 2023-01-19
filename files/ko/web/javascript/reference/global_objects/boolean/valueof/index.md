@@ -1,14 +1,8 @@
 ---
 title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
-tags:
-  - Boolean
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 메서드는 {{jsxref("Boolean")}} 객체의 원시 값을 반환합니다.

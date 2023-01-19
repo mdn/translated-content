@@ -2,6 +2,7 @@
 title: '@规则'
 slug: Web/CSS/At-rule
 ---
+
 一个 **at-rule** 是一个[CSS 语句，](/zh-CN/CSS/Syntax#CSS_statements)以 at 符号开头， '`@`' (`U+0040 COMMERCIAL AT`), 后跟一个标识符，并包括直到下一个分号的所有内容， '`;`' (`U+003B SEMICOLON`), 或下一个 CSS 块，以先到者为准。
 
 下面是一些 @规则，由它们的标示符指定，每种规则都有不同的语法：
@@ -16,7 +17,7 @@ slug: Web/CSS/At-rule
   - {{ cssxref("@font-face") }}, 描述将下载的外部的字体。 {{ experimental_inline() }}
   - {{ cssxref("@keyframes") }}, 描述 CSS 动画的中间步骤 . {{ experimental_inline() }}
   - {{ cssxref("@supports") }}, 如果满足给定条件则条件规则组里的规则生效。 {{ experimental_inline() }}
-  - {{ cssxref("@document") }}, 如果文档样式表满足给定条件则条件规则组里的规则生效。 _(推延至 CSS Level 4 规范)_
+  - {{ cssxref("@document") }}, 如果文档样式表满足给定条件则条件规则组里的规则生效。_(推延至 CSS Level 4 规范)_
 
 ## 条件规则组
 

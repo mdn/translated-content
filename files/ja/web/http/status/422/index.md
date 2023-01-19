@@ -1,19 +1,13 @@
 ---
 title: 422 Unprocessable Entity
 slug: Web/HTTP/Status/422
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - WebDAV
-  - クライアントエラー
-  - リファレンス
-translation_of: Web/HTTP/Status/422
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) の **`422 Unprocessable Entity`** 応答状態コードは、サーバーが要求本文のコンテンツ型を理解でき、要求本文の構文が正しいものの、中に含まれている指示が処理できなかったことを表します。
 
-> **Warning:** **重要**: クライアントは修正なしにこの要求を繰り返すべきではありません。
+> **警告:** クライアントは修正なしにこの要求を繰り返すべきではありません。
 
 ## 状態
 

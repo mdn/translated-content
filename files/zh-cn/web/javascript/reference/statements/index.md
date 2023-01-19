@@ -2,6 +2,7 @@
 title: 语句和声明
 slug: Web/JavaScript/Reference/Statements
 ---
+
 {{jsSidebar("Statements")}}
 
 JavaScript 应用程序是由许多语法正确的语句组成的。单个语句可以跨多行。如果每个语句用分号隔开，那么多个语句可以在一行中出现。本页的内容并不是一个关键字，而是一组关键字。
@@ -21,7 +22,7 @@ JavaScript 应用程序是由许多语法正确的语句组成的。单个语句
 - {{jsxref("Statements/Empty", "Empty")}}
   - : 空语句用来表示没有语句的情况，尽管 JavaScript 语法期望有语句提供。
 - {{jsxref("Statements/if...else", "if...else")}}
-  - : 如果指定的条件是 true ，则执行相匹配的一个语句，若为 false，则执行另一个语句。
+  - : 如果指定的条件是 true，则执行相匹配的一个语句，若为 false，则执行另一个语句。
 - {{jsxref("Statements/switch", "switch")}}
   - : 计算表达式，将子句于表达式的值做匹配，执行与该值相关联的语句。
 - {{jsxref("Statements/throw", "throw")}}

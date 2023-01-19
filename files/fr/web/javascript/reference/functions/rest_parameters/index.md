@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 original_slug: Web/JavaScript/Reference/Fonctions/paramètres_du_reste
 ---
+
 {{jsSidebar("Functions")}}
 
 Cette syntaxe permet de représenter un nombre indéfini d'arguments sous forme d'un tableau.
@@ -192,14 +193,11 @@ console.log(trierArguments(5, 3, 7, 1)); // [1, 3, 5, 7]
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.rest_parameters")}}
+{{Compat}}
 
 ## Voir aussi
 

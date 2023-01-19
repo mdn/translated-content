@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
 original_slug: Web/CSS/CSS_Columns/Gérer_rupture_contenu_entre_colonnes
 ---
+
 {{CSSRef}}
 
 Le contenu est coupé entre les colonnes d'une disposition multi-colonnes de la même façon qu'il est coupé entre chaque page d'un média paginé. Dans ces deux contextes, la façon dont on contrôle l'emplacement et la coupure se paramètre grâce aux propriétés décrites dans le module de spécification _CSS Fragmentation_. Dans ce guide, nous verrons comment fonctionne la fragmentation en multi-colonnes.
@@ -52,7 +53,7 @@ Avec l'exemple suivant, on force une rupture avant chaque élément de titre `h2
 
 ## Les ruptures entre les lignes
 
-On peut aussi utiliser les propriétés {{cssxref("orphans")}} et {{cssxref("widows")}}. La propriété  `orphans` contrôle le nombre de lignes qui restent à la fin d'un fragment et la propriété `widows` contrôle le nombre de lignes qui restent au début d'un fragment.
+On peut aussi utiliser les propriétés {{cssxref("orphans")}} et {{cssxref("widows")}}. La propriété `orphans` contrôle le nombre de lignes qui restent à la fin d'un fragment et la propriété `widows` contrôle le nombre de lignes qui restent au début d'un fragment.
 
 Les propriétés `orphans` et `widows` prennent un entier comme valeur et qui indique le nombre de lignes à avoir à la fin ou au début d'un fragment. On notera que ces propriétés ne fonctionnent qu'à l'intérieur d'un conteneur de bloc (un paragraphe par exemple). Si le bloc contient un nombre de lignes inférieur au nombre précisé pour la propriété, toutes les lignes resteront groupées ensemble.
 

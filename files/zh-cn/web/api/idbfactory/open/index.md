@@ -2,6 +2,7 @@
 title: IDBFactory.open
 slug: Web/API/IDBFactory/open
 ---
+
 {{APIRef("IDBFactory")}}
 
 **`IDBFactory.open`** 方法用于[打开一个数据库连接](/zh-CN/docs/IndexedDB#gloss_database_connection)。本方法立即返回一个 {{domxref("IDBOpenDBRequest")}} 对象，但打开数据库的操作是异步执行的。

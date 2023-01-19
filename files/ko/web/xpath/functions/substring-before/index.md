@@ -1,9 +1,6 @@
 ---
 title: substring-before
 slug: Web/XPath/Functions/substring-before
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/substring-before
 ---
 {{ XsltRef() }}
 
@@ -17,13 +14,13 @@ substring-before(haystack ,needle )
 
 ### 인수
 
-- _`haystack`_
+- `haystack`
   - : 평가할 문자열. 이 문자열의 부분이 반환됩니다.
-- _`needle`_
+- `needle`
   - : 찾을 부분 문자열.
-    _`haystack`_
+    `haystack`
     에서
-    _`needle`_
+    `needle`
     의 첫 출현 앞의 문자열이 반환됩니다.
 
 ### 반환

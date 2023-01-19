@@ -1,16 +1,8 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-browser-compat: html.global_attributes.itemref
-translation_of: Web/HTML/Global_attributes/itemref
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope) 属性を持つ要素の子孫でないプロパティは、[グローバル属性](/ja/docs/Web/HTML/Global_attributes) **`itemref`** を使用してアイテムに関連付けることができます。
@@ -19,7 +11,7 @@ translation_of: Web/HTML/Global_attributes/itemref
 
 `itemref` 属性は `itemscope` 属性が指定された要素のみで指定することができます。
 
-> **Note:** `itemref` 属性は、マイクロデータのデータモデルの一部ではありません。注釈づけるデータが扱いやすいツリー構造に従っていないページにおいて、注釈を追加することを助けるための単なる構文構造です。例えば、テーブル内のデータをマークアップするために、セル内のプロパティを維持しながらそれぞれの列に別々なアイテムを定義することができます。
+> **メモ:** `itemref` 属性は、マイクロデータのデータモデルの一部ではありません。注釈づけるデータが扱いやすいツリー構造に従っていないページにおいて、注釈を追加することを助けるための単なる構文構造です。例えば、テーブル内のデータをマークアップするために、セル内のプロパティを維持しながらそれぞれの列に別々なアイテムを定義することができます。
 
 ## 例
 

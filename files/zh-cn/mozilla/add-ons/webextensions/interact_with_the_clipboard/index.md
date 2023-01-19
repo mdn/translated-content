@@ -2,6 +2,7 @@
 title: Interact with the clipboard
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 ---
+
 {{AddonSidebar}}
 
 有两种方式可以让浏览器扩展与系统剪贴板交互：{{domxref("Document.execCommand()")}} 方法以及现代的异步的 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API).
@@ -126,7 +127,7 @@ function updateClipboard(newClip) {
 
 ### 使用 execCommand()
 
-首先，你需要为扩展申请 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 。即便你在用户生成的事件处理程序 ( 例如 {{event("click")}} 或 {{event("keypress")}} ) 中使用 "paste" 指令也是如此。
+首先，你需要为扩展申请 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 。即便你在用户生成的事件处理程序 ( 例如 [`click`](/zh-CN/docs/Web/API/Element/click_event) 或 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) ) 中使用 "paste" 指令也是如此。
 
 假设你的 HTML 页面内容如下：
 

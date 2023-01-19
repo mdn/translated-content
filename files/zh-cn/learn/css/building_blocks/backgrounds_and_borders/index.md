@@ -2,6 +2,7 @@
 title: 背景与边框
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
 在这节课中，我们来看看，使用 CSS 背景和边框来做一些，具有一些创造性的事情。渐变、背景图像和圆角，背景和边框的巧妙运用是 CSS 中许多样式问题的答案。

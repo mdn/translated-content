@@ -3,6 +3,7 @@ title: CSS 如何运行
 slug: Learn/CSS/First_steps/How_CSS_works
 original_slug: Learn/CSS/First_steps/CSS如何运行
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
@@ -134,7 +135,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Skipping_example', '100%', 200)}}
+{{EmbedLiveSample('当浏览器遇到无法解析的 CSS 代码会发生什么', '100%', 200)}}
 
 这样做好处多多，代表着你使用最新的 CSS 优化的过程中浏览器遇到无法解析的规则也不会报错。当你为一个元素指定多个 CSS 样式的时候，浏览器会加载样式表中的最后的 CSS 代码进行渲染（样式表，优先级等请读者自行了解），也正因为如此，你可以为同一个元素指定多个 CSS 样式来解决有些浏览器不兼容新特性的问题（比如指定两个`width`）。
 

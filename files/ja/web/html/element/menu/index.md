@@ -1,31 +1,9 @@
 ---
 title: <menu>
 slug: Web/HTML/Element/menu
-tags:
-  - Element
-  - Experimental
-  - HTML
-  - HTML interactive elements
-  - Navigation
-  - Reference
-  - Site Navigation
-  - UI
-  - UX
-  - User Interface
-  - User experience
-  - Web
-  - menu
-  - menus
-  - HTML 対話型コンテンツ
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - サイトナビゲーション
-  - メニュー
-  - ユーザーインターフェイス
-  - 要素
-translation_of: Web/HTML/Element/menu
 ---
-{{HTMLRef}}{{SeeCompatTable}}
+
+{{HTMLSidebar}}{{SeeCompatTable}}
 
 **HTML の `<menu>` 要素**は、ユーザーが実行またはアクティブ化できるコマンドのグループを表します。これは画面の上部に現れるリストメニューと、ボタンを押したときにその下部付近に現れるような[コンテキストメニュー](/ja/docs/Web/HTML/Element/menu#context_menu)の両方を含みます。
 
@@ -178,9 +156,9 @@ div {
 
 ### メニューボタン
 
-> **Warning:** メニューボタンを実装しているブラウザーはまだ知られていません。 `<menu>` 要素の {{HTMLAttrxRef("type", "menu")}} 属性は廃止されました。
+> **警告:** メニューボタンを実装しているブラウザーはまだ知られていません。 `<menu>` 要素の {{HTMLAttrxRef("type", "menu")}} 属性は廃止されました。
 
-> **Warning:** {{HTMLElement("menuitem")}} 要素は廃止されました。
+> **警告:** {{HTMLElement("menuitem")}} 要素は廃止されました。
 
 #### HTML
 
@@ -204,7 +182,7 @@ div {
 
 ### ツールバー
 
-> **Warning:** ツールバーメニューを実装しているブラウザーはまだ知られていません。
+> **警告:** ツールバーメニューを実装しているブラウザーはまだ知られていません。
 
 #### HTML
 
@@ -236,10 +214,7 @@ div {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML WHATWG")}} | 最新のスナップショット {{SpecName("HTML5.2")}} から変更なし |
-| {{SpecName("HTML5.1", "interactive-elements.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML5.1")}}     |                                                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

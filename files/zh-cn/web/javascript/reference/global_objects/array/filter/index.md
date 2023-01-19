@@ -2,6 +2,7 @@
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
+
 {{JSRef}}
 
 **`filter()`** 方法创建给定数组一部分的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)，其包含通过所提供函数实现的测试的所有元素。
@@ -63,7 +64,7 @@ filter(function(element, index, array) { /* … */ }, thisArg)
 
 `filter()` 遍历的元素范围在第一次调用 `callbackFn` 之前就已经确定了。修改已经访问过的或在确定的范围之外创建的元素，将不会被 `callbackFn` 访问。如果以相同的方式删除数组中的现有元素，则不会访问它们。
 
-> **警告：** 在上一段中描述的并发修改通常会导致难以理解的代码，通常应该避免(特殊情况除外)。
+> **警告：** 在上一段中描述的并发修改通常会导致难以理解的代码，通常应该避免 (特殊情况除外)。
 
 ## 示例
 

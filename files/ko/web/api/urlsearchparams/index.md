@@ -1,17 +1,8 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Landing
-  - Reference
-  - URL API
-  - URLSearchParams
-  - Polyfill
-translation_of: Web/API/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 **`URLSearchParams`** 인터페이스는 URL의 쿼리 문자열을 대상으로 작업할 수 있는 유틸리티 메서드를 정의합니다.
@@ -28,7 +19,7 @@ for (const [key, value] of mySearchParams.entries()) {}
 ## 생성자
 
 - {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
-  - :  `URLSearchParams` 객체 인스턴스를 반환합니다.
+  - : `URLSearchParams` 객체 인스턴스를 반환합니다.
 
 ## 메서드
 

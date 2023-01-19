@@ -2,6 +2,7 @@
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetLeft`** 是一个只读属性，返回当前元素*左上角*相对于 {{domxref("HTMLElement.offsetParent")}} 节点的左边界偏移的像素值。
@@ -31,7 +32,7 @@ if (tOLeft > 5) {
 
 这个例子展示了蓝色边框的 div 包含一个长的句子，红色的盒子是一个可以表示包含这个长句子的 span 标签的边界。
 
-![Image:offsetLeft.jpg](/@api/deki/files/790/=OffsetLeft.jpg)
+![Image:offsetLeft.jpg](offsetleft.jpg)
 
 ```plain
 <div style="width: 300px; border-color:blue;
@@ -65,7 +66,7 @@ if (tOLeft > 5) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLElement.offsetLeft")}}
+{{Compat}}
 
 ## 相关链接
 

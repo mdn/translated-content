@@ -2,6 +2,7 @@
 title: <angle-percentage>
 slug: Web/CSS/angle-percentage
 ---
+
 {{CSSRef}}
 
 [CSS 数据类型](/zh-CN/docs/Web/CSS) **`<angle-percentage>`** 代表了一种既可以是 {{Cssxref("angle")}} ，也可以是{{Cssxref("percentage")}}的数据类型
@@ -20,4 +21,4 @@ slug: Web/CSS/angle-percentage
 
 ## 浏览器兼容性
 
-{{Compat("css.types.angle-percentage")}}
+{{Compat}}

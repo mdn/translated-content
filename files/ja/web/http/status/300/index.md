@@ -1,12 +1,8 @@
 ---
 title: 300 Multiple Choices
 slug: Web/HTTP/Status/300
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/300
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`300 Multiple Choices`** リダイレクト状態コードは、リクエストに対して複数のレスポンスがあることを示します。ユーザーエージェントやユーザーは、その内から一つを選択します。レスポンスを一つ選択する方法は標準化されていないため、このレスポンスコードはほとんど使われていません。

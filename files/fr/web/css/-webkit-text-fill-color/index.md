@@ -3,6 +3,7 @@ title: '-webkit-text-fill-color'
 slug: Web/CSS/-webkit-text-fill-color
 translation_of: Web/CSS/-webkit-text-fill-color
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-text-fill-color`** définit la couleur utilisée pour dessiner le contenu des lettres qui forment un texte. Si cette propriété n'est pas définie, c'est la valeur de la propriété {{cssxref("color")}} qui sera utilisée.
@@ -27,9 +28,13 @@ La propriété **`-webkit-text-fill-color`** définit la couleur utilisée pour 
 - `<color>`
   - : La couleur utilisée pour colorer les lettres du texte.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -55,16 +60,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                                                                   | État                                        | Commentaires                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------- |
-| {{SpecName('Compat', '#the-webkit-text-fill-color', '-webkit-text-fill-color')}}                                                                                                                                                    | {{Spec2('Compat')}}                    | Définition initiale dans un standard. |
-| [Référence CSS Safari -webkit-text-fill-color' dans ce document.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-fill-color) | Documentation non-officielle, non-standard. | Documentation initiale.               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-text-fill-color")}}
+{{Compat}}
 
 ## Voir aussi
 

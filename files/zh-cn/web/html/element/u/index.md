@@ -2,11 +2,12 @@
 title: <u>
 slug: Web/HTML/Element/u
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<u>` 元素（表意不清标注元素）**表示一个需要标注为非文本化（non-textual）的内联文本域。默认情况下渲染为一个实线下划线，可以用 CSS 替换。
 
-> **警告：** 此元素以前在旧版本的 HTML 中称为 “下划线” 元素，但有时仍会以这种方式被滥用。要为文本加下划线，您应该应用包含 CSS {{cssxref("text-decoration")}}属性设置为 `underline` 的样式。
+> **警告：** 此元素以前在旧版本的 HTML 中称为“下划线”元素，但有时仍会以这种方式被滥用。要为文本加下划线，您应该应用包含 CSS {{cssxref("text-decoration")}}属性设置为 `underline` 的样式。
 
 {{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
@@ -36,7 +37,7 @@ slug: Web/HTML/Element/u
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}} Gecko 1.9.2 (Firefox 4) 之前（包含）, Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}}  接口。</td>
+   <td>{{domxref("HTMLElement")}} Gecko 1.9.2 (Firefox 4) 之前（包含）, Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}} 接口。</td>
   </tr>
  </tbody>
 </table>
@@ -85,7 +86,7 @@ slug: Web/HTML/Element/u
 spelled word.</p>
 ```
 
-在 HTML 中，我们看到 `<u>` 使用了一个类 `spelling`，用于表示 “wrongly” 一词的拼写错误。
+在 HTML 中，我们看到 `<u>` 使用了一个类 `spelling`，用于表示“wrongly”一词的拼写错误。
 
 #### CSS
 
@@ -101,7 +102,7 @@ u.spelling {
 
 任何使用过今天比较流行的文字处理器的人都应该熟悉结果。
 
-{{EmbedLiveSample("Indicating_a_spelling_error", 650, 80)}}
+{{EmbedLiveSample("表示拼写错误", 650, 80)}}
 
 ### 避免使用 \<u>
 
@@ -113,7 +114,7 @@ u.spelling {
 
 ##### HTML
 
-```plain
+```html
 <span class="underline">Today's Special</span>
 <br>
 Chicken Noodle Soup With Carrots
@@ -121,7 +122,7 @@ Chicken Noodle Soup With Carrots
 
 ##### CSS
 
-```plain
+```css
 .underline {
   text-decoration: underline;
 }
@@ -129,7 +130,7 @@ Chicken Noodle Soup With Carrots
 
 ##### 结果
 
-{{EmbedLiveSample("Non-semantic_underlines", 650, 80)}}
+{{EmbedLiveSample("非语义下划线", 650, 80)}}
 
 #### 表示书名
 
@@ -137,17 +138,23 @@ Chicken Noodle Soup With Carrots
 
 ##### HTML
 
-```plain
+```html
 <p>The class read <cite>Moby Dick</cite> in the first term.</p>
 ```
 
 ##### 默认样式的结果
 
-{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}
+{{EmbedLiveSample("表示书名", 650, 80)}}
+
+##### 为 cite 元素添加样式
 
 请注意， `<cite>` 元素的默认样式会以斜体显示文本。如果您愿意，可以使用 CSS 覆盖它：
 
-```plain
+```html
+<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+```
+
+```css
 cite {
   font-style: normal;
   text-decoration: underline;
@@ -156,7 +163,7 @@ cite {
 
 ##### 定制样式的结果
 
-{{EmbedLiveSample("Presenting_a_book_title", 650, 80)}}
+{{EmbedLiveSample("为 cite 元素添加样式", 650, 80)}}
 
 ## 规范
 

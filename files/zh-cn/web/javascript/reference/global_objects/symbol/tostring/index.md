@@ -2,6 +2,7 @@
 title: Symbol.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 ---
+
 {{JSRef("Global_Objects", "Symbol")}}
 
 ## 概述
@@ -36,7 +37,7 @@ Object(Symbol("foo")).toString() + "bar"
 ```js
 Symbol("desc").toString();   // "Symbol(desc)"
 
-// well-known symbols
+// 内置通用（well-known）symbol
 Symbol.iterator.toString();  // "Symbol(Symbol.iterator)
 
 // global symbols

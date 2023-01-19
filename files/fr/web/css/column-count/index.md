@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-count
 ---
+
 {{CSSRef}}
 
 La propriété **`column-count`** décrit le nombre de colonnes d'un élément lorsqu'on utilise une disposition en colonnes.
@@ -36,9 +37,13 @@ column-count: unset;
 - `<number>`
   - : Un nombre (type {{cssxref("&lt;integer&gt;")}}) strictement positif qui décrit le nombre idéal de colonnes avec lequel répartir le contenu de l'élément. Si la valeur de {{cssxref("column-width")}} n'est pas `auto`, cette propriété indique simplement le nombre maximal de colonnes autorisé.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -74,15 +79,11 @@ column-count: unset;
 
 ## Spécifications
 
-| Spécification                                                        | État                                 | Commentaires         |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol', '#cc', 'column-count')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.column-count")}}
+{{Compat}}
 
 ## Voir aussi
 

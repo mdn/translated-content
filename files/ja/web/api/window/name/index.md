@@ -2,13 +2,18 @@
 title: window.name
 slug: Web/API/Window/name
 ---
+
 {{ApiRef}}
 
 ウィンドウ名を取得 / 設定します。
 
+## 値
+
+文字列。
+
 ## 構文
 
-```
+```js
 string = window.name;
 window.name = string;
 ```
@@ -23,13 +28,23 @@ window.name = "lab_view";
 
 ウィンドウ名は、主にハイパーリンクとフォームのターゲットを設定するために使われます。ウィンドウは必ずしもウィンドウ名を持つ必要はありません。
 
-It has also been used in some frameworks for providing cross-domain messaging (e.g., [SessionVars](http://www.thomasfrank.se/sessionvars.html) and Dojo's [dojox.io.windowName](http://www.sitepen.com/blog/2008/07/22/windowname-transport/)) as a more secure alternative to JSONP. Modern web applications hosting sensitive data should however not rely on `window.name` for cross-domain messaging but instead rather utilize the [postMessage API](/ja/docs/Web/API/Window/postMessage).
+現代のブラウザーは、タブが他のドメインのページを読み込むと `Window.name` を空文字列に設定し、元のページが (例えば「戻る」ボタンを押すことにより) 再び読み込まれると名前を復元します。このことにより、信頼されていないページが、前のページがこのプロパティに保存していた可能性があるいかなる情報にもアクセスできないようにします。(新しいページがこのようなデータを書き換え、それが再び読み込まれた元のページによって読まれる、という可能性も考えられます)
 
-Don't set the value to something unstring since its get method will call the toString method.
+`Window.name` はまた、いくつかのフレームワーク ( SessionVars や Dojo の dojox.io.windowName など) によって JSONP のより安全な代替としてクロスドメインメッセージングを実現するために使われています。しかし、現代の機微なデータを扱うウェブアプリケーションは、クロスドメインメッセージングのために `window.name` に依存するべきではありません。なぜなら、これは意図された目的ではない上、ウィンドウ間での情報の共有にはより安全な/良い方法があります。{{domxref("Window.postMessage()")}} の利用を推奨します。
 
-## 仕様
+> **メモ:** `window.name` は保存される全ての値を `toString` メソッドにより文字列表現に変換します。
 
-| 仕様                                                                                         | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-name', 'Window.name')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-name', 'Window.name')}}     | {{Spec2('HTML5 W3C')}}     |          |
+## 例
+
+```html
+<script>
+  // 指定したウィンドウ名を持つタブを開く
+  const otherTab = window.open("url1", "_blank");
+  if (otherTab) otherTab.name = "other-tab";
+</script>
+<a href="url2" target="other-tab">このリンクはもう一つのタブで開かれます。</a>
+```
+
+## 仕様書
+
+{{Specifications}}

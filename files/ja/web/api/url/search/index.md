@@ -2,6 +2,7 @@
 title: URL.search
 slug: Web/API/URL/search
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`search`** プロパティは、*クエリー文字列*とも呼ばれる検索文字列、つまり `'?'` とその後に続く URL のパラメーターを含む {{domxref("USVString")}} です。
@@ -30,9 +31,7 @@ console.log(url.search); // 戻り値: "?q=123"
 
 ## 仕様
 
-| 仕様                                                                 | 状態                 | コメント |
-| -------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-search', 'URL.search')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

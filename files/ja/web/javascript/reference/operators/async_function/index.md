@@ -2,6 +2,7 @@
 title: 非同期関数式
 slug: Web/JavaScript/Reference/Operators/async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 **`async function`** キーワードは、式の中で `async` 関数を定義するために使用できます。

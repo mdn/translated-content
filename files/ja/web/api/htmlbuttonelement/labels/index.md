@@ -2,6 +2,7 @@
 title: HTMLButtonElement.labels
 slug: Web/API/HTMLButtonElement/labels
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLButtonElement.labels`** は読み取り専用プロパティで、この

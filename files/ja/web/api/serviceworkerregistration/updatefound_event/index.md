@@ -3,9 +3,10 @@ title: 'ServiceWorkerRegistration: updatefound イベント'
 slug: Web/API/ServiceWorkerRegistration/updatefound_event
 original_slug: Web/API/ServiceWorkerRegistration/onupdatefound
 ---
+
 {{APIRef("Service Workers API")}}
 
-**`updatefound`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのイベントで、  {{domxref("ServiceWorkerRegistration.installing")}} プロパティが新しいサービスワーカーが取得するたびに呼び出されます。
+**`updatefound`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのイベントで、 {{domxref("ServiceWorkerRegistration.installing")}} プロパティが新しいサービスワーカーが取得するたびに呼び出されます。
 
 ## 構文
 

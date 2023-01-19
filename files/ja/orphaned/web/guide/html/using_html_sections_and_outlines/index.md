@@ -3,9 +3,10 @@ title: HTML のセクションとアウトラインの使用
 slug: orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 original_slug: Web/Guide/HTML/Using_HTML_sections_and_outlines
 ---
+
 {{HTMLSidebar}}
 
-> **Warning:** **重要**: ウェブブラウザーや支援技術の中で、提案されているアウトラインアルゴリズムを実装したものはありません。これは最終的な W3C の仕様書に含まれていません。したがって、[アウトライン](https://www.w3.org/TR/html5/sections.html#outline)アルゴリズムを、ユーザーに文書の構造を伝えるために*使用するべきではありません*。作者には、見出しの[順位](https://www.w3.org/TR/html5/sections.html#rank) ([`h1`](https://www.w3.org/TR/html5/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements)-[`h6`](https://www.w3.org/TR/html5/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements)) を使用して文書の構造を伝えることを推奨します。
+> **警告:** ウェブブラウザーや支援技術の中で、提案されているアウトラインアルゴリズムを実装したものはありません。これは最終的な W3C の仕様書に含まれていません。したがって、[アウトライン](https://www.w3.org/TR/html5/sections.html#outline)アルゴリズムを、ユーザーに文書の構造を伝えるために*使用するべきではありません*。作者には、見出しの[順位](https://www.w3.org/TR/html5/sections.html#rank) ([`h1`](https://www.w3.org/TR/html5/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements)-[`h6`](https://www.w3.org/TR/html5/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements)) を使用して文書の構造を伝えることを推奨します。
 
 HTML5 の仕様書では、文書の構造を整理するのに役立つ意味づけする区分化要素がいくつか導入されました。意味づけする区分化要素は、ブラウザーや読み上げアプリや音声アシスタントなど、ユーザーに代わって文書を解釈する他の技術に構造的な意味を伝えるために特別に設計されています。
 
@@ -282,7 +283,7 @@ article, aside, footer, header, nav, section {
 </noscript>
 ```
 
-> **Note:** **注**: このコードは [HTML validator](https://validator.w3.org/) ではエラーが発生します。これは必ずしも本当に悪いことだとは言えません — サイトには若干のバリデーションエラーがあるものです — が、気を付けなければなりません。
+> **メモ:** このコードは [HTML validator](https://validator.w3.org/) ではエラーが発生します。これは必ずしも本当に悪いことだとは言えません — サイトには若干のバリデーションエラーがあるものです — が、気を付けなければなりません。
 
 ## まとめ
 

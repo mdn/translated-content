@@ -1,8 +1,8 @@
 ---
 title: Fetch basic concepts
 slug: Web/API/Fetch_API/Basic_concepts
-translation_of: Web/API/Fetch_API/Basic_concepts
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 [Fetch](/ko/docs/Web/API/Fetch_API) 는 네트워크 통신을 포함한 리소스를 가지고 오기 위한 인터페이스를 제공해주는 보다 새로운 API입니다. [XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest) 와 기능은 같지만 확장 가능하며 효과적으로 구성되어 있습니다. 이 문서에서는 Fetch API의 기본 컨셉들중 일부를 소개합니다.
@@ -59,8 +59,8 @@ Fetch는 이러한 Request의 비동기적인 성질을 한걸음 진화시킨 {
   </tbody>
 </table>
 
-헤더 가드는 헤더의 콘텐츠를 변경하는 {{domxref("Headers.set","set()")}}{{domxref("Headers.delete","delete()")}},{{domxref("Headers.append","append()")}}메서드에 영향을 끼칩니다.가드는 `immutable`의 {{domxref("Headers")}}를 수정하려고 한 경우, `TypeError`를 반환합니다. 예외의 경우도 있는데 다음과 같은 상황에서는 동작합니다.
+헤더 가드는 헤더의 콘텐츠를 변경하는 {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, {{domxref("Headers.append","append()")}} 메서드에 영향을 끼칩니다.가드는 `immutable`의 {{domxref("Headers")}}를 수정하려고 한 경우, `TypeError` 를 반환합니다. 예외의 경우도 있는데 다음과 같은 상황에서는 동작합니다.
 
-- 가드가 `request`에서 헤더의 이름이{{Glossary("forbidden header name")}}가 아닌 경우
-- 가드가`request-no-cors` 에서 헤더의`_name` 또는 \_\_value값이_ {{Glossary("simple header")}}인 경우
-- 가드가 `response`며 헤더의 이름이 {{Glossary("forbidden response header name")}}가 아닌 경우
+- 가드가 `request` 에서 헤더의 이름이 {{Glossary("forbidden header name")}} 가 아닌 경우
+- 가드가 `request-no-cors` 에서 헤더의 `name` 또는 `value` 값이 {{Glossary("simple header")}} 인 경우
+- 가드가 `response` 며 헤더의 이름이 {{Glossary("forbidden response header name")}} 가 아닌 경우

@@ -2,6 +2,7 @@
 title: Setting up adaptive streaming media sources
 slug: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
 ---
+
 たとえば、 HTML5 メディア要素内で利用するために、サーバー上の適応型ストリーミングメディアソースを設定するとします。あなたはどうしますか？この記事では、最も一般的な形式である MPEG-DASH と HLS (HTTP Live Streaming) の二つについて見ていきます。
 
 ## フォーマットの選択
@@ -104,11 +105,11 @@ MPEG-DASH をサポートしないブラウザのためのフォールバック�
 
 MPEG-DASH を取り扱うための良いソフトウェアは [Dash Encoder](https://github.com/slederer/DASHEncoder) です。これは [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/dash/) を使ってメディアを MPEG-DASH フォーマットにエンコードします。
 
-> **Note:** You will need to be comfortable with make files and installing dependencies to get this software up and running.
+> **メモ:** You will need to be comfortable with make files and installing dependencies to get this software up and running.
 
-> **Note:** Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.
+> **メモ:** Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.
 
-> **Note:** If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/DASH_Adaptive_Streaming_for_HTML_5_Video).
+> **メモ:** If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/DASH_Adaptive_Streaming_for_HTML_5_Video).
 
 エンコードされるとファイル構造はこのようになります。
 
@@ -179,7 +180,7 @@ main segment folder ->      /segments/main/
 
 MPD ファイルは、さまざまなメディアが配置されている場所をブラウザに伝え、 mimeType やコーデックなどのメタデータも含み、そこにはバイト範囲などの詳細も含まれています。一般的にこれらのファイルは自動的に生成されます。
 
-> **Note:** 音声と動画のストリームを異なるファイルに分割することも可能です。帯域幅に応じて優先順位を付けて個別に処理することができます。
+> **メモ:** 音声と動画のストリームを異なるファイルに分割することも可能です。帯域幅に応じて優先順位を付けて個別に処理することができます。
 
 MPD ファイルを生成すれば、 {{ htmlelement("video") }} 要素で参照することができます。
 
@@ -198,7 +199,7 @@ MPEG-DASH をサポートしないブラウザのためのフォールバック�
 </video>
 ```
 
-> **Note:** MPEG-DASH の再生は [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) と [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) のブラウザ対応に依存します。最新の [dash.js リファレンスプレイヤー](http://dashif.org/reference/players/javascript/index.html) を参照してください。
+> **メモ:** MPEG-DASH の再生は [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) と [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) のブラウザ対応に依存します。最新の [dash.js リファレンスプレイヤー](http://dashif.org/reference/players/javascript/index.html) を参照してください。
 
 ## HLS エンコーディング
 
@@ -214,7 +215,7 @@ HLS エンコードのための役立つツールがいくつかあります。
 - The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
 - Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
 
-> **Note:** これらのツールについて詳しくは [Using HTTP Live Streaming](https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html) を読んでください。
+> **メモ:** これらのツールについて詳しくは [Using HTTP Live Streaming](https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html) を読んでください。
 
 ### インデックスファイル (プレイリスト)
 
@@ -238,7 +239,7 @@ http://media.example.com/segment2.ts
 #EXT-X-ENDLIST
 ```
 
-> **Note:** Comprehensive information on how to encode media for Apple's HLS format can be found on [Apple's Developer Pages](https://developer.apple.com/streaming/).
+> **メモ:** Comprehensive information on how to encode media for Apple's HLS format can be found on [Apple's Developer Pages](https://developer.apple.com/streaming/).
 
 ## See Also
 

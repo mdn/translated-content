@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/exp
 ---
+
 {{JSRef}}
 
 La fonction **`Math.exp()`** renvoie l'exponentielle d'un nombre (donnée par `e^x`, où `x` est la valeur passée en argument et `e` la valeur du {{jsxref("Objets_globaux/Math/E","nombre d'Euler (parfois appelé constante de Napier)","",1)}}.
@@ -46,16 +47,11 @@ Math.exp(1);  // 2.718281828459045
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.exp', 'Math.exp')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.exp")}}
+{{Compat}}
 
 ## Voir aussi
 

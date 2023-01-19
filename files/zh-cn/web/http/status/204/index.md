@@ -2,6 +2,7 @@
 title: 204 No Content
 slug: Web/HTTP/Status/204
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`204 No Content`** 成功状态响应码，表示该请求已经成功了，但是客户端客户不需要离开当前页面。默认情况下 204 响应是可缓存的。一个 {{HTTPHeader("ETag")}} 标头包含在此类响应中。
@@ -24,4 +25,4 @@ HTTP **`204 No Content`** 成功状态响应码，表示该请求已经成功了
 
 ## 参见
 
-- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)

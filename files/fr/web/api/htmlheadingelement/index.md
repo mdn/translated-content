@@ -5,6 +5,7 @@ page-type: web-api-interface
 browser-compat: api.HTMLHeadingElement
 translation_of: Web/API/HTMLHeadingElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 L'interface **`HTMLHeadingElement`** représente les différents éléments d'en-tête [`<h1>` à `<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements). Elle hérite des méthodes et des propriétés de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).

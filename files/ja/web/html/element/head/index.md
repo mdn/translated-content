@@ -1,21 +1,13 @@
 ---
 title: '<head>: 文書メタデータ (ヘッダー) 要素'
 slug: Web/HTML/Element/head
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/head
-browser-compat: html.elements.head
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<head>` 要素**は、文書に関する機械可読な情報 ({{glossary("metadata", "メタデータ")}})、たとえば[題名](/ja/docs/Web/HTML/Element/title)、[スクリプト](/ja/docs/Web/HTML/Element/script)、[スタイルシート](/ja/docs/Web/HTML/Element/style)などを含みます。
 
-> **Note:** **メモ:** `<head>` は機械処理のための情報を保持するためのものであり、人間が読むためのものではありません。人間が読むための情報、例えば最上位のヘッダーや著者のリストのためのものは、 {{HTMLElement("header")}} 要素を参照してください。
+> **メモ:** `<head>` は機械処理のための情報を保持するためのものであり、人間が読むためのものではありません。人間が読むための情報、例えば最上位のヘッダーや著者のリストのためのものは、 {{HTMLElement("header")}} 要素を参照してください。
 
 <table class="properties">
   <tbody>
@@ -102,11 +94,7 @@ HTML5 互換のブラウザーでは、タグが省略されていても `<head>
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                               |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-head-element', '&lt;head&gt;')}}         | {{Spec2('HTML WHATWG')}} | 最新のスナップショットから変更なし |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-head-element', '&lt;head&gt;')}} | {{Spec2('HTML5 W3C')}}     | `profile` を廃止                   |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.1', '&lt;head&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                    |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

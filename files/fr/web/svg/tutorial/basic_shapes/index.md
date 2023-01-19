@@ -4,6 +4,7 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 translation_of: Web/SVG/Tutorial/Basic_Shapes
 original_slug: Web/SVG/Tutoriel/Formes_de_base
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Positions","Web/SVG/Tutorial/Paths")}}
 
 Il existe tout un ensemble de formes de base utilisées pour faire du dessin via SVG. Le but de ces formes s'avère assez transparent si on regarde attentivement les noms de chaque élément. Des attributs permettent de configurer leur position et leur taille, mais vous pourrez retrouver les détails de chaque élément avec tous ses attributs à [la page des références SVG](/fr/docs/Web/SVG/Element). Nous nous contenterons ici de couvrir les fonctions de base qui nous sont nécessaires, car elles sont utilisées dans la plupart des documents SVG.

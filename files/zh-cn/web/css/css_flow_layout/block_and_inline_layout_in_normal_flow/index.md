@@ -2,6 +2,7 @@
 title: 常规流中的块和内联布局
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 ---
+
 {{CSSRef}}
 
 在这篇指南中，我们会探讨块级元素和内联元素在常规流中是怎样工作的。
@@ -60,7 +61,6 @@ slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 
 ## 内联格式区域中的元素
 
-Inline elements display one after the other in the direction that sentences run in that particular writing mode. While we don’t tend to think of inline elements as having a box, as with everything in CSS they do. These inline boxes are arranged one after the other. If there is not enough space in the containing block for all of the boxes a box can break onto a new line. The lines created are known as line boxes.
 内联元素按照句子在特定书写模式下运行的方向依次显示。虽然我们不倾向于认为内联元素有一个框，就像 CSS 中的所有元素一样。这些内嵌的盒子一个接一个排列。如果包含块中没有足够的空间容纳所有框，则框可以换行。创建的行称为行框。
 
 In the following example we have three inline boxes created by a paragraph with a strong element inside it.

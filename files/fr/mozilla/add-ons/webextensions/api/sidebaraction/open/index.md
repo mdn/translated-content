@@ -11,6 +11,7 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/open
 ---
+
 {{AddonSidebar()}}Ouvrez la barre latérale dans la fenêtre active.
 
 Vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une [action utilisateur](/fr/Add-ons/WebExtensions/User_actions).

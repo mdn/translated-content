@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Uint32Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`Uint32Array`** permet de représenter un tableau d'entiers non signés représentés sur 32 bits, où l'ordre des octets correspond à celui de la plateforme utilisée. Si on souhaite contrôler l'ordre des octets utilisé (le « boutisme »), on utilisera un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).
@@ -152,29 +153,11 @@ var uint32 = new Uint32Array(iterable);
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                                                                 |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Englobée par ECMAScript 2015.                                                                                                                |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. `new` est obligatoire.                                                                       |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 a modifié le constructeur `Uint32Array` afin qu'il utilise l'opération `ToIndex` et qu'il puisse être utilisé sans argument. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Uint32Array")}}
-
-## Notes de compatibilité
-
-À partir d'ECMAScript 2015 (ES6), `Uint32Array` doit être utilisé avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur `Uint32Array` comme une fonction, sans `new`, provoquera une exception {{jsxref("TypeError")}}.
-
-```js example-bad
-var dv = Uint32Array([1, 2, 3]);
-// TypeError: calling a builtin Uint32Array constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new Uint32Array([1, 2, 3]);
-```
+{{Compat}}
 
 ## Voir aussi
 

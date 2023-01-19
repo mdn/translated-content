@@ -1,9 +1,6 @@
 ---
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
-tags:
-  - 오디오
-translation_of: Web/API/AudioDestinationNode
 ---
 {{APIRef()}}
 

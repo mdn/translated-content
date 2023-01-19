@@ -1,14 +1,17 @@
 ---
-title: Entity header(エンティティヘッダー)
+title: Entity header (エンティティヘッダー)
 slug: Glossary/Entity_header
+l10n:
+  sourceCommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
 ---
-エンティティヘッダーは、メッセージボディの内容を記述する{{glossary("header", "HTTP header")}}です。エンティティヘッダーは、HTTP リクエストとレスポンスの両方で使用されます。例えば{{HTTPHeader("Content-Length")}}、{{HTTPHeader("Content-Language")}}、{{HTTPHeader("Content-Encoding")}} は、エンティティヘッダーです。
 
-エンティティヘッダー自体はリクエストヘッダーでもレスポンスヘッダーでもありませんが、リクエストヘッダー、レスポンスヘッダーはしばしばエンティティヘッダーを含みます。
+> **警告:** 現在の HTTP/1.1 仕様書では、エンティティ、エンティティヘッダー、エンティティ本体を参照することはなくなりました。一部のフィールドは{{glossary("Representation header", "表現ヘッダー")}}フィールドとして参照されるようになりました。
 
-次の例では、{{HTTPHeader("Content-Length")}} はエンティティヘッダーであり、{{HTTPHeader("Host")}}と{{HTTPHeader("User-Agent")}}は{{glossary("request header", "リクエストヘッダー")}}です：
+エンティティヘッダーは {{glossary("HTTP_header", "HTTP ヘッダー")}}の一種で、 HTTP メッセージの本体を説明します（すなわちメッセージ本体についてのメタデータです）。エンティティヘッダーには、 {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}}, などがあります。エンティティヘッダーは HTTP のリクエストおよびレスポンスの両方に存在することがあります。
 
-```
+次の例では、 {{HTTPHeader("Content-Length")}} はエンティティヘッダーであり、 {{HTTPHeader("Host")}} と {{HTTPHeader("User-Agent")}} はリクエストヘッダーです。
+
+```http
 POST /myform.html HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
@@ -17,6 +20,4 @@ Content-Length: 128
 
 ## 詳細情報
 
-### 技術リファレンス
-
-- [全ての HTTP ヘッダー一覧](/ja/docs/Web/HTTP/Headers)
+- {{Glossary("Representation header", "表現ヘッダー")}}

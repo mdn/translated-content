@@ -3,6 +3,7 @@ title: HTMLAreaElement.href
 slug: Web/API/HTMLAreaElement/href
 original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAreaElement.href`** は{{Glossary("stringifier", "文字列化")}}プロパティで、URL 全体を含む文字列を返し、 href を更新することもできます。

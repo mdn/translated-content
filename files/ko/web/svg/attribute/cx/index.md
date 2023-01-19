@@ -1,8 +1,8 @@
 ---
 title: cx
 slug: Web/SVG/Attribute/cx
-translation_of: Web/SVG/Attribute/cx
 ---
+
 {{SVGRef}}
 
 **`cx`** 속성은 중심점의 x축 좌표를 정의합니다.

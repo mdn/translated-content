@@ -2,6 +2,7 @@
 title: Screen.pixelDepth
 slug: Web/API/Screen/pixelDepth
 ---
+
 {{APIRef("CSSOM View")}}
 
 ## 概述

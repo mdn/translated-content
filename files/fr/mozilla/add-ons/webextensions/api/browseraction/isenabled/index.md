@@ -12,6 +12,7 @@ tags:
   - isEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
 ---
+
 {{AddonSidebar()}}
 
 Renvoie `true` si l'action du navigateur est activée.

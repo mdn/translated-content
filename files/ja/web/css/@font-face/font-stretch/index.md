@@ -1,16 +1,8 @@
 ---
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - リファレンス
-  - 記述子
-  - font-stretch
-browser-compat: css.at-rules.font-face.font-stretch
-translation_of: Web/CSS/@font-face/font-stretch
 ---
+
 {{CSSRef}}
 
 **`font-stretch`** は CSS の記述子で、ウェブページ作成者が {{cssxref("@font-face")}} ルールで定義されているフォントが通常か、幅狭か、幅広かを指定できるようにします。

@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/type
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`type`** renvoie une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le type de navigation. La valeur doit être l'une des suivantes :

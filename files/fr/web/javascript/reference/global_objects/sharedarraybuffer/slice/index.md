@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer/slice
 ---
+
 {{JSRef}}
 
 La méthode **`SharedArrayBuffer.prototype.slice()`** renvoie un nouvel objet {{jsxref("SharedArrayBuffer")}} dont le contenu est une copie des octets de l'objet `SharedArrayBuffer` courant entre un indice de début (inclus) et un indice de fin (exclus) (autrement dit, on copie une « tranche » du tampon courant). Si l'indice de début ou de fin est négatif, la position sera comptée à partir de la fin du tableau plutôt qu'à partir du début. L'algorithme appliqué est le même que {{jsxref("Array.prototype.slice()")}}_._
@@ -62,13 +63,11 @@ sab.slice(0,1); // SharedArrayBuffer { byteLength: 1 }
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                         | Commentaires                     |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-sharedarraybuffer.prototype.slice', 'SharedArrayBuffer.prototype.slice')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.SharedArrayBuffer.slice")}}
+{{Compat}}
 
 ## Voir aussi
 

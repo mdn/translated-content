@@ -7,13 +7,14 @@ tags:
 translation_of: Web/Guide/Writing_forward-compatible_websites
 original_slug: Développement_Web/Développer_des_sites_à_compatibilité_descendante
 ---
+
 Cette page explique comment développer des sites qui continuent de fonctionner au fur et à mesure des mises à jour des navigateurs.
 
 C'est d'autant plus important pour les intranets et autres sites non-publics; s'il n'est pas possible de voir votre site, il ne nous est pas possible de voir s'il est cassé. Il ne nous est pas toujours possible de suivre tous les sites, mais en suivre autant que possible permet d'en assurer la pérennité.
 
 ## JavaScript
 
-### Préfixez tous les accès à des variables globales dans les attributs `onfoo` par “`window.`”
+### Préfixez tous les accès à des variables globales dans les attributs `onfoo` par "`window`".
 
 Quand un attribut de gestion d'évenement (`onclick`, `onmouseover`, etc) est utilisé sur un élément HTML, toutes les résolutions de variable dans l'attribut sont d'abord résolues sur l'élément lui-même, puis sur le formulaire contenant l'élément (si c'est un élément de formulaire), puis sur `document`, puis finalement sur `window` (là où se trouvent les variables globales que vous avez définies).Par exemple, si vous avez le balisage suivant :
 

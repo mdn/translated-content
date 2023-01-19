@@ -1,14 +1,8 @@
 ---
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("HTMLFormElement")}}** interface represents a {{HTMLElement("form")}} element in the DOM; it allows access to and in some cases modification of aspects of the form, as well as access to its component elements.

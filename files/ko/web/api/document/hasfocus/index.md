@@ -1,14 +1,8 @@
 ---
 title: Document.hasFocus()
 slug: Web/API/Document/hasFocus
-tags:
-  - API
-  - DOM
-  - Focus
-  - Method
-  - Reference
-translation_of: Web/API/Document/hasFocus
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.hasFocus()`** 메소드는 문서 또는 문서 내의 요소(element) 중 어느 하나라도 포커스(focus)를 갖고 있으면 `true`, 그렇지 않으면 `false` 인 {{jsxref("Boolean")}} 값을 반환한다. 이 메소드를 사용하여 문서내 활성화된(active) 요소가 포커스를 갖고 있는지 판단할 수 있다.

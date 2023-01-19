@@ -2,6 +2,7 @@
 title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest()`** 建構式會建立一個新的 {{domxref("XMLHttpRequest")}} 物件。

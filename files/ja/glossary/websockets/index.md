@@ -2,6 +2,7 @@
 title: WebSockets
 slug: Glossary/WebSockets
 ---
+
 _WebSocket_ は、{{Glossary("Server", "サーバー")}}とクライアント間の永続的な {{Glossary("TCP")}} 接続を可能にする{{Glossary("protocol", "プロトコル")}}で、任意のタイミングでデータをやり取りできます。
 
 どのクライアント、サーバーアプリケーションでも WebSocket を使用できますが、主にウェプ{{Glossary("Browser", "ブラウザー")}}とウェブサーバーで使用できます。 WebSocket を通じて、サーバーはクライアントのリクエストなしにデータを渡せるため、動的なコンテンツ更新が可能です。
@@ -10,7 +11,7 @@ _WebSocket_ は、{{Glossary("Server", "サーバー")}}とクライアント間
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "WebSocket")}}
+- Wikipedia の [WebSocket](https://ja.wikipedia.org/wiki/WebSocket)
 
 ### 技術リファレンス
 

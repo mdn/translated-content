@@ -1,11 +1,6 @@
 ---
 title: 엔디언
 slug: Glossary/Endianness
-tags:
-  - Coding
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Endianness
 ---
 **엔디언**(endian, endianness) 또는 **바이트 순서**는 숫자를 구성하는 바이트를 컴퓨터가 정렬하는 방법입니다.
 

@@ -2,6 +2,7 @@
 title: Performance
 slug: Web/API/Performance
 ---
+
 {{APIRef("High Resolution Time")}}
 
 **`Performance`** 接口可以获取到当前页面中与性能相关的信息。它是 High Resolution Time API 的一部分，同时也融合了 Performance Timeline API、[Navigation Timing API](/zh-CN/docs/Web/API/Navigation_timing_API)、 [User Timing API](/zh-CN/docs/Web/API/User_Timing_API) 和 [Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API)。
@@ -26,7 +27,7 @@ _`Performance` 接口没有继承任何属性。_
 ### 事件处理程序
 
 - {{domxref("Performance.onresourcetimingbufferfull")}}
-  - : 一个回调的 {{domxref("EventTarget")}}，当触发 {{event("resourcetimingbufferfull")}} 事件的时候会被调用。
+  - : 一个回调的 {{domxref("EventTarget")}}，当触发 `resourcetimingbufferfull` 事件的时候会被调用。
 
 ## 方法
 
@@ -61,4 +62,4 @@ _`Performance` 接口没有继承任何属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: Geolocation
 slug: Web/API/Geolocation
 ---
+
 {{APIRef}}
 
 **`Geolocation`** 接口是一个用来获取设备地理位置的可编程的对象，它可以让 Web 内容访问到设备的地理位置，这将允许 Web 应用基于用户的地理位置提供定制的信息。说实话：其实**`Geolocation`** 就是用来获取到当前设备的经纬度（位置）
@@ -23,7 +24,7 @@ _`Geolocation` 接口不实现，也不继承任何属性。_
 - {{domxref("Geolocation.watchPosition()")}}
   - : 注册一个位置改变监听器，每当设备位置改变时，返回一个 `long` 类型的该监听器的 ID 值。
 - {{domxref("Geolocation.clearWatch()")}}
-  - : 取消由 `watchPosition() 注册的位置监听器。`
+  - : 取消由 `watchPosition()` 注册的位置监听器。
 
 ## 规范
 
@@ -31,7 +32,7 @@ _`Geolocation` 接口不实现，也不继承任何属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ## 参见
 

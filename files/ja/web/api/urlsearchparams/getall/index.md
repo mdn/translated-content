@@ -2,6 +2,7 @@
 title: URLSearchParams.getAll()
 slug: Web/API/URLSearchParams/getAll
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`getAll()`** メソッドは、指定された検索パラメーターに関連付けられたすべての値を配列として返します。
@@ -37,9 +38,7 @@ console.log(params.getAll('foo')) // ["1","4"] を表示します。
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                 | コメント |
-| ------------------------------------------------------------------------------------ | -------------------- | -------- |
-| {{SpecName('URL', '#dom-urlsearchparams-getall', "getAll()")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

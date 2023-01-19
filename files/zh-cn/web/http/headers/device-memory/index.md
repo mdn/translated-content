@@ -2,6 +2,7 @@
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
 **`Device-Memory`** 是一个跟 [Device Memory API](/zh-CN/docs/Web/API/Device_Memory_API) 相关的请求头，它跟 [Client Hints](/zh-CN/docs/Glossary/Client_hints) 请求头的作用相似，用来表示客户端设备内存的近似大小。
@@ -14,7 +15,7 @@ slug: Web/HTTP/Headers/Device-Memory
 
 ## 语法
 
-设备的内存大小可能会被用作指纹变量，因此将这个取值设置的比较粗糙，以减少滥用它的可能性。 请求头采用以下值：0.25、0.5、1、2、4、8。
+设备的内存大小可能会被用作指纹变量，因此将这个取值设置的比较粗糙，以减少滥用它的可能性。请求头采用以下值：0.25、0.5、1、2、4、8。
 
 ```plain
 Device-Memory: <number>

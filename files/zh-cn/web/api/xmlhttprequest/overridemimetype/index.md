@@ -2,6 +2,7 @@
 title: XMLHttpRequest.overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
 ---
+
 XMLHttpRequest 的 **`overrideMimeType`** 方法是指定一个 MIME 类型用于替代服务器指定的类型，使服务端响应信息中传输的数据按照该指定 MIME 类型处理。例如强制使流方式处理为"text/xml"类型处理时会被使用到，即使服务器在响应头中并没有这样指定。此方法必须在 send 方法之前调用方为有效。
 
 ## Syntax
@@ -13,7 +14,7 @@ XMLHttpRequest.overrideMimeType(mimeType)
 ### Parameters
 
 - `mimeType`
-  - : 一个 {{domxref("DOMString")}} 指定具体的 MIME 类型去代替有服务器指定的 MIME 类型. 如果服务器没有指定类型，那么 `XMLHttpRequest` 将会默认为 `"text/xml"`.
+  - : 一个 {{domxref("DOMString")}} 指定具体的 MIME 类型去代替有服务器指定的 MIME 类型。如果服务器没有指定类型，那么 `XMLHttpRequest` 将会默认为 `"text/xml"`.
 
 ### Return value
 
@@ -41,7 +42,7 @@ req.send();
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest.overrideMimeType")}}
+{{Compat}}
 
 ## See also
 

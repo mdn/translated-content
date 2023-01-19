@@ -2,6 +2,7 @@
 title: JavaScript 物件介紹
 slug: Learn/JavaScript/Objects
 ---
+
 {{LearnSidebar}}
 
 在 JavaScript 裡面，從諸如字串與陣列的核心功能、到以 JavaScript 建構的瀏覽器 API，大部分的東西都可算是「物件 (Object)」。你甚至可建立自己的物件，將相關函式與變數封裝 (Encapsulate) 為有效封包，並可作為多樣的資料容器 (Data container)。如果你想更精進既有的程式語言知識，就必須了解 JavaScript 的「物件導向 (Object-Oriented；OO)」本質。為此，我們設計了相關文章來協助你更進一步。本文將先說明物件理論和語法的細節，再引導你建立自己的物件。
@@ -12,7 +13,7 @@ slug: Learn/JavaScript/Objects
 
 你也應該已經初步了解過 JavaScript 基本概念，再進一步閱讀 JavaScript 物件。所以另請先看過〈[JavaScript 的第一步](/zh-TW/docs/Learn/JavaScript/First_steps)〉與〈[JavaScript 基礎要件](/zh-TW/docs/Learn/JavaScript/Building_blocks)〉。
 
-> **備註：** 如果你在使用的桌機＼平板＼其他裝置，無法讓你建立自己的檔案，則可透過如 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/) 的線上編碼程式，來體驗 (大多數的) 範例程式碼。
+> **備註：** 如果你在使用的桌機＼平板＼其他裝置，無法讓你建立自己的檔案，則可透過如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 的線上編碼程式，來體驗（大多數的）範例程式碼。
 
 ## 指南
 

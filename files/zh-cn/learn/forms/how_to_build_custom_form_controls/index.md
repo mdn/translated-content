@@ -3,6 +3,7 @@ title: 如何构建表单小工具
 slug: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
 在许多情况下，[可用的 HTML 表单小组件](/zh-CN/docs/HTML/Forms/The_native_form_widgets)_是不够的_。如果要在某些小部件（例如 {{HTMLElement("select")}}元素）上执行[高级样式](/zh-CN/docs/Advanced_styling_for_HTML_forms)，或者如果要提供自定义表现，则别无选择，只能构建自己的小部件。
@@ -11,7 +12,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 > **备注：** 我们将专注于构建小部件，而不是怎样让代码更通用或可复用；那会涉及一些非基础的 JavaScript 代码和未知环境下的 DOM 操作，这超过了这篇文章的范围。
 
-## 设计，结构，和语义
+## 设计、结构和语义
 
 在构建一个自定义控件之前，首先你要确切的知道你要什么。这将为您节省宝贵的时间。特别地，清楚地定义控件的所有状态非常重要。为了做到这一点，从状态和行为表现都众所周知的现有小控件开始是很好的选择，这样你可以轻松的尽量模仿这些控件。
 
@@ -63,7 +64,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 - [UXDesign.com](http://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](http://uxdesign.smashingmagazine.com/)
 
-> **备注：** 另外， 在绝大多数系统中，还有一种方法能够打开{{HTMLElement("select")}}元素来观察其所有的选项（这和用鼠标点击{{HTMLElement("select")}}元素是一样的）。通过 Windows 下的 Alt + 向下箭头实现，在我们的例子中没有实现---但是这样做会很方便，因为鼠标点击事件就是由该原理实现的。
+> **备注：** 另外，在绝大多数系统中，还有一种方法能够打开{{HTMLElement("select")}}元素来观察其所有的选项（这和用鼠标点击{{HTMLElement("select")}}元素是一样的）。通过 Windows 下的 Alt + 向下箭头实现，在我们的例子中没有实现---但是这样做会很方便，因为鼠标点击事件就是由该原理实现的。
 
 ### 定义语义化的 HTML 结构
 
@@ -281,13 +282,13 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("基本状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("活动状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("展开状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
@@ -387,16 +388,16 @@ window.addEventListener("load", function () {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
+        {{EmbedLiveSample("不使用 JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
+        {{EmbedLiveSample("使用 JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
       <td colspan="2" style="text-align: center">
         <a
-          href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
+          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
           >Check out the source code</a
         >
       </td>
@@ -563,13 +564,13 @@ window.addEventListener('load', function () {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}
+        {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}
       </td>
     </tr>
     <tr>
       <td style="text-align: center">
         <a
-          href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
+          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
           >Check out the source code</a
         >
       </td>
@@ -681,13 +682,13 @@ window.addEventListener('load', function () {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}
+        {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}
       </td>
     </tr>
     <tr>
       <td style="text-align: center">
         <a
-          href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4"
+          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4"
           >Check out the source code</a
         >
       </td>
@@ -766,13 +767,13 @@ function updateValue(select, index) {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}
+        {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}
       </td>
     </tr>
     <tr>
       <td style="text-align: center">
         <a
-          href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5"
+          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5"
           >Check out the final source code</a
         >
       </td>
@@ -782,7 +783,7 @@ function updateValue(select, index) {
 
 ## 总结
 
-我们已经了解了所有和构建一个自定义表单组件相关的基础知识，但是如你所见做这件事非常繁琐，并且通常情况下依赖第三方库，而不是自己从头写起会更容易 ，也更好 (当然，除非你的目的就是构建一个这样的库）。
+我们已经了解了所有和构建一个自定义表单组件相关的基础知识，但是如你所见做这件事非常繁琐，并且通常情况下依赖第三方库，而不是自己从头写起会更容易，也更好 (当然，除非你的目的就是构建一个这样的库）。
 
 这儿有一些库，在你编写自己的之前应该了解一下：
 

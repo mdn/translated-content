@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isInteger
 ---
+
 {{JSRef}}
 
 La méthode **`Number.isInteger()`** permet de déterminer si l'argument est un nombre entier.
@@ -69,14 +70,11 @@ Number.isInteger = Number.isInteger || function(value) {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-number.isinteger', 'Number.isInteger')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.isinteger', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.isInteger")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: Checking when a deadline is due
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 在本文中，我们将看一个复杂的示例，该示例涉及根据 IndexedDB 存储的截止日期检查当前时间和日期。这里的主要复杂因素是检查存储的截止日期信息（月，小时，日等）与 Date 对象的当前时间和日期。

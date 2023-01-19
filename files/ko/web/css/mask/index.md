@@ -1,15 +1,8 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - SVG
-  - Web
-translation_of: Web/CSS/mask
 ---
+
 {{CSSRef}}
 
 **`mask`** [CSS](/ko/docs/Web/CSS) 속성은 아이템이 부분적으로만 보여지게 하거나 혹은 완전히 가려서 보여지지 않게 할 수 있는 기능을 가지고 있습니다. 이 속성은 마스킹 혹은 특정한 점을 기준으로 이미지를 잘라내는 기능을 함께 제공합니다.

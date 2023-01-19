@@ -1,14 +1,8 @@
 ---
 title: ループと反復処理
 slug: Web/JavaScript/Guide/Loops_and_iteration
-tags:
-  - Guide
-  - JavaScript
-  - Loop
-  - Syntax
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 ループは繰り返し何かを実行するための簡便な方法を提供します。本章では JavaScript で利用可能な反復処理を行う数々の文を紹介します。
@@ -106,7 +100,7 @@ do
 while (条件式);
 ```
 
-*`文`*は条件式がチェックされる前に毎回一度実行されます。(複数の文を実行するには、ブロック文 (`{ ... }`) を使って一つの文にします)。
+`文`は条件式がチェックされる前に毎回一度実行されます。(複数の文を実行するには、ブロック文 (`{ ... }`) を使って一つの文にします)。
 
 `条件式`が `true` の場合、`文`が再び実行されます。`文`の実行終了時に毎回条件がチェックされます。条件が `false` の場合、実行は停止し、制御は `do...while` の次の文に渡ります。
 
@@ -210,7 +204,7 @@ break [ラベル];
 1. 最初の形では最も内側のループや `switch` を終了します
 2. 2 つ目の形では指定した外側のラベルつき文を終了します。
 
-### **例** **1**
+### 例 1
 
 次の例では、値が `theValue` である要素のインデックスを探すまで配列の要素を反復します。:
 
@@ -222,7 +216,7 @@ for (let i = 0; i < a.length; i++) {
 }
 ```
 
-### **例 2:** ラベルまでブレーク
+### 例 2: ラベルまでブレーク
 
 ```js
 let x = 0;

@@ -12,6 +12,7 @@ tags:
   - setWindowsValue
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue
 ---
+
 {{AddonSidebar()}}
 
 Stocke une paire clé / valeur à associer à une fenêtre donnée. Vous pouvez ensuite récupérer cette valeur en utilisant {{WebExtAPIRef("sessions.getWindowValue")}}.
@@ -49,7 +50,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Définissez une valeur sur la fenêtre active lorsque l'utilisateur sélectionne un élément de menu. Notez que vous aurez besoin de la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "menus" pour exécuter cet exemple :
+Définissez une valeur sur la fenêtre active lorsque l'utilisateur sélectionne un élément de menu. Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "menus" pour exécuter cet exemple :
 
 ```js
 async function setOnActiveWindow() {

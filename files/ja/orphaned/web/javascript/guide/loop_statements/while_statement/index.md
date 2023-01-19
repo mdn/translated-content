@@ -3,6 +3,7 @@ title: while 文
 slug: orphaned/Web/JavaScript/Guide/Loop_Statements/while_Statement
 original_slug: Web/JavaScript/Guide/Loop_Statements/while_Statement
 ---
+
 ### while 文
 
 `while` 文は、指定した条件が true に評価される限り文を実行します。`while` 文は次のように使用します。

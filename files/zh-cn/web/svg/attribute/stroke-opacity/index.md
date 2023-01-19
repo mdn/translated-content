@@ -2,7 +2,8 @@
 title: stroke-opacity
 slug: Web/SVG/Attribute/stroke-opacity
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `stroke-opacity`属性指定了当前对象的轮廓的不透明度。它的默认值是**1**。
 
@@ -47,8 +48,8 @@ rect{
 
 下列元素可以使用`stroke-opacity`属性：
 
-- [形状元素](/en/SVG/Element#Shape) »
-- [文本内容元素](/en/SVG/Element#TextContent) »
+- [形状元素](/zh-CN/SVG/Element#Shape) »
+- [文本内容元素](/zh-CN/SVG/Element#TextContent) »
 
 ## 规范
 

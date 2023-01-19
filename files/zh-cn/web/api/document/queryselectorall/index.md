@@ -2,6 +2,7 @@
 title: Document.querySelectorAll
 slug: Web/API/Document/querySelectorAll
 ---
+
 {{ ApiRef("DOM") }}
 
 ## 概述
@@ -21,7 +22,7 @@ elementList = parentNode.querySelectorAll(selectors);
 - `selectors`
   - : 一个 {{domxref("DOMString")}} 包含一个或多个匹配的选择器。这个字符串必须是一个合法的 [CSS selector](/zh-CN/docs/Web/CSS/CSS_Selectors) 如果不是，会抛出一个 `SyntaxError` 错误。有关使用选择器标识元素的更多信息，请参阅 [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) 可以通过使用逗号分隔多个选择器来指定它们。
 
-> **备注：** 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。 由于 JavaScript 也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](/zh-CN/docs/Web/API/Document/querySelector#转义特殊字符)
+> **备注：** 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](/zh-CN/docs/Web/API/Document/querySelector#转义特殊字符)
 
 ### 返回值
 
@@ -72,9 +73,9 @@ var matches = container.querySelectorAll("li[data-active='1']");
 
 ### 访问匹配项
 
-一旦返回匹配元素的{{domxref("NodeList")}}，就可以像任何数组一样检查它。 如果数组为空（即，其`length`属性为 0），则找不到匹配项。
+一旦返回匹配元素的{{domxref("NodeList")}}，就可以像任何数组一样检查它。如果数组为空（即，其`length`属性为 0），则找不到匹配项。
 
-否则，您只需使用标准数组方法来访问列表的内容。 您可以使用任何常见的循环语句，例如：
+否则，您只需使用标准数组方法来访问列表的内容。您可以使用任何常见的循环语句，例如：
 
 ```js
 var highlightedItems = userList.querySelectorAll(".highlighted");
@@ -109,7 +110,7 @@ var inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, not 0!
 ```
 
-在这个例子中，当在`<div>`上下文中选择带有`"select"`类的`".outer .inner"`时，仍然会找到类`".inner"`的元素，即使`.outer`不是基类的后代 执行搜索的元素（`".select"`）。 默认情况下，`querySelectorAll()`仅验证选择器中的最后一个元素是否在搜索范围内。
+在这个例子中，当在`<div>`上下文中选择带有`"select"`类的`".outer .inner"`时，仍然会找到类`".inner"`的元素，即使`.outer`不是基类的后代 执行搜索的元素（`".select"`）。默认情况下，`querySelectorAll()`仅验证选择器中的最后一个元素是否在搜索范围内。
 
 {{cssxref(":scope")}} 伪类符合预期的行为，只匹配基本元素后代的选择器：
 
@@ -125,7 +126,7 @@ inner.length; // 0
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.querySelectorAll")}}
+{{Compat}}
 
 ## 相关连接
 

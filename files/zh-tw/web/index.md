@@ -2,6 +2,7 @@
 title: 給開發者的網頁技術文件
 slug: Web
 ---
+
 全球資訊網的開放性提供了開發人員非常棒的機會。要充分發揮網路潛能，你需要知道如何使用它們。你可以從以下連結找到各種 網頁技術說明。
 
 ## 網頁技術
@@ -9,11 +10,11 @@ slug: Web
 ### 基礎
 
 - [HTML](/zh-TW/docs/Web/HTML)
-  - : **超文字標記語言 (HyperText Markup Language)** 是一種用來結構化描述及定義網頁內容的語言。
+  - : **超文字標記語言**（HyperText Markup Language）是一種用來結構化描述及定義網頁內容的語言。
 - [CSS](/zh-TW/docs/Web/CSS)
-  - : **階層樣式表 (Cascading Style Sheets)** 可用來描述網頁內容的外觀。
+  - : **階層樣式表**（Cascading Style Sheets）可用來描述網頁內容的外觀。
 - [HTTP](/zh-TW/docs/Web/HTTP)
-  - : **_超文字傳輸協議 (Hypertext Transfer Protocol) _**用於傳送網路的 HTML 及其他網頁中會使用到的 hypermedia 文件。
+  - : **超文字傳輸協議**（Hypertext Transfer Protocol）用於傳送網路的 HTML 及其他網頁中會使用到的 hypermedia 文件。
 
 ### 腳本語言
 

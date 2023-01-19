@@ -1,16 +1,6 @@
 ---
 title: HTML 属性リファレンス
 slug: Web/HTML/Attributes
-tags:
-  - 属性
-  - 初心者
-  - 要素の属性
-  - 要素
-  - HTML
-  - リファレンス
-  - 設定
-  - ウェブ
-translation_of: Web/HTML/Attributes
 ---
 
 {{HTMLSidebar}}
@@ -809,7 +799,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("img") }}, {{ HTMLElement("iframe") }}
       </td>
       <td>
-        要素を遅延読み込みさせたいか (<code>loading="lazy"</code>) または直ちに読み込ませたいか  (<code>loading="eager"</code>) を示します。
+        要素を遅延読み込みさせたいか (<code>loading="lazy"</code>) または直ちに読み込ませたいか (<code>loading="eager"</code>) を示します。
       </td>
     </tr>
     <tr>

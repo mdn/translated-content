@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/message
 ---
+
 {{JSRef}}
 
 La propriété **`message`** est une description de l'erreur, écrite pour être lue par un humain.
@@ -32,16 +33,11 @@ throw e;
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                       | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.11.4.3', 'Error.prototype.message')}}                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-error.prototype.message', 'Error.prototype.message')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-error.prototype.message', 'Error.prototype.message')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Error.message")}}
+{{Compat}}
 
 ## Voir aussi
 

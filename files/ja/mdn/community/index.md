@@ -4,6 +4,7 @@ slug: MDN/Community
 i10n:
   sourceCommit: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952
 ---
+
 {{MDNSidebar}}
 
 👋 MDN Web Docs on GitHub へようこそ! MDN Web Docs は、[HTML](/ja/docs/Web/HTML)、[CSS](/ja/docs/Web/CSS)、[JavaScript](/ja/docs/Web/JavaScript)、[Web API](/ja/docs/Web/API) など、ウェブプラットフォーム技術のオープンソースかつ共同プロジェクトで、その文書を作成しています。また、初期段階の開発者や学生向けに、豊富な[学習リソース](/ja/docs/Learn)を提供しています。
@@ -41,7 +42,7 @@ MDN Web Docs チームやコミュニティと連絡を取るには、 [Matrix �
 
 私たちは小さなチームで、絶えず変化するウェブのエコシステムの文書化の要求に追いつくために、一所懸命作業しています。残念ながら、私たちは一般的なサポートに関する質問には対応できません。コードを学んでいる間の一般的なヘルプについては、以下のリソースを参照してください。
 
-- [ウェブ開発を学ぶ](https://developer.mozilla.org/docs/Learn)
+- [ウェブ開発を学ぶ](/ja/docs/Learn)
 - [MDN Web Docs 学習フォーラム](https://discourse.mozilla.org/c/mdn/learn/250)
 - [Stackoverflow](https://stackoverflow.com/questions/)
 

@@ -3,6 +3,7 @@ title: Codes de réponse HTTP
 slug: Web/HTTP/Status
 translation_of: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/Web/HTTP) a été exécutée avec succès ou non. Les réponses sont regroupées en cinq classes&nbsp;:

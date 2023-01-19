@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/line-break
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`line-break`** définit la façon dont les sauts de ligne sont gérés. Cette propriété affecte uniquement les textes en chinois, japonais ou coréen (CJK).
@@ -37,18 +38,18 @@ line-break: unset;
 - `strict`
   - : L'agent utilisateur utilisera des règles strictes et passera à la ligne dès que ce sera nécessaire au vu des caractères du langage utilisé.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('CSS3 Text', '#line-break-property', 'line-break')}} | {{Spec2('CSS3 Text')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.line-break")}}
+{{Compat}}

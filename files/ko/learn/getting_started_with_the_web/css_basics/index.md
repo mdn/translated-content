@@ -3,6 +3,7 @@ title: CSS 기초
 slug: Learn/Getting_started_with_the_web/CSS_basics
 original_slug: Learn/Getting_started_with_the_web/CSS_기본
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 CSS (Cascading Style Sheets)는 웹페이지를 꾸미려고 작성하는 코드입니다. _CSS 기초_ 에서 여러분이 처음 시작하며 필요한 내용을 익히도록 도와드립니다. 저희는 다음과 같은 질문에 관한 답을 드리겠습니다. 어떻게 하면 글자색을 검정이나 빨갛게 할 수 있을까? 어떻게 하면 콘텐츠를 화면의 이런 저런 곳에 보이게 할 수 있을까? 어떻게 하면 배경 이미지와 색상들로 웹페이지를 꾸밀 수 있을까?
@@ -29,13 +30,13 @@ p {
 
 2. `index.html`을 저장하고 브라우저에서 불러오세요. 여러분은 다음과 같은 것을 보게 되실겁니다:
 
-![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](https://mdn.mozillademos.org/files/9435/website-screenshot-styled.png)문단의 글자가 빨간색이라면 축하드립니다! 지금 여러분은 첫번째 CSS 를 성공적으로 작성하셨습니다!
+![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)문단의 글자가 빨간색이라면 축하드립니다! 지금 여러분은 첫번째 CSS 를 성공적으로 작성하셨습니다!
 
 ### CSS의 ruleset 해부
 
 위의 CSS를 좀 더 자세히 살펴 봅시다:
 
-![](https://mdn.mozillademos.org/files/9461/css-declaration-small.png)
+![](css-declaration-small.png)
 
 전체 구조는 **rule set** 라 불립니다 (하지만 종종 줄여서 "rule"이라고 합니다). 각 부분의 이름에도 주목하세요:
 
@@ -127,13 +128,13 @@ p,li,h1 {
 
 `px(픽셀)` 값들은 여러분이 원하는대로 조정할 수 있지만, 여러분이 원하는 디자인을 얻도록, 여러분의 디자인은 이런식으로 보여야 합니다:
 
-![a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](https://mdn.mozillademos.org/files/9447/website-screenshot-font-small.png)
+![a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](website-screenshot-font-small.png)
 
 ## 박스, 박스, 박스의 모든 것
 
 CSS 작성에서 여러분이 알게 될 한 가지는 많은 것들이 박스에 관한 것이라는 겁니다 — 그들의 크기, 색상, 위치 등을 설정하는 것. 여러분의 페이지에 있는 대부분의 HTML 요소들은 서로의 위에 놓여있는 박스로 생각해볼 수 있습니다.
 
-![a big stack of boxes or crates sat on top of one another](https://mdn.mozillademos.org/files/9441/boxes.jpg)
+![a big stack of boxes or crates sat on top of one another](boxes.jpg)
 
 놀랍지 않게도, CSS 레이아웃은 _박스모델_ 을 주 기반으로 하고 있습니다. 여러분의 페이지의 공간을 차지하고 있는 각각의 블록들은 이와 같은 속성들을 가집니다:
 
@@ -141,7 +142,7 @@ CSS 작성에서 여러분이 알게 될 한 가지는 많은 것들이 박스�
 - `border`, padding 의 바깥쪽에 놓인 실선
 - `margin`, 요소의 바깥쪽을 둘러싼 공간
 
-![three boxes sat inside one another. From outside to in they are labelled margin, border and padding](https://mdn.mozillademos.org/files/9443/box-model.png)
+![three boxes sat inside one another. From outside to in they are labelled margin, border and padding](box-model.png)
 
 여기서 이런 것도 사용합니다:
 
@@ -226,21 +227,21 @@ img {
 
 이 글의 모든 설명을 따라오셨다면, 이와 같이 보이는 페이지가 되실 겁니다. ([여기서](http://mdn.github.io/beginner-html-site-styled/) 확인하실 수도 있습니다):
 
-![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](https://mdn.mozillademos.org/files/9455/website-screenshot-final.png)
+![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
 혹시 막히셨다면, 여러분의 코드와 Github에 있는 우리의 [예제 코드](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)와 항상 비교해보세요.
 
-여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](https://developer.mozilla.org/en-US/Learn/CSS) 페이지로 가보세요.
+여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/en-US/Learn/CSS) 페이지로 가보세요.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 ## 이번 과목에서는
 
-- [기본 소프트웨어 설치 방법](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [파일 다루기](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 기본 사항](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 기본 사항](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 기본 사항](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [웹 사이트 출판](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [웹 작동 방식](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [기본 소프트웨어 설치 방법](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [파일 다루기](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [HTML 기본 사항](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS 기본 사항](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
+- [JavaScript 기본 사항](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [웹 사이트 출판](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [웹 작동 방식](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

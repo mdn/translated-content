@@ -1,14 +1,8 @@
 ---
 title: Date() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
-tags:
-  - Constructor
-  - Date
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/Date
-browser-compat: javascript.builtins.Date.Date
 ---
+
 {{JSRef}}
 
 **`Date`** 생성자는 시간의 특정 지점을 나타내는 `Date` 객체를 플랫폼에 종속되지 않는 형태로 생성합니다.
@@ -57,10 +51,15 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
   - : {{jsxref("Date.parse()")}} 메서드가 인식할 수 있는 형태로 나타낸 날짜 문자열입니다.
     [IETF 호환 RFC 2822 타임스탬프](https://datatracker.ietf.org/doc/html/rfc2822#page-14)와,
     [ISO8601의 특정 버전](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse)을 인식할 수
-    있습니다.<div class="notecard note"><p><strong>참고:</strong> <code>Date</code> 생성자(및 동일한 동작의 <code>Date.parse()</code>)를 사용한 날짜
-    파싱은 동작이 일관적이지 못하고 브라우저끼리 차이가 존재하므로 사용하지 않는 것이 좋습니다.</p><ul><li><a href="https://datatracker.ietf.org/doc/html/rfc2822">RFC 2822</a>
-    형식 문자열은 관례적으로만 지원하는 것 뿐입니다.</li><li>ISO 8601 형식 문자열은 시간 정보 없는 문자열(<code>"1970-01-01"</code>
-    등)을 현지 시간이 아닌 UTC 기준으로 처리하는 점에서 표준과 다릅니다.</li></ul></div>
+    있습니다.
+
+    > **참고:** `Date` 생성자(및 동일한 동작의 `Date.parse()`)를 사용한 날짜
+    파싱은 동작이 일관적이지 못하고 브라우저끼리 차이가 존재하므로 사용하지 않는 것이 좋습니다.
+    >
+    > - [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822)
+    형식 문자열은 관례적으로만 지원하는 것 뿐입니다.
+    > - ISO 8601 형식 문자열은 시간 정보 없는 문자열(`"1970-01-01"`
+    등)을 현지 시간이 아닌 UTC 기준으로 처리하는 점에서 표준과 다릅니다.
 
 #### 개별 날짜 및 시간 구성 요소
 

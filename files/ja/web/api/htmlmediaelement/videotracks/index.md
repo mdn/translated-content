@@ -2,6 +2,7 @@
 title: HTMLMediaElement.videoTracks
 slug: Web/API/HTMLMediaElement/videoTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`videoTracks`** は {{DOMxRef("HTMLMediaElement")}} オブジェクトの読み取り専用プロパティで、メディア要素の動画トラックを表すすべての {{DOMxRef("VideoTrack")}} オブジェクトを列挙した {{DOMxRef("VideoTrackList")}} オブジェクトを返します。

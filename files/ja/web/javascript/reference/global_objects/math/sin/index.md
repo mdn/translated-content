@@ -2,6 +2,7 @@
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
+
 {{JSRef}}
 
 **`Math.sin()`** 関数は、引数として与えた数の正弦 (サイン) を返します。
@@ -42,9 +43,7 @@ Math.sin(Math.PI / 2); // 1
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.sin', 'Math.sin')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

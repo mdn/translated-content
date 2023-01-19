@@ -2,6 +2,7 @@
 title: HTTP 狀態碼
 slug: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 HTTP 狀態碼表明一個 [HTTP](/zh-TW/docs/Web/HTTP) 要求是否已經被完成。回應分為五種：
@@ -49,8 +50,8 @@ HTTP 狀態碼表明一個 [HTTP](/zh-TW/docs/Web/HTTP) 要求是否已經被完
   - : This response code is used because of range header sent by the client to separate download into multiple streams.
 - {{HTTPStatus(207, "207 Multi-Status")}} ({{Glossary("WebDAV")}})
   - : A Multi-Status response conveys information about multiple resources in situations where multiple status codes might be appropriate.
-- {{HTTPStatus(208, "208 Multi-Status")}} ({{Glossary("WebDAV")}})
-  - : Used inside a DAV: propstat response element to avoid enumerating the internal members of multiple bindings to the same collection repeatedly.
+- {{HTTPStatus(208, "208 Already Reported")}} ({{Glossary("WebDAV")}})
+  - : Used inside a `<dav:propstat>` response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.
 - {{HTTPStatus(226, "226 IM Used")}} ([HTTP Delta encoding](https://tools.ietf.org/html/rfc3229))
   - : The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
 
@@ -161,7 +162,7 @@ HTTP 狀態碼表明一個 [HTTP](/zh-TW/docs/Web/HTTP) 要求是否已經被完
 
 ## 瀏覽器相容性
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## 參見
 

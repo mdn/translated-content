@@ -2,6 +2,7 @@
 title: flex-basis
 slug: Web/CSS/flex-basis
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/css) 属性 **`flex-basis`** 指定了 flex 元素在主轴方向上的初始大小。如果不使用 {{Cssxref("box-sizing")}} 改变盒模型的话，那么这个属性就决定了 flex 元素的内容盒（content-box）的尺寸。
@@ -167,10 +168,10 @@ flex-basis: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.flex-basis")}}
+{{Compat}}
 
 ## 参见
 
-- CSS 弹性盒子指南: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS 弹性盒子指南: _[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS 弹性盒子指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS 弹性盒子指南：_[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
 - {{cssxref("width")}}

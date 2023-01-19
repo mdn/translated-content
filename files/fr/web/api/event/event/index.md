@@ -8,6 +8,7 @@ tags:
   - évènements
 translation_of: Web/API/Event/Event
 ---
+
 {{APIRef("DOM")}}
 
 Le constructeur **`Event()`** crée un nouvel {{domxref("Event")}} (_évènement_).

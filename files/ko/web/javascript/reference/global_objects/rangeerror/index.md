@@ -1,14 +1,8 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
-tags:
-  - Error
-  - JavaScript
-  - Reference
-  - RangeError
-translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
-browser-compat: javascript.builtins.RangeError
 ---
+
 {{JSRef}}
 
 **`RangeError`** 객체는 어떤 값이 집합에 없거나 허용되는 범위가 아닐 때

@@ -12,6 +12,7 @@ tags:
   - timeStamp
 translation_of: Web/API/Notification/timestamp
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`timestamp`** de l'interface {{domxref ("Notification")}} renvoie un {{domxref ("DOMTimeStamp")}}, comme définis à l'aide de l'option `timestamp` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()")}}.

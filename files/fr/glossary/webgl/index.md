@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/WebGL
 original_slug: Glossaire/WebGL
 ---
+
 **WebGL** (_Web Graphics Library_) est une {{Glossary("API")}} {{Glossary("JavaScript")}} pour produire des graphismes 2D et 3D interactifs.
 
 Le [Groupe Khronos](https://www.khronos.org/) maintient WebGL qui est basé sur {{Glossary("OpenGL")}} ES 2.0.

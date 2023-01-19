@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-padding-left
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-padding-left`** est une propriété qui permet de définir le remplissage sur le côté gauche entre l'élément et la zone de défilement.
@@ -40,18 +41,18 @@ scroll-padding-left: unset;
 - `auto`
   - : Le décalage est déterminé par l'agent utilisateur. Cette valeur correspond généralement à `0px` mais le navigateur peut utiliser une heuristique et déterminer si une valeur non nulle est préférable au regard du contexte dans lequel se trouve l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-padding-left", "scroll-padding-left")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-padding-left")}}
+{{Compat}}

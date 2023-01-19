@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/codePointAt
 ---
+
 {{JSRef}}
 
 La méthode **`codePointAt()`** renvoie un entier positif qui correspond au code Unicode (_code point_) du caractère de la chaîne à la position donnée.
@@ -109,14 +110,11 @@ if (!String.prototype.codePointAt) {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.codePointAt")}}
+{{Compat}}
 
 ## Voir aussi
 

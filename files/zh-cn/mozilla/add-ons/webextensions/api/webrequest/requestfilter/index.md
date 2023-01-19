@@ -2,6 +2,7 @@
 title: webRequest.RequestFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 ---
+
 {{AddonSidebar()}}
 
 webRequest 事件参数
@@ -21,7 +22,7 @@ webRequest 事件参数
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.webRequest.RequestFilter")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -2,9 +2,10 @@
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 ---
+
 {{JSRef}}
 
-`TypedArray.of()` 方法创建一个具有可变数量参数的新[类型数组](/en-US/docs/) 。此方法几乎与{{jsxref("Array.of()")}} 相同。
+`TypedArray.of()` 方法创建一个具有可变数量参数的新[类型数组](/zh-CN/docs/) 。此方法几乎与{{jsxref("Array.of()")}} 相同。
 
 ## 句法
 

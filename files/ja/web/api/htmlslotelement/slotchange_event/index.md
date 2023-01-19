@@ -1,35 +1,33 @@
 ---
 title: 'HTMLSlotElement: slotchange イベント'
 slug: Web/API/HTMLSlotElement/slotchange_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef}}
 
 **`slotchange`** イベントは、 {{DOMxRef("HTMLSlotElement")}} インスタンス({{HTMLElement("slot")}} 要素) において、そのスロットに含まれるノードが変更された場合に発行されます。
 
-> **Note:** スロットに入っているノードの子ノードが変更された場合、 `slotchange` イベントは発生しません。つまり実際のノード自体を変更 (例えば、追加または削除) した場合に限ります。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>なし</td>
-    </tr>
-  </tbody>
-</table>
+> **メモ:** スロットに入っているノードの子ノードが変更された場合、 `slotchange` イベントは発生しません。実際のノード自体を変更（例えば、追加または削除）した場合に限ります。
 
 **slotchange** イベントを発行させるには、 `slot` 属性を設定または削除しなければなりません。
+
+このイベントはキャンセルできません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティに設定するかしてください。
+
+```js
+addEventListener('slotchange', (event) => {});
+
+onslotchange = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -40,13 +38,13 @@ element.removeAttribute('slot');
 // element.assignedSlot = null
 ```
 
-次のスニペットは、 [slotchange の例](https://github.com/mdn/web-components-examples/tree/master/slotchange)から取りました ([ライブでも確認できます](https://mdn.github.io/web-components-examples/slotchange/))。
+次のスニペットは、 [slotchange の例](https://github.com/mdn/web-components-examples/tree/main/slotchange)から取りました ([ライブでも確認できます](https://mdn.github.io/web-components-examples/slotchange/))。
 
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', function(e) {
+slots[1].addEventListener('slotchange', (e) => {
   let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
 });
 ```
 

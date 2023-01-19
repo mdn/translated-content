@@ -2,7 +2,8 @@
 title: FormData 对象的使用
 slug: Web/API/FormData/Using_FormData_Objects
 ---
-FormData 对象用以将数据编译成键值对，以便用[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)来发送数据。其主要用于发送表单数据，但亦可用于发送带键数据 (keyed data)，而独立于表单使用。如果表单`enctype`属性设为 multipart/form-data ，则会使用表单的{{domxref("HTMLFormElement.submit","submit()")}}方法来发送数据，从而，发送数据具有同样形式。
+
+FormData 对象用以将数据编译成键值对，以便用[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)来发送数据。其主要用于发送表单数据，但亦可用于发送带键数据 (keyed data)，而独立于表单使用。如果表单`enctype`属性设为 multipart/form-data，则会使用表单的{{domxref("HTMLFormElement.submit","submit()")}}方法来发送数据，从而，发送数据具有同样形式。
 
 ## 从零开始创建 FormData 对象
 
@@ -107,7 +108,7 @@ form.addEventListener('submit', function(ev) {
 }, false);
 ```
 
-> **备注：** 如果 FormData 对象是通过表单创建的，则表单中指定的请求方式会被应用到方法 open() 中 。
+> **备注：** 如果 FormData 对象是通过表单创建的，则表单中指定的请求方式会被应用到方法 open() 中。
 
 你还可以直接向 FormData 对象附加 File 或 Blob 类型的文件，如下所示：
 

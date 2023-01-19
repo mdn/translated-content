@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Colors/Applying_color
 translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Использование цвета - одна из фундаментальных форм человеческого восприятия, так дети экспериментируют с цветом ещё до того, как начинают осознанно рисовать. Возможно, именно поэтому цвет - одна из первых вещей, с которой люди хотят экспериментировать, изучая разработку веб-сайтов. С помощью [CSS](/ru/docs/Web/CSS), существует множество способов присвоить цвет [HTML](/ru/docs/Web/HTML) элементам, чтобы придать им желаемый вид. Эта статья даёт базовые представления о всех способах применения цвета к HTML-элементам с помощью CSS.
 
@@ -136,9 +136,9 @@ _**Рис. 1. Цилиндрическая модель HSL.** Hue (оттено
 
 Подумайте об этом как о создании идеального цвета краски:
 
-1.  Вы начинаете с базовой краски, т.е. с максимально возможной интенсивности данного цвета. Например, наиболее насыщенный синий, который может быть представлен на экране пользователя. Это компонент _hue (оттенок)_: значение представляющее **угол** вокруг цветового круга для насыщенного оттенка, который мы хотим использовать в качестве нашей базы.
-2.  Далее выберете краску серого оттенка, которая будет соответствовать тому, насколько ярким вы хотите сделать цвет. Это _luminance/ lightness (яркость)_. Вы хотите, чтобы цвет был очень ярким, практически белым или очень темным, ближе к чёрному, или что-то среднее? Данный компонент определяется в процентах, где 0% - совершенный чёрный цвет и 100% - совершенный белый (независимо от насыщенности или оттенка). Средние значения - это буквальная серая область.
-3.  Теперь, когда у есть серый цвет и идеально насыщенный цвет, вам необходимо их смешать. Компонент _saturation (насыщенность)_ определяет какой процент конечного цвета должен состоять из идеально насыщенного цвета. Остаток конечного цвета формируется серым цветом, который представляет насыщенность.
+1. Вы начинаете с базовой краски, т.е. с максимально возможной интенсивности данного цвета. Например, наиболее насыщенный синий, который может быть представлен на экране пользователя. Это компонент _hue (оттенок)_: значение представляющее **угол** вокруг цветового круга для насыщенного оттенка, который мы хотим использовать в качестве нашей базы.
+2. Далее выберете краску серого оттенка, которая будет соответствовать тому, насколько ярким вы хотите сделать цвет. Это _luminance/ lightness (яркость)_. Вы хотите, чтобы цвет был очень ярким, практически белым или очень темным, ближе к чёрному, или что-то среднее? Данный компонент определяется в процентах, где 0% - совершенный чёрный цвет и 100% - совершенный белый (независимо от насыщенности или оттенка). Средние значения - это буквальная серая область.
+3. Теперь, когда у есть серый цвет и идеально насыщенный цвет, вам необходимо их смешать. Компонент _saturation (насыщенность)_ определяет какой процент конечного цвета должен состоять из идеально насыщенного цвета. Остаток конечного цвета формируется серым цветом, который представляет насыщенность.
 
 Опционально вы также можете включить альфа-канал, чтобы сделать цвет менее прозрачным.
 
@@ -436,23 +436,23 @@ Using an eyedropper tool, we identify a color we like and determine that the col
 
 Having selected our base color, we need to build out our palette. We decide to use [Paletteon](http://www.paletteon.com/) to come up with the other colors we need. Upon opening Paletton, we see:
 
-![Right after loading Paletton.](https://mdn.mozillademos.org/files/15451/paletton1.png)
+![Right after loading Paletton.](paletton1.png)
 
 Next, we enter our color's hex code (`D79C7A`) into the "Base RGB" box at the bottom-left corner of the tool:
 
-![After entering base color](https://mdn.mozillademos.org/files/15453/paletton2.png)
+![After entering base color](paletton2.png)
 
 We now see a monochromatic palette based on the color we picked from the Mars photo. If you need a lot of related colors for some reason, those are likely to be good ones. But what we really want is an accent color. Something that will pop along side the base color. To find that, we click the "add complementary" toggle underneath the menu that lets you select the palette type (currently "Monochromatic"). Paletton computes an appropriate accent color; clicking on the accent color down in the bottom-right corner tells us that this color is `#508D7C`.
 
-![Now with complementary colors included.](https://mdn.mozillademos.org/files/15455/paletton3.png)
+![Now with complementary colors included.](paletton3.png)
 
 If you're unhappy with the color that's proposed to you, you can change the color scheme, to see if you find something you like better. For example, if we don't like the proposed greenish-blue color, we can click the Triad color scheme icon, which presents us with the following:
 
-![Triad color scheme selected](https://mdn.mozillademos.org/files/15457/paletton4.png)
+![Triad color scheme selected](paletton4.png)
 
 That greyish blue in the top-right looks pretty good. Clicking on it, we find that it's `#556E8D`. That would be used as the accent color, to be used sparingly to make things stand out, such as in headlines or in the highlighting of tabs or other indicators on the site:
 
-![Triad color scheme selected](https://mdn.mozillademos.org/files/15459/paletton-color-detail.png)
+![Triad color scheme selected](paletton-color-detail.png)
 
 Now we have our base color and our accent. On top of that, we have a few complementary shades of each, just in case we need them for gradients and the like. The colors can then be exported in a number of formats so you can make use of them.
 

@@ -2,7 +2,9 @@
 title: WebGL コンテキストへの平面コンテンツの追加
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+
+
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 [WebGL コンテキストの作成](/ja/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)に成功したら、レンダリングを開始できます。もっとも簡単にできることは、テクスチャが貼り付けられていない単純な正方形を描画することです。そこで、正方形の平面を描画するコードを作成することから始めましょう。
 
@@ -24,7 +26,7 @@ WebGL コンテンツを描画するときに実行される 2 つのシェー�
 
 頂点シェーダーは頂点の位置で必要な変換を実行し、頂点ごとに行う必要がある他の調整または計算を行い、GLSL によって提供される `gl_Position` と呼ばれる特別な変数に保存して、変換された頂点を返す必要があります。
 
-シェーダーは必要に応じて {{interwiki("wikipedia", "texel_(graphics)", "texel")}} の面のテクスチャ内の座標を決定して頂点に適用したり、法線を適用して頂点に適用する照明係数を決定したりすることもできます。この情報は、フラグメントシェーダーと共有するために、必要に応じて [varyings](/ja/docs/Web/API/WebGL_API/Data#Varyings) または [attributes](/ja/docs/Web/API/WebGL_API/Data#Attributes) に保存できます。
+シェーダーは必要に応じて [texel](https://en.wikipedia.org/wiki/texel_(graphics)) の面のテクスチャ内の座標を決定して頂点に適用したり、法線を適用して頂点に適用する照明係数を決定したりすることもできます。この情報は、フラグメントシェーダーと共有するために、必要に応じて [varyings](/ja/docs/Web/API/WebGL_API/Data#Varyings) または [attributes](/ja/docs/Web/API/WebGL_API/Data#Attributes) に保存できます。
 
 以下の頂点シェーダーは `aVertexPosition` と呼ばれる定義した属性から頂点位置の値を受け取ります。次に、その位置に `uProjectionMatrix` および `uModelViewMatrix`という 2 つの 4 x 4 行列を乗算します。`gl_Position` は結果に設定されます。投影法およびその他のマトリックスの詳細については、[この記事が役立つ場合があります](https://webglfundamentals.org/webgl/lessons/ja/webgl-3d-perspective.html)。
 
@@ -193,7 +195,7 @@ Once that's done, we create a JavaScript array containing the position for each 
 
 Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
 
-> **Note:** You might get a JavaScript error saying " mat4 is not defined". This means there is a dependency on `glmatrix`. You can include [gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js) to resolve this issue, as suggested [here](https://github.com/mdn/webgl-examples/issues/20).
+> **メモ:** You might get a JavaScript error saying " mat4 is not defined". This means there is a dependency on `glmatrix`. You can include [gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js) to resolve this issue, as suggested [here](https://github.com/mdn/webgl-examples/issues/20).
 
 ```js
 function drawScene(gl, programInfo, buffers) {

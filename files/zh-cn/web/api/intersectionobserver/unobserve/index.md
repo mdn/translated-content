@@ -2,6 +2,7 @@
 title: IntersectionObserver.unobserve()
 slug: Web/API/IntersectionObserver/unobserve
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}}的`unobserve()`

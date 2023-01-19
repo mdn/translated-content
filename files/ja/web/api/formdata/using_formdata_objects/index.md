@@ -2,6 +2,7 @@
 title: FormData オブジェクトの使用
 slug: Web/API/FormData/Using_FormData_Objects
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 [`FormData`](/ja/docs/Web/API/FormData) オブジェクトは、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) を使用して送信するためのキーと値のペアのセットを収集可能にします。本来はフォームデータの送信に使用することを想定していましたが、キーのついたデータを伝送するためにフォームとは独立して使用することもできます。伝送されるデータは、フォームのエンコードタイプが `multipart/form-data` に設定されている場合に、{{domxref("HTMLFormElement.submit","submit()")}} メソッドで送信する際に使用するデータと同じ形式です。
@@ -30,7 +31,7 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 ```
 
-> **Note:** **注:** フィールド "userfile" および "webmasterfile" はどちらも、ファイルを含んでいます。フィールド "accountnum" に与えた数値は [`FormData.append()`](</ja/docs/Web/API/FormData#append()>) メソッドにより直ちに文字列へ変換されます (フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、または文字列をとることができます。**値が Blob でもファイルでもない場合は、文字列に変換されます**)。
+> **メモ:** フィールド "userfile" および "webmasterfile" はどちらも、ファイルを含んでいます。フィールド "accountnum" に与えた数値は [`FormData.append()`](</ja/docs/Web/API/FormData#append()>) メソッドにより直ちに文字列へ変換されます (フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、または文字列をとることができます。**値が Blob でもファイルでもない場合は、文字列に変換されます**)。
 
 この例では、 "username", "accountnum", "userfile", "webmasterfile" というフィールドの値を含む `FormData` インスタンスを構築し、 `XMLHttpRequest` のメソッド [`send()`](</ja/docs/Web/API/XMLHttpRequest#send()>) を使用してフォームのデータを送信します。 "webmasterfile" というフィールドは {{domxref("Blob")}} です。 `Blob` オブジェクトは、不変的な生データのファイルのようなオブジェクトを表します。 Blob は、必ずしも JavaScript に適した形式ではないデータを表します。 {{ domxref("File") }} インターフェースは `Blob` をベースにしており、 Blob の機能を継承し、ユーザーのシステム上のファイルをサポートするように拡張されています。 `Blob` を作成するには、 {{domxref("Blob.Blob","Blob() constructor")}} コンストラクターを呼び出します。
 
@@ -38,7 +39,7 @@ request.send(formData);
 
 既存の {{ HTMLElement("form") }} のデータを含む `FormData` オブジェクトを構築するには、 `FormData` オブジェクトの作成時にその form 要素を指定します。
 
-> **Note:** **注**: FormData は name 属性を使用する入力フィールドのみを使用します。
+> **メモ:** FormData は name 属性を使用する入力フィールドのみを使用します。
 
 ```js
 var formData = new FormData(someFormElement);
@@ -109,9 +110,9 @@ form.addEventListener('submit', function(ev) {
 }, false);
 ```
 
-> **Note:** **注**: フォームへの参照を渡した場合は、 open() の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Methods)よりもフォームで指定したメソッドを優先します。
+> **メモ:** フォームへの参照を渡した場合は、 open() の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Methods)よりもフォームで指定したメソッドを優先します。
 
-> **Warning:** **警告**: FormData を使用して、{{ domxref("XMLHttpRequest") }} または {{ domxref("Fetch_API") }} を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合 (Files や Blob をサーバーにアップロードする場合など)、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
+> **警告:** FormData を使用して、{{ domxref("XMLHttpRequest") }} または {{ domxref("Fetch_API") }} を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合 (Files や Blob をサーバーにアップロードする場合など)、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
 
 以下のように、直接 {{ domxref("File") }} や {{ domxref("Blob") }} を{{ domxref("FormData") }} オブジェクトへ追加することもできます。
 
@@ -164,7 +165,7 @@ formElem.addEventListener('formdata', (e) => {
 });
 ```
 
-> **Note:** **注**: `formdata` イベントと {{domxref("FormDataEvent")}} オブジェクトは、 Chrome ではバージョン 77 (および同等の Chromium) から、 Firefox ではバージョン 72 から利用可能です (Firefox 71 で `dom.formdata.event.enabled` を設定することで初めて利用可能になりました)。
+> **メモ:** `formdata` イベントと {{domxref("FormDataEvent")}} オブジェクトは、 Chrome ではバージョン 77 (および同等の Chromium) から、 Firefox ではバージョン 72 から利用可能です (Firefox 71 で `dom.formdata.event.enabled` を設定することで初めて利用可能になりました)。
 
 ## `FormData` オブジェクトを*使用せずに* AJAX でフォームやファイルを送信する
 

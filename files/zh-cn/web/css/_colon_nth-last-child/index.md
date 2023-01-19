@@ -2,6 +2,7 @@
 title: ':nth-last-child'
 slug: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 **`:nth-last-child()`** 这个[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 从兄弟节点中从后往前匹配处于某些位置的元素
@@ -23,9 +24,9 @@ slug: Web/CSS/:nth-last-child
 ### Keyword values
 
 - `odd`
-  - : 代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是奇数，比如: 1, 3, 5 等。
+  - : 代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是奇数，比如：1, 3, 5 等。
 - `even`
-  - : 代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是偶数，比如: 2, 4, 6 等。
+  - : 代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是偶数，比如：2, 4, 6 等。
 
 ### Functional notation
 

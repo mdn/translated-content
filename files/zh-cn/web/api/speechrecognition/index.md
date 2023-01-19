@@ -2,6 +2,7 @@
 title: 语音识别
 slug: Web/API/SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`SpeechRecognition`** interface of the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) is the controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
@@ -81,7 +82,7 @@ Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTar
 
 ## Examples
 
-In our simple [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, and set it to be the grammar that will be recognised by the `SpeechRecognition` instance using the {{domxref("SpeechRecognition.grammars")}} property.
+In our simple [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, and set it to be the grammar that will be recognised by the `SpeechRecognition` instance using the {{domxref("SpeechRecognition.grammars")}} property.
 
 After some other values have been defined, we then set it so that the recognition service starts when a click event occurs (see {{domxref("SpeechRecognition.start()")}}.) When a result has been successfully recognised, the {{domxref("SpeechRecognition.onresult")}} handler fires, we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that colour.
 
@@ -117,7 +118,7 @@ recognition.onresult = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.SpeechRecognition")}}
+{{Compat}}
 
 ## See also
 

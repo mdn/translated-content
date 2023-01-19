@@ -3,6 +3,7 @@ title: IDBObjectStore.add()
 slug: Web/API/IDBObjectStore/add
 translation_of: Web/API/IDBObjectStore/add
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`add()`**, rattachée à l'interface {{domxref("IDBObjectStore")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée un [clone structurel](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur et stocke la valeur clonée dans le magasin d'objet. Cette méthode permet d'ajouter de nouveaux enregistrements dans un magasin d'objet.
@@ -49,7 +50,7 @@ Cette méthode peut lever une exception {{domxref("DOMException")}} ayant l'un d
     <tr>
       <td><code>TransactionInactiveError</code></td>
       <td>
-        La transaction pour cet objet  {{domxref("IDBObjectStore")}}
+        La transaction pour cet objet {{domxref("IDBObjectStore")}}
         est inactive.
       </td>
     </tr>

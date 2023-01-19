@@ -2,9 +2,10 @@
 title: MutationObserver.takeRecords()
 slug: Web/API/MutationObserver/takeRecords
 ---
+
 {{APIRef("DOM WHATWG")}}
 
-{{domxref("MutationObserver")}} 的 **`takeRecords()`** 方法返回已检测到但尚未由观察者的回调函数处理的所有匹配 DOM 更改的列表，使变更队列保持为空。 此方法最常见的使用场景是在断开观察者之前立即获取所有未处理的更改记录，以便在停止观察者时可以处理任何未处理的更改。
+{{domxref("MutationObserver")}} 的 **`takeRecords()`** 方法返回已检测到但尚未由观察者的回调函数处理的所有匹配 DOM 更改的列表，使变更队列保持为空。此方法最常见的使用场景是在断开观察者之前立即获取所有未处理的更改记录，以便在停止观察者时可以处理任何未处理的更改。
 
 ## 语法
 
@@ -57,4 +58,4 @@ observer.disconnect();
 
 ## 浏览器兼容性
 
-{{Compat("api.MutationObserver.takeRecords")}}
+{{Compat}}

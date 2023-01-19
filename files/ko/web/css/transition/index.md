@@ -1,9 +1,8 @@
 ---
 title: transition
 slug: Web/CSS/transition
-translation_of: Web/CSS/transition
-browser-compat: css.properties.transition
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Summary

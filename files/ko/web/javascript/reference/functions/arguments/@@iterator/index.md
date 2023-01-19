@@ -1,14 +1,8 @@
 ---
 title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
-tags:
-  - Deprecated
-  - Functions
-  - JavaScript
-  - Property
-  - arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
+
 {{jsSidebar("Functions")}}
 
 **`@@iterator`** 속성의 초기값은 {{jsxref("Array.prototype.values")}} 속성의 초기값과 같은 함수 객체입니다.

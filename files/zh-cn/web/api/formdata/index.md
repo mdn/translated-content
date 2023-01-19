@@ -2,6 +2,7 @@
 title: FormData
 slug: Web/API/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData`** 接口提供了一种表示表单数据的键值对 `key/value` 的构造方式，并且可以轻松的将数据通过{{domxref("XMLHttpRequest.send()")}} 方法发送出去，本接口和此方法都相当简单直接。如果送出时的编码类型被设为 `"multipart/form-data"`，它会使用和表单一样的格式。
@@ -44,7 +45,7 @@ slug: Web/API/FormData
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData")}}
+{{Compat}}
 
 ## 参见
 

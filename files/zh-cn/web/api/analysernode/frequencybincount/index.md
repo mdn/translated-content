@@ -2,6 +2,7 @@
 title: AnalyserNode.frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`frequencyBinCount`** 的值固定为 {{ domxref("AnalyserNode") }} 接口中 fftSize 值的一半。该属性通常用于可视化的数据值的数量。
@@ -70,7 +71,7 @@ draw();
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode.frequencyBinCount")}}
+{{Compat}}
 
 ## 相关内容
 

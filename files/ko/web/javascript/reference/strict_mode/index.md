@@ -1,17 +1,13 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - 엄격모드
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
+
 {{JsSidebar("More")}}
 
-> **Callout:** 가끔 엄격하지 않은 기본값을 " **[느슨한 모드](https://developer.mozilla.org/ko/docs/Glossary/Sloppy_mode)**(sloppy mode)"라고 부르기도 합니다. 공식적인 용어는 아니지만 혹시 모르니 알아두세요.
+> **Callout:** 가끔 엄격하지 않은 기본값을 " **[느슨한 모드](/ko/docs/Glossary/Sloppy_mode)**(sloppy mode)"라고 부르기도 합니다. 공식적인 용어는 아니지만 혹시 모르니 알아두세요.
 
-[ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 에서 소개된 JavaScript 의 엄격모드는 JavaScript 의 제한된 버전을 선택하여 암묵적인 "**[느슨한 모드](https://developer.mozilla.org/ko/docs/Glossary/Sloppy_mode)**(sloppy mode)" 를 해제하기 위한 방법입니다. 엄격 모드는 단지 부분적인 것이 아니며, 이것은 _고의적으로_ 일반 코드와 다른 시멘틱을 가지고 있습니다. 엄격모드를 지원하지 않는 브라우저에서는 엄격 모드의 코드가 다른 방식으로 동작할 것입니다, 그 때문에 엄격 모드가 적절하게 적용된 피쳐 테스트 없이 엄격 모드에 의존하면 안됩니다. 엄격 모드의 코드와 비-엄격 모드의 코드는 공존할 수 있으며, 때문에 스크립트의 엄격 모드를 취사 선택하는 것이 점진적으로 가능하게 되었습니다.
+[ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 에서 소개된 JavaScript 의 엄격모드는 JavaScript 의 제한된 버전을 선택하여 암묵적인 "**[느슨한 모드](/ko/docs/Glossary/Sloppy_mode)**(sloppy mode)" 를 해제하기 위한 방법입니다. 엄격 모드는 단지 부분적인 것이 아니며, 이것은 _고의적으로_ 일반 코드와 다른 시멘틱을 가지고 있습니다. 엄격모드를 지원하지 않는 브라우저에서는 엄격 모드의 코드가 다른 방식으로 동작할 것입니다, 그 때문에 엄격 모드가 적절하게 적용된 피쳐 테스트 없이 엄격 모드에 의존하면 안됩니다. 엄격 모드의 코드와 비-엄격 모드의 코드는 공존할 수 있으며, 때문에 스크립트의 엄격 모드를 취사 선택하는 것이 점진적으로 가능하게 되었습니다.
 
 엄격 모드는 평범한 JavaScript 시멘틱스에 몇가지 변경이 일어나게 합니다.
 
@@ -55,7 +51,7 @@ function notStrict() { return "I'm not strict."; }
 
 ### 모듈에 strict mode 적용
 
-ECMAScript 2015 는 [JavaScript 모듈](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)을 소개했습니다. 따라서, 이는 엄격 모드를 적용할 수 있는 3번 째 방법입니다. JavaScript 모듈의 전체 컨텐츠는 엄격 모드 시작을 위한 구문 없이도 자동으로 엄격모드입니다.
+ECMAScript 2015 는 [JavaScript 모듈](/en-US/docs/Web/JavaScript/Reference/Statements/export)을 소개했습니다. 따라서, 이는 엄격 모드를 적용할 수 있는 3번 째 방법입니다. JavaScript 모듈의 전체 컨텐츠는 엄격 모드 시작을 위한 구문 없이도 자동으로 엄격모드입니다.
 
 ```js
     function strict() {
@@ -81,7 +77,7 @@ ECMAScript 2015 는 [JavaScript 모듈](https://developer.mozilla.org/en-US/docs
 mistypedVaraible = 17; // 변수의 오타때문에 이 라인에서 ReferenceError 를 발생시킴
 ```
 
-둘째로, 엄격모드는 예외를 발생시키는 실패를 조용히 넘어가는 대신 작업을 만듭니다. 예를 들어, `NaN` 은 쓸 수 없는 전역 변수입니다. `NaN` 에 할당하는 일반적인 코드는 아무 것도 하지 않습니다. 개발자도 아무런 실패 피드백을 받지 않습니다. 엄격 모드에서 `NaN` 에 할당하는 것은 예외를 발생시킵니다. 일반 코드에서 조용히 넘어가는 모든 실패에 대해 (쓸 수 없는 전역 또는 프로퍼티에 할당, getter-only 프로퍼티에 할당, [확장 불가](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) 객체에 새 프로퍼티 할당) 엄격 모드에서는 예외를 발생시킵니다.
+둘째로, 엄격모드는 예외를 발생시키는 실패를 조용히 넘어가는 대신 작업을 만듭니다. 예를 들어, `NaN` 은 쓸 수 없는 전역 변수입니다. `NaN` 에 할당하는 일반적인 코드는 아무 것도 하지 않습니다. 개발자도 아무런 실패 피드백을 받지 않습니다. 엄격 모드에서 `NaN` 에 할당하는 것은 예외를 발생시킵니다. 일반 코드에서 조용히 넘어가는 모든 실패에 대해 (쓸 수 없는 전역 또는 프로퍼티에 할당, getter-only 프로퍼티에 할당, [확장 불가](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) 객체에 새 프로퍼티 할당) 엄격 모드에서는 예외를 발생시킵니다.
 
 ```js
 "use strict";

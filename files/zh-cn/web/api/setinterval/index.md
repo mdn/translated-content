@@ -2,12 +2,12 @@
 title: setInterval()
 slug: Web/API/setInterval
 ---
+
 {{ApiRef("HTML DOM")}}
 
 {{domxref("Window")}} 和 {{domxref("Worker")}} 接口提供的 **`setInterval()`** 方法重复调用一个函数或执行一个代码片段，在每次调用之间具有固定的时间间隔。
 
-它返回一个 `interval ID`，该 ID 唯一地标识时间间隔，因此你可以稍后通过调用 {{domxref("clearInterval",
-  "clearInterval()")}} 来移除定时器。
+它返回一个 `interval ID`，该 ID 唯一地标识时间间隔，因此你可以稍后通过调用 {{domxref("clearInterval", "clearInterval()")}} 来移除定时器。
 
 ## 语法
 
@@ -26,7 +26,7 @@ var intervalID = setInterval(code, [delay]);
 - `delay`
   - : 是每次延迟的毫秒数（一秒等于 1000 毫秒），函数的每次调用会在该延迟之后发生。如果未指定，则其默认值为 0。参见下方的[延迟限制](#延迟限制)以了解详细的 `delay` 的取值范围。
 - `arg1, ..., argN` {{optional_inline}}
-  - : 当定时器过期的时候，将被传递给 _func_ 函数的附加参数。
+  - : 当计时结束的时候，将被传递给 _func_ 函数的附加参数。
 
 ### 返回值
 
@@ -162,7 +162,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 定时器是可以嵌套的；这意味着，`setInterval()` 的回调中可以嵌入对 `setInterval()` 的调用以创建另一个定时器，即使第一个定时器还在运行。为了减轻这对性能产生的潜在影响，一旦定时器嵌套超过 5 层深度，浏览器将自动强制设置定时器的最小时间间隔为 4 毫秒。如果尝试将深层嵌套中调用 `setInterval()` 的延迟设定为小于 4 毫秒的值，其将被固定为 4 毫秒。
 
-在某些情况下，浏览器可能会强制执行更严格的最小时间间隔限制，尽管这些情况是不常见的。另外，请注意每次调用回调函数之间经过的实际时间可能会比给定的 `delay` 长；有关的示例，请参见{{SectionOnPage("/zh-CN/docs/Web/API/setTimeout", "实际延时比设定值更久的原因：最小延迟时间")}}。
+在某些情况下，浏览器可能会强制执行更严格的最小时间间隔限制，尽管这些情况是不常见的。另外，请注意每次调用回调函数之间经过的实际时间可能会比给定的 `delay` 长；有关的示例，请参见[实际延时比设定值更久的原因](/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间)。
 
 ### 确保执行时间短于定时器时间间隔
 

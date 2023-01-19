@@ -2,6 +2,7 @@
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
+
 {{jsSidebar("Objects")}}
 
 グローバルプロパティ **`Infinity`** は無限大を表す数値です。

@@ -1,14 +1,6 @@
 ---
 title: AnalyserNode.maxDecibels
 slug: Web/API/AnalyserNode/maxDecibels
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - maxDecibels
-browser-compat: api.AnalyserNode.maxDecibels
 ---
 {{APIRef("Web Audio API")}}
 
@@ -23,7 +15,7 @@ analyserNode.maxDecibels = newValue;
 
 ### 값
 
-FFT 분석 데이터를 스케일링하는 것에 대한 최대 [데시벨](https://en.wikipedia.org/wiki/Decibel "Decibel on Wikipedia") 값을 나타내는 double인데, `0` dB는 가능한 가장 큰 소리를 나타내고, `-10` dB는 그것의 10번째, 등등입니다. 기본 값은 `-30` dB입니다.
+FFT 분석 데이터를 스케일링하는 것에 대한 최대 [데시벨](https://en.wikipedia.org/wiki/Decibel) 값을 나타내는 double인데, `0` dB는 가능한 가장 큰 소리를 나타내고, `-10` dB는 그것의 10번째, 등등입니다. 기본 값은 `-30` dB입니다.
 
 `getByteFrequencyData()`로부터 데이터를 얻을 때, `maxDecibels` 또는 더 높은 진폭을 가진 모든 주파수는 `255`로 반환됩니다.
 

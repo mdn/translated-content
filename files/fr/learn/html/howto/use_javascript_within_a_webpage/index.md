@@ -9,6 +9,7 @@ tags:
 translation_of: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
 original_slug: Apprendre/HTML/Comment/Utiliser_JavaScript_au_sein_d_une_page_web
 ---
+
 Dans cet article, nous verrons comment améliorer les pages web en ajoutant du code JavaScript dans des documents HTML.
 
 <table class="standard-table">

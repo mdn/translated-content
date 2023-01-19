@@ -1,9 +1,9 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-translation_of: Web/CSS/transform-function/matrix()
 original_slug: Web/CSS/transform-function/matrix()
 ---
+
 {{CSSRef}}
 
 **`matrix()`** [CSS](/ko/docs/Web/CSS) 함수는 2D 변형 동차 행렬을 선언합니다. 결과는 {{cssxref("&lt;transform-function&gt;")}} 데이터 타입입니다.

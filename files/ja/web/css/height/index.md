@@ -2,6 +2,7 @@
 title: height
 slug: Web/CSS/height
 ---
+
 {{CSSRef}}
 
 **`height`** は CSS のプロパティで、要素の高さを指定します。既定では、このプロパティは[コンテンツ領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)の高さを定義します。{{cssxref("box-sizing")}} が `border-box` に設定されていた場合は、 [境界領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)の高さを定義します。

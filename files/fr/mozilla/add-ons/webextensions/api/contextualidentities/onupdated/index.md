@@ -12,6 +12,7 @@ tags:
   - onUpdated
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque les propriétés d'une identité contextuelle, telles que son nom, son icône ou sa couleur, sont modifiées. Les identités contextuelles peuvent être mises à jour par des extensions en utilisant l'API `contextualIdentities` , ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.
@@ -60,7 +61,8 @@ browser.contextualIdentities.onUpdated.addListener(handleUpdated);
 
 {{WebExtExamples}}
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -87,4 +89,4 @@ browser.contextualIdentities.onUpdated.addListener(handleUpdated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

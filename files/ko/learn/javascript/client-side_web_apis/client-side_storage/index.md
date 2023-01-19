@@ -2,6 +2,7 @@
 title: Client-side storage
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -11,24 +12,22 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
-        JavaScript basics (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
-          >building blocks</a
-        >,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
-        the
+        JavaScript에 대한 기본 (<a href="/ko/docs/Learn/JavaScript/First_steps">첫걸음</a>,
+        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
+          >구성 요소</a
+        >
+        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript 객체</a> 참고),
         <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >basics of Client-side APIs</a
+          >Client-side API의 기본</a
         >
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">목표:</th>
       <td>
-        To learn how to use client-side storage APIs to store application data.
+        데이터를 저장하기 위해 client-side storage API를 어떻게 사용하는지 배우기.
       </td>
     </tr>
   </tbody>
@@ -144,7 +143,7 @@ Let's apply this new-found knowledge by writing a simple working example to give
 
 You can find the example HTML at [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) — this contains a simple website with a header, content, and footer, and a form for entering your name.
 
-![](https://mdn.mozillademos.org/files/15735/web-storage-demo.png)
+![](web-storage-demo.png)
 
 Let's build up the example, so you can understand how it works.
 
@@ -249,7 +248,7 @@ Here we'll run you through an example that allows you to store notes in your bro
 
 The app looks something like this:
 
-![](https://mdn.mozillademos.org/files/15744/idb-demo.png)
+![](idb-demo.png)
 
 Each note has a title and some body text, each individually editable. The JavaScript code we'll go through below has detailed comments to help you understand what's going on.
 
@@ -650,7 +649,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
 The above example already shows how to create an app that will store large assets in an IndexedDB database, avoiding the need to download them more than once. This is already a great improvement to the user experience, but there is still one thing missing — the main HTML, CSS, and JavaScript files still need to downloaded each time the site is accessed, meaning that it won't work when there is no network connection.
 
-![](https://mdn.mozillademos.org/files/15759/ff-offline.png)
+![](ff-offline.png)
 
 This is where [Service workers](/ko/docs/Web/API/Service_Worker_API) and the closely-related [Cache API](/ko/docs/Web/API/Cache) come in.
 
@@ -734,7 +733,7 @@ self.addEventListener('fetch', function(e) {
 });
 ```
 
-And that is it for our simple service worker. There is a whole load more you can do with them — for a lot more detail, see the [service worker cookbook](https://serviceworke.rs/). And thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), which inspired this simple example.
+And that is it for our simple service worker. There is a whole load more you can do with them — for a lot more detail, see the [service worker cookbook](https://github.com/mdn/serviceworker-cookbook/). And thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), which inspired this simple example.
 
 #### Testing the example offline
 

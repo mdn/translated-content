@@ -3,6 +3,7 @@ title: 你的第二个 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 ---
+
 {{AddonSidebar}}
 
 如果你已经阅读了 [你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)，那么你现在已经知道如何写一个扩展了。在这篇文章，我们将写一个稍微复杂一点点的扩展来为你展示更多的一些 API。

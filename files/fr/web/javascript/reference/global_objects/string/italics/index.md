@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/italics
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/italics
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`italics()`** permet de créer un élément HTML {{HTMLElement("i")}} qui permet de représenter la chaîne courante en italique.
@@ -54,14 +55,11 @@ Cet exemple permet de produire le fragment HTML suivant dans la console :
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.italics', 'String.prototype.italics')}}     | {{Spec2('ES6')}}         | Définition initiale. Implémentée dans JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web. |
-| {{SpecName('ESDraft', '#sec-string.prototype.italics', 'String.prototype.italics')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web.                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.italics")}}
+{{Compat}}
 
 ## Voir aussi
 

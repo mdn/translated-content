@@ -7,6 +7,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@supports
 ---
+
 {{CSSRef}}
 
 La règle **`@supports`** permet de définir des déclarations qui dépendent de la prise en charge du navigateur d'une ou plusieurs fonctionnalités CSS. Cette condition est définie par un ensemble de paires de propriété/valeur qui forment une combinaison de conjonctions, disjonctions, négations. Une telle condition est appelée « condition de prise en charge » (ou _supports condition_).
@@ -200,14 +201,11 @@ sera ainsi équivalente à :
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires                       |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
-| {{SpecName("CSS4 Conditional", "#at-supports", "@supports")}} | {{Spec2("CSS4 Conditional")}} | Ajout de la fonction `selector()`. |
-| {{SpecName("CSS3 Conditional", "#at-supports", "@supports")}} | {{Spec2("CSS3 Conditional")}} | Définition initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.supports")}}
+{{Compat}}
 
 ## Voir aussi
 

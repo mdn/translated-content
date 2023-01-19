@@ -3,18 +3,19 @@ title: Разметка и содержащий блок
 slug: Web/CSS/Containing_block
 translation_of: Web/CSS/Containing_block
 ---
+
 {{cssref}}
 
 На размер и позицию элемента часто влияет его **содержащий блок** (containing block). Чаще всего содержащим блоком является content область ([content area](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)) ближайшего блочного ([block-level](/ru/docs/Web/HTML/Block-level_elements)) предка, но это не всегда так. В этой статье мы рассмотрим факторы, которые определяют содержащий блок элемента.
 
 Когда пользовательский агент (такой как ваш браузер) делает разметку документа, он создаёт бокс (box) для каждого элемента. Каждый бокс разделяется на следующие области:
 
-1.  Content область или область контента (content area).
-2.  Padding область или область внутреннего поля (padding area).
-3.  Border область или область границы (border area).
-4.  Margin область или область внешнего поля (margin area).
+1. Content область или область контента (content area).
+2. Padding область или область внутреннего поля (padding area).
+3. Border область или область границы (border area).
+4. Margin область или область внешнего поля (margin area).
 
-![Diagram of the box model](https://mdn.mozillademos.org/files/16558/box-model.png)
+![Diagram of the box model](box-model.png)
 
 Многие разработчики верят, что содержащий блок элемента - это всегда content область его родителя, но это не всегда является правдой. Давайте исследуем факторы, которые определяют, что представляет собой содержащий элемент блок.
 
@@ -30,23 +31,23 @@ translation_of: Web/CSS/Containing_block
 
 Определение содержащего блока элемента полностью зависит от значения свойства {{cssxref("position")}}:
 
-1.  Если свойство `position` имеет значение **`static`**,** \*\***`relative`**, или **`sticky`\*\*, то содержащий блок задаётся краем _content бокса_ ближайшего предка, который:
+1. Если свойство `position` имеет значение **`static`**, **`relative`**, или **`sticky`**, то содержащий блок задаётся краем _content бокса_ ближайшего предка, который:
 
     - либо является **блочным контейнером** (block container), например, если его свойство display имеет значение inline-block, block или list-item.
     - либо **устанавливает контекст форматирования** (formatting context), например, контейнер таблицы (table container), flex-контейнер (flex container), grid-контейнер (grid container) или блочный контейнер (block container).
 
-2.  Если свойство `position`\*\* **имеет значение **`absolute`**, то содержащий блок задаётся краем _padding бокса_ ближайшего предка, у которого свойство `position`** \*\*имеет значение отличное от `static` (`fixed`, `absolute`, `relative` или `sticky`).
-3.  Если свойство `position`\*\* **имеет значение **`fixed`\*\*, то содержащий блок задаётся:
+2. Если свойство **`position`** имеет значение **`absolute`**, то содержащий блок задаётся краем _padding бокса_ ближайшего предка, у которого свойство **`position`** имеет значение отличное от `static` (`fixed`, `absolute`, `relative` или `sticky`).
+3. Если свойство **`position`** имеет значение **`fixed`**, то содержащий блок задаётся:
 
     - в случае непрерывного медиа (continuous media) областью просмотра (вьюпорт - {{glossary("viewport")}});
     - в случае страничного медиа (paged media) областью страницы.
 
-4.  Если свойство `position`\*\* **имеет значение **`absolute`** или **`fixed`\*\*, то содержащий блок может также задаваться краем padding бокса ближайшего предка, у которого:
+4. Если свойство **`position`** имеет значение **`absolute`** или **`fixed`**, то содержащий блок может также задаваться краем padding бокса ближайшего предка, у которого:
 
-    1.  Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от `none`.
-    2.  Свойство {{cssxref("will-change")}} имеет значение `transform` или `perspective`.
-    3.  Свойство {{cssxref("filter")}}\*\* \*\*имеет значение отличное от `none` или `will-change` value of `filter` (работает только в Firefox).
-    4.  Свойство {{cssxref("contain")}} имеет значение `paint` (например, `contain: paint;`).
+    1. Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от `none`.
+    2. Свойство {{cssxref("will-change")}} имеет значение `transform` или `perspective`.
+    3. Свойство {{cssxref("filter")}} имеет значение отличное от `none` или `will-change` value of `filter` (работает только в Firefox).
+    4. Свойство {{cssxref("contain")}} имеет значение `paint` (например, `contain: paint;`).
 
 > **Примечание:**Содержащий блок в котором находится корневой элемент ({{HTMLElement("html")}}) представляет собой прямоугольник, который называется **начальный содержащий блок**. Он имеет размеры области просмотра (вьюпорт - viewport) для непрерывного медиа (continuous media) или области страницы (page area) для страничного медиа (paged media).
 
@@ -54,8 +55,8 @@ translation_of: Web/CSS/Containing_block
 
 As noted above, when certain properties are given a percentage value, the computed value depends on the element's containing block. The properties that work this way are **box model properties** and **offset properties**:
 
-1.  The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the `height`\*\* \*\*of the containing block.
-2.  The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the `width`\*\* \*\*of the containing block.
+1. The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the `height` of the containing block.
+2. The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the `width` of the containing block.
 
 ## Some examples
 
@@ -108,7 +109,7 @@ p {
 
 ### Example 2
 
-In this example, the paragraph's containing block is the {{HTMLElement("body")}}\*\* \*\*element, because `<section>` is not a block container (because of `display: inline`) and doesn’t establish a formatting context.
+In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because `<section>` is not a block container (because of `display: inline`) and doesn’t establish a formatting context.
 
 ```html hidden
 <body>
@@ -253,5 +254,22 @@ p {
 
 ## Смотрите также
 
-- {{css_key_concepts}}
+- Ключевые концепции CSS
+  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/Comments)
+  - [специфичность](/ru/docs/Web/CSS/Specificity)
+  - [наследование](/ru/docs/Web/CSS/inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Значения
+    - [начальные](/ru/docs/Web/CSS/initial_value)
+    - [вычисленные](/ru/docs/Web/CSS/computed_value)
+    - [используемые](/ru/docs/Web/CSS/used_value)
+    - [действительные](/ru/docs/Web/CSS/actual_value)
+  - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
 - The {{cssxref("all")}} property resets all CSS declarations to a given known state

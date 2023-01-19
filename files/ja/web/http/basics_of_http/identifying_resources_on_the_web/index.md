@@ -1,22 +1,8 @@
 ---
 title: ウェブ上のリソースの識別
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - Domain
-  - HTTP
-  - Path
-  - Scheme
-  - Syntax
-  - URI
-  - URL
-  - URL Syntax
-  - Web
-  - fragment
-  - port
-  - query
-  - resources
-translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
+
 {{HTTPSidebar}}
 
 HTTP 要求の対象は「リソース」と呼ばれ、その本質は細かく定義されていません。ドキュメント、写真、その他の何にでもなりえます。それぞれのリソースは、リソースを特定するために HTTP の至るところで使用される Uniform Resource Identifier ({{Glossary("URI")}}) で特定されます。

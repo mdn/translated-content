@@ -2,6 +2,7 @@
 title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
 ---
+
 {{APIRef("Web Workers API")}}
 
 {{domxref("Worker")}} 接口的 **`postMessage()`**方法向 worker 的内部作用域发送一个消息。这接受单个参数，这是要发送给 worker 的数据。数据可以是由[结构化克隆](/zh-CN/docs/Web/Guide/DOM/The_structured_clone_algorithm)算法处理的任何值或 JavaScript 对象，其包括循环引用。
@@ -28,7 +29,7 @@ Void.
 
 ## Example
 
-以下代码显示了如何使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个 Worker 对象。当两个表单输入 (`first`和`second)`中的其中一个的输入值改变时， {{event("change")}} 事件将调用`postMessage()`把两个 input 的值发送给当前 worker。
+以下代码显示了如何使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个 Worker 对象。当两个表单输入 (`first`和`second)`中的其中一个的输入值改变时， [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件将调用`postMessage()`把两个 input 的值发送给当前 worker。
 
 ```js
 var myWorker = new Worker('worker.js');
@@ -131,7 +132,7 @@ from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2
 
 ## Browser compatibility
 
-{{Compat("api.Worker.postMessage")}}
+{{Compat}}
 
 ## See also
 

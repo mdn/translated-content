@@ -2,6 +2,7 @@
 title: location.reload()
 slug: Web/API/Location/reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`location.reload()`** メソッドは、再読み込みボタンのように現在の URL を再読み込みします。

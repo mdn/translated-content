@@ -1,8 +1,8 @@
 ---
 title: 'InternalError: too much recursion'
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
-translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메시지
@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 
 ## 에러 형식
 
-[`InternalError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError 'The InternalError object indicates an error that occurred internally in the JavaScript engine. For example: "InternalError: too much recursion".').
+[`InternalError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError).
 
 ## 무엇이 잘못되었을까?
 

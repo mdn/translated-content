@@ -4,6 +4,7 @@ slug: Web/CSS/border-right-style
 translation_of: Web/CSS/border-right-style
 browser-compat: css.properties.border-right-style
 ---
+
 {{CSSRef}}
 
 La propriété **`border-right-style`** définit le style de ligne utilisé pour mettre en forme la bordure sur le côté droit d'une boîte.

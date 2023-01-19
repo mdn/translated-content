@@ -2,6 +2,7 @@
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`startTime`** プロパティは、{{domxref("PerformanceEntry","performance entry")}} のうち最初に記録された {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
@@ -28,7 +29,7 @@ entry.startTime;
 
 {{domxref("PerformanceEntry","パフォーマンスエントリ")}}が作成されたときの最初のタイムスタンプを表す {{domxref("DOMHighResTimeStamp")}}。
 
-> **Note:** パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが{{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは{{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+> **メモ:** パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが{{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは{{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
 
 ## 例
 
@@ -82,10 +83,7 @@ function check_PerformanceEntry(obj) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | ステータス                                               | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | -------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-starttime', 'startTime')}} | {{Spec2('Performance Timeline Level 2')}} |          |
-| {{SpecName('Performance Timeline', '#dom-performanceentry-starttime', 'startTime')}}             | {{Spec2('Performance Timeline')}}             | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

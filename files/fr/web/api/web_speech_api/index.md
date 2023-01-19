@@ -9,6 +9,7 @@ tags:
   - synthèse vocale
 translation_of: Web/API/Web_Speech_API
 ---
+
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
 
 L'API <i lang="en">Web Speech</i> permet d'intégrer des données liées à la voix dans des applications web. L'API <i lang="en">Web Speech</i> se compose de deux parties : <i lang="en">SpeechSynthesis</i> (synthèse vocale) et <i lang="en">SpeechRecognition</i> (reconnaissance vocale asynchrone).
@@ -42,7 +43,7 @@ Pour plus de détails concernant ces fonctionnalités, voir [Using the Web Speec
 - {{domxref("SpeechRecognitionError")}}
   - : Répresente les messages d'erreur de l'outil de reconnaissance vocale.
 - {{domxref("SpeechRecognitionEvent")}}
-  - : L'objet événement pour les événements {{event("result")}} et {{event("nomatch")}}, et contient toutes les données associées avec un résultat de reconnaissance vocale intermédiaire ou définitif.
+  - : L'objet événement pour les événements [`result`](/fr/docs/Web/API/SpeechRecognition/result_event) et [`nomatch`](/fr/docs/Web/API/SpeechRecognition/nomatch_event), et contient toutes les données associées avec un résultat de reconnaissance vocale intermédiaire ou définitif.
 - {{domxref("SpeechGrammar")}}
   - : Les mots ou schémas de mots que l'on demande à l'outil de reconnaissance vocale de reconnaître.
 - {{domxref("SpeechGrammarList")}}
@@ -72,7 +73,7 @@ Pour plus de détails concernant ces fonctionnalités, voir [Using the Web Speec
 
 ## Exemples
 
-Le [Web Speech API repo](https://github.com/mdn/web-speech-api/) sur GitHub contient des démos qui illustrent la reconnaissance vocale et la synthèse vocale.
+Le [Web Speech API repo](https://github.com/mdn/dom-examples/tree/main/web-speech-api) sur GitHub contient des démos qui illustrent la reconnaissance vocale et la synthèse vocale.
 
 ## Spécifications
 

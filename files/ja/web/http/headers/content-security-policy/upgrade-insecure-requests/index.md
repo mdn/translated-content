@@ -1,24 +1,13 @@
 ---
 title: 'CSP: upgrade-insecure-requests'
 slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Requests
-  - Security
-  - Upgrade
-  - upgrade-insecure-requests
-browser-compat: http.headers.Content-Security-Policy.upgrade-insecure-requests
-translation_of: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`upgrade-insecure-requests`** ディレクティブは、ユーザーエージェントに、すべてのサイトの安全でないURL (HTTP経由で提供されるURL) をセキュリティで保護された URL (HTTPSを介して提供されるもの) で置き換えられたかのように処理するよう指示します。このディレクティブは、書き換えが必要な安全ではない古い URL が多数存在するウェブサイトのためのものです。
 
-> **Note:** `upgrade-insecure-requests` ディレクティブは、 {{CSP("block-all-mixed-content")}} よりも前に処理され、もし設定されていれば後者は何もしません。どちらかのディレクティブを設定することをお勧めしますが、 HTTP にリダイレクトした後で HTTPS を強制することができない古いブラウザーで HTTPS を強制させたくない限り、両方を指定することはできません。
+> **メモ:** `upgrade-insecure-requests` ディレクティブは、 {{CSP("block-all-mixed-content")}} よりも前に処理され、もし設定されていれば後者は何もしません。どちらかのディレクティブを設定することをお勧めしますが、 HTTP にリダイレクトした後で HTTPS を強制することができない古いブラウザーで HTTPS を強制させたくない限り、両方を指定することはできません。
 
 `upgrade-insecure-requests` ディレクティブは、第三者のサイトのリンクを経由してサイトにアクセスしたユーザーが最上位のナビゲーション用に HTTPS にアップグレードされることを保証しないため、 {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) ヘッダーを置換せず、ユーザーがSSLストリッピング攻撃の対象にならないように、適切な `max-age` を設定するようにしてください。
 

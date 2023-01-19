@@ -1,24 +1,9 @@
 ---
 title: '<title>: 文書題名要素'
 slug: Web/HTML/Element/title
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Page Name
-  - Page Title
-  - Reference
-  - Tab Name
-  - Tab Title
-  - Title
-  - Web
-  - Window Name
-  - Window Title
-translation_of: Web/HTML/Element/title
-browser-compat: html.elements.title
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **`<title>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{glossary("Browser", "ブラウザー")}}のタイトルバーやページのタブに表示される文書の題名を定義します。テキストのみを含めることができます。要素内のタグはすべて無視されます。
 

@@ -2,6 +2,7 @@
 title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 ---
+
 {{ ApiRef("DOM Events") }}
 
 > **警告：** 不要再使用这个方法，而是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
@@ -10,7 +11,7 @@ slug: Web/API/KeyboardEvent/initKeyEvent
 
 {{deprecated_header}}
 
-KeyboardEvent.initKeyEvent 方法用于初始化使用{{domxref("document.createEvent")}}("KeyboardEvent") 创建的事件的值。 以这种方式初始化的事件必须使用{{domxref("document.createEvent")}}("KeyboardEvent") 方法创建。 在调度之前，必须调用 initKeyEvent 来设置事件。
+KeyboardEvent.initKeyEvent 方法用于初始化使用{{domxref("document.createEvent")}}("KeyboardEvent") 创建的事件的值。以这种方式初始化的事件必须使用{{domxref("document.createEvent")}}("KeyboardEvent") 方法创建。在调度之前，必须调用 initKeyEvent 来设置事件。
 
 ## Syntax
 

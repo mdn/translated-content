@@ -2,7 +2,8 @@
 title: <dd>
 slug: Web/HTML/Element/dd
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<dd>` 元素**（_HTML 描述元素_）用来指明一个描述列表 ({{HTMLElement("dl")}}) 元素中一个术语的描述。这个元素只能作为描述列表元素的子元素出现，并且必须跟着一个 {{HTMLElement("dt")}} 元素。
 
@@ -48,7 +49,7 @@ slug: Web/HTML/Element/dd
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.dd")}}
+{{Compat}}
 
 ## See also
 

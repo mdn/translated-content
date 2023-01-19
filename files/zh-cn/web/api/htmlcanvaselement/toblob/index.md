@@ -2,11 +2,12 @@
 title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.toBlob()`** 方法创造 {{domxref("Blob")}} 对象，用以展示 canvas 上的图片；这个图片文件可以被缓存或保存到本地（由用户代理自行决定）。
 
-可以在调用时指定所需的文件格式和图像质量，若未指定文件格式（或不支持指定的文件格式），则默认导出 `image/png` 类型。浏览器需要支持 `image/png`，大多数浏览器还支持额外的图片格式，包括 `image/jpg` 和 `image/webp`。
+可以在调用时指定所需的文件格式和图像质量，若未指定文件格式（或不支持指定的文件格式），则默认导出 `image/png` 类型。浏览器需要支持 `image/png`，大多数浏览器还支持额外的图片格式，包括 `image/jpeg` 和 `image/webp`。
 
 对于支持以指定分辨率编码的图片格式，如不特别指明，图片的默认分辨率为 96dpi。
 
@@ -95,7 +96,7 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
 
 ### 使用 OS.File 保存图像到本地（chrome/add-on context only）
 
-> **备注：** 此方法可将 toBlob 生成的图片保存到本地，但仅在 Firefox、 Chrome 上下文或带有相关插件的情况下可用，因为 Web 并不存在 OS API。
+> **备注：** 此方法可将 toBlob 生成的图片保存到本地，但仅在 Firefox、Chrome 上下文或带有相关插件的情况下可用，因为 Web 并不存在 OS API。
 
 ```js
 const canvas = document.getElementById('canvas');

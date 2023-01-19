@@ -1,13 +1,8 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-translation_of: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 CSS **`white-space`** 속성은 요소가 공백 문자를 처리하는 법을 지정합니다.

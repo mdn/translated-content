@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-text-stroke
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-text-stroke`** permet de définir l'épaisseur et la couleur du contour utilisé pour les lettres d'un texte. Cette propriété est une propriété raccourcie qui permet de définir les propriétés {{cssxref("-webkit-text-stroke-width")}} et {{cssxref("-webkit-text-stroke-color")}}.
@@ -31,9 +32,13 @@ La propriété **`-webkit-text-stroke`** permet de définir l'épaisseur et la c
 - `<color>`
   - : La couleur du contour (cf. {{cssxref("&lt;color&gt;")}}).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -59,16 +64,11 @@ La propriété **`-webkit-text-stroke`** permet de définir l'épaisseur et la c
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                                                          | État                                        | Commentaires                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------- |
-| {{SpecName('Compat', '#the-webkit-text-stroke', '-webkit-text-stroke')}}                                                                                                                                                       | {{Spec2('Compat')}}                    | Définition initiale dans un standard. |
-| [Référence CSS Safari -webkit-text-stroke dans ce document.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_text_stroke) | Documentation non-officielle, non-standard. | Documentation initiale.               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-text-stroke")}}
+{{Compat}}
 
 ## Voir aussi
 

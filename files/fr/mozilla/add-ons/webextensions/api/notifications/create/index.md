@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
+
 {{AddonSidebar()}}
 
 Crée et affiche une notification.
@@ -51,7 +52,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Créez et affichez périodiquement une notification de base à l'aide d'un  {{WebExtAPIRef("alarms", "alarm")}}. En cliquant sur l'action du navigateur, la notification est rejetée.
+Créez et affichez périodiquement une notification de base à l'aide d'un {{WebExtAPIRef("alarms", "alarm")}}. En cliquant sur l'action du navigateur, la notification est rejetée.
 
 Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications).
 

@@ -2,6 +2,7 @@
 title: Firefox 21 for developers
 slug: Mozilla/Firefox/Releases/21
 ---
+
 {{FirefoxSidebar}}
 
 ## Web 开发者需要注意的变化
@@ -18,7 +19,7 @@ slug: Mozilla/Firefox/Releases/21
 
 ### CSS
 
-- {{cssxref("user-select", "-moz-user-select")}}属性的属性值在设置为 `none` 时和设置为 `-moz-none` 时效果等同于, 这样才能让 Gecko 和其他内核 WebKit(Chrome, Safari),Presto (Opera) 以及 Trident(Internet Explorer) 中的表现相同 ({{bug("816298")}}).
+- {{cssxref("user-select", "-moz-user-select")}}属性的属性值在设置为 `none` 时和设置为 `-moz-none` 时效果等同于，这样才能让 Gecko 和其他内核 WebKit(Chrome, Safari),Presto (Opera) 以及 Trident(Internet Explorer) 中的表现相同 ({{bug("816298")}}).
 - On XHTML content, the `auto` value of {{cssxref("hyphens", "-moz-hyphens")}} incorrectly applied hyphenation rules when the language was not explicitly declared. This is fixed by ({{bug("702121")}}).
 - CSS 属性{{cssxref("-moz-orient")}}现在支持新的值 `auto`. 当应用到一个{{HTMLElement("meter")}}元素或者{{HTMLElement("progress")}}元素上时，`auto` 就等同于 `horizontal`({{bug("835883")}}).
 
@@ -90,7 +91,7 @@ slug: Mozilla/Firefox/Releases/21
 ## 相关链接
 
 - [Firefox 21 发行说明](http://www.mozilla.org/zh-CN/firefox/21.0/releasenotes/)
-- [Firefox 21 网站兼容性](../../../../../zh-CN/docs/Site_Compatibility_for_Firefox_21)
+- [Firefox 21 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_21)
 - [Firefox 21 附加组件兼容性](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
 
 ### 更早版本

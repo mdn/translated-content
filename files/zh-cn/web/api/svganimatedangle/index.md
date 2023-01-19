@@ -2,6 +2,7 @@
 title: SVGAnimatedAngle
 slug: Web/API/SVGAnimatedAngle
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated angle interface

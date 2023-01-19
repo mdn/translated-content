@@ -5,6 +5,7 @@ tags:
   - Canvas
 translation_of: Web/API/HTMLCanvasElement
 ---
+
 {{ApiRef}}
 
 L'interface **`HTMLCanvasElement`** fournit un ensemble de propriétés et de méthodes pour manipuler la disposition et la représentation des éléments canvas. L'interface `HTMLCanvasElement` hérite également des propriétés et des méthodes de l'interface {{domxref("HTMLElement")}}.

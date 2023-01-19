@@ -2,33 +2,26 @@
 title: AudioContext.listener
 slug: Web/API/BaseAudioContext/listener
 ---
+
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioContext") }}的`listener属性`返回一个{{ domxref("AudioListener") }} 对象，可以用来实现 3D 音频空间化。
+{{ domxref("AudioContext") }} 接口的 `listener` 属性返回一个 {{ domxref("AudioListener") }} 对象，可以用来实现 3D 音频空间化。
 
-## 语法
+## 值
 
-```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-```
+{{ domxref("AudioListener") }} 对象。
 
-### 返回值
+## 示例
 
-An {{ domxref("AudioListener") }} object.
-
-## 例子
-
-> **备注：** 想要完整的音频空间化例子，可以查看[panner-node](https://github.com/mdn/panner-node) DEMO
+> **备注：** 如果需要完整的音频空间化例子，可以查看 [panner-node](https://github.com/mdn/webaudio-examples/tree/master/panner-node) 演示。
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
-// Older webkit/blink browsers require a prefix
+const audioCtx = new AudioContext();
+// 旧式的 webkit/blink 浏览器需要一个前缀
 
-...
+// …
 
-var myListener = audioCtx.listener;
+const myListener = audioCtx.listener;
 ```
 
 ## 规范
@@ -37,8 +30,8 @@ var myListener = audioCtx.listener;
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.listener")}}
+{{Compat}}
 
-## 另见
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web 音频 API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

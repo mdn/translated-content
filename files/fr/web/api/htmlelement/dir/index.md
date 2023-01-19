@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/dir
 translation_of: Web/API/HTMLElement/dir
 browser-compat: api.HTMLElement.dir
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propriété **`HTMLElement.dir`** permet d'obtenir ou de modifier la direction d'écriture du texte du contenu de l'élément courant.

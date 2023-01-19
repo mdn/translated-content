@@ -1,77 +1,82 @@
 ---
-title: 'ServiceWorkerGlobalScope: install event'
+title: "ServiceWorkerGlobalScope: install イベント"
 slug: Web/API/ServiceWorkerGlobalScope/install_event
+original_slug: Web/API/ServiceWorkerGlobalScope/oninstall
+l10n:
+  sourceCommit: e910d1f446a8b3fa8c60c7cb34c272f4a13b3892
 ---
-{{DefaultAPISidebar("Service Workers API")}}
 
-{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`install`** イベントは、{{domxref("ServiceWorkerRegistration")}} が新しいインストール中のワーカー（{{domxref("ServiceWorkerRegistration.installing")}} worker）を取得すると発生します。
+{{APIRef("Service Workers API")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("ExtendableEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("ServiceWorkerGlobalScope.oninstall")}}</td>
-    </tr>
-  </tbody>
-</table>
+**`install`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、 {{domxref("ServiceWorkerRegistration")}} が新しい {{domxref("ServiceWorkerRegistration.installing")}} ワーカーを取得したときに発行されます。
+
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("install", (event) => {});
+
+oninstall = (event) => {};
+```
+
+## イベント型
+
+{{domxref("ExtendableEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("ExtendableEvent")}}
+
+## イベントプロパティ
+
+_固有のプロパティは実装していませんが、親である {{domxref("Event")}} からプロパティを継承しています。_
 
 ## 例
 
-次のスニペットは、`install` イベントハンドラーを使用してキャッシュに多数のレスポンスを設定する方法を示しています。 サービスワーカーはこれを使用して、資産をオフラインで提供できます。
+以下のスニペットでは、`install`イベントハンドラーを使用して、キャッシュに多くのレスポンスを投入し、サービスワーカーがオフラインで資産を提供するために使用する方法を示しています。
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", (event) => {
   event.waitUntil(
-   caches.open('v1').then(function(cache) {
-         return cache.add(
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-     );
-   })
-   );
+    caches
+      .open("v1")
+      .then((cache) =>
+        cache.addAll([
+          "/",
+          "/index.html",
+          "/style.css",
+          "/app.js",
+          "/image-list.js",
+          "/star-wars-logo.jpg",
+          "/gallery/",
+          "/gallery/bountyHunters.jpg",
+          "/gallery/myLittleVader.jpg",
+          "/gallery/snowTroopers.jpg",
+        ])
+      )
+  );
 });
 ```
 
-次のように {{domxref("ServiceWorkerGlobalScope.oninstall")}} プロパティを使用してイベントハンドラーを設定することもできます。
+また、 `oninstall` プロパティを使用して、イベントハンドラーを設定することもできます。
 
 ```js
-globalScope.oninstall = function(event) {
-  ...
+globalScope.oninstall = (event) => {
+  // ...
 };
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                 | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#service-worker-global-scope-install-event', 'install')}} | {{Spec2('Service Workers')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ServiceWorkerGlobalScope.install_event")}}
+{{Compat}}
 
 ## 関連情報
 
-- [`activate`](/ja/docs/Web/API/ServiceWorkerGlobalScope/activate) イベント
+- {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} イベント
 - {{domxref("ServiceWorkerGlobalScope")}}
-- [Service Worker API](/ja/docs/Web/API/Service_Worker_API)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)

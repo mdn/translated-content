@@ -4,6 +4,7 @@ slug: Web/API/MediaStreamAudioSourceNode
 translation_of: Web/API/MediaStreamAudioSourceNode
 browser-compat: api.MediaStreamAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface **`MediaStreamAudioSourceNode`** est un type d'[`AudioNode`](/fr/docs/Web/API/AudioNode) qui traite une source audio dont le média a été récupéré depuis un objet [`MediaStream`](/fr/docs/Web/API/MediaStream), obtenu en utilisant l'API WebRTC ou les API <i lang="en">Media Capture</i> et <i lang="en">Streams</i>.
@@ -64,7 +65,7 @@ _Cette interface hérite des méthodes de son parent, [`AudioNode`](/fr/docs/Web
 
 Pour l'interface `MediaStreamTrackAudioSourceNode`, l'ordre des pistes audio du flux est déterminé en prenant les pistes pour lesquelles l'attribut [`kind`](/fr/docs/Web/API/MediaStreamTrack/kind) vaut `audio`, en triant ces pistes selon les valeurs de leur propriété [`id`](/fr/docs/Web/API/MediaStreamTrack/id) selon l'ordre des points de code Unicode (ce qui correspond généralement à l'ordre alphabétique ou lexicographique lorsque les identifiants sont des chaînes de caractères alphanumériques simples).
 
-La **première** piste est donc la piste dont l'identifiant  `id` est le premier parmi ceux de toutes les pistes audio selon l'ordre des points de code Unicode.
+La **première** piste est donc la piste dont l'identifiant `id` est le premier parmi ceux de toutes les pistes audio selon l'ordre des points de code Unicode.
 
 Il est toutefois important de noter que cette règle pour l'ordre a été ajoutée après que cette interface a été introduite dans l'API [<i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API). Aussi, mieux vaut ne pas s'appuyer trop sur l'hypothèse que l'ordre sera le même d'un navigateur à l'autre, ou même d'une version à une autre d'un même navigateur.
 

@@ -2,6 +2,7 @@
 title: JavaScript オブジェクト入門
 slug: Learn/JavaScript/Objects
 ---
+
 {{LearnSidebar}}
 
 JavaScript では、文字列や配列などの JavaScript のコア機能から、JavaScript の最上部に構築されたブラウザー API まで、ほとんどのものがオブジェクトです。関連する関数や変数を効率的なパッケージにカプセル化して、便利なデータコンテナーとして動作する独自のオブジェクトを作成することもできます。JavaScript のオブジェクトベースの性質を理解することは、言語に関する知識をさらに深め、より効率的なコードを書く場合に重要です。したがって、この役立つモジュールを用意しました。ここではオブジェクトの理論と構文を詳しく説明し、独自のオブジェクトを作成する方法を見ていきます。
@@ -12,7 +13,7 @@ JavaScript では、文字列や配列などの JavaScript のコア機能から
 
 また、JavaScript オブジェクトを詳細に調べる前に、JavaScript の基本についていくらか精通している必要があります。このモジュールを試す前に、[JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps) と [JavaScript の構成要素](/ja/docs/Learn/JavaScript/Building_blocks)を通して学習してください。
 
-> **Note:** もしあなたが作業しているコンピューター・タブレットやその他のデバイスで自分でファイルを作れない場合は、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) といったようなオンラインコーディングプログラムで (ほとんどの場合) 試すことができます。
+> **メモ:** もしあなたが作業しているコンピューター・タブレットやその他のデバイスで自分でファイルを作れない場合は、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) といったようなオンラインコーディングプログラムで (ほとんどの場合) 試すことができます。
 
 ## ガイド
 

@@ -1,81 +1,74 @@
 ---
 title: Autres ressources
 slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
-tags:
-  - Transformations_XML_avec_XSLT
-  - XML
-  - XSLT
-translation_of: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
-original_slug: Web/XSLT/Transformations_XML_avec_XSLT/Autres_ressources
+l10n:
+  sourceCommit: e14e4830bcd43de164623aaf787fbd695be31d91
 ---
-[« Transformations XML avec XSLT](/fr/docs/Transformations_XML_avec_XSLT)
 
-### Sources imprimées
+[Transformations XML avec XSLT](/fr/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
-#### Livres
+## Publications
 
-- **XSLT: Programmer's Reference, Second Edition**
+### Livres
+
+- **<i lang="en">XSLT: Programmer's Reference, Second Edition</i>**
 
   - **Auteur**&nbsp;: Michael H. Kay
-  - **Nombre de page**&nbsp;: 992 pages
+  - **Nombre de pages**&nbsp;: 992 pages
   - **Éditeur**&nbsp;: Wrox; 2 edition (May 3, 2001)
-  - **ISBN**: 0764543814
-  - Michael Kay est membre du groupe de travail XSL du W3C et le développeur de son propre processeur XSLT libre,
-    Saxon. Il est également l'auteur du seul livre sur ce sujet à avoir bénéficié d'une seconde édition. C'est un
-    gros livre, bien articulé, détaillé, épuisant le sujet, voire parfois le lecteur, et qui couvre toutes les bases
-    possibles de XSLT.
-  - [http://www.amazon.com/XSLT-Programme.../dp/0764543814](http://www.amazon.com/XSLT-Programmers-Reference-Programmer/dp/0764543814)
+  - **ISBN**&nbsp;: 0764543814
+    - Michael Kay est membre du groupe de travail XSL du W3C et le développeur de son propre processeur XSLT libre, Saxon. Il est également l'auteur du seul livre sur ce sujet à avoir bénéficié d'une seconde édition. C'est un gros livre, bien articulé, détaillé, épuisant le sujet, voire parfois le lecteur, et qui couvre toutes les bases possibles de XSLT.
+
+<https://www.amazon.com/XSLT-Programmers-Reference-Programmer/dp/0764543814>
 
 - **XSLT**
 
   - **Auteur**&nbsp;: Doug Tidwell
-  - **Nombre de page**&nbsp;: 473 pages
-  - **Éditeur**&nbsp;: O'Reilly Media; 1 edition (August 15, 2001)
-  - **ISBN**: 0596000537
-  - Doug Tidwell est un développeur senior chez IBM et un*évangéliste* reconnu des technologies XML en
-    général. Il est l'auteur de plusieurs articles et tutoriels concernant divers aspects de XML sur l'exhaustif
-    site Web développeur d'IBM. Ce livre est moins complet que celui de Michael Kay, mais il couvre correctement les
-    bases, et offre quelques exemples intéressants.
-  - <http://www.amazon.com/Xslt-Doug-Tidwell/dp/0596000537>
+  - **Nombre de pages**&nbsp;: 473 pages
+  - **Éditeur**&nbsp;: O'Reilly Media&nbsp;; 1<sup>re</sup> édition (15 août 2001)
+  - **ISBN**&nbsp;: 0596000537
+    - Doug Tidwell est un développeur senior chez IBM et un *évangéliste* reconnu des technologies XML en général. Il est l'auteur de plusieurs articles et tutoriels concernant divers aspects de XML sur l'exhaustif site web développeur d'IBM. Ce livre est moins complet que celui de Michael Kay, mais il couvre correctement les bases, et offre quelques exemples intéressants.
 
-- **Learning XML, Second Edition**
+<https://www.amazon.com/Xslt-Doug-Tidwell/dp/0596000537>
+
+- **<i lang="en">Learning XML, Second Edition</i>**
 
   - **Auteur**&nbsp;: Erik T. Ray
-  - **Nombre de page**&nbsp;: 432 pages
-  - **Éditeur**&nbsp;: O'Reilly Media; 2 edition (September 22, 2003)
-  - **ISBN**: 0596004206
-  - Comme l'indique le titre, il s'agit d'un aperçu général de XML. Le chapitre 6 est dédié spécifiquement à XSLT.
-  - <http://www.amazon.com/gp/product/0596004206>
+  - **Nombre de pages**&nbsp;: 432 pages
+  - **Éditeur**&nbsp;: O'Reilly Media&nbsp;; 2<sup>e</sup> édition (22 septembre 2003)
+  - **ISBN**&nbsp;: 0596004206
+    - Comme l'indique le titre, il s'agit d'un aperçu général de XML. Le chapitre 6 est dédié spécifiquement à XSLT.
 
-### Sources numériques
+<https://www.amazon.com/gp/product/0596004206>
 
-#### Sites Web
+## Sources numériques
 
-- **World Wide Web Consortium**
+### Sites web
 
-  - **Page d'accueil du W3C**&nbsp;: <http://www.w3.org/>
-  - **Page de XSL**&nbsp;: <http://www.w3.org/Style/XSL/>
-  - **Recommandation XSLT 1.0**&nbsp;: <http://www.w3.org/TR/xslt>
-  - **Archive of public style (CSS and XSLT) discussions**&nbsp;: <http://lists.w3.org/Archives/Public/www-style/>
-  - **Recommandation XPath 1.0**&nbsp;: <http://www.w3.org/TR/xpath>
-  - Le World Wide Web Consortium est l'organisme qui publie des recommandations sur un certain nombre de technologies Web, dont beaucoup deviennent de-facto des standards.
+- **<i lang="en">World Wide Web Consortium</i>**
 
-#### Articles
+  - **Page d'accueil du W3C**&nbsp;: <https://www.w3.org/>
+  - **Page de XSL**&nbsp;: <https://www.w3.org/Style/XSL/>
+  - **Aperçu des spécifications XSLT**&nbsp;: <https://www.w3.org/TR/xslt>
+  - **Archive des discussions sur CSS et XSLT**&nbsp;: <https://lists.w3.org/Archives/Public/www-style/>
+  - **Aperçu des spécifications XPath**&nbsp;: <https://www.w3.org/TR/xpath>
+    - Le <i lang="en">World Wide Web Consortium</i> est l'organisme qui publie des recommandations sur un certain nombre de technologies web, dont beaucoup deviennent de-facto des standards.
 
-- [http://www-106.ibm.com/developerwork...-hands-on-xsl/](http://www-106.ibm.com/developerworks/library/x-hands-on-xsl/)
-- [http://hotwired.lycos.com/webmonkey/...l?tw=authoring](http://hotwired.lycos.com/webmonkey/98/43/index2a.html?tw=authoring)
-- <http://www.xml.com/pub/a/2000/08/holman/index.html>
+### Articles
 
-#### Tutoriels et exemples
+- [Travaux pratiques XSL](https://www.ibm.com/developerworks/library/x-hands-on-xsl/) par Don R. Day (en anglais)
+- [Qu'est-ce que XSLT&nbsp;?](https://www.xml.com/pub/a/2000/08/holman/index.html) par G. Ken Holman (en anglais)
 
-- <http://www.jenitennison.com/xslt/>
-- <http://www.xmlpitstop.com/Default.asp?DataType=SSC>
-- <http://www.nwalsh.com/docs/tutorials/xsl/>
+### Tutoriels et exemples
 
-#### Autres ressources
+- [Pages XSLT de Jeni Tennison](https://www.jenitennison.com/xslt/) (en anglais)
+- [XMLPitstop.com](https://web.archive.org/web/20211209064736/https://www.xmlpitstop.com/default_datatype_SSC.html) (en anglais)
+- [Tutoriel XSL](https://nwalsh.com/docs/tutorials/xsl/) (en anglais)
 
-- [Cover Pages - XSL](http://www.oasis-open.org/cover/xsl.html)
-- XSL-List
+### Voir aussi
 
-  - [Archives](http://www.biglist.com/lists/xsl-list/archives/)
-  - [Inscription](http://www.mulberrytech.com/xsl/xsl-list/)
+- [<i lang="en">Extensible Stylesheet Language</i> (XSL)](http://xml.coverpages.org/xsl.html)
+- **Liste de diffusion XSL-List**
+
+  - **S'inscrire**&nbsp;: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
+  - **Archives**&nbsp;: <https://www.biglist.com/lists/xsl-list/archives/>

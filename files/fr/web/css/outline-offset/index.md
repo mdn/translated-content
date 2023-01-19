@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/outline-offset
 ---
+
 {{CSSRef}}
 
 La propriété **`outline-offset`** définit l'espace qu'il y a entre la bordure dessinée par {{cssxref("outline")}} et le bord de [la boîte de bordure](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) d'un élément. Cet espace est transparent et la couleur visible en arrière-plan sera déterminée par l'élément parent.
@@ -32,9 +33,13 @@ outline-offset: unset;
 - `<length>`
   - : La largeur de l'espace, voir la page {{cssxref("&lt;length&gt;")}} pour plus d'informations. Les valeurs négatives sont utilisées et font que la bordure dessinée est dessinée dans l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -63,13 +68,8 @@ outline-offset: unset;
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                   | Commentaires                                 |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-offset')}} | {{Spec2('CSS3 Transitions')}} | `outline-offset` peut désormais être animée. |
-| {{SpecName('CSS3 Basic UI', '#outline-offset', 'outline-offset')}}     | {{Spec2('CSS3 Basic UI')}}     | Définition initiale.                         |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline-offset")}}
+{{Compat}}

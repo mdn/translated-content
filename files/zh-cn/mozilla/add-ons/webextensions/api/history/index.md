@@ -2,6 +2,7 @@
 title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
 ---
+
 {{AddonSidebar}}
 
 使用 `history` API 与浏览器历史记录进行交互。
@@ -57,7 +58,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.history")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

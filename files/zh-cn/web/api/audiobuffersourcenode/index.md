@@ -2,6 +2,7 @@
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioBufferSourceNode`** 接口继承自 {{domxref("AudioScheduledSourceNode")}}，表现为一个音频源，它包含了一些写在内存中的音频数据，通常储存在一个 ArrayBuffer 对象中。在处理有严格的时间精确度要求的回放的情形下它尤其有用。比如播放那些需要满足一个指定节奏的声音或者那些储存在内存而不是硬盘或者来自网络的声音。为了播放那些有时间精确度需求但来自网络的流文件或者来自硬盘，则使用 {{domxref("AudioWorkletNode")}} 来实现回放。
@@ -53,11 +54,11 @@ _从父级的_ _{{domxref("AudioNode")}} 继承属性_.
 ### 事件
 
 - {{domxref("AudioBufferSourceNode.onended")}}
-  - : 是一个 {{event("Event_handlers", "event handler")}} 类型，包含了与 {{event("ended_(Web_Audio)", "ended")}} 相关联的结束事件。
+  - : 是一个事件处理器类型，包含了与 `ended` 相关联的结束事件。
 
 ## 方法
 
-_从父级的_ _{{domxref("AudioNode")}} 继承方法_.
+_从父级的 {{domxref("AudioNode")}} 继承方法。_
 
 - {{domxref("AudioBufferSourceNode.start()")}}
   - : Schedules the start of the playback of the audio asset.
@@ -66,7 +67,7 @@ _从父级的_ _{{domxref("AudioNode")}} 继承方法_.
 
 ## 例子
 
-在这个例子中，我们将会创建一个 2 秒的缓冲器，并用白噪音填充它，然后通过{{domxref("AudioBufferSourceNode")}}来播放它. 注释里说明了它的功能。
+在这个例子中，我们将会创建一个 2 秒的缓冲器，并用白噪音填充它，然后通过{{domxref("AudioBufferSourceNode")}}来播放它。注释里说明了它的功能。
 
 > **备注：** 你可以 [查看在线演示](http://mdn.github.io/audio-buffer/) 或 [查看源代码](https://github.com/mdn/audio-buffer).
 
@@ -120,7 +121,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBufferSourceNode")}}
+{{Compat}}
 
 ## 相关页面
 

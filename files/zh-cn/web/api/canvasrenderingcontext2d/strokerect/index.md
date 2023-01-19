@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.strokeRect()`** 是 Canvas 2D API 在 canvas 中，使用当前的绘画样式，描绘一个起点在 _(x, y)_、宽度为 _w_、高度为 _h_ 的矩形的方法。
@@ -87,7 +88,7 @@ ctx.strokeRect(30, 30, 160, 90);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.strokeRect")}}
+{{Compat}}
 
 ## 参见
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/isExtensible
 ---
+
 {{JSRef}}
 
 La méthode **`handler.isExtensible()`** est une trappe pour intercepter les opérations de {{jsxref("Object.isExtensible()")}}.
@@ -49,7 +50,7 @@ Cette trappe intercepte les opérations suivantes :
 
 ### Invariants
 
-Si les invariants suivants ne sont pas respectés, le proxy renverra une exception  {{jsxref("TypeError")}} :
+Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
 
 - `Object.isExtensible(proxy)` doit renvoyer la même valeur que `Object.isExtensible(cible)`.
 
@@ -83,14 +84,11 @@ Object.isExtensible(p); // TypeError est levée
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-isextensible', '[[IsExtensible]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-isextensible', '[[IsExtensible]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.isExtensible")}}
+{{Compat}}
 
 ## Voir aussi
 

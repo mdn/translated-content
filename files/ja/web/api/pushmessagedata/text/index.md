@@ -2,9 +2,10 @@
 title: PushMessageData.text()
 slug: Web/API/PushMessageData/text
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-{{domxref("PushMessageData")}} インターフェースの **`text()`** メソッドは、プッシュメッセージデータをプレーンテキスト文字列として抽出します。
+{{domxref("PushMessageData")}} インターフェイスの **`text()`** メソッドは、プッシュメッセージデータをプレーンテキスト文字列として抽出します。
 
 ## 構文
 
@@ -12,11 +13,11 @@ slug: Web/API/PushMessageData/text
 var myText = PushEvent.data.text();
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
 {{domxref("USVString")}}。
 
@@ -30,13 +31,11 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                 | 状態                         | コメント   |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API', '#widl-PushMessageData-text-USVString', 'text()')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushMessageData.text")}}
 

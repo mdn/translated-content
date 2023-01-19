@@ -9,6 +9,7 @@ tags:
 translation_of: Learn/Server-side/First_steps/Web_frameworks
 original_slug: Learn/Server-side/Premiers_pas/Web_frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 L'article précédent nous a montré à quoi ressemble la communication entre les clients et les serveurs web, la nature des demandes et des réponses HTTP et ce qu’une application web côté serveur doit faire pour répondre aux demandes d’un navigateur web. Avec ces connaissances en main, il est temps d'explorer comment les frameworks peuvent nous simplifier la tâche. En chemin, vous comprendrez comment choisir le framework le mieux adapté pour votre première application web côté serveur.
@@ -117,7 +118,7 @@ class Team(models.Model):
 
 Le modèle Django fournit une API de requête simple pour la recherche dans la base de données. Cela peut correspondre à plusieurs champs à la fois en utilisant différents critères (par exemple, exact, insensible à la casse, supérieur à, etc.), et peut prendre en charge des instructions complexes (par exemple, vous pouvez spécifier une recherche sur les équipes U11 ayant un nom d'equipe (team name) qui commence par "Fr" ou se termine par "al").
 
-Le deuxième extrait de code montre une fonction d'affichage (gestionnaire de ressources) permettant d'afficher toutes nos équipes U09. Dans ce cas, nous spécifions que nous voulons filtrer tous les enregistrements où le champ team_level a exactement le texte 'U09' (notez dans l exemple ci dessous comment ce critère est transmis à la fonction filter () sous forme d'argument avec le nom du champ et le type de correspondance séparés par un double. underscores: team_level\_\_exact).
+Le deuxième extrait de code montre une fonction d'affichage (gestionnaire de ressources) permettant d'afficher toutes nos équipes U09. Dans ce cas, nous spécifions que nous voulons filtrer tous les enregistrements où le champ team_level a exactement le texte 'U09' (notez dans l exemple ci dessous comment ce critère est transmis à la fonction filter () sous forme d'argument avec le nom du champ et le type de correspondance séparés par un double. underscores: **`team_level__exact`**).
 
 ```python
 #best/views.py
@@ -137,7 +138,7 @@ Les frameworks web fournissent souvent des systèmes de templates. Ceux-ci vous 
 
 Les frameworks web fournissent souvent un mécanisme facilitant la génération d'autres formats à partir de données stockées, notamment {{glossary ("JSON")}} et {{glossary ("XML")}}.
 
-Par exemple, le système de templates Django vous permet de spécifier des variables en utilisant une syntaxe "double-handlebars" (par exemple,` {`` { variable_name ``}``} ` ), qui sera remplacée par les valeurs transmises à partir de la fonction d'affichage lors du rendu d'une page. Le système de templates prend également en charge les expressions (avec la syntaxe:`{% expression %}` ), qui permettent aux templates d'effectuer des opérations simples, telles que l'itération des valeurs de liste transmises au modèle.
+Par exemple, le système de templates Django vous permet de spécifier des variables en utilisant une syntaxe "double-handlebars" (par exemple, `\{{ variable_name }}`), qui sera remplacée par les valeurs transmises à partir de la fonction d'affichage lors du rendu d'une page. Le système de templates prend également en charge les expressions (avec la syntaxe : `{% expression %}`), qui permettent aux templates d'effectuer des opérations simples, telles que l'itération des valeurs de liste transmises au modèle.
 
 > **Note :** Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
 

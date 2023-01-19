@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/species
 ---
+
 {{JSRef}}
 
 Le symbole **`Symbol.species`** correspond à une fonction utilisée comme constructeur pour créer des objets dérivés.
@@ -40,14 +41,11 @@ console.log(mapped instanceof Array);    // true
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.species', 'Symbol.species')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.species")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: 'HTMLElement: drag イベント'
 slug: Web/API/HTMLElement/drag_event
 ---
+
 {{APIRef}}
 
 `drag` イベントは、要素や選択されたテキストをユーザーがドラッグしている間に、数百ミリ秒ごとに発生します。

@@ -2,6 +2,7 @@
 title: VRDisplay
 slug: Web/API/VRDisplay
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 [WebVR API](/zh-CN/docs/Web/API/WebVR_API) 中的 **`VRDisplay`** 代表任何支持此 API 的 VR 设备。它包括了设备 ID、描述信息等诸如此类的通用信息，以及用于开始呈现 VR 场景、检索眼睛参数和显示能力以及其他重要的功能和方法。
@@ -19,7 +20,7 @@ slug: Web/API/VRDisplay
 - {{domxref("VRDisplay.displayId")}} {{readonlyInline}}
   - : 返回此 VRDisplay 的标识符，它也用作与 [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) 的关联（详见 {{domxref("Gamepad.displayId")}}）。
 - {{domxref("VRDisplay.displayName")}} {{readonlyInline}}
-  - : 返回一个不反人类的名称来标识此 `VRDisplay。`
+  - : 返回一个不反人类的名称来标识此 `VRDisplay`。
 - {{domxref("VRDisplay.isConnected")}} {{readonlyInline}}
   - : 返回一个 {{domxref("Boolean")}} 值，指示 `VRDisplay` 是否连接到计算机。
 - {{domxref("VRDisplay.isPresenting")}} {{readonlyInline}}

@@ -2,11 +2,14 @@
 title: GlobalEventHandlers.oncuechange
 slug: Web/API/TextTrack/cuechange_event
 ---
-{{ ApiRef("HTML DOM") }}**`oncuechange`** 属性属于{{domxref("GlobalEventHandlers")}}，是一个处理{{event("cuechange")}}事件的{{event("Event_handlers", "event handler")}}。当{{domxref("TextTrack")}}更改了当前显示的提示时，`cuechange` 事件将会触发。
+
+{{ ApiRef("HTML DOM") }}
+
+**`oncuechange`** 属性属于 {{domxref("GlobalEventHandlers")}}，是一个处理 [`cuechange`](/zh-CN/docs/Web/API/TextTrack/cuechange_event) 事件的事件处理器。当{{domxref("TextTrack")}}更改了当前显示的提示时，`cuechange` 事件将会触发。
 
 ## 语法
 
-```plain
+```js
 element.oncuechange = handlerFunction;
 var handlerFunction = element.oncuechange;
 ```
@@ -23,5 +26,5 @@ var handlerFunction = element.oncuechange;
 
 ## 查看更多
 
-- {{event("cuechange")}}
+- [`cuechange`](/zh-CN/docs/Web/API/TextTrack/cuechange_event)
 - [DOM 事件处理函数](/zh-CN/docs/Web/Guide/Events/Event_handlers)

@@ -1,13 +1,8 @@
 ---
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
+
 {{JSRef}}
 
 **`Number.isFinite()`** 메서드는 주어진 값이 유한수인지 판별합니다.

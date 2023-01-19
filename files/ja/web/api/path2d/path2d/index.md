@@ -2,6 +2,7 @@
 title: Path2D()
 slug: Web/API/Path2D/Path2D
 ---
+
 {{APIRef("Canvas API")}}{{seeCompatTable}}
 
 **`Path2D()`** コンストラクターは、新たにインスタンス化した `Path2D` オブジェクトを返します。他のパスを引数に渡すこともできます(複製がつくられます)。また、[SVG パス](/ja/docs/Web/SVG/Tutorial/Paths) からなるデータを文字列で渡すこともできます。
@@ -69,13 +70,11 @@ ctx.fill(p);
 
 ## 仕様
 
-| Specification                                                            | Status                           | Comment             |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#dom-path2d', 'Path2D()')}} | {{Spec2('HTML WHATWG')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザー実装状況
 
-{{Compat("api.Path2D")}}
+{{Compat}}
 
 ## 関連情報
 

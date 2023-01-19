@@ -2,9 +2,10 @@
 title: Assertions
 slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
-断言的组成之一是边界。对于文本、词或模式，边界可以用来表明它们的起始或终止部分（如向前断言，向后断言以及条件表达式）。
+断言的组成之一是边界。对于文本、词或模式，边界可以用来表明它们的起始或终止部分（如先行断言，后行断言以及条件表达式）。
 
 {{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
 
@@ -64,7 +65,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
             "n" 这个单词字符。
           </li>
           <li>
-            <code>/oon\b/</code> 在 "moon" 中匹配 "oon"， 因为 "oon"
+            <code>/oon\b/</code> 在 "moon" 中匹配 "oon"，因为 "oon"
             是这个字符串的结尾，因此后面没有单词字符
           </li>
           <li>
@@ -88,7 +89,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           匹配非单词边界。这是上一个字符和下一个字符属于同一类型的位置：要么两者都必须是单词，要么两者都必须是非单词，例如在两个字母之间或两个空格之间。字符串的开头和结尾被视为非单词。与匹配的词边界相同，匹配的非词边界也不包含在匹配中。例如，<code
             >/\Bon/</code
           >
-          在 “at noon” 中匹配 “on” ，<code>/ye\B/</code> 在 "possibly
+          在“at noon”中匹配“on” ，<code>/ye\B/</code> 在 "possibly
           yesterday"中匹配"ye" 。
         </p>
       </td>
@@ -117,7 +118,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           <tbody>
             <tr>
               <td>
-                <strong>向前断言：</strong> x 被 y 跟随时匹配
+                <strong>先行断言：</strong> x 被 y 跟随时匹配
                 x。例如，对于/<code>Jack(?=Sprat)</code>/，“Jack”在跟有“Sprat”的情况下才会得到匹配．<code
                   >/Jack(?=Sprat|Frost)/</code
                 >
@@ -136,7 +137,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           <tbody>
             <tr>
               <td>
-                <strong>向前否定断言：</strong> x 没有被 y 紧随时匹配
+                <strong>先行否定断言：</strong> x 没有被 y 紧随时匹配
                 x。例如，对于<code>/\d+(?!\.)/</code>，数字后没有跟随小数点的情况下才会得到匹配。对于<code>/\d+(?!\.)/.exec(3.141)</code>，匹配‘141’而不是‘3’。
               </td>
             </tr>
@@ -151,7 +152,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           <tbody>
             <tr>
               <td>
-                <strong>向后断言：</strong> x 跟随 y 的情况下匹配
+                <strong>后行断言：</strong> x 跟随 y 的情况下匹配
                 x。例如，对于<code>/(?&#x3C;=Jack)Sprat/</code>，“Sprat”紧随“Jack”时才会得到匹配。对于<code>/(?&#x3C;=Jack|Tom)Sprat</code>，“Sprat”在紧随“Jack”或“Tom”的情况下才会得到匹配。不过，匹配结果中不包括“Jack”或“Tom”。
               </td>
             </tr>
@@ -166,7 +167,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           <tbody>
             <tr>
               <td>
-                <strong>向后否定断言：</strong> x 不跟随 y 时匹配
+                <strong>后行否定断言：</strong> x 不跟随 y 时匹配
                 x。例如，对于<code>/(?&#x3C;!-)\d+/</code>，数字不紧随 -
                 符号的情况下才会得到匹配。对于<code
                   >/(?&#x3C;!-)\d+/.exec(3)</code
@@ -228,10 +229,10 @@ console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```plain
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
-// 使用正则 /^[^A]/ 选择 不是以 ‘A’ 开头的水果
-// 在这个例子中，“^” 控件符号表示两种含义：
+// 使用正则 /^[^A]/ 选择 不是以‘A’开头的水果
+// 在这个例子中，“^”控件符号表示两种含义：
 // 1) 匹配输入的开头
-// 2) 一个否定的字符集: [^A] ，意思是匹配不是 ‘A’ 的字符
+// 2) 一个否定的字符集：[^A] ，意思是匹配不是‘A’的字符
 
 let fruitsStartsWithNotA = fruits.filter(fruit => /^[^A]/.test(fruit));
 
@@ -243,16 +244,16 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 ```plain
 let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
-// 选择包含以 “en” 或 “ed” 结尾的单词的描述：
+// 选择包含以“en”或“ed”结尾的单词的描述：
 let enEdSelection = fruitsWithDescription.filter(descr => /(en|ed)\b/.test(descr));
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```
 
-### 向前断言
+### 先行断言
 
 ```plain
-// JS 向前断言 x(?=y) 匹配被 y 跟随的 x
+// JS 先行断言 x(?=y) 匹配被 y 跟随的 x
 
 let regex = /First(?= test)/g;
 
@@ -262,7 +263,7 @@ console.log('This is a First test in a year.'.match(regex)); // [ 'First' ]
 console.log('This is a First peach in a month.'.match(regex)); // null
 ```
 
-### 向前否定断言
+### 先行否定断言
 
 例如， `/\d+(?!\.)/` 匹配没有被小数点跟随且至少有一位的数字。 `/\d+(?!\.)/.exec('3.141')` 匹配 "141" 而不是 "3"
 
@@ -284,7 +285,7 @@ let selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi
 console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not want to have a lemon!' ]
 ```
 
-### 向后断言
+### 后行断言
 
 ```plain
 let oranges = ['ripe orange A ', 'green orange B', 'ripe orange C',];

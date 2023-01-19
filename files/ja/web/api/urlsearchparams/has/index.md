@@ -2,6 +2,7 @@
 title: URLSearchParams.has()
 slug: Web/API/URLSearchParams/has
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`has()`** メソッドは、指定された名前のパラメーターが存在するかどうかを示す {{jsxref("Boolean")}} を返します。
@@ -34,9 +35,7 @@ params.has('bar') === true; // true
 
 ## 仕様
 
-| 仕様                                                                         | 状態                 | コメント |
-| ---------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-urlsearchparams-has', "has()")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

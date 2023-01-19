@@ -2,6 +2,7 @@
 title: MediaDevices
 slug: Web/API/MediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaDevices`** 接口提供访问连接媒体输入的设备，如照相机和麦克风，以及屏幕共享等。它可以使你取得任何硬件资源的媒体数据。
@@ -12,18 +13,17 @@ _从父类{{domxref("EventTarget")}}中继承的属性。_
 
 ## 事件
 
-- {{domxref("MediaDevices.devicechange_event", "devicechange")}}
-  - : 返回 {{event("devicechange")}} 事件类型的事件处理程序。
-    也可通过 {{domxref("MediaDevices/ondevicechange", "ondevicechange")}} 访问
+- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
+  - : 当媒体输入或输出设备连接到用户计算机或从用户计算机移除时触发。
 
 ## 方法
 
-_从其父项继承方法 {{domxref("EventTarget")}}._
+_从其父项继承方法 {{domxref("EventTarget")}}。_
 
 - {{ domxref("MediaDevices.enumerateDevices()") }}
   - : 获取有关系统中可用的媒体输入和输出设备的一系列信息。
 - {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
-  - : 返回一个符合 {{domxref("MediaTrackSupportedConstraints")}} 的对象。该对象指明了 {{domxref("MediaStreamTrack")}} 接口支持的可约束的属性。查看 {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} 去了解更多相关信息。
+  - : 返回一个符合 {{domxref("MediaTrackSupportedConstraints")}} 的对象。该对象指明了 {{domxref("MediaStreamTrack")}} 接口支持的可约束的属性。查看 [Media Streams API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Constraints) 以了解更多相关信息。
 - {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
   - : 提示用户选择显示器或显示器的一部分（例如窗口）以捕获为{{domxref("MediaStream")}} 以便共享或记录。返回解析为 MediaStream 的 Promise。
 - {{ domxref("MediaDevices.getUserMedia()") }}
@@ -79,7 +79,7 @@ function errorMsg(msg, error) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices")}}
+{{Compat}}
 
 ## 参见
 

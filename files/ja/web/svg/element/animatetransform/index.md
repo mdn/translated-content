@@ -1,12 +1,8 @@
 ---
 title: animateTransform
 slug: Web/SVG/Element/animateTransform
-tags:
-  - Element
-  - SVG
-  - SVG Animation
-translation_of: Web/SVG/Element/animateTransform
 ---
+
 {{SVGRef}}
 
 `animateTransform` 要素は、 ターゲット要素に対して変換属性をアニメーション化し、これにより変形、スケーリング、回転およびまたはゆがみのアニメーションを制御することができます。
@@ -66,10 +62,7 @@ translation_of: Web/SVG/Element/animateTransform
 
 ## 仕様
 
-| 仕様                                                                                                                     | ステータス                               | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName("SVG Animations 2", "#AnimateTransformElement", "&lt;animateTransform&gt;")}}     | {{Spec2("SVG Animations 2")}} | 変更なし |
-| {{SpecName('SVG1.1', 'animate.html#AnimateTransformElement', '&lt;animateTransform&gt;')}} | {{Spec2('SVG1.1')}}                 | 初回定義 |
+{{Specifications}}
 
 ## ブラウザ互換性
 

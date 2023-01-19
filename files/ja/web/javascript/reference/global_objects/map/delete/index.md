@@ -2,6 +2,7 @@
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** メソッドは `Map` オブジェクトから特定の要素を削除します。
@@ -37,10 +38,7 @@ myMap.has('bar');    // 存在しない要素を確認すると false を返す
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}} |
-| {{SpecName('ES2015', '#sec-map.prototype.delete', 'Map.prototype.delete')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

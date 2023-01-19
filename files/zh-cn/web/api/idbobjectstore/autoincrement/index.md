@@ -2,6 +2,7 @@
 title: IDBObjectStore.autoIncrement
 slug: Web/API/IDBObjectStore/autoIncrement
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBObjectStore")}}的只读属性 **`autoIncrement`** 接口返回当前 objectStore 的自增标记值（true 或 false）。
@@ -89,7 +90,7 @@ function addData() {
 - [使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - 开始学习事务 transactions: {{domxref("IDBDatabase")}}
 - 使用事务 transactions: {{domxref("IDBTransaction")}}
-- key 值域 range 的使用: {{domxref("IDBKeyRange")}}
-- 检索、修改: {{domxref("IDBObjectStore")}}
-- 使用游标: {{domxref("IDBCursor")}}
+- key 值域 range 的使用：{{domxref("IDBKeyRange")}}
+- 检索、修改：{{domxref("IDBObjectStore")}}
+- 使用游标：{{domxref("IDBCursor")}}
 - 相关例子：[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

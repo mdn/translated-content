@@ -2,6 +2,7 @@
 title: Map.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** プロパティの初期値は、 {{jsxref("Map.prototype.entries()", "entries")}} メソッドの初期値と同じ関数オブジェクトです。
@@ -60,9 +61,7 @@ for (const [key, value] of myMap) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

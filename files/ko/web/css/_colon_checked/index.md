@@ -1,14 +1,8 @@
 ---
 title: ':checked'
 slug: Web/CSS/:checked
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:checked
 ---
+
 {{CSSRef}}
 
 **`:checked`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) 선택자는 선택했거나 `on` 상태인 **라디오**([`<input type="radio">`](/ko/docs/Web/HTML/Element/input/radio)), **체크박스**([`<input type="checkbox">`](/ko/docs/Web/HTML/Element/input/checkbox)), **옵션**({{HTMLElement("option")}} 요소를 나타냅니다.

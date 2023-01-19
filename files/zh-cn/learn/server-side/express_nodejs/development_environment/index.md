@@ -2,6 +2,7 @@
 title: 设置 Node 开发环境
 slug: Learn/Server-side/Express_Nodejs/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 你已经了解了 Express 的用途，接下来将在 Windows、Linux（Ubuntu）和 Mac OS X 下搭建 Node/Express 开发环境。本节将介绍主流操作系统下开发 Express 程序的必备知识。
@@ -347,11 +348,11 @@ DEBUG=helloworld:* npm start
 
 DEBUG 命令可以展示应用运行时返回的有用的日志信息，如下所示：
 
-![设置 DEBUG 命令显示的日志信息](https://mdn.mozillademos.org/files/16404/debug.png)
+![设置 DEBUG 命令显示的日志信息](debug.png)
 
 打开浏览器并访问 <http://127.0.0.1:3000/> 将看到 Express 的默认欢迎页面。
 
-![生成应用的默认主页](https://mdn.mozillademos.org/files/16405/express.png)
+![生成应用的默认主页](express.png)
 
 稍后在创建应用框架一节中将讨论生成应用的具体细节。
 

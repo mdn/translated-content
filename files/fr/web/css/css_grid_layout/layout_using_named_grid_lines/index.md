@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille
 ---
+
 {{CSSRef}}
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille", "Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS","Web/CSS/CSS_Grid_Layout")}}

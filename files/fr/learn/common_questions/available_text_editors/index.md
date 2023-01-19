@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Common_questions/Available_text_editors
 original_slug: Apprendre/Choisir_installer_paramétrer_un_éditeur_de_texte
 ---
+
 Dans cet article, nous présentons les éléments principaux à connaître pour installer un éditeur de texte utilisé pour du développement web.
 
 <table class="standard-table">

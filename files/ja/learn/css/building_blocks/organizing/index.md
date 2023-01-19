@@ -2,6 +2,7 @@
 title: CSS の整理
 slug: Learn/CSS/Building_blocks/Organizing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
 大きなスタイルシートや巨大なプロジェクトで作業をはじめると、巨大な CSS ファイルを維持するのが難しいことがわかります。この記事では、CSS を書いていくのと保守していくのをやりやすくするためのベストプラクティスと、保守性を向上させるための解決策の一部を紹介します。
@@ -14,7 +15,7 @@ slug: Learn/CSS/Building_blocks/Organizing
         基本的なコンピューターリテラシー、
         <a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、
         <a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ていること。
+        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ていること。
       </td>
     </tr>
     <tr>
@@ -353,7 +354,7 @@ CSS を整理する 1 つの方法は、スタイルシートを小さなスタ�
 @use 'foundation'
 ```
 
-> **Note:** Sass を試す簡単な方法は、[CodePen](https://codepen.io) を使用することです。これを有効にすると、 CodePen が Sass パーサーを実行してくれるので、通常の CSS を適用したウェブページを見ることができます。CSS チュートリアルでは、CodePen のデモでプレーンな CSS ではなく Sass を使用しているのを見つけることがありますので、少しでも知っておくと便利です。
+> **メモ:** Sass を試す簡単な方法は、[CodePen](https://codepen.io) を使用することです。これを有効にすると、 CodePen が Sass パーサーを実行してくれるので、通常の CSS を適用したウェブページを見ることができます。CSS チュートリアルでは、CodePen のデモでプレーンな CSS ではなく Sass を使用しているのを見つけることがありますので、少しでも知っておくと便利です。
 
 #### ポストプロセッサー
 

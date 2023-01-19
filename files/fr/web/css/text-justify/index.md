@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-justify
 ---
+
 {{CSSRef}}
 
 la propriété CSS **`text-justify`** définit le type de justification à appliquer au texte justifié (par exemple avec {{cssxref("text-align")}}`: justify;`).
@@ -32,13 +33,17 @@ La propriété `text-justify` peut être définie grâce à l'un des mots-clés 
 - `inter-word`
   - : Le texte est justifié en ajustant les espaces entre les mots (en faisant varier {{cssxref("word-spacing")}}) ; cette propriété est appropriée pour les langues qui séparent les mots avec des espaces, comme le Français ou le Coréen.
 - `inter-character`
-  - : Le texte est justifié en ajustant les espaces entre les caractères (en faisant varier {{cssxref("letter-spacing")}}) ;  cette propritété est plus appropriée pour des langues comme le Japonais.
+  - : Le texte est justifié en ajustant les espaces entre les caractères (en faisant varier {{cssxref("letter-spacing")}}) ; cette propritété est plus appropriée pour des langues comme le Japonais.
 - `distribute` {{deprecated_inline}}
   - : Même effet que `inter-character` ; cette valeur sert uniquement à de fins de compatibilité.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -85,15 +90,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('CSS3 Text', '#text-justify-property', 'text-justify')}} | {{Spec2('CSS3 Text')}} |              |
+{{Specifications}}
 
-{{cssinfo}}
+## Compatibilité des navigateurs
 
-## Compatibilité avec les navigateurs
-
-{{Compat("css.properties.text-justify")}}
+{{Compat}}
 
 ## Voir aussi
 

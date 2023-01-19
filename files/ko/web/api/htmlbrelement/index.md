@@ -1,13 +1,8 @@
 ---
 title: HTMLBRElement
 slug: Web/API/HTMLBRElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLBRElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLBRElement`** 인터페이스는 HTML 줄바꿈 요소({{htmlelement("br")}})를 나타냅니다. {{domxref("HTMLElement")}}를 상속합니다.

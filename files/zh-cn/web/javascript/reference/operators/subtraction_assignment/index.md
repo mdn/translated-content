@@ -1,41 +1,40 @@
 ---
-title: Subtraction assignment (-=)
+title: 减法赋值（-=）
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The subtraction assignment operator (`-=`) subtracts the value of the right operand from a variable and assigns the result to the variable.
+**减法赋值**（**`-=`**）运算符从变量中减去右操作数的值，并将结果赋值给该变量。
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}
 
 ## 语法
 
-```plain
-Operator: x -= y
-Meaning:  x  = x - y
+```js-nolint
+x -= y // x = x - y
 ```
 
-## Examples
+## 示例
 
-### Using subtraction assignment
+### 使用减法赋值
 
 ```js
-// Assuming the following variable
-//  bar = 5
+let bar = 5;
 
-bar -= 2     // 3
-bar -= 'foo' // NaN
+bar -= 2; // 3
+bar -= 'foo'; // NaN
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)

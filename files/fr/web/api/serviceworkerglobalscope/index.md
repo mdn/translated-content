@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/ServiceWorkerGlobalScope
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/fr/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.

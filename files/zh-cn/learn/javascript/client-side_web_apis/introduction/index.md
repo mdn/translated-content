@@ -2,6 +2,7 @@
 title: Web API 简介
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_Web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
 首先，我们将从一个高层次看看 API - 它们是什么；他们如何工作；如何在代码中使用它们，以及它们是如何组织的。我们也将看看不同主要类别的 API 以及它们的用途。
@@ -54,7 +55,7 @@ _图片来自：[Overloaded plug socket](https://www.flickr.com/photos/easy-pics
 
 如上所述，我们讨论了什么是客户端 JavaScript API，以及它们与 JavaScript 语言的关系。让我们回顾一下，使其更清晰，并提及其他 JavaScript 工具的适用位置：
 
-- JavaScript — 一种内置于浏览器的高级脚本语言，您可以用来实现 Web 页面/应用中的功能。注意 JavaScript 也可用于其他象[Node](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)这样的的编程环境。但现在您不必考虑这些。
+- JavaScript——一种内置于浏览器的高级脚本语言，你可以用来实现 Web 页面/应用中的功能。注意 JavaScript 也可用于其他像 [Node](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction) 这样的的编程环境。但现在你不必考虑这些。
 - 客户端 API — 内置于浏览器的结构程序，位于 JavaScript 语言顶部，使您可以更容易的实现功能。
 - 第三方 API — 置于第三方普通的结构程序（例如 Twitter，Facebook），使您可以在自己的 Web 页面中使用那些平台的某些功能（例如在您的 Web 页面显示最新的 Tweets）。
 - JavaScript 库 — 通常是包含具有[特定功能](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#Custom_functions)的一个或多个 JavaScript 文件，把这些文件关联到您的 Web 页以快速或授权编写常见的功能。例如包含 jQuery 和 Mootools
@@ -68,10 +69,10 @@ _图片来自：[Overloaded plug socket](https://www.flickr.com/photos/easy-pics
 
 特别地，您将使用的最常见的浏览器 API 类别（以及我们将更详细地介绍的）是：
 
-- **操作文档的 API**内置于浏览器中。最明显的例子是[DOM（文档对象模型）](/zh-CN/docs/Web/API/Document_Object_Model)API，它允许您操作 HTML 和 CSS — 创建、移除以及修改 HTML，动态地将新样式应用到您的页面，等等。每当您看到一个弹出窗口出现在一个页面上，或者显示一些新的内容时，这都是 DOM 的行为。 您可以在在[Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)中找到关于这些类型的 API 的更多信息。
+- **操作文档的 API**内置于浏览器中。最明显的例子是[DOM（文档对象模型）](/zh-CN/docs/Web/API/Document_Object_Model)API，它允许您操作 HTML 和 CSS — 创建、移除以及修改 HTML，动态地将新样式应用到您的页面，等等。每当您看到一个弹出窗口出现在一个页面上，或者显示一些新的内容时，这都是 DOM 的行为。您可以在在[Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)中找到关于这些类型的 API 的更多信息。
 - **从服务器获取数据的 API** 用于更新网页的一小部分是相当好用的。这个看似很小的细节能对网站的性能和行为产生巨大的影响 — 如果您只是更新一个股票列表或者一些可用的新故事而不需要从服务器重新加载整个页面将使网站或应用程序感觉更加敏感和“活泼”。使这成为可能的 API 包括[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)和[Fetch API](/zh-CN/docs/Web/API/Fetch_API)。您也可能会遇到描述这种技术的术语**Ajax**。您可以在[Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)找到关于类似的 API 的更多信息。
 - **用于绘制和操作图形的 API**目前已被浏览器广泛支持 — 最流行的是允许您以编程方式更新包含在 HTML {{htmlelement("canvas")}} 元素中的像素数据以创建 2D 和 3D 场景的[Canvas](/zh-CN/docs/Web/API/Canvas_API)和[WebGL](/zh-CN/docs/Web/API/WebGL_API)。例如，您可以绘制矩形或圆形等形状，将图像导入到画布上，然后使用 Canvas API 对其应用滤镜（如棕褐色滤镜或灰度滤镜），或使用 WebGL 创建具有光照和纹理的复杂 3D 场景。这些 API 经常与用于创建动画循环的 API（例如{{domxref("window.requestAnimationFrame()")}}）和其他 API 一起不断更新诸如动画和游戏之类的场景。
-- **音频和视频 API**例如{{domxref("HTMLMediaElement")}}，[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)和[WebRTC](/zh-CN/docs/MDN/Doc_status/API/WebRTC)允许您使用多媒体来做一些非常有趣的事情，比如创建用于播放音频和视频的自定义 UI 控件，显示字幕字幕和您的视频，从网络摄像机抓取视频，通过画布操纵（见上），或在网络会议中显示在别人的电脑上，或者添加效果到音轨（如增益，失真，平移等） 。
+- **音频和视频 API** 例如 {{domxref("HTMLMediaElement")}}、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 允许你使用多媒体来做一些非常有趣的事情，比如创建用于播放音频和视频的自定义 UI 控件，显示字幕字幕和你的视频，从网络摄像机抓取视频，通过画布操纵（见上），或在网络会议中显示在别人的电脑上，或者添加效果到音轨（如增益、失真、平移等） 。
 - **设备 API**基本上是以对网络应用程序有用的方式操作和检索现代设备硬件中的数据的 API。我们已经讨论过访问设备位置数据的地理定位 API，因此您可以在地图上标注您的位置。其他示例还包括通过系统通知（参见[Notifications API](/zh-CN/docs/Web/API/Notifications_API)）或振动硬件（参见[Vibration API](/zh-CN/docs/Web/API/Vibration_API)）告诉用户 Web 应用程序有用的更新可用。
 - **客户端存储 API**在 Web 浏览器中的使用变得越来越普遍 - 如果您想创建一个应用程序来保存页面加载之间的状态，甚至让设备在处于脱机状态时可用，那么在客户端存储数据将会是非常有用的。例如使用[Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API)的简单的键 - 值存储以及使用[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API)的更复杂的表格数据存储。
 
@@ -133,7 +134,7 @@ myGeo.getCurrentPosition(function(position) { ... });
 
 但是我们可以使用 "点运算符" 将我们的属性和方法的访问链接在一起，减少了我们必须写的行数。
 
-{{domxref("Geolocation.getCurrentPosition()")}} 方法只有一个必须的参数，这个参数是一个匿名函数，当设备的当前位置被成功取到时，这个函数会运行。 这个函数本身有一个参数，它包含一个表示当前位置数据的 {{domxref("Position")}} 对象。
+{{domxref("Geolocation.getCurrentPosition()")}} 方法只有一个必须的参数，这个参数是一个匿名函数，当设备的当前位置被成功取到时，这个函数会运行。这个函数本身有一个参数，它包含一个表示当前位置数据的 {{domxref("Position")}} 对象。
 
 > **备注：** 由另一个函数作为参数的函数称为 ([callback function](/zh-CN/docs/Glossary/Callback_function) "回调函数").
 
@@ -146,19 +147,19 @@ var myLatitude = position.coords.latitude;
 
 如果第一行还没有返回结果，则第二行将会出现错误，因为位置数据还不可用。出于这个原因，涉及同步操作的 API 被设计为使用 {{glossary("callback function")}}s“回调函数”，或更现代的 [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 系统，这些系统在 ECMAScript 6 中可用，并被广泛用于较新的 API。
 
-我们将 Geolocation API 与第三方 API（Google Maps API）相结合， — 我们正在使用它来绘制 Google 地图上由 `getCurrentPosition()`返回的位置。 我们通过链接到页面上使这个 API 可用。 — 你会在 HTML 中找到这一行：
+我们将 Geolocation API 与第三方 API（Google Maps API）相结合， — 我们正在使用它来绘制 Google 地图上由 `getCurrentPosition()`返回的位置。我们通过链接到页面上使这个 API 可用。 — 你会在 HTML 中找到这一行：
 
 ```html
 <script type="text/javascript" src="https://maps.google.com/maps/API/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
 ```
 
-要使用该 API, 我们首先使用`google.maps.LatLng()`构造函数创建一个`LatLng`对象实例， 该构造函数需要我们的地理定位 {{domxref("Coordinates.latitude")}} 和 {{domxref("Coordinates.longitude")}}值作为参数：
+要使用该 API, 我们首先使用`google.maps.LatLng()`构造函数创建一个`LatLng`对象实例，该构造函数需要我们的地理定位 {{domxref("Coordinates.latitude")}} 和 {{domxref("Coordinates.longitude")}}值作为参数：
 
 ```js
 var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 ```
 
-该对象实例被设置为 `myOptions`对象的`center`属性的值。然后我们通过调用`google.maps.Map()`构造函数创建一个对象实例来表示我们的地图， 并传递它两个参数 — 一个参数是我们要渲染地图的 {{htmlelement("div")}} 元素的引用 (ID 为 `map_canvas`), 以及另一个参数是我们在上面定义的`myOptions`对象
+该对象实例被设置为 `myOptions`对象的`center`属性的值。然后我们通过调用`google.maps.Map()`构造函数创建一个对象实例来表示我们的地图，并传递它两个参数 — 一个参数是我们要渲染地图的 {{htmlelement("div")}} 元素的引用 (ID 为 `map_canvas`), 以及另一个参数是我们在上面定义的`myOptions`对象
 
 ```js
 var myOptions = {
@@ -173,7 +174,7 @@ var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
 
 这样做一来，我们的地图呈现了。
 
-最后一块代码突出显示了您将在许多 API 中看到的两种常见模式。 首先，API 对象通常包含构造函数，可以调用这些构造函数来创建用于编写程序的对象的实例。其次，API 对象通常有几个可用的 options(如上面的`myOptions`对象)，可以调整以获得您的程序所需的确切环境 (根据不同的环境，编写不同的`Options`对象)。API 构造函数通常接受 options 对象作为参数，这是您设置这些 options 的地方。
+最后一块代码突出显示了您将在许多 API 中看到的两种常见模式。首先，API 对象通常包含构造函数，可以调用这些构造函数来创建用于编写程序的对象的实例。其次，API 对象通常有几个可用的 options(如上面的`myOptions`对象)，可以调整以获得您的程序所需的确切环境 (根据不同的环境，编写不同的`Options`对象)。API 构造函数通常接受 options 对象作为参数，这是您设置这些 options 的地方。
 
 > **备注：** 如果您不能立即理解这个例子的细节，请不要担心。我们将在未来的文章中详细介绍第三方 API。
 
@@ -208,13 +209,13 @@ Ball.prototype.draw = function() {
 };
 ```
 
-> **备注：** 您可以在我们的[弹跳球演示中](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html)看到此代码的实际 [运行情况](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) （ 也可以参阅它 [现场运行](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)）。
+> **备注：** 您可以在我们的[弹跳球演示中](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html)看到此代码的实际 [运行情况](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) （也可以参阅它 [现场运行](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)）。
 
 ### 它们使用事件来处理状态的变化
 
 我们之前已经在课程中讨论了事件，在我们的 [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)文章中 - 详细介绍了客户端 Web 事件是什么以及它们在代码中的用法。如果您还不熟悉客户端 Web API 事件的工作方式，则应继续阅读。
 
-一些 Web API 不包含事件，但有些包含一些事件。当事件触发时，允许我们运行函数的处理程序属性通常在单独的“Event handlers”(事件处理程序) 部分的参考资料中列出。作为一个简单的例子，[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 对象的实例 （每一个实例都代表一个到服务器的 HTTP 请求，来取得某种新的资源）都有很多事件可用，例如 `onload` 事件在成功返回时就触发包含请求的资源，并且现在就可用。
+一些 Web API 不包含事件，但有些包含一些事件。当事件触发时，允许我们运行函数的处理程序属性通常在单独的“Event handlers”(事件处理程序) 部分的参考资料中列出。作为一个简单的例子，[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 对象的实例（每一个实例都代表一个到服务器的 HTTP 请求，来取得某种新的资源）都有很多事件可用，例如 `onload` 事件在成功返回时就触发包含请求的资源，并且现在就可用。
 
 下面的代码提供了一个简单的例子来说明如何使用它：
 
@@ -234,7 +235,7 @@ request.onload = function() {
 
 > **备注：** 您可以在我们的[ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html)**示例中看到此代码** (或者 在线运行版本 [see it live](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
 
-前五行指定了我们要获取的资源的位置，使用`XMLHttpRequest()` 构造函数创建请求对象的新实例 ，打开 HTTP 的 `GET` 请求以取得指定资源，指定响应以 JSON 格式发送，然后发送请求。
+前五行指定了我们要获取的资源的位置，使用`XMLHttpRequest()` 构造函数创建请求对象的新实例，打开 HTTP 的 `GET` 请求以取得指定资源，指定响应以 JSON 格式发送，然后发送请求。
 
 然后 `onload` 处理函数指定我们如何处理响应。我们知道请求会成功返回，并在需要加载事件（如`onload` 事件）之后可用（除非发生错误），所以我们将包含返回的 JSON 的响应保存在`superHeroes`变量中，然后将其传递给两个不同的函数以供进一步处理。
 

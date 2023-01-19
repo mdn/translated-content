@@ -1,12 +1,8 @@
 ---
 title: <length-percentage>
 slug: Web/CSS/length-percentage
-tags:
-  - CSS
-  - CSS Date Type
-  - Reference
-translation_of: Web/CSS/length-percentage
 ---
+
 {{CSSRef}}
 
 **`<length-percentage>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 {{Cssxref("&lt;length&gt;")}} 또는 {{Cssxref("&lt;percentage&gt;")}}인 값을 나타냅니다.

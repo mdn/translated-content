@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Float32Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`Float32Array`** représente un tableau de nombres flottants représentés sur 32 bits (ce qui correspond au type C `float`), l'ordre des octets utilisés étant celui de la plate-forme. Si on souhaite maîtriser le boutisme (_endianness_) utilisé, on pourra utiliser une {{jsxref("DataView")}}. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est établi, on peut référencer des éléments dans le tableau en utilisant les méthodes de l'objet ou la syntaxe usuelle des crochets.
@@ -151,15 +152,11 @@ var float32 = new Float32Array(iterable);
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                                                                                                            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {Spec2('Typed Array')}}      | Remplacée par ECMAScript 2015.                                                                                                          |
-| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}         | Défintion initiale au sein d'un standard ECMA. `new` est obligatoire.                                                                   |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}} | ECMAScript 2017 a modifié le constructeur afin que celui-ci utilise l'opération interne `ToIndex` et puisse être utilisé sans argument. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Float32Array")}}
+{{Compat}}
 
 ## Notes de compatibilité
 

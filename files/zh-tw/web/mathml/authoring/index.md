@@ -2,6 +2,7 @@
 title: Authoring MathML
 slug: Web/MathML/Authoring
 ---
+
 這裡我們將會介紹該如何利用 MathML 來表達數學語言。如同 HTML， MathML 也是一種 SGML 語言，因此它是以 tag 和 attribute 描述的。HTML 在你使用了一些諸如 list 或 table 等結構時將會變得很複雜，索性我們有一些 WYSIWYG 編輯器和其他 Content Management Systems 來協助我們進行開發。
 
 數學符號擁有許多更複雜的結構，如除號, 平方根以及矩陣等，他們都需要分別代表他們的 tags。因此，一個好的 MathML 編輯工具是非常重要的，而接下來我們將介紹一些工具給你。限於篇幅的關係，我們的介紹可能不是十分詳盡，你可以到 [W3C MathML software list](https://www.w3.org/Math/Software/) 查看更進一步的訊息，那裡也介紹了其他的工具。
@@ -355,7 +356,7 @@ There are even more sophisticated tools to convert arbitrary LaTeX documents int
   latexmlpost --dest foo.html --format=html5 foo.xml
 ```
 
-If you want to have a MathJax fallback for non-Gecko browsers, copy the [Javascript lines given above](/zh-TW/docs/Web/MathML/Authoring$edit#mathjax-fallback) into a `mathjax.js` file and use the `--javascript` parameter to tell LaTeXML to include that file:
+If you want to have a MathJax fallback for non-Gecko browsers, copy the [Javascript lines given above](/zh-TW/docs/Web/MathML/Authoring#mathjax-fallback) into a `mathjax.js` file and use the `--javascript` parameter to tell LaTeXML to include that file:
 
 ```bash
   latexmlpost --dest foo.html --format=html5 --javascript=mathjax.js foo.xml

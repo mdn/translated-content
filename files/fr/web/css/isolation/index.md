@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/isolation
 ---
+
 {{CSSRef}}
 
 La propriété **`isolation`** indique que l'élément crée un nouveau contexte d'empilement (_stacking context_).
@@ -38,9 +39,13 @@ La propriété `isolation` est définie avec l'un des mots-clés suivants.
 - `isolate`
   - : Un mot-clé qui indique qu'un nouveau contexte d'empilement doit être créé.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -88,15 +93,11 @@ La propriété `isolation` est définie avec l'un des mots-clés suivants.
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('Compositing', '#isolation', 'Isolation')}} | {{Spec2('Compositing')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.isolation")}}
+{{Compat}}
 
 ## Voir aussi
 

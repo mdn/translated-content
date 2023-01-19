@@ -12,6 +12,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged
 ---
+
 {{AddonSidebar()}}
 
 Remplacement quand le thème de devtools change
@@ -42,7 +43,7 @@ Les événements ont trois fonctions :
   - : Function qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
 
     - `themeName`
-      - : `string`. Nom du nouveau thème : ce sera l'une des valeurs autorisées pour  [`devtools.panels.themeName`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName).
+      - : `string`. Nom du nouveau thème : ce sera l'une des valeurs autorisées pour [`devtools.panels.themeName`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName).
 
 ## Compatibilité du navigateur
 

@@ -1,13 +1,8 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.POST
-translation_of: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `POST` メソッド**は、サーバーにデータを送信します。リクエストの本文の型は {{HTTPHeader("Content-Type")}} ヘッダーで示されます。

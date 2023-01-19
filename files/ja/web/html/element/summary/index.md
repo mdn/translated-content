@@ -1,21 +1,9 @@
 ---
 title: '<summary>: 概要明示要素'
 slug: Web/HTML/Element/summary
-tags:
-  - Disclosure Box
-  - Disclosure Control
-  - Disclosure Summary
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Summary
-  - Web
-browser-compat: html.elements.summary
-translation_of: Web/HTML/Element/summary
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<summary>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("details")}} 要素の折り畳みボックスの要約、キャプション、説明、凡例を表します。 `<summary>` 要素をクリックすると、親の `<details>` 要素の開閉状態を切り替えることができます。
 
@@ -66,11 +54,11 @@ translation_of: Web/HTML/Element/summary
 
 ## 既定のラベルテキスト
 
-`<details>` 要素の最初の子が `<summary>` 要素でな{{Glossary("user agent", "ユーザーエージェント")}}は既定の文字列（ふつうは「詳細」）を折りたたみボックスのラベルとして使用します。
+`<details>` 要素の最初の子が `<summary>` 要素でない場合、{{Glossary("user agent", "ユーザーエージェント")}}は既定の文字列（ふつうは「詳細」）を折りたたみボックスのラベルとして使用します。
 
 ## 既定のスタイル
 
-HTML 仕様書では、`<summary>` の既定のスタイルに `display: list-item` が含まれています。これで、ラベルの隣に既定で（多くは三角形で）表示される折りたたみウィジェットのとして表示さえるアイコンを変更したり削除したりすることができます。
+HTML 仕様書では、`<summary>` の既定のスタイルに `display: list-item` が含まれています。これで、ラベルの隣に既定で（多くは三角形で）表示される折りたたみウィジェットとして表示されるアイコンを変更したり削除したりすることができます。
 
 スタイルを `display: block` に変更すると、展開用の三角印を削除することができます。
 
@@ -118,7 +106,7 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 
 これは現在のところ、間隔の問題をいくつか抱えており、 CSS を使用して修正することができます。
 
-> **Warning:** `<summary>` 要素の既定のロールは [button](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)（子要素からはすべてのロールを外す）ですので、この例は画面リーダーのような支援技術のユーザーには動作しません。 `<h4>` のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。
+> **警告:** `<summary>` 要素の既定のロールは [button](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)（子要素からはすべてのロールを外す）ですので、この例は画面リーダーのような支援技術のユーザーには動作しません。 `<h4>` のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。
 </div>
 
 ## 概要の中の HTML

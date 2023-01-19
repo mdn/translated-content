@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-inline-start
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`margin-inline-start`** définit la marge logique appliquée au début des éléments en ligne, selon le mode d'écriture, la directionalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
@@ -37,9 +38,13 @@ margin-inline-start: inherit;
 
 La propriété `margin-inline-start` peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -73,15 +78,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-inline-start", "margin-inline-start")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-inline-start")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,23 +1,9 @@
 ---
 title: <datalist>
 slug: Web/HTML/Element/datalist
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML フォーム
-  - HTML5
-  - HTML:フローコンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - Web
-  - ウェブ
-  - フォーム
-  - リファレンス
-  - 要素
-translation_of: Web/HTML/Element/datalist
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<datalist>` 要素**は、他のコントロールで利用可能な値を表現する一連の {{HTMLElement("option")}} 要素を含みます。
 
@@ -93,10 +79,7 @@ translation_of: Web/HTML/Element/datalist
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,13 +1,8 @@
 ---
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 메서드는 지정된 배열 및 그 요소를 나타내는 문자열을 반환합니다.

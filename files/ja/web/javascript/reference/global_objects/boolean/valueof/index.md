@@ -2,6 +2,7 @@
 title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、{{jsxref("Boolean")}} オブジェクトのプリミティブ値を返します。

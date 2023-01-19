@@ -2,6 +2,7 @@
 title: CaretPosition
 slug: Web/API/CaretPosition
 ---
+
 {{SeeCompatTable}} {{ APIRef("CSSOM") }}
 
 `CaretPosition` インターフェイスは、テキスト挿入ポイントのインジケーターであるキャレット位置を表します。 {{domxref("document.caretPositionFromPoint")}} メソッドを使用して `CaretPosition` を取得できます。
@@ -21,9 +22,7 @@ _このインターフェイスはプロパティを継承しません。_
 
 ## 仕様
 
-| 仕様                                                                                 | ステータス                       | 備考 |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{ SpecName('CSSOM View', '#caret-position', 'CaretPosition') }} | {{ Spec2('CSSOM View') }} |      |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

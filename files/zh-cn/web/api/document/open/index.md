@@ -2,6 +2,7 @@
 title: Document.open()
 slug: Web/API/Document/open
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.open()`** 方法打开一个要[写入](/zh-CN/docs/Web/API/Document/write)的文档。
@@ -44,11 +45,11 @@ document.close();
 很多年以来，Firefox 和 IE 浏览器会在清除所有节点的同时，将所有 Javascript 变量等一并清除，但现在已经不采用这一做法。
 document non-spec'ed parameters to document.open
 
-不要和 [window.open()](/zh-CN/DOM/window.open) 方法混淆。`document.open` 可用于重写当前的文档内容或者追加内容，而 `window.open 是提供了打开一个新的窗口的方法，当前的网页文档内容会被保留。由于 window 是一个全局对象，直接调用 open(...) 和 window.open(...) 的效果是一样的。你可以使用 document.close（）关闭打开的文档。`
+不要和 [window.open()](/zh-CN/DOM/window.open) 方法混淆。`document.open` 可用于重写当前的文档内容或者追加内容，而 `window.open` 是提供了打开一个新的窗口的方法，当前的网页文档内容会被保留。由于 `window` 是一个全局对象，直接调用 `open(...)` 和 `window.open(...)` 的效果是一样的。你可以使用 `document.close()` 关闭打开的文档。
 
 See [Security check basics](/zh-CN/Security_check_basics) for more about principals.
 
-如果不想在当前文本追加内容， 使用 `open("text/html", "replace") 替换` `open()` .
+如果不想在当前文本追加内容，使用 `open("text/html", "replace")` 替换 `open()`。
 
 ### 针对 Gecko 的注意事项
 

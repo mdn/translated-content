@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/script
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<script>`** est utilisé pour intégrer ou faire référence à un script exécutable. Cela fait généralement référence à du code JavaScript mais ce peut également être un autre type de script (par exemple [WebGL](/fr/docs/Apprendre/WebGL)).
 
@@ -78,7 +79,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ## Notes
 
-Le script doit être servi avec le type MIME `text/javascript`. Cependant, les navigateurs appliquent cette règle avec une certaine flexibilité et ne bloquent que si le script est servi avec un type image (`image/*`), vidéo (`video/*`) ou audio (`audio/*`) ou CSV (`text/csv`). Si le script est bloqué, un évènement {{event("error")}} sera déclenché sur l'élément, sinon, l'évènement [`load`](/fr//docs/Web/API/Window/load_event) sera envoyé.
+Le script doit être servi avec le type MIME `text/javascript`. Cependant, les navigateurs appliquent cette règle avec une certaine flexibilité et ne bloquent que si le script est servi avec un type image (`image/*`), vidéo (`video/*`) ou audio (`audio/*`) ou CSV (`text/csv`). Si le script est bloqué, un évènement [`error`](/fr/docs/Web/API/Element/error_event) sera déclenché sur l'élément, sinon, l'évènement [`load`](/fr//docs/Web/API/Window/load_event) sera envoyé.
 
 ## Exemples
 

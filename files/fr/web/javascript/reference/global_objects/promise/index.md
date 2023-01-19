@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise
 browser-compat: javascript.builtins.Promise
 ---
+
 {{JSRef}}
 
 L'objet **`Promise`** (pour « promesse ») est utilisé pour réaliser des traitements de façon asynchrone. Une promesse représente une valeur qui peut être disponible maintenant, dans le futur voire jamais.

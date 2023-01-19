@@ -2,6 +2,7 @@
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
+
 {{JSRef}}
 
 **`toExponential()`** method 用來將數字轉成「科學記數法」格式。

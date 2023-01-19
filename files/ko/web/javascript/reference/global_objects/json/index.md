@@ -1,13 +1,8 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
+
 {{JSRef}}
 
 **`JSON`** 객체는 [JavaScript Object Notation](http://json.org/)({{glossary("JSON")}})을 분석하거나 값을 JSON으로 변환하는 메서드를 가지고 있습니다. `JSON`을 직접 호출하거나 인스턴스를 생성할 수 없으며, 두 개의 메서드를 제외하면 자신만의 흥미로운 기능은 없습니다.

@@ -3,6 +3,7 @@ title: SVGRectElement
 slug: Web/API/SVGRectElement
 translation_of: Web/API/SVGRectElement
 ---
+
 {{APIRef("SVG")}}
 
 L'interface `SVGRectElement` fournit un accès aux propriétés et aux méthodes de l'élément {{SVGElement("rect")}}.
@@ -16,7 +17,7 @@ _Cette interface hérite aussi des propriétés de_ _{{domxref("SVGGeometryEleme
 - {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
 - {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
-  - : Retourne un {{domxref("SVGAnimatedLength")}}  correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
+  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
 - {{domxref("SVGRectElement.y")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("y")}} de l'élément {{SVGElement("rect")}} donné.
 - {{domxref("SVGRectElement.width")}} {{ReadOnlyInline}}

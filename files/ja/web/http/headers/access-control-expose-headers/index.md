@@ -1,14 +1,8 @@
 ---
 title: Access-Control-Expose-Headers
 slug: Web/HTTP/Headers/Access-Control-Expose-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - ヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Expose-Headers`** レスポンスヘッダーは、レスポンスの一部としてどのヘッダーを公開するかを、その名前を列挙して示します。
@@ -85,9 +79,7 @@ Access-Control-Expose-Headers: *, Authorization
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                     | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---- |
-| {{SpecName('Fetch','#http-access-control-expose-headers', 'Access-Control-Expose-Headers')}} | {{Spec2("Fetch")}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

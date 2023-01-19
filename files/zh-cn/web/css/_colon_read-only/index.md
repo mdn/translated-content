@@ -2,6 +2,7 @@
 title: ':read-only'
 slug: Web/CSS/:read-only
 ---
+
 {{CSSRef}}
 
 **`:read-only`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 表示元素不可被用户编辑的状态（如锁定的文本输入框）。
@@ -58,7 +59,7 @@ p[contenteditable="true"] { color: blue; }
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.read-only")}}
+{{Compat}}
 
 ## 参见
 

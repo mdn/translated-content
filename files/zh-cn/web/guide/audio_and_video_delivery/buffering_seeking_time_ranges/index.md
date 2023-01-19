@@ -2,11 +2,11 @@
 title: Media buffering, seeking, and time ranges
 slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 ---
-有时候知道 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 已经下载了多少或有多少可以不延迟的播放是有用的 — 音频和视频的缓冲条就是这个的一个好例子。 这篇文章讨论 用 [TimeRanges](/zh-CN/docs/Web/API/TimeRanges)如何创建一个 buffer/seek bar，和 media API 的其他特性。
+有时候知道 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 已经下载了多少或有多少可以不延迟的播放是有用的 — 音频和视频的缓冲条就是这个的一个好例子。这篇文章讨论 用 [TimeRanges](/zh-CN/docs/Web/API/TimeRanges)如何创建一个 buffer/seek bar，和 media API 的其他特性。
 
 ## Buffered
 
-`Buffered` 属性会告诉我们媒体的哪一部分已经下载好了。它返回一个 {{ domxref("TimeRanges") }} 对象，表名哪些块已经下载。 这通常是连续的但是如果用户在缓冲时跳过，就可能会有缺口。
+`Buffered` 属性会告诉我们媒体的哪一部分已经下载好了。它返回一个 {{ domxref("TimeRanges") }} 对象，表名哪些块已经下载。这通常是连续的但是如果用户在缓冲时跳过，就可能会有缺口。
 
 它与 {{htmlelement("audio") }} 或 {{htmlelement("video") }}一起工作; 现在我们来考虑一个简单的 aodio 例子：
 
@@ -33,7 +33,7 @@ TimeRanges 是一系列有开始和结束时间的非重叠的时间范围。 ([
 - `start(index)`: The start time, in seconds, of a time range.
 - `end(index)`: The end time, in seconds, of a time range.
 
-没有用户操作的话通常只有一个时间范围，但是如果你在媒体中跳来跳去那么就会出现多个时间范围，下面形象化的表名了这一点。 This represents two buffered time ranges — one spanning 0 to 5 seconds and the second spanning 15 to 19 seconds.
+没有用户操作的话通常只有一个时间范围，但是如果你在媒体中跳来跳去那么就会出现多个时间范围，下面形象化的表名了这一点。This represents two buffered time ranges — one spanning 0 to 5 seconds and the second spanning 15 to 19 seconds.
 
 ```plain
 ------------------------------------------------------
@@ -99,7 +99,7 @@ and a little bit of JavaScript:
   }
 ```
 
-这在长一些的 audio 或 video 上工作的更好， 但是按开始键并在进度条上点击，你会得到这个。 每个红色填充的长方形代表一个时间范围。
+这在长一些的 audio 或 video 上工作的更好，但是按开始键并在进度条上点击，你会得到这个。每个红色填充的长方形代表一个时间范围。
 
 ![A simple audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](bufferedtimeranges.png)
 
@@ -207,7 +207,7 @@ This should give you results similar to the following, where the light grey bar 
 
 ## A quick word about Played
 
-It’s worth mentioning the `played` property — this tells us which time ranges have been played within the media. For example:
+It's worth mentioning the `played` property — this tells us which time ranges have been played within the media. For example:
 
 ```js
 var played = audio.played; // returns a TimeRanges object

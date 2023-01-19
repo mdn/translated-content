@@ -4,6 +4,7 @@ slug: Web/API/Element/compositionstart_event
 translation_of: Web/API/Element/compositionstart_event
 original_slug: Web/Events/compositionstart
 ---
+
 {{APIRef}}
 
 L'événement **`compositionstart`** est déclenché lorsqu'un système de composition de texte tel qu'une {{glossary("input method editor","méthode de saisie")}} démarre une nouvelle session de composition.

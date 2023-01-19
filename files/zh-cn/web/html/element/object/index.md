@@ -2,22 +2,23 @@
 title: <object>
 slug: Web/HTML/Element/object
 ---
+
 ## 概要
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 **HTML `<object>` 元素**（或者称作 _HTML 嵌入对象元素_）表示引入一个外部资源，这个资源可能是一张图片，一个嵌入的浏览上下文，亦或是一个插件所使用的资源。
 
 {{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
 
-- _[内容分类](/en-US/docs/HTML/Content_categories)_ [Flow content](/en-US/docs/HTML/Content_categories#Flow_content); [phrasing content](/en-US/docs/HTML/Content_categories#Phrasing_content); [embedded content](/en-US/docs/HTML/Content_categories#Embedded_content), palpable content; if the element has a **usemap** attribute, [interactive content](/en-US/docs/HTML/Content_categories#Interactive_content); [listed](/en-US/docs/HTML/Content_categories#Form_listed), [submittable](/en-US/docs/HTML/Content_categories#Form_submittable) [form-associated](/en-US/docs/HTML/Content_categories#Form-associated_content) element.
-- _允许内容_ zero or more {{HTMLElement("param")}} elements, then [Transparent content](/en-US/docs/HTML/Content_categories#Transparent_content_models).
+- _[内容分类](/zh-CN/docs/HTML/Content_categories)_ [Flow content](/zh-CN/docs/HTML/Content_categories#Flow_content); [phrasing content](/zh-CN/docs/HTML/Content_categories#Phrasing_content); [embedded content](/zh-CN/docs/HTML/Content_categories#Embedded_content), palpable content; if the element has a **usemap** attribute, [interactive content](/zh-CN/docs/HTML/Content_categories#Interactive_content); [listed](/zh-CN/docs/HTML/Content_categories#Form_listed), [submittable](/zh-CN/docs/HTML/Content_categories#Form_submittable) [form-associated](/zh-CN/docs/HTML/Content_categories#Form-associated_content) element.
+- _允许内容_ zero or more {{HTMLElement("param")}} elements, then [Transparent content](/zh-CN/docs/HTML/Content_categories#Transparent_content_models).
 - _标签闭合_ {{no_tag_omission}}
-- _允许的父级元素_ Any element that accepts [embedded content](/en-US/docs/HTML/Content_categories#Embedded_content).
+- _允许的父级元素_ Any element that accepts [embedded content](/zh-CN/docs/HTML/Content_categories#Embedded_content).
 - _DOM 接口_ {{domxref("HTMLObjectElement")}}
 
 ## 属性
 
-元素包含[全局属性](https://developer.mozilla.org/en-US/docs/HTML/Global_attributes)。
+元素包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - {{htmlattrdef("archive")}} {{Deprecated_Inline}}
   - : 用来指名对象资源列表的以空格分隔的 URI 列表。
@@ -46,7 +47,7 @@ slug: Web/HTML/Element/object
 - {{htmlattrdef("type")}}
   - : **data** 指定的资源的 MIME 类型，需要为 **data** 和 **type** 中至少一个设置值。
 - {{htmlattrdef("usemap")}}
-  - : 指向一个 {{HTMLElement("map")}} 元素的 hash-name；格式为 ‘#’ 加 map 元素 {{htmlattrxref("name", "map")}} 元素的值。
+  - : 指向一个 {{HTMLElement("map")}} 元素的 hash-name；格式为‘#’加 map 元素 {{htmlattrxref("name", "map")}} 元素的值。
 - {{htmlattrdef("width")}}
   - : 资源显示的宽度，单位是 CSS 像素。
 

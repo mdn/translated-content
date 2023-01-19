@@ -1,18 +1,9 @@
 ---
 title: JavaScript での XPath の利用の手引き
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-tags:
-  - Add-ons
-  - DOM
-  - Extensions
-  - JavaScript
-  - Transforming_XML_with_XSLT
-  - Web Development
-  - XML
-  - XPath
-  - XSLT
 original_slug: Introduction_to_using_XPath_in_JavaScript
 ---
+
 この文書では、拡張機能やウェブサイトから JavaScript 内で [XPath](/ja/docs/Web/XPath) を使うためのインターフェイスについて解説します。 Mozilla は [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html) のかなりの部分を実装しており、 HTML 文書と XML 文書のどちらに対しても XPath 式を実行することができます。
 
 XPath を使用するための主となるインターフェイスは [document](/ja/docs/Web/API/Document) オブジェクトの [evaluate](/ja/docs/Web/API/Document/evaluate) 関数です。

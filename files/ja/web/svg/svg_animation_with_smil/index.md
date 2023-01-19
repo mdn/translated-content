@@ -1,8 +1,8 @@
 ---
 title: SVG animation with SMIL
 slug: Web/SVG/SVG_animation_with_SMIL
-translation_of: Web/SVG/SVG_animation_with_SMIL
 ---
+
 Firefox 4 より、[Synchronized Multimedia Integration Language](http://www.w3.org/TR/REC-smil) (SMIL) を用いた [SVG](/ja/SVG) のアニメーションをサポートしています。SMIL では以下のようなことができます:
 
 - 要素の数値属性 (x, y など) のアニメーション

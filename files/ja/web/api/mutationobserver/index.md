@@ -2,6 +2,7 @@
 title: MutationObserver
 slug: Web/API/MutationObserver
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 {{domxref("MutationObserver")}} インターフェイスは、 [DOM](/ja/docs/Web/API/Document_Object_Model) ツリーへ変更が加えられたことを監視することができる機能を提供します。これは DOM3 Events の仕様で定義されていた [Mutation Events](/ja/docs/Web/API/MutationEvent) 機能の置き換えとして設計されたものです。
@@ -60,9 +61,7 @@ observer.disconnect();
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#interface-mutationobserver', 'MutationObserver')}} | {{ Spec2('DOM WHATWG') }} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,14 +1,8 @@
 ---
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
-tags:
-  - Error
-  - JavaScript
-  - Reference
-  - TypeError
-translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
-browser-compat: javascript.builtins.TypeError
 ---
+
 {{JSRef}}
 
 **`TypeError`** 객체는 일반적으로 값이 기대하던 자료형이 아니라서 연산을 할 수 없을 때 발생하는 오류입니다.

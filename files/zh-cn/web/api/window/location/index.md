@@ -2,13 +2,14 @@
 title: window.location
 slug: Web/API/Window/location
 ---
+
 {{ APIRef() }}
 
 **window\.location** 只读属性，返回一个 {{domxref("Location")}} 对象，其中包含有关文档当前位置的信息。
 
 > **备注：** window\.location : 所有字母必须小写！
 
-尽管 window\.location 是一个*只读* Location 对象，你仍然可以赋给它一个 {{domxref("DOMString")}}。这意味着您可以在大多数情况下处理 **location**，就像它是一个字符串一样：window\.location = 'http\://www\.example.com'，是 window\.location.href = 'http\://www\.example.com'的同义词 。
+尽管 window\.location 是一个*只读* Location 对象，你仍然可以赋给它一个 {{domxref("DOMString")}}。这意味着您可以在大多数情况下处理 **location**，就像它是一个字符串一样：window\.location = 'http\://www\.example.com'，是 window\.location.href = 'http\://www\.example.com'的同义词。
 
 ## 语法
 
@@ -274,7 +275,7 @@ var showBookmark = (function () {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.location")}}
+{{Compat}}
 
 ## 相关链接
 

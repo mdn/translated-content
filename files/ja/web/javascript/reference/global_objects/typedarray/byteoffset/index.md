@@ -2,6 +2,7 @@
 title: TypedArray.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 ---
+
 {{JSRef}}
 
 **`byteOffset`** アクセサープロパティは、 {{jsxref("ArrayBuffer")}} の開始位置からの型付き配列の (バイト単位の) オフセットを表します。
@@ -26,9 +27,7 @@ uint8.byteOffset; // 3 (as specified when constructing Uint8Array)
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.byteoffset', 'TypedArray.prototype.byteOffset')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

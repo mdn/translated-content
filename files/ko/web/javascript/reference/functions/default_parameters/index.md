@@ -1,14 +1,8 @@
 ---
 title: 기본값 매개변수
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript2015
-  - ECMAScript6
-  - Functions
-  - JavaScript
-  - 기본값 매개변수
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 기본값 함수 매개변수 (**default function parameter**)를 사용하면 값이 없거나 `undefined`가 전달될 경우 이름붙은 매개변수를 기본값으로 초기화할 수 있습니다.

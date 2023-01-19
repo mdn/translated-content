@@ -1,20 +1,11 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
-browser-compat: javascript.builtins.Array.find
 ---
+
 {{JSRef}}
 
-**`find()`\*\*** **메서드는 주어진 판별 함수를 만족하는 **첫 번째 요소**의 **값\*\*을 반환합니다. 그런 요소가 없다면 {{jsxref("undefined")}}를 반환합니다.
+**`find()`** 메서드는 주어진 판별 함수를 만족하는 **첫 번째 요소**의 **값**을 반환합니다. 그런 요소가 없다면 {{jsxref("undefined")}}를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/array-find.html")}}
 

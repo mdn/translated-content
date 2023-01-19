@@ -1,9 +1,9 @@
 ---
 title: navigator.hardwareConcurrency
 slug: orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency
-translation_of: Web/API/NavigatorConcurrentHardware/hardwareConcurrency
 original_slug: Web/API/NavigatorConcurrentHardware/hardwareConcurrency
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{AvailableInWorkers}}
@@ -40,11 +40,9 @@ for (let i = 0; i < window.navigator.hardwareConcurrency; i++) {
 }
 ```
 
-## Specification
+## Especificaciones
 
-| Specification                                                                                                                        | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-hardwareconcurrency', 'navigator.hardwareConcurrency')}} | {{Spec2('HTML WHATWG')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,7 +1,10 @@
 ---
 title: Notification.tag
 slug: Web/API/Notification/tag
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`tag`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `tag` オプションで指定された通知の識別タグを示します。

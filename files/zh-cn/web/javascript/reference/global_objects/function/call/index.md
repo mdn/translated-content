@@ -2,6 +2,7 @@
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
+
 {{JSRef}}
 
 **`call()`** 方法使用一个指定的 `this` 值和单独给出的一个或多个参数来调用一个函数。

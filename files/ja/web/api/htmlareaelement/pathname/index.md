@@ -3,6 +3,7 @@ title: HTMLAreaElement.pathname
 slug: Web/API/HTMLAreaElement/pathname
 original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAreaElement.pathname`** プロパティは、最初の `'/'` とその後に続く URL のパスが入った文字列（または、パスがない場合は空の文字列）です。

@@ -3,6 +3,7 @@ title: 'HTMLMediaElement: durationchange'
 slug: Web/API/HTMLMediaElement/durationchange_event
 translation_of: Web/API/HTMLMediaElement/durationchange_event
 ---
+
 L'évènement **`durationchange`** est déclenché quand l'attribut de durée est mis à jour.
 
 ## Informations générales
@@ -31,21 +32,20 @@ L'évènement **`durationchange`** est déclenché quand l'attribut de durée es
 
 ## Evénements liés
 
-- {{event("playing")}}
-- {{event("waiting")}}
-- {{event("seeking")}}
-- {{event("seeked")}}
-- {{event("ended")}}
-- {{event("loadedmetadata")}}
-- {{event("loadeddata")}}
-- {{event("canplay")}}
-- {{event("canplaythrough")}}
-- {{event("durationchange")}}
-- {{event("timeupdate")}}
-- {{event("play")}}
-- {{event("pause")}}
-- {{event("ratechange")}}
-- {{event("volumechange")}}
-- {{event("suspend")}}
-- {{event("emptied")}}
-- {{event("stalled")}}
+- [`playing`](/fr/docs/Web/API/HTMLMediaElement/playing_event)
+- [`waiting`](/fr/docs/Web/API/HTMLMediaElement/waiting_event)
+- [`seeking`](/fr/docs/Web/API/HTMLMediaElement/seeking_event)
+- [`seeked`](/fr/docs/Web/API/HTMLMediaElement/seeked_event)
+- [`ended`](/fr/docs/Web/API/HTMLMediaElement/ended_event)
+- [`loadedmetadata`](/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
+- [`loadeddata`](/fr/docs/Web/API/HTMLMediaElement/loadeddata_event)
+- [`canplay`](/fr/docs/Web/API/HTMLMediaElement/canplay_event)
+- [`canplaythrough`](/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event)
+- [`timeupdate`](/fr/docs/Web/API/HTMLMediaElement/timeupdate_event)
+- [`play`](/fr/docs/Web/API/HTMLMediaElement/play_event)
+- [`pause`](/fr/docs/Web/API/HTMLMediaElement/pause_event)
+- [`ratechange`](/fr/docs/Web/API/HTMLMediaElement/ratechange_event)
+- [`volumechange`](/fr/docs/Web/API/HTMLMediaElement/volumechange_event)
+- [`suspend`](/fr/docs/Web/API/HTMLMediaElement/suspend_event)
+- [`emptied`](/fr/docs/Web/API/HTMLMediaElement/emptied_event)
+- [`stalled`](/fr/docs/Web/API/HTMLMediaElement/stalled_event)

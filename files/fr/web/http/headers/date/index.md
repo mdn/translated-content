@@ -3,6 +3,7 @@ title: Date
 slug: Web/HTTP/Headers/Date
 translation_of: Web/HTTP/Headers/Date
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du message.

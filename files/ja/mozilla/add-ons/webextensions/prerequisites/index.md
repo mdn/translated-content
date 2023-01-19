@@ -3,6 +3,7 @@ title: 前提条件
 slug: Mozilla/Add-ons/WebExtensions/Prerequisites
 original_slug: Mozilla/Add-ons/WebExtensions/前提条件
 ---
+
 WebExtension API を使って開発するには、いくつかの小さいセットアップが必要です。
 
 - [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) または [Firefox Nightly](https://nightly.mozilla.org/) をダウンロード、インストールして、起動してください。最近の追加機能を使用したい場合、Nightly を使用してください。

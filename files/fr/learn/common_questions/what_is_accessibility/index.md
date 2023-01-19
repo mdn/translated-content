@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Common_questions/What_is_accessibility
 original_slug: Apprendre/Accessibilité
 ---
+
 Cet article aborde les concepts de base qui forment l'accessibilité pour le Web.
 
 <table class="standard-table">

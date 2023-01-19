@@ -2,6 +2,7 @@
 title: URL()
 slug: Web/API/URL/URL
 ---
+
 {{APIRef("URL API")}}
 
 **`URL()`** 构造函数返回一个新创建的 {{domxref("URL")}} 对象，表示由一组参数定义的 URL。

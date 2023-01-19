@@ -2,6 +2,7 @@
 title: compositionstart
 slug: Web/API/Element/compositionstart_event
 ---
+
 {{APIRef}}
 
 文本合成系统如 {{glossary("input method editor")}}（即输入法编辑器）开始新的输入合成时会触发 **`compositionstart`** 事件。
@@ -39,7 +40,7 @@ slug: Web/API/Element/compositionstart_event
 
 ## 示例
 
-```
+```js
 const inputElement = document.querySelector('input[type="text"]');
 
 inputElement.addEventListener('compositionstart', (event) => {
@@ -120,7 +121,7 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 #### 结果
 
-{{ EmbedLiveSample('Live_example', '100%', '180px') }}
+{{ EmbedLiveSample('动态演示', '100%', '180px') }}
 
 ## 规范
 

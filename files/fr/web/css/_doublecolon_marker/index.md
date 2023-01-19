@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::marker
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le pseudo-élément **`::marker`** représente le marqueur d'un élément d'une liste (par exemple la puce ou le numéro de l'élément d'un élément {{HTMLElement("li")}}). Ce pseudo-élément ne fonctionne que pour les éléments ou pseudo-éléments pour lesquels {{cssxref("display")}} vaut `list-item` (par défaut c'est le cas des éléments {{htmlelement("li")}} et {{htmlelement("summary")}}).
@@ -59,14 +60,11 @@ li::marker {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                         | Commentaires                       |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#marker-pseudo', '::marker')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Aucune modification significative. |
-| {{SpecName('CSS3 Lists', '#marker-pseudo', '::marker')}}             | {{Spec2('CSS3 Lists')}}             | Définition initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.marker")}}
+{{Compat}}
 
 ## Voir aussi
 

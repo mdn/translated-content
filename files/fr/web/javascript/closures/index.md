@@ -3,6 +3,7 @@ title: Closures (Fermetures)
 slug: Web/JavaScript/Closures
 translation_of: Web/JavaScript/Closures
 ---
+
 {{jsSidebar("Intermediate")}}
 
 Une **fermeture** est la paire formée d'une fonction et des références à son état environnant (**l'environnement lexical**). En d'autres termes, une fermeture donne accès à la portée d'une fonction externe à partir d'une fonction interne (on dit aussi que la fonction «&nbsp;capture son environnement&nbsp;»). En JavaScript, une fermeture est créée chaque fois qu'une fonction est créée.
@@ -67,7 +68,7 @@ console.log(ajouter_10(2)); // 12
 
 On définit une fonction `ajouterA(x)` avec un seul argument `x` et qui renvoie une fonction anonyme. La fonction anonyme a un seul argument `y`, et renvoie la somme de `x` et `y`.
 
-La fonction `ajouterA` permet de créer des fermetures qui font la somme de leur argument et d'un nombre fixé. Dans l'exemple ci-dessus, on crée  `ajouter_5` et `ajouter_10`. Elles partagent la même fonction, mais des environnements différents. Dans `ajouter_5`, `x` vaut 5&nbsp;; dans `ajouter_10`, `x` vaut 10.
+La fonction `ajouterA` permet de créer des fermetures qui font la somme de leur argument et d'un nombre fixé. Dans l'exemple ci-dessus, on crée `ajouter_5` et `ajouter_10`. Elles partagent la même fonction, mais des environnements différents. Dans `ajouter_5`, `x` vaut 5&nbsp;; dans `ajouter_10`, `x` vaut 10.
 
 ## Les fermetures en pratique
 

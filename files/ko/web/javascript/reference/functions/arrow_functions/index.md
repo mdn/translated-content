@@ -1,24 +1,18 @@
 ---
 title: 화살표 함수
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript6
-  - Functions
-  - Intermediate
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
 ---
+
 {{jsSidebar("Functions")}}
 
 화살표 함수 표현(**arrow function expression**)은 [전통적인 함수표현(function)](/ko/docs/Web/JavaScript/Reference/Operators/function)의 간편한 대안입니다. 하지만, 화살표 함수는 몇 가지 제한점이 있고 모든 상황에 사용할 수는 없습니다.
 
-- [this](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this)나 [super](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/super)에 대한 바인딩이 없고, [methods](https://developer.mozilla.org/ko/docs/Glossary/Method) 로 사용될 수 없습니다.
-- [new.target](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/new.target)키워드가 없습니다.
-- 일반적으로 스코프를 지정할 때 사용하는 [call](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [apply](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [bind](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) methods를 이용할 수 없습니다.
-- 생성자[(Constructor)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/constructor)로 사용할 수 없습니다.
-- [yield](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/yield)를 화살표 함수 내부에서 사용할 수 없습니다.
+- [this](/ko/docs/Web/JavaScript/Reference/Operators/this)나 [super](/ko/docs/Web/JavaScript/Reference/Operators/super)에 대한 바인딩이 없고, [methods](/ko/docs/Glossary/Method) 로 사용될 수 없습니다.
+- [new.target](/ko/docs/Web/JavaScript/Reference/Operators/new.target)키워드가 없습니다.
+- 일반적으로 스코프를 지정할 때 사용하는 [call](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [apply](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [bind](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) methods를 이용할 수 없습니다.
+- 생성자[(Constructor)](/ko/docs/Web/JavaScript/Reference/Classes/constructor)로 사용할 수 없습니다.
+- [yield](/ko/docs/Web/JavaScript/Reference/Operators/yield)를 화살표 함수 내부에서 사용할 수 없습니다.
 
 {{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 
@@ -231,9 +225,9 @@ This code sample using Chrome 81 demonstrates that arrow functions allow the cre
 
 f2 illustrates that when explicitly setting the arrow function to apply strict mode, it does throw an error when attempting to assign an undeclared variable.
 
-https\://www\.ecma-international.org/ecma-262/10.0/index.html#sec-strict-mode-code
+<https://www.ecma-international.org/ecma-262/10.0/index.html#sec-strict-mode-code>
 
-https\://www\.ecma-international.org/ecma-262/10.0/index.html#sec-arrow-function-definitions-runtime-semantics-evaluation
+<https://www.ecma-international.org/ecma-262/10.0/index.html#sec-arrow-function-definitions-runtime-semantics-evaluation>
 
 **CORRECTION: END**
 
@@ -418,7 +412,7 @@ var func = (a, b, c)
 
 ### 파싱순서
 
-화살표 함수 내의 화살표는 연산자가 아닙니다. 그러나 화살표 함수는 평범한 함수와 비교했을 때 [operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)와 다르게 반응하는 특별한 파싱룰을 가지고 있습니다.
+화살표 함수 내의 화살표는 연산자가 아닙니다. 그러나 화살표 함수는 평범한 함수와 비교했을 때 [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)와 다르게 반응하는 특별한 파싱룰을 가지고 있습니다.
 
 ```js
 let callback;

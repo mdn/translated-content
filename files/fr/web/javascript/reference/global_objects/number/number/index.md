@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/Number
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/Number
 browser-compat: javascript.builtins.Number.Number
 ---
+
 {{JSRef}}
 
 Le **constructeur `Number()`** permet de créer un objet [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number).

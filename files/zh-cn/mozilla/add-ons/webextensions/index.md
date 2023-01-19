@@ -2,6 +2,7 @@
 title: 浏览器扩展
 slug: Mozilla/Add-ons/WebExtensions
 ---
+
 {{AddonSidebar}}
 
 扩展或者说是附加组件，拥有可以修改、增强浏览器的能力。用于 Firefox 的扩展，使用跨浏览器的 WebExtensions API 技术来构建。

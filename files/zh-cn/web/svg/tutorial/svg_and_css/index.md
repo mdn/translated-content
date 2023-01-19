@@ -3,6 +3,7 @@ title: SVG and CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: Web/Guide/CSS/Getting_started/SVG_and_CSS
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 
 本节将演示如何将 CSS 应用到 [SVG](/zh-CN/docs/SVG) 中。
@@ -13,7 +14,7 @@ original_slug: Web/Guide/CSS/Getting_started/SVG_and_CSS
 前一节：[JavaScript](/zh-CN/docs/Web/JavaScript/Getting_Started)
 下一节：[XML data](/zh-CN/docs/Web/Guide/CSS/Getting_started/XML_data)
 
-### 信息: SVG
+### 信息：SVG
 
 _SVG_ (Scalable Vector Graphics) 是一个基于 XML 的图形描述语言。
 
@@ -23,7 +24,7 @@ _SVG_ (Scalable Vector Graphics) 是一个基于 XML 的图形描述语言。
 
 在样式表中你可以在任何可以可以指定图片的地方指定一个 SVG 的 URL。比如，在 HTML 的样式表中，你可以为 `background` 属性指定一个 SVG 的 URL。
 
-| 在这个教程编写的时间点 (2011 中旬)，绝大多数现代浏览器都对 SVG 有基本的支持。其中包括 Internet Explorer 9 及其后续版本。一些 SVG 特性只被某些浏览器支持。参见 [SVG tables on caniuse.com](http://caniuse.com/#search=SVG) 了解支持情况。 参见 [SVG element reference](/zh-CN/docs/SVG/Element) 了解兼容情况。通过安装 [Adobe](http://www.adobe.com/svg/viewer/install/main.html) 提供的插件，你可以让某些浏览器支持 SVG。欲在 Mozilla 了解更多关于 SVG 的信息，参考 [这里 SVG](/zh-CN/docs/SVG)。 |
+| 在这个教程编写的时间点 (2011 中旬)，绝大多数现代浏览器都对 SVG 有基本的支持。其中包括 Internet Explorer 9 及其后续版本。一些 SVG 特性只被某些浏览器支持。参见 [SVG tables on caniuse.com](http://caniuse.com/#search=SVG) 了解支持情况。参见 [SVG element reference](/zh-CN/docs/SVG/Element) 了解兼容情况。通过安装 [Adobe](http://www.adobe.com/svg/viewer/install/main.html) 提供的插件，你可以让某些浏览器支持 SVG。欲在 Mozilla 了解更多关于 SVG 的信息，参考 [这里 SVG](/zh-CN/docs/SVG)。 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## 示例

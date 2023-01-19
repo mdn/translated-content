@@ -2,6 +2,7 @@
 title: HTML 文字处理基础
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML 的主要工作是编辑文本结构和文本内容（也称为语义{{glossary("semantics")}}），以便浏览器能正确的显示。本文介绍了 {{glossary("HTML")}}的使用方法：在一段文本中添加标题和段落，强调语句，创建列表等等。
@@ -867,7 +868,7 @@ if you drink it, <strong>you may <em>die</em></strong>.</p>
 
 迄今为止我们已经讨论的元素都是意义清楚的语义元素。{{htmlelement("b")}}, {{htmlelement("i")}}, 和 {{htmlelement("u")}} 的情况却有点复杂。它们出现于人们要在文本中使用粗体、斜体、下划线但 CSS 仍然不被完全支持的时期。像这样的元素，仅仅影响表象而且没有语义，被称为**表象元素（presentational elements）**并且不应该再被使用。因为正如我们在之前看到的，语义对无障碍，SEO（搜索引擎优化）等非常重要。
 
-HTML5 用新的语义规则重新定义了`<b>`,`<i>`和`<u>`,使得它们的语言显得稍微有点混乱。
+HTML5 用新的语义规则重新定义了 `<b>`、`<i>` 和 `<u>`,使得它们的语言显得稍微有点混乱。
 
 这里是最好的经验法则：如果没有更合适的元素，那么使用 `<b>`、`<i>` 或 `<u>` 来表达传统上的粗体、斜体或下划线表达的意思是合适的。然而，始终拥有[无障碍](/zh-CN/docs/learn/Accessibility)的思维模式是至关重要的。斜体的概念对人们使用屏幕阅读器是没有帮助的，对使用其他书写系统而不是拉丁文书写系统的人们也是没有帮助的。
 

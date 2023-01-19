@@ -2,6 +2,7 @@
 title: 文档对象模型 (DOM)
 slug: Web/API/Document_Object_Model
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 **文档对象模型 (_DOM)_** 将 web 页面与到脚本或编程语言连接起来。通常是指 JavaScript，但将 HTML、SVG 或 XML 文档建模为对象并不是 JavaScript 语言的一部分。DOM 模型用一个逻辑树来表示一个文档，树的每个分支的终点都是一个节点 (node)，每个节点都包含着对象 (objects)。DOM 的方法 (methods) 让你可以用特定方式操作这个树，用这些方法你可以改变文档的结构、样式或者内容。节点可以关联上事件处理器，一旦某一事件被触发了，那些事件处理器就会被执行。
@@ -50,7 +51,7 @@ slug: Web/API/Document_Object_Model
 
 ## 过时的 DOM 接口
 
-DOM 模型已经被高度简化了。为此，以下出现在 DOM level 3 或更早的规范里的接口已经被移除了。 现在不是非常确定是否有一些会被重新引进，但是当前应该把它们看作废弃的，应当避免使用：
+DOM 模型已经被高度简化了。为此，以下出现在 DOM level 3 或更早的规范里的接口已经被移除了。现在不是非常确定是否有一些会被重新引进，但是当前应该把它们看作废弃的，应当避免使用：
 
 - {{domxref("CDATASection")}}
 - {{domxref("DOMConfiguration")}}

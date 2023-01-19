@@ -2,6 +2,7 @@
 title: MouseEvent.offsetX
 slug: Web/API/MouseEvent/offsetX
 ---
+
 {{APIRef("DOM Events")}}{{SeeCompatTable}}
 
 {{domxref("MouseEvent")}} 接口的只读属性 **offsetX** 规定了事件对象与目标节点的内填充边（padding edge）在 X 轴方向上的偏移量。
@@ -22,7 +23,7 @@ var xOffset = instanceOfMouseEvent.offsetX;
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.offsetX")}}
+{{Compat}}
 
 ## 相关内容
 

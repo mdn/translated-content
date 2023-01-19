@@ -2,6 +2,7 @@
 title: BigInt.asIntN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 ---
+
 {{JSRef}}
 
 **`BigInt.asIntN`** は静的メソッドで、 BigInt 値を符号付き整数値に丸め、その値を返します。

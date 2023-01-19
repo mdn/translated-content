@@ -2,6 +2,7 @@
 title: 'Express チュートリアル: 地域図書館の Web サイト'
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 
 実用的なチュートリアルシリーズの最初の記事では、これから学ぶことについて説明します。そして、私たちがこれから取り組んでいき、その後の記事で進化していく「地域図書館」のサンプルウェブサイトの概要を説明します。
@@ -44,7 +45,7 @@ _LocalLibrary_ は、この一連のチュートリアルの過程で作成お�
 
 あなたが立ち往生したならば、[Github のここ](https://github.com/mdn/express-locallibrary-tutorial)で ウェブサイトの完全に開発されたバージョンを見つけることができます。
 
-> **Note:** この文書でテストされた Node、Express、および他のモジュールの特定のバージョンは、プロジェクト [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) にリストされています。
+> **メモ:** この文書でテストされた Node、Express、および他のモジュールの特定のバージョンは、プロジェクト [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) にリストされています。
 
 ## まとめ
 

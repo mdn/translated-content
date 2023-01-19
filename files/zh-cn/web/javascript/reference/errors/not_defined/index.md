@@ -2,6 +2,7 @@
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误信息
@@ -28,7 +29,7 @@ ReferenceError: "x" is not defined
 foo.substring(1); // ReferenceError: foo is not defined
 ```
 
-“foo” 变量没有在任何地方被声明。它需要是某种字符串，这样 {{jsxref("String.prototype.substring()")}} 方法才可以正常工作。
+“foo”变量没有在任何地方被声明。它需要是某种字符串，这样 {{jsxref("String.prototype.substring()")}} 方法才可以正常工作。
 
 ```js example-good
 var foo = 'bar';
@@ -37,7 +38,7 @@ foo.substring(1); // "ar"
 
 ### 错误的作用域
 
-变量必须是在它当前的执行环境中可用的。在一个函数（[function](/en-US/docs/Web/JavaScript/Reference/Functions)）中定义的变量不能从这个函数外部的任何地方访问，因为这个变量的作用域仅在这个函数的内部。
+变量必须是在它当前的执行环境中可用的。在一个函数（[function](/zh-CN/docs/Web/JavaScript/Reference/Functions)）中定义的变量不能从这个函数外部的任何地方访问，因为这个变量的作用域仅在这个函数的内部。
 
 ```js example-bad
 function numbers () {
@@ -65,5 +66,5 @@ console.log(num1); // 2
 ## 相关页面
 
 - {{Glossary("Scope")}}
-- [Declaring variables in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
-- [Function scope in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions#Function_scope/en-US/docs/)
+- [Declaring variables in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
+- [Function scope in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Functions#Function_scope/en-US/docs/)

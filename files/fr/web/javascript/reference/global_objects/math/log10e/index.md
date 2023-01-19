@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/LOG10E
 ---
+
 {{JSRef}}
 
 La propriété **`Math.LOG10E`** fournit la valeur du logarithme en base 10 de e, environ 0.434 :
@@ -37,16 +38,11 @@ getLog10e(); // 0.4342944819032518
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.5', 'Math.LOG10E')}}     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.log10e', 'Math.LOG10E')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.log10e', 'Math.LOG10E')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.LOG10E")}}
+{{Compat}}
 
 ## Voir aussi
 

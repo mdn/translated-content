@@ -1,29 +1,42 @@
 ---
-title: HTMLFormElement.reset
+title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
-## 概要
 
-`reset` はフォームを初期状態にリセットします。
+{{APIRef("HTML DOM")}}
+
+**`HTMLFormElement.reset()`** メソッドは、フォーム要素の既定値を復元します。このメソッドはフォームの [`<input type="reset">`](/ja/docs/Web/HTML/Element/input/reset) コントロールをクリックするのと同じことを行います。
+
+もしあるフォームコントロール（リセットボタンなど）が _reset_ という形の名前か ID を持っていると、フォームの reset メソッドを隠してしまいます。これは `disabled` のような、入力の他の属性をリセットするものではありません。
+
+もし {{domxref("Element.setAttribute", "setAttribute()")}} を呼び出して特定の属性の値を設定した場合、その後に `reset()` を呼び出してもその属性は既定値にリセットされず、代わりに {{domxref("Element.setAttribute", "setAttribute()")}} を呼び出して設定した値を維持することに注意ください。
 
 ## 構文
 
+```js-nolint
+reset()
 ```
-HTMLFormElement.reset()
-```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 ```js
-document.forms["myform"].reset();
+document.getElementById('myform').reset();
 ```
-
-## 注記
-
-このメソッドは、フォームのリセットボタン押下と同様の効果となります。
-
-もしフォームコントロール（※リセットボタンなど）の id 属性か name 属性の値に "`reset`" が指定されている場合、フォームの `reset` メソッドをマスキングしてしまうという点に注意して下さい。
 
 ## 仕様書
 
-- [DOM Level 2 HTML: reset](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76767677)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

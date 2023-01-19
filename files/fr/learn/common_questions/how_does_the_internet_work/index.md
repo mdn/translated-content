@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/Common_questions/How_does_the_Internet_work
 original_slug: Apprendre/Fonctionnement_Internet
 ---
+
 Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
 
 <table class="standard-table">

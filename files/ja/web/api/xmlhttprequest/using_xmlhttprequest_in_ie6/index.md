@@ -2,6 +2,7 @@
 title: Using XMLHttpRequest in IE6
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6
 ---
+
 [XMLHttpRequest](/ja/DOM/XMLHttpRequest) は、 Microsoft によって Internet Explorer 5.0 で ActiveX control として最初に導入されました。ただし、 IE7 およびその他のブラウザーでは XMLHttpRequest はネイティブ JavaScript オブジェクトです。
 
 最近のすべてのブラウザーでは、次のコードを使用して新規の XMLHttpRequest オブジェクトを作成できます:

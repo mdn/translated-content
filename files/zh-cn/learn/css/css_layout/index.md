@@ -2,6 +2,7 @@
 title: CSS 布局
 slug: Learn/CSS/CSS_layout
 ---
+
 {{LearnSidebar}}
 
 此刻，我们已经看过 CSS 的基础知识，如何设置文本的样式，以及如何设置和操作内容所在的框。现在是时候看看如何把你的盒子放在与视口相关的正确位置上。我们已经涵盖了必要的先决条件，所以我们现在可以深入到 CSS 布局，查看不同的显示设置，涉及浮动和定位的传统布局方法，以及像 flexbox 这样的现代布局工具。
@@ -31,7 +32,7 @@ slug: Learn/CSS/CSS_layout
 - [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
   - : 最初对于文本块中的浮动图像，{{cssxref("float")}}属性已经成为在网页上创建多个列布局的最常用工具之一。本文解释所有。
 - [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-  - : 定位允许您从常规文档布局流程中取出元素，并使它们具有不同的行为，例如坐在另一个之上，或始终保持在浏览器视口内的同一位置。 本文解释不同的{{cssxref("position")}} 值，以及如何使用它们。
+  - : 定位允许您从常规文档布局流程中取出元素，并使它们具有不同的行为，例如坐在另一个之上，或始终保持在浏览器视口内的同一位置。本文解释不同的{{cssxref("position")}} 值，以及如何使用它们。
 - [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
   - : 多列布局声明提供了一种多列组织内容的方式，正如你在一些报纸中看到的那样。这篇文章介绍怎么使用这一特性。
 - [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)

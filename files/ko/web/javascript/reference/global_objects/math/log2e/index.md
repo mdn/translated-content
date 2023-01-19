@@ -1,13 +1,8 @@
 ---
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 ---
+
 {{JSRef}}
 
 **`Math.LOG2E`** 속성은 e의 로그 2 값, 약 1.442의 값을 가집니다.

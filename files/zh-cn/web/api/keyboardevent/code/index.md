@@ -2,6 +2,7 @@
 title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
 ---
+
 {{APIRef("DOM Events")}}
 
 `KeyboardEvent.code`属性表示键盘上的物理键（与按键生成的字符相对）。换句话说，此属性返回一个值，该值不会被键盘布局或修饰键的状态改变。
@@ -53,11 +54,11 @@ window.addEventListener("keydown", function(event) {
 
 To ensure that keystrokes go to the sample, click in the output box below before pressing keys.
 
-{{ EmbedLiveSample('Exercising_KeyboardEvent', 600, 300) }}
+{{ EmbedLiveSample('练习 KeyboardEvent', 600, 300) }}
 
 ### Handle keyboard events in a game
 
-This example establishes an event listener for {{event("keydown")}} events which handles keyboard input for a game which uses the typical "WASD" keyboard layout for steering forward, left, backward, and right. This will use the same four keys physically regardless of what the actual corresponding characters are, such as if the user is using an AZERTY keyboard.
+This example establishes an event listener for [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) events which handles keyboard input for a game which uses the typical "WASD" keyboard layout for steering forward, left, backward, and right. This will use the same four keys physically regardless of what the actual corresponding characters are, such as if the user is using an AZERTY keyboard.
 
 #### HTML
 
@@ -144,7 +145,7 @@ function refresh() {
 }
 ```
 
-Finally, the `addEventListener()` method is used to start listening for {{event("keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
+Finally, the `addEventListener()` method is used to start listening for [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
 
 ```js
 window.addEventListener("keydown", function(event) {
@@ -188,7 +189,7 @@ To ensure that keystrokes go to the sample code, click inside the black game pla
 
 {{EmbedLiveSample("Handle_keyboard_events_in_a_game", 420, 460)}}
 
-There are several ways this code can be made better. Most real games would watch for {{event("keydown")}} events, start motion when that happens, and stop the motion when the corresponding {{event("keyup")}} occurs, instead of relying on key repeats. That would allow both smoother and faster movement, but would also allow the player to be moving and steering at the same time. Transitions or animations could be used to make the ship's movement smoother, too.
+There are several ways this code can be made better. Most real games would watch for [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) events, start motion when that happens, and stop the motion when the corresponding [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) occurs, instead of relying on key repeats. That would allow both smoother and faster movement, but would also allow the player to be moving and steering at the same time. Transitions or animations could be used to make the ship's movement smoother, too.
 
 ## Specification
 
@@ -196,7 +197,7 @@ There are several ways this code can be made better. Most real games would watch
 
 ## Browser compatibility
 
-{{Compat("api.KeyboardEvent.code")}}
+{{Compat}}
 
 ## Code values
 
@@ -2112,7 +2113,7 @@ On Mac OS X, it's hard to get scancode or something which can distinguish a phys
         <div class="note">
           <p>
             Prior to
-            <a href="/en-US/docs/Mozilla/Firefox/Releases/37">Firefox 37</a>,
+            <a href="/zh-CN/docs/Mozilla/Firefox/Releases/37">Firefox 37</a>,
             this key incorrectly generated the key code
             <code>"RomanCharacters"</code>.
           </p>

@@ -2,6 +2,7 @@
 title: 拡張機能の中身
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
+
 {{AddonSidebar}}
 
 拡張機能は複数のファイルで構成されており、それらのファイルが配布・インストール用にパッケージ化されたものです。この記事では、拡張機能に含まれるファイルについて簡単に説明します。
@@ -53,7 +54,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 - **manifest.json**
 
-  - :&#x20;
+  - : &#x20;
 
     ```json
     // manifest.json
@@ -65,7 +66,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 - **background-page.html**
 
-  - :&#x20;
+  - : &#x20;
 
     ```html
     <!DOCTYPE html>
@@ -83,7 +84,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 バックグラウンドスクリプトは、バックグラウンドページと呼ばれる特殊なページのコンテキストで実行されます。ここでは [`window`](/ja/docs/Web/API/Window) というグローバルオブジェクトが利用でき、そのオブジェクトによってすべての DOM API 標準が利用できます。
 
-> **Warning:** Firefox では、バックグラウンドページでは[`alert()`](/ja/docs/Web/API/Window/alert)、[`confirm()`](/ja/docs/Web/API/Window/confirm)、[`prompt()`](/ja/docs/Web/API/Window/prompt)の使用はサポートされません。
+> **警告:** Firefox では、バックグラウンドページでは[`alert()`](/ja/docs/Web/API/Window/alert)、[`confirm()`](/ja/docs/Web/API/Window/confirm)、[`prompt()`](/ja/docs/Web/API/Window/prompt)の使用はサポートされません。
 
 #### WebExtension API
 

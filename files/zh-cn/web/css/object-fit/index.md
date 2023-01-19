@@ -2,6 +2,7 @@
 title: object-fit
 slug: Web/CSS/object-fit
 ---
+
 {{CSSRef}}
 
 **`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性指定[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)（例如：{{HTMLElement("img")}} 或 {{HTMLElement("video")}}）的内容应该如何适应到其使用高度和宽度确定的框。

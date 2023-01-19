@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Global_attributes
 original_slug: Web/HTML/Attributs_universels
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 Les **attributs universels** sont des attributs communs à l'ensemble des éléments HTML. Ces attributs peuvent donc être ajoutés sur tous les éléments (dans certains cas, les attributs n'auront aucun effet).

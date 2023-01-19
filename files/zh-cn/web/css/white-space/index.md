@@ -2,28 +2,34 @@
 title: white-space
 slug: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
-**`white-space`** CSS 属性是用来设置如何处理元素中的 {{Glossary("whitespace", "空白")}}。
+**`white-space`** CSS 属性是用来设置如何处理元素中的{{Glossary("whitespace", "空白")}}。
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
+这个属性表明了两件事:
+
+- 空白字符是否以及如何它们该如何[合并](#合并空白字符)。
+- 行是否采用软换行。
+
 ## 语法
 
-```
+```css
 /* Keyword values */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;
 white-space: pre-wrap;
 white-space: pre-line;
-
-/* https://github.com/w3c/csswg-drafts/pull/2841 */
 white-space: break-spaces;
 
 /* Global values */
 white-space: inherit;
 white-space: initial;
+white-space: revert;
+white-space: revert-layer;
 white-space: unset;
 ```
 
@@ -70,7 +76,7 @@ code {
 }
 ```
 
-### 下面的代码允许在 {{HTMLElement("pre")}} 中换行
+### 下面的代码允许在 \<pre> 中换行
 
 ```css
 pre {

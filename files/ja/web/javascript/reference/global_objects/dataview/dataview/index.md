@@ -2,6 +2,7 @@
 title: DataView() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 ---
+
 {{JSRef}}
 
 **`DataView()`** コンストラクターは、 {{jsxref("DataView")}} オブジェクトを生成するために使用します。
@@ -51,9 +52,7 @@ view.getInt16(1); // 42
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview-constructor', 'DataView constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

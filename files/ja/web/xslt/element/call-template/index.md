@@ -2,6 +2,7 @@
 title: <xsl:call-template>
 slug: Web/XSLT/Element/call-template
 ---
+
 {{ XsltRef() }}
 
 `<xsl:call-template>` 要素は名前付きテンプレートを呼び出します。

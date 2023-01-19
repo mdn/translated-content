@@ -1,21 +1,8 @@
 ---
 title: SVG 属性リファレンス
 slug: Web/SVG/Attribute
-tags:
-  - Drawing
-  - Landing
-  - Responsive Design
-  - SVG
-  - SVG Attribute
-  - SVG Reference
-  - SVG リファレンス
-  - SVG 属性
-  - Vector Graphics
-  - ベクターグラフィックス
-  - レスポンシブデザイン
-  - 描画
-translation_of: Web/SVG/Attribute
 ---
+
 {{SVGRef}}
 
 SVG 要素は、要素の扱いや描画の詳細を指定する属性を使って変更できます。以下は、すべての SVG 属性のリストです。各属性のリンク先のドキュメンテーションでは、どの要素が属性をサポートしているか、どのように動作するかを学ぶことができます。
@@ -375,7 +362,7 @@ SVG 要素は、要素の扱いや描画の詳細を指定する属性を使っ�
 
 ### [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
 
-> **Note:** すべての SVG プレゼンテーション属性が CSS プロパティとして使用できます。
+> **メモ:** すべての SVG プレゼンテーション属性が CSS プロパティとして使用できます。
 
 {{SVGAttr("alignment-baseline")}}, {{SVGAttr("baseline-shift")}}, {{SVGAttr("clip")}}, {{SVGAttr("clip-path")}}, {{SVGAttr("clip-rule")}}, {{SVGAttr("color")}}, {{SVGAttr("color-interpolation")}}, {{SVGAttr("color-interpolation-filters")}}, {{SVGAttr("color-profile")}}, {{SVGAttr("color-rendering")}}, {{SVGAttr("cursor")}}, {{SVGAttr("direction")}}, {{SVGAttr("display")}}, {{SVGAttr("dominant-baseline")}}, {{SVGAttr("enable-background")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-opacity")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("filter")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("flood-opacity")}}, {{SVGAttr("font-family")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("glyph-orientation-horizontal")}}, {{SVGAttr("glyph-orientation-vertical")}}, {{SVGAttr("image-rendering")}}, {{SVGAttr("kerning")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("lighting-color")}}, {{SVGAttr("marker-end")}}, {{SVGAttr("marker-mid")}}, {{SVGAttr("marker-start")}}, {{SVGAttr("mask")}}, {{SVGAttr("opacity")}}, {{SVGAttr("overflow")}}, {{SVGAttr("pointer-events")}}, {{SVGAttr("shape-rendering")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("stop-opacity")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-opacity")}}, {{SVGAttr("stroke-width")}}, {{SVGAttr("text-anchor")}}, {{SVGAttr("text-decoration")}}, {{SVGAttr("text-rendering")}}, {{SVGAttr("transform")}}, {{SVGAttr("transform-origin")}}, {{SVGAttr("unicode-bidi")}}, {{SVGAttr("vector-effect")}}, {{SVGAttr("visibility")}}, {{SVGAttr("word-spacing")}}, {{SVGAttr("writing-mode")}}
 

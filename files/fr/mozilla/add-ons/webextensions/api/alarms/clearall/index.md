@@ -13,6 +13,7 @@ tags:
   - clearAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
 ---
+
 {{AddonSidebar}}
 
 Cette méthode supprime toutes les alarmes actives. C'est une fonction asynchrone qui renvoie une promesse {{jsxref("Promise")}}.

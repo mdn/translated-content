@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 original_slug: Web/CSS/Modèle_de_boîte_CSS/Fusion_des_marges
 ---
+
 {{CSSRef}}Les marges [haute](/fr/docs/Web/CSS/margin-top) et [basse](/fr/docs/Web/CSS/margin-bottom) des blocs sont parfois fusionnées en une seule marge dont la taille est la plus grande des deux marges fusionnées. C'est ce qu'on appelle **la fusion des marges**.
 
 La fusion des marges se produit si on a l'un de ces trois cas :
@@ -72,9 +73,7 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

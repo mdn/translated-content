@@ -2,11 +2,12 @@
 title: IntersectionObserver.thresholds
 slug: Web/API/IntersectionObserver/thresholds
 ---
+
 {{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only **`thresholds`** property returns the list of intersection thresholds that was specified when the observer was instantiated with {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}. If only one threshold ratio was provided when instanitating the object, this will be an array containing that single value.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}} to learn how thresholds work.
+See [Intersection Observer](/zh-CN/docs/Web/API/Intersection_Observer_API#thresholds) to learn how thresholds work.
 
 ## Syntax
 
@@ -32,4 +33,4 @@ If no `threshold` option was included when `IntersectionObserver()` was used to 
 
 ## Browser compatibility
 
-{{Compat("api.IntersectionObserver.thresholds")}}
+{{Compat}}

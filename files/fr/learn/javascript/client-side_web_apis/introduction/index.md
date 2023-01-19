@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API — leur fonctionnement, comment les utiliser dans votre code, leur structure. Nous verrons également quelles sont les principales API et leur utilisation.
@@ -285,7 +286,7 @@ Les API Web Audio et [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) son
 
 ## Résumé
 
-À ce stade, vous devriez avoir une bonne idée de ce que sont les API, de leur fonctionnement et de ce que vous pouvez faire avec dans votre code JavaScript. Vous avec probablement hâte de commencer à faire des choses amusantes avec des API spécifiques, alors allons-y ! Par la suite, nous verrons comment manipuler des documents avec le _Document Object Model_ (DOM).
+À ce stade, vous devriez avoir une bonne idée de ce que sont les API, de leur fonctionnement et de ce que vous pouvez faire avec dans votre code JavaScript. Vous avez probablement hâte de commencer à faire des choses amusantes avec des API spécifiques, alors allons-y ! Par la suite, nous verrons comment manipuler des documents avec le _Document Object Model_ (DOM).
 
 {{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 

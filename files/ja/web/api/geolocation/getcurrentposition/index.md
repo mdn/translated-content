@@ -2,6 +2,7 @@
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{securecontext_header}}{{ APIRef("Geolocation API") }}
 
 **`Geolocation.getCurrentPosition()`** メソッドは、端末の現在位置を取得するために使われます。

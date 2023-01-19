@@ -2,6 +2,7 @@
 title: Response.status
 slug: Web/API/Response/status
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} 接口的**`status`** 只读属性包含响应的状态代码（例如，成功为 200）。
@@ -42,7 +43,7 @@ fetch(myRequest).then(function(response) {
 
 ## Browser compatibility
 
-{{Compat("api.Response.status")}}
+{{Compat}}
 
 ## See also
 

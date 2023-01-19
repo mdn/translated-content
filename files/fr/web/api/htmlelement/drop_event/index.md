@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/drop_event
 translation_of: Web/API/Document/drop_event
 original_slug: Web/API/Document/drop_event
 ---
+
 {{APIRef}}
 
 L'événement **drop** est déclenché lorsqu'un élément ou une sélection de texte est déposé sur une cible de dépôt valide.

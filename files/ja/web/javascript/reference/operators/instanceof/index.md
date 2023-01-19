@@ -2,6 +2,7 @@
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 ---
+
 {{jsSidebar("Operators")}}
 
 **`instanceof` 演算子**は、あるコンストラクターの `prototype` プロパティが、あるオブジェクトのプロトタイプチェーンの中のどこかに現れるかどうかを検査します。返値は論理値です。

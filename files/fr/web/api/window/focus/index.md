@@ -3,6 +3,7 @@ title: Window.focus()
 slug: Web/API/Window/focus
 translation_of: Web/API/Window/focus
 ---
+
 {{APIRef}}
 
 ## Résumé

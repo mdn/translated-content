@@ -2,9 +2,10 @@
 title: EventSource.onerror
 slug: Web/API/EventSource/error_event
 ---
+
 {{APIRef('WebSockets API')}}
 
-{{domxref("EventSource")}} 的属性 **`onerror`** 是当发生错误且这个错误事件（{{event("error")}} ）被 EventSource 触发时调用的一个事件处理函数（{{event("Event_handlers", "event handler")}}）
+{{domxref("EventSource")}} 的属性 **`onerror`** 是当发生错误且这个错误事件（[`error`](/zh-CN/docs/Web/API/Element/error_event)）被 EventSource 触发时调用的一个事件处理函数。
 
 ## 语法
 
@@ -28,7 +29,7 @@ evtSource.onerror = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.EventSource.onerror")}}
+{{Compat}}
 
 ## 相关链接
 

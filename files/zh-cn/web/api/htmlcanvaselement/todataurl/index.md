@@ -2,11 +2,12 @@
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.toDataURL()`** 方法返回一个包含图片展示的 [data URI](/zh-CN/docs/Web/HTTP/data_URIs) 。可以使用 `type` 参数其类型，默认为 [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) 格式。图片的分辨率为 96dpi。
 
-- 如果画布的高度或宽度是 0，那么会返回字符串“`data:,”。`
+- 如果画布的高度或宽度是 0，那么会返回字符串“`data:,”`。
 - 如果传入的类型非“`image/png`”，但是返回的值以“`data:image/png`”开头，那么该传入的类型是不支持的。
 - Chrome 支持“`image/webp`”类型。
 
@@ -21,7 +22,7 @@ canvas.toDataURL(type, encoderOptions);
 - `type` {{optional_inline}}
   - : 图片格式，默认为 `image/png`
 - `encoderOptions` {{optional_inline}}
-  - : 在指定图片格式为 `image/jpeg 或` `image/webp 的情况下，可以从 0 到 1 的区间内选择图片的质量`。如果超出取值范围，将会使用默认值 `0.92`。其他参数会被忽略。
+  - : 在指定图片格式为 `image/jpeg` 或 `image/webp` 的情况下，可以从 0 到 1 的区间内选择图片的质量。如果超出取值范围，将会使用默认值 `0.92`。其他参数会被忽略。
 
 ### 返回值
 
@@ -115,7 +116,7 @@ function removeColors() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.toDataURL")}}
+{{Compat}}
 
 ## 参考
 

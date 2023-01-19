@@ -2,6 +2,7 @@
 title: 'HTMLElement: dragstart イベント'
 slug: Web/API/HTMLElement/dragstart_event
 ---
+
 {{APIRef}}
 
 `dragstart` イベントは、ユーザーが要素や選択されたテキストをドラッグし始めたときに発生します。

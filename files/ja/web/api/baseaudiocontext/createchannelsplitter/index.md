@@ -3,11 +3,12 @@ title: BaseAudioContext.createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
 original_slug: Web/API/AudioContext/createChannelSplitter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createChannelSplitter()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("ChannelSplitterNode")}} を作成します。これは音声ストリームの個々のチャンネルにアクセスし、それらを個別に処理するために使用されます。
 
-> **Note:** {{domxref("ChannelSplitterNode.ChannelSplitterNode", "ChannelSplitterNode()")}} コンストラクターは {{domxref("ChannelSplitterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("ChannelSplitterNode.ChannelSplitterNode", "ChannelSplitterNode()")}} コンストラクターは {{domxref("ChannelSplitterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 
@@ -50,7 +51,7 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
  var dest = ac.createMediaStreamDestination();
 
  // ChannelMergerNode を使っているので、ステレオの MediaStream が
- // できました。これでウェブ音声グラフを WebRTC や MediaRecorder などに
+ // できました。これでウェブオーディオグラフを WebRTC や MediaRecorder などに
  // パイプするのに使えます。
  merger.connect(dest);
 });
@@ -66,4 +67,4 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

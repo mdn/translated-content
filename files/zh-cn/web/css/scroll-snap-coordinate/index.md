@@ -2,6 +2,7 @@
 title: scroll-snap-coordinate
 slug: Web/CSS/scroll-snap-coordinate
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 摘要

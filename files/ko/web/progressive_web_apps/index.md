@@ -1,12 +1,8 @@
 ---
 title: 프로그레시브 웹 앱
 slug: Web/Progressive_web_apps
-tags:
-  - 앱
-  - 최신 웹 앱
-  - 프로그레시브 웹 앱
-translation_of: Web/Progressive_web_apps
 ---
+
 프로그레시브 웹 앱은 최신 웹 API와 전통적인 점진적 개선 전략을 함께 사용해 크로스 플랫폼 웹 어플리케이션을 생성합니다. 이러한 앱은 어디서든 동작하며 네이티브 앱에서의 사용자 경험 이점과 동일한 몇 가지 기능들을 제공합니다. 이 문서에서는 이에 대해 여러분이 알아야 할 모든 것들에 대해 알려드립니다.
 
 ## PWA 이점
@@ -17,11 +13,11 @@ PWA는 발견 가능, 설치 가능, 연결 가능해야 하고, 네트워크에
 
 다음 가이드는 간단한 예제를 살펴보고 모든 조각이 어떻게 동작하는지 보여줌으로써 PWA 구현을 위해 해야하는 것들이 무엇인지 보여줍니다.
 
-1.  [프로그레시브 웹 앱 소개](/ko/docs/Web/Apps/Progressive/Introduction)
-2.  [프로그레시브 웹 앱 구조](/ko/docs/Web/Apps/Progressive/App_structure)
-3.  [Service worker를 사용해 PWA를 오프라인에서 동작하게 만들기](/ko/docs/Web/Apps/Progressive/Offline_Service_workers)
-4.  [PWA를 설치가능하게 만드는 방법](/ko/docs/Web/Apps/Progressive/Installable_PWAs)
-5.  [알림과 푸시를 사용해 PWA를 재참여(re-engageable)가능하게 만드는 방법](/ko/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)
+1. [프로그레시브 웹 앱 소개](/ko/docs/Web/Apps/Progressive/Introduction)
+2. [프로그레시브 웹 앱 구조](/ko/docs/Web/Apps/Progressive/App_structure)
+3. [Service worker를 사용해 PWA를 오프라인에서 동작하게 만들기](/ko/docs/Web/Apps/Progressive/Offline_Service_workers)
+4. [PWA를 설치가능하게 만드는 방법](/ko/docs/Web/Apps/Progressive/Installable_PWAs)
+5. [알림과 푸시를 사용해 PWA를 재참여(re-engageable)가능하게 만드는 방법](/ko/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)
 
 ## 기술 가이드
 
@@ -44,7 +40,7 @@ PWA는 발견 가능, 설치 가능, 연결 가능해야 하고, 네트워크에
 - [sw-precache](https://github.com/GoogleChrome/sw-precache) — 특정 리소스를 프리캐싱(미리 캐싱;precache)하는 service worker 코드를 생성하는 노드 모듈.
 - [workbox](https://github.com/GoogleChrome/workbox) — 더 나은 캐싱 전략과 쉬운 프리캐싱을 제공하는 sw-precache의 정신적 지주.
 - [upup](https://www.talater.com/upup/) — 사이트가 사용자들을 위해 항상 존재하도록 해주는 작은 스크립트.
-- [The service worker cookbook](https://serviceworke.rs/) — 오프라인 앱 및 그 이상의 다양한 앱 구현 방법을 보여주는 훌륭한 service worker/push 가이드 시리즈.
+- [The service worker cookbook](https://github.com/mdn/serviceworker-cookbook/) — 오프라인 앱 및 그 이상의 다양한 앱 구현 방법을 보여주는 훌륭한 service worker/push 가이드 시리즈.
 
 ## 함께 보기
 

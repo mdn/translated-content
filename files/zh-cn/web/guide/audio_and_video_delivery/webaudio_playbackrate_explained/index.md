@@ -2,6 +2,7 @@
 title: Web Audio playbackRate explained
 slug: Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained
 ---
+
 html 元素“audio”和“video”的`playbackRate` 属性允许我们改变一段正在播放的网页音频或者视频的速度，或速率。本文详细解释了 `playbackRate` 。
 
 ## playbackRate 基础
@@ -49,13 +50,13 @@ window.onload = function () {
 };
 ```
 
-最后，我们监听指向 html 元素“input”的 `input` 事件，这允许我们对被改变的播放速率控制产生影响 。
+最后，我们监听指向 html 元素“input”的 `input` 事件，这允许我们对被改变的播放速率控制产生影响。
 
 > **备注：** [在线试用示例](http://jsbin.com/UGIxoJis/1/edit), 尝试调整播放速率控制看看效果。
 
 ## defaultPlaybackRate 和 ratechange
 
-除了 `playbackRate,` 我们也有一个可用的 `defaultPlaybackRate` 属性，这让我们能设置默认的播放速率：对媒体文件重设置的播放速率；例如，如果我们改变视频的来源，或（在一些浏览器中）当产生一个`ended`事件。
+除了 `playbackRate`, 我们也有一个可用的 `defaultPlaybackRate` 属性，这让我们能设置默认的播放速率：对媒体文件重设置的播放速率；例如，如果我们改变视频的来源，或（在一些浏览器中）当产生一个`ended`事件。
 
 所以 `defaultPlaybackRate` 允许我们在播放媒体文件之前设置播放速率，而`playbackRate` 只允许我们在媒体播放阶段改变它。
 

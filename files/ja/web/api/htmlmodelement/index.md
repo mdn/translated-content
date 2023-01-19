@@ -2,6 +2,7 @@
 title: HTMLModElement
 slug: Web/API/HTMLModElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLModElement`** インターフェイスは、 (継承によって {{domxref("HTMLElement")}} を通じて利用できる通常のメソッドやプロパティに加えて) 改変 (modification) 要素、すなわち {{HTMLElement("del")}} と {{HTMLElement("ins")}} を操作するための特有のプロパティを提供します。
@@ -19,12 +20,7 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                                            |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG', "edits.html#htmlmodelement", "HTMLAnchorElement")}} | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}} から変更なし。 |
-| {{SpecName('HTML5 W3C', "edits.html#htmlmodelement", "HTMLAnchorElement")}}     | {{Spec2('HTML5 W3C')}}     | {{SpecName("DOM2 HTML")}} から変更なし。 |
-| {{SpecName('DOM2 HTML', 'html.html#ID-79359609', 'HTMLModElement')}}             | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}} から変更なし。     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-79359609', 'HTMLModElement')}}         | {{Spec2('DOM1')}}         | 初回定義                                        |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

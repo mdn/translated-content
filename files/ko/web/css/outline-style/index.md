@@ -1,14 +1,8 @@
 ---
 title: outline-style
 slug: Web/CSS/outline-style
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/outline-style
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`outline-style`** 속성은 요소 외곽선의 스타일을 설정합니다. 외곽선은 요소의 [테두리](/ko/docs/Web/CSS/border) 바깥에 그려지는 선입니다.

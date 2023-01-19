@@ -2,7 +2,8 @@
 title: 绘制文本
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 在前一个章节中看过 [应用样式和颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) 之后，我们现在来看一下如何在 canvas 中绘制文本
 
@@ -35,7 +36,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_fillText_example", 310, 110)}}
+{{EmbedLiveSample("一个填充文本的示例", 310, 110)}}
 
 ### 一个文本边框的示例
 
@@ -57,7 +58,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_strokeText_example", 310, 110)}}
+{{EmbedLiveSample("一个文本边框的示例", 310, 110)}}
 
 ## 有样式的文本
 
@@ -68,9 +69,9 @@ draw();
 - {{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}
   - : 文本对齐选项。可选的值包括：`start`, `end`, `left`, `right` or `center`. 默认值是 `start`。
 - {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}
-  - : 基线对齐选项。可选的值包括：`top`, `hanging`, `middle`, `alphabetic`, `ideographic`, `bottom`。默认值是 `alphabetic。`
+  - : 基线对齐选项。可选的值包括：`top`, `hanging`, `middle`, `alphabetic`, `ideographic`, `bottom`。默认值是 `alphabetic`。
 - {{domxref("CanvasRenderingContext2D.direction", "direction = value")}}
-  - : 文本方向。可能的值包括：`ltr`, `rtl`, `inherit`。默认值是 `inherit。`
+  - : 文本方向。可能的值包括：`ltr`, `rtl`, `inherit`。默认值是 `inherit`。
 
 如果你之前使用过 CSS，那么这些选项你会很熟悉。
 
@@ -135,7 +136,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('textBaseline 例子', 700, 360) }}
 
 ## 预测量文本宽度
 

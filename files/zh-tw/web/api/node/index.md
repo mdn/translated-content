@@ -2,6 +2,7 @@
 title: Node
 slug: Web/API/Node
 ---
+
 {{APIRef("DOM")}}
 
 **`Node`** 是一個被多種 DOM 類型繼承的介面，它讓各種類型的 DOM 都能以同樣的方式來操作。如繼承了相同的方法，或能以相同的方式測試。
@@ -197,4 +198,4 @@ document.body.removeAll();
 
 ## 瀏覽器相容性
 
-{{Compat("api.Node")}}
+{{Compat}}

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/any
 ---
+
 {{JSRef}}
 
 La méthode **`Promise.any()`** prend comme argument un itérable contenant des objets {{JSxRef("Promise")}} et, dès qu'une des promesses de cet itérable est tenue, renvoie une unique promesse résolue avec la valeur de la promesse résolue. Si aucune promesse de l'itérable n'est tenue (c'est-à-dire si toutes les promesses sont rejetées), la promesse renvoyée est rompue avec un objet {{JSxRef("Objets_globaux/AggregateError", "AggregateError")}} (une nouvelle sous-classe de {{JSxRef("Error")}} qui regroupe un ensemble d'erreurs). Cette méthode fait essentiellement le _contraire_ de {{JSxRef("Promise.all()")}} (qui renvoie une promesse tenue uniquement si toutes les promesses de l'itérable passé en argument ont été tenues).
@@ -122,20 +123,11 @@ Promise.any([café, thé]).then(valeur => {
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td><strong>Spécification</strong></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Promise.any')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.any")}}
+{{Compat}}
 
 ## Voir aussi
 

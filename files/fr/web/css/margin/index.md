@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/margin
 translation_of_original: Web/CSS/margin-new
 ---
+
 {{CSSRef}}
 
 La propriété **`margin`** définit la taille des marges sur les quatre côtés de l'élément. C'est une propriété raccourcie qui permet de manipuler les autres propriétés de marges : {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}.
@@ -59,9 +60,13 @@ Cette propriété peut accepter une, deux, trois ou quatre valeurs avec les type
 - `auto`
   - : `auto` est remplacé par une valeur adaptée (il peut être utilisé pour centrer les blocs, par exemple, `div { width:50%; margin:0 auto; }` permet de centrer un conteneur `div` horizontalement).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -137,18 +142,11 @@ Les marges haute et basse des éléments sont parfois fusionnées en une seule m
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires                                             |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#margin', 'margin')}}                         | {{Spec2('CSS3 Box')}}             | Aucun changement significatif.                           |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin')}}     | {{Spec2('CSS3 Transitions')}} | `margin` peut désormais être animée.                     |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin')}} | {{Spec2('CSS2.1')}}                 | Retrait de l'effet sur les éléments en ligne (_inline_). |
-| {{SpecName('CSS1', '#margin', 'margin')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin")}}
+{{Compat}}
 
 ## Voir aussi
 

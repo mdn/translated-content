@@ -2,6 +2,7 @@
 title: 'Django Tutorial Part 9: Working with forms'
 slug: Learn/Server-side/Django/Forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
 在本教程中，我們將向您展示，如何在 Django 中使用 HTML 表單，特別是編寫表單以創建，更新和刪除模型實例的最簡單方法。作為本演示的一部分，我們將擴展 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，以便圖書館員，可以使用我們自己的表單（而不是使用管理員應用程序）更新圖書，創建，更新和刪除作者。
@@ -423,7 +424,7 @@ If you accepted the "challenge" in [Django Tutorial Part 8: User authentication 
 
 > **備註：** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
 
-You can alternatively manually construct a test URL like this — [http://127.0.0.1:8000/catalog/book/*\<bookinstance_id>*/renew/](<http://127.0.0.1:8000/catalog/book/\<bookinstance id\>/renew/>) (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the `id` field).
+You can alternatively manually construct a test URL like this — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the `id` field).
 
 ### What does it look like?
 
@@ -605,11 +606,11 @@ Then navigate to the author create page: <http://127.0.0.1:8000/catalog/author/c
 
 ![Form Example: Create Author](forms_example_create_author.png)
 
-Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like _http\://127.0.0.1:8000/catalog/author/10_.
+Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
-You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/update/_) — we don't show a screenshot, because it looks just like the "create" page!
+You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/update/`) — we don't show a screenshot, because it looks just like the "create" page!
 
-Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
+Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
 
 ![](forms_example_delete_author.png)
 

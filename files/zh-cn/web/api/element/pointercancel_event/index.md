@@ -2,9 +2,10 @@
 title: GlobalEventHandlers.onpointercancel
 slug: Web/API/Element/pointercancel_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
-A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("pointercancel")}} event.
+A {{domxref("GlobalEventHandlers","global event handler")}} for the `pointercancel` event.
 
 ## 语法
 
@@ -45,8 +46,18 @@ function init() {
 
 ## 浏览器兼容性
 
-{{Compat("api.GlobalEventHandlers.onpointercancel")}}
+{{Compat}}
 
 ## 参见
 
-- {{ event("pointercancel") }}
+- 相关事件
+
+  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
+  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)

@@ -6,6 +6,7 @@ tags:
   - Window
 translation_of: Web/API/Window/resizeBy
 ---
+
 {{APIRef}}
 
 La méthode **`Window.resizeBy()`** redimensionne la fenêtre actuelle d'une taille spécifié.

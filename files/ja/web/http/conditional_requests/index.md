@@ -1,12 +1,8 @@
 ---
 title: HTTP 条件付きリクエスト
 slug: Web/HTTP/Conditional_requests
-tags:
-  - Conditional Requests
-  - Guide
-  - HTTP
-translation_of: Web/HTTP/Conditional_requests
 ---
+
 {{HTTPSidebar}}
 
 HTTP には*条件付きリクエスト*の概念があり、対象となるリソースと*検証子*の値とを比較することで、リクエストの結果や、成功か失敗かまでもが変化することがあります。このようなリクエストは、キャッシュの内容を検証して、無用な制御を避けたり、ダウンロードの再開の時などに文書の整合性を検証したり、サーバー上の文書をアップロードまたは変更するときに更新内容を失うことを避ける場合などに役立つことがあります。

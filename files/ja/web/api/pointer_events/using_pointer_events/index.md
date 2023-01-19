@@ -1,7 +1,10 @@
 ---
 title: ポインターイベントの使用
 slug: Web/API/Pointer_events/Using_Pointer_Events
+l10n:
+  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 このガイドでは、[ポインターイベント](/ja/docs/Web/API/Pointer_events)と HTML の {{HTMLElement("canvas")}} 要素を使用してマルチタッチ対応の描画アプリを作成する方法について説明します。この例は、{{domxref("PointerEvent","ポインターイベント", "", 1)}}の入力イベントモデルを使用する点を除いて、[タッチイベントの概要](/ja/docs/Web/API/Touch_events)の例に基づいています。 もう 1 つの違いは、ポインターイベントはポインターデバイスに依存しないため、アプリは同じコードを使用してマウス、ペン、または指先からの座標ベースの入力を受け入れることです。
@@ -19,20 +22,25 @@ slug: Web/API/Pointer_events/Using_Pointer_Events
 
 ## 例
 
-> **Note:** 以下のテキストでは、表面との接触を説明するときに「指」という用語を使用していますが、もちろんスタイラス、マウス、その他の場所を指す方法でもかまいません。
+> **メモ:** 以下のテキストでは、表面との接触を説明するときに「指」という用語を使用していますが、もちろんスタイラス、マウス、その他の場所を指す方法でもかまいません。
 
 ### キャンバスの作成
 
 ブラウザーが既定のタッチの振る舞いをアプリに適用しないようにするには、{{cssxref("touch-action")}} プロパティを `none` に設定します。
 
 ```html
-<canvas id="canvas" width="600" height="600" style="border:solid black 1px; touch-action:none">
+<canvas
+  id="canvas"
+  width="600"
+  height="600"
+  style="border:solid black 1px; touch-action:none">
   お使いのブラウザーは canvas 要素に対応していません。
 </canvas>
-<br>
+<br />
 <button onclick="startup()">Initialize</button>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ### イベントハンドラーの設定
@@ -41,7 +49,7 @@ Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
 
 ```js
 function startup() {
-  var el = document.getElementsByTagName("canvas")[0];
+  const el = document.getElementsByTagName("canvas")[0];
   el.addEventListener("pointerdown", handleStart, false);
   el.addEventListener("pointerup", handleEnd, false);
   el.addEventListener("pointercancel", handleCancel, false);
@@ -57,20 +65,20 @@ function startup() {
 進行中のタッチを追跡します。
 
 ```js
-var ongoingTouches = new Array();
+const ongoingTouches = [];
 ```
 
-{{domxref("HTMLElement/pointerdown_event", "pointerdown")}} イベントが発生すると、表面上で新しいタッチが発生したことを示し、次の `handleStart()` 関数が呼び出されます。
+{{domxref("Element/pointerdown_event", "pointerdown")}} イベントが発生すると、表面上で新しいタッチが発生したことを示し、次の `handleStart()` 関数が呼び出されます。
 
 ```js
 function handleStart(evt) {
   log("pointerdown.");
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
+  const el = document.getElementsByTagName("canvas")[0];
+  const ctx = el.getContext("2d");
 
-  log("pointerdown: id = " + evt.pointerId);
+  log(`pointerdown: id = ${evt.pointerId}`);
   ongoingTouches.push(copyTouch(evt));
-  var color = colorForTouch(evt);
+  const color = colorForTouch(evt);
   ctx.beginPath();
   ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
   ctx.arc(evt.clientX, evt.clientY, 4, 0, 2 * Math.PI, false);  // a circle at the start
@@ -83,21 +91,21 @@ function handleStart(evt) {
 
 #### ポインターの動きに合わせて描画
 
-1つ以上のポインターが移動するたびに、 {{domxref("HTMLElement/pointermove_event", "pointermove")}} イベントが配信され、その結果、次の `handleMove()` 関数が呼び出されます。 この例におけるその役割は、キャッシュされたタッチ情報を更新し、各タッチの前の位置から現在の位置まで線を引くことです。
+1つ以上のポインターが移動するたびに、 {{domxref("Element/pointermove_event", "pointermove")}} イベントが配信され、その結果、次の `handleMove()` 関数が呼び出されます。 この例におけるその役割は、キャッシュされたタッチ情報を更新し、各タッチの前の位置から現在の位置まで線を引くことです。
 
 ```js
 function handleMove(evt) {
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
-  var color = colorForTouch(evt);
-  var idx = ongoingTouchIndexById(evt.pointerId);
+  const el = document.getElementsByTagName("canvas")[0];
+  const ctx = el.getContext("2d");
+  const color = colorForTouch(evt);
+  const idx = ongoingTouchIndexById(evt.pointerId);
 
-  log("continuing touch: idx =  " + idx);
+  log(`continuing touch: idx =  ${idx}`);
   if (idx >= 0) {
     ctx.beginPath();
-    log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+    log(`ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`);
     ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-    log("ctx.lineTo(" + evt.clientX + ", " + evt.clientY + ");");
+    log(`ctx.lineTo(${evt.clientX}, ${evt.clientY});`);
     ctx.lineTo(evt.clientX, evt.clientY);
     ctx.lineWidth = 4;
     ctx.strokeStyle = color;
@@ -106,7 +114,7 @@ function handleMove(evt) {
     ongoingTouches.splice(idx, 1, copyTouch(evt));  // swap in the new touch record
     log(".");
   } else {
-    log("can't figure out which touch to continue: idx = " + idx);
+    log(`can't figure out which touch to continue: idx = ${idx}`);
   }
 }
 ```
@@ -115,19 +123,19 @@ function handleMove(evt) {
 
 これにより、各タッチの前の位置の座標を取得し、適切なコンテキストメソッドを使用して 2 つの位置を結ぶ線分を描画できます。
 
-線を描画した後、[`Array.splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) を呼び出して、`ongoingTouches` 配列内のタッチ点に関する以前の情報を現在の情報に置き換えます。
+線を描画した後、 [`Array.splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) を呼び出して、`ongoingTouches` 配列内のタッチ点に関する以前の情報を現在の情報に置き換えます。
 
 ### タッチの終わりの処理
 
-ユーザーが表面から指を離すと、 {{domxref("HTMLElement/pointerup_event", "pointerup")}} イベントが送信されます。 次の `handleEnd()` 関数を呼び出すことによってこのイベントを処理します。 その仕事は終わったタッチのための最後の線分を引き、進行中のタッチリストからタッチ点を取り除くことです。
+ユーザーが表面から指を離すと、 {{domxref("Element/pointerup_event", "pointerup")}} イベントが送信されます。 次の `handleEnd()` 関数を呼び出すことによってこのイベントを処理します。 その仕事は終わったタッチのための最後の線分を引き、進行中のタッチリストからタッチ点を取り除くことです。
 
 ```js
 function handleEnd(evt) {
   log("pointerup");
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
-  var color = colorForTouch(evt);
-  var idx = ongoingTouchIndexById(evt.pointerId);
+  const el = document.getElementsByTagName("canvas")[0];
+  const ctx = el.getContext("2d");
+  const color = colorForTouch(evt);
+  const idx = ongoingTouchIndexById(evt.pointerId);
 
   if (idx >= 0) {
     ctx.lineWidth = 4;
@@ -147,12 +155,12 @@ function handleEnd(evt) {
 
 #### キャンセルされたタッチの処理
 
-ユーザーの指がブラウザーの UI にぶつかったり、あるいはタッチをキャンセルする必要がある場合は、 {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベントが送信され、次の `handleCancel()` 関数を呼び出します。
+ユーザーの指がブラウザーの UI にぶつかったり、あるいはタッチをキャンセルする必要がある場合は、 {{domxref("Element/pointercancel_event", "pointercancel")}} イベントが送信され、次の `handleCancel()` 関数を呼び出します。
 
 ```js
 function handleCancel(evt) {
-  log("pointercancel: id = " + evt.pointerId);
-  var idx = ongoingTouchIndexById(evt.pointerId);
+  log(`pointercancel: id = ${evt.pointerId}`);
+  const idx = ongoingTouchIndexById(evt.pointerId);
   ongoingTouches.splice(idx, 1);  // remove it; we're done
 }
 ```
@@ -169,14 +177,14 @@ function handleCancel(evt) {
 
 ```js
 function colorForTouch(touch) {
-  var r = touch.pointerId % 16;
-  var g = Math.floor(touch.pointerId / 3) % 16;
-  var b = Math.floor(touch.pointerId / 7) % 16;
+  let r = touch.pointerId % 16;
+  let g = Math.floor(touch.pointerId / 3) % 16;
+  let b = Math.floor(touch.pointerId / 7) % 16;
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
-  var color = "#" + r + g + b;
-  log("color for touch with identifier " + touch.pointerId + " = " + color);
+  const color = `#${r}${g}${b}`;
+  log(`color for touch with identifier ${touch.pointerId} = ${color}`);
   return color;
 }
 ```
@@ -199,10 +207,10 @@ function copyTouch(touch) {
 
 ```js
 function ongoingTouchIndexById(idToFind) {
-  for (var i = 0; i < ongoingTouches.length; i++) {
-    var id = ongoingTouches[i].identifier;
+  for (let i = 0; i < ongoingTouches.length; i++) {
+    const id = ongoingTouches[i].identifier;
 
-    if (id == idToFind) {
+    if (id === idToFind) {
       return i;
     }
   }
@@ -214,42 +222,18 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  var p = document.getElementById('log');
-  p.innerHTML = msg + "\n" + p.innerHTML;
+  const p = document.getElementById('log');
+  p.innerHTML = `${msg}\n${p.innerHTML}`;
 }
 ```
 
 ## 仕様書
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Pointer Events 2','#pointerevent-interface', 'PointerEvent')}}
-      </td>
-      <td>{{Spec2('Pointer Events 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Pointer Events', '#pointerevent-interface', 'PointerEvent')}}
-      </td>
-      <td>{{Spec2('Pointer Events')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-## `PointerEvent` インターフェイス
-
-{{Compat("api.PointerEvent", 0)}}
+{{Compat}}
 
 ## 関連情報
 

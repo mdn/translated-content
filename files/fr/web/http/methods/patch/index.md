@@ -4,6 +4,7 @@ slug: Web/HTTP/Methods/PATCH
 translation_of: Web/HTTP/Methods/PATCH
 original_slug: Web/HTTP/Méthode/PATCH
 ---
+
 La **méthode `PATCH` d'une requête HTTP** applique des modifications partielles à une ressource.
 
 La méthode HTTP {{HTTPMethod("PUT")}} est déjà définie pour écraser une ressource avec un nouveau corps complet de message, et pour la méthode HTTP {{HTTPMethod("POST")}}, il n'existe aucun moyen standard pour découvrir le support de format de patch. Tout comme `POST`, la méthode HTTP `PATCH` n'est pas listée comme étant idempotent, contrairement à `PUT`. Cela signifie que les requêtes patch identiques et successives auront des effets différents sur l'objet manipulé.

@@ -1,16 +1,8 @@
 ---
 title: in 연산자
 slug: Web/JavaScript/Reference/Operators/in
-tags:
-  - JavaScript
-  - Operator
-  - Relational Operators
-  - 관계형 연산자
-  - 연산자
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Operators/in
-browser-compat: javascript.operators.in
 ---
+
 {{jsSidebar("Operators")}}
 
 **`in` 연산자**는 명시된 속성이 명시된 객체에 존재하면 `true`를 반환합니다.

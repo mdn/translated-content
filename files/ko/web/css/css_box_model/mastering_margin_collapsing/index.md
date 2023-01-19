@@ -1,13 +1,8 @@
 ---
 title: 여백 상쇄 정복
 slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Reference
-translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
+
 {{CSSRef}}
 
 여러 블록의 [위쪽](/ko/docs/Web/CSS/margin-top) 및 [아래쪽](/ko/docs/Web/CSS/margin-bottom) 바깥 여백(마진)은 경우에 따라 제일 큰 여백의 크기를 가진 단일 여백으로 결합(상쇄)되곤 합니다. 이런 동작을 **여백 상쇄**라고 부릅니다. 단, [플로팅](/ko/docs/Web/CSS/float) 요소와 [절대 위치를 지정](/ko/docs/Web/CSS/position#absolute)한 요소의 여백은 절대 상쇄되지 않습니다.

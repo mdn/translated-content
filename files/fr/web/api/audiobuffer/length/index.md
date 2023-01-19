@@ -3,6 +3,7 @@ title: AudioBuffer.length
 slug: Web/API/AudioBuffer/length
 translation_of: Web/API/AudioBuffer/length
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété `length` de l'interface {{ domxref("AudioBuffer") }} renvoie un entier représentant la longueur, en trames d'échantillonage, des données PCM stockées dans la mémoire-tampon.

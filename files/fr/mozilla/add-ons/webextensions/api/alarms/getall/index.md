@@ -13,6 +13,7 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 ---
+
 {{AddonSidebar}}
 
 Obtient toutes les alarmes actives pour le poste.

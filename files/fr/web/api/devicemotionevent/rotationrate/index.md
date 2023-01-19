@@ -10,6 +10,7 @@ tags:
   - Vitesse
 translation_of: Web/API/DeviceMotionEvent/rotationRate
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 La propriété **`rotationRate`** renvoie la vitesse de rotation de l'appareil autour de chacun de ses axes en degrés par seconde.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/set
 ---
+
 {{JSRef}}
 
 La méthode **`handler.set()`** est une trappe permettant d'intercepter les opérations visant à définir ou modifier la valeur d'une propriété.
@@ -84,14 +85,11 @@ console.log(p.a);       // 10
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.set")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -17,7 +17,7 @@ slug: Web/HTML/Element
 
 ## 文档元数据
 
-元数据（Metadata）含有页面的相关信息，包括样式、脚本及数据，能帮助一些软件（例如 {{Glossary("search engine", "搜索引擎")}}、{{Glossary("Browser","浏览器")}} 等等）更好地运用和渲染页面。对于样式和脚本的元数据，可以直接在网页里定义，也可以链接到包含相关信息的外部文件。
+元数据（Metadata）含有页面的相关信息，包括样式、脚本及数据，能帮助一些软件（例如{{Glossary("search engine", "搜索引擎")}}、{{Glossary("Browser","浏览器")}} 等等）更好地运用和渲染页面。对于样式和脚本的元数据，可以直接在网页里定义，也可以链接到包含相关信息的外部文件。
 
 {{HTMLRefTable("HTML Document Metadata")}}
 
@@ -33,13 +33,13 @@ slug: Web/HTML/Element
 
 ## 文本内容
 
-使用 HTML 文本内容元素来组织在开标签 {{HTMLElement("body")}} 和闭标签 `</body>` 里的块或章节的内容。这些元素能标识内容的宗旨或结构，而这对于 {{Glossary("accessibility")}} 和 {{Glossary("SEO")}} 很重要。
+使用 HTML 文本内容元素来组织在开标签 {{HTMLElement("body")}} 和闭标签 `</body>` 里的块或章节的内容。这些元素能标识内容的宗旨或结构，而这对于{{Glossary("accessibility","无障碍")}}和{{Glossary("SEO","搜索引擎优化")}}很重要。
 
 {{HTMLRefTable("HTML Grouping Content")}}
 
 ## 内联文本语义
 
-使用 HTML 内联文本语义（Inline text semantics）定义一个单词、一行内容，或任意文字的语义、结构或样式。
+使用 HTML 内联文本语义定义单词、内容、或任意文字的语义、结构或样式。
 
 {{HTMLRefTable("HTML Text-Level Semantics")}}
 
@@ -84,7 +84,7 @@ HTML 支持各种多媒体资源，例如图像、音频和视频。
 
 ## 脚本
 
-为了创建动态内容和 Web 应用程序，HTML 支持使用脚本语言，最突出的就是 JavaScript。某些元素用于支持此功能。
+为了创建动态内容和 Web 应用程序，HTML 支持使用脚本语言，最突出的就是 JavaScript。有一些特定的元素用于支持此功能。
 
 {{HTMLRefTable("HTML Scripting")}}
 
@@ -114,7 +114,7 @@ HTML 提供了一系列有助于创建交互式用户界面对象的元素。
 
 ## Web 组件
 
-Web 组件是一种与 HTML 相关联（HTML-related）的技术，简单来说，它允许开发者创建自定义元素，并如同普通的 HTML 一样使用它们。另外，也可以创建经过自定义的标准 HTML 元素。
+Web 组件是一种与 HTML 相关联的技术，简单来说，它允许开发者创建自定义元素，并如同普通的 HTML 一样使用它们。另外，也可以创建经过自定义的标准 HTML 元素。
 
 {{HTMLRefTable({"include":["Web Components"],"exclude":["Deprecated", "Obsolete"]})}}
 

@@ -2,6 +2,7 @@
 title: SameSite cookies
 slug: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
+
 **`SameSite`** 是 HTTP 响应头 {{HTTPHeader("Set-Cookie")}} 的属性之一。它允许您声明该 Cookie 是否仅限于第一方或者同一站点上下文。
 
 ## 值
@@ -30,8 +31,8 @@ Cookie 将在所有上下文中发送，即允许跨站发送。
 
 如果没有设置 `Secure` 属性，控制台中可能会出现以下警告：
 
-> Some cookies are misusing the “sameSite“ attribute, so it won’t work as expected.
-> Cookie “_myCookie_” rejected because it has the “sameSite=none” attribute but is missing the “secure” attribute.
+> Some cookies are misusing the "sameSite" attribute, so it won't work as expected.
+> Cookie "_myCookie_" rejected because it has the "sameSite=none" attribute but is missing the "secure" attribute.
 
 出现此警告是因为需要 `SameSite=None` 但未标记 `Secure` 的任何 cookie 都将被拒绝。
 
@@ -51,8 +52,8 @@ Set-Cookie: flavor=choco; SameSite=None; Secure
 
 最新版本的现代浏览器为 cookies 的 `SameSite` 提供了更安全的默认值，因此控制台中可能会显示以下消息：
 
-> Some cookies are misusing the “sameSite“ attribute, so it won’t work as expected.
-> Cookie “_myCookie_” has “sameSite” policy set to “lax” because it is missing a “sameSite” attribute, and “sameSite=lax” is the default value for this attribute.
+> Some cookies are misusing the "sameSite" attribute, so it won't work as expected.
+> Cookie "_myCookie_" has "sameSite" policy set to "lax" because it is missing a "sameSite" attribute, and "sameSite=lax" is the default value for this attribute.
 
 出现警告是因为未显式指定 cookie 的 `SameSite` 属性：
 
@@ -90,6 +91,6 @@ RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRul
 
 ## 另请参阅
 
-- [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/zh-CN/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}

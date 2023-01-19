@@ -2,6 +2,7 @@
 title: Sensor APIs
 slug: Web/API/Sensor_APIs
 ---
+
 {{APIRef("Generic Sensor API")}}
 
 传感器 API（Sensor APIs）是一组统一设计的接口，它们在 web 平台中为各类传感器提供了一致的访问方式。
@@ -60,7 +61,7 @@ sensor.onerror = event => {
 };
 ```
 
-下表描述了每种传感器类型，使用它们在 Permissions API、{{HTMLElement('iframe')}} 元素中`allow` 属性，以及{{httpheader('Feature-Policy')}}语句中被引用时使用的名字。
+下表描述了每种传感器类型，使用它们在 Permissions API、{{HTMLElement('iframe')}} 元素中`allow` 属性，以及{{httpheader('Permissions-Policy')}}语句中被引用时使用的名字。
 
 | Sensor                      | Permission/Feature Policy Name                         |
 | --------------------------- | ------------------------------------------------------ |
@@ -102,7 +103,7 @@ magSensor.start();
 
 下面的示例代码说明以上原则。{{jsxref('statements/try...catch', 'try...catch')}}代码块捕捉在实例化传感器时抛出的错误。它实现了一个{{domxref('Sensor.onerror')}}处理函数以捕捉使用中抛出的错误。它只在以下情况下提示用户：需要请求[权限](/zh-CN/docs/Web/API/Permissions_API)时，以及所请求的传感器类型在设备上不支持时。
 
-> **备注：** 如果一个功能策略（feature policy）阻止了对某功能的使用，这是因为你的代码与你的服务器上设置的策略不一致。这种情况是不应该显示给用户看的。具体实现请参见{{httpheader('Feature-Policy')}}。
+> **备注：** 如果一个权限策略（permission policy）阻止了对某功能的使用，这是因为你的代码与你的服务器上设置的策略不一致。这种情况是不应该显示给用户看的。具体实现请参见 {{httpheader('Permissions-Policy')}}。
 
 ```js
 let accelerometer = null;

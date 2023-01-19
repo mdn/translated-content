@@ -1,47 +1,70 @@
 ---
 title: グラフィックの描画
 slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
+l10n:
+  sourceCommit: 4f6ba2f5a1615fe155292cac416c7ab6b9d711ec
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-ブラウザーには Scalable Vector Graphics ([SVG](/ja/docs/Web/SVG)) 言語から、HTML {{htmlelement("canvas")}} 要素へ描画するための API ([The Canvas API](/ja/docs/Web/API/Canvas_API) と [WebGL](/ja/docs/Web/API/WebGL_API) を参照) まで、非常に強力なグラフィックプログラミングツールが含まれています。
-この記事では、canvas の概要とさらに詳細を学ぶためのリソースについて説明します。
+ブラウザーには、 Scalable Vector Graphics ([SVG](/ja/docs/Web/SVG)) 言語から HTML の {{htmlelement("canvas")}} 要素に描画するための API まで、とても強力なグラフィックプログラミングツールが含まれています（[キャンバス API](/ja/docs/Web/API/Canvas_API) と [WebGL](/ja/docs/Web/API/WebGL_API) を参照）。この記事では、キャンバスについて紹介し、さらに詳しく学ぶためのリソースを提供します。
 
-| 前提条件: | JavaScript basics (see [first steps](/ja/docs/Learn/JavaScript/First_steps), [building blocks](/ja/docs/Learn/JavaScript/Building_blocks), [JavaScript objects](/ja/docs/Learn/JavaScript/Objects)), the [basics of Client-side APIs](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目標:     | JavaScript を使用して `<canvas>` 要素に描画するための基本を学ぶ。                                                                                                                                                                                                                                  |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        JavaScript の基本
+        （<a href="/ja/docs/Learn/JavaScript/First_steps">第一歩</a>、
+        <a href="/ja/docs/Learn/JavaScript/Building_blocks"
+          >構成要素</a
+        >,
+        <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript のオブジェクト</a>）、
+        <a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+          >クライアントサイド API の基本</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        JavaScript　で<code>&#x3C;canvas></code>　要素に描画するための基本を学ぶこと。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## Web でのグラフィック
+## ウェブでのグラフィック
 
-As we talked about in our HTML [Multimedia and embedding](/ja/docs/Learn/HTML/Multimedia_and_embedding) module, the Web was originally just text, which was very boring, so images were introduced — first via the {{htmlelement("img")}} element and later via CSS properties such as {{cssxref("background-image")}}, and [SVG](/ja/docs/Web/SVG).
+HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding) モジュールで話したように、ウェブはもともとテキストだけでした、それはとても退屈だったので、画像が登場しました。最初は {{htmlelement("img")}} 要素によって、後には {{cssxref("background-image")}} といった CSS のプロパティを経て、 [SVG](/ja/docs/Web/SVG) が導入されました。
 
-This however was still not enough. While you could use [CSS](/ja/docs/Learn/CSS) and [JavaScript](/ja/docs/Learn/JavaScript) to animate (and otherwise manipulate) SVG vector images — as they are represented by markup — there was still no way to do the same for bitmap images, and the tools available were rather limited. The Web still had no way to effectively create animations, games, 3D scenes, and other requirements commonly handled by lower level languages such as C++ or Java.
+しかし、これではまだ十分ではありません。 [CSS](/ja/docs/Learn/CSS) や [JavaScript](/ja/docs/Learn/JavaScript) を使用して、マークアップで表わされた SVG ベクター画像をアニメーションさせたり操作したりすることはできますが、ビットマップ画像に対して同じことをする方法はまだなく、利用できるツールもかなり限定されていたのです。ウェブでは、アニメーションやゲーム、 3D シーンなど、 C++ や Java といった低水準の言語が扱う要件を効果的に作成する方法がまだありませんでした。
 
-The situation started to improve when browsers began to support the {{htmlelement("canvas")}} element and associated [Canvas API](/ja/docs/Web/API/Canvas_API) — Apple invented it in around 2004, and other browsers followed by implementing it in the years that followed. As you'll see below, canvas provides many useful tools for creating 2D animations, games, data visualizations, and other types of app, especially when combined with some of the other APIs the web platform provides.
+ブラウザーが {{htmlelement("canvas")}} 要素と関連する[キャンバス API](/ja/docs/Web/API/Canvas_API) に対応し始めた頃から状況は改善されました。 Apple が 2004 年頃にこれを発明し、それ以降の数年間で、他のブラウザーもこれを実装して後に続きました。後述するように、キャンバスは 2D アニメーション、ゲーム、データの視覚化、その他の種類のアプリケーションを作成するための多くの有用なツールを提供し、特にウェブプラットフォームが提供する他の API と組み合わせたときにその威力を発揮します。
 
-The below example shows a simple 2D canvas-based bouncing balls animation that we originally met in our [Introducing JavaScript objects](/ja/docs/Learn/JavaScript/Objects/Object_building_practice) module:
+以下の例は、もともと [JavaScript オブジェクト入門](/ja/docs/Learn/JavaScript/Objects/Object_building_practice)モジュールで出会った、キャンバスベースのシンプルな 2D の弾むボールアニメーションを示しています。
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/bouncing-balls/index-finished.html", '100%', 500)}}
 
-Around 2006–2007, Mozilla started work on an experimental 3D canvas implementation. This became [WebGL](/ja/docs/Web/API/WebGL_API), which gained traction among browser vendors, and was standardized around 2009–2010. WebGL allows you to create real 3D graphics inside your web browser; the below example shows a simple rotating WebGL cube:
+2006〜2007年頃、Mozilla は 3D キャンバスの実装を実験的に行うために動作を開始しました。これが [WebGL](/ja/docs/Web/API/WebGL_API) となり、ブラウザーベンダーの間で評判となり、2009 年から 2010 年頃に標準化されました。WebGL を使うと、ウェブブラウザーの中で本格的な 3D グラフィックを作成することができます。以下の例では、単純な回転する WebGL 立方体を示しています。
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
-This article will focus mainly on 2D canvas, as raw WebGL code is very complex. We will however show how to use a WebGL library to create a 3D scene more easily, and you can find a tutorial covering raw WebGL elsewhere — see [Getting started with WebGL](/ja/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL).
+この記事では、生の WebGL コードはとても複雑であるため、主に 2D キャンバスに焦点を当てます。しかし、WebGL ライブラリーを使用してより簡単に 3D シーンを作成する方法を紹介します。また、生の WebGL を使用するチュートリアルは他の場所にあります。 [WebGL 入門](/ja/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)を参照してください。
 
-> **Note:** Basic canvas functionality is supported well across browsers, with the exception of IE 8 and below for 2D canvas, and IE 11 and below for WebGL.
+> **メモ:** キャンバスの基本機能は、 2D キャンバスについては IE 8 以下、 WebGL については IE 11 以下を除き、すべてのブラウザーで十分に対応しています。
 
 ## アクティブラーニング: \<canvas>を始めよう
 
-If you want to create a 2D _or_ 3D scene on a web page, you need to start with an HTML {{htmlelement("canvas")}} element. This element is used to define the area on the page into which the image will be drawn. This is as simple as including the element on the page:
+ウェブページに 2D _または_ 3D シーンを作成する場合、HTML の {{htmlelement("canvas")}} 要素から開始する必要があります。この要素は、ページ上で画像が描画される領域を定義するために使用されます。これは、ページ上に要素を記載するのと同じくらい簡単です。
 
 ```html
 <canvas width="320" height="240"></canvas>
 ```
 
-This will create a canvas on the page with a size of 320 by 240 pixels.
+これにより、ページ上に 320 × 240 ピクセルの大きさのキャンバスが作成されます。
 
-Inside the canvas tags, you can put some fallback content, which is shown if the user's browser doesn't support canvas.
+canvas タグの内部には、ユーザーのブラウザーが canvas に対応していない場合に表示される代替コンテンツを置くことができます。
 
 ```html
 <canvas width="320" height="240">
@@ -49,153 +72,143 @@ Inside the canvas tags, you can put some fallback content, which is shown if the
 </canvas>
 ```
 
-Of course, the above message is really unhelpful! In a real example you'd want to relate the fallback content to the canvas content. 例えば、if you were rendering a constantly updating graph of stock prices, the fallback content could be a static image of the latest stock graph, with alt text saying what the prices are in text.
+もちろん、上記のメッセージは実に不親切です。実際の例では、代替コンテンツをキャンバスの内容に関連付けることが必要です。たとえば、常に更新される株価のグラフをレンダリングする場合、フォールバック コンテンツには最新の株価グラフの静止画像を使用し、代替テキストに株価を示すテキストを表示ようにすることができます。
 
-### canvas の作成とサイズ変更
+### キャンバスの作成とサイズ変更
 
-Let's start by creating our own canvas that we draw future experiments on to.
+まずは、これからの実験を描く自分自身のキャンバスを作成するところから始めましょう。
 
-1. First make a local copy of our [0_canvas_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/0_canvas_start.html) file, and open it in your text editor.
-2. Add the following code into it, just below the opening {{htmlelement("body")}} tag:
+1. まず、 [0_canvas_start](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start) ディレクトリーのローカルコピーを作成します。これには 3 つのファイルが含まれています。
+   - "index.html"
+   - "script.js"
+   - "style.css"
+2. "index.html" を開き、冒頭の {{htmlelement("body")}} タグのすぐ下に、以下のコードを追加してください。
 
-    ```html
-    <canvas class="myCanvas">
-      <p>Add suitable fallback here.</p>
-    </canvas>
-    ```
+   ```html
+   <canvas class="myCanvas">
+     <p>Add suitable fallback here.</p>
+   </canvas>
+   ```
 
-    We have added a `class` to the `<canvas>` element so it will be easier to select if we have multiple canvases on the page, but we have removed the `width` and `height` attributes for now (you could add them back in if you wanted, but we will set them using JavaScript in a below section). Canvases with no explicit width and height default to 300 pixels wide by 150 pixels high.
+   ページ上に複数のキャンバスがある場合に選択しやすいように、`<canvas>` 要素に `class` を追加しましたが、`width` と `height` 属性は今のところ削除しています（使用した場合に追加することもできますが、以下の節で JavaScript を使用して設定することになります）。幅と高さが明示されていないキャンバスの既定値は、幅 300 ピクセル、高さ 150 ピクセルです。
 
-3. Now add the following lines of JavaScript inside the {{htmlelement("script")}} element:
+3. 次に、 "script.js" を開き、以下の JavaScript の行を追加してください。
 
-    ```js
-    const canvas = document.querySelector('.myCanvas');
-    const width = canvas.width = window.innerWidth;
-    const height = canvas.height = window.innerHeight;
-    ```
+   ```js
+   const canvas = document.querySelector('.myCanvas');
+   const width = canvas.width = window.innerWidth;
+   const height = canvas.height = window.innerHeight;
+   ```
 
-    Here we have stored a reference to the canvas in the `canvas` constant. In the second line we set both a new constant `width` and the canvas' `width` property equal to {{domxref("Window.innerWidth")}} (which gives us the viewport width). In the third line we set both a new constant `height` and the canvas' `height` property equal to {{domxref("Window.innerHeight")}} (which gives us the viewport height). So now we have a canvas that fills the entire width and height of the browser window!
+   ここでは、定数 `canvas` にキャンバスへの参照を格納しています。2 つ目の行では、新しい定数 `width` とキャンバスの `width` プロパティを {{domxref("Window.innerWidth")}} （ビューポート幅に等しい値）に設定しています。3 行目では、新しい定数 `height` とキャンバスの `height` プロパティを {{domxref("Window.innerHeight")}} （ビューポートの高さを指定）に等しくなるように設定しています。これで、ブラウザーウィンドウの幅と高さをすべて満たすキャンバスを保有することができます。
 
-    You'll also see that we are chaining assignments together with multiple equals signs — this is allowed in JavaScript, and it is a good technique if you want to make multiple variables all equal to the same value. We wanted to make the canvas width and height easily accessible in the width/height variables, as they are useful values to have available for later (例えば、if you want to draw something exactly halfway across the width of the canvas).
+   また、複数の等号で代入を一斉に連結しているのがわかると思います。これは JavaScript で許可されており、複数の変数をすべて同じ値にしたい場合に有効なテクニックです。キャンバスの幅と高さは、変数 width/height で簡単にアクセスできるようにしたいと思いました。後で利用できるようにするために有用な値だからです（たとえば、キャンバスの幅のちょうど半分の大きさのものを描きたい場合など）。
 
-4. If you save and load your example in a browser now, you'll see nothing, which is fine, but you'll also see scrollbars — this is a problem for us, which happens because the {{htmlelement("body")}} element has a {{cssxref("margin")}} that, added to our full-window-size canvas, results in a document that's wider than the window. To get rid of the scrollbars, we need to remove the {{cssxref("margin")}} and also set {{cssxref("overflow")}} to `hidden`. Add the following into the {{htmlelement("head")}} of your document:
+> **メモ:** 一般に、画像のサイズは、上記で説明したように、 HTML 属性または DOM プロパティを使用して設定する必要があります。 CSS を使用することもできますが、サイズ設定はキャンバスがレンダリングされた後に行われるため、他の画像と同様に（レンダリングされたキャンバスは単なる画像です）、画像がピクセル化したり歪んだりする可能性があるという問題があります。
 
-    ```html
-    <style>
-      body {
-        margin: 0;
-        overflow: hidden;
-      }
-    </style>
-    ```
+### キャンバスのコンテキストと最終セットアップを取得する
 
-    The scrollbars should now be gone.
+キャンバステンプレートが完成したと考えることができるようになる前に、最後にもうひとつやっておくことがあります。キャンバスに描画するには、コンテキストと呼ばれる描画領域への特別な参照を取得する必要があります。これは {{domxref("HTMLCanvasElement.getContext()")}} メソッドを使用して行います。基本的な使用法では、取得したいコンテキストの型名を表す 1 つの文字列を引数として受け取ります。
 
-> **Note:** You should generally set the size of the image using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image (the rendered canvas is just an image), the image could become pixellated/distorted.
-
-### canvas コンテキストと最終セットアップを取得する
-
-We need to do one final thing before we can consider our canvas template finished. To draw onto the canvas we need to get a special reference to the drawing area called a context. This is done using the {{domxref("HTMLCanvasElement.getContext()")}} method, which for basic usage takes a single string as a parameter representing the type of context you want to retrieve.
-
-In this case we want a 2d canvas, so add the following JavaScript line below the others inside the `<script>` element:
+この場合、 2D キャンバスを取得したいので、 "script.js" の他の行の下に、以下の JavaScript を追加してください。
 
 ```js
 const ctx = canvas.getContext('2d');
 ```
 
-> **Note:** other context values you could choose include `webgl` for WebGL, `webgl2` for WebGL 2, etc., but we won't need those in this article.
+> **メモ:** 他にも、 WebGL の場合は `webgl`、WebGL 2 の場合は `webgl2` などのコンテキスト値を選ぶことができますが、この記事では必要ありません。
 
-So that's it — our canvas is now primed and ready for drawing on! The `ctx` variable now contains a {{domxref("CanvasRenderingContext2D")}} object, and all drawing operations on the canvas will involve manipulating this object.
+これでキャンバスには下地ができ、描画する準備ができました。これで `ctx` 変数に {{domxref("CanvasRenderingContext2D")}} オブジェクトが格納され、キャンバス上でのすべての描画処理にはこのオブジェクトの操作が必要となります。
 
-Let's do one last thing before we move on. We'll color the canvas background black to give you a first taste of the canvas API. Add the following lines at the bottom of your JavaScript:
+次に移動する前に最後のことをしましょう。キャンバスの背景を黒く塗って、キャンバス API を最初に体験してもらいましょう。 JavaScript の一番下に以下の行を追加してください。
 
 ```js
 ctx.fillStyle = 'rgb(0, 0, 0)';
 ctx.fillRect(0, 0, width, height);
 ```
 
-Here we are setting a fill color using the canvas' {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property (this takes [color values](/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors) just like CSS properties do), then drawing a rectangle that covers the entire area of the canvas with the{{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} method (the first two parameters are the coordinates of the rectangle's top left hand corner; the last two are the width and height you want the rectangle drawn at — we told you those `width` and `height` variables would be useful)!
+ここでは、キャンバスの {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} プロパティを使用して塗り色を設定し（これは、CSS のプロパティと同様に [color values](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#colors) をとります）、次に {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} メソッドを用いてキャンバスの全領域を占める矩形を描画しています（最初の 2 つの引数は矩形の左上隅の座標です。最後の 2 つは矩形を描く幅と高さで、変数 `width` と `height` は有用であることは既に示しました）。
 
-OK, our template is done and it's time to move on.
+さて、テンプレートが完成しましたので、次に移動させます。
 
-## 2D canvas の基本
+## 2D キャンバスの基本
 
-As we said above, all drawing operations are done by manipulating a {{domxref("CanvasRenderingContext2D")}} object (in our case, `ctx`). Many operations need to be given coordinates to pinpoint exactly where to draw something — the top left of the canvas is point (0, 0), the horizontal (x) axis runs from left to right, and the vertical (y) axis runs from top to bottom.
+上で述べたように、すべての描画処理は {{domxref("CanvasRenderingContext2D")}} オブジェクト（ここでは `ctx` ）に対する操作で行われます。多くの処理では、どこに何を描くかを正確に指定するために座標を与える必要があります。キャンバスの左上は点 (0, 0) で、水平 (x) 軸は左から右へ、垂直 (y) 軸は上から下へ走ります。
 
-![](Canvas_default_grid.png)
+![小さな正方形がその領域を覆い、真ん中にスチールブルーの正方形がある格子状のグラフ用紙。キャンバスの左上隅は、キャンバスの X 軸と Y 軸の点 (0, 0) である。横軸 (x) は左から右に動作して幅を表し、縦軸 (y) は上から下に動作して高さを表す。青い正方形の左上隅は、 Y 軸から x 単位、 X 軸から y 単位の距離であることがラベル付けされている。](canvas_default_grid.png)
 
-Drawing shapes tends to be done using the rectangle shape primitive, or by tracing a line along a certain path and then filling in the shape. Below we'll show how to do both.
+図形を描くには、矩形図形プリミティブを使用するか、一定のパスに沿って線をなぞり、その図形を塗りつぶす方法を取る傾向があるようです。以下では、その両方の方法を示します。
 
 ### 簡単な矩形
 
-Let's start with some simple rectangles.
+まずは簡単な長方形から始めてみましょう。
 
-1. First of all, take a copy of your newly coded canvas template (or make a local copy of [1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html) if you didn't follow the above steps).
-2. Next, add the following lines to the bottom of your JavaScript:
+1. まず最初に、新しくコーディングしたキャンバステンプレートのコピーを取得します（上記の手順に従わなかった場合は、[1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) ディレクトリーのローカル コピーを作成します）。
+2. 次に、 JavaScript の一番下に、以下の行を追加してください。
 
-    ```js
-    ctx.fillStyle = 'rgb(255, 0, 0)';
-    ctx.fillRect(50, 50, 100, 150);
-    ```
+   ```js
+   ctx.fillStyle = 'rgb(255, 0, 0)';
+   ctx.fillRect(50, 50, 100, 150);
+   ```
 
-    If you save and refresh, you should see a red rectangle has appeared on your canvas. Its top left corner is 50 pixels away from the top and left of the canvas edge (as defined by the first two parameters), and it is 100 pixels wide and 150 pixels tall (as defined by the third and fourth parameters).
+   保存して更新すると、キャンバスには赤い矩形が現れるはずです。その左上隅はキャンバスの上端と左端から 50 ピクセル離れており（最初の 2 つの引数で定義）、幅は 100 ピクセル、高さは 150 ピクセルです（3 番目と 4 番目の引数で定義）。
 
-3. Let's add another rectangle into the mix — a green one this time. Add the following at the bottom of your JavaScript:
+3. もうひとつ矩形を追加してみましょう。今度は緑色の矩形です。 JavaScript の一番下に以下のものを追加してください。
 
-    ```js
-    ctx.fillStyle = 'rgb(0, 255, 0)';
-    ctx.fillRect(75, 75, 100, 100);
-    ```
+   ```js
+   ctx.fillStyle = 'rgb(0, 255, 0)';
+   ctx.fillRect(75, 75, 100, 100);
+   ```
 
-    Save and refresh, and you'll see your new rectangle. This raises an important point: graphics operations like drawing rectangles, lines, and so forth are performed in the order in which they occur. Think of it like painting a wall, where each coat of paint overlaps and may even hide what's underneath. You can't do anything to change this, so you have to think carefully about the order in which you draw the graphics.
+   保存して更新すると、新しい矩形が表示されます。この点は重要です。矩形や行を描くなどのグラフィック処理は、発生した順番に実行されます。たとえば、壁にペンキを塗るとき、ペンキが重なり合うと、その下にあるものが隠れてしまうことがあります。これは何らかの方法で変更することはできないので、グラフィックを描く順序を注意深く考える必要があります。
 
-4. Note that you can draw semi-transparent graphics by specifying a semi-transparent color, 例えば、by using `rgba()`. The `a` value defines what's called the "alpha channel, " or the amount of transparency the color has. The higher its value, the more it will obscure whatever's behind it. Add the following to your code:
+4. 半透明の色を指定することで、例えば `rgba()` を使用して半透明のグラフィックを描画することができることに注意してください。 `a` 値は「アルファチャンネル」と呼ばれるもの、つまり色が持つ透明度の量を定義します。この値が高いほど、その背後にあるものをより見えなくすることができます。あなたのコードに以下のように追加してください。
 
-    ```js
-    ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
-    ctx.fillRect(25, 100, 175, 50);
-    ```
+   ```js
+   ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
+   ctx.fillRect(25, 100, 175, 50);
+   ```
 
-5. Now try drawing some more rectangles of your own; have fun!
+5. 今度は自分自身でもっと長方形を描いてみてください。楽しみましょう。
 
 ### ストロークと線の幅
 
-So far we've looked at drawing filled rectangles, but you can also draw rectangles that are just outlines (called **strokes** in graphic design). To set the color you want for your stroke, you use the {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} property; drawing a stroke rectangle is done using {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect")}}.
+これまで、塗りつぶされた長方形の描画について見てきましたが、輪郭だけの長方形（グラフィックデザインでは**ストローク**と呼びます）を描画することも可能です。ストロークに必要な色を設定するには、{{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} プロパティを使用します。ストロークの長方形を描くには {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect")}} を使用して行われます。
 
-1. Add the following to the previous example, again below the previous JavaScript lines:
+1. 前の例に以下のものを追加してください。また、前の JavaScript の行の下に追加してください。
 
-    ```js
-    ctx.strokeStyle = 'rgb(255, 255, 255)';
-    ctx.strokeRect(25, 25, 175, 200);
-    ```
+   ```js
+   ctx.strokeStyle = 'rgb(255, 255, 255)';
+   ctx.strokeRect(25, 25, 175, 200);
+   ```
 
-2. The default width of strokes is 1 pixel; you can adjust the {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}} property value to change this (it takes a number representing the number of pixels wide the stroke is). Add the following line in between the previous two lines:
+2. ストロークの既定幅は 1 ピクセルです。これを変更するには {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}} プロパティの値を調整します（ストロークの幅のピクセル数を表す数値を受け取ります）。前の 2 行の間に以下の行を追加してください。
 
-    ```js
-    ctx.lineWidth = 5;
-    ```
+   ```js
+   ctx.lineWidth = 5;
+   ```
 
-Now you should see that your white outline has become much thicker! That's it for now. At this point your example should look like this:
+これで、白い輪郭がかなり太くなったことがわかると思います。これで一旦終了です。この時点で、例はこのようになります。
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html", '100%', 250)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/index.html", '100%', 250)}}
 
-> **Note:** The finished code is available on GitHub as [2_canvas_rectangles.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html).
+> **メモ:** 完成版のコードは GitHub で [2_canvas_rectangles](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles) にあります。
 
 ### パスの描画
 
-If you want to draw anything more complex than a rectangle, you need to draw a path. Basically, this involves writing code to specify exactly what path the pen should move along on your canvas to trace the shape you want to draw. Canvas includes functions for drawing straight lines, circles, Bézier curves, and more.
+長方形よりも複数の複雑なものを描画する場合は、パスを描画する必要があります。基本的には、描きたい図形をなぞるためにペンがキャンバス上で移動させるパスを正確に指定するためのコードを書くことになります。キャンバスには、直線、円、ベジェ曲線などを描くための関数が含まれています。
 
-Let's start the section off by making a fresh copy of our canvas template ([1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)), in which to draw the new example.
+この節ではまず、新しい例を描くためにキャンバステンプレート ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) の新しいコピーを作成しましょう。
 
-We'll be using some common methods and properties across all of the below sections:
+以下の節すべてにおいて、いくつかの共通のメソッドとプロパティを使用します。
 
-- {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} — start drawing a path at the point where the pen currently is on the canvas. On a new canvas, the pen starts out at (0, 0).
-- {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} — move the pen to a different point on the canvas, without recording or tracing the line; the pen simply "jumps" to the new position.
-- {{domxref("CanvasRenderingContext2D.fill", "fill()")}} — draw a filled shape by filling in the path you've traced so far.
-- {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} — draw an outline shape by drawing a stroke along the path you've drawn so far.
-- You can also use features like `lineWidth` and `fillStyle`/`strokeStyle` with paths as well as rectangles.
+- {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} — キャンバス上で現在ペンがあるこの点からパスの描画を開始します。新しいキャンバスには、ペンは (0, 0) から開始されます。
+- {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} — ペンをキャンバス上の異なる点に移動させると、線を記録したりトレースしたりせずに、ペンは新しい位置に「ジャンプ」します。
+- {{domxref("CanvasRenderingContext2D.fill", "fill()")}} — これまでなぞったパスを埋めて、塗りつぶした図形を描きます。
+- {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} — これまでに描いたパスに沿ってストロークを描き、アウトライン図形を描きます。
+- また、長方形だけでなく、パスに対しても `lineWidth` や `fillStyle`/`strokeStyle` のような機能を使用することができます。
 
-A typical, simple path-drawing operation would look something like so:
+典型的な、簡単なパス描画処理をすると、次のようになります。
 
 ```js
 ctx.fillStyle = 'rgb(255, 0, 0)';
@@ -207,106 +220,106 @@ ctx.fill();
 
 #### 線を描く
 
-Let's draw an equilateral triangle on the canvas.
+キャンバスには正三角形を描いてみましょう。
 
-1. First of all, add the following helper function to the bottom of your code. This converts degree values to radians, which is useful because whenever you need to provide an angle value in JavaScript, it will nearly always be in radians, but humans usually think in degrees.
+1. まずはじめに、以下のヘルパー関数をコードの一番下に追加してください。これは度数の値をラジアンに変換するもので、 JavaScript で角度の値を指定する必要があるときは常にラジアン単位で指定されますが、人間は通常度数で考えるので有用です。
 
-    ```js
-    function degToRad(degrees) {
-      return degrees * Math.PI / 180;
-    };
-    ```
+   ```js
+   function degToRad(degrees) {
+     return degrees * Math.PI / 180;
+   }
+   ```
 
-2. Next, start off your path by adding the following below your previous addition; here we set a color for our triangle, start drawing a path, and then move the pen to (50, 50) without drawing anything. That's where we'll start drawing our triangle.
+2. 次に、先ほどの追加部分の下に従うことでパスを開始します。ここでは、三角形の色を設定し、パスを描き始め、何も描かずにペンを (50, 50) に移動させています。そこが三角形を描き始める場所です。
 
-    ```js
-    ctx.fillStyle = 'rgb(255, 0, 0)';
-    ctx.beginPath();
-    ctx.moveTo(50, 50);
-    ```
+   ```js
+   ctx.fillStyle = 'rgb(255, 0, 0)';
+   ctx.beginPath();
+   ctx.moveTo(50, 50);
+   ```
 
-3. Now add the following lines at the bottom of your script:
+3. 次に、スクリプトの末尾に以下の行を追加してください。
 
-    ```js
-    ctx.lineTo(150, 50);
-    let triHeight = 50 * Math.tan(degToRad(60));
-    ctx.lineTo(100, 50+triHeight);
-    ctx.lineTo(50, 50);
-    ctx.fill();
-    ```
+   ```js
+   ctx.lineTo(150, 50);
+   const triHeight = 50 * Math.tan(degToRad(60));
+   ctx.lineTo(100, 50 + triHeight);
+   ctx.lineTo(50, 50);
+   ctx.fill();
+   ```
 
-    Let's run through this in order:
+   では、順番に動作させてみましょう。
 
-    First we draw a line across to (150, 50) — our path now goes 100 pixels to the right along the x axis.
+   最初に、(150, 50) へ直線を引きます。このパスは、x 軸に沿って右へ 100 ピクセル進みます。
 
-    Second, we work out the height of our equalateral triangle, using a bit of simple trigonometry. Basically, we are drawing the triangle pointing downwards. The angles in an equalateral triangle are always 60 degrees; to work out the height we can split it down the middle into two right-angled triangles, which will each have angles of 90 degrees, 60 degrees, and 30 degrees. In terms of the sides:
+   次に、この正三角形の高さを、簡単な三角法を使用して算出します。基本的には、三角形は下向きに描かれています。正三角形の角度は常に 60 度です。高さを計算するには、正三角形を真ん中から 2 つに分割し、それぞれ 90 度、 60 度、 30 度の角度を持つようにすればいいのです。それぞれの辺は次のように呼びます。
 
-    - The longest side is called the **hypotenuse**
-    - The side next to the 60 degree angle is called the **adjacent** — which we know is 50 pixels, as it is half of the line we just drew.
-    - The side opposite the 60 degree angle is called the **opposite**, which is the height of the triangle we want to calculate.
+   - 一番長い辺は、**斜辺 (hypotenuse)** と呼ばれます。
+   - 60度の角度の横にある辺は、**隣辺 (adjacent)** と呼ばれています。これは、先ほど引いた線の半分なので、50ピクセルであることが分かっています。
+   - 60度の角と反対側にある辺は、**対辺 (opposite)** と呼ばれています。これが計算したい三角形の高さになります。
 
-    ![](trigonometry.png)
+   ![角と辺にラベル付けされた下向きの正三角形。上部の水平線は「隣辺」とラベル付けされている。隣接する線の中央から「対辺」とラベル付けされた垂直な点線が三角形を分割し、2つの等しい直角三角形が作成される。三角形の右辺は、「対辺」と書かれた行によって形成された直角三角形の斜辺であるため、「斜辺」と書かれる。三角形のすべての三辺の長さが同じであるのに対し、斜辺は直角三角形の最も長い辺となる。](trigonometry.png)
 
-    One of the basic trigonometric formulae states that the length of the adjacent multiplied by the tangent of the angle is equal to the opposite, hence we come up with `50 * Math.tan(degToRad(60))`. We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.
+   三角測量の基本的な公式の1つは、隣接する角度の長さに角度の正接（タンジェント）を掛けたものは、その反対側に等しいという状態です。したがって、 `50 * Math.tan(degToRad(60))` と結論づけられます。 {{jsxref("Math.tan()")}} はラジアン単位の入力値を想定しているので、 60 度をラジアンに変換するために `degToRad()` 関数を使用しています。
 
-4. With the height calculated, we draw another line to `(100, 50 + triHeight)`. The X coordinate is simple; it must be halfway between the previous two X values we set. The Y value on the other hand must be 50 plus the triangle height, as we know the top of the triangle is 50 pixels from the top of the canvas.
-5. The next line draws a line back to the starting point of the triangle.
-6. Last of all, we run `ctx.fill()` to end the path and fill in the shape.
+4. 高さが計算できたので、 `(100, 50 + triHeight)` へもう一本線を引きます。X 座標は単純で、前に設定した 2 つの X 値の中間の値でなければなりません。一方 Y 値は、三角形の頂点がキャンバスの頂点から 50 ピクセル離れていることが分かっているため、50 に三角形の高さを足した値でなければなりません。
+5. 次の行は、三角形の開始点まで戻る線を描きます。
+6. 最後に、 `ctx.fill()` を実行してパスを終了させ、図形を塗りつぶします。
 
 #### 円を描く
 
-Now let's look at how to draw a circle in canvas. This is accomplished using the {{domxref("CanvasRenderingContext2D.arc", "arc()")}} method, which draws all or part of a circle at a specified point.
+では、キャンバスにはどのように円を描くのかを見てみましょう。これは {{domxref("CanvasRenderingContext2D.arc", "arc()")}} メソッドを使用して実現します。このメソッドは、指定した点に円の全体または一部を描画するものです。
 
-1. Let's add an arc to our canvas — add the following to the bottom of your code:
+1. キャンバスには円弧を追加してみましょう。コードの一番下に以下のように追加してください。
 
-    ```js
-    ctx.fillStyle = 'rgb(0, 0, 255)';
-    ctx.beginPath();
-    ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
-    ctx.fill();
-    ```
+   ```js
+   ctx.fillStyle = 'rgb(0, 0, 255)';
+   ctx.beginPath();
+   ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
+   ctx.fill();
+   ```
 
-    `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise (anticlockwise) or clockwise (`false` is clockwise).
+   `arc()` は 6 つの引数を取ります。最初の 2 つは円弧の中心の位置を指定します (それぞれ X と Y)。3 番目は円の半径、4 番目と 5 番目は円を描く開始角度と終了角度を指定し（つまり 0 と 360 度を指定すると完全な円になります）、6 番目は円を反時計回りに描くか（反時計回り）時計回りに描くか（`false` は時計回り）を定義します。
 
-    > **Note:** 0 degrees is horizontally to the right.
+   > **メモ:** 0度は水平方向で右側です。
 
-2. Let's try adding another arc:
+2. もうひとつ、円弧を加えてみましょう。
 
-    ```js
-    ctx.fillStyle = 'yellow';
-    ctx.beginPath();
-    ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
-    ctx.lineTo(200, 106);
-    ctx.fill();
-    ```
+   ```js
+   ctx.fillStyle = 'yellow';
+   ctx.beginPath();
+   ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
+   ctx.lineTo(200, 106);
+   ctx.fill();
+   ```
 
-    The pattern here is very similar, but with two differences:
+   こちらのパターンもとてもよく似ていますが、 2 つの違いがあります。
 
-    - We have set the last parameter of `arc()` to `true`, meaning that the arc is drawn counterclockwise, which means that even though the arc is specified as starting at -45 degrees and ending at 45 degrees, we draw the arc around the 270 degrees not inside this portion. If you were to change `true` to `false` and then re-run the code, only the 90 degree slice of the circle would be drawn.
-    - Before calling `fill()`, we draw a line to the center of the circle. This means that we get the rather nice Pac-Man-style cutout rendered. If you removed this line (try it!) then re-ran the code, you'd get just an edge of the circle chopped off between the start and end point of the arc. This illustrates another important point of the canvas — if you try to fill an incomplete path (i.e. one that is not closed), the browser fills in a straight line between the start and end point and then fills it in.
+   - `arc()` の最後の引数を `true` に設定しています。これは、反時計回りに弧を描くという意味で、たとえ弧が -45 度から始まって 45 度で終わるように指定されていても、この部分の内側ではなく 270 度の周囲に弧を描くということになります。もし、 `true` を `false` に変更してからコードを再実行すると、 90 度の輪切りだけが描画されます。
+   - fill()`を呼び出す前に、円の中心に線を引いています。これは、パックマンスタイルの切り抜きレンダリングを得ることを意味しています。この行を削除して（試してみてください！）コードを再実行すると、円弧の開始点と終了点の間で円の端が切り落とされただけの状態になります。これは、キャンバスのもう一つの重要な点を示しています。不完全なパス（つまり、閉じられていないパス）を塗りつぶそうとすると、ブラウザーは始点と終点の間を直線で埋めてから、それを塗りつぶします。
 
-That's it for now; your final example should look like this:
+最終的には以下のような例となります。
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html", '100%', 200)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/index.html", '100%', 200)}}
 
-> **Note:** The finished code is available on GitHub as [3_canvas_paths.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html).
+> **メモ:** 完成したコードは、 GitHub で [3_canvas_paths](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths) として利用可能です。
 
-> **Note:** To find out more about advanced path drawing features such as Bézier curves, check out our [Drawing shapes with canvas](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) tutorial.
+> **メモ:** ベジェ曲線などの高度なパス描画機能については、[キャンバスでの図形の描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)チュートリアルをご覧ください。
 
 ### テキスト
 
-Canvas also has features for drawing text. Let's explore these briefly. Start by making another fresh copy of our canvas template ([1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)) in which to draw the new example.
+キャンバスには、テキストを描画するための機能も保有されています。これらを簡単に調べてみましょう。キャンバステンプレート（[1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)）を新しくコピーし、そこに新しい例を描画することから始めましょう。
 
-Text is drawn using two methods:
+テキストは2つのメソッドを使用して描画されます。
 
-- {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} — draws filled text.
-- {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} — draws outline (stroke) text.
+- {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} — 中身を塗りつぶしたテキストを描く。
+- {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} — テキストの輪郭線を描く。
 
-Both of these take three properties in their basic usage: the text string to draw and the X and Y coordinates of the point to start drawing the text at. This works out as the **bottom left** corner of the **text box** (literally, the box surrounding the text you draw), which might confuse you as other drawing operations tend to start from the top left corner — bear this in mind.
+どちらも基本的な使い方として、描画する文字列と、テキストの描画を開始する点の X 座標と Y 座標の 3 つのプロパティを取ります。これは、**テキストボックス**（文字通り、描画するテキストを囲むボックス）の**左下**隅となりますが、他の描画処理は左上隅から開始する傾向があるので混乱するかもしれません。気を付けてください。
 
-There are also a number of properties to help control text rendering such as {{domxref("CanvasRenderingContext2D.font", "font")}}, which lets you specify font family, size, etc. It takes as its value the same syntax as the CSS {{cssxref("font")}} property.
+また、テキスト レンダリングをコントロールするのに役立つプロパティもいくつかあります。このプロパティは、CSSの{{cssxref("font")}}プロパティと同じ構文を値として受け取ります。
 
-Try adding the following block to the bottom of your JavaScript:
+以下のブロックを JavaScript の最下部に追加してみてください。
 
 ```js
 ctx.strokeStyle = 'white';
@@ -319,331 +332,326 @@ ctx.font = '48px georgia';
 ctx.fillText('Canvas text', 50, 150);
 ```
 
-Here we draw two lines of text, one outline and the other stroke. The final example should look like so:
+ここでは、アウトラインとストロークの 2 つのテキストを描きます。最終的な例はこのようになるはずです。
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html", '100%', 180)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text/index.html", '100%', 180)}}
 
-> **Note:** The finished code is available on GitHub as [4_canvas_text.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html).
+> **メモ:** 完成したコードは、 GitHub で [4_canvas_text](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text) として利用することができます。
 
-Have a play and see what you can come up with! You can find more information on the options available for canvas text at [Drawing text](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+どんなものが出来上がるか、遊んでみてください。キャンバスのテキストで利用できるオプションについては、[テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)に詳細な情報があります。
 
-### canvas に画像を描画する
+### キャンバスへの画像の描画
 
-It is possible to render external images onto your canvas. These can be simple images, frames from videos, or the content of other canvases. For the moment we'll just look at the case of using some simple images on our canvas.
+キャンバスには、外部の画像を描画することができます。これには、単純な画像、動画のフレーム、他にもキャンバスのコンテンツが使用できます。ここでは、キャンバス上に簡単な画像を使用する場合について説明します。
 
-1. As before, make another fresh copy of our canvas template ([1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)) in which to draw the new example. In this case you'll also need to save a copy of our sample image — [firefox.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/firefox.png) — in the same directory.
+1. 前回と同様に、新しい例を描くために、キャンバステンプレート（[1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)）を新しくコピーします。
 
-    Images are drawn onto canvas using the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method. The simplest version takes three parameters — a reference to the image you want to render, and the X and Y coordinates of the image's top left corner.
+   画像は {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} メソッドを使用してキャンバスに描画します。最も単純なものは、描画する画像の参照と、画像の左上隅の X 座標と Y 座標の 3 つの引数を取ります。
 
-2. Let's start by getting an image source to embed in our canvas. Add the following lines to the bottom of your JavaScript:
+2. まず、キャンバスには埋め込む画像ソースを取得することから開始しましょう。以下の行を JavaScript の最下部に追加してください。
 
-    ```js
-    let image = new Image();
-    image.src = 'firefox.png';
-    ```
+   ```js
+   const image = new Image();
+   image.src = 'firefox.png';
+   ```
 
-    Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element). We then set its {{htmlattrxref("src", "img")}} attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
+   ここでは {{domxref("HTMLImageElement.Image()", "Image()")}} コンストラクターを使用して、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成しています。返されるオブジェクトは、既存の {{htmlelement("img")}} 要素への参照を取得したときに返されるオブジェクトと同じ型です。次に、その {{htmlattrxref("src", "img")}} 属性を、Firefox ロゴ画像と同じになるように設定します。この時点で、ブラウザーは画像の読み込みを開始します。
 
-3. We could now try to embed the image using `drawImage()`, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the `onload` event handler, which will only be invoked when the image has finished loading. Add the following block below the previous one:
+3. ここで、`drawImage()` を使用して画像を埋め込むことができますが、最初に画像ファイルが読み込まれたことを確認する必要があり、そうでなければコードは失敗してしまいます。これは `load` イベントを使用して実現することができます。このイベントは画像の読み込みが完了したときにのみ発行されます。前のブロックの下に、以下のブロックを追加してください。
 
-    ```js
-    image.onload = function() {
-      ctx.drawImage(image, 50, 50);
-    }
-    ```
+   ```js
+   image.addEventListener('load', () => ctx.drawImage(image, 20, 20));
+   ```
 
-    If you load your example in the browser now, you should see the image embeded in the canvas.
+   今、ブラウザーで例を読み込むと、キャンバスに埋め込まれた画像が表示されるはずです。
 
-4. But there's more! What if we want to display only a part of the image, or to resize it? We can do both with the more complex version of `drawImage()`. Update your `ctx.drawImage()` line like so:
+4. でも、まだあります。 画像の一部分だけを表示したり、サイズを変更したりしたい場合はどうすればよいのでしょうか。 `drawImage()` のより複雑なバージョンを使用すれば、どちらも可能です。 `ctx.drawImage()` の行を次のように更新してください。
 
-    ```js
-    ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
-    ```
+   ```js
+   ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
+   ```
 
-    - The first parameter is the image reference, as before.
-    - Parameters 2 and 3 define the coordinates of the top left corner of the area you want to cut out of the loaded image, relative to the top-left corner of the image itself. Nothing to the left of the first parameter or above the second will be drawn.
-    - Parameters 4 and 5 define the width and height of the area we want to cut out from the original image we loaded.
-    - Parameters 6 and 7 define the coordinates at which you want to draw the top-left corner of the cut-out portion of the image, relative to the top-left corner of the canvas.
-    - Parameters 8 and 9 define the width and height to draw the cut-out area of the image. In this case, we have specified the same dimensions as the original slice, but you could resize it by specifying different values.
+   - 最初の引数は、前回と同じく画像の参照です。
+   - 2 番目と 3 番目の引数は、読み込んだ画像から切り出したい領域の左上隅の座標を、画像自体の左上隅を基準にして定義します。 2 番目の引数より左側や 3 番目の引数より上側は何も描画されません。
+   - 4 番目と 5 番目の引数は、読み込んだ元画像から切り出したい領域の幅と高さを定義します。
+   - 6 番目と 7 番目の引数は、画像の切り出し部分の左上隅をキャンバスの左上隅と関連させて描画する座標を定義します。
+   - 8 番目と 9 番目の引数は、画像の切り出し領域を描画するための幅と高さを定義するものです。今回は、元のスライスと同じ寸法を保有しましたが、異なる値を指定することでリサイズすることも可能です。
 
-The final example should look like so:
+最終的な例はこのようになるはずです。
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html", '100%', 260)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images/index.html", '100%', 260)}}
 
-> **Note:** The finished code is available on GitHub as [5_canvas_images.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html).
+> **メモ:** 完成したコードは、 GitHub で [5_canvas_images](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images) として利用することができます。
 
 ## ループとアニメーション
 
-We have so far covered some very basic uses of 2D canvas, but really you won't experience the full power of canvas unless you update or animate it in some way. After all, canvas does provide scriptable images! If you aren't going to change anything, then you might as well just use static images and save yourself all the work.
+ここまで、2D キャンバスのとても基本的な使用方法を説明しましたが、実際に何らかの方法で更新したりアニメーションさせたりしない限り、キャンバスの能力をフルに体験することはできません。キャンバスにはスクリプト可能な画像が指定されています。もし、何も変更しないのであれば、静止画像を使用して、すべての作業を省く方がよいでしょう。
 
 ### ループの作成
 
-Playing with loops in canvas is rather fun — you can run canvas commands inside a [`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) (or other type of) loop just like any other JavaScript code.
+キャンバスでループを使うのはなかなか楽しいものです。他の JavaScript コードと同じように、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) （または他の種類のの）ループの中でキャンバスのコマンドを実行することができます。
 
-Let's build a simple example.
+簡単な例を作ってみましょう。
 
-1. Make another fresh copy of our canvas template ([1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)) and open it in your code editor.
-2. Add the following line to the bottom of your JavaScript. This contains a new method, {{domxref("CanvasRenderingContext2D.translate", "translate()")}}, which moves the origin point of the canvas:
+1. キャンバスのテンプレート（[1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)）を新たにコピーし、コードエディターで開くためのコードを作成します。
+2. 以下の行を JavaScript の一番下に追加します。これには新しいメソッド {{domxref("CanvasRenderingContext2D.translate", "translate()")}} が含まれていて、キャンバスの原点を移動させます。
 
-    ```js
-    ctx.translate(width/2, height/2);
-    ```
+   ```js
+   ctx.translate(width/2, height/2);
+   ```
 
-    This causes the coordinate origin (0, 0) to be moved to the center of the canvas, rather than being at the top left corner. This is very useful in many situations, like this one, where we want our design to be drawn relative to the center of the canvas.
+   これにより、座標原点 (0, 0) は左上隅ではなく、キャンバスの中央に移されます。これは、今回のようにキャンバスの中心から相対的にデザインを描画させたい多くの状況でとても有用です。
 
-3. Now add the following code to the bottom of the JavaScript:
+3. ここで、 JavaScript の一番下に、以下のコードを追加してください。
 
-    ```js
-    function degToRad(degrees) {
-      return degrees * Math.PI / 180;
-    };
+   ```js
+   function degToRad(degrees) {
+     return degrees * Math.PI / 180;
+   }
 
-    function rand(min, max) {
-      return Math.floor(Math.random() * (max-min+1)) + (min);
-    }
+   function rand(min, max) {
+     return Math.floor(Math.random() * (max-min+1)) + (min);
+   }
 
-    let length = 250;
-    let moveOffset = 20;
+   let length = 250;
+   let moveOffset = 20;
 
-    for(var i = 0; i < length; i++) {
+   for (let i = 0; i < length; i++) {
 
-    }
-    ```
+   }
+   ```
 
-    Here we are implementing the same `degToRad()` function we saw in the triangle example above, a `rand()` function that returns a random number between given lower and upper bounds, `length` and `moveOffset` variables (which we'll find out more about later), and an empty `for` loop.
+   ここでは、上の三角形の例で見たのと同じ `degToRad()` 関数、指定された下限と上限の間の乱数を返す `rand()` 関数、変数 `length` と `moveOffset` （これについては後で詳しく説明します）、そして空の `for` ループを実装しています。
 
-4. The idea here is that we'll draw something on the canvas inside the `for` loop, and iterate on it each time so we can create something interesting. Add the following code inside your `for` loop:
+4. ここでのアイディアは、 `for` ループの中でキャンバス上に何かを描くことができ、それを毎回反復処理することで、何か面白いものを作成することができるというものです。以下のコードを `for` ループの中に追加してください。
 
-    ```js
-    ctx.fillStyle = 'rgba(' + (255-length) + ', 0, ' + (255-length) + ', 0.9)';
-    ctx.beginPath();
-    ctx.moveTo(moveOffset, moveOffset);
-    ctx.lineTo(moveOffset+length, moveOffset);
-    let triHeight = length/2 * Math.tan(degToRad(60));
-    ctx.lineTo(moveOffset+(length/2), moveOffset+triHeight);
-    ctx.lineTo(moveOffset, moveOffset);
-    ctx.fill();
+   ```js
+   ctx.fillStyle = `rgba(${255-length},0,${255-length},0.9)`;
+   ctx.beginPath();
+   ctx.moveTo(moveOffset,moveOffset);
+   ctx.lineTo(moveOffset+length,moveOffset);
+   const triHeight = length/2 * Math.tan(degToRad(60));
+   ctx.lineTo(moveOffset+(length/2),moveOffset+triHeight);
+   ctx.lineTo(moveOffset,moveOffset);
+   ctx.fill();
 
-    length--;
-    moveOffset += 0.7;
-    ctx.rotate(degToRad(5));
-    ```
+   length--;
+   moveOffset += 0.7;
+   ctx.rotate(degToRad(5));
+   ```
 
-    So on each iteration, we:
+   つまり、各反復処理において、
 
-    - Set the `fillStyle` to be a shade of slightly transparent purple, which changes each time based on the value of `length`. As you'll see later the length gets smaller each time the loop runs, so the effect here is that the color gets brighter with each successive triangle drawn.
-    - Begin the path.
-    - Move the pen to a coordinate of `(moveOffset, moveOffset)`; This variable defines how far we want to move each time we draw a new triangle.
-    - Draw a line to a coordinate of `(moveOffset+length, moveOffset)`. This draws a line of length `length` parallel to the X axis.
-    - Calculate the triangle's height, as before.
-    - Draw a line to the downward-pointing corner of the triangle, then draw a line back to the start of the triangle.
-    - Call `fill()` to fill in the triangle.
-    - Update the variables that describe the sequence of triangles, so we can be ready to draw the next one. We decrease the `length` value by 1, so the triangles get smaller each time; increase `moveOffset` by a small amount so each successive triangle is slightly further away, and use another new function, {{domxref("CanvasRenderingContext2D.rotate", "rotate()")}}, which allows us to rotate the entire canvas! We rotate it by 5 degrees before drawing the next triangle.
+   - `fillStyle` にやや透明な紫色のシェードを設定します。このシェードは `length` の値に基づいて毎回変更されます。後で分かるように、長さはループを実行するたびに小さくなるので、ここでの効果は、三角形を連続して描画するたびに色が明るくなることです。
+   - パスを開始します。
+   - ペンを座標 `(moveOffset, moveOffset)` に移動します。この変数は、新しい三角形を描画するたびに、どれだけの距離を移動するかを定義するものです。
+   - 座標 `(moveOffset+length, moveOffset)` に直線を描画します。これは、長さ `length` の直線を X 軸に平行に描画します。
+   - 先ほどと同様に、三角形の高さを計算します。
+   - 三角形の下向きの角まで線を引き、それから三角形の始点に戻る線を描きます。
+   - `fill()` を呼び出して、三角形を塗りつぶします。
+   - 三角形の並びを記述する変数を更新し、次の三角形を描画する準備ができるようにします。 長さ`の値を 1 ずつ減らしていくので、三角形は毎回少しずつ小さくなります。 そして、{{domxref("CanvasRenderingContext2D.rotate", "rotate()")}} という別の新しい関数を使用して、キャンバス全体を回転させることができるようにします。次の三角形を描画する前に 5 度回転させています。
 
-That's it! The final example should look like so:
+これで完了です。最終的な例はこのようになるはずです。
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html", '100%', 550)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop/index.html", '100%', 550)}}
 
-At this point, we'd like to encourage you to play with the example and make it your own! 例えば、:
+この点については、ぜひこの例で遊んでみて、自分自身で作ってみてください。例えば、
 
-- Draw rectangles or arcs instead of triangles, or even embed images.
-- Play with the `length` and `moveOffset` values.
-- Introduce some random numbers using that `rand()` function we included above but didn't use.
+- 三角形の代わりに長方形や円弧を描画したり、画像を埋め込んだりする。
+- length` と `moveOffset` の値で遊んでみる。
+- 上で記載したが使用しなかった `rand()` 関数を使用して乱数を導入する。
 
-> **Note:** The finished code is available on GitHub as [6_canvas_for_loop.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html).
+> **メモ:** 完成したコードは、GitHub で [6_canvas_for_loop](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop) として利用することができます。
 
 ### アニメーション
 
-The loop example we built above was fun, but really you need a constant loop that keeps going and going for any serious canvas applications (such as games and real time visualizations). If you think of your canvas as being like a movie, you really want the display to update on each frame to show the updated view, with an ideal refresh rate of 60 frames per second so that movement appears nice and smooth to the human eye.
+上で作成したループの例は楽しいものでしたが、実際のところ、本格的なキャンバスアプリケーション（ゲームやリアルタイムの視覚化など）には、継続的に続く一定のループが必要です。キャンバスを映画のようなものと考えると、フレームごとに表示を更新して更新されたビューを表示する必要があります。
 
-There are a few JavaScript functions that will allow you to run functions repeatedly, several times a second, the best one for our purposes here being {{domxref("window.requestAnimationFrame()")}}. It takes one parameter — the name of the function you want to run for each frame. The next time the browser is ready to update the screen, your function will get called. If that function draws the new update to your animation, then calls `requestAnimationFrame()` again just before the end of the function, the animation loop will continue to run. The loop ends when you stop calling `requestAnimationFrame()` or if you call {{domxref("window.cancelAnimationFrame()")}} after calling `requestAnimationFrame()` but before the frame is called.
+JavaScript で、関数を 1 秒間に数回繰り返し実行することができる関数がいくつかありますが、ここでの目的に最適なのは {{domxref("window.requestAnimationFrame()")}} です。これは 1 つの引数を取ります - 各フレームに対して実行したい関数の名前です。次にブラウザーが画面の内側へ更新する準備ができたとき、その関数が呼び出されます。その関数がアニメーションの新しい更新を描画し、関数の終わりの直前に再び `requestAnimationFrame()` を呼び出すと、アニメーションループが実行され続けます。ループは `requestAnimationFrame()` の呼び出しをやめるか、呼び出した後、フレームが呼び出される前に {{domxref("window.cancelAnimationFrame()")}} を呼び出すと終わりになります。
 
-> **Note:** It's good practice to call `cancelAnimationFrame()` from your main code when you're done using the animation, to ensure that no updates are still waiting to be run.
+> **メモ:** アニメーションを使用し終わったら、メインコードから `cancelAnimationFrame()` を呼び出して、まだ実行されるのを待っている更新がないことを確認するのは良い習慣です。
 
-The browser works out complex details such as making the animation run at a consistent speed, and not wasting resources animating things that can't be seen.
+ブラウザーは、アニメーションを一定の速度で実行したり、見えないものをアニメーションさせるのに無駄なリソースを使わないようにするなど、複雑な細部にわたって作業しています。
 
-To see how it works, let's quickly look again at our Bouncing Balls example ([see it live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html), and also see [the source code](https://github.com/mdn/learning-area/tree/master/javascript/oojs/bouncing-balls)). The code for the loop that keeps everything moving looks like this:
+これらがどのように動作するかを確認するために、弾むボールの例を手早くもう一度見てみましょう（[ライブを見る](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)、[ソースコード](https://github.com/mdn/learning-area/tree/main/javascript/oojs/bouncing-balls)も参照してください）。すべてのものが移動し続けるループのコードは次のようになります。
 
 ```js
 function loop() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-  ctx.fillRect(0, 0, width, height);
+   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+   ctx.fillRect(0, 0, width, height);
 
-  for(let i = 0; i < balls.length; i++) {
-    balls[i].draw();
-    balls[i].update();
-    balls[i].collisionDetect();
-  }
+   for (const ball of balls) {
+     ball.draw();
+     ball.update();
+     ball.collisionDetect();
+   }
 
-  requestAnimationFrame(loop);
+   requestAnimationFrame(loop);
 }
 
 loop();
 ```
 
-We run the `loop()` function once at the bottom of the code to start the cycle, drawing the first animation frame; the `loop()` function then takes charge of calling `requestAnimationFrame(loop)` to run the next frame of the animation, again and again.
+コードの一番下で `loop()` 関数を一度実行してサイクルを開始し、最初のアニメーションフレームを描画します。`loop()` 関数は次に `requestAnimationFrame(loop)` を呼び出して、アニメーションの次のフレームを何度も何度も実行する役割を果たします。
 
-Note that on each frame we are completely clearing the canvas and redrawing everything. For every ball present we draw it, update its position, and check to see if it is colliding with any other balls. Once you've drawn a graphic to a canvas, there's no way to manipulate that graphic individually like you can with DOM elements. You can't move each ball around on the canvas, because once it's drawn, it's part of the canvas, and is not an individual accessible element or object. Instead, you have to erase and redraw, either by erasing the entire frame and redrawing everything, or by having code that knows exactly what parts need to be erased and only erases and redraws the minimum area of the canvas necessary.
+各フレームでキャンバスを完全にクリアして、すべてを再描画していることに注意してください。存在するすべてのボールについて描画し、位置を更新して、他のボールと衝突していないかどうかを調べています。キャンバスにグラフィックを描画したら、DOM 要素のようにそのグラフィックを個別に操作する方法はありません。描画されたボールはキャンバスの一部であり、個別にアクセスできる要素やオブジェクトではないため、キャンバス上でそれぞれのボールを移動させることはできません。フレーム全体を消去してすべてを再描画するか、どの部分を消去する必要があるかを正確に把握し、キャンバスの必要最小限の領域だけを消去して再描画するコードを持つか、どちらかの方法で消去と再描画を行う必要があります。
 
-Optimizing animation of graphics is an entire specialty of programming, with lots of clever techniques available. Those are beyond what we need for our example, though!
+グラフィックのアニメーションの最適化は、プログラミングの一つの専門分野であり、たくさんの賢いテクニックが利用できます。しかし、この例では、そのような技術は必要ありません。
 
-In general, the process of doing a canvas animation involves the following steps:
+一般に、キャンバスでアニメーションを行うには、以下のような段階を踏みます。
 
-1. Clear the canvas contents (e.g. with {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}).
-2. Save state (if necessary) using {{domxref("CanvasRenderingContext2D.save", "save()")}} — this is needed when you want to save settings you've updated on the canvas before continuing, which is useful for more advanced applications.
-3. Draw the graphics you are animating.
-4. Restore the settings you saved in step 2, using {{domxref("CanvasRenderingContext2D.restore", "restore()")}}
-5. Call `requestAnimationFrame()` to schedule drawing of the next frame of the animation.
+1. キャンバスの中身を消去します（例： {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} や {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} などで）。
+2. （必要に応じて）{{domxref("CanvasRenderingContext2D.save", "save()")}} で状態を保存します。これは、キャンバス上で更新した設定を保存してから継続したい場合に必要で、より高度なアプリケーションに有用です。
+3. アニメーションさせるグラフィックを描画します。
+4. 手順 2 で保存した設定を {{domxref("CanvasRenderingContext2D.restore", "restore()")}} を使用して復元します。
+5. `requestAnimationFrame()` を呼び出して、アニメーションの次のフレームを描画するように予約します。
 
-> **Note:** We won't cover `save()` and `restore()` here, but they are explained nicely in our [Transformations](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations) tutorial (and the ones that follow it).
+> **メモ:** ここでは `save()` と `restore()` は取り上げませんが、これらは[座標変換](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations)のチュートリアル (とそれに続くもの) でうまく説明されています。
 
 ### 簡単なキャラクターのアニメーション
 
-Now let's create our own simple animation — we'll get a character from a certain rather awesome retro computer game to walk across the screen.
+それでは、自分自身で簡単なアニメーションを作ってみましょう。ある素晴らしいレトロコンピュータゲームのキャラクターが、画面内を歩き回るようにします。
 
-1. Make another fresh copy of our canvas template ([1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)) and open it in your code editor. Make a copy of [walk-right.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/walk-right.png) in the same directory.
-2. At the bottom of the JavaScript, add the following line to once again make the coordinate origin sit in the middle of the canvas:
+1. キャンバスのテンプレート ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) の新しいコピーを作成し、コードエディターで開いてください。
+2. JavaScript の一番下に、以下の行を追加して、座標原点が再びキャンバスの中央に来るようにします。
 
-    ```js
-    ctx.translate(width/2, height/2);
-    ```
+   ```js
+   ctx.translate(width/2, height/2);
+   ```
 
-3. Now let's create a new {{domxref("HTMLImageElement")}} object, set its {{htmlattrxref("src", "img")}} to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
+3. では、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成し、その {{htmlattrxref("src", "img")}} に読み込ませたい画像を設定しましょう。そして、`onload` イベントハンドラーを追加して、画像を読み込んだら `draw()` 関数が起動するよう設定しましょう。
 
-    ```js
-    let image = new Image();
-    image.src = 'walk-right.png';
-    image.onload = draw;
-    ```
+   ```js
+   const image = new Image();
+   image.src = 'walk-right.png';
+   image.onload = draw;
+   ```
 
-4. Now we'll add some variables to keep track of the position the sprite is to be drawn on the screen, and the sprite number we want to display.
+4. 次に、スプライトが画面上に描画される位置と、表示したいスプライトの番号を記録するための変数を追加します。
 
-    ```js
-    let sprite = 0;
-    let posX = 0;
-    ```
+   ```js
+   let sprite = 0;
+   let posX = 0;
+   ```
 
-    Let's explain the spritesheet image (which we have respectfully borrowed from Mike Thomas' [Create a sprite sheet walk cycle using using CSS animation](http://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/)). The image looks like this:
+   スプライトシートの画像（Mike Thomas 氏の [Walking cycle using CSS animation](https://codepen.io/mikethomas/pen/kQjKLW) CodePen から謹んで拝借しました）について説明します。画像はこのような感じです。
 
-    ![](walk-right.png)
+   ![歩く人を模したドット絵のキャラクターを、右側から一歩ずつ異なる手順で描いたスプライト画像 6 枚を収録したスプライト・シートです。キャラクターは、水色のボタンのついた白いシャツ、黒いズボン、黒い靴を保有しています。各スプライトは、幅 102 ピクセル、高さ 148 ピクセルです。](walk-right.png)
 
-    It contains six sprites that make up the whole walking sequence — each one is 102 pixels wide and 148 pixels high. To display each sprite cleanly we will have to use `drawImage()` to chop out a single sprite image from the spritesheet and display only that part, like we did above with the Firefox logo. The X coordinate of the slice will have to be a multiple of 102, and the Y coordinate will always be 0. The slice size will always be 102 by 148 pixels.
+   これには 6 つのスプライトが含まれており、それぞれが幅 102 ピクセル、高さ 148 ピクセルで、歩行シーケンス全体を構成しています。それぞれのスプライトをきれいに表示するためには、上で Firefox のロゴに対して行ったように、 `drawImage()` を使用してスプライトシートから単一のスプライト画像を切り出し、その部分のみを表示する必要があります。スライスの X 座標は 102 の倍数でなければならず、Y 座標は常に 0 でなければなりません。
 
-5. Now let's insert an empty `draw()` function at the bottom of the code, ready for filling up with some code:
+5. では、コードの一番下に空の `draw()` 関数を挿入して、いくつかのコードで埋められるようにしましょう。
 
-    ```js
-    function draw() {
+   ```js
+   function draw() {
 
-    };
-    ```
+   }
+   ```
 
-6. the rest of the code in this section goes inside `draw()`. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as `-(width/2), -(height/2)` because we specified the origin position as `width/2, height/2` earlier on.
+6. この節の残りのコードは `draw()` の中に記述します。まず、以下の行を追加します。これはキャンバスで各フレームを描画するための準備をするものです。長方形の左上隅を `-(width/2), -(height/2)` と指定しなければならないことに注意してください先ほど原点位置を `width/2, height/2` と指定したためです。
 
-    ```js
-    ctx.fillRect(-(width/2), -(height/2), width, height);
-    ```
+   ```js
+   ctx.fillRect(-(width/2), -(height/2), width, height);
+   ```
 
-7. Next, we'll draw our image using drawImage — the 9-parameter version. Add the following:
+7. 次に、drawImage の引数 9 個版を使用して画像を描画します。従うことで以下が追加されます。
 
-    ```js
-    ctx.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);
-    ```
+   ```js
+   ctx.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);
+   ```
 
-    As you can see:
+   見ての通りです。
 
-    - We specify `image` as the image to embed.
-    - Parameters 2 and 3 specify the top-left corner of the slice to cut out of the source image, with the X value as `sprite` multiplied by 102 (where `sprite` is the sprite number between 0 and 5) and the Y value always 0.
-    - Parameters 4 and 5 specify the size of the slice to cut out — 102 pixels by 148 pixels.
-    - Parameters 6 and 7 specify the top-left corner of the box into which to draw the slice on the canvas — the X position is 0 + `posX`, meaning that we can alter the drawing position by altering the `posX` value.
-    - Parameters 8 and 9 specify the size of the image on the canvas. We just want to keep its original size, so we specify 102 and 148 as the width and height.
+   - 埋め込む画像として `image` を指定します。
+   - 2 番目と 3 番目の引数は、ソース画像から切り出すスライスの左上隅を指定します。 X 値は `sprite` に 102 を掛けた値（ `sprite` は 0 から 5 までのスプライト番号）、 Y 値は常に 0 を指定します。
+   - 4 番目と 5 番目の引数は、切り出すスライスの大きさ（102 ピクセル× 148 ピクセル）を指定します。
+   - 6 番目と 7 番目の引数は、キャンバス上にスライスを描画するボックスの左上隅を指定します。 X 位置は 0 + `posX` で、`posX` 値を変更することにより描画位置を変更できることを意味しています。
+   - 8 番目と 9 番目の引数は、キャンバスで表示する画像の大きさを指定します。元の大きさを維持したいだけなので、幅と高さを 102 と 148 に指定しています。
 
-8. Now we'll alter the `sprite` value after each draw — well, after some of them anyway. Add the following block to the bottom of the `draw()` function:
+8. 今度は、描画するたびに `sprite` の値を変更します。まあ、とにかくいくつかの描画の後で。以下のブロックを `draw()` 関数の末尾に追加してください。
 
-    ```js
-      if (posX % 13 === 0) {
-        if (sprite === 5) {
-          sprite = 0;
-        } else {
-          sprite++;
-        }
-      }
-    ```
+   ```js
+     if (posX % 13 === 0) {
+       if (sprite === 5) {
+         sprite = 0;
+       } else {
+         sprite++;
+       }
+     }
+   ```
 
-    We are wrapping the whole block in `if (posX % 13 === 0) { ... }`. We use the modulo (`%`) operator (also known as the [remainder operator](</ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()>)) to check whether the `posX` value can be exactly divided by 13 with no remainder. If so, we move on to the next sprite by incrementing `sprite` (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (`requestAnimationFrame()` calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!
+   ブロック全体を `if (posX % 13 === 0) { }` で囲んでいます。モジュロ演算子(`%`)（[剰余演算子](/ja/docs/Web/JavaScript/Reference/Operators/Remainder)とも呼ばれます）を使用して、 `posX` の値が余りなく 13 で正確に割り切れるかどうかを調べています。もしそうなら、 `sprite` を増加して次のスプライトに移動します（スプライト #5 が終わったら 0 に戻ります）。これは事実上、 13 フレームごとにしかスプライトを更新していないことを意味し、およそ 1 秒間に 5 フレーム程度です（`requestAnimationFrame()` では、可能であれば 1 秒間に 60 フレームまで呼び出されます）。フレームレートを意図的に遅くしているのは、作業するスプライトが 6 つしかないためで、 60 分の 1 秒ごとに 1 つずつ表示すると、キャラクターの移動が速くなりすぎてしまうからです。
 
-    Inside the outer block we use an [`if ... else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) statement to check whether the `sprite` value is at 5 (the last sprite, given that the sprite numbers run from 0 to 5). If we are showing the last sprite already, we reset `sprite` back to 0; if not we just increment it by 1.
+   外側のブロックの中では [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文を使用して、 `sprite` の値が 5 （0 から 5 までのスプライト番号が実行されている最後のスプライト）であるかどうかを調べています。もし、すでに最後のスプライトを示していれば、 `sprite` を 0 に戻し、そうでなければ、 1 だけ増加させます。
 
-9. Next we need to work out how to change the `posX` value on each frame — add the following code block just below your last one.
+9. 次に、各フレームで `posX` 値を変更する方法を作業する必要があります。次のコードブロックを、前回のコードのすぐ下に追加してください。
 
-    ```js
-      if(posX > width/2) {
-        newStartPos = -((width/2) + 102);
-        posX = Math.ceil(newStartPos);
-        console.log(posX);
-      } else {
-        posX += 2;
-      }
-    ```
+   ```js
+     if (posX > width/2) {
+       let newStartPos = -((width/2) + 102);
+       posX = Math.ceil(newStartPos);
+       console.log(posX);
+     } else {
+       posX += 2;
+     }
+   ```
 
-    We are using another `if ... else` statement to see if the value of `posX` has become greater than `width/2`, which means our character has walked off the right edge of the screen. If so, we calculate a position that would put the character just to the left of the left side of the screen.
+   別の `if...else` 文を使用して、 `posX` の値が `width/2` よりも大きくなったかどうか、つまりキャラクターが画面の右端から歩き出したかどうかを確認しています。もしそうなら、キャラクターが画面の左側の辺のすぐ左に来るように位置を計算します。
 
-    If our character hasn't yet walked off the edge of the screen, we simply increment `posX` by 2. This will make him move a little bit to the right the next time we draw him.
+   キャラクターがまだ画面の端に達していない場合は、 `posX` を 2 だけ増加させます。これは、次に彼を描画するときに、彼を少し右側に移動させます。
 
-10. Finally, we need to make the animation loop by calling {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} at the bottom of the `draw()` function:
+10. 最後に、アニメーションをループさせるために、 `draw()` 関数の一番下に {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} を呼び出す必要があります。
 
     ```js
     window.requestAnimationFrame(draw);
     ```
 
-That's it! The final example should look like so:
+これで完了です。最終的な例はこのようになるはずです。
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/index.html", '100%', 260)}}
 
-> **Note:** The finished code is available on GitHub as [7_canvas_walking_animation.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html).
+> **メモ:** The finished code is available on GitHub as [7_canvas_walking_animation](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
 
-### 簡単なドローアプリ
+### 簡単なお絵描きアプリ
 
-As a final animation example, we'd like to show you a very simple drawing application, to illustrate how the animation loop can be combined with user input (like mouse movement, in this case). We won't get you to walk through and build this one; we'll just explore the most interesting parts of the code.
+最後のアニメーションの例として、とてもシンプルな描画アプリケーションを示し、アニメーションループとユーザー入力（この場合はマウスの動きなど）をどのように組み合わせられるかを説明したいと思います。このアプリケーションを実際に作ってみることはせず、コードの最も注目される部分だけを見ていきます。
 
-The example can be found on GitHub as [8_canvas_drawing_app.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app.html), and you can play with it live below:
+この例は GitHub で [8_canvas_drawing_app](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app) として提供されており、以下からライブで動かすことができます。
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app.html", '100%', 600)}}
+{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app/index.html", '100%', 600)}}
 
-Let's look at the most interesting parts. First of all, we keep track of the mouse's X and Y coordinates and whether it is being clicked or not with three variables: `curX`, `curY`, and `pressed`. When the mouse moves, we fire a function set as the `onmousemove` event handler, which captures the current X and Y values. We also use `onmousedown` and `onmouseup` event handlers to change the value of `pressed` to `true` when the mouse button is pressed, and back to `false` again when it is released.
+最も興味深い部分を見ていきましょう。まず最初に、マウスの X と Y の座標と、クリックされているかどうかを `curX`、`curY`、`pressed` という 3 つの変数で記録しています。マウスが移動したら、 `mousemove` イベントハンドラーとして設定された関数を発行し、現在の X と Y の値を取得します。また、`mousedown` と `mouseup` イベントハンドラーを使用して、マウスボタンが押されたときに `pressed` の値を `true` に変更し、離したときに再び `false` に戻しています。
 
 ```js
 let curX;
 let curY;
 let pressed = false;
 
-document.onmousemove = function(e) {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-}
+// マウスポインターの座標を更新する
+document.addEventListener('mousemove', (e) => {
+  curX = e.pageX;
+  curY = e.pageY;
+});
 
-canvas.onmousedown = function() {
-  pressed = true;
-};
+canvas.addEventListener('mousedown', () => pressed = true);
 
-canvas.onmouseup = function() {
-  pressed = false;
-}
+canvas.addEventListener('mouseup', () => pressed = false);
 ```
 
-When the "Clear canvas" button is pressed, we run a simple function that clears the whole canvas back to black, the same way we've seen before:
+"Clear canvas" ボタンが押されたら、キャンバス全体を黒に戻す簡単な関数を実行します。これは、これまでと同じ方法です。
 
 ```js
-clearBtn.onclick = function() {
-  ctx.fillStyle = 'rgb(0, 0, 0)';
-  ctx.fillRect(0, 0, width, height);
-}
+clearBtn.addEventListener('click', () => {
+  ctx.fillStyle = 'rgb(0,0,0)';
+  ctx.fillRect(0,0,width,height);
+});
 ```
 
-The drawing loop is pretty simple this time around — if pressed is `true`, we draw a circle with a fill style equal to the value in the color picker, and a radius equal to the value set in the range input. We have to draw the circle 85 pixels above where we measured it from, because the vertical measurement is taken from the top of the viewport, but we are drawing the circle relative to the top of the canvas, which starts below the 85 pixel-high toolbar. If we drew it with just `curY` as the y coordinate, it would appear 85 pixels lower than the mouse position.
+描画ループは今回はとてもシンプルです。pressed が `true` の場合、カラーピッカーの値に等しい塗りつぶしスタイルと、範囲入力で設定した値に等しい半径を持つ円を描画します。垂直方向の測定はビューポートの上部から行われるため、円を測定した位置から 85 ピクセル上に描画する必要がありますが、キャンバスの上部から相対的に円を描いているので、ツールバーの高さ 85 ピクセルよりも下から始まっています。もし、 y 座標として `curY` だけで描画した場合、マウス位置より 85 ピクセル低い位置に現れることになります。
 
 ```js
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
     ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
@@ -656,151 +664,151 @@ function draw() {
 draw();
 ```
 
-> **Note:** The {{htmlelement("input")}} `range` and `color` types are supported fairly well across browsers, with the exception of Internet Explorer versions less than 10; also Safari doesn't yet support `color`. If your browser doesn't support these inputs, they will fall back to simple text fields and you'll just have to enter valid color/number values yourself.
+> **メモ:** {{htmlelement("input")}} の `range` および `color` 型は、 Internet Explorer のバージョン 10 より前を除いて、すべてのブラウザーが対応しています。また、 Safari も `color` に対応していません。もしブラウザーがこれらの入力型に対応していない場合は、単純なテキストフィールドに戻り、有効な色や数の値を自分で入力する必要があります。
 
 ## WebGL
 
-It's now time to leave 2D behind, and take a quick look at 3D canvas. 3D canvas content is specified using the [WebGL API](/ja/docs/Web/API/WebGL_API), which is a completely separate API from the 2D canvas API, even though they both render onto {{htmlelement("canvas")}} elements.
+さて、そろそろ 2D を離れ、3D キャンバスについて簡単に見てみましょう。3D キャンバスの中身は [WebGL API](/ja/docs/Web/API/WebGL_API) を使用して指定します。これは 2D キャンバス API とは完全に別の API ですが、どちらも {{htmlelement("canvas")}} 要素に描画されます。
 
-WebGL is based on [OpenGL](/ja/docs/Glossary/OpenGL) (Open Graphics Library), and allows you to communicate directly with the computer's [GPU](/ja/docs/Glossary/GPU). As such, writing raw WebGL is closer to low level languages such as C++ than regular JavaScript; it is quite complex but incredibly powerful.
+WebGL は [OpenGL](/ja/docs/Glossary/OpenGL) (Open Graphics Library) に基づいており、コンピューターの [GPU](/ja/docs/Glossary/GPU) と直接通信することが可能です。そのため、生の WebGL を書くことは、通常の JavaScript よりも C++ のような低レベル言語に近く、非常に複雑ですが非常に強力です。
 
 ### ライブラリーの使用
 
-Because of its complexity, most people write 3D graphics code using a third party JavaScript library such as [Three.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), or [Babylon.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). Most of these work in a similar way, providing functionality to create primitive and custom shapes, position viewing cameras and lighting, covering surfaces with textures, and more. They handle the WebGL for you, letting you work on a higher level.
+その複雑さから、ほとんどの人は [Three.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), [Babylon.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) などのサードパーティの JavaScript ライブラリーを使用して 3D グラフィックのコードを記述しています。これらのほとんどは同じように動作し、基本的な図形やカスタム図形を作成する機能、表示カメラや照明を配置する機能、テクスチャで表面を覆う機能などを提供します。これは、あなたに代わって WebGL を処理し、より高いレベルで作業できるようにしてくれます。
 
-Yes, using one of these means learning another new API (a third party one, in this case), but they are a lot simpler than coding raw WebGL.
+これらの API を使用することは、別の新しい API（この場合はサードパーティーの API）を学習することを意味しますが、生の WebGL を使用するよりもはるかに簡単な方法です。
 
-### 立方体を作成する
+### 立方体の作成
 
-Let's look at a simple example of how to create something with a WebGL library. We'll choose [Three.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), as it is one of the most popular ones. In this tutorial we'll create the 3D spinning cube we saw earlier.
+WebGLライブラリーを使って何かを作成する簡単な例を見てみましょう。ここでは、最も人気のあるものの 1 つである [Three.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) を選んでみましょう。このチュートリアルでは、先ほど見た 3D の回転する立方体を作成します。
 
-1. To start with, make a local copy of [index.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/threejs-cube/index.html) in a new folder, then save a copy of [metal003.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/threejs-cube/metal003.png) in the same folder. This is the image we'll use as a surface texture for the cube later on.
-2. Next, create a new file called `main.js`, again in the same folder as before.
-3. If you open `index.html` in your code editor, you'll see that it has two {{htmlelement("script")}} elements — the first one attaching `three.min.js` to the page, and the second one attaching our `main.js` file to the page. You need to [download the three.min.js library](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js) and save it in the same directory as before.
-4. Now we've got `three.js` attached to our page, we can start to write JavaScript that makes use of it into `main.js`. Let's start by creating a new scene — add the following into your main.js file:
+1. まず、新しいフォルダーに [threejs-cube/index.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html) をローカルにコピーし、同じフォルダーに [metal003.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) をコピーして保存してください。これは、後で立方体の表面テクスチャとして使用する画像です。
+2. 次に、 `script.js` というファイルを新規に作成し、これも先ほどと同じフォルダーに保存します。
+3. 次に、 [three.min.js ライブラリーをダウンロード](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js)して、先ほどと同じディレクトリーに保存する必要があります。
+4. これで `three.js` をページに持つことができたので、これを使用する JavaScript を `script.js` に書き始めることができます。まず、新しいシーンを作成することから始めましょう。 main.js ファイルに以下のように追加してください。
 
-    ```js
-    const scene = new THREE.Scene();
-    ```
+   ```js
+   const scene = new THREE.Scene();
+   ```
 
-    The [`Scene()`](https://threejs.org/docs/index.html#Reference/Scenes/Scene) constructor creates a new scene, which represents the whole 3D world we are trying to display.
+   [`Scene()`](https://threejs.org/docs/index.html#api/en/scenes/Scene) コンストラクターは、表示しようとする 3D の世界全体を表す新しいシーンを作成します。
 
-5. Next, we need a **camera** so we can see the scene. In 3D imagery terms, the camera represents a viewer's position in the world. To create a camera, add the following lines next:
+5. 次に、シーンを見るための**カメラ**が必要です。 3D 画像の用語では、カメラは世界における視聴者の位置を表します。カメラを作成するには、以下の行を次に追加してください。
 
-    ```js
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
-    ```
+   ```js
+   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+   camera.position.z = 5;
+   ```
 
-    The [`PerspectiveCamera()`](https://threejs.org/docs/index.html#Reference/Cameras/PerspectiveCamera) constructor takes four arguments:
+   [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) コンストラクターは 4 つの引数を取ります。
 
-    - The field of view: How wide the area in front of the camera is that should be visible onscreen, in degrees.
-    - The aspect ratio: Usually, this is the ratio of the scene's width divided by the scene's height. Using another value will distort the scene (which might be what you want, but usually isn't).
-    - The near plane: How close to the camera objects can be before we stop rendering them to the screen. Think about how when you move your fingertip closer and closer to the space between your eyes, eventually you can't see it anymore.
-    - The far plane: How far away things are from the camera before they are no longer rendered.
+   - 視野角です。カメラの前方で画面に表示されるべき領域の広さを度数で表します。
+   - アスペクト比です。通常、これはシーンの幅をシーンの高さで割った比率です。別の値を使用すると、シーンが歪みます（それが狙いかもしれませんが、通常はそうではありません）。
+   - 前方平面です。カメラにどれだけ近づけば、オブジェクトを画面に描画しなくなるか、を指定します。指先を目と目の間の空間にどんどん移動させていくと、やがて見えなくなることを思い浮かべてください。
+   - 後方平面です。カメラからどのくらい離れれば描画されなくなるかを指定します。
 
-    We also set the camera's position to be 5 distance units out of the Z axis, which, like in CSS, is out of the screen towards you, the viewer.
+   また、カメラの位置は CSS と同じく、画面から視聴者である自分に向けて、 Z 軸から距離単位で 5 つ外側になるように設定しています。
 
-6. The third vital ingredient is a renderer. This is an object that renders a given scene, as viewed through a given camera. We'll create one for now using the [`WebGLRenderer()`](https://threejs.org/docs/index.html#Reference/Renderers/WebGLRenderer) constructor, but we'll not use it till later. Add the following lines next:
+6. 3 つ目の重要な要素は「レンダラー」です。これは指定されたカメラを通して見た、指定されたシーンをレンダリングするオブジェクトです。 [`WebGLRenderer()`](https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer) コンストラクターを使ってとりあえず作成しておきますが、これは後ほど使用することにします。以下の行を次に追加します。
 
-    ```js
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-    ```
+   ```js
+   const renderer = new THREE.WebGLRenderer();
+   renderer.setSize(window.innerWidth, window.innerHeight);
+   document.body.appendChild(renderer.domElement);
+   ```
 
-    The first line creates a new renderer, the second line sets the size at which the renderer will draw the camera's view, and the third line appends the {{htmlelement("canvas")}} element created by the renderer to the document's {{htmlelement("body")}}. Now anything the renderer draws will be displayed in our window.
+   最初の行では新しいレンダラーを作成し、 2 つ目の行ではレンダラーがカメラのビューを描画するサイズを設定し、 3 つ目の行ではレンダラーが作成した {{htmlelement("canvas")}} 要素を文書内の {{htmlelement("body")}} に追加しています。これで、レンダラーが描画した何らかのものがウィンドウに表示されるようになります。
 
-7. Next, we want to create the cube we'll display on the canvas. Add the following chunk of code at the bottom of your JavaScript:
+7. 次に、キャンバス上に表示する立方体を作成します。JavaScript で以下のコードを追加してください。
 
-    ```js
-    let cube;
+   ```js
+   let cube;
 
-    let loader = new THREE.TextureLoader();
+   const loader = new THREE.TextureLoader();
 
-    loader.load( 'metal003.png', function (texture) {
-      texture.wrapS = THREE.RepeatWrapping;
-      texture.wrapT = THREE.RepeatWrapping;
-      texture.repeat.set(2, 2);
+   loader.load('metal003.png', (texture) => {
+     texture.wrapS = THREE.RepeatWrapping;
+     texture.wrapT = THREE.RepeatWrapping;
+     texture.repeat.set(2, 2);
 
-      let geometry = new THREE.BoxGeometry(2.4, 2.4, 2.4);
-      let material = new THREE.MeshLambertMaterial( { map: texture, shading: THREE.FlatShading } );
-      cube = new THREE.Mesh(geometry, material);
-      scene.add(cube);
+     const geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
+     const material = new THREE.MeshLambertMaterial({ map: texture });
+     cube = new THREE.Mesh(geometry, material);
+     scene.add(cube);
 
-      draw();
-    });
-    ```
+     draw();
+   });
+   ```
 
-    There's a bit more to take in here, so let's go through it in stages:
+   まだ少しやることがあるので、順を追って考えてみましょう。
 
-    - We first create a `cube` global variable so we can access our cube from anywhere in the code.
-    - Next, we create a new [`TextureLoader`](https://threejs.org/docs/index.html#Reference/Loaders/TextureLoader) object, then call `load()` on it. `load()` takes two parameters in this case (although it can take more): the texture we want to load (our PNG), and a function that will run when the texture has loaded.
-    - Inside this function we use properties of the [`texture`](https://threejs.org/docs/index.html#Reference/Textures/Texture) object to specify that we want a 2 x 2 repeat of the image wrapped around all sides of the cube. Next, we create a new [`BoxGeometry`](https://threejs.org/docs/index.html#Reference/Geometries/BoxGeometry) object and a new [`MeshLambertMaterial`](https://threejs.org/docs/index.html#Reference/Materials/MeshLambertMaterial) object, and bring them together in a [`Mesh`](https://threejs.org/docs/index.html#Reference/Objects/Mesh) to create our cube. An object typically requires a geometry (what shape it is) and a material (what its surface looks like).
-    - Last of all, we add our cube to the scene, then call our `draw()` function to start off the animation.
+   - 最初に `cube` グローバル変数を作成し、コード内の任意の場所から立方体にアクセスできるようにします。
+   - 次に、新しい [`TextureLoader`](https://threejs.org/docs/index.html#api/en/loaders/TextureLoader) オブジェクトを作成し、 `load()` を呼び出します。 `load()`はこの場合、 2 つの引数を取ります（もっと取ることもできますが）。読み込むテクスチャ (PNG) と、テクスチャが読み込まれたときに実行される関数です。
+   - この関数の内部では、[`texture`](https://threejs.org/docs/index.html#api/en/textures/Texture) オブジェクトのプロパティを使用して、立方体のすべての辺に 2 x 2 の画像の繰り返しを回り込ませるように指定しています。次に、新しい [`BoxGeometry`](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry) オブジェクトと新しい [`MeshLambertMaterial`](https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial) オブジェクトを作成し、それらを [`Mesh`](https://threejs.org/docs/index.html#api/en/objects/Mesh) で結合して立方体を作成しています。オブジェクトは通常、形状（どのような形か）と素材（表面がどのように見えるか）を必要とします。
+   - 最後に、立方体をシーンに追加し、 `draw()` 関数を呼び出して、アニメーションを開始します。
 
-8. Before we get to defining `draw()`, we'll add a couple of lights to the scene, to liven things up a bit; add the following blocks next:
+8. `draw()` の定義に入る前に、シーンを少し盛り上げるために、ライトをいくつか追加します。以下、ブロックを追加していきます。
 
-    ```js
-    let light = new THREE.AmbientLight('rgb(255, 255, 255)'); // soft white light
-    scene.add(light);
+   ```js
+   const light = new THREE.AmbientLight('rgb(255,255,255)'); // soft white light
+   scene.add(light);
 
-    let spotLight = new THREE.SpotLight('rgb(255, 255, 255)');
-    spotLight.position.set( 100, 1000, 1000 );
-    spotLight.castShadow = true;
-    scene.add(spotLight);
-    ```
+   const spotLight = new THREE.SpotLight('rgb(255,255,255)');
+   spotLight.position.set(100, 1000, 1000);
+   spotLight.castShadow = true;
+   scene.add(spotLight);
+   ```
 
-    An [`AmbientLight`](https://threejs.org/docs/index.html#Reference/Lights/AmbientLight) object is a kind of soft light that lightens the whole scene a bit, like the sun when you are outside. The [`SpotLight`](https://threejs.org/docs/index.html#Reference/Lights/SpotLight) object, on the other hand, is a directional beam of light, more like a flashlight/torch (or a spotlight, in fact).
+   [`AmbientLight`](https://threejs.org/docs/index.html#api/en/lights/AmbientLight) オブジェクトは、シーン全体を少し明るくするソフトライトのようなもので、外にいるときの太陽のようなものです。一方、[`SpotLight`](https://threejs.org/docs/index.html#api/en/lights/SpotLight) オブジェクトは、指向性のある光線で、懐中電灯やトーチ（実際にはスポットライト）のようなものです。
 
-9. Last of all, let's add our `draw()` function to the bottom of the code:
+9. 最後に、コードの一番下に `draw()` 関数を追加しましょう。
 
-    ```js
-    function draw() {
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
+   ```js
+   function draw() {
+     cube.rotation.x += 0.01;
+     cube.rotation.y += 0.01;
+     renderer.render(scene, camera);
 
-      requestAnimationFrame(draw);
-    }
-    ```
+     requestAnimationFrame(draw);
+   }
+   ```
 
-    This is fairly intuitive; on each frame, we rotate our cube slightly on its X and Y axes, then render the scene as viewed by our camera, then finally call `requestAnimationFrame()` to schedule drawing our next frame.
+   これはかなり直感的です。各フレームで立方体を X 軸と Y 軸でわずかに回転させ、カメラで見たシーンを描画し、最後に `requestAnimationFrame()` を呼び出して次のフレームを描くスケジュールを決めています。
 
-Let's have another quick look at what the finished product should look like:
+もう一度、完成品のイメージをすばやく把握しておきましょう。
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
-You can [find the finished code on GitHub](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-cube).
+[完成したコードは GitHub で見つける](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube)ことができます。
 
-> **Note:** In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
+> **メモ:** GitHub リポジトリーには、もうひとつ興味深い 3D 立方体の例である [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)) も掲載されています。これは {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用して、コンピューターのウェブカメラから動画ストリームを受け取り、それをテクスチャとして立方体の横に投影しています。
 
 ## まとめ
 
-At this point, you should have a useful idea of the basics of graphics programming using Canvas and WebGL and what you can do with these APIs, as well as a good idea of where to go for further information. Have fun!
+この時点で、Canvas と WebGL を使用したグラフィック プログラミングの基礎と、これらの API を使用してできることについて有益な考えを持ち、さらに詳しい情報を得るにはどこに行けばよいかについても十分な考えを持つことができるようになっているはずです。楽しんでください。
 
 ## 関連情報
 
-Here we have covered only the real basics of canvas — there is so much more to learn! The below articles will take you further.
+キャンバスには、まだまだ学ぶべきことがたくさんあります。この記事は、その先を導いてくれるでしょう。
 
-- [Canvas tutorial](/ja/docs/Web/API/Canvas_API/Tutorial) — A very detailed tutorial series explaining what you should know about 2D canvas in much more detail than was covered here. Essential reading.
-- [WebGL tutorial](/ja/docs/Web/API/WebGL_API/Tutorial) — A series that teaches the basics of raw WebGL programming.
-- [Building up a basic demo with Three.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) — basic Three.js tutorial. We also have equivalent guides for [PlayCanvas](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) or [Babylon.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js).
-- [Game development](/ja/docs/Games) — the landing page for web games development on MDN. There are some really useful tutorials and techniques available here related to 2D and 3D canvas — see the Techniques and Tutorials menu options.
+- [キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial) — 2D キャンバスについて知っておくべきことを、ここで扱った内容よりもとても詳しく説明しているチュートリアルシリーズです。必読です。
+- [WebGL のチュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial) — 生の WebGL プログラミングの基本を学ぶシリーズ。
+- [Three.js を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) — Three.js の基本的なチュートリアルです。 [PlayCanvas](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) や [Babylon.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) にも同等のガイドがあります。
+- [ゲーム開発](/ja/docs/Games) — は、 MDN でウェブゲームを開発するためのランディングページです。ここには、 2D および 3D キャンバスに関する実に有益なチュートリアルやテクニックがあります。「テクニックとチュートリアル」メニューオプションをご覧ください。
 
 ## 例
 
-- [Violent theramin](https://github.com/mdn/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
-- [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic) — Uses a canvas to visualize real-time audio data from the Web Audio API.
+- [Violent theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin) — 音声を生成するためにウェブオーディオ API を使用し、それと一緒に美しく視覚化するためにキャンバスを使用します。
+- [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic) — ウェブオーディオ API からのリアルタイムの音声データを視覚化するためにキャンバスを使用します。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-## このモジュール内
+## このモジュール
 
-- [Introduction to web APIs](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
+- [Web API の紹介](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [サーバーからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [サードパーティ API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- **グラフィックの描画**
+- [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
+- [クライアント側ストレージ](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

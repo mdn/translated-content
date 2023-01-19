@@ -2,6 +2,7 @@
 title: Window.screenTop
 slug: Web/API/Window/screenTop
 ---
+
 {{APIRef}}
 
 **`Window.screenTop`** 只读属性返回垂直距离，单位是 CSS 像素，从用户浏览器的上边界到屏幕最顶端。

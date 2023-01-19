@@ -3,6 +3,7 @@ title: Location
 slug: Web/API/Location
 translation_of: Web/API/Location
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`Location`** représente l'emplacement de l'objet auquel elle est liée. Les changements effectués dessus sont reflétés sur l'objet lié. Les deux interfaces {{domxref("Document")}} et {{domxref("Window")}} sont liées à une `Location`, accessible via {{domxref("Document.location")}} et {{domxref("Window.location")}} respectivement.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 original_slug: Web/JavaScript/Reference/Erreurs/Missing_bracket_after_list
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

@@ -2,6 +2,7 @@
 title: PerformanceObserver.observe()
 slug: Web/API/PerformanceObserver/observe
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 {{domxref("PerformanceObserver", "性能监测对象")}} 的 **`observe()`** 方法用于观察传入的参数中指定的性能条目类型的集合。当记录一个指定类型的性能条目时，性能监测对象的回调函数将会被调用。
@@ -28,7 +29,7 @@ observer.observe(options);
 var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
   for (var i=0; i < entries.length; i++) {
-    //处理 “mark” 和 “frame” 事件
+    //处理“mark”和“frame”事件
   }
 });
 //调用 observer 对象的 observe() 方法
@@ -38,7 +39,7 @@ observer.observe({entryTypes: ["mark", "frame"]});
 
 //预先声明回调函数 perf_observer
 function perf_observer(list, observer) {
-  //处理 “measure” 事件
+  //处理“measure”事件
 }
 //再将其传入 PerformanceObserver()，成功 new 了一个 PerformanceObserver 类的，名为 observer2 的对象
 var observer2 = new PerformanceObserver(perf_observer);

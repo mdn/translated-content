@@ -2,6 +2,7 @@
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 ---
+
 {{JSRef}}
 
 **`handler.deleteProperty()`** メソッドは、 {{jsxref("Operators/delete", "delete")}} 演算子のトラップです。
@@ -83,9 +84,7 @@ console.log(result)    // false
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-delete-p', '[[Delete]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

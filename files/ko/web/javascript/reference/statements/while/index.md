@@ -1,12 +1,8 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
-tags:
-  - 반복문
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Statements/while
-browser-compat: javascript.statements.while
 ---
+
 {{jsSidebar("Statements")}}
 
 **while문**은 조건문이 참일 때 실행되는 반복문이다. 조건은 문장안이 실행되기 전에 참, 거짓을 판단한다.

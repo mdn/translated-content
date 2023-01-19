@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy
 browser-compat: javascript.builtins.Proxy
 ---
+
 {{JSRef}}
 
 Un objet **Proxy** permet de créer un intermédiaire pour un autre objet et qui peut intercepter et redéfinir certaines opérations fondamentales pour lui.

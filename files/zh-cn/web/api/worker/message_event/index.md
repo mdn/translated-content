@@ -2,6 +2,7 @@
 title: 'Worker: message event'
 slug: Web/API/Worker/message_event
 ---
+
 {{APIRef}}当 worker 的父级接收到来自其 worker 的消息时，会在 {{domxref('Worker')}} 对象上触发 `message` 事件。例如：当 worker 通过 [`DedicatedWorkerGlobalScope.postMessage()`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) 发送了一条消息时。
 
 <table class="properties">
@@ -22,7 +23,7 @@ slug: Web/API/Worker/message_event
       <th scope="row">对应事件处理属性</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/Worker/onmessage">onmessage</a></code
+          ><a href="/zh-CN/docs/Web/API/Worker/onmessage">onmessage</a></code
         >
       </td>
     </tr>
@@ -65,7 +66,7 @@ self.postMessage('I\'m alive!');
 
 ## 浏览器兼容性
 
-{{Compat("api.Worker.message_event")}}
+{{Compat}}
 
 ## 另请参阅
 

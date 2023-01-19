@@ -4,6 +4,7 @@ slug: Web/CSS/minmax
 translation_of: Web/CSS/minmax()
 original_slug: Web/CSS/minmax()
 ---
+
 {{CSSRef}}
 
 La [fonction CSS](/fr/docs/Web/CSS/CSS_Functions) **`minmax()`** définit un intervalle de taille supérieure ou égale à _min_ et inférieure ou égale à _max_. Elle est utilisée avec [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout).
@@ -117,13 +118,11 @@ Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` 
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-minmax", "minmax()")}} | {{Spec2("CSS Grid")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-template-columns.minmax")}}
+{{Compat}}
 
 ## Voir aussi
 

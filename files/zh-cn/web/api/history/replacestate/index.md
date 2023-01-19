@@ -2,9 +2,10 @@
 title: History.replaceState()
 slug: Web/API/History/replaceState
 ---
+
 {{APIRef("DOM")}}
 
-`replaceState()`方法使用`state objects`, `title`,和 `URL` 作为参数， 修改当前历史记录实体，如果你想更新当前的 state 对象或者当前历史实体的 URL 来响应用户的的动作的话这个方法将会非常有用。
+`replaceState()`方法使用`state objects`, `title`,和 `URL` 作为参数，修改当前历史记录实体，如果你想更新当前的 state 对象或者当前历史实体的 URL 来响应用户的的动作的话这个方法将会非常有用。
 
 ## 语法
 
@@ -46,4 +47,4 @@ history.replaceState(stateObj, "", "bar2.html");
 
 ## 浏览器兼容性
 
-{{Compat("api.History.replaceState")}}
+{{Compat}}

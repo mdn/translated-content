@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/toStringTag
 ---
+
 {{JSRef}}
 
 Le symbole connu **`Symbol.toStringTag`** est une propriété qui est une chaîne de caractères qui est utilisée pour la description textuelle par défaut d'un objet. Ce symbole est utilisé par le moteur JavaScript via la méthode {{jsxref("Object.prototype.toString()")}}.
@@ -61,14 +62,11 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.toStringTag")}}
+{{Compat}}
 
 ## Voir aussi
 

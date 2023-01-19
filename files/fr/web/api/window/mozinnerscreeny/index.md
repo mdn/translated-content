@@ -10,6 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/mozInnerScreenY
 ---
+
 {{APIRef}}
 
 ## Résumé

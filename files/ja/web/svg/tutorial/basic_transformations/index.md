@@ -4,6 +4,7 @@ slug: Web/SVG/Tutorial/Basic_Transformations
 l10n:
   sourceCommit: b63ef3f9e01f3bd46009be8e722f7cb8ec0ecee4
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
 これまで作成してきた美しい画像を変形させる準備ができました。しかし始めに、 {{SVGElement("g")}} 要素を正式に紹介しましょう。このヘルパーを用いると、要素の集合全体にプロパティを割り当てることができます。実際のところ、これが唯一の用途です。

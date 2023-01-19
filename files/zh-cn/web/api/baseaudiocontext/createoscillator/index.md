@@ -2,6 +2,7 @@
 title: BaseAudioContext.createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("BaseAudioContext")}} 接口的 createOscillator() 方法创建一个 {{domxref("OscillatorNode")}}，它是一个表示周期性波形的源。它基本上产生一个不变的音调。
@@ -39,7 +40,7 @@ oscillator.start();
 
 ## Browser compatibility
 
-{{Compat("api.BaseAudioContext.createOscillator")}}
+{{Compat}}
 
 ## See also
 

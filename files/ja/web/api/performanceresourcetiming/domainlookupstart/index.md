@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.domainLookupStart
 slug: Web/API/PerformanceResourceTiming/domainLookupStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`domainLookupStart`** 読み取り専用プロパティは、ブラウザーがリソースのドメイン名検索を開始する直前に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
@@ -55,9 +56,7 @@ function print_start_and_end_properties(perfEntry) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       | ステータス                           | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-domainLookupStart', 'domainLookupStart')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

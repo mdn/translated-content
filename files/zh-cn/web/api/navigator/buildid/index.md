@@ -2,6 +2,7 @@
 title: Navigator.buildID
 slug: Web/API/Navigator/buildID
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 返回所使用浏览器的构建标识符。现代浏览器中，这个属性返回一个固定的时间戳作为私有的计量方法，比如 Firefox 64 及以后的版本返回 `20181001000000`。
@@ -28,4 +29,4 @@ console.log(window.navigator.buildID);
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.buildID")}}
+{{Compat}}

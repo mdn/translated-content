@@ -2,9 +2,10 @@
 title: text-justify
 slug: Web/CSS/text-justify
 ---
+
 {{CSSRef}}
 
-CSS 属性 **`text-justify` **定义的是当文本的 {{cssxref("text-align")}} 属性被设置为 `:justify` 时的齐行方法。
+CSS 属性 **`text-justify`** 定义的是当文本的 {{cssxref("text-align")}} 属性被设置为 `:justify` 时的齐行方法。
 
 ```css
 text-justify: none;
@@ -86,7 +87,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-justify")}}
+{{Compat}}
 
 ## 参见
 

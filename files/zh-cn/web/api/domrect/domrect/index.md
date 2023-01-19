@@ -2,6 +2,7 @@
 title: DOMRect.DOMRect()
 slug: Web/API/DOMRect/DOMRect
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 **`DOMRect()`** 构造函数生成一个新的 {{domxref("DOMRect")}} 对象。
@@ -39,7 +40,7 @@ myDOMRect = new DOMRect(0,0,100,100);
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMRect.DOMRect")}}
+{{Compat}}
 
 ## 更多
 

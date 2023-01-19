@@ -2,6 +2,7 @@
 title: <xsl:sort>
 slug: Web/XSLT/Element/sort
 ---
+
 {{ XsltRef() }}
 
 `<xsl:sort>` 要素は、`<xsl:apply-templates>` または `<xsl:for-each>` で選択されたノードのソートキーを定義し、それらが処理される順序を決定します。

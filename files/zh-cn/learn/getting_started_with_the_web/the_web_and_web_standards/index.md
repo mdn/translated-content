@@ -2,6 +2,7 @@
 title: Web 和 Web 标准
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 ---
+
 {{learnsidebar}}
 
 这篇文章提供了一些有用的 Web 背景知识——它是如何产生的，什么是 Web 标准技术，它们是如何协同工作的，为什么“Web 开发人员”是一个很好的职业选择，以及您将在本课程中学习哪些最佳做法。
@@ -10,11 +11,11 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 我们会简单叙述，因为别处已有很多关于 Web 历史的详尽说明，稍后我们会链接到它们（如果那您对更多细节内容感兴趣，也请试着在您惯用的搜索引擎中搜索“Web 的历史”以获取相关内容。）
 
-在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/zh-CN/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于 [分组交换（ packet switching）](https://en.wikipedia.org/wiki/Packet_switching) 进行工作，并且首次实现了 [TCP/IP 协议族（TCP/IP protocol suite）](https://en.wikipedia.org/wiki/Internet_protocol_suite) 。这两种技术构成了互联网基础设施的基础。
+在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/zh-CN/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于 [分组交换（packet switching）](https://en.wikipedia.org/wiki/Packet_switching) 进行工作，并且首次实现了 [TCP/IP 协议族（TCP/IP protocol suite）](https://en.wikipedia.org/wiki/Internet_protocol_suite) 。这两种技术构成了互联网基础设施的基础。
 
 1980 年，Tim Berners-Lee（通常称之为 TimBL）写了一个叫 ENQUIRE 的笔记本程序，这个程序实现了不同节点之间链接的概念。听起来有点熟悉对吧？
 
-快进到 1989 年，TimBL 在 CERN 撰写了 [《Information Management: A Proposal》](https://www.w3.org/History/1989/proposal.html) 和《HyperText》 ； 这两个出版物共同为 Web 将如何工作做了铺垫。两个出版物获得了极大的关注，这足以说服 TimBL 的上司让他继续前进，并创建一个全球超文本系统。
+快进到 1989 年，TimBL 在 CERN 撰写了 [《Information Management: A Proposal》](https://www.w3.org/History/1989/proposal.html) 和《HyperText》 ；这两个出版物共同为 Web 将如何工作做了铺垫。两个出版物获得了极大的关注，这足以说服 TimBL 的上司让他继续前进，并创建一个全球超文本系统。
 
 到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西—— [HTTP](/zh-CN/docs/Web/HTTP)，[HTML](/zh-CN/docs/Web/HTML)，名为 [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器，一个 HTTP 服务器和一些用于查看的网页。
 
@@ -34,7 +35,7 @@ Web 标准是由标准机构创建的——这些机构邀请不同技术公司�
 
 Web 标准的关键方面之一，TimBL 和 W3C 从一开始就认同的一点，Web（和 Web 技术）应该自由地贡献和使用，并且不受专利/许可的约束。因此，任何人都可以编写代码免费建立网站，并且任何人都可以为编写规范的标准创建过程做出贡献。
 
-由于 Web 技术是开放的，因此在许多不同公司之间的协作中，这意味着没有一家公司可以控制它，这确实是一件好事。 您不会希望任何一家公司突然决定将整个 Web 置于付费壁垒之后，或者发布每个人都必须购买以继续制作网站的新版 HTML，或者更糟糕的是，仅仅将他们不再感兴趣的网站关闭。
+由于 Web 技术是开放的，因此在许多不同公司之间的协作中，这意味着没有一家公司可以控制它，这确实是一件好事。您不会希望任何一家公司突然决定将整个 Web 置于付费壁垒之后，或者发布每个人都必须购买以继续制作网站的新版 HTML，或者更糟糕的是，仅仅将他们不再感兴趣的网站关闭。
 
 这一点允许 Web 保持免费可用，使其成为公共资源。
 
@@ -113,7 +114,7 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 ### 开发工具
 
-一旦了解了可用于构建网页的“原始”技术（例如 HTML，CSS 和 JavaScript），您很快就会发现各种可用于使工作更轻松或更有效的工具。 例如：
+一旦了解了可用于构建网页的“原始”技术（例如 HTML，CSS 和 JavaScript），您很快就会发现各种可用于使工作更轻松或更有效的工具。例如：
 
 - 现代浏览器中的 [开发人员工具（developer tools）](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)可用于调试代码。
 - 可用于运行测试以显示您的代码是否按预期运行的 [测试工具（Testing tools）](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。

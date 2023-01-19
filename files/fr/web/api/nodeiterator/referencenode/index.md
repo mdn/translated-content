@@ -10,6 +10,7 @@ tags:
   - Propriétés
 translation_of: Web/API/NodeIterator/referenceNode
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable }}
 
 La propriété en lecture seule **`NodeIterator.referenceNode`** renvoie le {{domxref("Node")}} auquel l'itérateur est ancré ; si de nouveaux noeuds sont insérés, l'itérateur reste ancré au noeud de référence spécifié par cette propriété.

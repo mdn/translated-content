@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:hover
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:hover`** permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec le pointeur, sans nécessairement l'activer.
@@ -19,7 +20,7 @@ a:hover {
 }
 ```
 
-La mise en forme ciblée par cette pseudo-classe peut être surchargée par d'autres pseudo-classes relatives aux liens hypertextes comme {{cssxref(":link")}}, {{cssxref(":visited")}}, et {{cssxref(":active")}}, apparaissant dans des règles subséquentes. Pour décorer les liens sans effet de bord problématique, on placera la règle `:hover` après les règles `:link` et `:visited` mais avant la règle `:active` (l'ordre est  `:link` — `:visited` — `:hover` — `:active` – un moyen mnémotechnique est de se souvenir des initiales LVHA) tandis que l'ordre de la règle {{cssxref(":focus")}} est indifférent.
+La mise en forme ciblée par cette pseudo-classe peut être surchargée par d'autres pseudo-classes relatives aux liens hypertextes comme {{cssxref(":link")}}, {{cssxref(":visited")}}, et {{cssxref(":active")}}, apparaissant dans des règles subséquentes. Pour décorer les liens sans effet de bord problématique, on placera la règle `:hover` après les règles `:link` et `:visited` mais avant la règle `:active` (l'ordre est `:link` — `:visited` — `:hover` — `:active` – un moyen mnémotechnique est de se souvenir des initiales LVHA) tandis que l'ordre de la règle {{cssxref(":focus")}} est indifférent.
 
 La pseudo-classe `:hover` peut être appliquée à n'importe quel [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements). {{experimental_inline}}
 
@@ -55,16 +56,11 @@ a:hover {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Commentaires                                                 | Retours                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-hover', ':hover')}}                     |                                                              | [_Issues_ GitHub du WHATWG HTML (en anglais)](https://github.com/whatwg/html/issues)                                  |
-| {{SpecName('CSS4 Selectors', '#the-hover-pseudo', ':hover')}}                                 | Permet d'appliquer `:hover` à n'importe quel pseudo-élément. | [Issues GitHub pour les brouillons du groupe de travail CSS (en anglais)](https://github.com/w3c/csswg-drafts/issues) |
-| {{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover')}} |                                                              |                                                                                                                       |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover')}}                 | Définition initiale.                                         |                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.hover")}}
+{{Compat}}
 
 ## Voir aussi
 

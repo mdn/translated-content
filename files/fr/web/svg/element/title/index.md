@@ -8,6 +8,7 @@ tags:
   - SVG Description
 translation_of: Web/SVG/Element/title
 ---
+
 {{SVGRef}}
 
 Tout élément graphique ou conteneur dans un dessin SVG peut définir un titre en utilisant un élément **`<title>`**, ce titre ne peut contenir que du texte.

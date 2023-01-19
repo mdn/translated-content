@@ -3,6 +3,7 @@ title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 ---
+
 {{JSRef}}
 
 **`handler.apply()`** 方法用于拦截函数的调用。
@@ -31,7 +32,7 @@ var p = new Proxy(target, {
 
 ### 返回值
 
-`apply 方法可以返回任何值。`
+`apply` 方法可以返回任何值。
 
 ## 描述
 

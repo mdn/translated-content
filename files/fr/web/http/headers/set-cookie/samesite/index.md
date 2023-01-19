@@ -8,6 +8,7 @@ tags:
   - samesite
 translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
+
 {{HTTPSidebar}}
 
 L'attribut **`SameSite`** de l'en-tête de réponse HTTP {{HTTPHeader("Set-Cookie")}} vous permet de déclarer si vos cookies doivent être restreints au site visité, à des tiers, ou à des sous-domaines du site actuel.
@@ -74,7 +75,7 @@ Même si vous pouvez compter sur la valeur par défaut `SameSite=Lax` des naviga
 Set-Cookie: flavor=choco; SameSite=Lax
 ```
 
-## **Exemples**
+## Exemples
 
 ```
 RewriteEngine on

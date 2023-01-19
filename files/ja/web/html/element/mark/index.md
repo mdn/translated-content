@@ -1,21 +1,9 @@
 ---
 title: '<mark>: 文字列マーク要素'
 slug: Web/HTML/Element/mark
-tags:
-  - HTML
-  - HTML 文字レベルの意味付け
-  - HTML5
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - ウェブ
-  - マーク
-  - 強調
-  - 要素
-translation_of: Web/HTML/Element/mark
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の文字列マーク要素** (**`<mark>`**) は、周囲の文脈の中でマークを付けた部分の関連性や重要性のために、参照や記述の目的で目立たせたり強調したりする文字列を表します。
 
@@ -87,7 +75,7 @@ translation_of: Web/HTML/Element/mark
 - それ以外に、 `<mark>` はユーザーの現在の行動に関する文書中の部分を示します。これは例えば、検索操作で検索された語を示す場合などに使用されます。
 - `<mark>` を (ソースコードなどの) 構文の強調には使用しないで下さい。{{HTMLElement("span")}} 要素とそれに適用する適切な CSS を使用してください。
 
-> **Note:** `<mark>` 要素と {{HTMLElement("strong")}} 要素を混同しないよう注意してください。 `<mark>` は*関連性*のあるコンテンツを表すために使用されますが、 `<strong>` は*重要性*のある文字列の区間を表します。
+> **メモ:** `<mark>` 要素と {{HTMLElement("strong")}} 要素を混同しないよう注意してください。 `<mark>` は*関連性*のあるコンテンツを表すために使用されますが、 `<strong>` は*重要性*のある文字列の区間を表します。
 
 ## 例
 
@@ -164,10 +152,7 @@ mark::after {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-mark-element', '&lt;mark&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

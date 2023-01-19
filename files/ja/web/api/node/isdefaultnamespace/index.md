@@ -2,12 +2,13 @@
 title: Node.isDefaultNamespace()
 slug: Web/API/Node/isDefaultNamespace
 ---
+
 {{APIRef("DOM")}}
 
 **`isDefaultNamespace()`** は {{domxref("Node")}} インターフェイスのメソッドで、名前空間 URI を引数として受け取ります。
 その名前空間がこのノードの既定の名前空間である場合は `true` を返し、そうでない場合は `false` を返します。
 
-> **Note:** 既定の名前空間は、 HTML 要素では常に `""` です。 SVG 要素では、 `xmlns` 属性で設定されます。
+> **メモ:** 既定の名前空間は、 HTML 要素では常に `""` です。 SVG 要素では、 `xmlns` 属性で設定されます。
 
 ## 構文
 
@@ -19,7 +20,7 @@ isDefaultNamespace(namespaceURI);
 
 - `namespaceURI`
   - : 要素の検査対象となる名前空間を表す文字列です。
-    > **Note:** `namespaceURI` は省略可能ではありませんが、 `null` に設定することはできます。
+    > **メモ:** `namespaceURI` は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 

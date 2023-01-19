@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl
 ---
+
 {{JSRef}}
 
 L'objet **`Intl`** est l'espace de noms pour l'API d'Internationalisation d'ECMAScript. Elle fournit des outils de comparaison de chaînes de caractères, de formatage des nombres, de dates et de l'heure selon les langues. `Intl` donne accès à plusieurs constructeurs et fonctionnalités communs aux constructeurs destinés à l'internationalion et à d'autres fonctions dépendantes des langues.
@@ -100,15 +101,11 @@ afficher("de-DE");
 
 ## Spécifications
 
-| Spécification                                                        | État                             | Commentaires                                            |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| {{SpecName('ES Int 1.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 1.0')}} | Définition initiale.                                    |
-| {{SpecName('ES Int 2.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 2.0')}} |                                                         |
-| {{SpecName('ES Int Draft', '#intl-object', 'Intl')}} | {{Spec2('ES Int Draft')}} | Ajout de `Intl.getCanonicalLocales` dans la 4e édition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl")}}
+{{Compat}}
 
 ## Voir aussi
 

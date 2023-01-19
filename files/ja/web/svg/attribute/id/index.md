@@ -1,12 +1,8 @@
 ---
 title: id
 slug: Web/SVG/Attribute/id
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG 属性
-translation_of: Web/SVG/Attribute/id
 ---
+
 {{SVGRef}}
 
 **`id`** 属性は要素に固有の名前を割り当てます。
@@ -53,20 +49,17 @@ translation_of: Web/SVG/Attribute/id
 
   - : 要素の ID を指定します。 ID はノードツリー内で固有でなければならず、空文字列であってはならず、ホワイトスペース文字を含んではなりません。
 
-    > **Note:** URL の対象フラグメントとして使用されるときに `id` の値に SVG view 仕様書として解釈される値 (例えば `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) や、基本メディアフラグメントを使用しないでください。
+    > **メモ:** URL の対象フラグメントとして使用されるときに `id` の値に SVG view 仕様書として解釈される値 (例えば `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) や、基本メディアフラグメントを使用しないでください。
 
     XML 文書内で妥当でなければなりません。独立した SVG 文書は XML 1.0 の構文を使用しており、有効な ID は指定された文字 (文字、数字、いくつかの句読点) のみを含み、数字、フルストップ (.) 文字、ハイフンマイナス (-) 文字で始まらないことを指定しています。
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                     | 備考                                       |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------------------------------ |
-| {{SpecName("SVG2", "struct.html#IDAttribute", "id")}} | {{Spec2("SVG2")}} | Defines the allowed values in more detail. |
-| {{SpecName("SVG1.1", "struct.html#IDAttribute", "id")}} | {{Spec2("SVG1.1")}} | 初回定義                                   |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("svg.attributes.style.class")}}
+{{Compat}}
 
 ## 関連情報
 

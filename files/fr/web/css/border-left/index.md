@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-left
 ---
+
 {{CSSRef}}
 
 La propriété **`border-left`** est une propriété raccourcie qui permet de définir la bordure gauche d'un élément
@@ -58,9 +59,13 @@ border-left: medium dashed green;
 - `<color>`
   - : Voir {{cssxref("border-left-color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -88,14 +93,8 @@ border-left: medium dashed green;
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                                                                                                  |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#border-left', 'border-left')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification directe bien que la modification de valeurs pour {{cssxref("border-left-color")}} s'applique. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-left', 'border-left')}} | {{Spec2('CSS2.1')}}                 | Aucune modification significative.                                                                                            |
-| {{SpecName('CSS1', '#border-left', 'border-left')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                          |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-left")}}
+{{Compat}}

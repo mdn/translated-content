@@ -2,6 +2,7 @@
 title: Web performance
 slug: Learn/Performance
 ---
+
 {{LearnSidebar}}
 
 Building websites requires HTML, CSS, and JavaScript. To build websites and applications people want to use, which attract and retain users, you need to create a good user experience. Part of good user experience is ensuring the content is quick to load and responsive to user interaction. This is known as web performance, and in this module you'll learn all you need to build performant websites.
@@ -83,6 +84,6 @@ This topic contains the following modules, in a suggested order for working thro
 ## See Also
 
 - [Mobile performance checklist](/zh-TW/docs/Web/Performance/Mobile_performance_checklist)
-- [Optimizing Startup Performance](/zh-TW/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)[](/zh-TW/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
+- [Optimizing Startup Performance](/zh-TW/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
 
 {{LandingPageListSubpages}}

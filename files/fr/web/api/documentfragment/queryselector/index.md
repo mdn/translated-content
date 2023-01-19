@@ -9,6 +9,7 @@ tags:
   - fragment
 translation_of: Web/API/DocumentFragment/querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`DocumentFragment.querySelector()`** renvoie le premier élément ou `null` si aucune correspondance n'est trouvée, dans le {{domxref("DocumentFragment")}} (en utilisant la traversée en profondeur des noeuds du document), avec le groupe spécifié de sélecteurs.

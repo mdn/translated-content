@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/calendar
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.calendar`** est une propriété (via un accesseur) qui renvoie le type de calendrier utilisé par l'instance de `Locale`.
@@ -121,7 +122,7 @@ La propriété `calendar` renvoie la partie de la locale qui indique le calendri
       <td>
         <div class="warning">
           <p>
-            <strong>Attention :</strong> La clé  <code>islamicc</code> est
+            <strong>Attention :</strong> La clé <code>islamicc</code> est
             désormais dépréciée et il faut utiliser <code>islamic-civil</code> à
             la place.
           </p>

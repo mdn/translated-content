@@ -2,6 +2,7 @@
 title: <length-percentage>
 slug: Web/CSS/length-percentage
 ---
+
 {{CSSRef}}
 
 **`<length-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{Cssxref("length")}} または {{Cssxref("percentage")}} が取りうる値を表します。

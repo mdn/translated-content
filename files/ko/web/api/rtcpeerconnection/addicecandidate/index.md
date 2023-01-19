@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
-translation_of: Web/API/RTCPeerConnection/addIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}}을 사용하는 웹이나 앱이 신규 ICE candidate를 signaling 채널을 통해 원격 유저로부터 수신하게되면, **`RTCPeerConnection.addIceCandidate()`**를 호출해서 브라우저의 {{Glossary("ICE")}} 에이전트에게 새로 수신한 candidate를 전달합니다. 이 메소드는 `RTCPeerConnection`의 원격 설명 (remote description)에 연결의 원격쪽 상태를 설명해주는 신규 원격 candidate를 추가합니다.
@@ -55,8 +55,6 @@ ICE candidate 추가 시도 중 에러가 발생하면, 이 메소드에서 반�
     - 지정된 {{domxref("RTCIceCandidate.usernameFragment", "ufrag")}}가 어떠한 원격 설명 (description) 안의 `ufrag` 필드와 일치하지 않음
     - {{domxref("RTCIceCandidate", "candidate")}} 문자열에 존재하는 하나 혹은 여러개의 값들이 올바르지 않거나, 파싱 될 수 없음
     - 어떠한 이유에서던 candidate를 추가하려는 시도가 실패
-
-      <span class="hidden"></span>
 
 ## 예시
 

@@ -2,6 +2,7 @@
 title: Range()
 slug: Web/API/Range/Range
 ---
+
 {{ APIRef("DOM") }}{{seeCompatTable}}
 
 构造函数 **`Range()`** 返回一个新创建的 {{domxref("Range")}} 对象，新创建的对象属于全局 {{domxref("Document")}} 对象。
@@ -46,9 +47,9 @@ const selection = window.getSelection();
 selection.addRange(range);
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -56,8 +57,8 @@ selection.addRange(range);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.Range")}}
+{{Compat}}
 
-## 扩展
+## 参见
 
 - [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)

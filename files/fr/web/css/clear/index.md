@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
 La propriété **`clear`** indique si un élément peut être situé à côté d'éléments [flottants](/fr/docs/Web/CSS/float) qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments. La propriété `clear` s'applique aux éléments flottants comme aux éléments non-flottants.
@@ -61,9 +62,13 @@ clear: unset;
 - `inline-end`
   - : Un mot-clé qui indique que l'élément est déplacé vers le bas pour dégager le contenu du côté de la fin du bloc englobant. Autrement dit, cela dégage à droite pour les scripts de gauche à droite (_LTR_ pour _left to right_) et dégage à gauche pour les scripts de droite à gauche (_RTL_ pour _droite à gauche_).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -198,17 +203,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                             | Commentaires                                                          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | --------------------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Ajout des valeurs `inline-start` et `inline-end`                      |
-| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}                 | {{Spec2('CSS2.1')}}                         | Pas de modification significative, clarification de certains détails. |
-| {{SpecName('CSS1', '#clear', 'clear')}}                                             | {{Spec2('CSS1')}}                         | Définition initiale.                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.clear")}}
+{{Compat}}
 
 ## Voir aussi
 

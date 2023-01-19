@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.numeric
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.numeric`** プロパティは、ロケールが特別な数字の照合処理を行うかどうかを返すアクセサープロパティです。

@@ -4,6 +4,7 @@ slug: Web/CSS/:nth-col
 translation_of: Web/CSS/:nth-col
 browser-compat: css.selectors.nth-col
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-col()`** est conçue pour les tableaux et les grilles. Elle accepte les notations de type `An+B` telles qu'utilisées avec le sélecteur {{Cssxref(":nth-child")}}, ce qui permet de cibler un jeu de colonnes. Les valeurs _odd_ et _even_ sont aussi valides.

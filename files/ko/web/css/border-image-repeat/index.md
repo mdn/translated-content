@@ -1,13 +1,8 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-image-repeat
 ---
+
 {{CSSRef}}
 
 **`border-image-repeat`** [CSS](/ko/docs/Web/CSS) 속성은 원본 이미지의 [모서리 영역](/ko/docs/Web/CSS/border-image-slice#edge_region)을 요소의 [테두리 이미지](/ko/docs/Web/CSS/border-image) 크기에 맞춰 조절할 때 사용할 방법을 지정합니다.
@@ -62,7 +57,7 @@ border-image-repeat: unset;
   margin-bottom: 1rem;
   padding: 1rem;
   border: 40px solid;
-  border-image: url("https://mdn.mozillademos.org/files/4127/border.png") 27;
+  border-image: url("border.png") 27;
   border-image-repeat: stretch;  /* 라이브 샘플에서 바꿀 수 있습니다 */
 }
 ```

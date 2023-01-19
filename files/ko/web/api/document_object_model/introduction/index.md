@@ -1,11 +1,6 @@
 ---
 title: DOM 소개
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - DOM
-  - 가이드
-  - 문서
-translation_of: Web/API/Document_Object_Model/Introduction
 original_slug: Web/API/Document_Object_Model/소개
 ---
 이 문서는 {{glossary("DOM")}}에 대한 개념을 간략하게 소개하는 문서이다: DOM 이 무엇이며, 그것이 어떻게 {{glossary("HTML")}}, {{glossary("XML")}} 문서들을 위한 구조를 제공하는지, 어떻게 DOM 에 접근하는지, API 가 어떻게 사용되는지에 대한 참조 정보와 예제들을 제공한다.
@@ -267,8 +262,6 @@ table.summary = "note: increased border";
 ```
 
 단일 페이지(예를 들어, 웹 페이지의 색상에 영향을 주는 property 설정하는) 안의 수많은 interfaces 를 테스트하기 위해 설정 버튼, textfield, 또는 다른 HTML elements를 사용하여 유사한 테스트 페이지를 만들 수 있다. 아래의 스크린샷은 테스트를 위해 어떻게 interfaces를 그룹화하는지에 대한 아이디어를 제공하고 있다.
-
-<figure><figcaption>Figure 0.1 Sample DOM Test Page</figcaption><img alt="Image:DOM_Ref_Introduction_to_the_DOM.gif" class="internal" src="/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif"></figure>
 
 이 예제에서 드롭다운 메뉴는 웹 페이지에서 DOM 접근가능한 배경색상(`bgColor`), 하이퍼링크 색상(`aLink`), 텍스트 색상(`text`)을 동적으로 업데이트한다. 어떻게 자신의 test pages 를 디자인하더라도, interface 테스트는 DOM 을 효과적으로 사용하는 법을 배우는 데 매우 중요한 수단임을 명심하라.
 

@@ -2,6 +2,7 @@
 title: 使用IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 ---
+
 IndexedDB 提供了在瀏覽器上儲存保留資料的功能，藉由它，不論是線上或線下我們的應用都可以進行資料存取。
 
 ## 關於本文

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/place-items
 ---
+
 {{CSSRef}}
 
 La propriété raccourcie **`place-items`** définit les valeurs utilisées pour les propriétés {{cssxref("align-items")}} et {{cssxref("justify-items")}}. La première valeur fournie est utilisée pour `align-items` et la seconde est utilisée pour `justify-items`. S'il n'y a pas de seconde valeur fournie, c'est la première qui est reprise pour `justify-items`.
@@ -227,21 +228,11 @@ display.addEventListener('change', function (evt) {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#place-items-property", "place-items")}} | {{Spec2('CSS3 Box Alignment')}} | Définition initiale. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions flexibles
-
-{{Compat("css.properties.place-items.flex_context")}}
-
-### Prise en charge pour les grilles
-
-{{Compat("css.properties.place-items.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

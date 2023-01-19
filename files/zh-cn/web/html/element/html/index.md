@@ -2,7 +2,8 @@
 title: <html>
 slug: Web/HTML/Element/html
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<html>` 元素** 表示一个 HTML 文档的根（顶级元素），所以它也被称为*根元素*。所有其他元素必须是此元素的后代。
 
@@ -58,7 +59,7 @@ slug: Web/HTML/Element/html
 
 ## 无障碍
 
-在`html`元素上提供具有[有效 IETF 标识语言标记](https://www.ietf.org/rfc/bcp/bcp47.txt)的[`lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#attr-lang)属性，将有助于屏幕阅读技术确定要陈述的正确语言。标识语言标签应描述页面大部分内容使用的语言。没有它，屏幕阅读器通常会默认使用操作系统的设置语言，这可能会导致错误陈述。
+在`html`元素上提供具有[有效 IETF 标识语言标记](https://www.ietf.org/rfc/bcp/bcp47.txt)的[`lang`](/zh-CN/docs/Web/HTML/Global_attributes#attr-lang)属性，将有助于屏幕阅读技术确定要陈述的正确语言。标识语言标签应描述页面大部分内容使用的语言。没有它，屏幕阅读器通常会默认使用操作系统的设置语言，这可能会导致错误陈述。
 
 ## 规范
 
@@ -71,9 +72,9 @@ slug: Web/HTML/Element/html
 ## 注意事项
 
 - 尽管在 {{glossary("HTML")}} 里\<html>元素不是必需的，可以是隐含的，但是在 {{glossary("XHTML")}} 里必须明确给出它的开标签和闭标签。
-- 严格意义上，**标签**是指开始标签（例如 \<p> 标签）或结束标签（例如 \</p> 标签）；**元素**（例如 p 元素或者称为`<p>`元素）则包括开始标签（自然也包括标签中定义的属性）、结束标签以及中间的内容（`Content`）。![标签和元素的区别](https://mdn.mozillademos.org/files/16129/et.PNG)
+- 严格意义上，**标签**是指开始标签（例如 \<p> 标签）或结束标签（例如 \</p> 标签）；**元素**（例如 p 元素或者称为`<p>`元素）则包括开始标签（自然也包括标签中定义的属性）、结束标签以及中间的内容（`Content`）。![标签和元素的区别](et.png)
 
 ## 参见
 
-- MathML 顶级元素: {{MathMLElement("math")}}
-- SVG 顶级元素: {{SVGElement("svg")}}
+- MathML 顶级元素：{{MathMLElement("math")}}
+- SVG 顶级元素：{{SVGElement("svg")}}

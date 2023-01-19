@@ -3,13 +3,14 @@ title: CanvasRenderingContext2D.lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
 translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
+
 {{APIRef}}
 
 La propriété **`CanvasRenderingContext2D.lineJoin`** de l'API Canvas 2D détermine la forme à utiliser pour joindre deux segments de ligne à leur intersection.
 
 Cette propriété n'a aucun effet quand deux segments connectés ont la même direction, car aucune zone de jonction ne sera ajoutée dans ce cas. Les segments dégénérés d'une longueur de zéro (c'est à dire avec les extrémités à la même position) seront ignorés.
 
-> **Note :** Les lignes peuvent être dessinées aves les méthodes  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
+> **Note :** Les lignes peuvent être dessinées aves les méthodes {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
 
 ## Syntaxe
 

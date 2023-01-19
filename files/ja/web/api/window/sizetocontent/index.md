@@ -2,6 +2,7 @@
 title: Window.sizeToContent()
 slug: Web/API/Window/sizeToContent
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 **`Window.sizeToContent()`** メソッドは、ウィンドウの大きさを内容に合わせて変更します。動作するには、この関数が呼び出された時点で DOM コンテンツの読み込みが完了している必要があります。例えば、{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発行された後です。

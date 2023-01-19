@@ -2,6 +2,7 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
+
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 `XMLHttpRequest`（XHR）对象用于与服务器交互。通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。这允许网页在不影响用户操作的情况下，更新页面的局部内容。`XMLHttpRequest` 在 {{Glossary("AJAX")}} 编程中被大量使用。
@@ -22,7 +23,7 @@ slug: Web/API/XMLHttpRequest
 _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("EventTarget")}} 的属性。_
 
 - {{domxref("XMLHttpRequest.onreadystatechange")}}
-  - : 当 `readyState` 属性发生变化时，调用的 {{event("Event_handlers", "event handler")}}。
+  - : 当 `readyState` 属性发生变化时，调用的事件处理器。
 - {{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}
   - : 返回 一个无符号短整型（`unsigned short`）数字，代表请求的状态码。
 - {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
@@ -45,7 +46,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.timeout")}}
   - : 一个无符号长整型（`unsigned long`）数字，表示该请求的最大请求时间（毫秒），若超出该时间，请求会自动终止。
 - {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
-  - : 当请求超时调用的 {{event("Event_handlers", "event handler")}}。
+  - : 当请求超时调用的事件处理器。
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : {{domxref("XMLHttpRequestUpload")}}，代表上传进度。
 - {{domxref("XMLHttpRequest.withCredentials")}}
@@ -134,7 +135,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## 参见
 
@@ -146,4 +147,4 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
   - [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
 
 - [HTML5 Rocks — New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
-- HTTP Feature-Policy 指令 {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}
+- HTTP Permissions-Policy 指令 {{httpheader("Permissions-Policy/sync-xhr", "sync-xhr")}}

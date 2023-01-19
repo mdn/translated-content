@@ -2,6 +2,7 @@
 title: CSSStyleSheet.deleteRule()
 slug: Web/API/CSSStyleSheet/deleteRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSStyleSheet.deleteRule()`** メソッドは、スタイル規則を現在のスタイルシートオブジェクトから削除します。
@@ -28,10 +29,7 @@ _無効。_
 
 ## 仕様
 
-| 仕様書                                                                                                                           | 策定状況                         | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("CSSOM", "#dom-cssstylesheet-deleterule", 'CSSStyleSheet.deleteRule()')}}                 | {{Spec2("CSSOM")}}         |          |
-| {{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet-deleteRule", "CSSStyleSheet.deleteRule()")}} | {{Spec2("DOM2 Style")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

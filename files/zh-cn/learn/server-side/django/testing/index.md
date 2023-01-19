@@ -2,6 +2,7 @@
 title: 'Django 教程 10: 测试 Django 网页应用'
 slug: Learn/Server-side/Django/Testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 
 随着网站的增长，他们越来越难以手动测试。不仅要进行更多的测试，而且随着组件之间的交互变得越来越复杂，一个区域的小改变可能会影响到其他区域，所以需要做更多的改变来确保一切正常运行，并且在进行更多更改时不会引入错误。减轻这些问题的一种方法是编写自动化测试，每当您进行更改时，都可以轻松可靠地运行测试。本教程演示如何使用 Django 的测试框架自动化您的网站的*单元测试*。
@@ -210,6 +211,7 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
+
 Ran 3 tests in 0.075s
 
 FAILED (failures=1)

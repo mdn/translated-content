@@ -2,6 +2,7 @@
 title: Vibration API
 slug: Web/API/Vibration_API
 ---
+
 {{DefaultAPISidebar("Vibration API")}}
 
 大多数现代移动设备包括振动硬件，其允许软件代码通过使设备摇动来向用户提供物理反馈。Vibration API 为 Web 应用程序提供访问此硬件（如果存在）的功能，如果设备不支持此功能，则不会执行任何操作。
@@ -31,7 +32,7 @@ window.navigator.vibrate([200, 100, 200]);
 
 这会使设备振动 200 ms，然后暂停 100 ms，然后再次振动设备 200 ms。
 
-您可以根据需要设定多个振动/暂停对，数组的值可以是偶数或奇数个； 值得注意的是，由于振动在每个振动周期结束时自动停止，因此您不必提供最后一个值去暂停，换句话说，数组长度只需要设置奇数个。
+您可以根据需要设定多个振动/暂停对，数组的值可以是偶数或奇数个；值得注意的是，由于振动在每个振动周期结束时自动停止，因此您不必提供最后一个值去暂停，换句话说，数组长度只需要设置奇数个。
 
 ### 停止振动
 
@@ -73,7 +74,7 @@ function startPeristentVibrate(duration, interval) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## 也可以参考
 

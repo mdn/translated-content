@@ -2,6 +2,7 @@
 title: Element.setAttributeNode()
 slug: Web/API/Element/setAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNode()` 为指定的 Element 添加属性节点。
@@ -13,7 +14,7 @@ var replacedAttr = element.setAttributeNode(attribute);
 ```
 
 - `attribute 是添加到 element 中的属性节点`.
-- `replacedAttr` 是被替换掉的属性节点。 如果存在原有属性，则函数返回原有属性节点.
+- `replacedAttr` 是被替换掉的属性节点。如果存在原有属性，则函数返回原有属性节点。
 
 ## Example
 

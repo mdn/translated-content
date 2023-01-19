@@ -2,6 +2,7 @@
 title: Document.documentURI
 slug: Web/API/Document/documentURI
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Document")}} インターフェイスの **`documentURI`** プロパティは、文書の位置を文字列で返します。
@@ -35,9 +36,7 @@ document.getElementById("url").textContent = document.documentURI;
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-documenturi','documentURI')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

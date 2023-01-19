@@ -2,6 +2,7 @@
 title: VideoTrack
 slug: Web/API/VideoTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 `VideoTrack` インターフェイスは、{{HTMLElement("video")}} 要素からの単一の動画トラックを表します。 `VideoTrack` オブジェクトにアクセスするための最も一般的な用途は、その {{HTMLElement("video")}} 要素のアクティブ動画トラックにするために、その {{domxref("VideoTrack.selected", "selected")}} プロパティを切り替えることです。
@@ -53,9 +54,7 @@ for (var i = 0; i < tracks.length; i++) {
 
 ## 仕様
 
-| 仕様                                                                         | 状態                             | コメント |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#videotrack', 'VideoTrack')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

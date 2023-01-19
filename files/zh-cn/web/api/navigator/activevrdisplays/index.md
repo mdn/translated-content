@@ -2,6 +2,7 @@
 title: Navigator.activeVRDisplays
 slug: Web/API/Navigator/activeVRDisplays
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
 
 **`activeVRDisplays`** 是 {{domxref("Navigator")}} 接口返回的数组中每个 {{domxref("VRDisplay")}} 对象的只读属性（{{domxref("VRDisplay.ispresenting")}} 为 `true`）。

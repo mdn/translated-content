@@ -2,6 +2,7 @@
 title: If-Match
 slug: Web/HTTP/Headers/If-Match
 ---
+
 {{HTTPSidebar}}
 
 请求首部 **`If-Match`** 的使用表示这是一个条件请求。在请求方法为 {{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 的情况下，服务器仅在请求的资源满足此首部列出的 `ETag`值时才会返回资源。而对于 {{HTTPMethod("PUT")}} 或其他非安全方法来说，只有在满足条件的情况下才可以将资源上传。

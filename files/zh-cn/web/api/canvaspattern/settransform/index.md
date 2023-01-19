@@ -2,6 +2,7 @@
 title: CanvasPattern.setTransform()
 slug: Web/API/CanvasPattern/setTransform
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`CanvasPattern.setTransform()`** 方法使用 {{domxref("SVGMatrix")}} 对象作为图案的变换矩阵，并在此图案上调用它。
@@ -40,7 +41,7 @@ var svg1 = document.getElementById("svg1");
 var matrix = svg1.createSVGMatrix();
 
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.src = 'canvas_createpattern.png';
 
 img.onload = function() {
   var pattern = ctx.createPattern(img, 'repeat');
@@ -61,7 +62,7 @@ img.onload = function() {
 </div>
 <textarea id="code" class="playable-code" style="height:120px">
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.src = 'canvas_createpattern.png';
 img.onload = function() {
   var pattern = ctx.createPattern(img, 'repeat');
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
@@ -99,15 +100,15 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 380) }}
+{{ EmbedLiveSample('使用 setTransform 方法', 700, 380) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasPattern.setTransform")}}
+{{Compat}}
 
 ## 参见
 

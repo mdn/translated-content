@@ -2,6 +2,7 @@
 title: var
 slug: Web/JavaScript/Reference/Statements/var
 ---
+
 {{jsSidebar("Statements")}}
 
 **`var` 语句** 用于声明一个函数范围或全局范围的变量，并可将其初始化为一个值（可选）。

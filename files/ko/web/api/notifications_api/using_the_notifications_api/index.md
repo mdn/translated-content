@@ -1,16 +1,16 @@
 ---
 title: 알림 API 사용하기
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 original_slug: WebAPI/Using_Web_Notifications
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 웹 페이지나 앱에서 [알림(Notifications) API](/ko/docs/Web/API/Notifications_API)를 사용하면 페이지 외부에 표시되는 알림을 보낼 수 있습니다. 이것은 시스템 레벨에서 처리되는 것으로 애플리케이션이 유휴 상태거나 백그라운드에 있더라도 웹 앱이 사용자에게 정보를 보낼 수 있습니다. 이 글에서는 여러분의 앱에서 이 API를 사용하기 위한 기초를 알아봅니다.
 
 일반적으로 시스템 알림은 운영 체계의 표준 알림 메커니즘을 말합니다. 예를 들어 일반적인 데스크톱 시스템이나 모바일 장치의 브로드캐스트 알림을 생각해봅시다.
 
-![](https://mdn.mozillademos.org/files/10959/android-notification.png)
+![](android-notification.png)
 
 물론 시스템 알림 시스템은 플랫폼 및 브라우저에 따라 다양하지만 괜찮습니다. 알림 API는 범용적으로 작성돼서 대부분의 시스템 알림 시스템과 호환됩니다.
 

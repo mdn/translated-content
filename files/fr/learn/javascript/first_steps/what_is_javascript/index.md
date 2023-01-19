@@ -3,6 +3,7 @@ title: Qu'est-ce que le JavaScript ?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
 translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 Bienvenue dans le cours JavaScript pour débutants sur le MDN. Dans ce premier article nous donnons une description générale de JavaScript en présentant le «&nbsp;pourquoi&nbsp;» et le «&nbsp;comment&nbsp;» du JavaScript. L'objectif est que vous compreniez bien son but.
@@ -154,7 +155,7 @@ function updateName() {
 }
 ```
 
-Nous sélectionnons ici un paragraphe de texte (ligne 1), puis lui attachons un «&nbsp;gestionnaire d'évènement&nbsp;»  (<i lang="en">event listener</i>)  ligne 3, pour qu'ensuite, lors d'un clic sur le paragraphe, le bloc de code `updateName()` (lignes 5-8) s'exécute. Le bloc de code `updateName()` (ces blocs de code réutilisables sont appelés «&nbsp;fonctions&nbsp;») demande à l'utilisateur un nouveau nom, et l'insère dans le paragraphe pour mettre à jour l'affichage.
+Nous sélectionnons ici un paragraphe de texte (ligne 1), puis lui attachons un «&nbsp;gestionnaire d'évènement&nbsp;» (<i lang="en">event listener</i>) ligne 3, pour qu'ensuite, lors d'un clic sur le paragraphe, le bloc de code `updateName()` (lignes 5-8) s'exécute. Le bloc de code `updateName()` (ces blocs de code réutilisables sont appelés «&nbsp;fonctions&nbsp;») demande à l'utilisateur un nouveau nom, et l'insère dans le paragraphe pour mettre à jour l'affichage.
 
 Si vous échangiez les deux premières lignes de code, rien ne fonctionnerait plus, vous obtiendriez une erreur dans la console développeur du navigateur&nbsp;: `TypeError: para is undefined`. Cela signifie que l'objet `para` n'existe pas encore, donc nous ne pouvons pas y ajouter de gestionnaire d'évènement.
 

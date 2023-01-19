@@ -1,15 +1,8 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - Replaced Elements
-  - 대체 요소
-translation_of: Web/CSS/object-position
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`object-position`** 속성은 [대체 요소](/ko/docs/Web/CSS/Replaced_element)의 콘텐츠 정렬 방식을 지정합니다. 대체 요소의 객체가 덮지 않은 부분은 요소의 배경이 보이게 됩니다.
@@ -55,8 +48,8 @@ object-position: unset;
 두 개의 {{htmlelement("img")}} 요소가 MDN 로고를 가리키는 코드입니다.
 
 ```html
-<img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
 ```
 
 #### CSS

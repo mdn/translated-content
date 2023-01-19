@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 original_slug: Web/JavaScript/Reference/Erreurs/Unnamed_function_statement
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

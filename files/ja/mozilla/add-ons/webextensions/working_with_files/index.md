@@ -2,6 +2,7 @@
 title: ファイルの操作
 slug: Mozilla/Add-ons/WebExtensions/Working_with_files
 ---
+
 {{AddonSidebar()}}
 
 拡張機能にて完全な機能を提供するのにファイルを操作する必要があるかもしれません。この記事ではファイルを扱うための 5 つのメカニズムを見ていきます:
@@ -24,7 +25,7 @@ browser.downloads.download({url: "https://example.org/image.png"})
 
 ユーザーが `saveAs` パラメーターで指定した場所にダウンロードさせることもできます。
 
-> **Note:** Using [URL.createObjectURL()](/ja/docs/Web/API/URL/createObjectURL) you can also download files and blobs defined in your JavaScript, which can include local content retrieved from IndexedDB.
+> **メモ:** Using [URL.createObjectURL()](/ja/docs/Web/API/URL/createObjectURL) you can also download files and blobs defined in your JavaScript, which can include local content retrieved from IndexedDB.
 
 ダウンロード API はダウンロードをキャンセル、停止、再開、消去、削除することもできます; ダウンロードマネージャーでダウンロード済みのファイルを探します; コンピューターのファイルマネージャーでダウンロード済みのファイルを表示します; 関連付けられたアプリケーションでそのファイルを開きます。
 
@@ -41,7 +42,7 @@ API リファレンス: [downloads API](/ja/docs/Mozilla/Add-ons/WebExtensions/A
 ガイド: [Using files from web applications](/ja/docs/Using_files_from_web_applications)
 API リファレンス: [HTML input element](/ja/docs/Web/HTML/Element/input/file) | [DOM File API](/ja/docs/Web/API/File)
 
-> **Note:** 選択したフォルダーの全ファイルにアクセスや処理したい場合、`<input type="file" webkitdirectory="true"/>` を使ってフォルダーを選択して、そこにある全ファイルを返すようにできます。
+> **メモ:** 選択したフォルダーの全ファイルにアクセスや処理したい場合、`<input type="file" webkitdirectory="true"/>` を使ってフォルダーを選択して、そこにある全ファイルを返すようにできます。
 
 ## ドラッグアンドドロップを使って拡張機能でファイルを開く
 
@@ -128,7 +129,7 @@ Once the blob URL has been revoked any attempt to load it will result in an erro
 Example: [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
 API References: [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
-> **Note:** Note: You can also use the full Web [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn’t handled well by the simple key/value pairs offered by the DOM [Storage API](/ja/Add-ons/WebExtensions/API/Storage).
+> **メモ:** You can also use the full Web [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn’t handled well by the simple key/value pairs offered by the DOM [Storage API](/ja/Add-ons/WebExtensions/API/Storage).
 
 ## ローカルアプリでファイルを処理する
 

@@ -1,16 +1,8 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - 属性
-  - グローバル属性
-  - HTML
-  - HTML マイクロデータ
-  - マイクロデータ
-  - リファレンス
-browser-compat: html.global_attributes.itemprop
-translation_of: Web/HTML/Global_attributes/itemprop
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemprop`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、アイテムにプロパティを追加するために使用します。すべての HTML 要素に `itemprop` 属性を設定することができ、 `itemprop` は名前と値の組み合わせで構成されます。名前と値の組み合わせは**プロパティ**と呼ばれ、 1 つまたは複数のプロパティで**アイテム**を構成します。プロパティ値は文字列又は URL のどちらかで、 {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, {{HTMLElement("video")}} など、広範にわたる要素と関連付けすることができます。
@@ -206,7 +198,7 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 </div>
 ```
 
-> **Note:** メモ: マイクロデータとマイクロデータがマークアップされる文書のコンテンツに関係はありません。
+> **メモ:** マイクロデータとマイクロデータがマークアップされる文書のコンテンツに関係はありません。
 
 ### 2 つの異なる方法でマークアップされた同じ構造化データ
 
@@ -298,7 +290,7 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 
     1. "`.`" (U+002E FULL STOP) 文字と "`:`" (U+003A COLON) 文字を含まず、所有者のアイテムプロパティ名 (公式な仕様で定義されないもの) として使用される文字列。
 
-> **Note:** 上記の規則では、 URL ではない値では ":" が許可されていません。なぜならそうでなければ URL と区別できないからです。 "." 文字をもつ値は、将来の拡張のために予約されています。空白文字は複数のトークンとして解析されるために許可されません。
+> **メモ:** 上記の規則では、 URL ではない値では ":" が許可されていません。なぜならそうでなければ URL と区別できないからです。 "." 文字をもつ値は、将来の拡張のために予約されています。空白文字は複数のトークンとして解析されるために許可されません。
 
 ## 値
 

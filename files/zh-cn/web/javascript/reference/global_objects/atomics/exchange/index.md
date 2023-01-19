@@ -2,6 +2,7 @@
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 **`Atomics.exchange()`** 静态方法会用给定的值替换掉数组上的值，然后返回数组的旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。
@@ -19,7 +20,7 @@ Atomics.exchange(typedArray, index, value)
 - `typedArray`
   - : 一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}，{{jsxref("Uint8Array")}}，{{jsxref("Int16Array")}}，{{jsxref("Uint16Array")}}，{{jsxref("Int32Array")}}，或 {{jsxref("Uint32Array")}}。
 - `index`
-  - : 被替换的 `typedArray 值的索引。`
+  - : 被替换的 `typedArray` 值的索引。
 - `value`
   - : 去替换的值。
 

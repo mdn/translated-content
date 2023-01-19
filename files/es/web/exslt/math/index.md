@@ -1,8 +1,8 @@
 ---
 title: Math (math)
 slug: Web/EXSLT/math
-translation_of: Web/EXSLT/math
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 El paquete Math de EXSLT proporciona funciones para trabajar con valores numéricos

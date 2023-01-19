@@ -2,6 +2,7 @@
 title: idle
 slug: Mozilla/Add-ons/WebExtensions/API/idle
 ---
+
 {{AddonSidebar}}
 
 找出用户系统何时处于空闲，锁定或活动状态。
@@ -27,7 +28,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/idle
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.idle")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

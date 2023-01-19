@@ -1,16 +1,10 @@
 ---
 title: animation
 slug: Web/CSS/animation
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/animation
 ---
 {{CSSRef}}
 
-**`animation`** [CSS](/ko/docs/Web/CSS)\*\* \*\*속성은 다수의 스타일을 전환하는 애니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
+**`animation`** [CSS](/ko/docs/Web/CSS) 속성은 다수의 스타일을 전환하는 애니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
 
 {{EmbedInteractiveExample("pages/css/animation.html")}}
 

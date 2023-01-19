@@ -2,6 +2,7 @@
 title: line-break
 slug: Web/CSS/line-break
 ---
+
 {{CSSRef}}
 
 **`line-break`** は CSS のプロパティで、中国語、日本語、韓国語 (CJK) のテキストにおいて、句読点や記号を用いた場合の改行規則 (禁則処理) を設定します。

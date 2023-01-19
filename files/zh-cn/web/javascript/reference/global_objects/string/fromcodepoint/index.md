@@ -2,6 +2,7 @@
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
+
 {{JSRef}}
 
 **`String.fromCodePoint()` 静态方法返回使用指定的代码点序列创建的字符串。**

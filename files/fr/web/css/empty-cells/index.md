@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/empty-cells
 ---
+
 {{CSSRef}}
 
 La propriété **`empty-cells`** définit la façon dont l'agent utilisateur doit afficher les bordures et l'arrière-plan des cellules d'un tableau ({{HTMLElement("table")}}) qui n'ont aucun contenu visible.
@@ -37,9 +38,13 @@ Cette propriété se définit avec l'un des mots-clés suivants.
 - `hide`
   - : Un mot-clé indiquant qu'aucune bordure ou arrière-plan ne doit être dessiné.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -90,12 +95,8 @@ td, th {
 
 ## Spécifications
 
-| Spécification                                                                        | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('CSS2.1', 'tables.html#empty-cells', 'empty-cells')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.empty-cells")}}
+{{Compat}}

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTTP/Link_prefetching_FAQ
 original_slug: Web/HTTP/FAQ_sur_le_préchargement_des_liens
 ---
+
 ### Qu’est ce que le préchargement de liens&nbsp;?
 
 Le préchargement de liens est un mécanisme du navigateur qui utilise le temps disponible du navigateur pour télécharger ou _précharger_ les documents que les utilisateurs pourraient visiter juste après. Une page web fournit un ensemble de cibles à précharger au navigateur. Une fois que le navigateur a fini de charger la page, il commence, de façon transparente, à précharger les documents spécifiés et les emmagasine dans son cache. Quand l’utilisateur visite un de ces documents préchargés, il peut être ressorti rapidement du cache du navigateur.
@@ -37,7 +38,7 @@ L’en-tête `Link:` peut également être spécifiée à l’intérieur d’un 
 <meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch">
 ```
 
-Le format pour l’en-tête `Link:`est décrit dans le [RFC 2068](http://tools.ietf.org/html/rfc2068) section 19.6.2.4.
+Le format pour l’en-tête `Link:` est décrit dans le [RFC 2068](http://tools.ietf.org/html/rfc2068) section 19.6.2.4.
 
 > **Note :** Nous avons intentionnellement pris pour référence une version dépassée de la spécification HTTP/1.1 car la plus récente [RFC 2616](http://tools.ietf.org/html/rfc2616) ne décrit pas l’en-tête `Link:`. Bien que les en-têtes `Link:` ne fassent pas partie du standard révisé, ils sont toujours utilisés en pratique par les serveurs, pour renseigner les feuilles de styles CSS. Donc nous faisons usage de la même fonction ici.
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Element/id
 ---
+
 {{ApiRef("DOM")}}
 
 La propriété **`Element.id`** représente l'identifiant de l'élément, reflétant l' **[id](/fr/docs/Web/HTML/Attributs_universels/id)** global de l'attribut.

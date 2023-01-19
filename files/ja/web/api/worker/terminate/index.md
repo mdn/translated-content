@@ -1,46 +1,46 @@
 ---
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
+l10n:
+  sourceCommit: 1529c6f4990c6d66190b8e50b38aa605f298c10b
 ---
+
 {{APIRef("Web Workers API")}}
 
-{{domxref("Worker")}}インターフェイスの **`terminate()`** メソッドは {{domxref("Worker")}} を即座に停止します。これは worker に対してその動作を終了する機会を提供するものではありません。単純に即時停止をします。
+**`terminate()`** は {{domxref("Worker")}} インターフェイスのメソッドで、このワーカーを即座に停止させます。これはワーカーに対してその動作を終了する機会を提供するものではありません。即時に停止させます。
 
 ## 構文
 
 ```js
-myWorker.terminate();
+terminate()
 ```
 
 ### 引数
 
-無し。
+なし。
 
-### 返り値
+### 返値
 
-Void.
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-次のコードでは{{domxref("Worker")}}オブジェクトを{{domxref("Worker.Worker", "Worker()")}} コンストラクタで作成したあと、すぐに停止しています。
+次のコードでは {{domxref("Worker")}} オブジェクトを {{domxref("Worker.Worker", "Worker()")}} コンストラクターで作成したあと、すぐに停止させます。
 
 ```js
-var myWorker = new Worker("worker.js");
+const myWorker = new Worker('worker.js');
 
 myWorker.terminate();
 ```
 
-## 仕様
+## 仕様書
 
-| Specification                                                                                        | Status                           | Comment                                              |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#dom-worker-terminate", "Worker.postMessage()")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
-| {{SpecName('Web Workers', "#dom-worker-terminate", "Worker.postMessage()")}} | {{Spec2('Web Workers')}} | Initial definition.                                  |
+{{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
-{{Compat("api.Worker.terminate")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
-The {{domxref("Worker")}} interface it belongs to.
+所属先の {{domxref("Worker")}} インターフェイス。

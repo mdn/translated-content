@@ -1,15 +1,8 @@
 ---
 title: File.type
 slug: Web/API/File/type
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.File.type
-translation_of: Web/API/File/type
 ---
+
 {{APIRef("File API")}}
 
 **`type`** 속성은 {{domxref("File")}} 객체가 나타내는 파일의 미디어 유형([MIME](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types))을 반환합니다.

@@ -2,6 +2,7 @@
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 返回一个包含了所有指定类名的子元素的类数组对象。当在 document 对象上调用时，会搜索整个 DOM 文档，包含根节点。你也可以在任意元素上调用{{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} 方法，它将返回的是以当前元素为根节点，所有指定类名的子元素。
@@ -15,7 +16,7 @@ var elements = rootElement.getElementsByClassName(names);
 
 - _elements_ 是一个实时{{ domxref("HTMLCollection", "集合") }}，包含了找到的所有元素。
 - _names_ 是一个字符串，表示要匹配的类名列表；类名通过空格分隔
-- getElementsByClassName 可以在任何元素上调用，不仅仅是 document。 调用这个方法的元素将作为本次查找的根元素。
+- getElementsByClassName 可以在任何元素上调用，不仅仅是 document。调用这个方法的元素将作为本次查找的根元素。
 
 ## 示例
 
@@ -76,7 +77,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ## 多个 Class 示例
 
-`document.getElementsByClassName` 的工作方式与 `document.querySelector` 和 `document.querySelectorAll` 很相似。 只有所有 className 都匹配的元素会被选择。
+`document.getElementsByClassName` 的工作方式与 `document.querySelector` 和 `document.querySelectorAll` 很相似。只有所有 className 都匹配的元素会被选择。
 
 ### HTML
 

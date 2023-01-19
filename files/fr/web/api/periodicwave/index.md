@@ -4,6 +4,7 @@ slug: Web/API/PeriodicWave
 translation_of: Web/API/PeriodicWave
 browser-compat: api.PeriodicWave
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface **`PeriodicWave`** définit une forme d'onde périodique qui peut être utilisée pour modeler la sortie d'un nœud [`OscillatorNode`](/fr/docs/Web/API/OscillatorNode).

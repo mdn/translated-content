@@ -1,16 +1,8 @@
 ---
 title: 접근자
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
-browser-compat: javascript.functions.get
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 **`get`** 구문은 객체의 속성 접근 시 호출할 함수를 바인딩합니다.
@@ -175,7 +167,7 @@ console.log(
 
 ## 명세
 
-{{Specification}}
+{{Specifications}}
 
 ## 브라우저 호환성
 
@@ -186,6 +178,6 @@ console.log(
 - [설정자](/ko/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - JavaScript 안내서의 [접근자와 설정자 정의하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

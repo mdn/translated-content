@@ -2,6 +2,7 @@
 title: Element.id
 slug: Web/API/Element/id
 ---
+
 {{ ApiRef("DOM") }}
 
 {{domxref("Element")}} 接口的 **`id`** 属性表示元素的标识符，与全局属性 [**`id`**](/zh-CN/docs/Web/HTML/Global_attributes/id) 对应。
@@ -27,7 +28,7 @@ element.id = idStr; // Set the id
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.id")}}
+{{Compat}}
 
 ## 参见
 

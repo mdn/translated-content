@@ -2,6 +2,7 @@
 title: AudioNode
 slug: Web/API/AudioNode
 ---
+
 {{APIRef()}}
 
 The AudioNode interface is a generic interface for representing an audio processing module like an audio source (e.g. an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), audio destination, intermediate processing module (e.g. a filter like {{domxref("BiquadFilterNode")}} or {{domxref("ConvolverNode")}}), or volume control (like {{domxref("GainNode")}}).
@@ -10,7 +11,7 @@ AudioNode インターフェースは、オーディオソース（例：\<audio
 
 ![AudioNodes participating in an AudioContext create a audio routing graph.](WebAudioBasics.png)
 
-An `AudioNode` has inputs and outputs, each with a given amount of _channels_.\_ _An `AudioNode` with zero inputs and exactly one output is called a \_source node_. The exactly processing done varies from one `AudioNode` to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs.
+An `AudioNode` has inputs and outputs, each with a given amount of _channels_. An `AudioNode` with zero inputs and exactly one output is called a _source node_. The exactly processing done varies from one `AudioNode` to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs.
 
 AudioNode は複数の入力、出力を持ち、それぞれがチャンネルを持ちます。入力が無く、一つの出力を持つ AudioNode は、ソースノードと呼ばれます。厳密な処理は AudioNode によって異なりますが,　基本的に、ノードは入力を読み込み、何らかの音声関連の処理を行ってから、出力のための新しい値を出力します。
 
@@ -18,7 +19,7 @@ Different nodes can be linked together to build a _processing graph_. Such a gra
 
 ノードは音声処理のグラフを構築するため、互いに関連付けることができます。そのようなグラフは一つの{{domxref("AudioContext")}}に含まれます。それぞれの AudioNode は必ず一つの context に含まれます。一般に、ノードは AudioNode のプロパティやメソッドを継承し、独自の機能が定義されています。個々のノードについての詳細を知りたい場合は、「Web Audio API」ホームページを御覧ください。
 
-> **Note:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
+> **メモ:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
 ## 属性
 
@@ -82,9 +83,7 @@ oscillator.channelCount;
 
 ## 使用
 
-| Specification                                                                                | Status                               | Comment |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-audionode-interface', 'AudioNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

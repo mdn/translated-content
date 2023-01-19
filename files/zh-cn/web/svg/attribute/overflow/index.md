@@ -2,7 +2,8 @@
 title: overflow
 slug: Web/SVG/Attribute/overflow
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+
+« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
 
 The `overflow` attribute has the same parameter values as defined for the {{ cssxref("overflow","CSS overflow property") }}. However, the following additional points apply:
 
@@ -12,7 +13,7 @@ The `overflow` attribute has the same parameter values as defined for the {{ css
 - Within SVG content, the value `auto` is equivalent to the value `visible`.
 - When an outermost svg element is embedded inline within HTML, if the `overflow` attribute has the value `hidden` or `scroll`, then the browser will establish an initial clipping path equal to the bounds of the initial viewport; otherwise, the initial clipping path is set according to the CSS clipping rules.
 - When an outermost svg element is stand-alone, the `overflow` attribute on the outermost svg element is ignored for the purposes of visual rendering and the initial clipping path is set to the bounds of the initial viewport.
-- The initial value for `overflow` as defined in CSS is `visible`, and this applies also to the root {{ SVGElement("svg") }} element; however, for child elements of an SVG document, SVG's browser style sheet overrides this initial value and sets the `overflow` attribute on elements that establish new viewports, ‘pattern’ elements and ‘marker’ elements to the value `hidden`.
+- The initial value for `overflow` as defined in CSS is `visible`, and this applies also to the root {{ SVGElement("svg") }} element; however, for child elements of an SVG document, SVG's browser style sheet overrides this initial value and sets the `overflow` attribute on elements that establish new viewports, 'pattern' elements and 'marker' elements to the value `hidden`.
 
 As a presentation attribute, it also can be used as a property directly inside a CSS stylesheet, see {{ cssxref("overflow","CSS overflow") }} for further information.
 

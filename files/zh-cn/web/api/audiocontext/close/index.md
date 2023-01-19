@@ -2,6 +2,7 @@
 title: AudioContext.close()
 slug: Web/API/AudioContext/close
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}的`close()`方法可以关闭 audio context，同时释放占用的所有系统资源。
@@ -41,7 +42,7 @@ stopBtn.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext.close")}}
+{{Compat}}
 
 ## 另见
 

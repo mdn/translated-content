@@ -2,6 +2,7 @@
 title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
 ---
+
 {{CSSRef}}
 
 **`mask-border-repeat`** は [CSS](/ja/docs/Web/CSS) のプロパティで、どのように元の画像の[辺の領域](/ja/docs/Web/CSS/border-image-slice#edge-regions)を要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の寸法に合うように調整するかを設定します。
@@ -65,7 +66,7 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 -webkit-mask-box-image-repeat: round;
 ```
 
-> **Note:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 

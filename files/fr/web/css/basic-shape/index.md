@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 Le type **`<basic-shape>`** permet de définir une forme simple en utilisant des fonctions et est notamment utilisé pour les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} ou {{cssxref("offset-path")}}.
@@ -97,7 +98,7 @@ Les arguments qui ne sont pas définis ci-avant suivent cette syntaxe :
 Les valeurs d'une fonction `<basic-shape>` sont calculées comme indiqué, avec ces exceptions :
 
 - Les valeurs absentes sont incluses et leurs valeurs calculées sont leurs valeurs par défaut.
-- Une valeur {{cssxref("&lt;position&gt;")}} pour `circle()` ou  `ellipse()` est calculée comme une paire de distances indiquant les décalages (horizontaux puis verticaux) depuis l'origine en haut à gauche. Chaque décalage est indiqué comme une combinaison d'une longueur absolue et d'un pourcentage.
+- Une valeur {{cssxref("&lt;position&gt;")}} pour `circle()` ou `ellipse()` est calculée comme une paire de distances indiquant les décalages (horizontaux puis verticaux) depuis l'origine en haut à gauche. Chaque décalage est indiqué comme une combinaison d'une longueur absolue et d'un pourcentage.
 - Pour `inset()`, une valeur {{cssxref("border-radius")}} est calculée comme une liste développée de de huit valeurs {{cssxref("length")}} ou de huit pourcentages.
 
 ## L'interpolation des formes simples
@@ -173,13 +174,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS Shapes', '#basic-shape-functions', '&lt;basic-shape&gt;')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.basic-shape")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Compatibility_sources
 original_slug: Web/SVG/Sources_compatibilite
 ---
+
 Les sources suivantes sont utilisées pour les tableaux de compatibilités des éléments SVG et de leurs attributs :
 
 - [https://developer.mozilla.org/En/SVG_in_Firefox](/fr/SVG_in_Firefox) associé à son historique de révision pour Firefox

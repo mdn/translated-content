@@ -1,14 +1,8 @@
 ---
 title: 'HTML 属性: required'
 slug: Web/HTML/Attributes/required
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
-translation_of: Web/HTML/Attributes/required
 ---
+
 {{HTMLSidebar}}
 
 論理属性の **`required`** 属性は、存在する場合、所有するフォームを送信する前にユーザーが入力に値を指定しなければならないことを示します。 `required` 属性は `{{HTMLElement("input/text","text")}}`, `{{HTMLElement("input/search","search")}}`, `{{HTMLElement("input/url","url")}}`, `{{HTMLElement("input/tel","tel")}}`, `{{HTMLElement("input/email","email")}}`, `{{HTMLElement("input/password","password")}}`, `{{HTMLElement("input/date","date")}}`, `{{HTMLElement("input/month","month")}}`, `{{HTMLElement("input/week","week")}}`, `{{HTMLElement("input/time","time")}}`, `{{HTMLElement("input/datetime-local","datetime-local")}}`, `{{HTMLElement("input/number","number")}}`, `{{HTMLElement("input/checkbox","checkbox")}}`, `{{HTMLElement("input/radio","radio")}}`, `{{HTMLElement("input/file","file")}}` の {{HTMLElement("input")}} 型と {{HTMLElement("select")}} および {{HTMLElement("textarea")}} のフォームコントロール要素で対応しています。これらの入力型や要素の何れかに設定された場合、 {{cssxref(':required')}} 擬似クラスが一致します。属性が設定されていない場合は {{cssxref(':optional')}} 擬似クラスが一致します。
@@ -23,7 +17,7 @@ translation_of: Web/HTML/Attributes/required
 
 同じ名前が付けられた {{HTMLElement("input/checkbox","checkbox")}} 入力型のグループでは、 `required` 属性がついたチェックボックスのみが必須になります。
 
-> **Note:** 注: `aria-required="true"` を設定すると、ある要素 (任意の要素) が必須であることを読み上げソフトに伝えますが、その要素が任意であるかどうかには関係ありません。
+> **メモ:** `aria-required="true"` を設定すると、ある要素 (任意の要素) が必須であることを読み上げソフトに伝えますが、その要素が任意であるかどうかには関係ありません。
 
 ### 属性の相互作用
 
@@ -65,11 +59,7 @@ translation_of: Web/HTML/Attributes/required
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-required', 'required attribute')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-required', 'required attribute')}}         | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML5.1', 'sec-forms.html#the-required-attribute', 'required attribute')}} | {{Spec2('HTML5.1')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

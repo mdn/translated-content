@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/entries
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/entries
 ---
+
 {{JSRef}}
 
 La méthode **`entries()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Itérateurs) qui contient les paires `[clé, valeur]` pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
@@ -47,14 +48,11 @@ console.log(mapIter.next().value); // [Object, "bidule"]
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.entries', 'Map.prototype.entries')}} | {{Spec2('ES2015')}}     | Défintion initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.entries', 'Map.prototype.entries')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

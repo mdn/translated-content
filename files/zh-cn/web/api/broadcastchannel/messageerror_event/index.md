@@ -2,6 +2,7 @@
 title: 'BroadcastChannel: messageerror event'
 slug: Web/API/BroadcastChannel/messageerror_event
 ---
+
 {{APIRef}}
 
 当频道收到一条无法反序列化的消息时会在 {{domxref('BroadcastChannel')}} 对象上触发 `messageerror` 事件。
@@ -24,7 +25,7 @@ slug: Web/API/BroadcastChannel/messageerror_event
       <th scope="row">Event handler property</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/BroadcastChannel/onmessageerror"
+          ><a href="/zh-CN/docs/Web/API/BroadcastChannel/onmessageerror"
             >onmessageerror</a
           ></code
         >
@@ -69,7 +70,7 @@ channel.onmessageerror = (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel.messageerror_event")}}
+{{Compat}}
 
 ## 另见
 

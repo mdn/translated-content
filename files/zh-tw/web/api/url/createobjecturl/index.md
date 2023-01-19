@@ -2,6 +2,7 @@
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
 ---
+
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 
 ## 摘要
@@ -35,7 +36,7 @@ objectURL = URL.createObjectURL(blob);
 
 ## 瀏覽器相容性
 
-{{Compat("api.URL.createObjectURL")}}
+{{Compat}}
 
 ## 另見
 

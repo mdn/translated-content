@@ -2,6 +2,7 @@
 title: default_locale
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

@@ -2,6 +2,7 @@
 title: transform
 slug: Web/CSS/transform
 ---
+
 {{CSSRef}}
 
 **`transform`** [CSS](/zh-TW/docs/Web/CSS) 屬性可以讓你修改 CSS 可視化格式模型（visual formatting model）的空間維度。使用此屬性，元素可以被平移、旋轉、縮放和傾斜。
@@ -101,7 +102,7 @@ p {
 
 ### 結果
 
-{{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
+{{EmbedLiveSample("平移、旋轉元素", "400", "160")}}
 
 ### 更多範例
 
@@ -115,7 +116,7 @@ p {
 
 ## 瀏覽器相容性
 
-{{Compat("css.properties.transform")}}
+{{Compat}}
 
 ## 參見
 

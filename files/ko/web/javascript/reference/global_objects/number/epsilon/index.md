@@ -1,13 +1,8 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Number
-  - 속성
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
+
 {{JSRef}}
 
 **`Number.EPSILON`** 속성(property)은 {{jsxref("Number")}} 형으로 표현될 수 있는 1과 1보다 큰 값 중에서 가장 작은 값의, 차입니다.

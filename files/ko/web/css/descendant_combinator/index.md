@@ -1,11 +1,6 @@
 ---
 title: 자손 결합자
 slug: Web/CSS/Descendant_combinator
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Descendant_combinator
 ---
 {{CSSRef("Selectors")}}
 

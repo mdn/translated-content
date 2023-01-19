@@ -1,8 +1,8 @@
 ---
 title: 루프와 반복
 slug: Web/JavaScript/Guide/Loops_and_iteration
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 루프는 어떤 것을 반복적으로 시행할때 빠르고 간편한 방법을 제공합니다. [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)의 이 항목은 JavaScript 에서 사용이 가능한 서로 다른 여러가지 반복문을 소개합니다.
@@ -316,7 +316,7 @@ car.model = Mustang
 
 ## `for...of` 문
 
-[`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
+[`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](/en-US/docs/Web/JavaScript/Guide/iterable)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
 
 ```
     for (variable of object) {

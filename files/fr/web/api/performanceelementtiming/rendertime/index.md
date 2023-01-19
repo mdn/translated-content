@@ -10,6 +10,7 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/renderTime
 ---
+
 {{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`renderTime`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie le temps écoulé pour le rendu de l'élément associé.

@@ -2,6 +2,7 @@
 title: IndexedDB 浏览器存储限制和清理标准
 slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 有许多 Web 技术可以在客户端（即本地磁盘上）存储这种或那种数据。浏览器计算分配给 Web 数据存储的空间大小以及达到该限制时要删除的内容的过程并不简单，并且浏览器之间有所不同。本文介绍了浏览器如何确定要清除的本地内容以及何时释放所需的本地存储空间。
@@ -57,18 +58,18 @@ slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 
 ### 储存限制
 
-浏览器的最大存储空间是动态的——它取决于您的硬盘大小。 **全局限制**为可用磁盘空间的 50％。 在 Firefox 中，一个名为 Quota Manager 的内部浏览器工具会跟踪每个源用尽的磁盘空间，并在必要时删除数据。
+浏览器的最大存储空间是动态的——它取决于您的硬盘大小。 **全局限制**为可用磁盘空间的 50％。在 Firefox 中，一个名为 Quota Manager 的内部浏览器工具会跟踪每个源用尽的磁盘空间，并在必要时删除数据。
 
 因此，如果您的硬盘驱动器是 500GB，那么浏览器的总存储容量为 250GB。如果超过此范围，则会发起称为**源回收**的过程，删除整个源的数据，直到存储量再次低于限制。删除源数据没有只删一部分的说法——因为这样可能会导致不一致的问题。
 
-还有另一个限制称为**组限制**——这被定义为全局限制的 20％，但它至少有 10 MB，最大为 2GB。 每个源都是一组（源组）的一部分。 每个 eTLD+1 域都有一个组。 例如：
+还有另一个限制称为**组限制**——这被定义为全局限制的 20％，但它至少有 10 MB，最大为 2GB。每个源都是一组（源组）的一部分。每个 eTLD+1 域都有一个组。例如：
 
 - `mozilla.org`——组 1，源 1
 - `www.mozilla.org`——组 1，源 2
 - `joe.blogs.mozilla.org`——组 1，源 3
 - `firefox.com` ——组 2，源 4
 
-在这个组中，`mozilla.org`、`www.mozilla.org`和`joe.blogs.mozilla.org`可以聚合使用最多 20％的全局限制。 firefox.com 单独最多使用 20％。
+在这个组中，`mozilla.org`、`www.mozilla.org`和`joe.blogs.mozilla.org`可以聚合使用最多 20％的全局限制。firefox.com 单独最多使用 20％。
 
 达到限制后有两种不同的反应：
 
@@ -79,13 +80,13 @@ slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 
 > **备注：** 如果超出组限制，或者如果原因驱逐无法释放足够的空间，浏览器将抛出`QuotaExceededError`错误。
 
-> **备注：** 在 Chrome 中，自 M66 以来，软硬存储配额限制已发生变化。 更多信息可以在[这里](https://chromium.googlesource.com/chromium/src/+/refs/heads/master/storage/browser/quota/quota_settings.cc#68)找到。
+> **备注：** 在 Chrome 中，自 M66 以来，软硬存储配额限制已发生变化。更多信息可以在[这里](https://chromium.googlesource.com/chromium/src/+/refs/heads/master/storage/browser/quota/quota_settings.cc#68)找到。
 
 ## LRU 策略
 
 当可用磁盘空间已满时，配额管理器将根据 LRU 策略开始清除数据——最近最少使用的源将首先被删除，然后是下一个，直到浏览器不再超过限制。
 
-我们使用临时存储跟踪每个源的“上次访问时间”。 一旦达到临时存储的全局限制（之后会有更多限制），我们将尝试查找所有当前未使用的源（即没有打开选项卡/应用程序的那些来保持打开的数据存储）。 然后根据“上次访问时间”对它们进行排序。 然后删除最近最少使用的源，直到有足够的空间来满足触发此源回收的请求。
+我们使用临时存储跟踪每个源的“上次访问时间”。一旦达到临时存储的全局限制（之后会有更多限制），我们将尝试查找所有当前未使用的源（即没有打开选项卡/应用程序的那些来保持打开的数据存储）。然后根据“上次访问时间”对它们进行排序。然后删除最近最少使用的源，直到有足够的空间来满足触发此源回收的请求。
 
 ## 参见
 

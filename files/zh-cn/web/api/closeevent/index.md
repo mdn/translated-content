@@ -2,9 +2,10 @@
 title: CloseEvent
 slug: Web/API/CloseEvent
 ---
+
 {{APIRef("Websockets API")}}
 
-`CloseEvent` 会在连接关闭时发送给使用 {{Glossary("WebSockets")}} 的客户端。它在 `WebSocket` `对象的` `onclose` 事件监听器中使用。
+`CloseEvent` 会在连接关闭时发送给使用 {{Glossary("WebSockets")}} 的客户端。它在 `WebSocket` 对象的 `onclose` 事件监听器中使用。
 
 ## 构造器
 
@@ -57,7 +58,7 @@ _该接口也继承了其父类 {{domxref("Event")}} 的属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.CloseEvent")}}
+{{Compat}}
 
 ## 参考
 

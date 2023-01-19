@@ -10,6 +10,7 @@ tags:
   - customized
 translation_of: Web/Web_Components/Using_custom_elements
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 L'un des aspects les plus importants des composants web est la possibilité de créer des éléments personnalisés qui encapsulent bien vos fonctionnalités sur une page HTML, plutôt que de devoir se contenter d'une soupe de balises définissant des fonctionnalités personnalisées. Cet article passe en revue les bases de l'utilisation d'éléments personnalisés.
@@ -142,7 +143,7 @@ Il est maintenant disponible pour utilisation dans notre page. Dans notre code H
   back of your card.">
 ```
 
-> **Note :** Vous pouvez voir le [full JavaScript source code](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) ici.
+> **Note :** Vous pouvez voir le [code source JavaScript complet](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) ici.
 
 ### Eléments intégrés personnalisés
 
@@ -183,7 +184,7 @@ L'utilisation de l'élément intégré dans un document web se présente égalem
 
 Vous utilisez l'élément `<ul>` comme d'habitude, mais vous spécifiez le nom de l'élément personnalisé dans l'attribut `is`.
 
-> **Note :** à nouveau, vous pouvez voir le [JavaScript source code](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) complet ici.
+> **Note :** à nouveau, vous pouvez voir le [code source JavaScript](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) complet ici.
 
 ## Utilisation des rappels de cycle de vie
 

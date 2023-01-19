@@ -1,7 +1,6 @@
 ---
 title: resize
 slug: Web/API/Window/resize_event
-translation_of: Web/API/Window/resize_event
 ---
 **`resize`** 이벤트는 document view의 크기가 변경될 때 발생합니다.
 

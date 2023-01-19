@@ -2,6 +2,7 @@
 title: window.scrollTo
 slug: Web/API/Window/scrollTo
 ---
+
 {{APIRef}}
 
 **`Window.scrollTo()`** は文書内の特定の組み合わせの座標までスクロールします。
@@ -46,9 +47,7 @@ window.scrollTo({
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

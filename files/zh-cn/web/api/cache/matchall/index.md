@@ -2,6 +2,7 @@
 title: Cache.matchAll()
 slug: Web/API/Cache/matchAll
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("Cache")}} 接口的 **`matchAll()`** 方法返回一个 {{jsxref("Promise")}} ，其 resolve 为 {{domxref("Cache")}} 对象中所有匹配请求的数组。
@@ -51,7 +52,7 @@ caches.open('v1').then(function(cache) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Cache.matchAll")}}
+{{Compat}}
 
 ## See also
 

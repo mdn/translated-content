@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/tanh
 ---
+
 {{JSRef}}
 
 La fonction **`Math.tanh()`** renvoie la tangente hyperbolique d'un nombre définie par&nbsp;:
@@ -76,14 +77,11 @@ Math.tanhx = Math.tanhx || function(x) {
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.tanh")}}
+{{Compat}}
 
 ## Voir aussi
 

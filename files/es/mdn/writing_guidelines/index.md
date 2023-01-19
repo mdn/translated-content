@@ -1,18 +1,10 @@
 ---
 title: Acerca de MDN
 slug: MDN/Writing_guidelines
-tags:
-  - Colaboración
-  - Comunidad
-  - Derechos de Autor
-  - Documentación
-  - Guía
-  - Licencias
-  - MDN Meta
-translation_of: MDN/About
 original_slug: MDN/About
 ---
-{{MDNSidebar}}{{IncludeSubNav("/es/docs/MDN")}}
+
+{{MDNSidebar}}
 
 MDN Web Docs es una plataforma de aprendizaje para las tecnologías Web y el software con el que funciona la Web, incluyendo:
 
@@ -86,7 +78,7 @@ Los derechos sobre las marcas comerciales, logotipos, marcas al servicio de la F
 
 ### Descarga de contenido
 
-Puede descargar un [espejo tarball completo de MDN](https://developer.mozilla.org/media/developer.mozilla.org.tar.gz). (2.5 GB a partir de 2016-11-30).
+Puede descargar un [espejo tarball completo de MDN](/media/developer.mozilla.org.tar.gz). (2.5 GB a partir de 2016-11-30).
 
 #### Páginas únicas
 

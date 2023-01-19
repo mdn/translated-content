@@ -2,6 +2,7 @@
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
+
 {{JSRef}}
 
 **`Number.parseFloat()`** メソッドは、引数を解釈して浮動小数点値を返します。引数の数値が解釈できない場合は、 {{jsxref("NaN")}} を返します。

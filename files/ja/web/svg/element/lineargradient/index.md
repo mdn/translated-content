@@ -1,12 +1,8 @@
 ---
 title: linearGradient
 slug: Web/SVG/Element/linearGradient
-tags:
-  - Element
-  - SVG
-  - SVG Gradient
-translation_of: Web/SVG/Element/linearGradient
 ---
+
 {{SVGRef}}
 
 ## 概要
@@ -49,10 +45,7 @@ translation_of: Web/SVG/Element/linearGradient
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                     | コメント   |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'pservers.html#LinearGradientElement', '&lt;linearGradient&gt;')}} | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'pservers.html#LinearGradients', '&lt;linearGradient&gt;')}}     | {{Spec2('SVG1.1')}} | 最初の定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

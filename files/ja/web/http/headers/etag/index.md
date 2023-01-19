@@ -1,15 +1,8 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - HTTP
-  - Reference
-  - ヘッダー
-  - リファレンス
-  - レスポンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/ETag
 ---
+
 {{HTTPSidebar}}
 
 **`ETag`** は HTTP のレスポンスヘッダーで、リソースの特定バージョンの識別子です。ウェブサーバーは、コンテンツが変更されていない場合はレスポンス全体を再送する必要がないので、キャッシュがより効率的になり通信帯域を節約することができます。加えて、 ETag はリソースが同時に更新されて互いを上書きすること ([「空中衝突」](#Caching_of_unchanged_resources)) を防ぐのに役立ちます。

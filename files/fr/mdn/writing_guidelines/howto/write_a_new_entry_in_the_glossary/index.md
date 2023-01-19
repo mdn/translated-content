@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
+
 {{MDNSidebar}}
 
 Dans cet article, nous allons voir comment ajouter des entrées au [glossaire MDN Web Docs](/fr/docs/Glossary) et comment y faire référence. Nous verrons également quelques règles quant à la structure et au contenu des entrées du glossaire. Le glossaire fournit des définitions pour tous les termes, abréviations, acronymes et tout le jargon que vous pourrez rencontrer en consultant le contenu de MDN à propos du Web et du développement web.

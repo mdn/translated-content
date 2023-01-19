@@ -2,6 +2,7 @@
 title: URLSearchParams
 slug: Web/API/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 **`URLSearchParams`** 接口定义了一些实用的方法来处理 URL 的查询字符串。
@@ -98,7 +99,7 @@ searchParams3.has("query") // true
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams")}}
+{{Compat}}
 
 ## 参见
 

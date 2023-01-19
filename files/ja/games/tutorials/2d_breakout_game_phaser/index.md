@@ -2,6 +2,7 @@
 title: Phaser を使用した 2D ブロック崩しゲーム
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
+
 {{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
@@ -39,7 +40,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 その後、好きなフレームワークを選んで、プロジェクトに使用することができます。私たちは、良いサポートとコミュニティが利用でき、プラグインの良いセットがある、堅実なフレームワークである Phaser を選びました。フレームワークは、開発時間を短縮し、退屈な部分を引き受けてくれるので、あなたは楽しいことに集中することができます。しかし、フレームワークは常に完璧というわけではありません。予期せぬことが起こったり、フレームワークが提供しない機能を書きたい場合、純粋な JavaScript の知識が必要になります。
 
-> **Note:** この連載記事は、ゲーム開発の体験型ワークショップの素材として使用することができます。また、Phaser を使ったゲーム開発についての講演を行う場合、このチュートリアルを元にした [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) を使用することができます。
+> **メモ:** この連載記事は、ゲーム開発の体験型ワークショップの素材として使用することができます。また、Phaser を使ったゲーム開発についての講演を行う場合、このチュートリアルを元にした [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) を使用することができます。
 
 ## 次のステップ
 

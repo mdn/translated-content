@@ -2,6 +2,7 @@
 title: let
 slug: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 **`let`** 文はブロックスコープのローカル変数を宣言します。任意で値を代入して初期化できます。
@@ -252,9 +253,7 @@ let x = 1;
 
 ## 仕様
 
-| 仕様                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

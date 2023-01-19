@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@match
 ---
+
 {{JSRef}}
 
 La méthode **`[@@match]()`** permet de récupérer les correspondances obtenues lorsqu'on teste une chaîne de caractères par rapport à une expression rationnelle (_regexp_).
@@ -84,14 +85,11 @@ console.log(résultat.group(3)); // 02
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.@@match")}}
+{{Compat}}
 
 ## Voir aussi
 

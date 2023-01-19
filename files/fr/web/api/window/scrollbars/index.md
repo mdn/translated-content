@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/scrollbars
 ---
+
 {{APIRef()}}
 
 La propriété **`Window.scrollbars`** renvoie l'objet `scrollbars`, dont la visibilité peut être vérifié.

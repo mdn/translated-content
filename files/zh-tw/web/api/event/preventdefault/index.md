@@ -2,6 +2,7 @@
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
 ---
+
 {{ ApiRef("DOM") }}
 
 ## 概要
@@ -88,7 +89,7 @@ function checkName(evt) {
 
 Here is the result of the preceding code:
 
-{{ EmbedLiveSample('preventDefault_invalid_text', '', '', '') }}
+{{ EmbedLiveSample('範例', '', '', '') }}
 
 ## 備註
 

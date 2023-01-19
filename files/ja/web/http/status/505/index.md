@@ -1,13 +1,8 @@
 ---
 title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Status/505
-tags:
-  - HTTP
-  - サーバーエラー
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/505
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) **`505 HTTP Version Not Supported`** レスポンスステータスコードは、リクエストで使用されている HTTP バージョンがサーバーによってサポートされていないことを示します。

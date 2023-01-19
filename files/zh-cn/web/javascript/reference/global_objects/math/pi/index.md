@@ -2,6 +2,7 @@
 title: Math.PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

@@ -2,6 +2,7 @@
 title: AudioParamDescriptor
 slug: Web/API/AudioParamDescriptor
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioParamDescriptor`** dictionary of the [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) specifies properties for an {{domxref("AudioParam")}} objects. It is used to create custom `AudioParam`s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by `AudioWorkletNode` constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.

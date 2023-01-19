@@ -11,7 +11,7 @@ translation_of: Web/CSS/align-self
 
 ## Описание
 
-Свойство [CSS](/ru/docs/CSS "CSS") **`align-self`** выравнивает flex-элементы по текущей flex-линии, переопределяя значение свойства [`align-items`](/en/CSS/align-items "en/CSS/flex-align"). Если у какого-либо flex-элемента **margin** в поперечной оси выставлен в `auto`, то `align-self` игнорируется.
+Свойство [CSS](/ru/docs/CSS) **`align-self`** выравнивает flex-элементы по текущей flex-линии, переопределяя значение свойства [`align-items`](/en/CSS/align-items). Если у какого-либо flex-элемента **margin** в поперечной оси выставлен в `auto`, то `align-self` игнорируется.
 
 {{cssinfo}}
 
@@ -57,7 +57,8 @@ align-self: unset;
 - `auto`
   - : Computes to the parent's {{cssxref("align-items")}} value.
 - `normal`
-  - : The effect of this keyword is dependent of the layout mode we are in:\* In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
+  - : The effect of this keyword is dependent of the layout mode we are in:
+    - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
     - For flex items, the keyword behaves as `stretch`.
     - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
@@ -99,7 +100,7 @@ align-self: unset;
 
 ### Support in Grid layout
 
-{{Compat("css.properties.align-self.grid_context")}}
+{{Compat}}
 
 {{CSSRef}}
 

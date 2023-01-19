@@ -1,21 +1,8 @@
 ---
 title: 'Reason: CORS disabled'
 slug: Web/HTTP/CORS/Errors/CORSDisabled
-tags:
-  - CORS
-  - HTTP
-  - HTTPS
-  - エラー
-  - オリジン間
-  - セキュリティ
-  - トラブルシューティング
-  - メッセージ
-  - リソース
-  - 共有
-  - 同一オリジン
-  - 無効
-translation_of: Web/HTTP/CORS/Errors/CORSDisabled
 ---
+
 {{HTTPSidebar}}
 
 ## 理由

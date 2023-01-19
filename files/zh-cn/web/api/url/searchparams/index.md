@@ -2,6 +2,7 @@
 title: URL.searchParams
 slug: Web/API/URL/searchParams
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URL")}} 接口的 **`searchParams`** 属性返回一个 {{domxref("URLSearchParams")}} 对象，这个对象包含当前 URL 中解码后的 {{httpmethod("GET")}} 查询参数。
@@ -34,4 +35,4 @@ let age = parseInt(params.get('age')); // is the number 18
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.searchParams")}}
+{{Compat}}

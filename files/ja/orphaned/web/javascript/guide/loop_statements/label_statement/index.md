@@ -3,6 +3,7 @@ title: label 文
 slug: orphaned/Web/JavaScript/Guide/Loop_Statements/label_Statement
 original_slug: Web/JavaScript/Guide/Loop_Statements/label_Statement
 ---
+
 ### label 文
 
 `label` を使うと、そのプログラムのどこからでも参照できる、識別子を持った文を作ることができます。例えば、ラベルを使用してあるループに名前を付けると、`break` 文や `continue` 文を使用してプログラムがループを脱出するべきかそのまま実行を継続するべきかを示すことができます。

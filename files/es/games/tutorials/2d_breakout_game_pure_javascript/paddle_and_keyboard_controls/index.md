@@ -1,10 +1,10 @@
 ---
 title: Control de la pala y el teclado
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado
 ---
-{{GamesSidebar}}{{IncludeSubnav("/es/docs/Games")}}
+
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego")}}
 
@@ -115,7 +115,7 @@ La posición paddleX que estamos utilizando variará entre 0 para la lado izquie
 
 Añade el código anterior dentro de la función `draw(), al final`, justo antes de la llave que cierra.
 
-Lo único que nos falta por hacer es llamar a la función `drawPaddle()` desde dentro de la función `draw()` para que dibuje la paleta dentro en la pantalla. Añade la línea siguiente dentro de `draw(), justo antes de la línea que llama a la función` `drawBall()`:
+Lo único que nos falta por hacer es llamar a la función `drawPaddle()` desde dentro de la función `draw()` para que dibuje la paleta dentro en la pantalla. Añade la línea siguiente dentro de `draw()`, justo antes de la línea que llama a la función `drawBall()`:
 
 ```js
 drawPaddle();

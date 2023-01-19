@@ -2,6 +2,7 @@
 title: ARIA
 slug: Web/Accessibility/ARIA
 ---
+
 Accessible Rich Internet Applications **(ARIA)** defines ways to make Web content and Web applications (especially those developed with Ajax and JavaScript) more accessible to people with disabilities. For example, ARIA enables accessible navigation landmarks, JavaScript widgets, form hints and error messages, live content updates, and more.
 
 ARIA is a set of special accessibility attributes which can be added to any markup, but is especially suited to HTML. The `role` attribute defines what the general type of object is (such as an article, alert, or slider). Additional ARIA attributes provide other useful properties, such as a description for a form or the current value of a progressbar.

@@ -4,6 +4,7 @@ slug: Web/CSS/border-left-style
 translation_of: Web/CSS/border-left-style
 browser-compat: css.properties.border-left-style
 ---
+
 {{CSSRef}}
 
 La propriété **`border-left-style`** définit le style de ligne utilisé pour mettre en forme la bordure sur le côté gauche d'une boîte.

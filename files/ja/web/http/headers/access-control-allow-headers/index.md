@@ -1,15 +1,8 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - ヘッダー
-  - リファレンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Headers`** レスポンスヘッダーは、 {{HTTPHeader("Access-Control-Request-Headers")}} を含む{{glossary("preflight request", "プリフライトリクエスト")}}へのレスポンスで、実際のリクエストの間に使用できる HTTP ヘッダーを示すために使用されます。
@@ -107,9 +100,7 @@ Access-Control-Max-Age: 86400
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                     | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}} | {{Spec2("Fetch")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

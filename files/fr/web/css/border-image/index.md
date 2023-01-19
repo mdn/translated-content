@@ -3,6 +3,7 @@ title: border-image
 slug: Web/CSS/border-image
 translation_of: Web/CSS/border-image
 ---
+
 {{CSSRef}}
 
 La propriété **`border-image`** dessine une image sur la bordure d'un élément.

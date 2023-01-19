@@ -2,6 +2,7 @@
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
+
 {{JSRef}}
 
 **`has()`** メソッドは、特定のキーをもつ要素が `WeakMap` オブジェクト内に存在するかどうかを示す真偽値を返します。
@@ -38,9 +39,7 @@ wm.has('baz');  // false を返す
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/API/DeviceMotionEvent/interval
 ---
+
 {{apiref("Device Orientation Events")}}
 
 La propriété **`interval`** renvoie la granularité temporelle, exprimée en millisecondes, avec laquelle les données relatives aux mouvements sont obtenues du matériel.

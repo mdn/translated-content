@@ -1,14 +1,6 @@
 ---
 title: MediaStreamTrack.id
 slug: Web/API/MediaStreamTrack/id
-tags:
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaStreamTrack/id
 ---
 {{APIRef("Media Capture and Streams")}}
 

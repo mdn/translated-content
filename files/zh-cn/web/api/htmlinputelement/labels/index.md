@@ -2,6 +2,7 @@
 title: HTMLInputElement.labels
 slug: Web/API/HTMLInputElement/labels
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLInputElement.labels`** 为只读属性，它返回一个{{domxref("NodeList")}} 实例，绑定当前的{{HTMLElement("input")}} 节点的{{HTMLElement("label")}} 元素。
@@ -14,9 +15,9 @@ var labelElements = input.labels;
 
 ### Return value
 
-{{domxref("NodeList")}} 包含 `<label>` 元素和 `<input>` 元素.
+{{domxref("NodeList")}} 包含 `<label>` 元素和 `<input>` 元素。
 
-## 实例
+## 示例
 
 ### HTML
 
@@ -37,7 +38,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("示例", "100%", 30)}}
 
 ## 规范
 
@@ -45,4 +46,4 @@ window.addEventListener("DOMContentLoaded", function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLInputElement.labels")}}
+{{Compat}}

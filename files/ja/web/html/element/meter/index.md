@@ -1,16 +1,9 @@
 ---
 title: '<meter>: HTML メーター要素'
 slug: Web/HTML/Element/meter
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/meter
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<meter>` 要素**は、既知の範囲内のスカラー値、または小数値を表します。
 
@@ -79,7 +72,7 @@ translation_of: Web/HTML/Element/meter
 
   - : 現在の数値。`min` 属性と `max` 属性が指定されている場合、これらの表す範囲内に収まる値でなくてはなりません。この `value` 属性が未定義、あるいは不正な値であった場合は、その値は `0` となります。指定されている値が `min` 属性と `max` 属性が示す範囲の範囲外の値である場合、その範囲の内のもっとも近い値が適用されます。
 
-    > **Note:** **注意:** `value` 属性の値が `0` を下限、`1` を上限とするものでない限り、`min` 属性および `max` 属性で `value` 属性の下限および上限を定義しなくてはなりません。
+    > **メモ:** `value` 属性の値が `0` を下限、`1` を上限とするものでない限り、`min` 属性および `max` 属性で `value` 属性の下限および上限を定義しなくてはなりません。
 
 - {{htmlattrdef("min")}}
   - : 範囲全体の下限。 `max` 属性により上限が設定されている場合は、それより小さい値でなくてはなりません。未設定の場合、下限値は `0` となります。

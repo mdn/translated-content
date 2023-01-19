@@ -3,6 +3,7 @@ title: '-webkit-text-security'
 slug: Web/CSS/-webkit-text-security
 translation_of: Web/CSS/-webkit-text-security
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 **`-webkit-text-security`** est une propriété CSS non-standard qui permet de masquer les caractères saisis dans un camp d'un formulaire (ex. {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}) en les remplaçant par une forme géométrique. Cette propriété n'affecte que les champs qui ne sont pas de type `password`.

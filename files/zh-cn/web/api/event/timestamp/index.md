@@ -2,6 +2,7 @@
 title: event.timeStamp
 slug: Web/API/Event/timeStamp
 ---
+
 {{APIRef}}
 
 > **警告：** 在 Gecko 中，该属性的值不是事件发生时正确的事件戳。查看 <https://bugzilla.mozilla.org/show_bug.cgi?id=238041>
@@ -33,7 +34,7 @@ function getTime(event) {
 
 <body onkeypress="getTime(event)">
 
-<p>按下任意键获取 onkeypress 事件对象的 timestamp 属性值.</p>
+<p>按下任意键获取 onkeypress 事件对象的 timestamp 属性值。</p>
 <p>timeStamp: <span id="time">-</span></p>
 
 </body>

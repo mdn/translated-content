@@ -2,6 +2,7 @@
 title: TextEncoder.encoding
 slug: Web/API/TextEncoder/encoding
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextEncoder.encoding`** は読み取り専用プロパティで、特定のエンコーダーで使用されるエンコーディングアルゴリズムの名前が入った文字列を返します。

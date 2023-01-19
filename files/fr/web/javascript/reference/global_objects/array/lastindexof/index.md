@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/lastIndexOf
 ---
+
 {{JSRef}}
 
 La méthode **`lastIndexOf()`** permet de renvoyer le dernier indice pour lequel une valeur donnée est présente dans un tableau. Si la valeur recherchée n'est pas présente, le résultat sera -1. Lors de la recherche, le tableau est parcouru dans le sens des index décroissants, à partir de l'index `indexDébut`.
@@ -123,19 +124,11 @@ On notera que cette implémentation vise une compatibilité absolue de `lastInde
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.15', 'Array.prototype.lastIndexOf')}}                             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.lastIndexOf")}}
-
-## Notes de compatibilité
-
-- À partir de Firefox 47 ({{geckoRelease(47)}}), cette méthode ne renverra plus `-0`. Ainsi, `[0].lastIndexOf(0, -0)` renverra toujours `+0` (cf. {{bug(1242043)}}).
+{{Compat}}
 
 ## Voir aussi
 

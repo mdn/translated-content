@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/CIA
 original_slug: Glossaire/DIC
 ---
+
 DIC (Disponibilité, Intégrité, Confidentialité) (également appelé triade DIC ou triade CID) est un modèle qui guide les stratégies d'une organisation dans le domaine de la sécurité de l'information.
 
 ## Voir aussi

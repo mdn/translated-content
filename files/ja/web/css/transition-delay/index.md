@@ -2,6 +2,7 @@
 title: transition-delay
 slug: Web/CSS/transition-delay
 ---
+
 {{CSSRef}}
 
 CSS の `transition-delay` プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。

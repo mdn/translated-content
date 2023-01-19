@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
 original_slug: Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets
 ---
+
 {{learnsidebar}}
 
 Les tables de compatibilité suivantes tentent de résumer l'état de la prise en charge des CSS par les formulaires HTML. Eu égard à la complexité des CSS et des formulaires HTML, ces tables ne peuvent pas être considérées comme un élément de référence parfait. Toutefois, elles vous donneront un bon aperçu de ce qui peut et de ce qui ne peut pas être fait, ce qui vous aidera à apprendre comment faire les choses.
@@ -888,7 +889,7 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
           <li>
             Seul Firefox fournit une prise en charge totale de cette propriété.
             Opera ne la prend pas du tout en charge et d'autres navigateur ne le
-            font que pour l'élément  {{HTMLElement("select")}}.
+            font que pour l'élément {{HTMLElement("select")}}.
           </li>
         </ol>
       </td>

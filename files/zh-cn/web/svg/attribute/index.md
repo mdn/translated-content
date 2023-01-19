@@ -2,9 +2,10 @@
 title: SVG 属性参考
 slug: Web/SVG/Attribute
 ---
+
 {{SVGRef}}
 
-SVG 元素可以通过属性来修改，这些属性指定有关如何处理或呈现元素的详细信息。 下面列出了 SVG 中所有的可用属性以及参考文档的链接，以帮助您了解哪些元素支持它们，以及它们如何工作。
+SVG 元素可以通过属性来修改，这些属性指定有关如何处理或呈现元素的详细信息。下面列出了 SVG 中所有的可用属性以及参考文档的链接，以帮助您了解哪些元素支持它们，以及它们如何工作。
 
 ## SVG 属性（从 A-Z 排序）
 
@@ -388,9 +389,9 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}, {{SVGAttr("accelerate")}}, {{SVGAttr("decelerate")}}
 
-#### 动画额外属性
+#### 动画累加属性
 
-{{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
+{{SVGAttr("additive")}}、{{SVGAttr("accumulate")}}
 
 ### 事件属性
 

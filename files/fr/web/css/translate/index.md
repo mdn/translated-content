@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/translate
 ---
+
 {{CSSRef}}{{seecompattable}}
 
 La propriété **`translate`** permet de définir des opérations de translations, individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.
@@ -41,9 +42,13 @@ translate: 50% 105px 5rem;
 - `none`
   - : Cette valeur indique qu'aucune translation ne devrait être appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -95,15 +100,11 @@ div:hover .translate {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#individual-transforms', 'individual transforms')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.translate")}}
+{{Compat}}
 
 ## Voir aussi
 

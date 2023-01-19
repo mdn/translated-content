@@ -2,6 +2,7 @@
 title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 ---
+
 {{JSRef}}
 
 **`findLast()`** 方法返回数组中满足提供的测试函数条件的最后一个元素的值。如果没有找到对应元素，则返回 {{jsxref("undefined")}}。
@@ -102,7 +103,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### 使用箭头函数和解构
 
-前面的示例可以使用箭头函数和[对象解构](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)来编写：
+前面的示例可以使用箭头函数和[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)来编写：
 
 ```js
 const inventory = [

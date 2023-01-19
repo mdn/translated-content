@@ -42,7 +42,7 @@ padding-left: unset;
 
 ### Формальный синтаксис
 
-    {{csssyntax}}
+{{csssyntax}}
 
 ## Примеры
 

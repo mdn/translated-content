@@ -3,6 +3,7 @@ title: Entrées utilisateur et méthodes
 slug: Web/Guide/User_input_methods
 translation_of: Web/Guide/User_input_methods
 ---
+
 Les entrées utilisateur modernes vont au-delà du simple clavier et souris: pensez aux écrans tactiles par exemple. Cet article fournit des recommendations pour gérer les entrées utilisateur et implémenter les contrôles des Open Web Apps, ainsi que des FAQs, des exemples concrets, et des liens pour ceux qui ont besoin d'informations supplémentaires sur les technologies utilisées. Les APIs et événements abordés sont en autre [les événements tactiles](/fr/docs/Web/Guide/DOM/Events/Touch_events), [l'API Pointer Lock](/fr/docs/WebAPI/Pointer_Lock), [l'API Screen Orientation](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), [l'API Fullscreen](/fr/docs/Web/Guide/DOM/Using_full_screen_mode) et [Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop).
 
 ## Workflow entrées utilisateur et contrôles
@@ -143,7 +144,7 @@ Dans un Open Web App, tout élément DOM peut être rendu directement éditable 
 
 ## Exemples
 
-- **[Suivre plusieurs points de contact à la fois](/en/DOM/Touch_events#Example)**
+- **[Suivre plusieurs points de contact à la fois](/fr/docs/Web/API/Touch_events#example)**
   - : Cet exemple permet de gérer un toucher multiple (plusieurs contacts simultanés), permettant ainsi à l'utilisateur de dessiner dans un `{{htmlelement("canvas")}}` avec plusieurs doigts. Cela ne fonctionne qu'avec les navigateurs supportant les interactions tactiles.
 - **[Démo de verrouillage de pointeur simple](/fr/docs/WebAPI/Pointer_Lock#example)**
   - : Vous avons écrit une démo de verrouillage de pointeur pour vous montrer comment l'utiliser pour mettre en place un système de contrôle simple. Cette démo utilise JavaScript pour dessiner une balle dans un élément `{{htmlelement("canvas")}}`. Quand vous cliquez sur le canvas, le verrouillage du pointeur est utilisé pour supprimer le curseur de la souris à l'écran et vous permettre de déplacer la balle avec la souris.

@@ -1,16 +1,8 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Generator.throw
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
+
 {{JSRef}}
 
 제너레이터의 **`throw()`** 메서드는 현재 중단 된 위치에서 제너레이터에 `throw` 문이 삽입되는 것처럼 작동하여 제너레이터의 오류 조건을 알려주고 오류를 처리하거나 정리 작업을 수행하며 제너레이터를 종료할 수 있도록 합니다.

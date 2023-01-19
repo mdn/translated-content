@@ -2,6 +2,7 @@
 title: FileSystemDirectoryEntry
 slug: Web/API/FileSystemDirectoryEntry
 ---
+
 {{APIRef("File System API")}}{{SeeCompatTable}}
 
 **`FileSystemDirectoryEntry`** は [File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) のインターフェイスで、ファイルシステム内のディレクトリを表します。これはディレクトリ内のファイルにアクセスして操作する方法と、ディレクトリ内のエントリにアクセスする方法を提供します。
@@ -58,9 +59,7 @@ _このインターフェイスは、親インターフェイスである {{domx
 
 ## 仕様
 
-| 仕様書                                                                                                       | ステータス                           | コメント |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('File System API', '#api-directoryentry', 'FileSystemDirectoryEntry')}} | {{Spec2('File System API')}} |          |
+{{Specifications}}
 
 ## ブラウザの互換性
 

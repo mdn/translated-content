@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
 original_slug: Web/JavaScript/Reference/Erreurs/Missing_initializer_in_const
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

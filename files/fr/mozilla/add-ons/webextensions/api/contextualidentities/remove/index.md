@@ -13,6 +13,7 @@ tags:
   - supprimer
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/remove
 ---
+
 {{AddonSidebar()}}
 
 Supprime une identité contextuelle, compte tenu de son ID de cookie.

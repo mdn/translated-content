@@ -1,54 +1,65 @@
 ---
-title: GlobalEventHandlers.ontouchmove
+title: Element：touchmove 事件
 slug: Web/API/Element/touchmove_event
 ---
-{{ApiRef("HTML DOM")}}
 
-A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchmove")}} event.
+{{APIRef}}
+
+`touchmove` 事件在触点于触控平面上移动时触发。
 
 ## 语法
 
-```plain
-var moveHandler = someElement.ontouchmove;
-```
-
-### Return value
-
-- `moveHandler`
-  - : `someElement`元素的 _touchmove 事件处理句柄/函数。_
-
-## 例子
-
-这个例子展示了两种通过 _ontouchmove_ 设置元素的 _touchmove 事件处理句柄/函数的方式。_
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-<html>
-<script>
+addEventListener('touchmove', (event) => {});
 
-function moveTouch(ev) {
- // 处理事件
-}
-
-function init() {
- var el=document.getElementById("target1");
- el.ontouchmove = moveTouch;
-}
-
-<body onload="init();">
-<div id="target1"> Touch me ... </div>
-<div id="target2" ontouchmove="moveTouch(event)"> Touch me ... </div>
-</body>
-</html>
+ontouchmove = (event) => { };
 ```
 
-## Specifications
+## 事件类型
+
+{{domxref("TouchEvent")}}。继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("TouchEvent")}}
+
+## 事件属性
+
+_此接口从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承属性。_
+
+- {{domxref("TouchEvent.altKey")}} {{ReadOnlyInline}}
+  - : 一个布尔值，表示在事件触发时 Alt 键是否被按下。
+- {{domxref("TouchEvent.changedTouches")}} {{ReadOnlyInline}}
+  - : 一个包含所有的 {{domxref("Touch")}} 对象的 {{domxref("TouchList")}}，这些 `Touch` 对象表示在前一个 touch 事件和当前的事件之间，状态发生变化的独立触点。
+- {{domxref("TouchEvent.ctrlKey")}} {{ReadOnlyInline}}
+  - : 一个布尔值，表示在事件触发时控制键是否被按下。
+- {{domxref("TouchEvent.metaKey")}} {{ReadOnlyInline}}
+  - : 一个布尔值，表示在事件触发时 Meta 键是否被按下。
+- {{domxref("TouchEvent.shiftKey")}} {{ReadOnlyInline}}
+  - : 一个布尔值，表示在事件触发时 Shift 键是否被按下。
+- {{domxref("TouchEvent.targetTouches")}} {{ReadOnlyInline}}
+  - : 一个包含所有的 {{domxref("Touch")}} 对象的 {{domxref("TouchList")}}，这些 `Touch` 对象表示当前与触摸表面接触的触点，且触点起始于事件发生的目标元素。
+- {{domxref("TouchEvent.touches")}} {{ReadOnlyInline}}
+  - : 一个包含所有的 {{domxref("Touch")}} 对象的 {{domxref("TouchList")}}，这些 `Touch` 对象表示当前与表面接触的触点（不论事件目标或状态变化）。
+- {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : 自事件开始以来的旋转角度变化（以度为单位）。正值表示顺时针旋转；负值表示逆时针旋转。初始值为 `0.0`。
+- {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : 自事件开始以来，两个数值之间的距离（缩放倍数）。表示事件开始至现在，触点距离的缩放倍数（浮点数）。小于 1.0 表示向内收缩（缩小），大于 1.0 表示向外松开（放大）。初始值为 `1.0`。
+
+## 示例
+
+这些事件的代码示例可在这个专用页面查看：[Touch 事件](/zh-CN/docs/Web/API/Touch_events)。
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{ event("touchmove") }}
+- [Touch 事件](/zh-CN/docs/Web/API/Touch_events)
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- 以 {{domxref("Document")}} 为目标的相同事件：{{domxref("Document/touchmove_event", "touchmove")}}

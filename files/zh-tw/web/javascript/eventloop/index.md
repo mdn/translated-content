@@ -2,6 +2,7 @@
 title: 並行模型和事件循環
 slug: Web/JavaScript/EventLoop
 ---
+
 {{JsSidebar("Advanced")}}
 
 JavaScript 的並行模型（concurrency model）是基於「事件循環（event loop）」，其在運作上跟 C 或是 Java 有很大的不同。

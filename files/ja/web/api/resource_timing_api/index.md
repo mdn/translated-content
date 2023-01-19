@@ -2,6 +2,7 @@
 title: Resource Timing API
 slug: Web/API/Resource_Timing_API
 ---
+
 {{DefaultAPISidebar("Resource Timing API")}}
 
 **`Resource Timing`** インターフェイスは、アプリケーションの*リソース*のロードに関する詳細なネットワークタイミングデータの取得と分析を可能にします。アプリケーションはタイミングメトリックを使用して、たとえば、{{domxref("XMLHttpRequest")}}、{{SVGElement("SVG","SVG element")}}、画像、スクリプトなど特定のリソースをロードするのにかかる時間を決定できます。
@@ -10,7 +11,7 @@ slug: Web/API/Resource_Timing_API
 
 このドキュメントでは、`Resource Timing` インターフェイスの概要を説明します。例を含むインターフェイスの詳細については、各インターフェイスのリファレンスページ、[リソースタイミング API の使用](/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)、および [あわせて参照](#あわせて参照) セクションの参照を参照してください。リソースタイミング処理モデルのグラフィック表示については、[リソースタイミングフェーズ](https://w3c.github.io/resource-timing/#process)の図を参照してください。
 
-> **Note:** The `PerformanceResourceTiming` interface extends the {{domxref("PerformanceEntry")}} for {{domxref("PerformanceEntry","performance entries", "", 1)}} which have an {{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`".
+> **メモ:** The `PerformanceResourceTiming` interface extends the {{domxref("PerformanceEntry")}} for {{domxref("PerformanceEntry","performance entries", "", 1)}} which have an {{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`".
 
 ## High-resolution タイムスタンプ
 
@@ -22,7 +23,7 @@ The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µ
 
 An application can get timestamps for the various stages used to load a resource. The first property in the processing model is {{domxref("PerformanceEntry.startTime","startTime")}} which returns the timestamp immediately before the resource loading process begins. The {{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} timestamps follows and redirect processing (if applicable) and preceeds DNS lookup. The next stages are {{domxref('PerformanceResourceTiming.connectStart','connectStart')}} and {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}} which are the timestamps immediately before and after connecting to the server, respectively. The last three timestamps are, in order: {{domxref('PerformanceResourceTiming.requestStart','requestStart')}} - the timestamp before the browser starts requesting the resource from the server; {{domxref('PerformanceResourceTiming.responseStart','responseStart')}} - the timestamp after the browser receives the first byte of the response from the server; and {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}} - the timestamp after the browser receives the last byte of the resource. If the resource is loaded via a secure connection a {{domxref('PerformanceResourceTiming.secureConnectionStart','secureConnectionStart')}} timestamp will be available between the connection start and end events.
 
-> **Note:** When {{Glossary("CORS")}} is in effect, many of these values are returned as zero unless the server's access policy permits these values to be shared. This requires the server providing the resource to send the `Timing-Allow-Origin` HTTP response header with a value specifying the origin or origins which are allowed to get the restricted timestamp values.
+> **メモ:** When {{Glossary("CORS")}} is in effect, many of these values are returned as zero unless the server's access policy permits these values to be shared. This requires the server providing the resource to send the `Timing-Allow-Origin` HTTP response header with a value specifying the origin or origins which are allowed to get the restricted timestamp values.
 >
 > The properties which are returned as 0 by default when loading a resource from a domain other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
 
@@ -52,7 +53,7 @@ The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceR
 
 ## 実装状況
 
-As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/Web/API/PerformanceResourceTiming#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
+As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/ja/docs/Web/API/PerformanceResourceTiming#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
 
 To test your browser's support for these interfaces, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 

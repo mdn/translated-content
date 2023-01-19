@@ -3,6 +3,7 @@ title: 高级设计 HTML 表单
 slug: Learn/Forms/Advanced_form_styling
 original_slug: Learn/HTML/Forms/Advanced_styling_for_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Styling_HTML_forms", "Learn/HTML/Forms/Property_compatibility_table_for_form_widgets", "Learn/HTML/Forms")}}
 
 在本文中，我们将看到[HTML](/zh-CN/docs/HTML)表单怎样使用[CSS](/zh-CN/docs/CSS)装饰难以定制的表单小部件。如[前面章节](/zh-CN/docs/HTML/Forms/Styling_HTML_forms)所示，文本域和按钮完全可以使用 CSS，现在我们将深入探索 HTML 表单样式。
@@ -261,7 +262,7 @@ p+p {
 
 你可以在线查看结果：
 
-{{EmbedLiveSample("A_more_complex_example", 250, 130)}}
+{{EmbedLiveSample("更复杂的例子", 250, 130)}}
 
 ### Dealing with the select nightmare
 
@@ -320,25 +321,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15672/firefox-mac-select-1-closed.png"
+          src="firefox-mac-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15673/firefox-mac-select-1-open.png"
+          src="firefox-mac-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15674/firefox-mac-select-2-closed.png"
+          src="firefox-mac-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15675/firefox-mac-select-2-open.png"
+          src="firefox-mac-select-2-open.png"
         />
       </td>
     </tr>
@@ -347,25 +348,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15692/firefox-windows-select-1-closed.png"
+          src="firefox-windows-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15693/firefox-windows-select-1-open.png"
+          src="firefox-windows-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15694/firefox-windows-select-2-closed.png"
+          src="firefox-windows-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15695/firefox-windows-select-2-open.png"
+          src="firefox-windows-select-2-open.png"
         />
       </td>
     </tr>
@@ -374,25 +375,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15677/chrome-mac-select-1-closed.png"
+          src="chrome-mac-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15678/chrome-mac-select-1-open.png"
+          src="chrome-mac-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15684/chrome-windows-select-2-closed.png"
+          src="chrome-windows-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15680/chrome-mac-select-2-open.png"
+          src="chrome-mac-select-2-open.png"
         />
       </td>
     </tr>
@@ -401,25 +402,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15682/chrome-windows-select-1-closed.png"
+          src="chrome-windows-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15683/chrome-windows-select-1-open.png"
+          src="chrome-windows-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15684/chrome-windows-select-2-closed.png"
+          src="chrome-windows-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15685/chrome-windows-select-2-open.png"
+          src="chrome-windows-select-2-open.png"
         />
       </td>
     </tr>
@@ -428,25 +429,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15702/opera-mac-select-1-closed.png"
+          src="opera-mac-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15703/opera-mac-select-1-open.png"
+          src="opera-mac-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15704/opera-mac-select-2-closed.png"
+          src="opera-mac-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15705/opera-mac-select-2-open.png"
+          src="opera-mac-select-2-open.png"
         />
       </td>
     </tr>
@@ -455,25 +456,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15697/ie11-select-1-closed.png"
+          src="ie11-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15698/ie11-select-1-open.png"
+          src="ie11-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15699/ie11-select-2-closed.png"
+          src="ie11-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15700/ie11-select-2-open.png"
+          src="ie11-select-2-open.png"
         />
       </td>
     </tr>
@@ -482,25 +483,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15687/edge-select-1-closed.png"
+          src="edge-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15688/edge-select-1-open.png"
+          src="edge-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15689/edge-select-2-closed.png"
+          src="edge-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15690/edge-select-2-open.png"
+          src="edge-select-2-open.png"
         />
       </td>
     </tr>

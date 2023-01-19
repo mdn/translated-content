@@ -2,6 +2,7 @@
 title: 球板及键盘控制
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
@@ -20,7 +21,7 @@ var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
 ```
 
-然后定义球拍的长和宽，以及为了之后的处理同时定义 x 轴上的初始位置。新建一个方法来在页面上描绘球板。把下列代码添加到你的`drawBall()方法里去`：
+然后定义球拍的长和宽，以及为了之后的处理同时定义 x 轴上的初始位置。新建一个方法来在页面上描绘球板。把下列代码添加到你的 `drawBall()` 方法里去：
 
 ```js
 function drawPaddle() {
@@ -48,14 +49,14 @@ var rightPressed = false;
 var leftPressed = false;
 ```
 
-这两个变量的默认值都是 false，因为在开始时按键没有被按下。为了监听按键的按下动作，我们需要添加两个监听器。把下列代码添加到底部的`setInterval()的上一列去：`
+这两个变量的默认值都是 false，因为在开始时按键没有被按下。为了监听按键的按下动作，我们需要添加两个监听器。把下列代码添加到底部的 `setInterval()` 的上一列去：
 
 ```js
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 ```
 
-当你按下任何键盘上的按键，按下事件被激活时`keyDownHandler()方法会被调用。对于松开时的处理也是类似的：当松开按键时keyUpHandler()方法会被调用。把下列代码添加到addEventListener()下方`：
+当你按下任何键盘上的按键，按下事件被激活时 `keyDownHandler()` 方法会被调用。对于松开时的处理也是类似的：当松开按键时 keyUpHandler() 方法会被调用。把下列代码添加到 addEventListener() 下方：
 
 ```js
 function keyDownHandler(e) {

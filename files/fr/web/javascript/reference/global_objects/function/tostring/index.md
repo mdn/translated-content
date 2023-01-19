@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant le code source de la fonction.
@@ -52,21 +53,11 @@ Si la méthode `toString()` est appelée sur une fonction créée avec le constr
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1.                                                           |
-| [`Function.prototype.toString()`](https://tc39.github.io/Function-prototype-toString-revision/#sec-introduction)         | Brouillon                    | Standardise la chaîne de caractères utilisée pour les fonctions natives ainsi que la gestion des fins de ligne. |
-| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}     | {{Spec2('ES6')}}         | Critères supplémentaires ajoutés sur la représentation de la chaîne.                                            |
-| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.toString")}}
-
-## Notes spécifiques à Firefox
-
-- À partir de Firefox 17.0, `Function.prototype.toString()` a été implémenté en sauvegardant le code source de la fonction. La méthode utilisant la décompilation a été retirée et le paramètre `indentation` n'est donc plus nécessaire. Pour plus d'informations, voir {{bug("761723")}}.
-- À partir de Firefox 38 et jusqu'à Firefox 63, `Function.prototype.toString()` levait une exception pour les {{jsxref("Proxy")}} (cf. {{bug(1100936)}} et {{bug(1440468)}}).
+{{Compat}}
 
 ## Voir aussi
 

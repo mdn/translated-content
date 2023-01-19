@@ -1,8 +1,8 @@
 ---
 title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
-translation_of: Web/JavaScript/Reference/Statements/Empty
 ---
+
 {{jsSidebar("Statements")}}
 
 **empty** 문은 JavaScript 아무것도 동작하지 않습니다.
@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Statements/Empty
 
 ## 설명
 
-empty statement은 JavaScript구문에 하나가 필요할 때 어떤 문도 실행되지 않을 것이라는 것을 나타내는 세미 콜론(;)입니다. 여러개의 문장을 원하지만 JavaScript는 [block statement](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/block)을 사용하여 하나만 허용하며 여러개의 문장을 하나로 결합합니다.
+empty statement은 JavaScript구문에 하나가 필요할 때 어떤 문도 실행되지 않을 것이라는 것을 나타내는 세미 콜론(;)입니다. 여러개의 문장을 원하지만 JavaScript는 [block statement](/ko/docs/Web/JavaScript/Reference/Statements/block)을 사용하여 하나만 허용하며 여러개의 문장을 하나로 결합합니다.
 
 ## 예제
 
@@ -40,7 +40,7 @@ if (condition);       // Caution, this "if" does nothing!
    killTheUniverse()  // So this always gets executed!!!
 ```
 
-다른 예 : 중괄호 ({})가없는 [`if...else`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/if...else) 문에서 `three`가 `true`이면 아무 일도 일어나지 않고 `four`를 건너 뛰고 else case의 launchRocket() 함수도 실행되지 않습니다.
+다른 예 : 중괄호 ({})가없는 [`if...else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 문에서 `three`가 `true`이면 아무 일도 일어나지 않고 `four`를 건너 뛰고 else case의 launchRocket() 함수도 실행되지 않습니다.
 
 ```js
 if (one)

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/resize
 ---
+
 {{CSSRef}}
 
 La propriété **`resize`** permet de contrôler le caractère redimensionnable d'un élément et notamment la direction dans laquelle celui-ci peut être redimensionné.
@@ -49,9 +50,13 @@ La propriété `resize` peut être définie avec l'un des mots-clés suivants.
 
 > **Note :** `resize` ne s'applique pas aux blocs dont la propriété {{cssxref("overflow")}} vaut `visible`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -118,16 +123,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                                           | Commentaires                           |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#resize', 'resize')}} | {{Spec2('CSS Logical Properties')}} | Ajout des valeurs `block` et `inline`. |
-| {{SpecName('CSS3 Basic UI', '#resize', 'resize')}}             | {{Spec2('CSS3 Basic UI')}}             | Définition initiale.                   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.resize")}}
+{{Compat}}
 
 ## Voir aussi
 

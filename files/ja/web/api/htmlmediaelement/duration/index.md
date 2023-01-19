@@ -2,6 +2,7 @@
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLMediaElement")}} の読み取り専用プロパティ **`duration`** は、この要素のメディアの長さを秒単位で表します。

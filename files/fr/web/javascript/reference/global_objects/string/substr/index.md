@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/substr
 ---
+
 {{JSRef}}
 
 > **Attention :** Bien que `String.prototype.substr(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui définit l'ensemble des fonctionnalités historiques qui doivent être évitées autant que possible. On utilisera la méthode {{jsxref("String.prototype.substring()")}} à la place.
@@ -97,16 +98,11 @@ if ('ab'.substr(-1) != 'b') {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                                                                 |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définie dans la Compatibility Annex B (informative). Implémentée dans JavaScript 1.0.        |
-| {{SpecName('ES5.1', '#sec-B.2.3', 'String.prototype.substr')}}                         | {{Spec2('ES5.1')}}     | Définie dans la Compatibility Annex B (informative).                                         |
-| {{SpecName('ES6', '#sec-string.prototype.substr', 'String.prototype.substr')}}     | {{Spec2('ES6')}}         | Définie dans l'Annex B (normative) pour les Additional ECMAScript Features for Web Browsers. |
-| {{SpecName('ESDraft', '#sec-string.prototype.substr', 'String.prototype.substr')}} | {{Spec2('ESDraft')}} | Définie dans l'Annex B (normative) pour les Additional ECMAScript Features for Web Browsers  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.substr")}}
+{{Compat}}
 
 ## Voir aussi
 

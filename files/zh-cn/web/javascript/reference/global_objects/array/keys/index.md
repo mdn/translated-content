@@ -2,6 +2,7 @@
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
+
 {{JSRef}}
 
 **`keys()`** 方法返回一个包含数组中每个索引键的 **`Array Iterator`** 对象。
@@ -43,5 +44,5 @@ console.log(denseKeys);  // [0, 1, 2]
 - [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.entries()")}}
-- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

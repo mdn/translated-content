@@ -1,14 +1,6 @@
 ---
 title: <spacer>
 slug: Web/HTML/Element/spacer
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.spacer
-translation_of: Web/HTML/Element/spacer
 ---
 
 {{non-standard_header}}{{deprecated_header}}
@@ -49,4 +41,4 @@ Netscape のブラウザーの子孫である Firefox は、バージョン 4 �
 
 {{Compat}}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

@@ -2,6 +2,7 @@
 title: DataView.prototype.getBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
 ---
+
 {{JSRef}}
 
 **`getBigInt64()`** メソッドは、符号つき 64 ビット整数 (long long) を {{jsxref("DataView")}} の先頭からのバイト単位のオフセット位置から取得します。

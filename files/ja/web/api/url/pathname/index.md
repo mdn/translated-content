@@ -2,6 +2,7 @@
 title: URL.pathname
 slug: Web/API/URL/pathname
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`pathname`** プロパティは、最初の `'/'` とその後に続く URL のパス（またはパスがない場合は空の文字列）を含む {{domxref("USVString")}} です。
@@ -28,9 +29,7 @@ var result = url.pathname; // 戻り値: "/en-US/docs/Web/API/URL/pathname"
 
 ## 仕様
 
-| 仕様                                                                         | 状態                 | コメント |
-| ---------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-pathname', 'URL.pathname')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

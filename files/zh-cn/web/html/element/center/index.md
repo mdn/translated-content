@@ -2,6 +2,7 @@
 title: <center>
 slug: Web/HTML/Element/center
 ---
+
 {{deprecated_header()}}
 
 ## Summary
@@ -46,4 +47,4 @@ And so will this line.</p>
 - {{Cssxref("text-align")}}
 - {{Cssxref("display")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

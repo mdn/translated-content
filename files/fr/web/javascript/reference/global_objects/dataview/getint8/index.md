@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getInt8
 ---
+
 {{JSRef}}
 
 La méthode **`getInt8()`** permet de lire un entier signé sur 8 bits à l'octet donné par rapport au début de {{jsxref("DataView")}}.
@@ -53,15 +54,11 @@ dataview.getInt8(1); // 0
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires                                    |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                 | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.getint8', 'DataView.prototype.getInt8')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getint8', 'DataView.prototype.getInt8')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getInt8")}}
+{{Compat}}
 
 ## Voir aussi
 

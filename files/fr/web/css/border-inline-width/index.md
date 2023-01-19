@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-inline-width
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-inline-width`** définit la largeur de la bordure sur les côtés d'un élément sur les côtés de l'axe en ligne. Cette propriété logique peut correspondre à différentes propriétés physiques selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à {{cssxref("border-top-width")}} et {{cssxref("border-bottom-width")}} ou à {{cssxref("border-left-width")}} et {{cssxref("border-right-width")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
@@ -29,9 +30,13 @@ The border width in the other dimension can be set with {{cssxref("border-block-
 - `<'border-width'>`
   - : La largeur de la bordure. Voir {{ cssxref("border-width") }}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -65,15 +70,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-width", "border-block-width")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-block-width")}}
+{{Compat}}
 
 ## Voir aussi
 

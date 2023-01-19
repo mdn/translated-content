@@ -4,6 +4,7 @@ slug: Web/API/console/timeEnd
 l10n:
   sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
+
 {{APIRef("Console API")}}
 
 **`console.timeEnd()`** は、以前 {{domxref("console.time()")}} の呼び出しで開始したタイマーを停止します。

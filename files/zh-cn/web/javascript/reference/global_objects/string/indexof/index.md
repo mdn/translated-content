@@ -2,32 +2,45 @@
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 ---
+
 {{JSRef}}
 
-**`indexOf()`** 方法返回调用它的 {{jsxref("String")}} 对象中第一次出现的指定值的索引，从 `fromIndex` 处进行搜索。如果未找到该值，则返回 -1。
+**`indexOf()`** 方法，给定一个参数：要搜索的子字符串，搜索整个调用字符串，并返回指定子字符串第一次出现的索引。给定第二个参数：一个数字，该方法将返回指定子字符串在大于或等于指定数字的索引处的第一次出现。
 
 {{EmbedInteractiveExample("pages/js/string-indexof.html")}}
 
-> **备注：** For the Array method, see {{jsxref("Array.prototype.indexOf()")}}.
-
 ## 语法
 
-```plain
-str.indexOf(searchValue [, fromIndex])
+```js-nolint
+indexOf(searchString)
+indexOf(searchString, position)
 ```
 
 ### 参数
 
 - `searchValue`
-  - : 要被查找的字符串值。如果没有提供确切地提供字符串，[_searchValue_ 会被强制设置为 `"undefined"`](https://tc39.github.io/ecma262/#sec-tostring)， 然后在当前字符串中查找这个值。举个例子：`'undefined'.indexOf()` 将会返回 0，因为 `undefined` 在位置 0 处被找到，但是 `'undefine'.indexOf()` 将会返回 -1 ，因为字符串 `'undefined'` 未被找到。
-- `fromIndex` {{optional_inline}}
-  - : 数字表示开始查找的位置。可以是任意整数，默认值为 `0`。如果 `fromIndex` 的值小于 `0`，或者大于 `str.length` ，那么查找分别从 `0` 和`str.length` 开始。（译者注： `fromIndex` 的值小于 `0`，等同于为空情况； `fromIndex` 的值大于或等于 `str.length` ，那么结果会直接返回 `-1` 。）举个例子，`'hello world'.indexOf('o', -5)` 返回 `4` ，因为它是从位置`0`处开始查找，然后 `o` 在位置`4`处被找到。另一方面，`'hello world'.indexOf('o', 11)` （或 `fromIndex` 填入任何大于`11`的值）将会返回 `-1` ，因为开始查找的位置`11`处，已经是这个字符串的结尾了。
+
+  - : 要搜索的子字符串，[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/string#字符串强制转换)。
+
+    如果不带参数调用方法，`searchString` 将被强制转换为 `"undefined"`。因此，`"undefined". indexof()` 返回 `0`——因为子字符串 `"undefined"` 在字符串 `"undefined"` 中的 `0` 位置找到。但是 `"undefine".indexof()` 返回 `-1`——因为子字符串 `"undefined"` 在字符串 `"undefine"` 中找不到。
+
+- `position` {{optional_inline}}
+
+  - : 该方法返回指定子字符串在大于或等于 `position` 位置的第一次出现的索引，默认为 `0`。如果 `position` 大于调用字符串的长度，则该方法根本不搜索调用字符串。如果 `position` 小于零，该方法的行为就像 `position` 为 `0` 时一样。
+
+    - `hello world hello'.indexOf('o', -5)` 返回 `4`——因为它使该方法的行为类似于第二个参数为 `0`，并且 `o` 在大于或等于 `0` 位置的第一次出现是在 `4` 位置。
+
+    - `'hello world hello'.indexOf('world', 12)` 返回 `-1`——因为，虽然子字符串 `world` 确实出现在索引 `6` 处，但该位置不大于或等于 `12`。
+
+    - `'hello world hello'.indexOf('o', 99)` 返回 `-1`——因为 `99` 大于 `hello world hello` 的长度，这会导致方法根本不搜索字符串。
 
 ### 返回值
 
 查找的字符串 `searchValue` 的第一次出现的索引，如果没有找到，则返回 `-1`。
 
-若被查找的字符串 `searchValue` 是一个空字符串，将会产生“奇怪”的结果。如果 `fromIndex` 值为空，或者 `fromIndex` 值小于被查找的字符串的长度，返回值和以下的 `fromIndex` 值一样：
+#### 当使用空字符串搜索时的返回值
+
+搜索空字符串会产生奇怪的结果。如果没有第二个实参，或者有第二个实参的值小于调用字符串的长度，返回值与第二个实参的值相同：
 
 ```js
 'hello world'.indexOf('') // 返回 0
@@ -36,7 +49,7 @@ str.indexOf(searchValue [, fromIndex])
 'hello world'.indexOf('', 8) // 返回 8
 ```
 
-另外，如果 `fromIndex` 值大于等于字符串的长度，将会直接返回字符串的长度（`str.length`）：
+然而，如果有第二个参数，其值大于或等于字符串的长度，则返回值为字符串的长度：
 
 ```js
 'hello world'.indexOf('', 11) // 返回 11
@@ -44,86 +57,81 @@ str.indexOf(searchValue [, fromIndex])
 'hello world'.indexOf('', 22) // 返回 11
 ```
 
-从前面一个例子可以看出，被查找的值是空值时，JavaScript 将直接返回指定的索引值。从后面一个例子可以看出，被查找的值是空值时，JavaScript 将直接返回字符串的长度。
+在前一个实例中，该方法的行为就像在第二个参数指定的位置之后发现了一个空字符串。在后一个实例中，该方法的行为就好像在调用字符串的末尾找到了一个空字符串。
 
 ## 描述
 
-字符串中的字符被从左向右索引。第一个字符的索引（index）是 `0`，变量名为 `stringName` 的字符串的最后一个字符的索引是 `stringName.length - 1` 。
+字符串中的字符被从左向右索引。第一个字符的索引（index）是 `0`，字符串的最后一个字符的索引是字符串的长度减 1。
 
 ```js
-"Blue Whale".indexOf("Blue")       // 返回 0
-"Blue Whale".indexOf("Blute")      // 返回 -1
-"Blue Whale".indexOf("Whale", 0)   // 返回 5
-"Blue Whale".indexOf("Whale", 5)   // 返回 5
-"Blue Whale".indexOf("", -1)       // 返回 0
-"Blue Whale".indexOf("", 9)        // 返回 9
-"Blue Whale".indexOf("", 10)       // 返回 10
-"Blue Whale".indexOf("", 11)       // 返回 10
+'Blue Whale'.indexOf('Blue')      // 返回  0
+'Blue Whale'.indexOf('Blute')     // 返回 -1
+'Blue Whale'.indexOf('Whale', 0)  // 返回  5
+'Blue Whale'.indexOf('Whale', 5)  // 返回  5
+'Blue Whale'.indexOf('Whale', 7)  // 返回 -1
+'Blue Whale'.indexOf('')          // 返回  0
+'Blue Whale'.indexOf('', 9)       // 返回  9
+'Blue Whale'.indexOf('', 10)      // 返回 10
+'Blue Whale'.indexOf('', 11)      // 返回 10
 ```
 
-`indexOf` 方法是区分大小写的。例如，下面的表达式将返回 `-1`：
+`indexOf()` 方法是区分大小写的。例如，下面的表达式将返回 `-1`：
 
 ```js
-"Blue Whale".indexOf("blue")      // 返回 -1
+'Blue Whale'.indexOf('blue')      // 返回 -1
 ```
 
 ### 检测是否存在某字符串
 
-注意 `0` 并不会被当成 `true` ，`-1` 不会被当成 `false` 。所以当检测某个字符串是否存在于另一个字符串中时，可使用下面的方法：
+当检查字符串中是否出现特定的子字符串时，正确的检查方法是测试返回值是否为 `-1`：
 
-```plain
-'Blue Whale'.indexOf('Blue') !== -1    // true
-'Blue Whale'.indexOf('Bloe') !== -1    // false
-~('Blue Whale'.indexOf('Bloe'))        // 0，这是一种错误用法
+```js
+'Blue Whale'.indexOf('Blue') !== -1  // true; found 'Blue' in 'Blue Whale'
+'Blue Whale'.indexOf('Bloe') !== -1  // false; no 'Bloe' in 'Blue Whale'
 ```
 
 ## 示例
 
-### 使用`indexOf()` 和 `lastIndexOf()`
+### 使用 indexOf()
 
-下例使用 `indexOf()` 和 `lastIndexOf()` 方法定位字符串中 "`Brave new world`" 的值。
+下面的例子使用 `indexOf()` 来定位字符串 `"Brave new world"` 中的子字符串。
 
 ```js
-var anyString = "Brave new world";
+const str = 'Brave new world';
 
-console.log("The index of the first w from the beginning is " + anyString.indexOf("w"));
-// logs 8
-console.log("The index of the first w from the end is " + anyString.lastIndexOf("w"));
-// logs 10
-
-console.log("The index of 'new' from the beginning is " + anyString.indexOf("new"));
-// logs 6
-console.log("The index of 'new' from the end is " + anyString.lastIndexOf("new"));
-// logs 6
+console.log(`Index of first w from start is ${str.indexOf('w')}`); // logs 8
+console.log(`Index of "new" from start is ${str.indexOf('new')}`); // logs 6
 ```
 
-### `indexOf` 和区分大小写
+### indexOf() 和区分大小写
 
-下例定义了两个字符串变量。两个变量包含相同的字符串，除了第二个字符串中的某些字符为大写。第一个 `log` 方法输出 19。但是由于 `indexOf` 方法区分大小写，因此不会在 `myCapString` 中发现字符串 `“cheddar"`，所以，第二个 `log` 方法会输出 -1。
+下例定义了两个字符串变量。
+
+两个变量包含相同的字符串，只是第二个字符串中的某些字符为大写。第一个 {{domxref("console.log()")}} 方法输出 `19`。但是由于 `indexOf()` 方法区分大小写，因此不会在 `myCapString` 中发现字符串 `“cheddar"`，所以第二个 `console.log()` 方法会输出 `-1`。
 
 ```js
-var myString    = "brie, pepper jack, cheddar";
-var myCapString = "Brie, Pepper Jack, Cheddar";
+const myString = 'brie, pepper jack, cheddar';
+const myCapString = 'Brie, Pepper Jack, Cheddar';
 
-console.log('myString.indexOf("cheddar") is ' + myString.indexOf("cheddar"));
+console.log(`myString.indexOf("cheddar") is ${myString.indexOf('cheddar')}`);
 // logs 19
-console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf("cheddar"));
+console.log(`myCapString.indexOf("cheddar") is ${myCapString.indexOf('cheddar')}`);
 // logs -1
 ```
 
-### 使用 `indexOf` 统计一个字符串中某个字母出现的次数
+### 使用 indexOf() 统计一个字符串中某个字母出现的次数
 
-在下例中，设置了 `count` 来记录字母 `e` 在字符串 `str` 中出现的次数：
+在下例中，使用 `count` 来记录字母 `e` 在字符串 `str` 中出现的次数：
 
 ```js
 // 翻译：生存还是毁灭？这是个问题。（莎士比亚《哈姆雷特》）
-var str = 'To be, or not to be, that is the question.';
-var count = 0;
-var pos = str.indexOf('e');
+const str = 'To be, or not to be, that is the question.';
+let count = 0;
+let position = str.indexOf('e');
 
-while (pos !== -1) {
+while (position !== -1) {
   count++;
-  pos = str.indexOf('e', pos + 1);
+  position = str.indexOf('e', position + 1);
 }
 
 console.log(count); // displays 4
@@ -137,7 +145,7 @@ console.log(count); // displays 4
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}

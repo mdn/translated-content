@@ -1,12 +1,15 @@
 ---
 title: Firefox 91 for developers
 slug: Mozilla/Firefox/Releases/91
+l10n:
+  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 91 の変更点をまとめています。Firefox 91 は 2021 年 8 月 10 日にリリースされました。
 
-> **Note:** Mozilla Hacks の [Hopping on Firefox 91](https://hacks.mozilla.org/2021/08/hopping-on-firefox-91/) もご覧ください。
+> **メモ:** Mozilla Hacks の [Hopping on Firefox 91](https://hacks.mozilla.org/2021/08/hopping-on-firefox-91/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -37,8 +40,8 @@ slug: Mozilla/Firefox/Releases/91
 
 #### DOM
 
-- [Visual Viewport API](/ja/docs/Web/API/Visual_Viewport_API) がデスクトップ版 Firefox でデフォルトで有効になりました (Android 版 Firefox はバージョン 68 で有効にしていました)。この API はドキュメントに対する {{Glossary("visual viewport", "視覚的ビューポート")}} の位置を表す情報へ、ウィンドウのコンテンツエリアと同様にアクセスする手段を提供します。また、ビューポートの変更を監視できるイベントも提供します ({{bug(1551302)}}).
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API) が {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}} で保護されるようになりました。[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy) で拒否された場合は、{{domxref('Navigator.getGamepads()')}} を呼び出すと `SecurityError` {{domxref('DOMException')}} が発生して、{{event("gamepadconnected")}} および {{event("gamepaddisconnected")}} イベントは発生しません。既定の `allowlist` は `*` です。この既定値は、仕様書に合わせるため将来のリリースで `self` に更新する予定です ({{bug(1704005)}})。
+- [Visual Viewport API](/ja/docs/Web/API/Visual_Viewport_API) がデスクトップ版 Firefox でデフォルトで有効になりました (Android 版 Firefox はバージョン 68 で有効にしていました)。この API はドキュメントに対する {{Glossary("visual viewport", "視覚的ビューポート")}} の位置を表す情報へ、ウィンドウのコンテンツエリアと同様にアクセスする手段を提供します。また、ビューポートの変更を監視できるイベントも提供します ({{bug(1551302)}})。
+- [Gamepad API](/ja/docs/Web/API/Gamepad_API) が {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}} で保護されるようになりました。[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy) で拒否された場合は、{{domxref('Navigator.getGamepads()')}} を呼び出すと `SecurityError` {{domxref('DOMException')}} が発生して、{{domxref("Window.gamepadconnected_event", "gamepadconnected")}} および {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} イベントは発生しません。既定の `allowlist` は `*` です。この既定値は、仕様書に合わせるため将来のリリースで `self` に更新する予定です ({{bug(1704005)}})。
 - 最近の仕様書の更新に準拠するため、および他の主要なブラウザーとの互換性を向上させるために、`Window.clientInformation` を {{domxref("Window.navigator")}} の別名として追加しました ({{bug(1717072)}})。
 
 ### WebDriver conformance (Marionette)

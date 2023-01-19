@@ -2,6 +2,7 @@
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement`** インタフェースは canvas 要素のレイアウトや表現の操作のための属性やメソッドを提供します。`HTMLCanvasElement`は{{domxref("HTMLElement")}}インタフェースのプロパティやメソッドも利用可能です。
@@ -39,12 +40,7 @@ _{{domxref("HTMLElement")}}から継承するメソッドの他に以下のメ�
 
 ## 仕様書
 
-| Specification                                                                                                                                        | Status                                               | Comment                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Media Capture DOM Elements', '#html-media-element-media-capture-extensions', 'HTMLCanvasElement')}} | {{Spec2('Media Capture DOM Elements')}} | Adds the method `captureStream()`.                                                                                                                                                                                      |
-| {{SpecName('HTML WHATWG', "#the-canvas-element", "HTMLCanvasElement")}}                                                     | {{Spec2('HTML WHATWG')}}                     | The method `getContext()` now returns a {{domxref("RenderingContext")}} rather than an opaque `object`. The methods `probablySupportsContext()`, `setContext()` and `transferControlToProxy()`have been added. |
-| {{SpecName('HTML5.1', "scripting-1.html#the-canvas-element", "HTMLCanvasElement")}}                                     | {{Spec2('HTML5.1')}}                         |                                                                                                                                                                                                                         |
-| {{SpecName('HTML5 W3C', "scripting-1.html#the-canvas-element", "HTMLCanvasElement")}}                                     | {{Spec2('HTML5 W3C')}}                         | Initial definition.                                                                                                                                                                                                     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

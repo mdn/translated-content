@@ -2,9 +2,10 @@
 title: Connection
 slug: Web/HTTP/Headers/Connection
 ---
+
 {{HTTPSidebar}}
 
-**Connection** 头（header） 决定当前的事务完成后，是否会关闭网络连接。如果该值是“keep-alive”，网络连接就是持久的，不会关闭，使得对同一个服务器的请求可以继续在该连接上完成。
+**Connection** 头（header）决定当前的事务完成后，是否会关闭网络连接。如果该值是“keep-alive”，网络连接就是持久的，不会关闭，使得对同一个服务器的请求可以继续在该连接上完成。
 
 > **备注：** [特定于连接的标头字段（例如 Connection）不得与 HTTP/2 一起使用。](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
 
@@ -30,4 +31,4 @@ Connection: close
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Connection")}}
+{{Compat}}

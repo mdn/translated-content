@@ -6,6 +6,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
+
 {{AddonSidebar}}
 
 Les APIs WebExtensions en JavaScript peuvent être utilisées au sein des [scripts d’arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) de l’extension et dans tout autre document livré avec celle-ci. Ceci inclut les pop-ups relatives à une [action navigateur](/fr/Add-ons/WebExtensions/user_interface/Browser_action) ou [action de page](/fr/Add-ons/WebExtensions/user_interface/Page_actions), [barres latérales](/fr/Add-ons/WebExtensions/user_interface/barres_laterales), [pages d’options](/fr/Add-ons/WebExtensions/user_interface/Options_pages), ou [pages de nouvel onglet](/fr/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). Certaines de ces APIs peuvent également être interrogées par des [scripts de contenu](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) de l’extension (voir la [liste dans le guide des scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).

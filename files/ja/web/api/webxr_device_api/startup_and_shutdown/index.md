@@ -2,6 +2,7 @@
 title: WebXR セッションの起動と停止
 slug: Web/API/WebXR_Device_API/Startup_and_shutdown
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_header}}
 
 すでに 3D グラフィックス全般、特に WebGL に精通していると想定すると、次の大胆なステップで複合現実を実現できます。 現実の世界に加えて、またはその代わりに人工の風景やオブジェクトを表示するという考え方は、それほど複雑ではありません。 拡張現実または仮想現実のシナリオのレンダリングを開始する前に、WebXR セッションを作成してセットアップする必要があります。 また、適切に停止する方法も知っておく必要があります。 この記事では、これらのことを行う方法を学びます。
@@ -258,7 +259,7 @@ async function runSession(session) {
 
 この時点で、`XRSession` 自体が完全に構成されているため、レンダリングを開始できます。 まず、その世界の座標が記述される参照空間が必要です。 `XRSession` の {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} メソッドを呼び出すことにより、セッションの初期参照空間を取得できます。 `requestReferenceSpace()` を呼び出すときに、必要な参照空間のタイプの名前を指定します。 この場合、`unbounded` です。 ニーズに応じて、`local` または `viewer` を簡単に指定できます。
 
-> **Note:** ニーズに合った適切な参照空間を選択する方法を理解するには、[WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)の[参照空間タイプの選択](/ja/docs/Web/API/WebXR_Device_API/Geometry#Selecting_the_reference_space_type)を参照してください。
+> **メモ:** ニーズに合った適切な参照空間を選択する方法を理解するには、[WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)の[参照空間タイプの選択](/ja/docs/Web/API/WebXR_Device_API/Geometry#Selecting_the_reference_space_type)を参照してください。
 
 `requestReferenceSpace()` によって返される参照空間は、原点 (0, 0, 0) を空間の中心に配置します。 これは素晴らしいことです — プレイヤーの視点が世界の正確な中心から始まる場合は。 しかし、ほとんどの場合、そうではありません。 その場合は、最初の参照空間で {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} を呼び出して、(0, 0, 0) がビューアーの位置に配置されるように[座標系をオフセット](/ja/docs/Web/API/WebXR_Device_API/Geometry#Establishing_the_reference_space)し、同様に顔を望ましい方向にシフトする*新しい*参照空間を作成します。 `getOffsetReferenceSpace()` への入力値は、デフォルトの世界座標で指定されたプレーヤーの位置と方向をカプセル化する {{domxref("XRRigidTransform")}} です。
 
@@ -305,7 +306,7 @@ session.onvisibilitychange = (event) => {
 
 これが発生すると、{{domxref("XRReferenceSpace.reset_event", "reset")}} イベントがセッションの {{domxref("XRReferenceSpace")}} に送信されます。 イベントの {{domxref("XRReferenceSpaceEvent.transform", "transform")}} プロパティは、ネイティブの原点を再調整するために必要な変換を詳述する {{domxref("XRRigidTransform")}} です。
 
-> **Note:** `reset` イベントは {{domxref("XRSession")}} ではなく {{domxref("XRReferenceSpace")}} で発生することに注意してください。
+> **メモ:** `reset` イベントは {{domxref("XRSession")}} ではなく {{domxref("XRReferenceSpace")}} で発生することに注意してください。
 
 `reset` イベントのもう 1 つの一般的な原因は、制限付き参照空間（{{domxref("XRReferenceSpaceType")}} が `bounded-floor` である参照空間）が、{{domxref("XRBoundedReferenceSpace")}} のプロパティ {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} の変更によって指定されたジオメトリを持っている場合です。
 

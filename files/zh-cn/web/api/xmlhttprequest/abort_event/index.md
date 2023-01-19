@@ -2,6 +2,7 @@
 title: 'XMLHttpRequest: abort event'
 slug: Web/API/XMLHttpRequest/abort_event
 ---
+
 {{APIRef}}当一个请求终止时 `abort` 事件被触发，比如程序执行 {{domxref("XMLHttpRequest.abort()")}}。
 
 <table class="properties">
@@ -90,7 +91,7 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener('click', () => {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg');
+    runXHR('dgszyjnxcaipwzy.jpg');
 });
 
 xhrButtonError.addEventListener('click', () => {
@@ -98,7 +99,7 @@ xhrButtonError.addEventListener('click', () => {
 });
 
 xhrButtonAbort.addEventListener('click', () => {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg').abort();
+    runXHR('dgszyjnxcaipwzy.jpg').abort();
 });
 ```
 
@@ -112,7 +113,7 @@ xhrButtonAbort.addEventListener('click', () => {
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest.abort_event")}}
+{{Compat}}
 
 ## See also
 

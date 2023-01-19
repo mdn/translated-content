@@ -11,6 +11,7 @@ tags:
   - postMessage
 translation_of: Web/API/Client/postMessage
 ---
+
 {{SeeCompatTable}}{{APIRef("Client")}}
 
 La méthode **`postMessage()`** de l'interface [`Client`](/fr/docs/Web/API/Client) permet à un service worker client d'envoyer un message à un [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).

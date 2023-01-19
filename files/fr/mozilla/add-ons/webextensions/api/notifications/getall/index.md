@@ -13,6 +13,7 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
 ---
+
 {{AddonSidebar()}}
 
 Obtient toutes les notifications actuellement actives créées par l'extension.

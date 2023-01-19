@@ -2,6 +2,7 @@
 title: JavaScript 中的类
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 在[上一篇文章](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_programming)中，我们介绍了面向对象编程（OOP）的基本概念，并介绍了一个使用 OOP 原则对学校的教授和学生进行建模的示例。
@@ -21,7 +22,7 @@ slug: Learn/JavaScript/Objects/Classes_in_JavaScript
           href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >创建代码块</a>）以及面向对象的
           JavaScript（OOJS）基础（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics"
           >JavaScript 对象基础</a>、<a
           href="/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes">对象原型</a>和<a
           href="/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_programming">面向对象编程</a>）。

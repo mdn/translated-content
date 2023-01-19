@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/7
 original_slug: Mozilla/Firefox/Versions/7
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.
@@ -106,8 +107,8 @@ Ces changements affectent les développeurs d'extensions ainsi que les développ
 
 ### XUL
 
-- Les éléments {{xulelem("tree")}} peuvent désormais conserver l'état des triangles d'affichage si les nœuds référencés par les {{XULAttr("datasources")}} ont tous des ID uniques spécifiés par les attributs "id".
-- Les éléments {{xulelem("panel")}} peuvent désormais être configurés pour [permettre à l'utilisateur de les faire glisser en cliquant n'importe où sur leur arrière-plan](/fr/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) avec le nouvel attribut {{XULAttr("backdrag")}}.
+- Les éléments `<tree>` peuvent désormais conserver l'état des triangles d'affichage si les nœuds référencés par les `datasources` ont tous des ID uniques spécifiés par les attributs "id".
+- Les éléments `<panel>` peuvent désormais être configurés pour [permettre à l'utilisateur de les faire glisser en cliquant n'importe où sur leur arrière-plan](/fr/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) avec le nouvel attribut `backdrag`.
 
 ### XPCOM
 

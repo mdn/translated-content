@@ -2,6 +2,7 @@
 title: 'Warning: 08/09 is not a legal ECMA-262 octal constant'
 slug: Web/JavaScript/Reference/Errors/Bad_octal
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の警告 "08 (or 09) is not a legal ECMA-262 octal constant" は、数値リテラルの

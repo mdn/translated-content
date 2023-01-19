@@ -2,6 +2,7 @@
 title: DocumentFragment.childElementCount
 slug: Web/API/DocumentFragment/childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 **`Document.childElementCount`** は読み取り専用のプロパティで、 `DocumentFragment` の子要素の数を返します。

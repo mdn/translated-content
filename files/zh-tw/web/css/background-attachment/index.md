@@ -2,6 +2,7 @@
 title: background-attachment
 slug: Web/CSS/background-attachment
 ---
+
 {{CSSRef}}
 
 **`background-attachment`** 這個 [CSS](/zh-TW/docs/CSS) 屬性能夠設定，背景圖片的位置是否要固定在 {{glossary("viewport")}}（視圖）上，還是背景圖片會隨著它的 containing block（外層容器）一起滾動。
@@ -56,7 +57,7 @@ background-attachment: unset;
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("starsolid.gif");
   background-attachment: fixed;
 }
 ```
@@ -93,8 +94,8 @@ p {
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"),
-      url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("starsolid.gif"),
+      url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -112,7 +113,7 @@ p {
 
 ## Browser compatibility
 
-{{Compat("css.properties.background-attachment")}}
+{{Compat}}
 
 ## See also
 

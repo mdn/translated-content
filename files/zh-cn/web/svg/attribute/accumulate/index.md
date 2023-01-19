@@ -2,7 +2,8 @@
 title: accumulate
 slug: Web/SVG/Attribute/accumulate
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 该属性控制了动画是否是累加的。
 

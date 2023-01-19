@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sin
 ---
+
 {{JSRef}}
 
 La fonction **`Math.sin()`** renvoie le sinus d'un nombre.
@@ -47,16 +48,11 @@ Math.sin(Math.PI / 2); // 1
 
 ## Spécifications
 
-| Spécification                                                        | Statut                       | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.16', 'Math.sin')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.sin', 'Math.sin')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.sin")}}
+{{Compat}}
 
 ## Voir aussi
 

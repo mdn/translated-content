@@ -2,6 +2,7 @@
 title: SourceBufferList.length
 slug: Web/API/SourceBufferList/length
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBufferList")}} インターフェイスの **`length`** 読み取り専用プロパティは、リスト内の {{domxref("SourceBuffer")}} オブジェクトの数を返します。
@@ -22,9 +23,7 @@ unsigned long 型の数。
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebufferlist-length', 'length')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

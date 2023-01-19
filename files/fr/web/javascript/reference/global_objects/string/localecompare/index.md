@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/localeCompare
 browser-compat: javascript.builtins.String.localeCompare
 ---
+
 {{JSRef}}
 
 La méthode **`localeCompare()`** renvoie un nombre indiquant si la chaîne de caractères courante se situe avant, après ou est la même que la chaîne passée en paramètre, selon l'ordre lexicographique de la locale.

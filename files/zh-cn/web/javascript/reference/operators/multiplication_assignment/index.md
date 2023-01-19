@@ -1,41 +1,40 @@
 ---
-title: Multiplication assignment (*=)
+title: 乘法赋值（*=）
 slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The multiplication assignment operator (`*=`) multiplies a variable by the value of the right operand and assigns the result to the variable.
+**乘法赋值**（**`*=`**）运算符将变量乘以右操作数的值，并将结果赋值给该变量。
 
 {{EmbedInteractiveExample("pages/js/expressions-multiplication-assignment.html")}}
 
 ## 语法
 
-```plain
-Operator: x *= y
-Meaning:  x  = x * y
+```js-nolint
+x *= y // x = x * y
 ```
 
-## Examples
+## 示例
 
-### Using multiplication assignment
+### 使用乘法赋值
 
 ```js
-// Assuming the following variable
-//  bar = 5
+let bar = 5;
 
-bar *= 2     // 10
-bar *= 'foo' // NaN
+bar *= 2; // 10
+bar *= 'foo'; // NaN
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [JS 指南中的赋值操作符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [乘法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.arcTo()`** 是 Canvas 2D API 根据控制点和半径绘制圆弧路径，使用当前的描点 (前一个 moveTo 或 lineTo 等函数的止点)。根据当前描点与给定的控制点 1 连接的直线，和控制点 1 与控制点 2 连接的直线，作为使用指定半径的圆的**切线**，画出两条切线之间的弧线路径。
@@ -69,7 +70,7 @@ ctx.arc(120,38,30,0,2*Math.PI);
 ctx.stroke();
 ```
 
-{{ EmbedLiveSample('Using_the_arc_method', 315, 165) }}
+{{ EmbedLiveSample('使用 arcTo 方法', 315, 165) }}
 
 ### 尝试 `arcTo` 参数
 
@@ -134,7 +135,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Trying_the_arcTo_parameters', 700, 360) }}
+{{ EmbedLiveSample('尝试 arcTo 参数', 700, 360) }}
 
 ## 规范描述
 
@@ -142,7 +143,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.arcTo")}}
+{{Compat}}
 
 ## 参见
 

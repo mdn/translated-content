@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/custom-ident
 ---
+
 {{CSSRef}}
 
 Le type de données CSS **`<custom-ident>`** permet de représenter des chaînes de caractères arbitraires définies par l'utilisateur et qui sont utilisées comme identifiants. Ce type de données est sensible à la casse et pour chaque contexte d'utilisation, plusieurs valeurs sont exclues afin d'éviter des ambiguïtés et des erreurs.
@@ -78,18 +79,11 @@ bili.bob          Il ne doit contenir que des caractères alphanumériques. _ et
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                        | État                                         | Commentaires                                                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS Will Change', '#valdef-will-change-custom-ident', '<code>&lt;custom-ident&gt;</code> for <code>will-change</code>')}}     | {{Spec2('CSS Will Change')}}         | Définition des valeurs exclues pour {{cssxref("will-change")}}.                                                                                                                            |
-| {{SpecName('CSS3 Counter Styles', '#typedef-counter-style-name', '<code>&lt;custom-ident&gt;</code> for <code>list-style-type</code>')}} | {{Spec2('CSS3 Counter Styles')}} | Utilisation de `<custom-ident>` à la place d'une liste finie de mots-clés. Définition des valeurs exclues pour {{cssxref("list-style-type")}} et {{cssxref("@counter-style")}}. |
-| {{SpecName('CSS3 Lists', '#counter-properties', '<code>&lt;custom-ident&gt;</code> for <code>counter-*</code>')}}                             | {{Spec2('CSS3 Lists')}}             | `<identifier>` est renommé en `<custom-ident>`. Son utilisation est ajoutée pour la propriété `counter-set`.                                                                                         |
-| {{SpecName('CSS3 Animations', '#typedef-single-animation-name', '<code>&lt;custom-ident&gt;</code> for <code>animation-name</code>')}} | {{Spec2('CSS3 Animations')}}         | Définition des valeurs exclues pour {{cssxref("animation-name")}}.                                                                                                                        |
-| {{SpecName('CSS3 Values', '#identifier-value', '<code>&lt;custom-ident&gt;</code>')}}                                                                     | {{Spec2('CSS3 Values')}}             | `<identifier>` est renommé en `<custom-ident>`. Devient un pseudo-type et est lié aux différents cas d'utilisation pour la définition des valeurs exclues.                                           |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-identifier', '<code>&lt;identifier&gt;</code>')}}                                                         | {{Spec2('CSS2.1')}}                     | Définition initiale.                                                                                                                                                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-_Ce type de données n'est pas un type de données « réel » mais un type artificiel permettant de simplifier la description des valeurs permises. Il n'y a donc pas de données de compatibilité stricto sensu._
+{{Compat}}
 
 ## Voir aussi
 

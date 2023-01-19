@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 original_slug: Apprendre/HTML/Introduction_à_HTML/Structuring_a_page_of_content
 ---
+
 {{LearnSidebar}}
 {{PreviousNext("Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
 
@@ -63,7 +64,7 @@ Vous devez aussi
 
 - appliquer à la page les CSS fournies en ajoutant un élément {{htmlelement("link")}} juste au‑dessous de celui existant.
 
-## **Conseils et astuces**
+## Conseils et astuces
 
 - Utilisez le «&nbsp;[W3C HTML validator&nbsp;»](https://validator.w3.org/) pour valider votre HTML&nbsp;; vous aurez des points bonus si la validation s'opère autant que possible (la ligne «&nbsp;googleapis&nbsp;» est une ligne utilisée pour importer des polices personnalisées dans la page à partir du service «&nbsp;Google Fonts » ; elle ne sera pas validée, donc ne vous en inquiétez pas).
 - Il n'est pas nécessaire de connaître quoi que ce soit des CSS pour faire cet exercice&nbsp;; vous avez juste besoin de placer les CSS fournies dans l'élément HTML.

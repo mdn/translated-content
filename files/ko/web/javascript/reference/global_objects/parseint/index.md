@@ -1,13 +1,6 @@
 ---
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - parseInt
-browser-compat: javascript.builtins.parseInt
-translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
 {{jsSidebar("Objects")}}
 
@@ -87,7 +80,7 @@ parseInt('08')   // 8
 
 ## 더 엄격한 파싱 함수
 
-간혹 정수를 파싱할 수 있는 더 엄격항 방법이 필요할 때가 있습니다. 정규표현식이 도움이 될 수 있습니다.
+간혹 정수를 파싱할 수 있는 더 엄격한 방법이 필요할 때가 있습니다. 정규표현식이 도움이 될 수 있습니다.
 
 ```js
 function filterInt(value) {

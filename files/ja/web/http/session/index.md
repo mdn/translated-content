@@ -1,10 +1,8 @@
 ---
 title: 典型的な HTTP セッション
 slug: Web/HTTP/Session
-tags:
-  - HTTP
-translation_of: Web/HTTP/Session
 ---
+
 {{HTTPSidebar}}
 
 HTTP のようなクライアントサーバープロトコルでは、セッションが 3 つの段階で構成されます。
@@ -21,7 +19,7 @@ HTTP/1.1 では第 3 段階の後にコネクションは閉じられなくな�
 
 コンピューター上の HTTP サーバー用の、 TCP の既定のポートは 80 番です。8000 番や 8080 番など、ほかのポートを使用することもできます。読み込むページの URL はドメイン名とポート番号の両方を含みますが、後者は 80 番である場合に省略できます。詳しくは [Identifying resources on the Web](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) をご覧ください。
 
-> **Note:** **メモ:** クライアントサーバーモデルでは、明示的な要求なくサーバーがクライアントにデータを送信することを認めていません。この問題を回避するために、ウェブ開発者はいくつかの技術を使用しています。 {{domxref("XMLHTTPRequest")}} や {{domxref("Fetch")}} API で定期的にサーバーに ping を送ったり、 [WebSockets API](/ja/docs/WebSockets) や同様のプロトコルを使用したりします。
+> **メモ:** クライアントサーバーモデルでは、明示的な要求なくサーバーがクライアントにデータを送信することを認めていません。この問題を回避するために、ウェブ開発者はいくつかの技術を使用しています。 {{domxref("XMLHTTPRequest")}} や {{domxref("Fetch")}} API で定期的にサーバーに ping を送ったり、 [WebSockets API](/ja/docs/WebSockets) や同様のプロトコルを使用したりします。
 
 ## クライアントの要求の送信
 

@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 original_slug: Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_amélioration_progressive
 ---
+
 {{CSSRef}}
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilité", "Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_disposition","Web/CSS/CSS_Grid_Layout")}}

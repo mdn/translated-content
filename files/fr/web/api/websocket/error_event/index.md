@@ -3,6 +3,7 @@ title: 'WebSocket : évènement error'
 slug: Web/API/WebSocket/error_event
 browser-compat: api.WebSocket.error_event
 ---
+
 {{APIRef}}
 
 L'évènement `error` est déclenché lorsqu'une connexion avec une `WebSocket` a été fermée à cause d'une erreur (par exemple lorsque des données n'ont pu être envoyées).

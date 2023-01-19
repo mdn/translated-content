@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/rotate
 ---
+
 {{CSSRef}}{{seecompattable}}
 
 La propriété **`rotate`** permet d'indiquer des rotations individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.
@@ -42,9 +43,13 @@ rotate: 1 1 1 90deg;
 - `none`
   - : Cette valeur indique qu'aucune rotation ne devrait être appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -96,15 +101,11 @@ div:hover .rotate {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#individual-transforms', 'individual transforms')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.rotate")}}
+{{Compat}}
 
 ## Voir aussi
 

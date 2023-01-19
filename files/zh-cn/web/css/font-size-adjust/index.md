@@ -2,6 +2,7 @@
 title: font-size-adjust
 slug: Web/CSS/font-size-adjust
 ---
+
 {{ CSSRef() }}
 
 ## 概述
@@ -10,14 +11,14 @@ slug: Web/CSS/font-size-adjust
 
 当{{ Cssxref("font-family") }}的首选字体不可用时，如果备选字体的尺寸比（小写字母的大小与字体大小的比）有较大的差别时，可读性可能会成为一大问题。
 
-为了兼容于不支持`font-size-adjust的浏览器，该属性的值应该被定义为`{{ Cssxref("font-size") }}的值所要乘的系数。这意味着定义的值应该为首选字体的尺寸比。例如，样式表这样定义
+为了兼容于不支持 `font-size-adjust` 的浏览器，该属性的值应该被定义为 {{ Cssxref("font-size") }} 的值所要乘的系数。这意味着定义的值应该为首选字体的尺寸比。例如，样式表这样定义
 
 ```css
 font-size: 14px;
 font-size-adjust: 0.5;
 ```
 
-的真实作用是定义小写字母的大小应该为`7px高` (0.5 × 14px).
+的真实作用是定义小写字母的大小应该为 `7px` 高（0.5 × 14px）。
 
 {{cssinfo}}
 
@@ -66,7 +67,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-size-adjust")}}
+{{Compat}}
 
 ## 参见
 

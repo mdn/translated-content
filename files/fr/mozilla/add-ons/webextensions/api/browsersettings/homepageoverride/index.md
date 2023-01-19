@@ -12,6 +12,7 @@ tags:
   - homepageOverride
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride
 ---
+
 {{AddonSidebar()}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour obtenir une chaîne représentant l'URL actuellement définie comme page d'accueil du navigateur.

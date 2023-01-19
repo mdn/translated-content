@@ -2,6 +2,7 @@
 title: 拖曳操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 本文會一一說明拖曳各步驟的作業。
@@ -17,7 +18,7 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 除了文字選擇、圖片或超連結之外，沒有元素預設是可拖曳的。所以要讓一個元素可以拖曳，有幾件事必須要做：
 
 - 在想要拖曳的元素上設定 `{{htmlattrxref("draggable")}}` 屬性為 `true`。
-- 註冊 `{{event("dragstart")}}` 事件之事件處理器。
+- 註冊 `[`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event)` 事件之事件處理器。
 - {{domxref("DataTransfer.setData","Set the drag data")}} within the listener defined above.
 
 以下是一段簡單的範例。
@@ -123,31 +124,6 @@ function dragWithCustomImage(event) {
 ```
 
 上面我們的 canvas 是 50 x 50px 大小，然後我們位移一半 25 讓圖片落在滑鼠指標中央。
-
-在 Gecko 上開發，比如說外掛或 Mozllia 應用程式，Gecko9.0{{geckoRelease("9.0")}}支援使用{{XULElem("panel")}}元素作為拖曳圖片，簡單將 XUL panel 元素傳入 setDragImage 方法即可。
-
-試想下面這個 {{XULElem("panel")}}元素:
-
-```xml
-<panel id="panel" style="opacity: 0.6">
-  <description id="pb">Drag Me</description>
-</panel>
-
-<vbox align="start" style="border: 1px solid black;" ondragstart="startDrag(event)">
-  <description>Drag Me</description>
-</vbox>
-```
-
-當使用者拖曳{{XULElem("vbox")}} 元素時，startDrag 函數會被呼叫。
-
-```js
-function startDrag(event) {
-  event.dataTransfer.setData("text/plain", "<strong>Body</strong>");
-  event.dataTransfer.setDragImage(document.getElementById("panel"), 20, 20);
-}
-```
-
-我們用 HTML 格式的"\<strong>Body\</strong>"作為資料，然後用 pnael 元素作為圖片。
 
 ## 拖曳效果
 
@@ -338,7 +314,7 @@ function doDrop(event)
 
 ## 參見
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
-- [Recommended Drag Types](/Web/Guide/HTML/Recommended_Drag_Types)
+- [HTML Drag and Drop API (Overview)](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [Recommended Drag Types](/zh-TW/docs/Web/Guide/HTML/Recommended_Drag_Types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

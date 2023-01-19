@@ -1,22 +1,15 @@
 ---
 title: '-webkit-animation'
 slug: Web/CSS/@media/-webkit-animation
-tags:
-  - '@media'
-  - CSS
-  - リファレンス
-  - WebKit
-  - メディア特性
-browser-compat: css.at-rules.media.-webkit-animation
-translation_of: Web/CSS/@media/-webkit-animation
 ---
+
 {{ CSSRef }} {{ Non-standard_header }}
 
 **`-webkit-transition`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞つきの CSS {{cssxref("animation")}} に対応していれば値が `true` になります。
 
 Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。eference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
 
-> **Note:** このメディア特性は WebKit のみが対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
+> **メモ:** このメディア特性は WebKit のみが対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
 
 ## 構文
 
@@ -49,7 +42,7 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 
 ## 関連情報
 
-- [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d)
-- [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
-- [`-webkit-transition`](/en-US/docs/Web/CSS/@media/-webkit-transition)
+- [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d)
+- [`-webkit-transform-2d`](/ja/docs/Web/CSS/@media/-webkit-transform-2d)
+- [`-webkit-transition`](/ja/docs/Web/CSS/@media/-webkit-transition)
 - [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)

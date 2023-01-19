@@ -1,20 +1,8 @@
 ---
 title: 'Reason: CORS header ''Access-Control-Allow-Origin'' missing'
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
-tags:
-  - CORS
-  - CORSMissingAllowOrigin
-  - Cross-Origin
-  - Error
-  - HTTP
-  - HTTPS
-  - Messages
-  - Reasons
-  - Security
-  - console
-  - troubleshooting
-translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
+
 {{HTTPSidebar}}
 
 ## 理由
@@ -41,7 +29,7 @@ Access-Control-Allow-Origin: https://amazing.site
 Access-Control-Allow-Origin: *
 ```
 
-> **Warning:** **警告:** ワイルドカードを使用して、非公開の API へのアクセスをすべてのサイトに許可することは、悪い考えです。
+> **警告:** ワイルドカードを使用して、非公開の API へのアクセスをすべてのサイトに許可することは、悪い考えです。
 
 何らかのサイトが CORS リクエストを `*` ワイルドカードを使用すること*なく* (たとえば資格情報を有効にする場合) 利用できるようにするには、サーバーにリクエストの `Origin` ヘッダーの値を読み取り、その値を `Access-Control-Allow-Origin` に設定することに加えて、一部のヘッダーがオリジンに応じて動的に設定されることを示すために `Vary: Origin` ヘッダーを設定する必要があります。
 

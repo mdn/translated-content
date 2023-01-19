@@ -2,6 +2,7 @@
 title: Age
 slug: Web/HTTP/Headers/Age
 ---
+
 {{HTTPSidebar}}
 
 **`Age`** 消息头里包含对象在缓存代理中存贮的时长，以秒为单位。.

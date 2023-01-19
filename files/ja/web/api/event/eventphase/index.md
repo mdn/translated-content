@@ -2,6 +2,7 @@
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
 ---
+
 {{ApiRef("DOM")}}
 
 **eventPhase`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティは、イベントフローのどの段階が現在評価されているかを示します。

@@ -8,6 +8,7 @@ tags:
   - SVG Gradient
 translation_of: Web/SVG/Element/linearGradient
 ---
+
 {{SVGRef}}
 
 L'élément **`<linearGradient>`** permet de définir des dégradés linéaires, qui pourront être utilisés comme remplissage ou contour des éléments SVG.

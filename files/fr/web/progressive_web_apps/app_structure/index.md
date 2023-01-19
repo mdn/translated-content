@@ -3,6 +3,7 @@ title: Structure d'une Progressive web app
 slug: Web/Progressive_web_apps/App_structure
 translation_of: Web/Progressive_web_apps/App_structure
 ---
+
 {{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
 
 Maintenant que nous avons pris connaissances des principes théoriques sur lesquelles sont bâties les PWAs, penchons nous sur la structure recommandée d'une vraie application. Nous commencerons par analyser l'application [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) et par examiner pourquoi elle est construite de cette façon et quels bénéfices elle en retire.
@@ -38,7 +39,7 @@ Il est important de se rappeler les avantages des PWA et de les garder à l'espr
 
 - Accessible par un lien: Même s'il se comporte comme une application native, il reste un site web - vous pouvez cliquer sur les liens d'une page et envoyer une URL à quelqu'un si vous voulez le partager.
 - Progressive: Commencer avec un "bon vieux site web basic” et ajouter progressivement de nouvelles fonctionnalités tout en se rappelant de détecter si elles sont disponibles dans le navigateur et de gérer proprement toute erreur qui pourrait survenir si la prise en charge n'est pas disponible. Par exemple, un mode déconnecté possible grâce aux service workers n'est qu'une caractéristique bonus qui améliore l'expérience sur le site web, mais ce dernier reste totalement fonctionnel sans elle.
-- Adaptatif: La conception web adaptative s'applique également aux applications web progressives, attendu que les deux sont principalement destinés aux appareils mobiles. Il y a tellements d'appareils différents en plus des navigateurs - il est important de préparer votre site web à fonctionner sur différentes tailles d'écran, supports d'affichage ou densité de pixels, en utilisant des technologies telles que  [les tags meta viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), [les reqêtes media CSS](/fr/docs/Web/CSS/Media_Queries/Using_media_queries), [les Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) et les [Grid CSS](/fr/docs/Web/CSS/CSS_Grid_Layout).
+- Adaptatif: La conception web adaptative s'applique également aux applications web progressives, attendu que les deux sont principalement destinés aux appareils mobiles. Il y a tellements d'appareils différents en plus des navigateurs - il est important de préparer votre site web à fonctionner sur différentes tailles d'écran, supports d'affichage ou densité de pixels, en utilisant des technologies telles que [les tags meta viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), [les reqêtes media CSS](/fr/docs/Web/CSS/Media_Queries/Using_media_queries), [les Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) et les [Grid CSS](/fr/docs/Web/CSS/CSS_Grid_Layout).
 
 ## Approche différente : les streams
 
@@ -98,7 +99,7 @@ Du point de vue HTML, l'app shell est tout ce qui est à l'extérieur de la sect
 </html>
 ```
 
-La section {{htmlelement("head")}} contient certaines informations de base telles que le titre, la description et des liens vers les CSS, le manifeste web, le fichier JS contenant les jeux et app.js — c'est là où notre application JavaScript est initialisée. Le {{htmlelement("body")}} est divisé en {{htmlelement("header")}} (contenant les images liées), {{htmlelement("main")}} la page (avec le titre, la description et un emplacement pour le contenu) et  {{htmlelement("footer")}} (le copyright et les liens).
+La section {{htmlelement("head")}} contient certaines informations de base telles que le titre, la description et des liens vers les CSS, le manifeste web, le fichier JS contenant les jeux et app.js — c'est là où notre application JavaScript est initialisée. Le {{htmlelement("body")}} est divisé en {{htmlelement("header")}} (contenant les images liées), {{htmlelement("main")}} la page (avec le titre, la description et un emplacement pour le contenu) et {{htmlelement("footer")}} (le copyright et les liens).
 
 Le seul travail de l'application est de lister toutes les entrées A-Frame de la compétition js13kGames 2017. Comme vous pouvez le voir, c'est un site web en une page tout ce qu'il y a de plus ordinaire - le but est d'avoir quelque chose de simple afin que nous puissions nous concentrer sur l'implémentation des réelles fonctionnalités PWA.
 

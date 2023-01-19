@@ -1,9 +1,8 @@
 ---
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-browser-compat: javascript.builtins.Date.setMinutes
 ---
+
 {{JSRef}}
 
 setMinutes () 메서드는 현지 시간에 따라 지정된 날짜의 분을 설정합니다.

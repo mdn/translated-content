@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
+
 {{JSRef}}
 
 **`getDay()`** 메서드는 주어진 날짜의 현지 시간 기준 요일을 반환합니다. 0은 일요일을 나타냅니다. 현재의 일을 반환하려면 {{jsxref("Date.prototype.getDate()")}}를 사용하세요.

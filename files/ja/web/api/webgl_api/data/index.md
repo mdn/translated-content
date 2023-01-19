@@ -2,7 +2,8 @@
 title: WebGL でのデータ
 slug: Web/API/WebGL_API/Data
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 シェーダープログラムは 3 種類のデータストレージにアクセスでき、それぞれに特定のユースケースがあります。それぞれの種類の変数はデータストアの種類に応じて 1 つまたは両方の種類のシェーダープログラムからアクセスでき、特定の変数の種類に応じてサイトの JavaScript コードからもアクセスできます。
 
@@ -57,7 +58,7 @@ fColor = vColor;
 
 ### Varyings
 
-**Varyings** は頂点シェーダーによって宣言され、頂点シェーダーからフラグメントシェーダーにデータを渡すために使用される変数です。これは、頂点シェーダーによって計算された後、頂点の {{interwiki("wikipedia", "Normal_(geometry)", "normal vector")}} を共有するために通常使用されます。
+**Varyings** は頂点シェーダーによって宣言され、頂点シェーダーからフラグメントシェーダーにデータを渡すために使用される変数です。これは、頂点シェーダーによって計算された後、頂点の [normal vector](https://en.wikipedia.org/wiki/Normal_(geometry)) を共有するために通常使用されます。
 
 <<使用方法>>
 

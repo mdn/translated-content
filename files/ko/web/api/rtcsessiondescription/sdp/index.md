@@ -1,8 +1,8 @@
 ---
 title: RTCSessionDescription.sdp
 slug: Web/API/RTCSessionDescription/sdp
-translation_of: Web/API/RTCSessionDescription/sdp
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 읽기 속성인 **`RTCSessionDescription.sdp`** 는 세션에 대해 설명해주는 {{Glossary("SDP")}}를 가지고 있는 {{domxref("DOMString")}}입니다.

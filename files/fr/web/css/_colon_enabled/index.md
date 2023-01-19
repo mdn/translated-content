@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:enabled
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:enabled`** permet de cibler un élément activé. Un élément est activé s'il peut être sélectionné, si on peut cliquer dessus ou si on peut y saisir du texte ou y passer le focus (un élément peut également être dans un état désactivé).
@@ -59,17 +60,11 @@ input:disabled {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires                                                             |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', '#selector-enabled', ':enabled')}}     | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                     |
-| {{SpecName('HTML5 W3C', '#selector-enabled', ':enabled')}}         | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique dans le contexte de HTML et des formulaires. |
-| {{SpecName('CSS4 Selectors', '#enableddisabled', ':enabled')}} | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                     |
-| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':enabled')}}     | {{Spec2('CSS3 Basic UI')}} | Lien vers la spécification des sélecteurs de niveau 3.                   |
-| {{SpecName('CSS3 Selectors', '#enableddisabled', ':enabled')}} | {{Spec2('CSS3 Selectors')}} | Définition de la pseudo-classe mais pas de la sémantique associée.       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.enabled")}}
+{{Compat}}
 
 ## Voir aussi
 

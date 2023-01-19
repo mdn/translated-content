@@ -3,6 +3,7 @@ title: 全くの初心者のための GitHub
 slug: conflicting/MDN/Community/Contributing/Getting_started
 original_slug: MDN/Contribute/GitHub_beginners
 ---
+
 {{MDNSidebar}}
 
 [Git](https://git-scm.com/) と [GitHub](https://github.com/) は学習したり使いこなしたりするのが難しいツールですが、いくつかの簡単なコマンドと適切なアドバイスがあれば、 MDN への協力を始めるのに十分な程度のことが、さほど苦労せずにできるはずです。この記事の目的は、 Git や GitHub を使いこなすことではなく、基本的なレベルで生産的になり、 MDN に協力するために必要なことを紹介することです。
@@ -160,7 +161,7 @@ origin    git@github.com:chrisdavidmills/content.git (push)
 git switch main
 ```
 
-> **Note:** #### 注他のチュートリアルで、リポジトリーのブランチを変更するのに `git checkout` を使っているのを見たことがあるかもしれません。このチュートリアルでは、より新しい `git switch` コマンドをお勧めします。これは純粋にブランチを変更するために設計されたもので、失敗する可能性が低いからです。これらのコマンドの関連性や違いに興味がある方は、 [Highlights from Git 2.23 > Experimental alternatives for git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) が良くまとまっています。
+> **メモ:** 他のチュートリアルで、リポジトリーのブランチを変更するのに `git checkout` を使っているのを見たことがあるかもしれません。このチュートリアルでは、より新しい `git switch` コマンドをお勧めします。これは純粋にブランチを変更するために設計されたもので、失敗する可能性が低いからです。これらのコマンドの関連性や違いに興味がある方は、 [Highlights from Git 2.23 > Experimental alternatives for git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) が良くまとまっています。
 
 ### 自分のメインブランチの更新
 
@@ -283,7 +284,7 @@ nothing to commit, working tree clean
     git add README.md
     ```
 
-    > **Note:** ### 注`README.md` は、変更したファイルの名前だけではなく、そのファイルへのパスを書きます。サブディレクトリーの中にあった場合は、そのファイルのフルパスを書かなければなりません。
+    > **メモ:** ### 注`README.md` は、変更したファイルの名前だけではなく、そのファイルへのパスを書きます。サブディレクトリーの中にあった場合は、そのファイルのフルパスを書かなければなりません。
 
 4. もう一度 `git status` を実行すると、このように表示されます。
 
@@ -349,7 +350,7 @@ To github.com:chrisdavidmills/content.git
 
     ![open pull request フォーム、その中にタイトルと説明のテキストフィールドがある](open-pull-request.png)
 
-    <div class="notecard warning"><h3>警告</h3><p>ここから先の手順は、実際にリポジトリーに変更を加える場合にのみ行ってください。実際にテスト PR をリポジトリーに提出しないでください。</p></div>
+    > **警告:** ここから先の手順は、実際にリポジトリーに変更を加える場合にのみ行ってください。実際にテスト PR をリポジトリーに提出しないでください。
 
 2. ここでは、プルリクエストに役立つタイトルと説明を入力し、変更した内容、それがなぜ良いことなのかを正確に書いてください。必要に応じて、修正された関連する問題を書いてください。具体的には、 `Fixes issue-url` という行を入れます。 GitHub は、自動的にこれを `Fixes #1234` のような課題番号へのリンクとして表示し、さらにプルリクエストがマージされると関連する課題を自動的にクローズします。 (訳注: `Fixes issue-url` の部分は英語で入力してください。日本語で書くと自動的にクローズする機能が動作しないことがあります。)
 3. プルリクエストを送信する準備ができたら、 "Create pull request" ボタンをクリックしてください。これにより、自分のプルリクエスト (PR) がリポジトリーの[プルリクエスト一覧](https://github.com/mdn/content/pulls)に表示され、レビューチームによるレビューを経て、メインのコードベースにマージされることになります。

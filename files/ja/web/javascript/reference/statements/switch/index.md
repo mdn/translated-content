@@ -1,7 +1,10 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
+l10n:
+  sourceCommit: 9e52d335675a9f7daa34b5e24c9b1292dbf23b2e
 ---
+
 {{jsSidebar("Statements")}}
 
 **`switch` 文**は[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)を評価し、その式の値が `case` 節と一致した場合は、その `case` に関連付けられた[文](/ja/docs/Web/JavaScript/Reference/Statements)を実行し、一致した `case` の後にある文も同様に実行します。
@@ -39,7 +42,17 @@ switch (expression) {
 
 `switch` 文はまず始めに式を評価します。次に、式が入力式の結果と評価される値が等しい最初の `case` 節を ([厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) `===` を使用して) 探し、その節に制御を移して、関連する処理を実行します。 (複数の `case` 節の値が指定された値と一致する場合、 `case` 節が互いに等しくなくても、最初に一致した `case` 節が選択されます。)
 
-一致する `case` 節が見つからない場合、プログラムは省略可能な `default` 節を探し、見つかればその節に制御を移し、関連する文を実行します。`default` 節が見つからない場合、プログラムは `switch` の終了に続く文で実行を続けます。慣習では、`default` 節は最後の節ですが、そうである必要はありません。
+`case` 節の値は必要があるときしか評価されません。マッチする `case` 節がすでに見つかっている場合、以降の `case` 節の値は評価されません。これは、 [フォールスルー](#break_を置かないとどうなるか) が発生した場合にも同様です。
+
+```js
+switch (undefined) {
+  case console.log(1):
+  case console.log(2):
+}
+// 1 だけがコンソールに出力されます。
+```
+
+一致する `case` 節が見つからない場合、プログラムは省略可能な `default` 節を探し、見つかればその節に制御を移し、関連する文を実行します。`default` 節が見つからない場合、プログラムは `switch` の終了に続く文で実行を続けます。慣習では、`default` 節は最後の節ですが、そうである必要はありません。`switch` 文は `default` 節を一つだけ持つことができます。複数の `default` 節がある場合は {{jsxref("SyntaxError")}} が発生します。
 
 省略可能な [`break`](/ja/docs/Web/JavaScript/Reference/Statements/break) 文は、各 `case` 節のラベルに関連付けられれており、一致した文を一回実行した後で `switch` を抜け出し、 `switch` に続く文から実行を継続することを保証します。もし `break` が省略されたら、プログラムは `switch` 文の中の次の文から実行を継続します。
 
@@ -76,7 +89,7 @@ console.log("Is there anything else you'd like?");
 
 ### `break` を置かないとどうなるか
 
-`break` を置かなかった場合、スクリプトは基準を満たす `case` から実行され、その後の `case` も条件に合うかに関係なく実行されます。
+`break` を置かなかった場合、スクリプトは基準を満たす `case` から実行され、その後の `case` も条件に合うかに関係なく実行されます。この挙動はフォールスルー (fall-through) と呼ばれます。
 
 こちらの例をご覧ください。
 
@@ -98,7 +111,10 @@ switch (foo) {
   default:
     console.log('default');
 }
+// 0 と 1 がコンソールに出力されます。
 ```
+
+`break` の代わりに、[`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文など、他の制御文を用いることもできます。
 
 ### case の間に `default` を置くことはできるか
 
@@ -242,9 +258,7 @@ switch (action) {
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

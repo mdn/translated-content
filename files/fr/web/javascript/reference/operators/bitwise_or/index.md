@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_or
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur OU binaire (`|`) renvoie un nombre dont la représentation binaire est une séquence de bits où il y a un `1` pour chaque position où au moins un des bits des deux opérandes vaut `1`.
@@ -45,6 +46,7 @@ La table de vérité pour l'opérateur OU est :
      9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
+
 14 | 9 (base 10) = 00000000000000000000000000001111 (base 2) = 15 (base 10)
 ```
 

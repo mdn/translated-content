@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Bad_octal
 original_slug: Web/JavaScript/Reference/Erreurs/Bad_octal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

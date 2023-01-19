@@ -3,6 +3,7 @@ title: Introduction au JavaScript asynchrone
 slug: Learn/JavaScript/Asynchronous/Introducing
 translation_of: Learn/JavaScript/Asynchronous/Introducing
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
 Dans cet article, nous expliquerons ce qu'est la programmation asynchrone, en quoi elle est nécessaire et nous aborderons brièvement certaines des façons dont les fonctions asynchrones ont été implémentées en JavaScript au fil temps.

@@ -2,6 +2,7 @@
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
 ---
+
 **`prefers-color-scheme`** [CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features)用于检测用户是否有将系统的主题色设置为亮色或者暗色。
 
 ## 语法
@@ -70,7 +71,7 @@ slug: Web/CSS/@media/prefers-color-scheme
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.media.prefers-color-scheme")}}
+{{Compat}}
 
 ## 参见
 

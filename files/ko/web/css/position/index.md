@@ -1,14 +1,8 @@
 ---
 title: position
 slug: Web/CSS/position
-tags:
-  - CSS
-  - CSS Positioninng
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/position
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`position`** 속성은 문서 상에 요소를 배치하는 방법을 지정합니다. {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} 속성이 요소를 배치할 최종 위치를 결정합니다.

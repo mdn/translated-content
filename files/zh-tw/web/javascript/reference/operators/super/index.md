@@ -2,6 +2,7 @@
 title: super
 slug: Web/JavaScript/Reference/Operators/super
 ---
+
 {{jsSidebar("Operators")}}
 
 super 關鍵字被使用於通過函式存取父層
@@ -154,7 +155,7 @@ obj2.method2(); // logs "method 1"
 
 ## Browser compatibility
 
-{{Compat("javascript.operators.super")}}
+{{Compat}}
 
 ## 參考
 

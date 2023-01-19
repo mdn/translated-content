@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/::slotted
 ---
+
 {{CSSRef}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-éléments) CSS **`::slotted()`** représente n'importe quel élément ayant été placé à l'intérieur d'un emplacement (_slot_) au sein d'un gabarit (_template_) HTML (cf. [Utiliser les gabarits et les emplacements](/fr/docs/Web/Web_Components/Using_templates_and_slots) pour plus d'informations).
@@ -88,13 +89,11 @@ Voici ce à quoi ressemblera l'élément lorsqu'il sera inséré dans la page :
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('CSS Scope', '#slotted-pseudo', '::slotted')}} | {{Spec2('CSS Scope')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.slotted")}}
+{{Compat}}
 
 ## Voir aussi
 

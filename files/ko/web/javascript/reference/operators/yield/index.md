@@ -1,20 +1,11 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterator
-  - JavaScript
-  - Operator
-  - 반복자
-  - 생성기
-translation_of: Web/JavaScript/Reference/Operators/yield
-browser-compat: javascript.operators.yield
 ---
+
 {{jsSidebar("Operators")}}
 
-`yield` 키워드는 제너레이터 함수 ({{jsxref("Statements/function*", "function*")}} 또는 [레거시 generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) 함수)를 중지하거나 재개하는데 사용됩니다.
+`yield` 키워드는 제너레이터 함수 ({{jsxref("Statements/function*", "function*")}} 또는 [레거시 generator](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) 함수)를 중지하거나 재개하는데 사용됩니다.
 
 ## 문법
 

@@ -2,6 +2,7 @@
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
+
 {{JSRef}}
 
 **`Map[@@species]`** アクセサープロパティは、 `Map` コンストラクターを返します。
@@ -33,9 +34,7 @@ class MyMap extends Map {
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-map-@@species', 'get Map [ @@species ]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

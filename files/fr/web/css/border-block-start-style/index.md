@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-block-start-style
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-block-start-style`** définit le style de la bordure utilisé pour le côté du début de l'élément dans l'axe orthogonal au sens de lecture. Cette propriété logique correspondra à une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}} ou à {{cssxref("border-left-style")}} selon les valeurs de {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
@@ -34,9 +35,13 @@ border-block-start-style: groove;
 - `<'border-style'>`
   - : Le style utilisé pour la ligne de la bordure, voir {{cssxref("border-style")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -70,15 +75,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-start-style", "border-block-start-style")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-block-start-style")}}
+{{Compat}}
 
 ## Voir aussi
 

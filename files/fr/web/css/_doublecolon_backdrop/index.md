@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::backdrop
 ---
+
 {{CSSRef}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments) **`::backdrop`** est une boîte de la taille de la zone d'affichage (_viewport_) qui est affichée immédiatement sous un élément lorsque ce dernier est affiché en plein écran. Cela correspond aux éléments passés en plein écran via l'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API) et aux éléments {{HTMLElement("dialog")}}.
@@ -49,13 +50,11 @@ Vous pouvez [voir cette démonstration en _live_](https://fullscreen-requestfull
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('Fullscreen', '#::backdrop-pseudo-element', '::backdrop')}} | {{Spec2('Fullscreen')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.backdrop")}}
+{{Compat}}
 
 ## Voir aussi
 

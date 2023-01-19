@@ -11,6 +11,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformancePaintTiming
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 L'interface **`PerformancePaintTiming`** de l'API [Paint Timing API](/fr/docs/Web/API/Paint_Timing_API) fournit des informations de temps sur les opérations de « peinture » (également appelées « render ») pendant la construction de la page Web. « Paint » fait référence à la conversion de l'arbre de rendu en pixels à l'écran.

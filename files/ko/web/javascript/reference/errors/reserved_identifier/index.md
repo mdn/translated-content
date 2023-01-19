@@ -1,12 +1,8 @@
 ---
 title: 'SyntaxError: "x" is a reserved identifier'
 slug: Web/JavaScript/Reference/Errors/Reserved_identifier
-tags:
-  - 구문 에러
-  - 예약어
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Errors/Reserved_identifier
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지

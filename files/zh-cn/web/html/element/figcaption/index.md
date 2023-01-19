@@ -2,7 +2,8 @@
 title: <figcaption>
 slug: Web/HTML/Element/figcaption
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<figcaption>` 元素** 是与其相关联的图片的说明/标题，用？于描述其父节点 {{HTMLElement("figure")}} 元素里的其他数据。这意味着 `<figcaption>` 在{{HTMLElement("figure")}} 块里是第一个或最后一个。同时 HTML Figcaption 元素是可选的；如果没有该元素，这个父节点的图片只是会没有说明/标题。
 
@@ -45,7 +46,7 @@ slug: Web/HTML/Element/figcaption
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.figcaption")}}
+{{Compat}}
 
 ## 另见
 

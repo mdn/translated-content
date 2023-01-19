@@ -2,6 +2,7 @@
 title: HTMLDocument
 slug: Web/API/HTMLDocument
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`HTMLDocument`** は、document オブジェクトに HTML 特有の機能を追加するために、{{domxref("Document")}} インターフェイスを拡張する抽象的なインターフェイスです。これは HTML 文書のルートを表し、その中に [DOM](/ja/docs/Web/API/Document_Object_Model) の階層全体が存在しています。
@@ -12,10 +13,7 @@ slug: Web/API/HTMLDocument
 
 ## 仕様書
 
-| {{SpecName("HTML WHATWG", "#htmldocument", "HTMLDocument")}}                 | {{Spec2("HTML WHATWG")}} | `HTMLDocument` インターフェイスを、{{DOMxRef("Document")}} の拡張に転換。 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------- |
-| {{SpecName("DOM2 HTML", "html.html#ID-26809268", "HTMLDocument")}}         | {{Spec2('DOM2 HTML')}}     | DOM 1 の後継                                                                       |
-| {{SpecName("DOM1", "level-one-html.html#ID-26809268", "HTMLDocument")}} | {{Spec2("DOM1")}}         | 初期定義                                                                           |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

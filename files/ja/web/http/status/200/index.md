@@ -1,12 +1,8 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - 成功
-translation_of: Web/HTTP/Status/200
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`200 OK`** はリクエストが成功した場合に返すレスポンスコード。200 のレスポンスはデフォルトでキャッシュしてよい。

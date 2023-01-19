@@ -1,61 +1,67 @@
 ---
 title: Cache.matchAll()
 slug: Web/API/Cache/matchAll
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
+
 {{APIRef("Service Workers API")}}
 
-{{domxref("Cache")}} インターフェイスの **`matchAll()`** メソッドは、{{domxref("Cache")}} オブジェクト内の一致するすべてのレスポンスの配列に解決される {{jsxref("Promise")}} を返します。
+**`matchAll()`** は {{domxref("Cache")}} インターフェイスのメソッドで、{{domxref("Cache")}} オブジェクト内の一致するすべてのレスポンスの配列に解決される {{jsxref("Promise")}} を返します。
 
 ## 構文
 
-```
-cache.matchAll(request, {options}).then(function(response) {
-  // レスポンスの配列で何かをする
-});
+```js-nolint
+matchAll()
+matchAll(request)
+matchAll(request, options)
 ```
 
-### パラメーター
+### 引数
 
-- request {{optional_inline}}
-  - : {{domxref("Cache")}} 内でレスポンスを見つけようとしている {{domxref("Request")}}。 これは、`Request` オブジェクトまたは URL です。 この引数を省略すると、このキャッシュ内のすべてのレスポンスのコピーが取得されます。
-- options {{optional_inline}}
+- `request` {{optional_inline}}
+  - : {{domxref("Cache")}} 内でレスポンスを見つけようとしている {{domxref("Request")}}。 これは、`Request` オブジェクトまたは URL です。この引数を省略すると、このキャッシュ内のすべてのレスポンスのコピーが取得されます。
+- `options` {{optional_inline}}
 
   - : 実行する照合の特定の制御オプションを設定できるオプションオブジェクト。 使用可能なオプションは次のとおりです。
 
-    - `ignoreSearch`: 照合操作で URL のクエリ文字列を無視するかどうかを指定する {{jsxref("Boolean")}}。 `true` に設定すると、`http://foo.com/?value=bar` の `?value=bar` 部分を、照合の実行時に無視します。 デフォルトは `false` です。
-    - `ignoreMethod`: `true` に設定すると、照合操作が {{domxref("Request")}} `HTTP` メソッドを検証しないようにする {{jsxref("Boolean")}}（通常、`GET` および `HEAD` のみが許可されます）。 デフォルトは `false` です。
-    - `ignoreVary`: `true` に設定すると、`VARY` ヘッダーの照合を実行しないように照合操作に指示する {{jsxref("Boolean")}}。 つまり、URL が一致する場合、{{domxref("Response")}} オブジェクトに `VARY` ヘッダーがあるかどうかに関係なく一致します。 デフォルトは `false` です。
+    - `ignoreSearch`
+      - : 論理値で、照合操作で URL のクエリー文字列を無視するかどうかを指定します。 `true` に設定すると、`http://foo.com/?value=bar` の `?value=bar` 部分を、照合の実行時に無視します。 既定値は `false` です。
+    - `ignoreMethod`
+      - : 論理値で、`true` に設定すると、照合操作で {{domxref("Request")}} の `http` メソッドを検証しないようにします（通常は、`GET` および `HEAD` のみが許可されます）。 既定値は `false` です。
+    - `ignoreVary`
+      - : 論理値で、`true` に設定すると、`VARY` ヘッダーの照合を実行しないように照合操作に指示します。 つまり、URL が一致する場合、{{domxref("Response")}} オブジェクトに `VARY` ヘッダーがあるかどうかに関係なく一致します。 既定値は `false` です。
 
-### 戻り値
+### 返値
 
 {{domxref("Cache")}} オブジェクト内のすべての一致するレスポンスの配列に解決される {{jsxref("Promise")}}。
 
-> **Note:** **注**: {{domxref("Cache.match()")}} は、一致するすべてのレスポンスの配列で解決するのではなく、最初に一致するレスポンスのみ（つまり、`response[0]`）で解決することを除いて、基本的に `Cache.matchAll()` と同じです。
+> **メモ:** {{domxref("Cache.match()")}} は、一致するすべてのレスポンスの配列で解決するのではなく、最初に一致するレスポンスのみ（つまり、`response[0]`）で解決することを除いて、基本的に `Cache.matchAll()` と同じです。
 
 ## 例
 
+以下の例では、 `v1` キャッシュにある、URL `/` に一致するすべての項目を、潜在的な引数も含めて削除しています。`{ ignoreSearch: true }` を使用することで、 `matchAll` を使用すると、 `/` だけでなく `/?value=bar` も取得することができます。
+
 ```js
-caches.open('v1').then(function(cache) {
-  cache.matchAll('/images/').then(function(response) {
-    response.forEach(function(element, index, array) {
-      cache.delete(element);
-    });
+caches.open("v1").then((cache) => {
+  cache.matchAll("/", { ignoreSearch: true }).then((responses) => {
+    for (const response of responses) {
+      cache.delete(response);
+    }
   });
-})
+});
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                             | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-cache-matchall', 'Cache: matchAll')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Cache.matchAll")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- {{domxref("caches")}}

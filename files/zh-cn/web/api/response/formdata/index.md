@@ -2,6 +2,7 @@
 title: Response.formData()
 slug: Web/API/Response/formData
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} 对象中的**`formData()`** 方法将 {{domxref("Response")}} 对象中的所承载的数据流读取并封装成为一个对象，该方法将返回一个 **`Promise`** 对象，该对象将产生一个{{domxref("FormData")}} 对象。
@@ -35,7 +36,7 @@ response.formData()
 
 ## Browser compatibility
 
-{{Compat("api.Response.formData")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: Fetch API
 slug: Web/API/Fetch_API
 ---
+
 {{DefaultAPISidebar("Fetch API")}}Fetch API 提供了一個能獲取包含跨網路資源在的資源介面。它有點像我們所熟悉的 {{domxref("XMLHttpRequest")}} ，但這個新的 API 提供了更強更彈性的功能。
 
 ## 概念與應用
@@ -46,7 +47,7 @@ Fetch 提供了 {{domxref("Request")}} 與 {{domxref("Response")}} 物件，還�
 
 ## 瀏覽器相容性
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## 參見
 

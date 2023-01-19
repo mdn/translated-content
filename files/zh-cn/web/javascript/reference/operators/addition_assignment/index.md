@@ -1,58 +1,63 @@
 ---
-title: 加法赋值 (+=)
+title: 加法赋值（+=）
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-加法赋值操作符 (`+=`) 将右操作数的值添加到变量，并将结果分配给该变量。两个操作数的类型确定加法赋值运算符的行为。加法或串联是可能的。
+加法赋值运算符（`+=`）将右操作数的值添加到变量，并将结果分配给该变量。两个操作数的类型决定了加法赋值运算符的行为，可能为加法或拼接。
 
 {{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
 
-## Syntax
+## 语法
 
-```plain
-Operator: x += y
-Meaning:  x  = x + y
+```js-nolint
+x += y // x = x + y
 ```
 
-## Examples
+## 示例
 
-### Using addition assignment
+### 使用加法赋值
 
 ```js
-// Assuming the following variables
-//  foo = 'foo'
-//  bar = 5
-//  baz = true
+let baz = true;
 
-// Number + Number -> addition
-bar += 2 // 7
+// Boolean + Number -> 加法
+baz += 1; // 2
 
-// Boolean + Number -> addition
-baz += 1 // 2
-
-// Boolean + Boolean -> addition
-baz += false // 1
-
-// Number + String -> concatenation
-bar += 'foo' // "5foo"
-
-// String + Boolean -> concatenation
-foo += false // "foofalse"
-
-// String + String -> concatenation
-foo += 'bar' // "foobar"
+// Number + Boolean -> 加法
+baz += false; // 2
 ```
 
-## Specifications
+```js
+let foo = 'foo';
+
+// String + Boolean -> 拼接
+foo += false; // "foofalse"
+
+// String + String -> 拼接
+foo += 'bar'; // "foofalsebar"
+```
+
+```js
+let bar = 5;
+
+// Number + Number -> 加法
+bar += 2; // 7
+
+// Number + String -> 拼接
+bar += 'foo'; // "7foo"
+```
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)

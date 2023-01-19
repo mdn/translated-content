@@ -4,6 +4,7 @@ slug: Web/CSS/column-gap
 translation_of: Web/CSS/column-gap
 browser-compat: css.properties.column-gap
 ---
+
 {{CSSRef}}
 
 La propriété **`column-gap`** permet de définir la taille des espaces ([gouttières](/fr/docs/Glossary/Gutters)) entre les colonnes d'un élément.

@@ -2,6 +2,7 @@
 title: Navigator
 slug: Web/API/Navigator
 ---
+
 {{apiref("DOM4")}}
 
 `Navigator` 接口表示用户代理的状态和标识。它允许脚本查询它和注册自己进行一些活动。
@@ -17,7 +18,7 @@ slug: Web/API/Navigator
 - {{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}}{{experimental_inline}}
   - : 筛选所有的 {{domxref("VRDisplay")}} 对象，把其中所有 {{domxref("VRDisplay.ispresenting")}} 属性的值为 `true` 的对象以数组的形式返回。
 - {{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{deprecated_inline}}
-  - : 返回当前浏览器的内部 “开发代号” 名称。不能保证此属性返回的值是正确的。
+  - : 返回当前浏览器的内部“开发代号”名称。不能保证此属性返回的值是正确的。
 - {{domxref("NavigatorID.appName")}} {{readonlyInline}}{{deprecated_inline}}
   - : 以 {{domxref("DOMString")}} 的形式返回浏览器官方名称。不能保证此属性返回的值是正确的。
 - {{domxref("NavigatorID.appVersion")}} {{readonlyInline}}{{deprecated_inline}}
@@ -126,17 +127,10 @@ _Doesn't inherit any method, but implements those defined in {{domxref("Navigato
 - {{domxref("Navigator.vibrate()")}}
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
 
-### 非标准方法
-
-- {{domxref("window.navigator.mozIsLocallyAvailable", "navigator.mozIsLocallyAvailable")}} {{non-standard_inline}}
-  - : Lets code check to see if the document at a given URI is available without using the network.
-- {{domxref("window.navigator.mozPay", "navigator.mozPay")}} {{non-standard_inline}}
-  - : Allows in-app payment.
-
 ## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator")}}
+{{Compat}}

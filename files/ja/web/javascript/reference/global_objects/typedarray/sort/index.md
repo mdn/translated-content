@@ -2,6 +2,7 @@
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 ---
+
 {{JSRef}}
 
 **`sort()`** メソッドは、型付き配列の要素を*その場で*数値的に並べ替え、その型付き配列を返します。このメソッドは {{jsxref("Array.prototype.sort()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
@@ -47,13 +48,11 @@ numbers.sort((a, b) => a - b); // 数値を比較
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.indexOf")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -2,6 +2,7 @@
 title: Trailer
 slug: Web/HTTP/Headers/Trailer
 ---
+
 {{HTTPSidebar}}
 
 **Trailer** 是一个响应首部，允许发送方在分块发送的消息后面添加额外的元信息，这些元信息可能是随着消息主体的发送动态生成的，比如消息的完整性校验，消息的数字签名，或者消息经过处理之后的最终状态等。

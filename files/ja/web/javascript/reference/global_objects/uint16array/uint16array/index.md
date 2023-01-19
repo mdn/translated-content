@@ -2,6 +2,7 @@
 title: Uint16Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
 ---
+
 {{JSRef}}
 
 **`Uint16Array()`** は型付き配列のコンストラクターで、プラットフォームのバイト順による 16 ビット符号なし整数値の配列を生成します。
@@ -76,9 +77,7 @@ var uint16 = new Uint16Array(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

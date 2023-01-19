@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/DOM
 original_slug: Glossaire/DOM
 ---
+
 Le DOM (Document Object Model) est une [API](/fr/docs/Glossary/API) qui représente et interagit avec tous types de documents [HTML](/fr/docs/Glossary/HTML) ou [XML](/fr/docs/Glossary/XML). Le DOM est un modèle de document chargé dans le [navigateur](/fr/docs/Glossary/Browser). La représentation du document est un arbre nodal. Chaque nœud représente une partie du document (par exemple, un [élément](/fr/docs/Glossary/Element), une chaîne de caractères ou un commentaire).
 
 Le DOM est l'une des [API](/fr/docs/Glossary/API) les plus utilisées sur le [Web](/fr/docs/Glossary/World_Wide_Web) parce qu'elle autorise du code exécuté dans un navigateur à accéder et interagir avec chaque nœud dans le document. Les nœuds peuvent être créés, déplacés et modifiés. Des écouteurs d'évènements (« _event listeners_ ») peuvent être ajoutés à des nœuds et déclenchés par un évènement donné.

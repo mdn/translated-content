@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 original_slug: Apprendre/CSS/CSS_layout/Prise_En_Charge_Des_Anciens_Navigateurs
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}

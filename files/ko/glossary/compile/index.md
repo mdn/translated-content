@@ -1,7 +1,6 @@
 ---
 title: Compile
 slug: Glossary/Compile
-translation_of: Glossary/Compile
 ---
 컴파일(Compile)은 주어진 {{Glossary("computer programming", "language")}}로 작성된 컴퓨터 프로그램을 다른 언어의 동등한 프로그램으로 변환하는 프로세스입니다. 컴파일러는이 작업을 실행하는 소프트웨어입니다. 때로는이 작업을 "조립(assembling)"또는 "빌드(build)"라고도 합니다. 이 작업들은 보통 컴파일과 같은 것(예를 들면 바이너리 형식으로 패키지를 만드는 일) 이상의 작업을 수행합니다 .
 

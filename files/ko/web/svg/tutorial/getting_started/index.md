@@ -1,14 +1,8 @@
 ---
 title: 시작하기
 slug: Web/SVG/Tutorial/Getting_Started
-tags:
-  - SVG
-  - SVG:Tutorial
-  - 초보자
-  - 튜토리얼
-translation_of: Web/SVG/Tutorial/Getting_Started
-original_slug: Web/SVG/Tutorial/시작하기
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
 ### 간단한 예제
@@ -30,21 +24,21 @@ original_slug: Web/SVG/Tutorial/시작하기
 </svg>
 ```
 
-코드를 복사하여 demo1.svg로 저장하고, 파이어폭스 에서 실행해 봅시다. 아래와 같은 화면이 그려질 것입니다.(파이어 폭스 사용자 : [링크](https://developer.mozilla.org/@api/deki/files/4571/=svgdemo1.xml))
+코드를 복사하여 demo1.svg로 저장하고, 파이어폭스 에서 실행해 봅시다. 아래와 같은 화면이 그려질 것입니다.(Firefox 사용자 : [링크](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
-![svgdemo1.png](/@api/deki/files/4928/=svgdemo1.png)
+![빨간색 배경 중앙에 녹색 원이 있습니다. 원 가운데에 있는 흰색 텍스트는 SVG입니다.](svgdemo1.png)
 
 화면이 그려지는 과정은 다음과 같습니다.
 
-1.  SVG 루트 요소(Element)부터 시작합니다.
+1. SVG 루트 요소(Element)부터 시작합니다.
 
     - DTD기반의 SVG유효성 검사는 해결할 수 있는 것보다 많은 문제를 야기하기 때문에 (X)HTML로 알려진 Doctype 선언은 사용하지 않습니다.
     - 다른 유형의 유효성 검사를 위해 SVG버전을 식별하려면 항상 version과 baseProfile 속성(Attribute)을 사용해야 합니다.
-    - XML 특수언어(dialect)로서 SVG는 (xmlsn 속성에서) 항상 네임 스페이스(namespace)를 올바르게 바인딩 해야합니다. 자세한 내용은[ 네임 스페이스 충돌 과정](/ko/docs/Web/SVG/Namespaces_Crash_Course) 페이지를 참조하십시오.
+    - XML 특수언어(dialect)로서 SVG는 (xmlsn 속성에서) 항상 네임 스페이스(namespace)를 올바르게 바인딩 해야합니다. 자세한 내용은[네임 스페이스 충돌 과정](/ko/docs/Web/SVG/Namespaces_Crash_Course) 페이지를 참조하십시오.
 
-2.  전체 이미지 영역을 포함하는 사각형 \<rect />을 그려 배경을 빨간색으로 설정합니다.
-3.  빨간색 직사각형의 중앙에 반경 80px의 녹색 원 \<circle />이 그려집니다
-4.  텍스트 "SVG"가 그려집니다. 각 문자의 내부는 흰색으로 채워집니다. 텍스트는 중심점이 되고자 하는 지점에 앵커를 설정하여 배치됩니다.이 경우 중심점은 녹색 원의 중심에 일치해야합니다. 글꼴 크기와 수직 위치를 미세 조정하여 심미적으로 뛰어난 최종 결과를 얻을 수 있습니다.
+2. 전체 이미지 영역을 포함하는 사각형 \<rect />을 그려 배경을 빨간색으로 설정합니다.
+3. 빨간색 직사각형의 중앙에 반경 80px의 녹색 원 \<circle />이 그려집니다
+4. 텍스트 "SVG"가 그려집니다. 각 문자의 내부는 흰색으로 채워집니다. 텍스트는 중심점이 되고자 하는 지점에 앵커를 설정하여 배치됩니다.이 경우 중심점은 녹색 원의 중심에 일치해야합니다. 글꼴 크기와 수직 위치를 미세 조정하여 심미적으로 뛰어난 최종 결과를 얻을 수 있습니다.
 
 ### SVG 파일의 기본 속성
 
@@ -68,9 +62,9 @@ original_slug: Web/SVG/Tutorial/시작하기
   - 이론적으로, img 요소로 사용될 수 있습니다만 4.0 이전의 Firefox에서는 작동하지 않습니다.
   - 마지막으로 SVG는 JavaScript로 동적으로 생성되어 HTML DOM에 삽입 될 수 있습니다. 이는 SVG를 처리 할 수없는 브라우저에서 대체하여 구현할 수 있다는 장점이 있습니다.
 
-  이 주제에 대해 깊이있게 다루기 위해 [이 문서](/ko/docs/SVG_In_HTML_Introduction)를 참조하십시오.
+  이 주제에 대해 깊이있게 다루기 위해 [이 문서](/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)를 참조하십시오.
 
-- SVG에서 크기와 단위를 처리하는 방법에 대해서는 [다음 페이지](/en-US/Web/SVG/Tutorial/Positions)에서 설명 할 것입니다.
+- SVG에서 크기와 단위를 처리하는 방법에 대해서는 [다음 페이지](/ko/docs/Web/SVG/Tutorial/Positions)에서 설명 할 것입니다.
 
 ### SVG 파일 형식
 

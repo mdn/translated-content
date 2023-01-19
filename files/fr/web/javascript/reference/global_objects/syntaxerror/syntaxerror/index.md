@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
 translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
 browser-compat: javascript.builtins.SyntaxError.SyntaxError
 ---
+
 {{JSRef}}
 
 Le constructeur **`SyntaxError()`** permet de créer un objet représentant une erreur qui se produit lorsqu'on essaie d'interpréter du code dont la syntaxe est invalide.

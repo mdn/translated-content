@@ -4,6 +4,7 @@ slug: Web/CSS/@counter-style
 translation_of: Web/CSS/@counter-style
 browser-compat: css.at-rules.counter-style
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@counter-style`** permet aux auteurs de définir des styles de compteurs qui ne font pas partie de l'ensemble des styles natifs prédéfinis. Une règle `@counter-style` explique comment convertir la valeur d'un compteur en une chaîne de caractères correspondantes.

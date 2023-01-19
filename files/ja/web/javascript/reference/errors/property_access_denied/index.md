@@ -2,6 +2,7 @@
 title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "Permission denied to access property" は、権限がない状態でオブジェクトへのアクセスの試行があった場合に発生します。

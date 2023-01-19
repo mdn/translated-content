@@ -2,6 +2,7 @@
 title: 何が間違っている? JavaScript のトラブルシューティング
 slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 前の記事の「数字当てゲーム」を作っていて、動かないことはありませんでしたか？恐れることはありません。この記事では、そんな心配をしなくて済むように、JavaScript のエラーを見つけて直す方法を伝授します。
@@ -26,7 +27,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 1. 始めるには、コピーしたファイルをお好みのテキストエディターとブラウザーで開きます。
 2. ゲームで遊んでみてください。気づきましたか。"予想を入力" ボタンを押しても動きません！
 
-> **Note:** もしかしたら、あなたにも直したいと思っているバージョンがあるかもしれませんね。ですが、まずはこちらで用意したバージョンを直してみてください。そうすれば、ここで教えるテクニックが身につきます。それから、あなた自身のプログラムに戻って直してみてください。
+> **メモ:** もしかしたら、あなたにも直したいと思っているバージョンがあるかもしれませんね。ですが、まずはこちらで用意したバージョンを直してみてください。そうすれば、ここで教えるテクニックが身につきます。それから、あなた自身のプログラムに戻って直してみてください。
 
 それでは、開発者コンソールで構文エラーがあるか調べてみましょう。それからエラーを修正します。どうやって修正すればいいかは今から教えます。
 
@@ -52,7 +53,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 4. エラーでは、"guessSubmit.addeventListener is not a function" とあり、これは JavaScript インタープリターに呼び出している関数が認識されないという意味です。しばしば、このエラーメッセージは、スペルミスをしたということです。もし正しい綴りがわからなければ、MDN のサイトで使用している機能を調べてみてください。きっと見つかります。いつもはお好みの検索エンジンで「mdn _機能の名前_」と検索してみるのがよいでしょう。今回は代わりに [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) のリンクを張っておきます。
 5. ページによると、関数の名前を間違えたみたいですね！JavaScript は大文字・小文字を区別しますので、ちょっとでも違うとエラーの原因になることを覚えておきましょう。それでは `addeventListener` を `addEventListener` に修正してエラーを直しましょう。
 
-> **Note:** [TypeError: "x" is not a function](/ja/docs/Web/JavaScript/Reference/Errors/Not_a_function) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> **メモ:** [TypeError: "x" is not a function](/ja/docs/Web/JavaScript/Reference/Errors/Not_a_function) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### 構文エラーその 2
 
@@ -60,9 +61,9 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 2. 予想を入力して、予想を入力ボタンを押してみると、...別のエラーが起きています！![](variable-is-null.png)
 3. 今回のエラーを見ると、 78 行目で"TypeError: lowOrHi is null"が起きています。
 
-    > **Note:** [`Null`](/ja/docs/Glossary/Null) は「何もない」ことや「値がない」ことを表す特別な値です。つまり `lowOrHi` が宣言されて初期化されているけれど、意味のある値ではない — つまり型も値もないということです。
+    > **メモ:** [`Null`](/ja/docs/Glossary/Null) は「何もない」ことや「値がない」ことを表す特別な値です。つまり `lowOrHi` が宣言されて初期化されているけれど、意味のある値ではない — つまり型も値もないということです。
 
-    > **Note:** このエラーは関数内部 (`checkGuess() { ... }` ブロックの中) で発生したため、ページを読み込んだだけでは出てきませんでした。後に続く[関数の記事](/ja/docs/Learn/JavaScript/Building_blocks/Functions)を読み進めていけば分かりますが、内側の関数のスコープは外側の関数のスコープとは異なります。今回のケースでは、 86 行目の `checkGuess()` 関数が実行されるまで実行されず、エラーも発生していませんでした。
+    > **メモ:** このエラーは関数内部 (`checkGuess() { ... }` ブロックの中) で発生したため、ページを読み込んだだけでは出てきませんでした。後に続く[関数の記事](/ja/docs/Learn/JavaScript/Building_blocks/Functions)を読み進めていけば分かりますが、内側の関数のスコープは外側の関数のスコープとは異なります。今回のケースでは、 86 行目の `checkGuess()` 関数が実行されるまで実行されず、エラーも発生していませんでした。
 
 4. 78 行目を見てください。以下のコードが書かれています。
 
@@ -82,7 +83,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
     console.log(lowOrHi);
     ```
 
-    > **Note:** [`console.log()`](/ja/docs/Web/API/Console/log) は値をコンソールに出力する、デバッグするときにとても便利な関数です。これで 48 行目で `lowOrHi` にセットしたはずの値がコンソールに出力されるでしょう。
+    > **メモ:** [`console.log()`](/ja/docs/Web/API/Console/log) は値をコンソールに出力する、デバッグするときにとても便利な関数です。これで 48 行目で `lowOrHi` にセットしたはずの値がコンソールに出力されるでしょう。
 
 7. ファイルを保存して再度ブラウザーで読み込みます。そして `console.log()` の結果をコンソールで見てみましょう。 ![](console-log-output.png)わかりましたね。`lowOrHi` の値は `null` でした。これで問題が 48 行目にあることがわかりました。
 8. それでは何が問題となり得るか考えてみましょう。 48 行目では要素への参照を CSS セレクターを使用して取得する [`document.querySelector()`](/ja/docs/Web/API/Document/querySelector) メソッドが使用されています。ファイルの少し上のほうにある、問題となる{{htmlelement("p")}} 要素を見てみましょう。
@@ -94,7 +95,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 9. ここではクラスセレクターが必要です。クラスセレクターはドット (`.`) で始まりますが、 48 行目で `querySelector()` メソッドに渡された文字列にはドットがありません。これが問題でしょう！ 48 行目の `lowOrHi` を `.lowOrHi` に変更してみてください。
 10. ファイルを保存して再度読み込むと、`console.log()` の文は求めていた `<p>` 要素を表示しています。何とか次のエラーを潰すことができました！`console.log()` の行は削除してもいいですし、後で使うために残しておいても大丈夫です。
 
-> **Note:** [TypeError: "x" is (not) "y"](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_type) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> **メモ:** [TypeError: "x" is (not) "y"](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_type) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### 構文エラーその 3
 
@@ -176,7 +177,7 @@ let userGuess === Number(guessField.value);
 
 そうすると、このエラーが吐かれます。違うことをやろうとしているように見えるのでしょう。値を変数に設定する代入演算子 (`=`) と、等値演算子 (`===`) を、これはある値が別の値と同じかどうかを判定して `true` または `false` を返しますが、間違わないようにしてください。
 
-> **Note:** [SyntaxError: missing ; before statement](/ja/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> **メモ:** [SyntaxError: missing ; before statement](/ja/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### プログラムが入力の内容に関わらずいつでも勝ちだと言ってくる
 
@@ -198,7 +199,7 @@ if (userGuess = randomNumber) {
 
 これは単純です。大体は関数やメソッドの呼び出しで閉じ括弧を忘れたことを表しています。
 
-> **Note:** [SyntaxError: missing ) after argument list](/ja/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> **メモ:** [SyntaxError: missing ) after argument list](/ja/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### SyntaxError: missing : after property id
 
@@ -226,7 +227,7 @@ function checkGuess( {
 
 どのエラーにも言えることですが、上の例でも見たように、考えてください。エラーが起きた時に、エラーが起きた行の番号をみて、その行にエラーがあるか見てみます。エラーはその行に存在しないこともありますし、上述した理由以外で起きることもあるということを心に留めておいてください。
 
-> **Note:** [SyntaxError: Unexpected token](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_token) と [SyntaxError: unterminated string literal](/ja/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) のリファレンスページで、これらエラーに関する詳細な説明が見られます。
+> **メモ:** [SyntaxError: Unexpected token](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_token) と [SyntaxError: unterminated string literal](/ja/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) のリファレンスページで、これらエラーに関する詳細な説明が見られます。
 
 ## まとめ
 

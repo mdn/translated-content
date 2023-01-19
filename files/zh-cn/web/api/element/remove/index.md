@@ -2,6 +2,7 @@
 title: Element.remove()
 slug: Web/API/Element/remove
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.remove()`** 方法，把对象从它所属的 DOM 树中删除。
@@ -70,7 +71,7 @@ You can polyfill the `remove()` method in Internet Explorer 9 and higher with th
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.remove")}}
+{{Compat}}
 
 ## 参见
 

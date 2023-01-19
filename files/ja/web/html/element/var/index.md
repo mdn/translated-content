@@ -1,20 +1,9 @@
 ---
 title: '<var>: 変数要素'
 slug: Web/HTML/Element/var
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-  - var
-  - variable
-translation_of: Web/HTML/Element/var
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 HTML の**変数要素** (**`<var>`**) は、数式やプログラムコード内の変数の名前を表します。挙動はブラウザーに依存しますが、通常は現在のフォントのイタリック体を使って表示されます。
 
@@ -147,10 +136,7 @@ var {
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-var-element', '&lt;var&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-var-element', '&lt;var&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

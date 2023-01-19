@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/defineProperties
 ---
+
 {{JSRef}}
 
 La méthode **`Object.defineProperties()`** permet de définir ou de modifier les propriétés d'un objet directement sur celui-ci. La valeur renvoyée est l'objet modifié.
@@ -154,15 +155,11 @@ function defineProperties(obj, properties) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée par JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.defineProperties")}}
+{{Compat}}
 
 ## Voir aussi
 

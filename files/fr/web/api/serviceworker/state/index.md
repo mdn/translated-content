@@ -4,6 +4,7 @@ slug: Web/API/ServiceWorker/state
 translation_of: Web/API/ServiceWorker/state
 browser-compat: api.ServiceWorker.state
 ---
+
 {{APIRef("Service Workers API")}}
 
 La propriété en lecture seule **`state`**, rattachée à l'interface [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker), renvoie une chaîne de caractères indiquant l'état courant du <i lang="en">service worker</i>. Sa valeur peut être&nbsp;:

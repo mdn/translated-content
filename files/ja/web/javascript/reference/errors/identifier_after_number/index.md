@@ -2,6 +2,7 @@
 title: 'SyntaxError: identifier starts immediately after numeric literal'
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
+
 {{JSSidebar("Errors")}}
 
 JavaScript の例外 "identifier starts immediately after numeric literal" は、識別子が数字で始まっているときに発生します。識別子の先頭は英字、アンダースコア (\_)、ドル記号 ($) しか使うことができません。

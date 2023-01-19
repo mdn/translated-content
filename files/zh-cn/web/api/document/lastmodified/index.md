@@ -2,6 +2,7 @@
 title: document.lastModified
 slug: Web/API/Document/lastModified
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -18,7 +19,7 @@ var string = document.lastModified;
 
 ```plain
 dump(document.lastModified);
-// 返回: Tuesday, July 10, 2001 10:19:42
+// 返回：Tuesday, July 10, 2001 10:19:42
 ```
 
 ### 备注
@@ -27,4 +28,4 @@ dump(document.lastModified);
 
 Webkit 返回的时间为 UTC 时间;Gecko 和 IE 返回的时间为本地时区时间。
 
-{{Compat("api.Document.lastModified")}}
+{{Compat}}

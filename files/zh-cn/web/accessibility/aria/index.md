@@ -2,6 +2,7 @@
 title: ARIA
 slug: Web/Accessibility/ARIA
 ---
+
 **ARIA** (Accessible Rich Internet Applications) 是一组属性，用于定义使残障人士更容易访问 Web 内容和 Web 应用程序（尤其是使用 JavaScript 开发的应用程序）的方法。
 
 它补充了 HTML，以便在没有其他机制时可以将应用程序中常用的交互和小部件传递给辅助技术。例如，ARIA 支持 HTML4 中的可访问导航地标、JavaScript 小部件、表单提示和错误消息、实时内容更新等。
@@ -54,7 +55,7 @@ function updateProgress(percentComplete) {
 - [ARIA 简介](/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
   - : 快速介绍如何使用 ARIA 访问动态内容。另请参阅 2008 年的经典 [ARIA intro by Gez Lemon](https://dev.opera.com/articles/view/introduction-to-wai-aria/)。
 - [Videos of screen readers using ARIA](https://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/)
-  - : 查看来自网络的真实和简化示例，视频包括 ARIA “之前”和 ARIA“之后”。
+  - : 查看来自网络的真实和简化示例，视频包括 ARIA“之前”和 ARIA“之后”。
 - [Using ARIA](https://w3c.github.io/using-aria/)
   - : 开发人员实用指南。它建议在 HTML 元素上使用哪些 ARIA 属性。建议是基于实施的实际情况。
 

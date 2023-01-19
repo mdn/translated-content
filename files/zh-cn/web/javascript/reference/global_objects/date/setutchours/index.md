@@ -2,6 +2,7 @@
 title: Date.prototype.setUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 ---
+
 {{JSRef}}
 
 The **`setUTCHours()`** method sets the hour for a specified date according to universal time, and returns the number of milliseconds since 1 January 1970 00:00:00 UTC until the time represented by the updated {{jsxref("Date")}} instance.
@@ -21,9 +22,9 @@ dateObj.setUTCHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
 - `minutesValue`
   - : 可选参数。表示分钟的整数，取值 0 到 59 之间。
 - `secondsValue`
-  - : 可选参数。表示秒数的整数，取值 0 到 59 之间。如果指定了该参数，就要同时指定`minutesValue 这个参数。`
+  - : 可选参数。表示秒数的整数，取值 0 到 59 之间。如果指定了该参数，就要同时指定 `minutesValue` 这个参数。
 - `msValue`
-  - : 可选参数。表示毫秒的整数，取值 0 到 999 之间。如果指定了该参数，就要指定`minutesValue 和 secondsValue 这两个参数。`
+  - : 可选参数。表示毫秒的整数，取值 0 到 999 之间。如果指定了该参数，就要指定 `minutesValue` 和 `secondsValue` 这两个参数。
 
 ### 返回值
 

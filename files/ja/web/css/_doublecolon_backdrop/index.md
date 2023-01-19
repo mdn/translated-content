@@ -2,6 +2,7 @@
 title: '::backdrop'
 slug: Web/CSS/::backdrop
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`::backdrop`** [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は、何らかの要素が全画面モードで表示される直下に直接表示される {{Glossary("viewport")}} の寸法のボックスです。これは [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) を使用した全画面モードに配置される要素、および {{HTMLElement("dialog")}} 要素の両方を含みます。

@@ -2,6 +2,7 @@
 title: 响应式设计
 slug: Learn/CSS/CSS_layout/Responsive_Design
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
 早年设计 Web 时，页面是以适配特定的屏幕大小为考量创建的。如果用户正在使用比设计者考虑到的更小或者更大的屏幕，那么结果从多余的滚动条，到过长的行和没有被合理利用的空间，不一而足。随着人们使用的屏幕尺寸的种类越来越多，出现了响应式网页设计的概念（_responsive web design，RWD_），RWD 指的是允许 Web 页面适应不同屏幕宽度因素等，进行布局和外观的调整的一系列实践。这是改变我们设计多设备网页的方式的思想，在这篇文章里，我们将会帮你理解掌握它时所需知道的主要技能。
@@ -11,12 +12,12 @@ slug: Learn/CSS/CSS_layout/Responsive_Design
     <tr>
       <th scope="row">学习前提：</th>
       <td>
-        HTML 基础（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 基础（学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >），以及对 CSS 工作方式的理解（学习<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
-        >和<a href="/en-US/docs/Learn/CSS/Building_blocks"
+        >和<a href="/zh-CN/docs/Learn/CSS/Building_blocks"
           >CSS building blocks</a
         >）
       </td>
@@ -182,7 +183,7 @@ target / context = result
 
 ```css
 img {
-  max-width: 100%:
+  max-width: 100%;
 }
 ```
 
@@ -281,8 +282,6 @@ h1 {
 - `user-scalable`：如果设为`no`的话阻止缩放。
 
 你应该避免使用`minimum-scale`、`maximum-scale`，尤其是将`user-scalable`设为`no`。用户应该有权力尽可能大或小地进行缩放，阻止这种做法会引起访问性问题。
-
-> **备注：** 有一个 CSS @规则是被设计用来替换掉视口元标签的——[@viewport](/zh-CN/docs/Web/CSS/@viewport)——但是浏览器对它的支持太差了。它是在 IE 和 Edge 中引入的，但自从 Chromium 内核的 Edge 发布以后，它就不再受到 Edge 浏览器支持了。
 
 ## 小结
 

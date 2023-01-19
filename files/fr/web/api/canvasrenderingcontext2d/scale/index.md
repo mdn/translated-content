@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
 translation_of: Web/API/CanvasRenderingContext2D/scale
 ---
+
 {{APIRef}}
 
 La méhode **`CanvasRenderingContext2D.scale()`** de l'API Canvas 2D ajoute une transformation de mise à l'échelle des unités du canevas, de x horizontalement et de y verticalement.

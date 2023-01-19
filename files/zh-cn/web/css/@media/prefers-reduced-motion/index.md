@@ -2,6 +2,7 @@
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 ---
+
 [CSS](/zh-CN/docs/CSS) [媒体查询特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
 
 ## 语法
@@ -15,7 +16,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 在火狐中，满足以下条件则 `reduce` 会生效：
 
-- 在 GTK/Gnome 中，可以通过 _GNOME Tweaks_ （在“通用”或“外观”菜单中，取决于具体版本） 的配置，设置 `gtk-enable-animations` 的值为 `false`。
+- 在 GTK/Gnome 中，可以通过 _GNOME Tweaks_（在“通用”或“外观”菜单中，取决于具体版本）的配置，设置 `gtk-enable-animations` 的值为 `false`。
 
   - 可以在 [GTK 3 的配置文件](https://wiki.archlinux.org/index.php/GTK#Configuration)中的 `[Settings]` 模块下设置 `gtk-enable-animations = false`。
 
@@ -103,7 +104,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.media.prefers-reduced-motion")}}
+{{Compat}}
 
 ## 参考
 

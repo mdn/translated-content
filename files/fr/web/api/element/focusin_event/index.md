@@ -4,6 +4,7 @@ slug: Web/API/Element/focusin_event
 translation_of: Web/API/Element/focusin_event
 original_slug: Web/Events/focusin
 ---
+
 L'événement **focusin** est déclenché lorsqu'un élément est sur le point de recevoir le focus. La principale différence avec [`focus`](/fr/docs/Mozilla_event_reference/focus_%28event%29) est que **focusin** se propage.
 
 ## Informations générales
@@ -37,7 +38,6 @@ L'événement **focusin** est déclenché lorsqu'un élément est sur le point d
 
 ## Evénements liés
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/fr/docs/Web/API/Element/focus_event)
+- [`blur`](/fr/docs/Web/API/Element/blur_event)
+- [`focusout`](/fr/docs/Web/API/Element/focusout_event)

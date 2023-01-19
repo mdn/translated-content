@@ -4,9 +4,10 @@ slug: Web/API/Window/open
 l10n:
   sourceCommit: 27e11bf5ee2425dc6b939d0d1825ac741414a688
 ---
+
 {{APIRef}}
 
-**`open()`**  は [`Window`](/ja/docs/Web/API/Window) インターフェイスのメソッドで、指定されたリソースを、新しい、または既存の指定された名前を持った閲覧コンテキスト (ウィンドウ、 {{HTMLElement("iframe")}}、タブ) に読み込みます。
+**`open()`** は [`Window`](/ja/docs/Web/API/Window) インターフェイスのメソッドで、指定されたリソースを、新しい、または既存の指定された名前を持った閲覧コンテキスト (ウィンドウ、 {{HTMLElement("iframe")}}、タブ) に読み込みます。
 
 ## 構文
 
@@ -34,7 +35,7 @@ open(url, target, windowFeatures)
 
         もし `popup` が有効でなく、ウィンドウ機能が宣言されていない場合、新しい閲覧コンテキストはタブになります。
 
-        > **Note:** windowFeatures` 引数で `noopener` や `noreferrer` 以外の機能を指定すると、ポップアップを要求する効果もあります。
+        > **メモ:** windowFeatures` 引数で `noopener` や `noreferrer` 以外の機能を指定すると、ポップアップを要求する効果もあります。
 
         この機能を有効にするには、 `popup` を指定して値を指定しないか、 `yes`、`1`、`true` のいずれかに設定します。
 
@@ -60,7 +61,7 @@ open(url, target, windowFeatures)
     - `noreferrer`
       - : この特性が設定されると、ブラウザーは [`Referer`](/ja/docs/Web/HTTP/Headers/Referer) ヘッダーを省略し、 `noopener` を true に設定します。詳しくは [`rel="noreferrer"`](/ja/docs/Web/HTML/Link_types/noreferrer) を参照してください。
 
-> **Note:** 要求位置 (`top`, `left`)、要求寸法 (`width`, `height`) の値が`windowFeatures` で指定された場合、ブラウザーポップアップ全体をユーザーのオペレーティングシステムのアプリケーションの作業領域内に表示できないと、**修正されます**。言い換えれば、新しいポップアップのどの部分も、最初は画面外に位置することはできません。
+> **メモ:** 要求位置 (`top`, `left`)、要求寸法 (`width`, `height`) の値が`windowFeatures` で指定された場合、ブラウザーポップアップ全体をユーザーのオペレーティングシステムのアプリケーションの作業領域内に表示できないと、**修正されます**。言い換えれば、新しいポップアップのどの部分も、最初は画面外に位置することはできません。
 
 ### 返値
 
@@ -84,7 +85,7 @@ window.open("https://www.mozilla.org/", "mozillaTab");
 
 他にも以下の例では、 `popup` 特性を使用して、ポップアップを開く方法を示しています。
 
-> **Warning:** 最近のブラウザーはポップアップブロッカーが内蔵されており、このようなポップアップを開くことを防いでいます。ユーザーは、ブラウザーの設定を変更してポップアップを有効にするか、ブラウザーのユーザーインターフェースからサイトごとに有効にする必要があります（サイトが最初にポップアップを開こうとしたときに通知が現れ、有効にするか破棄するかの選択肢が与えられる場合があります）。
+> **警告:** 最近のブラウザーはポップアップブロッカーが内蔵されており、このようなポップアップを開くことを防いでいます。ユーザーは、ブラウザーの設定を変更してポップアップを有効にするか、ブラウザーのユーザーインターフェースからサイトごとに有効にする必要があります（サイトが最初にポップアップを開こうとしたときに通知が現れ、有効にするか破棄するかの選択肢が与えられる場合があります）。
 
 ```js
 window.open("https://www.mozilla.org/", "mozillaWindow", "popup");
@@ -140,7 +141,7 @@ link.addEventListener("click", (event) => {
 
 上記のコードは、リンクがポップアップを開くことに関連するいくつかのユーザビリティの問題を解決しています。コード中の `event.preventDefault()` の目的は、リンクの既定値のアクションを取り消すことです。`click` のイベントリスナーが実行されれば、リンクの既定値のアクションを実行する必要はありません。しかし、ユーザーのブラウザーで JavaScript のサポートが無効または存在しない場合、 `click` のイベントリスナーは無視され、ブラウザーは `"WikipediaWindowName"` という名前を持つターゲットフレームまたはウィンドウに参照されたリソースを読み込む。フレームやウィンドウに `"WikipediaWindowName"` という名前がない場合、ブラウザーは新しいウィンドウを作成して `"WikipediaWindowName"` という名前を付けます。
 
-> **Note:** `target` 属性についての詳細は、 [`<a>`](/ja/docs/Web/HTML/Element/a#attr-target) または [`<form>`](/ja/docs/Web/HTML/Element/form#attr-target) を参照してください。
+> **メモ:** `target` 属性についての詳細は、 [`<a>`](/ja/docs/Web/HTML/Element/a#attr-target) または [`<form>`](/ja/docs/Web/HTML/Element/form#attr-target) を参照してください。
 
 ### 既存のウィンドウを再利用して `target="_blank"` を防止する
 

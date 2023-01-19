@@ -2,6 +2,7 @@
 title: 'FileReader: load event'
 slug: Web/API/FileReader/load_event
 ---
+
 {{APIRef}}
 
 当文件成功读取时，执行`load` 事件
@@ -141,7 +142,7 @@ fileInput.addEventListener('change', handleSelected);
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.load_event")}}
+{{Compat}}
 
 ## 请参阅
 

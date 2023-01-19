@@ -3,6 +3,7 @@ title: 426 Upgrade Required
 slug: Web/HTTP/Status/426
 translation_of: Web/HTTP/Status/426
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse d'erreur HTTP **`426 Upgrade Required`** indique que le serveur refuse de réaliser la requête en utilisant le protocole actuel mais qu'il sera peut-être disposé à le faire après que le client passe sur un protocole différent.

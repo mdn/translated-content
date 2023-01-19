@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 original_slug: Web/JavaScript/Reference/Objets_globaux/AsyncFunction
 browser-compat: javascript.builtins.AsyncFunction
 ---
+
 {{JSRef}}
 
 Le constructeur **`AsyncFunction`** crée un nouvel objet pour [une fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function). En JavaScript, chaque fonction asynchrone est en fait un objet `AsyncFunction`.

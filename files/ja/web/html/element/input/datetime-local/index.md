@@ -1,22 +1,11 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
-tags:
-  - 日付
-  - 日付と時刻
-  - 要素
-  - フォーム入力
-  - HTML
-  - HTML フォーム
-  - Input
-  - 入力要素
-  - 入力型
-  - リファレンス
-  - 時刻
-  - datetime-local
-translation_of: Web/HTML/Element/input/datetime-local
+l10n:
+  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 {{htmlelement("input")}} 要素の **`datetime-local`** 型は、ユーザーが簡単に日付と時刻、つまり年、月、日と時、分を入力することができる入力コントロールを生成します。ユーザーのローカルタイムゾーンが使用されます。
 
@@ -76,29 +65,33 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 ## 値
 
-入力欄に入力された日付の値を表す文字列です。この入力型で使われる日付と時刻の値の形式は、[ローカル日時の文字列](/ja/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)で説明されています。
+入力欄に入力された日付の値を表す文字列です。この入力型で使われる日付と時刻の値の形式は、[ローカル日時の文字列](/ja/docs/Web/HTML/Date_and_time_formats#ローカル日時の文字列)で説明されています。
 
 次のように、 {{htmlattrxref("value", "input")}} 属性に日付と時刻を入れることで、入力欄の既定値を設定することができます。
 
 ```html
 <label for="party">パーティーを予約する日時を入力してください。</label>
-<input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30">
+<input
+  id="party"
+  type="datetime-local"
+  name="partydate"
+  value="2017-06-01T08:30" />
 ```
 
 {{ EmbedLiveSample('Value', 600, 60) }}
 
 一点気を付けなければならないことは、表示される日付と時刻の書式は実際の `value` とは異なることです。表示される日付と時刻は、オペレーティングシステムからの報告に従ってユーザーのロケールによって書式化されますが、日付や時刻の `value` は常に `YYYY-MM-DDThh:mm` の書式です。例えば、上記の値をサーバーに送信すると、 `partydate=2017-06-01T08:30` のようになります。
 
-> **Note:** このようなデータが HTTP の [`GET`](/ja/docs/Web/HTTP/Methods/GET) を通じて送信されると、コロン文字を URL 引数に含めるために、 `partydate=2017-06-01T08%3A30` のようにエスケープする必要があることもお忘れなく。これを行う方法の一つとして {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} を参照してください。
+> **メモ:** このようなデータが HTTP の [`GET`](/ja/docs/Web/HTTP/Methods/GET) を通じて送信されると、コロン文字を URL 引数に含めるために、 `partydate=2017-06-01T08%3A30` のようにエスケープする必要があることもお忘れなく。これを行う方法の一つとして {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} を参照してください。
 
 次のように、 JavaScript で {{domxref("HTMLInputElement")}} の `value` プロパティを使用して日付の値を取得したり設定したりすることもできます。
 
 ```js
-var dateControl = document.querySelector('input[type="datetime-local"]');
+const dateControl = document.querySelector('input[type="datetime-local"]');
 dateControl.value = '2017-06-01T08:30';
 ```
 
-JavaScript の {{jsxref("Date")}} には、数値の日時情報を正しく整形された文字列に変換したり、手動で行ったりするメソッドがいくつかあります。例えば、この用途では {{jsxref("Date.toISOString()")}} メソッドが利用できます。
+JavaScript の {{jsxref("Date")}} では、数値の日付情報を適切な書式化された文字列に変換するために使用することができるメソッドがいくつか提供されています。例えば {{jsxref("Date.toISOString()")}} メソッドは UTC の日付/時刻を、そのタイムゾーンを表す接尾辞 "`Z`" とともに返します。"`Z`" を取り除くと、 `datetime-local` 入力が期待する形式の値を提供することができます。
 
 ## 追加の属性
 
@@ -122,7 +115,7 @@ JavaScript の {{jsxref("Date")}} には、数値の日時情報を正しく整�
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
-> **Note:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> **メモ:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 `datetime-local` 入力欄では、 `step` の値は秒数で指定され、 1000 が乗じられます (ミリ秒単位の数値であるため)。 `step` の既定値は 60 であり、60秒 (1分、60000ミリ秒) を表します。
 
@@ -140,8 +133,8 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 ```html
 <form>
-    <label for="party">パーティーを予約する日時を入力してください。</label>
-    <input id="party" type="datetime-local" name="partydate">
+  <label for="party">パーティーを予約する日時を入力してください。</label>
+  <input id="party" type="datetime-local" name="partydate" />
 </form>
 ```
 
@@ -152,10 +145,15 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 {{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性を使用して、ユーザーが選択できる日時を制限することができます。次の例では、日時の最小値を `2017-06-01T08:30` に、日時の最大値を `2017-06-30T16:30` に設定しています。
 
 ```html
-  <form>
-    <label for="party">パーティーを予約する日時を入力してください。</label>
-    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
-  </form>
+<form>
+  <label for="party">パーティーを予約する日時を入力してください。</label>
+  <input
+    id="party"
+    type="datetime-local"
+    name="partydate"
+    min="2017-06-01T08:30"
+    max="2017-06-30T16:30" />
+</form>
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
@@ -163,9 +161,9 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 結果は次のようになります。
 
 - この結果は、 2017 年の 6 月の日付のみが選択できるようになります。文字列値の「日」の部分のみが編集可能となり、日付選択ウィジェットで 6 月以外にスクロールすることはできなくなります。
-- どのブラウザーを使用するかによって、指定された値の範囲外の時刻が時刻選択画面で選択できなかったり (Edge など)、無効な値 ([検証](#検証)を参照) であっても設定できたりすることがあります (Chrome など)。
+- どのブラウザーを使用するかによって、指定された値の範囲外の時刻が時刻選択画面で選択できなかったり (Edge など)、無効な値（[検証](#検証)を参照）であっても設定できたりすることがあります (Chrome など)。
 
-> **Note:** {{htmlattrxref("step", "input")}} 属性を使用すると、日時を加算するたびに飛ばす日時を設定できるはずです (例えば、土曜日のみを選択できるようにしたい場合など)。しかし、執筆時点でどの実装も正しく動作していないようです。
+> **メモ:** {{htmlattrxref("step", "input")}} 属性を使用すると、日時を加算するたびに飛ばす日時を設定できるはずです (例えば、土曜日のみを選択できるようにしたい場合など)。しかし、執筆時点でどの実装も正しく動作していないようです。
 
 ### 入力欄の寸法の制御
 
@@ -173,23 +171,23 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 ### タイムゾーンの設定
 
-`datetime-local` 入力型はコントロールのタイムゾーンやロケールを設定する方法がありません。これは [`datetime`](/ja/docs/Web/HTML/Element/input/datetime-local) 入力型では利用できましたが、この入力型は廃止され、仕様書から削除されました。削除された主な理由はブラウザーの互換性がなく、ユーザーインターフェイスや使い勝手が決まっていなかったからです。単に日付と時刻を設定するコントロールを用意して、別なコントロールで地域を設定したほうが簡単です。
+`datetime-local` 入力型はコントロールのタイムゾーンやロケールを設定する方法がありません。これは `datetime` 入力型では利用できましたが、この入力型は廃止され、仕様書から削除されました。削除された主な理由はブラウザーの互換性がなく、ユーザーインターフェイスや使い勝手が決まっていなかったからです。単に日付と時刻を設定するコントロールを用意して、別なコントロールで地域を設定したほうが簡単です。
 
 例えば、ユーザーがログインしている場所によって地域を設定するようなシステムを開発する場合、タイムゾーンを [`hidden`](/ja/docs/Web/HTML/Element/input/hidden) 入力型で次のように提供することができます。
 
 ```html
-<input type="hidden" id="timezone" name="timezone" value="-08:00">
+<input type="hidden" id="timezone" name="timezone" value="-08:00" />
 ```
 
 一方、ユーザーに日時入力と共にタイムゾーンを入力できるようにする必要がある場合、 {{htmlelement("select")}} 要素などでタイムゾーンを入力する手段を提供することができます。
 
 ```html
 <select name="timezone" id="timezone">
-    <option value="Pacific/Kwajalein">Eniwetok, Kwajalein</option>
-    <option value="Pacific/Midway">Midway Island, Samoa</option>
-    <option value="Pacific/Honolulu">Hawaii</option>
-    <option value="Pacific/Marquesas">Taiohae</option>
-    <!-- and so on -->
+  <option value="Pacific/Kwajalein">Eniwetok, Kwajalein</option>
+  <option value="Pacific/Midway">Midway Island, Samoa</option>
+  <option value="Pacific/Honolulu">Hawaii</option>
+  <option value="Pacific/Marquesas">Taiohae</option>
+  <!-- and so on -->
 </select>
 ```
 
@@ -205,14 +203,22 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 ```html
 <form>
-    <div>
-        <label for="party">希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6 月 30 日午後 4:30) </label>
-        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
-        <span class="validity"></span>
-    </div>
-    <div>
-        <input type="submit" value="予約する！">
-    </div>
+  <div>
+    <label for="party">
+      希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6 月 30 日午後 4:30)
+    </label>
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      required />
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit" value="予約する！" />
+  </div>
 </form>
 ```
 
@@ -224,9 +230,9 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 ```css
 div {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 label {
@@ -234,18 +240,18 @@ label {
   width: 300px;
 }
 
-input:invalid+span:after {
-    content: '✖';
-    padding-left: 5px;
+input:invalid + span::after {
+  content: "✖";
+  padding-left: 5px;
 }
 
-input:valid+span:after {
-    content: '✓';
-    padding-left: 5px;
+input:valid + span::after {
+  content: "✓";
+  padding-left: 5px;
 }
 ```
 
-> **Warning:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、誤った種類のデータなど) が送信された場合に障害が発生するおそれがあります。
+> **警告:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、誤った種類のデータなど) が送信された場合に障害が発生するおそれがあります。
 
 ## ブラウザーの互換性の扱い
 
@@ -267,16 +273,23 @@ input:valid+span:after {
 ```html
 <form>
   <div>
-    <label for="party">希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6 月 30 日午後 4:30) </label>
-    <input id="party" type="datetime-local" name="partydate"
-           min="2017-06-01T08:30" max="2017-06-30T16:30"
-           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
+    <label for="party">
+      希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6 月 30 日午後 4:30)
+    </label>
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit" value="予約する！">
+    <input type="submit" value="予約する！" />
   </div>
-  <input type="hidden" id="timezone" name="timezone" value="-08:00">
+  <input type="hidden" id="timezone" name="timezone" value="-08:00" />
 </form>
 ```
 
@@ -297,8 +310,8 @@ input:invalid + span {
   position: relative;
 }
 
-input:invalid + span:after {
-  content: '✖';
+input:invalid + span::after {
+  content: "✖";
   position: absolute;
   right: -18px;
 }
@@ -307,8 +320,8 @@ input:valid + span {
   position: relative;
 }
 
-input:valid + span:after {
-  content: '✓';
+input:valid + span::after {
+  content: "✓";
   position: absolute;
   right: -18px;
 }
@@ -320,7 +333,7 @@ input:valid + span:after {
 
 JavaScript は日付を格納するとき、すべての数値と同様に、倍精度浮動小数点を使用しますので、 JavaScript のコードは整数への変換やビット操作が行われない限り、2038 年問題に悩まされることはありません。ビット操作演算は、 32 ビットの符号付き 2 の補数で演算を行っているので影響を受ける可能性があります。
 
-問題はサーバー側で、 2^31-1 よりも大きな日付値を格納する場合です。この問題を解決するには、すべての日付を符号なしの 32 ビット整数、符号付きの 64 ビット整数、または倍精度の浮動小数点のいずれかでサーバーに格納する必要があります。サーバーが PHP で書かれている場合は、PHP 8 または 7 にアップグレードし、ハードウェアを x86_64 または IA64 にアップグレードするだけで解決できるかもしれません。他のハードウェアで行き詰っている場合は、 32 ビット仮想マシン内で 64 ビットハードウェアをエミュレートすることもできますが、ほとんどの仮想マシンはこの種の仮想化をサポートしていないため、安定性が損なわれ、性能が大きく低下する可能性があります。
+問題はサーバー側で、 2^31 - 1 よりも大きな日付値を格納する場合です。この問題を解決するには、すべての日付を符号なしの 32 ビット整数、符号付きの 64 ビット整数、または倍精度の浮動小数点のいずれかでサーバーに格納する必要があります。サーバーが PHP で書かれている場合は、PHP 8 または 7 にアップグレードし、ハードウェアを x86_64 または IA64 にアップグレードするだけで解決できるかもしれません。他のハードウェアで行き詰っている場合は、 32 ビット仮想マシン内で 64 ビットハードウェアをエミュレートすることもできますが、ほとんどの仮想マシンはこの種の仮想化をサポートしていないため、安定性が損なわれ、性能が大きく低下する可能性があります。
 
 ## 10000 年問題 (主にクライアント側)
 
@@ -330,15 +343,15 @@ JavaScript は日付を格納するとき、すべての数値と同様に、倍
 
 ```html
 <!--midnight of January 1st, 10000: the exact time of Y10K-->
-<input type="datetime-local" value="+010000-01-01T05:00"/>
+<input type="datetime-local" value="+010000-01-01T05:00" />
 ```
 
 単純なことです。何桁でもいいコードを用意するだけです。 5 桁の数字だけを用意するのではありません。プログラムで値を設定するための JavaScript のコードを紹介します。
 
 ```js
 function setValue(element, date) {
-    var isoString = date.toISOString()
-    element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
+  const isoString = date.toISOString()
+  element.value = isoString.substring(0, isoString.indexOf("T") + 6);
 }
 ```
 
@@ -422,15 +435,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -439,22 +452,22 @@ input:valid+span:after {
 
 ```js
 // 変数を定義
-var nativePicker = document.querySelector('.nativeDateTimePicker');
-var fallbackPicker = document.querySelector('.fallbackDateTimePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector('.nativeDateTimePicker');
+const fallbackPicker = document.querySelector('.fallbackDateTimePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var yearSelect = document.querySelector('#year');
-var monthSelect = document.querySelector('#month');
-var daySelect = document.querySelector('#day');
-var hourSelect = document.querySelector('#hour');
-var minuteSelect = document.querySelector('#minute');
+const yearSelect = document.querySelector('#year');
+const monthSelect = document.querySelector('#month');
+const daySelect = document.querySelector('#day');
+const hourSelect = document.querySelector('#hour');
+const minuteSelect = document.querySelector('#minute');
 
 // 最初はフォールバックを非表示にする
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
 // 新しい日付入力が文字列入力にフォールバックされるかどうか
-var test = document.createElement('input');
+const test = document.createElement('input');
 
 try {
   test.type = 'datetime-local';
@@ -462,8 +475,8 @@ try {
   console.log(e.description);
 }
 
-// もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する
-if(test.type === 'text') {
+// もし文字列入力になるならば、 if () {} ブロックの中のコードを実行する
+if (test.type === 'text') {
   // ネイティブの日付選択を隠してフォールバック版を表示
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
@@ -480,50 +493,50 @@ if(test.type === 'text') {
 function populateDays(month) {
   // 日の <select> から現在の一連の <option> 要素を削除し、
   // 挿入のための準備をする
-  while(daySelect.firstChild){
+  while (daySelect.firstChild) {
     daySelect.removeChild(daySelect.firstChild);
   }
 
   // 挿入する日数を保持する変数を作成
-  var dayNum;
+  let dayNum;
 
   // 31 か 30 日か
-  if(month === '1' || month === '3' || month === '5' || month === '7' || month === '8' || month === '10' || month === '12') {
+  if (['1', '3', '5', '7', '8', '10', '12'].includes(month)) {
     dayNum = 31;
-  } else if(month === '4' || month === '6' || month === '9' || month === '11') {
+  } else if (['4', '6', '9', '11'].includes(month)) {
     dayNum = 30;
   } else {
-  // 2月の場合は、閏年かどうかを計算する
-    var year = yearSelect.value;
-    var isLeap = new Date(year, 1, 29).getMonth() == 1;
-    isLeap ? dayNum = 29 : dayNum = 28;
+  // 2 月の場合は、閏年かどうかを計算する
+    const year = yearSelect.value;
+    const isLeap = new Date(year, 1, 29).getMonth() === 1;
+    dayNum = isLeap ? 29 : 28;
   }
 
   // 日付の <select> に正しい数の新しい <option> 要素を
-  for(i = 1; i <= dayNum; i++) {
-    var option = document.createElement('option');
+  for (let i = 1; i <= dayNum; i++) {
+    const option = document.createElement('option');
     option.textContent = i;
     daySelect.appendChild(option);
   }
 
   // 前回の日が既に設定されていたら、 daySelect の値を
   // 日に設定し、年を変えたときに1に戻ることを避ける
-  if(previousDay) {
+  if (previousDay) {
     daySelect.value = previousDay;
 
     // 前回設定されていた日が大きい数字、つまり31であった場合、
     // そして日数が少ない月 (例えば2月) を選択した場合、
     // コードのこの部分で空欄を表示するのではなく、一番大きな日が
     // 選択されるようにする
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 1;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 2;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 3;
     }
   }
@@ -531,56 +544,56 @@ function populateDays(month) {
 
 function populateYears() {
   // 今年を数字として取得
-  var date = new Date();
-  var year = date.getFullYear();
+  const date = new Date();
+  const year = date.getFullYear();
 
   // 今年から 100 年前までの年が <select> で選択できるようにする
-  for(var i = 0; i <= 100; i++) {
-    var option = document.createElement('option');
-    option.textContent = year-i;
+  for (let i = 0; i <= 100; i++) {
+    const option = document.createElement('option');
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }
 
 function populateHours() {
   // populate the hours <select> with the 24 hours of the day
-  for(var i = 0; i <= 23; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 0; i <= 23; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
     hourSelect.appendChild(option);
   }
 }
 
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
-  for(var i = 0; i <= 59; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 0; i <= 59; i++) {
+    const option = document.createElement('option');
+    option.textContent = (i < 10) ? `0${i}` : i;
     minuteSelect.appendChild(option);
   }
 }
 
 // 年や月の <select> 値が変更されたら、 populateDays() を
 // 再実行して日数を調整する
-yearSelect.onchange = function() {
+yearSelect.onchange = () => {
   populateDays(monthSelect.value);
 }
 
-monthSelect.onchange = function() {
+monthSelect.onchange = () => {
   populateDays(monthSelect.value);
 }
 
 //日数を保存
-var previousDay;
+let previousDay;
 
 // 以前どの日が設定されていたかを保存する
 // 使い方は populateDays() を参照
-daySelect.onchange = function() {
+daySelect.onchange = () => {
   previousDay = daySelect.value;
 }
 ```
 
-> **Note:** 53 週ある年もあることを忘れないでください ([年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照)。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
+> **メモ:** 53 週ある年もあることを忘れないでください ([年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照)。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
 
 ## 仕様書
 

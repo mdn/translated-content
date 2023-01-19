@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/maximize
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Locale.prototype.maximize()`** permet d'obtenir les valeurs les plus vraisemblantes pour la langue, le script et la région de la locale en fonction des valeurs existantes.

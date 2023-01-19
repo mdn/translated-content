@@ -4,6 +4,7 @@ slug: Web/API/BatteryManager
 translation_of: Web/API/BatteryManager
 browser-compat: api.BatteryManager
 ---
+
 {{APIRef()}}
 
 L'interface `BatteryManager` fournit des moyens pour obtenir des informations sur le niveau de charge de la batterie du système. La méthode [`navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery) renvoie un objet `Promise` dont la valeur de résolution est une interface `BatteryManager`.

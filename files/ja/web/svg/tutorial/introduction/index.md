@@ -1,11 +1,8 @@
 ---
 title: Introduction
 slug: Web/SVG/Tutorial/Introduction
-tags:
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Introduction
 ---
+
 {{PreviousNext("SVG/Tutorial", "SVG/Tutorial/Getting Started")}}
 
 [SVG](/ja/docs/SVG) は右に示したようなグラフィックの描画に用いる、 [XHTML](/ja/docs/XHTML) に似ている [XML](/ja/docs/XML) 言語です。これは、必要な線や図形を指定する、既存のラスタ画像に手を加える、あるいはそれら両方を組み合わせることで画像を作成するのに用いられます。画像やその部品は、外見を完全に変えるためにトランスフォーム、合成、フィルタ適用を行うこともできます。

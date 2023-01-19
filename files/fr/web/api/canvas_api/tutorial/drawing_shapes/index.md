@@ -12,7 +12,8 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 ---
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
 
 Maintenant que nous avons défini notre [environnement de canevas](/fr/docs/Tutoriel_canvas/Utilisation_de_base), nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.
 
@@ -205,14 +206,14 @@ function draw() {
   const canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     const ctx = canvas.getContext('2d');
-    
+
     // Triangle plein
     ctx.beginPath();
     ctx.moveTo(25, 25);
     ctx.lineTo(105, 25);
     ctx.lineTo(25, 105);
     ctx.fill();
-    
+
     // Triangle filaire
     ctx.beginPath();
     ctx.moveTo(125, 125)
@@ -305,7 +306,7 @@ La différence entre ces deux méthodes est mieux décrite par l'image à droite
 
 ![](canvas_curves.png)
 
-Les paramètres `x` et `y` de ces deux méthodes sont les coordonnées du point d'arrivée. `cp1x` et `cp1y` sont les coordonnées du premier point de contrôle, et  `cp2x` et `cp2y` sont les coordonnées du second point de contrôle.
+Les paramètres `x` et `y` de ces deux méthodes sont les coordonnées du point d'arrivée. `cp1x` et `cp1y` sont les coordonnées du premier point de contrôle, et `cp2x` et `cp2y` sont les coordonnées du second point de contrôle.
 
 Utiliser des courbes quadratiques et cubiques de Bézier peut constituer un certain défi, car à la différence d'un logiciel de tracé des vecteurs comme _Adobe Illustrator_, nous n'avons pas de retour visuel direct concernant ce que nous faisons. Cela rend passablement difficile le dessin de formes complexes. Dans l'exemple suivant, nous allons dessiner quelques formes naturelles simples, mais si vous avez du temps et - surtout - de la patience, des formes bien plus complexes peuvent être créées.
 
@@ -328,7 +329,7 @@ function draw() {
   const canevas = document.getElementById('canvas');
   if (canevas.getContext) {
     const ctx = canevas.getContext('2d');
-    
+
     // Exemples de courbes quadratiques
     ctx.beginPath();
     ctx.moveTo(75, 25);
@@ -362,7 +363,7 @@ function draw() {
   const canevas = document.getElementById('canvas');
   if (canevas.getContext) {
     const ctx = canevas.getContext('2d');
-    
+
     // Exemple de courbes cubiques
     ctx.beginPath();
     ctx.moveTo(75, 40);
@@ -405,31 +406,31 @@ function draw() {
   const canevas = document.getElementById('canvas');
   if (canevas.getContext) {
     const ctx = canevas.getContext('2d');
-    
+
     rectArrondi(ctx, 12, 12, 150, 150, 15);
     rectArrondi(ctx, 19, 19, 150, 150, 9);
     rectArrondi(ctx, 53, 53, 49, 33, 10);
     rectArrondi(ctx, 53, 119, 49, 16, 6);
     rectArrondi(ctx, 135, 53, 49, 33, 10);
     rectArrondi(ctx, 135, 119, 25, 49, 10);
-    
+
     ctx.beginPath();
     ctx.arc(37, 37, 13, Math.PI/7, -Math.PI/7, false);
     ctx.lineTo(31, 37);
     ctx.fill();
-    
+
     for(let i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 35, 4, 4);
     }
-    
+
     for(i = 0; i < 6; i++) {
         ctx.fillRect(115, 51 + i * 16, 4, 4);
     }
-    
+
     for(i = 0; i < 8; i++) {
     ctx.fillRect(51 + i * 16, 99, 4, 4);
     }
-    
+
     ctx.beginPath();
     ctx.moveTo(83, 116);
     ctx.lineTo(83, 102);
@@ -443,7 +444,7 @@ function draw() {
     ctx.lineTo(87.666, 111.333);
     ctx.lineTo(83, 116);
     ctx.fill();
-    
+
     ctx.fillStyle = 'white';
     ctx.beginPath();
     ctx.moveTo(91, 96);
@@ -457,12 +458,12 @@ function draw() {
     ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
     ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
     ctx.fill();
-       
+
     ctx.fillStyle = "black";
     ctx.beginPath();
     ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
-       
+
     ctx.beginPath();
     ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
@@ -490,7 +491,7 @@ L'image résultante ressemble à ce qui suit&nbsp;:
 
 {{EmbedLiveSample("Combiner_les_possibilités", 160, 160)}}
 
-Nous ne l'expliquerons pas plus en détails, du fait que c'est étonnament simple. Les choses les plus importantes à noter sont l'utilisation de la propriété `fillStyle` sur le contexte du dessin, et l'utilisation d'une fonction utilitaire dans ce cas, rectArrondi`())`. L'utilisation de fonctions utilitaires pour des éléments de dessin que vous faites souvent peut être très utile, et peut réduire la quantité de code dont vous avez besoin, ainsi que sa complexité.
+Nous ne l'expliquerons pas plus en détails, du fait que c'est étonnament simple. Les choses les plus importantes à noter sont l'utilisation de la propriété `fillStyle` sur le contexte du dessin, et l'utilisation d'une fonction utilitaire dans ce cas, `rectArrondi()`. L'utilisation de fonctions utilitaires pour des éléments de dessin que vous faites souvent peut être très utile, et peut réduire la quantité de code dont vous avez besoin, ainsi que sa complexité.
 
 Nous reviendrons sur `fillStyle` plus en détail plus loin dans ce tutoriel. Pour l'instant, tout ce que nous faisons est de l'utiliser pour changer en blanc la couleur pour les trajets depuis la couleur noire par défaut, et inversement ensuite.
 
@@ -551,7 +552,7 @@ function draw() {
 
 Une autre fonctionnalité puissante de la nouvelle API `Path2D` de canevas est l'utilisation de [données de trajet SVG](/fr-FR/docs/Web/SVG/Tutorial/Paths) pour initialiser des trajets sur votre canevas. Cela peut vous permettre de faire circuler des données de trajet et les réutiliser, à la fois en SVG et dans un canevas.
 
-Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur P`ath2D`](/fr/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
+Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur `Path2D`](/fr/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

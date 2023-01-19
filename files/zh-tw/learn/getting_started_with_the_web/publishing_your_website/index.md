@@ -2,6 +2,7 @@
 title: 將你的網站發佈上線
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
 
 當你完成你的網頁程式碼後，你需要把它放到網路上，這樣人們才可以搜尋得到。這個章節將介紹如何快速的把你的程式碼放到網路上。
@@ -46,7 +47,7 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 試試以下網站，看看你能想到什麼點子：
 
 - [JSFiddle](https://jsfiddle.net/)
-- [Thimble](https://thimble.mozilla.org)
+- [Glitch](https://glitch.com/)
 - [JS Bin](http://jsbin.com/)
 - [CodePen](https://codepen.io/)
 

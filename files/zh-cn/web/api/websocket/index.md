@@ -2,6 +2,7 @@
 title: WebSocket
 slug: Web/API/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 `WebSocket` 对象提供了用于创建和管理 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 连接，以及可以通过该连接发送和接收数据的 API。

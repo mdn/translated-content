@@ -2,6 +2,7 @@
 title: Map.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
 ---
+
 {{JSRef}}
 
 **`size`** アクセサープロパティは、 {{jsxref("Map")}} オブジェクトにある要素の数を返します。
@@ -27,9 +28,7 @@ myMap.size // 3
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-map.prototype.size', 'Map.prototype.size')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

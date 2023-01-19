@@ -2,6 +2,7 @@
 title: 著者詳細ページ
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 ---
+
 著者詳細ページには、指定された `Author` に関する情報を、その (自動的に生成された) `_id` フィールド値を使用して識別し、その `Author` に関連するすべての `Book` オブジェクトのリストを表示する必要があります。
 
 ## Controller
@@ -80,7 +81,7 @@ Run the application and open your browser to <http://localhost:3000/>. Select th
 
 ![Author Detail Page - Express Local Library site](LocalLibary_Express_Author_Detail.png)
 
-> **Note:** The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
+> **メモ:** The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
 
 ## Next steps
 

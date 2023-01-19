@@ -2,6 +2,7 @@
 title: OscillatorNode()
 slug: Web/API/OscillatorNode/OscillatorNode
 ---
+
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 **`OscillatorNode()`** 构造器创建了一个新的 {{domxref("OscillatorNode")}} 对象，也是 {{domxref("AudioNode")}} 类型，表示一个周期的波形，例如正弦波，用来在不同的对象中定义其可选属性的值
@@ -25,9 +26,9 @@ var oscillatorNode = new OscillatorNode(context, options)
     - `type`
       - : oscillator node 产生的波形的形状。可用的值有 '`sine`', '`square`', '`sawtooth`', '`triangle`' 和 '`custom`'，默认值是'sine'。
     - `detune`
-      - : 音高微调值（cents）可以对给定的频率值进行偏移。 默认值是 0.
+      - : 音高微调值（cents）可以对给定的频率值进行偏移。默认值是 0.
     - `frequency`
-      - : 周期性波形的频率 (in [hertz](https://zh.wikipedia.org/wiki/hertz))。 默认值是 440.
+      - : 周期性波形的频率 (in [hertz](https://zh.wikipedia.org/wiki/hertz))。默认值是 440.
     - `periodicWave`
       - : 任意的周期性波形，通过一个 {{domxref("PeriodicWave")}} 对象描述。
 
@@ -37,4 +38,4 @@ var oscillatorNode = new OscillatorNode(context, options)
 
 ## 浏览器兼容性
 
-{{Compat("api.OscillatorNode.OscillatorNode")}}
+{{Compat}}

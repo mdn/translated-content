@@ -2,6 +2,7 @@
 title: HTMLTableRowElement.rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 只读属性 **`HTMLTableRowElement.rowIndex`** 用于表示元素所在行相对于整个 {{HtmlElement("table")}} 的逻辑位置。
@@ -54,7 +55,7 @@ rows.forEach((row) => {
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 浏览器兼容性
 

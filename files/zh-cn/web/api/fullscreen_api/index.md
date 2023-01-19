@@ -2,6 +2,7 @@
 title: 全屏 API
 slug: Web/API/Fullscreen_API
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 **`全屏 API`** 为使用用户的整个屏幕展现网络内容提供了一种简单的方式，并且在不需要时退出全屏模式。这种 API 让你可以简单地控制浏览器，使得一个元素与其子元素，如果存在的话，可以占据整个屏幕，并在此期间，从屏幕上隐藏所有的浏览器用户界面以及其他应用。
@@ -42,21 +43,21 @@ _{{DOMxRef("Document")}} 提供了可以用于判断是否支持和启用全屏�
 
 Fullscreen API 定义了两个事件，可用于检测全屏模式的打开和关闭，以及在全屏和窗口模式之间切换过程中发生的错误。_{{DOMxRef("Document")}}_ 和 _{{DOMxRef("Element")}}_ 接口提供了这些事件的事件处理函数。
 
-> **备注：** 这些事件处理函数特性不可以当成 HTML 内容属性来使用。换句话说，你无法在 HTML 内容中为 {{Event("fullscreenchange")}} 和 {{Event("fullscreenerror")}} 指定事件处理程序，你必须通过 JavaScript 代码添加它们。
+> **备注：** 这些事件处理函数特性不可以当成 HTML 内容属性来使用。换句话说，你无法在 HTML 内容中为 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 和 [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event) 指定事件处理程序，你必须通过 JavaScript 代码添加它们。
 
 #### Document 上的事件处理程序
 
 - {{DOMxRef("Document.onfullscreenchange")}}
-  - : {{Event("fullscreenchange")}} 事件的处理程序，当进入全屏或退出全屏时，事件将被发送到{{DOMxRef("Document")}}上。此处理程序仅在整个文档全屏模式更改时有效。
+  - : [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 事件的处理程序，当进入全屏或退出全屏时，事件将被发送到{{DOMxRef("Document")}}上。此处理程序仅在整个文档全屏模式更改时有效。
 - {{DOMxRef("Document.onfullscreenerror")}}
-  - : {{Event("fullscreenerror")}} 事件的处理程序，当进入全屏或退出全屏出错时，事件将被发送到 {{DOMxRef("Document")}} 上，仅对整个文档的全屏模式更改出错时候有效。
+  - : [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event) 事件的处理程序，当进入全屏或退出全屏出错时，事件将被发送到 {{DOMxRef("Document")}} 上，仅对整个文档的全屏模式更改出错时候有效。
 
 #### Element 上的事件处理程序
 
 - {{DOMxRef("Element.onfullscreenchange")}}
   - : 当全屏事件发生时，该事件会被发送到该元素，表明该元素进入或退出全屏模式
 - {{DOMxRef("Element.onfullscreenerror")}}
-  - : {{Event("fullscreenerror")}} 事件的处理程序，当指定的 {{DOMxRef("Element")}} 改变全屏模式时候出现错误，该事件将被发送到指定的 {{DOMxRef("Element")}} 上。
+  - : [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event) 事件的处理程序，当指定的 {{DOMxRef("Element")}} 改变全屏模式时候出现错误，该事件将被发送到指定的 {{DOMxRef("Element")}} 上。
 
 ### 废弃属性
 
@@ -70,9 +71,9 @@ Fullscreen API 定义了两个事件，可用于检测全屏模式的打开和�
 
 全屏 API 定义了两个事件：1.可用来检测全屏模式何时打开和关闭。2.在全屏模式和窗口模式之间切换过程中何时发生错误。
 
-- {{Event("fullscreenchange")}}
+- [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event)
   - : 当全屏或退出全屏时发送消息给（监听的）的 {{DOMxRef("Document")}} 或 {{DOMxRef("Element")}} 。
-- {{Event("fullscreenerror")}}
+- [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event)
   - : 当全屏或退出全屏是发生了错误时，将错误消息发送给（监听的）的 {{DOMxRef("Document")}} 或 {{DOMxRef("Element")}} 。
 
 ## Dictionaries

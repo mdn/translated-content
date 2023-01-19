@@ -1,25 +1,9 @@
 ---
 title: '<td>: 表データセル要素'
 slug: Web/HTML/Element/td
-tags:
-  - Cells
-  - Data Cell
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Cell
-  - Table Data
-  - Tables
-  - Web
-  - cell
-  - data
-  - td
-browser-compat: html.elements.td
-translation_of: Web/HTML/Element/td
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<td>`** は [HTML](/ja/docs/Web/HTML) の要素で、表でデータを包含するセルを定義します。これは*モデル*に関与します。
 
@@ -89,7 +73,7 @@ translation_of: Web/HTML/Element/td
 
   - : この属性は、セルの内容の簡潔な説明を持ちます。読み上げソフトなど一部のユーザーエージェントは、内容自体の前にこの説明を提供することがあります。
 
-    > **Note:** この属性は最新の標準で廃止されているため、使用しないでください。あるいは、省略した説明をセル内に置き、長い内容を **title** 属性に置くこともできます。
+    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。あるいは、省略した説明をセル内に置き、長い内容を **title** 属性に置くこともできます。
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
 
@@ -103,7 +87,7 @@ translation_of: Web/HTML/Element/td
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
-    > **Note:**
+    > **メモ:**
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
     > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 {{htmlattrxref("char", "td")}} を使用できます。 CSS3 では {{unimplemented_inline}} です。

@@ -2,6 +2,7 @@
 title: 'SyntaxError: missing : after property id'
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -16,7 +17,7 @@ SyntaxError: missing : after property id
 
 ## 哪里出错了？
 
-当使用[对象初始化](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)语法创建对象的时候，需要使用半角冒号 (:) 将属性键与属性值隔开。
+当使用[对象初始化](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)语法创建对象的时候，需要使用半角冒号 (:) 将属性键与属性值隔开。
 
 ```js
 var obj = { propertyKey: 'value' };
@@ -76,4 +77,4 @@ var obj = { ['b'+'ar']: 'foo' };
 
 ## 相关内容
 
-- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Object initializer](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)

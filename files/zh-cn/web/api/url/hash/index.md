@@ -2,6 +2,7 @@
 title: URL.hash
 slug: Web/API/URL/hash
 ---
+
 {{ APIRef("URL API") }}
 
 {{domxref("URL")}} 接口的 **`hash`** 属性返回一个 {{domxref("USVString")}}，其中会包含 URL 标识中的 `'#'` 和 fragment 标识符（fragment 即我们通常所说的 URL hash）。
@@ -34,7 +35,7 @@ url.hash // Returns '#Examples'
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.hash")}}
+{{Compat}}
 
 ## 参考
 

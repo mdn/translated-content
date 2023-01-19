@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setInt32
 ---
+
 {{JSRef}}
 
 La méthode **`setInt32()`** permet d'enregister un entier signé sur 32 bits (type _long_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
@@ -54,15 +55,11 @@ dataview.getInt32(1); // 3
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires                                    |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Remplacée par ECMAScript 2015.                  |
-| {{SpecName('ES2015', '#sec-dataview.prototype.setint32', 'DataView.prototype.setInt32')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setint32', 'DataView.prototype.setInt32')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.setInt32")}}
+{{Compat}}
 
 ## Voir aussi
 

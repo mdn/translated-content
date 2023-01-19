@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onpointerenter
 slug: Web/API/Element/pointerenter_event
 ---
+
 HTML DOMpointerenter 事件的 GlobalEventHandlers（全局事件处理函数）
 
 ```js
@@ -13,7 +14,7 @@ var enterHandler = targetElement.onpointerenter;
 - `enterHandler`
   - : `targetElement`的 pointerenter 事件处理函数。
 
-## 例子
+## 示例
 
 这个例子展示了使用 onpointerenter 来设置元素 pointerenter 事件处理函数的两种方式*。*
 
@@ -43,6 +44,16 @@ function init() {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{ event("pointerenter") }}
+- 相关事件
+
+  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
+  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)

@@ -13,6 +13,7 @@ tags:
   - play
 translation_of: Web/API/HTMLMediaElement/play
 ---
+
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
 La méthode **`HTMLMediaElement.play()`** essaie de commencer la lecture du média et renvoie une {{jsxref("Promise")}} qui est résolue quand la lecture a commencé avec succès, et est rejetée si la lecture ne peut commencer pour n'importe quelle raison (comme, par exemple, une erreur de permission).

@@ -2,6 +2,7 @@
 title: Location.replace()
 slug: Web/API/Location/replace
 ---
+
 {{ APIRef("Location") }}
 
 **`Location.replace()`** 方法以给定的 URL 来替换当前的资源。与 {{domxref("Location.assign","assign()")}} 方法 不同的是，调用 `replace()` 方法后，当前页面不会保存到会话历史中（session {{domxref("History")}}），这样，用户点击*回退*按钮时，将不会再跳转到该页面。
@@ -34,9 +35,9 @@ window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Locati
 
 ## 浏览器兼容性
 
-{{Compat("api.Location.replace")}}
+{{Compat}}
 
 ## 参见
 
 - {{domxref("Location")}} 对象。
-- 类似方法: {{domxref("Location.assign()")}} 和 {{domxref("Location.reload()")}}。
+- 类似方法：{{domxref("Location.assign()")}} 和 {{domxref("Location.reload()")}}。

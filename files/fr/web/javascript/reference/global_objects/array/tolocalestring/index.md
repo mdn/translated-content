@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/toLocaleString
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleString()`** renvoie une chaîne de caractères qui représente les éléments du tableau. Les éléments sont convertis en chaînes de caractères grâce à leurs méthodes `toLocaleString` et chacune de ces chaînes est séparée des autres avec un séparateur propre à la locale courante (par exemple une virgule ou un point).
@@ -149,14 +150,11 @@ S'il faut absolument prendre en charge les moteurs JavaScript qui ne supportent 
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                             | Commentaires                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}         | {{Spec2('ESDraft')}}     | Définition initiale dans ECMAScript 3.                         |
-| {{SpecName('ES Int Draft', '#sup-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} | Cette définition remplace la définition fournit dans ECMA-262. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.toLocaleString")}}
+{{Compat}}
 
 ## Voir aussi
 

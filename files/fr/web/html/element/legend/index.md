@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/legend
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **\<legend>** représente une légende pour le contenu de son élément parent {{HTMLElement("fieldset")}}.
 

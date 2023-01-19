@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 original_slug: Web/JavaScript/Reference/Erreurs/Illegal_character
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

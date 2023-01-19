@@ -3,6 +3,7 @@ title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
 translation_of: Web/API/DOMTokenList/item
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`item()`** de l'interface {{domxref("DOMTokenList")}} renvoie un élément de la liste par son index.

@@ -1,12 +1,6 @@
 ---
 title: Node.js
 slug: Glossary/Node.js
-tags:
-  - Glossary
-  - Infrastructure
-  - JavaScript
-  - node.js
-translation_of: Glossary/Node.js
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 

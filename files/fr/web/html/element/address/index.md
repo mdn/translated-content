@@ -18,7 +18,8 @@ tags:
 translation_of: Web/HTML/Element/address
 browser-compat: html.elements.address
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<address>`** indique des informations de contact pour une personne, un groupe de personnes ou une organisation.
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-line
 ---
+
 {{CSSRef}}
 
 La propriété **`text-decoration-line`** définit la façon dont les décorations linéaires sont ajoutées à un élément et notamment leur position (sous le texte, au-dessus ou en travers de celui-ci).
@@ -49,9 +50,13 @@ Cette propriété peut avoir une ou plusieurs valeurs séparées par des espaces
 - `blink` {{deprecated_inline}}
   - : Le texte clignote. Les agents utilisateurs conformes peuvent ne pas suivre cette directive. Cette valeur est dépréciée et il est conseillé d'utiliser les [animations CSS](/fr/docs/Web/CSS/animation) pour obtenir un effet similaire.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -77,15 +82,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-decoration-line', 'text-decoration-line')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. La propriété {{cssxref("text-decoration")}} n'était pas une propriété raccourcie auparavant. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-decoration-line")}}
+{{Compat}}
 
 ## Voir aussi
 

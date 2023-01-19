@@ -1,13 +1,8 @@
 ---
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Symbol
-browser-compat: javascript.builtins.Symbol.for
 ---
+
 {{JSRef}}
 
 **`Symbol.for(key)`** 메서드는 주어진 키를 사용해 런타임 범위의 심볼 레지스트리에서 존재하는 심볼을 찾고, 존재할 경우 이를 반환합니다. 존재하지 않는 경우에는 해당 키를 사용해 전역 심볼 레지스트리에 새로운 심볼을 생성합니다.

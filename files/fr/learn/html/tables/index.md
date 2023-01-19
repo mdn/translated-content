@@ -13,13 +13,14 @@ tags:
 translation_of: Learn/HTML/Tables
 original_slug: Apprendre/HTML/Tableaux
 ---
+
 {{LearnSidebar}}
 
 Une tâche assez courante en HTML consiste à structurer des données sous forme de tableaux. HTML dispose d'un certain nombre d'éléments avec attributs à cet effet. Couplé avec un peu de [CSS](/fr/docs/Learn/CSS) pour styliser ces tableaux, HTML facilite l'affichage d'informations dans des tableaux sur le web comme les emplois du temps de l'école par exemple, les horaires d'ouverture de la piscine du quartier ou des statistiques à propos de votre équipe de football ou de dinosaures favorite. Ce module parcourt tout ce que vous devez savoir pour structurer des données sous forme de tableaux en utilisant HTML.
 
 ## Prérequis
 
-Avant de commencer ce module, vous devez déjà connaître les bases du HTML  — voyez [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML).
+Avant de commencer ce module, vous devez déjà connaître les bases du HTML — voyez [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML).
 
 > **Note :** Si vous travaillez sur un ordinateur/tablette/autre appareil avec lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous devriez essayer (la plupart) des exemples de code dans un programme de codage en ligne comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
 

@@ -1,12 +1,11 @@
 ---
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-browser-compat: javascript.builtins.Symbol.matchAll
 l10n:
   sourceCommit: c20a54b3a4b713b2636f171d00162779e67b99b7
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.matchAll`** devuelve un iterador, que devuelve las coincidencias de la expresión regular con una cadena. Esta función es llamada por el método {{jsxref("String.prototype.matchAll()")}}.

@@ -3,6 +3,7 @@ title: setInterval()
 slug: Web/API/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`setInterval()`** 函式, {{domxref("Window")}} 與 {{domxref("Worker")}} 介面皆提供此一函式, 此函式作用為重複地執行一個函式呼叫或一個程式碼片斷, 每一次執行間隔固定的延遲時間. 此函式呼叫時將傳回一個間隔代碼(Interval ID)用以識別該間隔程序, 因此後續您可以呼叫 {{domxref("clearInterval()")}} 函式移除該間隔程序. 此函式為由 `WindowOrWorkerGlobalScope` 混合定義。
@@ -316,7 +317,7 @@ var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);
 
 ### Inactive tabs
 
-Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more often than once per second in inactive tabs.
+Starting in Gecko 5.0, intervals are clamped to fire no more often than once per second in inactive tabs.
 
 ## The "[`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this)" problem
 
@@ -474,7 +475,9 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 ### Syntax
 
-` var myDaemon = new MiniDaemon(thisObject, callback[``, rate``[, length]]); `
+```
+var myDaemon = new MiniDaemon(thisObject, callback[, rate[, length]]);
+```
 
 ### Description
 
@@ -571,7 +574,7 @@ If you wish to have your function called _once_ after the specified delay, use {
 
 It's possible for intervals to be nested; that is, the callback for `setInterval()` can in turn call `setInterval()` to start another interval running, even though the first one is still going. To mitigate the potential impact this can have on performance, once intervals are nested beyond five levels deep, the browser will automatically enforce a 4 ms minimum value for the interval. Attempts to specify a value less than 4 ms in deeply-nested calls to `setInterval()` will be pinned to 4 ms.
 
-Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see {{SectionOnPage("/en-US/docs/Web/API/setTimeout", "Reasons for delays longer than specified")}} for examples.
+Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/zh-TW/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for examples.
 
 ### Ensure that execution duration is shorter than interval frequency
 

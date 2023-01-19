@@ -2,6 +2,7 @@
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
 ---
+
 {{CSSRef}}
 
 **`font-variant-caps`** は [CSS](/ja/docs/Web/CSS) のプロパティで、大文字の代替字形の使用を制御します。

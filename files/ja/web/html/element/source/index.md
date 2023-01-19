@@ -1,17 +1,9 @@
 ---
 title: '<source>: メディアまたは画像のソース要素'
 slug: Web/HTML/Element/source
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Media
-  - Reference
-  - Web
-  - Web Performance
-translation_of: Web/HTML/Element/source
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<source>` 要素**は、 {{HTMLElement("picture")}} 要素、 {{HTMLElement("audio")}} 要素、 {{HTMLElement("video")}} 要素に対し、複数のメディアリソースを指定します。この要素は空要素であり、つまり中身も閉じタグもありません。[画像ファイル形式](/ja/docs/Web/Media/Formats/Image_types)や[メディアファイル形式](/ja/docs/Web/Media/Formats)の対応状況が様々であるブラウザーの幅広い互換性を確保するために、同じメディアコンテンツを複数のファイル形式で提供することはよくあることです。
 
@@ -142,9 +134,7 @@ translation_of: Web/HTML/Element/source
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-source-element', '&lt;source&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

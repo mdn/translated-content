@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.calendars
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.calendars`** プロパティは、 `Locale` のカレンダー識別子の配列を返すアクセサープロパティです。
@@ -50,7 +51,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendars
   - : 中華民国暦 (中華民国)
 - `islamicc`
   - : シビル（アルゴリズム）アラビア暦
-    > **Warning:** `islamicc` 暦は非推奨です。 `islamic-civil` を使用してください。
+    > **警告:** `islamicc` 暦は非推奨です。 `islamic-civil` を使用してください。
 
 ## 例
 

@@ -1,13 +1,8 @@
 ---
 title: TypedArray.BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
-tags:
-  - JavaScript
-  - Property
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 ---
+
 {{JSRef}}
 
 **`TypedArray.BYTES_PER_ELEMENT`** 속성은 각 형식화 배열 요소의 크기를 바이트로 나타냅니다.

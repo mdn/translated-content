@@ -2,6 +2,7 @@
 title: AggregateError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 ---
+
 {{JSRef}}
 
 **`AggregateError()`** コンストラクターは、単一のエラーにラップする必要があるいくつかのエラーに対してエラーを作成します。

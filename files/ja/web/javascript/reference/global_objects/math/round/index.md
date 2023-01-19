@@ -2,6 +2,7 @@
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
+
 {{JSRef}}
 
 **`Math.round()`** 関数は、引数として与えた数を四捨五入して、もっとも近似の整数を返します。
@@ -43,9 +44,7 @@ Math.round(-20.51); // -21
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.round', 'Math.round')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

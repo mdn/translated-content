@@ -2,6 +2,7 @@
 title: Element.openOrClosedShadowRoot
 slug: Web/API/Element/openOrClosedShadowRoot
 ---
+
 {{APIRef("Shadow DOM")}}{{non-standard_header}}
 
 > **备注：** This API is available only to [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions).
@@ -24,7 +25,7 @@ _This property is not part of any specification._
 
 ## Browser compatibility
 
-{{Compat("api.Element.openOrClosedShadowRoot")}}
+{{Compat}}
 
 ## See also
 

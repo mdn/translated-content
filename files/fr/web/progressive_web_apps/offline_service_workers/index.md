@@ -10,6 +10,7 @@ tags:
   - progressive
 translation_of: Web/Progressive_web_apps/Offline_Service_workers
 ---
+
 {{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
 
 Maintenant que nous avons vu à quoi ressemble l'architecture de js13kPWA et que nous avons configuré et exécuté la structure de base, voyons comment sont implémentées les fonctionnalités en mode déconnecté mettant en oeuvre Service Worker. Dans cet article, nous examinerons comment cela est utilisé dans notre [exemple js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) ([voir également le code source](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)). Nous examinerons comment ajouter la fonctionnalité mode déconnecté.

@@ -1,13 +1,6 @@
 ---
 title: 명시도
 slug: Web/CSS/Specificity
-tags:
-  - CSS
-  - Example
-  - Guide
-  - Reference
-  - Web
-translation_of: Web/CSS/Specificity
 ---
 {{cssref}}
 
@@ -15,7 +8,7 @@ translation_of: Web/CSS/Specificity
 
 ## 어떻게 계산되는가?
 
-명시도는 주어진 CSS 선언에 적용되는 가중치(weight)로, 일치하는 선택자 내 각 [선택자 유형](#selector-type)의 수에 의해 결정됩니다. 여러 선언이 명시도가 같은 경우, CSS에서 맨 끝에 오는 선언이 요소에 적용됩니다. 명시도는 같은 요소가 여러 선언의 대상이 되는 경우에만 적용합니다. CSS 규칙에 따라 [직접 대상 요소](#directly-targeted-elements "directly targeted element")는 요소가 부모로부터 상속받는 규칙보다 항상 우선합니다.
+명시도는 주어진 CSS 선언에 적용되는 가중치(weight)로, 일치하는 선택자 내 각 [선택자 유형](#selector-type)의 수에 의해 결정됩니다. 여러 선언이 명시도가 같은 경우, CSS에서 맨 끝에 오는 선언이 요소에 적용됩니다. 명시도는 같은 요소가 여러 선언의 대상이 되는 경우에만 적용합니다. CSS 규칙에 따라 [직접 대상 요소](#directly-targeted-elements)는 요소가 부모로부터 상속받는 규칙보다 항상 우선합니다.
 
 > **참고:** **주의:** 문서 트리 내 [요소의 근접도(proximity, 가까움)](#tree-proximity-ignorance)는 명시도에 영향이 없습니다.
 
@@ -144,7 +137,7 @@ ID를 ID 선택자 대신 속성 선택자로 선택하면 클래스 1개와 같
 
 ### `:is()` 및 `:not()` 예외
 
-모두 일치 의사 클래스 {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} 및 부정 의사 클래스 {{CSSxRef(":not", ":not()")}}은 명시도 계산에서 의사 클래스로 취급되지 _않습니다_. 그러나 이들 의사 클래스 안에 명시된 선택자는 [선택자 유형](#selector-type "selector types")의 수를 결정할 때 일반 선택자로 셉니다.
+모두 일치 의사 클래스 {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} 및 부정 의사 클래스 {{CSSxRef(":not", ":not()")}}은 명시도 계산에서 의사 클래스로 취급되지 _않습니다_. 그러나 이들 의사 클래스 안에 명시된 선택자는 [선택자 유형](#selector-type)의 수를 결정할 때 일반 선택자로 셉니다.
 
 다음 CSS 조각과 HTML은...
 

@@ -1,8 +1,8 @@
 ---
 title: Función Callback
 slug: Glossary/Callback_function
-translation_of: Glossary/Callback_function
 ---
+
 Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
 
 Ejemplo:
@@ -26,8 +26,8 @@ Sin embargo, tenga en cuenta que las callbacks a menudo se utilizan para continu
 
 Como obtener las coordenadas del dispositivo de su GPS es asíncrono (no sabemos exactamente cuándo se devolverán los datos), el método {{domxref("Geolocation.getCurrentPosition()")}} toma una función de devolución de llamada anónima como parámetro, que a su vez toma los datos de coordenadas devueltos como un parámetro. Esta función solo se ejecuta cuando se devuelven los datos de coordenadas.
 
-## **Aprende más**
+## Aprende más
 
-### **Conocimientos generales**
+### Conocimientos generales
 
 - [Callback](<https://es.wikipedia.org/wiki/Callback_(inform%C3%A1tica)>) en Wikipedia

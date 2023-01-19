@@ -2,6 +2,7 @@
 title: PannerNode.coneInnerAngle
 slug: Web/API/PannerNode/coneInnerAngle
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `coneInnerAngle` は {{ domxref("PannerNode") }} インターフェイスのプロパティで、倍精度実数値で音量が低減しない範囲を内側にもつ円錐体の角度を示します。
@@ -26,5 +27,5 @@ slug: Web/API/PannerNode/coneInnerAngle
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [ウェブ音声空間化の基礎知識](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ空間化の基礎知識](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

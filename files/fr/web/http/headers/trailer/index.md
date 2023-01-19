@@ -3,6 +3,7 @@ title: Trailer
 slug: Web/HTTP/Headers/Trailer
 translation_of: Web/HTTP/Headers/Trailer
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête **Trailer** permet à l'expéditeur d'inclure des champs supplémentaires à la fin des blocs de messages pour fournir des métadonnées supplémentaires qui peuvent être générées de manière dynamique pendant que le corps du message sera envoyé, il peut s'agir de la vérification de l'intégrité du message, une signature numérique, ou encore un statut après le traitement.
@@ -42,7 +43,7 @@ Trailer: header-names
 
 ## Exemple
 
-### **Encodage de transfert en bloc** en utilisant les en-têtes "trailer".
+### Encodage de transfert en bloc en utilisant les en-têtes "trailer".
 
 Dans cet exemple, l'en-tête {{HTTPHeader("Expires")}} est utilisée à la fin du bloc du message et sert en tant qu'un "trailing header".
 
@@ -72,7 +73,7 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Compatibilités
 
-{{Compat("http/headers/trailer")}}
+{{Compat}}
 
 ## Voir aussi
 

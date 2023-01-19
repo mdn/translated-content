@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Conditional_requests
 original_slug: Web/HTTP/Requêtes_conditionnelles
 ---
+
 {{HTTPSidebar}}
 
 Il existe en HTTP un concept de _requête conditionnelle_ où le résultat, et même le succès d'une requête, peut être changé en comparant les ressources affectées avec la valeur d'un _validateur_. De telles requêtes peuvent être utiles pour valider le contenu d'un cache et éviter un contrôle inutile, pour vérifier l'intégrité d'un document, par exemple pour la reprise d'un téléchargement ou pour éviter de perdre des mises à jour quand on uploade ou modifie un document sur le serveur.

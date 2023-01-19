@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: volumechange イベント'
 slug: Web/API/HTMLMediaElement/volumechange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `volumechange` イベントは、ボリュームが変更されたときに発生します。

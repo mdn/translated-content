@@ -1,15 +1,9 @@
 ---
 title: <blink>
 slug: Web/HTML/Element/blink
-tags:
-  - Elemento
-  - HTML
-  - Obsoleto
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/blink
 original_slug: Web/HTML/Elemento/blink
 ---
+
 {{Deprecated_header}} {{Non-standard_header}}
 
 El elemento HTML blink (`<blink>`) no es un elemento estándar que causa que el texto encerrado parpadee lentamente .
@@ -32,7 +26,7 @@ Este elemento no es soportado y por lo tanto implementa la interface {domxref("H
 
 ## Especificación
 
-Este elemento no es parte del estándar ni de alguna espeficación . Si no nos crees puedes verlo por ti mismo en la [espeficicación de HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features).
+Este elemento no es parte del estándar ni de alguna especificación. Si no nos crees puedes verlo por ti mismo en la [especificación de HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features).
 
 ## Compatibilidad en exploradores
 
@@ -45,4 +39,4 @@ Este elemento no es parte del estándar ni de alguna espeficación . Si no nos c
 - {{htmlelement("marquee")}}, otro elemento similar que no pertenece a un estándar.
 - Las [animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS) son la forma correcta de crear tal efecto .
 
-{{HTMLRef}}
+{{HTMLSidebar}}

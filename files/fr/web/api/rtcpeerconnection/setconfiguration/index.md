@@ -9,6 +9,7 @@ tags:
   - setConfiguration
 translation_of: Web/API/RTCPeerConnection/setConfiguration
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 La méthode **`RTCPeerConnection.setConfiguration()`** définit la configuration courante pour la connexion {{domxref("RTCPeerConnection")}} en fonction des valeurs des propriétés de l'objet {{domxref("RTCConfiguration")}} passé en argument. Cela permet de modifier les serveurs ICE et les règles de transport utilisés par la connexion.

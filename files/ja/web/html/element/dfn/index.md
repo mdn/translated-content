@@ -1,19 +1,9 @@
 ---
 title: '<dfn>: 定義要素'
 slug: Web/HTML/Element/dfn
-tags:
-  - Definition
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Semantic Markup
-  - Web
-  - dfn
-translation_of: Web/HTML/Element/dfn
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の定義要素** (**_\<dfn>_**) は、定義句や文の文脈の中で定義している用語を示すために用いられます。 `<dfn>` の直近の祖先である {{HTMLElement("p")}} 要素、 {{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ、 {{HTMLElement("section")}} 要素が用語の定義とみなされます。
 
@@ -89,7 +79,7 @@ HTML5 においては、この要素の {{htmlattrxref("title")}} 属性は後�
 2. `<dfn>` が単一の子要素を持ち、自分自身には何も文字列がなく、かつその子要素が `title` 属性を持つ {{HTMLElement("abbr")}} 要素である場合は、 `<abbr>` 要素の `title` の値が定義する用語です。
 3. それ以外では、 `<dfn>` 要素の文字列コンテンツが定義される用語です。これは[以下の最初の例](#basic_identification_of_a_term)で示します。
 
-> **Note:** もし `<dfn>` 要素に `title` 属性があれば、それが定義する用語であり、それ以外の文字列ではありません。
+> **メモ:** もし `<dfn>` 要素に `title` 属性があれば、それが定義する用語であり、それ以外の文字列ではありません。
 
 ### `<dfn>` 要素へのリンク
 
@@ -186,11 +176,7 @@ arguably done more to advance science than any device ever built.</p>
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dfn-element', '&lt;dfn&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-dfn-element', '&lt;dfn&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;dfn&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

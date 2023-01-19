@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/FederatedCredential/FederatedCredential
 ---
+
 {{APIRef("")}}{{Non-standard_header}}
 
 Le constructeur **`FederatedCredential`** permet de créer un nouvel objet {{domxref("FederatedCredential")}}.

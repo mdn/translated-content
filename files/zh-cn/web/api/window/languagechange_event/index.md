@@ -2,6 +2,7 @@
 title: languagechange
 slug: Web/API/Window/languagechange_event
 ---
+
 {{SeeCompatTable}}
 
 当用户首选语言更改时，将在全局范围对象上触发 languagechange 事件。

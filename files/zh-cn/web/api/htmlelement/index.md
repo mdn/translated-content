@@ -2,13 +2,14 @@
 title: HTMLElement
 slug: Web/API/HTMLElement
 ---
+
 {{APIRef}}
 
 HTMLElement 接口表示所有的 [HTML](/zh-CN/docs/Web/HTML) 元素。一些 HTML 元素直接实现了 HTMLElement 接口，其它的间接实现 HTMLElement 接口。
 
 ## 属性
 
-_继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}} **的属性**_
+_继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}} 的属性。_
 
 | 属性名称                                                                                                  | 属性类型                                             | Description                                                                |
 | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
@@ -41,22 +42,18 @@ _继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}
 | {{domxref("HTMLElement.title")}}                                                              | {{domxref("DOMString")}}                     | 获取/设置元素的 title 属性                                                 |
 | {{domxref("HTMLElement.translate")}}                                                          | {{domxref("Boolean")}}                         | 获取/设置元素是否可以被翻译                                                |
 
-### Event handlers
+## 事件
 
-The events properties, of the form `onXYZ`, are defined on the {{domxref("GlobalEventHandlers")}}, implemented by `HTMLElement`. A few more are specific to `HTMLElement`.
+Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{domxref("HTMLElement.onTouchStart")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchstart")}} event.
-- {{domxref("HTMLElement.onTouchEnd")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchend")}} event.
-- {{domxref("HTMLElement.onTouchMove")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchmove")}} event.
-- {{domxref("HTMLElement.onTouchEnter")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchenter")}} event.
-- {{domxref("HTMLElement.onTouchLeave")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchleave")}} event.
-- {{domxref("HTMLElement.onTouchCancel")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchcancel")}} event.
+- {{DOMxRef("HTMLElement.copy_event", "copy")}}
+  - : Fired when the user initiates a copy action through the browser's user interface.
+- {{DOMxRef("HTMLElement.cut_event", "cut")}}
+  - : Fired when the user initiates a cut action through the browser's user interface.
+- {{DOMxRef("HTMLElement.paste_event", "paste")}}
+  - : Fired when the user initiates a paste action through the browser's user interface.
+- {{domxref("HTMLInputElement/invalid_event", "invalid")}}
+  - : Fired when an element does not satisfy its constraints during constraint validation.
 
 ## 方法
 

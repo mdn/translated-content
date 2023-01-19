@@ -2,6 +2,7 @@
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
+
 {{JSRef}}
 
 **`has()`** 方法對一個指定值元素在 `Set` 物件中的存在與否回傳一個布林值。
@@ -51,7 +52,7 @@ set1.add({'key1': 1}); // now set1 contains 2 entries
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set.has")}}
+{{Compat}}
 
 ## 另見
 

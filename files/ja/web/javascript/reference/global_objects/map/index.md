@@ -2,6 +2,7 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 ---
+
 {{JSRef}}
 
 **`Map`** オブジェクトはキーと値のペアを保持し、キーが最初に挿入された順序を覚えています。キーや値には任意の値 (オブジェクトと{{glossary("Primitive", "プリミティブ値")}})を使用することができます。
@@ -148,14 +149,14 @@ Map オブジェクトに対してオブジェクトプロパティを設定す�
 wrongMap['bla'] = 'blaa'
 wrongMap['bla2'] = 'blaaa2'
 
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+console.log(wrongMap) // Map { bla: 'blaa', bla2: 'blaaa2' }
 </pre>
 
 しかし、このようにプロパティを設定すると、 Map データ構造に符合しません。一般的なオブジェクトの機能を使用します。 'bla' の値はクエリを行うための Map に格納されません。データにその他の操作を行うと失敗します。
 
 <pre class="syntaxbox example-bad brush js notranslate">wrongMap.has('bla')    // false
 wrongMap.delete('bla') // false
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }</pre>
+console.log(wrongMap) // Map { bla: 'blaa', bla2: 'blaaa2' }</pre>
 
 Map にデータを格納する正しい方法は、 `set(key, value)` メソッドを使用する方法です。
 
@@ -202,7 +203,7 @@ console.log(contacts.size) // 1
 ### 反復処理メソッド
 
 - {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-  - : 新しい**イテレーター**オブジェクトを返し、これには `Map`オブジェクト内の各要素の **`[key, value] の配列`**が挿入順で含まれます。
+  - : 新しい**イテレーター**オブジェクトを返し、これには `Map`オブジェクト内の各要素の **`[key, value] の配列`** が挿入順で含まれます。
 - {{jsxref("Map.prototype.keys()")}}
   - : 新しい**イテレーター**オブジェクトを返し、これには `Map`オブジェクト内の各要素の**キー**が挿入順で含まれます。
 - {{jsxref("Map.prototype.values()")}}
@@ -338,7 +339,7 @@ console.log(clone.get(1))       // one
 console.log(original === clone) // false (useful for shallow comparison)
 ```
 
-> **Note:** **重要:** *データ自身*は複製されないことに注意しておいてください。
+> **メモ:** *データ自身*は複製されないことに注意しておいてください。
 
 Map はキーの固有性を保持しながら混合可能です。
 
@@ -387,9 +388,7 @@ console.log(merged.get(3)) // three
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map-objects', 'Map')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

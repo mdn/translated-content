@@ -4,6 +4,7 @@ slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 translation_of: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 original_slug: Web/API/WebVR_API/Utiliser_des_contrôleurs_de_realite_virtuelle_pour_du_WebVR
 ---
+
 {{APIRef("WebVR API")}}
 
 La plupart des matériels de WebVR possède des contrôleurs qui viennent avec le casque de réalité virtuelle. Ceux-ci peuvent être utilisés dans les application WebVR grâce à l'[API Gamepad](/fr/docs/Web/API/Gamepad_API), et plus spécifiquement avec l'[API Gamepad Extensions](/fr/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions) qui ajoute des API pour accéder, entre autres, à la [position du controller](/fr/docs/Web/API/GamepadPose), au [retour haptique](/fr/docs/Web/API/GamepadHapticActuator), etc.. Cet article fournit les bases pour utiliser ces API.
@@ -119,7 +120,7 @@ The last thing to do here is set the `initialRun` variable to `false`, as the in
 
 ### Gamepad events
 
-To finish off this section, we'll look at the gamepad-associated events. There are two we need concern ourselves with — {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} — and it is fairly obvious what they do.
+To finish off this section, we'll look at the gamepad-associated events. There are two we need concern ourselves with — [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) and [`gamepadisdisconnected`](/fr/docs/Web/API/Window/gamepadisdisconnected_event) — and it is fairly obvious what they do.
 
 At the end of our example we first include the `removeGamepads()` function:
 

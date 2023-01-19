@@ -2,6 +2,7 @@
 title: 'Window: orientationchange event'
 slug: Web/API/Window/orientationchange_event
 ---
+
 {{APIRef}}
 
 `orientationchange` 事件在設備方向改變時被觸發。
@@ -36,4 +37,4 @@ window.onorientationchange = function() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.orientationchange_event")}}
+{{Compat}}

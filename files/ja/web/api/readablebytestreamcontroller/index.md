@@ -2,6 +2,7 @@
 title: ReadableByteStreamController
 slug: Web/API/ReadableByteStreamController
 ---
+
 {{APIRef("Streams")}}{{SeeCompatTable}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`ReadableByteStreamController`** インターフェイスは、{{domxref("ReadableStream")}} の状態と内部キューを制御できるコントローラーを表します。 バイトストリームコントローラーは、バイトストリーム用です。
@@ -32,9 +33,7 @@ slug: Web/API/ReadableByteStreamController
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#rbs-controller-class','ReadableByteStreamController')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

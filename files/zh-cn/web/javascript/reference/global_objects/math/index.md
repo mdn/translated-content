@@ -2,6 +2,7 @@
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
 ---
+
 {{JSRef}}
 
 **`Math`** 是一个内置对象，它拥有一些数学常数属性和数学函数方法。`Math` 不是一个函数对象。

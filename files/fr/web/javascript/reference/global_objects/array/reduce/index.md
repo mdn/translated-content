@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reduce
 ---
+
 {{JSRef}}
 
 La méthode **`reduce()`** applique une fonction qui est un « accumulateur » et qui traite chaque valeur d'une liste (de la gauche vers la droite) afin de la réduire à une seule valeur.
@@ -380,15 +381,11 @@ console.log(tableauSansDoublon); // [1, 2, 3, 4, 5, 6]
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.21', 'Array.prototype.reduce()')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémenté dans JavaScript 1.8 |
-| {{SpecName('ES6', '#sec-array.prototype.reduce', 'Array.prototype.reduce()')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.reduce', 'Array.prototype.reduce()')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.reduce")}}
+{{Compat}}
 
 ## Voir aussi
 

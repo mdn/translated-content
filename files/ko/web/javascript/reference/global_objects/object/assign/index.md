@@ -1,16 +1,8 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Object.assign
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
+
 {{JSRef}}
 
 **`Object.assign()`** 메서드는 출처 객체들의 모든 {{jsxref("Object/propertyIsEnumerable", "열거 가능", "", 1)}}한 {{jsxref("Object/hasOwnProperty", "자체 속성", "", 1)}}을 복사해 대상 객체에 붙여넣습니다. 그 후 대상 객체를 반환합니다.

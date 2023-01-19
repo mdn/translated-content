@@ -2,6 +2,7 @@
 title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 ---
+
 {{JSRef}}
 
 **`Uint8ClampedArray`（8 位无符号整型固定数组）** 类型化数组表示一个由值固定在 0-255 区间的 8 位无符号整型组成的数组；如果你指定一个在 \[0,255] 区间外的值，它将被替换为 0 或 255；如果你指定一个非整数，那么它将被设置为最接近它的整数。（数组）内容被初始化为 0。一旦（数组）被创建，你可以使用对象的方法引用数组里的元素，或使用标准的数组索引语法（即使用方括号标记）。
@@ -15,7 +16,7 @@ new Uint8ClampedArray(object);
 new Uint8ClampedArray(buffer [, byteOffset [, length]]);
 ```
 
-关于构造函数语法和参数的更多信息，参见 _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_。
+关于构造函数语法和参数的更多信息，参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_。
 
 ## 属性
 
@@ -26,7 +27,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
   - : 返回构造函数名的字符串值。对 `Uint8ClampedArray` 类型而言："Uint8ClampedArray"。
 - {{jsxref("TypedArray.prototype", "Uint8ClampedArray.prototype")}}
-  - : 原型是 _TypedArray_ （类型化数组）对象。
+  - : 原型是 _TypedArray_（类型化数组）对象。
 
 ## 方法
 
@@ -166,6 +167,6 @@ var dv = new Uint8ClampedArray([1, 2, 3]);
 
 ## 参见
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -4,6 +4,7 @@ slug: Web/CSS/border-radius
 translation_of: Web/CSS/border-radius
 browser-compat: css.properties.border-radius
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-radius`** permet de définir des coins arrondis pour la bordure d'un élément. La courbure de chaque coin est définie avec un ou deux rayons de courbures qui permettent de définir un arc de cercle ou un arc d'ellipse.

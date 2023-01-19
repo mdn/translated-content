@@ -2,6 +2,7 @@
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
+
 {{JSRef}}
 
 **`values()`** 方法回傳一個 `Iterator` 物件，包含著 `Set` 物件中所有元素，由插入順序排序。
@@ -43,7 +44,7 @@ console.log(setIter.next().value); // "baz"
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set.values")}}
+{{Compat}}
 
 ## 另見
 

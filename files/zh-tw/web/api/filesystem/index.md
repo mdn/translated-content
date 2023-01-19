@@ -2,6 +2,7 @@
 title: FileSystem
 slug: Web/API/FileSystem
 ---
+
 {{APIRef("File System API")}} {{non-standard_header}}
 
 **`FileSystem`** 實作文件和目錄介面，描述一個檔案系統。在任何檔案系統上，這個物件包含 {{domxref("FileSystemEntry.filesystem", "filesystem")}}的特性。某些網頁瀏覽器提供額外的 API 去創建和管理檔案系統，如 Google Chrome 的{{domxref("LocalFileSystem.requestFileSystem", "requestFileSystem()")}}函式。
@@ -30,7 +31,7 @@ This API has no official W3C or WHATWG specification.
 
 ## 瀏覽器相容性
 
-{{Compat("api.FileSystem")}}
+{{Compat}}
 
 ## 參見
 

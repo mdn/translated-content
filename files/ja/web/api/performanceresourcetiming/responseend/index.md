@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.responseEnd
 slug: Web/API/PerformanceResourceTiming/responseEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`responseEnd`** 読み取り専用プロパティは、ブラウザーがリソースの最後のバイトを受信した直後、または転送接続が閉じられる直前のどちらか早い方で {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
@@ -55,9 +56,7 @@ function print_start_and_end_properties(perfEntry) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | ステータス                           | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-responseEnd', 'responseEnd')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

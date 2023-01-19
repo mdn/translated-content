@@ -4,6 +4,7 @@ slug: Web/API/HTMLMediaElement/audioTracks
 browser-compat: api.HTMLMediaElement.audioTracks
 translation_of: Web/API/HTMLMediaElement/audioTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`audioTracks`** est une propriété en lecture seule rattachée à l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) qui renvoie un objet [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) répertoriant tous les objets [`AudioTrack`](/fr/docs/Web/API/AudioTrack) représentant les pistes audio de l'élément multimédia.

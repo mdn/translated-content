@@ -1,12 +1,8 @@
 ---
 title: scale
 slug: Web/SVG/Attribute/scale
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/scale
 ---
+
 {{SVGRef}}
 
 **`scale`** 属性は、{{SVGElement("feDisplacementMap")}}フィルタプリミティブにおいて用いられる距離の尺度因子を定義します。その量は、{{SVGElement("filter")}}要素の{{SVGAttr("primitiveUnits")}}属性で規定される座標系で表されます。
@@ -64,10 +60,7 @@ html, body, svg {
 
 ## 仕様
 
-| 仕様書                                                                                                       | 策定状況                         | コメント  |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------- |
-| {{SpecName("Filters 1.0", "#element-attrdef-fedisplacementmap-scale", "scale")}} | {{Spec2("Filters 1.0")}} | No change |
-| {{SpecName("SVG1.1", "filters.html#feDisplacementMapScaleAttribute", "scale")}}     | {{Spec2("SVG1.1")}}         | 初期定義  |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

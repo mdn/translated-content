@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/outline-width
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`outline-width`** est utilisée afin de définir l'épaisseur de la bordure (_outline_) d'un élément. Cette bordure est dessinée autour des éléments et délimite [la boîte de bordure](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte). Visuellement, cela permet de faire ressortir l'élément.
@@ -41,9 +42,13 @@ outline-width: inherit;
 - `<length>`
   - : Voir la page sur le type {{cssxref("&lt;length&gt;")}} pour les différentes valeurs correspondantes.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -98,14 +103,8 @@ span {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                                |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------- |
-| {{SpecName('CSS3 Basic UI', '#outline-width', 'outline-width')}}             | {{Spec2('CSS3 Basic UI')}}     | Aucun changement                            |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-width')}}     | {{Spec2('CSS3 Transitions')}} | `outline-width` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline-width', 'outline-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline-width")}}
+{{Compat}}

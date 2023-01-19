@@ -2,6 +2,7 @@
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`duration`** property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the {{domxref("PerformanceEntry","performance entry")}}.
@@ -11,8 +12,8 @@ The value returned by this property depends on the performance entry's {{domxref
 - "`frame`" - returns a {{domxref("DOMHighResTimeStamp","timestamp")}} indicating the difference between the `startTime`s of two successive frames.
 - "`mark`" - returns "`0`" (a mark has no duration).
 - "`measure`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the measure.
-- "`navigation`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceEntry.loadEventEnd")}} and {{domxref("PerformanceEntry.startTime")}} properties, respectively.例如： entry.entryType "navigation"，entry.duration 3611.26, entry.loadEventEnd 3611.2672285754975, entry.startTime 0；
-- "`resource`" - 返回 resource 的{{domxref("PerformanceEntry.responseEnd","responseEnd")}} {{domxref("DOMHighResTimeStamp","timestamp")}} 和 {{domxref("PerformanceEntry.startTime","startTime")}} {{domxref("DOMHighResTimeStamp","timestamp")}}的时间差。例如： entry.entryType "resource"，entry.duration 901.1400000000001, entry.responseEnd 2527.82, entry.startTime 1626.68， 2527.82 - 1626.68 == 901.1400000000001；
+- "`navigation`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceEntry.loadEventEnd")}} and {{domxref("PerformanceEntry.startTime")}} properties, respectively.例如：entry.entryType "navigation"，entry.duration 3611.26, entry.loadEventEnd 3611.2672285754975, entry.startTime 0；
+- "`resource`" - 返回 resource 的{{domxref("PerformanceEntry.responseEnd","responseEnd")}} {{domxref("DOMHighResTimeStamp","timestamp")}} 和 {{domxref("PerformanceEntry.startTime","startTime")}} {{domxref("DOMHighResTimeStamp","timestamp")}}的时间差。例如：entry.entryType "resource"，entry.duration 901.1400000000001, entry.responseEnd 2527.82, entry.startTime 1626.68，2527.82 - 1626.68 == 901.1400000000001；
 
 This property is {{readonlyInline}}.
 
@@ -84,4 +85,4 @@ function check_PerformanceEntry(obj) {
 
 ## Browser compatibility
 
-{{Compat("api.PerformanceEntry.duration")}}
+{{Compat}}

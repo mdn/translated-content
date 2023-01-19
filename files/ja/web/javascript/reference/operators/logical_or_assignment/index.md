@@ -2,6 +2,7 @@
 title: 論理和代入 (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 論理和代入演算子 (`x ||= y`) は、`x` が{{Glossary("falsy", "偽値")}}である場合にのみ代入を行います。

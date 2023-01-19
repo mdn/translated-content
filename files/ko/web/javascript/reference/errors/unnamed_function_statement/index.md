@@ -1,15 +1,8 @@
 ---
 title: 'SyntaxError: function statement requires a name'
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-tags:
-  - IIEF
-  - 객체 메소드
-  - 구문 에러
-  - 자바스크립트
-  - 콜백 함수
-  - 함수 이름
-translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지
@@ -26,13 +19,13 @@ translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 
 ## 무엇이 잘못되었을까?
 
-[함수 구문](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function)(Function statement)은 이름이 필수입니다. 함수가 정의된 방법에 따라 함수의 이름을 짓거나 함수 표현식(Function expression) {{Glossary("IIFE")}}으로 작성하거나, 함수가 맥락에 맞게 제대로 작성되었는지 확인해야 합니다.
+[함수 구문](/ko/docs/Web/JavaScript/Reference/Statements/function)(Function statement)은 이름이 필수입니다. 함수가 정의된 방법에 따라 함수의 이름을 짓거나 함수 표현식(Function expression) {{Glossary("IIFE")}}으로 작성하거나, 함수가 맥락에 맞게 제대로 작성되었는지 확인해야 합니다.
 
 ## 예제
 
 ### 구문 vs 표현식
 
-[함수 구문](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function)(또는 함수 선언)은 이름이 필요하므로 아래 예제는 동작하지 않습니다:
+[함수 구문](/ko/docs/Web/JavaScript/Reference/Statements/function)(또는 함수 선언)은 이름이 필요하므로 아래 예제는 동작하지 않습니다:
 
 ```js example-bad
 function () {
@@ -41,7 +34,7 @@ function () {
 // SyntaxError: function statement requires a name
 ```
 
-대신 [함수 표현식](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/function)을 사용할 수 있습니다:
+대신 [함수 표현식](/ko/docs/Web/JavaScript/Reference/Operators/function)을 사용할 수 있습니다:
 
 ```js example-good
 var greet = function() {
@@ -59,7 +52,7 @@ var greet = function() {
 
 ### 레이블을 붙인 함수
 
-만약 함수 [레이블](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/label)을 사용하는 경우 `function` 키워드 뒤에 함수 이름이 필요하므로 아래 예제는 동작하지 않습니다:
+만약 함수 [레이블](/ko/docs/Web/JavaScript/Reference/Statements/label)을 사용하는 경우 `function` 키워드 뒤에 함수 이름이 필요하므로 아래 예제는 동작하지 않습니다:
 
 ```js example-bad
 function Greeter() {
@@ -122,8 +115,8 @@ promise.then(
 
 ## 같이 보기
 
-- [함수](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98)
-- [함수 구문](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function)
-- [함수 표현식](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/function)
+- [함수](/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98)
+- [함수 구문](/ko/docs/Web/JavaScript/Reference/Statements/function)
+- [함수 표현식](/ko/docs/Web/JavaScript/Reference/Operators/function)
 - [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
-- [레이블](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/label)
+- [레이블](/ko/docs/Web/JavaScript/Reference/Statements/label)

@@ -12,6 +12,7 @@ tags:
   - refresh
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/refresh
 ---
+
 {{AddonSidebar()}}
 
 Actualise un menu affiché.

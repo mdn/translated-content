@@ -1,11 +1,10 @@
 ---
 title: SharedWorker
 slug: Web/API/SharedWorker
-translation_of: Web/API/SharedWorker
 ---
 {{APIRef("Web Workers API")}}
 
-**`SharedWorker`\*\*** \*\*인터페이스는 윈도우 창이나 iframe, 워커등의 다른 브라우징 컨텍스트에서도 접근이 가능한 특정 종류의 워커를 의미합니다. 기존의 다른 종류의 워커들과 다른 전역 스코프를 갖는 인터페이스를 구현합니다. {{domxref("SharedWorkerGlobalScope")}}.
+**`SharedWorker`** 인터페이스는 윈도우 창이나 iframe, 워커등의 다른 브라우징 컨텍스트에서도 접근이 가능한 특정 종류의 워커를 의미합니다. 기존의 다른 종류의 워커들과 다른 전역 스코프를 갖는 인터페이스를 구현합니다. {{domxref("SharedWorkerGlobalScope")}}.
 
 > **참고:** **참고 :** SharedWorker 가 몇개의 다른 브라우징 컨텍스트에서 접근이 가능하면, 그 브라우징 컨텍스트들은 모두 정확히 같은 오리진을 공유해야 합니다. (같은 프로토콜, 호스트, 포트 등)
 

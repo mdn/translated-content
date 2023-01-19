@@ -2,6 +2,7 @@
 title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 ---
+
 {{JSRef}}
 
 **`handler.isExtensible()`** は {{jsxref("Object.isExtensible()")}} に対するトラップです。
@@ -77,9 +78,7 @@ Object.isExtensible(p); // TypeError is thrown
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-isextensible', '[[IsExtensible]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

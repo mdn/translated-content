@@ -1,15 +1,6 @@
 ---
 title: Modelo de Concorrência e Event Loop
 slug: Web/JavaScript/EventLoop
-tags:
-  - Avançado
-  - Event Loop
-  - Event Management
-  - Event Queue
-  - Handling Events
-  - JavaScript
-  - events
-translation_of: Web/JavaScript/EventLoop
 ---
 
 {{JsSidebar("Advanced")}}
@@ -49,7 +40,7 @@ Ordem das operações:
 3. Quando `foo` retorna, o _frame_ do topo é removido da pilha (deixando apenas o _frame_ da chamada de `bar`).
 4. Quando `bar` retorna, a pilha fica vazia.
 
-Note que os argumentos e variáveis locais podem continuar existindo, pois são armazenados fora da pilha — de forma que podem ser acessados por quaisquer [funções aninhadas](/en-US/docs/Web/JavaScript/Guide/Functions#nested_functions_and_closures) muito depois de sua função externa ter retornado.
+Note que os argumentos e variáveis locais podem continuar existindo, pois são armazenados fora da pilha — de forma que podem ser acessados por quaisquer [funções aninhadas](/pt-BR/docs/Web/JavaScript/Guide/Functions#nested_functions_and_closures) muito depois de sua função externa ter retornado.
 
 ### Acervo (Heap)
 
@@ -85,7 +76,7 @@ Um aspecto negativo deste modelo é que se uma mensagem levar muito tempo para s
 
 Nos navegadores, as mensagens são adicionadas a qualquer momento que um evento é acionado se este possuir um _listener_ (ouvinte). Caso não haja, o evento será ignorado. Assim, um clique em um elemento com um manipulador de eventos de clique adicionará uma mensagem, como qualquer outro evento.
 
-A função [`setTimeout`](/en-US/docs/Web/API/WindowTimers.setTimeout) é chamada com 2 argumentos: uma mensagem para adicionar à fila (queue) e um valor em tempo (opcional, o padrão é `0`). O valor de tempo (_time value_) representa o intervalo (mínimo) com que a mensagem será realmente enviada à fila. Se não houver outra mensagem na fila, a mensagem será processada logo após o intervalo. No entanto, caso haja mensagens, a mensagem `setTimeout` terá que esperar até que outras mensagens sejam processadas. Por esse motivo, o segundo argumento indica um tempo _mínimo_ e não um tempo _garantido_.
+A função [`setTimeout`](/pt-BR/docs/Web/API/WindowTimers.setTimeout) é chamada com 2 argumentos: uma mensagem para adicionar à fila (queue) e um valor em tempo (opcional, o padrão é `0`). O valor de tempo (_time value_) representa o intervalo (mínimo) com que a mensagem será realmente enviada à fila. Se não houver outra mensagem na fila, a mensagem será processada logo após o intervalo. No entanto, caso haja mensagens, a mensagem `setTimeout` terá que esperar até que outras mensagens sejam processadas. Por esse motivo, o segundo argumento indica um tempo _mínimo_ e não um tempo _garantido_.
 
 Aqui está um exemplo que demonstra esse conceito (`setTimeout` não é executado imediatamente após o temporizador expirar):
 
@@ -107,7 +98,7 @@ while (true) {
 
 ### Intervalos de zero segundos
 
-O intervalo zero não significa, necessariamente, que o _callback_ será disparado após zero milissegundos. Chamar [`setTimeout`](/en-US/docs/Web/API/setTimeout) com um intervalo de `0` (zero) milissegundos não executa a função do _callback_ após intervalo dado.
+O intervalo zero não significa, necessariamente, que o _callback_ será disparado após zero milissegundos. Chamar [`setTimeout`](/pt-BR/docs/Web/API/setTimeout) com um intervalo de `0` (zero) milissegundos não executa a função do _callback_ após intervalo dado.
 
 A execução depende do número de mensagens em espera na fila. No exemplo abaixo, a mensagem `''this is just a message''` será escrita no console antes que a mensagem do _callback_ seja processada, porque, como informado previamente, o intervalo definido na função indica o tempo _mínimo_ necessário para que a aplicação processe a requisição e não o tempo _exato_ de processamento.
 
@@ -143,7 +134,7 @@ Um _web worker_ ou um `iframe` com uma diferente origem [(cross-origin)](/pt-BR/
 
 ## Sem bloqueio
 
-Uma propriedade muito interessante do modelo _event loop_ é que o JavaScript, ao contrário de muitas outras linguagens, nunca bloqueia. A manipulação de E/S (_I/O_) é tipicamente realizada através de eventos e _callbacks_. Portanto, quando uma aplicação está esperando pelo retorno de uma consulta do [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) ou de uma requisição [XHR](/en-US/docs/Web/API/XMLHttpRequest), ela ainda pode processar outras coisas, como as ações do usuário.
+Uma propriedade muito interessante do modelo _event loop_ é que o JavaScript, ao contrário de muitas outras linguagens, nunca bloqueia. A manipulação de E/S (_I/O_) é tipicamente realizada através de eventos e _callbacks_. Portanto, quando uma aplicação está esperando pelo retorno de uma consulta do [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API) ou de uma requisição [XHR](/pt-BR/docs/Web/API/XMLHttpRequest), ela ainda pode processar outras coisas, como as ações do usuário.
 
 Exceções de legado existem, como por exemplo, `alert` ou XHR síncrono, mas é considerado uma boa prática evitá-los. Tome cuidado, [exceções a exceção existem](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (mas geralmente são, mais do que qualquer coisa, _bugs_ de implementação).
 

@@ -2,6 +2,7 @@
 title: 只使用 JavaScript 的 2D 打磚塊遊戲
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
+
 {{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}

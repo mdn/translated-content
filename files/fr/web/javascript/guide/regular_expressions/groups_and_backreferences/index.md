@@ -6,6 +6,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 l10n:
   sourceCommit: df24a4432fc479f58901c9a101330d1100f1172a
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Les groupes permettent de regrouper différents motifs ensemble et les groupes de capture permettent d'extraire des informations supplémentaires quant aux correspondances entre une expression rationnelle et une chaîne de caractères. Les références arrière correspondent au groupe précédemment capturé dans la même expression rationnelle.
@@ -44,7 +45,7 @@ Les groupes permettent de regrouper différents motifs ensemble et les groupes d
       <td><code>(?&lt;Nom&gt;x)</code></td>
       <td>
         <p>
-          <strong>Groupe de capture nommé&nbsp;:</strong> correspond à <code>x</code> et enregistre cette correspondance dans la propriété <code>groups</code> des correspondances renvoyées aevc le nom fourni <code>&lt;Nom&gt;</code>. Les chevrons (<code>&lt;</code>
+          <strong>Groupe de capture nommé&nbsp;:</strong> correspond à <code>x</code> et enregistre cette correspondance dans la propriété <code>groups</code> des correspondances renvoyées avec le nom fourni <code>&lt;Nom&gt;</code>. Les chevrons (<code>&lt;</code>
           and <code>&gt;</code>) sont nécessaire pour indiquer le nom du groupe.
         </p>
         <p>

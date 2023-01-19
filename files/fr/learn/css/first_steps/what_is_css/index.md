@@ -4,6 +4,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 translation_of: Learn/CSS/First_steps/What_is_CSS
 original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 **[CSS](/fr/docs/Glossary/CSS)** (_Cascading Style Sheets_) permet de créer des pages web à l'apparence soignée. Cet article vous propose de lever le voile en expliquant ce qu'est CSS ; un exemple simple en présentera la syntaxe, puis quelques termes clés du langage seront introduits.

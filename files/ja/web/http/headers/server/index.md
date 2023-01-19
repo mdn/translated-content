@@ -1,17 +1,13 @@
 ---
 title: Server
 slug: Web/HTTP/Headers/Server
-tags:
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Server
 ---
+
 {{HTTPSidebar}}
 
 **`Server`** ヘッダーは、リクエストを処理したオリジンサーバー、すなわち、レスポンスを生成したサーバーで使用されたソフトウェアを説明します。
 
-> **Warning:** `Server` の値は、攻撃者が既知のセキュリティホールを悪用するのを (少し) 容易にする情報を暴露する可能性があるので、過度に詳細にすることは避けてください。
+> **警告:** `Server` の値は、攻撃者が既知のセキュリティホールを悪用するのを (少し) 容易にする情報を暴露する可能性があるので、過度に詳細にすることは避けてください。
 
 <table class="properties">
   <tbody>

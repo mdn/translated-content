@@ -2,7 +2,8 @@
 title: <thead>
 slug: Web/HTML/Element/thead
 ---
-**HTML**的**\<thead>**元素定义了一组定义表格的列头的行。
+
+[HTML](/zh-CN/docs/Web/HTML) 的 **`<thead>`** 元素定义了一组定义表格的列头的行。
 
 {{EmbedInteractiveExample("pages/tabbed/thead.html","tabbed-taller")}}
 
@@ -70,7 +71,7 @@ This element includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attrib
 
 - {{ htmlattrdef("valign") }} {{Deprecated_Inline}}
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
-  
+
     - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
     - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
     - `middle`, which will center the text in the cell;
@@ -98,4 +99,4 @@ See {{ HTMLElement("table") }} for examples on `<thead>`.
   - the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;
   - the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.<
 
-{{HTMLRef}}
+{{HTMLSidebar}}

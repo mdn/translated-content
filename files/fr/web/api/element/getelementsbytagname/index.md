@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Element/getElementsByTagName
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.getElementsByTagName()`** retourne une liste des éléments portant le [nom de balise](/fr/docs/Web/API/Element/tagName) donné. La recherche porte sur le sous-arbre de l'élément spécifié, à l'exception de cet élément lui-même. La liste retournée est _live_, c'est à dire qu'elle se met à jour automatiquement à chaque changement de l'arbre DOM. Par conséquent, il n'est pas nécessaire d'appeller plusieurs fois `Element.getElementsByTagName()` avec le même élément et les mêmes arguments.

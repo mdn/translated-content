@@ -1,12 +1,8 @@
 ---
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
-tags:
-  - Function
-  - JavaScript
-  - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
+
 {{JSRef}}
 
 **`call()`** 메소드는 주어진 `this` 값 및 각각 전달된 인수와 함께 함수를 호출합니다.

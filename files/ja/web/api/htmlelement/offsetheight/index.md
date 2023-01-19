@@ -2,6 +2,7 @@
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetHeight`** は読み取り専用プロパティで、垂直パディングや境界線を含む要素の高さを整数として返します。
@@ -10,7 +11,7 @@ slug: Web/API/HTMLElement/offsetHeight
 
 （例えば、要素またはその祖先のいずれかで `style.display` を `"none"` に設定することにより）要素が非表示の場合は、`0` が返されます。
 
-> **Note:** このプロパティは、値を整数に丸めます。 小数値が必要な場合は、{{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> **メモ:** このプロパティは、値を整数に丸めます。 小数値が必要な場合は、{{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
 ## 値
 

@@ -3,6 +3,7 @@ title: CSS の一般的な質問
 slug: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Common_CSS_Questions
 ---
+
 この記事には、 CSS に関するいくつかのよくある質問（FAQ）とその解答が見つかり、ウェブ開発者になるための道で役に立つでしょう。
 
 ## なぜ CSS が妥当なのに正しくレンダリングされないのか？
@@ -14,7 +15,7 @@ original_slug: Web/CSS/Common_CSS_Questions
 - _Quirks Mode_: 後方互換モードとも呼ばれます。古いウェブページが制作者の意図したとおりにレンダリングされるようにして、古いブラウザーが用いていた非標準のレンダリング規則に従います。 `DOCTYPE` 宣言が不完全、不正確、あるいは存在しない、または 2001 年より前に一般的であった既知の `DOCTYPE` 宣言であるドキュメントは、 Quirks Mode でレンダリングされます。
 - _Standards Mode_: ブラウザーは W3C 標準へ厳密に従おうとします。新しい HTML ページは標準に準拠したブラウザー向けに設計されていると考えられるため、新しい `DOCTYPE` 宣言を持つページは Standards Mode でレンダリングされます。
 
-Gecko ベースのブラウザーには、いくつかの小さな調整のみを行う第 3 のモードであります*[Almost Standards Mode](/ja/docs/Gecko's*"Almost*Standards"\_Mode "Gecko's*\"Almost*Standards\"\_Mode")* があります。
+Gecko ベースのブラウザーには、いくつかの小さな調整のみを行う第 3 のモードであります _[Almost Standards Mode](/ja/docs/Mozilla/Gecko_Almost_Standards_Mode))_ があります。
 
 以下は Standards Mode または Almost Standards Mode になる `DOCTYPE` 宣言で、もっとも一般的に使用されるものの一覧です:
 
@@ -57,7 +58,7 @@ HTML の要素は、 `id` 属性と `class` 属性の片方または両方を持
 - class を使用すると、複数の要素のスタイルを設定できるため、id セレクタを使用する複数のルールで同じスタイル設定情報を書き出す必要がなくなり、より短いスタイルシートを作成できます。より短いスタイルシートはより高性能です
 - class セレクタは id セレクタよりも特異性が低いため、必要に応じてオーバーライドする方が簡単です
 
-> **Note:** 詳しくは [Selectors](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors) もご覧ください。
+> **メモ:** 詳しくは [Selectors](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors) もご覧ください。
 
 ## プロパティの既定値に戻すにはどうすればよいのか?
 
@@ -209,9 +210,9 @@ div { color: black; }
 transform: rotate(90deg);
 ```
 
-> **Note:** 接頭辞付きプロパティの処理の詳細については、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)モジュールの[一般的な HTML および CSS の問題の処理 - CSS プレフィックスの処理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes)を参照してください。
+> **メモ:** 接頭辞付きプロパティの処理の詳細については、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)モジュールの[一般的な HTML および CSS の問題の処理 - CSS プレフィックスの処理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes)を参照してください。
 
-> **Note:** Mozilla をプレフィックスとする CSS プロパティの詳細については、[CSS の Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)ページを参照してください。
+> **メモ:** Mozilla をプレフィックスとする CSS プロパティの詳細については、[CSS の Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)ページを参照してください。
 
 ## z-index は位置指定へどのように関係するのか?
 
@@ -219,4 +220,4 @@ z-index プロパティは、要素を積み重ねる順序を指定します。
 
 z-index/stack の順序が高い要素は、常に z-index/stack の順序が低い要素の前に表示されます。z-index は指定された位置 (`position:absolute`、`position:relative`、または `position:fixed`) を持つ要素に対してのみ機能します。
 
-> **Note:** 詳細については、[ポジショニング](/ja/docs/Learn/CSS/CSS_layout/Positioning)学習の記事、特に [z-index の紹介](/ja/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index)セクションを参照してください。
+> **メモ:** 詳細については、[ポジショニング](/ja/docs/Learn/CSS/CSS_layout/Positioning)学習の記事、特に [z-index の紹介](/ja/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index)セクションを参照してください。

@@ -1,12 +1,6 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/image-rendering
 ---
 {{CSSRef}}
 
@@ -40,7 +34,7 @@ image-rendering: unset;
 - **`pixelated`**
   - : 이미지 스케일링을 크게 확대할 때는 "nearest neighbor" 혹은 비슷한 알고리즘을 반드시 사용해야 합니다. 그래서 이미지의 큰 픽셀로 구성해서 나타낼 수 있습니다. 이미지를 작게 축소할 때는 "auto" 속성과 같습니다.
 
-> **참고:** The values <span id="cke_bm_145S" class="hidden"></span>`optimizeQuality` and `optimizeSpeed` present in early draft (and coming from its SVG counterpart) are defined as synonyms for the `auto` value.
+> **참고:** The values `optimizeQuality` and `optimizeSpeed` present in early draft (and coming from its SVG counterpart) are defined as synonyms for the `auto` value.
 
 ### 공식 문법
 
@@ -77,15 +71,15 @@ div {
 
 #### image-rendering: auto;
 
-78% ![squares.gif](/@api/deki/files/3612/=squares.gif) 100% ![squares.gif](/@api/deki/files/3612/=squares.gif) 138% ![squares.gif](/@api/deki/files/3612/=squares.gif) downsized ![hut.jpg](/@api/deki/files/3613/=hut.jpg) upsized ![blumen.jpg](/@api/deki/files/3611/=blumen.jpg)
+78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 
 #### image-rendering: pixelated; (-ms-interpolation-mode: nearest-neighbor)
 
-78% ![squares.gif](/@api/deki/files/3612/=squares.gif) 100% ![squares.gif](/@api/deki/files/3612/=squares.gif) 138% ![squares.gif](/@api/deki/files/3612/=squares.gif) downsized ![hut.jpg](/@api/deki/files/3613/=hut.jpg) upsized ![blumen.jpg](/@api/deki/files/3611/=blumen.jpg)
+78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 
 #### image-rendering: crisp-edges; (-webkit-optimize-contrast)
 
-78% ![squares.gif](/@api/deki/files/3612/=squares.gif) 100% ![squares.gif](/@api/deki/files/3612/=squares.gif) 138% ![squares.gif](/@api/deki/files/3612/=squares.gif) downsized ![hut.jpg](/@api/deki/files/3613/=hut.jpg) upsized ![blumen.jpg](/@api/deki/files/3611/=blumen.jpg)
+78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 
 ## 명세
 

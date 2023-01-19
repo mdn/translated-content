@@ -8,6 +8,7 @@ tags:
   - Performance Web
 translation_of: Web/Performance/How_browsers_work
 ---
+
 Les utilisateurs veulent des expériences Web avec un contenu rapide à charger et une interaction fluide. Par conséquent, un développeur doit s'efforcer d'atteindre ces deux objectifs.
 
 Pour comprendre comment améliorer les performances et les performances perçues, il est utile de comprendre le fonctionnement du navigateur.
@@ -167,7 +168,7 @@ Les étapes de rendu incluent le style, la mise en page, la peinture et, dans ce
 
 La troisième étape du chemin de rendu critique consiste à combiner le DOM et CSSOM dans une arborescence de rendu. La construction de l'arbre de style calculé ou de l'arbre de rendu commence à la racine de l'arborescence DOM, en traversant chaque nœud visible.
 
-Les balises qui ne vont pas être affichées, telles que [`<head>`](/fr/docs/Web/HTML/Element/head) et ses enfants, ainsi que tous les nœuds avec `display: none`, tel que le ` script { display: none;``} ` vous trouverez dans les feuilles de style de l'agent utilisateur, ne sont pas inclus dans l'arborescence de rendu car ils n'apparaîtront pas dans la sortie rendue. Les nœuds avec `visibility: hidden` appliqué sont inclus dans l'arborescence de rendu, car ils occupent de l'espace. Comme nous n'avons donné aucune directive pour remplacer la valeur par défaut de l'agent utilisateur, le noeud de `script` de notre exemple de code ci-dessus ne sera pas inclus dans l'arbre de rendu.
+Les balises qui ne vont pas être affichées, telles que [`<head>`](/fr/docs/Web/HTML/Element/head) et ses enfants, ainsi que tous les nœuds avec `display: none`, tel que le `script { display: none;}` vous trouverez dans les feuilles de style de l'agent utilisateur, ne sont pas inclus dans l'arborescence de rendu car ils n'apparaîtront pas dans la sortie rendue. Les nœuds avec `visibility: hidden` appliqué sont inclus dans l'arborescence de rendu, car ils occupent de l'espace. Comme nous n'avons donné aucune directive pour remplacer la valeur par défaut de l'agent utilisateur, le noeud de `script` de notre exemple de code ci-dessus ne sera pas inclus dans l'arbre de rendu.
 
 Les règles CSSOM sont appliquées à chaque nœud visible. L'arborescence de rendu contient tous les nœuds visibles avec le contenu et les styles calculés - en faisant correspondre tous les styles pertinents à chaque nœud visible du DOM tree et en déterminant, en fonction de la cascade CSS, les styles calculés pour chaque nœud.
 

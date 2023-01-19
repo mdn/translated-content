@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Positioning
 translation_of: Learn/CSS/CSS_layout/Positioning
 original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
 
 Le positionnement permet de sortir les éléments du flux normal de la composition du document, et de les faire se comporter différemment, par exemple en plaçant un élément sur un autre ou en occupant toujours la même place dans la zone d'affichage du navigateur. Cet article explique les diverses valeurs de [`position`](/fr/docs/Web/CSS/position), et comment les utiliser.

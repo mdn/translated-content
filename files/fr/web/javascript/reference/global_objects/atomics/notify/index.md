@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/notify
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.notify()`** permet de réveiller des agents dormants qui sont dans la file d'attente.
@@ -66,13 +67,11 @@ Atomics.notify(int32, 0, 1);
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaires                     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.notify', 'Atomics.notify')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.notify")}}
+{{Compat}}
 
 ## Voir aussi
 

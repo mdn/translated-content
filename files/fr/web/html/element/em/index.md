@@ -4,7 +4,8 @@ slug: Web/HTML/Element/em
 translation_of: Web/HTML/Element/em
 browser-compat: html.elements.em
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<em>`** (pour emphase) est utilisé afin de marquer un texte sur lequel on veut insister. Les éléments `<em>` peuvent être imbriqués, chaque degré d'imbrication indiquant un degré d'insistance plus élevé.
 
