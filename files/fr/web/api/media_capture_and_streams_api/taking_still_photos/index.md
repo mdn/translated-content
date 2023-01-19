@@ -146,7 +146,7 @@ video.addEventListener(
 
 Cette fonction de rappel ne fait rien à moins qu'elle soit appelée pour la première fois (lorsqu'on teste `streaming`, il vaut `false` la première fois).
 
-S'il s'agît en effet du premier appel, on définit la hauteur de la vidéo en respectant les proportions du flux original et en appliquant le rapport des largeurs (entre celles du flux vidéo `video.videoWidth` et celle du cadre dans laquelle on affiche la vidéo, `width`).
+S'il s'agit en effet du premier appel, on définit la hauteur de la vidéo en respectant les proportions du flux original et en appliquant le rapport des largeurs (entre celles du flux vidéo `video.videoWidth` et celle du cadre dans laquelle on affiche la vidéo, `width`).
 
 On applique cette largeur (`width`) et cette hauteur (`height`) à la vidéo et au canevas à l'aide de [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) sur les propriétés correspondantes de chaque élément. Enfin, on passe la variable `streaming` à `true` pour éviter d'exécuter à nouveau ce code.
 
