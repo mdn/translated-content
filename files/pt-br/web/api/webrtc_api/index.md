@@ -89,7 +89,7 @@ Essas interfaces, dicionários e tipos são usados para configurar, abrir e gere
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
   - : Enviado para um {{domxref("RTCPeerConnection")}} quando o estado de sua conexão ICE - encontrado na propriedade {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} - muda.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
-  - : Enviado para um {{domxref("RTCPeerConnection")}} quando seu estado de coleta de ICE - encontrado na propriedade {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} muda.
+  - : Enviado para um {{domxref("RTCPeerConnection")}} quando seu estado de coleta de ICE - encontrado na propriedade {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} - muda.
 - {{domxref("RTCDataChannel.message_event", "message")}}
   - : Uma mensagem foi recebida no canal de dados. O evento é do tipo {{domxref("MessageEvent")}}.
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
