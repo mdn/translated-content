@@ -8,14 +8,6 @@ slug: Web/API/WebRTC_API
 
 WebRTC consiste em diversas APIs e protocolos interrelacionados que trabalham juntos. A documentação que você encontrará aqui o ajudará a entender os fundamentos de WebRTC, como configurar e usar, tanto informação, quanto conexões de mídia e mais.
 
-## Interoperabilidade
-
-Como as implementações de WebRTC ainda estão evoluindo e como cada navegador tem [diferentes níveis de suporte para codecs](/pt-BR/docs/Web/Media/Formats/WebRTC_codecs) e recursos de WebRTC, você deve _fortemente_ considerar fazer uso da [biblioteca Adapter.js](https://github.com/webrtcHacks/adapter) fornecida pelo Google antes de começar a escrever seu código.
-
-Adapter.js usa shims e polyfills para suavizar as diferenças entre as implementações WebRTC nos ambientes que o suportam. O Adapter.js também lida com prefixos e outras diferenças de nomenclatura para facilitar todo o processo de desenvolvimento do WebRTC, com resultados mais amplamente compatíveis. A biblioteca também está [disponível como um pacote npm](https://www.npmjs.com/package/webrtc-adapter).
-
-Para saber mais sobre o Adapter.js, veja: [Improving compatibility using WebRTC adapter.js](/pt-BR/docs/Web/API/WebRTC_API/adapter.js).
-
 ## Conceitos e uso
 
 WebRTC serve à diversas propostas; junto com a [Media Capture and Streams API](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API), eles fornecem poder multimídia para a Web, incluindo suporte para áudio e vídeo conferência, troca de arquivos, compartilhamento de tela, gerenciamento de identidade e interface com sistemas telefônicos legados, incluindo suporte para envio de sinais {{Glossary("DTMF")}} (touch-tone dialing). As conexões entre pares podem ser feitas sem a necessidade de drivers ou plug-ins especiais e, muitas vezes, sem servidores intermediários.
@@ -26,7 +18,9 @@ Dados de mídia podem consistir em qualquer número de _tracks_(faixas) de dados
 
 Você também pode usar a conexão entre dois _peers_ para trocar dados arbitrários binários usando a interface {{DOMxRef("RTCDataChannel")}}. Isto pode ser usado para informação de _back-channel_ (canal de volta), troca de _metadata_, pacotes de _status_ de games, transferência de arquivos, ou até mesmo como um canal primário para transferir dados.
 
-_**são necessários mais detalhes e links para tutoriais relevantes**_
+### Interoperabilidade
+
+O WebRTC é geralmente bem suportado em navegadores modernos, mas algumas incompatibilidades permanecem. A biblioteca [adapter.js](https://github.com/webrtcHacks/adapter) é um calço para isolar aplicativos dessas incompatibilidades.
 
 ## Referência WebRTC
 
