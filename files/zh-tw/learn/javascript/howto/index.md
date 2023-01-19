@@ -46,9 +46,11 @@ myFunction();
 ```
 
 #### **功能範圍**
+
 記得[函式有自己的作用域](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)──你無法從函式外部存取函式內部宣告的變數，除非你將該變數設為全域變數（也就是不在任何函式內部），或是[回傳變數的值](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)。
 
 #### 在 return 語句後執行語法
+
 同樣記得當你把一個值從函式回傳出去後，JavaScript 編譯器便離開該函式──在 return 敘述之後的程式碼皆不會執行。
 
 其實，當有程式碼出現在 return 敘述後時，某些瀏覽器會在開發人員工具的主控台中顯示 error 訊息，像是 Firefox 瀏覽器會顯示「unreachable code after return statement」。
