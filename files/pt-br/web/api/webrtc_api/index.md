@@ -87,7 +87,7 @@ Essas interfaces, dicionários e tipos são usados para configurar, abrir e gere
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : Um {{domxref("RTCPeerConnectionIceErrorEvent")}} indicando que ocorreu um erro durante a coleta de candidatos ICE.
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
-  - : Enviado para um {{domxref("RTCPeerConnection")}} quando o estado de sua conexão ICE - encontrado na propriedade {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} muda.
+  - : Enviado para um {{domxref("RTCPeerConnection")}} quando o estado de sua conexão ICE - encontrado na propriedade {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} - muda.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
   - : Enviado para um {{domxref("RTCPeerConnection")}} quando seu estado de coleta de ICE - encontrado na propriedade {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} muda.
 - {{domxref("RTCDataChannel.message_event", "message")}}
