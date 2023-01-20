@@ -76,7 +76,7 @@ Authorization: Digest username=<username>,
 - `username`
   - : 带引号的字符串，其中包含指定 `realm` 的用户名，可以是纯文本，也可以是十六进制表示的哈希编码。如果名称包含字段中不允许的字符，则可以使用 `username*` 替换它（而不是“同时包含两者”）。
 - `username*`
-  - : 使用 RFC5987 中定义的扩展符号格式化的用户名。只有当名称无法在 `username` 中编码并且 `userhash` 设置为 `"false"` 时，才应使用此功能。
+  - : 使用 RFC5987 中定义的扩展符号格式化的用户名。只有当名称无法在 `username` 中编码并且 `userhash` 设置为 `"false"` 时，才应使用此字段。
 - `uri`
   - : *有效的请求 URI*。有关更多信息，请参阅规范。
 - `realm`
