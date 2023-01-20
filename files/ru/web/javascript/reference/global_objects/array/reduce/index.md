@@ -18,19 +18,49 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 Метод **`reduce()`** применяет функцию **reducer** к каждому элементу массива (слева-направо), возвращая одно результирующее значение.
 
+При первом запуске обратного вызова нет "возвращаемого значения предыдущего вычисления".
+Если указано, вместо него может быть использовано начальное значение.
+В противном случае элемент массива с индексом 0 используется в качестве начального значения, и итерация начинается со следующего элемента (индекс 1 вместо индекса 0).
+
+Возможно, самый простой для понимания случай для `reduce()` - это возврат суммы всех элементов в массиве:
+
 {{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+
+Метод **`reduce()`** проходит по каждому элементу массива, на каждом шаге добавляя текущее значение массива к результату предыдущего шага (этот результат является текущей суммой всех предыдущих шагов) - до тех пор, пока не останется больше элементов для добавления.
 
 ## Синтаксис
 
-```
-array.reduce(callback[, initialValue])
+```js-nolint
+// Стрелочная функция
+reduce((accumulator, currentValue) => { /* … */ })
+reduce((accumulator, currentValue, currentIndex) => { /* … */ })
+reduce((accumulator, currentValue, currentIndex, array) => { /* … */ })
+
+reduce((accumulator, currentValue) => { /* … */ }, initialValue)
+reduce((accumulator, currentValue, currentIndex) => { /* … */ }, initialValue)
+reduce((accumulator, currentValue, currentIndex, array) => { /* … */ }, initialValue)
+
+// Функция обратного вызова
+reduce(callbackFn)
+reduce(callbackFn, initialValue)
+
+// Строчная функция обратного вызова
+reduce(function (accumulator, currentValue) { /* … */ })
+reduce(function (accumulator, currentValue, currentIndex) { /* … */ })
+reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ })
+
+reduce(function (accumulator, currentValue) { /* … */ }, initialValue)
+reduce(function (accumulator, currentValue, currentIndex) { /* … */ }, initialValue)
+reduce(function (accumulator, currentValue, currentIndex, array) { /* … */ }, initialValue)
 ```
 
 ### Параметры
 
-- `callback`
+- `callbackFn`
 
-  - : Функция, выполняющаяся для каждого элемента массива, принимает четыре аргумента:
+  - : Функция, выполняемая для каждого элемента в массиве. Его возвращаемое значение становится значением параметра `accumulator` при следующем вызове `callbackFn`. Для последнего вызова возвращаемое значение становится возвращаемым значением `reduce()`.
+
+Функция вызывается со следующими аргументами:
 
     - `accumulator`
       - : Аккумулятор, аккумулирующий значение, которое возвращает функция **callback** после посещения очередного элемента, либо значение `initialValue`, если оно предоставлено (смотрите пояснения ниже).
@@ -91,105 +121,300 @@ array.reduce(callback[, initialValue])
 
 ## Примеры
 
-### Суммирование всех значений в массиве
+### Как reduce() работает без начального значения
+
+Приведенный ниже пример показывает, что произойдет, если мы вызовем `reduce()` с массивом и без начального значения.
 
 ```js
-var total = [0, 1, 2, 3].reduce(function(a, b) {
-  return a + b;
-});
-// total == 6
-```
+const array = [15, 16, 17, 18, 19];
 
-### Суммирование значений в массиве объектов
-
-Чтобы суммировать значения, содержащиеся в массиве объектов, вы **должны** указать `initialValue`, чтобы каждый элемент смог пройти через `callback`.
-
-```js
-var initialValue = 0;
-var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue.x;
-}, initialValue)
-// sum == 6
-```
-
-Тоже самое, но со стрелочной функцией:
-
-```js
-var initialValue = 0;
-var sum = [{x: 1}, {x:2}, {x:3}].reduce(
-    (accumulator, currentValue) => accumulator + currentValue.x,
-    initialValue
-);
-// sum == 6
-```
-
-### Разворачивание массива массивов
-
-```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
-  return a.concat(b);
-});
-// flattened равен [0, 1, 2, 3, 4, 5]
-```
-
-### Пример: склеивание массивов, содержащихся в объектах массива, с использованием оператора расширения и initialValue
-
-```js
-// friends - список из объектов(друзей)
-// где поле "books" - список любимых книг друга
-var friends = [
-{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
-{ name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
-{ name: "Alice", books: ["The Lord of the Rings", "The Shining"], age: 18 }
-]
-
-// allbooks - список, который будет содержать все книги друзей +
-// дополнительный список указанный в initialValue
-var allbooks = friends.reduce(function(prev, curr) {
-  return [...prev, ...curr.books];
-}, ["Alphabet"]);
-
-// allbooks = ["Alphabet", "Bible", "Harry Potter", "War and peace",
-// "Romeo and Juliet", "The Lord of the Rings", "The Shining"]
-```
-
-## Полифил
-
-Метод `Array.prototype.reduce()` был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать `reduce()` в реализациях, которые не поддерживают этот метод.
-
-```js
-// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.21
-// Ссылка (en): http://es5.github.io/#x15.4.4.21
-// Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.21
-if (!Array.prototype.reduce) {
-  Array.prototype.reduce = function(callback/*, initialValue*/) {
-    'use strict';
-    if (this == null) {
-      throw new TypeError('Array.prototype.reduce called on null or undefined');
-    }
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
-    }
-    var t = Object(this), len = t.length >>> 0, k = 0, value;
-    if (arguments.length >= 2) {
-      value = arguments[1];
-    } else {
-      while (k < len && ! (k in t)) {
-        k++;
-      }
-      if (k >= len) {
-        throw new TypeError('Reduce of empty array with no initial value');
-      }
-      value = t[k++];
-    }
-    for (; k < len; k++) {
-      if (k in t) {
-        value = callback(value, t[k], k, t);
-      }
-    }
-    return value;
-  };
+function reducer(accumulator, currentValue, index) {
+  const returns = accumulator + currentValue;
+  console.log(
+    `accumulator: ${accumulator}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
+  );
+  return returns;
 }
+
+array.reduce(reducer);
+```
+
+Обратный вызов будет вызван четыре раза, при этом аргументы и возвращаемые значения в каждом вызове будут следующими:
+
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `15`          | `16`           | `1`     | `31`         |
+| Second call | `31`          | `17`           | `2`     | `48`         |
+| Third call  | `48`          | `18`           | `3`     | `66`         |
+| Fourth call | `66`          | `19`           | `4`     | `85`         |
+
+Параметр `array` никогда не меняется в процессе — он всегда `[15, 16, 17, 18, 19]`. Значение, возвращаемое `reduce()`, будет соответствовать значению последнего обратного вызова (`85`).
+
+### Как reduce() работает с начальным значением
+
+Здесь мы уменьшим тот же массив, используя тот же алгоритм, но с `initialValue` равным `10`, переданным в качестве второго аргумента в `reduce()`:
+
+```js
+[15, 16, 17, 18, 19].reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  10,
+);
+```
+
+Обратный вызов будет вызван пять раз, при этом аргументы и возвращаемые значения в каждом вызове будут следующими:
+
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `10`          | `15`           | `0`     | `25`         |
+| Second call | `25`          | `16`           | `1`     | `41`         |
+| Third call  | `41`          | `17`           | `2`     | `58`         |
+| Fourth call | `58`          | `18`           | `3`     | `76`         |
+| Fifth call  | `76`          | `19`           | `4`     | `95`         |
+
+Значение, возвращаемое `reduce()` в этом случае, будет равно `95`.
+
+### Сумма значений в массиве объектов
+
+Чтобы суммировать значения, содержащиеся в массиве объектов, вы **должны** указать
+`initialValue`, чтобы каждый элемент проходил через вашу функцию.
+
+```js
+const objects = [{ x: 1 }, { x: 2 }, { x: 3 }];
+const sum = objects.reduce(
+  (accumulator, currentValue) => accumulator + currentValue.x,
+  0,
+);
+
+console.log(sum); // 6
+```
+
+### Сплющивание двумерного массива
+
+```js
+const flattened = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
+// Вывод: [0, 1, 2, 3, 4, 5]
+```
+
+### Подсчет экземпляров значений в объекте
+
+```js
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
+
+const countedNames = names.reduce((allNames, name) => {
+  const currCount = allNames[name] ?? 0;
+  return {
+    ...allNames,
+    [name]: currCount + 1,
+  };
+}, {});
+// countedNames равняется:
+// { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
+```
+
+### Группировка объектов по свойству
+
+```js
+const people = [
+  { name: "Alice", age: 21 },
+  { name: "Max", age: 20 },
+  { name: "Jane", age: 20 },
+];
+
+function groupBy(objectArray, property) {
+  return objectArray.reduce((acc, obj) => {
+    const key = obj[property];
+    const curGroup = acc[key] ?? [];
+
+    return { ...acc, [key]: [...curGroup, obj] };
+  }, {});
+}
+
+const groupedPeople = groupBy(people, "age");
+console.log(groupedPeople);
+// {
+//   20: [
+//     { name: 'Max', age: 20 },
+//     { name: 'Jane', age: 20 }
+//   ],
+//   21: [{ name: 'Alice', age: 21 }]
+// }
+```
+
+### Объединение массивов, содержащихся в массиве объектов, с использованием синтаксиса распространения и initialValue
+
+```js
+// friends - массив объектов
+// где поле "книги" - это список любимых книг
+const friends = [
+  {
+    name: "Anna",
+    books: ["Bible", "Harry Potter"],
+    age: 21,
+  },
+  {
+    name: "Bob",
+    books: ["War and peace", "Romeo and Juliet"],
+    age: 26,
+  },
+  {
+    name: "Alice",
+    books: ["The Lord of the Rings", "The Shining"],
+    age: 18,
+  },
+];
+
+// allbooks - список, который будет содержать книги всех друзей +
+// дополнительный список, содержащийся в initialValue
+const allbooks = friends.reduce(
+  (accumulator, currentValue) => [...accumulator, ...currentValue.books],
+  ["Alphabet"],
+);
+console.log(allbooks);
+// [
+//   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
+//   'Romeo and Juliet', 'The Lord of the Rings',
+//   'The Shining'
+// ]
+```
+
+### Удаление повторяющихся элементов в массиве
+
+> **Примечание:** Тот же эффект может быть достигнут с помощью {{jsxref("Set")}} и {{jsxref("Array.from()")}} как `постоянный массив без дубликатов = Array.from(new Set(myArray))` с лучшей производительностью.
+
+```js
+const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
+const myArrayWithNoDuplicates = myArray.reduce((accumulator, currentValue) => {
+  if (!accumulator.includes(currentValue)) {
+    return [...accumulator, currentValue];
+  }
+  return accumulator;
+}, []);
+
+console.log(myArrayWithNoDuplicates);
+```
+
+### Замена .filter().map() на .reduce()
+
+Используйте {{jsxref("Array/filter", "filter()")}}, затем {{jsxref("Array/map", "map()")}} чтобы дважды пройти массив, но вы можете 
+добиться того же эффекта при обходе только один раз с помощью
+{{jsxref("Array/reduce", "reduce()")}}, тем самым ваш скрипт будет производительнее. (Если вам нравятся циклы `for`, вы
+можете фильтровать и сопоставлять при однократном обходе с {{jsxref("Array/forEach", "forEach()")}}.)
+
+```js
+const numbers = [-5, 6, 2, 0];
+
+const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
+  if (currentValue > 0) {
+    const doubled = currentValue * 2;
+    return [...accumulator, doubled];
+  }
+  return accumulator;
+}, []);
+
+console.log(doubledPositiveNumbers); // [12, 4]
+```
+
+### Последовательное выполнение функций 
+
+```js
+/**
+ * Создайте цепочку из нескольких обработчиков обещаний.
+ *
+ * @param {array} arr - список обработчиков Promises, каждый из которых получает
+ * разрешенный результат предыдущего обработчика и возвращает другой объект Promises.
+ * @param {*} input - начальное значение, чтобы запустить цепочку обещаний.
+ * @return {Object} - Final promise with a chain of handlers attached
+ */
+function runPromiseInSequence(arr, input) {
+  return arr.reduce(
+    (promiseChain, currentFunction) => promiseChain.then(currentFunction),
+    Promise.resolve(input),
+  );
+}
+
+// promise function 1
+function p1(a) {
+  return new Promise((resolve, reject) => {
+    resolve(a * 5);
+  });
+}
+
+// promise function 2
+function p2(a) {
+  return new Promise((resolve, reject) => {
+    resolve(a * 2);
+  });
+}
+
+// function 3 - will be wrapped in a resolved promise by .then()
+function f3(a) {
+  return a * 3;
+}
+
+// promise function 4
+function p4(a) {
+  return new Promise((resolve, reject) => {
+    resolve(a * 4);
+  });
+}
+
+const promiseArr = [p1, p2, f3, p4];
+runPromiseInSequence(promiseArr, 10).then(console.log); // 1200
+```
+
+### Функциональный состав, позволяющий прокладывать трубопроводы
+
+```js
+// Строительные блоки для использования в композиции
+const double = (x) => 2 * x;
+const triple = (x) => 3 * x;
+const quadruple = (x) => 4 * x;
+
+// Функциональный состав, обеспечивающий функциональность трубы
+const pipe =
+  (...functions) =>
+  (initialValue) =>
+    functions.reduce((acc, fn) => fn(acc), initialValue);
+
+// Составленные функции для умножения определенных значений
+const multiply6 = pipe(double, triple);
+const multiply9 = pipe(triple, triple);
+const multiply16 = pipe(quadruple, quadruple);
+const multiply24 = pipe(double, triple, quadruple);
+
+// Использование
+multiply6(6); // 36
+multiply9(9); // 81
+multiply16(16); // 256
+multiply24(10); // 240
+```
+
+### Использование reduce() с разреженными массивами
+
+`reduce()` пропускает отсутствующие элементы в разреженных массивах, но не пропускает `undefiend` значения.
+
+```js
+console.log([1, 2, , 4].reduce((a, b) => a + b)); // 7
+console.log([1, 2, undefined, 4].reduce((a, b) => a + b)); // NaN
+```
+
+### Вызов reduce() для объектов, не являющихся массивами
+
+Метод `reduce()` считывает свойство `length` из `this` и затем обращается к каждому целочисленному индексу.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
+// 9
 ```
 
 ## Спецификации
