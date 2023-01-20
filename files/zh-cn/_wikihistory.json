@@ -8479,10 +8479,6 @@
     "modified": "2020-10-15T21:04:24.930Z",
     "contributors": ["volving", "RainSlide", "teoli", "AlexChao", "ziyunfei"]
   },
-  "Web/API/Document/registerElement": {
-    "modified": "2020-10-15T21:37:30.950Z",
-    "contributors": ["zhangchen", "Pada", "Lock", "fsx950223", "mochen"]
-  },
   "Web/API/Document/releaseCapture": {
     "modified": "2019-03-23T23:35:19.576Z",
     "contributors": ["teoli", "khalid32", "ziyunfei", "princetoad@gmail.com"]
