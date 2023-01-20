@@ -1387,6 +1387,7 @@
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
 /zh-CN/docs/Web/API/Document/origin	/zh-CN/docs/Web/API/origin
+/zh-CN/docs/Web/API/Document/registerElement	/zh-CN/docs/conflicting/Web/API/CustomElementRegistry/define
 /zh-CN/docs/Web/API/Document/selectstart_event	/zh-CN/docs/Web/API/Node/selectstart_event
 /zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/Document/touchend_event	/zh-CN/docs/Web/API/Element/touchend_event
