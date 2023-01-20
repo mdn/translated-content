@@ -504,7 +504,7 @@ slug: Web/HTML/Element/Input
 - {{ htmlattrdef("height") }}
   - : 如果 **type** 属性的值是 image，这个属性定义了按钮图片的高度。
 - {{htmlattrdef("id")}}
-  - : Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s `for` attribute to link the label with the form control. See the [the label element](#labels) below.
+  - : Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s `for` attribute to link the label with the form control. See the [the label element](#label) below.
 - {{htmlattrdef("inputmode")}}
   - : Global value valid for all elements, it provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Values include none
     `text`, `tel`, `url`, `email`, `numeric`, `decimal`, and `search`.
@@ -610,7 +610,7 @@ See the {{htmlelement('datalist')}} element.
 - {{ htmlattrdef("tabindex") }}
   - : 元素在当前文档的 Tab 导航顺序中的位置。
 - {{htmlattrdef('title')}}
-  - : Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a `for` attribute set to the form control's {{htmlattrdef('id')}} attribute. See [Labels](#labels) below.
+  - : Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a `for` attribute set to the form control's {{htmlattrdef('id')}} attribute. See [Labels](#label) below.
 - {{ htmlattrdef("type") }}
   - : 要呈现的控件类型。有关各个类型的信息，请参阅 [Form \<input> types](#input_types)，其中包含指向每个类型的更多信息的链接。
 - {{ htmlattrdef("usemap") }} {{Deprecated_Inline}}
@@ -788,7 +788,7 @@ Also see:
 
 ## Additional Features
 
-### Labels
+### Label
 
 Labels are needed to associate assistive text with an `<input>`. The [`<label>`](/zh-CN/docs/Web/HTML/Element/label) element provides explanatory information about a form field that is _always_ appropriate (aside from any layout concerns you have). It's never a bad idea to use a `<label>` to explain what should be entered into an `<input>` or [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea).
 

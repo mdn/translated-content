@@ -88,9 +88,9 @@ Essas interfaces, dicionários e tipos são usados para configurar, abrir e gere
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : Um {{domxref("RTCPeerConnectionIceErrorEvent")}} indicando que ocorreu um erro durante a coleta de candidatos ICE.
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
-  - : Enviado para um {{domxref("RTCPeerConnection")}} quando o estado de sua conexão ICE - encontrado na propriedade {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} muda.
+  - : Enviado para um {{domxref("RTCPeerConnection")}} quando o estado de sua conexão ICE - encontrado na propriedade {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} - muda.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
-  - : Enviado para um {{domxref("RTCPeerConnection")}} quando seu estado de coleta de ICE - encontrado na propriedade {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} muda.
+  - : Enviado para um {{domxref("RTCPeerConnection")}} quando seu estado de coleta de ICE - encontrado na propriedade {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} - muda.
 - {{domxref("RTCDataChannel.message_event", "message")}}
   - : Uma mensagem foi recebida no canal de dados. O evento é do tipo {{domxref("MessageEvent")}}.
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
@@ -125,10 +125,6 @@ A API WebRTC inclui várias interfaces para gerenciar segurança e identidade.
   - : Representa a identidade de um ponto remoto da conexão atual. Se nenhum par ainda foi definido e verificado, esta interface retorna `null`. Uma vez definido, não pode ser alterado.
 - {{domxref("RTCIdentityProviderRegistrar")}}
   - : Registra um provedor de identidade (idP).
-- {{domxref("RTCIdentityEvent")}}
-  - : Representa uma asserção de identidade gerada por um provedor de identidade (idP). Isso geralmente é para um {{domxref("RTCPeerConnection")}}. O único evento enviado com este tipo é {{event("identityresult")}}.
-- {{domxref("RTCIdentityErrorEvent")}}
-  - : Representa um erro associado ao provedor de identidade (idP). Isso geralmente é para um {{domxref("RTCPeerConnection")}}. Dois eventos são enviados com este tipo: {{event("idpassertionerror")}} e {{event("idpvalidationerror")}}.
 - {{domxref("RTCCertificate")}}
   - : Representa um certificado que um {{domxref("RTCPeerConnection")}} usa para autenticar.
 
@@ -165,11 +161,11 @@ Essas interfaces e eventos estão relacionadas à interatividade com redes telef
 - [Usando canais de dados WebRTC](/pt-BR/docs/Web/API/WebRTC_API/Using_data_channels)
   - : Este guia aborda como você pode usar uma conexão de mesmo nível e um {{DOMxRef("RTCDataChannel")}} associado para trocar dados arbitrários entre dois pares.
 - [Usando DTMF com WebRTC](/pt-BR/docs/Web/API/WebRTC_API/Using_DTMF)
-  - : o suporte do WebRTC para interagir com gateways que se conectam a sistemas telefônicos antigos inclui suporte para enviar tons DTMF usando a interface {{DOMxRef("RTCDTMFSender")}}. Este guia mostra como fazer isso.
+  - : O suporte do WebRTC para interagir com gateways que se conectam a sistemas telefônicos antigos inclui suporte para enviar tons DTMF usando a interface {{DOMxRef("RTCDTMFSender")}}. Este guia mostra como fazer isso.
 
 ## Tutoriais
 
-- [Melhorando a compatibilidade usando o adaptador WebRTC.js (en-US)](/pt-BR/docs/Web/API/WebRTC_API/adapter.js)
+- [Melhorando a compatibilidade usando o adaptador WebRTC.js](/pt-BR/docs/Web/API/WebRTC_API/adapter.js)
   - : A organização WebRTC [fornece no GitHub o adaptador WebRTC](https://github.com/webrtc/adapter/) para solucionar problemas de compatibilidade em implementações WebRTC de diferentes navegadores. O adaptador é um shim JavaScript que permite que seu código seja escrito de acordo com a especificação para que "simplesmente funcione" em todos os navegadores com suporte a WebRTC.
 - [Uma simples amostra de RTCDataChannel](/pt-BR/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
   - : A interface {{DOMxRef("RTCDataChannel")}} é um recurso que permite abrir um canal entre dois pares através do qual você pode enviar e receber dados arbitrários. A API é intencionalmente semelhante à [API WebSocket](/pt-BR/docs/Web/API/WebSockets_API), para que o mesmo modelo de programação possa ser usado para cada uma.

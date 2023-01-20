@@ -37,8 +37,8 @@ _以下のプロパティに加え、親の {{domxref("Event")}} インターフ
 この例では、デバイスの切断を監視するためにイベントリスナーを登録します。切断時、デバイス名が {{domxref("HIDDevice.productName")}} を用いてコンソールに出力されます。
 
 ```js
-navigator.hid.addEventListener('connect', ({device}) => {
-  console.log(`HID connected: ${device.productName}`);
+navigator.hid.addEventListener('disconnect', ({device}) => {
+  console.log(`HID disconnected: ${device.productName}`);
 });
 ```
 
