@@ -3686,6 +3686,7 @@
 /fr/docs/Web/API/Document/onoffline	/fr/docs/Web/API/Window/offline_event
 /fr/docs/Web/API/Document/ononline	/fr/docs/Web/API/Window/online_event
 /fr/docs/Web/API/Document/origin	/fr/docs/Web/API/origin
+/fr/docs/Web/API/Document/registerElement	/fr/docs/Web/API/CustomElementRegistry/define
 /fr/docs/Web/API/Document/touchend_event	/fr/docs/Web/API/Element/touchend_event
 /fr/docs/Web/API/Document/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/Web/API/Document/width	/fr/docs/Web/API/Element/clientWidth
