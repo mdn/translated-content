@@ -59,7 +59,7 @@ Authorization: Digest username=<username>,
 
     > **备注：** 有关更多信息/选项，请参阅 [HTTP身份验证 > 身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)
 
-除 `<auth-scheme>` 外，其余指令特定于每个[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。通常，你需要检查这些方案的相关规范（下面列出了一小部分方案的密钥）。
+除 `<auth-scheme>` 外，其余指令特定于每个[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。通常，你需要检查这些方案的相关规范（下面列出了一小部分方案的要点）。
 
 ### Basic
 
