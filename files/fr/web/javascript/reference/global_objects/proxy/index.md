@@ -257,14 +257,14 @@ const element1 = document.getElementById('elem-1');
 const element2 = document.getElementById('elem-2');
 
 // on sélectionne element1
-view.selected = element1;
+vue.selected = element1;
 
 console.log(`element1 : ${element1.getAttribute('aria-selected')}`);
 // element1 : true
 
 // on sélectionne element2 et cela entraîne
 // la déselection automatique de element1
-view.selected = element2;
+vue.selected = element2;
 
 console.log(`element1 : ${element1.getAttribute('aria-selected')}`);
 // element1 : false
