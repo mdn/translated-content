@@ -2,6 +2,7 @@
 title: WebRTC API
 slug: Web/API/WebRTC_API
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 **WebRTC** (Web Real-Time Communications) é uma tecnologia que permite aplicativos e sites da Web a capturarem e opcionalmente transmitirem mídia de áudio e/ou vídeo, assim como trocar informação arbitrária entre navegadores sem a necessidade de um intermediador. O conjunto de padrões que abrangem WebRTC possibilita o compartilhamento de informação e a realização de teleconferência peer-to-peer, dispensando a instalação de _plug-ins_ ou quaisquer softwares de terceiros.
@@ -133,12 +134,19 @@ A API WebRTC inclui várias interfaces para gerenciar segurança e identidade.
 
 ### Telefonia
 
-Essas interfaces estão relacionadas à interatividade com redes telefônicas públicas comutadas (PTSNs).
+Essas interfaces e eventos estão relacionadas à interatividade com redes telefônicas públicas comutadas (PTSNs) Elas são primariamente usadas para enviar sons de discagem por tom - ou pacotes que representam esses tons - pela rede para um par remoto.
 
-- {{domxref("RTCDTMFSender")}}
-  - : Gerencia a codificação e a transmissão da sinalização de multifrequência de tom duplo (DTMF) para um {{domxref("RTCPeerConnection")}}.
-- {{domxref("RTCDTMFToneChangeEvent")}}
-  - : Indica uma ocorrência de multifrequência de tom duplo (DTMF). Este evento não borbulha (_bubbling_) (exceto se especificado ao contrário) e não é cancelável (_cancelable_)(exceto se especificado ao contrário).
+#### Interfaces
+
+- {{DOMxRef("RTCDTMFSender")}}
+  - : Gerencia a codificação e a transmissão da sinalização de multifrequência de tom duplo ({{Glossary("DTMF")}}) para um {{DOMxRef("RTCPeerConnection")}}.
+- {{DOMxRef("RTCDTMFToneChangeEvent")}}
+  - : Usado pelo evento {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}} para indicar que um tom DTMF começou ou terminou. Este evento não propaga "bolhas" (exceto onde indicado de outra forma) e não é cancelável (exceto onde indicado de outra forma).
+
+#### Eventos
+
+- {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}
+  - : Um novo tom {{Glossary("DTMF")}} começou a tocar na conexão, ou o último tom no {{domxref("RTCDTMFSender.toneBuffer" do `RTCDTMFSender`'s, "toneBuffer")} } foi enviado e o buffer agora está vazio. O tipo do evento é {{domxref("RTCDTMFToneChangeEvent")}}.
 
 ## Guias
 
