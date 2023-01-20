@@ -137,12 +137,12 @@ Essas interfaces e eventos estão relacionadas à interatividade com redes telef
 - {{DOMxRef("RTCDTMFSender")}}
   - : Gerencia a codificação e a transmissão da sinalização de multifrequência de tom duplo ({{Glossary("DTMF")}}) para um {{DOMxRef("RTCPeerConnection")}}.
 - {{DOMxRef("RTCDTMFToneChangeEvent")}}
-  - : Usado pelo evento {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}} para indicar que um tom DTMF começou ou terminou. Este evento não propaga "bolhas" (exceto onde indicado de outra forma) e não é cancelável (exceto onde indicado de outra forma).
+  - : Usado pelo evento {{DOMxRef("RTCDTMFSender.tonechange_event", "tonechange")}} para indicar que um tom DTMF começou ou terminou. Este evento não propaga "bolhas" (exceto onde indicado de outra forma) e não é cancelável (exceto onde indicado de outra forma).
 
 #### Eventos
 
 - {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}
-  - : Um novo tom {{Glossary("DTMF")}} começou a tocar na conexão, ou o último tom no {{domxref("RTCDTMFSender.toneBuffer" do `RTCDTMFSender`'s, "toneBuffer")} } foi enviado e o buffer agora está vazio. O tipo do evento é {{domxref("RTCDTMFToneChangeEvent")}}.
+  - : Um novo tom {{Glossary("DTMF")}} começou a tocar na conexão, ou o último tom no {{DOMxRef("RTCDTMFSender.toneBuffer", "toneBuffer")}} do `RTCDTMFSender` foi enviado e o buffer agora está vazio. O tipo do evento é {{DOMxRef("RTCDTMFToneChangeEvent")}}.
 
 ## Guias
 
