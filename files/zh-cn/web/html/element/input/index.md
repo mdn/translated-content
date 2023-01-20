@@ -240,9 +240,9 @@ slug: Web/HTML/Element/Input
       <th colspan="3">废弃的值</th>
     </tr>
     <tr>
-      <td><code>datetime</code></td>
+      <td><code>datetime</code> {{deprecated_inline}}</td>
       <td>
-        {{deprecated_inline}}用于输入基于 UTC 时区的日期和时间（时、分、秒及秒的小数部分）。
+        用于输入基于 UTC 时区的日期和时间（时、分、秒及秒的小数部分）。
       </td>
       <td id="exampledatetime">
         <pre class="brush: html hidden">
@@ -317,7 +317,7 @@ slug: Web/HTML/Element/Input
 
 - `autofocus`
 
-  - : 这个布尔属性允许指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。
+  - : 一个布尔属性，如果存在，表示当页面加载完毕（或包含该元素的 `<dialog>` 显示完毕）时，该 input 元素应该自动拥有焦点。
 
     > **备注：** 具有 `autofocus` 属性的元素可能在 {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} 事件触发前获得焦点。
 
