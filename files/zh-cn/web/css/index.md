@@ -7,7 +7,7 @@ slug: Web/CSS
 
 **层叠样式表** (Cascading Style Sheets，缩写为 **CSS**），是一种 [样式表](/zh-CN/docs/DOM/stylesheet) 语言，用来描述 [HTML](/zh-CN/docs/HTML) 或 [XML](/zh-CN/docs/XML_介绍)（包括如 [SVG](/zh-CN/docs/SVG)、[MathML](/zh-CN/docs/Web/MathML)、[XHTML](/zh-CN/docs/XHTML) 之类的 XML 分支语言）文档的呈现。CSS 描述了在屏幕、纸质、音频等其它媒体上的元素应该如何被渲染的问题。
 
-CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](http://w3.org/Style/CSS/#specs)在 Web 浏览器中进行了标准化。以前 CSS 规范的各个部分的开发是同步进行的，这种方式允许对最新推荐的 CSS 版本进行控制。你可能已经听说过 CSS1、CSS2.1 甚至 CSS3。但是以后将不会再有 CSS3 或者 CSS4；相反，现在的一切都是没有版本号的 CSS。
+CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www.w3.org/Style/CSS/#specs)在 Web 浏览器中进行了标准化。以前 CSS 规范的各个部分的开发是同步进行的，这种方式允许对最新推荐的 CSS 版本进行控制。你可能已经听说过 CSS1、CSS2.1 甚至 CSS3。但是以后将不会再有 CSS3 或者 CSS4；相反，现在的一切都是没有版本号的 CSS。
 
 在 CSS2.1 之后，规范的制定范围不断地增加，并且不同的 CSS 模块进展差异如此之大，以至于[按照模块来单独进行开发并发布建议](https://www.w3.org/Style/CSS/current-work)变得更加有效。W3C 现在不再对 CSS 规范进行版本控制，而是定期对 [CSS 规范的最新稳定状态](https://www.w3.org/TR/css/)和各个模块的进展用快照来记录。CSS 模块现在有版本号或者级别，例如 [CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/)。
 
