@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Authorization
 
 HTTP **`Authorization`** 请求标头用于提供服务器验证用户代理身份的凭据，允许访问受保护的资源。
 
-**`Authorization`** 标头通常在用户代理首次尝试请求受保护的资源（没有携带凭据）之后发送的，但并不总是发送。服务器响应一条 {{HTTPStatus("401")}} `Unauthorized` 信息，其中包含至少一个 {{HTTPHeader("WWW-Authenticate")}} 标头。该标头表示哪些身份验证的方案可以访问资源（以及客户端使用它们时，任意额外的信息）。用户代理应该从这些提供的身份验证方案中选择它支持的最安全的身份验证方案，并提示用户提供凭据，然后重新获取资源（包含 **`Authorization`** 标头中编码的凭据）。
+**`Authorization`** 标头通常在用户代理首次尝试请求受保护的资源（没有携带凭据）之后发送的，但并不总是发送。服务器响应一条 {{HTTPStatus("401")}} `Unauthorized` 信息，其中包含至少一个 {{HTTPHeader("WWW-Authenticate")}} 标头。该标头表示哪些身份验证的方案可用于访问资源（以及客户端使用它们时需要的额外的信息）。用户代理应该从这些提供的身份验证方案中选择它支持的最安全的身份验证方案，并提示用户提供凭据，然后重新获取资源（包含 **`Authorization`** 标头中编码的凭据）。
 
 > **备注：** 此标头是[通用的 HTTP 认证框架](/zh-CN/docs/Web/HTTP/Authentication#通用的_http_认证框架)的一部分。它可以与许多[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)一起使用.
 
