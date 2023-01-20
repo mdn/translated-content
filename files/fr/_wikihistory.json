@@ -7729,6 +7729,10 @@
     "modified": "2019-03-23T22:37:47.323Z",
     "contributors": ["Porkepix", "foxstorm"]
   },
+  "Web/API/CustomElementRegistry/define": {
+    "modified": "2019-03-23T22:43:18.277Z",
+    "contributors": ["loella16", "gsavin"]
+  },
   "Web/API/CustomEvent": {
     "modified": "2020-10-15T21:27:31.037Z",
     "contributors": [
@@ -8485,10 +8489,6 @@
   "Web/API/Document/referrer": {
     "modified": "2019-03-23T23:15:05.977Z",
     "contributors": ["fscholz", "Fredchat", "Akronos"]
-  },
-  "Web/API/Document/registerElement": {
-    "modified": "2019-03-23T22:43:18.277Z",
-    "contributors": ["loella16", "gsavin"]
   },
   "Web/API/Document/releaseCapture": {
     "modified": "2019-03-18T21:39:14.396Z",
