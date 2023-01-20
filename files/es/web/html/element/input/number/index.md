@@ -82,7 +82,7 @@ El atributo `placeholder` es una cadena de texto que proporciona una pista corta
 
 Si el controlador de contenido tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}), pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar el algoritmo bidireccional para formatear caracteres Unicode para sobreescribir la direccionalidad del marcador de posición; véase [Cómo usar los controles Unicode para texto bidireccional](https://www.w3.org/International/questions/qa-bidi-unicode-controls) para más información.
 
-> **Nota:** Evita usar el atributo `placeholder` si puedes. No es semánticamente útil como otras formas de explicar tu formulario, y puede causar problemas técnicos imprevisto con tu contenido. Véase {{SectionOnPage("/es/docs/Web/HTML/Element/input", "Marcadores y parámetros de ejemplo")}} para más información.
+> **Nota:** Evita usar el atributo `placeholder` si puedes. No es semánticamente útil como otras formas de explicar tu formulario, y puede causar problemas técnicos imprevisto con tu contenido. Véase [Marcadores y parámetros de ejemplo](/es/docs/Web/HTML/Element/input#marcadores_y_parámetros_de_ejemplo) para más información.
 
 ### `readonly`
 
