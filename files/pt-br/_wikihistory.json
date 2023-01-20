@@ -2927,10 +2927,6 @@
     "modified": "2019-03-23T22:44:47.032Z",
     "contributors": ["alexandrefsans", "TAGBrasil"]
   },
-  "Web/API/Document/registerElement": {
-    "modified": "2019-03-23T22:20:55.282Z",
-    "contributors": ["rener_bz", "mak213k"]
-  },
   "Web/API/Document/scripts": {
     "modified": "2019-03-23T23:14:44.682Z",
     "contributors": ["teoli", "BrenoPolanski"]
@@ -11037,6 +11033,10 @@
   "conflicting/Web/API/CryptoKey_f39d256ef7fbd1cf0a1f26de1e887ae7": {
     "modified": "2019-03-23T22:02:45.135Z",
     "contributors": ["Hikashii"]
+  },
+  "conflicting/Web/API/CustomElementRegistry/define": {
+    "modified": "2019-03-23T22:20:55.282Z",
+    "contributors": ["rener_bz", "mak213k"]
   },
   "conflicting/Web/API/Document_Object_Model": {
     "modified": "2019-03-23T23:35:40.503Z",
