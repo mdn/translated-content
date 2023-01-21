@@ -59,20 +59,20 @@ HTTPS를 이용한 보안성있는 연결을 위해서는 또 다른 "핸드셰�
 ```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>My simple page</title>
-		<link rel="stylesheet" src="styles.css" />
-		<script src="myscript.js"></script>
-	</head>
-	<body>
-		<h1 class="heading">My Page</h1>
-		<p>A paragraph with a <a href="https://example.com/about">link</a></p>
-		<div>
-			<img src="myimage.jpg" alt="image description" />
-		</div>
-		<script src="anotherscript.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My simple page</title>
+    <link rel="stylesheet" src="styles.css" />
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <h1 class="heading">My Page</h1>
+    <p>A paragraph with a <a href="https://example.com/about">link</a></p>
+    <div>
+      <img src="myimage.jpg" alt="image description" />
+    </div>
+    <script src="anotherscript.js"></script>
+  </body>
 </html>
 ```
 
@@ -82,9 +82,9 @@ HTTPS를 이용한 보안성있는 연결을 위해서는 또 다른 "핸드셰�
 
 ### TCP 슬로우 스타트 (TCP Slow Start) / 14kb rule
 
-첫 응답 패킷은 14kb입니다. 이는 네트워크 통신의 속도를 조절하는 알고리즘인 {{glossary('TCP 슬로우 스타트')}}에 의해 정해진 것입니다. 슬로우 스타트는 네트워크의 최대 대역폭을 파악할 수 있을 때까지 점진적으로 데이터의 전송량을 증가시킵니다.
+첫 응답 패킷은 14kb입니다. 이는 네트워크 통신의 속도를 조절하는 알고리즘인 {{glossary('TCP Slow Start', 'TCP 슬로우 스타트')}}에 의해 정해진 것입니다. 슬로우 스타트는 네트워크의 최대 대역폭을 파악할 수 있을 때까지 점진적으로 데이터의 전송량을 증가시킵니다.
 
-{{glossary('TCP 슬로우 스타트')}} 방식에 따라, 첫 패킷을 받고난 이후에 서버는 다음 패킷의 사이즈를 두 배인 28kb로 늘립니다. 뒤 이은 패킷의 크기도 미리 정의한 임계치에 다다르거나, 혼잡의 징후가 나타나기 전까지 2배씩 커집니다.
+{{glossary('TCP Slow Start', 'TCP 슬로우 스타트')}} 방식에 따라, 첫 패킷을 받고난 이후에 서버는 다음 패킷의 사이즈를 두 배인 28kb로 늘립니다. 뒤 이은 패킷의 크기도 미리 정의한 임계치에 다다르거나, 혼잡의 징후가 나타나기 전까지 2배씩 커집니다.
 
 ![TCP slow start](congestioncontrol.jpg)
 
@@ -108,7 +108,7 @@ HTTPS를 이용한 보안성있는 연결을 위해서는 또 다른 "핸드셰�
 
 첫 단계는 HTML을 처리하여 DOM 트리를 만드는 것입니다. HTML 구문 분석은 [토큰화](/ko/docs/Web/API/DOMTokenList)와 트리 생성을 포함합니다. HTML 토큰은 시작 및 종료 태그 그리고 속성 이름 및 값을 포함합니다. 만약 문서가 잘 구성되어 있다면 구문 분석은 명확하고 빠르게 이루어집니다. 구문 분석기는 토큰화된 입력을 분석하여 DOM 트리를 만듭니다.
 
-DOM 트리는 문서의 내용을 설명합니다. [`<html>`](/ko/docs/Web/HTML/Element/html) 요소는 시작하는 태그이고 DOM 트리의 루트 노드입니다. 트리는 다른 태그간의 관계와 계층을 반영합니다. 다른 태그에 감싸져 있는 태그는 자식 노드입니다. DOM 노드의 개수가 많아질수록, DOM 트리를 만드는데 더 오랜 시간이 걸립니다.
+DOM 트리는 문서의 내용을 설명합니다. {{glossary('html')}} 요소는 시작하는 태그이고 DOM 트리의 루트 노드입니다. 트리는 다른 태그간의 관계와 계층을 반영합니다. 다른 태그에 감싸져 있는 태그는 자식 노드입니다. DOM 노드의 개수가 많아질수록, DOM 트리를 만드는데 더 오랜 시간이 걸립니다.
 
 ![The DOM tree for our sample code, showing all the nodes, including text nodes.](dom.gif)
 
@@ -125,9 +125,9 @@ DOM 트리는 문서의 내용을 설명합니다. [`<html>`](/ko/docs/Web/HTML/
 <script src="anotherscript.js" async></script>
 ```
 
-이 예제에서 메인 쓰레드가 HTML과 CSS를 분석하고 있을 때, 프리로드 스캐너는 스크립트와 이미지를 찾아 다운로드하기 시작할 것입니다. 자바스크립트의 분석과 실행 순서가 중요하지 않고 스크립트가 프로세스를 막지 않도록 하려면 `async` 속성이나 `defer` 속성을 추가하세요.
+이 예제에서 메인 쓰레드가 HTML과 CSS를 분석하고 있을 때, 프리로드 스캐너는 스크립트와 이미지를 찾아 다운로드하기 시작할 것입니다. Javascript의 분석과 실행 순서가 중요하지 않고 스크립트가 프로세스를 막지 않도록 하려면 `async` 속성이나 `defer` 속성을 추가하세요.
 
-CSS를 다운로드하는 것은 HTML 분석이나 다운로드를 막지 않습니다. 하지만 자바스크립트의 실행은 막습니다. 자바스크립트는 종종 요소에 영향을 주는 CSS 속성들을 조작하기 떄문입니다.
+CSS를 다운로드하는 것은 HTML 분석이나 다운로드를 막지 않습니다. 하지만 Javascript의 실행은 막습니다. Javascript는 종종 요소에 영향을 주는 CSS 속성들을 조작하기 떄문입니다.
 
 ### CSSOM 구축(Building the CSSOM)
 
@@ -141,9 +141,9 @@ CSSOM을 만드는 것은 매우 매우 빠르고 현재 개발자 도구에서 
 
 ### 다른 작업들(Other Processes)
 
-#### 자바스크립트 컴파일(JavaScript Compilation)
+#### Javascript 컴파일(JavaScript Compilation)
 
-CSS가 분석되고 CSSOM이 생성되는 동안, 프리 스캐너 덕에 자바스크립트 파일 같은 다른 자원도 다운로드 됩니다. 자바스크립트는 해석, 컴파일, 구문 분석 및 실행됩니다. 스크립트는 추상 구문 트리로 구문 분석됩니다. 일부 브라우저 엔진은 {{glossary('추상 구문 트리')}를 인터프리터에게 넘깁니다. 그 결과 메인 쓰레드에서 실행되는 바이트코드가 생성됩니다. 이것이 자바스크립트 컴파일 과정입니다.
+CSS가 분석되고 CSSOM이 생성되는 동안, 프리 스캐너 덕에 Javascript 파일 같은 다른 자원도 다운로드 됩니다. Javascript는 해석, 컴파일, 구문 분석 및 실행됩니다. 스크립트는 추상 구문 트리로 구문 분석됩니다. 일부 브라우저 엔진은 [추상 구문 트리](https://en.wikipedia.org/wiki/Abstract_Syntax_Tree)를 인터프리터에게 넘깁니다. 그 결과 메인 쓰레드에서 실행되는 바이트코드가 생성됩니다. 이것이 Javascript 컴파일 과정입니다.
 
 #### 접근성 트리 구축(Building the Accessibility Tree)
 
@@ -175,7 +175,7 @@ AOM이 만들어지기 전까지, [화면 리더기](/ko/docs/Web/Accessibility/
 
 ### 페인트(Paint)
 
-중요한 렌더링 경로에서 마지막 단계는 각 노드를 화면에 페인팅하는 것입니다. 페인팅이 처음 일어나는 것을 [첫 번째 의미있는 페인트](/ko/docs/Glossary/first_meaningful_paint)라고 부릅니다. 페인팅 혹은 레지스터화 단계에서, 브라우저는 레이아웃 단계에서 계산된 각 박스를 실제 화면의 픽셀로 변환합니다. 페인팅에서 텍스트, 색깔, 경계, 그림자 및 버튼이나 이미지 같은 대체 요소를 포함하여 모든 요소의 시각적인 부분을 화면에 그리는 작업이 포함됩니다. 브라우저는 이 작업을 매우 빠르게 해야합니다.
+중요한 렌더링 경로에서 마지막 단계는 각 노드를 화면에 페인팅하는 것입니다. 페인팅이 처음 일어나는 것을 {{glossary('first meaningful paint', '첫 번째 의미있는 페인트')}}라고 부릅니다. 페인팅 혹은 레지스터화 단계에서, 브라우저는 레이아웃 단계에서 계산된 각 박스를 실제 화면의 픽셀로 변환합니다. 페인팅에서 텍스트, 색깔, 경계, 그림자 및 버튼이나 이미지 같은 대체 요소를 포함하여 모든 요소의 시각적인 부분을 화면에 그리는 작업이 포함됩니다. 브라우저는 이 작업을 매우 빠르게 해야합니다.
 
 부드러운 스크롤이나 애니메이션을 위해서, 스타일 계산, 리플로우, 페인팅과 같이 메인 쓰레드를 점유하는 모든 작업은 브라우저를 16.67ms 미만만 차지해야만 합니다. 2048 X 1536 화면에서 iPad는 화면에 페인트해야 할 3,145,000 픽셀을 가지고 있습니다. 이는 매우 많은 픽셀이며, 이 픽셀은 매우 빠르게 페인팅되어야 합니다. 첫 페인팅보다 다시 페인팅하는 것이 더 빠르게 마무리되기 위해서, 화면에 그리는 작업은 일반적으로 몇 개의 레이어로 구분됩니다. 이것이 일어나면 합성이 필요합니다.
 
@@ -191,9 +191,9 @@ AOM이 만들어지기 전까지, [화면 리더기](/ko/docs/Web/Accessibility/
 
 ## 상호작용(Interactivity)
 
-메인 쓰레드가 페이지를 그리는 것을 완료하면, 모든 것이 준비되었다고 생각할 수도 있습니다. 하지만 꼭 그렇지는 않습니다. 만약 지연된 자바스크립트를 다운했다면, 그리고 [`onload`](/ko/docs/Web/API/GlobalEventHandlers/onload) 이벤트가 발생할 때 코드가 실행된다면, 메인 쓰레드는 여전히 바쁠 것입니다. 그래서 스크롤링, 터치 등 다른 상호작용이 불가능 할 것입니다.
+메인 쓰레드가 페이지를 그리는 것을 완료하면, 모든 것이 준비되었다고 생각할 수도 있습니다. 하지만 꼭 그렇지는 않습니다. 만약 지연된 Javascript를 다운했다면, 그리고 [`onload`](/ko/docs/Web/API/Window/load_event) 이벤트가 발생할 때 코드가 실행된다면, 메인 쓰레드는 여전히 바쁠 것입니다. 그래서 스크롤링, 터치 등 다른 상호작용이 불가능 할 것입니다.
 
-{{glossary('Time to Interactive')}} (TTI) 는 DNS 조회와 SSL 연결이 이루어지는 첫 요청부터 페이지가 상호작용할 준비가 될 때까지 얼마나 걸리는지를 측정하는 단위입니다. {{glossary('첫 번째 콘텐츠가 포함된 페인트')}} 이후 페이지가 사용자와의 상호작용에 50ms 이내로 응답할 때를 상호작용 가능한 시점으로 봅니다. 만약 메인 쓰레드가 구문 분석, 컴파일, 자바스크립트 실행에 사용되고 있다면, 메인 쓰레드를 사용할 수 없고 따라서 사용자 상호작용에 50ms 이내로 적절하게 반응하지 못합니다.
+{{glossary('Time to Interactive')}} (TTI) 는 DNS 조회와 SSL 연결이 이루어지는 첫 요청부터 페이지가 상호작용할 준비가 될 때까지 얼마나 걸리는지를 측정하는 단위입니다. {{glossary('First contentful paint', '첫 번째 콘텐츠가 포함된 페인트')}} 이후 페이지가 사용자와의 상호작용에 50ms 이내로 응답할 때를 상호작용 가능한 시점으로 봅니다. 만약 메인 쓰레드가 구문 분석, 컴파일, Javascript 실행에 사용되고 있다면, 메인 쓰레드를 사용할 수 없고 따라서 사용자 상호작용에 50ms 이내로 적절하게 반응하지 못합니다.
 
 예제에서, 이미지는 매우 빠르게 로드됩니다. 하지만 만약 `anotherscript.js` 파일이 2MB였고 사용자의 네트워크 연결이 느렸다면 어땠을까요? 이 경우에는 사용자는 페이지는 매우 빠르게 볼 수 있지만 스크립트가 다운로드되고, 분석되고 실행되기 전까지는 버벅이는 스크롤을 할 수 밖에 없을 것입니다. 이는 좋은 사용자 경험이 아닙니다. WebPageTest 예시에서 볼 수 있듯이, 메인 쓰레드를 점유하는 것을 피하세요.
 
