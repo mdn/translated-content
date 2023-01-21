@@ -64,7 +64,7 @@ slug: Web/HTML/Element/article
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ariarole("article")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/article_role'><code>article</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
