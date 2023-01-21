@@ -13,15 +13,15 @@ l18n:
 
 こうした特徴は DTLS が活躍する最もありふれた領域、{{Glossary("WebRTC")}} において有用です。WebRTC に関連するすべてのプロトコルは DTLS で通信を暗号化することが求められています。これには {{Glossary("SCTP")}}や {{Glossary("RTP", "SRTP")}}、 {{Glossary("STUN")}} も含まれます。
 
-## See also
+## 詳細情報
 
-- [Datagram Transport Layer Security](https://en.wikipedia.org/wiki/Datagram_Transport_Layer_Security) on Wikipedia
-- Specifications:
+- [Datagram Transport Layer Security](https://ja.wikipedia.org/wiki/Datagram_Transport_Layer_Security) (_Wikipedia_)
+- 仕様:
 
   - {{RFC(9147, "The Datagram Transport Layer Security (DTLS) Protocol Version 1.3")}}
   - {{RFC(6347, "Datagram Transport Layer Security Version 1.2")}}
 
-- Related specification
+- 関連する仕様
 
   - {{RFC(5763, "Framework for Establishing a Secure Real-time Transport Protocol (SRTP) Security Context Using DTLS")}}
   - {{RFC(5764, "DTLS Extension to Establish Keys for the Secure Real-time Transport Protocol (SRTP)")}}
