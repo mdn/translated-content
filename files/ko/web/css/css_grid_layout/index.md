@@ -145,7 +145,6 @@ slug: Web/CSS/CSS_Grid_Layout
 - [CSS Grid Playground](https://mozilladevelopers.github.io/playground/)
 - [Grid Garden](http://cssgridgarden.com) - A game for learning CSS grid
 
-
 ## 안내서
 
 - [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
