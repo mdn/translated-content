@@ -257,17 +257,17 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 ## 使用约束验证 API 进行复杂的约束
 
-Using JavaScript and the Constraint API, it is possible to implement more complex constraints, for example, constraints combining several fields, or constraints involving complex calculations.
+使用 JavaScript 和约束 API，可以实现更复杂的约束，例如，结合几个字段的约束，或涉及复杂计算的约束。
 
-Basically, the idea is to trigger JavaScript on some form field event (like **onchange**) to calculate whether the constraint is violated, and then to use the method `field.setCustomValidity()` to set the result of the validation: an empty string means the constraint is satisfied, and any other string means there is an error and this string is the error message to display to the user.
+基本上，这个想法是在某个表单字段事件（比如 **onchange**）上触发 JavaScript，以计算约束是否被违反，然后使用方法 `field.setCustomValidity()` 来设置验证的结果：一个空字符串意味着满足约束条件，任何其他字符串意味着有一个错误，这个字符串是显示给用户的错误信息。
 
 ### 包含多个字段的约束：邮政编码验证
 
-The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
+每个国家的邮政编码都不相同。大多数国家允许有一个可选的国家代码前缀（如德国的 `D-`，法国或瑞士的 `F-`），还有其它一些国家的邮政编码只有固定的数字；其他国家，如英国，有更复杂的结构，允许在一些特定的位置有字母。
 
-> **备注：** This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
+> **备注：** 这不是一个全面的邮政编码验证库，而是关键概念的演示。
 
-As an example, we will add a script checking the constraint validation for this simple form:
+作为示例，我们会向以下这个简单的表单中添加一段代码来进行约束验证：
 
 ```html
 <form>
@@ -292,43 +292,42 @@ As an example, we will add a script checking the constraint validation for this 
 
 ```js
 function checkZIP() {
-  // For each country, defines the pattern that the ZIP has to follow
+  // 为每个国家定义 ZIP 码需要满足的模式
   const constraints = {
     ch: [
       "^(CH-)?\\d{4}$",
-      "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950",
+      "瑞士的 ZIP 码必须恰好有 4 位数字，如 CH-1950 或 1950",
     ],
     fr: [
       "^(F-)?\\d{5}$",
-      "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012",
+      "法国的 ZIP 码必须恰好有 5 位数字，如 F-75012 或 75012",
     ],
     de: [
       "^(D-)?\\d{5}$",
-      "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345",
+      "德国的 ZIP 码必须恰好有 5 位数字，如 D-12345 或 12345",
     ],
     nl: [
       "^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$",
-      "Netherland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS",
+      "荷兰的 ZIP 码必须恰好有 4 位数字，后跟除 SA、SD 和 SS 的 2 位字母",
     ],
   };
 
-  // Read the country id
+  // 读取国家 ID
   const country = document.getElementById("Country").value;
 
-  // Get the NPA field
+  // 获取 NPA 字段内容
   const ZIPField = document.getElementById("ZIP");
 
-  // Build the constraint checker
+  // 构建约束检查器
   const constraint = new RegExp(constraints[country][0], "");
   console.log(constraint);
 
-  // Check it!
+  // 检查它！
   if (constraint.test(ZIPField.value)) {
-    // The ZIP follows the constraint, we use the ConstraintAPI to tell it
+    // ZIP 码满足约束条件，我们使用 Constraint API 告知用户
     ZIPField.setCustomValidity("");
   } else {
-    // The ZIP doesn't follow the constraint, we use the ConstraintAPI to
-    // give a message about the format required for this country
+    // ZIP 不满足约束条件，我们使用 Constraint API 告知该国家所需的 ZIP 码格式
     ZIPField.setCustomValidity(constraints[country][1]);
   }
 }
@@ -345,7 +344,7 @@ window.onload = () => {
 
 ### 限制所上传文件的大小
 
-Another common constraint is to limit the size of a file to be uploaded. Checking this on the client side before the file is transmitted to the server requires combining the Constraint API, and especially the field.setCustomValidity() method, with another JavaScript API, here the HTML5 File API.
+另一个常见的约束是限制要上传的文件的大小。在文件传输到服务器之前，在客户端检查这个问题需要将约束条件验证 API，特别是 `field.setCustomValidity()` 方法，与另一个 JavaScript API 结合起来，这里是文件 API。
 
 这里是 HTML 部分：
 
@@ -358,22 +357,22 @@ Another common constraint is to limit the size of a file to be uploaded. Checkin
 
 {{EmbedLiveSample("限制所上传文件的大小")}}
 
-The JavaScript reads the file selected, uses the File.size() method to get its size, compares it to the (hard coded) limit, and calls the Constraint API to inform the browser if there is a violation:
+JavaScript 代码会读取所选的文件，使用 `File.size()` 方法来获取其大小，将其与（硬编码的）限制进行比较，如果有违反，则调用约束 API 来通知浏览器。
 
 ```js
 function checkFileSize() {
   const FS = document.getElementById("FS");
   const files = FS.files;
 
-  // If there is (at least) one file selected
+  // 如果选择了（至少）一个文件
   if (files.length > 0) {
     if (files[0].size > 75 * 1024) {
-      // Check the constraint
-      FS.setCustomValidity("The selected file must not be larger than 75 kB");
+      // 检查约束条件
+      FS.setCustomValidity("选择的文件不能超过 75 kB");
       return;
     }
   }
-  // No custom constraint violation
+  // 没有违反自定义约束条件
   FS.setCustomValidity("");
 }
 ```
@@ -388,15 +387,15 @@ window.onload = () => {
 
 ## 约束验证的可视化样式
 
-Apart from setting constraints, web developers want to control what messages are displayed to the users and how they are styled.
+除了设置约束条件外，web 开发者还想控制向用户显示什么信息以及它们的风格。
 
 ### 控制元素的外观
 
-The look of elements can be controlled via CSS pseudo-classes.
+元素的外观可以通过 CSS 伪类进行控制。
 
 #### :required、:optional CSS 伪类
 
-The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/zh-CN/docs/Web/CSS/Pseudo-classes) allow writing selectors that match form elements that have the {{ htmlattrxref("required") }} attribute, or that don't have it.
+{{cssxref(':required')}} 和 {{cssxref(':optional')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)允许编写选择器，以匹配有 {{ htmlattrxref("required") }} 属性或没有该属性的表单元素。
 
 #### :placeholder-shown CSS 伪类
 
@@ -404,19 +403,19 @@ The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/zh-C
 
 #### :valid、:invalid CSS 伪类
 
-The {{cssxref(':valid')}} and {{cssxref(':invalid')}} [pseudo-classes](/zh-CN/docs/Web/CSS/Pseudo-classes) are used to represent \<input> elements whose content validates and fails to validate respectively according to the input's type setting. These classes allow the user to style valid or invalid form elements to make it easier to identify elements that are either formatted correctly or incorrectly.
+{{cssxref(':valid')}} 和 {{cssxref(':invalid')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)用于表示 \<input> 元素，根据输入的类型设置，这些元素的内容分别可以验证和无法验证。这些类允许用户对有效或无效的表单元素进行样式设计，以使其更容易识别格式正确或不正确的元素。
 
 ### 控制约束验证的文字
 
-The following items can help with controlling the text of a constraint violation:
+以下一些方法可以帮助控制违反约束条件的文本：
 
-- The `setCustomValidity(message)` method on the following elements:
+- 以下元素上的 `setCustomValidity(message)` 方法：
 
-  - {{HTMLElement("fieldset")}}. Note: Setting a custom validity message on fieldset elements will not prevent form submission in most browsers.
+  - {{HTMLElement("fieldset")}}。备注：在 fieldset 元素上设定自定义验证信息在大多数浏览器上不会阻止表单提交。
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("select")}}
-  - Submit buttons (created with either a {{HTMLElement("button")}} element with the `submit` type, or an `input` element with the {{HTMLElement("input/submit", "submit")}} type. Other types of buttons do not participate in constraint validation.
+  - Submit 按钮（使用类型为 `submit` 的 {{HTMLElement("button")}} 元素创建，或类型为 {{HTMLElement("input/submit", "submit")}} 的 `input` 元素。其它类型的按钮不参与约束验证。
   - {{HTMLElement("textarea")}}
 
-- The [`ValidityState`](/zh-CN/docs/Web/API/ValidityState) interface describes the object returned by the `validity` property of the element types listed above. It represents various ways that an entered value can be invalid. Together, they help explain why an element's value fails to validate, if it's not valid.
+- [`ValidityState`](/zh-CN/docs/Web/API/ValidityState) 接口描述了由上述元素类型的 `validity` 属性返回的对象。它表示一个输入值可能无效的各种方式。它们共同解释了为什么一个元素的值是无效的，则不能被验证。
