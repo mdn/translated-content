@@ -130,7 +130,7 @@ Here, we're specifying a timeout of 2000 ms.
 
 ## Synchronous request
 
-> **참고:** Starting with Gecko 30.0 {{ geckoRelease("30.0") }}, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
+> **참고:** Starting with Gecko 30.0, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
 
 Synchronous XHR often causes hangs on the web. But developers typically don't notice the problem because the hang only manifests during poor network conditions or slow server response. Synchronous XHR is now in deprecation state. Developers are recommended to move away from the API.
 
