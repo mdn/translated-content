@@ -40,8 +40,8 @@ slug: Web/HTML/Element/iframe
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("img")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/application_role'><code>application</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/document_role'><code>document</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/img_role'><code>img</code></a>
       </td>
     </tr>
     <tr>

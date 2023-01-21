@@ -563,7 +563,7 @@
 /pt-BR/docs/Web/API/DeviceRotationRate	/pt-BR/docs/Web/API/DeviceMotionEventRotationRate
 /pt-BR/docs/Web/API/Document.querySelector	/pt-BR/docs/Web/API/Document/querySelector
 /pt-BR/docs/Web/API/Document.querySelectorAll	/pt-BR/docs/Web/API/Document/querySelectorAll
-/pt-BR/docs/Web/API/Document/ElementoRegistrado	/pt-BR/docs/Web/API/Document/registerElement
+/pt-BR/docs/Web/API/Document/ElementoRegistrado	/pt-BR/docs/conflicting/Web/API/CustomElementRegistry/define
 /pt-BR/docs/Web/API/Document/async	/pt-BR/docs/conflicting/Web/API/XMLDocument
 /pt-BR/docs/Web/API/Document/defaultView/popstate_event	/pt-BR/docs/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/Document/defaultView/resize_event	/pt-BR/docs/Web/API/Window/resize_event
@@ -572,6 +572,7 @@
 /pt-BR/docs/Web/API/Document/keypress_event	/pt-BR/docs/Web/API/Element/keypress_event
 /pt-BR/docs/Web/API/Document/keyup_event	/pt-BR/docs/conflicting/Web/API/Element/keyup_event_c3958d9a752bb3f2d72ac974b4e226ea
 /pt-BR/docs/Web/API/Document/origin	/pt-BR/docs/Web/API/origin
+/pt-BR/docs/Web/API/Document/registerElement	/pt-BR/docs/conflicting/Web/API/CustomElementRegistry/define
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/pt-BR/docs/Web/API/Document/elementFromPoint
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/getSelection	/pt-BR/docs/Web/API/Document/getSelection

@@ -88,8 +88,6 @@ myWorker.onmessage = function(e) {
 
 Here we grab the message event data and set it as the `textContent` of the result paragraph, so the user can see the result of the calculation.
 
-> **참고:** **Note**: The URI passed as a parameter to the `Worker` constructor must obey the [same-origin policy](/ko/docs/Web/Security/Same-origin_policy) .There is currently disagreement among browsers vendors on what URIs are of the same-origin; Gecko 10.0 {{geckoRelease("10.0")}} and later do allow data URIs and Internet Explorer 10 does not allow Blob URIs as a valid script for workers.
-
 > **참고:** Notice that `onmessage` and `postMessage()` need to be hung off the `Worker` object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.
 
 > **참고:** When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read [Transferring data to and from workers: further details](#transferring_data_to_and_from_workers_further_details) for a much more thorough explanation.

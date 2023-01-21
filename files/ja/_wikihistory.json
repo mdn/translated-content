@@ -17,10 +17,6 @@
     "modified": "2020-07-10T21:07:12.156Z",
     "contributors": ["dskmori", "Dicklessgreat", "wbamberg", "Uemmra3"]
   },
-  "Games/Examples": {
-    "modified": "2019-01-16T21:57:35.766Z",
-    "contributors": ["wbamberg", "Uemmra3"]
-  },
   "Games/Introduction": {
     "modified": "2019-03-23T22:51:04.568Z",
     "contributors": [
@@ -31051,6 +31047,10 @@
   "orphaned/Creating_toolbar_buttons": {
     "modified": "2019-03-23T23:41:54.024Z",
     "contributors": ["teoli", "electrolysis", "Akanemoto", "Taken Bot"]
+  },
+  "orphaned/Games/Examples": {
+    "modified": "2019-01-16T21:57:35.766Z",
+    "contributors": ["wbamberg", "Uemmra3"]
   },
   "orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data": {
     "modified": "2020-03-07T07:55:37.025Z",
