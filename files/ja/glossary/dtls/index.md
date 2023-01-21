@@ -11,7 +11,7 @@ l18n:
 
 **Datagram Transport Layer Security** (**DTLS**) とは、データグラムベースの通信を安全にするためのプロトコルです。ストリーム中心の Transport Layer Security ({{Glossary("TLS")}}) に基づいており、類似の水準のセキュリティーを提供します。一般的なデータグラムプロトコルと同様に、DTLSはメッセージが届く順番は愚か、メッセージが届くかどうかさえ保証しません。しかしながら、DTLSはデータグラムプロトコルの恩恵 ―― 特に低いオーバーヘッドや、レイテンシーの縮小 ――ももたらします。
 
-These features are especially useful for one of the most common areas in which DTLS comes into play: {{Glossary("WebRTC")}}. All of the WebRTC related protocols are required to encrypt their communications using DTLS; this includes {{Glossary("SCTP")}}, {{Glossary("RTP", "SRTP")}}, and {{Glossary("STUN")}}.
+こうした特徴は DTLS が活躍する最もありふれた領域、{{Glossary("WebRTC")}} において有用です。WebRTC に関連するすべてのプロトコルは DTLS で通信を暗号化することが求められています。これには {{Glossary("SCTP")}}や {{Glossary("RTP", "SRTP")}}、 {{Glossary("STUN")}} も含まれます。
 
 ## See also
 
