@@ -1839,6 +1839,7 @@
 /ja/docs/Firefox_9_for_developers	/ja/docs/Mozilla/Firefox/Releases/9
 /ja/docs/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Full_page_zoom	/ja/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
+/ja/docs/Games/Examples	/ja/docs/orphaned/Games/Examples
 /ja/docs/Games/Index	/ja/docs/Games
 /ja/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/ja/docs/Games/Introduction_to_HTML5_Game_Development
 /ja/docs/Games/Workflows	/ja/docs/Games/Tutorials
