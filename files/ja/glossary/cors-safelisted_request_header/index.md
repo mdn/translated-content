@@ -13,7 +13,7 @@ l10n:
 - {{HTTPHeader("Content-Language")}}
 - {{HTTPHeader("Content-Type")}}
 
-When containing only these headers (and values that meet the additional requirements laid out below), a request doesn't need to send a {{glossary("preflight request")}} in the context of [CORS](/en-US/docs/Glossary/CORS).
+リクエストがこれらのヘッダーのみを含んでいて、なおかつ値が後述の追加要件に合致する場合は、{{glossary("preflight request", "プリフライトリクエスト")}}を [CORS](/ja/docs/Glossary/CORS) のコンテキストにおいて送る必要がありません。
 
 You can safelist more headers using the {{HTTPHeader("Access-Control-Allow-Headers")}} header and also list the above headers there to circumvent the following additional restrictions:
 
