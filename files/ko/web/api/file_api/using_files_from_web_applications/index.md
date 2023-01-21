@@ -414,8 +414,6 @@ Before actually transferring the data, several preparatory steps are taken:
 5. The `FileReader` object is used to convert the file to a binary string.
 6. Finally, when the content is loaded the `XMLHttpRequest` function `send()` is called to upload the file's content.
 
-> **참고:** The non-standard `sendAsBinary` method which was previously used in the example above is considered deprecated as of Gecko 31 {{(31)}}; use the standard `send(Blob data)` method instead.
-
 ### Asynchronously handling the file upload process
 
 This example, which uses PHP on the server side and JavaScript on the client side, demonstrates asynchronous uploading of a file.
