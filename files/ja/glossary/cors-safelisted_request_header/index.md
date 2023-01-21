@@ -15,7 +15,7 @@ l10n:
 
 リクエストがこれらのヘッダーのみを含んでいて、なおかつ値が後述の追加要件に合致する場合は、{{glossary("preflight request", "プリフライトリクエスト")}}を [CORS](/ja/docs/Glossary/CORS) のコンテキストにおいて送る必要がありません。
 
-You can safelist more headers using the {{HTTPHeader("Access-Control-Allow-Headers")}} header and also list the above headers there to circumvent the following additional restrictions:
+{{HTTPHeader("Access-Control-Allow-Headers")}} ヘッダーを使うと、別のヘッダーをセーフリストとして追加したり、上記のヘッダーをリストアップすることで後述の追加要件を回避することができます:
 
 #### Additional restrictions
 
