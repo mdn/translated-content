@@ -59,7 +59,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
       <td>
         一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions"
           >JavaScript 正则表达式</a
-        >（以 {{jsxref("RegExp.global", "global")}}、{{jsxref("RegExp.ignoreCase", "ignoreCase")}} 标志编译，且<em>禁用</em>了 {{jsxref("RegExp.multiline", "multiline")}} 标志） 
+        >（以 {{jsxref("RegExp.global", "global")}}、{{jsxref("RegExp.ignoreCase", "ignoreCase")}} 标志编译，且<em>禁用</em>了 {{jsxref("RegExp.multiline", "multiline")}} 标志）
       </td>
       <td>输入的值必须符合模式。</td>
       <td>
@@ -132,7 +132,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         >
       </td>
       <td>
-        <code>text</code>、<code>search</code>、<code>url</code>、<code>tel</code>、<code>email</code>、<code>password</code>、<code>date</code>、<code>datetime-local</code>、       <code>month</code>、<code>week</code>、<code>time</code>、<code>number</code>、<code>checkbox</code>、<code>radio</code>、<code>file</code>；也在 {{ HTMLElement("select") }} 和 {{ HTMLElement("textarea") }} 元素上可用
+        <code>text</code>、<code>search</code>、<code>url</code>、<code>tel</code>、<code>email</code>、<code>password</code>、<code>date</code>、<code>datetime-local</code>、<code>month</code>、<code>week</code>、<code>time</code>、<code>number</code>、<code>checkbox</code>、<code>radio</code>、<code>file</code>；也在 {{ HTMLElement("select") }} 和 {{ HTMLElement("textarea") }} 元素上可用
       </td>
       <td>
         由于是一个布尔属性，所以为 <em>none</em>：如果存在这个属性，则为 <em>true</em>；否则为 <em>false</em>
