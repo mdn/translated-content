@@ -2,7 +2,7 @@
 title: DTLS (Datagram Transport Layer Security)
 slug: Glossary/DTLS
 page-type: glossary-definition
-l18n:
+l10n:
   sourceCommit: a160395a1e4baa10be746c56ec2f25e9d902e5cd
 ---
 
