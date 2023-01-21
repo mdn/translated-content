@@ -59,7 +59,7 @@ border-bottom-color: #F5F6F7;
 
 #### 结果
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{EmbedLiveSample('一个带有边框的简单 div')}}
 
 ## 规范
 
@@ -69,7 +69,7 @@ border-bottom-color: #F5F6F7;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 边框相关的 CSS 简写属性 {{Cssxref("border")}}, {{Cssxref("border-bottom")}} 和 {{Cssxref("border-color")}} 。
 - 用于其它边框颜色相关的 CSS 属性： {{Cssxref("border-right-color")}}, {{Cssxref("border-top-color")}}, 和 {{Cssxref("border-left-color")}} 。
