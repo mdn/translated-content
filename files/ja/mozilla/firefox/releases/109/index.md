@@ -29,13 +29,11 @@ l10n:
 #### 廃止
 
 - `SVGGraphicsElement.getTransformToElement()` を削除しました。
-  これは、2015 年に SVG2 の仕様書および他の主要なブラウザーから削除されたことに従ったものです 
-  ({{bug(1803790)}})。
+  これは、2015 年に SVG2 の仕様書および他の主要なブラウザーから削除されたことに従ったものです ({{bug(1803790)}})。
 
 - `SVGGraphicsElement.nearestViewportElement` および `SVGGraphicsElement.farthestViewportElement` 属性を、nightly および初期の beta ビルドにおいてデフォルトで無効にしました (設定項目 `svg.nearestAndFarthestViewportElement.enabled` で制御します)。
   `SVGGraphicsElement.nearestViewportElement` の代替として [`SVGElement.viewportElement`](/ja/docs/Web/API/SVGElement#svgelement.viewportelement) を使用できます。
-  これらは SVG2 仕様書から削除されており、将来の Firefox リリースで完全に削除する予定です 
-  ({{bug(1133174)}})。
+  これらは SVG2 仕様書から削除されており、将来の Firefox リリースで完全に削除する予定です ({{bug(1133174)}})。
 
 ### API
 
