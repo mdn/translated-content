@@ -143,11 +143,9 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 }(DOMParser));
 ```
 
-## 규격
+## 명세서
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#dom-parsing-and-serialization', 'DOM parsing')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

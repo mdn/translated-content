@@ -181,17 +181,15 @@ HTML은 우리의 예제에서 아주 간단합니다.
 
 {{EmbedLiveSample("Example", 640, 350)}}
 
-## Specification
+## 명세서
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM Parsing', '#dom-element-innerhtml', 'Element.innerHTML')}} | {{Spec2('DOM Parsing')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{domxref("Node.textContent")}} 과 {{domxref("Node.innerText")}}
 - {{domxref("Element.insertAdjacentHTML()")}}
