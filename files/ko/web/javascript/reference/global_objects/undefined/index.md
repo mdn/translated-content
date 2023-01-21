@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 
 {{jsSidebar("Objects")}}
 
-전역 **`undefined`** 속성은 `{{Glossary("Undefined", "undefined")}}` 원시 값을 나타내며, 
+전역 **`undefined`** 속성은 `{{Glossary("Undefined", "undefined")}}` 원시 값을 나타내며,
 JavaScript의 {{Glossary("Primitive", "원시 자료형")}} 중 하나입니다.
 
 {{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
