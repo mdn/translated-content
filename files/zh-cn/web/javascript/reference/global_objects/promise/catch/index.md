@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 
 {{JSRef}}
 
-**catch()** 方法返回一个[Promise](/zh-CN/docs/Web/API/Promise)，并且处理拒绝的情况。它的行为与调用{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 相同。(事实上，calling `obj.catch(onRejected)` 内部 calls `obj.then(undefined, onRejected)`).
+当 promise 被 rejected 时，[Promise](/zh-CN/docs/Web/API/Promise)对象上的 `catch()` 方法会被调用。它会立即返回一个新的 Promise 对象，这可以允许你链式调用 promise 其他的方法。`catch()` 方法是{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 另一种简写形式。
 
 ## 语法
 
@@ -24,13 +24,43 @@ p.catch(function(reason) {
 
 ### 返回值
 
-一个{{jsxref("Promise")}}.
+返回一个新的{{jsxref("Promise")}}，无论当前的 promise 状态如何，这个新的 promise 在返回时总是处于挂起（pending）状态。 如果 `onRejected` 方法抛出了一个错误或者返回了一个被拒绝（rejected）的 promise， 那么这个新的 promise 也会被置为拒绝（rejected）；否则会被置为实现（fulfilled）。
 
 ## 描述
 
-`catch` 方法可以用于您的 promise 组合中的错误处理。
+`catch` 方法用于在 Promise 链进行错误处理，因为它总是会返回一个 Promise，所以它可以和 {{jsxref("Promise.prototype.then()")}} 方法一样被[链式调用](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch)。
 
-Internally calls `Promise.prototype.then` on the object upon which is called, passing the parameters `undefined` and the `onRejected` handler received; then returns the value of that call (which is a {{jsxref("Promise")}}).
+如果一个 promise 置为被拒绝（rejected）并且没有可调用的拒绝处理函数（处理函数可以是 {{jsxref("Promise.prototype.then()")}}、{{jsxref("Promise.prototype.catch()")}}、{{jsxref("Promise.prototype.finally()")}} 中的其中一个），那么将会触发一个拒绝事件。拒绝事件由宿主环境来提供。在浏览器中，这个拒绝事件是一个 [unhandledrejection](/zh-CN/docs/Web/API/Window/unhandledrejection_event) 事件。如果 `catch()` 方法在被拒绝并导致 unhandledrejection 事件后附加到 promise 上，则会触发另一个名为 [rejectionhandled](/zh-CN/docs/Web/API/Window/rejectionhandled_event) 的事件。 此事件旨在表明拒绝承诺已被处理。
+
+`catch()` 方法内部会调用当前 promise 对象的 `then()` 方法，并将 `undefined` 和 `onRejected`作为参数传递给 `then()`。调用后的值直接返回，你可以查看以下的示例便于观察。
+
+```js
+// overriding original Promise.prototype.then/catch just to add some logs
+((Promise) => {
+  const originalThen = Promise.prototype.then;
+  const originalCatch = Promise.prototype.catch;
+
+  Promise.prototype.then = function (...args) {
+    console.log("Called .then on %o with arguments: %o", this, args);
+    return originalThen.apply(this, args);
+  };
+  Promise.prototype.catch = function (...args) {
+    console.error("Called .catch on %o with arguments: %o", this, args);
+    return originalCatch.apply(this, args);
+  };
+})(Promise);
+
+// calling catch on an already resolved promise
+Promise.resolve().catch(function XXX() {});
+
+// Logs:
+// Called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
+// Called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
+```
+
+这意味着传递 `undefined` 仍然会导致返回的 promise 被拒绝，你必须传递一个函数来防止最终的 promise 被拒绝。
+
+因为 `catch()` 只是单纯的调用了 `then()`，它支持 [子类化](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)#Subclasses_and_superclasses)。
 
 ## 示例
 
