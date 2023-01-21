@@ -1,5 +1,5 @@
 ---
-title: CORS-safelisted request header
+title: CORS-safelisted request header (CORS セーフリストリクエストヘッダー)
 slug: Glossary/CORS-safelisted_request_header
 page-type: glossary-definition
 l10n:
