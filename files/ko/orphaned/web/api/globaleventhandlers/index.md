@@ -45,7 +45,7 @@ _이 인터페이스는 아래에 나열된 이벤트 처리기를 위한 속성
 - {{domxref("GlobalEventHandlers.onchange")}}
   - : {{event("change")}} 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
 - {{domxref("GlobalEventHandlers.onclick")}}
-  - : {{event("click")}} 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
+  - : [`click`](/ko/docs/Web/API/Element/click_event) 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
 - {{domxref("GlobalEventHandlers.onclose")}}
   - : {{event("close")}} 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
