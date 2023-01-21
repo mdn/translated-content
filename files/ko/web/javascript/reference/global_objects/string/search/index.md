@@ -52,7 +52,7 @@ console.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}

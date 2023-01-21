@@ -22,12 +22,9 @@ Number.MIN_SAFE_INTEGER // -9007199254740991
 -(Math.pow(2, 53) - 1)  // -9007199254740991
 ```
 
-## 명세
+## 명세서
 
-| Specification                                                                                                | Status                       | Comment             |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## 브라우저 호환성
 
