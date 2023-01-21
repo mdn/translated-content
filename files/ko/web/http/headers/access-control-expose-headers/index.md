@@ -29,7 +29,7 @@ Access-Control-Expose-Headers: [<header-name>[, <header-name>]*]
 Access-Control-Expose-Headers: *
 ```
 
-## 디렉티브
+## 지침
 
 - `<header-name>`
   - : 클라이언트가 응답에서 접근할 수 있는 헤더 이름 목록이며, 0개 이상의 콤마로 구분됩니다. {{Glossary("CORS-safelisted response header", "CORS 안전 목록 응답 헤더")}}에 추가 됩니다.
