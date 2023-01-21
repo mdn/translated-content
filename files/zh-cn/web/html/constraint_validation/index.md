@@ -349,7 +349,7 @@ window.onload = () => {
 这里是 HTML 部分：
 
 ```html
-<label for="FS"选择一个小于 75 kB 的文件：</label>
+<label for="FS">选择一个小于 75 kB 的文件：</label>
 <input type="file" id="FS" />
 ```
 
