@@ -39,10 +39,6 @@
       "yjy1992"
     ]
   },
-  "Games/Examples": {
-    "modified": "2019-01-16T21:48:35.297Z",
-    "contributors": ["wbamberg", "noiron"]
-  },
   "Games/Introduction": {
     "modified": "2019-12-05T00:08:12.532Z",
     "contributors": [
@@ -33702,5 +33698,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "orphaned/Games/Examples": {
+    "modified": "2019-01-16T21:48:35.297Z",
+    "contributors": ["wbamberg", "noiron"]
   }
 }
