@@ -6,12 +6,12 @@ l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
-A [CORS-safelisted request header](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) is one of the following [HTTP headers](/en-US/docs/Web/HTTP/Headers):
+[CORS セーフリストリクエストヘッダー](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)は、次の [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)のうちの一つです:
 
-- {{HTTPHeader("Accept")}},
-- {{HTTPHeader("Accept-Language")}},
-- {{HTTPHeader("Content-Language")}},
-- {{HTTPHeader("Content-Type")}}.
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Language")}}
+- {{HTTPHeader("Content-Language")}}
+- {{HTTPHeader("Content-Type")}}
 
 When containing only these headers (and values that meet the additional requirements laid out below), a request doesn't need to send a {{glossary("preflight request")}} in the context of [CORS](/en-US/docs/Glossary/CORS).
 
