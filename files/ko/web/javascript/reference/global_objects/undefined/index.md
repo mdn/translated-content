@@ -98,7 +98,7 @@ if ("x" in window) {
 
 ### `void` 연산자와 `undefined`
 
-{{jsxref("Operators/void", "void")}} 연산자를 세번째 대안입니다.
+{{jsxref("Operators/void", "void")}} 연산자는 세번째 대안입니다.
 
 ```js
 let x;
