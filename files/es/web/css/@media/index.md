@@ -19,13 +19,13 @@ Un `<media-query>` está compuesto por un tipo de medio opcional y/o un conjunto
 
 ## Tipos de medios
 
-- all
+- `all`
   - : Aplicable a todos los dispositivos.
-- print
-  - : Destinado material paginado y para documentos visibles en pantalla en modo de vista previa para impresión. Por favor, consulte la sección de [medios paginados](/es/docs/Web/CSS/Paged_Media), y la [sección de Media en el tutorial de Introducción](/es/docs/Web/CSS/Introducción/Media) para más información acerca de problemas de formateo específicos para los medios paginados.
-- screen
+- `print`
+  - : Destinado a material paginado y documentos visibles en una pantalla en modo de vista previa para impresión. Por favor, consulte la sección de [medios paginados](/es/docs/Web/CSS/Paged_Media), y la [sección de Media en el tutorial de Introducción](/es/docs/Web/CSS/Media_Queries/Using_media_queries) para más información acerca de problemas de formateo específicos para los medios paginados.
+- `screen`
   - : Destinado a principalmente a pantallas de computadora a color.
-- speech
+- `speech`
   - : Destinado a sintetizadores de voz. Nota: CSS2 tenía un tipo de medio similar llamado 'aural' para este propósito. Vea el apéndice sobre hojas de estilo aural para más detalles.
 
 > **Nota:** CSS2.1 y Media Queries 3 definió varios tipos de media adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`), pero fueron descontinuados en [Media Queries 4](http://dev.w3.org/csswg/mediaqueries/#media-types) y no deben ser usados.
