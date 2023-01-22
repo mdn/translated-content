@@ -6,22 +6,22 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 {{HTMLSidebar}}
 
-创建 web 表单始终是一个复杂的任务。仅仅组装表单是容易的，但是检查每一个字段的值是否有效并且一致是一件更加困难的事情，而向用户指明错误可能会令人头痛。[HTML5](/zh-CN/docs/Glossary/HTML5) 引入了表单相关的一些新的机制：它为 {{ HTMLElement("input") }} 元素和*约束验证*增加了一些新的语义类型，使得在客户端检查表单内容的工作变得容易。基本上，在填写字段时，通常这些约束都会被检查，而不需要额外的 JavaScript 代码进行校验；对于更复杂的约束条件的校验可以尝试使用约束验证 API。
+创建 web 表单始终是一个复杂的任务。仅仅组装表单是容易的，但是检查每一个字段的值是否有效并且一致是一件更加困难的事情，而如何告知用户错误所在可能会令人头痛。[HTML5](/zh-CN/docs/Glossary/HTML5) 引入了表单相关的一些新机制：它为 {{ HTMLElement("input") }} 元素和*约束验证*增加了一些新的语义类型，使得客户端检查表单内容变得容易。基本上，通过设置一些新的属性，常用的约束条件可以无需 JavaScript 代码而检测到；对于更复杂的约束条件的校验可以尝试使用约束验证 API。
 
 对于这些概念的基本介绍和示例，参阅[表单验证基础](/zh-CN/docs/Learn/Forms/Form_validation)一页的介绍。
 
-> **备注：** HTML 约束验证并不能移除*服务端*验证的需要。尽管无效的表单请求要少得多，但无效的表单请求仍然可能被发送，例如被试图欺骗你的网络应用的坏人发送。因此，你需要始终在服务器端验证输入约束，其方式与在客户端所做的一致。
+> **备注：** HTML 约束验证并不能移除*服务端*验证的需要。尽管无效的表单请求要少得多，但无效的表单请求仍然可能被发送，例如被试图欺骗你的网络应用的坏人发送。因此，你需要始终在服务端验证输入约束，其方式与在客户端所做的一致。
 
 ## 固有和基本的约束
 
-在 HTML 中，声明基本的约束有两种方式：
+在 HTML 中，有两种方式声明基本的约束：
 
-- 给 {{ HTMLElement("input") }} 元素的 {{ htmlattrxref("type", "input") }} 属性选择最合适的语义化的值，比如，选择 `email` 类型将会自动创建一个约束用于检查输入的值是否是一个有效的电子邮件地址。
+- 给 {{ HTMLElement("input") }} 元素的 {{ htmlattrxref("type", "input") }} 属性选择最合适的语义化的值，比如，选择 `email` 类型将会自动创建一个约束，用于检查输入的值是否是一个有效的电子邮件地址。
 - 设置验证相关的属性值，允许用一种简单的方式来描述基本的约束，而不必要使用 JavaScript。
 
 ### 语义的 input 类型
 
-{{ htmlattrxref("type", "input") }} 特性中固有约束有：
+{{ htmlattrxref("type", "input") }} 特性中的固有约束有：
 
 | Input 类型                                                         | 约束描述                                                                                                                                           | 相关违约                                                                    |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -244,7 +244,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 ## 约束验证过程
 
-约束验证是通过约束验证 API 在单个表单元素上或在表单层面上，通过 {{ HTMLElement("form") }} 元素本身上完成。约束验证是通过以下方式完成的：
+约束验证是通过约束验证 API 在单个表单元素上或在表单层面上，通过 {{ HTMLElement("form") }} 元素本身完成。约束验证是通过以下方式完成的：
 
 - 通过调用表单相关的 DOM 接口（[`HTMLInputElement`](/zh-CN/docs/Web/API/HTMLInputElement)、[`HTMLSelectElement`](/zh-CN/docs/Web/API/HTMLSelectElement)、[`HTMLButtonElement`](/zh-CN/docs/Web/API/HTMLButtonElement) 、[`HTMLOutputElement`](/zh-CN/docs/Web/API/HTMLOutputElement) 或 [`HTMLTextAreaElement`](/zh-CN/docs/Web/API/HTMLTextAreaElement)）的 `checkValidity()` 或 `reportValidity()` 方法，只对这个元素进行约束评估，允许脚本获得这些信息。`checkValidity()` 方法返回一个布尔值，表示该元素的值是否通过其约束（这通常是由用户代理在确定哪个 CSS 伪类，{{ Cssxref(":valid") }} 或 {{ Cssxref(":invalid") }} 适用时完成的）。相反，`reportValidity()` 方法会向用户报告任何约束失败的情况。
 - 通过调用 [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement) 接口上的 `checkValidity()` 或 `reportValidity()` 方法。
@@ -257,9 +257,9 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 ## 使用约束验证 API 进行复杂的约束
 
-使用 JavaScript 和约束 API，可以实现更复杂的约束，例如，结合几个字段的约束，或涉及复杂计算的约束。
+使用 JavaScript 和约束验证 API，可以实现更复杂的约束，例如，结合几个字段的约束，或涉及复杂计算的约束。
 
-基本上，这个想法是在某个表单字段事件（比如 **onchange**）上触发 JavaScript，以计算约束是否被违反，然后使用方法 `field.setCustomValidity()` 来设置验证的结果：一个空字符串意味着满足约束条件，任何其他字符串意味着有一个错误，这个字符串是显示给用户的错误信息。
+基本上，这个想法是在某个表单字段事件（比如 **onchange**）上触发 JavaScript，以计算是否违反约束，然后使用 `field.setCustomValidity()` 方法来设置验证的结果：一个空字符串意味着满足约束条件，任何其他字符串意味着有一个错误，这个字符串是显示给用户的错误信息。
 
 ### 包含多个字段的约束：邮政编码验证
 
@@ -387,7 +387,7 @@ window.onload = () => {
 
 ## 约束验证的可视化样式
 
-除了设置约束条件外，web 开发者还想控制向用户显示什么信息以及它们的风格。
+除了设置约束条件外，web 开发者还想控制向用户显示什么信息以及它们的样式。
 
 ### 控制元素的外观
 
@@ -395,7 +395,7 @@ window.onload = () => {
 
 #### :required、:optional CSS 伪类
 
-{{cssxref(':required')}} 和 {{cssxref(':optional')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)允许编写选择器，以匹配有 {{ htmlattrxref("required") }} 属性或没有该属性的表单元素。
+{{cssxref(':required')}} 和 {{cssxref(':optional')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)允许开发者编写选择器，以匹配有 {{ htmlattrxref("required") }} 属性或没有该属性的表单元素。
 
 #### :placeholder-shown CSS 伪类
 
@@ -407,15 +407,15 @@ window.onload = () => {
 
 ### 控制约束验证的文字
 
-以下一些方法可以帮助控制违反约束条件的文本：
+以下一些方法可以控制违反约束条件的文本：
 
 - 以下元素上的 `setCustomValidity(message)` 方法：
 
-  - {{HTMLElement("fieldset")}}。备注：在 fieldset 元素上设定自定义验证信息在大多数浏览器上不会阻止表单提交。
+  - {{HTMLElement("fieldset")}}。备注：大多数浏览器中，在 fieldset 元素上设定自定义验证信息不会阻止表单提交。
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("select")}}
-  - Submit 按钮（使用类型为 `submit` 的 {{HTMLElement("button")}} 元素创建，或类型为 {{HTMLElement("input/submit", "submit")}} 的 `input` 元素。其它类型的按钮不参与约束验证。
+  - 提交按钮（使用类型为 `submit` 的 {{HTMLElement("button")}} 元素，或类型为 {{HTMLElement("input/submit", "submit")}} 的 `input` 元素创建。其它类型的按钮不参与约束验证。
   - {{HTMLElement("textarea")}}
 
 - [`ValidityState`](/zh-CN/docs/Web/API/ValidityState) 接口描述了由上述元素类型的 `validity` 属性返回的对象。它表示一个输入值可能无效的各种方式。它们共同解释了为什么一个元素的值是无效的，则不能被验证。
