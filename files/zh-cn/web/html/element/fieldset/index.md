@@ -94,11 +94,11 @@ slug: Web/HTML/Element/fieldset
   </tr>
   <tr>
    <th scope="row">默认 ARIA role</th>
-   <td>{{ARIARole("group")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA roles</th>
-   <td>{{ARIARole("radiogroup")}}, {{ARIARole("presentation")}}, {{ARIARole("none")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
