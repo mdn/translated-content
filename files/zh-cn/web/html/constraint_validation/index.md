@@ -8,7 +8,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 创建 web 表单始终是一个复杂的任务。仅仅组装表单是容易的，但是检查每一个字段的值是否有效并且一致是一件更加困难的事情，而如何告知用户错误所在可能会令人头痛。[HTML5](/zh-CN/docs/Glossary/HTML5) 引入了表单相关的一些新机制：它为 {{ HTMLElement("input") }} 元素和*约束验证*增加了一些新的语义类型，使得客户端检查表单内容变得容易。基本上，通过设置一些新的属性，常用的约束条件可以无需 JavaScript 代码而检测到；对于更复杂的约束条件的校验可以尝试使用约束验证 API。
 
-对于这些概念的基本介绍和示例，参阅[表单验证基础](/zh-CN/docs/Learn/Forms/Form_validation)一页的介绍。
+对于这些概念的基本介绍和示例，参阅[表单数据校验教程](/zh-CN/docs/Learn/Forms/Form_validation)一页的介绍。
 
 > **备注：** HTML 约束验证并不能移除*服务端*验证的需要。尽管无效的表单请求要少得多，但无效的表单请求仍然可能被发送，例如被试图欺骗你的网络应用的坏人发送。因此，你需要始终在服务端验证输入约束，其方式与在客户端所做的一致。
 
@@ -21,7 +21,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 ### 语义的 input 类型
 
-{{ htmlattrxref("type", "input") }} 特性中的固有约束有：
+{{ htmlattrxref("type", "input") }} 属性中的固有约束有：
 
 | Input 类型                                                         | 约束描述                                                                                                                                           | 相关违约                                                                    |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -250,6 +250,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
 - 通过调用 [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement) 接口上的 `checkValidity()` 或 `reportValidity()` 方法。
 - 通过提交表单本身。
 
+调用 `checkValidity()` 也被称为约束的*静态*验证，调用 `reportValidity()` 也被称为约束的*交互*认证。
 > **备注：**
 >
 > - 如果 {{ HTMLElement("form") }} 元素上设置了 {{ htmlattrxref("novalidate", "form") }} 属性，则不发生约束验证交互。
