@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
-Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API&nbsp;: leur fonctionnement, comment les utiliser dans votre code, leur structure. Nous verrons également quelles sont les principales API et leur utilisation.
+Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API&nbsp;: leur fonctionnement, comment les utiliser dans votre code, et leur structure. Nous verrons également quelles sont les principales API et leur utilisation.
 
 <table class="standard-table">
   <tbody>
@@ -28,9 +28,9 @@ Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API&nbsp;: leur
 
 ## Qu'est-ce qu'une API&nbsp;?
 
-Les API (_Application Programming Interfaces_ soit «&nbsp;interface de programmation d'application&nbsp;» en français) sont des constructions disponibles dans les langages de programmation pour permettre aux développeuses et développeurs de créer plus facilement des fonctionnalités complexes. Elles fournissent une abstraction sur les parties de code plus complexes, fournissant ainsi une syntaxe plus facile à utiliser à la place.
+Les API (<i lang="en">Application Programming Interfaces</i> soit «&nbsp;interface de programmation d'application&nbsp;» en français) sont des constructions disponibles dans les langages de programmation pour permettre aux développeuses et développeurs de créer plus facilement des fonctionnalités complexes. Elles fournissent une abstraction sur les parties de code plus complexes, fournissant ainsi une syntaxe plus facile à utiliser à la place.
 
-En guise d'exemple concret, pensez à des branchements électriques dans une maison, appartement ou autre logement. Si vous souhaitez utiliser un appareil dans votre maison, il vous suffit de le brancher dans une prise et cela fonctionne. Vous n'essayez pas de le brancher directement à l'alimentation électrique&nbsp;: le faire serait réellement inefficace, et, si vous n'êtes pas électricien, difficile et dangereux à réaliser.
+En guise d'exemple concret, pensez à des branchements électriques dans une maison, appartement ou autre logement. Si vous souhaitez utiliser un appareil dans votre maison, il vous suffit de le brancher dans une prise et cela fonctionne. Vous n'essayez pas de le brancher directement à l'alimentation électrique&nbsp;: le faire serait réellement inefficace, et, si vous n'êtes pas électricienne ou électricien, difficile et dangereux à réaliser.
 
 ![Deux multiprises branchées sur deux prises différentes. Chaque multiprise possède deux emplacements&nbsp;: un sur le haut et un sur la face. Sur ces emplacements, des prises simples sont branchées.](plug-socket.png)
 
@@ -42,10 +42,10 @@ De la même façon, par exemple, pour programmer des graphismes en 3D, il est be
 
 ### Les API JavaScript côté client
 
-Le JavaScript côté client en particulier a de nombreuses API à sa disposition. Elles ne font pas partie du langage JavaScript lui-même, elles sont construites par-dessus JavaScript, offrant des super-pouvoirs supplémentaires à utiliser dans votre code. Elles se répartissent en des deux catégories&nbsp;:
+Le JavaScript côté client en particulier a de nombreuses API à sa disposition. Elles ne font pas partie du langage JavaScript lui-même, elles sont construites par-dessus JavaScript, offrant des super-pouvoirs supplémentaires à utiliser dans votre code. Elles se répartissent en deux catégories&nbsp;:
 
-- **Les API Web** sont intégrées au navigateur web et permettent de rendre disponibles les données du navigateur et de son environnement afin de réaliser des choses complexes avec. Ainsi, [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API) fournit des constructions JavaScript pour manipuler des données audio dans le navigateur. On pourra utiliser cette API afin de récupérer une piste audio puis d'abaisser son volume, d'y appliquer des effets, etc. Sous le capot, c'est le navigateur qui s'occupe des couches plus complexes en code «&nbsp;bas niveau&nbsp;» (C++ ou Rust par exemple) afin de réaliser le traitement du signal. Là encore, cette complexité est masquée par l'abstraction offerte par l'API.
-- **Les API tierces** ne sont pas intégrées au navigateur par défaut, et vous devez généralement récupérer le code de l'API et des informations depuis un site Web. Par exemple&nbsp;: [l'API Twitter](https://dev.twitter.com/overview/documentation) vous permet d'afficher vos derniers tweets sur votre site Web. Elle fournit un ensemble de constructions que vous pouvez utiliser pour interroger le service Twitter et qui renvoie alors les informations demandées.
+- **Les API web** sont intégrées au navigateur web et permettent de rendre disponibles les données du navigateur et de son environnement afin de réaliser des choses complexes avec. Ainsi, [l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API) fournit des constructions JavaScript pour manipuler des données audio dans le navigateur. On pourra utiliser cette API afin de récupérer une piste audio puis d'abaisser son volume, d'y appliquer des effets, etc. Sous le capot, c'est le navigateur qui s'occupe des couches plus complexes en code «&nbsp;bas niveau&nbsp;» (C++ ou Rust par exemple) afin de réaliser le traitement du signal. Là encore, cette complexité est masquée par l'abstraction offerte par l'API.
+- **Les API tierces** ne sont pas intégrées au navigateur par défaut, et vous devez généralement récupérer le code de l'API et des informations depuis un site web. Par exemple&nbsp;: [l'API Twitter](https://dev.twitter.com/overview/documentation) vous permet d'afficher vos derniers tweets sur votre site web. Elle fournit un ensemble de constructions que vous pouvez utiliser pour interroger le service Twitter et qui renvoie alors les informations demandées.
 
 ![Une capture d'écran d'un navigateur ouvert sur la page d'accueil de Firefox. Il existe des API natives, construites dans le navigateur et disponibles par défaut. Il existe aussi des API tierces qui ne sont pas intégrées dans le navigateur et pour lesquelles il faut récupérer le code par ailleurs pour les utiliser.](browser.png)
 
@@ -54,8 +54,8 @@ Le JavaScript côté client en particulier a de nombreuses API à sa disposition
 Ci-dessus, nous avons indiqué ce qu'est une API JavaScript côté client et sa relation avec le langage JavaScript. Pour récapituler, clarifier, et apporter plus de précisions sur d'autres outils JavaScript qui existent&nbsp;:
 
 - JavaScript
-  - : Un langage de programmation de haut niveau intégré aux navigateurs, qui permet de mettre en œuvre des fonctionnalités sur les pages et applications Web. Notez que JavaScript est également disponible dans d'autres environnements de programmation, tels que [Node.js](/fr/docs/Learn/Server-side/Express_Nodejs/Introduction).
-- Les API Web, fournies par le navigateur
+  - : Un langage de programmation de haut niveau intégré aux navigateurs, qui permet de mettre en œuvre des fonctionnalités sur les pages et applications web. Notez que JavaScript est également disponible dans d'autres environnements de programmation, tels que [Node.js](/fr/docs/Learn/Server-side/Express_Nodejs/Introduction).
+- Les API web, fournies par le navigateur
   - : Constructions intégrées dans le navigateur, situées au‑dessus du langage JavaScript, permettant une mise en œuvre plus facile de fonctionnalités.
 - Les API tierces
   - : Constructions intégrées à des plateformes tierces (par exemple Twitter, Facebook) qui permettent d'utiliser certaines fonctionnalités de ces plateformes dans vos propres pages web (par exemple&nbsp;: afficher vos derniers tweets sur votre page web).
@@ -66,14 +66,14 @@ Ci-dessus, nous avons indiqué ce qu'est une API JavaScript côté client et sa 
 
 ## Que peuvent faire les API&nbsp;?
 
-Il existe de nombreuses API dans les navigateurs modernes. Elles permettent de réaliser plein de choses. Vous pouvez vous en faire une petite idée en jetant un coup d'œil à la [page d'index des API Web sur MDN](/fr/docs/Web/API).
+Il existe de nombreuses API dans les navigateurs modernes. Elles permettent de réaliser plein de choses. Vous pouvez vous en faire une petite idée en jetant un coup d'œil à la [page d'index des API web sur MDN](/fr/docs/Web/API).
 
-### Les API Web du navigateur fréquemment utilisées
+### Les API web du navigateur fréquemment utilisées
 
-Voici les API Web que vous rencontrerez le plus souvent (et que nous allons voir en détails dans ce module)&nbsp;:
+Voici les API web que vous rencontrerez le plus souvent (et que nous allons voir en détails dans ce module)&nbsp;:
 
 - Les API pour manipuler des documents chargés dans le navigateur
-  - : L'exemple le plus évident est [l'API DOM (pour <i lang="en">Document Object Model</i>)](/fr/docs/Web/API/Document_Object_Model). Elle permet de manipuler le HTML et CSS&nbsp; créer, supprimer et modifier du code HTML, appliquer de nouveaux styles à votre page dynamiquement, etc. Par exemple, chaque fois que vous voyez une fenêtre pop-up apparaître sur une page, ou qu'un nouveau contenu est affiché, c'est que le DOM est en action. Découvrez-en plus sur ces types d'API dans la rubrique [Manipuler des documents](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
+  - : L'exemple le plus évident est [l'API DOM (pour <i lang="en">Document Object Model</i>)](/fr/docs/Web/API/Document_Object_Model). Elle permet de manipuler le HTML et CSS&nbsp;: créer, supprimer et modifier du code HTML, appliquer de nouveaux styles à votre page dynamiquement, etc. Par exemple, chaque fois que vous voyez une fenêtre pop-up apparaître sur une page, ou qu'un nouveau contenu est affiché, c'est que le DOM est en action. Découvrez-en plus sur ces types d'API dans la rubrique [Manipuler des documents](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
 - Les API pour récupérer des données du serveur et mettre à jour une page web
   - : Si vous avez juste besoin de mettre à jour une liste de produits ou afficher de nouveaux articles disponibles, le faire instantanément sans avoir à recharger toute la page du serveur peut rendre le site ou l'application beaucoup plus réactif et «&nbsp;accrocheur&nbsp;». [L'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) est l'API principale pour cet usage (du code antérieur peut utiliser l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)). Vous pourrez rencontrer le terme **Ajax** pour qualifier cette technique. Pour en savoir plus sur ces API, voir [Récupérer des données du serveur.](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - Les API pour dessiner et manipuler des graphiques
@@ -111,7 +111,7 @@ Les API interagissent avec le code en utilisant un ou plusieurs [objets JavaScri
 Prenons comme exemple l'API <i lang="en">Web Audio</i>. Il s'agit d'une API assez complexe avec plusieurs objets. Voici les objets principaux&nbsp;:
 
 - [`AudioContext`](/fr/docs/Web/API/AudioContext)
-  - : Qui représente un [graphe audio](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_graphs) qui peut être utilisé afin de manipuler la lecture audio dans le navigateur et qui possède différentes méthodes et propriétés qui sont disponibles pour manipuler ce signal audio.
+  - : Qui représente un [graphe audio](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#graphes_audio) qui peut être utilisé afin de manipuler la lecture audio dans le navigateur et qui possède différentes méthodes et propriétés qui sont disponibles pour manipuler ce signal audio.
 - [`MediaElementAudioSourceNode`](/fr/docs/Web/API/MediaElementAudioSourceNode)
   - : Qui représente un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) contenant du son qu'on veut jouer et manipuler dans le contexte.
 - [`AudioDestinationNode`](/fr/docs/Web/API/AudioDestinationNode)
@@ -122,7 +122,7 @@ Alors comment ces objets interagissent-ils&nbsp;? Si vous regardez notre exemple
 ```html
 <audio src="outfoxing.mp3"></audio>
 
-<button class="paused">Play</button>
+<button class="paused">Lire</button>
 <br>
 <input type="range" min="0" max="1" step="0.01" value="1" class="volume">
 ```
@@ -233,11 +233,11 @@ Ball.prototype.draw = function() {
 
 ### Elles utilisent des évènements pour gérer les changements d'état
 
-Nous avons déjà abordé les évènements plus tôt dans le cours dans notre article [Introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events), qui examine en détail ce que sont les évènements web côté client et comment ils sont utilisés dans votre code. Si vous n'êtes pas déjà familiarisé avec le fonctionnement des évènements de l'API Web côté client, nous vous conseillons de lire cet article avant de poursuivre.
+Nous avons déjà abordé les évènements plus tôt dans le cours dans notre article [Introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events), qui examine en détail ce que sont les évènements web côté client et comment ils sont utilisés dans votre code. Si vous n'êtes pas déjà familiarisé avec le fonctionnement des évènements de l'API web côté client, nous vous conseillons de lire cet article avant de poursuivre.
 
-Certaines API web ne contiennent aucun évènement, mais la plupart en contiennent au moins quelques-uns. Les propriétés des gestionnaires qui nous permettent d'exécuter des fonctions lorsque des évènements se produisent sont généralement répertoriées dans notre matériel de référence dans des sections distinctes intitulées « Gestionnaires d'évènements ».
+Certaines API web ne contiennent aucun évènement, mais la plupart en contiennent au moins quelques-uns. Les propriétés des gestionnaires qui nous permettent d'exécuter des fonctions lorsque des évènements se produisent sont généralement répertoriées dans notre matériel de référence dans des sections distinctes intitulées «&nbsp;Gestionnaires d'évènements&nbsp;».
 
-Nous avons déjà vu un certain nombre de gestionnaires d'évènements utilisés dans notre exemple d'API audio Web ci-dessus&nbsp;
+Nous avons déjà vu un certain nombre de gestionnaires d'évènements utilisés dans notre exemple d'API <i lang="en">Web Audio</i> ci-dessus&nbsp;:
 
 ```js
 // lecture/pause de l'audio
@@ -269,9 +269,9 @@ audioElement.addEventListener('ended', function() {
 
 ### Elles disposent de mécanismes de sécurité supplémentaires adéquats
 
-Les fonctionnalités des API web sont soumises aux mêmes considérations de sécurité que JavaScript et les autres technologies web (par exemple [la règle de même origine policy](/fr/docs/Web/Security/Same-origin_policy)), mais elles disposent parfois de mécanismes de sécurité supplémentaires. Par exemple, certaines des API web les plus modernes ne fonctionneront que sur des pages servies avec HTTPS, car elles transmettent des données potentiellement sensibles (par exemple [l'API <i lang="en">Service Workers</i>](/fr/docs/Web/API/Service_Worker_API) et [<i lang="en">Push</i>](/fr/docs/Web/API/Push_API)).
+Les fonctionnalités des API web sont soumises aux mêmes considérations de sécurité que JavaScript et les autres technologies web (par exemple [la règle de même origine](/fr/docs/Web/Security/Same-origin_policy)), mais elles disposent parfois de mécanismes de sécurité supplémentaires. Par exemple, certaines des API web les plus modernes ne fonctionneront que sur des pages servies avec HTTPS, car elles transmettent des données potentiellement sensibles (par exemple [l'API <i lang="en">Service Workers</i>](/fr/docs/Web/API/Service_Worker_API) et [<i lang="en">Push</i>](/fr/docs/Web/API/Push_API)).
 
-En outre, certaines API Web demandent la permission à la personne pour être activée dès que des appels à ces interfaces sont effectués dans votre code. À titre d'exemple, l'API [Notifications](/fr/docs/Web/API/Notifications_API) demande la permission à l'aide d'une boîte de dialogue contextuelle&nbsp;:
+En outre, certaines API web demandent la permission à la personne pour être activée dès que des appels à ces interfaces sont effectués dans votre code. À titre d'exemple, l'API [Notifications](/fr/docs/Web/API/Notifications_API) demande la permission à l'aide d'une boîte de dialogue contextuelle&nbsp;:
 
 ![Une capture d'écran d'une boîte de dialogue de notification fournie par l'API Notifications du navigateur. Ici, le site web 'mdn.github.io' demande la permission de pousser des notifications. Une croix en haut à droite permet de fermer la boîte de dialogue et une liste déroulante permet de choisir les options. C'est l'option 'Toujours recevoir les notifications' qui est sélectionnée par défaut.](notification-permission.png)
 
