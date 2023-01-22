@@ -96,5 +96,5 @@ Cada _característica de medios_ verifica una característica específica del na
 
 ## Véase también
 
-- [Media queries](/en/CSS/Media_queries)
+- [Media queries](/es/docs/Web/CSS/Media_Queries)
 - El modelo CSSOM {{ domxref("CSSMediaRule") }} asociado a esta regla-at.
