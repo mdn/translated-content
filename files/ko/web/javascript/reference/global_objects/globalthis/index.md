@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 ## 설명
 
 역사적으로 전역 객체에 접근하려면 다른 JavaScript 환경에서 다른 구문이 필요했습니다. 웹에서는 {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}}, {{domxref("Window.frames", "frames")}}를 사용할 수 있지만, [Web Workers](/ko/docs/Web/API/Worker)에서는 `self`만 동작합니다. Node.js에서는 이 중 어느 것도 작동하지 않으며 대신 `global`을 사용해야 합니다.
-`this` 키워드는 비엄격 모드에서 실행되는 함수 내부에서 사용될 수 있지만, `this`는 엄격 모드에서 실행되는 모듈 및 내부 함수에서 `undefined`가 됩니다. `Function('return this')()`를 사용하는 방법도 존재하지만, 브라우저의 {{glossary("CSP")}와 같이 {{jsxref("eval", "eval()")}}을 비활성화하는 환경에서는 이러한 방식으로 {{jsxref("Function")}}을 사용할 수 없습니다.
+`this` 키워드는 비엄격 모드에서 실행되는 함수 내부에서 사용될 수 있지만, `this`는 엄격 모드에서 실행되는 모듈 및 내부 함수에서 `undefined`가 됩니다. `Function('return this')()`를 사용하는 방법도 존재하지만, 브라우저의 {{glossary("CSP")}}와 같이 {{jsxref("eval", "eval()")}}을 비활성화하는 환경에서는 이러한 방식으로 {{jsxref("Function")}}을 사용할 수 없습니다.
 
 `globalThis` 속성은 환경에 무관하게 전역 `this` 값, 즉 전역 객체에 접근하는 표준 방법을 제공합니다. `window`, `self` 등 유사한 속성과는 다르게 window와 non-window 컨텍스트 모두에서의 동작을 보장합니다. 따라서 코드를 구동하는 환경을 모르더라도 전역 객체에 일관된 방식으로 접근할 수 있습니다. 이름을 기억하는 데 도움이 되도록 전역 범위에서 `this` 값은 `globalThis`라는 점만 기억하세요.
 
@@ -53,7 +53,7 @@ console.log(window.Math === Math); // true
 
 ```js
 function check(it) {
-  // Math is known to exist as a global in every environment.
+  // Math는 모든 환경에서 전역으로 존재하는 것으로 알려져 있습니다.
   return it && it.Math === Math && it;
 }
 
@@ -61,7 +61,7 @@ const globalObject =
   check(typeof window === 'object' && window) ||
   check(typeof self === 'object' && self) ||
   check(typeof global === 'object' && global) ||
-  // This returns undefined when running in strict mode
+  // 엄격 모드에서 실행할 때 undefined를 반환합니다.
   (function () { return this; })() ||
   Function('return this')();
 ```
