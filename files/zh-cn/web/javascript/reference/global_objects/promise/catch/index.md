@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 
 {{JSRef}}
 
-当 promise 被 rejected 时，[Promise](/zh-CN/docs/Web/API/Promise)对象上的 `catch()` 方法会被调用。它会立即返回一个新的 Promise 对象，这可以允许你链式调用 promise 其他的方法。`catch()` 方法是{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 另一种简写形式。
+当 promise 被 rejected 时，[Promise](/zh-CN/docs/Web/API/Promise)对象上的 `catch()` 方法会被调用。它会立即返回一个新的 Promise 对象，这可以允许你链式调用 promise 其他的方法。`catch()` 方法是 {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 的一种简写形式。
 
 ## 语法
 
@@ -20,7 +20,7 @@ p.catch(function(reason) {
 ### 参数
 
 - **onRejected**
-  - : 当 Promise 被 rejected 时，被调用的一个{{jsxref("Function")}}。该函数拥有一个参数：`reason` rejection 的原因。如果 `onRejected` 抛出一个错误或返回一个本身失败的 Promise，通过 `catch()` 返回的 Promise 被 rejected；否则，它将显示为成功（resolved）。
+  - : 当 Promise 被 rejected 时，被调用的一个 {{jsxref("Function")}}。该函数拥有一个参数：`reason` rejection 的原因。如果 `onRejected` 抛出一个错误或返回一个本身失败的 Promise，通过 `catch()` 返回的 Promise 被 rejected；否则，它将显示为成功（resolved）。
 
 ### 返回值
 
@@ -30,7 +30,7 @@ p.catch(function(reason) {
 
 `catch` 方法用于在 Promise 链进行错误处理，因为它总是会返回一个 Promise，所以它可以和 {{jsxref("Promise.prototype.then()")}} 方法一样被[链式调用](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch)。
 
-如果一个 promise 置为被拒绝（rejected）并且没有可调用的拒绝处理函数（处理函数可以是 {{jsxref("Promise.prototype.then()")}}、{{jsxref("Promise.prototype.catch()")}}、{{jsxref("Promise.prototype.finally()")}} 中的其中一个），那么将会触发一个拒绝事件。拒绝事件由宿主环境来提供。在浏览器中，这个拒绝事件是一个 [unhandledrejection](/zh-CN/docs/Web/API/Window/unhandledrejection_event) 事件。如果 `catch()` 方法在被拒绝并导致 unhandledrejection 事件后附加到 promise 上，则会触发另一个名为 [rejectionhandled](/zh-CN/docs/Web/API/Window/rejectionhandled_event) 的事件。 此事件旨在表明拒绝承诺已被处理。
+如果一个 promise 置为被拒绝（rejected）并且没有可调用的拒绝处理函数（处理函数可以是 {{jsxref("Promise.prototype.then()")}}、{{jsxref("Promise.prototype.catch()")}}、{{jsxref("Promise.prototype.finally()")}} 中的其中一个），那么将会触发一个拒绝事件。拒绝事件由宿主环境来提供。在浏览器中，这个拒绝事件是一个 [unhandledrejection](/zh-CN/docs/Web/API/Window/unhandledrejection_event)事件。如果 `catch()` 方法在被拒绝并导致 unhandledrejection 事件后附加到 promise 上，则会触发另一个名为 [rejectionhandled](/zh-CN/docs/Web/API/Window/rejectionhandled_event)的事件。 此事件旨在表明拒绝承诺已被处理。
 
 `catch()` 方法内部会调用当前 promise 对象的 `then()` 方法，并将 `undefined` 和 `onRejected`作为参数传递给 `then()`。调用后的值直接返回，你可以查看以下的示例便于观察。
 
@@ -60,7 +60,7 @@ Promise.resolve().catch(function XXX() {});
 
 这意味着传递 `undefined` 仍然会导致返回的 promise 被拒绝，你必须传递一个函数来防止最终的 promise 被拒绝。
 
-因为 `catch()` 只是单纯的调用了 `then()`，它支持 [子类化](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)#Subclasses_and_superclasses)。
+因为 `catch()` 只是单纯的调用了 `then()`，它支持子类化。
 
 ## 示例
 
