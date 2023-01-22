@@ -94,7 +94,7 @@ Il y a une grande variété d'API tierces&nbsp;; en voici quelques-unes des plus
 - [L'ensemble d'API de Facebook](https://developers.facebook.com/docs/) permet d'utiliser différentes parties de l'écosystème de Facebook dans votre application (par exemple pour la connexion avec un compte Facebook, la gestion des paiements ou de publicité, etc.).
 - [Les API Telegram](https://core.telegram.org/api) permettent d'intégrer le contenu de canaux Telegram sur un site web et de prendre en charge les bots.
 - [L'API YouTube](https://developers.google.com/youtube/) vous permet d'intégrer des vidéos YouTube sur votre site, de faire des recherches sur YouTube, de construire des listes de lecture, etc.
-- [L'API Pinterest](https://developers.pinterest.com/) fournit des outils pour gérer des tableaux et épingles Pinterest et de les inclures à votre site web.
+- [L'API Pinterest](https://developers.pinterest.com/) fournit des outils pour gérer des tableaux et épingles Pinterest et de les inclure à votre site web.
 - [L'API Twilio](https://www.twilio.com/) fournit un ensemble d'outil pour intégrer des fonctionnalités d'appels audio et vidéo à une application et/ou d'envoyer des SMS/MMS.
 - [L'API Mastodon](https://docs.joinmastodon.org/api/) permet de manipuler les fonctionnalités du réseau social Mastodon grâce à des programmes.
 
@@ -208,7 +208,7 @@ L'API DOM (<i lang="en">Document Object Model</i>) a également un point d'entr�
 const em = document.createElement('em'); // crée un nouvel élément em
 const para = document.querySelector('p'); // référence à un élément p existant
 em.textContent = 'Coucou vous !'; // donne à em du contenu textuel
-para.appendChild(em); // intégre em dans le paragraphe
+para.appendChild(em); // intègre em dans le paragraphe
 ```
 
 L'API [Canvas](/fr/docs/Web/API/Canvas_API) repose également sur l'obtention d'un objet de contexte à utiliser pour manipuler les choses, bien que dans ce cas, il s'agisse d'un contexte graphique plutôt que d'un contexte audio. Son objet de contexte est créé en obtenant une référence à l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sur lequel vous voulez dessiner, puis en appelant sa méthode [`HTMLCanvasElement.getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext)&nbsp;:
