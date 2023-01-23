@@ -47,7 +47,7 @@ Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/Jav
 
 - [Comprendiendo los frameworks JavaScript de lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : Los frameworks de JavaScript son una parte esencial del desarrollo web front-end moderno, ya que proporcionan a los desarrolladores herramientas probadas y comprobadas para crear aplicaciones web interactivas y escalables. Este módulo te brinda algunos conocimientos básicos sobre cómo funcionan los frameworks del lado del cliente y cómo encajan en tu conjunto de herramientas, antes de pasar a la serie de tutoriales que cubren algunos de los más populares en la actualidad.
-- [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+- [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/Language_Overview)
   - : Una descripción general para aquellos que _piensan_ que saben JavaScript.
 - [Estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures)
   - : Descripción general de las estructuras de datos disponibles en JavaScript.
