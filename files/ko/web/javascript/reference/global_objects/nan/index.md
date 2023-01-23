@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 `NaN`을 반환하는 연산에는 다섯 가지 종류가 있습니다.
 
-- 숫자로서 읽을 수 없음 (예시: `parseInt("blabla")`, `Number(undefined)`와 같은 명시적인 것 또는 `Math.abs(undefined)`와 같은 암시적인 것)
+- 숫자로 변환 실패 (예시: `parseInt("blabla")`, `Number(undefined)`와 같은 명시적인 것 또는 `Math.abs(undefined)`와 같은 암시적인 것)
 - 결과가 허수인 수학 계산식 (예시: `Math.sqrt(-1)`)
 - 정의할 수 없는 계산식 (예시: `0 * Infinity`, `1 ** Infinity`, `Infinity / Infinity`, `Infinity - Infinity`)
 - 피연산자가 `NaN`이거나 `NaN`으로 강제 변환되는 메서드 또는 표현식 (예시: `7 ** NaN`, `7 * "blabla"`) - 이것은 `NaN`이 전염성 있다는 것을 의미합니다.
