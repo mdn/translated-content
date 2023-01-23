@@ -8,9 +8,9 @@ l10n:
 
 {{MDNSidebar}}
 
-La plataforma [yari](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) en la que se ejecuta MDN, proporciona un sistema de macros [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) que permite automatizar ciertas tareas. Este artículo proporciona información sobre cómo invocar las macros de MDN dentro de los artículos.
+La plataforma [Yari](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) en la que se ejecuta MDN, proporciona un sistema de macros, [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) que permite automatizar ciertas tareas. Este artículo proporciona información sobre cómo invocar las macros de MDN dentro de los artículos.
 
-La [guía KumaScript](https://github.com/mdn/yari/blob/main/docs/kumascript/README.md) proporciona una visión en profundidad de cómo utilizar macros en MDN, por lo que esta sección es más bien una breve visión general.
+La [guía de KumaScript](https://github.com/mdn/yari/blob/main/docs/kumascript/README.md) proporciona una visión en profundidad de cómo utilizar macros en MDN, por lo que esta sección es más bien una breve visión general.
 
 ## Cómo se implementan las macros
 
@@ -21,15 +21,15 @@ Las macros en MDN se implementan utilizando código [JavaScript](/es/docs/Web/Ja
 Para utilizar una macro, encierre la llamada a la macro en un par de llaves dobles incluyendo sus parámetros, si los hay.
 
 ```plain
-\{{nombredelparámetro(lista-de-parámetros)}} 
+\{{nombredelamacro(lista-de-parámetros)}} 
 ```
 
 Algunos apuntes sobre la llamada a las macros
 
-- Los nombres de las macros son _case-sensitive_, es decir distinguen entre minúsculas y mayúsculas, pero se intentan corregir los errores comunes de mayúsculas. Puede escribir el nombre completo de una macro en minúsculas incluso si el nombre de la macro utiliza mayúsculas en su interior. Del mismo modo, puede comenzar el nombre de una macro en mayúsculas,incluso cuando éstas generalmente suelen comenzar con una letra minúscula.
+- Los nombres de las macros son _case-sensitive_ (sensibles a mayúsculas), es decir distinguen entre minúsculas y mayúsculas, pero se intentan corregir los errores comunes de mayúsculas. Puede escribir el nombre completo de una macro en minúsculas incluso si el nombre de la macro utiliza mayúsculas en su interior. Del mismo modo, puede comenzar el nombre de una macro en mayúsculas,incluso cuando éstas generalmente suelen comenzar con una letra minúscula.
 - Los parámetros deben ir separados por comas.
-- Si no hay parámetros, puede omitir por completo los paréntesis. `\{{macroname()}}` y `\{{macroname}}` son idénticos.
-- Los parámetros numéricos puede ir entre comillas o no. Depende de Usted (sin embargo, si tiene un número de versión con varios decimales, debe ir entre comillas).
+- Si no hay parámetros, puede omitir por completo los paréntesis. `\{{nombredelamacro()}}` y `\{{nombredelamacro}}` son idénticos.
+- Los parámetros numéricos puede ir entre comillas o no. Depende de ti (sin embargo, si tiene un número de versión con varios decimales, debe ir entre comillas).
 - Si obtienes errores, revisa tu código cuidadosamente. Si sigues sin poder averiguar qué está pasando, consulta [Solución de errores de KumaScript](https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md) para obtener ayuda.
 
 Las macros son almacenadas en caché de forma considerable. Para cualquier conjunto de valores de entrada (tanto parámetros y valores de entorno como la URL para la que se ejecutó la macro), los resultados se almacenan y se reutilizan. Esto significa que la macro realmente sólo se ejecuta cuando las entradas cambian.
