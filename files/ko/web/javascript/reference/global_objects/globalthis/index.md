@@ -107,4 +107,5 @@ if (typeof globalThis.Intl === 'undefined') {
 
 ## 같이 보기
 
+- [Polyfill of `globalThis` in `core-js`](https://github.com/zloirock/core-js#ecmascript-globalthis)
 - {{jsxref("Operators/this", "this")}}
