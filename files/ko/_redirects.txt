@@ -774,7 +774,6 @@
 /ko/docs/Web/Performance/중요_렌더링_경로	/ko/docs/Web/Performance/Critical_rendering_path
 /ko/docs/Web/Progressive_web_apps/Responsive/Media_types	/ko/docs/Web/CSS/Media_Queries/Using_media_queries
 /ko/docs/Web/Progressive_web_apps/소개	/ko/docs/Web/Progressive_web_apps/Introduction
-/ko/docs/Web/Reference/Events	/ko/docs/Web/Events
 /ko/docs/Web/Reference/Events/DOMContentLoaded	/ko/docs/Web/API/Window/DOMContentLoaded_event
 /ko/docs/Web/Reference/Events/blur	/ko/docs/Web/API/Element/blur_event
 /ko/docs/Web/Reference/Events/canplay	/ko/docs/Web/API/HTMLMediaElement/canplay_event
