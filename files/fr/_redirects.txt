@@ -1249,6 +1249,7 @@
 /fr/docs/Firefox_8_for_developers	/fr/docs/Mozilla/Firefox/Releases/8
 /fr/docs/Firefox_9_for_developers	/fr/docs/Mozilla/Firefox/Releases/9
 /fr/docs/Firefox_pour_les_développeurs	/fr/docs/Mozilla/Firefox/Releases
+/fr/docs/Games/Examples	/fr/docs/orphaned/Games/Examples
 /fr/docs/Games/Index	/fr/docs/Games
 /fr/docs/Games/Workflows	/fr/docs/Games/Tutorials
 /fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
@@ -2950,7 +2951,7 @@
 /fr/docs/Javascript/Reference/RegExp/Exec	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /fr/docs/Jeux	/fr/docs/Games
 /fr/docs/Jeux/Anatomie	/fr/docs/Games/Anatomy
-/fr/docs/Jeux/Exemples	/fr/docs/Games/Examples
+/fr/docs/Jeux/Exemples	/fr/docs/orphaned/Games/Examples
 /fr/docs/Jeux/Index	/fr/docs/Games
 /fr/docs/Jeux/Introduction	/fr/docs/Games/Introduction
 /fr/docs/Jeux/Introduction_to_HTML5_Game_Gevelopment_(summary)	/fr/docs/Games/Introduction_to_HTML5_Game_Development

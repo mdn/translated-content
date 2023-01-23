@@ -14,10 +14,6 @@
     "modified": "2019-01-17T06:54:31.636Z",
     "contributors": ["wbamberg", "und3rh00d", "loella16", "ericfourmaux"]
   },
-  "Games/Examples": {
-    "modified": "2019-03-23T22:44:48.124Z",
-    "contributors": ["wbamberg", "loella16", "Gibus", "samuelbeloola", "BNedry"]
-  },
   "Games/Introduction": {
     "modified": "2019-04-23T09:34:16.784Z",
     "contributors": [
@@ -27914,5 +27910,9 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "orphaned/Games/Examples": {
+    "modified": "2019-03-23T22:44:48.124Z",
+    "contributors": ["wbamberg", "loella16", "Gibus", "samuelbeloola", "BNedry"]
   }
 }
