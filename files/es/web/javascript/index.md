@@ -86,8 +86,8 @@ Consulta la documentación completa de la [referencia de JavaScript](/es/docs/We
 
 Herramientas útiles para escribir y depurar tu código **JavaScript**.
 
-- [Herramientas para Desarrolladores de Firefox](/es/docs/Tools)
-  - : [Consola Web](/es/docs/Tools/Web_Console), [Generador de Perfiles de JavaScript](/es/docs/Tools/Profiler), [Depurador](/es/docs/Tools/Debugger), y más.
+- [Herramientas para Desarrolladores de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [Generador de Perfiles de JavaScript](/es/docs/Tools/Profiler), [Depurador](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), y más.
 - [Consola de Javascript](/es/docs/Web/JavaScript/Shells)
   - : Una consola de JavaScript te permite probar rápidamente fragmentos de código JavaScript.
 - [Aprende JavaScript](https://learnjavascript.online/)
