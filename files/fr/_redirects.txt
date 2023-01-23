@@ -2950,7 +2950,6 @@
 /fr/docs/Javascript/Reference/RegExp/Exec	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /fr/docs/Jeux	/fr/docs/Games
 /fr/docs/Jeux/Anatomie	/fr/docs/Games/Anatomy
-/fr/docs/Jeux/Exemples	/fr/docs/Games/Examples
 /fr/docs/Jeux/Index	/fr/docs/Games
 /fr/docs/Jeux/Introduction	/fr/docs/Games/Introduction
 /fr/docs/Jeux/Introduction_to_HTML5_Game_Gevelopment_(summary)	/fr/docs/Games/Introduction_to_HTML5_Game_Development
