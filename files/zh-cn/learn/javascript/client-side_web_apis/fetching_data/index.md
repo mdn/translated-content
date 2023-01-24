@@ -5,7 +5,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-在现代网站和应用中另一个常见的任务是从服务端获取个别数据来更新部分网页而不用加载整个页面。这看起来是小细节却对网站性能和行为产生巨大的影响。所以我们将在这篇文章介绍概念和技术使它成为可能，例如：[Fetch API](/zh-CN/docs/Web/API/Fetch_API)。
+现代网站和应用中另一个常见的任务是从服务端获取个别数据来更新部分网页而不用加载整个页面。这看起来是小细节却对网站性能和行为产生巨大的影响。所以我们将在这篇文章介绍概念和技术使它成为可能，例如：[Fetch API](/zh-CN/docs/Web/API/Fetch_API)。
 
 <table>
   <tbody>
@@ -53,7 +53,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - 页面更新更加迅速，你不必等待页面刷新，这意味这网站的体验更加流畅、响应更加迅速。
 - 每次更新时下载的数据更少，这意味着浪费的带宽更少。这在使用宽带连接的台式机上可能不是什么问题，但在移动设备或没有高速互联网连接的国家/地区则是一个主要问题。
 
-> **备注：** 在早期，这种通用技术被称为[异步](/zh-CN/docs/Glossary/Asynchronous)的 JavaScript 与 XML 技术（[Ajax](/zh-CN/docs/Glossary/AJAX)），因为他倾向于请求 XML 数据。但现在通常不是这种情况（你更有可能请求 JSON），但结果依然相同，并通常依旧使用术语“Ajax”来描述该技术。
+> **备注：** 在早期，这种通用技术被称为[异步](/zh-CN/docs/Glossary/Asynchronous)的 JavaScript 与 XML 技术（[Ajax](/zh-CN/docs/Glossary/AJAX)），因为倾向于请求 XML 数据。但现在通常不是这种情况（你更有可能请求 JSON），但结果依然相同，并通常依旧使用术语“Ajax”来描述该技术。
 
 为了进一步加快速度，某些网站还会在首次请求时将资源和数据存储在用户的计算机上，这意味这在后续的访问中，会使用这些内容的本地版本，而不是在每次重新加载页面时都下载新的副本。内容仅在更新后才会从服务器重新加载。
 
@@ -91,7 +91,7 @@ function updateDisplay(verse) {
 
 让我们将通过构造一个指向我们要加载的文本文件的相对 URL 来开始编写函数，因为我们稍后需要它。任何时候 {{htmlelement("select")}} 元素的值都与所选的 {{htmlelement("option")}} 内的文本相同（除非在值属性中指定了不同的值）——例如“Verse 1”。相应的诗歌文本文件是“verse1.txt”，并与 HTML 文件位于同一目录中，因此只需要文件名即可。
 
-但是，web 服务器往往是区分大小写的，且文件名没有空格。要将“Verse 1”转换为“verse1.txt”，我们需要将 V 转换为小写、删除空格，并在末尾添加 .txt。这可以通过 {{jsxref("String.replace", "replace()")}}、{{jsxref("String.toLowerCase", "toLowerCase()")}} 和[字符串连接](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#连接字符串)来完成。在 `updateDisplay()` 函数中添加以下代码：
+但是，web 服务器往往是区分大小写的，且文件名没有空格。要将“Verse 1”转换为“verse1.txt”，我们需要将 `V` 转换为小写、删除空格，并在末尾添加“.txt”。这可以通过 {{jsxref("String.replace", "replace()")}}、{{jsxref("String.toLowerCase", "toLowerCase()")}} 和[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)来完成。在 `updateDisplay()` 函数中添加以下代码：
 
 ```js
 verse = verse.replace(' ', '').toLowerCase();
@@ -133,7 +133,7 @@ fetch(url)
 
 `response.text()` *也*是异步的，所以我们返回它返回的 promise，并向新的 promise 的 `then()` 方法传递一个函数。这个函数会在响应文本可用时被调用，在这个函数中，我们会使用该文本更新 `<pre>` 块。
 
-最后，我们在最后串联 {{jsxref("Promise/catch", "catch()")}} 处理器，以捕获我们调用的异步函数或其它处理器中抛出的任何错误。
+最后，我们在最后链式调用 {{jsxref("Promise/catch", "catch()")}} 处理器，以捕获我们调用的异步函数或其它处理器中抛出的任何错误。
 
 此示例的一个问题是，它在第一次加载时不会显示任何诗歌。要解决此问题，请在代码的最后（`</script>` 结束标签之前）添加以下两行代码，以默认加载第一首诗歌，并确保 {{htmlelement("select")}} 元素始终显示正确的值：
 
