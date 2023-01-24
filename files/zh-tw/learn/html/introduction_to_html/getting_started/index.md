@@ -1,5 +1,5 @@
 ---
-title: Getting started with HTML
+title: HTML 入門
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 
@@ -42,9 +42,7 @@ My cat is very grumpy
 <p>My cat is very grumpy</p>
 ```
 
-> **備註：** HTML 中的元素是不區分大小寫的。
-> 例如 : 一個 {{htmlelement("title")}} 標籤可以寫成`<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`，之類的形式，都沒有問題*。*
-> 通常來說，為了保持一致性(consistency)、可讀性(readability)，以及其他可能的原因，最好還是以小寫來撰寫標籤*。*
+> **備註：** HTML 中的元素是不區分大小寫的。例如：一個 {{htmlelement("title")}} 標籤可以寫成`<title>`、`<TITLE>`、`<Title>`、`<TiTlE>`之類的形式，都沒有問題。通常來說，為了保持一致性(consistency)、可讀性(readability)，以及其他可能的原因，最好還是以小寫來撰寫標籤。
 
 ## 分析 HTML 元素
 
@@ -54,8 +52,8 @@ My cat is very grumpy
 
 元素中主要的內容有:
 
-1. **起始標籤(opening tag)：**它包含了元素的名字(在這裡是 p)，夾在一對 **<、> (angle brackets)**之間。它指明元素從何開始生效 — 在上例中則代表段落的開始。
-2. **結束標籤(closing tag)：**結束標籤和起始標籤長得差不多，只不過它在名字前面還多加了一條斜線 (forward slash) 。它表示元素結束的地方 — 在上例中表示該段落的結束。忘記加上結束標籤是初學者常犯的錯誤，這將導致奇怪的結果。
+1. **起始標籤(opening tag):** 它包含了元素的名字(在這裡是 p)，夾在一對 **<、> (angle brackets)** 之間。它指明元素從何開始生效 — 在上例中則代表段落的開始。
+2. **結束標籤(closing tag):** 結束標籤和起始標籤長得差不多，只不過它在名字前面還多加了一條斜線 (forward slash) 。它表示元素結束的地方 — 在上例中表示該段落的結束。忘記加上結束標籤是初學者常犯的錯誤，這將導致奇怪的結果。
 3. **內容(content):** 元素的內容。在上例中就是一段文字。
 4. **元素(element):** 以上三者加起來就是元素。
 
@@ -595,18 +593,18 @@ HTML 就像大部分的程式語言，提供了一種能讓我們可以在原始
 
 ## 另見
 
-- [Applying color to HTML elements using CSS](/zh-TW/docs/Web/HTML/Applying_color)
+- [用 CSS 為 HTML 元素修改顏色](/zh-TW/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 ## 在本主題中的內容
 
-- [Getting started with HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
+- [HTML 入門](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [標頭裡是什麼？HTML 中的後設資料（metadata）](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML 文字基礎概念](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [建立超連結](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [進階文字格式](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [文件與網站架構](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [HTML 除錯](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [設個字母](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [架構出具備內容的網頁](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
