@@ -20,7 +20,7 @@ slug: Web/CSS/display-box
 
     要一个元素占据空间（文件中存在），但不渲染，请使用 {{CSSxRef("visibility")}} 属性。
 
-## 举例
+## 示例
 
 在第一个例子中，带有 secret 类的段落，会被设置成 `display: none`; 该盒子和内容不会渲染。
 
@@ -43,7 +43,7 @@ p.secret {
 
 #### 结果
 
-{{EmbedLiveSample("Hide_element", "100%", 60)}}
+{{EmbedLiveSample("display: none", "100%", 60)}}
 
 ### display: contents
 
@@ -73,7 +73,7 @@ p.secret {
 
 #### 结果
 
-{{EmbedLiveSample("Display_contents", 300, 60)}}
+{{EmbedLiveSample("display: contents", 300, 60)}}
 
 ## Accessibility concerns
 
@@ -84,11 +84,9 @@ p.secret {
 
 ## 浏览器兼容性
 
-### Support of `contents`
-
 {{Compat}}
 
-## 其它参考
+## 参见
 
 - {{CSSxRef("display")}}
 
