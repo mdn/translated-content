@@ -1542,7 +1542,7 @@
 /es/docs/Tools/Page_Inspector/How_to/Reposition_elements_in_the_page	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/reposition_elements_in_the_page/index.html
 /es/docs/Tools/Page_Inspector/How_to/Select_an_element	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html
 /es/docs/Tools/Page_Inspector/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html
-/es/docs/Tools/Performance  https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
+/es/docs/Tools/Performance https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
 /es/docs/Tools/Performance/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/performance/ui_tour/index.html
 /es/docs/Tools/Profiler https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
 /es/docs/Tools/Remote_Debugging	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html
