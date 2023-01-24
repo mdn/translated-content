@@ -1235,7 +1235,7 @@
 /es/docs/MDN/Guidelines/Conventions_definitions	/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /es/docs/MDN/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Guidelines/Writing_style_guide	/es/docs/MDN/Writing_guidelines/Writing_style_guide
-/es/docs/MDN/Kuma	https://github.com/mdn/yari/blob/main/docs/what-yari-does.md
+/es/docs/MDN/Kuma	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/MDN/Kuma/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
 /es/docs/MDN/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
@@ -1249,7 +1249,7 @@
 /es/docs/MDN/Tools	/es/docs/orphaned/MDN/Tools
 /es/docs/MDN/Tools/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
 /es/docs/MDN/Tools/KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
-/es/docs/MDN/Yari	https://github.com/mdn/yari/blob/main/docs/what-yari-does.md
+/es/docs/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/MDN_en_diez	/es/docs/MDN/At_ten
 /es/docs/Manipular_video_por_medio_de_canvas	/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /es/docs/MathML	/es/docs/Web/MathML
@@ -2862,5 +2862,5 @@
 /es/docs/controladores_protocolos_web	/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/
-/es/docs/orphaned/MDN/Yari	https://github.com/mdn/yari/blob/main/docs/what-yari-does.md
+/es/docs/orphaned/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/video	/es/docs/Web/HTML/Element/video
