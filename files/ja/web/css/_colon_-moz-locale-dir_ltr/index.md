@@ -1,6 +1,7 @@
 ---
 title: ':-moz-locale-dir(ltr)'
-slug: Web/CSS/:-moz-locale-dir(ltr)
+slug: Web/CSS/:-moz-locale-dir_ltr
+original_slug: Web/CSS/:-moz-locale-dir(ltr)
 ---
 
 {{CSSRef}}{{Non-standard_header}}
