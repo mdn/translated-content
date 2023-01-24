@@ -1246,7 +1246,9 @@
 /es/docs/MDN/Structures/Macros/Other	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Writing_guidelines/Page_structures
-/es/docs/MDN/Tools/Introduction_to_KumaScript	/es/docs/MDN/Tools/KumaScript
+/es/docs/MDN/Tools	/es/docs/orphaned/MDN/Tools
+/es/docs/MDN/Tools/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
+/es/docs/MDN/Tools/KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
 /es/docs/MDN/Yari	https://github.com/mdn/yari/blob/main/docs/what-yari-does.md
 /es/docs/MDN_en_diez	/es/docs/MDN/At_ten
 /es/docs/Manipular_video_por_medio_de_canvas	/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
