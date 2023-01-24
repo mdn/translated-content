@@ -525,6 +525,7 @@
 /zh-CN/docs/Glossary/404	/zh-CN/docs/Web/HTTP/Status/404
 /zh-CN/docs/Glossary/502	/zh-CN/docs/Web/HTTP/Status/502
 /zh-CN/docs/Glossary/Bézier_curve	/zh-CN/docs/Glossary/Bezier_curve
+/zh-CN/docs/Glossary/Descriptor_(CSS)	/zh-CN/docs/Glossary/CSS_Descriptor
 /zh-CN/docs/Glossary/Empty_element	/zh-CN/docs/Glossary/Void_element
 /zh-CN/docs/Glossary/Grid_Rows	/zh-CN/docs/Glossary/Grid_Row
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
@@ -532,6 +533,7 @@
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
 /zh-CN/docs/Glossary/Symbol	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /zh-CN/docs/Glossary/Transferable_objects	/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects
+/zh-CN/docs/Glossary/XHR_(XMLHttpRequest)	/zh-CN/docs/Glossary/XMLHttpRequest
 /zh-CN/docs/Glossary/主轴	/zh-CN/docs/Glossary/Main_Axis
 /zh-CN/docs/Glossary/交叉轴	/zh-CN/docs/Glossary/Cross_Axis
 /zh-CN/docs/Glossary/代理服务器	/zh-CN/docs/Glossary/Proxy_server
