@@ -7,7 +7,7 @@ body:
       value: |
         ### 在提交议题前
 
-        **想要自行修改页面？**文档内容是开源的！
+        **想要自行修改页面？** 文档内容是开源的！
         ↩ 返回，并点击页面中的 _Edit the page on Github_ 链接。
 
         **你的议题有关于浏览器兼容性表格？**
@@ -54,7 +54,7 @@ body:
     attributes:
       value: |
         ---
-        你以完成了所有内容！以下字段已被预填充。请点击 **Submit new issue** 按钮。
+        你已完成了所有内容！以下字段已被预填充。请点击 **Submit new issue** 按钮。
   - type: textarea
     id: metadata
     attributes:
