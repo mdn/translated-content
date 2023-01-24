@@ -67,7 +67,7 @@ p.then((v) => {
 
 ### 別の Promise で解決
 
-`Promise.resolve()` は、既存の `Promise` インスタンスを再利用します。ネイティブのプロミスを解決する場合は、ラッパーを作成せずに同じプロミスインスタンスを返す。
+`Promise.resolve()` は、既存の `Promise` インスタンスを再利用します。ネイティブのプロミスを解決する場合は、ラッパーを作成せずに同じプロミスインスタンスを返します。
 
 ```js
 const original = Promise.resolve(33);
