@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Promise.resolve()`** は静的メソッドで、 {{jsxref("Promise")}} を与えられた値で「解決」させます。値がプロミスの場合は、そのプロミスをそのプロミスが返されます。その値が [Thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) であれば、`Promise.resolve()` は `then()` メソッドを、準備した 2 つのコールバックと共に呼び出します。それ以外の場合は、その値で履行するプロミスが返されます。
+**`Promise.resolve()`** は静的メソッドで、 {{jsxref("Promise")}} を与えられた値で「解決」させます。値がプロミスの場合は、そのプロミスが返されます。その値が [Thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) であれば、`Promise.resolve()` は `then()` メソッドを、準備した 2 つのコールバックと共に呼び出します。それ以外の場合は、その値で履行するプロミスが返されます。
 
 この関数は複数階層のプロミス風オブジェクト (例えば、何かで解決するプロミスで解決するプロミス) を単一の階層に平坦化します。
 
