@@ -72,7 +72,7 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
       <th scope="row">Permitted ARIA roles</th>
       <td>
         <a href="/es/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/image_role"><code>image</code></a>
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>
       </td>
     </tr>
     <tr>
