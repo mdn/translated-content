@@ -1,12 +1,8 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/title
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`title`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소와 관련된 추가 정보를 제공하는 텍스트를 나타냅니다.

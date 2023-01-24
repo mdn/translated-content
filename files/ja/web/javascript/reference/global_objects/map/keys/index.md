@@ -38,9 +38,7 @@ console.log(mapIter.next().value); // Object
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-map.prototype.keys', 'Map.prototype.keys')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

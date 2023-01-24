@@ -1,10 +1,6 @@
 ---
 title: Firefox 50 para desarrolladores
 slug: Mozilla/Firefox/Releases/50
-tags:
-  - Firefox
-  - Release Notes
-translation_of: Mozilla/Firefox/Releases/50
 ---
 
 {{FirefoxSidebar}}
@@ -86,7 +82,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 ### Pointer Lock API
 
 - The [Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API) is now unprefixed ({{bug(991899)}}).
-- Before Firefox 50, [`requestPointerLock()`](/en-US/docs/Web/API/Element/requestPointerLock) asked for permission using a doorhanger, and pointer lock would not be enabled until the user granted permission. From Firefox 50, pointer lock is like the [fullscreen API](/es/docs/Web/API/Fullscreen_API): it's granted immediately, but a notification is displayed explaining to the user how to exit ({{bug(1273351)}}).
+- Before Firefox 50, [`requestPointerLock()`](/es/docs/Web/API/Element/requestPointerLock) asked for permission using a doorhanger, and pointer lock would not be enabled until the user granted permission. From Firefox 50, pointer lock is like the [fullscreen API](/es/docs/Web/API/Fullscreen_API): it's granted immediately, but a notification is displayed explaining to the user how to exit ({{bug(1273351)}}).
 
 ### IndexedDB
 

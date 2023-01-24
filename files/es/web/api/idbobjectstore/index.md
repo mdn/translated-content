@@ -1,9 +1,6 @@
 ---
 title: IDBObjectStore
 slug: Web/API/IDBObjectStore
-tags:
-  - API
-translation_of: Web/API/IDBObjectStore
 ---
 
 {{APIRef("IndexedDB")}}
@@ -118,11 +115,9 @@ objectStoreRequest.onsuccess = function(event) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                       | Comment |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

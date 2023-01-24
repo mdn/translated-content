@@ -22,7 +22,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
     - `button`: Um botão sem comportamento padrão.
     - `checkbox`: Uma caixa de marcação. Você deve usar o atributo **value** para definir o valor enviado por este item. Use o atributo **checked** para indicar se o item está selecionado por padrão. Você também pode usar o atributo **indeterminate** para indicar que a caixa de marcação está em um estado indeterminado (na maioria das plataformas, isso desenha uma linha horizontal cortando a caixa).
-    - `color`: {{HTMLVersionInline("5")}} Um controle para especificar cores. A interface de um seletor de cores não tem nenhuma funcionalidade obrigatória a não ser aceitar cores simples em texto ([mais informações — em inglês](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
+    - `color`: {{HTMLVersionInline("5")}} Um controle para especificar cores. A interface de um seletor de cores não tem nenhuma funcionalidade obrigatória a não ser aceitar cores simples em texto ([mais informações — em inglês](<https://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
     - `date`: {{HTMLVersionInline("5")}} Um controle para inserir uma data (ano, mês e dia, sem horário).
     - `datetime`: {{HTMLVersionInline("5")}} Um controle para inserir data e horário (hora, minuto, segundo e fração de segundo) baseado no fuso horário UTC.
     - `datetime-local`: {{HTMLVersionInline("5")}} Um controle para inserir data e horário, sem fuso horário.
@@ -60,8 +60,6 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
     - `video/*` representando arquivos de vídeo {{HTMLVersionInline("5")}}
     - `image/*` representando arquivos de imagem {{HTMLVersionInline("5")}}
 
-- {{htmlattrdef("accesskey")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline", "HTML5")}}
-  - : Um único caractere que o usuário pode pressionar para mudar o foco de entrada de dados para este controle. Este atributo é global no HTML5.
 - {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
   - : Especifica uma "dica de ação" usada para determinar como rotular a tecla Enter em dispositivos móveis com teclados virtuais. Os valores suportados são `go`, `done`, `next`, `search` e `send`; estes valores são automaticamente mapeados para o texto apropriado (maiúsculas e minúsculas não são diferenciadas).
 - {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
@@ -205,8 +203,6 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
   - : Trabalha junto com os atributos **min** e **max** para limitar os incrementos em que valores numéricos ou datas podem ser alterados. Seu valor pode ser `any` ou um número de ponto flutuante positivo. Se o valor não for `any`, o controle aceita somente valores múltiplos valor do incremento maiores que o mínimo.
 - {{htmlattrdef("tabindex")}} element-specific in {{HTMLVersionInline(4)}}, global in {{HTMLVersionInline("5")}}
   - : A posição do elemento na ordem de navegação pela tecla Tab no documento atual.
-- {{htmlattrdef("usemap")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline", "HTML5")}}
-  - : O nome de um elemento {{HTMLElement("map")}} para ser usado como um mapa de imagem.
 - {{htmlattrdef("value")}}
   - : O valor inicial do controle. Este atributo é opcional exceto quando o valor do atributo **type** for `radio` ou `checkbox`.
     Note que, quando a página é recarregada, Gecko and IE [ignorarão o valor especificado no código HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186) se o valor tiver sido alterado antes do recarregamento.

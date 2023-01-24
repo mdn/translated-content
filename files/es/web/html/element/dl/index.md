@@ -1,13 +1,6 @@
 ---
 title: dl
 slug: Web/HTML/Element/dl
-tags:
-  - Agrupando contenido HTML
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/dl
 original_slug: Web/HTML/Elemento/dl
 ---
 
@@ -67,7 +60,7 @@ El contenido para este ejemplo interactivo se encuentra almacenado en un reposit
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -213,11 +206,7 @@ Para cambiar la indentación de un término, usa la propiedad {{cssxref("margin"
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dl-element', '&lt;dl&gt;')}}     | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dl-element', '&lt;dl&gt;')}} | {{Spec2('HTML5 W3C')}}     |                    |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dl&gt;')}}                 | {{Spec2('HTML4.01')}}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad Web
 

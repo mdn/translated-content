@@ -122,7 +122,7 @@ La propriété `calendar` renvoie la partie de la locale qui indique le calendri
       <td>
         <div class="warning">
           <p>
-            <strong>Attention :</strong> La clé  <code>islamicc</code> est
+            <strong>Attention :</strong> La clé <code>islamicc</code> est
             désormais dépréciée et il faut utiliser <code>islamic-civil</code> à
             la place.
           </p>

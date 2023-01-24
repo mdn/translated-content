@@ -17,7 +17,7 @@ client.postMessage(message[, { transfer }]);
 ### 引数
 
 - `message`
-  - : クライアントに送信するメッセージです。これは、任意の[複製可能な構造化型](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)にすることができます。
+  - : クライアントに送信するメッセージです。これは、任意の[構造化複製可能型](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#%E5%AF%BE%E5%BF%9C%E6%B8%88%E3%81%BF%E3%81%AE%E5%9E%8B)にすることができます。
 - `transfer` {{optional_inline}}
   - : メッセージとともに[転送](/ja/docs/Web/API/Transferable)されるオブジェクトのシーケンスです。 これらのオブジェクトの所有権は宛先側に与えられ、送信側では使用できなくなります。
 
@@ -62,9 +62,7 @@ navigator.serviceWorker.addEventListener('message', event => {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-client-postmessage-message-options', 'postMessage()')}} | {{Spec2('Service Workers')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

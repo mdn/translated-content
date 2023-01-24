@@ -1,9 +1,7 @@
 ---
 title: '<tr>: El elemento Fila de la tabla'
 slug: Web/HTML/Element/tr
-translation_of: Web/HTML/Element/tr
 original_slug: Web/HTML/Elemento/tr
-browser-compat: html.elements.tr
 ---
 
 ## Resumen

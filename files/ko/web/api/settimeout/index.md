@@ -1,20 +1,6 @@
 ---
 title: setTimeout()
 slug: Web/API/setTimeout
-tags:
-  - API
-  - HTML DOM
-  - Intervals
-  - JavaScript timers
-  - MakeBrowserAgnostic
-  - Method
-  - NeedsMarkupWork
-  - Reference
-  - Timers
-  - setTimeout
-  - Polyfill
-browser-compat: api.setTimeout
-translation_of: Web/API/setTimeout
 ---
 {{APIRef("HTML DOM")}}
 

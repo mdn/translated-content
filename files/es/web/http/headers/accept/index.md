@@ -1,12 +1,6 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-tags:
-  - Cabecera HTTP
-  - Cabecera de Pedido
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/Accept
 ---
 
 {{HTTPSidebar}}

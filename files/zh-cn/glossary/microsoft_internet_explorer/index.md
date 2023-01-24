@@ -1,31 +1,16 @@
 ---
-title: Microsoft Internet Explorer
+title: Microsoft Internet Explorer 浏览器
 slug: Glossary/Microsoft_Internet_Explorer
 ---
 
-Internet Explorer (or IE) 是一个由微软为遗留企业用户维护的免费的可视化 {{glossary("浏览器")}} 。{{glossary("Microsoft Edge")}} 是 Windows 现在默认的浏览器。
+Internet Explorer（或 IE）是一个免费的图形{{glossary("browser","浏览器")}}，曾经由微软为企业用户维护。目前，{{glossary("Microsoft Edge")}} 是 Windows 默认的浏览器。
 
-微软在 1995 年首次将 IE 和 Windows 捆绑，作为 "Microsoft Plus!" 包的一部分出售。在大约 2002，Internet Explorer 已经成了世界上使用最多的浏览器，但目前已经落后于 Chrome、Firefox、Edge 和 Safari。
+微软在 1995 年首次将 IE 和 Windows 捆绑，作为“Microsoft Plus!”包的一部分出售。在大约 2002 年时，Internet Explorer 已经成了世界上使用最多的浏览器，但目前已经落后于 Chrome、Firefox、Edge 和 Safari。
 
-IE 已经发行了许多版本，目前停留在版本 11.0.12，可以得到桌面、手机和 Xbox 控制台的相应版本。之前可以在 Mac 和 UNIX 上获得，Microsoft 分别于 2003 和 2001 停止了对它们的支持。
+IE 经历了许多版本，并为桌面、手机和 Xbox 控制台提供了版本。它也可以在 Mac 和 UNIX 上使用，微软分别在 2003 年和 2001 年停止了这些版本。最后的 Windows 版本是 2020 年 11 月 10 日的 Windows 11.0.220。微软于 2022 年 6 月 15 日结束对 IE 的支持。
 
-## 了解更多
+## 参见
 
-### 常识
-
-- [Internet Explorer](https://zh.wikipedia.org/wiki/Internet_Explorer) on Wikipedia
-- [History of Internet Explorer](https://zh.wikipedia.org/wiki/History_of_Internet_Explorer) on Wikipedia
-- [Internet Explorer versions](https://zh.wikipedia.org/wiki/Internet_Explorer_versions) on Wikipedia
-
-### 了解 Internet Explorer
-
-- [http://windows.microsoft.com/en-us/internet-explorer/download-ie](https://windows.microsoft.com/en-us/internet-explorer/download-ie)
-- [http://windows.microsoft.com/en-us/windows7/getting-started-with-internet-explorer-9](https://windows.microsoft.com/en-us/windows7/getting-started-with-internet-explorer-9)
-- [http://windows.microsoft.com/en-us/internet-explorer/internet-explorer-help](https://windows.microsoft.com/en-us/internet-explorer/internet-explorer-help)
-- [http://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-11](https://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-11)
-
-### 技术参考
-
-- [http://windows.microsoft.com/en-us/internet-explorer/products/ie-8/system-requirements](https://windows.microsoft.com/en-us/internet-explorer/products/ie-8/system-requirements)
-- [http://windows.microsoft.com/en-us/internet-explorer/products/ie-9/system-requirements](https://windows.microsoft.com/en-us/internet-explorer/products/ie-9/system-requirements)
-- [http://support.microsoft.com/kb/969393](https://support.microsoft.com/kb/969393)
+- [Internet Explorer](https://zh.wikipedia.org/wiki/Internet_Explorer) 维基百科
+- [Internet Explorer 的历史](https://zh.wikipedia.org/wiki/History_of_Internet_Explorer)维基百科
+- [Internet Explorer 版本](https://zh.wikipedia.org/wiki/Internet_Explorer_versions)维基百科

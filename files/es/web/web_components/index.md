@@ -1,13 +1,6 @@
 ---
 title: Web Components
 slug: Web/Web_Components
-tags:
-  - Componentes
-  - Componentes Web
-  - Landing
-  - TopicStub
-  - Web Components
-translation_of: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -115,7 +108,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
   - : Contiene un fragmento de HTML que no es renderizado cuando se carga inicialmente un documento que lo contiene, pero puede ser desplegado en tiempo de ejecución usando JavaScript, principalmente usado como la base de la estructura de los elementos personalizados. La interfaz DOM asociada es {{domxref("HTMLTemplateElement")}}.
 - {{htmlelement("slot")}}
   - : Un espacio termporal dentro de un componente web que se puede llenar con una plantilla de marcado propia, lo que permite crear árboles DOM separados y presentarlos juntos. La interfaz DOM asociada es {{domxref("HTMLSlotElement")}}.
-- El atributo global HTML [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot)
+- El atributo global HTML [`slot`](/es/docs/Web/HTML/Global_attributes/slot)
   - : Asigna un slot en un _shadow tree_ de un _shadow DOM_ shadow tree a un elemento.
 - {{domxref("Slotable")}}
   - : Un mixin implementado tanto por los nodos {{domxref("Element")}} y {{domxref("Text")}}, definiendo características que les permiten convertirse en el contenido de un elemento {{htmlelement("slot")}}. El mixin define un atributo, {{domxref("Slotable.assignedSlot")}}, el cual retorna una referencia al nodo del slot donde esta insertado.
@@ -143,13 +136,7 @@ Se están construyendo varios ejemplos en nuestro repositorio de GitHub [web-com
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                           | Comentario                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG","scripting.html#the-template-element","&lt;template&gt; element")}} | {{Spec2("HTML WHATWG")}} | La definición de {{HTMLElement("template")}}.                                                                      |
-| {{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}             | {{Spec2("HTML WHATWG")}} | La definición de [elementos personalizados HTML (HTML Custom Elements)](/es/docs/Web/Web_Components/Using_custom_elements). |
-| {{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}                                                 | {{Spec2("DOM WHATWG")}} | La definición de [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM).                                                |
-| {{SpecName("HTML Imports", "", "")}}                                                                             | {{Spec2("HTML Imports")}} | Definición inicial de [HTML Imports](/es/docs/Web/Web_Components/HTML_Imports).                                             |
-| {{SpecName("Shadow DOM", "", "")}}                                                                                 | {{Spec2("Shadow DOM")}} | Definición inicial de [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM).                                           |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

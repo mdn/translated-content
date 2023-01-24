@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
-translation_of: Web/API/RTCPeerConnection/setConfiguration
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
@@ -61,11 +60,9 @@ myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
 
 먼저, 신규 {{domxref("RTCConfiguration")}}가 신규 ICE 서버와 인증 정보를 명시한 `restartConfig`를 가지도록 생성됩니다. 그리고 설정한 {{domxref("RTCConfiguration")}}가 `setConfiguration()`에 전달됩니다. `iceRestart` 옵션의 값을 `true`로 지정하고, {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}을 호출해서 ICE 협상이 재시작됩니다. 이후에, 반환받은 offer를 local description으로 설정하고, 다른 피어에게 offer를 전달하는 것과 같이 일반적으로 진행되도록 처리합니다.
 
-## 사양서
+## 명세서
 
-| 사양서                                                                                                                                                                       | 상태                             | 코멘트              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-setConfiguration-void-RTCConfiguration-configuration', 'setConfiguration()')}} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

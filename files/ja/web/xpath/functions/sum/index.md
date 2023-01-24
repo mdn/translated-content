@@ -15,7 +15,7 @@ sum(node-set )
 
 ### 引数
 
-- _`node-set`_
+- `node-set`
   - : 評価されるノード集合。 このノード集合内のそれぞれのノードが [number()](/ja/XPath/Functions/number) 関数に渡されたかのように評価され、その結果として得られた数値の合計が返される。
 
 ### 返値

@@ -1,12 +1,6 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-  - is
-translation_of: Web/HTML/Global_attributes/is
 original_slug: Web/HTML/Atributos_Globales/is
 ---
 
@@ -43,9 +37,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "custom-elements.html#attr-is", "is")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

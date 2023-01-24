@@ -1,15 +1,6 @@
 ---
 title: Content Editable
 slug: conflicting/Web/HTML/Global_attributes/contenteditable
-tags:
-  - HTML
-  - HTML5
-  - 가이드
-  - 고급
-  - 예제
-  - 웹
-  - 필요컨텐트
-translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Editable_content
 ---
 HTML5 에서는 어떤 엘러먼트라도 수정이 가능하다. 약간의 JavaScript 이벤트 핸들러들을 사용하는 것만로 당신은 웹페이지를 완전하고 빠른 리치-텍스트 에디터로 변형할 수 있다. 이 문서는 이런 기능성에 대하여 대략의 정보를 제공 한다.

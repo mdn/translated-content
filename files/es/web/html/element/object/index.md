@@ -1,14 +1,6 @@
 ---
 title: <object>
 slug: Web/HTML/Element/object
-tags:
-  - Contenido incrustado
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-  - incrustar
-translation_of: Web/HTML/Element/object
 original_slug: Web/HTML/Elemento/object
 ---
 
@@ -79,8 +71,8 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("image")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>
       </td>
     </tr>
     <tr>
@@ -144,11 +136,7 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName("HTML WHATWG", "embedded-content.html#the-object-element", "&lt;object&gt;")}} | {{Spec2("HTML WHATWG")}} |            |
-| {{SpecName("HTML5 W3C", "embedded-content-0.html#the-object-element", "&lt;object&gt;")}} | {{Spec2("HTML5 W3C")}}     |            |
-| {{SpecName("HTML4.01", "struct/objects.html#h-13.3", "&lt;object&gt;")}}                         | {{Spec2("HTML4.01")}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

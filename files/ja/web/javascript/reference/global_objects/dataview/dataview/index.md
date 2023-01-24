@@ -52,9 +52,7 @@ view.getInt16(1); // 42
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview-constructor', 'DataView constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

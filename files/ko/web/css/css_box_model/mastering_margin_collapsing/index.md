@@ -1,12 +1,6 @@
 ---
 title: 여백 상쇄 정복
 slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Reference
-translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
 
 {{CSSRef}}

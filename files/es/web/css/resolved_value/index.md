@@ -1,10 +1,6 @@
 ---
 title: Valor resuelto
 slug: Web/CSS/resolved_value
-tags:
-  - CSS
-  - Referencia CSS
-translation_of: Web/CSS/resolved_value
 ---
 
 {{cssref}}
@@ -13,9 +9,7 @@ El **valor resuelto** (**resolved value**) de una propiedad CSS es el valor devu
 
 ## Especificaciones
 
-| Especificación                                                                   | Estatus                  | Comentarios        |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("CSSOM", "#resolved-values", "resolved value")}} | {{Spec2("CSSOM")}} | Definición inicial |
+{{Specifications}}
 
 ## Véase también
 

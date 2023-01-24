@@ -1,15 +1,8 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
-tags:
-  - API
-  - CustomElementRegistry
-  - Interface
-  - Reference
-  - Web Components
-browser-compat: api.CustomElementRegistry
-translation_of: Web/API/CustomElementRegistry
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 **`CustomElementRegistry`** 인터페이스는 사용자 지정 요소를 등록하고, 기존에 등록한 요소를 가져올 수 있는 메서드를 제공합니다. `CustomElementRegistry`의 인스턴스를 가져오려면 {{domxref("window.customElements")}} 속성을 사용하세요.

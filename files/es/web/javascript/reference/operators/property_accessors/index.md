@@ -1,10 +1,6 @@
 ---
 title: Miembros
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
-tags:
-  - JavaScript
-  - Operator
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 original_slug: Web/JavaScript/Referencia/Operadores/Miembros
 ---
 

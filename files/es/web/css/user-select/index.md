@@ -1,7 +1,6 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-translation_of: Web/CSS/user-select
 ---
 
 {{CSSRef}}
@@ -103,9 +102,7 @@ user-select: unset;
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario                                                                                     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 UI', '#propdef-user-select', 'user-select')}} | {{Spec2('CSS4 UI')}} | Initial definition. Also defines `-webkit-user-select` as a deprecated alias of `user-select`. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

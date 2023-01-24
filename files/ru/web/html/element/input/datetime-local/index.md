@@ -17,13 +17,13 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 Для тех из вас, кто не использует поддерживающий браузер, Chrome/Opera datetime-local control выглядит как скриншот ниже. Нажатие на стрелку вниз с правой стороны приводит к выбору даты, чтобы вы могли выбрать дату; вы должны ввести время вручную.
 
-![](https://mdn.mozillademos.org/files/14949/datetime-local-chrome.png)
+![](datetime-local-chrome.png)
 
 В Edge `datetime-local` элемент управления выглядит как на скриншоте ниже. Клик на дате и времени отобразит два отдельных поля выбора, чтобы вы могли легко установить дату и время. То есть, по сути, получаем два элемента `date` и `time`, объединённых в один:
 
-![](https://mdn.mozillademos.org/files/14953/datetime-local-picker-edge1.png)
+![](datetime-local-picker-edge1.png)
 
-![](https://mdn.mozillademos.org/files/14955/datetime-local-picker-edge2.png)
+![](datetime-local-picker-edge2.png)
 
 | **[Value](#value)**             | A {{domxref("DOMString")}} representing a date and time, or empty.                                                                                                                                            |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ If you try to submit the form with an incomplete date (or with a date outside th
 
 Here's'a screenshot for those of you who aren't using a supporting browser:
 
-![](https://mdn.mozillademos.org/files/14957/datetime-local-error.png)
+![](datetime-local-error.png)
 
 Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
 
@@ -187,7 +187,7 @@ input:valid+span:after {
 
 As mentioned above, the major problem with using date inputs at the time of writing is browser support — only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the `datetime-local` picker on Firefox for Android looks like this:
 
-![](https://mdn.mozillademos.org/files/14951/datetime-local-fxa.png)
+![](datetime-local-fxa.png)
 
 Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 

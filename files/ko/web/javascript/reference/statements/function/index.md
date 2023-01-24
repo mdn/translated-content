@@ -1,12 +1,6 @@
 ---
 title: 함수 선언
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - Function
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/function
 ---
 {{jsSidebar("Statements")}}
 

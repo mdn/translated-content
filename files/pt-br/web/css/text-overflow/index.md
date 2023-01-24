@@ -7,7 +7,7 @@ slug: Web/CSS/text-overflow
 
 ## Sumário
 
-A propriedade `text-overflow` do [CSS](/en/CSS) determina como o conteúdo que ultrapassou a sua div e que não é mostrado ao usuário deve ser exibido. Ele pode ser cortado, mostrar reticências ou até mesmo exibir qualquer string definida pelo autor.
+A propriedade `text-overflow` do [CSS](/pt-BR/CSS) determina como o conteúdo que ultrapassou a sua div e que não é mostrado ao usuário deve ser exibido. Ele pode ser cortado, mostrar reticências ou até mesmo exibir qualquer string definida pelo autor.
 
 ![text-overflow.png](/@api/deki/files/5846/=text-overflow.png)
 
@@ -43,11 +43,11 @@ text-overflow: inherit
 ### Values
 
 - `clip`
-  - : This keyword value indicates to truncate the text at the limit of the [content area](/en/CSS/box_model), therefore the truncation can happen in the middle of a character. To truncate at the transition between two characters, the empty string value (`''`) must be used. The value `clip` is the default for this property.
+  - : This keyword value indicates to truncate the text at the limit of the [content area](/pt-BR/CSS/box_model), therefore the truncation can happen in the middle of a character. To truncate at the transition between two characters, the empty string value (`''`) must be used. The value `clip` is the default for this property.
 - `ellipsis`
-  - : This keyword value indicates to display ellipses (`'…'`, `U+2026 Horizontal Ellipsis`) to represent clipped text. The ellipsis is displayed inside the [content area](/en/CSS/box_model), shortening more the size of the displayed text. If there is not enough place to display ellipsis, they are clipped.
+  - : This keyword value indicates to display ellipses (`'…'`, `U+2026 Horizontal Ellipsis`) to represent clipped text. The ellipsis is displayed inside the [content area](/pt-BR/CSS/box_model), shortening more the size of the displayed text. If there is not enough place to display ellipsis, they are clipped.
 - `<string>` {{ experimental_inline() }}
-  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/en/CSS/box_model), shortening more the size of the displayed text. If there is not enough place to display the string itself, it is clipped.
+  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/pt-BR/CSS/box_model), shortening more the size of the displayed text. If there is not enough place to display the string itself, it is clipped.
 
 ## Examples
 
@@ -524,5 +524,5 @@ A previous version of this interface reached the _Candidate Recommendation_ stat
 
 ## See also
 
-- [CSS Reference](/en/CSS/CSS_Reference) index
+- [CSS Reference](/pt-BR/CSS/CSS_Reference) index
 - Related CSS properties: {{ cssxref("overflow") }}, {{ cssxref("white-space") }}

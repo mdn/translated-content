@@ -1,7 +1,6 @@
 ---
 title: margin-block-start
 slug: Web/CSS/margin-block-start
-translation_of: Web/CSS/margin-block-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -69,11 +68,9 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                           | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-block-start", "margin-block-start")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -185,8 +185,9 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 
     1. [HTML 問題](/zh-TW/docs/Learn/HTML/Howto)
     2. [CSS 問題](/zh-TW/docs/Learn/CSS/Howto)
-    3. [Web 運作方式](/zh-TW/docs/Learn/Common_questions#How_the_Web_works)
-    4. [工具與設定](/zh-TW/docs/Learn/Common_questions#Tools_and_setup)
-    5. [設計與親和度](/zh-TW/docs/Learn/Common_questions#Design_and_accessibility)
+    3. [JavaScript 問題](/zh-TW/docs/Learn/JavaScript/Howto)
+    4. [Web 運作方式](/zh-TW/docs/Learn/Common_questions#How_the_Web_works)
+    5. [工具與設定](/zh-TW/docs/Learn/Common_questions#Tools_and_setup)
+    6. [設計與親和度](/zh-TW/docs/Learn/Common_questions#Design_and_accessibility)
 
 6. [該如何貢獻](/zh-TW/docs/Learn/How_to_contribute)

@@ -1,15 +1,8 @@
 ---
 title: AudioParam.setTargetAtTime()
 slug: Web/API/AudioParam/setTargetAtTime
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - setTargetAtTime
-browser-compat: api.AudioParam.setTargetAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{domxref("AudioParam")}} 인터페이스의 `setTargetAtTime()` 메서드는 `AudioParam` 값에 점진적인 변화의 시작을 예정합니다. 이 메서드는 ADSR 엔벨로프의 decay 혹은 release 부분에 유용합니다.

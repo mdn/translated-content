@@ -32,7 +32,7 @@ Aucune.
 
 ### Exceptions
 
-Cette méthode peut déclencher des exceptions  {{domxref("DOMException")}} :
+Cette méthode peut déclencher des exceptions {{domxref("DOMException")}} :
 
 | Exception                  | Description                                                      |
 | -------------------------- | ---------------------------------------------------------------- |

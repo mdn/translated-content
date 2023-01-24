@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fff0462a1f0cdd479b62808e810e9fd030622c8e
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 **WebGL** (<i lang="en">Web Graphics Library</i>, qu'on pourrait traduire en «&nbsp;bibliothèque de graphismes pour le Web&nbsp;») est une API JavaScript permettant le rendu de graphismes en 2D ou 3D avec de hautes performances, sans avoir à utiliser de plugin. WebGL introduit une API qui est conforme de près à OpenGL ES 2.0 et qui peut être utilisée sur les éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Cette conformité permet à l'API de tirer parti de l'accélération matérielle graphique fournie par l'appareil.
 
@@ -141,7 +141,7 @@ Dans la section qui suit, vous trouverez un ensemble de guide pour apprendre les
 
 - [Site WebGL de Khronos](https://www.khronos.org/webgl/), le site principal du Khronos Group pour WebGL.
 - [<i lang="en">WebGL Fundamentals</i> (en anglais)](https://web.dev/webgl-fundamentals/), un tutoriel pour apprendre les fondamentaux de WebGL.
-- [<i lang="en">Raw WebGL: An introduction to WebGL</i> (en anglais)](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage), une présentation de  Nick Desaulniers qui introduit les bases de WebGL.
+- [<i lang="en">Raw WebGL: An introduction to WebGL</i> (en anglais)](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage), une présentation de Nick Desaulniers qui introduit les bases de WebGL.
 - [Bac à sable WebGL](http://webglplayground.net), un outil en ligne pour créer et partager des projets WebGL, utile pour le prototypage et l'expérimentation.
 - [<i lang="en">WebGL Academy</i> (en anglais)](http://www.webglacademy.com), un éditeur HTML/JavaScript avec des tutoriels pour apprendre les fondamentaux de la programmation WebGL.
 - [Stats WebGL](https://webglreport.com/), un site avec des statistiques quant aux fonctionnalités WebGL des navigateurs sur les différentes plateformes.

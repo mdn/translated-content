@@ -25,10 +25,8 @@ slug: Web/API/CSSVariableReferenceValue/CSSVariableReferenceValue
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                     | 備考     |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSSOM','#cssvariablereferencevalue','CSSVariableReferenceValue')}} | {{Spec2('CSSOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 
-{{Compat("api.CSSVariableReferenceValue")}}
+{{Compat}}

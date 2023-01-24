@@ -1,17 +1,6 @@
 ---
 title: API de Solicitud de Pago
 slug: Web/API/Payment_Request_API
-tags:
-  - API
-  - API de Solicitud de Pago
-  - Comercio
-  - Contexto seguro
-  - Intermediário
-  - Pago
-  - Referencia
-  - Solicitud de Pago
-  - Tarjeta de Crédito
-translation_of: Web/API/Payment_Request_API
 ---
 
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}

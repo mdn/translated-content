@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 [キャンバスの環境](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_usage)をセットアップしましたので、キャンバスに描画する方法の詳細に入ることができます。この記事の終わりまでに、矩形、三角形、直線、円弧、曲線を描く方法を学び、基本的な図形について理解できます。キャンバスにオブジェクトを描く際はパスを扱うことが不可欠ですので、その方法を見ていきます。
 

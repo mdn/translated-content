@@ -21,9 +21,7 @@ let refSpace = xrReferenceSpaceEvent.referenceSpace;
 
 ## 仕様
 
-| 仕様                                                                                                                                         | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#dom-xrreferencespaceevent-referencespace','XRReferenceSpaceEvent.referenceSpace')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,7 +1,6 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
-translation_of: Web/API/SubtleCrypto/digest
 ---
 
 {{APIRef("Web Crypto API")}}
@@ -96,9 +95,7 @@ console.log(digestHex);
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                               | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

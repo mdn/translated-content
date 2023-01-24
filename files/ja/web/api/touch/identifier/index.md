@@ -31,10 +31,7 @@ someElement.addEventListener('touchmove', function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 | 備考     |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Touch Events 2','#dom-touch-identifier')}} | {{Spec2('Touch Events 2')}} | 変更なし |
-| {{SpecName('Touch Events', '#widl-Touch-identifier')}} | {{Spec2('Touch Events')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

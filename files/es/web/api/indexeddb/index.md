@@ -1,7 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.indexedDB
 slug: Web/API/indexedDB
-translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
 
@@ -33,10 +32,7 @@ function openDB() {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Comentario                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}} | {{Spec2('IndexedDB 2')}} | Definido en un `WindowOrWorkerGlobalScope` parcial en la última especificación. |
-| {{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}                 | {{Spec2('IndexedDB')}}     | Definición inicial.                                                             |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

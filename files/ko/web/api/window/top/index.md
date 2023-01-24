@@ -1,14 +1,8 @@
 ---
 title: Window.top
 slug: Web/API/Window/top
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/top
 ---
+
 {{APIRef}}
 
 Returns a reference to the topmost window in the window hierarchy.

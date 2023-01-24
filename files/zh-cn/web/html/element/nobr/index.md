@@ -3,7 +3,7 @@ title: <nobr>
 slug: Web/HTML/Element/nobr
 ---
 
-{{non-standard_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 ## 概述
 

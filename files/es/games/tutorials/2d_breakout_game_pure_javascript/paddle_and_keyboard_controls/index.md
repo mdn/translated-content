@@ -1,7 +1,6 @@
 ---
 title: Control de la pala y el teclado
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado
 ---
 

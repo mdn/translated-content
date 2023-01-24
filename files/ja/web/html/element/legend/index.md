@@ -70,11 +70,7 @@ slug: Web/HTML/Element/legend
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考                |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "forms.html#the-legend-element", "&lt;legend&gt;")}}     | {{Spec2("HTML WHATWG")}} | `legend` 要素を定義 |
-| {{SpecName("HTML5 W3C", "sec-forms.html#the-legend-element", "&lt;legend&gt;")}} | {{Spec2("HTML5 W3C")}}     |                     |
-| {{SpecName("HTML4.01", "interact/forms.html#h-17.10", "&lt;legend&gt;")}}             | {{Spec2("HTML4.01")}}     | 初回定義            |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,7 +1,6 @@
 ---
 title: Firefox 3.5 para desarrolladores
 slug: Mozilla/Firefox/Releases/3.5
-translation_of: Mozilla/Firefox/Releases/3.5
 original_slug: Firefox_3.5_para_desarrolladores
 ---
 
@@ -60,15 +59,15 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
   - : Firefox 3.5 implementa las transformaciones CSS. Mirá [`-moz-transform`](/es/docs/CSS/-moz-transform) y [`-moz-transform-origin`](/es/docs/CSS/-moz-transform-origin) para saber más detalles.
 - [`:nth-child`](/es/docs/CSS/:nth-child)
 
-  [`:nth-last-child`](/en-US/docs/CSS/:nth-last-child)
+  [`:nth-last-child`](/es/docs/CSS/:nth-last-child)
 
-  [`:nth-of-type`](/en-US/docs/CSS/:nth-of-type)
+  [`:nth-of-type`](/es/docs/CSS/:nth-of-type)
 
-  [`:nth-last-of-type`](/en-US/docs/CSS/:nth-last-of-type)
+  [`:nth-last-of-type`](/es/docs/CSS/:nth-last-of-type)
 
-  [`:first-of-type`](/en-US/docs/CSS/:first-of-type)
+  [`:first-of-type`](/es/docs/CSS/:first-of-type)
 
-  [`:last-of-type`](/en-US/docs/CSS/:nth-last-of-type)
+  [`:last-of-type`](/es/docs/CSS/:nth-last-of-type)
 
   [`:only-of-type`](/es/docs/CSS/:only-of-type)
 
@@ -108,7 +107,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 
 - [Controles de acceso cross-site para HTTP](/es/docs/HTTP_access_control)
   - : En Firefox 3.5, es ahora posible en las peticiones HTTP, incluyendo aquellas hechas por [`XMLHttpRequest`](/es/docs/XMLHttpRequest), trabajar entre dominios si el servidor lo permite.
-- [Eventos de progreso para](/es/docs/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)[`XMLHttpRequest`](/en-US/docs/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- [Eventos de progreso para](/es/docs/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)[`XMLHttpRequest`](/es/docs/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
   - : Ahora se ofrecen eventos de progreso para que las extensiones puedan monitorizar el progreso de las peticiones.
 - Soporte `XMLHttpRequest` síncrono mejorado
   - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) y [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) son ahora soportados durante un `XMLHttpRequest` síncrono.
@@ -140,8 +139,8 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 
 ### Otras mejoras
 
-- La propiedad de los nodosde texto [`wholeText`](/en-US/docs/DOM/Text.wholeText) y el método [`replaceWholeText()`](/en-US/docs/DOM/Text.replaceWholeText) han sido implementados.
-- La propiedad [`element.children`](/en-US/docs/DOM/Element.children) ha sido añadida. Retorna una _colección_ de elementos hijo del elemento dado.
+- La propiedad de los nodosde texto [`wholeText`](/es/docs/DOM/Text.wholeText) y el método [`replaceWholeText()`](/es/docs/DOM/Text.replaceWholeText) han sido implementados.
+- La propiedad [`element.children`](/es/docs/DOM/Element.children) ha sido añadida. Retorna una _colección_ de elementos hijo del elemento dado.
 - La propiedad {{domxref("element.contentEditable")}} es ahora soportada, para soportar elementos editables.
 - La API Element Traversal es ahora soportada por el objeto DOM [Element](/es/docs/DOM/element).
 - Los nodos de documento HTML pueden ser ahora clonados usando [`cloneNode()`](/es/docs/DOM/Node.cloneNode).

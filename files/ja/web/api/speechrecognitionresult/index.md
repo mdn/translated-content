@@ -21,7 +21,7 @@ The **`SpeechRecognitionResult`** interface of the [Web Speech API](/ja/docs/Web
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = function(event) {
@@ -41,9 +41,7 @@ recognition.onresult = function(event) {
 
 ## Specifications
 
-| Specification                                                                                            | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Speech API', '#speechreco-result', 'SpeechRecognitionResult')}} | {{Spec2('Web Speech API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

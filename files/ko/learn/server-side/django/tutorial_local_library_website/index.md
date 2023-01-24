@@ -2,6 +2,7 @@
 title: 'Django 튜토리얼: 지역 도서관 웹사이트'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
 이번은 실전 튜토리얼 시리즈의 첫번째 파트로서 당신이 배울 내용을 설명하고, 이어지는 튜토리얼 시리즈에서 개발하고 개선시켜볼 "지역 도서관" 예제 웹사이트에 대한 개요를 제공한다.

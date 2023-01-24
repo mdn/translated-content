@@ -88,7 +88,7 @@ This type of field is set with the value `email` for the {{htmlattrxref("type","
 
 When this `type` is used, the user is required to type a valid e-mail address into the field; any other content causes the browser to display an error when the form is submitted. Note that this is client-side error validation, performed by the browser:
 
-![An invalid email input showing the message Please enter an email address.](https://mdn.mozillademos.org/files/14781/email-invalid.png)
+![An invalid email input showing the message Please enter an email address.](email-invalid.png)
 
 It's also possible to let the user type several e-mail addresses into the same input (separated by commas) by including the {{htmlattrxref("multiple","input")}} attribute.
 
@@ -257,7 +257,7 @@ Once a data list is affiliated with a form widget, its options are used to auto-
 </datalist>
 ```
 
-> **Nota:** According to [the HTML specification](http://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.
+> **Nota:** According to [the HTML specification](https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.
 
 ![Screenshots of datalist on several platforms.](/files/4593/all-datalist.png)
 

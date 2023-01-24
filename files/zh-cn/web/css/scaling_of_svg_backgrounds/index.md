@@ -26,33 +26,33 @@ slug: Web/CSS/Scaling_of_SVG_backgrounds
 
 下面这个图片既没有尺寸也没有比例。这种情况不会关心它的尺寸也不关心它的长宽比例。无论你的屏幕尺寸和长宽比如何，这都是一个很好的渐变桌面背景。
 
-![no-dimensions-or-ratio.png](/@api/deki/files/5860/=no-dimensions-or-ratio.png)
+![no-dimensions-or-ratio.png](no-dimensions-or-ratio.png)
 
-[SVG 图片源码](/@api/deki/files/5864/=no-dimensions-or-ratio.svg)
+[SVG 源码](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg)
 
 ### 指定一个维度的尺寸，但无固定比例
 
 这个图片指定了 100px 的宽但是没有高度也没有固定的比例。我们可以说这是一个可以在一条街道上无线延伸的壁纸。
 
-![100px-wide-no-height-or-ratio.png](/@api/deki/files/5858/=100px-wide-no-height-or-ratio.png)
+![100px-wide-no-height-or-ratio.png](100px-wide-no-height-or-ratio.png)
 
-[SVG 图片源码](/@api/deki/files/5863/=100px-wide-no-height-or-ratio.svg)
+[SVG 源码](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg)
 
 ### 指定一个维度的尺寸，有固定比例
 
 这个图片指定了 100px 的高但没有宽。同时指定了一个 3:4 的比例，除非是故意放大到不成比例的尺寸（也就是说，通过显式指定宽度和高度到不是这个比例）
 
-![100px-height-3x4-ratio.png](/@api/deki/files/5857/=100px-height-3x4-ratio.png)
+![100px-height-3x4-ratio.png](100px-height-3x4-ratio.png)
 
-[SVG 图片源码](/@api/deki/files/5862/=100px-height-3x4-ratio.svg)
+[SVG 源码](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg)
 
 ### 无宽高，有固定比例
 
 这个图片既没有指定高度也没有指定宽度。它指定的是 1:1 的固定比例。就像软件的图标一样。它总是保持正方形，而且可以用于任何尺寸，例如 32x32，128x128，和 512x512。
 
-![no-dimensions-1x1-ratio.png](/@api/deki/files/5859/=no-dimensions-1x1-ratio.png)
+![no-dimensions-1x1-ratio.png](no-dimensions-1x1-ratio.png)
 
-[SVG 图片源码](/@api/deki/files/5861/=no-dimensions-1x1-ratio.svg)
+[SVG 源码](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg)
 
 ## 缩放示例
 
@@ -75,7 +75,7 @@ background-size: 125px 175px;
 
 The rendered output would look like this:
 
-![fixed-no-dimensions-or-ratio.png](/@api/deki/files/5868/=fixed-no-dimensions-or-ratio.png)
+![fixed-no-dimensions-or-ratio.png](fixed-no-dimensions-or-ratio.png)
 
 #### Source: One specified dimension, no intrinsic ratio
 
@@ -88,7 +88,7 @@ background-size: 250px 150px;
 
 The rendered output would look like this:
 
-![fixed-100px-wide-no-height-or-ratio.png](/@api/deki/files/5866/=fixed-100px-wide-no-height-or-ratio.png)
+![fixed-100px-wide-no-height-or-ratio.png](fixed-100px-wide-no-height-or-ratio.png)
 
 #### Source: One specified dimension with intrinsic ratio
 
@@ -101,7 +101,7 @@ background-size: 275px 125px;
 
 The rendered output would look like this:
 
-![fixed-100px-height-3x4-ratio.png](/@api/deki/files/5865/=fixed-100px-height-3x4-ratio.png)
+![fixed-100px-height-3x4-ratio.png](fixed-100px-height-3x4-ratio.png)
 
 #### Source: No specified width or height with intrinsic ratio
 
@@ -114,7 +114,7 @@ background-size: 250px 100px;
 
 The rendered output would look like this:
 
-![fixed-no-dimensions-1x1-ratio.png](/@api/deki/files/5867/=fixed-no-dimensions-1x1-ratio.png)
+![fixed-no-dimensions-1x1-ratio.png](fixed-no-dimensions-1x1-ratio.png)
 
 ### 使用 contain 或者 cover
 
@@ -133,7 +133,7 @@ background-size: contain;
 
 The rendered output looks like this:
 
-![no-dimensions-or-ratio-contain.png](/@api/deki/files/5874/=no-dimensions-or-ratio-contain.png)
+![no-dimensions-or-ratio-contain.png](no-dimensions-or-ratio-contain.png)
 
 #### Source: One specified dimension, no intrinsic ratio
 
@@ -146,7 +146,7 @@ background-size: contain;
 
 The rendered output looks like this:
 
-![100px-wide-no-height-or-ratio-contain.png](/@api/deki/files/5871/=100px-wide-no-height-or-ratio-contain.png)
+![100px-wide-no-height-or-ratio-contain.png](100px-wide-no-height-or-ratio-contain.png)
 
 #### Source: One specified dimension with intrinsic ratio
 
@@ -161,7 +161,7 @@ background-size: contain;
 
 The rendered output looks like this:
 
-![100px-height-3x4-ratio-contain.png](/@api/deki/files/5869/=100px-height-3x4-ratio-contain.png)
+![100px-height-3x4-ratio-contain.png](100px-height-3x4-ratio-contain.png)
 
 Notice how the entire image is rendered, fitting as best as possible into the box without clipping any of it away.
 
@@ -174,7 +174,7 @@ background-size: cover;
 
 The rendered output looks like this:
 
-![100px-height-3x4-ratio-cover.png](/@api/deki/files/5870/=100px-height-3x4-ratio-cover.png)
+![100px-height-3x4-ratio-cover.png](100px-height-3x4-ratio-cover.png)
 
 Here, the 3:4 ratio is preserved while still stretching the image to fill the entire box. That causes the bottom of the image to be clipped away.
 
@@ -191,7 +191,7 @@ background-size: contain;
 
 The rendered output looks like this:
 
-![no-dimensions-1x1-ratio-contain.png](/@api/deki/files/5872/=no-dimensions-1x1-ratio-contain.png)
+![no-dimensions-1x1-ratio-contain.png](no-dimensions-1x1-ratio-contain.png)
 
 Notice that the image is sized to fit the smallest dimension while preserving the 1:1 aspect ratio.
 
@@ -204,7 +204,7 @@ background-size: cover;
 
 The rendered output looks like this:
 
-![no-dimensions-1x1-ratio-cover.png](/@api/deki/files/5873/=no-dimensions-1x1-ratio-cover.png)
+![no-dimensions-1x1-ratio-cover.png](no-dimensions-1x1-ratio-cover.png)
 
 Here, the image is sized so that it fills the largest dimension. The 1:1 aspect ratio has been preserved, although with this source image, that can be difficult to see.
 
@@ -223,7 +223,7 @@ background-size: auto auto;
 
 The rendered output looks like this:
 
-![auto-no-dimensions-or-ratio.png](/@api/deki/files/5878/=auto-no-dimensions-or-ratio.png)
+![auto-no-dimensions-or-ratio.png](auto-no-dimensions-or-ratio.png)
 
 #### Source: One dimension and no intrinsic ratio
 
@@ -236,7 +236,7 @@ background-size: auto auto;
 
 The rendered output looks like this:
 
-![auto-100px-wide-no-height-or-ratio.png](/@api/deki/files/5876/=auto-100px-wide-no-height-or-ratio.png)
+![auto-100px-wide-no-height-or-ratio.png](auto-100px-wide-no-height-or-ratio.png)
 
 Note here that the width, which is specified in the source SVG at 100 pixels, is obeyed, while the height fills the background area since it's not specified (either explicitly or by an intrinsic ratio).
 
@@ -251,7 +251,7 @@ background-size: auto auto;
 
 The rendered output looks like this:
 
-![auto-100px-height-3x4-ratio.png](/@api/deki/files/5875/=auto-100px-height-3x4-ratio.png)
+![auto-100px-height-3x4-ratio.png](auto-100px-height-3x4-ratio.png)
 
 Since this image has an explicit 100 pixel height, the 3:4 ratio explicitly sets its width at 75 pixels, so that's how it's rendered in the `auto` case.
 
@@ -266,7 +266,7 @@ background-size: auto auto;
 
 The rendered output looks like this:
 
-![auto-no-dimensions-1x1-ratio.png](/@api/deki/files/5877/=auto-no-dimensions-1x1-ratio.png)
+![auto-no-dimensions-1x1-ratio.png](auto-no-dimensions-1x1-ratio.png)
 
 ### Using "auto" and one specific length
 
@@ -281,7 +281,7 @@ background: url(no-dimensions-or-ratio.svg);
 background-size: auto 150px;
 ```
 
-![1auto-no-dimensions-or-ratio.png](/@api/deki/files/5881/=1auto-no-dimensions-or-ratio.png)
+![1auto-no-dimensions-or-ratio.png](1auto-no-dimensions-or-ratio.png)
 
 Here, the width is determined using the background area's width per rule 4, while the height is the 140px specified in the CSS.
 
@@ -294,7 +294,7 @@ background: url(100px-wide-no-height-or-ratio.svg);
 background-size: 200px auto;
 ```
 
-![100px-wide-no-height-or-ratio-length-auto.png](/@api/deki/files/5883/=100px-wide-no-height-or-ratio-length-auto.png)
+![100px-wide-no-height-or-ratio-length-auto.png](100px-wide-no-height-or-ratio-length-auto.png)
 
 Here, the 200px specified in the CSS overrides the 100px width specified in the SVG, per rule 1. Since there's no intrinsic ratio or height provided, `auto` selects the height of the background area as the height for the rendered image.
 
@@ -303,7 +303,7 @@ background: url(100px-wide-no-height-or-ratio.svg);
 background-size: auto 125px;
 ```
 
-![100px-wide-no-height-or-ratio-auto-length.png](/@api/deki/files/5882/=100px-wide-no-height-or-ratio-auto-length.png)
+![100px-wide-no-height-or-ratio-auto-length.png](100px-wide-no-height-or-ratio-auto-length.png)
 
 In this case, the width is specified as auto in the CSS, so the 100px width specified in the SVG is selected, per rule 3. The height is set at 125px in the CSS, so that is selected per rule 1.
 
@@ -316,7 +316,7 @@ background: url(100px-height-3x4-ratio.svg);
 background-size: 150px auto;
 ```
 
-![1auto-100px-height-3x4-ratio.png](/@api/deki/files/5879/=1auto-100px-height-3x4-ratio.png)
+![1auto-100px-height-3x4-ratio.png](1auto-100px-height-3x4-ratio.png)
 
 In this case, we've overridden the height of the image in the CSS to be 150px, so rule 1 is applied. The intrinsic 3:4 aspect ratio then determines the width for the `auto` case.
 
@@ -329,7 +329,7 @@ background: url(no-dimensions-1x1-ratio.svg);
 background-size: 150px auto;
 ```
 
-![1auto-no-dimensions-1x1-ratio.png](/@api/deki/files/5880/=1auto-no-dimensions-1x1-ratio.png)
+![1auto-no-dimensions-1x1-ratio.png](1auto-no-dimensions-1x1-ratio.png)
 
 The width is set by the CSS to 150px. The `auto` value for the height is computed using that width and the 1:1 aspect ratio to be 150px as well, resulting in the image above.
 

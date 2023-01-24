@@ -1,13 +1,6 @@
 ---
 title: 'Prueba tus habilidades: controles HTML5'
 slug: Learn/Forms/Test_your_skills:_HTML5_controls
-tags:
-  - Aprendizaje
-  - Evaluación
-  - Formulário
-  - HTML5
-  - Principiante
-translation_of: Learn/Forms/Test_your_skills:_HTML5_controls
 original_slug: Learn/HTML/Forms/Prueba_tus_habilidades:_controles_HTML5
 ---
 
@@ -32,7 +25,7 @@ Intenta actualizar el código en vivo más abajo para retrear el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el código inicial de esta tarea](/es/docshttps://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **Nota:** [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Controles HTML5 2
 

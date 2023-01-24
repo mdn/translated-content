@@ -8,7 +8,8 @@ tags:
 translation_of: Games/Introduction
 original_slug: Games/Ввод
 ---
-{{GamesSidebar}}{{IncludeSubnav("/ru/docs/Games")}}
+
+{{GamesSidebar}}
 
 Современный web позволяет не только передавать различную информацию, но и создавать интерактивный контент. Например, потрясающие, высококачественные игры.
 

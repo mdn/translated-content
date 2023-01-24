@@ -13,7 +13,7 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 
 这有一种我们认为足够稳定和可靠的方法推荐给您。
 
-### HTML 内容
+### HTML
 
 首先，让我们定义一个我们想要添加动画的元素{{HTMLElement("div")}} 以及一个“播放”或“重播”动画的按钮。
 
@@ -24,7 +24,7 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 <div class="runButton">Click me to run the animation</div>
 ```
 
-### CSS 内容
+### CSS
 
 现在我们将使用 CSS 定义动画本身。为了简洁，有些并不重要的 CSS（如“播放”按钮的样式）并没有显示在这里。
 
@@ -65,7 +65,7 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 
 注意，正因为如此，这个 box 在这里不触发任何动画效果，因此他不会动起来。
 
-### JavaScript 内容
+### JavaScript
 
 接下来我们将看看 JavaScript 的部分如何工作。这里关键的部分在 `play()` 方法中，他在用户点击“播放”按钮时被触发。
 
@@ -94,11 +94,11 @@ function play() {
 document.querySelector(".runButton").addEventListener("click", play, false);
 ```
 
-### 结论
+### 结果
 
-{{ EmbedLiveSample('Run_an_animation_again', 320, 160) }}
+{{ EmbedLiveSample('重新播放动画', 320, 160) }}
 
-## 另见
+## 参见
 
 - [Using CSS transitions](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
 - {{domxref("Window.requestAnimationFrame()")}}

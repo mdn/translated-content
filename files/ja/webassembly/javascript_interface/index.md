@@ -27,7 +27,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 - [`WebAssembly.Instance()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance)
   - : ステートフルで、実行可能な [WebAssembly.Module](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) のインスタンスです。
 - [`WebAssembly.LinkError()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError)
-  - :  (関数開始後の[トラップ](https://webassembly.org/docs/semantics/#traps)ではなく) モジュールの初期化時に発生したエラーを示します。
+  - : (関数開始後の[トラップ](https://webassembly.org/docs/semantics/#traps)ではなく) モジュールの初期化時に発生したエラーを示します。
 - [`WebAssembly.Memory()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory)
   - : {{jsxref("WebAssembly/Memory/buffer","buffer")}} プロパティが可変長の [ArrayBuffer](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) であり、これが WebAssembly の `Instance` からアクセス可能なメモリーのバイト列を保持しています。
 - [`WebAssembly.Module()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module)

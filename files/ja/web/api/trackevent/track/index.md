@@ -1,29 +1,24 @@
 ---
 title: TrackEvent.track
 slug: Web/API/TrackEvent/track
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("TrackEvent")}} インターフェイスの読み取り専用の **`track`** プロパティは、イベントが適用されるメディアトラックオブジェクトを指定します。 これは {{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、または {{domxref("TextTrack")}} のオブジェクトになります。
+**`track`** は {{domxref("TrackEvent")}} インターフェイスの読み取り専用プロパティで、イベントが適用されるメディアトラックオブジェクトを指定します。
 
-## 構文
+メディアトラックは {{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、{{domxref("TextTrack")}} のいずれかのオブジェクトになります。
 
-```
-track = TrackEvent.track;
-```
+## 値
 
-### 値
+トラックで表されるメディアの種類に応じて、{{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、{{domxref("TextTrack")}} のいずれかの型のオブジェクトです。 これは、イベントが適用されるトラックを識別します。
 
-トラックで表されるメディアの種類に応じて、{{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、または {{domxref("TextTrack")}} のいずれかの種類のオブジェクトです。 これは、イベントが適用されるトラックを識別します。
+## 仕様書
 
-## 仕様
-
-| 仕様                                                                                                                         | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "media.html#dom-trackevent-track", "TrackEvent.track")}}                 | {{Spec2('HTML WHATWG')}} | 初期定義 |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#dom-trackevent-track", "TrackEvent.track")}} | {{Spec2('HTML5 W3C')}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.TrackEvent.track")}}
+{{Compat}}

@@ -1,14 +1,7 @@
 ---
 title: draggable
 slug: Web/HTML/Global_attributes/draggable
-tags:
-  - Atributos globales
-  - Experimental
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/draggable
 original_slug: Web/HTML/Atributos_Globales/draggable
-browser-compat: html.global_elements.draggable
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}

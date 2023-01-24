@@ -1,17 +1,12 @@
 ---
 title: Introduccion para desarrollo de juegos para la Web
 slug: Games/Introduction
-tags:
-  - Firefox OS
-  - juegos
-  - moviles
-translation_of: Games/Introduction
 original_slug: Games/Introduccion
 ---
 
 {{GamesSidebar}}
 
-La Web rapidamente se ha convertido en una plataforma viable no solo para crear impresionantes juegos de alta calidad, sino también para distruibuirlos.El rango de juegos que pueden ser creados está a la par tanto de los juegos de escritorio como de SO nativos (Android, iOS). Con tecnologias Web modernas y un navegador reciente es totalmente posible hacer juegos de primera categoria para la Web. Y no estamos hablando sobre simples juegos de cartas o juegos sociales multijugadores que en tiempos anteriores se podian hacer con Flash®. Estamos hablando sobre juegos 3D _shooters_ de accion, RPGs, y más. Gracias a las masivas mejoras de rendimiento en [JavaScript](/en-US/docs/JavaScript) con tecnologia de compilación _just-in-time_ y nuevas APIs, se pueden construir juegos que pueden correr en el navegador (o en dispositivos [HTML5](/en-US/docs/HTML/HTML5) como [Firefox OS](/en-US/docs/Mozilla/Firefox_OS)) sin problemas.
+La Web rapidamente se ha convertido en una plataforma viable no solo para crear impresionantes juegos de alta calidad, sino también para distruibuirlos.El rango de juegos que pueden ser creados está a la par tanto de los juegos de escritorio como de SO nativos (Android, iOS). Con tecnologias Web modernas y un navegador reciente es totalmente posible hacer juegos de primera categoria para la Web. Y no estamos hablando sobre simples juegos de cartas o juegos sociales multijugadores que en tiempos anteriores se podian hacer con Flash®. Estamos hablando sobre juegos 3D _shooters_ de accion, RPGs, y más. Gracias a las masivas mejoras de rendimiento en [JavaScript](/es/docs/JavaScript) con tecnologia de compilación _just-in-time_ y nuevas APIs, se pueden construir juegos que pueden correr en el navegador (o en dispositivos [HTML5](/es/docs/HTML/HTML5) como [Firefox OS](/es/docs/Mozilla/Firefox_OS)) sin problemas.
 
 ## La plataforma de juegos HTML5
 
@@ -21,7 +16,7 @@ Puedes pensar en la Web como una mejor opción de plataforma para desarrollar tu
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Audio**          | [Web Audio API](/es/docs/Web_Audio_API)                                                                                                                                                                                                                                                                                                                                                                           |
 | **Graficos**       | [WebGL](/es/docs/WebGL) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                                                                                                                                                               |
-| **Entrada**        | [Touch events](/es/docs/DOM/Touch_events), [Gamepad API](/en-US/docs/API/Gamepad/Using_Gamepad_API), device sensors, [WebRTC](/es/docs/Web/API/WebRTC_API), [Full Screen API](/es/docs/DOM/Using_fullscreen_mode), [Pointer Lock API](/es/docs/WebAPI/Pointer_Lock) |
+| **Entrada**        | [Touch events](/es/docs/DOM/Touch_events), [Gamepad API](/es/docs/API/Gamepad/Using_Gamepad_API), device sensors, [WebRTC](/es/docs/Web/API/WebRTC_API), [Full Screen API](/es/docs/DOM/Using_fullscreen_mode), [Pointer Lock API](/es/docs/WebAPI/Pointer_Lock) |
 | **Lenguaje**       | [JavaScript](/es/docs/JavaScript) (o C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar a JavaScript)                                                                                                                                                                                                                                                                               |
 | **Redes**          | [WebRTC](/es/docs/WebRTC) and/or [WebSockets](/es/docs/WebSockets)                                                                                                                                                                                                                                                                                                                              |
 | **Almacenamiento** | [IndexedDB](/es/docs/IndexedDB) o la "nube"                                                                                                                                                                                                                                                                                                                                                                           |

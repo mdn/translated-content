@@ -90,9 +90,10 @@
 /ru/docs/Glossary/Bootstrap	/ru/docs/orphaned/Glossary/Bootstrap
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
 /ru/docs/Glossary/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
+/ru/docs/Glossary/Empty_element	/ru/docs/Glossary/Void_element
 /ru/docs/Glossary/Symbol	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
 /ru/docs/Glossary/jQuery	/ru/docs/orphaned/Glossary/jQuery
-/ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Empty_element
+/ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Void_element
 /ru/docs/HTML	/ru/docs/Web/HTML
 /ru/docs/HTML/Canvas	/ru/docs/Web/API/Canvas_API
 /ru/docs/HTML/Canvas/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
@@ -283,6 +284,7 @@
 /ru/docs/MDN/Contribute/Creating_and_editing_pages	/ru/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ru/docs/MDN/Contribute/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Contribute/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
+/ru/docs/MDN/Contribute/Howto	/ru/docs/conflicting/MDN/Contribute
 /ru/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	/ru/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 /ru/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/ru/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ru/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/ru/docs/conflicting/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -292,15 +294,19 @@
 /ru/docs/MDN/Contribute/Howto/Добавить_или_обновить_данные_о_браузерной_совместимости	/ru/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 /ru/docs/MDN/Contribute/Howto/Создай_интерактивное_упражнение_для_помощи_в_изучении_веба	/ru/docs/conflicting/MDN/Writing_guidelines/Page_structures/Live_samples
 /ru/docs/MDN/Contribute/Open_source_etiquette	/ru/docs/MDN/Community/Open_source_etiquette
-/ru/docs/MDN/Contribute/Tools	/ru/docs/MDN/Tools
+/ru/docs/MDN/Contribute/Tools	/ru/docs/orphaned/MDN/Tools
 /ru/docs/MDN/Contribute/Процессы	/ru/docs/MDN/Contribute/Processes
 /ru/docs/MDN/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
 /ru/docs/MDN/Guidelines	/ru/docs/conflicting/MDN/Writing_guidelines
-/ru/docs/MDN/Kuma	/ru/docs/MDN/Yari
-/ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/ru/docs/MDN/Tools/KumaScript/Troubleshooting
+/ru/docs/MDN/Kuma	/ru/docs/orphaned/MDN/Yari
+/ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/ru/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
-/ru/docs/MDN/Tools/URL-suffix	/ru/docs/MDN/Tools/Unsupported_GET_API
+/ru/docs/MDN/Tools	/ru/docs/orphaned/MDN/Tools
+/ru/docs/MDN/Tools/KumaScript/Troubleshooting	/ru/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/ru/docs/MDN/Tools/URL-suffix	/ru/docs/conflicting/MDN
+/ru/docs/MDN/Tools/Unsupported_GET_API	/ru/docs/conflicting/MDN
+/ru/docs/MDN/Yari	/ru/docs/orphaned/MDN/Yari
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
@@ -389,6 +395,7 @@
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_текста	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_фигур	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ru/docs/Web/API/Canvas_API/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
+/ru/docs/Web/API/Constraint_validation	/ru/docs/conflicting/Learn/Forms/Form_validation
 /ru/docs/Web/API/Coordinates	/ru/docs/Web/API/GeolocationCoordinates
 /ru/docs/Web/API/DOMString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
 /ru/docs/Web/API/Document.querySelectorAll	/ru/docs/Web/API/Document/querySelectorAll
@@ -536,6 +543,7 @@
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 /ru/docs/Web/CSS/:blank	/ru/docs/Web/CSS/:-moz-only-whitespace
 /ru/docs/Web/CSS/:host()	/ru/docs/Web/CSS/:host_function
+/ru/docs/Web/CSS/@viewport	/ru/docs/conflicting/Web/CSS
 /ru/docs/Web/CSS/Adjacent_sibling_selectors	/ru/docs/Web/CSS/Adjacent_sibling_combinator
 /ru/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/ru/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy	/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations
@@ -627,6 +635,7 @@
 /ru/docs/Web/Guide/HTML/Canvas_tutorial/Рисование_фигур	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ru/docs/Web/Guide/HTML/Drag_and_drop	/ru/docs/Web/API/HTML_Drag_and_Drop_API
 /ru/docs/Web/Guide/HTML/Drag_and_drop/Drag_operations	/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
+/ru/docs/Web/Guide/HTML/Editable_content	/ru/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /ru/docs/Web/Guide/HTML/Forms	/ru/docs/Learn/Forms
 /ru/docs/Web/Guide/HTML/Introduction	/ru/docs/Learn/HTML/Introduction_to_HTML
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
@@ -708,6 +717,7 @@
 /ru/docs/Web/HTTP/Куки	/ru/docs/Web/HTTP/Cookies
 /ru/docs/Web/HTTP/Кэширование	/ru/docs/Web/HTTP/Caching
 /ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ru/docs/Web/JavaScript/Language_Overview
+/ru/docs/Web/JavaScript/About_JavaScript	/ru/docs/conflicting/Web/JavaScript
 /ru/docs/Web/JavaScript/Guide/Closures	/ru/docs/Web/JavaScript/Closures
 /ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/ru/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ru/docs/Web/JavaScript/Guide/EventLoop	/ru/docs/Web/JavaScript/EventLoop
@@ -729,6 +739,7 @@
 /ru/docs/Web/JavaScript/Guide_ru/Замыкания	/ru/docs/Web/JavaScript/Closures
 /ru/docs/Web/JavaScript/JavaScript_шеллы	/ru/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ru/docs/Web/JavaScript/Language_Resources	/ru/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/ru/docs/Web/JavaScript/Reference/About	/ru/docs/conflicting/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields
 /ru/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
@@ -773,6 +784,8 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/null	/ru/docs/Web/JavaScript/Reference/Operators/null
 /ru/docs/Web/JavaScript/Reference/Global_Objects/uneval	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects
 /ru/docs/Web/JavaScript/Reference/Methods_Index	/ru/docs/Web/JavaScript/Reference
+/ru/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment	/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
+/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator	/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /ru/docs/Web/JavaScript/Reference/Operators/Spread_operator	/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /ru/docs/Web/JavaScript/Reference/Operators/Группировка	/ru/docs/Web/JavaScript/Reference/Operators/Grouping
 /ru/docs/Web/JavaScript/Reference/Operators/Оператор_Запятая	/ru/docs/Web/JavaScript/Reference/Operators/Comma_Operator
@@ -781,10 +794,11 @@
 /ru/docs/Web/JavaScript/Reference/Properties_Index	/ru/docs/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Reference/Statements/import.meta	/ru/docs/Web/JavaScript/Reference/Operators/import.meta
 /ru/docs/Web/JavaScript/Reference/Statements/Блок	/ru/docs/Web/JavaScript/Reference/Statements/block
+/ru/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ru/docs/conflicting/Web/JavaScript/Reference/Strict_mode
 /ru/docs/Web/JavaScript/Reference/template_strings	/ru/docs/Web/JavaScript/Reference/Template_literals
-/ru/docs/Web/JavaScript/Reference/Об	/ru/docs/Web/JavaScript/Reference/About
+/ru/docs/Web/JavaScript/Reference/Об	/ru/docs/conflicting/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Shells	/ru/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
-/ru/docs/Web/JavaScript/О_JavaScript	/ru/docs/Web/JavaScript/About_JavaScript
+/ru/docs/Web/JavaScript/О_JavaScript	/ru/docs/conflicting/Web/JavaScript
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5	/ru/docs/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5/Methods_Index	/ru/docs/Web/JavaScript/Reference
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5/Operators	/ru/docs/Web/JavaScript/Reference/Operators
@@ -954,7 +968,7 @@
 /ru/docs/Словарь/Dynamic_programming_language	/ru/docs/orphaned/Glossary/Dynamic_programming_language
 /ru/docs/Словарь/ECMA	/ru/docs/Glossary/ECMA
 /ru/docs/Словарь/ECMAScript	/ru/docs/Glossary/ECMAScript
-/ru/docs/Словарь/Empty_element	/ru/docs/Glossary/Empty_element
+/ru/docs/Словарь/Empty_element	/ru/docs/Glossary/Void_element
 /ru/docs/Словарь/Encapsulation	/ru/docs/Glossary/Encapsulation
 /ru/docs/Словарь/Entity_header	/ru/docs/Glossary/Entity_header
 /ru/docs/Словарь/Expando	/ru/docs/Glossary/Expando
@@ -1107,7 +1121,7 @@
 /ru/docs/Словарь/Тег	/ru/docs/Glossary/Tag
 /ru/docs/Словарь/Функция	/ru/docs/Glossary/Function
 /ru/docs/Словарь/Элемент	/ru/docs/Glossary/Element
-/ru/docs/Словарь/пустой_элемент	/ru/docs/Glossary/Empty_element
+/ru/docs/Словарь/пустой_элемент	/ru/docs/Glossary/Void_element
 /ru/docs/Словарь/функция_обратного_вызова	/ru/docs/Glossary/Callback_function
 /ru/docs/Словарь/хеш	/ru/docs/Glossary/hash
 /ru/docs/Справочник_по_JavaScript_1.5	/ru/docs/Web/JavaScript/Reference

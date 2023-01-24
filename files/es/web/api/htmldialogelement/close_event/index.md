@@ -1,10 +1,6 @@
 ---
 title: GlobalEventHandlers.onclose
 slug: Web/API/HTMLDialogElement/close_event
-tags:
-  - Propiedad
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/onclose
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
 
@@ -30,10 +26,8 @@ window.onclose = resetThatServerThing;
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onclose','onclose')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 
-{{Compat("api.GlobalEventHandlers.onclose")}}
+{{Compat}}

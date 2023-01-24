@@ -62,9 +62,7 @@ while (currentNode = nodeIterator.nextNode()) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-createnodeiterator', 'document.createNodeIterator')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

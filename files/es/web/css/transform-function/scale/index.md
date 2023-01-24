@@ -1,20 +1,12 @@
 ---
 title: scale()
 slug: Web/CSS/transform-function/scale
-tags:
-  - CSS Scale
-  - scale()
-  - scaleX()
-  - scaleY()
-translation_of: Web/CSS/transform-function/scale()
 original_slug: Web/CSS/transform-function/scale()
 ---
 
 {{CSSRef}}
 
 La función CSS `scale()` define una transformación que modifica el tamaño de un elemento en el plano 2D. Debido a que la cantidad de escalado está definida por un vector, puede cambiar el tamaño de la dimensiones horizontal y vertical a diferentes escalas. Su resultado es un dato tipo {{cssxref("transform-function")}}.
-
-![](https://mdn.mozillademos.org/files/12115/scale.png)
 
 Esta transformación de escalado se caracteriza por un vector bidimensional. Sus coordenadas definen cuanto escalamiento se realiza en cada dirección. Sí ambas coordenadas son iguales, la escala es uniforme (isotrópica) y la relación de aspecto del elemento se conserva (esta es una transformación homotética).
 
@@ -162,10 +154,10 @@ div {
 
 ## Compatibilidad con navegadores
 
-Please see the [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
+Please see the [`<transform-function>`](/es/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
 
 ## También puede ver
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d)
+- [`scale3d()`](/es/docs/Web/CSS/transform-function/scale3d)

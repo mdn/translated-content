@@ -348,7 +348,7 @@ Quit the server with CONTROL-C.
 
 Как только сервер запущен, вы можете посмотреть сайт, перейдя по следующему адресу в вашем браузере: `http://127.0.0.1:8000/`. Вы должны увидеть, что сайт выглядит следующим образом:
 
-![Django Skeleton App Homepage](https://mdn.mozillademos.org/files/15728/Django_Skeleton_Website_Homepage.png)
+![Django Skeleton App Homepage](django_skeleton_website_homepage.png)
 
 ## Заключение
 

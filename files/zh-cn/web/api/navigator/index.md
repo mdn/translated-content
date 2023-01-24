@@ -127,13 +127,6 @@ _Doesn't inherit any method, but implements those defined in {{domxref("Navigato
 - {{domxref("Navigator.vibrate()")}}
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
 
-### 非标准方法
-
-- {{domxref("window.navigator.mozIsLocallyAvailable", "navigator.mozIsLocallyAvailable")}} {{non-standard_inline}}
-  - : Lets code check to see if the document at a given URI is available without using the network.
-- {{domxref("window.navigator.mozPay", "navigator.mozPay")}} {{non-standard_inline}}
-  - : Allows in-app payment.
-
 ## 规范
 
 {{Specifications}}

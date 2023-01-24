@@ -42,9 +42,7 @@ Symbol.keyFor(Symbol.iterator) // undefined
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.keyfor', 'Symbol.keyFor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,7 +1,6 @@
 ---
 title: 'CSP: img-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
 ---
 
 {{HTTPSidebar}}
@@ -65,7 +64,7 @@ Content-Security-Policy: img-src https://example.com/
 
 ## Browser compatibility
 
-{{Compat("http.headers.csp.img-src")}}
+{{Compat}}
 
 ## See also
 

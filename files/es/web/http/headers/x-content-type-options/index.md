@@ -1,12 +1,6 @@
 ---
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
-tags:
-  - Encabezado de respuesta
-  - Encabezados HTTP
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
 
 {{HTTPSidebar}}
@@ -38,9 +32,7 @@ X-Content-Type-Options: nosniff
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                   | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("Fetch", "#x-content-type-options-header", "X-Content-Type-Options definition")}} | {{Spec2("Fetch")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

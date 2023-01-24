@@ -88,5 +88,5 @@ Internet Explorer et Edge, dans les versions antérieures à la version 17, ne d
 - [Utiliser `requestAnimationFrame()` pour des animations intelligentes, un billet en anglais de Paul Irish](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/)
 - [Les animations en JavaScript&nbsp;: de `setInterval()` à `requestAnimationFrame()`](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)
 - [TestUFO&nbsp;: testez les déviations temporelles de votre navigateur sur `requestAnimationFrame()`](https://www.testufo.com/#test=animation-time-graph)
-- [Une précision inférieure à la milliseconde pour l'API  `requestAnimationFrame()`, un billet en anglais](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
+- [Une précision inférieure à la milliseconde pour l'API `requestAnimationFrame()`, un billet en anglais](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
 - [Une prothèse d'émulation (<i lang="en">polyfill</i>)](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

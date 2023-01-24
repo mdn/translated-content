@@ -1,16 +1,8 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
-tags:
-  - API
-  - DOM
-  - History
-  - History API
-  - Method
-  - Reference
-  - Web
-translation_of: Web/API/History/pushState
 ---
+
 {{APIRef("DOM")}}
 
 [HTML](/ko/docs/Web/HTML) 문서에서, **`history.pushState()`** 메서드는 브라우저의 세션 기록 스택에 상태를 추가합니다.

@@ -1,13 +1,6 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.set
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
 
 {{JSRef}}
@@ -40,7 +33,7 @@ new Proxy(target, {
   - : 할당이 지시된 원래 객체입니다. 이것은 일반적으로 프록시 자체입니다.
     그러나 `set()` 처리기는 프로토타입 체인이나 다양한 다른 방법 등을 통해
     간접적으로 호출할 수도 있습니다.
-  
+
     예를 들어, 스크립트가 `obj.name = "jen"`을 수행하는데,
     `obj`는 프록시가 아니면서 속성 `.name`이 없고,
     프로토타입 체인에는 프록시가 있다고 가정해봅시다.
@@ -71,7 +64,7 @@ new Proxy(target, {
 다음 불변 조건이 위반되면 프록시에서 {{jsxref("TypeError")}}가 발생합니다.
 
 - 대상 객체 속성이 쓰기 및 구성할 수 없는 데이터 속성인 경우, 속성 값을 대상 객체 속성의 값과 다르게 변경할 수 없습니다.
-- 대상 객체 속성의 `[[Set]]` 속성이  `undefined`인 구성 불가능한 접근자 속성인 경우, 속성 값을 설정할 수 없습니다.
+- 대상 객체 속성의 `[[Set]]` 속성이 `undefined` 인 구성 불가능한 접근자 속성인 경우, 속성 값을 설정할 수 없습니다.
 - 엄격 모드에서 `set()` 처리기가 `false`를 반환하면 {{jsxref("TypeError")}} 예외가 발생합니다.
 
 ## 예제

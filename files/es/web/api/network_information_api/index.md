@@ -1,12 +1,6 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-tags:
-  - API
-  - Experimental
-  - JSAPI Reference
-  - Referencia
-translation_of: Web/API/Network_Information_API
 ---
 
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
@@ -55,9 +49,7 @@ if (connection) {
 
 ## Especificaciones
 
-| Especifiación                                                                            | Estado                                       | Comentario            |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------- |
-| {{SpecName('Network Information', '', 'Network Information API')}} | {{Spec2('Network Information')}} | Initial specification |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

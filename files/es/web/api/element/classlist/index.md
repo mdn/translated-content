@@ -1,14 +1,6 @@
 ---
 title: Element.classList
 slug: Web/API/Element/classList
-tags:
-  - API
-  - DOM
-  - Elemento
-  - Propiedad
-  - Referencia
-  - Sólo-Lectura
-translation_of: Web/API/Element/classList
 ---
 
 {{APIRef}}

@@ -1,9 +1,9 @@
 ---
 title: 'Element: select event'
 slug: Web/API/HTMLInputElement/select_event
-translation_of: Web/API/Element/select_event
 original_slug: Web/API/Element/select_event
 ---
+
 {{APIRef}}
 
 **`select`** 이벤트는 어떤 텍스트가 선택되었을 때 발생됩니다.

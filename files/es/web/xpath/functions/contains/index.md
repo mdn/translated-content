@@ -1,7 +1,6 @@
 ---
 title: contains
 slug: Web/XPath/Functions/contains
-translation_of: Web/XPath/Functions/contains
 original_slug: Web/XPath/Funciones/contains
 ---
 

@@ -7,7 +7,7 @@ translation_of: Web/CSS/Layout_cookbook/Split_Navigation
 
 Навигационный паттерн, в котором один или более элементов отделены от остальных элементов навигации.
 
-![Items separated into two groups.](https://mdn.mozillademos.org/files/16227/split-navigation.png)
+![Items separated into two groups.](split-navigation.png)
 
 ## Требования
 

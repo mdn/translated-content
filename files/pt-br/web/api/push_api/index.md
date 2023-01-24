@@ -18,7 +18,7 @@ O resultado de {{domxref("PushSubscription")}} inclui toda informação que a ap
 
 O service worker será iniciado conforme o necessário para lidar com as mensagens recebidas, que são entregues ao manipulador de evento {{domxref("ServiceWorkerGlobalScope.onpush")}} . Isto permite que a aplicação reaja a cada mensagem recebida, por exemplo para exibir a notificação ao usuário (usando {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
 
-Cada assinatura é única para um service worker. O endpoint para a assinatura é uma [capability URL](http://www.w3.org/TR/capability-urls/) única: o conhecimento do endpoint é tudo que é necessário para enviar uma mensagem para sua aplicação. A URL do endpoint precisa ser mantida em segredo, ou outras aplicações estranhas poderão enviar mensagens push para a sua aplicação.
+Cada assinatura é única para um service worker. O endpoint para a assinatura é uma [capability URL](https://www.w3.org/TR/capability-urls/) única: o conhecimento do endpoint é tudo que é necessário para enviar uma mensagem para sua aplicação. A URL do endpoint precisa ser mantida em segredo, ou outras aplicações estranhas poderão enviar mensagens push para a sua aplicação.
 
 A ativação de um service worker para entregar mensagens push pode resultar em um aumento de uso de recursos, particularmente de bateria. Diferentes navegadores tem diferentes formas para lidar com isso — atualmente não existe uma forma padrão. Firefox permite um número limitado (cota) de mensagens push para serem enviadas para uma aplicação, embora as mensagens Push que gerem notificações são isentas deste limite. O limite é atualizado a cada site visitado. Numa comparação, Chrome não aplica nenhum limite, mas requer que cada mensagem push exiba uma notificação.
 

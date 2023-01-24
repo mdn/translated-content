@@ -1,11 +1,6 @@
 ---
 title: overflow-y
 slug: Web/CSS/overflow-y
-tags:
-  - CSS
-  - CSS Modelo de Caja
-  - Propiedad CSS
-translation_of: Web/CSS/overflow-y
 ---
 
 {{CSSRef}}
@@ -106,9 +101,7 @@ La propiedad `overflow-y` es especificada con una sola palabra clave escogida de
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                       | Comentario |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{ SpecName('CSS3 Overflow', '#propdef-overflow-y', 'overflow-y') }} | {{Spec2('CSS3 Box')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

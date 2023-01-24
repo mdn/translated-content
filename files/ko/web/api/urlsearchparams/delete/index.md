@@ -1,16 +1,8 @@
 ---
 title: URLSearchParams.delete()
 slug: Web/API/URLSearchParams/delete
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - delete
-browser-compat: api.URLSearchParams.delete
-translation_of: Web/API/URLSearchParams/delete
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} 인터페이스의 **`delete()`** 메서드는 지정한 키와 연관된 모든 값을 검색 매개변수 리스트에서 제거합니다.

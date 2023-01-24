@@ -97,7 +97,7 @@ While display capture is in effect, the machine which is sharing screen contents
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is most commonly used to capture video of a user's screen (or parts thereof). However, {{Glossary("user agent", "user agents")}} may allow the capture of audio along with the video content. The source of this audio might be the selected window, the entire computer's audio system, or the user's microphone (or a combination of all of the above).
 
-Before starting a project that will require sharing of audio, be sure to check the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} to see if the browsers you wish compaibility with have support for audio in captured screen streams.
+Before starting a project that will require sharing of audio, be sure to check the [browser compatibility](/zh-CN/docs/Web/API/MediaDevices/getDisplayMedia#浏览器兼容性) for `getDisplayMedia()` to see if the browsers you wish compaibility with have support for audio in captured screen streams.
 
 To request that the screen be shared with included audio, the options passed into `getDisplayMedia()` might look like this:
 
@@ -321,12 +321,12 @@ The final product looks like this. If your browser supports Screen Capture API, 
 
 ## 安全
 
-In order to function when [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's {{htmlattrxref("allow", "iframe")}} attribute.
+In order to function when [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Permissions-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's {{htmlattrxref("allow", "iframe")}} attribute.
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
 ```
-Feature-Policy: display-capture 'self'
+Permissions-Policy: display-capture 'self'
 ```
 
 If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:

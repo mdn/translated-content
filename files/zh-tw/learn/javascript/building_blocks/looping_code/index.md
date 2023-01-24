@@ -31,7 +31,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 
 讓我們考慮一個農民的例子，他要確保他有足夠的食物來養家糊口。 他可能使用以下循環來實現此目的：
 
-![](https://mdn.mozillademos.org/files/13755/loop_js-02-farm.png)
+![](loop_js-02-farm.png)
 
 循環通常具有以下一項或多項功能：
 

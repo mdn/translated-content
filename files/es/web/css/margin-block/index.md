@@ -1,7 +1,6 @@
 ---
 title: margin-block
 slug: Web/CSS/margin-block
-translation_of: Web/CSS/margin-block
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -76,13 +75,9 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                           | Estado                                           | Comentario          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-block", "margin-block")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

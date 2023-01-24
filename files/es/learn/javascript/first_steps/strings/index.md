@@ -1,20 +1,6 @@
 ---
 title: Manejar texto — cadenas en JavaScript
 slug: Learn/JavaScript/First_steps/Strings
-tags:
-  - Artículo
-  - Cadenas
-  - Comillas
-  - Guía
-  - JavaScript
-  - Novato
-  - Principiante
-  - Union
-  - Unir
-  - concatenación
-  - l10n:priority
-  - strings
-translation_of: Learn/JavaScript/First_steps/Strings
 ---
 
 {{LearnSidebar}}

@@ -506,4 +506,4 @@ Feito isso, você pode trabalhar com elementos 3D.
 
 ## Veja também
 
-- [Usando deviceorientation com 3D Transforms](/en/Using_Deviceorientation_In_3D_Transforms)
+- [Usando deviceorientation com 3D Transforms](/pt-BR/Using_Deviceorientation_In_3D_Transforms)

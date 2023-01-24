@@ -1,15 +1,6 @@
 ---
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterable
-  - Iterator
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/yield*
 ---
 
 {{jsSidebar("Operators")}}
@@ -118,19 +109,6 @@ console.log(result);          // "foo"
 ## 브라우저 호환성
 
 {{Compat}}
-
-## Firefox에 한정된 내용
-
-- Gecko 33 {{geckoRelease(33)}} 부터, yield 표현 구문 분석이 최신 ES6 표준에 맞추도록 업데이트 되었습니다 ({{bug(981599)}}):
-
-  - 개행 제한이 이제 구현되었습니다. 개행이 없는 "yield" 와 "\*"만 인정됩니다. 다음과 같은 코드는 {{jsxref("SyntaxError")}}를 발생시킵니다:
-
-    ```js
-    function* foo() {
-      yield
-      *[];
-    }
-    ```
 
 ## 같이 보기
 

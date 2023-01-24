@@ -1,15 +1,6 @@
 ---
 title: 배경 이미지 크기 조정하기
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-tags:
-  - CSS
-  - CSS Background
-  - Example
-  - Guide
-  - Intermediate
-  - Reference
-  - Web
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
 
@@ -32,7 +23,7 @@ CSS 배경 이미지의 기본 설정값에서는 원본 이미지가 크기 변
 
 ```css
 .tiledBackground {
-  background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
+  background-image: url(firefox_logo.png);
   background-size: 150px;
   width: 300px;
   height: 300px;
@@ -55,13 +46,13 @@ background-size: 300px 150px;
 
 결과는 다음과 같습니다.
 
-![](https://mdn.mozillademos.org/files/8967/ss2.png)
+![](ss2.png)
 
 ## 작은 이미지 키우기
 
 반대로 배경 이미지를 키울 수도 있습니다. 다음 코드는 32x32 픽셀 파비콘을 300x300 픽셀로 늘린 결과입니다.
 
-![](https://mdn.mozillademos.org/files/8969/ss3.png)
+![](ss3.png)
 
 ```css
 .square2 {
@@ -97,7 +88,7 @@ background-size: 300px 150px;
 
 ```css
 .bgSizeContain {
-  background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
+  background-image: url(firefox_logo.png);
   background-size: contain;
   width: 160px;
   height: 160px;
@@ -128,7 +119,7 @@ background-size: 300px 150px;
 
 ```css
 .bgSizeCover {
-  background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
+  background-image: url(firefox_logo.png);
   background-size: cover;
   width: 160px;
   height: 160px;

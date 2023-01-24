@@ -26,7 +26,7 @@ if (window.confirm("Você realmente quer sair?")) {
 
 Produzirá:
 
-![firefox confirm](https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png)
+![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
 
 ## Notas
 
@@ -34,7 +34,7 @@ The following text is shared between this article, DOM:window\.prompt and DOM:wi
 
 Usuários do [Mozilla Chrome](/pt-BR/Chrome) (Ex.: Extensões do Firefox) devem utilizar métodos de `nsIPromptService`.
 
-{{gecko_minversion_inline("23.0")}}O argumento é opcional e não é requerido por especificações.
+O argumento é opcional e não é requerido por especificações.
 
 ## Especificação
 

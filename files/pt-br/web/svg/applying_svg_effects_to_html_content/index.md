@@ -3,8 +3,6 @@ title: Applying SVG effects to HTML content
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 
-{{gecko_minversion_header("1.9.1")}}
-
 Firefox 3.5 introduziu suporte para uso do [SVG](/pt-BR/docs/SVG) como um componente do [CSS](/pt-BR/docs/Web/CSS) em ordem para introduzir efeitos SVG no conteúdo HTML.
 
 Você pode embutir o SVG nos estilos dentro do mesmo documento, ou com um _stylesheet_ externo.
@@ -172,7 +170,7 @@ Para borrar um texto há um webkit baseado dos navegadores com o (prefixo) filtr
 
 ```html
  <p class="blur">Time to clean my glasses</p>
- <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <svg xmlns="https://www.w3.org/2000/svg" version="1.1">
   <defs>
     <filter id="wherearemyglasses" x="0" y="0">
       <feGaussianBlur in="SourceGraphic" stdDeviation="1" />

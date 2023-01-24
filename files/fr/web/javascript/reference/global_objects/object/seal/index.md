@@ -37,7 +37,7 @@ L'objet qui est scellé.
 
 Par défaut, les objets sont {{jsxref("Object.isExtensible()", "extensibles", "", 1)}} (ce qui signifie que de nouvelles propriétés peuvent leur être ajoutées). Sceller un objet empêche l'ajout de nouvelles propriétés et marque les propriétés existantes comme non-configurables. Ainsi, l'ensemble de propriétés de l'objet devient fixé et immuable. Le fait de rendre les propriétés non-configurables empêche également de transformer des propriétés de données en accesseurs et vice versa. Cela n'empêche pas de modifier la valeur des propriétés. Toute tentative de suppression ou d'ajout de propriétés à un objet qui est scellé, de conversion d'une propriété de données en accesseurs ou vice versa échouera, soit de manière silencieuse soit en lançant une exception {{jsxref("TypeError")}} (la plupart du temps en {{jsxref("Fonctions_et_portee_des_fonctions/Strict_mode","mode strict","",1)}}.
 
-La chaîne de prototypes reste la même. Cependant, la propriété {{jsxref("Object.proto", "__proto__")}} ( {{deprecated_inline}} ) est scellée également.
+La chaîne de prototypes reste la même. Cependant, la propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) ( {{deprecated_inline}} ) est scellée également.
 
 ## Exemples
 

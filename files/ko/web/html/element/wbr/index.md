@@ -1,13 +1,6 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/wbr
 ---
 
 {{HTMLSidebar}}

@@ -2,6 +2,7 @@
 title: '실력을 평가해 보세요: 함수'
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Functions
 ---
+
 {{learnsidebar}}
 
 이 실력 테스트의 목적은 여러분이 우리의 [함수 — 코드 재사용](/ko/docs/Learn/JavaScript/Building_blocks/Functions), [함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function), 그리고 [함수 반환 값](/ko/docs/Learn/JavaScript/Building_blocks/Return_values) 문서를 이해했는지 평가하기 위함입니다.

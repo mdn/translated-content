@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.getConfiguration()
 slug: Web/API/RTCPeerConnection/getConfiguration
-translation_of: Web/API/RTCPeerConnection/getConfiguration
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.getConfiguration()`** 메소드는 호출 된 {{domxref("RTCPeerConnection")}}의 현재 설정을 알려주는 {{domxref("RTCConfiguration")}} 객체를 반환합니다.

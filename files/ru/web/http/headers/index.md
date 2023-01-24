@@ -208,7 +208,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -236,7 +236,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -264,7 +264,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -292,7 +292,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -320,7 +320,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -348,7 +348,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("2") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -376,7 +376,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -404,7 +404,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -942,7 +942,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         More recently defined in the

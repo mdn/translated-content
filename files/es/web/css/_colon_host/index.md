@@ -1,14 +1,6 @@
 ---
 title: ':host'
 slug: Web/CSS/:host
-tags:
-  - ':host'
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:host
 ---
 
 {{ CSSRef }}
@@ -61,9 +53,7 @@ La regla `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` estiliza tod
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                           | Comentarios         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{ SpecName('CSS Scope', '#host-selector', ':host') }} | {{ Spec2('CSS Scope') }} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

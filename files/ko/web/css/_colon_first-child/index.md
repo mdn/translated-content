@@ -1,13 +1,6 @@
 ---
 title: ':first-child'
 slug: Web/CSS/:first-child
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:first-child
 ---
 
 {{CSSRef}}

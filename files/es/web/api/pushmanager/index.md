@@ -1,18 +1,6 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
-  - TopicStub
-  - WebAPI
-translation_of: Web/API/PushManager
 ---
 
 {{SeeCompatTable}}{{ApiRef("Push API")}}
@@ -76,11 +64,9 @@ navigator.serviceWorker.register('serviceworker.js').then(
   });
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                        | Status                       | Comment             |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('Push API','#pushmanager-interface','PushManager')}} | {{Spec2('Push API')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

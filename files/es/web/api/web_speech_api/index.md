@@ -1,18 +1,6 @@
 ---
 title: Web Speech API
 slug: Web/API/Web_Speech_API
-tags:
-  - API
-  - Experimental
-  - Landing
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web Speech API
-  - recognition
-  - speech
-  - synthesis
-translation_of: Web/API/Web_Speech_API
 ---
 
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
@@ -69,7 +57,7 @@ For more details on using these features, see [Using the Web Speech API](/es/doc
 
 ## Examples
 
-The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub contains demos to illustrate speech recognition and synthesis.
+The [Web Speech API repo](https://github.com/mdn/dom-examples/tree/main/web-speech-api) on GitHub contains demos to illustrate speech recognition and synthesis.
 
 ## Especificaciones
 

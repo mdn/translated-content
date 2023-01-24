@@ -1,8 +1,8 @@
 ---
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
-translation_of: Web/API/WebGL_API/By_example/Hello_GLSL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
 
 매우 간단한 색이 있는 단단한 사각형을 그려주는 쉐이더 프로그램

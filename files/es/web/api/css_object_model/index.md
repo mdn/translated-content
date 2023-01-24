@@ -1,11 +1,6 @@
 ---
 title: CSS Object Model
 slug: Web/API/CSS_Object_Model
-tags:
-  - API
-  - CSSOM
-  - Referencia
-translation_of: Web/API/CSS_Object_Model
 ---
 
 {{DefaultAPISidebar('CSSOM')}}

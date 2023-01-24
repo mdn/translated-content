@@ -57,7 +57,7 @@ _Propriedades herdadas do elemento pai, {{domxref("Element")}}, e aquelas implem
   - : Returns a `double` containing the width of an element, relative to the layout.
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns an {{domxref("HTMLPropertiesCollection")}}…
-- {{domxref("HTMLElement.spellcheck")}}{{ gecko_minversion_inline("1.9")}}
+- {{domxref("HTMLElement.spellcheck")}}
   - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/pt-BR/docs/HTML/Controlling_spell_checking_in_HTML_forms). It is present on all HTML elements, though it hasn't an effect on all of them.
 - {{domxref("HTMLElement.style")}}
   - : Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.

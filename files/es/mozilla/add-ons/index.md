@@ -1,12 +1,6 @@
 ---
 title: Complementos
 slug: Mozilla/Add-ons
-tags:
-  - Complementos
-  - Destino
-  - Mozilla
-  - extensiones
-translation_of: Mozilla/Add-ons
 ---
 
 {{AddonSidebar}}
@@ -33,7 +27,7 @@ La mayoría de las APIs de WebExtensions estarán también disponibles para Fire
 
 ### Migrar un complemento ya existente
 
-Si tu mantienes extensiones que están por ser remplazados, tales como XUL overlay, bootstrapped, o extensiones basadas en SDK, le recomendamos que investige como portarlos a WebExtensions. Existen algunos [recursos de portación en MDN](/en-US/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on).
+Si tu mantienes extensiones que están por ser remplazados, tales como XUL overlay, bootstrapped, o extensiones basadas en SDK, le recomendamos que investige como portarlos a WebExtensions. Existen algunos [recursos de portación en MDN](/es/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on).
 
 Hemos recolectado [recursos](https://wiki.mozilla.org/Add-ons/developer/communication) en una página wiki para proporcionar soporte a los desarrolladores mediante la transición. Para empezar, utilice la herramienta de compatibilidad [Lookup Tool](https://compatibility-lookup.services.mozilla.com/) para ver si su herramienta será afectada.
 

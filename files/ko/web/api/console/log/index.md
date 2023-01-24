@@ -1,20 +1,8 @@
 ---
 title: console.log()
 slug: Web/API/console/log
-tags:
-  - API
-  - DOM
-  - Debugging
-  - HTML-tree
-  - Method
-  - Reference
-  - Web Development
-  - console.log()
-  - difference
-  - web console
-browser-compat: api.console.log
-translation_of: Web/API/Console/log
 ---
+
 {{APIRef("Console API")}}
 
 **`console.log()`** 메서드는 웹 콘솔에 메시지를 출력합니다. 메시지는 (선택적 대체 값을 포함한) 단일 문자열이거나 더 많은 JavaScript 객체중 하나일 수 있습니다.

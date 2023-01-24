@@ -12,7 +12,7 @@ Basicamente é uma nova forma de criar strings e tornar o seu código um pouco m
 
 ## Sintaxe
 
-```
+```js-nolint
 `corpo de texto`
 
 `texto linha 1
@@ -116,14 +116,11 @@ String.raw`Hi\n${2+3}!`; // "Hi\\n5!"
 
 ## Especificações
 
-| Especificação                                                                                | Status                       | Comentário                                                                                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-template-literals', 'Template Literals')}} | {{Spec2('ES2015')}}     | Definição inicial. Definido em várias seções da especificação: [Template Literals](http://www.ecma-international.org/ecma-262/6.0/#sec-template-literals), [Tagged Templates](http://www.ecma-international.org/ecma-262/6.0/#sec-tagged-templates) |
-| {{SpecName('ESDraft', '#sec-template-literals', 'Template Literals')}} | {{Spec2('ESDraft')}} | Definido em várias seções da especificação: [Template Literals](https://tc39.github.io/ecma262/#sec-template-literals), [Tagged Templates](https://tc39.github.io/ecma262/#sec-tagged-templates)                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.grammar.template_literals")}}
+{{Compat}}
 
 ## Veja também
 

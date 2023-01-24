@@ -1,11 +1,6 @@
 ---
 title: Localizando elementos DOM usando selectores
 slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
-tags:
-  - DOM
-  - Necesita actualizacion para principiantes
-  - Principiante
-translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 original_slug: Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores
 ---
 

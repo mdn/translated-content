@@ -1,14 +1,6 @@
 ---
 title: <bdi>
 slug: Web/HTML/Element/bdi
-tags:
-  - BiDi
-  - Elemento
-  - HTML
-  - Referencia
-  - Semántica HTML a nivel de texto
-  - Web
-translation_of: Web/HTML/Element/bdi
 original_slug: Web/HTML/Elemento/bdi
 ---
 
@@ -43,10 +35,7 @@ Esta palabra arábica REDLOHECALP_CIBARA se muestra automáticamente de derecha 
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}         | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 

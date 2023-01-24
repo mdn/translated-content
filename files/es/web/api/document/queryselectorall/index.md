@@ -1,20 +1,6 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - API
-  - Buscando Elementos
-  - DOM
-  - Document
-  - Encontrando Elementos
-  - Localizando Elementos
-  - Métodos
-  - Referencia
-  - Seleccionando Elementos
-  - Selectores
-  - Selectores CSS
-  - querySelectorAll
-translation_of: Web/API/Document/querySelectorAll
 ---
 
 {{ ApiRef("DOM") }}

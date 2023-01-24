@@ -52,13 +52,11 @@ rtf.formatToParts(100, "day");
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                               | 状態      | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---- |
-| {{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.prototype.formatToParts', 'RelativeTimeFormat.formatToParts()')}} | 第 4 段階 |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.format")}}
+{{Compat}}
 
 ## 関連情報
 

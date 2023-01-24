@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.LinkError()
 slug: WebAssembly/JavaScript_interface/LinkError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 ---
 

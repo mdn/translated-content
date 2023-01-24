@@ -90,9 +90,9 @@ input {
 }
 ```
 
-下記の例ではお使いのシステムでどのように見えるかを示します。既定では左で、上記の CSS が適用されると右になります（その他のシステムでテストしたい場合は[ここも探してください](https://mdn.github.io/learning-area/html/forms/styling-examples/appearence-tester.html)）。
+下記の例ではお使いのシステムでどのように見えるかを示します。既定では左で、上記の CSS が適用されると右になります（その他のシステムでテストしたい場合は[ここも探してください](https://mdn.github.io/learning-area/html/forms/styling-examples/appearance-tester.html)）。
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearence-tester.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearance-tester.html", '100%', 400)}}
 
 たいていの場合、効果は枠線を除去し、 CSS でのスタイル設定を少し簡単にしますが、それは本質できありません。いくつかの場合 — 検索やラジオボタン/チェックボックスでは、もっと便利です。これを見ていきましょう。
 
@@ -110,7 +110,7 @@ input[type="search"] {
 
 下記の例では、2 つのスタイル設定された検索ボックスが見えます。右のものは `appearance: none;` が適用され、左はそうでありません。macOS の Safari で見ると左のものは正しいサイズでないように見えます。
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearence.html", '100%', 200)}}
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearance.html", '100%', 200)}}
 
 興味深いことに、検索フィールドで border/background をセットしてもこの問題を解決できます。下記のスタイル設定された検索ボックスは `appearance: none;` が適用されていませんが、前の例と同じ Safari の問題に悩まされていません。
 

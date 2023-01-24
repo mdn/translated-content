@@ -1,14 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-tags:
-  - Elemento
-  - Formulario(2)
-  - HTML
-  - Referencia
-  - Web
-  - formularios html(2)
-translation_of: Web/HTML/Element/select
 original_slug: Web/HTML/Elemento/select
 ---
 
@@ -72,10 +64,7 @@ El siguiente ejemplo muestra como simular una lista con opciones editables, pero
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('HTML5 W3C', 'forms.html#the-select-element', '&lt;select&gt;')}} | {{Spec2('HTML5 W3C')}} |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}     | {{Spec2('HTML4.01')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

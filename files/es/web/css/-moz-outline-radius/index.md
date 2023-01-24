@@ -1,11 +1,6 @@
 ---
 title: '-moz-outline-radius'
 slug: Web/CSS/-moz-outline-radius
-tags:
-  - CSS
-  - No estándar(2)
-  - Referencia CSS
-translation_of: Web/CSS/-moz-outline-radius
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -86,7 +81,7 @@ border: 1px solid black; outline: dotted red;
 
 ### Result
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/-moz-outline-radius') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Notas
 

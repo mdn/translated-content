@@ -76,9 +76,7 @@ if (!Uint8Array.prototype.slice) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

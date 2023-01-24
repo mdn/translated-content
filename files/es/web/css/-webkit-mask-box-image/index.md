@@ -1,12 +1,6 @@
 ---
 title: '-webkit-mask-box-image'
 slug: Web/CSS/-webkit-mask-box-image
-tags:
-  - CSS
-  - Diseño
-  - Referencia
-  - Web
-translation_of: Web/CSS/-webkit-mask-box-image
 ---
 
 {{ CSSRef() }}

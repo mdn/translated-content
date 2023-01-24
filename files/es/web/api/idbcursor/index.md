@@ -1,18 +1,6 @@
 ---
 title: IDBCursor
 slug: Web/API/IDBCursor
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - Storage
-  - TopicStub
-translation_of: Web/API/IDBCursor
 ---
 
 {{APIRef("IndexedDB")}}
@@ -88,11 +76,9 @@ function displayData() {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                | Status                       | Comment |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

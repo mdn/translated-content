@@ -1,12 +1,6 @@
 ---
 title: opacity
 slug: Web/CSS/opacity
-tags:
-  - CSS
-  - CSS Reference
-  - CSS3
-  - css3-color
-translation_of: Web/CSS/opacity
 ---
 
 {{ CSSRef() }}
@@ -103,10 +97,7 @@ img.opacity:hover {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                                   | Comentarios                          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------ |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'opacity') }} | {{ Spec2('CSS3 Transitions') }} | Define `opacity` como una animación. |
-| {{ SpecName('CSS3 Colors', '#opacity', 'opacity') }}                 | {{ Spec2('CSS3 Colors') }}     | Definición inicial                   |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

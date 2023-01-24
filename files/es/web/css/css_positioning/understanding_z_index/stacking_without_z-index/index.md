@@ -1,7 +1,6 @@
 ---
 title: Apilando sin z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-index
 ---
 
@@ -107,7 +106,7 @@ En el siguiente ejemplo, los bloques con posiciones absolutas y relativas son ap
 
 (Si la imagen no aparece en CodePen, haz clic en el botón Tidy en la sección CSS)
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index') }}
+{{EmbedLiveSample('', '', '')}}
 
 ### También puedes ver
 

@@ -1,15 +1,8 @@
 ---
 title: AbortController.AbortController()
 slug: Web/API/AbortController/AbortController
-tags:
-  - API
-  - AbortController
-  - Fetch
-  - 레퍼런스
-  - 생성자
-  - 실험적
-translation_of: Web/API/AbortController/AbortController
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 **`AbortController()`** 생성자는 새로운 `AbortController` 객체 인터페이스를 생성한다.

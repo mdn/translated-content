@@ -1,7 +1,6 @@
 ---
 title: Detección de colisiones
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones
 ---
 

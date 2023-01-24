@@ -23,16 +23,16 @@ Esta é uma lista das declarações de `DOCTYPE` mais usadas e que acionarão o 
                    uso desta declaração é recomendada */
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+"https://www.w3.org/TR/html4/loose.dtd">
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+"https://www.w3.org/TR/html4/strict.dtd">
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+"https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 Sempre que possível, use a declaração de `DOCTYPE` HTML5.
@@ -205,7 +205,7 @@ Quando multiplas regras são aplicadas a um elemento, a regra a ser renderizada 
 <div id="orange" class="green" style="color: red;">Isso é vermelho</div>
 ```
 
-As regras se tornam mais complicadas quando o seletor tem diversas partes. Informações mais detalhadas sobre como a especificidade de seletores é calculada podem ser encontradas nas [Especificações CSS 2.1, capítulo 6.4.3](http://www.w3.org/TR/CSS21/cascade.html#specificity).
+As regras se tornam mais complicadas quando o seletor tem diversas partes. Informações mais detalhadas sobre como a especificidade de seletores é calculada podem ser encontradas nas [Especificações CSS 2.1, capítulo 6.4.3](https://www.w3.org/TR/CSS21/cascade.html#specificity).
 
 ## O que as propriedades -moz-\*, -ms-\*, -webkit-\*, -o-\* e -khtml-\* fazem?
 

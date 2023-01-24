@@ -1,14 +1,6 @@
 ---
 title: <dd>
 slug: Web/HTML/Element/dd
-tags:
-  - Element
-  - HTML
-  - HTML grouping element
-  - Reference
-  - Web
-  - 요소
-translation_of: Web/HTML/Element/dd
 ---
 
 {{HTMLSidebar}}
@@ -59,7 +51,7 @@ translation_of: Web/HTML/Element/dd
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ARIARole("definition")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/definition_role'><code>definition</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>

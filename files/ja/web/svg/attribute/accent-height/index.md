@@ -32,9 +32,7 @@ slug: Web/SVG/Attribute/accent-height
 
 ## 仕様
 
-| 仕様書                                                                                                                   | 策定状況                 | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName("SVG1.1", "fonts.html#FontFaceElementAccentHeightAttribute", "accent-height")}} | {{Spec2("SVG1.1")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

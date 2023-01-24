@@ -1,7 +1,6 @@
 ---
 title: '<progress>: Elemento indicador de progreso'
 slug: Web/HTML/Element/progress
-translation_of: Web/HTML/Element/progress
 original_slug: Web/HTML/Elemento/progress
 ---
 
@@ -51,10 +50,7 @@ En Windows, el resultante sería este:
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#the-progress-element', '&lt;progress&gt;')}}     | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-progress-element', '&lt;progress&gt;')}} | {{Spec2('HTML5 W3C')}}     | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad en los navegadores
 

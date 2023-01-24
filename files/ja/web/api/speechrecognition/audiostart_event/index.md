@@ -1,66 +1,56 @@
 ---
 title: 'SpeechRecognition: audiostart イベント'
 slug: Web/API/SpeechRecognition/audiostart_event
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("Web Speech API")}} {{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-[Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`audiostart`** イベントは、ユーザーエージェントが会話認識のためのオーディオキャプチャを開始したときに発生します。
+**`audiostart`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、ユーザーエージェントが音声認識のためのオーディオキャプチャを開始したときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラー</th>
-      <td>
-        {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('audiostart', (event) => { })
+
+onaudiostart = (event) => { }
+```
+
+## イベント型
+
+一般的な {{DOMxRef("Event")}} であり、追加のプロパティはありません。
 
 ## 例
 
-`audiostart` イベントは、 {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} メソッドの中で使用することができます。
+`audiostart` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
 
 ```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('audiostart', function() {
-  console.log('Audio capturing started');
+recognition.addEventListener('audiostart', () => {
+  console.log('音声キャプチャを開始しました。');
 });
 ```
 
-または、 [onaudiostart](/ja/docs/Web/API/SpeechRecognition/onaudiostart) イベントハンドラープロパティを使用してください。
+または `onaudiostart` イベントハンドラープロパティを使用してください。
 
 ```js
-recognition.onaudiostart = function() {
-  console.log('Audio capturing started');
+recognition.onaudiostart = () => {
+  console.log('音声キャプチャを開始しました。');
 }
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                                 | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
-| {{SpecName('Web Speech API', '#speechreco-events', 'speech recognition events')}} | {{Spec2('Web Speech API')}} |      |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognition.audiostart_event")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
-- {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} イベントハンドラープロパティ
+- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)

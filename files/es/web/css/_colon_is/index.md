@@ -1,13 +1,6 @@
 ---
 title: ':any'
 slug: Web/CSS/:is
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-Clase CSS
-  - Referencia
-translation_of: Web/CSS/:is
-translation_of_original: Web/CSS/:any
 original_slug: Web/CSS/:any
 ---
 

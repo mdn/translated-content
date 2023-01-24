@@ -1,18 +1,6 @@
 ---
 title: Control de flujo y manejo de errores
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Control de flujo
-  - Guía
-  - JavaScript
-  - Lógica
-  - Manejo de errores
-  - Novato
-  - Principiantes
-  - Promesas
-  - declaraciones
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 original_slug: Web/JavaScript/Guide/Control_de_flujo_y_manejo_de_errores
 ---
 

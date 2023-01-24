@@ -1,11 +1,6 @@
 ---
 title: area
 slug: Web/HTML/Element/area
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/area
 original_slug: Web/HTML/Elemento/area
 ---
 ### Definición
@@ -14,14 +9,14 @@ original_slug: Web/HTML/Elemento/area
 
 - Sirve para crear las distintas secciones en las que se puede dividir un [mapas de imágenes](http://html.conclase.net/w3c/html401-es/struct/objects.html#include-maps) en el cliente.
   - : **Sus etiquetas son**: \<area> (solo tiene una).
-  
+
     **Crea una caja**: No.
 
     **Es un**: Elemento para mapas de imágenes.
 
     **Puede contener**: Nada.
 
-    **Solo puede ser hijo de**: Elementos [map](es/HTML/Elemento/map).
+    **Solo puede ser hijo de**: Elementos [map](/es/HTML/Elemento/map).
 
 #### Atributos
 
@@ -382,7 +377,7 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ### Notas
 
-- **area** es un elemento antiguo con el que pueden hacerse mapas simples y poco accesibles. No se recomienda su uso, es preferible diseñar los mapas con elementos en bloque y [anclas](es/HTML/Elemento/a).
+- **area** es un elemento antiguo con el que pueden hacerse mapas simples y poco accesibles. No se recomienda su uso, es preferible diseñar los mapas con elementos en bloque y [anclas](/es/HTML/Elemento/a).
 
 ### Referencia
 

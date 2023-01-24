@@ -1,13 +1,6 @@
 ---
 title: border-block-end-style
 slug: Web/CSS/border-block-end-style
-tags:
-  - CSS
-  - Experimental
-  - Propiedad CSS
-  - Propiedad Lógica CSS
-  - Referencia
-translation_of: Web/CSS/border-block-end-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -63,11 +56,9 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                       | Estatus                                          | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-end-style", "border-block-end-style")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

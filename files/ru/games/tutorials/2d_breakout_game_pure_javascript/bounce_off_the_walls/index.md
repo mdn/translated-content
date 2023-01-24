@@ -11,9 +11,8 @@ tags:
   - столкновения
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
 Это 3-й этап из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код как он должен выглядеть после завершения этого урока в [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
 
@@ -87,7 +86,7 @@ if(y + dy > canvas.height || y + dy < 0) {
 
 Проверьте сейчас свой код, и вы будете впечатлёны — теперь мяч, отскакивает от всех четырёх краёв нашего `<canvas>`! Однако есть некоторая проблема - когда мяч попадает в любую стену, он немного заходит за границы `<canvas>` перед отскоком:
 
-![](https://mdn.mozillademos.org/files/10432/ball-in-wall.png)
+![](ball-in-wall.png)
 
 Это происходит потому, что мы проверяем касание стены и центра мяча, а не его края. Мяч должен отскакивать сразу после касания, а не когда он уже на половину в стене, так что давайте корректировать наш код включив в него небольшое выражение. Обновите последний код добавив к нему:
 

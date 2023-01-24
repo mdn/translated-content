@@ -1,13 +1,6 @@
 ---
 title: '<mark>: el elemento de resaltado de texto'
 slug: Web/HTML/Element/mark
-tags:
-  - HTML
-  - HTML5
-  - HTML:Elemento
-  - mark
-  - para_revisar
-translation_of: Web/HTML/Element/mark
 original_slug: Web/HTML/Elemento/mark
 ---
 
@@ -127,10 +120,7 @@ El resultado se vería:
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

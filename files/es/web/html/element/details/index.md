@@ -1,14 +1,6 @@
 ---
 title: <details>
 slug: Web/HTML/Element/details
-tags:
-  - Elemento
-  - Elementos HTML interactivos
-  - HTML
-  - HTML5
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/details
 original_slug: Web/HTML/Elemento/details
 ---
 
@@ -87,10 +79,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                 | Estatus                          | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'interactive-elements.html#the-details-element', '&lt;details&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5.1', 'semantics.html#the-details-element', '&lt;details&gt;')}}                     | {{Spec2('HTML5.1')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

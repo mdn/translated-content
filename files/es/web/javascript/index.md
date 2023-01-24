@@ -1,11 +1,6 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
- - Aprender
- - JavaScript
- - 'l10n:priority'
-translation_of: Web/JavaScript
 ---
 
 {{JsSidebar}}
@@ -52,7 +47,7 @@ Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/Jav
 
 - [Comprendiendo los frameworks JavaScript de lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : Los frameworks de JavaScript son una parte esencial del desarrollo web front-end moderno, ya que proporcionan a los desarrolladores herramientas probadas y comprobadas para crear aplicaciones web interactivas y escalables. Este módulo te brinda algunos conocimientos básicos sobre cómo funcionan los frameworks del lado del cliente y cómo encajan en tu conjunto de herramientas, antes de pasar a la serie de tutoriales que cubren algunos de los más populares en la actualidad.
-- [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+- [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/Language_Overview)
   - : Una descripción general para aquellos que _piensan_ que saben JavaScript.
 - [Estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures)
   - : Descripción general de las estructuras de datos disponibles en JavaScript.
@@ -91,8 +86,8 @@ Consulta la documentación completa de la [referencia de JavaScript](/es/docs/We
 
 Herramientas útiles para escribir y depurar tu código **JavaScript**.
 
-- [Herramientas para Desarrolladores de Firefox](/es/docs/Tools)
-  - : [Consola Web](/es/docs/Tools/Web_Console), [Generador de Perfiles de JavaScript](/es/docs/Tools/Profiler), [Depurador](/es/docs/Tools/Debugger), y más.
+- [Herramientas para Desarrolladores de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [Generador de Perfiles de JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [Depurador](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), y más.
 - [Consola de Javascript](/es/docs/Web/JavaScript/Shells)
   - : Una consola de JavaScript te permite probar rápidamente fragmentos de código JavaScript.
 - [Aprende JavaScript](https://learnjavascript.online/)

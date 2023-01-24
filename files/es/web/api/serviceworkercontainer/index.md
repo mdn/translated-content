@@ -1,19 +1,6 @@
 ---
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
-tags:
-  - API
-  - Draft
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerContainer
-  - TopicStub
-  - Workers
-translation_of: Web/API/ServiceWorkerContainer
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -88,11 +75,9 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                        | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

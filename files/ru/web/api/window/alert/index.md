@@ -42,7 +42,7 @@ The following text is shared between this article, DOM:window\.prompt and DOM:wi
 
 Начиная с Chrome 46.0 этот метод заблокирован в {{htmlelement("iframe")}} пока атрибут sandbox не установлен в значение `allow-modal`.
 
-{{gecko_minversion_inline("23.0")}} Аргумент является опциональным и необязательным согласно спецификации.
+Аргумент является опциональным и необязательным согласно спецификации.
 
 ## Спецификации
 

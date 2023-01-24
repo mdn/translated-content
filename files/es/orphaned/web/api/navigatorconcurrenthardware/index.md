@@ -1,23 +1,6 @@
 ---
 title: NavigatorConcurrentHardware
 slug: orphaned/Web/API/NavigatorConcurrentHardware
-tags:
-  - API
-  - Concurrency
-  - HTML DOM
-  - Interface
-  - Navigator
-  - NavigatorCPU
-  - NavigatorConcurrentHardware
-  - NeedsBrowserCompatibility
-  - NeedsTranslation
-  - Reference
-  - Threading
-  - Threads
-  - TopicStub
-  - WorkerNavigator
-  - Workers
-translation_of: Web/API/NavigatorConcurrentHardware
 original_slug: Web/API/NavigatorConcurrentHardware
 ---
 
@@ -38,11 +21,9 @@ The number of **logical processor cores** is a way to measure the number of thre
 
 _The `NavigatorConcurrentHardware`_ _mixin has no methods._
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                            | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#navigatorconcurrenthardware', 'NavigatorConcurrentHardware')}} | {{Spec2('HTML WHATWG')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

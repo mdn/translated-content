@@ -48,9 +48,7 @@ console.log(str.search(reDot)) // '.' ドット記号が見つからないので
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

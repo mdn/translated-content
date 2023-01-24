@@ -1,13 +1,6 @@
 ---
 title: Node.parentElement
 slug: Web/API/Node/parentElement
-tags:
-  - API
-  - DOM
-  - NecesitaCompatiblidadNavegador
-  - Nodo
-  - Propiedad
-translation_of: Web/API/Node/parentElement
 original_slug: Web/API/Node/elementoPadre
 ---
 

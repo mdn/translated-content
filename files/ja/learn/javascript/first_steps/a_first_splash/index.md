@@ -346,7 +346,7 @@ true/false テスト（例えば条件内 - [below](#conditionals)参照）を�
       <td>
         <pre class="brush: js">
 6 > 10 // false
-20 > 10  // true</pre
+20 > 10 // true</pre
         >
       </td>
     </tr>

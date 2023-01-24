@@ -1,12 +1,6 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-tags:
-  - HTTP
-  - HTTP 헤더
-  - 응답 헤더
-  - 참고자료
-translation_of: Web/HTTP/Headers/Last-Modified
 ---
 
 {{HTTPSidebar}}

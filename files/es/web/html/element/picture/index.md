@@ -1,12 +1,6 @@
 ---
 title: <picture>
 slug: Web/HTML/Element/picture
-tags:
-  - Elemento
-  - Fotografía
-  - Imagen
-  - graficos
-translation_of: Web/HTML/Element/picture
 original_slug: Web/HTML/Elemento/picture
 ---
 
@@ -62,9 +56,7 @@ El atributo `type` permite especificar un tipo MIME para los recursos dados en e
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element', '&lt;picture&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

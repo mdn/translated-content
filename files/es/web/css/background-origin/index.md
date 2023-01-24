@@ -1,10 +1,6 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-tags:
-  - CSS
-  - CSS Referência
-translation_of: Web/CSS/background-origin
 ---
 
 ## Resumen

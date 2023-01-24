@@ -1,10 +1,6 @@
 ---
 title: Sentencias
 slug: Glossary/Statement
-tags:
-  - Glosario
-  - Principiante
-translation_of: Glossary/Statement
 original_slug: Glossary/Sentencias
 ---
 
@@ -14,7 +10,7 @@ En un lenguaje de programación, una **sentencia** es una línea de código al m
 
 ### Referencia técnica
 
-- [Sentencias y declaraciones en JavaScript](/en-US/docs/Web/JavaScript/Reference/Statements) (en inglés)
+- [Sentencias y declaraciones en JavaScript](/es/docs/Web/JavaScript/Reference/Statements) (en inglés)
 
 ### Conocimientos generales
 

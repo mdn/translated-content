@@ -63,9 +63,7 @@ if (!Math.asinh) Math.asinh = function(x) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

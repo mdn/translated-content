@@ -30,4 +30,4 @@ d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 
 ## Especificação
 
-[DOM Level 2 Core: setAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)
+[DOM Level 2 Core: setAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)

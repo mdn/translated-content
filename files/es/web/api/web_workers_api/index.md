@@ -1,7 +1,6 @@
 ---
 title: Web Workers API
 slug: Web/API/Web_Workers_API
-translation_of: Web/API/Web_Workers_API
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}
@@ -60,9 +59,7 @@ You can find out more information on how these demos work in [Using web workers]
 
 ## Especificaciones
 
-| Specification                                        | Status                           | Comment |
-| ---------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#workers')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## See also
 

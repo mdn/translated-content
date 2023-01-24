@@ -55,9 +55,7 @@ var view   = new Int32Array(buffer);
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

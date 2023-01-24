@@ -1,16 +1,8 @@
 ---
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
-tags:
-  - API
-  - Elements
-  - HTML DOM
-  - HTMLFormControlsCollection
-  - HTMLFormElement
-  - Property
-  - Reference
-translation_of: Web/API/HTMLFormElement/elements
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLFormElement")}} 의 **{{domxref("HTMLFormElement.elements")}}** 속성은 {{HTMLElement("form")}} 요소에 포함된 모든 컨트롤 폼을 나열하는 {{domxref("HTMLFormControlsCollection")}}을 반환합니다.

@@ -3,11 +3,17 @@ title: JavaScript 参考
 slug: Web/JavaScript/Reference
 ---
 
-{{JsSidebar}}在 MDN 的 JavaScript 分区中，这一部分被作为 Javascript 的资料库。阅读[关于该参考](/zh-CN/docs/Web/JavaScript/Reference/About)以了解更多。
+{{JsSidebar}}
 
-## 内置
+JavaScript 参考提供了有关 JavaScript 语言的内容资料库。这里详细描述了整个语言。在编写 JavaScript 代码时，你经常会参考这些页面（因此，标题为“JavaScript 参考”）。
 
-{{JSxRef("Global_Objects", "JavaScript 标准内置对象")}}, 以及他们的方法和属性。
+JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务端脚本还是其他类似的环境。在大多数情况下，本参考与环境无关，且不针对 web 浏览器环境。
+
+如果你对 JavaScript 不熟悉，请先阅读[指南](/zh-CN/docs/Web/JavaScript/Guide)。一旦你牢牢地掌握了基础知识，就可以使用参考资料，来获取有关各个对象和语言结构的更加详细的知识。
+
+## 内置对象
+
+[JavaScript 标准内置对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)，以及它们的方法和属性。
 
 ### 值属性
 
@@ -47,7 +53,7 @@ slug: Web/JavaScript/Reference
 - {{JSxRef("TypeError")}}
 - {{JSxRef("URIError")}}
 
-### Numbers & dates
+### 数字和日期
 
 - {{JSxRef("Number")}}
 - {{JSxRef("BigInt")}}
@@ -56,7 +62,8 @@ slug: Web/JavaScript/Reference
 
 ### 文本处理
 
-- {{JSxRef("String")}} {{JSxRef("RegExp")}}
+- {{JSxRef("String")}}
+- {{JSxRef("RegExp")}}
 
 ### 索引集合类
 

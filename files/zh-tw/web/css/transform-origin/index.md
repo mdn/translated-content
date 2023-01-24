@@ -3,7 +3,7 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 [CSS](/zh-TW/docs/Web/CSS) 內的**`transform-origin`**屬性可以設定元素變化的原點。
 

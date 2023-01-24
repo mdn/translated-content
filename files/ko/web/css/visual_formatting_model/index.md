@@ -1,12 +1,6 @@
 ---
 title: 시각적 서식 모델
 slug: Web/CSS/Visual_formatting_model
-tags:
-  - CSS
-  - CSS 상자 모델
-  - 참조
-translation_of: Web/CSS/Visual_formatting_model
-original_slug: Web/Guide/CSS/Visual_formatting_model
 ---
 {{CSSRef}}
 
@@ -36,7 +30,7 @@ CSS **시각적 서식 모델** (visual formatting model)은 문서를 처리하
 
 수석 블록수준 상자는 자손이 생성한 상자 및 콘텐츠를 포함합니다. 상자는 [위치잡기 기법](/ko/docs/CSS/Positioning_scheme)에도 관여하고 있습니다.
 
-![venn_blocks.png](/@api/deki/files/5995/=venn_blocks.png)블록 수준 상자는 역시 블록 콘테이너 상자도 될 수 있습니다. *블록 컨테이너 상자*는 다른 블록수준 상자만을 포함하고 [인라인 서식 상황](/ko/docs/Web/CSS/Inline_formatting_context)을 생성하므로 인라인 상자 무리만을 포함합니다.
+블록 수준 상자는 역시 블록 콘테이너 상자도 될 수 있습니다. *블록 컨테이너 상자*는 다른 블록수준 상자만을 포함하고 [인라인 서식 상황](/ko/docs/Web/CSS/Inline_formatting_context)을 생성하므로 인라인 상자 무리만을 포함합니다.
 
 중요한 점은 블록수준 상자와 블록 컨테이너 상자의 개념은 별개라는 점에 유의해야 한다는 것입니다. 첫째, 상자가 자기 부모와 형제자매과 함께하는 행동 방식을 설명합니다. 둘째, 상자가 자기 자손과는 어떻게 상호작용하는지 설명합니다. 테이블과 같은 블록 수준의 상자 무리는 블록 컨테이너 상자가 아닙니다. 마찬가지로 **비객원<** (non-replaced) 인라인 블록과 비객원 테이블 셀과 같은 일부 블록 컨테이너 상자는 블록 수준 상자가 아닙니다.
 
@@ -62,8 +56,6 @@ CSS 선택기는 해당 상자에 이름을 부여하거나 스타일링을 할 
 
 두 개의 무명 블록 상자가 만들어집니다: 하나는 단락 이전 텍스트(`약간의 인라인 텍스트`) 나머지 하나는 단락 이후 텍스트(`그 뒤를 잇는 인라인 텍스트`). 이는 다음과 같은 블록 구조를 구축합니다:
 
-![anonymous_block-level_boxes.png](/@api/deki/files/5996/=anonymous_block-level_boxes.png)
-
 결과는:
 
 ```
@@ -88,7 +80,7 @@ CSS 선택기는 해당 상자에 이름을 부여하거나 스타일링을 할 
 
 두 개의 무명 블록 상자가 생성되었습니다. 스팬 요소 이전의 텍스트(`일부 인라인 텍스트`) 하나와 그 뒤의 텍스트(`그 뒤를 잇는 추가 인라인 텍스트`) 하나가 있는데 이로써 다음과 같은 블록 구조가 주어졌습니다:
 
-![](https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png)
+![](anonymous_block_box_break.png)
 
 이 것의 결과는:
 
@@ -101,8 +93,6 @@ CSS 선택기는 해당 상자에 이름을 부여하거나 스타일링을 할 
 ### 인라인수준 요소와 인라인 상자
 
 어떤 요소가 *인라인수준*이라고 말하려면 자신의 계산된 {{ cssxref("display") }} CSS 속성 값이 `inline`, `inline-block` 또는 `inline-table`일 때입니다. 시각적으로는 이것은 콘텐츠로 이뤄진 블록 무리를 구성하지 않고 다른 인라인수준 콘텐츠와 함께 라인의 형태로 배포됩니다. 일반적으로 강조 또는 이미지와 같이 서로 다른 서식을 가진 단락의 콘텐츠는 인라인수준 요소로 만들어집니다.
-
-![venn_inlines.png](/@api/deki/files/6008/=venn_inlines.png)
 
 > **경고:** 이 도식은 구식 용어를 사용합니다: 아래 참조 사항을 보세요. 그것 이외에도 오른쪽의 노란색 타원은 정의에 따르면 왼쪽의 타원형과 동일하거나 그보다 크기 때문에(수학적 상위집합일 수 있어) 그림이 틀렀습니다, 왜냐하면 해당 CSS 스펙을 보면 "인라인수준 요소는 인라인 서식 상황에 참여하는 상자인 인라인수준 상자를 생성한다"라고 쓰여있기 때문입니다. CSS 2.2, 9.2.2장 참조
 

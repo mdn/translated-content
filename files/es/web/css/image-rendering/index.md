@@ -1,7 +1,6 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
-translation_of: Web/CSS/image-rendering
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -78,11 +77,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Images', '#the-image-rendering', 'image-rendering')}} | {{Spec2('CSS3 Images')}} | Initial definition |
-
-> **Nota:** Aunque similar al atributo SVG {{svgattr("image-rendering")}}, los valores son bastante diferentes ahora.
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

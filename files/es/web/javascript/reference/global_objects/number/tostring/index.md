@@ -1,13 +1,6 @@
 ---
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toString
 ---
 

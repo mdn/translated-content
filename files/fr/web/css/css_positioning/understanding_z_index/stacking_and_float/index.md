@@ -32,7 +32,7 @@ Ce comportement peut être expliqué en améliorant la liste précédente :
 
 ## Code source de l'exemple
 
-### **HTML**
+### HTML
 
 ```html
 <div id="abs1">

@@ -55,7 +55,7 @@ rows.forEach((row) => {
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 浏览器兼容性
 

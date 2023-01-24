@@ -5,7 +5,7 @@ slug: Web/API/PushMessageData/arrayBuffer
 
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-{{domxref("PushMessageData")}} インターフェースの **`arrayBuffer()`** メソッドは、プッシュメッセージデータを {{domxref("ArrayBuffer")}} オブジェクトとして抽出します。
+{{domxref("PushMessageData")}} インターフェイスの **`arrayBuffer()`** メソッドは、プッシュメッセージデータを {{jsxref("ArrayBuffer")}} オブジェクトとして抽出します。
 
 ## 構文
 
@@ -13,13 +13,13 @@ slug: Web/API/PushMessageData/arrayBuffer
 var myArrayBuffer = PushEvent.data.arrayBuffer();
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-{{domxref("ArrayBuffer")}}。
+{{jsxref("ArrayBuffer")}}。
 
 ## 例
 
@@ -31,13 +31,11 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                     | 状態                         | コメント   |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Push API', '#widl-PushMessageData-arrayBuffer-ArrayBuffer', 'arrayBuffer()')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushMessageData.arrayBuffer")}}
 

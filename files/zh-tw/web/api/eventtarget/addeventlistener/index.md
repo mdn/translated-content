@@ -50,7 +50,7 @@ buttonElement.addEventListener('click', {
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('範例')}}
 
 ### 檢閱相關:
 

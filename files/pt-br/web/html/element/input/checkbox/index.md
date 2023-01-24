@@ -281,7 +281,7 @@ otherCheckbox.onchange = function () {
 
 ## Compatibilidade com navegadores
 
-{{Compat ("html.elements.input.input-checkbox")}}
+{{Compat}}
 
 ## Veja também
 

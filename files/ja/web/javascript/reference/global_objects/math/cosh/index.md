@@ -61,9 +61,7 @@ Math.cosh = Math.cosh || function(x) {
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

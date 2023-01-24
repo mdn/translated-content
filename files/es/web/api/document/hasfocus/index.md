@@ -1,9 +1,6 @@
 ---
 title: element.hasFocus
 slug: Web/API/Document/hasFocus
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Document/hasFocus
 ---
 
 {{ ApiRef() }}

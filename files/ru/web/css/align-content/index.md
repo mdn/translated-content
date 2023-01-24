@@ -248,8 +248,8 @@ display.addEventListener('change', function (evt) {
 
 ### Support in Grid layout
 
-{{Compat("css.properties.align-content.grid_context")}}
+{{Compat}}
 
 ## Смотрите также
 
-- [Использование гибких блоков CSS](../../CSS/Using_CSS_flexible_boxes)
+- [Использование гибких блоков CSS](/ru/docs/CSS/Using_CSS_flexible_boxes)

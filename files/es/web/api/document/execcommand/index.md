@@ -1,14 +1,6 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - Método(2)
-  - NecesitaEjemplo
-  - Referencia
-  - editor
-translation_of: Web/API/Document/execCommand
 ---
 
 {{ApiRef("DOM")}}{{ Deprecated_header() }}

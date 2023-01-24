@@ -61,4 +61,4 @@ original_slug: Web/API/WebRTC_API/связь
 
 ## Весь обмен в сложной схеме
 
-[![A complete architectural diagram showing the whole WebRTC process.](https://mdn.mozillademos.org/files/6119/webrtc-complete-diagram.png)](https://hacks.mozilla.org/wp-content/uploads/2013/07/webrtc-complete-diagram.png)
+[![A complete architectural diagram showing the whole WebRTC process.](webrtc-complete-diagram.png)](https://hacks.mozilla.org/wp-content/uploads/2013/07/webrtc-complete-diagram.png)

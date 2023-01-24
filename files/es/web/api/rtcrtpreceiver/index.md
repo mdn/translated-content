@@ -1,7 +1,6 @@
 ---
 title: RTCRtpReceiver
 slug: Web/API/RTCRtpReceiver
-translation_of: Web/API/RTCRtpReceiver
 ---
 
 {{APIRef("WebRTC")}}
@@ -36,9 +35,7 @@ La interfaz **`RTCRtpReceiver`** de la [WebRTC API](/es/docs/Web/API/WebRTC_API)
 
 ## Especificaciones
 
-| Especificación                                                                                   | Status                           | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('WebRTC 1.0','#rtcrtpreceiver-interface','RTCRtpReceiver')}} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad
 

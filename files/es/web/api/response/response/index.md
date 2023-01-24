@@ -1,7 +1,6 @@
 ---
 title: Response()
 slug: Web/API/Response/Response
-translation_of: Web/API/Response/Response
 ---
 
 {{APIRef("Fetch")}}
@@ -47,9 +46,7 @@ var miRespuesta = new Response(miBlob,opciones);
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                   | Comentarios        |
-| -------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-response','Response()')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -1,16 +1,6 @@
 ---
 title: URL
 slug: Web/API/URL
-tags:
-  - API
-  - Interface
-  - Overview
-  - Reference
-  - URI
-  - URL
-  - URL API
-  - Web
-translation_of: Web/API/URL
 ---
 {{APIRef("URL API")}}
 

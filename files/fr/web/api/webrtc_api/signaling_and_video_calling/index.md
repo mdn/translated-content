@@ -127,7 +127,7 @@ C'est le point de départ pour créer une connexion avec un pair. Il accepte des
 var pc = new PeerConnection(configuration, options);
 ```
 
-### **`RTCConfiguration`**
+### RTCConfiguration
 
 L'objet {{domxref("RTCConfiguration")}} contient l’information sur les serveurs TURN et/ou STUN à utiliser pour ICE. Ceci est requis pour s'assurer que la plupart des utilisateurs peuvent en fait créer une connexion en évitant les restrictions du NAT et du pare-feu.
 
@@ -143,7 +143,7 @@ var configuration = {
 
 Google met à disposition un [serveur STUN public](https://code.google.com/p/natvpn/source/browse/trunk/stun_server_list) que nous pouvons utiliser. J'ai également créé un compte chez <http://numb.viagenie.ca/> pour un accès gratuit à un serveur TURN. Vous pouvez faire la même chose et les remplacer par vos propres informations d'identification.
 
-### **`options`** (Cf. "Note" avant)
+### options (Cf. "Note" avant)
 
 Selon le type de connexion, vous devez passer des options.
 
@@ -211,7 +211,7 @@ pc.createOffer(function (offer) {
 }, errorHandler, constraints);
 ```
 
-### **`errorHandler`**
+### errorHandler
 
 S'il y avait un problème lors de la génération d’une offre, cette méthode sera exécutée avec les détails de l'erreur comme premier argument.
 
@@ -221,7 +221,7 @@ var errorHandler = function (err) {
 };
 ```
 
-### **`constraints`**
+### constraints
 
 Options pour l'offre SDP.
 
@@ -267,11 +267,11 @@ var channel = pc.createDataChannel(channelName, channelOptions);
 
 L'auteur de l'offre doit être le pair qui crée le canal. Le répondeur recevra le canal dans le rappel (callback) `ondatachannel` dans le PeerConnection. Vous devez appeler `createDataChannel()` une fois avant de créer l'offre.
 
-### **`channelName`**
+### channelName
 
 Il s'agit d'une chaîne qui agit comme une étiquette pour le nom de votre canal. _AVERTISSEMENT : Assurez-vous que votre nom de canal n'a pas d'espaces ou Chrome va échouer sur `createAnswer()`._
 
-### **`channelOptions`**
+### channelOptions
 
 ```js
 var channelOptions = {};
@@ -281,11 +281,11 @@ Ces options ne sont pas bien supportées sur Chrome donc vous pouvez laisser ça
 
 ### Méthodes et événements de canal
 
-#### **`onopen`**
+#### onopen
 
 Exécuté lorsque la connexion est établie.
 
-#### **`onerror`**
+#### onerror
 
 Exécuté s'il y a une erreur de création de la connexion. Le premier argument est un objet d'erreur.
 
@@ -295,7 +295,7 @@ channel.onerror = function (err) {
 };
 ```
 
-#### **`onmessage`**
+#### nmessage
 
 ```js
 channel.onmessage = function (e) {
@@ -305,11 +305,11 @@ channel.onmessage = function (e) {
 
 Le cœur de la connexion. Lorsque vous recevez un message, cette méthode s’exécute. Le premier argument est un objet d'événement qui contient les données, heure de réception et autres informations.
 
-#### **`onclose`**
+#### onclose
 
 Exécuté si l'autre pair ferme la connexion.
 
-### **Lier les événements**
+### Lier les événements
 
 Si vous êtes le créateur du canal(l'auteur de l'offre), vous pouvez lier des événements directement à la DataChannel que vous avez créé avec `createChannel`. Si vous êtes l'auteur de la réponse, vous devez utiliser le callback `ondatachannel` dans le PeerConnection afin d'accéder au même canal.
 
@@ -321,7 +321,7 @@ pc.ondatachannel = function (e) {
 
 Le canal est disponible dans l’objet événement passé dans le descripteur en tant que `e.channel`.
 
-#### **`send()`**
+#### send()
 
 ```js
 channel.send("Hi Peer!");
@@ -329,7 +329,7 @@ channel.send("Hi Peer!");
 
 Cette méthode vous permet d'envoyer des données directement au pair! Incroyable. Vous devez envoyer un String, Blob, ArrayBuffer ou ArrayBufferView, alors assurez-vous de "stringifier" les objets.
 
-#### **`close()`**
+#### close()
 
 Ferme le canal une fois que la connexion doit se terminer. Il est recommandé de le faire sur l’ unload de la page.
 
@@ -361,13 +361,13 @@ var mediaOptions = {
 
 Si vous voulez juste une conversation audio, supprimez la clé `video`.
 
-#### **`errorHandler`**
+#### errorHandler
 
 Exécuté s'il y a une erreur retournée par le support demandé.
 
 ### Événements Médias et Méthodes
 
-#### **`addStream`**
+#### addStream
 
 Ajoute le flux de `getUserMedia` au PeerConnection.
 
@@ -375,7 +375,7 @@ Ajoute le flux de `getUserMedia` au PeerConnection.
 pc.addStream(stream);
 ```
 
-#### **`onaddstream`**
+#### onaddstream
 
 ```js
 <video id="otherPeer" autoplay></video>

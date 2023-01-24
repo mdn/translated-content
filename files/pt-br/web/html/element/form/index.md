@@ -53,8 +53,8 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
 
   - : O [HTTP](/pt-BR/docs/HTTP) method that the browser uses to submit the form. Possible values are:
 
-    - `post`: Corresponds to the HTTP [POST method](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; the data from the form is included in the body of the form and is sent to the server.
-    - `get`: Corresponds to the HTTP [GET method](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); the data from the form are appended to the `action` attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
+    - `post`: Corresponds to the HTTP [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; the data from the form is included in the body of the form and is sent to the server.
+    - `get`: Corresponds to the HTTP [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); the data from the form are appended to the `action` attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
 
     This value can be overridden by a {{htmlattrxref("formmethod", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
 

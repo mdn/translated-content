@@ -1,7 +1,6 @@
 ---
 title: WindowTimers.clearInterval()
 slug: Web/API/clearInterval
-translation_of: Web/API/WindowOrWorkerGlobalScope/clearInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
 ---
 
@@ -21,10 +20,9 @@ window.clearInterval(intervalID)
 
 Vea el [ejemplo de`setInterval()`](/es/docs/DOM/window.setInterval#Example).
 
-## Especificación
+## Especificaciones
 
-| {{SpecName('HTML WHATWG', 'timers.html#timers', 'clearInterval')}} | {{Spec2('HTML WHATWG')}} |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
+{{Specifications}}
 
 ## Vea también
 

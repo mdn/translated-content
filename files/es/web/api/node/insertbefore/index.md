@@ -1,13 +1,6 @@
 ---
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
-tags:
-  - API
-  - DOM
-  - Nodo
-  - Referencia
-  - metodo
-translation_of: Web/API/Node/insertBefore
 original_slug: Web/API/Node/insertarAntes
 ---
 

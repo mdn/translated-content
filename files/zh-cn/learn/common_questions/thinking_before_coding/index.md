@@ -3,12 +3,14 @@ title: 我该怎样开始设计我的网站？
 slug: Learn/Common_questions/Thinking_before_coding
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 这篇文章介绍了所有项目最重要的第一步：确定你想要做什么
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提：</th>
+      <th scope="row">预备知识：</th>
       <td>无</td>
     </tr>
     <tr>

@@ -1,20 +1,6 @@
 ---
 title: Números y fechas
 slug: Web/JavaScript/Guide/Numbers_and_dates
-tags:
-  - Coma flotante
-  - Cálculo
-  - Enteros
-  - Fechas
-  - Guía
-  - JavaScript
-  - Math
-  - Numeros
-  - Numérico
-  - PF
-  - Punto flotante
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
 {{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}

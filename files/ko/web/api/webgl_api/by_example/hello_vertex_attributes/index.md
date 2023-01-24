@@ -1,8 +1,8 @@
 ---
 title: Hello vertex attributes
 slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
-translation_of: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
 
 쉐이더 프로그래밍과 유저 인터페이스를 정점 속성을 이용하여 합치기.

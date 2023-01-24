@@ -1,14 +1,6 @@
 ---
 title: 단축 속성
 slug: Web/CSS/Shorthand_properties
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - Web
-  - 단축 속성
-translation_of: Web/CSS/Shorthand_properties
 ---
 {{cssref}}
 

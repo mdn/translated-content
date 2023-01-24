@@ -1,16 +1,6 @@
 ---
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
-tags:
-  - API
-  - Almacen
-  - Basededatos
-  - Continuar
-  - CursorIDB
-  - IndexadoIDB
-  - Referencia
-  - metodo
-translation_of: Web/API/IDBCursor/continue
 ---
 
 {{APIRef("IndexedDB")}}
@@ -73,9 +63,7 @@ function displayData() {
 
 ## Especificaciones
 
-| Specification                                                                                                | Estado                       | Comentarios |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -1,7 +1,6 @@
 ---
 title: Console.timeEnd()
 slug: Web/API/Console/timeEnd
-translation_of: Web/API/Console/timeEnd
 ---
 
 {{APIRef("Console API")}}
@@ -29,7 +28,7 @@ console.timeEnd(etiqueta);
 
 ## Compatibilidad con Navegadores
 
-{{Compat("api.Console.timeEnd")}}
+{{Compat}}
 
 ## Relacionados
 

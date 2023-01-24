@@ -1,36 +1,42 @@
 ---
 title: Date.prototype.setUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
-browser-compat: javascript.builtins.Date.setUTCDate
 ---
 
 {{JSRef}}
 
-**setUTCDate()** 메서드는 표준시에 따라 지정된 날짜의 날짜를 설정합니다.
+**`setUTCDate()`** 메서드는 UTC 시간을 기준으로 지정된 {{jsxref("Date")}} 인스턴스의 날짜를 변경합니다.
 
-## Syntax
+표준시 대신 현지 시간을 기준으로 하는 {{jsxref("Date")}} 인스턴스의 날짜를 변경하려면 {{jsxref("Date.prototype.setDate", "setDate()")}} 메소드를 사용하세요.
 
-```js
-    dateObj.setUTCDate(dayValue)
+{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}
+
+## 구문
+
+```js-nolint
+setUTCDate(dayValue)
 ```
 
-### Parameters
+### 매개변수
 
 - `dayValue`
   - : 한 달의 날짜를 나타내는 1에서 31 사이의 정수입니다.
 
-### Return value
+### 반환 값
 
-1970 년 1 월 1 일 00:00:00 UTC와 업데이트 된 날짜 사이의 밀리 초 숫자입니다.
+1970년 1월 1일 00:00:00 UTC와 업데이트 된 날짜 사이의 밀리 초 숫자입니다.
 
-## Description
+## 설명
 
-지정한 매개 변수가 예상 범위를 벗어난 경우 setUTCDate ()는 그에 따라 {{jsxref ( "Date")}} 객체의 날짜 정보를 업데이트하려고 시도합니다. 예를 들어, dayValue에 40을 사용하고 {{jsxref ( "Date")}} 객체에 저장된 달이 6 월이면 일이 10으로 변경되고 월이 7 월로 증가합니다.
+`dayValue`가 해당 월의 날짜 값 범위를 벗어나면 `setDate()`는 그에 맞춰 {{jsxref("Date")}} 객체를 업데이트합니다.
 
-## Examples
+예를 들어 `dayValue`에 0을 입력하면 날짜는 전월 말일로 설정됩니다. `dayValue`에 40을 사용하고 {{jsxref("Date")}} 객체에 저장된 월이 6월이면 날짜는 10으로 변경되고 월은 7월로 증가합니다.
 
-### Using `setUTCDate()`
+`dayValue`에 음수를 입력하면 전월 말일부터 역순으로 날짜가 설정됩니다. -1을 사용하면 날짜가 이전 달의 마지막 날 1일로 설정됩니다.
+
+## 예제
+
+### `setUTCDate()` 사용하기
 
 ```js
 var theBigDay = new Date();
@@ -45,7 +51,7 @@ theBigDay.setUTCDate(20);
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{jsxref("Date.prototype.getUTCDate()")}}
 - {{jsxref("Date.prototype.setDate()")}}

@@ -1,14 +1,6 @@
 ---
 title: 'HTML el atributo: minlength'
 slug: Web/HTML/Attributes/minlength
-tags:
-  - Entrada
-  - Input
-  - Referencia
-  - atributo
-  - minlength
-  - textarea
-translation_of: Web/HTML/Attributes/minlength
 original_slug: Web/HTML/Atributos/minlength
 ---
 
@@ -42,14 +34,11 @@ input:invalid:focus {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                               |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-minlength', 'atributo minlength')}} | {{ Spec2('HTML WHATWG') }} |
-| {{SpecName('HTML5.1', 'input.html#attr-minlength-accept', 'atributo minlength')}}     | {{Spec2('HTML5.1')}}         |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.attribute.minlength")}}
+{{Compat}}
 
 ## Ve también
 

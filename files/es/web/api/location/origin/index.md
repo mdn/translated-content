@@ -1,13 +1,6 @@
 ---
 title: 'Location: origin'
 slug: Web/API/Location/origin
-tags:
-  - API
-  - Location
-  - Propiedad
-  - Referencia
-  - Ubicación
-translation_of: Web/API/Location/origin
 ---
 
 {{APIRef("Location")}}
@@ -35,9 +28,7 @@ var result = window.location.origin; // Devuelve:'https://developer.mozilla.org'
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#dom-location-origin', 'origin')}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

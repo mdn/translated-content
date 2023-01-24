@@ -3,6 +3,7 @@ title: 모범 사례
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 original_slug: MDN/Guidelines/Conventions_definitions
 ---
+
 {{MDNSidebar}}
 
 이 글은 MDN에서 추천하는 콘텐츠 작업 법을 설명합니다. 이 가이드라인은 더 나은 결과로 이끌 선호하는 일하는 법을 설명하거나 비슷한 일을 하는 여러 방법 중에서 결정에 조언을 제공합니다.

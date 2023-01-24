@@ -1,8 +1,6 @@
 ---
 title: label
 slug: Web/JavaScript/Reference/Statements/label
-translation_of: Web/JavaScript/Reference/Statements/label
-browser-compat: javascript.statements.label
 ---
 
 {{jsSidebar("Statements")}}

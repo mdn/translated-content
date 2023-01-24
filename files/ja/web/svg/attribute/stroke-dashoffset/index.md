@@ -76,7 +76,4 @@ The offset is usually expressed in user units resolved against the {{SVGAttr('pa
 
 ## Specification
 
-| Specification                                                                                                    | Status                   | Comment                                 |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------- |
-| {{SpecName("SVG2", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}} | {{Spec2("SVG2")}} | Definition for shapes and texts         |
-| {{SpecName("SVG1.1", "painting.html#StrokeDashoffsetProperty", "stroke-dashoffset")}} | {{Spec2("SVG1.1")}} | Initial definition for shapes and texts |
+{{Specifications}}

@@ -117,4 +117,4 @@ h3{
 
 ## Veja também
 
-- [CSS Box Model](/en/CSS/box_model)
+- [CSS Box Model](/pt-BR/CSS/box_model)

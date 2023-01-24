@@ -147,4 +147,4 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
   - [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
 
 - [HTML5 Rocks — New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
-- HTTP Feature-Policy 指令 {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}
+- HTTP Permissions-Policy 指令 {{httpheader("Permissions-Policy/sync-xhr", "sync-xhr")}}

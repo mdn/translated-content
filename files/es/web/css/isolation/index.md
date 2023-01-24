@@ -1,11 +1,6 @@
 ---
 title: Isolation
 slug: Web/CSS/isolation
-tags:
-  - CSS
-  - Composición CSS
-  - Propieiedad CSS
-translation_of: Web/CSS/isolation
 ---
 
 {{CSSRef}}
@@ -82,9 +77,7 @@ isolation: unset;
 
 ## Especificaciones
 
-| Specification                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('Compositing', '#isolation', 'Isolation') }} | {{ Spec2('Compositing') }} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

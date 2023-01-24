@@ -3,7 +3,7 @@ title: WebGL を用いた 3D オブジェクトの作成
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 正方形に 5 つの面を追加して立体化し、キューブを作成しましょう。これを効率的に行うために、`gl.drawArrays()` メソッドを呼び出して頂点情報を直接使用する描画方法から、頂点の配列をテーブルとして扱い、`gl.drawElements()` を呼び出して、そのテーブルの各頂点情報を参照して各面の頂点を定義する方法に切り替えます。
 

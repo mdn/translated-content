@@ -37,9 +37,7 @@ observer2.observe({entryTypes: ["measure"]});
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | ステータス                                               | コメント                                         |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver', 'PerformanceObserver')}} | {{Spec2('Performance Timeline Level 2')}} | `PerformanceObserver` インターフェイスの初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

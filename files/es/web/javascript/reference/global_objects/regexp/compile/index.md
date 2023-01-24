@@ -1,16 +1,6 @@
 ---
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-tags:
-  - Desaprovado
-  - Expresion Regular
-  - JavaScript
-  - Obsoleto
-  - Prototype
-  - Referencia
-  - RegExp
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/compile
 ---
 

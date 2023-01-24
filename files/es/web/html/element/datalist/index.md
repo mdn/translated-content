@@ -1,10 +1,6 @@
 ---
 title: datalist
 slug: Web/HTML/Element/datalist
-tags:
-  - HTML5
-  - datalist
-translation_of: Web/HTML/Element/datalist
 original_slug: Web/HTML/Elemento/datalist
 ---
 
@@ -88,10 +84,7 @@ Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 

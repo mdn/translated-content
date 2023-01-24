@@ -13,7 +13,7 @@ fixed() 方法创建了一个 \<tt> 标签元素将字符串包裹起来，从�
 str.fixed()
 ```
 
-### Return value
+### 返回值
 
 返回一个表示 {{HTMLElement("tt")}} HTML 元素的字符串。
 

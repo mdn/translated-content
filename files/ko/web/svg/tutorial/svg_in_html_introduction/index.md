@@ -1,14 +1,11 @@
 ---
 title: SVG In HTML Introduction
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
-tags:
-  - SVG
-translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
 
 ### 개요
 
-이 문서와 관련된 예제는 form의 배경 그림을 제공하기 위해서 inline [SVG](ko/SVG)를 어떻게 사용하는지를 보여줍니다. 정규 XHTML을 작성하는 것과 같은 방식으로 그 그림들을 조작하기 위해 [JavaScript](ko/JavaScript)와 [CSS](ko/CSS)의 사용법도 설명합니다. 예제들은 XHTML(HTML이 아님)과 SVG integration을 지원하는 웹브라우져에서만 동작함을 유의하시기 바랍니다.
+이 문서와 관련된 예제는 form의 배경 그림을 제공하기 위해서 inline [SVG](/ko/SVG)를 어떻게 사용하는지를 보여줍니다. 정규 XHTML을 작성하는 것과 같은 방식으로 그 그림들을 조작하기 위해 [JavaScript](/ko/JavaScript)와 [CSS](/ko/CSS)의 사용법도 설명합니다. 예제들은 XHTML(HTML이 아님)과 SVG integration을 지원하는 웹브라우져에서만 동작함을 유의하시기 바랍니다.
 
 ### 소스
 
@@ -80,5 +77,5 @@ translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 
 ### Related Links
 
-- Another SVG in XHTML example: [A swarm of motes](ko/SVG/Namespaces_Crash_Course/Example)
+- Another SVG in XHTML example: [A swarm of motes](/ko/SVG/Namespaces_Crash_Course/Example)
 - [Inline SVG](http://svg-whiz.com/wiki/index.php?title=Inline_SVG) page on SVG wiki

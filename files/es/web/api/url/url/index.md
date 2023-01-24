@@ -1,7 +1,6 @@
 ---
 title: URL()
 slug: Web/API/URL/URL
-translation_of: Web/API/URL/URL
 ---
 
 {{APIRef("URL API")}}
@@ -57,11 +56,9 @@ var d = new URL('/en-US/docs', b);                     // => 'https://developer.
         new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (ver URL relativas)
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                   | Estado               | Comentario          |
-| ---------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('URL', '#constructors', 'URL.URL()')}} | {{Spec2('URL')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

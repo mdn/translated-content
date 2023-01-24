@@ -1,15 +1,6 @@
 ---
 title: CSS Colors
 slug: Web/CSS/CSS_Colors
-tags:
-  - CSS
-  - CSS Colors
-  - NeedsTranslation
-  - Overview
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/CSS_Color
-translation_of_original: Web/CSS/CSS_Colors
 original_slug: Web/CSS/CSS_Color
 ---
 
@@ -34,11 +25,7 @@ _Ninguna._
 
 ## Especificaciones
 
-| Especificación                                   | Estado                           | Comentario         |
-| ------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Colors')}}             | {{Spec2('CSS3 Colors')}} |                    |
-| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}         |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}         | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

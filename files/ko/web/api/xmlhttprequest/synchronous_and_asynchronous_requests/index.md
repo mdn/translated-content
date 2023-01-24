@@ -1,7 +1,6 @@
 ---
 title: Synchronous and asynchronous requests
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
-translation_of: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
 `XMLHttpRequest` 는 동기적 통신과 비동기적 통신을 모두 지원합니다. 하지만, 일반적으로는 성능상의 이유로 인하여 비동기적 요청이 동기적 요청보다 우선시 되어야 합니다.
 
@@ -131,7 +130,7 @@ Here, we're specifying a timeout of 2000 ms.
 
 ## Synchronous request
 
-> **참고:** Starting with Gecko 30.0 {{ geckoRelease("30.0") }}, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
+> **참고:** Starting with Gecko 30.0, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
 
 Synchronous XHR often causes hangs on the web. But developers typically don't notice the problem because the hang only manifests during poor network conditions or slow server response. Synchronous XHR is now in deprecation state. Developers are recommended to move away from the API.
 

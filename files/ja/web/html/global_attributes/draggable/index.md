@@ -18,11 +18,7 @@ slug: Web/HTML/Global_attributes/draggable
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                                                         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#the-draggable-attribute", "draggable")}} | {{Spec2("HTML WHATWG")}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。 |
-| {{SpecName("HTML5.2", "interaction.html#the-draggable-attribute", "draggable")}}     | {{Spec2("HTML5.2")}}     | 変更なし                                                                     |
-| {{SpecName("HTML5.1", "editing.html#the-draggable-attribute", "draggable")}}             | {{Spec2("HTML5.1")}}     | {{SpecName('HTML WHATWG')}} のスナップショット、初回定義。          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

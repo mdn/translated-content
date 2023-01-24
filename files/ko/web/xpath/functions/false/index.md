@@ -1,9 +1,6 @@
 ---
 title: 'false'
 slug: Web/XPath/Functions/false
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/false
 ---
 
 {{ XsltRef() }}

@@ -1,11 +1,6 @@
 ---
 title: CSS Fonts
 slug: Web/CSS/CSS_Fonts
-tags:
-  - CCS
-  - CSS Fonts
-  - Reference
-translation_of: Web/CSS/CSS_Fonts
 ---
 
 {{CSSRef}}
@@ -60,8 +55,4 @@ _None._
 
 ## Especificaciones
 
-| Specification                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts')}}                                     | {{Spec2('CSS3 Fonts')}} |                    |
-| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}} | {{Spec2('CSS2.1')}}         |                    |
-| {{SpecName('CSS1', '#font', '')}}                             | {{Spec2('CSS1')}}         | Definición inicial |
+{{Specifications}}

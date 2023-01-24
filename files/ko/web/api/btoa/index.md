@@ -1,17 +1,8 @@
 ---
 title: btoa()
 slug: Web/API/btoa
-page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Polyfill
-  - Web
-browser-compat: api.btoa
-translation_of: Web/API/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`btoa()`** 함수는 [이진 문자열](/ko/docs/Web/API/DOMString/Binary)({{jsxref("String")}} 객체 내 모든 문자가 이진 데이터의 바이트 한 개)로부터 {{glossary("Base64")}} 인코딩된 ASCII 문자열을 생성해 반환합니다.

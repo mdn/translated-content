@@ -29,7 +29,7 @@ M x y
 m dx dy
 ```
 
-这有一个比较好的例子，不过我们没画任何东西，只是将画笔移动到路径的起点，所以我们不会看到任何图案。但是，我把我们移动到的点标注出来了，所以在下面的例子里会看到 (10,10) 坐标上有一个点。注意，如果只画 path，这里什么都不会显示。（这段不太好理解，说明一下：为了更好地展示路径，下面的所有例子里，在用 path 绘制路径的同时，也会用 circle 标注路径上的点。）![](/@api/deki/files/45/=Blank_Path_Area.png)
+这有一个比较好的例子，不过我们没画任何东西，只是将画笔移动到路径的起点，所以我们不会看到任何图案。但是，我把我们移动到的点标注出来了，所以在下面的例子里会看到 (10,10) 坐标上有一个点。注意，如果只画 path，这里什么都不会显示。（这段不太好理解，说明一下：为了更好地展示路径，下面的所有例子里，在用 path 绘制路径的同时，也会用 circle 标注路径上的点。）![](blank_path_area.png)
 
 ```plain
 <?xml version="1.0" standalone="no"?>
@@ -57,7 +57,7 @@ m dx dy
  V y (or v dy)
 ```
 
-现在我们已经掌握了一些命令，可以开始画一些东西了。先从简单的地方开始，画一个简单的矩形（同样的效果用`<rect/>`元素可以更简单的实现），矩形是由水平线和垂直线组成的，所以这个例子可以很好地展现前面讲的画线的方法。![](/@api/deki/files/292/=Path_Line_Commands.png)
+现在我们已经掌握了一些命令，可以开始画一些东西了。先从简单的地方开始，画一个简单的矩形（同样的效果用`<rect/>`元素可以更简单的实现），矩形是由水平线和垂直线组成的，所以这个例子可以很好地展现前面讲的画线的方法。![](path_line_commands.png)
 
 ```plain
 <?xml version="1.0" standalone="no"?>
@@ -106,25 +106,27 @@ m dx dy
 我们从稍微复杂一点的三次贝塞尔曲线 C 入手，三次贝塞尔曲线需要定义一个点和两个控制点，所以用 C 命令创建三次贝塞尔曲线，需要设置三组坐标参数：
 
 ```plain
- C x1 y1, x2 y2, x y (or c dx1 dy1, dx2 dy2, dx dy)
+C x1 y1, x2 y2, x y
+(or)
+c dx1 dy1, dx2 dy2, dx dy
 ```
 
-这里的最后一个坐标 (x,y) 表示的是曲线的终点，另外两个坐标是控制点，(x1,y1) 是起点的控制点，(x2,y2) 是终点的控制点。如果你熟悉代数或者微积分的话，会更容易理解控制点，控制点描述的是曲线起始点的斜率，曲线上各个点的斜率，是从起点斜率到终点斜率的渐变过程。（文字描述不好，维基百科上有图示，更直观。）![](/@api/deki/files/159/=Cubic_Bezier_Curves.png)
+这里的最后一个坐标 (x,y) 表示的是曲线的终点，另外两个坐标是控制点，(x1,y1) 是起点的控制点，(x2,y2) 是终点的控制点。如果你熟悉代数或者微积分的话，会更容易理解控制点，控制点描述的是曲线起始点的斜率，曲线上各个点的斜率，是从起点斜率到终点斜率的渐变过程。（文字描述不好，维基百科上有图示，更直观。）
 
-```plain
-<?xml version="1.0" standalone="no"?>
+![Cubic Bézier Curves with grid](cubic_bézier_curves_with_grid.png)
 
-<svg width="190px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+```xml
+<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
 
-  <path d="M10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/>
-  <path d="M70 10 C 70 20, 120 20, 120 10" stroke="black" fill="transparent"/>
-  <path d="M130 10 C 120 20, 180 20, 170 10" stroke="black" fill="transparent"/>
-  <path d="M10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent"/>
-  <path d="M70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent"/>
-  <path d="M130 60 C 120 80, 180 80, 170 60" stroke="black" fill="transparent"/>
-  <path d="M10 110 C 20 140, 40 140, 50 110" stroke="black" fill="transparent"/>
-  <path d="M70 110 C 70 140, 110 140, 110 110" stroke="black" fill="transparent"/>
-  <path d="M130 110 C 120 140, 180 140, 170 110" stroke="black" fill="transparent"/>
+  <path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/>
+  <path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="transparent"/>
+  <path d="M 130 10 C 120 20, 180 20, 170 10" stroke="black" fill="transparent"/>
+  <path d="M 10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent"/>
+  <path d="M 70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent"/>
+  <path d="M 130 60 C 120 80, 180 80, 170 60" stroke="black" fill="transparent"/>
+  <path d="M 10 110 C 20 140, 40 140, 50 110" stroke="black" fill="transparent"/>
+  <path d="M 70 110 C 70 140, 110 140, 110 110" stroke="black" fill="transparent"/>
+  <path d="M 130 110 C 120 140, 180 140, 170 110" stroke="black" fill="transparent"/>
 
 </svg>
 ```
@@ -134,49 +136,52 @@ m dx dy
 你可以将若干个贝塞尔曲线连起来，从而创建出一条很长的平滑曲线。通常情况下，一个点某一侧的控制点是它另一侧的控制点的对称（以保持斜率不变）。这样，你可以使用一个简写的贝塞尔曲线命令 S，如下所示：
 
 ```plain
- S x2 y2, x y (or s dx2 dy2, dx dy)
+S x2 y2, x y
+(or)
+s dx2 dy2, dx dy
 ```
 
 S 命令可以用来创建与前面一样的贝塞尔曲线，但是，如果 S 命令跟在一个 C 或 S 命令后面，则它的第一个控制点会被假设成前一个命令曲线的第二个控制点的中心对称点。如果 S 命令单独使用，前面没有 C 或 S 命令，那当前点将作为第一个控制点。下面是 S 命令的语法示例，图中左侧红色标记的点对应的控制点即为蓝色标记点。
 
-![](/@api/deki/files/363/=ShortCut_Cubic_Bezier.png)
+![A smooth S-shaped curve is drawn from two Bézier curves. The second curve keeps the same slope of the control points as the first curve, which is reflected to the other side.](shortcut_cubic_bézier_with_grid.png)
 
-```plain
-<?xml version="1.0" standalone="no"?>
-<svg width="190px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
+```xml
+<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
 </svg>
 ```
 
 另一种可用的贝塞尔曲线是二次贝塞尔曲线 Q，它比三次贝塞尔曲线简单，只需要一个控制点，用来确定起点和终点的曲线斜率。因此它需要两组参数，控制点和终点坐标。
 
 ```plain
- Q x1 y1, x y (or q dx1 dy1, dx dy)
+Q x1 y1, x y
+(or)
+q dx1 dy1, dx dy
 ```
 
-![](/@api/deki/files/326/=Quadratic_Bezier.png)
+![Quadratic Bézier with grid](quadratic_bézier_with_grid.png)
 
-```plain
-<?xml version="1.0" standalone="no"?>
-<svg width="190px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 80 Q 95 10 180 80" stroke="black" fill="transparent"/>
+```xml
+<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent"/>
 </svg>
 ```
 
 就像三次贝塞尔曲线有一个 S 命令，二次贝塞尔曲线有一个差不多的 T 命令，可以通过更简短的参数，延长二次贝塞尔曲线。
 
 ```plain
- T x y (or t dx dy)
+T x y
+(or)
+t dx dy
 ```
 
 和之前一样，快捷命令 T 会通过前一个控制点，推断出一个新的控制点。这意味着，在你的第一个控制点后面，可以只定义终点，就创建出一个相当复杂的曲线。需要注意的是，T 命令前面必须是一个 Q 命令，或者是另一个 T 命令，才能达到这种效果。如果 T 单独使用，那么控制点就会被认为和终点是同一个点，所以画出来的将是一条直线。
 
-![](/@api/deki/files/364/=Shortcut_Quadratic_Bezier.png)
+![Two quadratic curves form one smooth S-shaped curve. The second curve's control points are reflected across the horizontal axis](shortcut_quadratic_bézier_with_grid.png)
 
-```plain
-<?xml version="1.0" standalone="no"?>
-<svg width="190px" height="160px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent"/>
+```xml
+<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent"/>
 </svg>
 ```
 
@@ -193,12 +198,11 @@ S 命令可以用来创建与前面一样的贝塞尔曲线，但是，如果 S 
 
 弧形命令 A 的前两个参数分别是 x 轴半径和 y 轴半径，它们的作用很明显，不用多做解释，如果你不是很清楚它们的作用，可以参考一下椭圆[ellipse](/zh-CN/docs/Web/SVG/Element/ellipse)命令中的相同参数。弧形命令 A 的第三个参数表示弧形的旋转情况，下面的例子可以很好地解释它：
 
-![](/@api/deki/files/346/=SVGArcs_XAxisRotation.png)
+![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
 
-```plain
-<?xml version="1.0" standalone="no"?>
-<svg width="320px" height="320px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 315
+```xml
+<svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 10 315
            L 110 215
            A 30 50 0 0 1 162.55 162.45
            L 172.55 152.45
@@ -211,25 +215,39 @@ S 命令可以用来创建与前面一样的贝塞尔曲线，但是，如果 S 
 
 对于上图没有旋转的椭圆，只有 2 种弧形可以选择，不是 4 种，因为两点连线（也就是对角线）正好穿过了椭圆的中心。像下面这张图，就是普通的情况，可以画出两个椭圆，四种弧。
 
-![](svgarcs_xaxisrotation_with_grid_ellipses.png)
+![Show the 4 arcs on the Ellipse example](svgarcs_xaxisrotation_with_grid_ellipses.png)
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
+  <path d="M 10 315
+           L 110 215
+           A 36 60 0 0 1 150.71 170.29
+           L 172.55 152.45
+           A 30 50 -45 0 1 215.1 109.9
+           L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
+  <circle cx="150.71" cy="170.29" r="2" fill="red"/>
+  <circle cx="110" cy="215" r="2" fill="red"/>
+  <ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/>
+  <ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/>
+</svg>
+```
 
 上面提到的四种不同路径将由接下来的两个参数决定。如前所讲，还有两种可能的椭圆用来形成路径，它们给出的四种可能的路径中，有两种不同的路径。这里要讲的参数是 large-arc-flag（角度大小）和 sweep-flag（弧线方向），large-arc-flag 决定弧线是大于还是小于 180 度，0 表示小角度弧，1 表示大角度弧。sweep-flag 表示弧线的方向，0 表示从起点到终点沿逆时针画弧，1 表示从起点到终点沿顺时针画弧。下面的例子展示了这四种情况。
 
-![](/@api/deki/files/345/=SVGArcs_Flags.png)
+![Four examples are shown for each combination of large-arc-flag and sweep-flag for two circles overlapping, one in the top right, the other in the bottom left. For sweep-flag = 0, when large-arc-flag = 0, the interior arc of the top right circle is drawn, and when large-arc-flag = 1, the exterior arc of the bottom left circle is drawn. For sweep-flag = 1, when large-arc-flag = 0, the interior arc of the bottom left circle is drawn, and when large-arc-flag = 1, the exterior arc of the top right circle is drawn.](svgarcs_flags.png)
 
-```plain
-<?xml version="1.0" standalone="no"?>
-<svg width="325px" height="325px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M80 80
+```xml
+<svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 80 80
            A 45 45, 0, 0, 0, 125 125
            L 125 80 Z" fill="green"/>
-  <path d="M230 80
+  <path d="M 230 80
            A 45 45, 0, 1, 0, 275 125
            L 275 80 Z" fill="red"/>
-  <path d="M80 230
+  <path d="M 80 230
            A 45 45, 0, 0, 1, 125 275
            L 125 230 Z" fill="purple"/>
-  <path d="M230 230
+  <path d="M 230 230
            A 45 45, 0, 1, 1, 275 275
            L 275 230 Z" fill="blue"/>
 </svg>

@@ -1,11 +1,8 @@
 ---
 title: OPTIONS
 slug: Web/HTTP/Methods/OPTIONS
-tags:
-  - HTTP
-  - 요청 메소드
-translation_of: Web/HTTP/Methods/OPTIONS
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `OPTIONS` method** 는 목표 리소스와의 통신 옵션을 설명하기 위해 사용됩니다. 클라이언트는 OPTIONS 메소드의 URL을 특정지을 수 있으며, aterisk(\*) 를 통해 서버 전체를 선택할 수 있습니다.

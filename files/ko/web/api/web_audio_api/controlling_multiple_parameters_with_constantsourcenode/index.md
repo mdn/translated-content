@@ -1,16 +1,8 @@
 ---
 title: ConstantSourceNode로 다수의 파라미터 제어하기
 slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
-tags:
-  - Audio
-  - Example
-  - Guide
-  - Intermediate
-  - Media
-  - Tutorial
-  - Web Audio
-  - Web Audio API
 ---
+
 {{APIRef("Web Audio API")}}
 
 이 글은 다수의 파라미터가 같은 값을 공유하도록 파라미터들을 함께 연결하기 위해 어떻게 {{domxref("ConstantSourceNode")}}를 사용하는지를 설명합니다. 이 값은 {{domxref("ConstantSourceNode.offset")}} 파라미터의 값을 설정함으로써 변경될 수 있습니다.
@@ -179,7 +171,7 @@ window.addEventListener("load", setup, false);
 
 먼저, window의 {{domxref("AudioContext")}}에 대한 접근을 얻고, 이 참조를 `context` 변수에 저장합니다. 그리고 나서 `playButton`에 재생 버튼에 대한 참조와 `volumeControl`에 사용자가 연결된 오실레이터 쌍의 gain을 조정하기 위해 사용할 슬라이더에 대한 참조를 설정하며 제어 위젯에 대한 참조를 얻습니다.
 
-그리고 나서 재생 버튼의 {{event("click")}} 이벤트와 볼륨 슬라이더의 {{event("input")}} 이벤트에 이벤트 처리기를 부착합니다 (`togglePlay()` 메서드에 대해 알아보려면 [오실레이터 켜고 끄기](#오실레이터_켜고_끄기)를, 아주 짧은 `changeVolume()` 메서드를 살펴보려면 [연결된 오실레이터 제어하기](#연결된_오실레이터_제어하기)를 참고하세요).
+그리고 나서 재생 버튼의 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트와 볼륨 슬라이더의 {{event("input")}} 이벤트에 이벤트 처리기를 부착합니다 (`togglePlay()` 메서드에 대해 알아보려면 [오실레이터 켜고 끄기](#오실레이터_켜고_끄기)를, 아주 짧은 `changeVolume()` 메서드를 살펴보려면 [연결된 오실레이터 제어하기](#연결된_오실레이터_제어하기)를 참고하세요).
 
 다음으로, {{domxref("GainNode")}} `gainNode1`은 연결되지 않은 오실레이터의 볼륨을 다루기 위해 생성됩니다 (`oscNode1`). 이 gain은 0.5로 설정합니다. 또한 `gainNode2`와 `gainNode3`를 생성하고 이들의 값을 `gainNode1`의 값과 동일하게 설정합니다. 그 후, 볼륨 슬라이더의 값을 같은 값으로 설정해 이 값이 슬라이더가 제어하는 gain 레벨과 동기화되도록 합니다.
 

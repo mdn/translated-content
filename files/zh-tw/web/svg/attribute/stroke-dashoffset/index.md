@@ -3,6 +3,8 @@ title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
 ---
 
+{{SVGRef}}
+
 « [SVG 屬性引用首頁](/zh-TW/SVG/Attribute)
 
 `stroke-dashoffset` 屬性指定一個數值至虛線的開頭。

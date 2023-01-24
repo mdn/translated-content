@@ -1,17 +1,6 @@
 ---
 title: display-mode
 slug: Web/CSS/@media/display-mode
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Referencia
-  - características de medio
-  - consultas de medio
-  - display
-  - display-mode
-  - media feature
-translation_of: Web/CSS/@media/display-mode
 ---
 
 {{cssref}}
@@ -44,9 +33,7 @@ La característica `display-mode` se especifica como un valor de palabra clave e
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Manifest', '#the-display-mode-media-feature', 'display-mode')}} | {{Spec2('Manifest')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

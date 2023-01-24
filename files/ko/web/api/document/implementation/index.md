@@ -1,14 +1,8 @@
 ---
 title: Document.implementation
 slug: Web/API/Document/implementation
-tags:
-  - API
-  - DOM
-  - NeedsContent
-  - Property
-  - Reference
-translation_of: Web/API/Document/implementation
 ---
+
 {{ ApiRef("DOM") }}
 
 현재 document에 연관된 {{domxref("DOMImplementation")}} 객체를 반환합니다.
@@ -45,7 +39,3 @@ W3C의 DOM Level 1 권고안에는 DOM 모듈을 브라우저에서 지원하는
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- Gecko 19.0 {{geckoRelease("19.0")}}부터 {{domxref("DOMImplementation.hasFeature","hasFeature")}} 메소드는 항상 true를 반환합니다.

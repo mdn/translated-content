@@ -1,13 +1,6 @@
 ---
 title: '<small>: 덧붙임 글 요소'
 slug: Web/HTML/Element/small
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/small
 ---
 
 {{HTMLSidebar}}

@@ -1,17 +1,6 @@
 ---
 title: '<iframe>: el elemento Inline Frame'
 slug: Web/HTML/Element/iframe
-tags:
-  - Contenido
-  - Contenido incrustado
-  - Elemento
-  - Embebido
-  - HTML
-  - Incrustado
-  - Marcos
-  - Web
-  - iframe
-translation_of: Web/HTML/Element/iframe
 original_slug: Web/HTML/Elemento/iframe
 ---
 
@@ -67,8 +56,8 @@ Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("img")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>
       </td>
     </tr>
     <tr>
@@ -258,14 +247,7 @@ En este ejemplo, se muestra un mapa de Google en un marco.
 
 ## Especificaciones
 
-| Specification                                                                                                                                    | Status                                   | Comment                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerpolicy attribute')}} | {{Spec2('Referrer Policy')}}     | Added the `referrerpolicy` attribute.                     |
-| {{SpecName('HTML WHATWG', 'iframe-embed-object.html#the-iframe-element', '&lt;iframe&gt;')}}                     | {{Spec2('HTML WHATWG')}}         |                                                           |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-iframe-element', '&lt;iframe&gt;')}}                         | {{Spec2('HTML5 W3C')}}             |                                                           |
-| {{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}                                                 | {{Spec2('HTML4.01')}}             |                                                           |
-| {{SpecName('Screen Orientation')}}                                                                                                     | {{Spec2('Screen Orientation')}} | Adds `allow-orientation-lock` to the `sandbox` attribute. |
-| {{SpecName('Presentation','#sandboxing-and-the-allow-presentation-keyword','allow-presentation')}}             | {{Spec2('Presentation')}}         | Adds `allow-presentation` to the `sandbox` attribute      |
+{{Specifications}}
 
 ## Notes
 

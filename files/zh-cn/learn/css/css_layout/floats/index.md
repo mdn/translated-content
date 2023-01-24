@@ -106,7 +106,7 @@ body {
 
 现在，如果您保存和刷新，你会看到类似下面的东西：
 
-{{EmbedLiveSample('Floating_the_box', '100%', 500)}}
+{{EmbedLiveSample('使盒子浮动起来', '100%', 500)}}
 
 让我们考虑一下浮动是如何工作的——浮动元素 (这个例子中的 {{htmlelement("div")}} 元素) 会脱离正常的文档布局流，并吸附到其父容器的左边（这个例子中的 {{htmlelement("body")}} 元素）。在正常布局中位于该浮动元素之下的内容，此时会围绕着浮动元素，填满其右侧的空间。
 
@@ -165,7 +165,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('Visualizing_the_float', '100%', 500)}}
+{{EmbedLiveSample('让浮动效果可视化', '100%', 500)}}
 
 目标元素的[行内盒子](/zh-CN/docs/Web/CSS/Visual_formatting_model#line_boxes)已被缩短，故文字会排布在浮动元素周围，但是浮动元素从正常文档流移出，故段落的盒子仍然保持全部宽度。
 
@@ -222,7 +222,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('Clearing_floats', '100%', 600)}}
+{{EmbedLiveSample('清除浮动', '100%', 600)}}
 
 应该看到，第二个段落已经停止了浮动，不会再跟随浮动元素排布了。`clear` 属性接受下列值：
 
@@ -297,7 +297,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('The_problem', '100%', 600)}}
+{{EmbedLiveSample('问题所在', '100%', 600)}}
 
 再一次强调，这是因为浮动元素处于正常文档流之外，停止紧随其后元素的浮动并不像之前那样奏效。如果你想让盒子联合包住浮动的项目以及第一段文字，同时让紧随其后的内容从盒子中清除浮动，这就是一个问题。
 
@@ -362,7 +362,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('The_clearfix_hack', '100%', 600)}}
+{{EmbedLiveSample('clearfix 小技巧', '100%', 600)}}
 
 ### 使用 overflow
 
@@ -417,7 +417,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('Using_overflow', '100%', 600)}}
+{{EmbedLiveSample('使用 overflow', '100%', 600)}}
 
 这个例子之所以能够生效，是因为创建了所谓的 **块格式化上下文（BFC）**。可以把它看作页面内部包含所需元素的一小块布局区域。如此设置可以让浮动元素包含在 BFC 及其背景之内。大部分情况下这种小技巧都可以奏效，但是可能会出现莫名其妙的滚动条或裁剪阴影，这是使用 overflow 带来的一些副作用。
 

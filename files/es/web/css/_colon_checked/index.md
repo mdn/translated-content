@@ -1,13 +1,6 @@
 ---
 title: ':checked'
 slug: Web/CSS/:checked
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:checked
 ---
 
 {{ CSSRef() }}
@@ -163,13 +156,7 @@ Puede usar la pseudoclase `:checked` para crear una galería de imágenes con im
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                                   | Comentarios                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }} | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                        |
-| {{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}     | {{ Spec2('HTML5 W3C') }}         | Define la semántica con respecto a HTML.              |
-| {{ SpecName('CSS4 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.                                        |
-| {{ SpecName('CSS3 UI', '#pseudo-checked', ':checked') }}         | {{ Spec2('CSS3 UI') }}             | Enlace al Nivel 3 de Selectores.                      |
-| {{ SpecName('CSS3 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS3 Selectors') }} | Define la pseudoclase, pero no la semántica asociada. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

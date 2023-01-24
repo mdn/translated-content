@@ -1,6 +1,8 @@
 ---
 title: Notification.requestPermission()
 slug: Web/API/Notification/requestPermission
+l10n:
+  sourceCommit: 571287e7fe2a51f8790c1dc717e5fb55ca60339d
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}
@@ -11,7 +13,7 @@ slug: Web/API/Notification/requestPermission
 
 ## 構文
 
-```js
+```js-nolint
 // 最新の仕様では、このメソッドは次のようにプロミスベースの構文に更新されています。
 requestPermission()
 
@@ -44,33 +46,31 @@ requestPermission(callback)
 
 ```js
 function notifyMe() {
-  // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
-    alert("This browser does not support desktop notification");
-  }
-
-  // Let's check whether notification permissions have already been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    const notification = new Notification("Hi there!");
-  }
-
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then(function (permission) {
-      // If the user accepts, let's create a notification
+    // ブラウザーが通知に対応しているか調べる
+    alert("このブラウザーはデスクトップ通知には対応していません。");
+  } else if (Notification.permission === "granted") {
+    // 通知権限が既に付与されているかどうかを調べる。
+    // その場合は、通知を作成する。
+    const notification = new Notification("こんにちは！");
+    // …
+  } else if (Notification.permission !== "denied") {
+    // ユーザーにその権限を要求する必要がある
+    Notification.requestPermission().then((permission) => {
+      // ユーザーが受け入れたら、通知を作成する。
       if (permission === "granted") {
-        const notification = new Notification("Hi there!");
+        const notification = new Notification("こんにちは！");
+        // …
       }
     });
   }
 
-  // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them any more.
+  // 最後に、ユーザーが通知を拒否している場合は、これ以上
+  // ユーザーに迷惑をかける必要はありません。
 }
 ```
 
-このページでライブ例を公開するのはやめました。 Chrome や Firefox が別オリジンの {{htmlelement("iframe")}} から要求された通知の許可をしないようになり、その他のブラウザーも従っているからです。動作する例を見る場合は、 [To-do リストの例](https://github.com/mdn/to-do-notifications/tree/gh-pages) (また、[ライブで動作するアプリ](https://mdn.github.io/to-do-notifications/)) を参照してください。
+このページでライブ例を公開するのはやめました。 Chrome や Firefox が別オリジンの {{htmlelement("iframe")}} から要求された通知の許可をしないようになり、その他のブラウザーも従っているからです。動作する例を見る場合は、 [To-do リストの例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（また、[ライブで動作するアプリ](https://mdn.github.io/dom-examples/to-do-notifications/)）を参照してください。
 
 > **メモ:** 上記の例では、通知をユーザーの操作（ボタンのクリック）から起動しました。ユーザーが同意していない通知でユーザーに迷惑をかけるべきではないので、これはベストプラクティスであるだけでなく、今後ブラウザーはユーザーの操作によって起動されたものではない通知の許可の要求を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン 72 からすでにこれを行っており、 Safari もしばらく前からこれを行っています。
 

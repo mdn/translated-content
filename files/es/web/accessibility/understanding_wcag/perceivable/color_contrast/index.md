@@ -1,11 +1,6 @@
 ---
 title: Contraste del color
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-tags:
-  - Accesibilidad
-  - Perceptible
-  - contraste
-translation_of: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 original_slug: Web/Accesibilidad/Understanding_WCAG/Perceivable/Color_contraste
 ---
 

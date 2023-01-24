@@ -1,13 +1,6 @@
 ---
 title: Propiedades y Valores Lógicos de CSS
 slug: Web/CSS/CSS_Logical_Properties
-tags:
-  - CSS
-  - Propiedades lógicas
-  - Referencia
-  - Valores lógicos
-  - Visión general
-translation_of: Web/CSS/CSS_Logical_Properties
 ---
 
 {{CSSRef}}
@@ -118,9 +111,7 @@ Las propiedades y valores lógicos usan los términos abstractos de bloque (_blo
 
 ## Especificaciones
 
-| Especificación                                       | Estado                                           | Comentario          |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en los Navegadores
 

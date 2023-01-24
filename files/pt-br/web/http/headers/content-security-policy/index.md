@@ -199,7 +199,7 @@ Veja as [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.csp.Content-Security-Policy")}}
+{{Compat}}
 
 ## Veja também
 

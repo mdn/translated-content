@@ -1,13 +1,6 @@
 ---
 title: Selectores CSS
 slug: Web/CSS/CSS_Selectors
-tags:
-  - CSS
-  - Referencia
-  - Selectores
-  - Selectores de CSS
-  - Visión general
-translation_of: Web/CSS/CSS_Selectors
 original_slug: Web/CSS/Selectores_CSS
 ---
 
@@ -93,9 +86,4 @@ Los **selectores** definen sobre qué elementos se aplicará un conjunto de regl
 
 ## Especificaciones
 
-| Especificación                                       | Estado                               | Comentario                                                                                                                                                                                                                                                                                          |
-| ---------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors')}}             | {{Spec2('CSS4 Selectors')}} | Añadidos el combinador de columna `\|\|`, selectores de estructura de grilla, combinadores lógicos, pseudoclases de ubicación, dimensión temporal, estado de recurso, lingüisticas y de UI, modificador para la selección de valores de atributo ASCII que distingue entre mayúsculas y minúsculas. |
-| {{SpecName('CSS3 Selectors')}}             | {{Spec2('CSS3 Selectors')}} | Añadidos el combinador `~` general de hermanos y las pseudoclases de árbol-estructural. Los pseudoelementos creados, usan un prefijo `::` de dos puntos dobles. Selectores de atributos adicionales.                                                                                                |
-| {{SpecName('CSS2.1', 'selector.html')}} | {{Spec2('CSS2.1')}}             | Añadidos los combinadores `>` de elemento hijo y `+` de elementos hermanos adyacentes. Añadidos los selectores **universal** y de **atributo**.                                                                                                                                                     |
-| {{SpecName('CSS1')}}                         | {{Spec2('CSS1')}}             | Definición inicial.                                                                                                                                                                                                                                                                                 |
+{{Specifications}}

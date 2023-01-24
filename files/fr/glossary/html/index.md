@@ -18,7 +18,7 @@ original_slug: Glossaire/HTML
 
 En 1990, lorsqu'il présente sa vision du {{Glossary("World Wide Web","Web")}}, Tim Berners-Lee définit le concept d'{{Glossary("Hypertext","hypertexte")}}, qu'il formalise l'année suivante avec un langage de balisage essentiellement basé sur {{Glossary("SGML")}}. L'{{Glossary("IETF")}} commence officiellement à spécifier le HTML en 1993, et publie la version 2.0 en 1995, après plusieurs versions de travail. En 1994, Berners-Lee fonde le {{Glossary("W3C")}} pour développer le Web. En 1996, le W3C reprend le travail sur le HTML et publie un an plus tard la recommandation HTML 3.2. HTML 4.0 fut publié en 1999 et devient une norme {{Glossary("ISO")}} en 2000.
 
-À cette période, le W3C est sur le point d'abandonner le HTML au profit du {{Glossary("XHTML")}}, ce qui provoque la création d'un groupe indépendant appelé {{Glossary("WHATWG")}} en 2004.  Grâce au WHATWG, le travail sur le {{Glossary("HTML5")}} se poursuit : les deux organisations publient la première version de travail en 2008 puis la norme finale en 2014.
+À cette période, le W3C est sur le point d'abandonner le HTML au profit du {{Glossary("XHTML")}}, ce qui provoque la création d'un groupe indépendant appelé {{Glossary("WHATWG")}} en 2004. Grâce au WHATWG, le travail sur le {{Glossary("HTML5")}} se poursuit : les deux organisations publient la première version de travail en 2008 puis la norme finale en 2014.
 
 ## Concept et syntaxe
 

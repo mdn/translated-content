@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest/timeout
 
 {{APIRef('XMLHttpRequest')}}
 
-A propriedade **`XMLHttpRequest.timeout`** é um `unsigned long` que representa o número de milisegundos que uma requisição deve esperar até ser automaticamente terminada. O valor padrão para essa propriedade é 0, o que significa que o navegador deverá esperar uma resposta indefinidamente. A propriedade Timeout não deveria ser usada para requisições XMLHttpRequests síncronas em um {{Glossary('document environment')}} ou uma exceção do tipo `InvalidAccessError` será lançada. Quando um timeout ocorre, o evento [timeout](/pt-BR/docs/Web/Events/timeout) é disparado. {{gecko_minversion_inline("12.0")}}
+A propriedade **`XMLHttpRequest.timeout`** é um `unsigned long` que representa o número de milisegundos que uma requisição deve esperar até ser automaticamente terminada. O valor padrão para essa propriedade é 0, o que significa que o navegador deverá esperar uma resposta indefinidamente. A propriedade Timeout não deveria ser usada para requisições XMLHttpRequests síncronas em um {{Glossary('document environment')}} ou uma exceção do tipo `InvalidAccessError` será lançada. Quando um timeout ocorre, o evento [timeout](/pt-BR/docs/Web/Events/timeout) é disparado.
 
 > **Nota:** Você não pode usar um timeout para requisições síncronas dentro de uma janela.
 

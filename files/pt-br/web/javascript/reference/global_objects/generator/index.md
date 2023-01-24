@@ -59,7 +59,7 @@ Firefox (SpiderMonkey) também implementa a versão anterior do generator em [Ja
   - : Fecha o generator, então quando chamar `next()` um erro {{jsxref("StopIteration")}} será lançado. Isto corresponde ao método `return()` do ES6.
 - `Generator.prototype.send()` {{non-standard_inline}}
   - : Usado para enviar um valor para o generator. Este valor é retordo pela expressão {{jsxref("Operators/yield", "yield")}}, e retorna o valor fornecido pelo pelo next {{jsxref("Operators/yield", "yield")}}. `send(x)` corresponde ao `next(x)` do ES6.
-- **`Generator.`**`prototype.`**`throw()` **{{non-standard_inline}}
+- `Generator.prototype.throw()` {{non-standard_inline}}
   - : Lança um erro no generator. Isto corresponde ao método `throw() do ES6.`
 
 ### Exemplo do Legacy generator

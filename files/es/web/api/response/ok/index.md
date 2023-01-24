@@ -1,7 +1,6 @@
 ---
 title: Response.ok
 slug: Web/API/Response/ok
-translation_of: Web/API/Response/ok
 ---
 
 {{APIRef("Fetch")}}
@@ -39,9 +38,7 @@ fetch(peticion).then(function(respuesta) {
 
 ## Especificaciones
 
-| Especificación           | Estado                   | Comentario         |
-| ------------------------ | ------------------------ | ------------------ |
-| {{Spec2('Fetch')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

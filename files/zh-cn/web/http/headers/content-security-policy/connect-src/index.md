@@ -5,77 +5,97 @@ slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 
 {{HTTPSidebar}}
 
-HTTP 协议头部{{HTTPHeader("Content-Security-Policy")}} (CSP) 的**`connect-src`** 指令用于控制允许通过脚本接口加载的链接地址。其中受到影响的 API 如下：
+HTTP {{HTTPHeader("Content-Security-Policy")}}（内容安全策略，CSP）中的 **`connect-src`** 指令用于限制通过使用脚本接口加载的 URL。其中受限制的 API 如下：
 
-- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},
-- {{domxref("Fetch")}},
-- {{domxref("XMLHttpRequest")}},
-- {{domxref("WebSocket")}}, and
-- {{domxref("EventSource")}}.
+- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
+- {{domxref("fetch()")}}
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("WebSocket")}}
+- {{domxref("EventSource")}}
+- {{domxref("Navigator.sendBeacon()")}}
 
-| CSP version                           | 1                                                                                           |
-| ------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Directive type                        | {{Glossary("Fetch directive")}}                                                    |
-| {{CSP("default-src")}} fallback | Yes. If this directive is absent, the user agent will look for the `default-src` directive. |
+> **备注：** 并不是所有浏览器都能将 `connect-src 'self'` 解析为 websocket 协议，更多信息，请查看这个 [issue](https://github.com/w3c/webappsec-csp/issues/7)。
 
-## Syntax
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">CSP 版本</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row"> 指令类型</th>
+      <td>{{Glossary("Fetch directive","Fetch 指令")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} 回落</th>
+      <td>
+        是。如果没有此指令，用户代理将查找 <code>default-src</code> 指令。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-connect-src 可以设置一个或者多个源地址：
+## 语法
 
-```plain
+connect-src 策略可以允许一个或多个源：
+
+```http
 Content-Security-Policy: connect-src <source>;
 Content-Security-Policy: connect-src <source> <source>;
 ```
 
-### Sources
+### 源
 
-{{page("/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
+`<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)列出来的任意一个。
 
-## Examples
+注意，这套相同的值可以用于所有 {{Glossary("fetch directive", "fetch 指令")}}（以及[许多其他指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)）。
 
-### Violation cases
+## 示例
 
-给定如下 CSP 头部：
+### 违规的案例
 
-```bash
+给定此 CSP 标头：
+
+```http
 Content-Security-Policy: connect-src https://example.com/
 ```
 
-如下的连接请求会被阻塞且不会加载：
+以下连接被禁止并且将不会加载：
 
 ```html
 <a ping="https://not-example.com">
+  <script>
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://not-example.com/");
+    xhr.send();
 
-<script>
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://not-example.com/');
-  xhr.send();
+    const ws = new WebSocket("https://not-example.com/");
 
-  var ws = new WebSocket("https://not-example.com/");
+    const es = new EventSource("https://not-example.com/");
 
-  var es = new EventSource("https://not-example.com/");
-
-  navigator.sendBeacon("https://not-example.com/", { ... });
-</script>
+    navigator.sendBeacon("https://not-example.com/", {
+      /* … */
+    });
+  </script></a>
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## Compatibility notes
+### 兼容性备注
 
-- Prior to Firefox 23, `xhr-src` was used in place of the `connect-src` directive and only restricted the use of {{domxref("XMLHttpRequest")}}.
+- Firefox 23 之前，`xhr-src` 被用来代替 `connect-src` 指令，并且只用于限制 {{domxref("XMLHttpRequest")}} 的使用。
 
-## See also
+## 参见
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
-- {{domxref("Fetch")}}
+- {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
 - {{domxref("EventSource")}}

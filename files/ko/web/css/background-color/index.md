@@ -1,18 +1,6 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Graphics
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styles
-  - Styling HTML
-translation_of: Web/CSS/background-color
 ---
 
 {{CSSRef}}
@@ -120,13 +108,9 @@ background-color: unset;
 
 {{EmbedLiveSample("예제","200","150")}}
 
-## 명세
+## 명세서
 
-| 명세                                                                                                             | 주석                                                                                                                                                           | 피드백                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Backgrounds', '#background-color', 'background-color') }}             | Though technically removing the `transparent` keyword, this doesn't change anything as it has been incorporated as a true {{cssxref("&lt;color&gt;")}} | [Backgrounds Level 3 GitHub issues](https://github.com/w3c/csswg-drafts/labels/css-backgrounds-3) |
-| {{ SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color') }} | No change.                                                                                                                                                     |                                                                                                   |
-| {{ SpecName('CSS1', '#background-color', 'background-color') }}                             |                                                                                                                                                                |                                                                                                   |
+{{Specifications}}
 
 ## 브라우저 호환성
 

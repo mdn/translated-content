@@ -1,13 +1,8 @@
 ---
 title: CSSMediaRule
 slug: Web/API/CSSMediaRule
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
-translation_of: Web/API/CSSMediaRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSMediaRule`** 인터페이스는 하나의 CSS {{cssxref("@media")}} 규칙을 나타냅니다. {{domxref("CSSConditionRule")}} 인터페이스를 구현하므로, {{domxref("CSSGroupingRule")}}과 {{domxref("CSSRule")}} 인터페이스도 유형값 `4` (`CSSRule.MEDIA_RULE`)로 구현합니다.

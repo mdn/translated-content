@@ -47,9 +47,7 @@ dataview.getInt16(1); // 0
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getint16', 'DataView.prototype.getInt16')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

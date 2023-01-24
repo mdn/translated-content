@@ -1,16 +1,6 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-tags:
-  - CSS
-  - Diseño
-  - Filtro SVG
-  - Propiedad CSS
-  - Referencia
-  - SVG
-  - Web
-  - graficos
-translation_of: Web/CSS/backdrop-filter
 ---
 
 {{CSSRef}}
@@ -117,9 +107,7 @@ body {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Filters 2.0', '#BackdropFilterProperty', 'backdrop-filter')}} | {{Spec2('Filters 2.0')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

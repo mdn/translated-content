@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.getReceivers()
 slug: Web/API/RTCPeerConnection/getReceivers
-translation_of: Web/API/RTCPeerConnection/getReceivers
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.getReceivers()`** 메소드는 {{domxref("RTCRtpReceiver")}} 객체의 배열을 반환합니다. 이 배열의 각 요소들은 RTP 리시버를 나타냅니다. 각각의 RTP 리시버는 {{domxref("RTCPeerConnection")}}에 대한 {{domxref("MediaStreamTrack")}}의 데이터를 수신하고 디코딩 합니다.

@@ -1,16 +1,6 @@
 ---
 title: CSS
 slug: Learn/CSS
-tags:
-  - CSS
-  - Codificación
-  - Depuración
-  - Necesidades
-  - Principiante
-  - Tema
-  - concreción
-  - longitud
-translation_of: Learn/CSS
 ---
 
 {{LearnSidebar}}

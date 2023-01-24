@@ -1,14 +1,6 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - Replaced Elements
-  - 대체 요소
-translation_of: Web/CSS/object-position
 ---
 
 {{CSSRef}}
@@ -56,8 +48,8 @@ object-position: unset;
 두 개의 {{htmlelement("img")}} 요소가 MDN 로고를 가리키는 코드입니다.
 
 ```html
-<img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
 ```
 
 #### CSS

@@ -1,11 +1,6 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/background
 ---
 
 {{CSSRef}}
@@ -85,7 +80,7 @@ La sintaxis de cada capa es la siguiente:
 }
 
 .topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #00D repeat-y fixed;
+  background: url("starsolid.gif") #00D repeat-y fixed;
 }
 ```
 

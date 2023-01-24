@@ -1,11 +1,6 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/contextmenu
 original_slug: Web/HTML/Atributos_Globales/contextmenu
 ---
 
@@ -62,10 +57,7 @@ resulta en :
 
 ## Especificaciones
 
-| Specification                                                                                                | Status                           | Comment                                                               |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "forms.html#attr-contextmenu", "contextmenu")}}             | {{Spec2('HTML WHATWG')}} | Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', "interactive-elements.html#context-menus", "contextmenu")}} | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en exploradores
 

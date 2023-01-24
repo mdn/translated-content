@@ -1,12 +1,8 @@
 ---
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
-tags:
-  - Method
-  - Reference
-browser-compat: api.Event.stopImmediatePropagation
-translation_of: Web/API/Event/stopImmediatePropagation
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Event")}} 인터페이스의 **`stopImmediatePropagation()`** 메서드는 같은 이벤트에 대해 나머지 수신기가 발동하지 못하도록 방지합니다.

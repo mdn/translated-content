@@ -1,14 +1,8 @@
 ---
 title: Document.compatMode
 slug: Web/API/Document/compatMode
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-translation_of: Web/API/Document/compatMode
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.compatMode`** 속성은 문서 렌더링을 [호환 모드](/ko/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)에서 진행했는지, 표준 모드에서 진행했는지 나타냅니다.

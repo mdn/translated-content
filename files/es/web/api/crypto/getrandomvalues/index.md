@@ -1,12 +1,6 @@
 ---
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-tags:
-  - API
-  - Criptografía
-  - Referencia
-  - metodo
-translation_of: Web/API/Crypto/getRandomValues
 original_slug: Web/API/RandomSource/Obtenervaloresaleatorios
 ---
 
@@ -45,11 +39,9 @@ for (var i = 0; i < array.length; i++) {
 }
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentario         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}} | {{Spec2('Web Crypto API')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

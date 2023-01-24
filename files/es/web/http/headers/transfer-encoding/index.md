@@ -1,14 +1,6 @@
 ---
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
-tags:
-  - Castellano Transfer encoding
-  - HTTP Header
-  - Métodos HTTP
-  - Referências
-  - header
-  - transfer encoding español
-translation_of: Web/HTTP/Headers/Transfer-Encoding
 ---
 
 El encabezado Transfer-Encoding especifica la forma de codificación utilizada para transferir de forma segura el {{Glossary("Payload body", "cuerpo del payload")}} al usuario.

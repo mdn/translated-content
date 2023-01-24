@@ -1,12 +1,6 @@
 ---
 title: CSS Conditional Rules
 slug: Web/CSS/CSS_Conditional_Rules
-tags:
-  - CSS
-  - CSS Conditional Rules
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Conditional_Rules
 ---
 {{CSSRef}}
 
@@ -20,8 +14,6 @@ translation_of: Web/CSS/CSS_Conditional_Rules
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
 
-## 명세
+## 명세서
 
-| 명세                                         | 상태                                     | 설명      |
-| -------------------------------------------- | ---------------------------------------- | --------- |
-| {{SpecName('CSS3 Conditional')}} | {{Spec2('CSS3 Conditional')}} | 초기 정의 |
+{{Specifications}}

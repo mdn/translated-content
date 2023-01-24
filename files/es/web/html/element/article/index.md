@@ -1,8 +1,6 @@
 ---
 title: '<article>: El elemento con contendio del artículo'
 slug: Web/HTML/Element/article
-translation_of: Web/HTML/Element/article
-browser-compat: html.elements.article
 l10n:
   sourceCommit: 8507170b71a6612358bdf2d9ec47b4e9b825bd78
 ---
@@ -100,7 +98,7 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_att
 
 ## Notas de uso
 
-- Cada `<article>` debe ser identificado, normalmente con un elemento de encabezado (elementos [`<h1>` - `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements)) como hijo.
+- Cada `<article>` debe ser identificado, normalmente con un elemento de encabezado (elementos [`<h1>` - `<h6>`](/es/docs/Web/HTML/Element/Heading_Elements)) como hijo.
 - Cuando un `<article>` está incorporado dentro de otro, representa un artículo cuyo contenido está relacionado con el artículo que lo anida. Por ejemplo, un comentario en una entrada de blog puede ser un `<article>` dentro de otro `<article>` que representa la propia entrada del blog.
 - La información del autor de un `<article>` se pueden proporcionar mediante el elemento [`<address>`](/es/docs/Web/HTML/Element/address), pero esto no se aplica a los artículos anidados dentro de otros.
 - La fecha y momento de publicación de un elemento `<article>` pueden ser declarados mediante el atributo [`datetime`](/es/docs/Web/HTML/Element/time#attr-datetime) de un elemento [`<time>`](/es/docs/Web/HTML/Element/time).

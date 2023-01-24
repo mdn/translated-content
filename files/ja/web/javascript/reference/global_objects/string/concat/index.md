@@ -58,9 +58,7 @@ let greetList = ['こんにちは', ' ', '佐藤さん', '!']
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

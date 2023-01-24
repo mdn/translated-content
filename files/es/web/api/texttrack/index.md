@@ -1,17 +1,6 @@
 ---
 title: TextTrack
 slug: Web/API/TextTrack
-tags:
-  - API
-  - Interface
-  - Media
-  - NeedsTranslation
-  - Reference
-  - TextTrack
-  - TopicStub
-  - Web
-  - WebVTT
-translation_of: Web/API/TextTrack
 ---
 
 {{APIRef("WebVTT")}}
@@ -60,11 +49,9 @@ _This interface also inherits methods from {{domxref("EventTarget")}}._
 
 tbd
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{ SpecName('HTML WHATWG', '#texttrack', 'TextTrack') }} | {{ Spec2('HTML WHATWG') }} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

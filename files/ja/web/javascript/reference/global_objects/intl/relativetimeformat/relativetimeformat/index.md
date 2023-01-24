@@ -82,9 +82,7 @@ rtf.format(1, "day");
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES Int Draft', '#sec-intl-relativetimeformat-constructor', 'RelativeTimeFormat()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

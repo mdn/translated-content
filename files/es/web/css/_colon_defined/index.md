@@ -1,13 +1,6 @@
 ---
 title: ':defined'
 slug: Web/CSS/:defined
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:defined
 ---
 
 {{ CSSRef }}
@@ -93,9 +86,7 @@ Esto es útil si tiene un elemento personalizado complejo que demora un tiempo e
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{ SpecName('HTML WHATWG', 'semantics-other.html#selector-defined', ':defined') }} | {{ Spec2('HTML WHATWG') }} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

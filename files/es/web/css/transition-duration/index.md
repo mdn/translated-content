@@ -1,7 +1,6 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
-translation_of: Web/CSS/transition-duration
 ---
 
 {{CSSRef}}
@@ -302,11 +301,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                                   | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Transitions', '#transition-duration-property', 'transition-duration') }} | {{ Spec2('CSS3 Transitions') }} | Definición Inicial |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

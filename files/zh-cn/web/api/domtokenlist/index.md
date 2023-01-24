@@ -12,7 +12,7 @@ slug: Web/API/DOMTokenList
 - {{ domxref("DOMTokenList.length") }} {{ReadOnlyInline}}
   - : 一个整数，表示存储在该对象里值的个数。
 - {{domxref("DOMTokenList.value")}}
-  - : 该属性以 {{domxref("DOMString")}} 的形式返回 **`DOMTokenList` **列表的值。
+  - : 该属性以 {{domxref("DOMString")}} 的形式返回 **`DOMTokenList`** 列表的值。
 
 ## 方法
 
@@ -43,15 +43,15 @@ slug: Web/API/DOMTokenList
 
 在下面这个简单的例子中，我们使用 {{domxref("Element.classList")}} 获取了 {{htmlelement("p")}} 元素的 class 列表，也就是一个`DOMTokenList` ，再使用 {{domxref("DOMTokenList.add()")}} 添加了一个 class，然后更新 `<p>` 元素的{{domxref("Node.textContent")}}以显示这个新的 `DOMTokenList`。
 
-HTML:
+### HTML
 
-```
+```html
 <p class="a b c"></p>
 ```
 
-JavaScript:
+### JavaScript
 
-```
+```js
 let para = document.querySelector("p");
 let classes = para.classList;
 para.classList.add("d");
@@ -60,17 +60,17 @@ para.textContent = `paragraph classList is "${classes}"`;
 
 输出类似这样：
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('示例', '100%', 60) }}
 
 ## 去除空格和重复项目
 
 修改 `DOMTokenList` 的方法（例如 {{domxref("DOMTokenList.add()")}}）会自动去除多余的空格（{{Glossary("Whitespace")}}）和列表中的重复项目。例如：
 
-```
+```html
 <span class="    d   d e f"></span>
 ```
 
-```
+```js
 let span = document.querySelector("span");
 let classes = span.classList;
 span.classList.add("x");
@@ -79,7 +79,7 @@ span.textContent = `span classList is "${classes}"`;
 
 输出类似这样：
 
-{{ EmbedLiveSample('Trimming_of_whitespace_and_removal_of_duplicates', '100%', 60) }}
+{{ EmbedLiveSample('去除空格和重复项目', '100%', 60) }}
 
 ## 规范
 
@@ -89,7 +89,7 @@ span.textContent = `span classList is "${classes}"`;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{ domxref("DOMSettableTokenList") }} (object that extends DOMTokenList with settable _.value_ property)
 - {{ bug("501257") }} - Implement HTML 5's HTMLElement.classList property

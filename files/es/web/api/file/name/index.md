@@ -1,13 +1,6 @@
 ---
 title: File.name
 slug: Web/API/File/name
-tags:
-  - API
-  - Archivo
-  - Archivos
-  - Propiedad
-  - Referencia
-translation_of: Web/API/File/name
 ---
 
 {{APIRef("File API")}}
@@ -46,9 +39,7 @@ Prueba el resultado:
 
 ## Especificaciones
 
-| Especificacion                                                   | Estado                       | Comentario          |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#file-attrs', 'name')}} | {{Spec2('File API')}} | Definicion inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -32,21 +32,19 @@ _このインターフェイスはどのプロパティも定義または継承�
 - {{domxref("SubtleCrypto.deriveKey()")}}
   - : 引数に与えられたマスターキーと特定のアルゴリズムによりもたらされる、新たに生成された {{domxref("CryptoKey")}} の {{jsxref("Promise")}} を返します。
 - {{domxref("SubtleCrypto.deriveBits()")}}
-  - : 引数に与えられたマスターキーと特定のアルゴリズムによりもたらされる、疑似乱数ビットの新たに生成されたバッファーの {{jsxref("Promise")}} を返します。
+  - : 引数に与えられたマスターキーと特定のアルゴリズムによりもたらされる、新たに生成された疑似乱数のビット列を含むバッファーの {{jsxref("Promise")}} を返します。
 - {{domxref("SubtleCrypto.importKey()")}}
   - : 引数に与えられた書式およびアルゴリズム、生の鍵データ、使用法、抽出可能性に対応する {{domxref("CryptoKey")}} の {{jsxref("Promise")}} を返します。
 - {{domxref("SubtleCrypto.exportKey()")}}
-  - : 要求された書式内の鍵を含むバッファーの {{jsxref("Promise")}} を返します。
+  - : 要求された書式の鍵を含むバッファーの {{jsxref("Promise")}} を返します。
 - {{domxref("SubtleCrypto.wrapKey()")}}
-  - : 安全でない環境での使用法 (transfer, storage) について、ラップされた対称鍵の {{jsxref("Promise")}} を返します。返されるラップされたバッファーは、引数に与えられた書式内にあり、与えられたアルゴリズムで与えられたラッピング鍵によりラップされた鍵を含みます。
+  - : 安全でない環境で使用 (転送や保存) するために、ラップされた対称鍵の {{jsxref("Promise")}} を返します。返されるラップされたバッファーは、引数に与えられた書式内にあり、与えられたアルゴリズムで与えられたラッピング鍵によりラップされた鍵を含みます。
 - {{domxref("SubtleCrypto.unwrapKey()")}}
   - : 引数に与えられたラップされた鍵に対応する {{domxref("CryptoKey")}} の {{jsxref("Promise")}} を返します。
 
 ## 仕様
 
-| 仕様書                                                                                               | 策定状況                                 | 備考       |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('Web Crypto API', '#subtlecrypto-interface', 'SubtleCrypto') }} | {{ Spec2('Web Crypto API') }} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

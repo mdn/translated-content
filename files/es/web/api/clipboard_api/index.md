@@ -1,7 +1,6 @@
 ---
 title: API del portapapeles
 slug: Web/API/Clipboard_API
-translation_of: Web/API/Clipboard_API
 original_slug: Web/API/API_del_portapapeles
 ---
 
@@ -33,9 +32,7 @@ Esta pieza de código lee el texto que hay en el portapapeles y lo añade al pri
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Observaciones         |
-| ---------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('Clipboard API')}} | {{Spec2('Clipboard API')}} | Definición primitiva. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

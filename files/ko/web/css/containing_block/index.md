@@ -1,12 +1,6 @@
 ---
 title: 컨테이닝 블록의 모든 것
 slug: Web/CSS/Containing_block
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Position
-translation_of: Web/CSS/Containing_block
 original_slug: Web/CSS/All_About_The_Containing_Block
 ---
 
@@ -21,7 +15,7 @@ original_slug: Web/CSS/All_About_The_Containing_Block
   - 테두리 영역
   - 바깥 여백(마진) 영역
 
-![Diagram of the box model](https://mdn.mozillademos.org/files/16558/box-model.png)
+![Diagram of the box model](box-model.png)
 
 많은 개발자들은 요소의 컨테이닝 블록이 언제나 부모 요소의 콘텐츠 영역이라고 생각하지만, 사실 꼭 그렇지는 않습니다. 어떤 항목이 컨테이닝 블록을 결정짓나 알아보겠습니다.
 

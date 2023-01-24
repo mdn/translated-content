@@ -1,13 +1,8 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
-tags:
-  - HTTP
-  - Reference
-  - Status code
-  - Success
-translation_of: Web/HTTP/Status/204
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`204 No Content`** 성공 상태 응답 코드는 요청이 성공했으나 클라이언트가 현재 페이지에서 벗어나지 않아도 된다는 것을 나타냅니다. 기본값에서 204 응답은 캐시에 저장할 수 있습니다. 캐시에서 가져온 응답인 경우 {{HTTPHeader("ETag")}} 헤더를 포함합니다.

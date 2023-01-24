@@ -1,13 +1,6 @@
 ---
 title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
-tags:
-  - HTTP
-  - Referencia
-  - Respuesta de encabezado
-  - encabezado
-  - encabezado HTTP
-translation_of: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 ---
 
 {{HTTPSidebar}}
@@ -34,9 +27,7 @@ Cross-Origin-Resource-Policy: same-origin
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                                                                       | Comentario         |
-| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------ |
-| {{SpecName("Fetch", '#cross-origin-resource-policy-header')}} | {{Spec2("Fetch", '#cross-origin-resource-policy-header')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

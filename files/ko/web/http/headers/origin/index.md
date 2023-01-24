@@ -1,15 +1,8 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
-tags:
-  - HTTP
-  - Reference
-  - Request header
-  - header
-  - origin
-  - 헤더
-translation_of: Web/HTTP/Headers/Origin
 ---
+
 {{HTTPSidebar}}
 
 **`Origin`** request 헤더는 fetch가 시작되는 위치입니다. 경로 정보는 포함하지 않고 서버 이름만 포함합니다. {{HTTPMethod("POST")}} requests에 포함되는 것처럼, {{Glossary("CORS")}} requests 와 함께 전송합니다. {{HTTPHeader("Referer")}} 헤더와 비슷하지만, origin 헤더는 전체 경로를 공개하지 않습니다.

@@ -2,6 +2,7 @@
 title: 함수 만들기
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
 지난 문서에서 다뤄진 필수적인 이론의 대부분을 바탕으로, 이 문서에서는 실제적인 경험을 제공합니다. 여기서 사용자 정의(custom) 함수를 만드는 연습을 할 수 있습니다. 그 과정에서 함수를 다루는 데 있어 유용한 세부 사항을 설명할 것입니다.

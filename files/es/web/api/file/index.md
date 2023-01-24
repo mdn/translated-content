@@ -1,13 +1,6 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - File API
-  - Interfaz
-  - Referencia
-  - Web
-translation_of: Web/API/File
 ---
 
 {{APIRef }}
@@ -61,9 +54,7 @@ _La interfaz `File` no define algún método, pero los hereda de la interfaz {{d
 
 ## Especificaciones
 
-| Especificación                   | Estado                       | Comentario          |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

@@ -1,7 +1,6 @@
 ---
 title: URL.port
 slug: Web/API/URL/port
-translation_of: Web/API/URL/port
 ---
 
 {{ApiRef("URL API")}}
@@ -30,9 +29,7 @@ var result = url.port; // Devuelve:'80'
 
 ## Especificaciones
 
-| Especificación                                                   | Estado               | Comentario          |
-| ---------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('URL', '#dom-url-port', 'URL.port')}} | {{Spec2('URL')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

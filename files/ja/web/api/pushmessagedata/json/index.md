@@ -5,7 +5,7 @@ slug: Web/API/PushMessageData/json
 
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-{{domxref("PushMessageData")}} インターフェースの **`json()`** メソッドは、プッシュメッセージデータを [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクトとして抜き出します。
+{{domxref("PushMessageData")}} インターフェイスの **`json()`** メソッドは、プッシュメッセージデータを [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクトとして抜き出します。
 
 ## 構文
 
@@ -13,11 +13,11 @@ slug: Web/API/PushMessageData/json
 var myJson = PushEvent.data.json();
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
 [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクト。
 
@@ -31,13 +31,11 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                         | 状態                         | コメント   |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API', '#widl-PushMessageData-json-JSON', 'json()')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushMessageData.json")}}
 

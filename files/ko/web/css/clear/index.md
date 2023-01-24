@@ -1,12 +1,6 @@
 ---
 title: clear
 slug: Web/CSS/clear
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/clear
 ---
 
 {{CSSRef}}

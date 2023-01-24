@@ -1,12 +1,6 @@
 ---
 title: caret-color
 slug: Web/CSS/caret-color
-tags:
-  - CSS
-  - CSS UI
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/caret-color
 ---
 
 {{CSSRef}}
@@ -69,9 +63,7 @@ input {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                      | Comentarios         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName("CSS3 UI", "#propdef-caret-color", "caret-color")}} | {{Spec2("CSS3 UI")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -1,13 +1,6 @@
 ---
 title: Gramática y Tipos
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - Guia(2)
-  - Guía
-  - JavaScript
-  - Variables
-  - literales
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
@@ -182,11 +175,11 @@ var x = 3;
  * Ejemplo 2
  */
 // devolverá un valor de undefined
-var myvar = 'my value';
+var myVar = 'my value';
 
 (function() {
   console.log(myVar); // undefined
-  var myvar = 'valor local';
+  var myVar = 'valor local';
 })();
 ```
 
@@ -203,12 +196,12 @@ x = 3;
 /**
  * Ejemplo 2
  */
-var myvar = 'my value';
+var myVar = 'my value';
 
 (function() {
   var myVar;
   console.log(myVar); // undefined
-  myvar = 'valor local';
+  myVar = 'valor local';
 })();
 ```
 

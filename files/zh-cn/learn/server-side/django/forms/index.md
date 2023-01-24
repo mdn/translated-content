@@ -424,7 +424,7 @@ def renew_book_librarian(request, pk):
 
 > **备注：** 请记住，您的测试登录需要具有“`catalog.can_mark_returned`”权限，才能访问续借书本页面（可能使用您的超级用户帐户）。
 
-您也可以手动构建这样的测试 URL - [http://127.0.0.1:8000/catalog/book/*\<bookinstance_id>*/renew/](<http://127.0.0.1:8000/catalog/book/\<bookinstance id\>/renew/>) （可以通过导航到图书馆中的书本详细信息页面，获取有效的 bookinstance id，并复制`id` 字段）。
+您也可以手动构建这样的测试 URL - `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` （可以通过导航到图书馆中的书本详细信息页面，获取有效的 bookinstance id，并复制`id` 字段）。
 
 ### 它看起来是什么样子？
 

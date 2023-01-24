@@ -1,13 +1,8 @@
 ---
 title: HTMLSpanElement
 slug: Web/API/HTMLSpanElement
-tags:
-  - API
-  - HTML DOM
-  - 레퍼런스
-  - 인터페이스
-translation_of: Web/API/HTMLSpanElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSpanElement`** 인터페이스는 {{HTMLElement("span")}} 엘리먼트를 나타내며 {{ domxref("HTMLElement") }} 인터페이스로부터 파생되었으며 부가적인 프로퍼티나 메소드는 구현되지 않았습니다.
