@@ -60,7 +60,7 @@ El contenido para este ejemplo interactivo se encuentra almacenado en un reposit
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
