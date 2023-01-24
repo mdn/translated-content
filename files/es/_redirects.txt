@@ -1610,6 +1610,7 @@
 /es/docs/Web/API/Document/height	/es/docs/web/api/element/clientheight
 /es/docs/Web/API/Document/keydown_event	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/API/Document/keyup_event	/es/docs/Web/API/Element/keyup_event
+/es/docs/Web/API/Document/registerElement	/es/docs/conflicting/Web/API/CustomElementRegistry/define
 /es/docs/Web/API/Document/selectstart_event	/es/docs/Web/API/Node/selectstart_event
 /es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection
 /es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
@@ -1761,6 +1762,8 @@
 /es/docs/Web/CSS/-webkit-mask-position	/es/docs/Web/CSS/mask-position
 /es/docs/Web/CSS/-webkit-mask-repeat	/es/docs/Web/CSS/mask-repeat
 /es/docs/Web/CSS/-webkit-print-color-adjust	/es/docs/Web/CSS/print-color-adjust
+/es/docs/Web/CSS/:-moz-locale-dir(ltr)	/es/docs/Web/CSS/:-moz-locale-dir_ltr
+/es/docs/Web/CSS/:-moz-locale-dir(rtl)	/es/docs/Web/CSS/:-moz-locale-dir_rtl
 /es/docs/Web/CSS/:-moz-ui-invalid	/es/docs/Web/CSS/:user-invalid
 /es/docs/Web/CSS/:-webkit-autofill	/es/docs/Web/CSS/:autofill
 /es/docs/Web/CSS/::-webkit-file-upload-button	/es/docs/Web/CSS/::file-selector-button
