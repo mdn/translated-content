@@ -68,40 +68,33 @@ HTML 只建立文件的基礎架構，可以透過 {{glossary("CSS")}} 或腳本
 
 有些被稱為表格訊息的資訊需要被組織成擁有直行與橫列的表格。這是其中一種最複雜的 HTML 架構，要熟練它並不簡單：
 
-- [如何建立資料試算表](/en-US/docs/Learn/HTML/Howto/Create_a_data_spreadsheet)
-- [如何讓 HTML 表格可被獲取](/en-US/docs/Learn/HTML/Howto/Make_HTML_tables_accessible)
-- [如何最佳化 HTML 表格的渲染效能](/en-US/docs/Learn/HTML/Howto/Optimize_HTML_table_rendering)
+- [如何建立資料試算表](/zh-TW/docs/Learn/HTML/Howto/Basics)
+- [如何讓 HTML 表格可被獲取](/zh-TW/docs/Learn/HTML/Howto/Advanced)
 
 ### 資料表示方式
 
-- [如何用 HTML 表示數值](/en-US/docs/Learn/HTMLHowto/Represent_numeric_values_with_HTML)
-- [如何使用資料屬性](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
-- [如何結合可讀內容與隨機電腦資料結構](/en-US/docs/Learn/HTML/Howto/Associate_human_readable_content_with_arbitrary_computer_data_structures)
-
-### 互動性
-
-- [如何用 HTML 創建可折疊內容](/en-US/docs/Learn/HTML/Howto/Create_collapsible_content_with_HTML)
-- [如何在網頁中加入內文選單](/en-US/docs/Learn/HTML/Howto/Add_context_menus_to_a_webpage)
-- [如何用 HTML 創建對話框](/en-US/docs/Learn/HTML/Howto/Create_dialog_boxes_with_HTML)
+- 如何用 HTML 表示數值──參見[上標與下標](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#superscript_and_subscript)及[顯示電腦程式碼](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#representing_computer_code)
+- [如何使用資料屬性](/zh-TW/docs/Learn/HTML/Howto/Use_data_attributes)
 
 ### 進階文字語法
 
-- [如何控制 HTML 換行](/en-US/docs/Learn/HTML/Howto/Take_control_of_HTML_line_breaking)
-- [如何標記改變（新增與移除的文字）](/en-US/docs/Learn/HTML/Howto/Mark_text_insertion_and_deletion)
+- [如何控制 HTML 換行](/zh-TW/docs/Learn/HTML/Howto/Take_control_of_HTML_line_breaking)
+- 如何標記改變（新增與移除的文字）參見 {{htmlelement("ins")}} 及 {{htmlelement("del")}} 標籤
+- [如何標記改變（新增與移除的文字）](/zh-TW/docs/Learn/HTML/Howto/Mark_text_insertion_and_deletion)
 
 ### 進階圖片 & 多媒體
 
-- [如何在網頁中加入響應式圖片](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [如何在網頁中加入向量圖片](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [如何在圖片上加入圖像映射](/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
+- [如何在網頁中加入響應式圖片](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [如何在網頁中加入向量圖片](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [如何在圖片上加入圖像映射](/zh-TW/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
 
 ### 國際化
 
 HTML 不只支援單一語言，它還有提供工具來處理常見的國際化問題。
 
-- [如何在單一網頁中加入多國語言](/en-US/docs/Learn/HTML/Howto/Add_multiple_languages_into_a_single_webpage)
-- [如何用 HTML 表示時間與日期](/en-US/docs/Learn/HTML/Howto/Display_time_and_date_with_HTML)
+- [如何在單一網頁中加入多國語言](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#setting_the_primary_language_of_the_document)
+- [如何用 HTML 表示時間與日期](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#marking_up_times_and_dates)
 
 ### 效能
 
-- [如何創建快速載入 HTML 網頁](/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
+- [如何創建快速載入 HTML 網頁](/zh-TW/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
