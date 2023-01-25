@@ -37,7 +37,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('A_basic_linear_gradient', 120, 120) }}
+{{ EmbedLiveSample('基础线性渐变', 120, 120) }}
 
 ### 改变渐变方向
 
@@ -60,7 +60,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Changing_the_direction', 120, 120) }}
+{{ EmbedLiveSample('改变渐变方向', 120, 120) }}
 
 ### 对角线渐变
 
@@ -83,7 +83,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Diagonal_gradients', 200, 100) }}
+{{ EmbedLiveSample('对角线渐变', 200, 100) }}
 
 ### 设置渐变角度
 
@@ -106,7 +106,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Using_angles', 120, 120) }}
+{{ EmbedLiveSample('设置渐变角度', 120, 120) }}
 
 在使用角度的时候，`0deg` 代表渐变方向为从下到上，`90deg` 代表渐变方向为从左到右，诸如此类正角度都属于顺时针方向。而负角度意味着逆时针方向。
 
@@ -137,7 +137,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Using_more_than_two_colors', 120, 120) }}
+{{ EmbedLiveSample('使用多种颜色', 120, 120) }}
 
 ### 颜色终止位置
 
@@ -160,7 +160,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Positioning_color_stops', 120, 120) }}
+{{ EmbedLiveSample('颜色终止位置', 120, 120) }}
 
 ### 创建实线
 
@@ -183,7 +183,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Creating_hard_lines', 120, 120) }}
+{{ EmbedLiveSample('创建实线', 120, 120) }}
 
 ### 渐变提示
 
@@ -210,7 +210,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Gradient_hints', 120, 120) }}
+{{ EmbedLiveSample('渐变提示', 120, 120) }}
 
 ### 创建色带和条纹
 
@@ -244,7 +244,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Creating_color_bands_stripes', 120, 120) }}
+{{ EmbedLiveSample('创建色带和条纹', 120, 120) }}
 
 In the first example above, the lime goes from the 0% mark, which is implied, to the 20% mark, transitions from lime to red over the next 10% of the width of the gradient, reach solid red at the 30% mark, and staying solid red up until 45% through the gradient, where it fades to cyan, being fully cyan for 15% of the gradient, and so on.
 
