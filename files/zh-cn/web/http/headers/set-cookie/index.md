@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Set-Cookie
 
 {{HTTPSidebar}}
 
-响应标头 **`Set-Cookie`** 被用来由服务器端向用户代理发送 cookie，所以用户代理可再后续的请求中将其发送回服务器。服务器要发送多个 cookie，则应该在同一响应中发送多个 **`Set-Cookie`** 标头。
+响应标头 **`Set-Cookie`** 被用来由服务器端向用户代理发送 cookie，所以用户代理可在后续的请求中将其发送回服务器。服务器要发送多个 cookie，则应该在同一响应中发送多个 **`Set-Cookie`** 标头。
 
 > **警告：** 根据 Fetch 规范，`Set-Cookie` 是一个[禁止的响应标头](https://fetch.spec.whatwg.org/#forbidden-response-header-name)，对应的响应在被暴露给前端代码前，[必须滤除](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0)这一响应标头，即浏览器会阻止前端 JavaScript 代码访问 `Set-Cookie` 标头。
 
@@ -66,9 +66,9 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 - `Expires=<date>` {{optional_inline}}
   - : cookie 的最长有效时间，形式为符合 HTTP-date 规范的时间戳。参见 {{HTTPHeader("Date")}} 可以获取详细信息。
-  
+
   如果没有设置这个属性，那么表示这是一个**会话期 cookie**。一个会话结束于客户端被关闭时，这意味着会话期 cookie 在彼时会被移除。
-  
+
   > **警告：** 然而，很多 Web 浏览器支持会话恢复功能，这个功能可以使浏览器保留所有的 tab 标签，然后在重新打开浏览器的时候将其还原。与此同时，cookie 也会恢复，就跟从来没有关闭浏览器一样。
 
   如果设置了 `Expires` 属性，其截止时间与*客户端*相关，而非服务器的时间。
@@ -77,22 +77,22 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : 在 cookie 失效之前需要经过的秒数。秒数为 0 或 -1 将会使 cookie 直接过期。假如 `Expires` 和 `Max-Age` 属性均存在，那么 `Max-Age` 的优先级更高。
 - `Domain=<domain-value>` {{optional_inline}}
   - : 指定 cookie 可以送达的主机名。
-  
+
   假如没有指定，那么默认值为当前文档访问地址中的主机部分（但是不包含子域名）。
-  
+
   与之前的规范不同的是，域名（`.example.com`）之前的点号会被忽略。
-  
+
   多个主机/域名的值是*不*被允许的，但如果指定了一个域，则其子域也会被包含。
 - `Path=<path-value>` {{optional_inline}}
   - : 指定一个 URL 路径，这个路径*必须*出现在要请求的资源的路径中才可以发送 `Cookie` 标头。
-  
+
   字符 `/` 可以解释为文件目录分隔符，此目录的下级目录也满足匹配的条件（例如，如果 `path=/docs`，那么
   - `/docs`、`/docs/`、`/docs/Web/` 和 `/docs/Web/HTTP` 都满足匹配条件。
   - `/`、`/docsets` 或者 `/fr/docs` 则不满足匹配条件。
 - `Secure` {{optional_inline}}
 
   - : 一个带有安全属性的 cookie 只有在请求使用 `https:` 协议（localhost 不受此限制）的时候才会被发送到服务器。以阻止[中间人](/zh-CN/docs/Glossary/MitM)攻击。
-  
+
     > **备注：** 不要假设 `Secure` 会阻止所有的对 cookie 中敏感信息（session key、登录信息，等等）的访问。携带这一属性的 cookie 在不设置 `HttpOnly` 的情况下仍能从客户端的硬盘或是从 JavaScript 中访问。
     >
     > 非安全站点（`http:`）已经不能在 cookie 中设置 `Secure` 属性了（在 Chrome 52 和 Firefox 52 中新引入的限制）。对于 Firefox，`Secure` 属性的 `https:` 限制会在域为 localhost 时被忽略（从 Firefox 75 开始）。
@@ -106,7 +106,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
   - `Strict`
     - : 这意味浏览器仅对同一站点的请求发送 `cookie`，即请求来自设置 cookie 的站点。如果请求来自不同的域或协议（即使是相同域），则携带有 `SameSite=Strict` 属性的 cookie 将不会被发送。
-  
+
   - `Lax`
     - : 这意味着 cookie 不会在跨站请求中被发送，如：加载图像或 frame 的请求。但 cookie 在用户从外部站点导航到源站时，cookie 也将被发送（例如，跟随一个链接）。这是 `SameSite` 属性未被设置时的默认行为。
 

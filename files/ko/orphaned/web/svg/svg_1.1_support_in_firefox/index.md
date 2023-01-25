@@ -1,11 +1,9 @@
 ---
 title: SVG in Firefox
 slug: orphaned/Web/SVG/SVG_1.1_Support_in_Firefox
-tags:
-  - SVG
-translation_of: Web/SVG/SVG_1.1_Support_in_Firefox
 original_slug: Web/SVG/SVG_1.1_Support_in_Firefox
 ---
+
 Firefox 2는 더욱 폭넓은 [Scalable Vector Graphics (SVG)](http://www.w3.org/Graphics/SVG/) 기능 구현을 위해서 계속해서 향상시켜 나가고 있습니다. 많은 스펙과 버그 수정들이 포함되었지만 Firefox 1.5이후 새로이 추가된 유일한 특징이 바로 \<textPath>입니다. -- 아래 참조.
 
 Firefox SVG는 [SVG 1.1](http://www.w3.org/TR/SVG11/)의 부분집합이지만 그렇다고 공식 프로필(Tiny, Basic, Full)들중 어느 것도 아닙니다. 각 내용들과 그것들이 Firefox 2에서 구현되었는지 아닌지에 대한 전체 내용은 문서의 마지막에서 찾을 수 있습니다. 문서의 나머지 부분은 우리의 구현상 제약사항들에 대한 정보를 제공할 것입니다.

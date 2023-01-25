@@ -1904,6 +1904,10 @@
     "modified": "2020-10-15T22:03:31.329Z",
     "contributors": ["Syihoy", "porfirion"]
   },
+  "Web/API/CustomElementRegistry/define": {
+    "modified": "2019-03-18T21:37:29.505Z",
+    "contributors": ["Chang-jui-hsuan"]
+  },
   "Web/API/CustomEvent": {
     "modified": "2020-10-15T21:38:37.754Z",
     "contributors": ["fscholz", "jackblackevo", "Shiyou"]
@@ -1999,10 +2003,6 @@
   "Web/API/Document/readyState": {
     "modified": "2019-06-11T20:31:50.296Z",
     "contributors": ["StanleyDing", "jackblackevo", "Shiyou", "alk03073135"]
-  },
-  "Web/API/Document/registerElement": {
-    "modified": "2019-03-18T21:37:29.505Z",
-    "contributors": ["Chang-jui-hsuan"]
   },
   "Web/API/Document/scroll_event": {
     "modified": "2019-04-08T09:05:58.589Z",

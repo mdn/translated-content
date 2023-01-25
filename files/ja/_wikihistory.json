@@ -17,10 +17,6 @@
     "modified": "2020-07-10T21:07:12.156Z",
     "contributors": ["dskmori", "Dicklessgreat", "wbamberg", "Uemmra3"]
   },
-  "Games/Examples": {
-    "modified": "2019-01-16T21:57:35.766Z",
-    "contributors": ["wbamberg", "Uemmra3"]
-  },
   "Games/Introduction": {
     "modified": "2019-03-23T22:51:04.568Z",
     "contributors": [
@@ -366,6 +362,10 @@
     "modified": "2020-05-10T03:48:40.893Z",
     "contributors": ["mfuji09", "Uemmra3", "succi0303"]
   },
+  "Glossary/CSS_Descriptor": {
+    "modified": "2019-03-18T21:28:01.557Z",
+    "contributors": ["mfuji09"]
+  },
   "Glossary/CSS_Selector": {
     "modified": "2020-09-17T11:09:53.099Z",
     "contributors": ["mfuji09", "Uemmra3"]
@@ -557,10 +557,6 @@
   "Glossary/Denial_of_Service": {
     "modified": "2019-01-17T03:38:26.331Z",
     "contributors": ["Wind1808"]
-  },
-  "Glossary/Descriptor_(CSS)": {
-    "modified": "2019-03-18T21:28:01.557Z",
-    "contributors": ["mfuji09"]
   },
   "Glossary/Deserialization": {
     "modified": "2019-06-26T16:21:34.149Z",
@@ -1497,7 +1493,7 @@
     "modified": "2019-07-20T03:48:37.423Z",
     "contributors": ["Uemmra3", "hamasaki", "yoko0827", "YuichiNukiyama"]
   },
-  "Glossary/Round_Trip_Time_(RTT)": {
+  "Glossary/Round_Trip_Time": {
     "modified": "2020-10-15T12:43:22.677Z",
     "contributors": ["mpcjazz"]
   },
@@ -1939,10 +1935,6 @@
     "modified": "2019-03-18T21:18:40.801Z",
     "contributors": ["mfuji09"]
   },
-  "Glossary/XHR_(XMLHttpRequest)": {
-    "modified": "2019-03-18T21:46:39.520Z",
-    "contributors": ["Uemmra3"]
-  },
   "Glossary/XHTML": {
     "modified": "2020-08-12T11:48:47.313Z",
     "contributors": ["mfuji09", "ethertank", "Potappo", "Mgjbot", "Okome"]
@@ -1950,6 +1942,10 @@
   "Glossary/XML": {
     "modified": "2019-12-18T12:48:54.820Z",
     "contributors": ["Uemmra3", "Wind1808", "kadopoly"]
+  },
+  "Glossary/XMLHttpRequest": {
+    "modified": "2019-03-18T21:46:39.520Z",
+    "contributors": ["Uemmra3"]
   },
   "Glossary/XPath": {
     "modified": "2019-03-18T21:30:27.405Z",
@@ -7397,10 +7393,6 @@
   "Web/API/Document/open": {
     "modified": "2020-10-15T21:15:48.961Z",
     "contributors": ["mfuji09", "fscholz", "khalid32", "ethertank", "Potappo"]
-  },
-  "Web/API/Document/origin": {
-    "modified": "2020-10-17T12:14:26.538Z",
-    "contributors": ["mfuji09", "YuichiNukiyama"]
   },
   "Web/API/Document/paste_event": {
     "modified": "2020-10-15T22:27:22.949Z",
@@ -15887,11 +15879,11 @@
     "modified": "2020-07-16T11:05:59.288Z",
     "contributors": ["mfuji09", "mitsuba-clover", "teoli", "ethertank"]
   },
-  "Web/CSS/:-moz-locale-dir(ltr)": {
+  "Web/CSS/:-moz-locale-dir_ltr": {
     "modified": "2019-03-24T00:02:53.402Z",
     "contributors": ["mfuji09", "mitsuba-clover", "teoli", "ethertank", "Marsf"]
   },
-  "Web/CSS/:-moz-locale-dir(rtl)": {
+  "Web/CSS/:-moz-locale-dir_rtl": {
     "modified": "2019-03-24T00:02:54.520Z",
     "contributors": ["mfuji09", "mitsuba-clover", "teoli", "ethertank", "Marsf"]
   },
@@ -20813,6 +20805,17 @@
     "modified": "2020-11-08T15:06:32.777Z",
     "contributors": ["mfuji09"]
   },
+  "Web/HTML/Attributes/rel/preload": {
+    "modified": "2020-12-13T02:32:11.039Z",
+    "contributors": [
+      "kobayashitomoya",
+      "maechabin",
+      "rigani",
+      "8tak4",
+      "mfuji09",
+      "turenar"
+    ]
+  },
   "Web/HTML/Attributes/required": {
     "modified": "2020-11-09T13:06:49.783Z",
     "contributors": ["mfuji09", "silverskyvicto"]
@@ -21798,21 +21801,6 @@
     "modified": "2019-04-15T20:58:44.936Z",
     "contributors": ["hSakura", "mfuji09", "yyss", "ethertank", "Marsf"]
   },
-  "Web/HTML/Link_types": {
-    "modified": "2020-10-15T21:36:59.711Z",
-    "contributors": ["mfuji09", "yyss", "marmot1123"]
-  },
-  "Web/HTML/Link_types/preload": {
-    "modified": "2020-12-13T02:32:11.039Z",
-    "contributors": [
-      "kobayashitomoya",
-      "maechabin",
-      "rigani",
-      "8tak4",
-      "mfuji09",
-      "turenar"
-    ]
-  },
   "Web/HTML/Microdata": {
     "modified": "2020-09-06T05:56:41.358Z",
     "contributors": ["mfuji09", "momdo"]
@@ -22083,7 +22071,7 @@
       "yyss"
     ]
   },
-  "Web/HTTP/Cross-Origin_Resource_Policy_(CORP)": {
+  "Web/HTTP/Cross-Origin_Resource_Policy": {
     "modified": "2020-10-15T22:27:25.103Z",
     "contributors": ["mfuji09", "Potappo", "shisama", "53able"]
   },
@@ -30183,58 +30171,6 @@
     "modified": "2019-03-30T15:58:22.824Z",
     "contributors": ["silverskyvicto", "ExE-Boss", "Mgjbot", "Shoot"]
   },
-  "Web/XPath/Axes/ancestor": {
-    "modified": "2019-01-17T03:28:09.177Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/ancestor-or-self": {
-    "modified": "2019-03-18T21:28:03.767Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/attribute": {
-    "modified": "2019-03-30T16:06:16.122Z",
-    "contributors": ["silverskyvicto", "ExE-Boss"]
-  },
-  "Web/XPath/Axes/child": {
-    "modified": "2020-10-15T22:08:08.333Z",
-    "contributors": ["silverskyvicto", "ExE-Boss"]
-  },
-  "Web/XPath/Axes/descendant": {
-    "modified": "2019-01-17T03:28:56.581Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/descendant-or-self": {
-    "modified": "2019-01-17T03:28:36.654Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/following": {
-    "modified": "2019-01-17T03:29:05.424Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/following-sibling": {
-    "modified": "2019-01-17T03:29:25.545Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/namespace": {
-    "modified": "2019-03-18T21:27:59.706Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/parent": {
-    "modified": "2019-01-17T03:28:42.276Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/preceding": {
-    "modified": "2019-01-17T03:29:16.726Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/preceding-sibling": {
-    "modified": "2019-01-17T03:29:19.432Z",
-    "contributors": ["ExE-Boss", "silverskyvicto"]
-  },
-  "Web/XPath/Axes/self": {
-    "modified": "2020-10-15T22:08:17.935Z",
-    "contributors": ["silverskyvicto", "ExE-Boss"]
-  },
   "Web/XPath/Comparison_with_CSS_selectors": {
     "modified": "2020-10-24T08:07:33.764Z",
     "contributors": ["silverskyvicto", "mfuji09"]
@@ -31111,6 +31047,10 @@
   "orphaned/Creating_toolbar_buttons": {
     "modified": "2019-03-23T23:41:54.024Z",
     "contributors": ["teoli", "electrolysis", "Akanemoto", "Taken Bot"]
+  },
+  "orphaned/Games/Examples": {
+    "modified": "2019-01-16T21:57:35.766Z",
+    "contributors": ["wbamberg", "Uemmra3"]
   },
   "orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data": {
     "modified": "2020-03-07T07:55:37.025Z",

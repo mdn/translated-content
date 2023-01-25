@@ -425,7 +425,7 @@ Si aceptó el "desafío" en [Django Tutorial Part 8: User authentication and per
 
 > **Nota:** Recuerde que su inicio de sesión de prueba deberá tener el permiso "`catalog.can_mark_returned`" para acceder a la página de renovar el libro (quizás use su cuenta de superusuario).
 
-Alternativamente, puede construir manualmente una URL de prueba como esta — `http://127.0.0.1:8000/catalog/book/_\<bookinstance_id>_/renew/` (se puede obtener un ID de instancia de libro válido navegando a la página de detalles de un libro en su biblioteca y copiando el campo `id`).
+Alternativamente, puede construir manualmente una URL de prueba como esta — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (se puede obtener un ID de instancia de libro válido navegando a la página de detalles de un libro en su biblioteca y copiando el campo `id`).
 
 ### Como se ve?
 

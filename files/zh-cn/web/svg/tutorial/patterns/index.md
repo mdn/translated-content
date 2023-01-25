@@ -70,6 +70,6 @@ slug: Web/SVG/Tutorial/Patterns
 
 当然，这意味着如果你后续改变了对象大小，pattern 也不会缩放。上述三个举例在下图中放在一个矩形中展示，高度被轻微拉伸到 300px，但是我注意到这不是完整的图片，并且有些其他选项可能你的应用不支持。
 
-![Image:SVG_Pattern_Comparison_of_Units.png](/@api/deki/files/349/=SVG_Pattern_Comparison_of_Units.png)
+![Image:SVG_Pattern_Comparison_of_Units.png](svg_pattern_comparison_of_units.png)
 
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}

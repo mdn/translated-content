@@ -1,11 +1,6 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/style
 ---
 
 {{HTMLSidebar("Global_attributes")}}

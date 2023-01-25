@@ -1,12 +1,8 @@
 ---
 title: HTTP 캐싱
 slug: Web/HTTP/Caching
-tags:
-  - HTTP
-  - 가이드
-  - 캐싱
-translation_of: Web/HTTP/Caching
 ---
+
 {{HTTPSidebar}}
 
 웹 사이트와 애플리케이션의 성능은 이전에 가져온 리소스들을 재사용함으로써 현저하게 향상될 수 있습니다. 웹 캐시는 레이턴시와 네트워크 트래픽을 줄여줌으로써 리소스를 보여주는 데에 필요한 시간을 줄여줍니다. HTTP 캐싱을 활용하면 웹 사이트가 좀 더 빠르게 반응하도록 만들 수 있습니다.

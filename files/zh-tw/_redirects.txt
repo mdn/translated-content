@@ -543,6 +543,7 @@
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/DOMString	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-TW/docs/Web/API/Document/keyup_event	/zh-TW/docs/Web/API/Element/keyup_event
+/zh-TW/docs/Web/API/Document/registerElement	/zh-TW/docs/Web/API/CustomElementRegistry/define
 /zh-TW/docs/Web/API/Document/width	/zh-TW/docs/Web/API/Element/clientWidth
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
 /zh-TW/docs/Web/API/DocumentTemp/createElement	/zh-TW/docs/Web/API/Document/createElement

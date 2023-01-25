@@ -7,7 +7,7 @@ slug: Web/API/Clipboard/writeText
 
 {{domxref("Clipboard")}} 接口的 **`writeText()`** 方法可以写入特定字符串到操作系统的剪切板。
 
-> **备注：** 规范要求在写入剪贴板之前使用 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 获取“剪贴板写入”权限。但是，不同浏览器的具体要求不同，因为这是一个新的 API。有关详细信息，请查看[浏览器兼容性](#浏览器兼容性) and {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}}。
+> **备注：** 规范要求在写入剪贴板之前使用 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 获取“剪贴板写入”权限。但是，不同浏览器的具体要求不同，因为这是一个新的 API。有关详细信息，请查看[浏览器兼容性](#浏览器兼容性)和[剪贴板可用性](/zh-CN/docs/Web/API/Clipboard#剪贴板可用性)。
 
 ## 语法
 

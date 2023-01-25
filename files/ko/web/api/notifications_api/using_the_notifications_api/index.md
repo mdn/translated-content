@@ -246,11 +246,9 @@ window.addEventListener('load', function () {
 
 {{ EmbedLiveSample('Tag_example', '100%', 30) }}
 
-## 규격
+## 명세서
 
-| 규격                                         | 상태                                     | 비고      |
-| -------------------------------------------- | ---------------------------------------- | --------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | 현행 표준 |
+{{Specifications}}
 
 ## 브라우저 호환성
 

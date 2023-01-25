@@ -97,6 +97,6 @@ draw();
 
 裁切路径创建之后所有出现在它里面的东西才会画出来。在画线性渐变时我们就会注意到这点。然后会绘制出 50 颗随机位置分布（经过缩放）的星星，当然也只有在裁切路径里面的星星才会绘制出来。
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
+{{EmbedLiveSample("clip 的例子", "180", "180", "canvas_clip.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

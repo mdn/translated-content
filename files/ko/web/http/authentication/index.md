@@ -1,7 +1,6 @@
 ---
 title: HTTP 인증
 slug: Web/HTTP/Authentication
-translation_of: Web/HTTP/Authentication
 ---
 
 {{HTTPSidebar}}

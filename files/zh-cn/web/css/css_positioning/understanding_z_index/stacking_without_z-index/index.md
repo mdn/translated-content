@@ -21,8 +21,6 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index
 > - 在一组由不含有任何 z-index 属性的同类元素，如例子中的定位块元素（DIV #1 至 #4），这些元素按照它们在 HTML 结构中出现的顺序堆叠，而不管它们的定位属性如何。
 > - 普通流中不含有定位属性的标准块元素（DIV #5）始终先于定位元素渲染并出现在定位元素的下层，即便它们在 HTML 结构中出现的位置晚于定位元素也是如此。
 
-![understanding_zindex_01.png](/@api/deki/files/910/=understanding_zindex_01.png)
-
 ### 示例
 
 ```html

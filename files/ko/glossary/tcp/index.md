@@ -17,4 +17,3 @@ TCP의 역할은 에러가 없이 패킷이 신뢰할 수 있게 전달 되었�
   - {{Glossary("IPv4")}}
   - {{Glossary("IPv6")}}
   - {{Glossary("Packet")}}
-  

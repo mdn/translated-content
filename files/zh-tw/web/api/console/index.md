@@ -169,7 +169,7 @@ console.debug("Back to the outer level");
 
 The output looks like this:
 
-![nesting.png](/@api/deki/files/6082/=nesting.png)
+![nesting.png](console_groups_demo.png)
 
 ### Timers
 
@@ -185,7 +185,7 @@ console.timeEnd("answer time");
 
 Will log the time needed by the user to discard the alert box:
 
-![timerresult.png](/@api/deki/files/6084/=timerresult.png)
+![timerresult.png](console-timelog.png)
 
 Notice that the timer's name is displayed both when the timer is started and when it's stopped.
 

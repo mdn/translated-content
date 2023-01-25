@@ -525,6 +525,7 @@
 /zh-CN/docs/Glossary/404	/zh-CN/docs/Web/HTTP/Status/404
 /zh-CN/docs/Glossary/502	/zh-CN/docs/Web/HTTP/Status/502
 /zh-CN/docs/Glossary/Bézier_curve	/zh-CN/docs/Glossary/Bezier_curve
+/zh-CN/docs/Glossary/Descriptor_(CSS)	/zh-CN/docs/Glossary/CSS_Descriptor
 /zh-CN/docs/Glossary/Empty_element	/zh-CN/docs/Glossary/Void_element
 /zh-CN/docs/Glossary/Grid_Rows	/zh-CN/docs/Glossary/Grid_Row
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
@@ -532,6 +533,7 @@
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
 /zh-CN/docs/Glossary/Symbol	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /zh-CN/docs/Glossary/Transferable_objects	/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects
+/zh-CN/docs/Glossary/XHR_(XMLHttpRequest)	/zh-CN/docs/Glossary/XMLHttpRequest
 /zh-CN/docs/Glossary/主轴	/zh-CN/docs/Glossary/Main_Axis
 /zh-CN/docs/Glossary/交叉轴	/zh-CN/docs/Glossary/Cross_Axis
 /zh-CN/docs/Glossary/代理服务器	/zh-CN/docs/Glossary/Proxy_server
@@ -1113,6 +1115,7 @@
 /zh-CN/docs/Localization	/zh-CN/docs/Glossary/Localization
 /zh-CN/docs/MDN/About	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
+/zh-CN/docs/MDN/Community/Users_teams	/zh-CN/docs/MDN/Community/Roles_teams
 /zh-CN/docs/MDN/Contribute/Content	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/Contribute/Content/CSS_style_guide	/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /zh-CN/docs/MDN/Contribute/Content/Custom_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
@@ -1386,6 +1389,7 @@
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
 /zh-CN/docs/Web/API/Document/origin	/zh-CN/docs/Web/API/origin
+/zh-CN/docs/Web/API/Document/registerElement	/zh-CN/docs/Web/API/CustomElementRegistry/define
 /zh-CN/docs/Web/API/Document/selectstart_event	/zh-CN/docs/Web/API/Node/selectstart_event
 /zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/Document/touchend_event	/zh-CN/docs/Web/API/Element/touchend_event
@@ -2271,6 +2275,9 @@
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Web/HTML/Inline_elements
 /zh-CN/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
+/zh-CN/docs/Web/HTML/Link_types	/zh-CN/docs/Web/HTML/Attributes/rel
+/zh-CN/docs/Web/HTML/Link_types/prefetch	/zh-CN/docs/Web/HTML/Attributes/rel/prefetch
+/zh-CN/docs/Web/HTML/Link_types/preload	/zh-CN/docs/Web/HTML/Attributes/rel/preload
 /zh-CN/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/zh-CN/docs/Glossary/speculative_parsing
 /zh-CN/docs/Web/HTML/全局属性	/zh-CN/docs/Web/HTML/Global_attributes
 /zh-CN/docs/Web/HTML/内联元素	/zh-CN/docs/Web/HTML/Inline_elements

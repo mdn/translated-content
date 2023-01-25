@@ -1,62 +1,52 @@
 ---
-title: 'Document: scroll event'
+title: "Document: scroll イベント"
 slug: Web/API/Document/scroll_event
+l10n:
+  sourceCommit: ad11fa09cfe07fbce82de0457daa8c5ac243b748
 ---
 
 {{APIRef}}
 
-**`scroll`** イベントは、ドキュメントのビューまたは要素がスクロールされたときに生じます。
+**`scroll`** イベントは、文書のビューまたは要素がスクロールされたときに発生します。
+スクロールが完了したことを検出するには、 {{domxref("Document/scrollend_event", "Document: scrollend イベント")}}を参照してください。
+要素のスクロールには、 {{domxref("Element/scroll_event", "Element: scroll イベント")}}を参照してください。
 
-<table class="properties">
-  <thead></thead>
-  <tbody>
-    <tr>
-      <th>バブリング</th>
-      <td>はい</td>
-    </tr>
-    <tr>
-      <th>キャンセル可能</th>
-      <td>いいえ</td>
-    </tr>
-    <tr>
-      <th>インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th>イベントハンドラープロパティ</th>
-      <td>
-        {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
 
-> **メモ:** iOS UIWebViews では、スクロールされている最中は `scroll` イベントは生じません。スクロールが完了したあとにのみ生じます。 詳しくは [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202) をご覧ください。 Safari と WKWebViews ではこのバグは起きません。
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("scroll", (event) => {});
+
+onscroll = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
-### スクロールイベントを抑制する
+### スクロールイベントの間引き
 
-`scroll` イベントは高い確率で生じることができるため、イベントハンドラーは DOM の変更といった計算上の処理コストの高い操作を実行すべきではありません。その代わり、次のように、 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}} や、 {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}} 、または {{DOMxRef("CustomEvent")}} を使ってイベントを抑制することが推奨されます。
+`scroll` イベントは高い確率で生じることができるため、イベントハンドラーは DOM の変更といった計算上の処理コストの高い操作を実行すべきではありません。その代わり、次のように {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}}、{{DOMxRef("CustomEvent")}} などを使ってイベントを間引くことをお勧めします。
 
-ただし、インプットイベントやアニメーションフレームは同じような確率で生じ、そのため下記のような最適化は不要の場合が多いことに注意してください。 この例では `requestAnimationFrame` の `scroll` を最適化しています。
+ただし、入力イベントやアニメーションフレームは同じような割合で発生するため、そのため下記のような最適化は不要の場合が多いことに注意してください。 この例では `requestAnimationFrame` の `scroll` イベントを最適化しています。
 
 ```js
-// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
-
-let last_known_scroll_position = 0;
+let lastKnownScrollPosition = 0;
 let ticking = false;
 
-function doSomething(scroll_pos) {
-  // Do something with the scroll position
+function doSomething(scrollPos) {
+  // 子のスクロール位置で何かを行う
 }
 
-window.addEventListener('scroll', function(e) {
-  last_known_scroll_position = window.scrollY;
+document.addEventListener("scroll", (event) => {
+  lastKnownScrollPosition = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
-      doSomething(last_known_scroll_position);
+    window.requestAnimationFrame(() => {
+      doSomething(lastKnownScrollPosition);
       ticking = false;
     });
 
@@ -65,9 +55,7 @@ window.addEventListener('scroll', function(e) {
 });
 ```
 
-その他の類似の例を見るには、 [`resize`](/ja/docs/Web/API/Document/defaultView/resize_event) イベントページをご覧ください。
-
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
@@ -77,4 +65,6 @@ window.addEventListener('scroll', function(e) {
 
 ## 関連情報
 
-- [Element: `scroll` event](/ja/docs/Web/API/Element/scroll_event)
+- [Document: `scrollend` イベント](/ja/docs/Web/API/Document/scrollend_event)
+- [Element: `scroll` イベント](/ja/docs/Web/API/Element/scroll_event)
+- [Element: `scrollend` イベント](/ja/docs/Web/API/Element/scrollend_event)

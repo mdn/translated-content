@@ -1,11 +1,8 @@
 ---
 title: HTTP 상태 코드
 slug: Web/HTTP/Status
-tags:
-  - HTTP
-  - 상태 코드
-translation_of: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 HTTP 응답 상태 코드는 특정 HTTP 요청이 성공적으로 완료되었는지 알려줍니다. 응답은 5개의 그룹으로 나누어집니다: 정보를 제공하는 응답, 성공적인 응답, 리다이렉트, 클라이언트 에러, 그리고 서버 에러. 상태 코드는 [section 10 of RFC 2616](https://tools.ietf.org/html/rfc2616#section-10)에 정의되어 있습니다.

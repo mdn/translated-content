@@ -54,7 +54,7 @@ for (let constraint in supportedConstraints) {
 
 ### 结果
 
-{{ EmbedLiveSample('Example', 600, 350) }}
+{{ EmbedLiveSample('示例', 600, 350) }}
 
 ## 规范
 

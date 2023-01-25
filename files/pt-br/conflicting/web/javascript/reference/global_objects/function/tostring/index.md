@@ -1,11 +1,6 @@
 ---
 title: Function.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
-tags:
-  - Função
-  - JavaScript
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
 ---
 

@@ -39,10 +39,6 @@
       "yjy1992"
     ]
   },
-  "Games/Examples": {
-    "modified": "2019-01-16T21:48:35.297Z",
-    "contributors": ["wbamberg", "noiron"]
-  },
   "Games/Introduction": {
     "modified": "2019-12-05T00:08:12.532Z",
     "contributors": [
@@ -465,6 +461,10 @@
     "modified": "2020-10-13T09:26:56.960Z",
     "contributors": ["xgqfrms"]
   },
+  "Glossary/CSS_Descriptor": {
+    "modified": "2019-04-06T08:43:55.316Z",
+    "contributors": ["RainSlide"]
+  },
   "Glossary/CSS_Selector": {
     "modified": "2020-07-08T11:12:08.989Z",
     "contributors": [
@@ -632,10 +632,6 @@
   "Glossary/Decryption": {
     "modified": "2020-08-26T10:35:14.561Z",
     "contributors": ["BrianTan"]
-  },
-  "Glossary/Descriptor_(CSS)": {
-    "modified": "2019-04-06T08:43:55.316Z",
-    "contributors": ["RainSlide"]
   },
   "Glossary/Developer_Tools": {
     "modified": "2019-05-04T00:00:54.405Z",
@@ -1489,10 +1485,6 @@
     "modified": "2019-03-23T22:08:50.575Z",
     "contributors": ["Ende93", "TomScavo"]
   },
-  "Glossary/XHR_(XMLHttpRequest)": {
-    "modified": "2019-03-18T20:48:05.724Z",
-    "contributors": ["Azurak", "HiroKHuang"]
-  },
   "Glossary/XHTML": {
     "modified": "2019-03-23T23:53:05.465Z",
     "contributors": [
@@ -1512,6 +1504,10 @@
       "eeeeeeeason",
       "xgqfrms-GitHub"
     ]
+  },
+  "Glossary/XMLHttpRequest": {
+    "modified": "2019-03-18T20:48:05.724Z",
+    "contributors": ["Azurak", "HiroKHuang"]
   },
   "Glossary/XPath": {
     "modified": "2019-03-18T21:21:51.767Z",
@@ -8479,10 +8475,6 @@
     "modified": "2020-10-15T21:04:24.930Z",
     "contributors": ["volving", "RainSlide", "teoli", "AlexChao", "ziyunfei"]
   },
-  "Web/API/Document/registerElement": {
-    "modified": "2020-10-15T21:37:30.950Z",
-    "contributors": ["zhangchen", "Pada", "Lock", "fsx950223", "mochen"]
-  },
   "Web/API/Document/releaseCapture": {
     "modified": "2019-03-23T23:35:19.576Z",
     "contributors": ["teoli", "khalid32", "ziyunfei", "princetoad@gmail.com"]
@@ -15306,10 +15298,6 @@
     "modified": "2019-03-23T22:13:47.101Z",
     "contributors": ["fscholz", "wbamberg", "chen4w", "bigfat", "yxxgoogle"]
   },
-  "Web/API/WebRTC_API/adapter.js": {
-    "modified": "2020-04-17T09:34:28.178Z",
-    "contributors": ["charliex2", "physihan"]
-  },
   "Web/API/WebSocket": {
     "modified": "2020-10-15T21:37:01.958Z",
     "contributors": [
@@ -21780,6 +21768,31 @@
       "kmc947373"
     ]
   },
+  "Web/HTML/Attributes/rel": {
+    "modified": "2020-10-15T21:31:40.375Z",
+    "contributors": [
+      "chanvin",
+      "Yayure",
+      "gafish",
+      "JuliusKingsley",
+      "songlime",
+      "liutongshuo",
+      "idlefire",
+      "hstarorg",
+      "Ende93",
+      "grtreexyz",
+      "blue0125",
+      "Breezewish"
+    ]
+  },
+  "Web/HTML/Attributes/rel/prefetch": {
+    "modified": "2020-10-15T22:29:06.249Z",
+    "contributors": ["chanvin"]
+  },
+  "Web/HTML/Attributes/rel/preload": {
+    "modified": "2020-10-15T22:29:06.417Z",
+    "contributors": ["chanvin"]
+  },
   "Web/HTML/Block-level_elements": {
     "modified": "2019-03-18T20:38:24.578Z",
     "contributors": [
@@ -23215,31 +23228,6 @@
       "ziyunfei",
       "pmtao"
     ]
-  },
-  "Web/HTML/Link_types": {
-    "modified": "2020-10-15T21:31:40.375Z",
-    "contributors": [
-      "chanvin",
-      "Yayure",
-      "gafish",
-      "JuliusKingsley",
-      "songlime",
-      "liutongshuo",
-      "idlefire",
-      "hstarorg",
-      "Ende93",
-      "grtreexyz",
-      "blue0125",
-      "Breezewish"
-    ]
-  },
-  "Web/HTML/Link_types/prefetch": {
-    "modified": "2020-10-15T22:29:06.249Z",
-    "contributors": ["chanvin"]
-  },
-  "Web/HTML/Link_types/preload": {
-    "modified": "2020-10-15T22:29:06.417Z",
-    "contributors": ["chanvin"]
   },
   "Web/HTML/Microdata": {
     "modified": "2019-07-13T06:56:53.858Z",

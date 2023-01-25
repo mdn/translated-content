@@ -33,7 +33,7 @@ slug: Web/HTML/Element/ol
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
-   <td>{{ARIARole("directory")}}, {{ARIARole("group")}}, {{ARIARole("listbox")}}, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("none")}}, {{ARIARole("presentation")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -95,7 +95,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("简单示例", 400, 100)}}
 
 ### 使用小写罗马数字编号
 
@@ -109,7 +109,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Using_Roman_Numeral_type", 400, 100)}}
+{{EmbedLiveSample("使用小写罗马数字编号", 400, 100)}}
 
 ### 使用 `start` 属性
 
@@ -125,7 +125,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Using_the_start_attribute", 400, 100)}}
+{{EmbedLiveSample("使用 start 属性", 400, 100)}}
 
 ### 嵌套列表
 
@@ -145,7 +145,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Nesting_lists", 400, 150)}}
+{{EmbedLiveSample("嵌套列表", 400, 150)}}
 
 ### 嵌套有序列表和无序列表
 
@@ -165,7 +165,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Unordered_list_inside_ordered_list", 400, 150)}}
+{{EmbedLiveSample("嵌套有序列表和无序列表", 400, 150)}}
 
 ## 规范
 

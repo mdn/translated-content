@@ -1,13 +1,6 @@
 ---
 title: 부트스트랩
 slug: orphaned/Glossary/Bootstrap
-tags:
-  - 부트스트랩
-  - bootstrap
-  - Glossary
-  - framework
-  - css
-translation_of: Glossary/Bootstrap
 original_slug: Glossary/Bootstrap
 ---
 

@@ -8,7 +8,7 @@ original_slug: Web/HTML/Elemento/ol
 
 - El elemento `ol` permite definir listas o viñetas ordenadas (“Ordered List”), bien con numeración o alfabéticamente.
   - : **Sus etiquetas son**: \<ol> y \</ol> (ambas obligatorias).
-  
+
     **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Está definido como**: [Elemento de lista](/es/HTML/Elemento/Tipos_de_elementos#de_lista).

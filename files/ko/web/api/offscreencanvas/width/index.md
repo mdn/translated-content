@@ -23,11 +23,9 @@ offscreen.width; // 256
 offscreen.width = 512;
 ```
 
-## 상세
+## 명세서
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "#dom-offscreencanvas-width", "OffscreenCanvas.width")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 
