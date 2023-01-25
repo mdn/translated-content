@@ -80,7 +80,6 @@ HTML 只建立文件的基礎架構，可以透過 {{glossary("CSS")}} 或腳本
 
 - [如何控制 HTML 換行](/zh-TW/docs/Learn/HTML/Howto/Take_control_of_HTML_line_breaking)
 - 如何標記改變（新增與移除的文字）參見 {{htmlelement("ins")}} 及 {{htmlelement("del")}} 標籤
-- [如何標記改變（新增與移除的文字）](/zh-TW/docs/Learn/HTML/Howto/Mark_text_insertion_and_deletion)
 
 ### 進階圖片 & 多媒體
 
