@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Signaling_and_video_calling
 translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 [WebRTC](/ru/docs/Web/API/WebRTC_API) позволяет обмениваться медиаданными между двумя устройствами напрямую (peer-to-peer) в режиме реального времени. Соединение устанавливается путём обнаружения и согласования, называемым **сигнализацией (signaling)**. Эта статья объясняет, как сделать двусторонний видеозвонок.
 
