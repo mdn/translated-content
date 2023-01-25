@@ -45,7 +45,7 @@ function myFunction() {
 myFunction();
 ```
 
-#### **功能範圍**
+#### 函數作用域
 
 記得[函數有自己的作用域](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)──你無法從函數外部存取函數內部宣告的變數，除非你將該變數設為全域變數（也就是不在任何函數內部），或是[回傳變數的值](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)。
 
