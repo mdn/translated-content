@@ -6,7 +6,7 @@ tags:
 translation_of: Web/API/WebRTC_API/Taking_still_photos
 original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 В этой статье объясняется как использовать WebRTC для получения доступа к камере компьютера или мобильного устройства, и захвата кадров с их помощью. [Ознакомьтесь с примером,](https://mdn-samples.mozilla.org/s/webrtc-capturestill) а затем узнайте как это работает.
 
