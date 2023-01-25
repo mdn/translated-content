@@ -1,6 +1,6 @@
 ---
 title: ':-moz-locale-dir(ltr)'
-slug: Web/CSS/:-moz-locale-dir(ltr)
+slug: Web/CSS/:-moz-locale-dir_ltr
 tags:
   - CSS
   - Localisation
@@ -9,6 +9,7 @@ tags:
   - Reference
   - l10n
 translation_of: Web/CSS/:-moz-locale-dir(ltr)
+original_slug: Web/CSS/:-moz-locale-dir(ltr)
 ---
 
 {{Non-standard_header}}{{CSSRef}}

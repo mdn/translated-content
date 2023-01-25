@@ -90,7 +90,7 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_Area_1', '300', '330') }}
+{{ EmbedLiveSample('命名网格区域', '300', '330') }}
 
 用这种方法，我们不需要为任何网格项目单独指定属性，所有的定义都在网格容器中。请仔细观察在 {{cssxref("grid-template-areas")}} 属性中是怎样描述布局的。
 
@@ -154,7 +154,7 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 </div>
 ```
 
-{{ EmbedLiveSample('Leaving_1', '300', '330') }}
+{{ EmbedLiveSample('留出空白的网格单元', '300', '330') }}
 
 为了让布局更整齐，可以使用多个“`.`”符号，如果在多个句点符号之间没有空格，那它们就会被计为一个单元格。用多个句点表示一个单元格的好处是对于复杂的布局来说很容易让行列对齐，这意味着你在 CSS 中看到的，就像是实际布局看起来那样。
 
@@ -220,7 +220,7 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 </div>
 ```
 
-{{ EmbedLiveSample('Spanning_1', '300', '330') }}
+{{ EmbedLiveSample('跨越多个网格单元', '300', '330') }}
 
 {{cssxref("grid-template-areas")}} 的值必须是一个完整的网格，否则无效（即这个属性会被忽略掉），这意味着你应该让每一行都有相同数量的单元格，如果出现句点符就表示这个单元格将被留空。如果创建的区域不是矩形，也是无效的网格。
 
@@ -308,11 +308,13 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 </div>
 ```
 
-{{ EmbedLiveSample('Redefining_1', '550', '330') }}
+{{ EmbedLiveSample('用媒体查询重新定义网格', '550', '330') }}
 
 ## 在 UI 元素上使用 `grid-template-areas`
 
 许多网上流传的网格例子都假定使用网格来做页面的整体布局，实际上网格对于小元素一样有用。使用 {{cssxref("grid-template-areas")}} 能令人特别愉快，因为你在代码里就能直观地看到的这些元素的布局效果。
+
+### 媒体对象示例
 
 下面我们举一个非常简单的例子，来创建一个“媒体对象”。这个组件由一侧的图片或其他媒体以及另一侧的内容组成，图片将显示在盒子的右边或左边。
 
@@ -359,7 +361,7 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 </div>
 ```
 
-{{ EmbedLiveSample('Media_1', '300', '200') }}
+{{ EmbedLiveSample('媒体对象示例', '300', '200') }}
 
 ### 把图片显示在盒子的另一侧
 
@@ -407,7 +409,7 @@ slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 </div>
 ```
 
-{{ EmbedLiveSample('Media_2', '300', '200') }}
+{{ EmbedLiveSample('把图片显示在盒子的另一侧', '300', '200') }}
 
 ## 网格定义的简写规则
 

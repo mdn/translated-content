@@ -1094,9 +1094,9 @@ table.standard-table td {
 }
 ```
 
-{{EmbedLiveSample('Combining_functions','100%','209px','','', 'no-codepen')}}
+{{EmbedLiveSample('复合函数','100%','209px','','', 'no-codepen')}}
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
