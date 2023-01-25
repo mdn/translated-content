@@ -1,5 +1,5 @@
 ---
-title: "Оператор_опциональной последовательности"
+title: "Оператор опциональной последовательности"
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
