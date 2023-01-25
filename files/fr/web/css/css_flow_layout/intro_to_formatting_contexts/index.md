@@ -11,13 +11,13 @@ original_slug: Web/CSS/CSS_Flow_Layout/Explications_contextes_formatage
 
 {{CSSRef}}
 
-Dans cet article, nous aborderons le concept des contextes de formatage. Ceux-ci peuvent être de dfiférents types : contextes de formatage de bloc, contextes de formatage en ligne, contextes de formatage flexibles. Nous verrons les bases de leur comportement et comment les utiliser.
+Dans cet article, nous aborderons le concept des contextes de formatage. Ceux-ci peuvent être de différents types : contextes de formatage de bloc, contextes de formatage en ligne, contextes de formatage flexibles. Nous verrons les bases de leur comportement et comment les utiliser.
 
 Sur une page web, tout s'inscrit dans un **contexte de formatage**, une zone qui a été définie pour être organisée d'une certaine façon. Un **contexte de formatage en bloc** (ou _block formatting context_ (BFC)) organisera ses éléments fils selon une disposition en bloc, un **contexte de formatage flexible** organisera ses éléments fils comme des objets flexibles, etc. Chaque contexte de formatage possède des règles spécifiques qui décrivent le comportement de la disposition pour ce contexte.
 
 ## Le contexte de formatage de bloc
 
-L'élément `html` définit le contexte de formatage de bloc initial pour la page. Cela signifie que tous les éléments contenus dans `<html></html>` s'organisent selon le flux normal en suivant les règles de la disposition de bloc et en ligne. Les élméents qui participent à un contexte de formatage de bloc (_Block formatting context_ ou BFC en anglais) utilisent les règles décrites par le modèle de boîte CSS qui définit la façon dont les marges, bordures et zones de remplissage (_padding_) d'un élément interagissent avec les autres blocs du même contexte.
+L'élément `html` définit le contexte de formatage de bloc initial pour la page. Cela signifie que tous les éléments contenus dans `<html></html>` s'organisent selon le flux normal en suivant les règles de la disposition de bloc et en ligne. Les éléments qui participent à un contexte de formatage de bloc (_Block formatting context_ ou BFC en anglais) utilisent les règles décrites par le modèle de boîte CSS qui définit la façon dont les marges, bordures et zones de remplissage (_padding_) d'un élément interagissent avec les autres blocs du même contexte.
 
 ### Créer un nouveau contexte de formatage de bloc
 
@@ -40,7 +40,7 @@ Au delà de l'élément racine du document (ici l'élément `html`), un nouveau 
 
 Prenons quelques exemples afin de voir les conséquences de la création d'un nouveau contexte de formatage de bloc.
 
-Dans le prochain exemple, on a un élément flottant à l'intérieur d'un élément `<div>` où une bordure est appliquée. Le contenu de cet élément `div` flotte avec l'élément flottant. Le contenu de l'élément flottant étant plus grand que le contenu environnant, la bordure du `div` passe sur le contenu flottant. Comme expliqué dans [le guide sur les éléments appartenant ou non au flux](/fr/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow), l'élément flottant a été retiré du flux afin que l'arrière-plan et la bordure du `div` ne contienne que le contenu et pas l'élément flottant.
+Dans le prochain exemple, on a un élément flottant à l'intérieur d'un élément `<div>` où une bordure est appliquée. Le contenu de cet élément `div` flotte avec l'élément flottant. Le contenu de l'élément flottant étant plus grand que le contenu environnant, la bordure du `div` passe sous le contenu flottant. Comme expliqué dans [le guide sur les éléments appartenant ou non au flux](/fr/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow), l'élément flottant a été retiré du flux afin que l'arrière-plan et la bordure du `div` ne contiennent que le contenu et pas l'élément flottant.
 
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 
