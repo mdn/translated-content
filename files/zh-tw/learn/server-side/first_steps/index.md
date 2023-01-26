@@ -23,7 +23,7 @@ slug: Learn/Server-side/First_steps
 
 ## 指引
 
-- [介紹伺服器端](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
+- [伺服端介紹](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
   - : 歡迎來到 MDN 初學者的伺服器端程式設計課程！在這首篇文章中，我們將以很高的角度回答諸如「這是什麼？」、「它和用戶端程式設計有何不同？」、還有「為什麼它有用？」之類的問題。讀完以後，你會明白很多關於伺服器端程式設計的知識。
 - [用戶端概覽](/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview)
   - : 現在你知道了伺服器端程式設計的目標與益處，而我們現在要檢驗一些細節：當伺服器從瀏覽器那邊收到「動態請求」的時候，究竟發生了什麼事。因為大多數網站都用相近的方法處理請求與回應，所以這一點會幫助你理解自己在撰寫程式碼的時候要幹什麼。

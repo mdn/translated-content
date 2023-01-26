@@ -1,5 +1,5 @@
 ---
-title: 伺服器端的介紹
+title: 伺服器端介紹
 slug: Learn/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/First_steps/介紹
 ---
@@ -186,9 +186,9 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
-## In this module
+## 本教學連結
 
-- [Introduction to the server side](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/zh-TW/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/zh-TW/docs/Learn/Server-side/First_steps/Website_security)
+- [伺服端介紹](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
+- [用戶端概述](/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview)
+- [伺服端網路框架](/zh-TW/docs/Learn/Server-side/First_steps/Web_frameworks)
+- [網站安全](/zh-TW/docs/Learn/Server-side/First_steps/Website_security)
