@@ -753,11 +753,7 @@ oReq.send(null);
 
 ## 安全性
 
-{{fx_minversion_note(3, "Versions of Firefox prior to Firefox 3 allowed you to set the preference <code>capability.policy.&lt;policyname&gt;.XMLHttpRequest.open&lt;/policyname&gt;</code> to <code>allAccess</code> to give specific sites cross-site access. This is no longer supported.")}}
-
-{{fx_minversion_note(5, "Versions of Firefox prior to Firefox 5 could use <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> to request cross-site access. This is no longer supported, even though it produces no warning and permission dialog is still presented.")}}
-
-要启用跨站脚本，推荐的做法是对 XMLHttpRequest 的响应使用 the `Access-Control-Allow-Origin` 的 HTTP 头。
+要启用跨站脚本，推荐的做法是对 XMLHttpRequest 的响应使用 `Access-Control-Allow-Origin` 的 HTTP 头。
 
 ### XMLHttpRequests 被停止
 
@@ -775,16 +771,11 @@ oReq.send(null);
 
 {{Compat}}
 
-## 参考资料
+## 参见
 
-1. [MDC AJAX introduction](/zh-CN/AJAX/Getting_Started)
-2. [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-3. [HTTP access control](/zh-CN/HTTP_access_control)
-4. [How to check the security state of an XMLHTTPRequest over SSL](/zh-CN/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-5. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-6. [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-7. [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
-8. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-9. [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
-10. [Web Progress Events specification](http://dev.w3.org/2006/webapi/progress/Progress.html)
-11. [Reading Ogg files with JavaScript (Chris Double)](http://www.bluishcoder.co.nz/2009/06/05/reading-ogg-files-with-javascript.html)
+- [MDN AJAX introduction](/zh-CN/docs/Web/Guide/AJAX/Getting_Started)
+- [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTTP access control](/zh-CN/docs/Web/HTTP/CORS)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)
