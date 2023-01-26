@@ -103,7 +103,7 @@ const myObject = {
 
 ### 數學運算
 
-- [What types of number do you have to deal with in web development？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Types_of_numbers)
+- [網路開發需要處理哪些型態的數字？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Types_of_numbers)
 - [如何在 JavaScript 中進行基本數學運算？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Arithmetic_operators)
 - [什麼是運算次序，以及它在 JavaScript 中是如何運作的？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Operator_precedence)
 - [如何在 JavaScript 中遞增與遞減值？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Increment_and_decrement_operators)
@@ -134,7 +134,7 @@ const myObject = {
 
 - [有哪些 error 的基本型態？](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong#Types_of_error)
 - [什麼是瀏覽器開發人員工具以及如何獲取？](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)
-- [如何在 JavaScript 主控台輸出一個值？(/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#The_Console_API)
+- [如何在 JavaScript 主控台輸出一個值？](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#The_Console_API)
 - [如何使用中斷點及其它 JavaScript 除錯功能？](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_the_JavaScript_debugger)
 
 欲獲得更多 JavaScript 除錯相關資訊，參閱[處理 JavaScript 常見問題](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)；此外，參閱[其它常見 error](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong#Other_common_errors) 以了解常見 error。
