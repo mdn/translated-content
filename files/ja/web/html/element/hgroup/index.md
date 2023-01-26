@@ -5,7 +5,7 @@ slug: Web/HTML/Element/hgroup
 
 {{HTMLSidebar}}
 
-**HTML の `<hgroup>` 要素**は、見出しとそれに関連する内容を表します。これは1つの [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素と、1つ以上の [`<p>`](/ja/docs/Web/HTML/Element/p) 要素をグループ化します。
+**HTML の `<hgroup>` 要素**は、見出しとそれに関連する内容を表します。これは 1 つの [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素と、 1 つ以上の [`<p>`](/ja/docs/Web/HTML/Element/p) 要素をグループ化します。
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
@@ -26,9 +26,7 @@ slug: Web/HTML/Element/hgroup
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-      0個以上の {{HTMLElement("p")}} と、それに続く1個の {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
-        {{HTMLElement("h3")}},{{HTMLElement("h4")}},
-        {{HTMLElement("h5")}},{{HTMLElement("h6")}} と、それに続く0個以上の {{HTMLElement("p")}}
+      0 個以上の {{HTMLElement("p")}} と、それに続く 1 個の {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} と、それに続く 0 個以上の {{HTMLElement("p")}}
       </td>
     </tr>
     <tr>
@@ -98,7 +96,7 @@ slug: Web/HTML/Element/hgroup
 
 ## アクセシビリティの考慮
 
-現在のところ、 `<hgroup>` 要素に強いアクセシビリティセマンティクスはありません。要素内のコンテンツ (見出しと、任意の段落) は、ブラウザーのアクセシビリティAPIによって公開されます。
+現在のところ、 `<hgroup>` 要素に強いアクセシビリティセマンティクスはありません。要素内のコンテンツ (見出しと、任意の段落) は、ブラウザーのアクセシビリティ API によって公開されます。
 
 ## ブラウザーの互換性
 
