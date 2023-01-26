@@ -5,12 +5,12 @@ slug: Learn/HTML/Introduction_to_HTML/Getting_started
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
-本文將探討 HTML 最基本的部分。首先，我們將會定義元素（elements）、屬性（attributes）以及其它你可能聽過的重要名詞，然後講解該如何使用它們。我們也會告訴你典型的 HTML 頁面以及其中的元素是如何構成的，以及解釋其他重要的基礎語言特性。在此過程中，我們會撰寫一些 HTML 來引發你的興趣！
+本文將探討 HTML 最基本的部分。首先，我們將會定義元素（element）、屬性（attribute）以及其它你可能聽過的重要名詞，然後講解該如何使用它們。我們也會告訴你典型的 HTML 頁面以及其中的元素是如何構成的，以及解釋其他重要的基礎語言特性。在此過程中，我們會撰寫一些 HTML 來引發你的興趣！
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">需求:</th>
+      <th scope="row">需求：</th>
       <td>
         基礎電腦能力、已安裝<a
           href="/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -22,7 +22,7 @@ slug: Learn/HTML/Introduction_to_HTML/Getting_started
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目標：</th>
       <td>對 HTML 產生初步認識、並練習如何撰寫 HTML 元素。</td>
     </tr>
   </tbody>
@@ -42,7 +42,7 @@ My cat is very grumpy
 <p>My cat is very grumpy</p>
 ```
 
-> **備註**：HTML 中的元素是不區分大小寫的。例如：一個 {{htmlelement("title")}} 標籤可以寫成 `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` 之類的形式，都沒有問題。通常來說，為了保持一致性（consistency）、可讀性（readability），以及其他可能的原因，最好還是以小寫來撰寫標籤。
+> **備註：** HTML 中的元素是不區分大小寫的。例如：一個 {{htmlelement("title")}} 標籤可以寫成 `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` 之類的形式，都沒有問題。通常來說，為了保持一致性（consistency）、可讀性（readability），以及其他可能的原因，最好還是以小寫來撰寫標籤。
 
 ## 分析 HTML 元素
 
@@ -185,9 +185,9 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('不要光是看：創造你的第一個 HTML 元素', 700, 400) }}
 
-### 巢狀元素（Nesting elements）
+### 巢狀元素（Nesting element）
 
-你可以把元素放進另一個元素裡面 — 這叫做**巢套**（nesting）。比如說，我們想要強調我們的貓咪**非常**兇，我們可以用{{htmlelement("strong")}}元素來包住 "very" 這個字，這樣就可以標註我們想要強調的字:
+你可以把元素放進另一個元素裡面──這叫做**巢狀元素**（nesting element）。比如說，我們想要強調我們的貓咪**非常**兇，我們可以用{{htmlelement("strong")}}元素來包住「very」這個字，這樣就可以標註我們想要強調的字:
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>
@@ -201,11 +201,11 @@ textarea.onkeyup = function(){
 
 這些元素必須要正確地開啟與關閉，它們與其他元素的內外關係要相當明確。如果它們像上例這樣交互重疊，你的網頁瀏覽器將無法解讀，只能盡可能地猜測你的意思，因此你很有可能會得到一個不如預期的結果。所以，別這樣做！！
 
-### 區塊級元素 vs. 行內元素（Block versus inline elements）
+### 區塊級元素 vs. 行內元素（Block versus inline element）
 
-在 HTML 中有兩種你應該要知道的重要元素類別──區塊級元素（block-level elements）和行內元素（inline elements）。
+在 HTML 中有兩種你應該要知道的重要元素類別──區塊級元素（block-level element）和行內元素（inline element）。
 
-- 區塊級元素在頁面中組成一個可見區塊──它在頁面中單獨佔據一行，在它前後的內容都將以一個換行分隔。區塊級元素傾向於作為頁面上的結構化元素（structural elements），舉凡段落、列表、導航選單（navigation menus）、頁尾（footers）等等皆是。區塊級元素不會巢套在行內元素中，但有可能會巢套其他區塊級元素中。
+- 區塊級元素在頁面中組成一個可見區塊──它在頁面中單獨佔據一行，在它前後的內容都將以一個換行分隔。區塊級元素傾向於作為頁面上的結構化元素（structural element），舉凡段落、列表、導航選單（navigation menu）、頁尾（footer）等等皆是。區塊級元素不會巢套在行內元素中，但有可能會巢套其他區塊級元素中。
 - 行內元素指的是放在區塊級元素之中的內容，這些元素只由文件內容的一小部分組成，而非由完整段落或群組式內容組成。一個行內元素不會在文件中產生新的一行，它們通常只會出現在一段文字中，舉例來說，{{htmlelement("a")}} 元素（超連結），或者強調元素如 {{htmlelement("em")}} 和 {{htmlelement("strong")}}。
 
 以下面這個例子來說：
@@ -220,13 +220,13 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('區塊級元素_vs._行內元素Block_versus_inline_elements', 700, 200, "", "") }}
 
-> **備註**：HTML5 重新定義了元素類別：請見 [Element content categories](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories)。新的定義比先前所定義的更為準確且少歧義性，因此它們也同時比 block 和 inline 還來得複雜，所以我們選擇在這裡繼續使用這個觀念。
+> **備註：** HTML5 重新定義了元素類別：請見 [Element content categories](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories)。新的定義比先前所定義的更為準確且少歧義性，因此它們也同時比 block 和 inline 還來得複雜，所以我們選擇在這裡繼續使用這個觀念。
 
-> **備註**：在本主題所使用的 block 與 inline 這兩個名詞，不應與 CSS 的 boxes 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態（display type）並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。
+> **備註：** 在本主題所使用的 block 與 inline 這兩個名詞，不應與 CSS 的 boxes 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態（display type）並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。
 
-> **備註**：你可以查看 block element 與 inline element 分別有哪些元素 — 請見 [Block-l](/zh-TW/docs/Web/HTML/Block-level_elements)[evel elements](/zh-TW/docs/Web/HTML/Block-level_elements) 和 [Inline elements](/zh-TW/docs/Web/HTML/Inline_elements)。
+> **備註：** 你可以查看 block element 與 inline element 分別有哪些元素 — 請見 [Block-l](/zh-TW/docs/Web/HTML/Block-level_elements)[evel elements](/zh-TW/docs/Web/HTML/Block-level_elements) 和 [Inline elements](/zh-TW/docs/Web/HTML/Inline_elements)。
 
-### 空元素（Empty elements）
+### 空元素（Empty element）
 
 不是所有元素都符合起始標籤、內容、結束標籤的格式。有些元素只有一個標籤，這些標籤通常用來在文件中插入/嵌入物件。例如 {{htmlelement("img")}} 元素便是用來在當前位置嵌入圖片檔：
 
@@ -238,9 +238,9 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('空元素Empty_elements', 700, 300, "", "", "hide-codepen-jsfiddle") }}
 
-> **備註**：空元素有時也被稱作 _void elements。_
+> **備註：** 空元素有時也被稱作 _void elements_。
 
-## 屬性（Attributes）
+## 屬性（Attribute）
 
 你也可以在元素中加入屬性，像是：
 
@@ -370,7 +370,7 @@ window.addEventListener("load", drawOutput);
 
 我們建議不管怎樣都要加屬性引號，避免這些錯誤，同時增加原始碼的可讀性。
 
-### 要用單引號還是雙引號？（Single or double quotes?）
+### 要用單引號還是雙引號？（Single or double quote?）
 
 在這個章節中，你會發現所有的屬性都是使用雙引號，而你可能會發現其他人的 HTML 中使用的是單引號。這純粹是個人風格，你可以依照你個人的喜好去使用它們。下面兩行的意思是相同的：
 
@@ -447,7 +447,7 @@ window.addEventListener("load", drawOutput);
 3. 將剛複製的 HTML 範例貼到新開的檔案裡。
 4. 將檔案儲存為 `index.html`。
 
-> **備註**：你也能在這找到 HTML 範例：[MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)。
+> **備註：** 你也能在這找到 HTML 範例：[MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)。
 
 接著你就可以用網頁瀏覽器開啟你的檔案，看看這些原始碼會被渲染（rendered）的樣子，然後編輯原始碼並重新整理瀏覽器，再看看會變成怎樣。目前你的網頁會長這樣：
 
@@ -541,7 +541,7 @@ window.addEventListener("load", drawOutput);
 
 不管你用多少空格（whitespace，包括空白字元與換行字元），HTML 的語法分析器都只會留下一個空格。所以說，為什麼要用這麼多空格呢？答案是為了增加可讀性──適當的排版會讓人更明白你的原始碼，所以千萬不要把你的原始碼擠成一團，讓它們變得雜亂無章。在我們的 HTML 中，我們將每個巢狀的元素都以兩個空格縮排。原始碼的排版風格（如要用多少空格進行縮排），可依照個人喜好使用，但你的排版方式應該要一致。
 
-## 實體參照（Entity references）：引用 HTML 中的特殊字元
+## 實體參照（Entity reference）：引用 HTML 中的特殊字元
 
 在 HTML 中， `<` 、 `>` 、 `"` 、 `'` 和 `&` 是特殊字元，它們是 HTML 語法的一部份。那麼，要如何使用這些特殊字元呢？比方說，你如果想要用 `&`（ampersand）或小於符號 `<`（less than sign）時，要如何避免它們被瀏覽器當成原始碼呢？
 
@@ -567,7 +567,7 @@ window.addEventListener("load", drawOutput);
 
 {{ EmbedLiveSample('實體參照Entity_references_引用_HTML_中的特殊字元', 700, 200, "", "", "hide-codepen-jsfiddle") }}
 
-> **備註**：你可以在維基百科中找到完整的 HTML 字元實體參照的對照表：[List of XML and HTML character entity references](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)。請記得只要你的 HTML 的[字元編碼設定為 UTF-8](Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding)，你就不需要使用其他字元的實體參照，因為現今的瀏覽器都能應付。
+> **備註：** 你可以在維基百科中找到完整的 HTML 字元實體參照的對照表：[List of XML and HTML character entity references](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)。請記得只要你的 HTML 的[字元編碼設定為 UTF-8](Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding)，你就不需要使用其他字元的實體參照，因為現今的瀏覽器都能應付。
 
 ## HTML 註解
 
@@ -589,7 +589,7 @@ HTML 就像大部分的程式語言，提供了一種能讓我們可以在原始
 
 恭喜你看完了這個章節，我們你能享受這個學習基礎 HTML 的旅程！目前，你應該已經了解 HTML 長什麼樣子、它最基本的運作方式，並且能夠寫出一些元素和屬性。基礎 HTML 大致上就到這裡結束，在單元接下來的章節中，我們將會更深入探討本章節學到的內容並介紹更多 HTML 的觀念。千萬別轉台！
 
-> **備註**：目前，在你要開始學更多有關 HTML 的知識時，你可能也想要探索基礎的 [CSS](/zh-TW/docs/Learn/CSS)(Cascading Style Sheets)。CSS 是一種用來為你的網頁增添花樣的語言，例如改變字型、顏色，或改變頁面的布局。你很快就會發現，同時使用 HTML 和 CSS 會帶來很棒的效果。
+> **備註：** 目前，在你要開始學更多有關 HTML 的知識時，你可能也想要探索基礎的 [CSS](/zh-TW/docs/Learn/CSS)（Cascading Style Sheet）。CSS 是一種用來為你的網頁增添花樣的語言，例如改變字型、顏色，或改變頁面的布局。你很快就會發現，同時使用 HTML 和 CSS 會帶來很棒的效果。
 
 ## 參見
 
