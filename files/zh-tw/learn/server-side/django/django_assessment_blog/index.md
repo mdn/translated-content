@@ -281,7 +281,7 @@ Once you've completed this module you've also finished all the MDN content for l
 
 {{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-## In this module
+## 本教學連結
 
 - [Django 介紹](/zh-TW/docs/Learn/Server-side/Django/Introduction)
 - [設定 Django 開發環境](/zh-TW/docs/Learn/Server-side/Django/development_environment)
