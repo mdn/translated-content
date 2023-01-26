@@ -130,7 +130,7 @@ slug: Web/HTML/Element/form
 </form>
 ```
 
-{{ EmbedLiveSample('Examples', '100%', 110) }}
+{{ EmbedLiveSample('示例', '100%', 110) }}
 
 ## 规范
 

@@ -48,7 +48,7 @@ slug: Web/HTML/Element/fieldset
 </form>
 ```
 
-{{ EmbedLiveSample('Simple_fieldset', '100%', '80') }}
+{{ EmbedLiveSample('简单的 fieldset', '100%', '80') }}
 
 ### 禁用 fieldset
 
@@ -70,7 +70,7 @@ slug: Web/HTML/Element/fieldset
 </form>
 ```
 
-{{ EmbedLiveSample('Disabled_fieldset', '100%', '110') }}
+{{ EmbedLiveSample('禁用 fieldset', '100%', '110') }}
 
 ## 技术概览
 
