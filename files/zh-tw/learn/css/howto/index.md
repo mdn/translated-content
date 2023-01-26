@@ -9,48 +9,48 @@ slug: Learn/CSS/Howto
 
 ## 修飾盒子
 
-- [How do I add a drop-shadow to an element?](/zh-TW/docs/Learn/CSS/Howto/Add_a_shadow)
-  - : Shadows can be added to boxes with the {{cssxref("box-shadow")}} property. This tutorial explains how it works and shows an example.
-- [How do I fill a box with an image without distorting the image?](/zh-TW/docs/Learn/CSS/Howto/Fill_a_box_with_an_image)
-  - : The {{cssxref("object-fit")}} property provides different ways to fit an image into a box which has a different aspect ratio, and you can find out how to use them in this tutorial.
-- [Which methods can be used to style boxes?](/zh-TW/docs/Learn/CSS/Howto/create_fancy_boxes)
-  - : A rundown of the different properties that might be useful when styling boxes using CSS.
-- [How can I make elements semi-transparent?](/zh-TW/docs/Learn/CSS/Howto/Make_box_transparent)
-  - : The {{cssxref("opacity")}} property and color values with an alpha channel can be used for this; find out which one to use when.
+- [如何為元素新增 Drop-Shadow？](/zh-TW/docs/Learn/CSS/Howto/Add_a_shadow)
+  - : 陰影可以透過 {{cssxref("box-shadow")}} 屬性添加給盒子。這個教學解釋它如何運作並提供範例。
+- [如何用圖片填滿盒子同時不讓該圖片變形？](/zh-TW/docs/Learn/CSS/Howto/Fill_a_box_with_an_image)
+  - : {{cssxref("object-fit")}} 屬性提供將圖片置入長寬比不同的盒子中的各種方式。你能在這個教學中了解如何利用它們。
+- [什麼方法可以用來修飾盒子？](/zh-TW/docs/Learn/CSS/Howto/create_fancy_boxes)
+  - : 展示一系列用 CSS 修飾盒子時能派上用場的屬性。
+- [如何把元素設為半透明？](/zh-TW/docs/Learn/CSS/Howto/Make_box_transparent)
+  - : {{cssxref("opacity")}} 屬性及擁有 alpha 通道的顏色數值可以解決這個問題。
 
 ### 盒子修飾教學與指南
 
-- [The Box Model](/zh-TW/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Styling backgrounds and borders](/zh-TW/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [盒子模型](/zh-TW/docs/Learn/CSS/Building_blocks/The_box_model)
+- [修飾背景與邊界](/zh-TW/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
 
 ## CSS 與文字
 
-- [How do I add a drop-shadow to text?](/zh-TW/docs/Learn/CSS/Howto/Add_a_text_shadow)
-  - : Shadows can be added to text with the {{cssxref("text-shadow")}} property. This tutorial explains how it works and shows an example.
-- [How do I highlight the first line of a paragraph?](/zh-TW/docs/Learn/CSS/Howto/Highlight_first_line)
-  - : Find out how to target the first line of text in a paragraph with the {{cssxref("::first-line")}} pseudo-element.
-- [How do I highlight the first paragraph in an article?](/zh-TW/docs/Learn/CSS/Howto/Highlight_first_para)
-  - : Find out how to target the first paragraph with the {{cssxref(":first-child")}} pseudo-class.
-- [How do I highlight a paragraph only if it comes right after a heading?](/zh-TW/docs/Learn/CSS/Howto/Highlight_para_after_h1)
-  - : Combinators can help you to precisely target elements based on where they are in the document; this tutorial explains how to use them to apply CSS to a paragraph only if it immediately follows a heading.
+- [如何為文字新增 Drop-Shadow？](/zh-TW/docs/Learn/CSS/Howto/Add_a_text_shadow)
+  - : 陰影可以透過 {{cssxref("text-shadow")}} 屬性添加給文字。這個教學解釋它如何運作並提供範例。
+- [如何強調段落第一行？](/zh-TW/docs/Learn/CSS/Howto/Highlight_first_line)
+  - : 了解如何透過偽元素 {{cssxref("::first-line")}} 抓到段落第一行。
+- [如何強調文章第一段？](/zh-TW/docs/Learn/CSS/Howto/Highlight_first_para)
+  - : 了解如何透過偽類別 {{cssxref("::first-child")}} 抓到第一個段落。
+- [如何僅強調出現在標題之後的第一段？](/zh-TW/docs/Learn/CSS/Howto/Highlight_para_after_h1)
+  - : 組合器能幫助你基於文件裡的位置精準抓取元素；這個教學解釋如何使用讓 CSS 僅套用於出現在標題之後的第一段。
 
 ### 文字修飾教學與指南
 
-- [How to style text](/zh-TW/docs/Learn/CSS/Styling_text/Fundamentals)
-- [How to customize a list of elements](/zh-TW/docs/Learn/CSS/Styling_text/Styling_lists)
-- [How to style links](/zh-TW/docs/Learn/CSS/Styling_text/Styling_links)
-- [CSS Selectors](/zh-TW/docs/Learn/CSS/Building_blocks/Selectors)
+- [如何修飾文字？](/zh-TW/docs/Learn/CSS/Styling_text/Fundamentals)
+- [如何修飾列表元素？](/zh-TW/docs/Learn/CSS/Styling_text/Styling_lists)
+- [如何修飾超連結？](/zh-TW/docs/Learn/CSS/Styling_text/Styling_links)
+- [CSS 選擇器](/zh-TW/docs/Learn/CSS/Building_blocks/Selectors)
 
 ## CSS 布局
 
-- [How do I center an item?](/zh-TW/docs/Learn/CSS/Howto/Center_an_item)
-  - : Centering an item inside another box horizontally and vertically used to be tricky, however Flexbox now makes it simple.
+- [如何置中項目？](/zh-TW/docs/Learn/CSS/Howto/Center_an_item)
+  - : 在盒子裡將項目水平或垂直置中以前很麻煩，但現在彈性盒子讓它變得很簡單。
 
 ### 布局指南
 
-- [Using CSS Flexbox](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [Using CSS multi-column layouts](/zh-TW/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
-- [Using CSS Grid Layout](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [Using CSS generated content](/zh-TW/docs/Learn/CSS/Howto/Generated_content)
+- [使用 CSS 彈性盒子](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [使用 CSS 多行布局](/zh-TW/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [使用 CSS 格線布局](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [使用 CSS 生成內容](/zh-TW/docs/Learn/CSS/Howto/Generated_content)
 
-> **備註：** We have a cookbook dedicated to [CSS Layout solutions](/zh-TW/docs/Web/CSS/Layout_cookbook), with fully working examples and explanations of common layout tasks.
+> **備註：** 我們有一本針對 [CSS 布局解法](/zh-TW/docs/Web/CSS/Layout_cookbook)的食譜，內有可正常執行的範例與常見布局任務說明。
