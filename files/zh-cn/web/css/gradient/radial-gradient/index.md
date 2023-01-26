@@ -87,7 +87,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 }
 ```
 
-{{EmbedLiveSample('Simple_gradient', 120, 120)}}
+{{EmbedLiveSample('简单的渐变', 120, 120)}}
 
 ### 非居中渐变
 
@@ -109,7 +109,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 }
 ```
 
-{{EmbedLiveSample('Non-centered_gradient', 240, 120)}}
+{{EmbedLiveSample('非居中渐变', 240, 120)}}
 
 ### 更多径向渐变示例
 
