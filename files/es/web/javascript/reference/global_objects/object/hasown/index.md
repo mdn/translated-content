@@ -1,14 +1,8 @@
 ---
 title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
-page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - hasOwn
-  - Polyfill
-browser-compat: javascript.builtins.Object.hasOwn
+l10n:
+  sourceCommit: e95c6906f33470e3c0123404da299f8939daa9db
 ---
 
 {{JSRef}}
@@ -30,7 +24,7 @@ Object.hasOwn(obj, prop)
 - `obj`
   - : La instancia del objeto JavaScript a probar.
 - `prop`
-  - : El nombre del {{jsxref("String")}} ó [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) de la propiedad a probar.
+  - : El nombre del {{jsxref("String")}} ó [Symbol](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol) de la propiedad a probar.
 
 ### Valor de retorno del método
 
@@ -52,16 +46,16 @@ El siguiente código muestra como determinar si el objeto `example` contiene una
 
 ```js
 const example = {};
-Object.hasOwn(example, 'prop');   // false - 'prop' has not been defined
+Object.hasOwn(example, 'prop');   // false - 'prop' no ha sido definido
 
-example.prop = 'exists';
-Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
+example.prop = 'existe';
+Object.hasOwn(example, 'prop');   // true - 'prop' ha sido definido
 
 example.prop = null;
-Object.hasOwn(example, 'prop');   // true - own property exists with value of null
+Object.hasOwn(example, 'prop');   // true - la propiedad existe con valor nulo
 
 example.prop = undefined;
-Object.hasOwn(example, 'prop');   // true - own property exists with value of undefined
+Object.hasOwn(example, 'prop');   // true - la propiedad existe con valor de indefinido
 ```
 
 ### Propiedades directas vs. heredadas
@@ -70,17 +64,17 @@ El siguiente ejemplo diferencía entre propiedades directas y propiedades hereda
 
 ```js
 const example = {};
-example.prop = 'exists';
+example.prop = 'existe';
 
-// `hasOwn` will only return true for direct properties:
-Object.hasOwn(example, 'prop');             // returns true
-Object.hasOwn(example, 'toString');         // returns false
-Object.hasOwn(example, 'hasOwnProperty');   // returns false
+// `hasOwn` solo devolverá verdadero para propiedades directas:
+Object.hasOwn(example, 'prop');                      // Devuelve verdadero
+Object.hasOwn(example, 'toString');                 // Devuelve falso
+Object.hasOwn(example, 'hasOwnProperty');   // Devuelve falso
 
-// The `in` operator will return true for direct or inherited properties:
-'prop' in example;                          // returns true
-'toString' in example;                      // returns true
-'hasOwnProperty' in example;                // returns true
+// El operador `in` devolverá verdadero para propiedades directas o heredadas:
+'prop' in example;                                   // Devuelve verdadero
+'toString' in example;                              // Devuelve verdadero
+'hasOwnProperty' in example;                // Devuelve verdadero
 ```
 
 ### Iterando sobre las propiedades de un objeto
@@ -124,11 +118,11 @@ const foo = {
   hasOwnProperty() {
     return false;
   },
-  bar: 'The dragons be out of office',
+  bar: 'Los dragones están fuera de la oficina',
 };
 
 if (Object.hasOwn(foo, 'bar')) {
-  console.log(foo.bar); //true - reimplementation of hasOwnProperty() does not affect Object
+  console.log(foo.bar); //true - la reimplementación de hasOwnProperty() no afecta a Object
 }
 ```
 
@@ -137,9 +131,9 @@ También se puede usar para probar objetos creados usando
 
 ```js
 const foo = Object.create(null);
-foo.prop = 'exists';
+foo.prop = 'existe';
 if (Object.hasOwn(foo, 'prop')) {
-  console.log(foo.prop); //true - works irrespective of how the object is created.
+  console.log(foo.prop); //true - funciona independientemente de cómo se crea el objeto.
 }
 ```
 
@@ -153,10 +147,10 @@ if (Object.hasOwn(foo, 'prop')) {
 
 ## Véase también
 
-- [Polyfill of `Object.hasOwn` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill de `Object.hasOwn` en `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerabilidad y pertenencia de las propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Guía de JavaScript: Herencia revisada](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
