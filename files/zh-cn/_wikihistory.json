@@ -33694,9 +33694,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/HTTP/Headers/Content-Security-Policy": {
-    "modified": "2020-10-15T22:04:29.993Z",
-    "contributors": ["SphinxKnight", "shevacjs"]
   }
 }
