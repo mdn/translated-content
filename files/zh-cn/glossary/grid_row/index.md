@@ -1,7 +1,6 @@
 ---
 title: Grid Row
 slug: Glossary/Grid_Row
-original_slug: Glossary/Grid_Rows
 ---
 
 **网格行**是[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中的水平轨道，即两个水平网格线之间的空间。它通过属性 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}}， {{cssxref("grid-template")}} 定义。
