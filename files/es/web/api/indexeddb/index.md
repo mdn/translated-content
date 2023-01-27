@@ -1,5 +1,5 @@
 ---
-title: WindowOrWorkerGlobalScope.indexedDB
+title: indexedDB
 slug: Web/API/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---

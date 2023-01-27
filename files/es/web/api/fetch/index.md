@@ -1,5 +1,5 @@
 ---
-title: WindowOrWorkerGlobalScope.fetch()
+title: fetch()
 slug: Web/API/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---

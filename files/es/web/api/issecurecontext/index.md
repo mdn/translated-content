@@ -1,5 +1,5 @@
 ---
-title: WindowOrWorkerGlobalScope.isSecureContext
+title: isSecureContext
 slug: Web/API/isSecureContext
 original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 ---

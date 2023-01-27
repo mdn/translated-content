@@ -1,5 +1,5 @@
 ---
-title: WindowOrWorkerGlobalScope.setTimeout
+title: setTimeout
 slug: Web/API/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
