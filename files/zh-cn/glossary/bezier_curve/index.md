@@ -1,7 +1,6 @@
 ---
 title: 贝塞尔曲线
 slug: Glossary/Bezier_curve
-original_slug: Glossary/Bézier_curve
 ---
 
 **贝塞尔曲线**是一种使用数学方法描述的曲线，被广泛用于计算机图形学和动画中。在矢量图中，贝塞尔曲线用于定义可无限放大的光滑曲线。

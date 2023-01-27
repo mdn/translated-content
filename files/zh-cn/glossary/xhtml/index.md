@@ -1,7 +1,6 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
-original_slug: XHTML
 ---
 
 ### W3C 标准 XHTML
