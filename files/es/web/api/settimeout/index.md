@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 
 {{APIRef("HTML DOM")}}
 
-El método **`setTimeout()`**  establece un temporizador que ejecuta una función o una porción de código después de que transcurre un tiempo establecido.
+El método **`setTimeout()`** establece un temporizador que ejecuta una función o una porción de código después de que transcurre un tiempo establecido.
 
 ## Sintaxis
 
