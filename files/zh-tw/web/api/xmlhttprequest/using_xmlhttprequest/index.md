@@ -727,10 +727,6 @@ oReq.send(null);
 
 ## 安全性
 
-{{fx_minversion_note(3, "Firefox 3 之前的版本允許在偏好設定中設定 <code>capability.policy.&lt;policyname&gt;.XMLHttpRequest.open&lt;/policyname&gt;</code> 為 <code>allAccess</code> 來讓指定的網域能夠跨網域存取。現已不再支援。")}}
-
-{{fx_minversion_note(5, "Firefox 5 之前的版本可以使用 <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> 來發送跨網域存取請求。現已不再支援，即使它不會有警告並且依然會顯示允許請求的權限對話框。")}}
-
 開啟跨網域指令碼（script）的建議方式是於 XMLHttpRequest 的回應中使用 `Access-Control-Allow-Origin` HTTP 標頭。
 
 ### 被中止的 XMLHttpRequest
@@ -757,11 +753,9 @@ var oReq = new XMLHttpRequest();
 
 ## 參見
 
-1. [MDN AJAX 介紹](/docs/AJAX/Getting_Started)
-2. [HTTP 存取控制](/docs/Web/HTTP/Access_control_CORS)
-3. [How to check the security state of an XMLHTTPRequest over SSL](/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-4. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-5. [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
-6. [Apple developers' reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Articles/XHR.html)
-7. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-8. [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)
+- [MDN AJAX 介紹](/zh-TW/docs/Web/Guide/AJAX/Getting_Started)
+- [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

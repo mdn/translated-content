@@ -14,8 +14,6 @@ a::after {
 }
 ```
 
-{{ fx_minversion_note("3.5", "Firefox 3.5 之前版本仅实现了 CSS 2.0 版本的语法<code> :after</code>. 且不允许在<code> position, float, list-style-* </code>等属性中使用。Firefox 3.5 开始没有了这项限制。") }}
-
 ## 语法
 
 ```
