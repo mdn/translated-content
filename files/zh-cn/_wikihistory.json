@@ -23840,10 +23840,6 @@
     "modified": "2020-10-15T22:04:25.324Z",
     "contributors": ["SphinxKnight", "shevacjs"]
   },
-  "Web/HTTP/Headers/Content-Security-Policy/require-sri-for": {
-    "modified": "2020-10-15T22:04:29.993Z",
-    "contributors": ["SphinxKnight", "shevacjs"]
-  },
   "Web/HTTP/Headers/Content-Security-Policy/sandbox": {
     "modified": "2020-10-15T22:18:49.969Z",
     "contributors": ["SphinxKnight", "Syclover-u2400"]
