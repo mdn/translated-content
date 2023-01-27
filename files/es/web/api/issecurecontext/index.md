@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 
 {{APIRef()}}{{SeeCompatTable}}
 
-La propiedad de sólo-lectura **`isSecureContext`**, de la interface {{domxref("WindowOrWorkerGlobalScope")}} Devuelve un booleano indicando si el contexto actual es seguro (`true`) or not (`false`).
+La propiedad de sólo-lectura **`isSecureContext`** devuelve un booleano indicando si el contexto actual es seguro (`true`) or not (`false`).
 
 ## Sintaxis
 
