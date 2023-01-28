@@ -44,7 +44,7 @@ mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
 
 {{csssyntax}}
 
-## 范例
+## 示例
 
 ### Bitmap
 
@@ -77,9 +77,9 @@ div {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Bitmap")}}
 
 ## 规范
 
