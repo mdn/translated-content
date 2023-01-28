@@ -67,7 +67,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
     为了找到自动重复的轨道数，用户代理将轨道大小限制为用户代理指定的值（例如 `1px`），以避免被零除。
 
-## 例子
+## 示例
 
 ### CSS
 
@@ -113,12 +113,12 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ### 结果
 
-{{EmbedLiveSample("Example", "100%", 200)}}
+{{EmbedLiveSample("示例", "100%", 200)}}
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
