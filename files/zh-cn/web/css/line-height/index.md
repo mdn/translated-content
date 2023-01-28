@@ -120,7 +120,7 @@ h1 {
 
 #### 结果
 
-{{EmbedLiveSample('Prefer_unitless_numbers_for_line-height_values', 600, 200)}}
+{{EmbedLiveSample('推荐在设置 line-height 时使用无单位数值', 600, 200)}}
 
 ## 无障碍方面
 
