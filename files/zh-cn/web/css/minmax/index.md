@@ -56,7 +56,7 @@ minmax(auto, 300px)
 - `auto`
   - : 作为最大值时，等价于 `max-content`。作为最小值时，它表示轨道中单元格最小长宽 (由{{cssxref("min-width")}}/{{cssxref("min-height")}}) 的最大值。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -99,9 +99,9 @@ minmax(auto, 300px)
 </div>
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("example", "100%", 200)}}
+{{EmbedLiveSample("示例", "100%", 200)}}
 
 ## 规范
 
@@ -111,7 +111,7 @@ minmax(auto, 300px)
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - 网格布局指南：_[Basic concepts of grid layout - track sizing with minmax()](</zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Track_sizing_and_minmax()>)_
 - 视频教程：_[Introducing minmax()](http://gridbyexample.com/video/series-minmax/)_

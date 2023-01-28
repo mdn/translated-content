@@ -15,7 +15,7 @@ slug: Web/CSS/overflow-y
 
 {{cssinfo}}
 
-## Syntax\[语法]
+## 语法
 
 ```
 /* 在当前 css 选择器元素下，元素内容在垂直方向上溢出时 */
@@ -37,7 +37,7 @@ overflow-y: unset; /*未设置*/
 
 当 {{cssxref("overflow-x")}} 值为 `hidden`、`scroll` 或者 `auto`，而本属性的值为 `visible`（默认值）时，本属性会被隐式的计算为 `auto`。
 
-### Values\[可选值]
+### 可选值
 
 - `visible`
   - : 内容不会被截断，且可以显示在内容盒之外。
@@ -50,11 +50,11 @@ overflow-y: unset; /*未设置*/
 - `auto`
   - : 取决于浏览器本身。当内容发生溢出时，桌面浏览器如 Firefox 会显示滚动条。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax("overflow-y")}}
 
-## Example\[示例]
+## 示例
 
 ### HTML
 
@@ -111,7 +111,7 @@ overflow-y: unset; /*未设置*/
 
 ### 结果
 
-{{EmbedLiveSample("Example", "100%", "760")}}
+{{EmbedLiveSample("示例", "100%", "760")}}
 
 ## 规范
 
