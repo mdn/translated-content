@@ -1,7 +1,7 @@
 ---
 title: XHR (XMLHttpRequest)
-slug: Glossary/XHR_(XMLHttpRequest)
-original_slug: Glossario/XHR_(XMLHttpRequest)
+slug: Glossary/XMLHttpRequest
+original_slug: Glossary/XHR_(XMLHttpRequest)
 ---
 
 {{domxref("XMLHttpRequest")}} (XHR) é uma {{Glossary("API")}} {{Glossary("JavaScript")}} para criar requisições {{Glossary("AJAX")}}. Os métodos desta API fornecem opções para enviar requisições entre o {{Glossary("browser")}} e o {{Glossary("server")}}.
