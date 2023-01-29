@@ -1,23 +1,23 @@
 ---
-title: Building up a basic demo with Three.js
+title: Réaliser une démo basique avec Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 ---
 
 {{GamesSidebar}}
 
-Une scène 3D dans un jeu - même la plus simple - contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir réellement, des lumières et des matériaux pour amelioré son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme avec toute autre bibliothèque 3D, fournit des fonctions d'assistance intégrées pour vous aider à implémenter plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous vous expliquerons les bases de l'utilisation de Three, notamment la configuration d'un environnement de développement, la structuration du code HTML nécessaire, les objets fondamentaux de Three et la manière de créer une démonstration de base.
+Une scène 3D dans un jeu - même la plus simple qui soit - contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir, des lumières et des matériaux pour ameliorer son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme avec toute autre bibliothèque 3D, fournit des fonctions d'assistance intégrées pour vous aider à implémenter plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous vous expliquerons les bases de l'utilisation de Three, notamment la configuration d'un environnement de développement, la structure du code HTML nécessaire, les objets fondamentaux de ThreeJS et la manière de créer une démonstration de base.
 
-> **Note :** Nous avons choisi Three car il s'agit de l'une des bibliothèques WebGL les plus populaires, et il est facile de commencer. Nous n'essayons pas de dire que c'est mieux que toute autre bibliothèque WebGL disponible, et vous devriez vous sentir libre d'essayer une autre bibliothèque, comme CopperLicht, GLGE ou PlayCanvas
+> **Note :** Nous avons choisi ThreeJS car il s'agit de l'une des bibliothèques WebGL les plus populaires, et il est facile de commencer. Nous n'essayons pas de dire que c'est mieux que toute autre bibliothèque WebGL disponible, et vous devriez vous sentir libre d'essayer une autre bibliothèque, comme CopperLicht, GLGE ou PlayCanvas
 
 ## Configuration de l environnement de Developpement
 
 Pour commencer a developper avec **Three.js :**
 
-- Assurez-vous d utiliser un navigateur moderne avec une bonne prise en charge de **WebGL,** comme le dernier Firefox ou Chrome.
-- Creer un repertoire ou stocker vos experience
-- Enregistrez une copie à jour de la bibliotheque Three.js réduite dans votre repertoire
-- Ouvrir la documentation de **Three.js** dans un nouvel onglet, il est utile de s'y référer.
+- Assurez-vous d'utiliser un navigateur moderne avec une bonne prise en charge de **WebGL,** comme la dernière version de Firefox ou Chrome.
+- Creer un répertoire où stocker vos expériences.
+- Enregistrez une copie à jour d'une version minimale de la bibliotheque Three.js dans votre répertoire.
+- Ouvrez la documentation de **Three.js** dans un nouvel onglet, car il est utile de s'y référer.
 
 ## Structure HTML
 
@@ -39,25 +39,25 @@ Voici la structure que nous allons utiliser
 <script>
   var WIDTH = window.innerWidth;
   var HEIGHT = window.innerHeight;
-  /* all our JavaScript code goes here */
+  /* Tout votre javascript se place ici */
 </script>
 </body>
 </html>
 ```
 
-Cette structure contient des informations de base , un peu de CSS pour definir la largeur et la hauteur de l élément canvas, ici 100% pour remplir tout l'espace disponnible.
+Cette structure contient des informations de base, un peu de CSS pour définir la largeur et la hauteur de l'élément canvas, ici 100% pour remplir tout l'espace disponnible.
 
-la premeire balise de script inclut la bibliotheque **Three.js** dans la page. nous ecrirons notre code dans la deuxieme balise script.
+La première balise de script inclut la bibliothèque **Three.js** dans la page. nous écrirons notre code dans la deuxième balise script.
 
-nous avons deja inclut deux variables d assitance pour stocké la alrgeur et la hauteur de la fenetre.
+Nous avons déjà inclut deux variables d'assitance pour stocker la largeur et la hauteur de la fenêtre.
 
-avant de poursuivre copier se code dans un fichier nommé index.html.
+Avant de poursuivre, copier ce code dans un fichier nommé "index.html".
 
-## Renderer ou Moteur de rendue
+## Renderer ou Moteur de rendu
 
-un Moteur de rendue est un outil qui affiche les scénes directement dans votre navigateur.Il existe plusieur moteur different :WebGL est la valeur par défaut, vous pouvez utilisercanvas,SVG,CSS et DOM . ils différent dans la façons dont il gere le rendu. Malgres leurs differences , l experience utilisateur sera la meme.
+Un moteur de rendu est un outil qui affiche les scènes directement dans votre navigateur. Il existe plusieurs moteurs different: WebGL est la valeur par défaut, vous pouvez utiliser canvas, SVG, CSS et DOM . Ils diffèrent dans la façon dont ils gèrent le rendu. Malgré leurs différences , l'expérience utilisateur sera la même.
 
-Grace à cette approche, une solution de secour peut etre utilisée , si une technologie n'est pas prise en charge par le navigatueur.
+Grâce à cette approche, une solution de secours peut être utilisée, si une technologie n'est pas prise en charge par le navigatueur.
 
 ```js
 var renderer = new THREE.WebGLRenderer({antialias:true});
@@ -68,7 +68,7 @@ document.body.appendChild(renderer.domElement);
 
 Nous créons un nouveau rendu WebGL, définissons sa taille pour qu'elle corresponde à tout l'espace disponible à l'écran et ajoutons la structure DOM à la page. Vous avez peut-être remarqué le paramètre d'antialias dans la première ligne - cela rend les bords des formes plus fluides. La méthode setClearColor () définit notre arrière-plan sur une couleur gris clair, au lieu de la couleur noire par défaut.
 
-Ajoutez ce code dans notre deuxième balise script du fichier index.html, juste en dessous du commentaire JavaScript.
+Ajoutez ce code dans notre deuxième balise script du fichier "index.html", juste en dessous du commentaire JavaScript.
 
 ## Scene
 
@@ -78,11 +78,11 @@ Une scène est l'endroit où tout se passe. Lors de la création de nouveaux obj
 var scene = new THREE.Scene();
 ```
 
-plutard nous utiliserons la methode add() , pour ajouter des objets a cette scene.
+Plus tard, nous utiliserons la methode add(), pour ajouter des objets a cette scène.
 
 ## Camera
 
-Nous avons la scène , mais nous devons encore ajouter une caméra pour voir notre travail - imaginez un film sans caméra. Les lignes suivantes mettent la caméra en place dans le système de coordonnées 3D et la pointent dans la direction de notre scène, afin que nous puissions enfin voir quelque chose :
+Nous avons la scène, mais nous devons encore ajouter une caméra pour voir notre travail (imaginez un film sans caméra). Les lignes suivantes mettent la caméra en place dans le système de coordonnées 3D et la pointe dans la direction de notre scène, afin que nous puissions enfin voir quelque chose :
 
 ```js
 var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
@@ -90,21 +90,21 @@ camera.position.z = 50;
 scene.add(camera);
 ```
 
-Ajoutez les lignes ci-dessus à votre code, en dessous de celles précédemment ajoutées.
+Insérez les lignes ci-dessus à votre code, en dessous de celles précédemment ajoutées.
 
-Il existe d'autres types de camera (Cube, Orthographique), mais la plus simple est Perspective. Pour l'initialiser, nous devons définir son champ de vision et son rapport d'aspect: le premier est utilisé pour définir la quantité de vue, et le second est important pour que les objets à l'écran aient les bonnes proportions lors du rendu, et ne semblent pas étirés . Expliquons les valeurs que nous définissons pour le code ci-dessus:>
+Il existe d'autres types de caméra (Cube, Orthographique), mais la plus simple est Perspective. Pour l'initialiser, nous devons définir son champ de vision et son rapport d'aspect: le premier est utilisé pour définir la quantité de vue, et le second est important pour que les objets à l'écran aient les bonnes proportions lors du rendu, et ne semblent pas étirés. Expliquons les valeurs que nous définissons pour le code ci-dessus:
 
 - La valeur que nous fixons pour le champ de vision, 70, est quelque chose que nous pouvons expérimenter: plus la valeur est élevée, plus la quantité de scène que la caméra affichera sera grande. Imaginez une vue de caméra normale, par opposition à un effet fish-eye, qui permet de voir beaucoup plus. La valeur par défaut est 50.
-- Le rapport hauteur / largeur est défini sur la largeur et la hauteur actuelles de la fenêtre afin qu'il soit ajusté dynamiquement. Nous pourrions définir un rapport fixe - par exemple 16 ⁄ 9, qui est le rapport d'aspect d'un téléviseur à écran large. La valeur par défaut est 1.
-- La position z, avec une valeur de 50 unités, est la distance entre la caméra et le centre de la scène sur l'axe z. Ici, nous reculons la caméra, afin que les objets de la scène puissent être visualisés. 50 se sent bien. Ce n'est ni trop près, ni trop loin, et la taille des objets leur permet de rester sur la scène, dans le champ de vision donné. Les valeurs x et y, si elles ne sont pas spécifiées, seront définies par défaut sur 0.
+- Le rapport hauteur / largeur est définie sur la largeur et la hauteur actuelles de la fenêtre afin qu'il soit ajusté dynamiquement. Nous pourrions définir un rapport fixe - par exemple 16/9, qui est le rapport d'aspect d'un téléviseur à écran large. La valeur par défaut est 1.
+- La position z, avec une valeur de 50 unités, est la distance entre la caméra et le centre de la scène sur l'axe z. Ici, nous reculons la caméra, afin que les objets de la scène puissent être visualisés. 50 est une valeur correcte. Ce n'est ni trop près, ni trop loin, et la taille des objets leur permet de rester sur la scène, dans le champ de vision donné. Les valeurs x et y, si elles ne sont pas spécifiées, seront définies par défaut à 0.
 
-Vous devez expérimenter ces valeurs et voir comment elles changent ce que vous voyez dans la scène. .
+Vous devez expérimenter ces valeurs et voir comment elles changent ce que vous voyez dans la scène.
 
 > **Note :** Les valeurs de distance (par exemple pour la position z de la caméra) sont sans unité et peuvent être tout ce que vous jugez approprié pour votre scène: millimètres, mètres, pieds ou miles.
 
 ## Rendu de la scene
 
-Tout est prêt, mais on ne voit toujours rien. Bien que nous ayons configuré le moteur de rendu, nous devons toujours effetué le rendu. Notre fonction render () fera ce travail, avec un peu d'aide de requestAnimationFrame (), ce qui fait que la scène sera restituée sur chaque image :
+Tout est prêt, mais on ne voit toujours rien. Bien que nous ayons configuré le moteur de rendu, nous devons toujours effectuer le rendu. Notre fonction render() fera ce travail, avec un peu d'aide de requestAnimationFrame(), ce qui fait que la scène sera restituée sur chaque image :
 
 ```js
 function render() {
@@ -114,75 +114,75 @@ function render() {
 render();
 ```
 
-On every new frame the `render` function is invoked, and the `renderer` renders the `scene` and the `camera`. Right after the function declaration, we're invoking it for the first time to start the loop, after which it will be used indefinitely.
+À chaque nouvelle image, la fonction `render` est invoquée, et le `renderer` rend `scene` et la `caméra`. Juste après la déclaration de fonction, nous l'invoquons pour la première fois pour débuter la boucle, après quoi elle sera utilisée indéfiniment.
 
-Again, add this new code below your previous additions. Try saving the file and opening it in your browser. You should now see a gray window. Congratulations!
+À nouveau, ajouter ce nouveau code sous vos précédents ajouts. Sauvez votre fichier et ouvrez le dans votre navigateur. Vous devriez voir une fenêtre grise. Félicitations !
 
-## Geometry
+## Géométrie
 
-Now our scene is properly rendering, we can start adding 3D shapes. To speed up development, Three.js provides a bunch of predefined primitives, which you can use to create shapes instantly in a single line of code. There's cubes, spheres, cylinders, and more complicated shapes available. Detail like drawing required vertices and faces, for a given shape, is handled by the Three framework, so we can focus on higher level coding. Let's start, by defining the geometry for a cube shape, adding the following just above the `render()` function:
+Désormais que notre scène est correctement rendue, nous pouvons débuter l'ajout de nos objets 3D. Pour accélérer le développement, Three.js fournit une collection d'objets prédéfinis, que nous pourrons utiliser pour créer des formes instantanément, en une seule ligne de code. Il y a les cubes, les sphères, les cylindres, ainsi que des formes plus complexes à notre disposition. Le détail, comme le dessin des sommets et des faces, pour une forme donnée, est géré par Three.js, afin que nous puissions nous concentrer sur un plus haut niveau de développement. Commençons par définir la géométrie pour la forme d'un cube, en ajoutant la fonction `render()` ci-dessus:
 
 ```js
 var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 ```
 
-In this case, we define a simple cube that is 10 x 10 x 10 units. The geometry itself is not enough though, we also need a material that will be used for our shape.
+Dans ce cas, nous définissons un cube simple de 10 x 10 x 10 unités. Cette géométrie n'est pourtant pas suffisante, car nous avons besoin d'un matériau qui sera utilisée pour notre forme.
 
-## Material
+## Matériau
 
-A material is what covers an object, the colors, or textures on its surface. In our case, we will choose a simple blue color to paint our box. There are a number of predefined materials which can be used: Basic, Phong, Lambert. Let's play with the last two later, but for now, the Basic one should be enough:
+Un matériau est ce qui recouvre un objet, les couleurs, ou les textures sur sa surface. Dans notre cas, nous allons choisir une simple couleur bleue pour peindre notre boîte. Il y a un nombre prédéfini de matériaux qui peuvent être utilisés: Basic, Phong, et Lambert. Nous expérimenterons les deux derniers plus tard, mais pour l'instant, le matériau Basic devrait être suffisant:
 
 ```js
 var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 ```
 
-Add this line below the previously added.
+Ajoutez cette ligne sous le code précédemment ajouté.
 
-Our material is now ready, what next?
+Notre matériau est maintenant prêt. Quoi d'autre ?
 
-## Mesh
+## Maillage
 
-To apply the material to a geometry, a mesh is used. This takes on a shape, and adds the specified material to every face:
+Pour appliquer le matériau à une géométrie, un maillage est utilisé. Ça épouse la forme, et ajoute le matériau spécifié sur chaque face:
 
 ```js
 var cube = new THREE.Mesh(boxGeometry, basicMaterial);
 ```
 
-Again, add this line below the one you previously added.
+À nouveau, joutez cette ligne sous le code précédemment ajouté.
 
-## Adding the cube to the scene
+## Ajouter le cube à la scène
 
-We've now created a cube, using the geometry and material defined earlier. The last thing to do is to place the cube to our scene. Add this line below the previous one:
+Nous avons maintenant créé un cube, utilisant la géométrie et le matériau définit auparavant. La dernière chose à faire est de placer le cube dans notre scène. Ajoutez cette ligne sous le code précédent.
 
 ```js
 scene.add(cube);
 ```
 
-If you save, and refresh your Web browser, our object will now look like a square, because it's facing the camera. The good thing about objects, is that we can move them on the scene, however we want. For example, rotating and scaling as we like. Let's apply a little rotation to the cube, so we can see more than one face. Again, adding our code below the previous:
+Si vous sauvegardez, et rafraîchissez votre navigateur, notre objet ressemblera maintenant à un carré, car il fait face à la caméra. Ce qu'il y a de bien dans les objets, c'est que nous pouvons les déplacer dans la scène, où nous le souhaitons. Par exemple, le faire tourner et l'élargir comme nous le souhaitons. Appliquons une petite rotation au cube, afin que nous puissions voir plus qu'une face. À nouveau, ajoutons ce code à la suite:
 
 ```js
 cube.rotation.set(0.4, 0.2, 0);
 ```
 
-Congratulations, you've created an object in a 3D environment! This might have proven easier than you first thought? Here's how it should look:
+Félicitations, vous avez créé un objet dans un environnement 3D ! Cela paraît plus facile maintenant, n'est-ce pas ? Voici ce à quoi ça devrait ressembler:
 
 ![](cube.png)
 
-And here's the code we have created so far:
+Et voici le code que nous créé jusqu'à maintenant:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/bwup75fa/","","350")}}
 
-You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html).
+Vous pouvez aussi [aller voir sur GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html).
 
-## More shapes and materials
+## Plus de formes et de matériaux
 
-Now we will add more shapes to the scene, and explore other shapes, materials, lighting, and more. Let's move the cube to the left, to make space for some friends. Adding the following line just below the previous one:
+Maintenant nous allons ajouter plusieurs formes à la scène, et explorer d'autres formes, matériaux, lumières et plus. Déplaçons le cube vers la gauche, et faisons de la place pour ses amis. Ajoutez la ligne suivante au code:
 
 ```js
 cube.position.x = -25;
 ```
 
-Now onto more shapes and materials. What might happen when you add a torus, wrapped in the Phong material? Try adding the following lines, just below the lines defining the cube.
+Ajoutons maintenant plus de formes et de matériaux. Que devrait-il arriver si vous ajoutez un tore, enveloppé dans un matériau Phong ? Essayez d'ajouter les lignes suivantes, juste sous les lignes qui définissent le cube.
 
 ```js
 var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
@@ -190,10 +190,9 @@ var phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
 var torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
 ```
+Ces lignes vont ajouter un tore; la méthode que les paramètres `TorusGeometry()` définissent sont `radius`, `tube diameter`, `radial segment count`, et `tubular segment count`. Le matériau Phong devrait apparaître plus brillant que le matériau Basic utilisé pour la boîte, malgré que notre tore apparaît noir.
 
-These lines will add a torus geometry; the `TorusGeometry()` method's parameters define, and the parameters are `radius`, `tube diameter`, `radial segment count`, and `tubular segment count`. The Phong material should look more glossy than the box's simple Basic material, though right now our torus will just look black.
-
-We can choose more fun predefined shapes. Let's play some more. Add the following lines, below those defining the torus:
+Nous pouvons choisir plus de formes prédéfinies. Jouons avec plusieurs autres. Ajoutez les lignes suivantes sous celles définies pour le tore:
 
 ```js
 var dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
@@ -203,13 +202,14 @@ dodecahedron.position.x = 25;
 scene.add(dodecahedron);
 ```
 
-This time, we are creating a dodecahedron, a shape containing twelve flat faces. The parameter, `DodecahedronGeometry(),` defines the size of the object. We're using a Lambert material, similar to Phong, but should be less glossy. Again it's black, for now. We're moving the object to the right, so it's not in the same position as the box, or torus.
+Cette fois, nous créons un dodécahèdre, une forme contenant douze faces plattes. Ce paramètre `DodecahedronGeometry()`, définit la taille de l'objet.
+Nous utilisons un matériau Lambert, similaire au Phong, mais qui devrait être moins brillant. À nouveau, il est noir pour l'instant. Nous déplaçons l'objet vers la droite, afin qu'il ne soit pas au même emplacement que la boîte, ou le tore.
 
-As mentioned above, the new objects currently just look black. To have both, the Phong and Lambert materials properly visible, we need to introduce a source of light.
+Tel que mentionné plus haut, les nouveaux objets courants apparaissent noirs. Nous avons à la fois les matériaux Phong et Lambert correctement visibles, et nous devons introduire une source de lumière.
 
-## Lights
+## Lumières
 
-There are various types of light sources available in Three.js. The most basic is `PointLight`, which works like a flashlight, shining a spotlight in a defined direction. Add the following lines, below your shape definitions:
+Il y a une grande variété de sources de lumière disponibles dans Three.js. La plus simple est `PointLight`, qui fonctionne comme une lampe torche, diffusant un rayon de lumière dans une direction définie. Ajoutez les lignes suivantes, sous la définition de la forme:
 
 ```js
 var light = new THREE.PointLight(0xFFFFFF);
@@ -217,61 +217,61 @@ light.position.set(-10, 15, 50);
 scene.add(light);
 ```
 
-We define a white point of light, set its position a little away from the center of the scene, so it can light up some parts of the shapes, finally adding it to the scene. Now everything works as it should, all three shapes are visible. You should check the documentation for other types of lights, like Ambient, Directional, Hemisphere, or Spot. Experiment placing them on our scene, to see how they affect it.
+Nous définissons un point de lumière blanche, ajustons sa position un peu plus loin que le centre de la scène, afin que certaines parties de la forme soient éclairées, et enfin nous l'ajoutons à la scène. Désormais, tout fonctionne comme cela devrait. Les trois formes sont visibles. Vous devriez consulter la documentation pour d'autres types de lumières, telles que Ambient, Directional, Hemisphere, ou Spot. Expérimentez en les plaçant dans la scène, pour voir comment elles l'affectent.
 
 ![](shapes.png)
 
-This looks a little boring though. In a game, something is usually happening. We might see animations and such. So let's try breathing a little life into these shapes, by animating them!
+Malgré tout, ceci paraît un peu ennuyeux. Dans un jeu, il y a toujours de l'action. Nous devrions voir des animations, et plus. Alors donnons un peu de vie à nos formes, en les animant !
 
 ## Animation
 
-We already used rotation, to adjust the position of the cube. We can also scale the shapes, or change their positions. To show animation, we need to make changes to these values inside the render loop, so they update on each frame.
+Nous avons déjà utilisé la rotation pour ajuster la position du cube. Nous pouvons aussi élargir la forme, ou changer ses positions. Pour montrer une animation, nous devons faire quelque changements à ces valeurs à l'intérieur dans la boucle de rendu, afin que ces formes soients mises à jour sur chaque image.
 
 ### Rotation
 
-Rotating is straighforward. You add a value to a given direction of rotation on each frame. Add this line of code, right after the `requestAnimationFrame()` invocation inside the `render` function:
+La rotation est simple. Vous ajoutez la valeur d'une direction donnée sur chaque image. Ajoutez cette ligne de code juste après l'invocation de la méthode `requestAnimationFrame()`, à l'intérieur de la fonction  `render`:
 
 ```js
 cube.rotation.y += 0.01;
 ```
 
-This rotates the cube on every frame, by a tiny bit, so the animation looks smooth.
+Cela fait tourner le cube à chaque image, très légèrement à chaque fois, afin que l'animation apparaisse fluide.
 
-### Scaling
+### Élargir
 
-We can also scale an object. Applying a constant value, we would make it grow, or shrink just once. Let's make things more interesting. First, we implement a helper variable, called `t,` for counting elapsed time. Add it right before the `render()` function:
+Nous pouvons élargir (ou diminuer) un objet en appliquant une valeur, en la faisant grossir ou diminuer une fois. Rendons les choses plus intéressantes. D'abord, nous implémentons une variable d'aide, appelée `t`, pour compter le temps passé. Ajoutons cela avant la fonction `render()`:
 
 ```js
 var t = 0;
 ```
 
-Now let's increase the value by a given constant value, on each frame of the animation. Add the following lines, just below the `requestAnimationFrame()` invocation:
+Maintenant, augmentons cette valeur avec une valeur constante, sur chaque image de l'animation. Ajoutons ces lignes, juste sous l'invocation de `requestAnimationFrame()`:
 
 ```js
 t += 0.01;
 torus.scale.y = Math.abs(Math.sin(t));
 ```
 
-We use `Math.sin`, ending up with quite an interesting result. This scales the torus, repeating the process, as `sin` is a periodic function. We're wrapping the scale value in `Math.abs`, to pass the absolute values, greater or equal to 0. As sin is between -1 and 1, negative values might render out torus in unexpected way. In this case it looks black half the time.
+Nous utilisons `Math.sin`, donnant un résultat très intéressant. Cela élargit le tore, répétant le processus, car `sin` est une fonction périodique. Nous enveloppons la valeur d'élargissement dans `Math.abs`, afin de passer les valeurs absolues, plus grand ou égal à 0. Quand sin est entre -1 et 1, les valeurs négatives devraient rendre le tore de manière inattendue. Dans ce cas, cela apparaît noir la moitié du temps.
 
-Now, onto movement.
+Mainteant, regardons le mouvement.
 
-### Moving
+### Mouvement
 
-Aside from rotation, and scaling, we can additionally move objects around the scene. Add the following, again just below our `requestAnimationFrame()` invocation:
+À part la rotation et l'élargissement, nous pouvons aussi déplacer les objets autour de la scène. Ajoutons ce qui, à nouveau juste au dessous de `requestAnimationFrame()`:
 
 ```js
 dodecahedron.position.y = -7*Math.sin(t*2);
 ```
 
-This will move the dodecahedron up and down, by applying the `sin()` value to the y axis on each frame, and a little adjustment to make it look cooler. Try changing these values, to see how it affects the animations.
+Cela va déplacer le dodécahèdre vers le haut et le bas, en appliquant la valeur `sin()` à l'axe Y à chaque image. Un petit ajustement lui ajoute un look plus cool. Essayez de changer ces valeurs, afin de voir comment ça affecte les animations.
 
 ## Conclusion
 
-Here's the final code:
+Voici le code final:
 
 {{JSFiddleEmbed("https://jsfiddle.net/rybr720u/","","350")}}
 
-You can also [see it on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/shapes.html) and [fork the repository](https://github.com/end3r/MDN-Games-3D/), if you want to play with it locally. Now you understand the basics of Three.js, you can jump back to the parent page, [3D on the Web](/fr/docs/Games/Techniques/3D_on_the_web).
+Vous pouvez aussi [consulter sur GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/shapes.html) si vous désirez jouer avec locallement. Maintenant, vous comprenez les bases de Three.js. Vous pouvez revenir à la page parent, [la 3D sur le Web](/fr/docs/Games/Techniques/3D_on_the_web).
 
-You could also try learning raw WebGL, to gain a better understanding of what's going on underneath. See our [WebGL documentation](/fr/docs/Web/API/WebGL_API).
+Vous pouvez aussi essayer d'apprendre WebGL brut, pour avoir une meilleure compréhension de ce qui se passe. Consultez notre page [WebGL documentation](/fr/docs/Web/API/WebGL_API).
