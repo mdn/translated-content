@@ -1,13 +1,15 @@
 ---
 title: Валидация ограничений
-slug: Web/Guide/HTML/Constraint_validation
+slug: Web/HTML/Constraint_validation
 tags:
   - CSS
   - Руководство
   - HTML5
   - NeedsContent
   - Селекторы
+original_slug: Web/Guide/HTML/Constraint_validation
 ---
+
 Создание веб-форм всегда было сложной задачей. Хотя сверстать саму форму достаточно просто, проверить, имеет ли каждое поле валидное значение — сложнее, а информирование пользователя о проблеме может стать настоящей головной болью. [HTML5](/ru/docs/Web/Guide/HTML/HTML5) представил для форм новый механизм: он добавляет элементу {{ HTMLElement("input") }} новые семантические типы и _constraint validation_, чтобы облегчить проверку содержимого на стороне клиента. С помощью новых атрибутов основные ограничения могут быть проверены без использования JavaScript; более сложные ограничения могут быть проверены с помощью [Constraint validation API](/ru/docs/Web/API/Constraint_validation).
 
 Базовое введение в эти концепции с примерами можно найти в разделе [Валидация форм на стороне клиента](/ru/docs/Learn/Forms/Form_validation).

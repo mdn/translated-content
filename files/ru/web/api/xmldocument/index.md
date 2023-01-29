@@ -1,9 +1,10 @@
 ---
 title: Document.async
-slug: Web/API/XMLDocument/async
+slug: Web/API/XMLDocument
 translation_of: Web/API/XMLDocument/async
-original_slug: Web/API/Document/async
+original_slug: Web/API/XMLDocument/async
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}
 
 `document.async` может быть установлен, для того, чтобы определить, что вызов {{domxref("document.load")}} должен быть выполнен синхронно или не синхронно. `true` - стандартное значение, определяющее, асинхронно ли должны быть загружены документы.

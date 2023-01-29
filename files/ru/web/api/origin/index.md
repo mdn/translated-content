@@ -1,6 +1,6 @@
 ---
 title: Document.origin
-slug: Web/API/Document/origin
+slug: Web/API/origin
 tags:
   - API
   - DOM
@@ -9,7 +9,9 @@ tags:
   - Свойство
   - Экспериментальный
 translation_of: Web/API/Document/origin
+original_slug: Web/API/Document/origin
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 **Document.origin —** это свойство, доступное только для чтения, которое возвращает **origin** документа. В большинстве случаев это свойство эквивалентно `document.defaultView.location.origin.`

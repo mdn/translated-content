@@ -1,7 +1,8 @@
 ---
 title: Node.isSupported()
-slug: Web/API/Node/isSupported
+slug: conflicting/Web/API/Node
 translation_of: Web/API/Node/isSupported
+original_slug: Web/API/Node/isSupported
 ---
 
 {{APIRef("DOM")}}{{obsolete_header}}

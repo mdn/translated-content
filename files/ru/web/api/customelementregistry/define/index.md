@@ -1,7 +1,8 @@
 ---
 title: Document.registerElement()
-slug: Web/API/Document/registerElement
+slug: Web/API/CustomElementRegistry/define
 translation_of: Web/API/Document/registerElement
+original_slug: Web/API/Document/registerElement
 ---
 
 {{APIRef("DOM")}}

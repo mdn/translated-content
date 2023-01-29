@@ -1,6 +1,6 @@
 ---
 title: Date.prototype.toGMTString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 tags:
   - Date
   - Deprecated
@@ -9,7 +9,9 @@ tags:
   - Prototype
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+original_slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 ---
+
 {{JSRef("Global_Objects", "Date")}} {{deprecated_header}}
 
 ## Сводка
