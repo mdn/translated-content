@@ -42,7 +42,7 @@ Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及�
 ## Fetch 接口
 
 - {{domxref("fetch()")}}
-  - : 包含了`fetch()` 方法，用于获取资源。
+  - : 包含了 `fetch()` 方法，用于获取资源。
 - {{domxref("Headers")}}
   - : 表示响应/请求的标头信息，允许你查询它们，或者针对不同的结果做不同的操作。
 - {{domxref("Request")}}
@@ -62,7 +62,7 @@ Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及�
 
 - [使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 - [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch 基础概念](/zh-CN/docs/Web/API/Fetch_API/Basic_concepts)
