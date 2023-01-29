@@ -54,7 +54,7 @@ Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及�
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
