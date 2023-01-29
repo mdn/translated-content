@@ -11,7 +11,7 @@ slug: Web/CSS/:focus-visible
 
 请注意 Firefox 通过较旧的前缀伪类 `:-moz-focusring` 支持类似的功能。更多细节请参考{{cssxref(":-moz-focusring")}}页面。
 
-## 语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -44,7 +44,7 @@ input, button {
 }
 ```
 
-{{EmbedLiveSample('Basic_example', '100%', '300')}}
+{{EmbedLiveSample('基本示例', '100%', '300')}}
 
 ### 选择性地显示焦点
 
@@ -82,7 +82,7 @@ custom-button:focus-visible {
 }
 ```
 
-{{EmbedLiveSample('Selectively_showing_the_focus_indicator', '100%', '300')}}
+{{EmbedLiveSample('选择性地显示焦点', '100%', '300')}}
 
 ## Polyfill
 

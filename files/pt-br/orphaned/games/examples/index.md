@@ -1,6 +1,7 @@
 ---
 title: Exemplos
-slug: Games/Examples
+slug: orphaned/Games/Examples
+original_slug: Games/Examples
 ---
 
 {{GamesSidebar}}
