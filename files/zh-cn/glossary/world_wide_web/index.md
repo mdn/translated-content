@@ -3,13 +3,13 @@ title: World Wide Web
 slug: Glossary/World_Wide_Web
 ---
 
-*万维网（World Wide Web）*一般称其为**WWW**，**W3**，或 **Web** 是通过 {{Glossary("Internet")}} 访问公共网页的互连系统。网络与互联网不一样：Web 是建立在互联网之上的许多应用程序之一。
+_万维网_（World Wide Web）一般称其为**WWW**、**W3** 或 **Web** 是通过 {{Glossary("Internet")}} 访问公共网页的互连系统。网络与互联网不一样：Web 是建立在互联网之上的许多应用程序之一。
 
-Tim Berners-Lee 提出了被称为万维网的架构。他在 1990 年在 CERN 物理研究实验室的计算机上创建了第一个网页{{Glossary("Server","server")}}，web {{Glossary("Browser","browser")}}和网页。1991 年，他在 alt.hypertext 新闻组上宣布创作，标志着 Web 首次公开的那一刻。
+Tim Berners-Lee 提出了被称为万维网的架构。他在 1990 年在 CERN 物理研究实验室的计算机上创建了第一个网页{{Glossary("Server","服务器")}}、web {{Glossary("Browser","浏览器")}}和网页。1991 年，他在 alt.hypertext 新闻组上宣布创作，标志着 Web 首次公开的那一刻。
 
 我们今天认为的“Web”系统由几个组件组成：
 
-- 的**{{Glossary("HTTP")}}**协议管理服务器和客户端之间的数据传输。
+- **{{Glossary("HTTP")}}** 协议管理服务器和客户端之间的数据传输。
 - 要访问 Web 组件，客户端提供唯一的通用标识符，称为 **{{Glossary("URL")}}**（统一资源位置）或 {{Glossary("URI")}}（统一资源标识符）（正式称为通用文档标识符（UDI））。
 - **{{Glossary("HTML")}}**（超文本标记语言）是发布 Web 文档的最常用格式。
 
