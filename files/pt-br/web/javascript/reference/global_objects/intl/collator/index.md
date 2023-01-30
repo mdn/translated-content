@@ -37,3 +37,17 @@ O objeto **`Intl.Collator`** permite uma comparação de strings sensível a lin
 	- : Função Getter que compara duas strings conforme a ordenação deste objeto {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}}.
 - {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
 	- : Retorna um novo objeto com as propriedades que refletem as opções de localização (`locale`) e agrupamento (`collation`) computadas durante a inicialização do objeto.
+
+## Exemplos
+
+### Usando Collator
+
+O exemplo a seguir demonstra os diferentes potenciais resultados para uma string que aparece antes, depois, ou no mesmo nível que outra:
+
+```js
+console.log(new Intl.Collator().compare("a", "c")); // -1, ou algum outro valor negativo
+console.log(new Intl.Collator().compare("c", "a")); // 1, or ou algum outro valor positivo
+console.log(new Intl.Collator().compare("a", "a")); // 0
+```
+
+É importante notar que os resultados mostrados no código acima podem variar entre navegadores e versões de navegadores. Isso por os valores serem específicos a implementação. Isso ocorre, pois a implementação define somente que os valores para antes e depois sejam negativo e positivo.
