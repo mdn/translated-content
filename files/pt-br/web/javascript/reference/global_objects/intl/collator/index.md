@@ -30,3 +30,10 @@ O objeto **`Intl.Collator`** permite uma comparação de strings sensível a lin
 
 - {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
   - : Retorna um array contendo as localizações (`locales`) providas que são suportados sem a necessidade de depender da localização padrão do runtime.
+
+## Métodos de instância
+
+- {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}
+	- : Função Getter que compara duas strings conforme a ordenação deste objeto {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}}.
+- {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
+	- : Retorna um novo objeto com as propriedades que refletem as opções de localização (`locale`) e agrupamento (`collation`) computadas durante a inicialização do objeto.
