@@ -28,11 +28,11 @@ font-palette: --one;
 - `<palette-identifier>`
   - : 允许使用 [@font-palette-values](/zh-CN/docs/Web/CSS/@font-palette-values) @ 规则指定字体调色板的自定义值。该值使用 [&lt;dashed-ident&gt;](/zh-CN/docs/Web/CSS/dashed-ident) 格式指定。
 
-## 正式定义
+## 形式定义
 
 {{CSSInfo}}
 
-## 正式语法
+## 形式语法
 
 {{CSSSyntax}}
 
