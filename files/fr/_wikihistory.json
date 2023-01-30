@@ -27906,9 +27906,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Web/HTTP/Headers/Content-Security-Policy": {
-    "modified": "2020-10-29T16:42:06.606Z",
-    "contributors": ["JNa0"]
   }
 }
