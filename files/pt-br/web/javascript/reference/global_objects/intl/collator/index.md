@@ -46,13 +46,13 @@ O exemplo a seguir demonstra os diferentes potenciais resultados para uma string
 
 ```js
 console.log(new Intl.Collator().compare("a", "c")); // -1, ou algum outro valor negativo
-console.log(new Intl.Collator().compare("c", "a")); // 1, or ou algum outro valor positivo
+console.log(new Intl.Collator().compare("c", "a")); // 1, ou algum outro valor positivo
 console.log(new Intl.Collator().compare("a", "a")); // 0
 ```
 
 É importante notar que os resultados mostrados no código acima podem variar entre navegadores e versões de navegadores. Isso por os valores serem específicos a implementação. Isso ocorre, pois a implementação define somente que os valores para antes e depois sejam negativo e positivo.
 
-### Usando Localizações
+### Usando localizações
 
 Os resultados retornados por [`Intl.Collator.prototype.compare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) variam entre linguagens. Para obter a sequência de ordenação da linguagem usada na interface da sua aplicação, garanta a especificação desta linguagem (e possivelmente algumas linguagens reserva) usando o argumento `locales`:
 
@@ -79,3 +79,15 @@ console.log(new Intl.Collator("de", { sensitivity: "base" }).compare("ä", "a"))
 console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"));
 // 1, ou algum outro valor positivo
 ```
+
+## Especificações
+
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
+
+## Veja também
+
+- {{jsxref("Intl")}}
