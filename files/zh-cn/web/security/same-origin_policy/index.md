@@ -25,7 +25,7 @@ slug: Web/Security/Same-origin_policy
 
 > **备注：** 例如，`about:blank` 通常作为父脚本写入内容的新的空白弹出窗口的 URL（例如，通过 [Window.open()](/zh-CN/docs/Web/API/Window/open)）。如果此弹出窗口也包含 JavaScript，则该脚本将从创建它的脚本那里继承对应的源。
 
-> **备注：** 在{{Gecko("6.0")}}之前，如果用户在位置栏中输入 `data` URLs，`data` URLs 将继承当前浏览器窗口中网页的安全上下文。
+> **备注：** 在 Gecko 6.0 之前，如果用户在位置栏中输入 `data` URL，`data` URL 将继承当前浏览器窗口中网页的安全上下文。
 
 > **警告：** `data`：URLs 获得一个新的，空的安全上下文。
 
