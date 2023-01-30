@@ -72,8 +72,8 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 3. Браузер будет считать, что строка не была закрыта, потому что в строке может появиться другой тип цитаты, который вы не используете, чтобы хранить ваши строки в переменных. Из примера можно понять, о чем идёт речь (в коде ошибок нет):
 
     ```js
-    const sglDbl = 'Хочешь поесть "рыбный суп"?';
-    const dblSgl = "Я приболел";
+    const sglDbl = 'Я не сказала "да", милорд…';
+    const dblSgl = "Вы не сказали "нет"… (королева, Бэкингем)";
     sglDbl;
     dblSgl;
     ```
@@ -81,7 +81,7 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 4. Однако вы не можете включить один и тот же знак кавычки внутри строки, если он используется для их хранения. Ниже приведена ошибка, браузер ошибочно определяет место, где строка кончается:
 
     ```js example-bad
-    const bigmouth = 'I've got no right to take my place...';
+    const bigmouth = 'Жанна Д'Арк — народная героиня Франции.';
     ```
 
     Что приводит нас к следующей теме.
@@ -91,7 +91,7 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 Чтобы исправить нашу предыдущую строку кода, нам нужно дать понять браузеру, что кавычка в середине строки не является меткой её конца. Экранирование символов означает, что мы делаем что-то с ними, чтобы убедиться, что они распознаются как текст, а не часть кода. В JavaScript мы делаем это, помещая обратную косую черту непосредственно перед символом. Введите эти строки:
 
 ```js
-const bigmouth = 'I\'ve got no right to take my place...';
+const bigmouth = 'Жанна Д\'Арк — народная героиня Франции.';
 bigmouth;
 ```
 
@@ -108,7 +108,7 @@ bigmouth;
     joined;
     ```
 
-    Результат этой программы - это переменная `joined`, содержащая значение "Hello, how are you?".
+    Результат этой программы - это переменная `joined`, содержащая значение "Привет, как дела?".
 
 2. В последнем случае мы просто объединим две строки вместе, но на самом деле, вы можете объединить столько строк, сколько хотите, до тех пор, пока вы ставите `+` между ними. Попробуйте это:
 
@@ -124,7 +124,7 @@ bigmouth;
     response;
     ```
 
-> **Примечание:** Когда вы вводите фактическую строку в свой код, заключённую в одинарные или двойные кавычки, она называется **строковым литералом.**
+> **Примечание:** Когда вы вводите фактическую строку в свой код, заключённую в одинарные или двойные кавычки, она называется **строковым литералом**.
 
 ### Конкатенация строк в контексте
 
@@ -139,7 +139,7 @@ const button = document.querySelector('button');
 
 button.onclick = function() {
   const name = prompt('Как тебя зовут?');
-  alert('Привет ' + name + ', рад тебя видеть!');
+  alert('Привет, ' + name + ', рад тебя видеть!');
 }
 ```
 
@@ -186,16 +186,16 @@ button.onclick = function() {
 
 ## Совмещение строк с различными выражениями
 
-Вы можете совмещать выражения JavaScript в литералы шаблона, а также простые переменные, и результаты будут включены в конечный результат:
+Вы можете совмещать выражения JavaScript в литералы шаблона, а также простые переменные, и результаты будут включены в конечную строку:
 
 ```js
   const song = "Fight the Youth";
   const score = 9;
   const highestScore = 10;
-  const output = `Мне нравится эта песня ${song}. Я дал ей оценку в ${
+  const output = `Мне нравится песня ${song}. Я оценил её на ${
     (score / highestScore) * 100
   }%.`;
-  console.log(output); // "Мне нравится эта песня Fight the Youth. Я дал ей оценку в 90%."
+  console.log(output); // "Мне нравится есня Fight the Youth. Я оценил её на 90%."
 
 ```
 
@@ -205,24 +205,24 @@ button.onclick = function() {
 
 ```js
   const output = `Мне нравится эта песня. 
-  Я дал ей оценку в 90%.`;
+  Я оценил её на 90%.`;
   console.log(output);
 
   /*
   Мне нравится эта песня.
-  Я дал ей оценку в 90%.
+  Я оценил её на 90%.
   */
 ```
 
-Чтобы получить эквивалентный вывод с использованием обычной строки, вам придется включить в строку символы переноса строки (\n):
+Чтобы получить эквивалентный вывод с использованием обычной строки, вам придется включить в строку символы переноса строки (`\n`):
 
 ```js
-  const output = "Мне нравится эта песня.\nЯ дал ей оценку в 90%.";
+  const output = "Мне нравится эта песня.\nЯ оценил её на 90%.";
   console.log(output);
 
   /*
-  I like the song.
-  I gave it a score of 90%.
+  Мне нравится эта песня.
+  Я оценил её на 90%.
   */
 ```
 
@@ -237,11 +237,11 @@ button.onclick = function() {
 ## В этом модуле
 
 - [Что такое JavaScript?](/ru/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Первыая теория о JavaScript](/ru/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [Первое погружение в JavaScript](/ru/docs/Learn/JavaScript/First_steps/A_first_splash)
 - [Что пошло не так? Устранение ошибок JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Хранение необходимой вам информации — Переменные](/ru/docs/Learn/JavaScript/First_steps/Variables)
-- [Основы математики в JavaScript — числа и операторы](/ru/docs/Learn/JavaScript/First_steps/Math)
-- [Обработка текста в JavaScript](/ru/docs/Learn/JavaScript/First_steps/Strings)
-- [Полезные методы для работы с текстом](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Переменные - место хранения необходимой информации](/ru/docs/Learn/JavaScript/First_steps/Variables)
+- [Базовая математика в JavaScript — числа и операторы](/ru/docs/Learn/JavaScript/First_steps/Math)
+- [Работа с текстом — строки в JavaScript](/ru/docs/Learn/JavaScript/First_steps/Strings)
+- [Полезные методы для строк](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods)
 - [Массивы](/ru/docs/Learn/JavaScript/First_steps/Arrays)
-- [Оценка: Генератор глупых историй](/ru/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [Генератор глупых историй](/ru/docs/Learn/JavaScript/First_steps/Silly_story_generator)
