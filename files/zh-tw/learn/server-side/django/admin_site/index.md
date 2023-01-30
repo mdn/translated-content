@@ -336,7 +336,7 @@ In this case all we've done is declare our tabular inline class, which just adds
 
 {{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
-## 本教學連結
+## 本系列課程
 
 - [Django 介紹](/zh-TW/docs/Learn/Server-side/Django/Introduction)
 - [設定 Django 開發環境](/zh-TW/docs/Learn/Server-side/Django/development_environment)

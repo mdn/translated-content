@@ -490,7 +490,7 @@ In a later topic we'll use the _Express Application Generator_, which creates a 
 
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
-## 本教學連結
+## 本系列課程
 
 - [Express/Node 介紹](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
 - [設定 Node（Express）開發環境](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)

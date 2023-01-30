@@ -369,7 +369,7 @@ We'll talk more about the generated app when we get to the article on generating
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
-## 本教學連結
+## 本系列課程
 
 - [Express/Node 介紹](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
 - [設定 Node（Express）開發環境](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)

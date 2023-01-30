@@ -897,7 +897,7 @@ The next and final tutorial shows how you can deploy your wonderful (and fully t
 
 {{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 
-## 本教學連結
+## 本系列課程
 
 - [Django 介紹](/zh-TW/docs/Learn/Server-side/Django/Introduction)
 - [設定 Django 開發環境](/zh-TW/docs/Learn/Server-side/Django/development_environment)

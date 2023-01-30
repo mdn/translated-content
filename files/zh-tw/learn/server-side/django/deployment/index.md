@@ -650,7 +650,7 @@ The next step is to read our last few articles, and then complete the assessment
 
 {{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-## 本教學連結
+## 本系列課程
 
 - [Django 介紹](/zh-TW/docs/Learn/Server-side/Django/Introduction)
 - [設定 Django 開發環境](/zh-TW/docs/Learn/Server-side/Django/development_environment)

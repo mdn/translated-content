@@ -233,7 +233,7 @@ Express, node, 與 NPM 上面的第三方套件，提供你需要的每樣東西
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
-## 本教學連結
+## 本系列課程
 
 - [Express/Node 介紹](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
 - [設定 Node（Express）開發環境](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)

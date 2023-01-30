@@ -186,7 +186,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
-## 本教學連結
+## 本系列課程
 
 - [伺服器端介紹](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
 - [用戶端概述](/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview)

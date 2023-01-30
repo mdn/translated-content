@@ -639,7 +639,7 @@ There is a lot more that can be done with forms (check out our See also list bel
 
 {{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-## 本教學連結
+## 本系列課程
 
 - [Django 介紹](/zh-TW/docs/Learn/Server-side/Django/Introduction)
 - [設定 Django 開發環境](/zh-TW/docs/Learn/Server-side/Django/development_environment)
