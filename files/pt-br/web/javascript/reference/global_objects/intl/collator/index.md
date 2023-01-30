@@ -25,3 +25,8 @@ O objeto **`Intl.Collator`** permite uma comparação de strings sensível a lin
 
 - {{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}
   - : Cria um novo objeto `Collator`.
+
+## Métodos estáticos
+
+- {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
+  - : Retorna um array contendo as localizações (`locales`) providas que são suportados sem a necessidade de depender da localização padrão do runtime.
