@@ -65,3 +65,17 @@ console.log(new Intl.Collator("de").compare("ä", "z"));
 console.log(new Intl.Collator("sv").compare("ä", "z"));
 // 1, ou algum outro valor positivo
 ```
+
+### Usando opções
+
+Os resultados retornados por [`Intl.Collator.prototype.compare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) podem ser customizados usando o argumento `options`:
+
+```js
+// Em Alemão, ä tem a como sua letra base
+console.log(new Intl.Collator("de", { sensitivity: "base" }).compare("ä", "a"));
+// 0
+
+// Em Sueco, ä e a são letras base separadas
+console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"));
+// 1, ou algum outro valor positivo
+```
