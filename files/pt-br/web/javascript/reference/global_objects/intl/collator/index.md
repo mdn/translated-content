@@ -51,3 +51,17 @@ console.log(new Intl.Collator().compare("a", "a")); // 0
 ```
 
 É importante notar que os resultados mostrados no código acima podem variar entre navegadores e versões de navegadores. Isso por os valores serem específicos a implementação. Isso ocorre, pois a implementação define somente que os valores para antes e depois sejam negativo e positivo.
+
+### Usando Localizações
+
+Os resultados retornados por [`Intl.Collator.prototype.compare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) variam entre linguagens. Para obter a sequência de ordenação da linguagem usada na interface da sua aplicação, garanta a especificação desta linguagem (e possivelmente algumas linguagens reserva) usando o argumento `locales`:
+
+```js
+// Em alemão, ä está no mesmo nível de a
+console.log(new Intl.Collator("de").compare("ä", "z"));
+// -1, ou algum outro valor negativo
+
+// Em Sueco, ä vem depois de z
+console.log(new Intl.Collator("sv").compare("ä", "z"));
+// 1, ou algum outro valor positivo
+```
