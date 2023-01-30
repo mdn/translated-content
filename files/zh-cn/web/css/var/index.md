@@ -1,16 +1,15 @@
 ---
 title: var()
 slug: Web/CSS/var
-original_slug: Web/CSS/var()
 ---
 
 {{CSSRef}}
 
-## 概述
+**`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-cn/docs/Web/CSS/CSS_Functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
 
-**`var()`** [函数](/zh-cn/docs/Web/CSS/CSS_Functions)可以插入一个[自定义属性](/en-US/docs/Web/CSS/--*) (有时也被称为 "CSS 变量") 的值，用来代替非自定义属性中值的任何部分。
+{{EmbedInteractiveExample("pages/css/var.html")}}
 
-**`var()`** 函数不能作为属性名、选择器或者其他除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）
+`var()` 函数不能作为属性名、选择器或者其它除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）
 
 ## 语法
 
@@ -18,18 +17,18 @@ original_slug: Web/CSS/var()
 
 {{csssyntax}}
 
-> **备注：** 自定义属性的回退值允许使用逗号。例如， `var(--foo, red, blue)` 将`red, blue`同时指定为回退值；即是说任何在第一个逗号之后到函数结尾前的值都会被考虑为回退值。
+> **备注：** 自定义属性的回退值允许使用逗号。例如，`var(--foo, red, blue)` 将 `red, blue` 同时指定为回退值；即是说任何在第一个逗号之后到函数结尾前的值都会被考虑为回退值。
 
 ### 值
 
 - `<custom-property-name>` 自定义属性名
   - : 在实际应用中它被定义为以两个破折号开始的任何有效标识符。自定义属性仅供作者和用户使用; CSS 将永远不会给他们超出这里表达的意义。
 - `<declaration-value>` 声明值（回退值）
-  - : 回退值被用来在自定义属性值无效的情况下保证函数有值。回退值可以包含任何字符，但是部分有特殊含义的字符除外，例如换行符、不匹配的右括号（如 `)`、`]`或 `}`）、感叹号以及顶层分号（不被任何非`var()`的括号包裹的分号，例如`var(--bg-color, --bs;color)`是不合法的，而`var(--bg-color, --value(bs;color))`是合法的）。
+  - : 回退值被用来在自定义属性值无效的情况下保证函数有值。回退值可以包含任何字符，但是部分有特殊含义的字符除外，例如换行符、不匹配的右括号（如 `)`、`]` 或 `}`）、感叹号以及顶层分号（不被任何非 `var()` 的括号包裹的分号，例如 `var(--bg-color, --bs;color)` 是不合法的，而 `var(--bg-color, --value(bs;color))` 是合法的）。
 
 ## 示例
 
-### 在 :root 上定义，然后使用它
+### 在 :root 上使用自定义属性
 
 ```css
 :root {
@@ -86,7 +85,7 @@ body {
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
-- {{cssxref("env","env(…)")}} – 由 user‑agent 控制的只读环境变量。
-- [使用 CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_variables)
+- {{cssxref("env","env(…)")}}——由 user‑agent 控制的只读环境变量。
+- [使用 CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
