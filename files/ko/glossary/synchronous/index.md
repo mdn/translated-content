@@ -1,9 +1,6 @@
 ---
 title: 동기(Synchronous)
 slug: Glossary/Synchronous
-tags:
-  - Web
-  - WebMechanics
 ---
 
 **동기**란 각 참여자가 즉시(또는 가능한 한 즉시) 메시지를 수신(필요시 처리 및 회신)하는 실시간 통신을 말합니다.
