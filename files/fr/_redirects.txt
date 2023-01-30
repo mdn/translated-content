@@ -4793,6 +4793,7 @@
 /fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Web/HTTP/Link_prefetching_FAQ
 /fr/docs/Web/HTTP/Feature_Policy	/fr/docs/Web/HTTP/Permissions_Policy
 /fr/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
+/fr/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/fr/docs/conflicting/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/Web/HTTP/Headers/Feature-Policy	/fr/docs/Web/HTTP/Headers/Permissions-Policy
 /fr/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/fr/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /fr/docs/Web/HTTP/Headers/Serveur	/fr/docs/Web/HTTP/Headers/Server
@@ -6447,7 +6448,6 @@
 /fr/docs/conflicting/Web/HTML/Global_attributes/contenteditable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/conflicting/Web/HTTP	/fr/docs/Web/HTTP
 /fr/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types	/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types
-/fr/docs/conflicting/Web/HTTP/Headers/Content-Security-Policy	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/conflicting/Web/HTTP/Status/404	/fr/docs/Web/HTTP/Status/404
 /fr/docs/conflicting/Web/HTTP/Status/502	/fr/docs/Web/HTTP/Status/502
 /fr/docs/conflicting/Web/JavaScript	/fr/docs/Web/JavaScript

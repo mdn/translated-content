@@ -21401,10 +21401,6 @@
     "modified": "2020-10-29T20:45:38.126Z",
     "contributors": ["JNa0"]
   },
-  "Web/HTTP/Headers/Content-Security-Policy/require-sri-for": {
-    "modified": "2020-10-29T16:42:06.606Z",
-    "contributors": ["JNa0"]
-  },
   "Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for": {
     "modified": "2020-10-29T16:19:21.052Z",
     "contributors": ["JNa0"]
@@ -27910,5 +27906,9 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "conflicting/Web/HTTP/Headers/Content-Security-Policy": {
+    "modified": "2020-10-29T16:42:06.606Z",
+    "contributors": ["JNa0"]
   }
 }
