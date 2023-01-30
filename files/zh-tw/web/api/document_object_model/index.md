@@ -266,7 +266,7 @@ slug: Web/API/Document_Object_Model
 
 這裡是資料型態的 DOM API，在 SVG 特性和性質的定義中被使用。
 
-> **備註：** 從 {{Gecko("5.0")}} 開始，下列 SVG 相關的 DOM 介面物件的表示清單，現在可以被索引且可以像陣列般被取用；此外，他們也有 length 屬性來標示其清單中的項目個數：{{domxref("SVGLengthList")}}、{{domxref("SVGNumberList")}}、{{domxref("SVGPathSegList")}}，和 {{domxref("SVGPointList")}}。
+> **備註：** 從 Gecko 5.0 開始，下列 SVG 相關的 DOM 介面物件的表示清單，現在可以被索引且可以像陣列般被取用；此外，他們也有 length 屬性來標示其清單中的項目個數：{{domxref("SVGLengthList")}}、{{domxref("SVGNumberList")}}、{{domxref("SVGPathSegList")}}，和 {{domxref("SVGPointList")}}。
 
 #### 靜態類型
 
