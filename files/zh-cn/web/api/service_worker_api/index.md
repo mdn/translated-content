@@ -11,7 +11,7 @@ Service worker 本质上充当 Web 应用程序、浏览器与网络（可用时
 
 Service worker 是一个注册在指定源和路径下的事件驱动 [worker](/zh-CN/docs/Web/API/Worker)。它采用 JavaScript 文件的形式，控制关联的页面或者网站，拦截并修改访问和资源请求，细粒度地缓存资源。你可以完全控制应用在特定情形（最常见的情形是网络不可用）下的表现。
 
-Service worker 运行在 worker 上下文：因此它无法访问 DOM，相对于驱动应用的主 JavaScript 线程，它运行在其他线程中，所以不会造成阻塞。它被设计为完全异步的；因此，同步 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest) 和 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 不能在 service worker 中使用。
+Service worker 运行在 worker 上下文：因此它无法访问 DOM，相对于驱动应用的主 JavaScript 线程，它运行在其他线程中，所以不会造成阻塞。它被设计为完全异步；因此，同步 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest) 和 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 不能在 service worker 中使用。
 
 出于安全考量，Service worker 只能由 HTTPS 承载，毕竟修改网络请求的能力暴露给{{Glossary("MitM", "中间人攻击")}}会非常危险，如果允许访问这些强大的 API，此类攻击将会变得很严重。在 Firefox 浏览器的[用户隐私模式](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，Service Worker 不可用。
 
