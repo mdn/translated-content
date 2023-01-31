@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.commit()
-slug: Web/API/WebGLRenderingContext/commit
+slug: orphaned/Web/API/WebGLRenderingContext/commit
+original_slug: Web/API/WebGLRenderingContext/commit
 ---
 
 {{APIRef("WebGL")}} {{SeeCompatTable}}

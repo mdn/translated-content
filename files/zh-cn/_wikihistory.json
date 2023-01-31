@@ -14804,10 +14804,6 @@
     "modified": "2020-10-15T21:55:10.731Z",
     "contributors": ["shenwenkai"]
   },
-  "Web/API/WebGLRenderingContext/commit": {
-    "modified": "2020-10-15T21:59:26.379Z",
-    "contributors": ["dondevi"]
-  },
   "Web/API/WebGLRenderingContext/compileShader": {
     "modified": "2020-10-15T21:56:26.723Z",
     "contributors": ["yegao", "Char-Ten"]
@@ -33694,5 +33690,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "orphaned/Web/API/WebGLRenderingContext/commit": {
+    "modified": "2020-10-15T21:59:26.379Z",
+    "contributors": ["dondevi"]
   }
 }
