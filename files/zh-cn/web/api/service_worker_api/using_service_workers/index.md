@@ -32,7 +32,7 @@ service worker 在现代浏览器中默认开启。要使用 service worker 运�
 
 ![](sw-lifecycle.png)
 
-一下是可用的 service worker 事件的摘要：
+以下是可用的 service worker 事件的摘要：
 
 - [`install`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/install_event)
 - [`activate`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
