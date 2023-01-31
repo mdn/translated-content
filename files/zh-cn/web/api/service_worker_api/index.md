@@ -17,7 +17,7 @@ Service worker 运行在 worker 上下文：因此它无法访问 DOM，相对�
 
 > **备注：** 在 Firfox，为了进行测试，你可以通过 HTTP 运行 service worker（不安全）；只需选中 Firefox 开发者选项/齿轮菜单中的 **Enable Service Workers over HTTP (when toolbox is open)** 选项。
 
-> **备注：** 与之前在该领域的尝试不同，如 [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag)），service worker 并不确定你试图去做什么，但是当这些假设不完全正确时，它们会被中断。相对地，service worker 可以更细致地控制每一件事情。
+> **备注：** 与之前在该领域的尝试不同，如 [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/)），service worker 并不确定你试图去做什么，但是当这些假设不完全正确时，它们会被中断。相对地，service worker 可以更细致地控制每一件事情。
 
 > **备注：** Service worker 大量使用 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，因为通常它们会等待响应后继续，并根据响应返回一个成功或者失败的操作。Promise 非常适合这种场景。
 
