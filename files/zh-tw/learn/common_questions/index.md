@@ -49,20 +49,20 @@ slug: Learn/Common_questions
 - [為網站除錯及改良效能需要什麼工具？](/zh-TW/docs/Tools/Performance)
   - : 本系列文章教你如何用 Firefox 開發者工具來除錯與改良網站效能，將會運用工具來檢視記憶體使用量、JavaScript Call Tree、被渲染的 DOM 節點數及其它東西。
 
-## 設計與親合度
+## 設計與網頁親和力
 
-這個區塊列舉有關美感、網頁架構、親合度技巧等等的問題。
+這個區塊列舉有關美感、網頁架構、網頁親和力技巧等等的問題。
 
 - [如何開始設計我的網站？](/zh-TW/docs/Learn/Common_questions/Thinking_before_coding)
   - : 這篇文章會探討每個專案最重要的第一步：定義你想透過這個網站達成什麼目標？
 - [常見網頁布局包含什麼？](/zh-TW/docs/Learn/Common_questions/Common_web_layouts)
   - : 當你為你的網站設計網頁時，最好對一些常見的布局有所了解。這篇文章帶你遍覽幾個典型的網頁布局，仔細檢視組成它的每個部份。
-- [親合度是什麼？](/zh-TW/docs/Learn/Common_questions/What_is_accessibility)
-  - : 這篇文章將介紹親合度背後的基本概念。
+- [網頁親和力是什麼？](/zh-TW/docs/Learn/Common_questions/What_is_accessibility)
+  - : 這篇文章將介紹網頁親和力背後的基本概念。
 - [如何設計能兼容所有使用者的網站？](/zh-TW/docs/Learn/Common_questions/Design_for_all_types_of_users)
   - : 這篇文章提供幫助你設計能兼容所有使用者的網站的基本技巧。
-- [哪些 HTML 功能可以增進親合度？](/zh-TW/docs/Learn/Common_questions/HTML_features_for_accessibility)
-  - : 這篇文章講述專門讓一個網頁對身心障礙群體而言更有親合度的 HTML 功能。
+- [哪些 HTML 功能可以增進網頁親和力？](/zh-TW/docs/Learn/Common_questions/HTML_features_for_accessibility)
+  - : 這篇文章講述專門讓一個網頁對身心障礙群體而言更有網頁親和力的 HTML 功能。
 
 ## HTML、CSS 與 JavaScript 問題
 
