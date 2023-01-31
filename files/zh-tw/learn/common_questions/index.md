@@ -34,16 +34,16 @@ slug: Learn/Common_questions
   - : 這篇文章解釋當你編輯、上傳或檢視網站時需要用到的軟體。
 - [哪個文字編輯器比較適合？](/zh-TW/docs/Learn/Common_questions/Available_text_editors)
   - : 這篇文章中，我們列出為網路開發選擇與安裝文字編輯器時一些值得思考的重點。
-- [瀏覽器開發人員工具是什麼？](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)
+- [瀏覽器開發者工具是什麼？](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)
   - : 每個瀏覽器皆有一系列對 HTML、CSS 及其它網路程式碼除錯的開發工具。這篇文章將解釋如何使用你的瀏覽器開發工具的基本功能。
 - [如何確保我的網站會正常運作？](/zh-TW/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly)
   - : 你將你的網站發佈到網路上了──非常好！但是你確定它能正確運行嗎？這篇文章提供一些基本的問題解決步驟。
 - [如何架設本地端測試伺服器](/zh-TW/docs/Learn/Common_questions/set_up_a_local_testing_server)
   - : 這篇文章將解釋如何在你的電腦上設置一個簡單的本地端測試伺服器，以及基本使用方式。
 - [如何上傳檔案到網路伺服器？](/zh-TW/docs/Learn/Common_questions/Upload_files_to_a_web_server)
-  - : 這篇文章示範如何透過 [FTP](/zh-TW/docs/Glossary/FTP) 工具將你的網站發佈到網路上──這是讓別人從他們的電腦存取到線上網站的其中一種常見方式。
+  - : 這篇文章示範如何透過 [FTP](/zh-TW/docs/Glossary/FTP) 工具將你的網站發佈到網路上──這是將網站放到線上，讓別人可從他們的電腦存取的常見方式之一。
 - [如何使用 GitHub 頁面？](/zh-TW/docs/Learn/Common_questions/Using_GitHub_Pages)
-  - : 這篇文章提供如何透過 Github 頁面發佈文章的基礎指南。
+  - : 這篇文章提供如何透過 Github 頁面發佈內容的基礎指南。
 - [如何在 Google App Engine 上架設網站？](/zh-TW/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
   - : 想找個地方架設你的網站嗎？這是一篇手把手教你在 Google App Engine 上架設網站的指南。
 - [為網站除錯及改良效能需要什麼工具？](/zh-TW/docs/Tools/Performance)
@@ -62,7 +62,7 @@ slug: Learn/Common_questions
 - [如何設計能兼容所有使用者的網站？](/zh-TW/docs/Learn/Common_questions/Design_for_all_types_of_users)
   - : 這篇文章提供幫助你設計能兼容所有使用者的網站的基本技巧。
 - [哪些 HTML 功能可以增進網頁親和力？](/zh-TW/docs/Learn/Common_questions/HTML_features_for_accessibility)
-  - : 這篇文章講述專門讓一個網頁對身心障礙群體而言更有網頁親和力的 HTML 功能。
+  - : 這篇文章講述讓網頁對不同的身心障礙更顯親和的特定 HTML 功能。
 
 ## HTML、CSS 與 JavaScript 問題
 
