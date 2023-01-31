@@ -5,13 +5,13 @@ slug: Web/API/Beacon_API
 
 {{DefaultAPISidebar("Beacon")}}
 
-**`Beacon`** API 用于发送异步和非阻塞请求到服务器。这类请求不需要响应。与 {{domxref("XMLHttpRequest")}} 或 [Fetch API](/en-US/docs/Web/API/Fetch_API) 请求不同，浏览器会保证在页面卸载前，将信标请求初始化并运行完成。
+**`Beacon`** API 用于发送异步和非阻塞请求到服务器。这类请求不需要响应。与 {{domxref("XMLHttpRequest")}} 或 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 请求不同，浏览器会保证在页面卸载前，将信标请求初始化并运行完成。
 
 Beacon API 主要的使用场景是将分析数据发送给服务器，如：客户端事件、会话数据等。在过去，网站使用 {{domxref("XMLHttpRequest")}} 来做这件事，但是浏览器无法保证在某些情况发送这些请求（如：页面将被卸载）。为了解决这个问题，网站采取了各种各样的技术，例如使用同步请求，但是这样对性能造成了很糟糕的影响。因为信标请求是异步的并且保证发送，所以它们结合了良好的性能特征和可靠性。
 
 如需了解 Beacon API 更多的细节和用例，请参考 {{domxref("navigator.sendBeacon()")}} 方法。
 
-> **注意:** Beacon API 在 [Web Workers](/en-US/docs/Web/API/Web_Workers_API) 中是不可用的 (没有通过 {{domxref("WorkerNavigator")}} 暴露出来).
+> **注意:** Beacon API 在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 中是不可用的 (没有通过 {{domxref("WorkerNavigator")}} 暴露出来).
 
 ## 接口
 
