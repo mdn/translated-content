@@ -125,5 +125,5 @@ Service workers 也可以用来做这些事情：
 - [ServiceWorker 烹饪书](https://github.com/mdn/serviceworker-cookbook/)
 - [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service worker 基础代码示例](https://github.com/mdn/sw-test)
-- [ServiceWorker 准备好了吗？](https://jakearchibald.github.io/isserviceworkerready/)
+- [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
