@@ -1,6 +1,7 @@
 ---
 title: 'CSP: require-sri-for'
-slug: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
+slug: conflicting/Web/HTTP/Headers/Content-Security-Policy
+original_slug: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 ---
 
 {{deprecated_header}}

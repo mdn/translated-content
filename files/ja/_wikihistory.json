@@ -22287,10 +22287,6 @@
     "modified": "2020-10-15T22:08:00.031Z",
     "contributors": ["mfuji09"]
   },
-  "Web/HTTP/Headers/Content-Security-Policy/require-sri-for": {
-    "modified": "2020-10-15T22:33:25.391Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/HTTP/Headers/Content-Security-Policy/sandbox": {
     "modified": "2020-10-15T22:21:06.473Z",
     "contributors": ["acid-chicken", "mfuji09"]
@@ -30977,6 +30973,10 @@
   "conflicting/Web/HTML/Global_attributes/contenteditable": {
     "modified": "2019-05-13T11:13:31.486Z",
     "contributors": ["mfuji09", "yyss", "ethertank"]
+  },
+  "conflicting/Web/HTTP/Headers/Content-Security-Policy": {
+    "modified": "2020-10-15T22:33:25.391Z",
+    "contributors": ["mfuji09"]
   },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
     "modified": "2020-08-12T12:42:41.854Z",
