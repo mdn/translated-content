@@ -47,13 +47,13 @@ slug: Web/CSS/grid-column
 
 如果省略\<integer>，则默认为`1`。负整数或 0 无效。
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML Content
+### HTML
 
 ```html
 <div id="grid">
@@ -63,7 +63,7 @@ slug: Web/CSS/grid-column
 </div>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 #grid {
@@ -88,7 +88,7 @@ slug: Web/CSS/grid-column
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "100px")}}
+{{EmbedLiveSample("示例", "100%", "100px")}}
 
 ## IE 问题
 

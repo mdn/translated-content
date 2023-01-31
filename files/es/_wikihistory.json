@@ -3781,10 +3781,6 @@
     "modified": "2019-03-23T22:46:17.268Z",
     "contributors": ["Codejobs"]
   },
-  "Web/API/Document/registerElement": {
-    "modified": "2019-03-23T22:58:15.536Z",
-    "contributors": ["SphinxKnight", "AlePerez92", "mclo", "chrisdavidmills"]
-  },
   "Web/API/Document/scripts": {
     "modified": "2019-03-23T22:57:42.662Z",
     "contributors": ["MauroEldritch"]
@@ -6278,11 +6274,11 @@
     "modified": "2019-03-23T22:33:38.436Z",
     "contributors": ["pekechis"]
   },
-  "Web/CSS/:-moz-locale-dir(ltr)": {
+  "Web/CSS/:-moz-locale-dir_ltr": {
     "modified": "2019-03-23T22:33:43.908Z",
     "contributors": ["pekechis"]
   },
-  "Web/CSS/:-moz-locale-dir(rtl)": {
+  "Web/CSS/:-moz-locale-dir_rtl": {
     "modified": "2019-03-23T22:33:44.356Z",
     "contributors": ["pekechis"]
   },
@@ -14509,6 +14505,10 @@
     "modified": "2019-03-23T22:25:15.548Z",
     "contributors": ["Jeremie"]
   },
+  "conflicting/Web/API/CustomElementRegistry/define": {
+    "modified": "2019-03-23T22:58:15.536Z",
+    "contributors": ["SphinxKnight", "AlePerez92", "mclo", "chrisdavidmills"]
+  },
   "conflicting/Web/API/Document_Object_Model": {
     "modified": "2019-03-24T00:02:47.149Z",
     "contributors": ["fscholz", "Mgjbot", "Nathymig", "Jorolo"]
@@ -15364,17 +15364,6 @@
   "orphaned/MDN/Tools/Template_editing": {
     "modified": "2020-09-30T16:48:19.234Z",
     "contributors": ["chrisdavidmills", "wbamberg", "juan-ferrer-toribio"]
-  },
-  "orphaned/MDN/Yari": {
-    "modified": "2019-09-09T15:52:33.535Z",
-    "contributors": [
-      "SphinxKnight",
-      "clarii",
-      "wbamberg",
-      "Jeremie",
-      "Diio",
-      "atlas7jean"
-    ]
   },
   "orphaned/Migrar_aplicaciones_desde_Internet_Explorer_a_Mozilla": {
     "modified": "2019-03-23T23:59:56.566Z",

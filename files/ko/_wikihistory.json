@@ -170,6 +170,10 @@
     "modified": "2020-08-05T01:06:55.575Z",
     "contributors": ["alattalatta"]
   },
+  "Glossary/CSS_Descriptor": {
+    "modified": "2020-06-18T03:48:31.777Z",
+    "contributors": ["DeadIntegral"]
+  },
   "Glossary/CSS_preprocessor": {
     "modified": "2019-04-18T12:04:13.994Z",
     "contributors": ["alattalatta", "ByeongGi"]
@@ -209,10 +213,6 @@
   "Glossary/DOM": {
     "modified": "2019-03-18T21:26:45.962Z",
     "contributors": ["cs09g"]
-  },
-  "Glossary/Descriptor_(CSS)": {
-    "modified": "2020-06-18T03:48:31.777Z",
-    "contributors": ["DeadIntegral"]
   },
   "Glossary/Doctype": {
     "modified": "2019-10-31T03:37:46.868Z",
@@ -647,13 +647,13 @@
     "modified": "2019-11-17T09:43:44.308Z",
     "contributors": ["enfroze"]
   },
-  "Glossary/XHR_(XMLHttpRequest)": {
-    "modified": "2019-05-26T04:21:15.494Z",
-    "contributors": ["alattalatta", "frankradio", "OKCHANGWON", "kidkkr"]
-  },
   "Glossary/XHTML": {
     "modified": "2019-12-26T10:45:10.722Z",
     "contributors": ["04SeoHyun", "jeonnoej", "teoli", "Sebuls"]
+  },
+  "Glossary/XMLHttpRequest": {
+    "modified": "2019-05-26T04:21:15.494Z",
+    "contributors": ["alattalatta", "frankradio", "OKCHANGWON", "kidkkr"]
   },
   "Glossary/array": {
     "modified": "2019-03-18T21:24:02.576Z",

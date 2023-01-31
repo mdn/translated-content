@@ -176,8 +176,8 @@
 /ja/docs/CSS/:-moz-last-node	/ja/docs/Web/CSS/:-moz-last-node
 /ja/docs/CSS/:-moz-list-bullet	/ja/docs/Web/CSS/:-moz-list-bullet
 /ja/docs/CSS/:-moz-loading	/ja/docs/Web/CSS/:-moz-loading
-/ja/docs/CSS/:-moz-locale-dir(ltr)	/ja/docs/Web/CSS/:-moz-locale-dir(ltr)
-/ja/docs/CSS/:-moz-locale-dir(rtl)	/ja/docs/Web/CSS/:-moz-locale-dir(rtl)
+/ja/docs/CSS/:-moz-locale-dir(ltr)	/ja/docs/Web/CSS/:-moz-locale-dir_ltr
+/ja/docs/CSS/:-moz-locale-dir(rtl)	/ja/docs/Web/CSS/:-moz-locale-dir_rtl
 /ja/docs/CSS/:-moz-only-whitespace	/ja/docs/Web/CSS/:-moz-only-whitespace
 /ja/docs/CSS/:-moz-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/CSS/::after	/ja/docs/Web/CSS/::after
@@ -1839,6 +1839,7 @@
 /ja/docs/Firefox_9_for_developers	/ja/docs/Mozilla/Firefox/Releases/9
 /ja/docs/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Full_page_zoom	/ja/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
+/ja/docs/Games/Examples	/ja/docs/orphaned/Games/Examples
 /ja/docs/Games/Index	/ja/docs/Games
 /ja/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/ja/docs/Games/Introduction_to_HTML5_Game_Development
 /ja/docs/Games/Workflows	/ja/docs/Games/Tutorials
@@ -1864,17 +1865,20 @@
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
+/ja/docs/Glossary/Descriptor_(CSS)	/ja/docs/Glossary/CSS_Descriptor
 /ja/docs/Glossary/Empty_element	/ja/docs/Glossary/Void_element
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Grid_Rows	/ja/docs/Glossary/Grid_Row
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/Index	/ja/docs/Glossary
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
+/ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
 /ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ja/docs/Glossary/Transferable_objects	/ja/docs/Web/API/Web_Workers_API/Transferable_objects
+/ja/docs/Glossary/XHR_(XMLHttpRequest)	/ja/docs/Glossary/XMLHttpRequest
 /ja/docs/Glossary/XSS	/ja/docs/Glossary/Cross-site_scripting
 /ja/docs/Glossary/クロージャ	/ja/docs/Glossary/Closure
 /ja/docs/Glossary/スラグ	/ja/docs/Glossary/Slug
@@ -3993,6 +3997,8 @@
 /ja/docs/Web/CSS/-ms-high-contrast	/ja/docs/Web/CSS/@media/-ms-high-contrast
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
 /ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
+/ja/docs/Web/CSS/:-moz-locale-dir(ltr)	/ja/docs/Web/CSS/:-moz-locale-dir_ltr
+/ja/docs/Web/CSS/:-moz-locale-dir(rtl)	/ja/docs/Web/CSS/:-moz-locale-dir_rtl
 /ja/docs/Web/CSS/:-moz-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-ms-input-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-webkit-autofill	/ja/docs/Web/CSS/:autofill
@@ -4478,6 +4484,7 @@
 /ja/docs/Web/HTML/属性	/ja/docs/Web/HTML/Attributes
 /ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+/ja/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)	/ja/docs/Web/HTTP/Cross-Origin_Resource_Policy
 /ja/docs/Web/HTTP/Feature_Policy	/ja/docs/Web/HTTP/Permissions_Policy
 /ja/docs/Web/HTTP/Gecko_user_agent_string_reference	/ja/docs/Web/HTTP/Headers/User-Agent/Firefox
 /ja/docs/Web/HTTP/HTTP_access_control	/ja/docs/Web/HTTP/CORS
@@ -4498,6 +4505,7 @@
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSPreflightDidNotSucceed	/ja/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSRequestNotHttp	/ja/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 /ja/docs/Web/HTTP/HTTP_response_codes	/ja/docs/Web/HTTP/Status
+/ja/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/ja/docs/conflicting/Web/HTTP/Headers/Content-Security-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/ja/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /ja/docs/Web/HTTP/Headers/Feature-Policy/ambient-light-sensor	/ja/docs/Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor

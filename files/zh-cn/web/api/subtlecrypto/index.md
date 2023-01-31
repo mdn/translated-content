@@ -38,7 +38,7 @@ _此接口没有任何父接口，因此没有继承任何方法。_
 - {{domxref("SubtleCrypto.deriveKey()")}}
   - : 返回一个 {{jsxref("Promise")}}，会兑现一个新生成的、从主密钥（以过参数给定的算法）派生出来的{{domxref("CryptoKey", "密钥", "", 1)}}。
 - {{domxref("SubtleCrypto.deriveBits()")}}
-  - : 返回一个 {{jsxref("Promise")}}，会兑现一个新生成的、从主密钥（以通过参数给定的算法）派生出来的伪随机字节序列。
+  - : 返回一个 {{jsxref("Promise")}}，会兑现一个新生成的、从主密钥（以通过参数给定的算法）派生出来的伪随机比特序列。
 - {{domxref("SubtleCrypto.importKey()")}}
   - : 返回一个 {{jsxref("Promise")}}，会兑现一个新生成的{{domxref("CryptoKey", "密钥", "", 1)}}，该密钥与通过参数给定的密钥格式、算法、原始密钥数据、用法和可导出性相对应。
 - {{domxref("SubtleCrypto.exportKey()")}}

@@ -1235,7 +1235,7 @@
 /es/docs/MDN/Guidelines/Conventions_definitions	/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /es/docs/MDN/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Guidelines/Writing_style_guide	/es/docs/MDN/Writing_guidelines/Writing_style_guide
-/es/docs/MDN/Kuma	/es/docs/orphaned/MDN/Yari
+/es/docs/MDN/Kuma	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/MDN/Kuma/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
 /es/docs/MDN/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
@@ -1249,7 +1249,7 @@
 /es/docs/MDN/Tools	/es/docs/orphaned/MDN/Tools
 /es/docs/MDN/Tools/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
 /es/docs/MDN/Tools/KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
-/es/docs/MDN/Yari	/es/docs/orphaned/MDN/Yari
+/es/docs/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/MDN_en_diez	/es/docs/MDN/At_ten
 /es/docs/Manipular_video_por_medio_de_canvas	/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /es/docs/MathML	/es/docs/Web/MathML
@@ -1544,6 +1544,7 @@
 /es/docs/Tools/Page_Inspector/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html
 /es/docs/Tools/Performance	https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
 /es/docs/Tools/Performance/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/performance/ui_tour/index.html
+/es/docs/Tools/Profiler	https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
 /es/docs/Tools/Remote_Debugging	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html
 /es/docs/Tools/Remote_Debugging/Firefox_for_Android	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/firefox_for_android/index.html
 /es/docs/Tools/Remote_Debugging/Firefox_para_Android	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/firefox_for_android/index.html
@@ -1610,6 +1611,7 @@
 /es/docs/Web/API/Document/height	/es/docs/web/api/element/clientheight
 /es/docs/Web/API/Document/keydown_event	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/API/Document/keyup_event	/es/docs/Web/API/Element/keyup_event
+/es/docs/Web/API/Document/registerElement	/es/docs/conflicting/Web/API/CustomElementRegistry/define
 /es/docs/Web/API/Document/selectstart_event	/es/docs/Web/API/Node/selectstart_event
 /es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection
 /es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
@@ -1761,6 +1763,8 @@
 /es/docs/Web/CSS/-webkit-mask-position	/es/docs/Web/CSS/mask-position
 /es/docs/Web/CSS/-webkit-mask-repeat	/es/docs/Web/CSS/mask-repeat
 /es/docs/Web/CSS/-webkit-print-color-adjust	/es/docs/Web/CSS/print-color-adjust
+/es/docs/Web/CSS/:-moz-locale-dir(ltr)	/es/docs/Web/CSS/:-moz-locale-dir_ltr
+/es/docs/Web/CSS/:-moz-locale-dir(rtl)	/es/docs/Web/CSS/:-moz-locale-dir_rtl
 /es/docs/Web/CSS/:-moz-ui-invalid	/es/docs/Web/CSS/:user-invalid
 /es/docs/Web/CSS/:-webkit-autofill	/es/docs/Web/CSS/:autofill
 /es/docs/Web/CSS/::-webkit-file-upload-button	/es/docs/Web/CSS/::file-selector-button
@@ -2858,4 +2862,5 @@
 /es/docs/controladores_protocolos_web	/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/
+/es/docs/orphaned/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/video	/es/docs/Web/HTML/Element/video

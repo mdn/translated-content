@@ -32,7 +32,7 @@ quotes: unset;
 - `[<string> <string>]+`
   - : 一组或者多组 {{cssxref("&lt;string&gt;")}} 的值对应 `open-quote` and `close-quote`. 第一对表示引号的外层，第二对表示第一个嵌套层，下一对表示第三层，依此类推。
 
-### 语法格式
+### 形式语法
 
 {{csssyntax}}
 
@@ -62,13 +62,13 @@ q:after {
 
 #### 结果
 
-{{EmbedLiveSample('Basic_quote_marks', "100%", 60)}}
+{{EmbedLiveSample('基本用法', "100%", 60)}}
 
 ### 自动选择引号
 
 #### HTML
 
-```plain
+```html
 <div lang="fr">
   <q>Ceci est une citation française.</q>
 <div>
@@ -88,7 +88,7 @@ q:after {
 
 #### CSS
 
-```plain
+```css
 /*q {
   quotes: auto;
 }*/
@@ -96,7 +96,7 @@ q:after {
 
 #### 结果
 
-{{EmbedLiveSample('Auto_quotes', "100%", 200)}}
+{{EmbedLiveSample('自动选择引号', "100%", 200)}}
 
 ## 备注
 
@@ -113,6 +113,6 @@ q:after {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{ Cssxref("content") }}

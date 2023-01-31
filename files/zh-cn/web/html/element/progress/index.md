@@ -13,26 +13,58 @@ slug: Web/HTML/Element/progress
 
 ## 使用上下文
 
-```plain
-使用策略                流文本 (Flow content), 短文本 (phrasing content)
-Content categories     可标记内容，可触摸内容
-
-有效内容                Phrasing content, 其中在它的后代中不能包含
-Permitted content      <progress>元素。
-
-标签省略                不可以，{{no_tag_omission}}
-Tag omission
-
-有效的父元素             任何可以包裹短文本 (phrasing content) 的元素。
-
-隐式元素                {{ARIARole("progressbar")}}
-ARIA role
-
-有效的辅助元素            无
-ARIA roles
-
-DOM 接口                {{domxref("HTMLProgressElement")}}
-```
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >、可关联标签内容、<a href="/zh-CN/docs/Web/HTML/Content_categories#可感知内容"
+          >可感知内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
+          >可感知内容</a
+        >，但其后代元素不能有 <code>&#x3C;progress></code> 元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
+          >可感知内容</a
+        >的任何元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐式 ARIA 角色</th>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的角色（<code>role</code>）</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLProgressElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 属性
 

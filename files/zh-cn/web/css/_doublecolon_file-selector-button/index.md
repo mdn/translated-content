@@ -55,7 +55,7 @@ input[type="file"]::file-selector-button:hover {
 
 #### 结果
 
-{{EmbedLiveSample("基础示例", "100%", 150)}}
+{{EmbedLiveSample("基本示例", "100%", 150)}}
 
 请注意 `::file-selector-button` 是一个完整元素，因此与 UA 样式表中的规则相匹配。特别是，字体和颜色不一定会从 `input` 元素继承。
 

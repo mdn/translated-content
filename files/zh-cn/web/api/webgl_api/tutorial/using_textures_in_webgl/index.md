@@ -196,12 +196,12 @@ GL 最多可同时注册 32 张纹理；`gl.TEXTURE0 是第一张。我们把我
 
 [这篇文章](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/)也对跨域加载纹理到 WebGL 做出了解释。而且文章里面还包含了一个使用的[例子](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html)。
 
-> **备注：** 对跨域加载 WebGL 纹理的支持和对 image 元素的 `crossOrigin` 的属性的支持都是在 {{Gecko("8.0")}} 版本中实现的。
+> **备注：** 对跨域加载 WebGL 纹理的支持和对 image 元素的 `crossOrigin` 的属性的支持都是在 Gecko 8.0 版本中实现的。
 
 被污染过的（只写）画布是不能拿来当作 WebGL 纹理来使用的。举个例子来说，当把一张跨域的图片画到一个 2D 的 {{ HTMLElement("canvas") }} 中时，这个画布就是“被污染过的”。
 
-> **备注：** 对 Canvas 2D 的 `drawImage` 的跨域支持已经在 {{Gecko("9.0")}} 版本实现的。这就意味着使用支持跨域的图片来污染一个 2D 的画布，这张画布也已经可以作为 WebGL 的纹理来使用了。
+> **备注：** 对 Canvas 2D 的 `drawImage` 的跨域支持已经在 Gecko 9.0 版本实现的。这就意味着使用支持跨域的图片来污染一个 2D 的画布，这张画布也已经可以作为 WebGL 的纹理来使用了。
 
-> **备注：** 视频对跨域的支持以及 {{ HTMLElement("video") }} 元素的 `crossorigin` 属性的支持是在 {{Gecko("12.0")}} 版本中实现的。
+> **备注：** 视频对跨域的支持以及 {{ HTMLElement("video") }} 元素的 `crossorigin` 属性的支持是在 Gecko 12.0 版本中实现的。
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

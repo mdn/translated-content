@@ -13,7 +13,7 @@ slug: Web/API/DOMHighResTimeStamp
 
 ## 降低时间精度
 
-为了提供对抗时序攻击和记录指纹的保护措施，时间戳可能会四舍五入，这取决于浏览器设置。在火狐浏览器中，`privacy.reduceTimerPrecision` 首选项默认被启用，并且在或火狐浏览器 59 版本中，它的默认值是 20 微秒。在火狐浏览器 60 版本中，这个默认值将是 2 毫秒。
+为了提供对抗时序攻击和记录指纹的保护措施，时间戳可能会四舍五入，这取决于浏览器设置。在火狐浏览器中，`privacy.reduceTimerPrecision` 首选项默认被启用，并且在火狐浏览器 59 版本中，它的默认值是 20 微秒。在火狐浏览器 60 版本中，这个默认值将是 2 毫秒。
 
 ```plain
 // reduced time precision (2ms) in Firefox 60

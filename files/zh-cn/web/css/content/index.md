@@ -56,7 +56,7 @@ content: inherit
 
 ## 示例
 
-### 代码举例 - 标题和引号
+### 标题和引号
 
 #### HTML
 
@@ -88,11 +88,11 @@ q::after    { content: close-quote }
 h1::before  { content: "Chapter "; }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('代码举例_-_标题和引号', 460, 100) }}
+{{ EmbedLiveSample('标题和引号', 460, 100) }}
 
-### 代码举例 - link 前面加一个 icon
+### link 前面加一个 icon
 
 #### HTML
 
@@ -110,11 +110,11 @@ a::before{
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('代码举例_link_前面加一个_icon', 200, 60) }}
+{{ EmbedLiveSample('link 前面加一个 icon', 200, 60) }}
 
-### 代码举例 - 自定义列表后面加加文字
+### 自定义列表后面加加文字
 
 #### HTML
 
@@ -139,13 +139,13 @@ a::before{
 }
 ```
 
-#### 输出
+#### 结果
 
-{{EmbedLiveSample('代码举例_-_自定义列表后面加加文字', 300, 100)}}
+{{EmbedLiveSample('自定义列表后面加加文字', 300, 100)}}
 
-### Code sample - class based example
+### class based example
 
-#### HTML Content
+#### HTML
 
 ```html
 <h2>Paperback best sellers</h2>
@@ -157,7 +157,7 @@ a::before{
 </ol>
 ```
 
-#### CSS Content
+#### CSS
 
 ```css
 /* use a class rather that an element selector to give more flexibility.
@@ -170,13 +170,13 @@ for spacing purposes  */
 }
 ```
 
-#### Output
+#### 结果
 
-{{ EmbedLiveSample('Code_sample_-_class_based_example', 300, 200) }}
+{{ EmbedLiveSample('class based example', 300, 200) }}
 
-### Code sample - rich link styling
+### rich link styling
 
-#### HTML Content
+#### HTML
 
 ```html
 <ul>
@@ -189,7 +189,7 @@ for spacing purposes  */
 </ul>
 ```
 
-#### CSS Content
+#### CSS
 
 ```css
 a {
@@ -214,9 +214,9 @@ li {
 }
 ```
 
-#### Output
+#### 结果
 
-{{ EmbedLiveSample('Code_sample_-_rich_link_styling', 340, 200) }}
+{{ EmbedLiveSample('rich link styling', 340, 200) }}
 
 ## 规范
 
@@ -226,6 +226,6 @@ li {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{ Cssxref("::after") }}, {{ Cssxref("::before") }}, {{ Cssxref("quotes") }}

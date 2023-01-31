@@ -39,10 +39,6 @@
       "yjy1992"
     ]
   },
-  "Games/Examples": {
-    "modified": "2019-01-16T21:48:35.297Z",
-    "contributors": ["wbamberg", "noiron"]
-  },
   "Games/Introduction": {
     "modified": "2019-12-05T00:08:12.532Z",
     "contributors": [
@@ -465,6 +461,10 @@
     "modified": "2020-10-13T09:26:56.960Z",
     "contributors": ["xgqfrms"]
   },
+  "Glossary/CSS_Descriptor": {
+    "modified": "2019-04-06T08:43:55.316Z",
+    "contributors": ["RainSlide"]
+  },
   "Glossary/CSS_Selector": {
     "modified": "2020-07-08T11:12:08.989Z",
     "contributors": [
@@ -632,10 +632,6 @@
   "Glossary/Decryption": {
     "modified": "2020-08-26T10:35:14.561Z",
     "contributors": ["BrianTan"]
-  },
-  "Glossary/Descriptor_(CSS)": {
-    "modified": "2019-04-06T08:43:55.316Z",
-    "contributors": ["RainSlide"]
   },
   "Glossary/Developer_Tools": {
     "modified": "2019-05-04T00:00:54.405Z",
@@ -1489,10 +1485,6 @@
     "modified": "2019-03-23T22:08:50.575Z",
     "contributors": ["Ende93", "TomScavo"]
   },
-  "Glossary/XHR_(XMLHttpRequest)": {
-    "modified": "2019-03-18T20:48:05.724Z",
-    "contributors": ["Azurak", "HiroKHuang"]
-  },
   "Glossary/XHTML": {
     "modified": "2019-03-23T23:53:05.465Z",
     "contributors": [
@@ -1512,6 +1504,10 @@
       "eeeeeeeason",
       "xgqfrms-GitHub"
     ]
+  },
+  "Glossary/XMLHttpRequest": {
+    "modified": "2019-03-18T20:48:05.724Z",
+    "contributors": ["Azurak", "HiroKHuang"]
   },
   "Glossary/XPath": {
     "modified": "2019-03-18T21:21:51.767Z",
@@ -8478,10 +8474,6 @@
   "Web/API/Document/referrer": {
     "modified": "2020-10-15T21:04:24.930Z",
     "contributors": ["volving", "RainSlide", "teoli", "AlexChao", "ziyunfei"]
-  },
-  "Web/API/Document/registerElement": {
-    "modified": "2020-10-15T21:37:30.950Z",
-    "contributors": ["zhangchen", "Pada", "Lock", "fsx950223", "mochen"]
   },
   "Web/API/Document/releaseCapture": {
     "modified": "2019-03-23T23:35:19.576Z",
@@ -23846,10 +23838,6 @@
   },
   "Web/HTTP/Headers/Content-Security-Policy/report-to": {
     "modified": "2020-10-15T22:04:25.324Z",
-    "contributors": ["SphinxKnight", "shevacjs"]
-  },
-  "Web/HTTP/Headers/Content-Security-Policy/require-sri-for": {
-    "modified": "2020-10-15T22:04:29.993Z",
     "contributors": ["SphinxKnight", "shevacjs"]
   },
   "Web/HTTP/Headers/Content-Security-Policy/sandbox": {
