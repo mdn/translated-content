@@ -1,14 +1,6 @@
 ---
 title: Element.prefix
 slug: Web/API/Element/prefix
-tags:
-  - API
-  - Compatibilidad de los Navegadores en Móviles
-  - Compatibilidad de los navegadores
-  - DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Element/prefix
 ---
 
 {{APIRef}}

@@ -5,7 +5,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Eclairage_en_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
 La première chose à comprendre à propos de WebGL est que contrairement au standard OpenGL, WebGL n'a pas de support pour l'éclairage. Vous avez à le faire par vous même. Heureusement ce n'est pas si dur à faire, et cet article va vous expliquer quelques bases.
 

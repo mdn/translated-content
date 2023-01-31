@@ -1,14 +1,8 @@
 ---
 title: URL.toString()
 slug: Web/API/URL/toString
-tags:
-  - API
-  - Method
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/toString
 ---
+
 {{ApiRef("URL API")}}
 
 **`URL.toString()`** 문자열화 메서드는 전체 URL을 담은 {{domxref("USVString")}}을 반환합니다. 사실상 읽기 전용 {{domxref("URL.href")}}인 셈입니다.

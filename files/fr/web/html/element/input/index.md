@@ -59,7 +59,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/input/date"><code>date</code></a></td>
-      <td>Un contrôle qui permet de saisir une date (composé d'un jour,  d'un mois et d'une année mais sans heure), cela ouvre un sélecteur de date ou des roues numériques pour la sélection du jour/mois/année dans les navigateurs qui le prennent en charge.
+      <td>Un contrôle qui permet de saisir une date (composé d'un jour, d'un mois et d'une année mais sans heure), cela ouvre un sélecteur de date ou des roues numériques pour la sélection du jour/mois/année dans les navigateurs qui le prennent en charge.
       </td>
       <td id="exampledate">
         <pre class="brush: html hidden">
@@ -630,7 +630,7 @@ Les champs de formulaire sont des éléments remplacés et disposent de quelques
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:out-of-range"><code>:out-of-range</code></a></td>
-      <td>S'applique aux champs non vides dont la valeur actuelle est située en dehors des limites d'intervalle définies par les attributs  <a href="#min"><code>min</code></a> et <a href="#max"><code>max</code></a> ou qui ne respecte pas la contrainte de granularité dictée par l'attribut <a href="#step"><code>step</code></a>.</td>
+      <td>S'applique aux champs non vides dont la valeur actuelle est située en dehors des limites d'intervalle définies par les attributs <a href="#min"><code>min</code></a> et <a href="#max"><code>max</code></a> ou qui ne respecte pas la contrainte de granularité dictée par l'attribut <a href="#step"><code>step</code></a>.</td>
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/CSS/:required"><code>:required</code></a></td>

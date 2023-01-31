@@ -28,13 +28,11 @@ window.URL.revokeObjectURL(objectURL);
 
 ## 例
 
-[オブジェクト URL で画像を表示](/ja/docs/Web/API/File/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)を参照してください。
+[オブジェクト URL で画像を表示](/ja/docs/Web/API/File_API/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)を参照してください。
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('File API', '#dfn-revokeObjectURL', 'revokeObjectURL()')}} | {{Spec2('File API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -42,6 +40,6 @@ window.URL.revokeObjectURL(objectURL);
 
 ## 関連情報
 
-- [Web アプリケーションからファイルを扱う](/ja/docs/Web/API/File/Using_files_from_web_applications)
-- [オブジェクト URL で画像を表示](/ja/docs/Web/API/File/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+- [オブジェクト URL で画像を表示](/ja/docs/Web/API/File_API/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)
 - {{domxref("URL.createObjectURL()") }}

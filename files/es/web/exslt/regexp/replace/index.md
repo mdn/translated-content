@@ -1,11 +1,6 @@
 ---
 title: replace
 slug: Web/EXSLT/regexp/replace
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/regexp/replace
 ---
 
 {{XsltRef}}

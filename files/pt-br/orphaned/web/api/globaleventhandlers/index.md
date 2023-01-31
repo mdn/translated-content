@@ -1,17 +1,9 @@
 ---
 title: GlobalEventHandlers
 slug: orphaned/Web/API/GlobalEventHandlers
-tags:
-  - API
-  - DOM
-  - HTML-DOM
-  - Mixin
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/GlobalEventHandlers
 original_slug: Web/API/GlobalEventHandlers
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`GlobalEventHandlers`** mixin describes the event handlers common to several interfaces like {{domxref("HTMLElement")}}, {{domxref("Document")}}, or {{domxref("Window")}}. Each of these interfaces can implement more event handlers.

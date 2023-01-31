@@ -1,7 +1,6 @@
 ---
 title: Geolocalización
 slug: Web/API/Geolocation
-translation_of: Web/API/Geolocation
 ---
 
 {{APIRef("Geolocation API")}}

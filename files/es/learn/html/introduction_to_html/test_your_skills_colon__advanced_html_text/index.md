@@ -1,13 +1,12 @@
 ---
 title: 'Pon a prueba tus habilidades: texto HTML avanzado'
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
-translation_of: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
 original_slug: Learn/HTML/Introduccion_a_HTML/Test_your_skills:_Advanced_HTML_text
 ---
 
 {{learnsidebar}}
 
-El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras __[formato de texto avanzado](/es/docs//en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)__ articulo.
+El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras [formato de texto avanzado](/es/docs//en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) articulo.
 
 > **Nota:** Puede probar soluciones en los editores interactivos a continuación; sin embargo, puede resultar útil descargar el código y utilizar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) trabajar en las tareas.
 >
@@ -21,7 +20,7 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el puno de partida para esta tarea](/es/docs/https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) to work in your own editor or in an online editor.
+> **Nota:** [Descarga el puno de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) to work in your own editor or in an online editor.
 
 ## Texto HTML avanzado 2
 
@@ -36,7 +35,7 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2.html", '100%', 700)}}
 
-> **Nota:** [Descarga el punto de partida para esta tarea](/es/docs/https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) para trabajar en su propio editor o en un editor en línea.
+> **Nota:** [Descarga el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 

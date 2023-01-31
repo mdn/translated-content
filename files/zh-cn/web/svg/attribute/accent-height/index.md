@@ -3,28 +3,46 @@ title: accent-height
 slug: Web/SVG/Attribute/accent-height
 ---
 
-« 回到 SVG 属性指南首页
+{{SVGRef}}{{deprecated_header}}
 
-此属性定义从原点到重点字符顶部的距离，通过字体坐标系内的距离测量。
+**`accent-height`** 属性定义从原点到重点字符顶部的距离，通过字体坐标系内的距离测量。
 
-若未定义该属性，那么该属性就会被设置为{{ SVGAttr("ascent") }}。
+你可以将该属性与以下 SVG 元素一起使用：
 
-## Usage context
+- {{SVGElement("font-face")}}
 
-| Categories         | None                                                                                              |
-| ------------------ | ------------------------------------------------------------------------------------------------- |
-| Value              | [\<number>](/zh-CN/SVG/Content_type#Length)                                                           |
-| Animatable         | No                                                                                                |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/fonts.html#FontFaceElementAccentHeightAttribute) |
+## font-face
 
-{{ page("/en-US/docs/SVG/Content_type","Number") }}
+对于 {{SVGElement("font-face")}} 元素，`accent-height` 定义从原点到重音字符顶部的距离，通过字体坐标系内的距离测量。
 
-## Elements
-
-The following elements can use the `accent-height` attribute
-
-- {{ SVGElement("font-face") }}
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>
+        <a href="/zh-CN/docs/Web/SVG/Content_type#number">&#x3C;number></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td>{{SVGAttr("ascent")}} 的值</td>
+    </tr>
+    <tr>
+      <th scope="row">可变性</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
 {{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{SVGAttr("cap-height")}}
+- {{SVGAttr("x-height")}}

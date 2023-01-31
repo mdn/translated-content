@@ -1,9 +1,9 @@
 ---
 title: NavigatorLanguage.language
 slug: orphaned/Web/API/NavigatorLanguage/language
-translation_of: Web/API/NavigatorLanguage/language
 original_slug: Web/API/NavigatorLanguage/language
 ---
+
 {{APIRef("HTML DOM")}}
 
 A propriedade **`NavigatorLanguage.language`** retorna uma string representando a língua de preferência do usuário, normalmente a língua da interface do navegador.

@@ -96,10 +96,7 @@ Chrome のバージョン 56 以降 (デスクトップ版, Android 版 Chrome, 
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                                 | 備考                                                                                        |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------- |
-| {{SpecName('Touch Events 2','#touchevent-interface', 'TouchEvent')}} | {{Spec2('Touch Events 2')}} | グローバル属性ハンドラーの `ontouchstart`, `ontouchend`, `ontouchmove`, `ontouchend` を追加 |
-| {{SpecName('Touch Events', '#touchevent-interface', 'TouchEvent')}}     | {{Spec2('Touch Events')}}     | 初回定義                                                                                    |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

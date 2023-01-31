@@ -2,6 +2,7 @@
 title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
+
 {{AddonSidebar()}}
 
 지정한 탭의 페이지 액션을 보인다. 페이지 액션은 해당 탭이 활성일 때 표시된다.

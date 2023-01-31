@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/yield*
 
 {{jsSidebar("Operators")}}
 
-A **expressão** **`yield*` **é usada para delegar para outro objeto {{jsxref("Statements/function*", "generator")}} ou iterable.
+A **expressão** **`yield*`** é usada para delegar para outro objeto {{jsxref("Statements/function*", "generator")}} ou iterable.
 
 ## Sintaxe
 

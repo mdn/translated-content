@@ -31,11 +31,11 @@ object-position: unset;
 
 > **备注：** 这些定位方式允许被替换元素的对象被定位到内容框外部。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -44,8 +44,8 @@ Here we see HTML that includes two {{HTMLElement("img")}} elements, each display
 这里我们看到包含两个 img 元素的 HTML，分别展示了 MDN 的 logo
 
 ```html
-<img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
 ```
 
 ### CSS
@@ -73,9 +73,9 @@ img {
 
 第一个图像的左边缘距元素框左边缘 10 个像素。第二个图像的右边缘与元素框的右边缘齐平，并位于元素框高度下方 10％处。
 
-### 输出
+### 结果
 
-{{ EmbedLiveSample('Example', '100%','300px') }}
+{{ EmbedLiveSample('示例', '100%','300px') }}
 
 ## 规范
 
@@ -83,7 +83,7 @@ img {
 
 {{cssinfo}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 

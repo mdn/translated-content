@@ -1,14 +1,8 @@
 ---
 title: AnalyserNode
 slug: Web/API/AnalyserNode
-tags:
-  - API
-  - AnalyserNode
-  - Interface
-  - Reference
-  - Web Audio API
-browser-compat: api.AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AnalyserNode`** 인터페이스는 실시간 주파수와 시간 영역 분석 정보를 제공 가능한 노드를 표현합니다. 이것은 변경되지 않은 오디오 스트림을 입력에서 출력으로 전달하지만, 여러분은 생성된 데이터를 얻고, 그것을 처리하고, 오디오 시각화를 생성할 수 있습니다.

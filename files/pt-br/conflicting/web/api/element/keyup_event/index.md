@@ -1,14 +1,9 @@
 ---
 title: GlobalEventHandlers.onkeyup
 slug: conflicting/Web/API/Element/keyup_event
-tags:
-  - API
-  - HTML DOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/onkeyup
 original_slug: Web/API/GlobalEventHandlers/onkeyup
 ---
+
 {{ApiRef("HTML DOM")}}
 
 A propriedade **onkeyup** retorna o código de manipulador de eventos onKeyUp no elemento atual.

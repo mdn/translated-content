@@ -1,16 +1,6 @@
 ---
 title: Using the alert role
 slug: Web/Accessibility/ARIA/Roles/alert_role
-tags:
-  - ARIA
-  - Accesibilidad
-  - CSS
-  - HTML
-  - alert
-  - alerta
-  - rol de alerta
-  - tecnología asistencial
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-tags:
-  - Bordes CSS
-  - CSS
-  - Propiedades CSS
-  - Referencia
-translation_of: Web/CSS/border-image-repeat
 ---
 
 {{CSSRef}}
@@ -63,7 +57,7 @@ border-image-repeat: unset;
   height: 80px;
   margin-bottom: 10px;
   border: 30px solid;
-  border-image: url("https://mdn.mozillademos.org/files/4127/border.png") 27;
+  border-image: url("border.png") 27;
   border-image-repeat: stretch; /* Puede ser modificado en el ejemplo en vivo */
 }
 ```

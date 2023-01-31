@@ -1,13 +1,6 @@
 ---
 title: 거듭제곱 (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Exponentiation
-browser-compat: javascript.operators.exponentiation
 ---
 
 {{jsSidebar("Operators")}}

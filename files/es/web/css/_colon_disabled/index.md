@@ -1,13 +1,6 @@
 ---
 title: ':disabled'
 slug: Web/CSS/:disabled
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:disabled
 ---
 
 {{CSSRef}}

@@ -1,12 +1,6 @@
 ---
 title: Modo Estricto
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript5
-  - Guía
-  - JavaScript
-  - Modo estricto
-translation_of: Web/JavaScript/Reference/Strict_mode
 original_slug: Web/JavaScript/Referencia/Modo_estricto
 ---
 
@@ -364,9 +358,7 @@ La mayoría de los navegadores ya implementan el modo estricto. Sin embargo, no 
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-strict-mode-code', 'Código en modo estricto')}} |
+{{Specifications}}
 
 ## Ve también
 

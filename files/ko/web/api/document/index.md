@@ -1,13 +1,6 @@
 ---
 title: Document
 slug: Web/API/Document
-tags:
-  - API
-  - DOM
-  - Document
-  - Interface
-  - Reference
-translation_of: Web/API/Document
 ---
 {{APIRef("DOM")}}
 

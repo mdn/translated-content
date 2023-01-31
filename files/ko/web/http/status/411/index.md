@@ -1,7 +1,6 @@
 ---
 title: 411 Length Required
 slug: Web/HTTP/Status/411
-translation_of: Web/HTTP/Status/411
 ---
 
 HyperText Transfer Protocol (HTTP) 411 Length Required 클라이언트 오류 응답 코드는 서버가 정의된 {{HTTPHeader("Content-Length")}} 헤더 없이 요청을 수락하지 않음을 나타낸다.

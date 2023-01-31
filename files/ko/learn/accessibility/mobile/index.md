@@ -3,6 +3,7 @@ title: 모바일 접근성
 slug: Learn/Accessibility/Mobile
 original_slug: Learn/접근성/모바일
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 
 모바일 기기에서 웹 접근이 매우 자주 발생하고 iOS와 안드로이드와 같은 유명 플랫폼들은 전문적인 접근성 점검도구들이 있기 때문에 웹콘텐츠의 접근성을 고려하는 것이 더욱 중요하다. 여기서는 모바일환경을 중심으로 접근성 고려사항을 살펴본다.

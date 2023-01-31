@@ -13,7 +13,7 @@ Toda extensão contém um arquivo chamado ["manifest.json"](/pt-BR/Add-ons/WebEx
 - [browser action files](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions): implementação de botões na toolbar
 - [web accessible resources](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources): torna o conteúdo do pacote acessível a páginas web e scripts de conteúdo
 
-![](https://mdn.mozillademos.org/files/11465/webextension-anatomy.svg)
+![](webextension-anatomy.svg)
 
 ## manifest.json
 

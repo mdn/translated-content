@@ -1,17 +1,6 @@
 ---
 title: min()
 slug: Web/CSS/min
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - min
-translation_of: Web/CSS/min()
 original_slug: Web/CSS/min()
 ---
 

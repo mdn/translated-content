@@ -1,11 +1,6 @@
 ---
 title: 전체 선택자
 slug: Web/CSS/Universal_selectors
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Universal_selectors
 ---
 
 {{CSSRef("Selectors")}}

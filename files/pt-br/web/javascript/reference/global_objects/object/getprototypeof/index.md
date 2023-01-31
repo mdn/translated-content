@@ -50,12 +50,12 @@ Object.getPrototypeOf("foo");
 
 ## Notas específicas para o Opera
 
-Embora as versões mais antigas do Opera não suportem `Object.getPrototypeOf()`, ele suporta a propriedade não oficial {{jsxref("Object.proto", "__proto__")}} desde de a sua versão 10.50.
+Embora as versões mais antigas do Opera não suportem `Object.getPrototypeOf()`, ele suporta a propriedade não oficial [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) desde de a sua versão 10.50.
 
 ## Veja também
 
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}

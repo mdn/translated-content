@@ -16,7 +16,7 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 
 ### JavaScript
 
-- `WeakMap.set()` メソッドの戻り値はそれ自身から _`undefined`_ に替わりました。
+- `WeakMap.set()` メソッドの戻り値はそれ自身から `undefined` に替わりました。
 - Firefox 7 以降で正規表現のハンドリングに関する不具合がありましたが、修正されました。詳しくは {{ bug("683838") }} をご覧ください。
 - [ECMAScript 5 strict mode](/ja/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (すなわち、`"use strict;"` 以降) では、[E4X](/ja/docs/E4X) の構文を使用できなくなりました。
 

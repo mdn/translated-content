@@ -1,13 +1,8 @@
 ---
 title: Event.target
 slug: Web/API/Event/target
-tags:
-  - Property
-  - Reference
-  - Read-only
-browser-compat: api.Event.target
-translation_of: Web/API/Event/target
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Event")}} 인터페이스의 **`target`** 속성은 이벤트가 발생한 대상 객체를 가리킵니다. 버블링과 캡처링 단계에서는 {{domxref("Event.currentTarget")}}과 다를 수 있습니다.

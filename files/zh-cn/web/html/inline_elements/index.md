@@ -3,6 +3,8 @@ title: 行内元素
 slug: Web/HTML/Inline_elements
 ---
 
+{{HTMLSidebar}}
+
 ## 摘要
 
 HTML (超文本标记语言) 元素大多数都是行内元素或[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)。一个行内元素只占据它对应标签的边框所包含的空间。下面这个例子说明了行内元素的作用范围：
@@ -21,7 +23,7 @@ HTML (超文本标记语言) 元素大多数都是行内元素或[块级元素](
 span { background-color: #8ABB55; }
 ```
 
-{{ EmbedLiveSample('Inline_example') }}
+{{ EmbedLiveSample('行内元素示例') }}
 
 ## 行内元素与块级元素对比
 

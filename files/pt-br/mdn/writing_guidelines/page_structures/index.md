@@ -143,12 +143,7 @@ Inside a feature `__compat` member, you need to include the following members:
 
 The names of the browser members are defined in the schema (see [Browser identifiers](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers)). You should use the full list of currently defined identifiers. If you wish to add another browser, talk to us first, as this could have a wide-ranging impact and should not be done without careful thought.
 
-In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover [Advanced cases](#advanced_cases) later on). The different values you might want to include are as follows:
-
-- A version number: If you know the exact version in which a browser started to support your feature, use a string representing the number, e.g. "47".
-- `true`: If a browser supports a feature but you don't know the exact version number, use the value `true`. This equivalent to the `\{{CompatVersionUnknown}}` macro call in the old manual tables.
-- `false`: If a browser does not support a feature, use the value `false`. This is equivalent to the the `\{{CompatNo}}` macro call in the old manual tables.
-- `null`: If you don't know whether a browser supports a feature or not, use the value `null`. This is equivalent to the `\{{CompatUnknown}}` macro call in the old manual tables.
+In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover [Advanced cases](#advanced_cases) later on).
 
 Inside the `status` member, you'll include three submembers:
 

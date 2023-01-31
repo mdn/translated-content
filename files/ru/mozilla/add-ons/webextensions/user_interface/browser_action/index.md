@@ -8,7 +8,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 {{AddonSidebar}}
 
 Кнопка на панели инструментов браузера (оригинальное название [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)) - это иконка, которую можно вывести в панель инструментов. Пользователь взаимодействует с расширением нажимая на неё как на кнопку.
-![](https://mdn.mozillademos.org/files/12966/browser-action.png)
+![](browser-action.png)
 
 Кнопка на панели инструментов одинаково отображается для любой открытой вкладки. Это предполагает, что расширение единообразно работает со всеми страницами.
 

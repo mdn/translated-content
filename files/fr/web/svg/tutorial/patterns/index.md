@@ -25,7 +25,7 @@ Les motifs (_patterns_ en anglais) sont sans aucun doute les types de remplissag
       <stop offset="5%" stop-color="red"/>
       <stop offset="95%" stop-color="orange"/>
     </linearGradient>
-    
+
     <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
       <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
       <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
@@ -47,7 +47,7 @@ La partie pouvant apporter le plus de confusion avec les motifs est le système 
 
 Les attributs `width` et `height` sur l'élément `pattern` décrivent jusqu'où le motif doit aller avant de se répéter. Les attributs `x` et `y` sont également disponibles si vous souhaitez décaler le point de départ du motif à l'intérieur du dessin.
 
-Même principe que l'attribut `gradientUnits` (que nous avons vu précédemment avec les dégradés), les motifs peuvent prendre un attribut `patternUnits`, pour spécifier l'unité utilisée par le motif. La valeur par défaut est  "objectBoundingBox", ainsi une taille de 1 remplira entièrement la hauteur/largeur de l'objet auquel le motif est appliqué. Puisque dans notre cas, on veut que le motif se répète 4 fois horizontalement et verticalement, on a définit `height` et `width` à 0.25. Cela signifie que la hauteur et largeur du pattern sera de 25% celle de l'objet.
+Même principe que l'attribut `gradientUnits` (que nous avons vu précédemment avec les dégradés), les motifs peuvent prendre un attribut `patternUnits`, pour spécifier l'unité utilisée par le motif. La valeur par défaut est "objectBoundingBox", ainsi une taille de 1 remplira entièrement la hauteur/largeur de l'objet auquel le motif est appliqué. Puisque dans notre cas, on veut que le motif se répète 4 fois horizontalement et verticalement, on a définit `height` et `width` à 0.25. Cela signifie que la hauteur et largeur du pattern sera de 25% celle de l'objet.
 
 De même, pour que le motif commence à 10 pixels du bord supérieur-gauche de l'objet, il faudrait définir les valeurs de `x` et `y` à 0.05 (10/200 = 0.05).
 
@@ -72,7 +72,7 @@ La chose à retenir est que si l'objet change de taille, le motif lui-même sera
       <stop offset="5%" stop-color="red"/>
       <stop offset="95%" stop-color="orange"/>
     </linearGradient>
-    
+
     <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
       <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
       <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
@@ -144,7 +144,7 @@ Maintenant, parce le contenu du motif utilise le même système d'unité que le 
       <stop offset="5%" stop-color="red"/>
       <stop offset="95%" stop-color="orange"/>
     </linearGradient>
-    
+
     <pattern id="Pattern" width=".25" height=".25" patternContent
       <rect x="0" y="0" width=".25" height=".25" fill="skyblue"/>
       <rect x="0" y="0" width=".125" height=".125" fill="url(#Gradient2)"/>
@@ -218,7 +218,7 @@ Bien sûr, cela veut dire que le motif ne sera pas mis à l'échelle si vous mod
       <stop offset="5%" stop-color="red"/>
       <stop offset="95%" stop-color="orange"/>
     </linearGradient>
-    
+
     <pattern id="Pattern" x="10" y="10" width="50" height="50" 
       <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
       <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>

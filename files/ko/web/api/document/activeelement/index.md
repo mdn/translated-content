@@ -1,17 +1,9 @@
 ---
 title: DocumentOrShadowRoot.activeElement
 slug: Web/API/Document/activeElement
-tags:
-  - API
-  - Document
-  - DocumentOrShadowRoot
-  - Focus
-  - Property
-  - Reference
-  - ShadowRoot
-translation_of: Web/API/DocumentOrShadowRoot/activeElement
 original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 {{domxref("Document")}}와 {{domxref("ShadowRoot")}} 인터페이스의 **`activeElement`** 읽기 전용 속성은 DOM과 섀도우 DOM 내에서 현재 포커스를 받은 {{domxref("Element")}} 객체를 반환합니다. 이 속성은 {{domxref("DocumentOrShadowRoot")}} {{Glossary("mixin", "믹스인")}}에서 상속받습니다.

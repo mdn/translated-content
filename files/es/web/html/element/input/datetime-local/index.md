@@ -1,11 +1,6 @@
 ---
 title: <input type="datetime">
 slug: Web/HTML/Element/input/datetime-local
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Element/input/datetime
 original_slug: Web/HTML/Element/input/datetime
 ---
 

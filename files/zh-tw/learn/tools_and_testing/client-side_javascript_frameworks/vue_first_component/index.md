@@ -330,7 +330,7 @@ export default {
 
 Next, bind the `id` to both our checkbox’s `id` attribute and the label’s `for` attribute, updating the existing `id` and `for` attributes as shown:
 
-```js
+```html
 <template>
   <div>
     <input type="checkbox" :id="id" :checked="isDone" />

@@ -1,12 +1,6 @@
 ---
 title: Herencia y la cadena de prototipos
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - Herencia
-  - Intermedio
-  - JavaScript
-  - Programación orientada a objetos
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 original_slug: Web/JavaScript/Herencia_y_la_cadena_de_protipos
 ---
 

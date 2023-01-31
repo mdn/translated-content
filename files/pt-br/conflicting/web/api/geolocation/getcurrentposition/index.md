@@ -1,9 +1,9 @@
 ---
 title: PositionOptions
 slug: conflicting/Web/API/Geolocation/getCurrentPosition
-translation_of: Web/API/PositionOptions
 original_slug: Web/API/PositionOptions
 ---
+
 {{APIRef("Geolocation API")}}A interface **`PositionOptions`** consiste em um objeto que contém propriedades opcionais para passar como um parâmetro de {{domxref("Geolocation.getCurrentPosition()")}} e {{domxref("Geolocation.watchPosition()")}}.
 
 ## Propriedades

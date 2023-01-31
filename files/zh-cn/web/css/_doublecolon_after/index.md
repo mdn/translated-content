@@ -14,8 +14,6 @@ a::after {
 }
 ```
 
-{{ fx_minversion_note("3.5", "Firefox 3.5 之前版本仅实现了 CSS 2.0 版本的语法<code> :after</code>. 且不允许在<code> position, float, list-style-* </code>等属性中使用。Firefox 3.5 开始没有了这项限制。") }}
-
 ## 语法
 
 ```
@@ -26,7 +24,7 @@ element::after { style properties }  /* CSS3 语法 */
 
 `::after` 表示法是在`CSS 3 中引入的，`::` 符号是用来区分[伪类](/zh-CN/CSS/Pseudo-classes)和伪元素的。支持 CSS3 的浏览器同时也都支持 CSS2 中引入的表示法 `:after`。
 
-> **备注：** IE8 仅支持`:after`。
+> **备注：** IE8 仅支持 `:after`。
 
 ## 示例
 
@@ -53,9 +51,9 @@ element::after { style properties }  /* CSS3 语法 */
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('Simple_usage', 500, 170) }}
+{{ EmbedLiveSample('简单用法', 500, 170) }}
 
 ### 装饰用法
 
@@ -78,9 +76,9 @@ element::after { style properties }  /* CSS3 语法 */
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('Decorative_example', 450, 20) }}
+{{ EmbedLiveSample('装饰用法', 450, 20) }}
 
 ### 提示用法
 
@@ -118,9 +116,9 @@ span[data-descr]:hover::after {
 }
 ```
 
-#### 输出
+#### 结果
 
-{{ EmbedLiveSample('Tooltips', 450, 160) }}
+{{ EmbedLiveSample('提示用法', 450, 160) }}
 
 ## 规范
 
@@ -130,7 +128,7 @@ span[data-descr]:hover::after {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 {{ Cssxref("::before") }}, {{ cssxref("content") }}
 

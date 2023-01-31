@@ -1,12 +1,6 @@
 ---
 title: SEO
 slug: Glossary/SEO
-tags:
-  - SEO
-  - buscadores
-  - busquedas
-  - posicionamiento web
-translation_of: Glossary/SEO
 ---
 
 **SEO** (Search Engine Optimization) también conocido como posicionamiento web, es el proceso de hacer un sitio web más visible en los resultados de búsqueda o mejorar el ranking de búsqueda.

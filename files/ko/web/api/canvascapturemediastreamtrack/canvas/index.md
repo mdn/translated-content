@@ -1,11 +1,8 @@
 ---
 title: CanvasCaptureMediaStreamTrack.canvas
 slug: Web/API/CanvasCaptureMediaStreamTrack/canvas
-tags:
-  - 웹
-  - 캔버스
-translation_of: Web/API/CanvasCaptureMediaStreamTrack/canvas
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} **`canvas`**읽기 전용 속성은 프레임이 캡쳐되는{{domxref("HTMLCanvasElement")}} 를 반환한다.

@@ -1,15 +1,6 @@
 ---
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
-tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
-browser-compat: javascript.builtins.String.trimStart
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
 {{JSRef}}
 
@@ -31,7 +22,7 @@ trimLeft()
 
 ### 별칭
 
-{{jsxref("String.prototype.padStart")}} 표준 메서드 이름과 같은 함수의 일관성을 위해서 `trimStart` 가 되었습니다.  
+{{jsxref("String.prototype.padStart")}} 표준 메서드 이름과 같은 함수의 일관성을 위해서 `trimStart` 가 되었습니다.
 그러나, 웹 호환성을 위해서 `trimLeft` 이라는 별칭을 가집니다. 일부 엔진에서 이것은 다음 예시를 의미합니다.
 
 ```js

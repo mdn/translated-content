@@ -1,7 +1,6 @@
 ---
 title: 웹 비디오 코덱 가이드
 slug: Web/Media/Formats/Video_codecs
-translation_of: Web/Media/Formats/Video_codecs
 original_slug: Web/Media/Formats/비디오코덱
 ---
 압축되지 않은 비디오 데이터는 그 크기가 엄청나기 때문에, 저장하거나 네트워크를 통해 전송하기 위해서는 아주 작게 압축해야 합니다. 압축되지 않은 비디오를 저장하는 과정을 상상해 봅시다:
@@ -97,10 +96,10 @@ original_slug: Web/Media/Formats/비디오코덱
         </p>
       </td>
       <td>
-        <a href="https://mdn.mozillademos.org/files/16680/moire-pattern.jpg"
+        <a href="moire-pattern.jpg"
           ><img
             alt=""
-            src="https://mdn.mozillademos.org/files/16680/moire-pattern.jpg"
+            src="moire-pattern.jpg"
             style="height: 250px; width: 205px"
         /></a>
       </td>
@@ -115,10 +114,10 @@ original_slug: Web/Media/Formats/비디오코덱
         </p>
       </td>
       <td>
-        <a href="https://mdn.mozillademos.org/files/16681/staircase-effect.jpg"
+        <a href="staircase-effect.jpg"
           ><img
             alt=""
-            src="https://mdn.mozillademos.org/files/16681/staircase-effect.jpg"
+            src="staircase-effect.jpg"
             style="height: 250px; width: 206px"
         /></a>
       </td>
@@ -143,10 +142,10 @@ original_slug: Web/Media/Formats/비디오코덱
       </td>
       <td>
         <a
-          href="https://mdn.mozillademos.org/files/16682/stroboscopic-effect.gif"
+          href="stroboscopic-effect.gif"
           ><img
             alt=""
-            src="https://mdn.mozillademos.org/files/16682/stroboscopic-effect.gif"
+            src="stroboscopic-effect.gif"
         /></a>
       </td>
     </tr>
@@ -167,7 +166,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 손실 압축 알고리즘은 링잉 효과 **[ringing artifacts](https://en.wikipedia.org/wiki/Ringing_artifacts)**를 일으킬 수 있습니다. 링잉 효과는 압축 알고리즘에 의해 오브젝트의 경계면에 픽셀이 오염되는 현상을 의미합니다. 압축 알고리즘이 오브젝트와 배경의 경계면이 포함된 블럭을 사용했을 때 발생할 수 있습니다. 보통 압축율이 높을 때 주로 발생합니다.
 
-[![Example of the ringing effect](https://mdn.mozillademos.org/files/16684/Ringing-effects.png)](https://mdn.mozillademos.org/files/16684/Ringing-effects.png)
+[![Example of the ringing effect](ringing-effects.png)](ringing-effects.png)
 
 위 별 모양의 경계 부분에 파랑 및 분홍 부분을 보세요 (계단 현상 등 다른 압축 아티팩트도 나타남). 저 부분이 링잉 효과입니다. 링잉은 어떤 면에서는 [mosquito noise](#mosquito_noise)와 비슷합니다, 다만 모기 효과는 일렁거리거나 움직이는데 반해 링잉 효과는 정지한 채로 변하지 않습니다.
 
@@ -177,7 +176,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 **포스터리제이션**은 압축된 결과물이 그라디언트 부분에서 색상 디테일을 잃는 현상을 의미합니다. 그라디언트 영역이 부드럽게 색상이 변하지 않고 원본과 비슷한 색상의 블록 형태로 얼룩이 묻은 듯한 이미지로 표현 됩니다.
 
-[![](https://mdn.mozillademos.org/files/16686/posterize-effect.jpg)](https://mdn.mozillademos.org/files/16686/posterize-effect.jpg)
+[![](posterize-effect.jpg)](posterize-effect.jpg)
 
 위 이미지상 흰머리 수리의 깃털 부분의 색상이 블록처럼 보이는 것을 보세요(배경의 흰색 올빼미도요). 포스터리제이션 효과로 인해 깃털의 디테일을 상당 부분 잃었습니다.
 
@@ -185,7 +184,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 **컨투어링** 또는 **컬러 밴딩**은 포스터리제이션의 특별한 형태로 이미지에서 색상 블록이 줄무늬 형태로 나타나는 현상을 의미합니다. 이는 비디오 인코딩 시 양자화 설정이 제대로 이뤄지지 않은 경우 발생할 수 있습니다. 결과적으로 부드럽게 변해야 할 그라디언트 부분에 "층"이 생긴 것처럼 줄무늬가 보입니다.
 
-[![Example of an image whose compression has introduced contouring](https://mdn.mozillademos.org/files/16685/contouring-effect.jpg)](https://mdn.mozillademos.org/files/16685/contouring-effect.jpg)
+[![Example of an image whose compression has introduced contouring](contouring-effect.jpg)](contouring-effect.jpg)
 
 위 이미지를 보시면 하늘에서 지평선으로 부드럽게 변해야 하는데 파란색이 층층이 져 있는 것을 볼 수 있습니다. 이 것이 컨투어링 효과입니다.
 
@@ -193,7 +192,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 **모스키토 노이즈**는 시간적 아티팩트 중 하나로 배경과 물체의 경계면의 차이가 큰 부분에서 노이즈나 **edge busyness**가 흐릿하게 일렁거리는 현상을 의미합니다. 시각적으로는 [ringing](#ringing) 효과와 유사합니다.
 
-![](https://mdn.mozillademos.org/files/16687/mosquito-effect-sm.png)
+![](mosquito-effect-sm.png)
 
 위 이미지상 다리 여러군데의 주변 하늘에서 모스키토 노이즈를 볼 수 있습니다. 우측 상단에 모스키토 노이즈가 발생한 부분을 확대해 놓았습니다.
 
@@ -218,21 +217,21 @@ original_slug: Web/Media/Formats/비디오코덱
       <td>
         <img
           alt="Original frame of video"
-          src="https://mdn.mozillademos.org/files/16688/motion-comp-orig.jpg"
+          src="motion-comp-orig.jpg"
           style="height: 102px; width: 182px"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/16689/motion-comp-diff.jpg"
+          src="motion-comp-diff.jpg"
           style="height: 102px; width: 182px"
         />
       </td>
       <td>
         <img
           alt="Differences between the frames after shifting two pixels right"
-          src="https://mdn.mozillademos.org/files/16690/motion-comp-compensated.jpg"
+          src="motion-comp-compensated.jpg"
           style="height: 102px; width: 182px"
         />
       </td>
@@ -863,7 +862,7 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 support</th>
-              <td>No</td>
+              <td>107</td>
               <td>
                 18<sup><a href="#hevc-foot--1">[1]</a></sup>
               </td>

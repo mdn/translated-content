@@ -1,10 +1,6 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - Cabecera
-  - Referencia
-translation_of: Web/HTTP/Headers/Content-Encoding
 ---
 
 {{HTTPSidebar}}

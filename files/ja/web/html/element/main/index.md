@@ -143,11 +143,7 @@ slug: Web/HTML/Element/main
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}                             | {{Spec2('HTML WHATWG')}} |                                               |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}     | {{Spec2('HTML5.1')}}     | {{SpecName('HTML5 W3C')}} から変更なし |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,7 +1,6 @@
 ---
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
-translation_of: Web/API/DeviceMotionEvent
 ---
 
 {{APIRef("Device Orientation Events")}}{{SeeCompatTable}}

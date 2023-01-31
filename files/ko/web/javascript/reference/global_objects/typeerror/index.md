@@ -1,13 +1,6 @@
 ---
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
-tags:
-  - Error
-  - JavaScript
-  - Reference
-  - TypeError
-translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
-browser-compat: javascript.builtins.TypeError
 ---
 
 {{JSRef}}

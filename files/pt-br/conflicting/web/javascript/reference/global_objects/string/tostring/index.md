@@ -1,16 +1,9 @@
 ---
 title: String.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
-tags:
-  - JavaScript
-  - Non-standard
-  - Obsoleto
-  - Prototipo
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 ---
+
 {{JSRef}} {{obsolete_header}}
 
 O método `toSource()` retorna uma string que representa o código-fonte do objeto.

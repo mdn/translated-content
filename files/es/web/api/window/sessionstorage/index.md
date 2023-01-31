@@ -1,12 +1,6 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
-tags:
-  - Almacenaje
-  - Propiedad
-  - Referencia
-  - Sesion
-translation_of: Web/API/Window/sessionStorage
 ---
 
 {{APIRef()}}

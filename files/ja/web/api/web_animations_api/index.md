@@ -46,9 +46,7 @@ Web Animation API によって {{domxref("document")}} 及び {{domxref("element
 
 ## 仕様書
 
-| 仕様書                                   | 策定状況                             | コメント |
-| ---------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Animations')}} | {{Spec2('Web Animations')}} | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 

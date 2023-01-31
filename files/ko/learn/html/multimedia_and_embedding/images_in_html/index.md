@@ -2,6 +2,7 @@
 title: HTML의 이미지
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 초창기의 웹에는 텍스트만 있었고 조금 지루했습니다. 다행히도 웹 페이지 안에 이미지 (및 보다 흥미로운 유형의 컨텐츠)를 삽입하는 기능이 추가되기까지는 오래 걸리지 않았습니다. 시작해볼 수 있는 다른 유형의 멀티미디어가 있지만 단순한 이미지를 웹 페이지에 삽입하는 데 사용되는 {{htmlelement ( "img")}} 요소로 쉽게 시작해 보겠습니다. 이 글에서는 기초내용 부터 심층적으로 사용하는 방법, {{htmlelement("figure")}}를 사용하여 캡션을 주석으로 추가하는 방법, {{htmlelement("CSS")}}배경 이미지와 관련된 사용 방법을 자세히 설명합니다.
@@ -74,7 +75,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 위에서 쓴 우리의 코드는 이러한 결과를 보여줄 것입니다:
 
-![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](https://mdn.mozillademos.org/files/12700/basic-image.png)
+![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](basic-image.png)
 
 > **참고:** {{htmlelement("img")}} 와 {{htmlelement("video")}} 와 같은 element들을 대체 element라고 하기도 합니다. 그 이유는 element의 내용과 크기가 element 그 자체가 아니라, 외부적인 요소(이미지나 비디오)에 의해 결정되기 때문입니다.
 
@@ -92,7 +93,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 `alt` 를 잘 작성하였는지 확인하기 위한 가장 쉬운 방법은 파일 이름을 고의로 틀리게 적는 것이다. 예를 들어 이미지 파일의 이름을 `dinosooooor.jpg` 로 바꾼다면 브라우저는 이미지를 보여주는 대신, alt의 내용을 보여줄 것이다:
 
-![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](https://mdn.mozillademos.org/files/12702/alt-text.png)
+![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
 
 alt는 왜 굳이 사용되거나 필요한걸까? alt는 여러가지 이유로 유용하게 사용된다:
 
@@ -127,7 +128,7 @@ alt는 왜 굳이 사용되거나 필요한걸까? alt는 여러가지 이유로
 
 평범한 경우에 위와 같은 방법은 디스플레이에 큰 차이를 주지 않는다. 그러나 만약에 이미지가 로딩중이어서 아직 페이지에 안나타나더라도 브라우저는 지정된 크기의 공간을 이미지를 위해 할당해둔다:
 
-![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png)
+![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](alt-text-with-width-height.png)
 
 이미지 크기를 지정해두는 것은 좋은 습관이며 이를 통해, 페이지가 더 빠르고 순조롭게 로딩될 수 있다.
 
@@ -150,7 +151,7 @@ As [with links](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Addin
 
 This gives us a tooltip, just like link titles:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](https://mdn.mozillademos.org/files/12708/image-with-title.png)
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
 
 Image titles aren't essential to include. It is often better to include such supporting information in the main article text, rather than attached to the image. However, they are useful in some circumstances; for example, in an image gallery when you have no space for captions.
 

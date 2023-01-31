@@ -18,18 +18,18 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 
 #### HTML5
 
-- [Utilisation d'audio et video dans Firefox](/Fr/Utilisation_d'audio_et_video_dans_Firefox)
-  - : Firefox 3.5 ajoute la gestion des éléments HTML5 [`audio`](/fr/HTML/Element/audio) et [`video`](/Fr/HTML/Element/Video).
+- [Utilisation d'audio et vidéo dans Firefox](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - : Firefox 3.5 ajoute la gestion des éléments HTML5 [`audio`](/fr/docs/Web/HTML/Element/audio) et [`video`](/fr/docs/Web/HTML/Element/video).
 - [Ressources hors ligne dans Firefox](/fr/Ressources_hors_ligne_dans_Firefox)
   - : Firefox 3.5 gère entièrement la spécification de ressources hors ligne d'HTML5.
-- [Glisser et déposer](/Fr/GlisserDéposer/Glisser_et_déposer)
+- [Glisser et déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API)
   - : L'API de glisser/déposer d'HTML5 permet de gérer le glisser/déposer d'éléments à l'intérieur et entre des sites web. Elle fournit également une API plus simple pour les extensions et applications basées sur Mozilla.
 
 #### Nouvelles fonctionnalités CSS
 
 - [Gestion des polices téléchargeables](/fr/CSS/@font-face)
   - : La nouvelle règle-@ `@font-face` permet aux pages web de fournir des polices téléchargeables, afin qu'elles puissent être affichées exactement telles que l'auteur de la page les attend.
-- [Media queries](/Fr/CSS/Media_queries)
+- [Requêtes de média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries)
   - : Firefox 3.5 gère les requêtes de médias, qui améliorent le traitement des feuilles de style destinées à des médias particuliers.
 - Mise à jour de {{ cssxref(":before") }} et {{ cssxref(":after") }} pour CSS 2.1
   - : Les pseudo-éléments `:before` et `:after` ont été mis à jour pour respecter complètement CSS 2.1, avec l'ajout des propriétés `position`, `float` et `list-style-*`, ainsi que de certaines valeurs de `display`.
@@ -158,7 +158,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 - Les références ID dans SVG sont à présent directes.
 - Les filtres SVG fonctionnent à présent avec `foreignObject`.
 - La méthode `GetSVGDocument()` a été ajoutée aux éléments [`object`](/fr/HTML/Element/object) et [`iframe`](/fr/HTML/Element/iframe) pour assurer une meilleure compatibilité.
-- La définition implicite de propriétés dans des initialiseurs d'objets et de tableaux n'exécute plus les mutateurs en JavaScript. Consultez le billet [Object and array initializers should not invoke setters when evaluated](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated) pour plus de détails.
+- La définition implicite de propriétés dans des initialiseurs d'objets et de tableaux n'exécute plus les mutateurs en JavaScript.
 - La variable `gDownloadLastDir.path` a été renommée en `gDownloadLastDir.file` étant donné qu'elle fait référence à un objet `nsIFile` et non à un chemin.
 - La variable `gDownloadLastDirPath` a été renommée en `gDownloadLastDirFile` étant donné qu'elle fait référence à un objet `nsIFile` et non à un chemin.
 - À partir de Firefox 3.5, il devient impossible d'utiliser des liaisons `data:` dans les paquets chrome qui bénéficient de l'automatisation `XPCNativeWrapper`.

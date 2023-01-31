@@ -39,7 +39,7 @@ Service worker 最终要去解决这些问题。虽然 Service Worker 的语法�
 6. 下一步是激活。当 service worker 安装完成后，会接收到一个激活事件 (activate event)。 `onactivate` 主要用途是清理先前版本的 service worker 脚本中使用的资源。
 7. Service Worker 现在可以控制页面了，但仅是在 `register()` 成功后的打开的页面。也就是说，页面起始于有没有 service worker，且在页面的接下来生命周期内维持这个状态。所以，页面不得不重新加载以让 service worker 获得完全的控制。
 
-![](sw-lifecycle.png)
+![](sw-lifecycle.svg)
 
 下图展示了 service worker 所有支持的事件：
 
@@ -433,7 +433,7 @@ Firefox 也开始实现一些关于 service worker 的有用的工具：
 
 - [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- 下载 [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
+- 下载 [Service Workers 101 cheatsheet](sw101.png).
 - [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)
 - Fetch API

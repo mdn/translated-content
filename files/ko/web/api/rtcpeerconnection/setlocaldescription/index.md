@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.setLocalDescription()
 slug: Web/API/RTCPeerConnection/setLocalDescription
-translation_of: Web/API/RTCPeerConnection/setLocalDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.setLocalDescription()`** 메소드는 연결 인터페이스와 관련이 있는 로컬 설명 (local description)을 변경합니다. 로컬 설명은 미디어 형식을 포함하는 연결의 로컬 엔드에 대한 속성을 명시합니다.
@@ -86,12 +86,9 @@ function handleNegotiationNeededEvent() {
 
 이 함수는 {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}를 호출하여 offer를 생성하면서 시작됩니다. 이 과정이 성공하면, `setLocalDescription()`를 호출합니다. 프로미스에 대한 fulfillment 핸들러는 시그널링 서버를 사용해서 다른 유저에게 신규 생성된 offer를 전송할 수 있게 됩니다.
 
-## 사양서
+## 명세서
 
-| 사양서                                                                                                                                                                                                                                                                                                                   | 상태                             | 코멘트                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{ SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-setLocalDescription-void-RTCSessionDescription-description-VoidFunction-successCallback-RTCPeerConnectionErrorCallback-failureCallback', 'RTCPeerConnection.setLocalDescription()') }} | {{ Spec2('WebRTC 1.0') }} | Initial specification. |
-| {{SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-setLocalDescription-Promise-void--RTCSessionDescriptionInit-description', 'RTCPeerConnection.setLocalDescription()')}}                                                                                         | {{Spec2('WebRTC 1.0')}} | Initial specification. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

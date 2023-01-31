@@ -1,15 +1,6 @@
 ---
 title: Cadenas binarias
 slug: Web/API/btoa
-tags:
-  - Arreglos tipados JavaScript
-  - Cadena
-  - Cadena de caracteres
-  - DOM
-  - JavaScript
-  - Referencia
-  - String
-translation_of: Web/API/DOMString/Binary
 original_slug: Web/API/DOMString/Binary
 ---
 

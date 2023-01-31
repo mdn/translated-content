@@ -1,12 +1,6 @@
 ---
 title: window.innerHeight
 slug: Web/API/Window/innerHeight
-tags:
-  - API
-  - Propiedades
-  - Referências
-  - Window
-translation_of: Web/API/Window/innerHeight
 ---
 
 {{APIRef}}

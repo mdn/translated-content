@@ -1,7 +1,6 @@
 ---
 title: window.navigator.geolocation
 slug: Web/API/Navigator/geolocation
-translation_of: Web/API/Navigator/geolocation
 original_slug: Web/API/NavigatorGeolocation/geolocation
 ---
 

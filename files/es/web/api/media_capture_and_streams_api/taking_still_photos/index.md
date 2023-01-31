@@ -1,12 +1,6 @@
 ---
 title: Capturar fotografías con la cámara web
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-tags:
-  - Canvas
-  - WebRTC
-  - cámara web
-  - getusermedia
-translation_of: Web/API/WebRTC_API/Taking_still_photos
 original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
 

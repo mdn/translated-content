@@ -42,7 +42,7 @@ Exemple :
 
 Le [projet HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate) contient un exemple sur [la configuration d'un serveur Apache afin de rediriger un domaine vers un autre](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 
-### Utiliser _`< link rel="canonical">`_
+### Utiliser \< link rel="canonical">
 
 Il est possible d'ajouter un élément HTML spécifique {{HTMLElement("link")}} pour indiquer l'adresse canonique de la page. Cela n'a aucun impact sur la personne qui visite la page web, en revanche, elle permet aux robots des moteurs de recherche de connaître l'adresse effective de la page. De cette manière les moteurs de recherche n'indexent pas le contenu de façon répétée. Sans cet élément, ils pourraient penser que la page est dupliquée ou constitue du spam, ce qui entraînerait la disparition de la page dans les index des moteurs de recherche ou un mauvais classement.
 

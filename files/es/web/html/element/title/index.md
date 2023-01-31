@@ -1,9 +1,7 @@
 ---
 title: '<title>: El elemento Título del documento'
 slug: Web/HTML/Element/title
-translation_of: Web/HTML/Element/title
 original_slug: Web/HTML/Elemento/title
-browser-compat: html.elements.title
 ---
 
 {{HTMLSidebar}}

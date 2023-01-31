@@ -1,13 +1,8 @@
 ---
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
-tags:
-  - Property
-  - Reference
-  - Read-only
-browser-compat: api.Event.timeStamp
-translation_of: Web/API/Event/timeStamp
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Event")}} 인터페이스의 **`timeStamp`** 읽기 전용 속성은 이벤트가 생성된 시간을 밀리초 단위로 반환합니다.

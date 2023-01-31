@@ -1,14 +1,8 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
-tags:
-  - API
-  - AudioBuffer
-  - Interface
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioBuffer`** 인터페이스는 메모리에 상주하는 짧은 오디오 에셋을 나타내는데, 이는 {{ domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()") }} 메서드를 사용하여 오디오 파일로부터 생성되거나, {{ domxref("BaseAudioContext/createBuffer", "AudioContext.createBuffer()") }}를 사용하여 가공되지 않은(raw) 데이터로부터 생성될 수 있습니다. 한 번 AudioBuffer에 입력되고 나면, 이 오디오는 {{ domxref("AudioBufferSourceNode") }}에 전달됨으로써 재생될 수 있습니다.

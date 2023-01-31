@@ -3,7 +3,7 @@ title: 使用 canvas 处理视频
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 通过在一个 canvas（画布）上结合 video 元素功能，你可以实时地操纵视频数据来合成各种视觉特效到正在呈现的视频画面中。本教程示范如何使用 JavaScript 代码执行色度键控（也被称为“绿屏效果”）。
 
@@ -133,11 +133,11 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 当这段例行程序被调用时，video 元素正显示最新的视频数据帧，就像这样：
 
-![video.png](/@api/deki/files/3282/=video.png)
+![video.png](video.png)
 
 在第 2 行，视频帧被复制到第一个 canvas 的图形上下文 `ctx1` 中，并指定了和我们之前保存的值一样的宽度和高度来绘制一半大小的帧。注意这点，你可以简单地把 video 元素放到上下文的 `drawImage()` 方法当中来绘制当前的视频帧到上下文里。效果如下：
 
-![sourcectx.png](/@api/deki/files/3284/=sourcectx.png)
+![sourcectx.png](sourcectx.png)
 
 第 3 行通过在第一个上下文里调用 `getImageData()` 方法获取到视频当前帧的原始图形数据的拷贝。它提供了原始的 32 位像素的图像数据使我们可以继续操作。第 4 行通过用帧的图像数据的总大小除以四来计算图像中的像素数。
 
@@ -147,7 +147,7 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 形成的图像像这样：
 
-![output.png](/@api/deki/files/3283/=output.png)
+![output.png](output.png)
 
 这随视频播放而被反复实现，所以一帧接着一帧被处理并带有色键效果被显示出来。
 

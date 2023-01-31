@@ -63,5 +63,5 @@ transition-property: unset;
 
 ## 参考
 
-- [Using CSS transitions](/Web/Guide/CSS/Using_CSS_transitions)
+- [Using CSS transitions](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

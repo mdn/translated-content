@@ -44,16 +44,14 @@ slug: Web/CSS/@font-face
 
 下面的例子简单定义了一个可下载的字体，并应用到了文档的整个 body 标签上。
 
-[View live sample](/@api/deki/files/2935/=webfont-sample.html)
-
-```
+```html
 <html>
 <head>
   <title>Web Font Sample</title>
   <style type="text/css" media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
-      src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
     }
 
     body { font-family: "Bitstream Vera Serif Bold", serif }

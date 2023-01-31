@@ -1,7 +1,6 @@
 ---
 title: 메타 프로그래밍
 slug: Web/JavaScript/Guide/Meta_programming
-translation_of: Web/JavaScript/Guide/Meta_programming
 original_slug: Web/JavaScript/Guide/메타_프로그래밍
 ---
 
@@ -24,7 +23,7 @@ p.a = 1;
 console.log(p.a, p.b); // 1, 42
 ```
 
-The `Proxy` object defines a _target_ (an empty object here) and a _handler_ object in which a `get` _trap_ is implemented. Here, an object that is proxied will not return `undefined` when getting undefined properties, but will instead return the number 42.
+The `Proxy` object defines a `target` (an empty object here) and a `handler` object in which a `get` _trap_ is implemented. Here, an object that is proxied will not return `undefined` when getting undefined properties, but will instead return the number 42.
 
 Additional examples are available on the {{jsxref("Proxy")}} reference page.
 

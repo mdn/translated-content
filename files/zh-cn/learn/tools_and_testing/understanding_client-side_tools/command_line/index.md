@@ -1,5 +1,5 @@
 ---
-title: Command line crash course
+title: 命令行速成课
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 ---
 

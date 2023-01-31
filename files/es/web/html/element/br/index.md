@@ -1,9 +1,7 @@
 ---
 title: '<br>: El elemento de salto de línea'
 slug: Web/HTML/Element/br
-translation_of: Web/HTML/Element/br
 original_slug: Web/HTML/Elemento/br
-browser-compat: html.elements.br
 ---
 
 ## Resumen

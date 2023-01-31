@@ -184,11 +184,7 @@ kbd.key {
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                                                               |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-kbd-element', '&lt;kbd&gt;')}} | {{Spec2('HTML WHATWG')}} |                                                                    |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-kbd-element', '&lt;kbd&gt;')}}     | {{Spec2('HTML5 W3C')}}     | 音声入力や個々のキー入力など、どのようなユーザ入力も含むように拡張 |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;kbd&gt;')}}                             | {{Spec2('HTML4.01')}}     |                                                                    |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,14 +1,6 @@
 ---
 title: '<canvas>: 그래픽 캔버스 요소'
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/canvas
 ---
 
 {{HTMLSidebar}}

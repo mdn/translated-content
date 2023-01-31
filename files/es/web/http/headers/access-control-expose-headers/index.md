@@ -1,11 +1,6 @@
 ---
 title: Access-Control-Expose-Headers
 slug: Web/HTTP/Headers/Access-Control-Expose-Headers
-tags:
-  - CORS
-  - Cabecera
-  - HTTP
-translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
 
 {{HTTPSidebar}}

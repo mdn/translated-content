@@ -1,15 +1,9 @@
 ---
 title: NavigatorID.userAgent
 slug: orphaned/Web/API/NavigatorID/userAgent
-tags:
-  - API
-  - Descontinuado
-  - Propriedade
-  - Referencia
-  - Somente Leitura
-translation_of: Web/API/NavigatorID/userAgent
 original_slug: Web/API/NavigatorID/userAgent
 ---
+
 {{ApiRef("HTML DOM")}}
 
 A propriedade read-only (apenas leitura) **`NavigatorID.userAgent`** retorna a string do agente do usuário (user agent) para o browser atual.

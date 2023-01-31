@@ -1,16 +1,8 @@
 ---
 title: History API
 slug: Web/API/History_API
-tags:
-  - API
-  - Advanced
-  - DOM
-  - History
-  - 기록
-  - 브라우저 히스토리
-  - 히스토리
-translation_of: Web/API/History_API
 ---
+
 {{DefaultAPISidebar("History API")}}
 
 DOM의 {{domxref("Window")}} 객체는 {{domxref("Window.history", "history")}} 객체를 통해 브라우저의 세션 기록에 접근할 수 있는 방법을 제공합니다. {{domxref("History", "history")}}는 사용자를 자신의 방문 기록 앞과 뒤로 보내고 기록 스택의 콘텐츠도 조작할 수 있는, 유용한 메서드와 속성을 가집니다.

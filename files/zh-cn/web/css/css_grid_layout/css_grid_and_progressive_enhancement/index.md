@@ -89,7 +89,7 @@ img {
 </div>
 ```
 
-{{ EmbedLiveSample('enhancement_1', '500', '180') }}
+{{ EmbedLiveSample('Floats', '500', '180') }}
 
 The image below shows the media object in a non-supporting browser on the left, and a supporting one on the right:
 
@@ -159,7 +159,7 @@ In this next example, I have a set of floated cards. I have given the cards a {{
 </div>
 ```
 
-{{ EmbedLiveSample('enhancement_2', '550', '400') }}
+{{ EmbedLiveSample('Using feature queries', '550', '400') }}
 
 The example demonstrates the typical problem that we have with floated layouts: if additional content is added to any one card, the layout breaks.
 
@@ -172,6 +172,8 @@ I then enhance the layout using grid. I can turn my {{HTMLElement("ul")}} into a
 ![After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width.](10-float-width-problem.png)
 
 If I reset the width to `auto`, then this will stop the float behavior happening for older browsers. I need to be able to define the width for older browsers, and remove the width for grid supporting browsers. Thanks to [CSS Feature Queries](/zh-CN/docs/Web/CSS/@supports) I can do this, right in my CSS.
+
+### A solution using feature queries
 
 _Feature queries_ will look very familiar if you have ever used a [media query](/zh-CN/docs/Web/CSS/Media_Queries) to create a responsive layout. Rather than checking a {{glossary("viewport")}} width, or some feature of the browser or device, we check for support of a CSS property and value pair using an {{cssxref("@supports")}} rule. Inside the feature query, we can then write any CSS we need to apply our modern layout, and remove anything required for the older layout.
 
@@ -259,7 +261,7 @@ I use an `@supports` rule to check for support of `display: grid`. I then do my 
 </div>
 ```
 
-{{ EmbedLiveSample('enhancement_3', '550', '480') }}
+{{ EmbedLiveSample('A solution using feature queries', '550', '480') }}
 
 ## Overwriting other values of `display`
 
@@ -346,7 +348,7 @@ Once again I can use feature queries to overwrite a layout that uses `display: i
 </div>
 ```
 
-{{ EmbedLiveSample('enhancement_4', '500', '480') }}
+{{ EmbedLiveSample('Overwriting other values of display', '500', '480') }}
 
 Once again it is the width on the item we need to address, and then any other properties we want to enhance. In this example I have again used `grid-gap`, rather than margins and negative margins to create my gutters.
 

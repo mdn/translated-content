@@ -1,18 +1,6 @@
 ---
 title: X-Forwarded-Host
 slug: Web/HTTP/Headers/X-Forwarded-Host
-tags:
-  - HTTP
-  - HTTP Header
-  - Non-standard
-  - Reference
-  - Request header
-  - header
-  - 레퍼런스
-  - 비표준
-  - 요청헤더
-  - 헤더
-translation_of: Web/HTTP/Headers/X-Forwarded-Host
 ---
 
 {{HTTPSidebar}}

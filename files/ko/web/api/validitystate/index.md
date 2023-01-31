@@ -1,14 +1,8 @@
 ---
 title: ValidityState
 slug: Web/API/ValidityState
-tags:
-  - API
-  - Constraint Validation API
-  - Forms
-  - HTML DOM
-  - Interface
-translation_of: Web/API/ValidityState
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`ValidityState`** 인터페이스는 제약 유효성 검사에 대해 요소가 가질 수 있는 유효성 상태를 나타내며, 요소의 값이 유효하지 않은 경우 그 이유에 대한 설명을 도와줍니다.

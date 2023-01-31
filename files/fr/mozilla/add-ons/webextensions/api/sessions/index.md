@@ -18,7 +18,7 @@ Utilisez l'API de sessions pour lister et restaurer, les onglets et les fenêtre
 
 La fonction {{WebExtAPIRef("sessions.getRecentlyClosed()")}} renvoie un tableau de {{WebExtAPIRef("tabs.Tab")}} et les objets {{WebExtAPIRef("windows.Window")}}, représente les onglets et les fenêtres qui ont été fermées depuis le fonctionnement du navigateur, jusqu'au maximum défini dans {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.
 
-Vous pouvez ensuite restaurer une fenêtre ou un onglet en utilisant la fonction  {{WebExtAPIRef("sessions.restore()")}}. il restaure également l'historique de navigation de l'onglet, de sorte que les boutons arrière / avant fonctionnent.
+Vous pouvez ensuite restaurer une fenêtre ou un onglet en utilisant la fonction {{WebExtAPIRef("sessions.restore()")}}. il restaure également l'historique de navigation de l'onglet, de sorte que les boutons arrière / avant fonctionnent.
 
 Cette API fournit également un groupe de fonctions permettant à une extension de stocker un état supplémentaire associé à un onglet ou une fenêtre. Ensuite, si l'onglet ou la fenêtre est fermé et restauré ultérieurement, l'extension peut récupérer l'état. Par exemple, une extension de groupe d'onglets peut l'utiliser pour se souvenir du groupe dans lequel se trouve un onglet, afin de le restaurer dans le bon groupe si l'utilisateur restaure l'onglet.
 

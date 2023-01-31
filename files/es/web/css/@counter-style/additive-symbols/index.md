@@ -1,11 +1,6 @@
 ---
 title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
-tags:
-  - Descriptor CSS
-  - Estilos de Contador CSS
-  - Referencia
-translation_of: Web/CSS/@counter-style/additive-symbols
 ---
 
 ## Resumen

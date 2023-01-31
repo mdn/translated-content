@@ -1,15 +1,8 @@
 ---
 title: AnalyserNode.minDecibels
 slug: Web/API/AnalyserNode/minDecibels
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - minDecibels
-browser-compat: api.AnalyserNode.minDecibels
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AnalyserNode") }} 인터페이스의 **`minDecibels`** 속성은 unsigned byte 값으로의 전환에 대해서, FFT 분석 데이터의 스케일링 범위에서의 최소 power 값을 나타내는 double 값입니다 — 기본적으로, 이것은 `getByteFrequencyData()`를 사용할 때 결과의 범위에 대한 최소 값을 명시합니다.

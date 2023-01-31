@@ -1,7 +1,6 @@
 ---
 title: 'HTMLMediaElement: timeupdate'
 slug: Web/API/HTMLMediaElement/timeupdate_event
-translation_of: Web/API/HTMLMediaElement/timeupdate_event
 ---
 
 El evento `timeupdate` es llamado cuando el tiempo indicado por el atributo `currentTime` es actualizado.

@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 待定状态的 Promise 对象要么会通过一个值*被兑现*，要么会通过一个原因（错误）*被拒绝*。当这些情况之一发生时，我们用 promise 的 `then` 方法排列起来的相关处理程序就会被调用。如果 promise 在一个相应的处理程序被绑定时就已经被兑现或被拒绝了，那么这个处理程序也同样会被调用，因此在完成异步操作和绑定处理方法之间不存在竞态条件。
 
-因为 `{{jsxref("Promise.then", "Promise.prototype.then")}}` 和  `{{jsxref("Promise.catch", "Promise.prototype.catch")}}` 方法返回的是 promise，所以它们可以被链式调用。
+因为 `{{jsxref("Promise.then", "Promise.prototype.then")}}` 和 `{{jsxref("Promise.catch", "Promise.prototype.catch")}}` 方法返回的是 promise，所以它们可以被链式调用。
 
 ![](promises.png)
 

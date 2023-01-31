@@ -1,12 +1,6 @@
 ---
 title: Using the W3C DOM Level 1 Core
 slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
-tags:
-  - DOM
-  - NeedsTranslation
-  - NeedsUpdate
-  - TopicStub
-translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 original_slug: Using_the_W3C_DOM_Level_1_Core
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: Window.setCursor()
 slug: orphaned/Web/API/Window/setCursor
-translation_of: Web/API/Window/setCursor
 original_slug: Web/API/Window/setCursor
 ---
+
 {{ ApiRef() }}
 
 ## Sumário

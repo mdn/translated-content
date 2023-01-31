@@ -452,4 +452,4 @@ nsIVariant mozTypesAt(
 
 ## Voir Aussi
 
-[Drag and Drop](/En/DragDrop/Drag_and_Drop)
+[Drag and Drop](/fr/docs/Web/DragDrop/Drag_and_Drop)

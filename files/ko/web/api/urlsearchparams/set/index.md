@@ -1,15 +1,6 @@
 ---
 title: URLSearchParams.set()
 slug: Web/API/URLSearchParams/set
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - set
-browser-compat: api.URLSearchParams.set
-translation_of: Web/API/URLSearchParams/set
 ---
 {{ApiRef("URL API")}}
 

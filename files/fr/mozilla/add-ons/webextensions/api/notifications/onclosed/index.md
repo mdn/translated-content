@@ -54,7 +54,7 @@ Les événements ont trois fonctions :
 
 ## Exemples
 
-Dans cet exemple simple, nous ajoutons un écouteur à l'événement  {{WebExtAPIRef("notifications.onClosed")}} pour écouter les notifications système fermées. Lorsque cela se produit, nous enregistrons un message approprié à la console.
+Dans cet exemple simple, nous ajoutons un écouteur à l'événement {{WebExtAPIRef("notifications.onClosed")}} pour écouter les notifications système fermées. Lorsque cela se produit, nous enregistrons un message approprié à la console.
 
 ```js
 browser.notifications.onClosed.addListener(function(notificationId) {

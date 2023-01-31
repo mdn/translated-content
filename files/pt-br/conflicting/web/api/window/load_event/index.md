@@ -1,9 +1,9 @@
 ---
 title: GlobalEventHandlers.onload
 slug: conflicting/Web/API/Window/load_event
-translation_of: Web/API/GlobalEventHandlers/onload
 original_slug: Web/API/GlobalEventHandlers/onload
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Um manipulador de eventos para o evento de carregamento do objeto {{domxref("window")}}.

@@ -1,16 +1,9 @@
 ---
 title: WindowEventHandlers
 slug: orphaned/Web/API/WindowEventHandlers
-tags:
-  - API
-  - HTML-DOM
-  - Interface
-  - Mixin
-  - Reference
-  - WindowEventHandlers
-translation_of: Web/API/WindowEventHandlers
 original_slug: Web/API/WindowEventHandlers
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`WindowEventHandlers`** mixin describes the event handlers common to several interfaces like {{domxref("Window")}}, or {{domxref("HTMLBodyElement")}} and {{domxref("HTMLFrameSetElement")}}. Each of these interfaces can implement additional specific event handlers.

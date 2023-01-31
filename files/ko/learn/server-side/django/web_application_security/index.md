@@ -2,6 +2,7 @@
 title: Django web application security
 slug: Learn/Server-side/Django/web_application_security
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
 
 사용자의 데이터를 보호하는 것은 모든 웹사이트 개발에서 중요한 부분입니다. 우리는 이전의 강의 [Web security](/ko/docs/Web/Security) 에서 자주 나타나는 보안 위협에 대해 알아봤습니다. — 이번 강의에서는 장고의 내장 보안 기능이 이런 위험에 어떻게 대처하는지 실제 예시들을 통해 살펴보겠습니다.
@@ -54,12 +55,12 @@ Django's template system protects you against the majority of XSS attacks by [es
 3. Navigate to the author-creation page (which should be at URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
 4. Enter names and date details for a new user, and then append the following text to the Last Name field:
     `<script>alert('Test alert');</script>`.
-    ![Author Form XSS test](https://mdn.mozillademos.org/files/14305/author_create_form_alert_xss.png)
+    ![Author Form XSS test](author_create_form_alert_xss.png)
 
     > **참고:** This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.
 
 5. Press **Submit** to save the record.
-6. When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.![Author detail view XSS test](https://mdn.mozillademos.org/files/14307/author_detail_alert_xss.png)
+6. When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.![Author detail view XSS test](author_detail_alert_xss.png)
 
 If you view the page HTML source code, you can see that the dangerous characters for the script tags have been turned into their harmless escape code equivalents (e.g. `>` is now `&gt;`)
 

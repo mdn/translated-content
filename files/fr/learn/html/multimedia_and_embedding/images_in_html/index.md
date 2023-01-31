@@ -18,7 +18,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
-Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureusement, il n'a pas fallu longtemps pour que la possibilité d'intégrer des images ( et d'autres types de contenu intéressants) dans une page web soit ajoutée.  Bien qu'il y ait plusieurs types de contenu multimedia, il est logique de commencer avec l'humble élément {{htmlelement("img")}},  utilisé pour intégrer une image dans une page web. Dans cet article, nous approfondirons son utilisation en abordant les principes fondamentaux, l'annotation par légendes utilisant {{htmlelement("figure")}}, et en analysant sa relation avec les images d'arrière-plan du {{glossary("CSS")}} .
+Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureusement, il n'a pas fallu longtemps pour que la possibilité d'intégrer des images ( et d'autres types de contenu intéressants) dans une page web soit ajoutée. Bien qu'il y ait plusieurs types de contenu multimedia, il est logique de commencer avec l'humble élément {{htmlelement("img")}}, utilisé pour intégrer une image dans une page web. Dans cet article, nous approfondirons son utilisation en abordant les principes fondamentaux, l'annotation par légendes utilisant {{htmlelement("figure")}}, et en analysant sa relation avec les images d'arrière-plan du {{glossary("CSS")}} .
 
 <table class="standard-table">
   <tbody>
@@ -51,9 +51,9 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
 
 ## Comment intégrer une image à une page web ?
 
-Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}.  C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier: *source*). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément  {{htmlelement("a")}} `href=` attribue des valeurs.
+Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}. C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier: *source*). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément {{htmlelement("a")}} `href=` attribue des valeurs.
 
-> **Note :** Vous devriez lire [Une brève présentation des URL et des chemins](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#url)  pour vous rafraîchir la mémoire avant de continuer.
+> **Note :** Vous devriez lire [Une brève présentation des URL et des chemins](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#url) pour vous rafraîchir la mémoire avant de continuer.
 
 Donc, par exemple, si votre image s'appelle `dinosaur.jpg`, et qu'elle est située dans le même répertoire que votre page HTML, vous pouvez intégrer cette image comme ceci (URL relative) :
 
@@ -126,11 +126,11 @@ Que devriez-vous noter dans vos attributs `alt` ? En premier lieu, cela dépend 
 
 Le but est de livrer essentiellement une expérience de qualité, même quand les images ne peuvent être vues. Cela assure à tous les utilisateurs de ne rien manquer du contenu. Essayez de ne pas afficher les images dans votre navigateur et regardez ce qu'il se passe. Vous allez vite réaliser que le texte fourni à la place est réellement utile.
 
-> **Note :** Pour plus d'informations, voyez notre guide  [Textes Alternatifs](/fr/docs/Learn/Accessibility/HTML#Text_alternatives)
+> **Note :** Pour plus d'informations, voyez notre guide [Textes Alternatifs](/fr/docs/Learn/Accessibility/HTML#Text_alternatives)
 
 ### Largeur et hauteur (width-height)
 
-Vous pouvez vous servir des attributs  `width` et `height` pour spécifier la largeur et la hauteur de votre image. Vous pouvez trouver la largeur et la hauteur de différentes manières. Sur Mac, par exemple, vous pouvez utiliser   <kbd>Cmd</kbd> + <kbd>I</kbd> pour afficher l'info relative au fichier image. Pour revenir à notre exemple, nous pourrions faire ceci :
+Vous pouvez vous servir des attributs `width` et `height` pour spécifier la largeur et la hauteur de votre image. Vous pouvez trouver la largeur et la hauteur de différentes manières. Sur Mac, par exemple, vous pouvez utiliser   <kbd>Cmd</kbd> + <kbd>I</kbd> pour afficher l'info relative au fichier image. Pour revenir à notre exemple, nous pourrions faire ceci :
 
 ```html
 <img src="images/dinosaur.jpg"
@@ -146,9 +146,9 @@ Cela ne fait pas grande différence à l'affichage dans des circonstances normal
 
 C'est une bonne pratique, cela donne une page se chargeant plus rapidement et en douceur.
 
-De toutes manières, vous ne devez pas altérer la taille de vos images avec les attributs HTML . Si vous réglez la taille de l'image trop grande, vous aurez un résultat avec beaucoup de "grain", flou ou trop petit et vous dépensez de la bande passante en téléchargeant une image qui ne convient pas aux besoins de l'utilisateur.  Votre image peut aussi sortir distordue, si vous n'en maintenez pas le bon  [Format d'image](https://fr.wikipedia.org/wiki/Format_d%27image). Vous devriez utiliser un éditeur d'images pour la mettre à la bonne taille avant de la mettre dans votre page web.
+De toutes manières, vous ne devez pas altérer la taille de vos images avec les attributs HTML . Si vous réglez la taille de l'image trop grande, vous aurez un résultat avec beaucoup de "grain", flou ou trop petit et vous dépensez de la bande passante en téléchargeant une image qui ne convient pas aux besoins de l'utilisateur. Votre image peut aussi sortir distordue, si vous n'en maintenez pas le bon [Format d'image](https://fr.wikipedia.org/wiki/Format_d%27image). Vous devriez utiliser un éditeur d'images pour la mettre à la bonne taille avant de la mettre dans votre page web.
 
-> **Note :** Si vous devez absolument modifier une taille d' image, vous devriez vous servir de  [CSS](/fr/Apprendre/CSS) .
+> **Note :** Si vous devez absolument modifier une taille d' image, vous devriez vous servir de [CSS](/fr/Apprendre/CSS) .
 
 ### Titre d'images
 
@@ -182,10 +182,10 @@ Nous avons dit plus tôt de ne jamais faire de "hotlinking" sur d'autres serveur
 Nous avons encore quelques petites choses pour vous :
 
 - Ajoutez du texte `alt`  , et vérifiez qu'il marche en faisant une faute dans l'URL de l'image.
-- Réglez l'image à une bonne taille :  `width` et `height` ( conseil : c'est 200px wide (large) and 171px high (haut)), puis expérimentez d'autres valeurs pour en appréhender les effets.
-- Mettez un  `title`  sur l'image.
+- Réglez l'image à une bonne taille : `width` et `height` ( conseil : c'est 200px wide (large) and 171px high (haut)), puis expérimentez d'autres valeurs pour en appréhender les effets.
+- Mettez un `title`  sur l'image.
 
-Si vous faites une erreur, vous pouvez toujours remettre à zéro en utilisant le bouton _Reset_ .  Si vous êtes vraiment bloqué, regardez la réponse en cliquant le bouton S*how solution* :
+Si vous faites une erreur, vous pouvez toujours remettre à zéro en utilisant le bouton _Reset_ . Si vous êtes vraiment bloqué, regardez la réponse en cliquant le bouton S*how solution* :
 
 ```html hidden
 <h2>Live output</h2>
@@ -326,7 +326,7 @@ En parlant de légendes, il y a de nombreuses manières d'en ajouter qui ira ave
 </div>
 ```
 
-C'est bon. Ça contient ce que vous voulez et c'est aisément stylisable en CSS.  Mais il y a un problème : il n'y a rien de sensé qui relie l'image à sa légende. Ce qui peut poser des problèmes à un lecteur d'écran. Par exemple, quand vous avez 50 images, quelle légende va avec quelle image ?
+C'est bon. Ça contient ce que vous voulez et c'est aisément stylisable en CSS. Mais il y a un problème : il n'y a rien de sensé qui relie l'image à sa légende. Ce qui peut poser des problèmes à un lecteur d'écran. Par exemple, quand vous avez 50 images, quelle légende va avec quelle image ?
 
 Une meilleure solution consiste en l'utilisation des éléments HTML5 {{htmlelement("figure")}} et {{htmlelement("figcaption")}} . Ils ont été conçus pour cela : fournir un conteneur sémantique aux objets et lier clairement cet objet à sa légende. Notre exemple précédent pourrait être réécrit comme ceci :
 
@@ -342,7 +342,7 @@ Une meilleure solution consiste en l'utilisation des éléments HTML5 {{htmlelem
 </figure>
 ```
 
-L'élément {{htmlelement("figcaption")}}  dit au navigateur et aux technologies d'assistance que la légende décrit le contenu de l'autre élément {{htmlelement("figure")}}.
+L'élément {{htmlelement("figcaption")}} dit au navigateur et aux technologies d'assistance que la légende décrit le contenu de l'autre élément {{htmlelement("figure")}}.
 
 > **Note :** D'un point de vue accessibilité, les légendes ont un rôle différent du texte {{htmlattrxref('alt','img')}}. Le texte {{htmlattrxref('alt','img')}} ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
 
@@ -359,9 +359,9 @@ Cet objet peut être un ensemble d'images, des bribes de code, de l'audio, de la
 Dans cette section, nous allons vous demander de récupérer le code fini de la section "Pédagogie active" précédente et d'y faire ceci :
 
 - Encapsulez-le dans un élément {{htmlelement("figure")}} .
-- Copiez le texte de l'attribut, enlevez l'attribut  `title`  et mettez le texte dans un élément  {{htmlelement("figcaption")}} sous l'image.
+- Copiez le texte de l'attribut, enlevez l'attribut `title`  et mettez le texte dans un élément {{htmlelement("figcaption")}} sous l'image.
 
-Si vous faites une erreur, vous pouvez toujours remettre à zéro en utilisant le bouton _Reset_ .  Si vous êtes vraiment bloqué, regardez la réponse en cliquant le bouton S*how solution* :
+Si vous faites une erreur, vous pouvez toujours remettre à zéro en utilisant le bouton _Reset_ . Si vous êtes vraiment bloqué, regardez la réponse en cliquant le bouton S*how solution* :
 
 ```html hidden
 <h2>Live output</h2>
@@ -499,7 +499,7 @@ Le résultat est probablement plus facile à positionner et contrôler qu'une im
 
 En résumé : si une image a du sens, en terme de contenu, vous devriez utiliser une image HTML. Si une image n'est que pure décoration, il vaut mieux utiliser les images d'arrière-plan CSS.
 
-> **Note :** Vous en apprendrez beaucoup plus sur les  [CSS background images](/fr/docs/Learn/CSS/Styling_boxes/Backgrounds) dans notre topic  [CSS](/fr/Apprendre/CSS) .
+> **Note :** Vous en apprendrez beaucoup plus sur les [CSS background images](/fr/docs/Learn/CSS/Styling_boxes/Backgrounds) dans notre topic [CSS](/fr/Apprendre/CSS) .
 
 C'est tout pour l'instant. Nous avons découvert en détails les images et légendes. Dans le prochain article, nous monterons en régime pour aborder la manière d'utiliser HTML pour intégrer des vidéos et de l'audio dans une page web.
 

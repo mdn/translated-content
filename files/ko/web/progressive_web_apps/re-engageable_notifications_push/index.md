@@ -1,14 +1,6 @@
 ---
 title: 알림과 푸시를 사용해 PWA를 재참여(re-engageable)가능하게 만드는 방법
 slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
-tags:
-  - PWA
-  - js13kGames
-  - 알림
-  - 푸시
-  - 프로그레시브
-  - 프로그레시브 웹 앱
-translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
 {{PreviousMenu("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
@@ -42,7 +34,7 @@ button.addEventListener('click', function(e) {
 
 팝업은 운영체제가 가진 알림 서비스를 사용해 보여집니다.
 
-![Notification of js13kPWA.](https://mdn.mozillademos.org/files/15930/js13kpwa-notification.png)
+![Notification of js13kPWA.](js13kpwa-notification.png)
 
 사용자가 알림 수신을 확인하면 앱이 알림을 보여줄 수 있습니다. 사용자는 기본, 승인 또는 거절을 선택할 수 있습니다. 기본 옵션은 사용자가 선택할 수 없을 때 사용되며, 다른 두 옵션은 사용자가 예 또는 아니오를 선택했을 때 사용됩니다.
 

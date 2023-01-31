@@ -1,18 +1,9 @@
 ---
 title: NavigatorID.platform
 slug: orphaned/Web/API/NavigatorID/platform
-tags:
-  - API
-  - DOM
-  - DOM_0
-  - Gecko
-  - HTML5
-  - Propriedade
-  - Referencia
-  - Referência(2)
-translation_of: Web/API/NavigatorID/platform
 original_slug: Web/API/NavigatorID/platform
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 Retorna uma string representando a plataforma do navegador. A especificação permite aos navegadores retornar sempre strings vazias, portanto não se utilize dessa propriedade para obter resultados confiáveis.

@@ -1,10 +1,8 @@
 ---
 title: Document.forms
 slug: Web/API/Document/forms
-tags:
-  - Forms
-translation_of: Web/API/Document/forms
 ---
+
 {{APIRef("DOM")}}
 
 `forms`는 현재 document에 존재하는 {{HTMLElement("form")}} element 들이 담긴 collection (an {{domxref("HTMLCollection")}})을 반환합니다.

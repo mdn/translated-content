@@ -1,7 +1,6 @@
 ---
 title: Transmisión Adaptativa DASH para Video en HTML 5
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-translation_of: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 original_slug: Web/HTML/Transision_adaptativa_DASH
 ---
 

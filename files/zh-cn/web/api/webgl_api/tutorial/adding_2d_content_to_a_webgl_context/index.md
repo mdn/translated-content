@@ -3,7 +3,7 @@ title: 使用 WebGL 创建 2D 内容
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 一旦创建 WebGL 上下文创建成功，你就可以在这个上下文里渲染画图了。而对我们而言最简单的事，莫过于绘制一个没有纹理的 2D 图形了。那就让我们从画出一个正方形开始吧。
 
@@ -239,7 +239,7 @@ function drawScene(gl, programInfo, buffers) {
   // Tell WebGL how to pull out the positions from the position
   // buffer into the vertexPosition attribute.
   {
-    const numComponents = 3;  // pull out 3 values per iteration
+    const numComponents = 2;  // pull out 2 values per iteration
     const type = gl.FLOAT;    // the data in the buffer is 32bit floats
     const normalize = false;  // don't normalize
     const stride = 0;         // how many bytes to get from one set of values to the next

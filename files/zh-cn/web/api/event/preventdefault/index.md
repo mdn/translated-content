@@ -53,7 +53,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 你可以看到如下的行为：
 
-{{EmbedLiveSample("Blocking_default_click_handling")}}
+{{EmbedLiveSample("阻止默认的点击事件执行")}}
 
 ### 在编辑域中阻止按键
 
@@ -142,7 +142,7 @@ function displayWarning(msg) {
 
 这里就是代码的执行结果：
 
-{{ EmbedLiveSample('Stopping_keystrokes_from_reaching_an_edit_field', 600, 200) }}
+{{ EmbedLiveSample('在编辑域中阻止按键', 600, 200) }}
 
 ## 备注
 
@@ -154,6 +154,6 @@ function displayWarning(msg) {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

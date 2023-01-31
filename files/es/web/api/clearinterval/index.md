@@ -1,7 +1,6 @@
 ---
 title: WindowTimers.clearInterval()
 slug: Web/API/clearInterval
-translation_of: Web/API/WindowOrWorkerGlobalScope/clearInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
 ---
 

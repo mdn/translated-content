@@ -1,14 +1,6 @@
 ---
 title: Animation.ready
 slug: Web/API/Animation/ready
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Ready Promise
-  - Reference
-translation_of: Web/API/Animation/ready
 ---
 
 {{ APIRef("Web Animations") }}

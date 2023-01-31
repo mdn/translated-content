@@ -1,12 +1,6 @@
 ---
 title: font-weight
 slug: Web/CSS/font-weight
-tags:
-  - CSS
-  - Propiedad de CSS
-  - Referencia
-  - Tipos de letra de CSS
-translation_of: Web/CSS/font-weight
 ---
 
 {{CSSRef}}

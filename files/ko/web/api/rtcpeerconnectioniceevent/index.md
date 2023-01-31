@@ -1,17 +1,8 @@
 ---
 title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - RTCIceCandidateEvent
-  - Reference
-  - TopicStub
-  - WebRTC
-translation_of: Web/API/RTCPeerConnectionIceEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnectionIceEvent`** interface represents events that occurs in relation to {{Glossary("ICE")}} candidates with the target, usually an {{domxref("RTCPeerConnection")}}. Only one event is of this type: {{event("icecandidate")}}.

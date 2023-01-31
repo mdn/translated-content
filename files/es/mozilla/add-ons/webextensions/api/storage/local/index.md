@@ -1,14 +1,6 @@
 ---
 title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
-tags:
-  - API
-  - Complentos
-  - Storage
-  - WebExtension
-  - extensiones
-  - local
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
 
 {{AddonSidebar()}}
@@ -17,7 +9,7 @@ Representa el área de almacenamiento local. Los elementos en el almacenamiento 
 
 El navegador puede restringir la cantidad de datos que una extensión puede almacenar en el área de almacenamiento local:
 
-Chrome limita la extensión a 5MB de datos usando esta API a menos que tenga el permiso ["unlimitedStorage"](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage).
+Chrome limita la extensión a 5MB de datos usando esta API a menos que tenga el permiso ["unlimitedStorage"](/es/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage).
 Firefox le permite solicitar el permiso "Almacenamiento ilimitado" de la versión 56 en adelante. Aún no restringe la cantidad de datos que su extensión puede almacenar, pero comenzará a hacerlo en una versión futura: por lo tanto, es una buena idea solicitar el permiso de "Almacenamiento ilimitado" ahora, si tiene la intención de almacenar una gran cantidad de datos.
 
 Cuando se desinstala la extensión, se borra su almacenamiento local asociado.

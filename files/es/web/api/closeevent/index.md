@@ -1,7 +1,6 @@
 ---
 title: CloseEvent
 slug: Web/API/CloseEvent
-translation_of: Web/API/CloseEvent
 ---
 
 {{APIRef("Websockets API")}}

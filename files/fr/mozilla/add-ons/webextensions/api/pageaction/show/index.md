@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 
 Affiche l'action de la page pour un onglet donné. L'action de la page est affichée chaque fois que l'onglet donné est l'onglet actif.
 
-`show()` remplace la correspondance de motifs, de sorte que l'action page sera affichée dans l'onglet spécifié même si [`show_matches`](/Add-ons/WebExtensions/manifest.json/page_action) e correspond pas à l'URL ou si [`hide_matches`](/Add-ons/WebExtensions/manifest.json/page_action) ne correspond pas.
+`show()` remplace la correspondance de motifs, de sorte que l'action page sera affichée dans l'onglet spécifié même si [`show_matches`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) e correspond pas à l'URL ou si [`hide_matches`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) ne correspond pas.
 
 Notez que l'appel à `show()` n'a aucun effet sur un onglet sans contenu chargé.
 

@@ -5,7 +5,7 @@ slug: Web/API/ResizeObserver/disconnect
 
 {{APIRef("Resize Observer API")}}
 
-{{domxref("ResizeObserver")}} 接口的  **`disconnect()`** 方法取消所有的对 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 目标的监听。
+{{domxref("ResizeObserver")}} 接口的 **`disconnect()`** 方法取消所有的对 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 目标的监听。
 
 ## 语法
 

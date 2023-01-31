@@ -1,12 +1,6 @@
 ---
 title: '-moz-outline-radius-topleft'
 slug: Web/CSS/-moz-outline-radius-topleft
-tags:
-  - CSS
-  - No estandar
-  - Propiedad CSS
-  - Referencia CSS
-translation_of: Web/CSS/-moz-outline-radius-topleft
 ---
 
 {{Non-standard_header}}{{CSSRef}}

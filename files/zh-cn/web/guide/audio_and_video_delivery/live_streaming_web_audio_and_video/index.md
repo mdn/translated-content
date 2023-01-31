@@ -141,7 +141,7 @@ Opus 是一个无版权的开放格式，针对不同类型文件使用不同的
 
 ### GStreamer
 
-[GStreamer](https://gstreamer.freedesktop.org/)  是一个开源的跨平台的多媒体框架，它可以让你创建各种媒体处理组件，包括流式组件。GStreamer 通过它的插件系统，支持了一百多种编码 (包括 MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV，和 FLV。)
+[GStreamer](https://gstreamer.freedesktop.org/) 是一个开源的跨平台的多媒体框架，它可以让你创建各种媒体处理组件，包括流式组件。GStreamer 通过它的插件系统，支持了一百多种编码 (包括 MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV，和 FLV。)
 
 GStreamer 的插件如 [souphttpclientsink](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-plugin-soup.html) 和 [shout2send](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html) 通过 HTTP 来传输媒体。你也可以集成 Python 的 Twisted 框架或者使用一些类似 [Flumotion](http://www.flumotion.net/features/) (open source streaming software) 的东西。
 

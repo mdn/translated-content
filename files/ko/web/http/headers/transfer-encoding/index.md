@@ -1,7 +1,6 @@
 ---
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
-translation_of: Web/HTTP/Headers/Transfer-Encoding
 ---
 
 {{HTTPSidebar}}
@@ -79,7 +78,7 @@ Network\r\n
 
 ## 브라우저 호환성
 
-{{Compat("http/headers/transfer-encoding")}}
+{{Compat}}
 
 ## 함께 참고할 내용들
 

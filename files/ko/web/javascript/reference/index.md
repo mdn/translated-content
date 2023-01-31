@@ -1,19 +1,6 @@
 ---
 title: JavaScript 참고서
 slug: Web/JavaScript/Reference
-tags:
-  - Code
-  - ECMAScript
-  - ECMAScript6
-  - ES6
-  - JS
-  - JavaScript
-  - Landing page
-  - Reference
-  - es
-  - l10n:priority
-  - programming
-translation_of: Web/JavaScript/Reference
 ---
 
 {{JsSidebar}}

@@ -1,15 +1,6 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
-tags:
-  - API
-  - ContenidoNecesario
-  - DOM
-  - EjemploNecesario
-  - Propiedad
-  - Referencia
-  - UbicaciónDocumento
-translation_of: Web/API/Document/documentURI
 ---
 
 {{ApiRef("DOM")}}

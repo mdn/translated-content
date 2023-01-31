@@ -1,10 +1,6 @@
 ---
 title: symbols
 slug: Web/CSS/@counter-style/symbols
-tags:
-  - Descriptor CSS
-  - Estilos de contadores CSS
-translation_of: Web/CSS/@counter-style/symbols
 ---
 
 ## Summary

@@ -1,11 +1,8 @@
 ---
 title: Window.toolbar
 slug: Web/API/Window/toolbar
-tags:
-  - 참고
-  - 창
-translation_of: Web/API/Window/toolbar
 ---
+
 {{APIRef}}
 
 ## 요약

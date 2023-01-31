@@ -1,13 +1,6 @@
 ---
 title: 빼기 (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Subtraction
-browser-compat: javascript.operators.subtraction
 ---
 
 {{jsSidebar("Operators")}}

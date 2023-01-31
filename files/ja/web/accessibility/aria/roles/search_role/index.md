@@ -85,10 +85,7 @@ slug: Web/Accessibility/ARIA/Roles/Search_role
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                                             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#search","ARIA search role")}}                                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_search","ARIA search role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

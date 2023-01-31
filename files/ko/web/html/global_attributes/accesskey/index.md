@@ -1,13 +1,8 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - 단축키
-translation_of: Web/HTML/Global_attributes/accesskey
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`accesskey`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 현재 요소에 대한 키보드 단축키를 생성할 때 사용할 힌트를 제공합니다. `accesskey` 속성의 값은 반드시 출력 가능한 단일 문자(키보드로 입력할 수 있는 글자)여야 합니다.
@@ -108,7 +103,7 @@ translation_of: Web/HTML/Global_attributes/accesskey
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.accesskey")}}
+{{compat}}
 
 ## 함께 보기
 

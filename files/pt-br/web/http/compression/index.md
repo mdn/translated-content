@@ -34,13 +34,13 @@ Algoritmos de compressão com perdas geralmente são mais eficientes que os sem 
 
 Para compressão, a compressão de ponta a ponta é onde residem as maiores melhorias de desempenho dos sites. Compressão de ponta a ponta refere-se a uma compressão do corpo de uma mensagem que é realizada pelo servidor e permanecerá inalterada até atingir o cliente. Quaisquer que sejam os nós intermediários, eles deixam o corpo intacto.
 
-![](https://mdn.mozillademos.org/files/13801/HTTPEnco1.png)
+![](httpenco1.png)
 
 Todos os navegadores e servidores modernos suportam a compressão, bastante somente negociar o algoritmo a ser usado. Esses algoritmos são otimizados para texto. Nos anos 90, a tecnologia de compressão avançava a um ritmo acelerado e numerosos algoritmos sucessivos foram adicionados ao conjunto de escolhas possíveis. Hoje em dia, apenas dois são relevantes: o `gzip`, o mais comum, e `br` o novo desafiante.
 
 Para selecionar o algoritmo a ser usado, os navegadores e servidores usam a [negociação proativa de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation). O navegador envia um cabeçalho {{HTTPHeader("Accept-Encoding")}} com o algoritmo que ele suporta e sua ordem de precedência. O servidor escolhe um, usa-o para comprimir o corpo da resposta e usa o {{HTTPHeader("Content-Encoding")}} para informar ao navegador o algoritmo escolhido. Como a negociação de conteúdo foi usada para escolher uma representação baseada em sua codificação, o servidor deve enviar um cabeçalho {{HTTPHeader("Vary")}} contendo pelo menos {{HTTPHeader("Accept-Encoding")}} ao lado do cabeçalho na resposta. Dessa forma, os caches poderão armazenar em cache as diferentes representações do recurso.
 
-![](https://mdn.mozillademos.org/files/13811/HTTPCompression1.png)
+![](httpcompression1.png)
 
 Como a copressão de dados traz melhorias significativas no desempenho, recomenda-se ativá-la para todos os arquivos, com exceção daqueles já comprimidos, como imagens, arquivos de áudio e vídeos.
 
@@ -50,11 +50,11 @@ Apache suporta compressão e usa [mod_deflate](http://httpd.apache.org/docs/curr
 
 A compressão de nó a nó (do inglês _Hop-by-hop compression_), embora semelhante à compresão de ponta a ponta, difere em um elemento fundamental: a compressão não acontece no recurso no servidor, criando uma representação específica que é então transmitida, mas sim no corpo da mensagem entre dois nós no caminho entre o cliente e o servidor. Conexões entre nós intermediários sucessivos podem aplicar uma compressão diferente.
 
-![](https://mdn.mozillademos.org/files/13807/HTTPTE1.png)
+![](httpte1.png)
 
 Para fazer isso, o HTTP usa um mecanismo semelhante à negociação de conteúdo para a compressão ponta a ponta: o nó que transmite a solicitação anuncia sua vontade usando o cabeçalho {{HTTPHeader ("TE")}}, sendo que o outro nó escolhe o método adequado, aplica-o e indica a sua escolha com o cabeçalho {{HTTPHeader("Transfer-Encoding")}}.
 
-![](https://mdn.mozillademos.org/files/13809/HTTPComp2.png)
+![](httpcomp2.png)
 
 Na prática, a compressão de nó a nó é transparente para o servidor e o cliente, sendo raramente usada. {{HTTPHeader ("TE")}} e {{HTTPHeader ("Transfer-Encoding")}} são usados principalmente para enviar uma resposta por partes, permitindo iniciar a transmissão de um recurso sem conhecer seu tamanho.
 

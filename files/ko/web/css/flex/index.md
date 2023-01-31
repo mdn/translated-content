@@ -1,12 +1,6 @@
 ---
 title: flex
 slug: Web/CSS/flex
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/flex
 ---
 
 {{CSSRef}}

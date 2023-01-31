@@ -1,18 +1,6 @@
 ---
 title: '<q>: El elemento de cita en línea'
 slug: Web/HTML/Element/q
-tags:
-  - Cita de bloque independiente
-  - Citación
-  - Elemento
-  - HTML
-  - Marca de cita
-  - Q
-  - Referencia
-  - Semántica HTML a nivel de texto
-  - Web
-  - cita
-translation_of: Web/HTML/Element/q
 original_slug: Web/HTML/Elemento/q
 ---
 

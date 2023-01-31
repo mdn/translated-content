@@ -152,4 +152,4 @@ input:invalid {
 - {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLInputElement.stepUp", "HTMLInputElement.stepUp()")}}
 - [`step`](/ja/docs/Web/HTML/Attributes/step),
-  [`min`](/ja/docs/Web/HTML/Attributes/min),  [`max`](/ja/docs/Web/HTML/Attributes/max) 属性
+  [`min`](/ja/docs/Web/HTML/Attributes/min), [`max`](/ja/docs/Web/HTML/Attributes/max) 属性

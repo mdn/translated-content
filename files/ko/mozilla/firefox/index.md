@@ -2,6 +2,7 @@
 title: Firefox
 slug: Mozilla/Firefox
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox](https://www.mozilla.org/firefox/)는 모질라 재단의 유명한 웹브라우저로서 윈도우, OS X, 리눅스, 솔라리스(비공식), 안드로이드 기기 등의 다양한 플랫폼을 지원합니다. 호환성과 최신 웹기술, 그리고 강력한 개발 도구로서 Firefox는 웹 개발자들과 사용자들에겐 최고의 선택입니다.

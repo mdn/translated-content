@@ -1,6 +1,6 @@
 # Bienvenido a la localización de MDN en español
 
-Puedes comenzar en la siguiente [guía de contribución](https://developer.mozilla.org/es/docs/MDN/Contribute)
+Puedes comenzar en la siguiente [guía de contribución][]
 
 ## Pasos para configurar el entorno local
 
@@ -104,7 +104,7 @@ Matrix link
 Grupo en community
 <https://community.mozilla.org/en/groups/mdn-localizacion-espanol/>
 
-Los `tags` no se usan para las traducciones de la documentación,  borremoslo.
+Los `tags` no se usan para las traducciones de la documentación, borremoslo.
 <https://github.com/mdn/translated-content/pull/4058#discussion_r802298455>
 
 Tutorial para crear el ambiente de desarrollo para MDN
@@ -115,3 +115,5 @@ Guía de markdown
 </details>
 
 Más información [aqui](https://github.com/mdn/translated-content/discussions/4029)
+
+[guía de contribución]: https://developer.mozilla.org/es/docs/MDN/Contribute

@@ -1,12 +1,6 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
 
 {{HTTPSidebar}}

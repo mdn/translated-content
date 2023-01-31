@@ -1,8 +1,8 @@
 ---
 title: Window.length
 slug: Web/API/Window/length
-translation_of: Web/API/Window/length
 ---
+
 {{ ApiRef() }}
 
 window의 frame 개수를 반환합니다. ({{HTMLElement("frame")}} 또는 {{HTMLElement("iframe")}} 요소들 중 하나)

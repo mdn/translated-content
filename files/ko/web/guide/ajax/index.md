@@ -1,12 +1,6 @@
 ---
 title: AJAX
 slug: Web/Guide/AJAX
-tags:
-  - AJAX
-  - DOM
-  - JavaScript
-  - References
-translation_of: Web/Guide/AJAX
 ---
 
 **[시작하기](/ko/AJAX/Getting_Started)** AJAX를 소개합니다.

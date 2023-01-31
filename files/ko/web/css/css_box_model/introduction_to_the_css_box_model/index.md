@@ -1,12 +1,6 @@
 ---
 title: CSS 기본 박스 모델 입문
 slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Layout
-translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 ---
 
 {{CSSRef}}
@@ -15,7 +9,7 @@ translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 
 하나의 박스는 네 부분(영역)으로 이루어집니다. 각 영역을 콘텐츠 영역, 안쪽 여백(패딩) 영역, 테두리 영역, 그리고 바깥 여백(마진) 영역이라고 부릅니다.
 
-![CSS Box model](<https://mdn.mozillademos.org/files/8685/boxmodel-(3).png>)
+![CSS Box model](<boxmodel-(3).png>)
 
 **콘텐츠 영역**(content area)은 콘텐츠 경계(content edge)가 감싼 영역으로, 글이나 이미지, 비디오 등 요소의 실제 내용을 포함합니다. 콘텐츠 영역의 크기는 콘텐츠 너비(콘텐츠 박스 너비)와 콘텐츠 높이(콘텐츠 박스 높이)입니다. 배경색과 배경 이미지를 가지고 있기도 합니다.
 
@@ -35,13 +29,9 @@ translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 
 끝으로, 비대체 인라인 요소가 차지하는 공간의 크기(줄 높이에 기여하는 양)는, 요소 주위에 테두리와 안쪽 여백이 표시되더라도 {{cssxref("line-height")}} 속성으로 결정한다는 점을 주의하세요.
 
-## 명세
+## 명세서
 
-| Specification                                                    | Status                       | Comment                                                     |
-| ---------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#intro')}}                     | {{Spec2('CSS3 Box')}} |                                                             |
-| {{ SpecName("CSS2.1","box.html#box-dimensions")}} | {{Spec2('CSS2.1')}}     | Though more precisely worded, there is no practical change. |
-| {{ SpecName("CSS1","#formatting-model")}}         | {{Spec2('CSS1')}}     | Initial definition.                                         |
+{{Specifications}}
 
 ## 같이 보기
 

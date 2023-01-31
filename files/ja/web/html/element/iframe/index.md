@@ -216,13 +216,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | 状態                                     | 備考                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerpolicy attribute')}} | {{Spec2('Referrer Policy')}}     | `referrerpolicy` 属性を追加。                      |
-| {{SpecName('HTML WHATWG', 'iframe-embed-object.html#the-iframe-element', '&lt;iframe&gt;')}}                     | {{Spec2('HTML WHATWG')}}         |                                                    |
-| {{SpecName('HTML5 W3C', 'semantics-embedded-content.html#the-iframe-element', '&lt;iframe&gt;')}}                 | {{Spec2('HTML5 W3C')}}             |                                                    |
-| {{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}                                                 | {{Spec2('HTML4.01')}}             |                                                    |
-| {{SpecName('Screen Orientation')}}                                                                                                     | {{Spec2('Screen Orientation')}} | `sandbox` 属性に `allow-orientation-lock` を追加。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

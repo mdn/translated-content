@@ -20,7 +20,7 @@ L'événement `onChanged` de l'API {{WebExtAPIRef("cookies")}} est déclenché l
 
 Notez que la mise à jour des propriétés d'un cookie est implémentée en deux étapes :
 
-1. Tout d'abord, le cookie à mettre à jour est tout d'abord entiérement supprimé, généralement une notification avec un  {{WebExtAPIRef("cookies.OnChangedCause")}} d'écrasement.
+1. Tout d'abord, le cookie à mettre à jour est tout d'abord entiérement supprimé, généralement une notification avec un {{WebExtAPIRef("cookies.OnChangedCause")}} d'écrasement.
 2. Ensuite, un nouveau cookie est écrit avec les valeurs mises à jour, généralement une seconde notification avec un {{WebExtAPIRef("cookies.OnChangedCause")}} `explicite`.
 
 ## Syntaxe
@@ -31,7 +31,7 @@ browser.cookies.onChanged.removeListener(listener)
 browser.cookies.onChanged.hasListener(listener)
 ```
 
-Cet API est également disponible en tant que  `browser.cookies.onChanged.*`.
+Cet API est également disponible en tant que `browser.cookies.onChanged.*`.
 
 Les événements ont trois fonctions :
 
@@ -67,7 +67,7 @@ Les événements ont trois fonctions :
 
 ## Exemples
 
-Cet exemple écoute les événements `onChanged` et enregistre les détails de l'argument  `changeInfo` :
+Cet exemple écoute les événements `onChanged` et enregistre les détails de l'argument `changeInfo` :
 
 ```js
 browser.cookies.onChanged.addListener(function(changeInfo) {

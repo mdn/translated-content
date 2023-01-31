@@ -1,15 +1,6 @@
 ---
 title: <slot>
 slug: Web/HTML/Element/slot
-tags:
-  - Componentes Web
-  - Componentes Web HTML
-  - Elemento
-  - HTML
-  - Referencia
-  - slot
-  - sombra dom
-translation_of: Web/HTML/Element/slot
 original_slug: Web/HTML/Elemento/slot
 ---
 {{HTMLSidebar}}
@@ -83,7 +74,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("name")}}
   - : El nombre del slot.
-  
+
     Un **slot nombrado** es un elemento `<slot>` con el atributo `name`.
 
 ## Ejemplos

@@ -1,8 +1,6 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
-translation_of: Web/API/DragEvent
-browser-compat: api.DragEvent
 ---
 
 {{APIRef("HTML Drag and Drop API")}}

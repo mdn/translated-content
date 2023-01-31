@@ -25,7 +25,4 @@ slug: Web/CSS/CSS_Lists_and_Counters
 
 ## 仕様書
 
-| 仕様書                                  | 状態                    | 備考     |
-| --------------------------------------- | ----------------------- | -------- |
-| {{SpecName('CSS3 Lists')}}              | {{Spec2('CSS3 Lists')}} |          |
-| {{SpecName('CSS2.1', 'generate.html')}} | {{Spec2('CSS2.1')}}     | 初回定義 |
+{{Specifications}}

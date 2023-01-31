@@ -1,14 +1,6 @@
 ---
 title: API de almacenamiento web
 slug: Web/API/Web_Storage_API
-tags:
-  - API
-  - API de almacenamiento web
-  - Almacenamiento web
-  - Storage
-  - localStorage
-  - sessionStorage
-translation_of: Web/API/Web_Storage_API
 original_slug: Web/API/API_de_almacenamiento_web
 ---
 

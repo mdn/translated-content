@@ -1,8 +1,8 @@
 ---
 title: 'RTCPeerConnection: icegatheringstatechange event'
 slug: Web/API/RTCPeerConnection/icegatheringstatechange_event
-translation_of: Web/API/RTCPeerConnection/icegatheringstatechange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 **`icegatheringstatechange`** 이벤트는 {{Glossary("ICE")}} candidate 수집 과정이 변경되면, {{domxref("RTCPeerConnection")}}의 이벤트 핸들러인 {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}}로 전달됩니다. 이는 연결의 {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} 속성이 변경되었다는 것을 뜻합니다.

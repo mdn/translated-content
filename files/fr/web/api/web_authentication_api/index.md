@@ -40,7 +40,7 @@ Afin de comprendre le rôle général des méthodes `create()` et `get()`, il fa
 
 ### Enregistrement
 
-Un enregistrement classique s'effectue en six étapes, comme illustré dans la figure qui suit et décrit ensuite. Les données nécessaires sont ici simplifiées, car il s'agit de fournir un aperçu. L'ensemble des champs nécessaires et optionnels ainsi que leur signification sont décrits dans le dictionnaire [`PublicKeyCredentialCreationOptions`](/fr/docs/Web/API/CredentialsContainer/create). De même, l'ensemble des champs associés à la réponse est décrit dans la page de l'interface [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) (où [`PublicKeyCredential.response`](/fr/docs/Web/API/PublicKeyCredential/response) correspond à l'interface [`AuthenticatorAttestationResponse`](/fr/docs/Web/API/AuthenticatorAttestationResponse)) On notera que pour le développement d'une application sur la partie JavaScript, seules les étapes 1 et 5 où on appelle/gère le retour de la fonction  `create()` sont nécessaires. Toutefois, les étapes 2, 3, et 4 sont essentielles pour bien comprendre le traitement qui a lieu dans le navigateur et l'authentificateur et ce que les données renvoyées signifient.
+Un enregistrement classique s'effectue en six étapes, comme illustré dans la figure qui suit et décrit ensuite. Les données nécessaires sont ici simplifiées, car il s'agit de fournir un aperçu. L'ensemble des champs nécessaires et optionnels ainsi que leur signification sont décrits dans le dictionnaire [`PublicKeyCredentialCreationOptions`](/fr/docs/Web/API/CredentialsContainer/create). De même, l'ensemble des champs associés à la réponse est décrit dans la page de l'interface [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) (où [`PublicKeyCredential.response`](/fr/docs/Web/API/PublicKeyCredential/response) correspond à l'interface [`AuthenticatorAttestationResponse`](/fr/docs/Web/API/AuthenticatorAttestationResponse)) On notera que pour le développement d'une application sur la partie JavaScript, seules les étapes 1 et 5 où on appelle/gère le retour de la fonction `create()` sont nécessaires. Toutefois, les étapes 2, 3, et 4 sont essentielles pour bien comprendre le traitement qui a lieu dans le navigateur et l'authentificateur et ce que les données renvoyées signifient.
 
 ![Diagramme représentant les composants en jeu et les flux de données pour un enregistrement à l'aide de l'API Web Authentication](webauthn_registration_r4.png)
 
@@ -153,7 +153,7 @@ On a ensuite ces étapes pour l'authentification&nbsp;:
 
 - [webauthn.io](https://github.com/duo-labs/webauthn.io), un site web de démonstration et [son code source](https://github.com/duo-labs/webauthn.io)
 - [github.com/webauthn-open-source](https://github.com/webauthn-open-source) avec&nbsp;:
-  - [le code source côté client](https://github.com/webauthn-open-source/webauthn-simple-app) 
+  - [le code source côté client](https://github.com/webauthn-open-source/webauthn-simple-app)
   - [le code source côté serveur](https://github.com/webauthn-open-source/fido2-lib)
 - [webauthn.bin.coffee](https://webauthn.bin.coffee/), un site web de démonstration construit par J.C. Jones, ainsi que [le code source](https://github.com/jcjones/webauthn.bin.coffee).
 - [try-webauthn.appspot.com](https://try-webauthn.appspot.com/), un site web de démonstration de Google, ainsi que [le code source](https://github.com/google/webauthndemo).

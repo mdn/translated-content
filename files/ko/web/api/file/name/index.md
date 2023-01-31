@@ -1,15 +1,8 @@
 ---
 title: File.name
 slug: Web/API/File/name
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.File.name
-translation_of: Web/API/File/name
 ---
+
 {{APIRef("File API")}}
 
 **`name`** 속성은 {{domxref("File")}} 객체가 나타내는 파일의 이름을 반환합니다. 보안상의 이유로 경로는 이름에서 제외됩니다.

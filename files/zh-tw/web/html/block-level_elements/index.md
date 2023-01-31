@@ -27,7 +27,7 @@ HTML (超文字標記語言, **Hypertext Markup Language**) 元素通常為 "區
 p { background-color: #8ABB55; }
 ```
 
-{{ EmbedLiveSample('Block-level_Example') }}
+{{ EmbedLiveSample('區塊級元素') }}
 
 ## 用法
 

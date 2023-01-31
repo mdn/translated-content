@@ -1,13 +1,6 @@
 ---
 title: '::after (:after)'
 slug: Web/CSS/::after
-tags:
-  - CSS
-  - Presentación
-  - Pseudo-elemento CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/::after
 ---
 
 {{CSSRef}}

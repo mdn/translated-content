@@ -258,7 +258,7 @@ Le HTML modifié ressemble à ceci&nbsp;:
 </table>
 ```
 
-On voit ici que chaque spécialité est placée dans un bloc  `<tbody>` séparé, avec la première ligne qui contient un unique élément [`<th>`](/fr/docs/Web/HTML/Element/th) avec un attribut [`colspan`](/fr/docs/Web/HTML/Element/th#attr-colspan) pour s'étendre sur toute la largeur du tableau. Cet en-tête indique le nom de la spécialité contenue dans le `<tbody>`.
+On voit ici que chaque spécialité est placée dans un bloc `<tbody>` séparé, avec la première ligne qui contient un unique élément [`<th>`](/fr/docs/Web/HTML/Element/th) avec un attribut [`colspan`](/fr/docs/Web/HTML/Element/th#attr-colspan) pour s'étendre sur toute la largeur du tableau. Cet en-tête indique le nom de la spécialité contenue dans le `<tbody>`.
 
 Puis, chaque ligne suivante pour ce `<tbody>` se compose de deux cellules&nbsp;: la première contenant l'identifiant et la seconde contenant le nom.
 

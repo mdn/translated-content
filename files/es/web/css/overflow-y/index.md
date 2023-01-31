@@ -1,11 +1,6 @@
 ---
 title: overflow-y
 slug: Web/CSS/overflow-y
-tags:
-  - CSS
-  - CSS Modelo de Caja
-  - Propiedad CSS
-translation_of: Web/CSS/overflow-y
 ---
 
 {{CSSRef}}

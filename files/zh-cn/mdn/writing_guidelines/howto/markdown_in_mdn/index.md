@@ -62,7 +62,7 @@ GFM 规范定义了两种基础的链接类型：
     - `cs`——C#
     - `java`——Java
     - `clike`——类 C 语言（对于任何未定义的类 C 语言）
-  - Other
+  - 其它
     - `python`——Python
     - `php`——PHP
     - `rust`——Rust
@@ -98,13 +98,29 @@ GFM 规范定义了两种基础的链接类型：
 
 例如：
 
-````plain
+````md
 ```js
 const greeting = "I will get syntax highlighting";
 ```
 ````
 
-如果你希望高亮显示的语言未在上方列出，请使用 `plain` 标记代码块。也可以按照[这里提出的流程](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366)请求其它语言的高亮支持。
+如果你希望高亮显示的语言未在上方列出，请使用 `plain` 标记代码块。也可以按照[GitHub 讨论](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366)提出的流程请求其它语言的高亮支持。
+
+### 阻止 lint
+
+你可以为任何语言标识符添加 `-nolint` 后缀：
+
+````plain
+```html-nolint
+<p>
+I will not be linted.
+</p>
+```
+````
+
+类似这样的代码块将得到适当的语法高亮，而且会被运行实例系统识别，但会被 linter 或自动化的格式化工具（如 Prettier）所忽略。你应该使用此后缀来展示 linter 或格式化工具不应该修复的无效代码或替代的格式。
+
+### 附加词
 
 你可以使用以下提供的任意一个附加词，但它必须跟在语言词之后：
 
@@ -114,7 +130,7 @@ const greeting = "I will get syntax highlighting";
 
 例如：
 
-````plain
+````md
 ```js example-good
 const greeting = "I'm a good example";
 ```
@@ -160,7 +176,7 @@ const greeting = "I'm a bad example";
 
 ##### 备注
 
-```plain
+```md
 > **备注：** This is how you write a note.
 >
 > It can have multiple lines.
@@ -183,7 +199,7 @@ const greeting = "I'm a bad example";
 
 ##### 警告
 
-```plain
+```md
 > **警告：** This is how you write a warning.
 >
 > It can have multiple paragraphs.
@@ -206,7 +222,7 @@ const greeting = "I'm a bad example";
 
 ##### 标注
 
-```plain
+```md
 > **标注：** **This is how you write a callout.**
 >
 > It can have multiple paragaphs.
@@ -233,7 +249,7 @@ const greeting = "I'm a bad example";
 
 例如，如果我们想在德语中使用“Warnung”来表示“警告”，那么我们在德语页面应该写：
 
-```plain
+```md
 > **Warnung:** So schreibt man eine Warnung.
 ```
 
@@ -249,7 +265,7 @@ const greeting = "I'm a bad example";
 
 这是一个包含代码块的例子。
 
-````plain
+````md
 > **备注：** This is how you write a note.
 >
 > It can contain code blocks.
@@ -302,7 +318,7 @@ const greeting = "I'm a bad example";
 
 例如，这是一个 `<dl>`：
 
-````plain
+````md
 - term1
     - : My description of term1
 
@@ -366,9 +382,9 @@ const greeting = "I'm a bad example";
 
 如果你需要将多个 `<dt>` 元素关联到同一个 `<dd>` 上，可以考虑将它们以逗号分隔后提供给同一个 `<dt>` 元素，如下：
 
-```plain
-* `param1`, `param2`, `param3`
-    * : My description of params 1, 2, and 3
+```md
+- `param1`, `param2`, `param3`
+    - : 对参数 1、2、3 的描述
 ```
 
 这样设计语法的原因是：在使用 CommonMark（如 Prettier 或 Github 预览）工具的情况下，它相当容易编写和解析。
@@ -393,7 +409,7 @@ const greeting = "I'm a bad example";
 
 也就是说，必须使用以下风格：
 
-```plain
+```md
 | Heading 1 | Heading 2 | Heading 3 |
 |-----------|-----------|-----------|
 | cell 1    | cell 2    | cell 3    |
@@ -402,7 +418,7 @@ const greeting = "I'm a bad example";
 
 而不是这种风格：
 
-```plain
+```md
 Heading 1 | Heading 2 | Heading 3
  --- | --- | ---
 
@@ -455,7 +471,7 @@ GFM 表格语法的主要限制是：
 
 在 GFM 中，它会是这样：
 
-```plain
+```md
   | A heading 1        | A heading 2                                                                                                                                         | A heading 3        | A heading 4                                                                                                                                                              | A heading 5        | A heading 6        |
   | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
   | Something shortish | Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Something shortish |
@@ -469,32 +485,34 @@ GFM 表格语法的主要限制是：
 
 属性表是一类特殊的表格，用于在一组特定类型的页面中显示结构化的属性值。例如，所有的 Event 页面都有一个属性表，列出了关于事件的常见信息：是否冒泡、是否可取消等等。
 
-这类表格有两列：第一列是标题列，其列出了属性名；第二列则列出了这些特定属性的值。例如，以下是一个 {{domxref("XMLHttpRequest")}} 接口的 {{domxref("XMLHttpRequest/progress_event", "progress")}} 事件的属性表。
+这类表格有两列：第一列是标题列，其列出了属性名；第二列则列出了这些特定属性的值。例如，以下是一个 {{domxref("PannerNode")}} 接口的属性表：
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">是否冒泡</th>
-      <td>否</td>
+      <th scope="row">输入数量</th>
+      <td><code>1</code></td>
     </tr>
     <tr>
-      <th scope="row">是否可取消</th>
-      <td>否</td>
+      <th scope="row">输出数量</th>
+      <td><code>0</code></td>
     </tr>
     <tr>
-      <th scope="row">接口</th>
-      <td>{{domxref("ProgressEvent")}}</td>
+      <th scope="row">通道计数模式</th>
+      <td><code>"explicit"</code></td>
     </tr>
     <tr>
-      <th scope="row">事件处理器属性</th>
-      <td>
-        {{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}}
-      </td>
+      <th scope="row">通道数</th>
+      <td><code>2</code></td>
+    </tr>
+    <tr>
+      <th scope="row">通道解释</th>
+      <td><code>"speakers"</code></td>
     </tr>
   </tbody>
 </table>
 
-因为它们有一个标题列，GFM 无法实现这些页面。因此，应该使用 HTML。为了获得特殊的样式，还需要将 `"properties"` 类应用于表格：
+因为它们有一个标题列，GFM 无法表示这些页面。因此，应该使用 HTML。为了获得特殊的样式，还需要将 `"properties"` 类应用于表格：
 
 ```html
 <table class="properties">
@@ -509,12 +527,7 @@ GFM 表格语法的主要限制是：
 如果有必要，你可以使用 HTML {{HTMLElement("sup")}} 和 {{HTMLElement("sub")}} 元素，但应尽可能使用替代品。特别是：
 
 - 对于求幂，请使用脱字符：`2^53`。
-- 对于像 1
-
-  <sup>st</sup>
-
-  这样的表达式，推荐使用单词，如：“第一”。
-
+- 对于像 1<sup>st</sup> 这样的表达式，推荐使用单词，如：“第一”。
 - 对于脚注，请不要在脚注的参考文献上使用类似 `<sup>[1]</sup>` 的标注，这是没有必要的。
 
 ### 讨论参考
@@ -535,7 +548,7 @@ GFM 表格语法的主要限制是：
 
 文本内容可以包括对 KumaScript 宏的调用：
 
-```plain
+```md
 The **`margin`** [CSS](/en-US/docs/Web/CSS) property
 sets the margin area on all four sides of an element. It is a shorthand for
 \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},

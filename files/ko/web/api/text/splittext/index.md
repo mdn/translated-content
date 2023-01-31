@@ -1,13 +1,8 @@
 ---
 title: Text.splitText()
 slug: Web/API/Text/splitText
-tags:
-  - API
-  - DOM
-  - Text
-  - 메소드
-translation_of: Web/API/Text/splitText
 ---
+
 {{apiref("DOM")}}
 
 **`Text.splitText()`** 메소드는 {{domxref("Text")}} 노드를 지정된 오프셋에서 두 노드로 분리합니다. 두 노드는 sibling으로써 트리에 유지됩니다.

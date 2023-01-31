@@ -1,6 +1,8 @@
 ---
 title: SubtleCrypto.generateKey()
 slug: Web/API/SubtleCrypto/generateKey
+l10n:
+  sourceCommit: 6f81db437ff479079728eee2edec8d3c3d291084
 ---
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}

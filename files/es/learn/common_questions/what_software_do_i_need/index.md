@@ -1,13 +1,6 @@
 ---
 title: ¿Qué software necesito para construir un sitio web?
 slug: Learn/Common_questions/What_software_do_I_need
-tags:
-  - Build a website
-  - Building
-  - Mecanismos Web
-  - Principiante
-  - software
-translation_of: Learn/Common_questions/What_software_do_I_need
 original_slug: Learn/Common_questions/Que_software_necesito
 ---
 
@@ -178,11 +171,11 @@ Todos los sistemas operativos de escritorio traen un editor de texto básico. Es
 
 Aquí se muestra una captura de pantalla de un editor de texto avanzado:
 
-![Screenshot of Notepad++.](https://mdn.mozillademos.org/files/8221/NotepadPlusPlus.png)
+![Screenshot of Notepad++.](notepadplusplus.png)
 
 Esta es una captura de panalla de un editor de texto online:
 
-![Screenshot of ShiftEdit](https://mdn.mozillademos.org/files/15837/shiftedit.png)
+![Screenshot of ShiftEdit](shiftedit.png)
 
 ### Subir archivos a la Web
 

@@ -1,14 +1,6 @@
 ---
 title: ¿Cuánto cuesta hacer algo en la Web?
 slug: Learn/Common_questions/How_much_does_it_cost
-tags:
-  - Comenzando
-  - Herramientas de desarrollo web
-  - Principiante
-  - alojamiento
-  - costo
-  - hosting
-translation_of: Learn/Common_questions/How_much_does_it_cost
 original_slug: Learn/Common_questions/Cuanto_cuesta
 ---
 
@@ -158,4 +150,4 @@ En dependencia de cómo responda estas preguntas, su sitio pudiera costar miles 
 Ahora que entiende que cantidad de dinero su sitio puede costarle, es tiempo de comenzar a diseñar un sitio web y [preparar su entorno de trabajo](/es/docs/Learn/Set_up_a_basic_working_environment).
 
 - Lea sobre [cómo seleccionar e instalar un editor de texto](/es/docs/Learn/Choose,_Install_and_set_up_a_text_editor).
-- SI está más enfocado en diseño, eche una mirada a la [anatomía de una página web](/en-US/Learn/Anatomy_of_a_web_page).
+- SI está más enfocado en diseño, eche una mirada a la [anatomía de una página web](/es/Learn/Anatomy_of_a_web_page).

@@ -1,17 +1,8 @@
 ---
 title: Cache.put()
 slug: Web/API/Cache/put
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - put
-translation_of: Web/API/Cache/put
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`put()`** method of the {{domxref("Cache")}} interface allows key/value pairs to be added to the current {{domxref("Cache")}} object.

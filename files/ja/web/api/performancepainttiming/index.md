@@ -53,9 +53,7 @@ The time to first-contentful-paint was 2787.460 milliseconds.
 
 ## 仕様書
 
-| 仕様書                                                                                                           | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Paint Timing','#sec-PerformancePaintTiming','PerformancePaintTiming')}} | {{Spec2('Paint Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

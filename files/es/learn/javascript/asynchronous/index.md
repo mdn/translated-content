@@ -1,7 +1,6 @@
 ---
 title: JavaScript asíncrono
 slug: Learn/JavaScript/Asynchronous
-translation_of: Learn/JavaScript/Asynchronous
 ---
 
 {{LearnSidebar}}

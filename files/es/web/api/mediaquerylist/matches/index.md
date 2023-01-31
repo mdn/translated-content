@@ -1,7 +1,6 @@
 ---
 title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
-translation_of: Web/API/MediaQueryList/matches
 ---
 
 {{APIRef("CSSOM View")}}

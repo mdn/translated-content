@@ -1,13 +1,6 @@
 ---
 title: Carga progresiva
 slug: Web/Progressive_web_apps/Loading
-tags:
-  - Cargar
-  - PWAs
-  - aplicaciones web progresivas
-  - js13kGames
-  - progresiva
-translation_of: Web/Progressive_web_apps/Loading
 ---
 
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
@@ -89,7 +82,7 @@ imagesToLoad.forEach((img) => {
 
 Para que todo el proceso sea más atractivo visualmente, el marcador de posición se difumina en CSS.
 
-![Captura de pantalla de imágenes de marcador de posición en la aplicación js13kPWA.](https://mdn.mozillademos.org/files/15992/js13kpwa-placeholders.png)
+![Captura de pantalla de imágenes de marcador de posición en la aplicación js13kPWA.](js13kpwa-placeholders.png)
 
 Renderizamos las imágenes con un desenfoque al principio, por lo que se puede lograr una transición hacia la nitidez:
 

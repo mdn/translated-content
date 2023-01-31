@@ -1,13 +1,9 @@
 ---
 title: EventListener
 slug: conflicting/Web/API/EventTarget/addEventListener
-tags:
-  - API
-  - DOM
-  - Eventos DOM
-translation_of: Web/API/EventListener
 original_slug: Web/API/EventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 ## Visão Geral

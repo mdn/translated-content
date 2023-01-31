@@ -1,13 +1,6 @@
 ---
 title: Política Same-origin
 slug: Web/Security/Same-origin_policy
-tags:
-  - CORS
-  - JavaScript
-  - Mismo-Origen
-  - Política Same-Origin
-  - Seguridad
-translation_of: Web/Security/Same-origin_policy
 original_slug: Web/Security/Same-origin_politica
 ---
 
@@ -76,7 +69,7 @@ Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado
 - Archivos multimedia con {{htmlelement("video")}} y {{htmlelement("audio")}}.
 - Plug-ins con [`<object>`](/es/docs/HTML/Element/object), [`<embed>`](/es/docs/HTML/Element/embed) y [`<applet>`](/es/docs/HTML/Element/applet).
 - Fuentes con [`@font-face`](/es/docs/CSS/@font-face). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
-- Cualquiera con [`<frame>`](/es/docs/HTML/Element/frame) and [`<iframe>`](/es/docs/HTML/Element/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/en-US/docs/HTTP/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
+- Cualquiera con [`<frame>`](/es/docs/HTML/Element/frame) and [`<iframe>`](/es/docs/HTML/Element/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/es/docs/HTTP/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
 
 ### Cómo permitir el acceso de origen cruzado
 

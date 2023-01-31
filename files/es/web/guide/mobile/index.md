@@ -1,10 +1,6 @@
 ---
 title: Desarrollo Web Móvil
 slug: Web/Guide/Mobile
-tags:
-  - Intermedio
-  - NecesitaEjemplo
-translation_of: Web/Guide/Mobile
 original_slug: Web/Guide/Movil
 ---
 

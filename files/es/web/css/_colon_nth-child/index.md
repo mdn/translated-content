@@ -1,13 +1,6 @@
 ---
 title: ':nth-child'
 slug: Web/CSS/:nth-child
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:nth-child
 ---
 
 {{CSSRef}}

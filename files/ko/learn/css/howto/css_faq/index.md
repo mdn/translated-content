@@ -3,6 +3,7 @@ title: 공통된 CSS 질문들
 slug: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Common_CSS_Questions
 ---
+
 ## 왜 유효한 내 CSS가 왜 올바르게 그려지지 않는가?
 
 Browsers use the `DOCTYPE` declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern `DOCTYPE` declaration at the start of your HTML will improve browser standards compliance.

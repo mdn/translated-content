@@ -34,7 +34,7 @@ text-decoration-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 修饰文本的线的颜色。
 
-### 格式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -58,7 +58,7 @@ s {
 }
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## Accessibility concerns
 

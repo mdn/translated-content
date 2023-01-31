@@ -38,7 +38,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_conte
 
 ## Пример
 
-![Example of stacking rules modified using z-index](/@api/deki/files/913/=Understanding_zindex_04.png)
+![Example of stacking rules modified using z-index](understanding_zindex_04.png)
 
 В примере каждый позиционированный элемент создаёт свой контекст наложения, так как имеет свойства position и z-index. Иерархия контекстов наложения выглядит следующим образом:
 

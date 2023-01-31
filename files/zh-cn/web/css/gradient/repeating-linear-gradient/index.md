@@ -27,7 +27,7 @@ repeating-linear-gradient(0deg, blue, green 40%, red);
 
 与其他渐变一样，线形重复渐变没有提供 [固定的尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，它没有原始尺寸或首选尺寸，也没有首选的比列。它将自适应于对应元素的尺寸。
 
-> **备注：**  因为 `<gradient>` 属于`<image>` 数据类型，所以只能在可以使用 `<image>`的地方使用它们。因此`repeating-linear-gradient()` 不适用于{{Cssxref("background-color")}}以及使用 {{cssxref("&lt;color&gt;")}} 数据类型的地方。
+> **备注：** 因为 `<gradient>` 属于`<image>` 数据类型，所以只能在可以使用 `<image>`的地方使用它们。因此`repeating-linear-gradient()` 不适用于{{Cssxref("background-color")}}以及使用 {{cssxref("&lt;color&gt;")}} 数据类型的地方。
 
 ## 语法
 
@@ -122,7 +122,7 @@ div {
 </ol>
 ```
 
-{{EmbedLiveSample('Example_hidden', '300px', '300px', '')}}
+{{EmbedLiveSample('示例', '300px', '300px', '')}}
 
 ## 规范
 
@@ -132,7 +132,7 @@ div {
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
 - [使用 CSS 渐变](/zh-CN/CSS/Using_CSS_gradients)
 - 其他渐变方法：{{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-radial-gradient")}}

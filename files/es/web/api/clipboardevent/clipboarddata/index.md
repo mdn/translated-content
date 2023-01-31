@@ -1,14 +1,6 @@
 ---
 title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
-tags:
-  - API
-  - Clipboard API
-  - Experimental
-  - Portapapeles
-  - Solo lectura
-  - metodo
-translation_of: Web/API/ClipboardEvent/clipboardData
 ---
 
 {{ apiref("Clipboard API") }} {{SeeCompatTable}}

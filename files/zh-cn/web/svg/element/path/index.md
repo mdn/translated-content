@@ -16,18 +16,24 @@ path 元素是用来定义形状的通用元素。所有的基本形状都可以
 
 ## 示例
 
-```plain
-<svg width="100%" height="100%" viewBox="0 0 400 400"
-     xmlns="http://www.w3.org/2000/svg">
+```css hidden
+html,body,svg { height:100% }
+```
 
-  <path d="M 100 100 L 300 100 L 200 300 z"
-        fill="orange" stroke="black" stroke-width="3" />
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M 10,30
+           A 20,20 0,0,1 50,30
+           A 20,20 0,0,1 90,30
+           Q 90,60 50,90
+           Q 10,60 10,30 z" />
 </svg>
 ```
 
 输出结果：
 
-{{EmbedLiveSample("Example",200,215)}}
+{{EmbedLiveSample("示例",200,215)}}
 
 ## 属性
 

@@ -1,12 +1,6 @@
 ---
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
-tags:
-  - JavaScript
-  - Método(2)
-  - Prototipo
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/substr
 ---
 

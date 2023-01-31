@@ -1,18 +1,8 @@
 ---
 title: AnimationTimeline
 slug: Web/API/AnimationTimeline
-tags:
-  - API
-  - Animation
-  - AnimationTimeline
-  - Experimental
-  - Interface
-  - Reference
-  - Web Animations
-  - waapi
-  - web animations api
-translation_of: Web/API/AnimationTimeline
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
 The `AnimationTimeline` interface of the [Web Animations API](/ko/docs/Web/API/Web_Animations_API) represents the timeline of an animation. This interface exists to define timeline features (inherited by {{domxref("DocumentTimeline")}} and future timeline types) and is not itself directly used by developers. Anywhere you see `AnimationTimeline`, you should use `DocumentTimeline` or any other timeline type instead.

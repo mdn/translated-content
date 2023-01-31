@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onchange
 slug: conflicting/Web/API/HTMLElement/change_event
-translation_of: Web/API/GlobalEventHandlers/onchange
 original_slug: Web/API/GlobalEventHandlers/onchange
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Dimensionamiento para propiedades lógicas
 slug: Web/CSS/CSS_Logical_Properties/Sizing
-translation_of: Web/CSS/CSS_Logical_Properties/Sizing
 original_slug: Web/CSS/CSS_Logical_Properties/Dimensionamiento
 ---
 {{CSSRef}}

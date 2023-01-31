@@ -1,9 +1,9 @@
 ---
 title: Eventos on-line e off-line
 slug: orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
-translation_of: Web/API/NavigatorOnLine/Online_and_offline_events
 original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
 ---
+
 IAlguns navegadores utilizam [Online/Offline events](http://www.whatwg.org/specs/web-apps/current-work/#offline) relacionados à [WHATWG Web Applications 1.0 specification](http://www.whatwg.org/specs/web-apps/current-work/).
 
 ### Introdução

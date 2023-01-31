@@ -1,18 +1,11 @@
 ---
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
 
 {{JSRef}}
 
-**`Array[@@species]` **접근자 속성은 `Array` 생성자를 반환합니다.
+**`Array[@@species]`** 접근자 속성은 `Array` 생성자를 반환합니다.
 
 ## 구문
 

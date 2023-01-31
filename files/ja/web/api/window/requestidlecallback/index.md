@@ -37,9 +37,7 @@ var handle = window.requestIdleCallback(callback[, options])
 
 ## 仕様
 
-| 仕様                                         | 状態                                     | コメント |
-| -------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザ互換性
 

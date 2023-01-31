@@ -1,19 +1,8 @@
 ---
 title: AudioWorklet을 사용하는 백그라운드 오디오 프로세싱
 slug: Web/API/Web_Audio_API/Using_AudioWorklet
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - Background
-  - Examples
-  - Guide
-  - Processing
-  - Web Audio
-  - Web Audio API
-  - WebAudio API
-  - sound
 ---
+
 {{APIRef("Web Audio API")}}
 
 Web Audio API가 처음 브라우저에 소개되었을 때, 이것은 실시간으로 오디오를 조작하는 사용자 정의 오디오 프로세서를 생성하기 위해 JavaScript 코드를 사용하고 있었습니다. `ScriptProcessorNode`의 문제점은 단순했습니다: 이것은 메인 스레드에서 실행되기 때문에 실행을 마치기 전까지 다른 모든 동작을 막았습니다. 이러한 방식은 이상적이지 않았습니다. 특히 오디오 프로세싱같이 계산적으로 비용이 많이 들 수 있는 무언가에 대해서 말입니다.

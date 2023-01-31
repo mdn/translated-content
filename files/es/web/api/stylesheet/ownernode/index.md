@@ -1,7 +1,6 @@
 ---
 title: Stylesheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
-translation_of: Web/API/StyleSheet/ownerNode
 ---
 
 {{ ApiRef() }}

@@ -1,6 +1,8 @@
 ---
 title: Firefox 69 for developers
 slug: Mozilla/Firefox/Releases/69
+l10n:
+  sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d
 ---
 
 {{FirefoxSidebar}}
@@ -11,19 +13,19 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 ### 開発者ツール
 
-#### Debugger
+#### デバッガー
 
-- [イベントリスナーブレークポイント](/ja/docs/Tools/Debugger/Set_event_listener_breakpoints) で、ブラウザーのイベントに対してどのコードを実行したかを分析できます。`click` や `keydown` など特定の型、あるいはすべてのマウス入力イベントのようにイベントのカテゴリー全体を選択できます ({{bug(1526082)}})。
-- デバッガーの [ソースリストペイン](/ja/docs/Tools/Debugger/UI_Tour#Source_list_pane) に表示しているスクリプトを、コンテキストメニューの _ファイルをダウンロード_ で保存できるようになりました ({{bug(888161)}})。
-- デバッガーのソースリストペインで、拡張機能が UUID に代わって拡張機能の名前で表示されるようになりました ({{bug(1486416)}})。デバッグしたい拡張機能のコードを見つけやすくなります。
+- [イベントリスナーブレークポイント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_event_listener_breakpoints/index.html) で、ブラウザーのイベントに対してどのコードを実行したかを分析できます。`click` や `keydown` など特定の型、あるいはすべてのマウス入力イベントのようにイベントのカテゴリー全体を選択できます ({{bug(1526082)}})。
+- デバッガーの [ソースリストペイン](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#source-list-pane) に表示しているスクリプトを、コンテキストメニューの _ファイルをダウンロード_ で保存できるようになりました ({{bug(888161)}})。
+- デバッガーのソースリストペインで、拡張機能が {{Glossary("UUID")}} に代わって拡張機能の名前で表示されるようになりました ({{bug(1486416)}})。デバッグしたい拡張機能のコードを見つけやすくなります。
 - スクリプトの読み込みを遅延させることで、デバッガーの起動がかなり早くなりました ({{bug(1527488)}})。
 
 #### コンソール
 
-- リソースやストレージへのアクセスが何度もブロックされることによるノイズを減らすため、[トラッキング防止のエラー](/ja/docs/Mozilla/Firefox/Privacy/Tracking_Protection)、[CSP のエラー](/ja/docs/Web/HTTP/CSP)、[CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) による [ブラウザーコンソール](/ja/docs/Tools/Browser_Console) のメッセージを自動的にグループ化するようになりました ({{bug(1522396)}})。
+- リソースやストレージへのアクセスが何度もブロックされることによるノイズを減らすため、[トラッキング防止のエラー](/ja/docs/Web/Privacy/Tracking_Protection)、[CSP のエラー](/ja/docs/Web/HTTP/CSP)、[CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) による [ブラウザーコンソール](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) のメッセージを自動的にグループ化するようになりました ({{bug(1522396)}})。
 - コンソールに表示されているログを、コンテキストメニューの新しい項目である \[表示メッセージをエクスポート] でファイルに保存、またはクリップボードにコピーして共有できるようになりました ({{bug(1517728)}})。
 - コンソールのツールバーが、縦方向の領域を節約するためレスポンシブに高さを 1 行に減らすようになりました ({{bug(972530)}})。
-- Firefox のフロントエンドが発したログに集中するため、コンソールでコンテンツが発したメッセージを隠せるようになりました ({{bug(1523842)}})。
+- Firefox UI が発したログに集中するため、コンソールでコンテンツが発したメッセージを隠せるようになりました ({{bug(1523842)}})。
 
 #### ネットワーク
 
@@ -32,11 +34,12 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 #### インスペクター
 
-- [ページインスペクター](/ja/docs/Tools/Page_Inspector) で要素にマウスポインターを載せたときに表示される情報バーで、その要素が flex コンテナーや flex アイテムであることを表示するようになりました ({{bug(1521188)}})。
+- [ページインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) で要素にマウスポインターを載せたときに表示される情報バーで、その要素がフレックスコンテナーやフレックスアイテムであることを表示するようになりました ({{bug(1521188)}})。
+- サブグリッドを持つグリッドを含むページを検査するとき、サブグリッドの行が表示されるたびに親グリッドのオーバーレイ行が表示されます。親グリッドのオーバーレイチェックボックスが選択されていない場合、その行は半透明になります ({{bug(1550519)}}).
 
 #### リモートデバッグ
 
-- 私たちのモバイルウェブブラウザーのために、リモートデバッグの機能を古い WebIDE から再設計した [about:debugging](/ja/docs/Tools/about:debugging) に移行しました。USB を通してリモート端末の [GeckoView](https://hacks.mozilla.org/2019/06/geckoview-in-2019/) をリモートデバッグするエクスペリエンスが向上します ({{bug(1462208)}})。
+- モバイルウェブブラウザーのために、リモートデバッグの機能を古い WebIDE から再設計した [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) に移行しました。USB を通してリモート端末の [GeckoView](https://hacks.mozilla.org/2019/06/geckoview-in-2019/) をリモートデバッグするエクスペリエンスが向上します ({{bug(1462208)}})。
 
 #### 全般
 
@@ -70,8 +73,8 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 ### JavaScript
 
-- [パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes#Field_declarations) をデフォルトで有効にしました ({{bug(1555464)}})。詳しくは [Class fields](/ja/docs/Web/JavaScript/Reference/Classes/Class_fields) もご覧ください。
-- promise の拒否イベントである [`unhandledrejection`](/ja/docs/Web/API/Window/unhandledrejection_event) および [`rejectionhandled`](/ja/docs/Web/API/Window/rejectionhandled_event) をデフォルトで有効にしました ({{bug(1362272)}})。これらの動作について詳しくは {{SectionOnPage("/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}} をご覧ください。
+- [パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes#フィールド宣言)を既定で有効にしました ({{bug(1555464)}})。詳しくは[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)もご覧ください。
+- プロミスの拒否イベントである [`unhandledrejection`](/ja/docs/Web/API/Window/unhandledrejection_event) および [`rejectionhandled`](/ja/docs/Web/API/Window/rejectionhandled_event) を既定で有効にしました ({{bug(1362272)}})。これらの動作について詳しくは {{SectionOnPage("/ja/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}} をご覧ください。
 
 ### HTTP
 
@@ -81,12 +84,12 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 #### 新規 API
 
-- [Resize Observer API](/ja/docs/Web/API/Resize_Observer_API) をデフォルトで有効にしました ({{bug(1543839)}})。
-- Microtask API ({{domxref("WindowOrWorkerGlobalScope.queueMicrotask()")}}) を実装しました ({{bug(1480236)}})。
+- [リサイズオブザーバー API](/ja/docs/Web/API/Resize_Observer_API) を既定で有効にしました ({{bug(1543839)}})。
+- Microtask API ({{domxref("queueMicrotask()")}}) を実装しました ({{bug(1480236)}})。
 
 #### DOM
 
-- workers で {{domxref("DOMMatrix")}}、{{domxref("DOMPoint")}}、および関連オブジェクトをサポートしました ({{bug(1420580)}})。
+- ワーカーで {{domxref("DOMMatrix")}}、{{domxref("DOMPoint")}}、および関連オブジェクトをサポートしました ({{bug(1420580)}})。
 - 仕様書に準拠させるため、`pageX` および `pageY` プロパティを {{domxref("UIEvent")}} から {{domxref("MouseEvent")}} に移動しました ({{bug(1178763)}})。これらのプロパティは、`UIEvent` から継承する {{domxref("CompositionEvent")}}、{{domxref("FocusEvent")}}、{{domxref("InputEvent")}}、{{domxref("KeyboardEvent")}}、{{domxref("TouchEvent")}} インターフェイスに公開されなくなりました。
 - {{domxref("Blob.text()")}}、{{domxref("Blob.arrayBuffer()")}}、{{domxref("Blob.stream()")}} メソッドを実装しました ({{bug(1557121)}})。
 - {{domxref("DOMMatrix.fromMatrix()")}} を実装しました ({{bug(1560462)}})。
@@ -98,7 +101,7 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 #### メディア、Web Audio、WebRTC
 
-- ユーザーのセキュリティを向上させるため、および最新版の [Media Capture and Streams](/ja/docs/Web/API/Media_Streams_API) 仕様書に合わせるために、安全でないコンテキストでは {{domxref("navigator.mediaDevices")}} プロパティを提供しないようになりました。{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}、{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}、{{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} などを使用するには、{{Glossary("HTTPS")}} を使用してコンテンツを読み込むようにしてください ({{bug(1528031)}})。
+- ユーザーのセキュリティを向上させるため、および最新版の[メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)仕様書に合わせるために、安全でないコンテキストでは {{domxref("navigator.mediaDevices")}} プロパティを提供しないようになりました。{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}、{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}、{{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} などを使用するには、{{Glossary("HTTPS")}} を使用してコンテンツを読み込むようにしてください ({{bug(1528031)}})。
 - Web Audio API の {{domxref("AudioParam.value")}} プロパティが、現時点のプロパティの実際の値を、その値に適用されるすべての予定済みまたは段階的な変更を考慮したうえで返すようになりました。以前の Firefox は、(`value` セッターを使用して) 直近に明示的に設定された値だけを返していました({{bug(893020)}}).
 - 新たにトラックを辞書式順序で使用するように {{domxref("MediaStreamAudioSourceNode")}} を更新しました。以前はトラックの順序が個々のブラウザー次第であり、任意に変更することもできました。加えて、音声トラックがないストリームを使用して `MediaStreamAudioSourceNode` を作成しようとすると `InvalidStateError` 例外が発生するようになりました ({{bug(1553215)}})。
 - {{domxref("MediaTrackSettings.facingMode", "facingMode")}}、{{domxref("MediaTrackSettings.deviceId", "deviceId")}}、{{domxref("MediaTrackSettings.groupId", "groupId")}} 設定が、{{domxref("MediaStreamTrack.getSettings()")}} を呼び出すと返される {{domxref("MediaTrackSettings")}} オブジェクトのメンバーに含まれるようになりました ({{bug(1537986)}})。
@@ -112,19 +115,23 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 #### その他
 
 - Marionette が、モーダルダイアログやユーザープロンプトの開く・閉じるを動的に制御するようになりました ({{bug(1477977)}})。これは、複数開くプロンプトも制御されることを意味します ({{bug(1487358)}})。
-- DOM の一部が削除されたり追加の通知が出たりすることを防ぐため、デフォルトでトラッキング防止と DOM push 機能を無効化するようになりました ({{bug(1542244)}})。
+- DOM の一部が削除されたり追加の通知が出たりすることを防ぐため、既定でトラッキング防止と DOM push 機能を無効化するようになりました ({{bug(1542244)}})。
 - Firefox が低メモリ状態になったときにバッググラウンドのタブを自動的にアンロードする機能を無効化しました。これはタブを切り替えるときの自動化に悪影響がありました ({{bug(1553748)}})。
 
 ## アドオン開発者向けの変更点
 
 ### API の変更点
 
-- [UserScripts API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/userScripts) をデフォルトで有効にしました。
+- [UserScripts API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/userScripts) を既定で有効にしました。
 - [`topSites.get()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/topSites/get) メソッドで、新たなオプションである `includePinned` および `includeSearchShortcuts` が使用可能になりました ({{bug(1547669)}})。
 
 ### その他の変更点
 
 - ホワイトリストに記載されたものを除く*すべての*拡張機能をブラックリストに登録する [グループポリシー設定](https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings) を追加しました ({{bug(1522823)}})。
+
+## 関連情報
+
+- Hacks release post: [Firefox 69 — a tale of Resize Observer, microtasks, CSS, and DevTools](https://hacks.mozilla.org/2019/09/firefox-69-a-tale-of-resize-observer-microtasks-css-and-devtools/)
 
 ## 過去のバージョン
 

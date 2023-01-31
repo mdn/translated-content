@@ -1,9 +1,6 @@
 ---
 title: string
 slug: Web/XPath/Functions/string
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/string
 ---
 
 {{ XsltRef() }}
@@ -18,7 +15,7 @@ string( [object] )
 
 ### 인수
 
-- _`object`_
+- `object`
   (선택사항)
   - : 문자열로 변환할 개체. 빼면, 문맥 노드를 씁니다.
 

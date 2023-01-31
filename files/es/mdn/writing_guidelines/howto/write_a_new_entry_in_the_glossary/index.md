@@ -1,12 +1,6 @@
 ---
 title: Cómo escribir una nueva entrada en el Glosario
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-tags:
-  - Glosario
-  - Guía
-  - Howto
-  - MDN Meta
-translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
 

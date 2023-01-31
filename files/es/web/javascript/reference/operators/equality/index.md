@@ -1,13 +1,6 @@
 ---
 title: Comparación (==)
 slug: Web/JavaScript/Reference/Operators/Equality
-tags:
-  - JS
-  - JavaScript
-  - Operador de comparacion
-  - Operadores
-  - Referências
-translation_of: Web/JavaScript/Reference/Operators/Equality
 original_slug: Web/JavaScript/Referencia/Operadores/Comparacion
 ---
 
@@ -107,9 +100,7 @@ console.log(d == s);    //true
 
 ## Especificaciones
 
-| Especificaciones                                                                                 |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}} |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

@@ -1,11 +1,6 @@
 ---
 title: Comentarios
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - Principiante
-  - Referencia CSS
-translation_of: Web/CSS/Comments
 original_slug: Web/CSS/Comentarios
 ---
 

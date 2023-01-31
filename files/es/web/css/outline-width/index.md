@@ -1,10 +1,6 @@
 ---
 title: outline-width
 slug: Web/CSS/outline-width
-tags:
-  - Contorno CSS
-  - Propiedad CSS
-translation_of: Web/CSS/outline-width
 ---
 
 {{CSSRef}}

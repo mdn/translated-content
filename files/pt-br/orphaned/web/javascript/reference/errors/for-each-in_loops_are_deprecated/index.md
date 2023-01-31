@@ -1,13 +1,9 @@
 ---
 title: 'Warning: JavaScript 1.6''s for-each-in loops are deprecated'
 slug: orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
-tags:
-  - Aviso
-  - JavaScript
-  - Warning
-translation_of: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 original_slug: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem

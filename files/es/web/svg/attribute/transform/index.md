@@ -1,7 +1,6 @@
 ---
 title: transform
 slug: Web/SVG/Attribute/transform
-translation_of: Web/SVG/Attribute/transform
 ---
 
 « Indice de atributos SVG

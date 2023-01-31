@@ -1,8 +1,8 @@
 ---
 title: Document.createRange()
 slug: Web/API/Document/createRange
-translation_of: Web/API/Document/createRange
 ---
+
 {{APIRef("DOM")}}
 
 새 {{domxref("Range")}} 객체를 리턴합니다.

@@ -1,12 +1,6 @@
 ---
 title: CSS media queries
 slug: Web/CSS/Media_Queries/Using_media_queries
-tags:
-  - CSS
-  - Media
-  - Media Queries
-  - query
-translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: CSS/Media_queries
 ---
 

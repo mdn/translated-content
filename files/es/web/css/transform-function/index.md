@@ -1,9 +1,6 @@
 ---
 title: transform-function
 slug: Web/CSS/transform-function
-tags:
-  - Transformaciones CSS
-translation_of: Web/CSS/transform-function
 ---
 
 {{CSSRef}}

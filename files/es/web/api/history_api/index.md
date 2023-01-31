@@ -1,11 +1,6 @@
 ---
 title: Manipulando el historial del navegador
 slug: Web/API/History_API
-tags:
-  - HTML5
-  - historial
-  - para_revisar
-translation_of: Web/API/History_API
 original_slug: DOM/Manipulando_el_historial_del_navegador
 ---
 

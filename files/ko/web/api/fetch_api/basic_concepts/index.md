@@ -1,8 +1,8 @@
 ---
 title: Fetch basic concepts
 slug: Web/API/Fetch_API/Basic_concepts
-translation_of: Web/API/Fetch_API/Basic_concepts
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 [Fetch](/ko/docs/Web/API/Fetch_API) 는 네트워크 통신을 포함한 리소스를 가지고 오기 위한 인터페이스를 제공해주는 보다 새로운 API입니다. [XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest) 와 기능은 같지만 확장 가능하며 효과적으로 구성되어 있습니다. 이 문서에서는 Fetch API의 기본 컨셉들중 일부를 소개합니다.

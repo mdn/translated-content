@@ -1,14 +1,6 @@
 ---
 title: float
 slug: Web/CSS/float
-tags:
-  - CSS
-  - CSS Float
-  - CSS Posicionamiento
-  - CSS Propiedad
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/float
 ---
 
 {{CSSRef}}

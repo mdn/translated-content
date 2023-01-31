@@ -42,7 +42,7 @@ translation_of: Learn/Server-side/First_steps/Introduction
 
 Сервер извлекает запрошенный документ из своей файловой системы и возвращает HTTP-ответ, содержащий документ и [успешный статус](/ru/docs/Web/HTTP/Status#Successful_responses) (обычно 200 OK). Если файл не может быть извлечён по каким-либо причинам, возвращается статус ошибки (смотри [ошибки клиента](/ru/docs/Web/HTTP/Status#Client_error_responses) и [ошибки сервера](/ru/docs/Web/HTTP/Status#Server_error_responses)).
 
-![A simplified diagram of a static web server.](https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 ### Динамические сайты
 
@@ -56,7 +56,7 @@ translation_of: Learn/Server-side/First_steps/Introduction
 
 Запросы статических ресурсов обрабатываются так же, как и для статических сайтов (статические ресурсы — это любые файлы, которые не меняются, обычно это: CSS, JavaScript, изображения, предварительно созданные PDF-файлы и прочее).
 
-![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png)
+![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](web_application_with_html_and_steps.png)
 
 Запросы динамических данных отправляются (2) в код серверной части (показано на диаграмме как _Веб-приложение_). Для «динамических запросов» сервер интерпретирует запрос, читает необходимую информацию из базы данных (3), комбинирует извлечённые данные с шаблонами HTML и возвращает ответ, содержащий сгенерированный HTML (5, 6).
 

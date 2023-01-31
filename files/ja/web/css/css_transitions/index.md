@@ -24,9 +24,7 @@ slug: Web/CSS/CSS_Transitions
 
 ## 仕様書
 
-| 仕様書                           | 状態                          | 備考     |
-| -------------------------------- | ----------------------------- | -------- |
-| {{SpecName('CSS3 Transitions')}} | {{Spec2('CSS3 Transitions')}} | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 

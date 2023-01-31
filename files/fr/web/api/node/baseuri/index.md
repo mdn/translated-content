@@ -19,7 +19,7 @@ La propriété en lecture seule **`Node.baseURI`** renvoie l'URL de base absolue
 
 L'URL de base est utilisée pour [résoudre](http://developers.whatwg.org/urls.html#resolving-urls) les URL relatives quand le navigateur a besoin d'obtenir une URL absolue, par exemple lors du traitement de l'attribut `src`  en HTML ou XML `xlink:href` d'un élément {{HTMLElement("img")}} HTML.
 
-En général, l'URL de base est simplement l'emplacement du document, mais elle peut être affectée par de nombreux facteurs, y compris l'élément {{HTMLElement("base")}} en HTML et l'attribut  [`xml:base`](/fr/docs/Introduction_%C3%A0_XML/xml:base) en XML.
+En général, l'URL de base est simplement l'emplacement du document, mais elle peut être affectée par de nombreux facteurs, y compris l'élément {{HTMLElement("base")}} en HTML et l'attribut [`xml:base`](/fr/docs/Introduction_%C3%A0_XML/xml:base) en XML.
 
 ## Syntaxe
 

@@ -1,16 +1,8 @@
 ---
 title: MediaStreamTrack.muted
 slug: Web/API/MediaStreamTrack/muted
-tags:
-  - API
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/MediaStreamTrack/muted
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaStreamTrack")}} 인터페이스의 **`muted`** 읽기 전용 속성은 트랙이 현재 미디어 출력을 제공할 수 없는 상태인지를 나타내는 {{jsxref("Boolean")}}을 반환합니다.

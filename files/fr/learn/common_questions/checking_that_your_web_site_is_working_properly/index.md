@@ -165,7 +165,7 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 ```
 
-Si vous utilisez Windows, le ping s'arrêtera après quelques envois mais si vous utilisez Mac ou Linux, mémorisez le raccourci **Ctrl+C** pour arrêter l'envoi des pings.  Ctrl+C envoie un signal d'interruption qui arrêtera l'exécution du programme. Si vous n'utilisez pas Ctrl+C, le programme `ping` contactera le serveur indéfiniment.
+Si vous utilisez Windows, le ping s'arrêtera après quelques envois mais si vous utilisez Mac ou Linux, mémorisez le raccourci **Ctrl+C** pour arrêter l'envoi des pings. Ctrl+C envoie un signal d'interruption qui arrêtera l'exécution du programme. Si vous n'utilisez pas Ctrl+C, le programme `ping` contactera le serveur indéfiniment.
 
 ### Une _checklist_ de base
 

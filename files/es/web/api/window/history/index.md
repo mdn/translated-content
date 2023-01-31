@@ -1,7 +1,6 @@
 ---
 title: Window.history
 slug: Web/API/Window/history
-translation_of: Web/API/Window/history
 ---
 
 {{ APIRef }}

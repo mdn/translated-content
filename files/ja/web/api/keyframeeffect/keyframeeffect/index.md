@@ -31,9 +31,7 @@ Simply put, these properties describe how the {{Glossary("user agent")}} should 
 
 ## Specifications
 
-| Specification                                                                                            | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Web Animations', '#the-effecttiming-dictionary', 'EffectTiming' )}} | {{Spec2('Web Animations')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

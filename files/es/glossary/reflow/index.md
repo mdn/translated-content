@@ -1,7 +1,6 @@
 ---
 title: Reflow
 slug: Glossary/Reflow
-translation_of: Glossary/Reflow
 ---
 
 **Un Reflow** sucede cuando un {{glossary("navegador")}} debe procesar y pintar parte de, o toda una pagina web nuevamente, Como despues de actualizar un sitio web interactivo

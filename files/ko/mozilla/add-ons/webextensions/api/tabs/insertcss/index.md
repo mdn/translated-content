@@ -2,6 +2,7 @@
 title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 ---
+
 {{AddonSidebar()}}
 
 페이지에 CSS 삽입하기

@@ -3,7 +3,9 @@ title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 
-{{JSRef}}**`Promise.resolve(value)`**方法返回一个以给定值解析后的 {{jsxref("Promise")}} 对象。如果这个值是一个 promise，那么将返回这个 promise；如果这个值是 thenable（即带有 {{jsxref("Promise.then", "\"then\" ")}} 方法），返回的 promise 会“跟随”这个 thenable 的对象，采用它的最终状态；否则返回的 promise 将以此值完成。此函数将类 promise 对象的多层嵌套展平。
+{{JSRef}}
+
+**`Promise.resolve(value)`** 方法返回一个以给定值解析后的 {{jsxref("Promise")}} 对象。如果这个值是一个 promise，那么将返回这个 promise；如果这个值是 thenable（即带有 {{jsxref("Promise.then", "then")}} 方法），返回的 promise 会“跟随”这个 thenable 的对象，采用它的最终状态；否则返回的 promise 将以此值完成。此函数将类 promise 对象的多层嵌套展平。
 
 > **警告：** 不要在解析为自身的 thenable 上调用`Promise.resolve`。这将导致无限递归，因为它试图展平无限嵌套的 promise。一个例子是将它与 Angular 中的异步管道一起使用。在[此处](https://angular.io/guide/template-syntax#avoid-side-effects)了解更多信息。
 

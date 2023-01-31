@@ -31,7 +31,7 @@ Once your environment is set up, try visiting one of our [MozVR projects](http:/
 There are a number of WebVR demos available at the [MozVR team repo](https://github.com/MozVR/), and the [MDN webvr-tests repo](https://github.com/mdn/webvr-tests), but the main one we will be focusing on in this article is our [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) demo ([view it live](http://mdn.github.io/webvr-tests/positionsensorvrdevice/)):
 在[MozVR team repo](https://github.com/MozVR/)和[MDN webvr-tests repo](https://github.com/mdn/webvr-tests)提供了一定数量的 WebVR 示例，在这篇文章里，我们将着重关注我们的 [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) 提供的示例 (点此访问 live [view it live](http://mdn.github.io/webvr-tests/positionsensorvrdevice/))
 
-![](https://mdn.mozillademos.org/files/10797/vrpositionsensor-demo.png)
+![](vrpositionsensor-demo.png)
 
 This is a simple 2.5D demo showing a Firefox logo seen on a left and right eye view, rendered on [HTML5 Canvas](/zh-CN/docs/Web/HTML/Element/canvas). When you view the demo with a VR HMD and click the canvas, the demo will go fullscreen, and you'll be able to approach the Firefox logo. It will move realistically as you move your head towards and away from it, up and down and side to side, and rotate your head in any direction.
 这是一个简单的 2.5D 的示例，在左右眼两个区域，以[HTML5 Canvas](/zh-CN/docs/Web/HTML/Element/canvas)的方式，同时渲染了 Firefox 的 LOGO。当你使用 VR 头显来观看这个示例时，点击画面，这个 DEMO 就会切换到全屏形式，可以尝试靠近 Firefox 图标。将会非常真实地同步你的头部运动后应该看到的内容，包括可以上下移动、左右移动、转动你的头部看想看的方向。

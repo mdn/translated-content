@@ -71,10 +71,7 @@ new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
 
 ## 仕様
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| [`import.meta`](https://tc39.es/proposal-import-meta/#prod-ImportMeta) proposal                                          |
-| {{SpecName("HTML WHATWG", "webappapis.html#hostgetimportmetaproperties", "import.meta")}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

@@ -18,7 +18,7 @@ slug: Web/Manifest/description
   </tbody>
 </table>
 
-_`description`_ メンバーは、何をするアプリケーションなのかを開発者が説明することができる文字列です。 `description` には書字方向を設定することができ、マニフェストメンバーの [`dir`](/ja/docs/Web/Manifest/dir) と [`lang`](/ja/docs/Web/Manifest/lang) の値に基づいて左書きまたは右書きで表示することができます。
+`description` メンバーは、何をするアプリケーションなのかを開発者が説明することができる文字列です。 `description` には書字方向を設定することができ、マニフェストメンバーの [`dir`](/ja/docs/Web/Manifest/dir) と [`lang`](/ja/docs/Web/Manifest/lang) の値に基づいて左書きまたは右書きで表示することができます。
 
 ## 例
 

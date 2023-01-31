@@ -1,12 +1,9 @@
 ---
 title: Recursos de linguagem JavaScript
 slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
-tags:
-  - Avançado
-  - Recursos
-translation_of: Web/JavaScript/Language_Resources
 original_slug: Web/JavaScript/Language_Resources
 ---
+
 {{JsSidebar}}
 
 **ECMAScript** é a linguagem de script que forma a base do [JavaScript](/pt-BR/docs/JavaScript). ECMAScript é padronizada pela [Ecma International](http://www.ecma-international.org/) organização de padrões nas especificações **ECMA-262 e ECMA-402** . As seguintes normas ECMAScript foram aprovadas ou estão sendo trabalhadas:

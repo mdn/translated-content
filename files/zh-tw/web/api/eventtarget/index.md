@@ -72,7 +72,7 @@ EventTarget.prototype.dispatchEvent = function(event) {
 };
 ```
 
-{{ EmbedLiveSample('_Simple_implementation_of_EventTarget') }}
+{{ EmbedLiveSample('Simple implementation of EventTarget') }}
 
 ## 規範
 

@@ -313,32 +313,17 @@ multiply(0.5, 3);
 
 ### 事件
 
-事件能为网页添加真实的交互能力。它可以捕捉浏览器操作并运行一些代码做为响应。最简单的事件是 [点击事件](/zh-CN/docs/Web/Events/click)，鼠标的点击操作会触发该事件。可尝试将下面的代码输入到控制台，然后点击页面的任意位置：
+事件能为网页添加真实的交互能力。它可以捕捉浏览器操作并运行一些代码做为响应。最简单的事件是[点击事件](/zh-CN/docs/Web/API/Element/click_event)，鼠标的点击操作会触发该事件。可尝试将下面的代码输入到控制台，然后点击页面的任意位置：
 
 ```js
-document.querySelector('html').onclick = function() {
-    alert('别戳我，我怕疼。');
-}
+document.querySelector("html").addEventListener("click", function () {
+  alert("别戳我，我怕疼。");
+});
 ```
 
-将事件与元素绑定有许多方法。在这里选用了 {{htmlelement("html")}} 元素，把一个匿名函数（就是没有命名的函数，这里的匿名函数包含单击鼠标时要运行的代码）赋值给了 `html` 的 [`onclick`](/zh-CN/docs/Web/API/GlobalEventHandlers.onclick) 属性。
+将事件与元素绑定有许多方法。在这里选用了 {{htmlelement("html")}} 元素，然后调用了它的 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 方法，将事件名称（`'click'`）以及其回调函数（当事件发生时，调用该函数）传入该函数中作为调用参数。
 
-请注意：
-
-```js
-document.querySelector('html').onclick = function() {};
-```
-
-等价于
-
-```js
-let myHTML = document.querySelector('html');
-myHTML.onclick = function() {};
-```
-
-只是前者更简洁。
-
-刚刚我们传递给 `onclick` 的函数被称为匿名函数，因为它没有名字。匿名函数还有另一种我们称之为箭头函数的写法，箭头函数使用 `() =>` 代替 `function ()`：
+刚刚我们传递给 `addEventListener()` 的函数被称为*匿名函数*，因为它没有名字。匿名函数还有另一种我们称之为*箭头函数*的写法，箭头函数使用 `() =>` 代替 `function ()`：
 
 ```js
 document.querySelector('html').addEventListener('click', () => {
@@ -460,7 +445,7 @@ function setUserName() {
 
 如果你按部就班完成本文的实践，那么最终可以得到以下页面（可以 [查看我们的版本](https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site-scripted/)）：
 
-![测试页面，添加了 一个 js 脚本，可以显示用户名、更改 Firefox 图片。](https://mdn.mozillademos.org/files/16484/beginner-site-scripted.png)
+![测试页面，添加了 一个 js 脚本，可以显示用户名、更改 Firefox 图片。](beginner-site-scripted.png)
 
 若遇到问题，可以参考 GitHub 上的 [完整示例代码](https://github.com/roy-tian/learning-area/tree/master/extras/getting-started-web/beginner-html-site-scripted) 进行对比。
 

@@ -1,9 +1,9 @@
 ---
 title: Boolean.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 O método **`toSource()`** retorna uma representação string do código fonte do objeto.

@@ -1,11 +1,6 @@
 ---
 title: Texto CSS
 slug: Web/CSS/CSS_Text
-tags:
-  - CSS
-  - Texto CSS
-  - Vista general
-translation_of: Web/CSS/CSS_Text
 original_slug: Web/CSS/Texto_CSS
 ---
 

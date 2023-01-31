@@ -1,7 +1,6 @@
 ---
 title: Indexed collections
 slug: Web/JavaScript/Guide/Indexed_collections
-translation_of: Web/JavaScript/Guide/Indexed_collections
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
@@ -476,7 +475,7 @@ Array.prototype.forEach.call('a string', function(chr) {
 
 유연성과 효율성을 극대화하기 위해, 자바스크립트 타입 배열은 **버퍼**와 **뷰**라는 구조로 구현되어 있습니다. 하나의 버퍼({{jsxref("ArrayBuffer")}}객체로 구현되어 있습니다)는 하나의 데이터 덩어리를 의미하는 객체입니다. 버퍼는 구체적으로 언급할 형식이 없고, 버퍼가 담고 있는 내용에 접근할 메카니즘을 제공하지 않습니다. 버퍼에 담겨 있는 메모리에 접근하기 위해선, 뷰를 사용해야 합니다. 하나의 뷰는 컨덱스트를 제공하는데, 컨텍스트는 데이터 형, 시작 오프셋 그리고 실제 타입배열로 변경되는 요소의 갯수를 제공합니다.
 
-![Typed arrays in an ArrayBuffer](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
+![Typed arrays in an ArrayBuffer](typed_arrays.png)
 
 ### 배열버퍼
 

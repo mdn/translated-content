@@ -9,202 +9,19 @@ slug: Web/CSS/animation
 
 {{EmbedInteractiveExample("pages/css/animation.html")}}
 
+## 语法
+
 ```css
-/* @keyframes duration | timing-function | delay |
-   iteration-count | direction | fill-mode | play-state | name */
+/* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
 animation: 3s ease-in 1s 2 reverse both paused slidein;
 
-/* @keyframes duration | timing-function | delay | name */
+/* @keyframes duration | easing-function | delay | name */
 animation: 3s linear 1s slidein;
 
-/* @keyframes duration | name */
-animation: 3s slidein;
+/* two animations */
+animation: 3s linear slidein, 3s ease-out 5s slideout;
 ```
-
-```html hidden
-<div class="grid">
-  <div class="col">
-    <div class="note">
-      Given the following animation:
-      <pre>@keyframes slidein {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
-}</pre>
-    </div>
-    <div class="row">
-      <div class="cell">
-        <button class="play" title="PLAY"></button>
-      </div>
-      <div class="cell flx">
-        <div class="overlay">animation: 3s ease-in 1s 2 reverse both paused slidein;</div>
-        <div class="animation a1"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="cell">
-        <button class="pause" title="PAUSE"></button>
-      </div>
-      <div class="cell flx">
-        <div class="overlay">animation: 3s linear 1s slidein;</div>
-        <div class="animation a2"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="cell">
-        <button class="pause" title="PAUSE"></button>
-      </div>
-      <div class="cell flx">
-        <div class="overlay">animation: 3s slidein;</div>
-        <div class="animation a3"></div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-```css hidden
-html,body {
-  height: 100%;
-  box-sizing: border-box;
-}
-
-pre { margin-bottom: 0; }
-svg { width: 1.5em; height: 1.5em; }
-
-button {
-  width: 27px;
-  height: 27px;
-  background-size: 16px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-button.play {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#play');
-}
-
-button.pause {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#pause');
-}
-
-button.restart {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#restart');
-}
-
-.grid {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background: #EEE;
-  font: 1em monospace;
-}
-
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.col {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: column;
-}
-
-.cell {
-  box-sizing: border-box;
-  margin: .5em;
-  padding: 0;
-  background-color: #FFF;
-  overflow: hidden;
-  text-align: left;
-}
-
-.flx {
-  flex: 1 0;
-}
-
-.note {
-  background: #fff3d4;
-  padding: 1em;
-  margin: .5em;
-  font: .8em sans-serif;
-  text-align: left;
-  flex: none;
-}
-
-.overlay { padding: .5em; }
-
-@keyframes slidein {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
-}
-
-.a1 { animation: 3s ease-in 1s 2 reverse both paused slidein; }
-.a2 { animation: 3s linear 1s slidein; }
-.a3 { animation: 3s slidein; }
-
-.animation {
-  background: #3F87A6;
-  width: 100%;
-  height: calc(100% - 1.5em);
-  transform-origin: left center;
-}
-```
-
-```js hidden
-window.addEventListener('load', function () {
-  var ANIMATION = Array.from(document.querySelectorAll('.animation'));
-  var BUTTON    = Array.from(document.querySelectorAll('button'));
-
-  function toggleButton (btn, type) {
-    btn.classList.remove('play', 'pause', 'restart');
-    btn.classList.add(type);
-    btn.title = type.toUpperCase(type);
-  }
-
-  function playPause (i) {
-    var btn  = BUTTON[i];
-    var anim = ANIMATION[i];
-
-    if (btn.classList.contains('play')) {
-      anim.style.animationPlayState = 'running';
-      toggleButton(btn, 'pause');
-    } else if (btn.classList.contains('pause')) {
-      anim.style.animationPlayState = 'paused';
-      toggleButton(btn, 'play');
-    } else {
-      anim.classList.remove('a' + (i + 1));
-      setTimeout(function () {
-        toggleButton(btn, i === 0 ? 'play' : 'pause');
-        anim.style.animationPlayState = '';
-        anim.classList.add('a' + (i + 1));
-      }, 100)
-    }
-  }
-
-  ANIMATION.forEach(function (node, index) {
-    node.addEventListener('animationstart', function () { toggleButton(BUTTON[index], 'pause');   });
-    node.addEventListener('animationend',   function () { toggleButton(BUTTON[index], 'restart'); });
-  });
-
-  BUTTON.forEach(function (btn, index) {
-    btn.addEventListener('click', function () { playPause(index); });
-  });
-})
-```
-
-{{EmbedLiveSample("animation", "100%", 260, "", "", "example-outcome-frame")}}
-
-[哪些属性是可动画的？](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions#Which_CSS_properties_are_animatable)值得注意的是，此描述也适用于[CSS 变换](/zh-CN/docs/CSS/CSS_transitions)。
-
-{{cssinfo}}
-
-## 语法
 
 `animation` 属性用来指定一组或多组动画，每组之间用逗号相隔。
 
@@ -240,9 +57,9 @@ window.addEventListener('load', function () {
 
 {{csssyntax("animation")}}
 
-## 范例
+## 示例
 
-### **赛隆人之眼 (赛隆人**是一个虚构的生化人种族，出自科幻电视系列剧星际大争霸系列**)**
+### 赛隆人之眼
 
 ```html
 <div class="view_port">
@@ -285,7 +102,7 @@ window.addEventListener('load', function () {
         @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
 ```
 
-{{EmbedLiveSample('Cylon_Eye')}}
+{{EmbedLiveSample('赛隆人之眼')}}
 
 更多示例请参阅[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Examples)。
 
@@ -309,13 +126,7 @@ window.addEventListener('load', function () {
 
 {{Compat}}
 
-### Quantum CSS notes
-
-- Gecko 有一个 bug，当你在屏幕上对屏幕外的元素使用带有指定延时的动画时，Gecko 不会在某些平台上重绘，例如 Windows {{bug(1383239)}}。这个问题已经在 Firefox 新的并行 CSS 引擎 (也称为[Quantum CSS](https://wiki.mozilla.org/Quantum) 或者 [Stylo](https://wiki.mozilla.org/Quantum/Stylo)，计划在 Firefox 57 中发布) 中得到了解决。
-- 另外一个 Gecko bug，当我们激活\<details>元素的动画效果时，即使通过 open 属性也不能将其展示 ({{bug(1382124)}})。Quantum CSS 会将其修复了。
-- 另一个 bug 是，由于动画使用的是 em 单位，所以即使我们改变父元素的 font-size 属性也不会影响该动画元素 ({{bug(1254424)}})，而它们原本应该受到影响。Quantum CSS 会将其修复了。
-
-## 更多
+## 参见
 
 - [Using CSS animations](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

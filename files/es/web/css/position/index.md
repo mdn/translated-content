@@ -1,9 +1,6 @@
 ---
 title: position
 slug: Web/CSS/position
-tags:
-  - Referencia_CSS
-translation_of: Web/CSS/position
 ---
 
 {{CSSRef}}

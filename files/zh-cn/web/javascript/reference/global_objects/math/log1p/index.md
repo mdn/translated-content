@@ -26,7 +26,7 @@ Math.log1p(x)
 
 函数 `y = log(x+1)` 的图形是这样的：
 
-![log(x+1)](https://mdn.mozillademos.org/files/6467/logx1.jpg)
+![log(x+1)](logx1.jpg)
 
 **示例**
 
