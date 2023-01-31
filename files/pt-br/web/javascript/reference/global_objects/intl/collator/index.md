@@ -34,9 +34,9 @@ O objeto **`Intl.Collator`** permite uma comparação de strings sensível a lin
 ## Métodos de instância
 
 - {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}
-	- : Função Getter que compara duas strings conforme a ordenação deste objeto {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}}.
+  - : Função Getter que compara duas strings conforme a ordenação deste objeto {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}}.
 - {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
-	- : Retorna um novo objeto com as propriedades que refletem as opções de localização (`locale`) e agrupamento (`collation`) computadas durante a inicialização do objeto.
+  - : Retorna um novo objeto com as propriedades que refletem as opções de localização (`locale`) e agrupamento (`collation`) computadas durante a inicialização do objeto.
 
 ## Exemplos
 
