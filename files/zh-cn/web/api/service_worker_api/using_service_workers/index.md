@@ -455,7 +455,7 @@ Firefox 也开始实现一些关于 service worker 的有用的工具：
 
 - [Chrome](https://www.chromium.org/blink/serviceworker/service-worker-faq/)
 - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/application/service_workers/index.html)
-  - [Firefox 工具栏自定义选项](https://support.mozilla.org/zh-CN/kb/customize-firefox-controls-buttons-and-toolbars)中的“Forget about this site”按钮可用于清除服务人员及其缓存。
+  - [Firefox 工具栏自定义选项](https://support.mozilla.org/zh-CN/kb/customize-firefox-controls-buttons-and-toolbars)中的“Forget about this site”按钮可用于清除 service worker 及其缓存。
 - [Edge](https://learn.microsoft.com/zh-CN/microsoft-edge/devtools-guide-chromium/service-workers/)
 
 ## 参见
