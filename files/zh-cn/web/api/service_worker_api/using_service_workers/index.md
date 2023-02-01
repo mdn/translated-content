@@ -78,7 +78,7 @@ registerServiceWorker();
 ```
 
 1. `if` 代码块进行功能性检测测试，以确保 service worker 在尝试注册之前得到支持。
-2. 接着，我们使用 [`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 函数来注册站点的 service worker。service worker 代码只是一个驻留在我们的 app 内的一个 JavaScript 文件（注意，这个文件的 url 是相对于 origin，而不是相对于引用它的那个 JS 文件）。
+2. 接着，我们使用 [`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 函数来注册站点的 service worker。service worker 代码只是一个驻留在我们的 app 内的一个 JavaScript 文件（注意，这个文件的 url 是相对于源（origin）的，而不是相对于引用它的那个 JS 文件）。
 3. `scope` 参数是可选的，并且可以用来指定你想要 service worker 控制的字幕了。在这个例子中，我们制定了 `'/'`，其表示 app 的源（origin）下的所有内容。如果你留空的话，它默认值也是这个，但是我们在这里指定它是为了阐述我们的目的。
 
 这就注册了一个 service worker，它工作在 worker 上下文，所以没有访问 DOM 的权限。
