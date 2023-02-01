@@ -229,7 +229,7 @@ Nous avons déjà utilisé la rotation pour ajuster la position du cube. Nous po
 
 ### Rotation
 
-La rotation est simple. Vous ajoutez la valeur d'une direction donnée sur chaque image. Ajoutez cette ligne de code juste après l'invocation de la méthode `requestAnimationFrame()`, à l'intérieur de la fonction  `render`:
+La rotation est simple. Vous ajoutez la valeur d'une direction donnée sur chaque image. Ajoutez cette ligne de code juste après l'invocation de la méthode `requestAnimationFrame()`, à l'intérieur de la fonction `render`:
 
 ```js
 cube.rotation.y += 0.01;
