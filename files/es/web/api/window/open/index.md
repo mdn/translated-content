@@ -173,7 +173,7 @@ The following features require the `UniversalBrowserWrite` privilege, otherwise 
 
   - : **Note**: Starting with Mozilla 1.2.1, this feature requires the `UniversalBrowserWrite` privilege ({{Bug(180048)}}). Without this privilege, it is ignored. If on, the new window is said to be modal. The user cannot return to the main window until the modal window is closed. A typical modal window is created by the [alert() function](/es/docs/DOM/window.alert). The exact behavior of modal windows depends on the platform and on the Mozilla release version.
 
-    > **Nota:** As of {{Gecko("1.9")}}, the Internet Explorer equivalent to this feature is the {{domxref("window.showModalDialog()")}} method. For compatibility reasons, it's now supported in Firefox. Note also that starting in {{Gecko("2.0")}}, you can use {{domxref("window.showModalDialog()")}} without UniversalBrowserWrite privileges.
+    > **Nota:** As of Gecko 1.9, the Internet Explorer equivalent to this feature is the {{domxref("window.showModalDialog()")}} method. For compatibility reasons, it's now supported in Firefox. Note also that starting in Gecko 2.0, you can use {{domxref("window.showModalDialog()")}} without UniversalBrowserWrite privileges.
 
     Supported in: ![Netscape 6.x](/@api/deki/files/785/=Ns6.gif), ![Netscape 7.x](/@api/deki/files/281/=NS7_ico4.gif), ![Mozilla 1.x](/@api/deki/files/277/=Mozilla1_ico.png), ![Firefox 1.x](/@api/deki/files/200/=FF1x.png)
 
