@@ -20,7 +20,7 @@ _ServiceWorker 接口继承它父类 {{domxref("EventTarget")}} 的属性。_
 - {{domxref("ServiceWorker.scriptURL")}} {{ReadOnlyInline}}
   - : 返回作为 {{domxref("ServiceWorkerRegistration")}} 一部分所定义的 ServiceWorker 序列化脚本 URL。这个 URL 必须和注册该 `ServiceWorker` 的文档处于同一域。
 - {{domxref("ServiceWorker.state")}} {{ReadOnlyInline}}
-  - : 返回 service worker 的状态。其值可能是如下之一：`installing`、`installed`、`activating`、`activated` 或 `redundant`.
+  - : 返回 service worker 的状态。其值可能是如下之一：`installing`、`installed`、`activating`、`activated` 或 `redundant`。
 
 ## 实例方法
 
