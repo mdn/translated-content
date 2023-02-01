@@ -92,7 +92,7 @@ registerServiceWorker();
 可能是如下的原因：
 
 - 你没有在 HTTPS 下运行你的程序
-- service worker 文件的地址没有写对——需要相对于 origin，而不是 app 的根目录。在我们的例子中，worker 是在 `https://mdn.github.io/sw-test/sw.js`，app 的根目录是 `https://mdn.github.io/sw-test/`。但是路径需要写成 `/sw.js`.
+- service worker 文件的地址没有写对——需要相对于源（origin），而不是 app 的根目录。在我们的例子中，worker 是在 `https://mdn.github.io/sw-test/sw.js`，app 的根目录是 `https://mdn.github.io/sw-test/`。但是路径需要写成 `/sw.js`.
 - 也不允许你的 app 指向不同源（origin）的 service worker。
 - service worker 只能在 service worker 作用域里捕获客户端发出的请求。
 - service worker 最大的作用域是 worker 所在的位置（换句话说，如果脚本 `sw.js` 位于 `/js/sw.js` 中，默认情况下它只能控制 `/js/` 下的URL）。可以使用该 [`Service-Worker-Allowed`](/zh-CN/docs/Web/HTTP/Header/Service-Worker-Allowed) 标头指定该 worker 的最大范围列表。
