@@ -24,7 +24,7 @@ _ServiceWorker 接口继承它父类 {{domxref("EventTarget")}} 的属性。_
 
 ## 实例方法
 
-_ServiceWorker 接口继承它父类 {{domxref("EventTarget")}} 的方法。_
+_ServiceWorker 接口继承其父类 {{domxref("EventTarget")}} 的方法。_
 
 ### 事件
 
