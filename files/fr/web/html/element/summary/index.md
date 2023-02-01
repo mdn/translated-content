@@ -123,7 +123,7 @@ Il est possible d'utiliser des titres au sein d'un résumé.
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>{{ARIARole("button")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
