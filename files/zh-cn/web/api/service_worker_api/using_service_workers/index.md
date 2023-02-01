@@ -416,7 +416,7 @@ self.addEventListener("install", (event) => {
 
 正如我们在最后一节看到的那样，当你更新 service worker 到一个新的版本，你将在它的 `install` 事件处理程序中创建一个新的缓存。虽然有由上一个 worker 的版本控制的打开的页面，但你需要保留这两个缓存，因为之前的版本需要它缓存的版本。你可以使用 `activate` 事件从之前的缓存移除数据。
 
-传给 `waitUntil()` 的 promise 会阻塞其他的事件，直到它完成，因此你可以放心，当你在新的 service worker 中得到你的第一个 `fetch` 事件是，你的清理操作将已经完成。
+传给 `waitUntil()` 的 promise 会阻塞其他的事件，直到它完成，因此你可以放心，当你在新的 service worker 中得到你的第一个 `fetch` 事件时，你的清理操作将已经完成。
 
 ```js
 const deleteCache = async (key) => {
