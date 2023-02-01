@@ -7,7 +7,7 @@ slug: Web/API/ServiceWorker
 
 {{APIRef("Service Workers API")}} 的 **`ServiceWorker`** 接口提供了对 service worker 的引用。各个{{glossary("browsing context", "浏览上下文")}}（例如页面，工作者等）可以与相同的 service worker 相关联，每个浏览上下文都可以通过唯一的 `ServiceWorker` 对象访问。
 
-一个 `ServiceWorker` 对象在 {{domxref("ServiceWorkerRegistration.active")}} 属性和 {{domxref("ServiceWorkerContainer.controller")}} 属性中可用——这是一个已激活并在控制页面的 service worker（service worker 成功注册，被控页面已经重新加载完毕）。
+在 {{domxref("ServiceWorkerRegistration.active")}} 属性和 {{domxref("ServiceWorkerContainer.controller")}} 属性中有一个 `ServiceWorker` 对象——这是一个已激活并在控制页面的 service worker（service worker 成功注册，被控页面已经重新加载完毕）。
 
 `ServiceWorker` 接口被分配了一系列生命周期事件——`install` 和 `activate`---以及功能型的事件，包括 `fetch`。一个 ServiceWorker 对象有一个与之关联的 {{domxref("ServiceWorker.state")}}，指示着它的生命周期。
 
