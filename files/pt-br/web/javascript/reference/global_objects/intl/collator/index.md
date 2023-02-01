@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 
 {{JSRef}}
 
-O objeto **`Intl.Collator`** permite uma comparação de strings sensível a linguagem.
+O objeto **`Intl.Collator`** permite uma comparação de strings sensível à linguagem.
 
 {{EmbedInteractiveExample("pages/js/intl-collator.html")}}
 
