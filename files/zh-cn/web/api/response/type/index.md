@@ -5,7 +5,7 @@ slug: Web/API/Response/type
 
 {{APIRef("Fetch")}}
 
-{{domxref("Response")}} 接口的只读属性 **`type`** 包含的一种响应类型，是只读属性。它可以是以下某一种值：
+{{domxref("Response")}} 接口的 **`type`** 只读属性包含一种响应的类型。它可以是以下某一种值：
 
 - `basic`：标准值，同源响应，暴露除了“Set-Cookie”之外的所有标头。
 - `cors`：从有效的跨源请求接收到响应。[某些标头和主体](https://fetch.spec.whatwg.org/#concept-filtered-response-cors)可以被访问。
