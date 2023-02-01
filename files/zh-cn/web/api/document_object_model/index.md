@@ -265,7 +265,7 @@ DOM 模型已经被高度简化了。为此，以下出现在 DOM level 3 或更
 
 Here are the DOM API for data types used in the definitions of SVG properties and attributes.
 
-> **备注：** Starting in {{Gecko("5.0")}},the following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed like arrays; in addition, they have a length property indicating the number of items in the lists: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}}, and {{domxref("SVGPointList")}}.
+> **备注：** Starting in Gecko 5.0,the following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed like arrays; in addition, they have a length property indicating the number of items in the lists: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}}, and {{domxref("SVGPointList")}}.
 
 #### Static type
 
