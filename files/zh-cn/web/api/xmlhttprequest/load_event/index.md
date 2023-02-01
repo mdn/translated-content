@@ -107,7 +107,7 @@ xhrButtonAbort.addEventListener('click', () => {
 
 #### 结果
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('在线例子', '100%', '150px') }}
 
 ## 规范
 

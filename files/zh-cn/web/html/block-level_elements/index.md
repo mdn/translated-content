@@ -23,7 +23,7 @@ HTML（超文本标记语言）中元素大多数都是“块级”元素或[行
 p { background-color: #8ABB55; }
 ```
 
-{{ EmbedLiveSample('Block-level_Example') }}
+{{ EmbedLiveSample('块级元素示例') }}
 
 ## 用法
 

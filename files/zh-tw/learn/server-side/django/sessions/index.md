@@ -168,20 +168,20 @@ def index(request):
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
 
-## In this module
+## 本系列課程
 
-- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django 介紹](/zh-TW/docs/Learn/Server-side/Django/Introduction)
+- [設定 Django 開發環境](/zh-TW/docs/Learn/Server-side/Django/development_environment)
+- [Django 教學: 本地圖書館網站](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django 教學 第 2 部分: 建立網站骨架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
+- [Django 教學 第 3 部分: 使用模型](/zh-TW/docs/Learn/Server-side/Django/Models)
+- [Django 教學 第 4 部分: Django 的管理員頁面](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
+- [Django 教學 第 5 部分: 創建我們的首頁](/zh-TW/docs/Learn/Server-side/Django/Home_page)
+- [Django 教學 第 6 部分: 通用列表與詳細視圖](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
+- [Django 教學 第 7 部分: 會話 (Sessions) 框架](/zh-TW/docs/Learn/Server-side/Django/Sessions)
+- [Django 教學 第 8 部分: 使用者的身分驗證與權限](/zh-TW/docs/Learn/Server-side/Django/Authentication)
+- [Django 教學 第 9 部分: 使用表單](/zh-TW/docs/Learn/Server-side/Django/Forms)
+- [Django 教學 第 10 部分: 測試 Django 網頁應用](/zh-TW/docs/Learn/Server-side/Django/Testing)
+- [Django 教學 第 11 部分: 部署 Django 到生產環境(production)](/zh-TW/docs/Learn/Server-side/Django/Deployment)
+- [Django 網頁應用安全](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django 迷你部落格](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

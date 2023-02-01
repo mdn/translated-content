@@ -319,7 +319,7 @@
 /fr/docs/CSS/-moz-zoom-out	/fr/docs/Web/CSS/cursor
 /fr/docs/CSS/:-moz-first-node	/fr/docs/Web/CSS/:-moz-first-node
 /fr/docs/CSS/:-moz-last-node	/fr/docs/Web/CSS/:-moz-last-node
-/fr/docs/CSS/:-moz-locale-dir(ltr)	/fr/docs/Web/CSS/:-moz-locale-dir(ltr)
+/fr/docs/CSS/:-moz-locale-dir(ltr)	/fr/docs/Web/CSS/:-moz-locale-dir_ltr
 /fr/docs/CSS/:-moz-only-whitespace	/fr/docs/Web/CSS/:-moz-only-whitespace
 /fr/docs/CSS/:-moz-placeholder	/fr/docs/Web/CSS/:placeholder-shown
 /fr/docs/CSS/::-moz-progress-bar	/fr/docs/Web/CSS/::-moz-progress-bar
@@ -1356,7 +1356,7 @@
 /fr/docs/Glossaire/DTD	/fr/docs/Glossary/Doctype
 /fr/docs/Glossaire/DTMF	/fr/docs/Glossary/DTMF
 /fr/docs/Glossaire/Delta	/fr/docs/Glossary/Delta
-/fr/docs/Glossaire/Descripteur_(CSS)	/fr/docs/Glossary/Descriptor_(CSS)
+/fr/docs/Glossaire/Descripteur_(CSS)	/fr/docs/Glossary/CSS_Descriptor
 /fr/docs/Glossaire/Developer_Tools	/fr/docs/Glossary/Developer_Tools
 /fr/docs/Glossaire/Directive_de_navigation	/fr/docs/Glossary/Navigation_directive
 /fr/docs/Glossaire/Directive_de_rapport	/fr/docs/Glossary/Reporting_directive
@@ -1676,7 +1676,7 @@
 /fr/docs/Glossaire/World_Wide_Web	/fr/docs/Glossary/World_Wide_Web
 /fr/docs/Glossaire/Wrapper	/fr/docs/Glossary/Wrapper
 /fr/docs/Glossaire/XForm	/fr/docs/Glossary/XForms
-/fr/docs/Glossaire/XHR_(XMLHttpRequest)	/fr/docs/Glossary/XHR_(XMLHttpRequest)
+/fr/docs/Glossaire/XHR_(XMLHttpRequest)	/fr/docs/Glossary/XMLHttpRequest
 /fr/docs/Glossaire/XInclude	/fr/docs/Glossary/XInclude
 /fr/docs/Glossaire/XLink	/fr/docs/Glossary/XLink
 /fr/docs/Glossaire/XML	/fr/docs/Glossary/XML
@@ -1731,6 +1731,7 @@
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
 /fr/docs/Glossary/Bézier_curve	/fr/docs/Glossary/Bezier_curve
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
+/fr/docs/Glossary/Descriptor_(CSS)	/fr/docs/Glossary/CSS_Descriptor
 /fr/docs/Glossary/Empty_element	/fr/docs/Glossary/Void_element
 /fr/docs/Glossary/Grid_Rows	/fr/docs/Glossary/Grid_Row
 /fr/docs/Glossary/Index	/fr/docs/Glossary
@@ -1739,6 +1740,7 @@
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
 /fr/docs/Glossary/Symbol	/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /fr/docs/Glossary/Transmission_Control_Protocol_(TCP)	/fr/docs/Glossary/TCP
+/fr/docs/Glossary/XHR_(XMLHttpRequest)	/fr/docs/Glossary/XMLHttpRequest
 /fr/docs/Guide_JavaScript_1.5/Aperçu_de_JavaScript	/fr/docs/Web/JavaScript/Guide/Introduction
 /fr/docs/Guide_JavaScript_1.5/Boucles/L'instruction_break	/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /fr/docs/Guide_JavaScript_1.5/Boucles/L'instruction_do...while	/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
@@ -2950,7 +2952,6 @@
 /fr/docs/Javascript/Reference/RegExp/Exec	/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
 /fr/docs/Jeux	/fr/docs/Games
 /fr/docs/Jeux/Anatomie	/fr/docs/Games/Anatomy
-/fr/docs/Jeux/Exemples	/fr/docs/Games/Examples
 /fr/docs/Jeux/Index	/fr/docs/Games
 /fr/docs/Jeux/Introduction	/fr/docs/Games/Introduction
 /fr/docs/Jeux/Introduction_to_HTML5_Game_Gevelopment_(summary)	/fr/docs/Games/Introduction_to_HTML5_Game_Development
@@ -3686,6 +3687,7 @@
 /fr/docs/Web/API/Document/onoffline	/fr/docs/Web/API/Window/offline_event
 /fr/docs/Web/API/Document/ononline	/fr/docs/Web/API/Window/online_event
 /fr/docs/Web/API/Document/origin	/fr/docs/Web/API/origin
+/fr/docs/Web/API/Document/registerElement	/fr/docs/Web/API/CustomElementRegistry/define
 /fr/docs/Web/API/Document/touchend_event	/fr/docs/Web/API/Element/touchend_event
 /fr/docs/Web/API/Document/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/Web/API/Document/width	/fr/docs/Web/API/Element/clientWidth
@@ -4161,6 +4163,8 @@
 /fr/docs/Web/CSS/-ms-user-select	/fr/docs/Web/CSS/user-select
 /fr/docs/Web/CSS/-webkit-mask-image	/fr/docs/Web/CSS/mask-image
 /fr/docs/Web/CSS/-webkit-print-color-adjust	/fr/docs/Web/CSS/print-color-adjust
+/fr/docs/Web/CSS/:-moz-locale-dir(ltr)	/fr/docs/Web/CSS/:-moz-locale-dir_ltr
+/fr/docs/Web/CSS/:-moz-locale-dir(rtl)	/fr/docs/Web/CSS/:-moz-locale-dir_rtl
 /fr/docs/Web/CSS/:-moz-placeholder	/fr/docs/Web/CSS/:placeholder-shown
 /fr/docs/Web/CSS/:-moz-ui-invalid	/fr/docs/Web/CSS/:user-invalid
 /fr/docs/Web/CSS/:-ms-input-placeholder	/fr/docs/Web/CSS/:placeholder-shown
@@ -4789,6 +4793,7 @@
 /fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Web/HTTP/Link_prefetching_FAQ
 /fr/docs/Web/HTTP/Feature_Policy	/fr/docs/Web/HTTP/Permissions_Policy
 /fr/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
+/fr/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/Web/HTTP/Headers/Feature-Policy	/fr/docs/Web/HTTP/Headers/Permissions-Policy
 /fr/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/fr/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /fr/docs/Web/HTTP/Headers/Serveur	/fr/docs/Web/HTTP/Headers/Server

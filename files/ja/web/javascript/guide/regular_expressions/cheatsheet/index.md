@@ -248,7 +248,7 @@ l10n:
 
 ## アサーション
 
-[サーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)には、行や単語の先頭と末尾を示す境目、他にも何らかの形で一致が可能であることを示すパターン（先読み、後読み、条件式など）が含まれます。
+[アサーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)には、行や単語の先頭と末尾を示す境目、他にも何らかの形で一致が可能であることを示すパターン（先読み、後読み、条件式など）が含まれます。
 
 ### 境界型のアサーション
 

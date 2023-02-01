@@ -48,12 +48,12 @@ El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de interne
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        {{ARIARole("button")}}, {{ARIARole("checkbox")}},
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("radio")}}, {{ARIARole("switch")}},
-        {{ARIARole("tab")}}, {{ARIARole("treeitem")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
       </td>
     </tr>
     <tr>
