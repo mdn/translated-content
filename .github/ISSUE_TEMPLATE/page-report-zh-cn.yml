@@ -48,7 +48,7 @@ body:
   - type: textarea
     id: more-info
     attributes:
-      label: 你想要补充什么内容？
+      label: 你还想补充什么内容？
       description: 例如，复现 bug 的步骤、截图、录屏或示例代码
   - type: markdown
     attributes:
