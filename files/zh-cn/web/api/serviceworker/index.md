@@ -9,7 +9,7 @@ slug: Web/API/ServiceWorker
 
 在 {{domxref("ServiceWorkerRegistration.active")}} 属性和 {{domxref("ServiceWorkerContainer.controller")}} 属性中有一个 `ServiceWorker` 对象——这是一个已激活并在控制页面的 service worker（service worker 成功注册，被控页面已经重新加载完毕）。
 
-`ServiceWorker` 接口被分配了一系列生命周期事件——`install` 和 `activate`---以及功能型的事件，包括 `fetch`。一个 ServiceWorker 对象有一个与之关联的 {{domxref("ServiceWorker.state")}}，指示着它的生命周期。
+`ServiceWorker` 接口被分配了一系列生命周期事件——`install` 和 `activate`——以及功能型的事件，包括 `fetch`。一个 ServiceWorker 对象有一个与之关联的 {{domxref("ServiceWorker.state")}}，指示着它的生命周期。
 
 {{InheritanceDiagram}}
 
