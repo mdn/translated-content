@@ -25,7 +25,7 @@ service worker 在现代浏览器中默认开启。要使用 service worker 运�
 
 1. 获取 service worker 代码，然后使用 [`serviceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 来注册。如果成功，service worker 将在 [`ServiceWorkerGlobalScope`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope) 中执行；这本质上是一种特殊的上下文，在主脚本执行线程之外运行，没有访问 DOM 的权限。Service Worker 现在已经准备好处理事件。
 2. 安装完成。`install` 事件始终是发送给 service worker 的第一个事件（这可用于启动填充 IndexedDB 和缓存站点资源的过程）。在此步骤中，应用程序正准备将所有内容离线使用。
-3. 当 `install` 程序处理完成时，service worker 被视为已安装。此时，service worker 的先前版本可能出于活动状态并控制打开的页面。由于我们不希望同一service worker 的两个不同版本同时运行，因此新版本尚未激活。
+3. 当 `install` 程序处理完成时，service worker 被视为已安装。此时，service worker 的先前版本可能出于活动状态并控制打开的页面。由于我们不希望同一 service worker 的两个不同版本同时运行，因此新版本尚未激活。
 4. 一旦 service worker 的旧版本控制的页面都已关闭，就可以安全地停用旧版本，并且心安装的 service worker 将收到 `activate` 事件。`activate` 的主要用途是去清理 service worker 之前版本使用的资源。新的 service worker 可以调用 [`skipWaiting()`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) 要求立即激活，而无需要求打开的页面关闭。然后，新的 service worker 将立即收到 `activate` 事件，并将接管任何打开的页面。
 5. 激活后，service worker 将立即控制页面，但是只有那些在 `register()` 成功后打开的页面。换句话说，文档必须重新加载才能真正的收到控制，因为文档在有或者没有 service worker 的情况下开始存在，并在其生命周期内维护它。要覆盖次默认行为，并在页面打开的情况下，service worker 可以调用 [`clients.claim()`](/zh-CN/docs/Web/API/Clients/claim)。
 6. 每当获取新版本的 service worker 时，都会再次发生此循环，并在新版本的激活期间清理上一个版本的残留。
