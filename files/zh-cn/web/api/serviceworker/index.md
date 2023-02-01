@@ -15,7 +15,7 @@ slug: Web/API/ServiceWorker
 
 ## 实例属性
 
-_ServiceWorker 接口继承它父类 {{domxref("EventTarget")}} 的属性。_
+_ServiceWorker 接口继承其父类 {{domxref("EventTarget")}} 的属性。_
 
 - {{domxref("ServiceWorker.scriptURL")}} {{ReadOnlyInline}}
   - : 返回作为 {{domxref("ServiceWorkerRegistration")}} 一部分所定义的 ServiceWorker 序列化脚本 URL。这个 URL 必须和注册该 `ServiceWorker` 的文档处于同一域。
