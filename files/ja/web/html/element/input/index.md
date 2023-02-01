@@ -1170,7 +1170,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
               </li>
               <li>
                 <code>list</code> 属性あり:
-                {{ARIARole("combobox")}}
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>
               </li>
             </ul>
           </li>
@@ -1179,10 +1179,10 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
             <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
           </li>
           <li>
-            <code>type=number</code>: {{ARIARole("spinbutton")}}
+            <code>type=number</code>: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role">spinbutton</a></code>
           </li>
-          <li><code>type=radio</code>: {{ARIARole("radio")}}</li>
-          <li><code>type=range</code>: {{ARIARole("slider")}}</li>
+          <li><code>type=radio</code>: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code></li>
+          <li><code>type=range</code>: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/slider_role">slider</a></code></li>
           <li>
             <code>type=reset</code>:
             <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
@@ -1191,10 +1191,10 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
             <code>type=search</code>
             <ul>
               <li>
-                <code>list</code> 属性なし: {{ARIARole("searchbox")}}
+                <code>list</code> 属性なし: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role">searchbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり: {{ARIARole("combobox")}}
+                <code>list</code> 属性あり: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>
               </li>
             </ul>
           </li>
@@ -1210,7 +1210,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
                 <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり: {{ARIARole("combobox")}}
+                <code>list</code> 属性あり: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>
               </li>
             </ul>
           </li>
@@ -1222,7 +1222,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
                 <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり: {{ARIARole("combobox")}}
+                <code>list</code> 属性あり: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>
               </li>
             </ul>
           </li>
@@ -1234,7 +1234,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
                 <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり: {{ARIARole("combobox")}}
+                <code>list</code> 属性あり: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>
               </li>
             </ul>
           </li>
@@ -1250,32 +1250,32 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
       <td>
         <ul>
           <li>
-            <code>type=button</code>: {{ARIARole("link")}},
-            {{ARIARole("menuitem")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("menuitemradio")}},
-            {{ARIARole("option")}}, {{ARIARole("radio")}},
-            {{ARIARole("switch")}}, {{ARIARole("tab")}}
+            <code>type=button</code>: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>
           </li>
           <li>
-            <code>type=checkbox</code>: {{ARIARole("button")}} ただし <code>aria-pressed</code>,
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("option")}}, {{ARIARole("switch")}} と共に使用されたとき
+            <code>type=checkbox</code>: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code> ただし <code>aria-pressed</code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code> と共に使用されたとき
           </li>
           <li>
-            <code>type=image</code>: {{ARIARole("link")}},
-            {{ARIARole("menuitem")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("menuitemradio")}},
-            {{ARIARole("radio")}}, {{ARIARole("switch")}}
+            <code>type=image</code>: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code>
           </li>
           <li>
-            <code>type=radio</code>: {{ARIARole("menuitemradio")}}
+            <code>type=radio</code>: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>
           </li>
           <li>
             <code>type=text</code> で <code>list</code> 属性なし:
-            {{ARIARole("combobox")}}, {{ARIARole("searchbox")}},
-            {{ARIARole("spinbutton")}}
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role">searchbox</a></code>,
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role">spinbutton</a></code>
           </li>
           <li>
             <code>type=color|date|datetime-local|email|file|hidden|</code>
