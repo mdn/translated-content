@@ -437,22 +437,6 @@ self.addEventListener("activate", (event) => {
 
 ## 开发者工具
 
-Chrome 有一个 `chrome://inspect/#service-workers` 可以展示当前设备上激活和存储的 service worker。还有个 `chrome://serviceworker-internals` 可以展示更多细节来允许你开始/暂停/调试 worker 的进程。未来他们会支持流量调节控制/离线模式来模拟弱网或者没网状态，这也是非常好的。
-
-Firefox 也开始实现一些关于 service worker 的有用的工具：
-
-- 你可以访问&#x20;
-
-  about:serviceworkers
-
-  &#x20;来看注册了什么 SW，还可以更新和移除他们。
-
-- 当测试时你想绕开 HTTPS 限制时，可以检查 Firefox Devtools 的选项 "Enable Service Workers over HTTP (when toolbox is open)" （齿轮图标）
-
-> **备注：** 你也许想让你的应用运行在 `http://localhost` (示例：使用 `me@localhost:/my/app$ python -m SimpleHTTPServer`) 以用于本地开发。详细内容请查看 [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
-
-## 开发者工具
-
 - [Chrome](https://www.chromium.org/blink/serviceworker/service-worker-faq/)
 - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/application/service_workers/index.html)
   - [Firefox 工具栏自定义选项](https://support.mozilla.org/zh-CN/kb/customize-firefox-controls-buttons-and-toolbars)中的“Forget about this site”按钮可用于清除 service worker 及其缓存。
