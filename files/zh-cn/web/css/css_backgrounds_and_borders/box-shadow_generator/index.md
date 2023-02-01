@@ -1,7 +1,6 @@
 ---
 title: Box-shadow 生成器
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
-original_slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
 ---
 
 {{CSSRef}}
@@ -26,9 +25,9 @@ Box-shadow 生成器可以向一个元素上添加一至多个 box shadow。
 
 要添加另一个阴影，再次点击“+”。现在你设置的任何数值都将应用于这个新的阴影。用左上方的 ↑ 和 ↓ 按钮改变这两个阴影的应用顺序。再次选择第一个阴影，在左边的栏目中点击它。要更新元素本身的样式，请点击顶部标有“element”的按钮来选择它。
 
-你可以为该元素添加 {{cssxref("::before")}} 和 {{cssxref(":after")}} 伪元素，并给它们加上盒状阴影。要在元素和它的伪元素之间进行切换，可以使用顶部标有“element”、“:before”和“:after”的按钮。
+你可以为该元素添加 {{cssxref("::before")}} 和 {{cssxref("::after")}} 伪元素，并给它们加上盒状阴影。要在元素和它的伪元素之间进行切换，可以使用顶部标有“element”、“:before”和“:after”的按钮。
 
-右下角的方框包含该元素的 CSS 和任何 `before::` 或 `:after` 伪元素。
+右下角的方框包含该元素的 CSS 和任何 `before::` 或 `::after` 伪元素。
 
 ## 参见
 
