@@ -20,7 +20,7 @@ str.match(regexp)
 - `regexp`
   - : 一个正则表达式对象或者任何具有 [`Symbol.match`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) 方法的对象。
      
-    如果 `regexp` 不是 `RegExp` 对象并且对象上无 `Symbol.match` 方法，则会使用 `new RegExp(regexp)` 将其隐式地转换为 {{jsxref("RegExp")}} 。
+    如果 `regexp` 不是 `RegExp` 对象并且对象上无 `Symbol.match` 方法，则会使用 `new RegExp(regexp)` 将其隐式地转换为 {{jsxref("RegExp")}}。
     
     如果你没有给出任何参数并直接使用 `match()` 方法，你将会得到一个包含空字符串的 {{jsxref("Array", "数组", "", 1)}} ：`[""]`，因为这相当于 `match(/(?:)/)`。
 
