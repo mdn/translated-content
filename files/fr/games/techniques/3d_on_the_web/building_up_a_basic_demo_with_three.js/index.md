@@ -272,6 +272,6 @@ Voici le code final:
 
 {{JSFiddleEmbed("https://jsfiddle.net/rybr720u/","","350")}}
 
-Vous pouvez aussi [consulter sur GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/shapes.html) si vous désirez jouer avec locallement. Maintenant, vous comprenez les bases de Three.js. Vous pouvez revenir à la page parent, [la 3D sur le Web](/fr/docs/Games/Techniques/3D_on_the_web).
+Vous pouvez aussi [consulter sur GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/shapes.html) si vous désirez jouer avec locallement. Maintenant, vous comprenez les bases de Three.js. Vous pouvez revenir à la page parent, [la 3D sur le Web](https://developer.mozilla.org/fr/docs/Games/Techniques/3D_on_the_web).
 
-Vous pouvez aussi essayer d'apprendre WebGL brut, pour avoir une meilleure compréhension de ce qui se passe. Consultez notre page [WebGL documentation](/fr/docs/Web/API/WebGL_API).
+Vous pouvez aussi essayer d'apprendre WebGL brut, pour avoir une meilleure compréhension de ce qui se passe. Consultez notre page [WebGL documentation](https://developer.mozilla.org/fr/docs/Web/API/WebGL_API).
