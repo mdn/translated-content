@@ -452,7 +452,7 @@ import "./assets/reset.css";
 
 现在我们需要在模板中添加一些 CSS 类来与我们的样式连接。
 
-在根部的 `<div>` 中，添加一个 `custom-checkbox` 类。在 `<input>` 中，添加一个 `checkbox` 类。最后，在 `<label>` 中添加一个 `checkbox-label` 类。更新的模板如下所示：
+在根 `<div>` 中，添加一个 `custom-checkbox` 类。在 `<input>` 中，添加一个 `checkbox` 类。最后，在 `<label>` 中添加一个 `checkbox-label` 类。更新的模板如下所示：
 
 ```html
 <template>
