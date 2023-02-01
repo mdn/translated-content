@@ -135,9 +135,9 @@ oReq.open();
 
 > **備註：** `progress` 事件無法用於 `file:` 通訊協定。
 
-> **備註：** 自 {{Gecko("9.0")}} 開始，接收到每一個資料的區塊（chunk）時，`progress` 事件都會被觸發。包括在 `progress` 事件被觸發前，就已經接收到含有最後一個資料區塊的最後一個封包並且關閉連線的狀況下，在載入此封包時仍會自動觸發 `progress` 事件。這代表我們可以僅關注 `progress` 事件即能夠可靠的監視進度。
+> **備註：** 自 Gecko 9.0 開始，接收到每一個資料的區塊（chunk）時，`progress` 事件都會被觸發。包括在 `progress` 事件被觸發前，就已經接收到含有最後一個資料區塊的最後一個封包並且關閉連線的狀況下，在載入此封包時仍會自動觸發 `progress` 事件。這代表我們可以僅關注 `progress` 事件即能夠可靠的監視進度。
 
-> **備註：** 在 {{Gecko("12.0")}} 中，如果 `XMLHttpRequest` 的 `responseType` 屬性為「moz-blob」，那麼 `progress` 事件觸發時的 `XMLHttpRequest.response` 值會是一個目前包含了所接收資料的 {{domxref("Blob")}}。
+> **備註：** 在 Gecko 12.0 中，如果 `XMLHttpRequest` 的 `responseType` 屬性為「moz-blob」，那麼 `progress` 事件觸發時的 `XMLHttpRequest.response` 值會是一個目前包含了所接收資料的 {{domxref("Blob")}}。
 
 我們也可以透過 `loadend` 事件來偵測到所有之三種下載結束狀況（`abort`、`load` 或 `error`）：
 
