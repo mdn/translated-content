@@ -29,7 +29,7 @@ _ServiceWorker 接口继承它父类 {{domxref("EventTarget")}} 的方法。_
 ### 事件
 
 - {{domxref("ServiceWorker.onstatechange")}} {{ReadOnlyInline}}
-  - : 每当{{domxref("ServiceWorker.state")}} 发生改变时，都会触发。
+  - : 每当 {{domxref("ServiceWorker.state")}} 发生改变时，都会触发。
 
 ## 示例
 
