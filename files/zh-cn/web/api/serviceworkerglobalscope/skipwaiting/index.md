@@ -5,7 +5,7 @@ slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
 
 {{APIRef("Service Workers API")}}
 
-{{domxref("ServiceWorkerGlobalScope")}} 的 **`ServiceWorkerGlobalScope.skipWaiting()`** 方嘎强制等待 service worker 成为活动的 service worker。
+{{domxref("ServiceWorkerGlobalScope")}} 的 **`ServiceWorkerGlobalScope.skipWaiting()`** 方法强制等待 service worker 成为活动的 service worker。
 
 将此方法与 {{domxref("Clients.claim()")}} 方法一起使用，以确保对底层 service worker 的更新，并立即对当前客户端和其它活动的客户端生效。
 
@@ -50,9 +50,9 @@ self.addEventListener("install", (event) => {
 
 ## 参见
 
-- [使用 Service Worker](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service worker 基础代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [是否支持 ServiceWorker？](https://jakearchibald.github.io/isserviceworkerready/)
 - {{domxref("Clients.claim()")}}
 - {{jsxref("Promise", "Promise")}}
-- [使用 web worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
