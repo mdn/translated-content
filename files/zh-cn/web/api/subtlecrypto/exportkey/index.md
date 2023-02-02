@@ -7,8 +7,7 @@ slug: Web/API/SubtleCrypto/exportKey
 
 {{domxref("SubtleCrypto")}} 接口的 **`exportKey()`** 方法用于导出密钥。也就是说，它将一个 {{domxref("CryptoKey")}} 对象作为输入，并给出对应的外部可移植格式的密钥。
 
-要导出密钥，密钥的 {{domxref("CryptoKey.extractable")}} 必须设置为
-`true`。
+若要导出密钥，密钥的 {{domxref("CryptoKey.extractable")}} 必须设置为 `true`。
 
 密钥可导出为多种格式：请参阅 [`SubtleCrypto.importKey()`](/zh-CN/docs/Web/API/SubtleCrypto/importKey) 页面[支持的格式](/zh-CN/docs/Web/API/SubtleCrypto/importKey#支持的格式)以获取详细信息。
 
