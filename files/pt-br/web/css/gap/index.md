@@ -107,3 +107,41 @@ Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<l
 #### Resultado
 
 {{EmbedLiveSample("Flex_layout", "auto", 250)}}
+
+### Layout grid
+
+#### HTML
+
+```html
+<div id="grid">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
+
+#### CSS
+
+```css
+#grid {
+  display: grid;
+  height: 200px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 20px 5px;
+}
+
+#grid > div {
+  border: 1px solid green;
+  background-color: lime;
+}
+```
+
+#### Resultado
+
+{{EmbedLiveSample("Grid_layout", "auto", 250)}}
