@@ -122,7 +122,7 @@ Para expresar que una clase hereda de otra clase, utilizamos la palabra clave {{
 
 Debido a que la clase `Professor` agrega una nueva propiedad `teaches`, ésta se declara en el cuerpo de la clase.
 
-Cuando creamos un nuevo `Professor`, queremos establecer el nombre de la `teaches` que enseña, para esto definimos un constructor que recibe `name` y `teaches` como argumentos. Lo primero que hace el constructor es utilizar {{jsxref("Operators/super", "super()")}} para llamar al constructor de la superclase, mientras le pasa el parámetro `name`. El constructor de la superclase se encarga de establecer el valor de la propiedad `name`. Enseguida, el constructor de la clase `Professor` establece el valor de la propiedad `teaches`.
+Cuando creamos un nuevo `Professor`, queremos establecer el nombre de `teaches` que enseña, para esto definimos un constructor que recibe `name` y `teaches` como argumentos. Lo primero que hace el constructor es utilizar {{jsxref("Operators/super", "super()")}} para llamar al constructor de la superclase, mientras le pasa el parámetro `name`. El constructor de la superclase se encarga de establecer el valor de la propiedad `name`. Enseguida, el constructor de la clase `Professor` establece el valor de la propiedad `teaches`.
 
 > **Nota:** Si una subclase debe realizar algún tipo de inialización, es **obligatorio** que esta llame al constructor de la superclase utilizando `super()` con los paramétros que el constructor de la superclase espera.
 
