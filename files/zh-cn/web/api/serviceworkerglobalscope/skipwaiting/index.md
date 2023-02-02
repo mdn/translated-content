@@ -5,7 +5,7 @@ slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
 
 {{APIRef("Service Workers API")}}
 
-{{domxref("ServiceWorkerGlobalScope")}} 的 **`ServiceWorkerGlobalScope.skipWaiting()`** 方法强制等待 service worker 成为活动的 service worker。
+{{domxref("ServiceWorkerGlobalScope")}} 的 **`ServiceWorkerGlobalScope.skipWaiting()`** 方法强制等待 service worker 成为激活的 service worker。
 
 将此方法与 {{domxref("Clients.claim()")}} 方法一起使用，以确保对底层 service worker 的更新，并立即对当前客户端和其它活动的客户端生效。
 
