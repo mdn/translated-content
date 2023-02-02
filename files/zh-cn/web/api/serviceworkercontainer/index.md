@@ -36,7 +36,7 @@ slug: Web/API/ServiceWorkerContainer
 - {{domxref("ServiceWorkerContainer.getRegistrations()")}}
   - : 返回数组中与 `ServiceWorkerContainer` 关联的所有 {{domxref("ServiceWorkerRegistration")}} 对象。该方法返回一个兑现为 {{domxref("ServiceWorkerRegistration")}} 的数组的 {{jsxref("Promise")}}。
 - {{domxref("ServiceWorkerContainer.startMessages()")}}
-  - : 显示地启动从 service worker 分派到其控制下的页面的消息流（例如，通过 {{domxref("Client.postMessage()")}} 发送）。这可用于更早地对发送的消息做出反应，甚至在该页面的内容内容加载完成之前。
+  - : 显示地启动，从 service worker 分发到其控制页面下的消息流（例如，通过 {{domxref("Client.postMessage()")}} 发送）。这可用于更早地对发送的消息做出反应，甚至在该页面的内容内容加载完成之前。
 
 ## 示例
 
