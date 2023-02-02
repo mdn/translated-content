@@ -86,7 +86,7 @@ Telegram: <https://t.me/+Dr6qKQCAepw4MjFj>
 
 Matrix: <https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org>
 
-MDN Discord, canal #spanish: https://discord.gg/MkEg2ATW 
+MDN Discord, canal #spanish: <https://discord.gg/MkEg2ATW>
 
 <details>
   <summary><h2>Enlaces relevantes</h2></summary>
