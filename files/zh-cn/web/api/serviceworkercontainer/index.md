@@ -5,16 +5,16 @@ slug: Web/API/ServiceWorkerContainer
 
 {{APIRef("Service Workers API")}}
 
-[Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的 `ServiceWorkerContainer` 接口提供了一个对象，该对象表示 service worker 作为网络系统中的整体单元，包括注册、取消注册和更新 service worker 以及访问 service worker 的状态和它们注册状况的功能。
+[Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的 `ServiceWorkerContainer` 接口提供了一个对象，该对象表示 service worker 作为网络系统中的整体单元，包括注册、注销和更新 service worker 以及访问 service worker 的状态和它们的注册状态的功能。
 
-更重要的是，它暴露了用于注册 service worker 的 {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} 方法，并且用于确定当前页面是否受到主动控制的 {{domxref("ServiceWorkerContainer.controller")}} 属性。
+更重要的是，它暴露了用于注册 service worker 的 {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} 方法，和用于确定当前页面是否受到主动控制的 {{domxref("ServiceWorkerContainer.controller")}} 属性。
 
 {{InheritanceDiagram}}
 
 ## 实例属性
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
-  - : 如果 ServiceWorker 对象的状态是 `activating` 或 `activated` 的时候（与 {{domxref("ServiceWorkerRegistration.active")}} 返回相同的对象），则返回 {{domxref("ServiceWorker")}} 对象。在强制刷新请求（_Shift_ + refresh）或者没有激活的 worker 的时候，该属性返回 `null`。
+  - : 如果 ServiceWorker 对象的状态是 `activating` 或 `activated`（与 {{domxref("ServiceWorkerRegistration.active")}} 返回相同的对象），则返回 {{domxref("ServiceWorker")}} 对象。在强制刷新请求（_Shift_ + refresh）或者没有激活的 worker 的时候，该属性返回 `null`。
 - {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
   - : 提供了一种延迟代码执行直到 service worker 被激活的方法。它返回一个从不会拒绝的 {{jsxref("Promise")}}，并且一直等到与当前页面相关联的 {{domxref("ServiceWorkerRegistration")}} 有一个 {{domxref("ServiceWorkerRegistration.active")}} worker。一旦满足该条件，它将用 {{domxref("ServiceWorkerRegistration")}} 兑现。
 
