@@ -5,7 +5,7 @@ slug: Web/API/ServiceWorkerContainer
 
 {{APIRef("Service Workers API")}}
 
-[Service Worker API](/en-US/docs/Web/API/Service_Worker_API) 的 `ServiceWorkerContainer` 接口提供了一个对象，该对象表示 service worker 作为网络系统中的整体单元，包括注册、取消注册和更新 service worker 以及访问 service worker 的状态和它们注册状况的功能。
+[Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的 `ServiceWorkerContainer` 接口提供了一个对象，该对象表示 service worker 作为网络系统中的整体单元，包括注册、取消注册和更新 service worker 以及访问 service worker 的状态和它们注册状况的功能。
 
 更重要的是，它暴露了用于注册 service worker 的 {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} 方法，并且用于确定当前页面是否受到主动控制的 {{domxref("ServiceWorkerContainer.controller")}} 属性。
 
@@ -20,11 +20,11 @@ slug: Web/API/ServiceWorkerContainer
 
 ### 事件
 
-- [`controllerchange`](/en-US/docs/Web/API/ServiceWorkerContainer/controllerchange_event)
+- [`controllerchange`](/zh-CN/docs/Web/API/ServiceWorkerContainer/controllerchange_event)
   - : 当文档关联的 {{domxref("ServiceWorkerRegistration")}} 获得新的 {{domxref("ServiceWorkerRegistration.active","active")}} worker 时触发。
-- [`error`](/en-US/docs/Web/API/ServiceWorkerContainer/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
+- [`error`](/zh-CN/docs/Web/API/ServiceWorkerContainer/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 每当关联的 service worker 出现错误时都会触发。
-- [`message`](/en-US/docs/Web/API/ServiceWorkerContainer/message_event)
+- [`message`](/zh-CN/docs/Web/API/ServiceWorkerContainer/message_event)
   - : 当 {{domxref("ServiceWorkerContainer")}} 对象收到传入的消息时，触发。（例如，通过 {{domxref("MessagePort.postMessage()")}} 调用）。
 
 ## 实例方法
@@ -50,7 +50,7 @@ if ("serviceWorker" in navigator) {
 
       console.log("Service worker registration succeeded:", registration);
       // At this point, you can optionally do something
-      // with registration. See https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration
+      // with registration. See https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerRegistration
     })
     .catch((error) => {
       console.error(`Service worker registration failed: ${error}`);
@@ -93,8 +93,8 @@ if ("serviceWorker" in navigator) {
 
 ## 参见
 
-- [使用 Service Worker](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service worker 基础代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [是否支持 ServiceWorker？](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [使用 web worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
