@@ -51,10 +51,10 @@ class Person {
 Esto declara una clase llamada `Person` con:
 
 - una propiedad `name`.
-- un constructor que recibe un parámetro `nombre` que se usa para inicializar la propiedad `name` del nuevo objeto.
+- un constructor que recibe un parámetro `name` que se usa para inicializar la propiedad `name` del nuevo objeto.
 - un método `introduceSelf()` que puede hacer referencia a las propiedades del objeto usando `this`.
 
-La declaración `name;` es opcional y puedes omitirla, ya que la línea `this.name = name` en el constructor crea la propiedad `name` antes de inicializarla. En cualquier caso, enlistar las propiedades de manera explícita en la declaración de la clase hará que sea más fácil para las personas leyendo tu código saber cuáles son las propiedades que conforman a dicha clase.
+La declaración `name;` es opcional y puedes omitirla, ya que la línea `this.name = name;` en el constructor crea la propiedad `name` antes de inicializarla. En cualquier caso, enlistar las propiedades de manera explícita en la declaración de la clase hará que sea más fácil para las personas leyendo tu código saber cuáles son las propiedades que conforman a dicha clase.
 
 Cuando declaras una propiedad, también puedes inicializarla con un valor por defecto con una línea como `name = '';`.
 
@@ -128,6 +128,8 @@ Cuando creamos un nuevo `Professor`, queremos establecer el nombre de `teaches` 
 
 Podemos observar que hemos sobreescrito el método `introduceSelf()` de la superclase y a su vez agregamos un nuevo método `grade()` para calificar las tareas de los alumnos (Nuestro profesor no es muy bueno que digamos, solo asigna calificaciones aleatorias a los ensayos).
 
+Con esta declaración ahora podemos crear y usar profesores:
+
 ```js
 const walsh = new Professor('Walsh', 'Psicología');
 walsh.introduceSelf();  // 'Mi nombre es Walsh, yo seré tu profesor de Psicología'
@@ -171,7 +173,7 @@ const summers = new Student('Summers', 2)
 summers.introduceSelf(); // ¡Hola! me llamo Summers y estoy en el año 2.
 summers.canStudyArchery(); // true
 
-summers.#year; // Error de sintaxis
+summers.#year; // SyntaxError (Error de sintaxis)
 ```
 
 Las propiedades de datos privadas deben ser declaradas en la propia declaración de la clase y sus nombres deben empezar con `#`.
@@ -195,7 +197,7 @@ const myExample = new Eaxmple();
 
 myExample.somePublicMethod(); // '¿Me llamaste?'
 
-myExample.#somePrivateMethod(); // Error de Sintaxis
+myExample.#somePrivateMethod(); // SyntaxError (Error de Sintaxis)
 ```
 
 ## ¡Pon a prueba tus habilidades!
