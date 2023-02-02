@@ -6,7 +6,7 @@ translation_of: Web/CSS/gap
 
 {{CSSRef}}
 
-A propriedade {{CSSxRef("", "CSS")}}  **`gap`** define os espaços ({{glossary("gutters", "entrelinhas")}}) entre as linhas e colunas. É uma {{CSSxRef("Shorthand_properties", "propriedade shorthand")}} para {{CSSxRef("row-gap")}} e {{CSSxRef("column-gap")}}.
+A propriedade {{CSSxRef("", "CSS")}}  **`gap`** define os espaços ({{glossary("gutters")}}) entre as linhas e colunas. É uma {{CSSxRef("Shorthand_properties", "propriedade shorthand")}} para {{CSSxRef("row-gap")}} e {{CSSxRef("column-gap")}}.
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
 
@@ -56,9 +56,9 @@ Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<l
 ### Valores
 
 - {{CSSxRef("&lt;length&gt;")}}
-  - : É o comprimento do espaçamento que separa as linhas do grid.
+  - : É o comprimento do espaçamento (gutter) que separa as linhas do grid.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : É o comprimento do espaçamento que separa as linhas do grid, relativo à dimensão do elemento.
+  - : É o comprimento do espaçamento (gutter) que separa as linhas do grid, relativo à dimensão do elemento.
 
 ## Definição formal
 
@@ -70,7 +70,7 @@ Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<l
 
 ## Exemplos
 
-### Layout flex
+### Flex layout
 
 #### HTML
 
@@ -108,7 +108,7 @@ Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<l
 
 {{EmbedLiveSample("Flex_layout", "auto", 250)}}
 
-### Layout grid
+### Grid layout
 
 #### HTML
 
