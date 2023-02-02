@@ -5,13 +5,13 @@ slug: Web/API/Navigator/serviceWorker
 
 {{APIRef("Service Workers API")}}
 
-**`Navigator.serviceWorker`** 只读属性，返回[关联文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorkerContainer")}} 对象，它提供了对 {{domxref("ServiceWorker")}} 的注册、删除、更新以及通信的权限。
+**`Navigator.serviceWorker`** 只读属性，返回[关联文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorkerContainer")}} 对象，它提供了对 {{domxref("ServiceWorker")}} 的注册、删除、更新以及通信的访问。
 
-该功能可能无法在私人模式下使用。
+该功能可能无法在无痕模式下使用。
 
 ## 值
 
-{{domxref("ServiceWorkerContainer")}}.
+{{domxref("ServiceWorkerContainer")}}。
 
 ## 示例
 
