@@ -11,7 +11,7 @@ slug: Web/API/Client/id
 
 唯一标识对象的字符串。
 
-## 参考
+## 规范
 
 {{Specifications}}
 
