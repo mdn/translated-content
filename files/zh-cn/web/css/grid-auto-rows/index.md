@@ -79,7 +79,7 @@ grid-auto-rows: unset;
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <div id="grid">
@@ -89,7 +89,7 @@ grid-auto-rows: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 #grid {
@@ -105,7 +105,7 @@ grid-auto-rows: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", "210px", "210px")}}
+{{EmbedLiveSample("示例", "210px", "210px")}}
 
 ## 规范
 
@@ -117,7 +117,7 @@ grid-auto-rows: unset;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
 - 网格布局指南：_[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_

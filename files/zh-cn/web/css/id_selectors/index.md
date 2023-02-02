@@ -45,7 +45,7 @@ span#identified {
 
 ### 结果
 
-{{EmbedLiveSample("Example", '100%', 50)}}
+{{EmbedLiveSample("示例", '100%', 50)}}
 
 ## 规范
 

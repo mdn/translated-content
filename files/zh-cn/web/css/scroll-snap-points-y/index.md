@@ -26,20 +26,20 @@ scroll-snap-points-y: initial;
 scroll-snap-points-y: unset;
 ```
 
-### Values
+### 值
 
 - `none`
   - : 滚动容器没有定义任何 snap 点。Elements within the scroll container may still define snap points of behalf of the scroll container.（i don't understand this statement）
 - `repeat(<长度>)`
   - : 定义 snap 点的一个间隔，从容器相关的边缘开始。仅允许正数长度。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <div id="container">
@@ -49,7 +49,7 @@ scroll-snap-points-y: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 #container {
@@ -80,7 +80,7 @@ scroll-snap-points-y: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", 220, 220)}}
+{{EmbedLiveSample("示例", 220, 220)}}
 
 ## 规范
 

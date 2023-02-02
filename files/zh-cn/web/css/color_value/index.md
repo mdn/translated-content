@@ -79,7 +79,7 @@ slug: Web/CSS/color_value
 
 ##### 结果
 
-{{EmbedLiveSample('currentcolor_example')}}
+{{EmbedLiveSample('currentcolor 示例')}}
 
 ### RGB 颜色
 
@@ -354,7 +354,7 @@ inputElem.addEventListener('change', () => {
 
 #### 结果
 
-{{EmbedLiveSample('Color_value_tester','100%', 300)}}
+{{EmbedLiveSample('颜色值检测器','100%', 300)}}
 
 ### RGB 的多种语法
 
@@ -621,7 +621,7 @@ hsla(240 100% 50% / .05)      /*   5% opaque blue */
 hsla(240 100% 50% / 5%)       /*   5% opaque blue */
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 

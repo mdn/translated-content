@@ -50,7 +50,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>

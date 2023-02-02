@@ -80,7 +80,7 @@ button.addEventListener('click', event => {
 - {{event("mousedown")}}
 - {{event("mouseup")}}
 - {{event("mousemove")}}
-- {{event("click")}}
+- [`click`](/ko/docs/Web/API/Element/click_event)
 - {{event("dblclick")}}
 - {{event("mouseover")}}
 - {{event("mouseout")}}

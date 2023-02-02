@@ -263,7 +263,7 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
   </tr>
   <tr>
    <th scope="row">合法 de ARIA roles</th>
-   <td>{{ARIARole("application")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM interface</th>

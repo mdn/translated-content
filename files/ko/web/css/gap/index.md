@@ -96,7 +96,6 @@ gap: unset;
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 

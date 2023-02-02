@@ -71,7 +71,7 @@ slug: Web/API/notification
 #### Event handlers
 
 - {{domxref("Notification.onclick")}}
-  - : {{event("click")}} 이벤트에 대한 핸들러입니다. 사용자가 알림을 클릭할 때 마다 호출됩니다.
+  - : [`click`](/ko/docs/Web/API/Element/click_event) 이벤트에 대한 핸들러입니다. 사용자가 알림을 클릭할 때 마다 호출됩니다.
 - {{domxref("Notification.onerror")}}
   - : {{event("error")}} 이벤트에 대한 핸들러입니다. 알림에 오류가 발생할 때 마다 호출됩니다.
 

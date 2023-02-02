@@ -48,7 +48,7 @@ There are two Unicode characters that can be used to manually specify potential 
 - U+00AD (SHY)
   - : An invisible, "soft" hyphen. This character is not rendered visibly; instead, it suggests a place where the browser might choose to break the word if necessary. In HTML, you can use `&shy;` to insert a soft hyphen.
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
@@ -92,16 +92,16 @@ p.auto {
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "470'")}}
+{{EmbedLiveSample("示例", "100%", "470'")}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{Cssxref("content")}}
