@@ -145,3 +145,27 @@ Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<l
 #### Resultado
 
 {{EmbedLiveSample("Grid_layout", "auto", 250)}}
+
+### Layout de múltiplas colunas
+
+#### HTML
+
+```html
+<p class="content-box">
+  This is some multi-column text with a 40px column gap created with the CSS
+  <code>gap</code> property. Don't you think that's fun and exciting? I sure do!
+</p>
+```
+
+#### CSS
+
+```css
+.content-box {
+  column-count: 3;
+  gap: 40px;
+}
+```
+
+#### Resultado
+
+{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
