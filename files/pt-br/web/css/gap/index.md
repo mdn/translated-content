@@ -169,3 +169,16 @@ Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<l
 #### Resultado
 
 {{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
+
+## Especificações
+
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
+
+## Veja também
+
+- Propriedades CSS relacionadas: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
+- Guia para layout Grid: _{{CSSxRef("CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters", "Conceitos básicos de Grid Layout - Gutters")}}_
