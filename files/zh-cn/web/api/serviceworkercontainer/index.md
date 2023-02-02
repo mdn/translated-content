@@ -25,7 +25,7 @@ slug: Web/API/ServiceWorkerContainer
 - [`error`](/zh-CN/docs/Web/API/ServiceWorkerContainer/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 每当关联的 service worker 出现错误时都会触发。
 - [`message`](/zh-CN/docs/Web/API/ServiceWorkerContainer/message_event)
-  - : 当 {{domxref("ServiceWorkerContainer")}} 对象收到传入的消息时，触发。（例如，通过 {{domxref("MessagePort.postMessage()")}} 调用）。
+  - : 当 {{domxref("ServiceWorkerContainer")}} 对象收到传入的消息时，触发（例如，通过 {{domxref("MessagePort.postMessage()")}} 调用）。
 
 ## 实例方法
 
@@ -35,6 +35,8 @@ slug: Web/API/ServiceWorkerContainer
   - : 得到一个 {{domxref("ServiceWorkerRegistration")}} 对象，它的作用域范围与提供的文档匹配。该方法返回一个兑现为 {{domxref("ServiceWorkerRegistration")}} 或 `undefined` 的 {{jsxref("Promise")}}。
 - {{domxref("ServiceWorkerContainer.getRegistrations()")}}
   - : 返回数组中与 `ServiceWorkerContainer` 关联的所有 {{domxref("ServiceWorkerRegistration")}} 对象。该方法返回一个兑现为 {{domxref("ServiceWorkerRegistration")}} 的数组的 {{jsxref("Promise")}}。
+- {{domxref("ServiceWorkerContainer.startMessages()")}}
+  - : 显示地启动从 service worker 分派到其控制下的页面的消息流（例如，通过 {{domxref("Client.postMessage()")}} 发送）。这可用于更早地对发送的消息做出反应，甚至在该页面的内容内容加载完成之前。
 
 ## 示例
 
