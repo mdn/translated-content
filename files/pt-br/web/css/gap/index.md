@@ -6,7 +6,7 @@ translation_of: Web/CSS/gap
 
 {{CSSRef}}
 
-A propriedade {{CSSxRef("", "CSS")}}  **`gap`** define os espaços ({{glossary("gutters")}}) entre as linhas e colunas. É uma {{CSSxRef("Shorthand_properties", "propriedade shorthand")}} para {{CSSxRef("row-gap")}} e {{CSSxRef("column-gap")}}.
+A propriedade {{CSSxRef("", "CSS")}} **`gap`** define os espaços ({{glossary("gutters")}}) entre as linhas e colunas. É uma {{CSSxRef("Shorthand_properties", "propriedade shorthand")}} para {{CSSxRef("row-gap")}} e {{CSSxRef("column-gap")}}.
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
 
