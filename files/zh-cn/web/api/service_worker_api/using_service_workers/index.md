@@ -15,7 +15,7 @@ Service worker 修复了这个问题。使用 service worker，你可以将 app 
 
 service worker 的功能类似于代理服务器，允许你去修改请求和响应，将其替换成来自其自身缓存的项目。
 
-## 为了执行 service worker 的设置
+## 使用 service worker 的准备工作
 
 service worker 在现代浏览器中默认开启。要使用 service worker 运行代码，你需要通过 HTTPS 提供你的代码——出于安全原因，Service worker 仅限在 HTTPS 上运行。支持 HTTPS 的服务器是必要的。为了托管实验代码，你可以使用 Github、Netlify、Vercel 等服务。为了促进本地开发，浏览器也认为 `localhost` 是一个安全的来源。
 
