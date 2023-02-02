@@ -19,7 +19,7 @@ service worker 的功能类似于代理服务器，允许你去修改请求和�
 
 service worker 在现代浏览器中默认开启。要使用 service worker 运行代码，你需要通过 HTTPS 提供你的代码——出于安全原因，Service worker 仅限在 HTTPS 上运行。支持 HTTPS 的服务器是必要的。为了托管实验代码，你可以使用 Github、Netlify、Vercel 等服务。为了促进本地开发，浏览器也认为 `localhost` 是一个安全的来源。
 
-## 基本架构
+## 基本步骤
 
 通常遵循以下基本步骤来使用 service worker：
 
