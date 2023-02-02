@@ -27,7 +27,7 @@ skipWaiting()
 
 虽然 `self.skipWaiting()` 可以在 service worker 执行期间的任何时间点调用，但是它只有在新安装的 service worker 可能保持在 `waiting` 状态的时候才会其作用。因此，通常从 {{domxref("InstallEvent")}} 处理程序内容调用 `self.skipWaiting()`。
 
-以下示例会导致新安装的 service worker 进入 `activating` 状态，而不管是否已经有一个活动的 service worker。
+以下示例会导致新安装的 service worker 进入 `activating` 状态，而不会管是否已经有一个活动的 service worker。
 
 ```js
 self.addEventListener("install", (event) => {
