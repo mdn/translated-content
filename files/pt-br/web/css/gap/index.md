@@ -67,3 +67,43 @@ Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<l
 ## Sintaxe formal
 
 {{csssyntax}}
+
+## Exemplos
+
+### Layout flex
+
+#### HTML
+
+```html
+<div id="flexbox">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
+
+#### CSS
+
+```css
+#flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  gap: 20px 5px;
+}
+
+#flexbox > div {
+  border: 1px solid green;
+  background-color: lime;
+  flex: 1 1 auto;
+  width: 100px;
+  height: 50px;
+}
+```
+
+#### Resultado
+
+{{EmbedLiveSample("Flex_layout", "auto", 250)}}
