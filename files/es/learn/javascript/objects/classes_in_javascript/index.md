@@ -111,59 +111,59 @@ class Professor extends Person {
     console.log(`Mi nombre es ${this.name}, yo seré tu profesor de ${this.teaches}`);
   }
 
-  calificar(tarea) {
-    const calificacion = Math.floor(Math.random() * (5 - 1) + 1);
-    console.log(calificacion);
+  grade(paper) {
+    const grade = Math.floor(Math.random() * (5 - 1) + 1);
+    console.log(grade);
   }
 }
 ```
 
 Para expresar que una clase hereda de otra clase, utilizamos la palabra clave {{jsxref("Classes/extends", "extends")}}.
 
-Debido a que la clase `Profesor` agrega una nueva propiedad `materia`, ésta se declara en el cuerpo de la clase.
+Debido a que la clase `Professor` agrega una nueva propiedad `teaches`, ésta se declara en el cuerpo de la clase.
 
-Cuando creamos un nuevo `Profesor`, queremos establecer el nombre de la `materia` que enseña, para esto definimos un constructor que recibe el `nombre` y la `materia` como argumentos. Lo primero que hace el constructor es utilizar {{jsxref("Operators/super", "super()")}} para llamar al constructor de la superclase, mientras le pasa el parámetro `nombre`. El constructor de la superclase se encarga de establecer el valor de la propiedad `nombre`. Enseguida, el constructor de la clase `Profesor` establece el valor de la propiedad `materia`.
+Cuando creamos un nuevo `Professor`, queremos establecer el nombre de la `teaches` que enseña, para esto definimos un constructor que recibe `name` y `teaches` como argumentos. Lo primero que hace el constructor es utilizar {{jsxref("Operators/super", "super()")}} para llamar al constructor de la superclase, mientras le pasa el parámetro `name`. El constructor de la superclase se encarga de establecer el valor de la propiedad `name`. Enseguida, el constructor de la clase `Professor` establece el valor de la propiedad `teaches`.
 
 > **Nota:** Si una subclase debe realizar algún tipo de inialización, es **obligatorio** que esta llame al constructor de la superclase utilizando `super()` con los paramétros que el constructor de la superclase espera.
 
-Podemos observar que hemos sobreescrito el método `presentarse()` de la superclase y a su vez agregamos un nuevo método `calificar()` para calificar las tareas de los alumnos (Nuestro profesor no es muy bueno que digamos, solo asigna calificaciones aleatorias a los ensayos).
+Podemos observar que hemos sobreescrito el método `introduceSelf()` de la superclase y a su vez agregamos un nuevo método `grade()` para calificar las tareas de los alumnos (Nuestro profesor no es muy bueno que digamos, solo asigna calificaciones aleatorias a los ensayos).
 
 ```js
-const carlos = new Profesor('Carlos', 'Matematicas');
-carlos.presentarse();  // 'Mi nombre es Carlos, yo seré tu profesor de Matematicas'
+const walsh = new Professor('Walsh', 'Psicología');
+walsh.introduceSelf();  // 'Mi nombre es Walsh, yo seré tu profesor de Psicología'
 
-carlos.calificar('mi tarea'); // una calificación aleatoria
+walsh.grade('mi tarea'); // una calificación aleatoria
 ```
 
 ## Encapsulamiento
 
-Finalmente, veámos cómo implementar el encapsulamiento en JavaScript. En el anterior artículo hablamos de cómo nos gustaría que la propiedad `año` de `Estudiante` fuera privada, de esta forma podríamos cambiar las reglas sobre la clase de tiro con arco sin estropear el código que depende de la clase `Estudiante`.
+Finalmente, veamos cómo implementar el encapsulamiento en JavaScript. En el anterior artículo hablamos de cómo nos gustaría que la propiedad `year` de `Student` fuera privada, de esta forma podríamos cambiar las reglas sobre la clase de tiro con arco sin estropear el código que depende de la clase `Student`.
 
-Aquí podemos ver la declaración de la clase `Estudiante` que se encarga precisamente de ello:
+Aquí podemos ver la declaración de la clase `Student` que se encarga precisamente de ello:
 
 ```js
-class Estudiante extends Persona {
+class Student extends Person {
 
-  #año;
+  #year;
 
-  constructor(nombre, año) {
-    super(nombre);
-    this.#año = año;
+  constructor(name, year) {
+    super(name);
+    this.#year = year;
   }
 
 
-  presentarse() {
-    console.log(`¡Hola! me llamo ${this.nombre} y estoy en el año ${this.#año}.`);
+  introduceSelf() {
+    console.log(`¡Hola! me llamo ${this.name} y estoy en el año ${this.#year}.`);
   }
 
-  puedeEstudiarArqueria() {
-    return this.#año > 1;
+  canStudyArchery() {
+    return this.#year > 1;
   }
 
 }
 ```
 
-En la clase anterior, `año` es una [propiedad de dato privada](/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields). Podemos crear un objeto `Estudiante` que puede acceder a la propiedad `#año` internamente, sin embargo, si algún código que se encuentre afuera de la clase intenta acceder a la propiedad `#año`, el navegador lanzará un error:
+En la clase anterior, `year` es una [propiedad de dato privada](/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields). Podemos crear un objeto `Student` que puede acceder a la propiedad `#year` internamente, sin embargo, si algún código que se encuentre afuera de la clase intenta acceder a la propiedad `#year`, el navegador lanzará un error:
 
 ```js
 const arturo = new Estudiante("Arturo", 2)
@@ -171,7 +171,7 @@ const arturo = new Estudiante("Arturo", 2)
 arturo.presentarse(); // ¡Hola! me llamo Arturo y estoy en el año 2.
 arturo.puedeEstudiarArqueria(); // true
 
-arturo.#año; // Error de sintaxis
+summers.#year; // Error de sintaxis
 ```
 
 Las propiedades de datos privadas deben ser declaradas en la propia declaración de la clase y sus nombres deben empezar con `#`.
@@ -181,21 +181,21 @@ Las propiedades de datos privadas deben ser declaradas en la propia declaración
 En un clase puedes incluir tanto propiedades de dato privadas como métodos privados. Al igual que las propiedades de dato privadas, su nombre debe empezar con `#` y solo pueden ser llamados por los propios métodos del objeto:
 
 ```js
-class Ejemplo {
-  metodoPublico() {
-    this.#metodoPrivado();
+class Example {
+  somePublicMethod() {
+    this.#somePrivateMethod();
   }
 
-  #metodoPrivado() {
+  #somePrivateMethod() {
     console.log('¿Me llamaste?');
   }
 }
 
-const miEjemplo = new Ejemplo();
+const myExample = new Eaxmple();
 
 miEjemplo.metodoPublico(); // '¿Me llamaste?'
 
-miEjemplo.#metodoPrivado(); // Error de Sintaxis
+myExample.#somePrivateMethod(); // Error de Sintaxis
 ```
 
 ## ¡Pon a prueba tus habilidades!
