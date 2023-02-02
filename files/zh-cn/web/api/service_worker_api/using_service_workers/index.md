@@ -91,11 +91,11 @@ registerServiceWorker();
 
 可能是如下的原因：
 
-- 你没有在 HTTPS 下运行你的程序
-- service worker 文件的地址没有写对——需要相对于源（origin），而不是 app 的根目录。在我们的例子中，worker 是在 `https://mdn.github.io/sw-test/sw.js`，app 的根目录是 `https://mdn.github.io/sw-test/`。但是路径需要写成 `/sw.js`.
+- 你没有在 HTTPS 下运行你的程序。
+- service worker 文件的地址没有写对——需要相对于源（origin），而不是 app 的根目录。在我们的例子中，worker 是在 `https://mdn.github.io/sw-test/sw.js`，app 的根目录是 `https://mdn.github.io/sw-test/`。但是路径需要写成 `/sw.js`。
 - 也不允许你的 app 指向不同源（origin）的 service worker。
 - service worker 只能在 service worker 作用域里捕获客户端发出的请求。
-- service worker 最大的作用域是 worker 所在的位置（换句话说，如果脚本 `sw.js` 位于 `/js/sw.js` 中，默认情况下它只能控制 `/js/` 下的URL）。可以使用该 [`Service-Worker-Allowed`](/zh-CN/docs/Web/HTTP/Header/Service-Worker-Allowed) 标头指定该 worker 的最大范围列表。
+- service worker 最大的作用域是 worker 所在的位置（换句话说，如果脚本 `sw.js` 位于 `/js/sw.js` 中，默认情况下它只能控制 `/js/` 下的 URL）。可以使用该 [`Service-Worker-Allowed`](/zh-CN/docs/Web/HTTP/Header/Service-Worker-Allowed) 标头指定该 worker 的最大范围列表。
 - 在 Firefox 中，Service Worker API 在用户处于[隐私浏览模式](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，或当历史记录被禁用时，或者如果 Firefox 关闭时 cookie 被清楚时，会被隐藏而且无法使用。
 - 在 Chrome 中，当启用“Block all cookies (not recommended)”选项时，注册失败。
 
@@ -143,7 +143,7 @@ self.addEventListener("install", (event) => {
 
 现在你已经将你的站点资源缓存了，你需要告诉 service worker 让它用这些缓存内容来做点什么。有了 `fetch` 事件，这是很容易做到的。
 
-1. 每次获取 service worker 控制的资源时，都会触发 `fetch` 事件，这些资源包括了指定的作用域（scope）内的文档，和这些文档内引用的其他任何资源（比如 `index.html` 发起了一个跨源的请求来嵌入一个图片，这个也会通过 service worker。）
+1. 每次获取 service worker 控制的资源时，都会触发 `fetch` 事件，这些资源包括了指定的作用域（scope）内的文档，和这些文档内引用的其他任何资源（比如 `index.html` 发起了一个跨源的请求来嵌入一个图片，这个也会通过 service worker）。
 
 2. 你可以给 service worker 添加一个 `fetch` 的事件监听器，接着调用 event 上的 `respondWith()` 方法来劫持我们的 HTTP 响应，然后你用可以用自己的方法来更新他们。
 
