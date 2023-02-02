@@ -52,3 +52,10 @@ gap: unset;
 Esta propriedade é especificada como um valor para `<'row-gap'>` seguido opcionalmente por um valor para `<'column-gap'>`. Se o valor para `<'column-gap'>` for omitido, este será definido como o mesmo valor de `<'row-gap'>`.
 
 Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<length>` ou `<percentage>`.
+
+### Valores
+
+- {{CSSxRef("&lt;length&gt;")}}
+  - : É o comprimento do espaçamento que separa as linhas do grid.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : É o comprimento do espaçamento que separa as linhas do grid, relativo à dimensão do elemento.
