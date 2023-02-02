@@ -59,3 +59,11 @@ Os valores de `<'row-gap'>` e `<'column-gap'>` são ambos especificados como `<l
   - : É o comprimento do espaçamento que separa as linhas do grid.
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : É o comprimento do espaçamento que separa as linhas do grid, relativo à dimensão do elemento.
+
+## Definição formal
+
+{{cssinfo}}
+
+## Sintaxe formal
+
+{{csssyntax}}
