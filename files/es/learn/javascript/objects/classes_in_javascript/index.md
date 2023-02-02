@@ -1,10 +1,8 @@
 ---
 title: Clases en JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - Javascript
-  - Aprender
-  - Programación orientada a objetos
+l10n:
+  sourceCommit: 8b799e40ec01fede4e6cd95c2447ae45b6bc74d5
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
