@@ -85,7 +85,7 @@ registerServiceWorker();
 
 单个 service worker 可以控制很多页面。每个你的 scope 里的页面加载完的时候，安装在页面的 service worker 可以控制它。牢记你需要小心 service worker 脚本里的全局变量：每个页面不会有自己独有的 worker。
 
-> **备注：** 关于 service worker 一个很棒的事情就是，如果你像我们上面做的那样使用功能性检测，发现浏览器并不不支持 service worker，但是它还是可以正常的以预期的方式在线使用你的 app。
+> **备注：** 关于 service worker 一个很棒的事情就是，如果你像我们上面做的那样使用功能性检测，发现浏览器并不支持 service worker，但是它还是可以正常的以预期的方式在线使用你的 app。
 
 #### 为什么我的 service worker 注册失败了？
 
