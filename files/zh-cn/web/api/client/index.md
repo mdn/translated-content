@@ -15,7 +15,7 @@ slug: Web/API/Client
 ## 实例属性
 
 - {{domxref("Client.id")}} {{readonlyInline}}
-  - : 客户端的唯一通用标识符，字符串形式。
+  - : 一个字符串，表示客户端的通用唯一标识。
 - {{domxref("Client.type")}} {{readonlyInline}}
   - : 表示客户端类型的字符串。可能是 `"window"`、`"worker"` 或 `"sharedworker"`。
 - {{domxref("Client.url")}} {{readonlyInline}}
