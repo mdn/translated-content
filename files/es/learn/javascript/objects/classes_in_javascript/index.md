@@ -166,10 +166,10 @@ class Student extends Person {
 En la clase anterior, `year` es una [propiedad de dato privada](/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields). Podemos crear un objeto `Student` que puede acceder a la propiedad `#year` internamente, sin embargo, si algún código que se encuentre afuera de la clase intenta acceder a la propiedad `#year`, el navegador lanzará un error:
 
 ```js
-const arturo = new Estudiante("Arturo", 2)
+const summers = new Student('Summers', 2)
 
-arturo.presentarse(); // ¡Hola! me llamo Arturo y estoy en el año 2.
-arturo.puedeEstudiarArqueria(); // true
+summers.introduceSelf(); // ¡Hola! me llamo Summers y estoy en el año 2.
+summers.canStudyArchery(); // true
 
 summers.#year; // Error de sintaxis
 ```
@@ -193,7 +193,7 @@ class Example {
 
 const myExample = new Eaxmple();
 
-miEjemplo.metodoPublico(); // '¿Me llamaste?'
+myExample.somePublicMethod(); // '¿Me llamaste?'
 
 myExample.#somePrivateMethod(); // Error de Sintaxis
 ```
