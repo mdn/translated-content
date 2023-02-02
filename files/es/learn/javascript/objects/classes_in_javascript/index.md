@@ -33,7 +33,7 @@ También hablamos acerca de cómo podemos usar [prototipos](/es/docs/Learn/JavaS
 Puedes utilizar la palabra clave {{jsxref("Statements/class", "class")}} para declarar una clase. A continuación se muestra la declaración de la clase `Persona` de nuestro artículo anterior.
 
 ```js
-class Persona {
+class Person {
 
   nombre;
 
