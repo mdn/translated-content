@@ -35,28 +35,28 @@ Puedes utilizar la palabra clave {{jsxref("Statements/class", "class")}} para de
 ```js
 class Person {
 
-  nombre;
+  name;
 
-  constructor(nombre) {
-    this.nombre = nombre;
+  constructor(name) {
+    this.name = name;
   }
 
-  presentarse() {
-    console.log(`¡Hola!, soy ${this.nombre}`);
+  introduceSelf() {
+    console.log(`¡Hola!, soy ${this.name}`);
   }
 
 }
 ```
 
-Esto declara una clase llamada `Persona` con:
+Esto declara una clase llamada `Person` con:
 
-- una propiedad `nombre`.
-- un constructor que recibe un parámetro `nombre` que se usa para inicializar la propiedad `nombre` del nuevo objeto.
-- un método `presentarse()` que puede hacer referencia a las propiedades del objeto usando `this`.
+- una propiedad `name`.
+- un constructor que recibe un parámetro `nombre` que se usa para inicializar la propiedad `name` del nuevo objeto.
+- un método `introduceSelf()` que puede hacer referencia a las propiedades del objeto usando `this`.
 
-La declaración `nombre;` es opcional y puedes omitirla, ya que la línea `this.nombre = nombre` en el constructor crea la propiedad `nombre` antes de inicializarla. En cualquier caso, enlistar las propiedades de manera explícita en la declaración de la clase hará que sea más fácil para las personas leyendo tu código saber cuáles son las propiedades que conforman a dicha clase.
+La declaración `name;` es opcional y puedes omitirla, ya que la línea `this.name = name` en el constructor crea la propiedad `name` antes de inicializarla. En cualquier caso, enlistar las propiedades de manera explícita en la declaración de la clase hará que sea más fácil para las personas leyendo tu código saber cuáles son las propiedades que conforman a dicha clase.
 
-Cuando declaras una propiedad, también puedes inicializarla con un valor por defecto con una línea como `nombre = '';`.
+Cuando declaras una propiedad, también puedes inicializarla con un valor por defecto con una línea como `name = '';`.
 
 El constructor se define utilizando la palabra clave {{jsxref("Classes/constructor", "constructor")}}. Al igual que un [constructor fuera de una clase](/es/docs/Learn/JavaScript/Objects/Basics#introducing_constructors), se encargará de:
 
@@ -65,15 +65,15 @@ El constructor se define utilizando la palabra clave {{jsxref("Classes/construct
 - ejecutar el código en el constructor
 - retornar el objeto recién creado.
 
-Dada la declaración de clase anterior, puedes crear y utilizar una nueva instancia de `Persona` de la siguiente manera:
+Dada la declaración de clase anterior, puedes crear y utilizar una nueva instancia de `Person` de la siguiente manera:
 
 ```js
-const canela = new Persona('Canela');
+const gil = new Person('Gil');
 
-canela.presentarse(); // ¡Hola!, soy Canela
+gil.introduceSelf(); // ¡Hola!, soy Gil
 ```
 
-Observa que para llamar al constructor usamos el nombre de la clase, `Persona` en este ejemplo.
+Observa que para llamar al constructor usamos el nombre de la clase, `Person` en este ejemplo.
 
 ### Omitiendo el constructor
 
@@ -82,33 +82,33 @@ En caso de que no necesites algún tipo de inicialización, puedes omitir al con
 ```js
 class Animal {
 
-  dormir() {
+  sleep() {
     console.log('zzzzzzz');
   }
 
 }
 
-const firu = new Animal();
+const spot = new Animal();
 
-firu.dormir(); // 'zzzzzzz'
+spot.sleep(); // 'zzzzzzz'
 ```
 
 ## Herencia
 
-A partir de la clase `Persona`, vamos a definir la subclase `Profesor`.
+A partir de la clase `Person`, vamos a definir la subclase `Professor`.
 
 ```js
-class Profesor extends Persona {
+class Professor extends Person {
 
-  materia;
+  teaches;
 
-  constructor(nombre, materia) {
-    super(nombre);
-    this.materia = materia;
+  constructor(name, teaches) {
+    super(name);
+    this.teaches = teaches;
   }
 
-  presentarse() {
-    console.log(`Mi nombre es ${this.nombre}, yo seré tu profesor de ${this.materia}`);
+  introduceSelf() {
+    console.log(`Mi nombre es ${this.name}, yo seré tu profesor de ${this.teaches}`);
   }
 
   calificar(tarea) {
