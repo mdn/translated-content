@@ -135,7 +135,7 @@ self.addEventListener("install", (event) => {
 3. 如果 promise 被拒绝，安装就会失败，这个 worker 不会做任何事情。这也是可以的，因为你可以修复你的代码，在下次注册发生的时候，又可以进行尝试。
 4. 当安装成功完成之后，service worker 就会激活。在第一次你的 service worker 安装／激活时，这并不会有什么不同。但是当 service worker 更新（稍后查看[更新你的 service worker](#更新你的_service_worker) 部分）的时候，就不太一样了。
 
-> **备注：** [localStorage](/zh-CN/docs/Web/API/Storage/LocalStorage) 跟 service worker 的 cache 工作原理很类似，但是它是同步的，所以不允许在 service workers 内使用。
+> **备注：** [localStorage](/zh-CN/docs/Web/API/Storage/LocalStorage) 跟 service worker 的 cache 工作原理很类似，但是它是同步的，所以不允许在 service worker 内使用。
 
 > **备注：** [IndexedDB](/zh-CN/docs/Glossary/IndexedDB) 可以在 service worker 内做数据存储。
 
