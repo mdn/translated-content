@@ -16,7 +16,7 @@ slug: Web/API/ServiceWorkerContainer
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
   - : 如果 ServiceWorker 对象的状态是 `activating` 或 `activated` 的时候（与 {{domxref("ServiceWorkerRegistration.active")}} 返回相同的对象），则返回 {{domxref("ServiceWorker")}} 对象。在强制刷新请求（_Shift_ + refresh）或者没有激活的 worker 的时候，该属性返回 `null`。
 - {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
-  - : 提供了一种延迟代码执行直到 service worker 被激活的方法。它返回一个从不会拒绝的 {{jsxref("Promise")}}，并且一直等到与当前页面相关联的 {{domxref("ServiceWorkerRegistration")}} 有一个 {{domxref("ServiceWorkerRegistration.active")}} worker。一旦满足该条件，它将通过 {{domxref("ServiceWorkerRegistration")}} 兑现。
+  - : 提供了一种延迟代码执行直到 service worker 被激活的方法。它返回一个从不会拒绝的 {{jsxref("Promise")}}，并且一直等到与当前页面相关联的 {{domxref("ServiceWorkerRegistration")}} 有一个 {{domxref("ServiceWorkerRegistration.active")}} worker。一旦满足该条件，它将用 {{domxref("ServiceWorkerRegistration")}} 兑现。
 
 ### 事件
 
