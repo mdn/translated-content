@@ -9,7 +9,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
-En el último artículo, se introdujeron algunos de los conceptos básicos de la [programación orientada a objetos](/es/docs/Learn/JavaScript/Objects/Object-oriented_programming) (POO), y discutimos un ejemplo donde usamos principios de la POO para modelar los profesores y alumnos de una escuela. 
+En el último artículo, se introdujeron algunos de los conceptos básicos de la [programación orientada a objetos](/es/docs/Learn/JavaScript/Objects/Object-oriented_programming) (POO), y discutimos un ejemplo donde usamos principios de la POO para modelar los profesores y alumnos de una escuela.
 
 También hablamos acerca de cómo podemos usar [prototipos](/es/docs/Learn/JavaScript/Objects/Object_prototypes) y [constructores](/es/docs/Learn/JavaScript/Objects/Basics#introducing_constructors) para implementar un modelo como éste, además, vimos que Javascript también proporciona características que se asemejan más a los conceptos de la POO clásica.
 
@@ -32,7 +32,7 @@ También hablamos acerca de cómo podemos usar [prototipos](/es/docs/Learn/JavaS
 
 ## Clases y constructores
 
-Puedes utilizar la palabra clave {{jsxref("Statements/class", "class")}} para declarar una clase. A continuación se muestra la declaración de la clase `Persona` de nuestro artículo anterior. 
+Puedes utilizar la palabra clave {{jsxref("Statements/class", "class")}} para declarar una clase. A continuación se muestra la declaración de la clase `Persona` de nuestro artículo anterior.
 
 ```js
 class Persona {
@@ -53,7 +53,7 @@ class Persona {
 Esto declara una clase llamada `Persona` con:
 
 - una propiedad `nombre`.
-- un constructor que recibe un parámetro `nombre` que se usa para inicializar la propiedad `nombre` del nuevo objeto. 
+- un constructor que recibe un parámetro `nombre` que se usa para inicializar la propiedad `nombre` del nuevo objeto.
 - un método `presentarse()` que puede hacer referencia a las propiedades del objeto usando `this`.
 
 La declaración `nombre;` es opcional y puedes omitirla, ya que la línea `this.nombre = nombre` en el constructor crea la propiedad `nombre` antes de inicializarla. En cualquier caso, enlistar las propiedades de manera explícita en la declaración de la clase hará que sea más fácil para las personas leyendo tu código saber cuáles son las propiedades que conforman a dicha clase.
@@ -75,7 +75,7 @@ const canela = new Persona('Canela');
 canela.presentarse(); // ¡Hola!, soy Canela
 ```
 
-Observa que para llamar al constructor usamos el nombre de la clase, `Persona` en este ejemplo. 
+Observa que para llamar al constructor usamos el nombre de la clase, `Persona` en este ejemplo.
 
 ### Omitiendo el constructor
 
@@ -122,9 +122,9 @@ class Profesor extends Persona {
 
 Para expresar que una clase hereda de otra clase, utilizamos la palabra clave {{jsxref("Classes/extends", "extends")}}.
 
-Debido a que la clase `Profesor` agrega una nueva propiedad `materia`, ésta se declara en el cuerpo de la clase. 
+Debido a que la clase `Profesor` agrega una nueva propiedad `materia`, ésta se declara en el cuerpo de la clase.
 
-Cuando creamos un nuevo `Profesor`, queremos establecer el nombre de la `materia` que enseña, para esto definimos un constructor que recibe el `nombre` y la `materia` como argumentos. Lo primero que hace el constructor es utilizar {{jsxref("Operators/super", "super()")}} para llamar al constructor de la superclase, mientras le pasa el parámetro `nombre`. El constructor de la superclase se encarga de establecer el valor de la propiedad `nombre`. Enseguida, el constructor de la clase `Profesor` establece el valor de la propiedad `materia`.  
+Cuando creamos un nuevo `Profesor`, queremos establecer el nombre de la `materia` que enseña, para esto definimos un constructor que recibe el `nombre` y la `materia` como argumentos. Lo primero que hace el constructor es utilizar {{jsxref("Operators/super", "super()")}} para llamar al constructor de la superclase, mientras le pasa el parámetro `nombre`. El constructor de la superclase se encarga de establecer el valor de la propiedad `nombre`. Enseguida, el constructor de la clase `Profesor` establece el valor de la propiedad `materia`.
 
 > **Nota:** Si una subclase debe realizar algún tipo de inialización, es **obligatorio** que esta llame al constructor de la superclase utilizando `super()` con los paramétros que el constructor de la superclase espera.
 
@@ -180,7 +180,7 @@ Las propiedades de datos privadas deben ser declaradas en la propia declaración
 
 ### Métodos privados
 
-En un clase puedes incluir tanto propiedades de dato privadas como métodos privados. Al igual que las propiedades de dato privadas, su nombre debe empezar con `#` y solo pueden ser llamados por los propios métodos del objeto:  
+En un clase puedes incluir tanto propiedades de dato privadas como métodos privados. Al igual que las propiedades de dato privadas, su nombre debe empezar con `#` y solo pueden ser llamados por los propios métodos del objeto:
 
 ```js
 class Ejemplo {
