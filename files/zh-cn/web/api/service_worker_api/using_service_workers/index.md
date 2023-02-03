@@ -99,7 +99,7 @@ registerServiceWorker();
 - service worker 只能在 service worker 作用域里捕获客户端发出的请求。
 - service worker 最大的作用域是 worker 所在的位置（换句话说，如果脚本 `sw.js` 位于 `/js/sw.js` 中，默认情况下它只能控制 `/js/` 下的 URL）。可以使用该 [`Service-Worker-Allowed`](/zh-CN/docs/Web/HTTP/Header/Service-Worker-Allowed) 标头指定该 worker 的最大范围列表。
 - 在 Firefox 中，Service Worker API 在用户处于[无痕模式](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，或当历史记录被禁用，或者如果 Firefox 关闭 cookie 被清除时，会被隐藏而且无法使用。
-- 在 Chrome 中，当启用“Block all cookies (not recommended)”选项时，注册失败。
+- 在 Chrome 中，当启用“阻止所有 Cookie（不建议）”选项时，注册失败。
 
 ### 安装和激活：填充你的缓存
 
