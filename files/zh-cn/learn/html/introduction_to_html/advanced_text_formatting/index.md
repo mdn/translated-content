@@ -5,7 +5,7 @@ slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
-HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)中提到它们。本文中所描述的元素虽然少有人知，但仍然值得去学习（尽管仍然不是完整的列表）。在这里你将了解标记引文、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。
+HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)中提到它们。本文中所描述的元素虽然少有人知，但仍然值得去学习（尽管仍然不是完整的列表）。在这里你将了解标记引用、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。
 
 <table>
   <tbody>
@@ -84,7 +84,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
 
 ### 主动学习：标记一组定义
 
-现在是时候尝试一下描述列表了; 在*输入*区域的原始文本里添加相应的元素，使得它在*输出*区域是以描述列表的形式出现。如果你喜欢，你也可以使用你自己的描述术语和描述。
+现在是时候尝试一下描述列表了。在*输入*区域的原始文本里添加相应的元素，使得它在*输出*区域是以描述列表的形式出现。如果你喜欢，你也可以使用你自己的描述术语和描述。
 
 如果你做错了，你可以随时点击*重置*按钮。如果实在进行不下去，可以点击*显示答案*。
 
