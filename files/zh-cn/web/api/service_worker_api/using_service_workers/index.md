@@ -87,7 +87,7 @@ registerServiceWorker();
 
 单个 service worker 可以控制很多页面。每个你的作用域（scope）里的页面加载完的时候，安装在页面的 service worker 就可以控制它。牢记你需要小心 service worker 脚本里的全局变量：每个页面不会有自己独有的 worker。
 
-> **备注：** 关于 service worker 一个很棒的事情就是，如果你像我们上面做的那样使用功能性检测，发现浏览器并不支持 service worker，但是它还是可以正常的以预期的方式在线使用你的 app。
+> **备注：** 关于 service worker 一个很棒的事情就是，如果你像我们上面做的那样使用特性检测，发现浏览器并不支持 service worker，但是它还是可以正常地以预期的方式在线使用你的 app。
 
 #### 为什么我的 service worker 注册失败了？
 
@@ -96,8 +96,8 @@ registerServiceWorker();
 - 你没有在 HTTPS 下运行你的程序。
 - service worker 文件的路径没有写对——需要相对于源（origin），而不是 app 的根目录。在我们的示例中，worker 是在 `https://mdn.github.io/sw-test/sw.js`，app 的根目录是 `https://mdn.github.io/sw-test/`。但是路径需要写成 `/sw.js`。
 - 也不允许你的 app 指向不同源（origin）的 service worker。
-- service worker 只能在 service worker 作用域里捕获客户端发出的请求。
-- service worker 最大的作用域是 worker 所在的位置（换句话说，如果脚本 `sw.js` 位于 `/js/sw.js` 中，默认情况下它只能控制 `/js/` 下的 URL）。可以使用该 [`Service-Worker-Allowed`](/zh-CN/docs/Web/HTTP/Header/Service-Worker-Allowed) 标头指定该 worker 的最大范围列表。
+- service worker 只能在 service worker 作用域内捕获客户端发出的请求。
+- service worker 最大的作用域是 worker 所在的位置（换句话说，如果脚本 `sw.js` 位于 `/js/sw.js` 中，默认情况下它只能控制 `/js/` 下的 URL）。可以使用 [`Service-Worker-Allowed`](/zh-CN/docs/Web/HTTP/Header/Service-Worker-Allowed) 标头指定 worker 的最大作用域列表。
 - 在 Firefox 中，Service Worker API 是隐藏的，在用户处于[无痕浏览模式](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)时、禁用历史记录或者关闭 Firefox 清除 cookie时，无法使用。
 - 在 Chrome 中，当启用“阻止所有 Cookie（不建议）”选项时，注册失败。
 
