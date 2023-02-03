@@ -73,7 +73,9 @@ const registerServiceWorker = async () => {
     }
   }
 };
+
 // …
+
 registerServiceWorker();
 ```
 
