@@ -5,7 +5,7 @@ slug: Web/CSS/At-rule
 
 {{CSSRef}}
 
-**At-rule** 是一个[CSS 语句](/zh-CN/CSS/Syntax#CSS_statements)，用来指示 CSS 如何运行。以 at 符号开头，'`@`' (`U+0040 COMMERCIAL AT`)，后跟一个标识符，并包括直到下一个分号的所有内容，'`;`' (`U+003B SEMICOLON`)，或下一个 [CSS block](/zh-CN/docs/Web/CSS/Syntax#css_declarations_blocks)，以先到者为准。
+**At-rule** 是一个[CSS 语句](/zh-CN/CSS/Syntax#CSS_statements)，用来指示 CSS 如何运行。以 at 符号开头，'`@`'（`U+0040 COMMERCIAL AT`），后跟一个标识符，并包括直到下一个分号的所有内容，'`;`'（`U+003B SEMICOLON`），或下一个 [CSS block](/zh-CN/docs/Web/CSS/Syntax#css_declarations_blocks)，以先到者为准。
 
 ## 语法
 
@@ -41,7 +41,7 @@ slug: Web/CSS/At-rule
 - {{ cssxref("@font-face") }} —— 描述将下载的外部的字体。{{ experimental_inline() }}
 - {{ cssxref("@keyframes") }} —— 描述 CSS 动画的中间步骤。{{ experimental_inline() }}
 - {{cssxref("@counter-style")}} —— 定义不属于预定义样式集的特定计数器样式。_(在候选推荐阶段，仅在Gecko中实现)_
-- {{cssxref("@font-feature-values")}} (加上 `@swash`，`@ornaments`，`@annotation`，`@stylistic`，`@styleset` 和 `@character-variant`) —— 在 {{cssxref("font-variant-alternates")}} 中定义通用名称，以便在 OpenType 中以不同方式激活功能。 _(在候选推荐阶段，仅在Gecko中实现)_
+- {{cssxref("@font-feature-values")}} （加上 `@swash`，`@ornaments`，`@annotation`，`@stylistic`，`@styleset` 和 `@character-variant`） —— 在 {{cssxref("font-variant-alternates")}} 中定义通用名称，以便在 OpenType 中以不同方式激活功能。 _（在候选推荐阶段，仅在Gecko中实现）_
 - {{cssxref("@property")}} {{experimental_inline}} —— 描述自定义属性和变量。_（目前处于工作草案阶段）_
 - {{cssxref("@layer")}} —— 声明一个级联层，并在有多个级联层时定义优先顺序。
 
@@ -53,7 +53,7 @@ slug: Web/CSS/At-rule
 
 - {{ cssxref("@media") }}
 - {{ cssxref("@supports") }}
-- {{ cssxref("@document") }} _(推迟至 CSS Level 4 规范)_
+- {{ cssxref("@document") }} _（推迟至 CSS Level 4 规范）_
 
 既然条件规则组可以嵌套语句，那么嵌套层级不定。
 
