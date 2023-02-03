@@ -17,7 +17,7 @@ browser-compat: api.BackgroundFetchRecord.responseReady
 
 ## Значение
 
-{{jsxref("Promise")}}, результатом обработки которого будет{{domxref("Response")}}.
+{{jsxref("Promise")}}, результатом обработки которого будет {{domxref("Response")}}.
 
 ## Примеры
 
