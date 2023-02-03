@@ -21,7 +21,7 @@ browser-compat: api.BackgroundFetchRecord.request
 
 ## Примеры
 
-В этом примере отдельный `BackgroundFetchRecord`, возвращается с помощью {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. Значение `request` возвращается и выводится в консоль.
+В этом примере отдельный `BackgroundFetchRecord`, возвращается с помощью {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. Значение `request` выводится в консоль.
 
 ```js
 bgFetch.match('/ep-5.mp3').then(async (record) => {

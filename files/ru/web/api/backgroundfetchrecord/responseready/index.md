@@ -21,7 +21,7 @@ browser-compat: api.BackgroundFetchRecord.responseReady
 
 ## Примеры
 
-В этом примере отдельный `BackgroundFetchRecord`, возвращается с помощью {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. Значение `responseReady` возвращается и выводится в консоль.
+В этом примере отдельный `BackgroundFetchRecord`, возвращается с помощью {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. Значение `responseReady` выводится в консоль.
 
 ```js
 bgFetch.match('/ep-5.mp3').then(async (record) => {
