@@ -163,7 +163,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-`caches.match(event.request)` 允许我们对网络请求里的每个资源与缓存里可获取的等效资源进行匹配，查看缓存中是否有相应的资源。这个匹配通过 URL 和各种标头进行，就像正常的 HTTP 请求一样。
+`caches.match(event.request)` 允许我们对网络请求里的每个资源与缓存里可获取的等效资源进行匹配，查看缓存中是否有相应的资源。该匹配通过 URL 和各种标头进行，就像正常的 HTTP 请求一样。
 
 ![Fetch event diagram](sw-fetch.svg)
 
