@@ -52,7 +52,7 @@ service worker 在现代浏览器中默认开启。要使用 service worker 运�
 
 ### 注册你的 worker
 
-在我们 app 的 JavaScript 文件的第一个代码快中——`app.js`——如下。这是我们使用 service worker 的切入点。
+在我们 app 的 JavaScript 文件（`app.js`）的第一个代码块中如下所示。这是我们使用 service worker 的入口点。
 
 ```js
 const registerServiceWorker = async () => {
