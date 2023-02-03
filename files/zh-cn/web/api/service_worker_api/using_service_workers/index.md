@@ -105,7 +105,7 @@ registerServiceWorker();
 
 在你的 service worker 注册之后，浏览器会尝试为你的页面或站点安装并激活它。
 
-`install` 事件会在注册完成之后触发。`install` 事件一般这样用，使用离线运行 app 所需的资源填充浏览器的离线缓存能力。为了达成这个目的，我们使用了 Service Worker 的新的标志性的存储 API——{{domxref("cache")}}——一个 service worker 上的全局对象，它使我们可以存储网络响应发来的资源，并且根据它们的请求来生成 key。这个 API 和浏览器的标准的缓存工作原理很相似，但它特定于你的域的。它会一直持久存在，直到你告诉它不再存储，你拥有全部的控制权。
+`install` 事件会在注册成功完成之后触发。`install` 事件通常会这样用，将离线运行 app 产生的资源放置在浏览器离线缓存的空间。为了实现这个，我们使用了 Service Worker 的存储 API——{{domxref("cache")}}——一个 service worker 上的全局对象，它使我们可以存储网络响应发来的资源，并且根据它们的请求来生成 key。这个 API 和浏览器的标准的缓存工作原理很相似，但它特定于你的域的。直到你清理它们之前，这些内容都会持久存在。
 
 以下是我们的 service worker 如何处理 `install` 事件：
 
