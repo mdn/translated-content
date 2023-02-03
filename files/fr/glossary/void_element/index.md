@@ -2,10 +2,10 @@
 title: Élément vide
 slug: Glossary/Void_element
 l10n:
-  sourceCommit: cf6a042f735e1e9a0f820bde7df1d3aa75dcc050
+  sourceCommit: 4654b14923a4bad8ca5244b4708c86e7f97ffd2b
 ---
 
-Un **élément vide** (<i lang="en">void element</i> en anglais) est un [élément](/fr/docs/Glossary/Element) HTML qui **ne peut pas** avoir de nœuds enfant (c'est-à-dire des éléments imbriqués ou des nœuds texte). Les éléments vides n'ont qu'une balise ouvrante&nbsp;: les balises fermantes ne doivent pas être indiquées pour ces éléments.
+Un **élément vide** (<i lang="en">void element</i> en anglais) est un [élément](/fr/docs/Glossary/Element) HTML qui **ne peut pas** avoir de nœud enfant (c'est-à-dire des éléments imbriqués ou des nœuds texte). Les éléments vides n'ont qu'une balise ouvrante&nbsp;: les balises fermantes ne doivent pas être indiquées pour ces éléments.
 
 En HTML, un élément vide ne doit pas avoir de balise fermante. Ainsi, `<input type="text"></input>` sera invalide en HTML. En revanche, pour SVG ou MathML, les éléments qui ne peuvent pas avoir de nœuds enfants peuvent utiliser une balise fermante plutôt que la syntaxe auto-fermante XML.
 
@@ -32,7 +32,7 @@ Voici la liste des éléments vides en HTML&nbsp;:
 
 ## Balises auto-fermantes
 
->**Note :** Les balises auto-fermantes (`<tag />`) n'existent pas en HTML.
+> **Note :** Les balises auto-fermantes (`<tag />`) n'existent pas en HTML.
 
 Si une barre oblique `/` de fin est présente dans la balise ouvrante d'un élément HTML, les analyseurs syntaxiques HTML ignoreront ce caractère. Il est important de se rappeler cette distinction pour les éléments (comme [`<script>`](/fr/docs/Web/HTML/Element/script) ou [`<ul>`](/fr/docs/Web/HTML/Element/ul)) qui doivent avoir une balise fermante. Pour ces éléments, ajouter une barre oblique à la fin de la balise ouvrante ne suffira pas à fermer l'élément.
 
