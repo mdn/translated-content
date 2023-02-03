@@ -48,7 +48,7 @@ service worker 在现代浏览器中默认开启。要使用 service worker 运�
 
 ![The words Star Wars followed by an image of a Lego version of the Darth Vader character](demo-screenshot.png)
 
-你也可以[在 GitHub 上看到源代码](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)以及[简单 service worker 的在线演示](https://bncb2v.csb.app/)。
+你也可以[在 GitHub 上查看源代码](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)以及[简单 service worker 的在线演示](https://bncb2v.csb.app/)。
 
 ### 注册你的 worker
 
