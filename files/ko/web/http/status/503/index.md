@@ -14,7 +14,7 @@ slug: Web/HTTP/Status/503
 
 ## 상태
 
-```
+```http
 503 Service Unavailable
 ```
 

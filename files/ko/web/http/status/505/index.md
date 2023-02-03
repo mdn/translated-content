@@ -9,7 +9,7 @@ slug: Web/HTTP/Status/505
 
 ## 상태
 
-```
+```http
 505 HTTP Version Not Supported
 ```
 
