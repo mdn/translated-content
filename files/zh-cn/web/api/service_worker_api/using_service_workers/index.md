@@ -282,7 +282,7 @@ self.addEventListener("activate", (event) => {
 
 然后使用 [`event.preloadResponse`](/zh-CN/docs/Web/API/FetchEvent/preloadResponse) 等待预加载的资源在 `fetch` 事件处理程序中完成下载。
 
-继续前几节的示例，我们插入代码，以便在缓存检查后等待预加载的资源，如果失败，则在从网络中获取。
+继续前几节的示例，我们插入代码，以便在缓存检查后等待预加载的资源，如果失败，则再从网络中获取。
 
 新流程是：
 
