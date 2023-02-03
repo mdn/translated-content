@@ -5,7 +5,7 @@ slug: Web/HTML/Element/label
 
 {{HTMLSidebar}}
 
-**HTML `<label>` 元素（标签）**表示用户界面中某个元素的说明。
+**HTML `<label>` 元素（标签）** 表示用户界面中某一项目的标题。
 
 {{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
 
