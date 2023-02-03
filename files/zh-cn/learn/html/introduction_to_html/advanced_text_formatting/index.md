@@ -470,7 +470,7 @@ textarea.onkeyup = () => {
 <p class="a11y-label">
   按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
 </p>
-<textarea id="code" class="input">
+<textarea id="code" class="input" style="min-height: 50px; width: 95%">
 <p>美国国家航空航天局 NASA 做了一些动人心弦的事情。</p>
 </textarea>
 
@@ -737,7 +737,7 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 - [HTML 文字处理初步](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [高级文字格式](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文档和站点结构](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [文档和站点结构](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
 - [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
 - [课程测验：为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
 - [课程测验：构建内容丰富的网页](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
