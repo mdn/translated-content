@@ -44,7 +44,7 @@ service worker 在现代浏览器中默认开启。要使用 service worker 运�
 
 ## 演示
 
-为了展示注册和安装 service worker 的基础知识，我们已经创建了一个名为[简单 service worker](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) 的演示，这是一个乐高的星球大战图像库。它使用 promise 驱动的函数从 JSON 对象读取图像数据，并使用 [`fetch()`](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch) 加载图像，然后将图像显示在页面的下一行。我们暂时让它保持不变。它也注册、安装激活 service worker。
+为了展示注册和安装 service worker 的基础知识，我们已经创建了一个名为[简单 service worker](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) 的演示，这是一个乐高的星球大战图像库。它使用 promise 驱动的函数从 JSON 对象读取图像数据，并使用 [`fetch()`](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch) 加载图像，然后将图像显示在页面的下一行。我们暂时让它保持不变。它也注册、安装和激活 service worker。
 
 ![The words Star Wars followed by an image of a Lego version of the Darth Vader character](demo-screenshot.png)
 
