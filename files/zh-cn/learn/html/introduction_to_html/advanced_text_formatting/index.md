@@ -19,9 +19,8 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
         中）、HTML 文本格式（包含在
         <a
           href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >HTML 文字处理初步</a
-        >
-        中）。
+          >HTML 文字处理基础</a
+        >中）。
       </td>
     </tr>
     <tr>
