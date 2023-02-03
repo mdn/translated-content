@@ -361,7 +361,7 @@ const htmlSolution = `<p>你好！欢迎访问我的激励网页！<a href="http
 <blockquote cite="https://zh.wikipedia.org/zh-hans/孔子">
   <p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>
 </blockquote>
-<p>要保持乐观，<q cite="http://www.affirmationsforpositivethinking.com/">不要说泄气的话</q>。（源自 <a href="http://www.affirmationsforpositivethinking.com/"><cite>Affirmations for Positive Thinking</cite></a>。）</p>`;
+<p>要保持乐观，<q cite="http://example.com/affirmationsforpositivethinking">不要说泄气的话</q>。（源自 <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>。）</p>`;
 
 let solutionEntry = htmlSolution;
 reset.addEventListener('click', () => {
