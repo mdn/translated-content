@@ -23,11 +23,11 @@ service worker 在现代浏览器中默认开启。要使用 service worker 运�
 
 通常遵循以下基本步骤来使用 service worker：
 
-1. 获取 service worker 代码，然后使用 [`serviceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 来注册。如果成功，service worker 将在 [`ServiceWorkerGlobalScope`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope) 中执行；这本质上是一种特殊的上下文，在主脚本执行线程之外运行，没有访问 DOM 的权限。Service Worker 已为处理事件做好准备。
+1. 获取 service worker 代码，然后使用 [`serviceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 来注册。如果成功，service worker 将在 [`ServiceWorkerGlobalScope`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope) 中执行；这本质上是一种特殊的上下文，在主脚本执行线程之外运行，没有访问 DOM 的权限。Service Worker 现在已为处理事件做好准备。
 2. 安装完成。`install` 事件始终是发送给 service worker 的第一个事件（这可用于启动填充 IndexedDB 和缓存站点资源的过程）。在此步骤期间，应用程序正在为离线可用做准备。
 3. 当 `install` 程序处理完成时，service worker 被视为已安装。此时，service worker 的先前版本可能处于激活的状态并控制着打开的页面。由于我们不希望同一 service worker 的两个不同版本同时运行，因此新版本尚未激活。
 4. 一旦 service worker 的旧版本控制的页面都已关闭，就可以安全地停用旧版本，并且新安装的 service worker 将收到 `activate` 事件。`activate` 的主要用途是去清理 service worker 之前版本使用的资源。新的 service worker 可以调用 [`skipWaiting()`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) 要求立即激活，而无需要求打开的页面关闭。然后，新的 service worker 将立即收到 `activate` 事件，并将接管任何打开的页面。
-5. 激活后，service worker 将立即控制页面，但是只有那些在 `register()` 成功后打开的页面。换句话说，文档必须重新加载才能真正的收到控制，因为文档在有或者没有 service worker 的情况下开始存在，并在其生命周期内维护它。要覆盖次默认行为，并在页面打开的情况下，service worker 可以调用 [`clients.claim()`](/zh-CN/docs/Web/API/Clients/claim)。
+5. 激活后，service worker 将立即控制页面，但是只会控制那些在 `register()` 成功后打开的页面。换句话说，文档必须重新加载才能真正的受到控制，因为文档在有或者没有 service worker 的情况下开始存在，并在其生命周期内维护它。为了覆盖次默认行为并在页面打开的情况下，service worker 可以调用 [`clients.claim()`](/zh-CN/docs/Web/API/Clients/claim) 方法。
 6. 每当获取新版本的 service worker 时，都会再次发生此循环，并在新版本的激活期间清理上一个版本的残留。
 
 ![](sw-lifecycle.png)
@@ -44,7 +44,7 @@ service worker 在现代浏览器中默认开启。要使用 service worker 运�
 
 ## 演示
 
-为了展示注册和安装 service worker 的基础知识，我们已经创建了一个名为[简单 service worker](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) 的演示，这是一个乐高的星球大战图像库。它使用 promise 驱动的函数从 JSON 对象读取图像数据，并使用 [`fetch()`](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch) 加载图像，然后将图像显示在页面的下一行。我们暂时让它保持不变。它也注册、安装和激活 service worker。
+为了展示注册和安装 service worker 的基础知识，我们已经创建了一个名为[简单 service worker](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) 的演示，这是一个乐高的星球大战图像库。它使用 promise 驱动的函数从 JSON 对象读取图像数据，并使用 [`fetch()`](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch) 加载图像，然后将图像显示在页面的下一行。我们暂时让它保持不变。它同时也注册、安装和激活 service worker。
 
 ![The words Star Wars followed by an image of a Lego version of the Darth Vader character](demo-screenshot.png)
 
@@ -80,12 +80,12 @@ registerServiceWorker();
 ```
 
 1. `if` 代码块进行特性检测测试，以确保在尝试注册 service worker 之前，该特性是被支持的。
-2. 接着，我们使用 [`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 函数来注册站点的 service worker。service worker 代码只是一个驻留在我们的 app 内的一个 JavaScript 文件（注意，这个文件的 url 是相对于源（origin）的，而不是相对于引用它的那个 JS 文件）。
-3. `scope` 参数是可选的，并且可以用来指定你想要 service worker 控制的字幕了。在这个例子中，我们制定了 `'/'`，其表示 app 的源（origin）下的所有内容。如果你留空的话，它默认值也是这个，但是我们在这里指定它是为了阐述我们的目的。
+2. 接着，我们使用 [`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 函数来注册站点的 service worker。service worker 代码只是一个驻留在我们的 app 内的一个 JavaScript 文件（注意，这个文件的 URL 是相对于源（origin）的，而不是相对于引用它的那个 JS 文件）。
+3. `scope` 参数是可选的，并且可以用来指定你想要 service worker 控制的子作用域。在这个例子中，我们指定了 `'/'`，其表示 app 的源（origin）下的所有内容。如果你留空的话，它的默认值也是这个，但是我们在这里指定它是为了更明确的阐述我们的目的。
 
 这就注册了一个 service worker，它工作在 worker 上下文，所以没有访问 DOM 的权限。
 
-单个 service worker 可以控制很多页面。每个你的 scope 里的页面加载完的时候，安装在页面的 service worker 可以控制它。牢记你需要小心 service worker 脚本里的全局变量：每个页面不会有自己独有的 worker。
+单个 service worker 可以控制很多页面。每个你的作用域（scope）里的页面加载完的时候，安装在页面的 service worker 就可以控制它。牢记你需要小心 service worker 脚本里的全局变量：每个页面不会有自己独有的 worker。
 
 > **备注：** 关于 service worker 一个很棒的事情就是，如果你像我们上面做的那样使用功能性检测，发现浏览器并不支持 service worker，但是它还是可以正常的以预期的方式在线使用你的 app。
 
@@ -94,11 +94,11 @@ registerServiceWorker();
 可能是如下的原因：
 
 - 你没有在 HTTPS 下运行你的程序。
-- service worker 文件的地址没有写对——需要相对于源（origin），而不是 app 的根目录。在我们的例子中，worker 是在 `https://mdn.github.io/sw-test/sw.js`，app 的根目录是 `https://mdn.github.io/sw-test/`。但是路径需要写成 `/sw.js`。
+- service worker 文件的路径没有写对——需要相对于源（origin），而不是 app 的根目录。在我们的示例中，worker 是在 `https://mdn.github.io/sw-test/sw.js`，app 的根目录是 `https://mdn.github.io/sw-test/`。但是路径需要写成 `/sw.js`。
 - 也不允许你的 app 指向不同源（origin）的 service worker。
 - service worker 只能在 service worker 作用域里捕获客户端发出的请求。
 - service worker 最大的作用域是 worker 所在的位置（换句话说，如果脚本 `sw.js` 位于 `/js/sw.js` 中，默认情况下它只能控制 `/js/` 下的 URL）。可以使用该 [`Service-Worker-Allowed`](/zh-CN/docs/Web/HTTP/Header/Service-Worker-Allowed) 标头指定该 worker 的最大范围列表。
-- 在 Firefox 中，Service Worker API 在用户处于[隐私浏览模式](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，或当历史记录被禁用时，或者如果 Firefox 关闭时 cookie 被清楚时，会被隐藏而且无法使用。
+- 在 Firefox 中，Service Worker API 在用户处于[无痕模式](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，或当历史记录被禁用，或者如果 Firefox 关闭 cookie 被清除时，会被隐藏而且无法使用。
 - 在 Chrome 中，当启用“Block all cookies (not recommended)”选项时，注册失败。
 
 ### 安装和激活：填充你的缓存
@@ -132,10 +132,10 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-1. 这里我们新增了一个 `install` 事件监听器，接着在事件上接了一个 [`ExtendableEvent.waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil) 方法——这会确保 Service Worker 不会在 `waitUntil()` 里面的代码执行完毕之前安装完成。
-2. 在 `addResourcesToCache()` 内，我们使用了 [`caches.open()`](/zh-CN/docs/Web/API/CacheStorage/open) 方法来创建了一个叫做 `v1` 的新的缓存，将会是我们的站点资源缓存的第一个版本。然后我们接着会在创建的缓存示例上的一个方法 `addAll()`，它的参数采用一个 URL 数组，指向你想要的所有资源。URL 与 worker 的 {{domxref("WorkerGlobalScope.location", "location", "", 1)}} 相关。
-3. 如果 promise 被拒绝，安装就会失败，这个 worker 不会做任何事情。这也是可以的，因为你可以修复你的代码，在下次注册发生的时候，又可以进行尝试。
-4. 当安装成功完成之后，service worker 就会激活。在第一次你的 service worker 安装／激活时，这并不会有什么不同。但是当 service worker 更新（稍后查看[更新你的 service worker](#更新你的_service_worker) 部分）的时候，就不太一样了。
+1. 这里我们新增了一个 `install` 事件监听器去监听 service worker（这里是 `self`），接着在事件上接了一个 [`ExtendableEvent.waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil) 方法——这会确保 Service Worker 不会在 `waitUntil()` 里面的代码执行完毕之前安装完成。
+2. 在 `addResourcesToCache()` 内，我们使用了 [`caches.open()`](/zh-CN/docs/Web/API/CacheStorage/open) 方法来创建了叫做 `v1` 的新缓存，这将会是我们的站点资源缓存的第 1 个版本。然后我们会在创建的缓存示例中调用 `addAll()` 函数，它的参数采用一个 URL 数组，指向你想要缓存的所有资源。其中，URL 是相对于 worker 的 {{domxref("WorkerGlobalScope.location", "location", "", 1)}}。
+3. 如果 promise 被拒绝，安装就会失败，这个 worker 不会做任何事情。这也是可以的，因为你可以修复你的代码，在下次注册发生的时候再次进行尝试。
+4. 当安装成功完成之后，service worker 就会激活。在你的 service worker 第一次已安装/激活时，这并不会有什么用途。但是当 service worker 更新（稍后查看[更新你的 service worker](#更新你的_service_worker) 部分）的时候，就不太一样了。
 
 > **备注：** [localStorage](/zh-CN/docs/Web/API/Storage/LocalStorage) 跟 service worker 的 cache 工作原理很类似，但是它是同步的，所以不允许在 service worker 内使用。
 
@@ -147,7 +147,7 @@ self.addEventListener("install", (event) => {
 
 1. 每次获取 service worker 控制的资源时，都会触发 `fetch` 事件，这些资源包括了指定的作用域（scope）内的文档，和这些文档内引用的其他任何资源（比如 `index.html` 发起了一个跨源的请求来嵌入一个图片，这个也会通过 service worker）。
 
-2. 你可以给 service worker 添加一个 `fetch` 的事件监听器，接着调用 event 上的 `respondWith()` 方法来劫持我们的 HTTP 响应，然后你用可以用自己的方法来更新他们。
+2. 你可以给 service worker 添加一个 `fetch` 的事件监听器，接着调用 event 上的 `respondWith()` 方法来劫持我们的 HTTP 响应，然后你用可以用自己的方法来更新它们。
 
    ```js
    self.addEventListener("fetch", (event) => {
@@ -163,7 +163,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-`caches.match(event.request)` 允许我们对网络请求的资源和 cache 里可获取的资源进行匹配，查看是否缓存中有相应的资源。这个匹配通过 URL 和各种 header 进行，就像正常的 HTTP 请求一样。
+`caches.match(event.request)` 允许我们对网络请求里的每个资源与缓存里可获取的等效资源进行匹配，查看缓存中是否有相应的资源。这个匹配通过 URL 和各种标头进行，就像正常的 HTTP 请求一样。
 
 ![Fetch event diagram](sw-fetch.svg)
 
@@ -216,7 +216,7 @@ self.addEventListener("fetch", (event) => {
 
 克隆响应是必要的，因为请求和响应流仅可以读取一次。为了返回响应到浏览器，并将其放入缓存中，我们得克隆它。因此原始的资源返回给浏览器，克隆的资源被发送到缓存。它们只读一次。
 
-看起来有点奇怪的是，`putInCache()` 返回的 promise 并没有等待。但原因是，我们并不像等到响应克隆添加到缓存后再添加响应。
+看起来有点奇怪的是，`putInCache()` 返回的 promise 并没有等待。但原因是，我们并不想等到响应克隆添加到缓存后再返回响应。
 
 我们现在唯一的问题是当请求没有匹配到缓存中的任何资源的时候，以及网络不可用的时候，我们的请求依然会失败。让我们提供一个默认的回退方案以便不管发生了什么，用户至少能得到些东西：
 
