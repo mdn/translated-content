@@ -11,4 +11,4 @@ slug: Glossary/Value
 
 ## 参见
 
-- 维基百科上的[原始值包装类](https://en.wikipedia.org/wiki/Primitive_wrapper_class)词条（英文）
+- 维基百科上的[原始值包装类](https://en.wikipedia.org/wiki/Primitive_wrapper_class)词条
