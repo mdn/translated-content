@@ -21,11 +21,11 @@ slug: Web/API/ServiceWorkerContainer
 ### 事件
 
 - [`controllerchange`](/zh-CN/docs/Web/API/ServiceWorkerContainer/controllerchange_event)
-  - : 当文档关联的 {{domxref("ServiceWorkerRegistration")}} 获得新的 {{domxref("ServiceWorkerRegistration.active","active")}} worker 时触发。
+  - : 当文档关联的 {{domxref("ServiceWorkerRegistration")}} 获得新{{domxref("ServiceWorkerRegistration.active","激活", "", 1)}}的 worker 时触发。
 - [`error`](/zh-CN/docs/Web/API/ServiceWorkerContainer/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 每当关联的 service worker 出现错误时都会触发。
+  - : 每当关联的 service worker 出现错误时触发。
 - [`message`](/zh-CN/docs/Web/API/ServiceWorkerContainer/message_event)
-  - : 当 {{domxref("ServiceWorkerContainer")}} 对象收到传入的消息时，触发（例如，通过 {{domxref("MessagePort.postMessage()")}} 调用）。
+  - : 当 {{domxref("ServiceWorkerContainer")}} 对象收到传入的消息时触发（例如，通过 {{domxref("MessagePort.postMessage()")}} 调用）。
 
 ## 实例方法
 
@@ -40,7 +40,7 @@ slug: Web/API/ServiceWorkerContainer
 
 ## 示例
 
-以下示例首先检查浏览器是否支持 service worker。如果支持，代码将注册 service worker，并确定页面是否由 service worker 主动控制。如果不是，它会提示用户重新加载页面，以便 service worker 可以控制。该代码还报告任何失败的注册。
+以下示例首先检查浏览器是否支持 service worker。如果支持，代码将注册 service worker，并确定页面是否由 service worker 控制。如果不是，它会提示用户重新加载页面，以便 service worker 可以控制。该代码还将报告任何注册的错误。
 
 ```js
 if ("serviceWorker" in navigator) {
