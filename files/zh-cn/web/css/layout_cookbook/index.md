@@ -26,4 +26,4 @@ CSS 布局手册旨在汇集常见的布局样式，这些布局你可能在自�
 
 ## 贡献布局专题
 
-作为 MDN 的一员，我们希望你能贡献一份与上图所示相同格式的布局小专题。[参见本页](/zh-CN/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe)以获取撰写自己的模板和指引的方法。
+作为 MDN 的一员，我们希望你能贡献一份与上表所示相同格式的布局专题。[参见本页](/zh-CN/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe)以获得编写示例的模板和指南。
