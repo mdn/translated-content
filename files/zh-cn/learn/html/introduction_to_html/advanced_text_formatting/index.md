@@ -64,7 +64,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
 
 {{EmbedLiveSample('描述列表示例', '100%', '285px')}}
 
-### 单个术语的多个定义
+### 单个术语的多个描述
 
 请注意：一个术语可以同时有多个描述，比如说：
 
@@ -733,7 +733,7 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 
 - [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
 - [“头”里有什么？HTML 元信息](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML 文字处理初步](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [高级文字格式](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
 - [文档和站点结构](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
