@@ -11,7 +11,7 @@ slug: Web/CSS/text-rendering
 
 > **备注：** 该属性是 SVG 的属性而不是标准的 CSS 属性。但是 Gecko（Firefox）和 Webkit（Chrome、Safari）内核的浏览器允许该属性在 Windows、Mac OS 和 Linux 操作系统中应用于 HTML 和 XML 内容。
 
-一个视觉上很明显的效果是，`optimizeLegibility 属性值会在某些字体（比如，微软的 Calibri，`Candara，Constantia 和 Corbel 或者 DejaVu 系列字体`）小于 20px 时把有些相邻字符连接起来`（ligatures，比如，ff、fi、fl 等，效果见下面的 LiveExample) 。
+一个视觉上很明显的效果是，`optimizeLegibility` 属性值会在某些字体（比如，微软的 *Calibri*，*Candara*，*Constantia* 和 *Corbel* 或者 *DejaVu* 系列字体）小于 20px 时把某些相邻字符连接起来（比如 ff、fi、fl 等）。
 
 {{cssinfo}}
 
@@ -27,6 +27,8 @@ text-rendering: geometricPrecision;
 /* Global values */
 text-rendering: inherit;
 text-rendering: initial;
+text-rendering: revert;
+text-rendering: revert-layer;
 text-rendering: unset;
 ```
 
