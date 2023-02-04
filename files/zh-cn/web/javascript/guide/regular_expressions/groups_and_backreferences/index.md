@@ -175,10 +175,10 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 
 ```js
 var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
-var regexpVowels = /[aeiouy]/g;
+var regexpVowels = /[aeiou]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
-// Number of vowels: 25
+// Number of vowels: 24
 ```
 
 ### 使用 组
