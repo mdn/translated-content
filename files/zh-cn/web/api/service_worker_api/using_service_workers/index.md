@@ -145,7 +145,7 @@ self.addEventListener("install", (event) => {
 
 现在你已经将你的站点资源缓存了，你需要告诉 service worker 让它用这些缓存内容来做点什么。有了 `fetch` 事件，这是很容易做到的。
 
-1. 每次获取 service worker 控制的资源时，都会触发 `fetch` 事件，这些资源包括了指定的作用域（scope）内的文档，和这些文档内引用的其他任何资源（比如 `index.html` 发起了一个跨源的请求来嵌入一个图片，这个也会通过 service worker）。
+1. 每次获取 service worker 控制的资源时，都会触发 `fetch` 事件，这些资源包括了指定的作用域内的文档，和这些文档内引用的其它任何资源（比如 `index.html` 发起了一个跨源的请求来嵌入一个图片，这个也会通过 service worker）。
 
 2. 你可以给 service worker 添加一个 `fetch` 的事件监听器，接着调用 event 上的 `respondWith()` 方法来劫持我们的 HTTP 响应，然后你用可以用自己的方法来更新它们。
 
