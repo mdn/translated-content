@@ -392,7 +392,7 @@ function resetGame() {
 
 ### 循环（Loop）
 
-上面代码中有一部分需要我们仔细研读，那就是 [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 循环。循环是一个非常重要的编程概念，它让你能够重复运行一段代码，直到满足某个条件为止。
+上面代码中有一部分需要我们仔细研读，那就是 [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环。循环是一个非常重要的编程概念，它让你能够重复运行一段代码，直到满足某个条件为止。
 
 首先，请再次转到 [浏览器开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 然后输入以下内容：
 
