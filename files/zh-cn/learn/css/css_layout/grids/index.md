@@ -16,7 +16,7 @@ CSS 网格是一个用于 web 的二维布局系统。利用网格，你可以�
           HTML 简介</a
         >)，以及了解 CSS 如何工作的 (学习
         <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">CSS 简介</a> 和
-        <a href="/zh-CN/docs/Learn/CSS/Styling_boxes">盒子样式</a>。)
+        <a href="/zh-CN/docs/Learn/CSS/Building_blocks">CSS 构建</a>.。)
       </td>
     </tr>
     <tr>
