@@ -62,14 +62,14 @@ const registerServiceWorker = async () => {
         scope: "/",
       });
       if (registration.installing) {
-        console.log("Service worker installing");
+        console.log("正在安装 Service worker");
       } else if (registration.waiting) {
-        console.log("Service worker installed");
+        console.log("已安装 Service worker installed");
       } else if (registration.active) {
-        console.log("Service worker active");
+        console.log("激活 Service worker");
       }
     } catch (error) {
-      console.error(`Registration failed with ${error}`);
+      console.error(`注册失败：${error}`);
     }
   }
 };
@@ -151,7 +151,7 @@ self.addEventListener("install", (event) => {
 
    ```js
    self.addEventListener("fetch", (event) => {
-     event.respondWith(/* custom content goes here */);
+     event.respondWith(/* 在这里放置自定义的内容 */);
    });
    ```
 
@@ -227,18 +227,18 @@ const putInCache = async (request, response) => {
 };
 
 const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
-  // First try to get the resource from the cache
+  // 首先，尝试从缓存中获取资源
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
 
-  // Next try to get the resource from the network
+  // 然后尝试从网络中获取资源
   try {
     const responseFromNetwork = await fetch(request);
-    // response may be used only once
-    // we need to save clone to put one copy in cache
-    // and serve second one
+    // 响应可能会被使用
+    // 我们需要将它的拷贝放入缓存
+    // 然后再返回该响应
     putInCache(request, responseFromNetwork.clone());
     return responseFromNetwork;
   } catch (error) {
@@ -246,9 +246,9 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     if (fallbackResponse) {
       return fallbackResponse;
     }
-    // when even the fallback response is not available,
-    // there is nothing we can do, but we must always
-    // return a Response object
+    // 当回落的响应也不可用时，
+    // 我们便无能为力了，但我们始终需要
+    // 返回 Response 对象
     return new Response("Network error happened", {
       status: 408,
       headers: { "Content-Type": "text/plain" },
@@ -302,13 +302,13 @@ const putInCache = async (request, response) => {
 };
 
 const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
-  // First try to get the resource from the cache
+  // 首先，尝试从缓存中获取资源
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
 
-  // Next try to use (and cache) the preloaded response, if it's there
+  // 接下来，尝试使用缓存或预加载的响应
   const preloadResponse = await preloadResponsePromise;
   if (preloadResponse) {
     console.info("using preload response", preloadResponse);
@@ -316,12 +316,12 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     return preloadResponse;
   }
 
-  // Next try to get the resource from the network
+  // 然后尝试从网络中获取资源
   try {
     const responseFromNetwork = await fetch(request);
-    // response may be used only once
-    // we need to save clone to put one copy in cache
-    // and serve second one
+    // 响应可能会被使用
+    // 我们需要将它的拷贝放入缓存
+    // 然后再返回该响应
     putInCache(request, responseFromNetwork.clone());
     return responseFromNetwork;
   } catch (error) {
@@ -329,9 +329,9 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     if (fallbackResponse) {
       return fallbackResponse;
     }
-    // when even the fallback response is not available,
-    // there is nothing we can do, but we must always
-    // return a Response object
+    // 当回落的响应也不可用时，
+    // 我们便无能为力了，但我们始终需要
+    // 返回 Response 对象
     return new Response("Network error happened", {
       status: 408,
       headers: { "Content-Type": "text/plain" },
@@ -339,7 +339,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
   }
 };
 
-// Enable navigation preload
+// 启用导航预加载
 const enableNavigationPreload = async () => {
   if (self.registration.navigationPreload) {
     await self.registration.navigationPreload.enable();
@@ -404,7 +404,7 @@ self.addEventListener("install", (event) => {
 
       // …
 
-      // include other new resources for the new version…
+      // 包含新版本需要的其它资源…
     ])
   );
 });
