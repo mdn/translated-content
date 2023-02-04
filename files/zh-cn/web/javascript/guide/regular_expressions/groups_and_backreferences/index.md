@@ -128,8 +128,8 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
             >/apple(,)\sorange\1/</code
           >
           匹配“apple, orange, cherry, peach”中的 "apple, orange,"，其中
-          <code>\1</code> 引用了 之前使用 <code>（）</code> 捕获的
-          <code>，</code>
+          <code>\1</code> 引用了 之前使用 <code>()</code> 捕获的
+          <code>,</code>
         </p>
       </td>
     </tr>
