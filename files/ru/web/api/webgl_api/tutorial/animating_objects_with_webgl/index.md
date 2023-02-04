@@ -1,12 +1,9 @@
 ---
 title: Оживление объектов при помощи WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
-tags:
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
 
 Наш код оставшийся от предыдущего примера уже настроен на перерисовку нашей WebGL сцены каждые 15 миллисекунд. До сих пор мы просто отрисовывали в точности одно и то же каждый раз. Пришло время изменить это так, чтобы наш квадрат начал двигаться.
 
