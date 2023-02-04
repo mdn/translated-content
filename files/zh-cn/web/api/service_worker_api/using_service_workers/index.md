@@ -189,7 +189,7 @@ self.addEventListener("fetch", (event) => {
 
 如果资源不存在缓存中，它们则会从网络中进行请求。
 
-使用更复杂的策略，我们不仅可以从网络请求资源，还可以将其保存到缓存中，以便稍后对该资源的请求也可以离线检索。这意味着，如果将额外的图像添加到星球大战图库中，我们的 app 可以自动抓取它们并缓存它们。以下片段实现了这样的策略：
+使用更复杂的策略，我们不仅可以从网络中请求资源，还可以将其保存到缓存中，以便稍后对该资源的请求也可以离线检索。这意味着，如果将额外的图像添加到星球大战图库中，我们的 app 可以自动抓取并缓存它们。以下片段实现了这样的策略：
 
 ```js
 const putInCache = async (request, response) => {
@@ -214,11 +214,11 @@ self.addEventListener("fetch", (event) => {
 
 如果请求 URL 在缓存中不可用，我们将使用 `await fetch（request)` 从网络请求中请求资源。之后，我们将响应的克隆放入缓存。`putInCache()` 函数使用 `caches.open('v1')` 和 `cache.put()` 将资源增加到缓存中。它的原始响应会返回给浏览器以提供给调用它的页面。
 
-克隆响应是必要的，因为请求和响应流仅可以读取一次。为了返回响应到浏览器，并将其放入缓存中，我们得克隆它。因此原始的资源返回给浏览器，克隆的资源被发送到缓存。它们只读一次。
+克隆响应是必要的，因为请求和响应流仅可以读取一次。为了返回响应到浏览器，并将其放入缓存中，我们得克隆它。因此原始的资源会返回给浏览器，克隆的资源会发送到缓存。它们都只能被读取一次。
 
-看起来有点奇怪的是，`putInCache()` 返回的 promise 并没有等待。但原因是，我们并不想等到响应克隆添加到缓存后再返回响应。
+看起来有点奇怪的是，`putInCache()` 返回的 promise 并没有使用 await。但原因是，我们并不想要等到缓存被添加至缓存后再返回响应。
 
-我们现在唯一的问题是当请求没有匹配到缓存中的任何资源的时候，以及网络不可用的时候，我们的请求依然会失败。让我们提供一个默认的回退方案以便不管发生了什么，用户至少能得到些东西：
+我们现在唯一的问题是当请求没有匹配到缓存中的任何资源，或网络不可用的时，我们的请求依然会失败。让我们提供一个默认的回退方案以便不管发生了什么，用户至少能得到些东西：
 
 ```js
 const putInCache = async (request, response) => {
@@ -266,13 +266,13 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-我们选择了回落的图片，因为仅有的更新新图片可能会失败，因为其它一切都依赖于我们之前看到的 `install` 事件监听器中的安装。
+我们选择了回落的图片，因为唯一的更新是对新图片的，它可能会失败，因为其它的所有内容都依赖于我们之前看到的 `install` 事件监听器中的安装过程。
 
 ## Service Worker 导航预加载
 
-如果启用，[导航预加载](/zh-CN/docs/Web/API/NavigationPreloadManager)功能将在发出 fetch 请求后，立即开始下载资源，同时激活 service worker。这确保了在导航到一个页面时，立即开始下载，而不是等到 service worker 被激活。这种延迟发生的次数相对较少，但是一旦发生就不可避免，而且可能很重要。
+如果启用了[导航预加载](/zh-CN/docs/Web/API/NavigationPreloadManager)功能，其将在发出 fetch 请求后，立即开始下载资源，并同时激活 service worker。这确保了在导航到一个页面时，立即开始下载，而不是等到 service worker 被激活。这种延迟发生的次数相对较少，但是一旦发生就不可避免，而且可能很重要。
 
-首先，必须在 service worker 激活期间使用该功能，使用 [`registration.navigationPreload.enable()`](/zh-CN/docs/Web/API/NavigationPreloadManager/enable)：
+首先，必须在 service worker 激活期间使用 [`registration.navigationPreload.enable()`](/zh-CN/docs/Web/API/NavigationPreloadManager/enable) 来启用该功能：
 
 ```js
 self.addEventListener("activate", (event) => {
@@ -287,8 +287,8 @@ self.addEventListener("activate", (event) => {
 新流程是：
 
 1. 检查缓存
-2. 等待 `event.preloadResponse`，它作为 `preloadResponsePromise` 传递给 `cacheFirst()` 的函数。如果结果返回，缓存结果。
-3. 如果这两个都没有定义，那么我们就从网络中获取。
+2. 等待 `event.preloadResponse`，它作为 `preloadResponsePromise` 传递给 `cacheFirst()` 函数。如果返回结果，则缓存它。
+3. 如果两者均没有结果，那么我们就从网络中获取。
 
 ```js
 const addResourcesToCache = async (resources) => {
@@ -377,11 +377,11 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-注意，在此示例中，无论资源是“正常”下载还是预加载，我们都会下载和缓存相同的数据。相反，你可以选择在预加载时下载和缓存其它资源。有关更多信息，请参阅 [`NavigationPreloadManager` > 自定义响应](/zh-CN/docs/Web/API/NavigationPreloadManager#custom_responses)
+注意，在此示例中，无论资源是“正常”下载还是预加载，我们都会下载和缓存相同的数据。相反，你可以选择在预加载时下载和缓存其它资源。请参阅 [`NavigationPreloadManager` > 自定义响应](/zh-CN/docs/Web/API/NavigationPreloadManager#custom_responses) 以了解详情。
 
 ## 更新你的 service worker
 
-如果你的 service worker 已经被安装，但是刷新页面时有一个新版本的可用，新版的 service worker 会在后台安装，但是仍然不会激活。当不再有任何已加载的页面在使用旧版的 service worker 的时候，新版本才会激活。一旦再也没有更多的这样已加载的页面，新的 service worker 就会被激活。
+如果你的 service worker 已经被安装，但是刷新页面时有一个新版本的可用，新版的 service worker 会在后台安装，但是仍然不会被激活。当不再有任何已加载的页面在使用旧版的 service worker 的时候，新版本才会激活。一旦再也没有这样的已加载的页面，新的 service worker 就会被激活。
 
 > **备注：** 可以通过使用 [`Clients.claim()`](/zh-CN/docs/Web/API/Clients/claim) 绕过这一点。
 
@@ -412,13 +412,13 @@ self.addEventListener("install", (event) => {
 
 当安装发生的时候，前一个版本依然在响应请求。新的版本正在后台安装。我们调用了一个新的缓存 `v2`，所以前一个 `v1` 版本的缓存不会被扰乱。
 
-当没有页面在使用当前的版本的时候，这个新的 service worker 就会激活并开始响应请求。
+当没有页面在使用之前的版本的时候，这个新的 service worker 就会激活并开始响应请求。
 
 ### 删除旧缓存
 
-正如我们在最后一节看到的那样，当你更新 service worker 到一个新的版本，你将在它的 `install` 事件处理程序中创建一个新的缓存。虽然有由上一个 worker 的版本控制的打开的页面，但你需要保留这两个缓存，因为之前的版本需要它缓存的版本。你可以使用 `activate` 事件从之前的缓存移除数据。
+正如我们在最后一节看到的那样，当你更新 service worker 到一个新的版本，你将在它的 `install` 事件处理程序中创建一个新的缓存。在仍有由上一个 worker 的版本控制的打开的页面，你就需要同时保留这两个版本的缓存，因为之前的版本需要它缓存的版本。你可以使用 `activate` 事件从之前的缓存中移除数据。
 
-传给 `waitUntil()` 的 promise 会阻塞其他的事件，直到它完成，因此你可以放心，当你在新的 service worker 中得到你的第一个 `fetch` 事件时，你的清理操作将已经完成。
+传给 `waitUntil()` 的 promise 会阻塞其它的事件，直到它完成，因此你可以放心，当你在新的 service worker 中得到你的第一个 `fetch` 事件时，你的清理操作已经完成。
 
 ```js
 const deleteCache = async (key) => {
