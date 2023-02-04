@@ -134,7 +134,7 @@ self.addEventListener("install", (event) => {
 
 1. 这里我们新增了一个 `install` 事件监听器去监听 service worker（这里指的是 `self`），接着在事件上调用 [`ExtendableEvent.waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil) 方法——这会确保 Service Worker 不会在 `waitUntil()` 里面的代码执行完毕之前安装完成。
 2. 在 `addResourcesToCache()` 内，我们使用了 [`caches.open()`](/zh-CN/docs/Web/API/CacheStorage/open) 方法来创建了叫做 `v1` 的新缓存，这将会是我们的站点资源缓存的第 1 个版本。然后我们会在创建的缓存示例中调用 `addAll()` 函数，它的参数采用一个 URL 数组，指向你想要缓存的所有资源。其中，URL 是相对于 worker 的 {{domxref("WorkerGlobalScope.location", "location", "", 1)}}。
-3. 如果 promise 被拒绝，安装就会失败，这个 worker 不会做任何事情。这也是可以的，因为你可以修复你的代码，在下次注册发生的时候再次进行尝试。
+3. 如果 promise 被拒绝，安装就会失败，这个 worker 不会做任何事情。这也是可以的，因为你可以修复你的代码，在下次注册的时候再次进行尝试。
 4. 当安装成功完成之后，service worker 就会激活。在你的 service worker 第一次已安装/激活时，这并没有什么用。但是当 service worker 更新（稍后查看[更新你的 service worker](#更新你的_service_worker) 部分）的时候，就不太一样了。
 
 > **备注：** [localStorage](/zh-CN/docs/Web/API/Storage/LocalStorage) 跟 service worker 的 cache 工作原理很类似，但是它是同步的，所以不允许在 service worker 内使用。
