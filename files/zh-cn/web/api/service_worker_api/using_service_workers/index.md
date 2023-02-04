@@ -155,7 +155,7 @@ self.addEventListener("install", (event) => {
    });
    ```
 
-3. 在任何情况下，我们会首先响应缓存和网络请求相匹配的 URL 的资源：
+3. 在任何情况下，我们会首先响应缓存的 URL 和网络请求的 URL 相匹配的资源：
 
    ```js
    self.addEventListener("fetch", (event) => {
