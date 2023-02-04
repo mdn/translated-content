@@ -5,17 +5,17 @@ slug: Learn/Accessibility
 
 {{LearnSidebar}}
 
-如果你想成为一个 web 开发者，学习一些 HTML、CSS 和 JavaScript 是很有用的，但是仅仅使用这些技术是不够的，重要的是要学会如何**负责任**地使用这些技术，以便所有读者都可能在网上使用你的创作。为了达到这个目的，要遵循一般最佳实践（这些最佳实践已经被 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 相关的话题所证明）进行[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)，并且从项目最初阶段就把无障碍性考虑在内。在这个模块中我们将会详细讨论后者。
+如果你想成为一个 web 开发者，学习一些 HTML、CSS 和 JavaScript 是很有用的，但是仅仅使用这些技术是不够的，重要的是要学会如何**负责任**地使用这些技术，以便所有读者都可能在网上使用你的创作。为了达到这个目的，要遵循一般最佳实践（这些最佳实践已经被 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 相关的主题所证明）进行[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)，并且从项目最初阶段就把无障碍性考虑在内。在这个模块中我们将会详细讨论后者。
 
 ## 概述
 
 当有人将一个网站描述为“无障碍”时，他们的意思是，任何用户都可以使用其所有的功能和内容，无论用户是如何访问网络的——甚至特别是有身体或精神障碍的用户。
 
-- 键盘、鼠标和触摸屏用户，以及用户访问网络的任何其他方式，包括像 Alexa 和 Google Home 这样的屏幕阅读器等语音助手，都应该能够访问网站。
+- 键盘、鼠标和触摸屏用户，以及用户访问网络的任何其它方式，包括像 Alexa 和 Google Home 这样的屏幕阅读器等语音助手，都应该能够访问网站。
 - 无论人们的听觉、视觉、身体或认知能力如何，应用程序都应该是可以理解和使用的。
-- 网站也不应该造成伤害：像运动这样的网络功能会导致偏头痛或癫痫发作。
+- 网站也不应该造成伤害：像动画（motion）这样的 web 特性会导致偏头痛或癫痫发作。
 
-**默认情况下，HTML 在使用正确的时候是可以实现无障碍的。** Web 无障碍包括确保内容保持无障碍，无论访问网络的人员或方式。
+**默认情况下，HTML 在使用正确的时候是可以实现无障碍的**。Web 无障碍涉及确保内容保持无障碍，无论访问 web 的人员或方式。
 
 Firefox 浏览器无障碍检查器是一个非常有用的工具，用于检查网页的无障碍问题。下面的视频对它做了很好的介绍：
 
@@ -31,7 +31,7 @@ Firefox 浏览器无障碍检查器是一个非常有用的工具，用于检查
 
 ## 预备知识
 
-为了充分理解这个模块，你至少需要读过 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 各个话题的前两个模块，或者有可能的话，在你学习相关联的技术话题时也把无障碍相关的内容学习了，这样会更好。
+为了充分理解这个模块，你至少需要读过 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 各个主题的前两个模块，或者有可能的话，在你学习相关联的技术话题时也把无障碍相关的内容学习了，这样会更好。
 
 > **备注：** 如果在你所使用的设备上不能建立自己的文件，你可以使用在线编码平台运行大多数样例代码，比如 [JSBin](http://jsbin.com/) 或者 [Glitch](https://glitch.com/)。
 
