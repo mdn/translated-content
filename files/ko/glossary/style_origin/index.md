@@ -1,5 +1,5 @@
 ---
-title: Style origin
+title: 스타일 출처
 slug: Glossary/Style_origin
 page-type: glossary-definition
 tags:
