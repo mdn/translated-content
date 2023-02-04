@@ -7,18 +7,27 @@ slug: Web/API/Node/contains
 
 ## 概述
 
-**Node.contains()**返回的是一个布尔值，来表示传入的节点是否为该节点的后代节点。
+[Node](/zh-CN/docs/Web/API/Node) 接口的 `contains()` 方法 返回一个布尔值，表示一个节点是否是给定节点的后代，即该节点本身、其直接子节点（[childNodes](/zh-CN/docs/Web/API/Node/childNodes)）、子节点的直接子节点等。
+
+> **备注：** 节点包含在其本身内。
 
 ## 语法
 
-```plain
-node.contains( otherNode )
+```js
+contains(otherNode)
 ```
 
-- `node` 是否包含 otherNode 节点。
-- `otherNode` 是否是 node 的后代节点。
+## 参数
 
-如果 `otherNode` 是 `node 的后代节点或是` `node` 节点本身。则返回`true` , 否则返回 `false`.
+`otherNode`
+
+要测试的节点。
+
+> **备注：** `otherNode` 不是可选的，但是可以设置为 null。
+
+## 返回值
+
+返回一个布尔值，如果 `otherNode` 包含在节点中会返回 true，否则返回 false。
 
 ## 例子
 
