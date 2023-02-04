@@ -169,7 +169,7 @@ self.addEventListener("fetch", (event) => {
 
 ## 恢复失败的请求
 
-在有 service worker cache 里匹配的资源时，`caches.match(event.request)` 是非常棒的。但是如果没有匹配资源呢？如果我们不提供任何错误处理，promise 就会拒绝，同时也会出现一个网络错误。
+在 service worker 的缓存中存在相匹配的资源时，`caches.match(event.request)` 是非常棒的。但是如果没有匹配资源呢？如果我们不提供任何错误处理，promise 就会兑现 `undefined`，因而我们不会得到任何内容。
 
 在测试缓存的响应后，我们可以退回常规网络请求：
 
