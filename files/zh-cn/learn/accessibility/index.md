@@ -59,5 +59,5 @@ Firefox 浏览器无障碍检查器是一个非常有用的工具，用于检查
 
 - [现在开始构建无障碍的 web 应用](https://egghead.io/courses/start-building-accessible-web-applications-today)——来自 Marcy Sutton 的一系列优质的视频教程。
 - [Deque University 资源](https://dequeuniversity.com/resources/)——包含代码示例，屏幕阅读参考和其他有用的资源。
-- [WebAIM 资源](http://webaim.org/resources/)——包含指引、清单、工具和其他资源。
+- [WebAIM 资源](https://webaim.org/resources/)——包含指引、清单、工具和其他资源。
 - [Web 无障碍性评估工具列表](https://www.w3.org/WAI/ER/tools/)——包含一系列 web 无障碍评估工具。
