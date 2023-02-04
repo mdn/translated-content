@@ -139,7 +139,7 @@ self.addEventListener("install", (event) => {
 
 > **备注：** [Web Storage API（`localStorage`）](/zh-CN/docs/Web/API/Web_Storage_API)跟 service worker 的 cache 工作原理十分类似，但是它是同步的，所以不允许在 service worker 中使用。
 
-> **备注：** [IndexedDB](/zh-CN/docs/Glossary/IndexedDB) 可以在 service worker 内做数据存储。
+> **备注：** 如果你需要的话，可以在 service worker 中使用 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 来做数据存储。
 
 ### 自定义请求的响应
 
