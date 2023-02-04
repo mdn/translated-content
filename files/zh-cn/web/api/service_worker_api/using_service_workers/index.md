@@ -157,13 +157,13 @@ self.addEventListener("install", (event) => {
 
 3. 在任何情况下，我们会首先响应缓存和网络请求相匹配的 URL 的资源：
 
-```js
-self.addEventListener("fetch", (event) => {
-  event.respondWith(caches.match(event.request));
-});
-```
+   ```js
+   self.addEventListener("fetch", (event) => {
+     event.respondWith(caches.match(event.request));
+   });
+   ```
 
-`caches.match(event.request)` 允许我们对网络请求里的每个资源与缓存里可获取的等效资源进行匹配，查看缓存中是否有相应的资源。该匹配通过 URL 和各种标头进行，就像正常的 HTTP 请求一样。
+   `caches.match(event.request)` 允许我们对网络请求里的每个资源与缓存里可获取的等效资源进行匹配，查看缓存中是否有相应的资源。该匹配通过 URL 和各种标头进行，就像正常的 HTTP 请求一样。
 
 ![Fetch 事件图示](sw-fetch.svg)
 
