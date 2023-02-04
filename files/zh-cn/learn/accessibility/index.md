@@ -38,7 +38,7 @@ Firefox 浏览器无障碍检查器是一个非常有用的工具，用于检查
 ## 指南
 
 - [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-  - : 这篇文章开头很好地阐述了到底什么是无障碍——这包括我们要考虑哪一群人、为什么要考虑这些人、不同用户使用什么工具与网页交互、以及我们在网页开发流中如何构建无障碍部分。
+  - : 这篇文章开头很好地阐述了到底什么是无障碍——这包括我们要考虑哪一群人，为什么要考虑这些人，不同用户使用什么工具与网页交互，以及我们如何在 web 开发工作流中构建无障碍部分。
 - [HTML: 确保无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
   - : 只要确保恰当的 HTML 元素被用于适当的目的，大量的网页内容即可具有无障碍，这篇文章详细地讲述了 HTML 的用法，以确保网页有最大的无障碍性。
 - [CSS 与 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
