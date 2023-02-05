@@ -169,19 +169,9 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
   </tbody>
 </table>
 
-## 一些例子
+## 示例
 
-### 计算元音数
-
-```js
-var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
-var regexpVowels = /[aeiou]/g;
-
-console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
-// Number of vowels: 24
-```
-
-### 使用 组
+### 使用组
 
 ```js
 let personList = `First_Name: John, Last_Name: Doe
@@ -213,7 +203,7 @@ do {
 
 > **备注：** 并不是所有的浏览器都支持这个功能; 参考兼容表： [compatibility table](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility).
 
-## 另请参阅
+## 参见
 
 - [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
 
