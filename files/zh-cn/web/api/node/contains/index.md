@@ -7,9 +7,9 @@ slug: Web/API/Node/contains
 
 ## 概述
 
-[Node](/zh-CN/docs/Web/API/Node) 接口的 `contains()` 方法 返回一个布尔值，表示一个节点是否是给定节点的后代，即该节点本身、其直接子节点（[childNodes](/zh-CN/docs/Web/API/Node/childNodes)）、子节点的直接子节点等。
+[Node](/zh-CN/docs/Web/API/Node) 接口的 `contains()` 方法返回一个布尔值，表示一个节点是否是给定节点的后代，即该节点本身、其直接子节点（[childNodes](/zh-CN/docs/Web/API/Node/childNodes)）、子节点的直接子节点等。
 
-> **备注：** 节点包含在其本身内。
+> **备注：** 节点包含在自身内部。
 
 ## 语法
 
@@ -21,13 +21,13 @@ contains(otherNode)
 
 `otherNode`
 
-要测试的节点。
+要测试的[节点](/zh-CN/docs/Web/API/Node)。
 
-> **备注：** `otherNode` 不是可选的，但是可以设置为 null。
+> **备注：** `otherNode` 不是可选的，但是可以设置为 `null`。
 
 ## 返回值
 
-返回一个布尔值，如果 `otherNode` 包含在节点中会返回 true，否则返回 false。
+返回一个布尔值，如果 `otherNode` 包含在节点中会返回 `true`，否则返回 `false`。如果 `otherNode` 参数为 `null`，则 `contains()` 始终返回 `false。`
 
 ## 例子
 
