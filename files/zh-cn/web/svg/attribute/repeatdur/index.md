@@ -58,7 +58,7 @@ svg {
       <th scope="row">值</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#clock-value"
+          ><a href="/zh-CN/docs/Web/SVG/Content_type#clock-value"
             >&#x3C;clock-value></a
           ></code
         >
