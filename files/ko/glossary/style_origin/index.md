@@ -1,12 +1,6 @@
 ---
 title: 스타일 출처
 slug: Glossary/Style_origin
-page-type: glossary-definition
-tags:
-  - CSS
-  - Style
-  - Style Origin
-  - origin
 ---
 
 {{Glossary("CSS")}}에는 스타일 변경을 위한 소스를 구분하는 세 가지 카테고리가 있습니다. 이 카테고리를 **스타일 출처**라고 합니다. 스타일 출처에는 **사용자 에이전트 출처**, **사용자 출처** 그리고 **작성자 출처**가 있습니다.
