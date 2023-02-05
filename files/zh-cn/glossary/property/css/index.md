@@ -8,12 +8,12 @@ slug: Glossary/Property/CSS
 以下是 CSS 规则的示例：
 
 ```css
-/* “div” 选择器意味着文档中所有 div 元素会以该规则进行样式化 */
+/* “div”选择器意味着文档中所有 div 元素会以该规则进行样式化 */
 div {
-  /* 值为 “black” 的 “color” 属性值意味着文字会是黑色的 */
+  /* 值为“black”的“color”属性值意味着文字会是黑色的 */
   color: black;
 
-  /* 值为 ”white“ 的 “background-color” 属性值意味着元素的背景颜色会是白色的 */
+  /* 值为“white”的“background-color”属性值意味着元素的背景颜色会是白色的 */
   background-color: white;
 }
 ```
