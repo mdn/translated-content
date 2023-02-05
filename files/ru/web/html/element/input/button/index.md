@@ -1,6 +1,7 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/Input/button
+page-type: html-element
 tags:
   - HTML формы
   - Формы
