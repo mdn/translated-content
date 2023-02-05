@@ -17,6 +17,8 @@ browser-compat: javascript.builtins.Array.at
 
 Метод **`at()`** принимает значение в виде целого числа и возвращает элемент массива с данным индексом. В качестве аргумента метод принимает положительные и отрицательные числа. При отрицательном значении отсчёт происходит с конца массива.
 
+{{EmbedInteractiveExample("pages/js/array-at.html")}}
+
 ## Синтаксис
 
 ```js-nolint
@@ -39,9 +41,6 @@ at(index)
 Обычной практикой является получении числа элементов массива {{jsxref("Array/length", "length")}} и последующее вычисление значения индекса — например, `array[array.length - 1]`. Метод `at()` разрешает относительную индексацию, поэтому может быть сокращено до `array.at(-1)`.
 
 Метод `at()` — это [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Он ожидает только, что значение `this` будет иметь свойство `length` и свойства с числовыми ключом.
-
-
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
 
 ## Примеры
 
