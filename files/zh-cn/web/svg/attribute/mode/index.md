@@ -59,7 +59,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "480", "200")}}
+{{EmbedLiveSample("示例", "480", "200")}}
 
 ## 用法
 
