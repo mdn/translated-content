@@ -7,7 +7,7 @@ slug: Web/SVG/Attribute/repeatDur
 
 **`repeatDur`** 属性指定重复动画的总持续时间。
 
-可在以下元素中使用该属性：
+可在以下 SVG 元素中使用该属性：
 
 - {{SVGElement("animate")}}
 - {{SVGElement("animateColor")}}

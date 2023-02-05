@@ -7,7 +7,7 @@ slug: Web/SVG/Attribute/mode
 
 **`mode`** 属性定义了 {{SVGElement("feBlend")}} 滤镜原语上的混合模式。
 
-可在以下元素中使用该属性：
+可在以下 SVG 元素中使用该属性：
 
 - {{SVGElement("feBlend")}}
 
