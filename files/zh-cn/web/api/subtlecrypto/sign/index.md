@@ -47,7 +47,7 @@ sign(algorithm, key, data)
 
 Web Crypto API 提供了 4 种可用于签名和签名验证的算法。
 
-其中的三种算法（RSASSA-PKCS1-v1_5、RSA-PSS 和 ECDSA）是{{Glossary("public-key cryptography", "公开密钥加密算法")}}，它们使用私钥进行签名，使用公钥验证签名。所有的算法均使用[摘要算法](/en-US/docs/Web/API/SubtleCrypto/digest#支持的算法)在签名前将消息计算为短的、固定大小的散列值。除了 ECDSA（是将摘要算法传递给 `algorithm` 对象），其它算法均是通过将参数传递给 {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} 或 {{domxref("SubtleCrypto.importKey()", "importKey()")}} 函数来选择摘要算法的。
+其中的三种算法（RSASSA-PKCS1-v1_5、RSA-PSS 和 ECDSA）是{{Glossary("public-key cryptography", "公开密钥加密算法")}}，它们使用私钥进行签名，使用公钥验证签名。所有的算法均使用[摘要算法](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法)在签名前将消息计算为短的、固定大小的散列值。除了 ECDSA（是将摘要算法传递给 `algorithm` 对象），其它算法均是通过将参数传递给 {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} 或 {{domxref("SubtleCrypto.importKey()", "importKey()")}} 函数来选择摘要算法的。
 
 第四种算法（HMAC）使用相同的算法、密钥来签名和验证签名：这意味着签名验证的密钥必须保密，换句话说，该算法不适用与很多签名的场景。但是，当签名者和验证签名者是同一个实体时，这也是一个不错的选择。
 
@@ -73,7 +73,7 @@ ECDSA（椭圆曲线数字签名算法）是 [FIPS-186](https://nvlpubs.nist.gov
 
 HMAC 算法根据 [FIPS 198-1 标准](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) 计算和验证基于散列的消息认证码。
 
-需要在传入 {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} 的 [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) 对象或传入 {{domxref("SubtleCrypto.importKey()", "importKey()")}} 的 [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) 对象中指定要使用的散列算法。
+需要在传入 {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} 的 [`HmacKeyGenParams`](/zh-CN/docs/Web/API/HmacKeyGenParams) 对象或传入 {{domxref("SubtleCrypto.importKey()", "importKey()")}} 的 [`HmacImportParams`](/zh-CN/docs/Web/API/HmacImportParams) 对象中指定要使用的散列算法。
 
 ## 示例
 
