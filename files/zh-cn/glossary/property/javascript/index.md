@@ -24,7 +24,7 @@ const obj = {
 };
 ```
 
-对象 `obj` 含有两个属性。第一个属性以 `"a"` 为键，`1` 为值。第二个属性以 `"b"` 为键，一个函数为值，且使用了[方法语法](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)。`"a"` – `1` 和 `"b"` – `function` 之间的联系是对象的属性。
+对象 `obj` 含有两个属性。第一个属性以 `"a"` 为键，`1` 为值。第二个属性以 `"b"` 为键，一个函数为值，且使用了[方法语法](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)。`"a"`—`1` 和 `"b"`—`function` 之间的联系是对象的属性。
 
 在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的概念中，属性可以分为*实例属性*和*静态属性*，前者由每个实例拥有，后者由类拥有，持有所有实例共有的数据。在[继承](/zh-CN/docs/Web/JavaScript/Reference/Classes)的概念下，属性也可以分为*自有属性*和*继承属性*，前者由对象本身拥有，后者由对象的原型链中的对象拥有。
 
