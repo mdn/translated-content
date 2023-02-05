@@ -75,7 +75,7 @@ body {
 }
 
 body {
-  background-image: url('https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/backdrop-filter/anemones.jpg');
+  background-image: url('./anemones.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
