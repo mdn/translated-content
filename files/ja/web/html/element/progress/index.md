@@ -47,7 +47,7 @@ slug: Web/HTML/Element/progress
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("progressbar")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/progressbar_role">progressbar</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
