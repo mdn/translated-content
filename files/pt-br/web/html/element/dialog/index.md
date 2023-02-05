@@ -42,7 +42,7 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></td>
+      <td>{{ARIARole("alertdialog")}}</td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>
