@@ -191,7 +191,7 @@ let signature = await window.crypto.subtle.sign(
 
 ## 参见
 
-- {{domxref("SubtleCrypto.verify()")}}.
+- {{domxref("SubtleCrypto.verify()")}}
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) 定义了 RSASSA-PKCS1-v1_5。
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) 定义了 RSA-PSS。
 - [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) 定义了 ECDSA。
