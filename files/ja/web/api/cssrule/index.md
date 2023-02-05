@@ -1,6 +1,8 @@
 ---
 title: CSSRule
 slug: Web/API/CSSRule
+l10n:
+  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
 {{APIRef("CSSOM")}}
@@ -21,17 +23,17 @@ slug: Web/API/CSSRule
 - {{DOMXRef("CSSFontFeatureValuesRule")}}
 - {{DOMXRef("CSSViewportRule")}}
 
-## すべての CSSRule インスタンスに共通のプロパティ
+## インスタンスプロパティ
 
 `CSSRule` インターフェイスは、すべてのルールに共通のプロパティを規定します。特定の種類のルールに特有のプロパティは、各種類のルールのために、さらに特化したインターフェース内で規定されています。
 
 - {{domxref("CSSRule.cssText")}}
   - : このルールのテキスト表現を表します。たとえば "`h1,h2 { font-size: 16pt }`" や "`@import 'url'`" です。ルールの一部（つまり、この例の "font-size" の値）にアクセスまたは変更するには、[ルールの種類に特化したインターフェイス](#型定数)のプロパティを使用してください。
-- {{domxref("CSSRule.parentRule")}} {{readonlyinline}}
+- {{domxref("CSSRule.parentRule")}} {{ReadOnlyInline}}
   - : このルールを含むルールを返します。このルールが包含されていなければ `null` を返します。つまり、このルールが {{cssxref("@media")}} ブロック内部のスタイルルールの場合、親ルールは {{domxref("CSSMediaRule")}} になります。
-- {{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}
+- {{domxref("CSSRule.parentStyleSheet")}} {{ReadOnlyInline}}
   - : このルールを含むスタイルシートの {{domxref("CSSStyleSheet")}} オブジェクトを返します。
-- {{domxref("CSSRule.type")}} {{readonlyinline}}{{deprecated_inline}}
+- {{domxref("CSSRule.type")}} {{ReadOnlyInline}}{{deprecated_inline}}
   - : どの種類のルールを表すかを決定するための、型定数の一つを返します。
 
 ## 例
