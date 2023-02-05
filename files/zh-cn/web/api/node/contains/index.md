@@ -1,11 +1,9 @@
 ---
-title: Node.contains
+title: Node.contains()
 slug: Web/API/Node/contains
 ---
 
-{{ApiRef}}
-
-## 概述
+{{APIRef("DOM")}}
 
 {{domxref("Node")}} 接口的 **`contains()`** 方法返回一个布尔值，表示一个节点是否是给定节点的后代，即该节点本身、其直接子节点（{{domxref("Node.childNodes", "childNodes")}}）、子节点的直接子节点等。
 
@@ -30,9 +28,9 @@ contains(otherNode)
 
 如果 `otherNode` 参数为 `null`，则 `contains()` 始终返回 `false`。
 
-## 例子
+## 示例
 
-下面的函数用来检查一个元素是否是 body 元素的后代元素且非 body 元素本身。
+下面的函数用来检查一个元素是否是 body 元素的后代元素。由于 `contains` 会包含元素自身，而确定 body 是否包含自身不是设计 `isInPage` 的意图，这种情况明确返回 `false`。
 
 ```js
 function isInPage(node) {
@@ -40,16 +38,15 @@ function isInPage(node) {
 }
 ```
 
-- `node` 是我们想要检查的元素节点。
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 规范
+## 参见
 
-- [DOM Level 4: contains](http://www.w3.org/TR/domcore/#dom-node-contains)
-
-## 相关链接
-
+- {{domxref("Node.compareDocumentPosition")}}
 - {{domxref("Node.hasChildNodes")}}
