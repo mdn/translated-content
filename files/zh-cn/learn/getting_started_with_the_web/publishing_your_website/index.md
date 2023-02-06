@@ -15,8 +15,8 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 如果你想要完全控制你发布的网页，那么你将需要花钱购置：
 
-- 主机服务 — 在主机服务提供商的 [Web 服务器](/zh-CN/Learn/What_is_a_web_server)上租用文件空间。将你网站的文件上传到这里，然后服务器会提供 Web 用户需求的内容。
-- [域名](/zh-CN/Learn/Understanding_domain_names)——一个可以让人们访问的独一无二的地址，比如 `http://www.mozilla.org`，或 `http://www.bbc.co.uk` 。你可以从**域名注册商**租借域名。
+- 主机服务——在主机服务提供商的 [Web 服务器](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)上租用文件空间。将你网站的文件上传到这里，然后服务器会提供 Web 用户需求的内容。
+- [域名](/zh-CN/docs/Learn/Common_questions/What_is_a_domain_name)——一个可以让人们访问的独一无二的地址，比如 `http://www.mozilla.org` 或 `http://www.bbc.co.uk`。你可以从**域名注册商**租借域名。
 
 许多专业的网站通过这种方法接入互联网。
 

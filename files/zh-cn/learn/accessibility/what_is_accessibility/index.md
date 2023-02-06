@@ -1,5 +1,5 @@
 ---
-title: What is accessibility?
+title: 什么是无障碍？
 slug: Learn/Accessibility/What_is_accessibility
 ---
 
@@ -170,7 +170,7 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
 - [Mobile accessibility](/zh-CN/docs/Learn/Accessibility/Mobile)
 - [Accessibility troubleshooting](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)
 
-## 另见
+## 参见
 
 - [WCAG](/zh-CN/docs/Web/Accessibility/Understanding_WCAG)
 

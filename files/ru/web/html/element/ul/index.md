@@ -60,21 +60,21 @@ translation_of: Web/HTML/Element/ul
 <ul>
   <li>first item</li>
   <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <!-- Закрывающий тег </li> пишем не здесь! -->
     <ul>
       <li>second item first subitem</li>
       <li>second item second subitem
-      <!-- Same for the second nested unordered list! -->
+     <!-- То же самое для второго вложенного неупорядоченного списка! -->
         <ul>
           <li>second item second subitem first sub-subitem</li>
           <li>second item second subitem second sub-subitem</li>
           <li>second item second subitem third sub-subitem</li>
         </ul>
-      </li> <!-- Closing </li> tag for the li that
-                  contains the third unordered list -->
+      </li> <!-- Закрывающий тег </li>, который
+закрывает третий неупорядоченный список -->
       <li>second item third subitem</li>
     </ul>
-  <!-- Here is the closing </li> tag -->
+  <!-- Вот закрывающий тег </li> -->
   </li>
   <li>third item</li>
 </ul>
@@ -90,13 +90,13 @@ translation_of: Web/HTML/Element/ul
 <ul>
   <li>first item</li>
   <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <!-- Закрывающий тег </li> пишем не здесь! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  <!-- Here is the closing </li> tag -->
+   <!-- Вот закрывающий тег </li> -->
   </li>
   <li>third item</li>
 </ul>

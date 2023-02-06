@@ -1,7 +1,6 @@
 ---
 title: 幂等
 slug: Glossary/Idempotent
-original_slug: Glossary/幂等
 ---
 
 一个 HTTP 方法是**幂等**的，指的是同样的请求被执行一次与连续执行多次的效果是一样的，服务器的状态也是一样的。换句话说就是，幂等方法不应该具有副作用（统计用途除外）。在正确实现的条件下， {{HTTPMethod("GET")}} ， {{HTTPMethod("HEAD")}} ， {{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 等方法都是**幂等**的，而 {{HTTPMethod("POST")}} 方法不是。所有的 {{glossary("safe")}} 方法也都是幂等的。
