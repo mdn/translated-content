@@ -120,7 +120,7 @@ function displayDataByIndex() {
 };
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/to-do-notifications/)).
+> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
