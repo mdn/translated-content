@@ -47,7 +47,7 @@ slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 
 ### RTSP 2.0
 
-RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RSTP 1.0。
+RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RTSP 1.0。
 
 > **警告：** 虽然 {{ htmlelement("audio") }} 与 {{ htmlelement("video") }} 标签与协议无关，但是目前没有浏览器可以在无插件的情况下支持除了 HTTP 外的协议，尽管这种局面可能会有所转变，但除了 HTTP 以外的协议可能会被防火墙或代理服务器拦截。
 
