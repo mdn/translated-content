@@ -195,7 +195,7 @@ button.onclick = function() {
   const output = `Мне нравится песня ${song}. Я оценил её на ${
     (score / highestScore) * 100
   }%.`;
-  console.log(output); // "Мне нравится есня Fight the Youth. Я оценил её на 90%."
+  console.log(output); // "Мне нравится песня Fight the Youth. Я оценил её на 90%."
 
 ```
 
