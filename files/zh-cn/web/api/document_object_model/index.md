@@ -72,7 +72,7 @@ DOM 模型已经被高度简化了。为此，以下出现在 DOM level 3 或更
 - `TypeInfo`
 - `UserDataHandler`
 
-## HTML 接口
+## HTML DOM
 
 包含 HTML 的文档使用 {{DOMxRef("Document")}} 接口进行描述，该接口由 HTML 规范扩展，包含了各种特定于 HTML 的功能。特别是，{{domxref("Element")}} 接口得到了增强，成为 {{domxref("HTMLElement")}} 和各种子类，每个子类代表一个（或一系列密切相关的）元素。
 
@@ -259,7 +259,11 @@ HTML DOM API 提供对各种浏览器功能的访问，例如选项卡和窗口�
 - {{DOMxRef("SVGViewSpec")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGZoomEvent")}} {{Deprecated_Inline}}
 
-## 相关参考
+## 规范
+
+{{Specifications}}
+
+## 参见
 
 - [DOM 示例](/zh-CN/docs/DOM/DOM_Reference/Examples)
 - [CSS 对象模型 (CSSOM)](/zh-CN/docs/Web/API/CSS_Object_Model)
