@@ -73,7 +73,7 @@ original_slug: Learn/JavaScript/Первые_шаги/Строки
 
     ```js
     const sglDbl = 'Я не сказала "да", милорд…';
-    const dblSgl = "Вы не сказали "нет"… (королева, Бэкингем)";
+    const dblSgl = "Вы не сказали 'нет'… (королева, Бэкингем)";
     sglDbl;
     dblSgl;
     ```
