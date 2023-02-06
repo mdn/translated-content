@@ -45,7 +45,7 @@ l10n:
 - サイト上のすべてのページは、レスポンシブデザインを念頭に置いて作成されており、さまざまな解像度で見栄えがよいはずです。
 - 今後の計画では、ユーザーエージェントに基づいて画像を提供することを検討します。
 
-物事はまだ開発段階にあるので、これまでのところモバイルについてはそれほど多くはありませんが、新しい mozilla.org が [GitJub](https://github.com/mozilla/bedrock) で成長するのをいつでも見ることができます。 私たちの進歩についての最新情報は [Mozilla Webdev](https://blog.mozilla.org/webdev/) ブログを購読してください。
+物事はまだ開発段階にあるので、これまでのところモバイルについてはそれほど多くはありませんが、新しい mozilla.org が [GitHub](https://github.com/mozilla/bedrock) で成長するのをいつでも見ることができます。 私たちの進歩についての最新情報は [Mozilla Webdev](https://blog.mozilla.org/webdev/) ブログを購読してください。
 
 ## まとめ
 
