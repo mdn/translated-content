@@ -61,7 +61,9 @@ slug: Learn/Common_questions/set_up_a_local_testing_server
 3. 下面应该给出你安装的版本号，使用`cd`命令导航到您的示例所在的目录。
 
     ```bash
-    # 输入你想要进入的目录，举例
+    # （win10） 输入你想进入的盘符，举例
+    cd f:
+    # 输入你想要进入的目录(文件夹)，举例
     cd Desktop
     # 用两个点来表示进入上一层级的目录
     cd ..
@@ -74,6 +76,10 @@ slug: Learn/Common_questions/set_up_a_local_testing_server
     python -m http.server
     ＃如果上面返回的 Python 版本是 2.X
     python -m SimpleHTTPServer
+    ```
+    ```bash
+    # 服务器成功运行后如果想停止服务器在命令窗口内按下：
+    ctrl+c
     ```
 
 5. 默认情况下，这将在本地 Web 服务器上的端口 8000 上运行目录的内容。您可以通过转到`localhost:8000`Web 浏览器中的 URL 来访问此服务器。在这里你会看到列出的目录的内容 - 点击你想运行的 HTML 文件。
