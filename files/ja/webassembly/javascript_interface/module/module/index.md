@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Module/Module
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Module()`** コンストラクターは、ステートレスな WebAssembly コードを含む新しい Module オブジェクトを生成します。これはブラウザーでコンパイルされ、[Worker と効率的に共有する](/ja/docs/Web/API/Worker/postMessage)ことができ、複数回インスタンス化することができます。
 
