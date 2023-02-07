@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/compileStreaming
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.compileStreaming()`** 方法用来从一个流式源中直接编译一个 {{jsxref("WebAssembly.Module")}}。当模块需要在被实例化前被编译时，这个方法会很有用。如果要从流式源实例化一个模块应采用 {{jsxref("WebAssembly.instantiateStreaming()")}} 方法。
 
