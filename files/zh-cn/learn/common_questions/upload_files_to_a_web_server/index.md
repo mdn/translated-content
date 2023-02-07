@@ -18,7 +18,7 @@ slug: Learn/Common_questions/Upload_files_to_a_web_server
           >域名是如何工作的</a
         >。你必须知道如何<a
           href="/zh-CN/docs/Learn/Set_up_a_basic_working_environment"
-          >搭建一个基本环境</a
+          >如何设置一个本地测试服务器</a
         >，还有如何<a href="/zh-CN/docs/Learn/HTML/Write_a_simple_page_in_HTML"
           >写一个简单的网页</a
         >。
