@@ -20,7 +20,7 @@ Svelte가 어떻게 작동하는지, 지금까지 본 나머지 프레임워크 
           적어도
           <a href="/ko/docs/Learn/HTML">HTML</a>,
           <a href="/ko/docs/Learn/CSS">CSS</a>, and
-          <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 
+          <a href="/ko/docs/Learn/JavaScript">JavaScript</a>
           언어의 사용에 익숙하기를 권장합니다. 그리고
           <a
             href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
@@ -41,7 +41,6 @@ Svelte가 어떻게 작동하는지, 지금까지 본 나머지 프레임워크 
     </tr>
   </tbody>
 </table>
-
 
 ## Svelte: 풍부한 사용자 인터페이스를 구축하기 위한 새로운 접근
 
@@ -438,9 +437,9 @@ REPL을 시작하려면 브라우저를 열고 <https://svelte.dev/repl>로 이�
 - 해당 막대 위에는 REPL의 제목이 있습니다. 그것을 클릭하여 편집하세요.
 - 오른쪽에는 3개의 탭이 있습니다.
 
-   - _Result_ 탭에는 앱 출력이 표시되며 하단에 콘솔이 제공됩니다.
-   - _JS output_ 탭에서는 Svelte에서 생성된 JavaScript 코드를 검사하고 컴파일러 옵션을 설정할 수 있습니다.
-   - _CSS output_ 탭에는 Svelte에서 생성한 CSS가 표시됩니다.
+  - _Result_ 탭에는 앱 출력이 표시되며 하단에 콘솔이 제공됩니다.
+  - _JS output_ 탭에서는 Svelte에서 생성된 JavaScript 코드를 검사하고 컴파일러 옵션을 설정할 수 있습니다.
+  - _CSS output_ 탭에는 Svelte에서 생성한 CSS가 표시됩니다.
 
 - 탭 위에는 전체 화면 모드로 전환하고 앱을 다운로드할 수 있는 도구 모음이 있습니다. GitHub 계정으로 로그인하면 앱을 포크하고 저장할 수도 있습니다. 또한 GitHub 사용자 이름 프로필을 클릭하고 _Your saved apps_ 을 선택하면 저장된 모든 REPL을 볼 수 있습니다.
 
@@ -550,4 +549,3 @@ Svelte에서.
   - [Creating an item component](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
   - [Filtering our to-do items](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - [Building Angular applications and further resources](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
-
