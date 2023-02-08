@@ -9,6 +9,8 @@ tags:
   - Guide
   - Paint
   - Responsive Design
+l10n:
+  sourceCommit: 674fd4fb4225dfad82eab7425f9fc8e52d67a7db
 ---
 
 {{CSSRef}}
