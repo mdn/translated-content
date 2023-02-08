@@ -63,10 +63,10 @@ slug: Web/HTML/Element/article
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("feed")}}, {{ARIARole("main")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code>
       </td>
     </tr>
     <tr>

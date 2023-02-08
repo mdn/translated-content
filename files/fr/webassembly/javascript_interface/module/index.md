@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 browser-compat: javascript.builtins.WebAssembly.Module
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Un objet **`WebAssembly.Module`** contient du code WebAssembly, sans état et qui a déjà été compilé par le navigateur. Ce code peut être [partagé avec des <i lang="en">web workers</i>](/fr/docs/Web/API/Worker/postMessage) et être instancié à plusieurs reprises.
 

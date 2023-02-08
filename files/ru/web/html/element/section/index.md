@@ -1,5 +1,5 @@
 ---
-title: <section>
+title: <section> - элемент секции
 slug: Web/HTML/Element/section
 tags:
   - Element

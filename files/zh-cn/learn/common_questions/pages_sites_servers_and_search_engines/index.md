@@ -32,7 +32,7 @@ slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 - 网页（webpage）
   - : 一份能够显示在网络浏览器（如 Firefox,，Google Chrome，Microsoft Internet Explorer 或 Edge，Apple 的 Safari）上的文档。网页也常被称作"web pages"（网页）或者就叫"pages"（页面）。
 - 网站（website）
-  - : 一个由许多组合在一起，并常常以各种方式相互连接的网页组成的集合。网站常被称作"web site"（网站）或简称"site"（站点）。
+  - : 一个由许多网页组合在一起，并常常以各种方式相互连接的网页组成的集合。网站常被称作"web site"（网站）或简称"site"（站点）。
 - 网络服务器（web server）
   - : 一个在互联网上托管网站的计算机。
 - 搜索引擎（search engine）

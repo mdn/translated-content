@@ -1446,6 +1446,7 @@
 /zh-CN/docs/Web/API/Element/onfullscreenchange	/zh-CN/docs/Web/API/Element/fullscreenchange_event
 /zh-CN/docs/Web/API/Element/onfullscreenerror	/zh-CN/docs/Web/API/Element/fullscreenerror_event
 /zh-CN/docs/Web/API/Element/onpaste	/zh-CN/docs/Web/API/HTMLElement/paste_event
+/zh-CN/docs/Web/API/Element/openOrClosedShadowRoot	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot
 /zh-CN/docs/Web/API/Element/pointerlockchange_event	/zh-CN/docs/Web/API/Document/pointerlockchange_event
 /zh-CN/docs/Web/API/Element/removeAttributre	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/Web/API/Element/select_event	/zh-CN/docs/Web/API/HTMLInputElement/select_event
