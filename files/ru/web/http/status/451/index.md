@@ -45,8 +45,3 @@ operated by the People's Front of Judea.</p>
 ## Совместимость с браузером
 
 {{Compat}}
-
-## Смотрите также
-
-- {{interwiki("wikipedia", "HTTP_451", "Wikipedia: HTTP 451")}}
-- {{interwiki("wikipedia", "Fahrenheit_451", "Wikipedia: Fahrenheit 451")}} (which gave this status code its number)

@@ -72,5 +72,4 @@ Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 ## Смотрите также
 
-- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
 - {{HTTPHeader("Referrer-Policy")}}
