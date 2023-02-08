@@ -59,7 +59,7 @@ translation_of: Web/HTML/Global_attributes/itemid
 
 ### Результат
 
-{{EmbedLiveSample('Пример)}}
+{{EmbedLiveSample('Пример')}}
 
 ## Спецификации
 
