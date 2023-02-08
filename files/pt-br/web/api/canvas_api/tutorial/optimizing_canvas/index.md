@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 original_slug: Web/Guide/HTML/Canvas_tutorial/Otimizando_Canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 O elemento {{HTMLElement("canvas")}} é um dos padrões mais largamente utilizados para renderização de gráficos 2D na Web. É muito usado em jogos e em visualizações complexas. Porém, quando sítios web e aplicativos utilizam canvas até seus limites, começam a surgir problemas de perda de performance. Este artigo tem o objetivo de prover sugestões de otimização de seu elemento canvas e garantir que seu site ou aplicativo funcione melhor.
 
