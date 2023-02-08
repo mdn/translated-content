@@ -726,10 +726,6 @@ oReq.send(null);
 
 ## Sécurité
 
-{{fx_minversion_note(3, "Les versions de Firefox avant Firefox 3 autorisaient à mettre les préférences <code>capability.policy.&lt;policyname&gt;.XMLHttpRequest.open&lt;/policyname&gt;</code> à <code>allAccess</code> pour donner l'accès cross-sites à des sites spécifiques. Cela n'est plus possible.")}}
-
-{{fx_minversion_note(5, "Les versions de Firefox avant Firefox 5 pouvaient utiliser <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> pour demander un accès cross-site. Ce n'est plus supporté, me^me si cela ne produit aucun avertissement et que la demande de permission est toujours présente.")}}
-
 La manière recommandée d'activer les requêtes intersites est d'utiliser l'en-tête HTTP `Access-Control-Allow-Origin` dans la réponse du `XMLHttpRequest`.
 
 ### XMLHttpRequests stoppées
