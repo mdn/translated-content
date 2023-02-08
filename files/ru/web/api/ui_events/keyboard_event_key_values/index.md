@@ -2818,7 +2818,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
 
 Приведённые ниже значения частично получены из ряда технических характеристик бытовой электроники:
 
-- [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (часть спецификации [ATSC](https://ru.wikipedia.org/wiki/ATSC)}})
+- [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (часть спецификации [ATSC](https://ru.wikipedia.org/wiki/ATSC))
 - [Open Cable Application Platform 1.1.3](http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
 - [ANSI/CEA-2014-B](<http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI).aspx>): Веб-протокол и фреймворк для удалённого пользовательского интерфейса в сетях UPnP ™ и Интернете
 - [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
