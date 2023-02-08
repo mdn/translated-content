@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La méthode **`WebAssembly.compile()`**, permet de compiler un module ({{jsxref("WebAssembly.Module")}} à partir d'un code binaire WebAssembly. Cette fonction est utile lorsqu'il est nécessaire de compiler un module avant de l'instancier (dans les autres cas, la méthode {{jsxref("WebAssembly.instantiate()")}} sera plus pertinente).
 
