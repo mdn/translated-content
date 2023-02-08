@@ -526,6 +526,7 @@ aside {
   border-right: 1px solid #999;
 }
 ```
+
 ```html hidden
 <div class="container">
   <header>This is my lovely blog</header>
