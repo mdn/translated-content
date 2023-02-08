@@ -21,10 +21,9 @@ Si estás creando un [diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsi
 Es bastante común agrupar elementos HTML dentro de componentes reutilizables que tienen una determinada disposición dependiendo del espacio disponible en la página.
 Es posible que el espacio disponible no solo dependa del tamaño del viewport, pues también puede depender del contexto donde el componente se muestra.
 
-
 ![Una media query basada en el ancho del viewport, que representa el ancho total del navegador, y una container query basada en el ancho del contexto contenedor, el cual representa el ancho del elemento contenedor ](container-query-diagram.png)
 
-Las container queries nos permiten observar el tamaño del contenedor en vez de observar únicamente el viewport u otras características del dispositivo, esto para aplicar estilos al contenido según el tamaño del contenedor. 
+Las container queries nos permiten observar el tamaño del contenedor en vez de observar únicamente el viewport u otras características del dispositivo, esto para aplicar estilos al contenido según el tamaño del contenedor.
 Si el contenedor tiene menos espacio en el contexto que lo envuelve, puedes optar por ocultar algunos elementos o utilizar una fuente más pequeña, por ejemplo.
 
 ![Una página web con tres componentes de cartas que se muestran en diferentes disposiciones según el tamaño del contenedor](container-query-examples.png)
@@ -43,7 +42,6 @@ Estos valores tienen los siguientes efectos:
 
 En el siguiente fragmento de HTML se muestra un ejemplo de un componente tipo tarjeta que tiene una imagen, un título y algo de texto:
 
-
 ```html
 <div class="container">
   <div class="card">
@@ -53,8 +51,8 @@ En el siguiente fragmento de HTML se muestra un ejemplo de un componente tipo ta
   </div>
 </div>
 ```
-Puedes crear un containment context en el contenedor `div` al usar la propiedad `container-type`:
 
+Puedes crear un containment context en el contenedor `div` al usar la propiedad `container-type`:
 
 ```css
 .container {
@@ -152,7 +150,7 @@ Para más información acerca de estas unidades, mira la referencia de [Unidades
 
 ## Propiedades de respaldo para container queries
 
-Se puede utilizar {{cssxref("grid")}} y {{cssxref("flex")}}  para crear un efecto similar en los navegadores que aún no soportan las container queries.
+Se puede utilizar {{cssxref("grid")}} y {{cssxref("flex")}} para crear un efecto similar en los navegadores que aún no soportan las container queries.
 En el siguiente ejemplo se usa una declaración {{cssxref("grid-template-columns")}} para crear una disposición de dos columnas para el componente de tipo tarjeta.
 
 ```css
