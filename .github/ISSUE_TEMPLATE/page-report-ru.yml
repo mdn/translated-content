@@ -21,7 +21,7 @@ body:
     id: mdn-url
     attributes:
       label: MDN URL
-      description: Заполнится само, не правьте.
+      description: Заполнится само, пожалуйста, не правьте.
     validations:
       required: true
   - type: input
@@ -43,7 +43,7 @@ body:
   - type: textarea
     id: references
     attributes:
-      label: Есть ли у вас какие-либо подтверждающие ссылки, упоминания или цитаты?
+      label: Есть ли у вас какие-либо подтверждающие ссылки?
       description: Это поможет нам быстрее разобраться в проблеме и всё исправить.
   - type: textarea
     id: more-info
@@ -59,4 +59,4 @@ body:
     id: metadata
     attributes:
       label: MDN metadata
-      description: Заполнится само, не правьте.
+      description: Заполнится само, пожалуйста, не правьте.
