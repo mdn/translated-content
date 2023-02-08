@@ -8160,10 +8160,6 @@
     "modified": "2019-03-23T22:44:18.504Z",
     "contributors": ["loella16", "jmh"]
   },
-  "Web/API/Document/createExpression": {
-    "modified": "2019-03-18T21:40:18.366Z",
-    "contributors": ["loella16"]
-  },
   "Web/API/Document/createNSResolver": {
     "modified": "2019-03-18T21:40:18.204Z",
     "contributors": ["loella16"]
@@ -8349,10 +8345,6 @@
       "Mgjbot",
       "BenoitL"
     ]
-  },
-  "Web/API/Document/getElementsByTagNameNS": {
-    "modified": "2019-03-18T21:39:18.440Z",
-    "contributors": ["loella16"]
   },
   "Web/API/Document/getSelection": {
     "modified": "2019-09-25T07:21:02.389Z",
