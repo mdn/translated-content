@@ -5083,6 +5083,10 @@
     "modified": "2020-10-15T22:13:56.821Z",
     "contributors": ["wbamberg", "ClassJm"]
   },
+  "Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot": {
+    "modified": "2020-10-15T22:35:17.746Z",
+    "contributors": ["liuyuxiang806"]
+  },
   "Mozilla/Add-ons/WebExtensions/API/downloads": {
     "modified": "2020-10-15T22:24:32.261Z",
     "contributors": ["miracleXL", "zombie110year"]
@@ -9189,10 +9193,6 @@
   "Web/API/Element/nextElementSibling": {
     "modified": "2019-10-05T16:51:15.466Z",
     "contributors": ["VictorDu", "rguanghui", "teoli", "khalid32", "ziyunfei"]
-  },
-  "Web/API/Element/openOrClosedShadowRoot": {
-    "modified": "2020-10-15T22:35:17.746Z",
-    "contributors": ["liuyuxiang806"]
   },
   "Web/API/Element/outerHTML": {
     "modified": "2019-03-24T00:15:11.770Z",
