@@ -59,7 +59,7 @@ req.send();
 
 ### Получение HTML из responseText
 
-Если вы используете `XMLHttpRequest` для получения содержимого HTML-страницы, в свойстве {{domxref("XMLHttpRequest.responseText", "responseText")}} будет "сырой" HTML, работать с которым неудобно.  Есть три способа упростить работу с этим "сырым" HTML:
+Если вы используете `XMLHttpRequest` для получения содержимого HTML-страницы, в свойстве {{domxref("XMLHttpRequest.responseText", "responseText")}} будет "сырой" HTML, работать с которым неудобно. Есть три способа упростить работу с этим "сырым" HTML:
 
 1. Использовать свойство `XMLHttpRequest.responseXML`, как показано в статье [HTML в XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
 2. Вставить содержимое в [фрагмент](/ru/docs/Web/API/DocumentFragment) с помощью `fragment.body.innerHTML` и работать уже с содержимым фрагмента как с DOM-деревом.
