@@ -309,11 +309,11 @@ body {
 }
 ```
 
-如果所有网格内的内容均小于 100 像素，看起来不会有变化.但如果在某一项中放入很长的内容或者图片，你可以看到这个格子所在的哪一行的高度变成能刚好容纳内容的高度了。注意我们修改的是 `grid-auto-rows`，因此只会作用于隐式网格。当然，这一项属性也可以应用于显式网格，更多内容可以参考 {{cssxref("minmax")}} 页面。
+如果所有网格内的内容均小于 100 像素，看起来不会有变化。但如果在某一项中放入很长的内容或者图片，你可以看到这个格子所在的哪一行的高度变成能刚好容纳内容的高度了。注意我们修改的是 `grid-auto-rows`，因此只会作用于隐式网格。当然，这一项属性也可以应用于显式网格，更多内容可以参考 {{cssxref("minmax")}} 页面。
 
 ### 自动使用多列填充
 
-现在来试试把学到的关于网格的一切，包括 repeat 与 minmax 函数，组合起来，来实现一个非常有用的功能。某些情况下，我们需要让网格自动创建很多列来填满整个容器。通过设置`grid-template-columns`属性，我们可以实现这个效果，不过这一次我们会用到{{cssxref("repeat")}}函数中的一个关键字`auto-fill`来替代确定的重复次数。而函数的第二个参数，我们使用{{cssxref("minmax")}}函数来设定一个行/列的最小值，以及最大值`1fr`。
+现在来试试把学到的关于网格的一切，包括 repeat 与 minmax 函数，组合起来，来实现一个非常有用的功能。某些情况下，我们需要让网格自动创建很多列来填满整个容器。通过设置`grid-template-columns`属性，我们可以实现这个效果，不过这一次我们会用到 {{cssxref("repeat")}} 函数中的一个关键字`auto-fill`来替代确定的重复次数。而函数的第二个参数，我们使用{{cssxref("minmax")}}函数来设定一个行/列的最小值，以及最大值 `1fr`。
 
 在你的文件中试试看，你也许可以用到以下的代码。
 
@@ -468,7 +468,7 @@ aside {
 
 {{ EmbedLiveSample('基于线的元素放置', '100%', 400) }}
 
-> **备注：** 你也可以用`-1`来定位到最后一条列分隔线或是行分隔线，并且可以用负数来指定倒数的某一条分隔线。但是这只能用于显式网格，对于[隐式网格](/zh-CN/docs/Glossary/Grid)`-1`不一定能定位到最后一条分隔线。
+> **备注：** 你也可以用 `-1` 来定位到最后一条列分隔线或是行分隔线，并且可以用负数来指定倒数的某一条分隔线。但是这只能用于显式网格，对于[隐式网格](/zh-CN/docs/Glossary/Grid)`-1`不一定能定位到最后一条分隔线。
 
 ## 使用 grid-template-areas 属性放置元素
 
@@ -476,15 +476,15 @@ aside {
 
 将之前基于线的元素放置代码删除（或者重新下载一份新的文件），然后加入以下 CSS 规则：
 
-```plain
+```css
 .container {
   display: grid;
   grid-template-areas:
-      "header header"
-      "sidebar content"
-      "footer footer";
+    "header header"
+    "sidebar content"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
-  grid-gap: 20px;
+  gap: 20px;
 }
 
 header {
@@ -511,62 +511,56 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
   border-right: 1px solid #999;
 }
-
-.container {
-  display: grid;
-  grid-template-areas:
-  "header header"
-  "sidebar content"
-  "footer footer";
-  grid-template-columns: 1fr 3fr;
-  grid-gap: 20px;
-}
-
-header {
-  grid-area: header;
-}
-
-article {
-  grid-area: content;
-}
-
-aside {
-  grid-area: sidebar;
-}
-
-footer {
-  grid-area: footer;
-}
-
 ```
-
 ```html hidden
 <div class="container">
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
@@ -588,7 +582,7 @@ footer {
 
 下载这个[初始文件](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/11-grid-system-starting-point.html)，文件中包含了一个定义了 12 列网格的容器。文件中的一些内容我们曾在前两个示例中使用过，我们暂时可以先用基于线的元素放置模式来将我们的内容放到这个 12 列的网格中。
 
-```plain
+```css
 header {
   grid-column: 1 / 13;
   grid-row: 1;
@@ -615,47 +609,26 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
-  grid-gap: 20px;
-}
-
-header {
-  grid-column: 1 / 13;
-  grid-row: 1;
-}
-
-article {
-  grid-column: 4 / 13;
-  grid-row: 2;
-}
-
-aside {
-  grid-column: 1 / 4;
-  grid-row: 2;
-}
-
-footer {
-  grid-column: 1 / 13;
-  grid-row: 3;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
   border-right: 1px solid #999;
 }
-
 ```
 
 ```html hidden
@@ -663,14 +636,36 @@ aside {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
