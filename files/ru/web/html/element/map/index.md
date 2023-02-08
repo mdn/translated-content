@@ -39,7 +39,7 @@ translation_of: Web/HTML/Element/map
 
 ## Живой пример
 
-{{ EmbedLiveSample('Пример', '350', '150', '', 'Web/HTML/Element/map') }}
+{{ EmbedLiveSample('Пример', '350', '150') }}
 
 ### Ожидаемые выходные данные
 
