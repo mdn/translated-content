@@ -68,7 +68,6 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
    ```bash
    exec bash
    ```
-   
 2. 打开 `.bash_profile`（或 `.bashrc`）文件（如果看不到隐藏文件，需要将它们显示出来，查看[在 macOS 中显示/隐藏文件](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) 或[显示 Ubuntu 的隐藏文件夹](https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-file-manager-nautilus-on-ubuntu)）。
 3. 把下面语句粘贴到文件的最后（就像平常在机器上更新 path）：
 
@@ -614,8 +613,7 @@ driver.quit();
    });
    ```
 
-
-4. 最后，修改下面 `driver.sleep(2000)` 的代码，添加 REST API 调用（同样，使用你的真实用户名和访问密钥替换 `YOUR-USER-NAME` 和` YOUR-ACCESS-KEY` 的值）：
+4. 最后，修改下面 `driver.sleep(2000)` 的代码，添加 REST API 调用（同样，使用你的真实用户名和访问密钥替换 `YOUR-USER-NAME` 和 `YOUR-ACCESS-KEY` 的值）：
 
    ```js
    driver.sleep(2000).then(() => {
