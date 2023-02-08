@@ -379,7 +379,7 @@ Se puede usar el atributo {{htmlattrxref("mozactionhint", "input")}} para especi
 
 El resultado es:
 
-[![mozactionhint.png](/@api/deki/files/4970/=mozactionhint.png?size=webview)](/@api/deki/files/4970/=mozactionhint.png)
+[![mozactionhint.png](mozactionhint.png?size=webview)](mozactionhint.png)
 
 ## Regionalización
 
