@@ -1709,7 +1709,6 @@
 /es/docs/Web/API/WindowEventHandlers/onbeforeunload	/es/docs/conflicting/Web/API/Window/beforeunload_event
 /es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/conflicting/Web/API/Window/hashchange_event
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
-/es/docs/Web/API/WindowOrWorkerGlobalScope	/es/docs/orphaned/Web/API/WindowOrWorkerGlobalScope
 /es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/caches
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/es/docs/Web/API/clearInterval
