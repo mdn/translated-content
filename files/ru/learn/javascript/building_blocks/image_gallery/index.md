@@ -21,7 +21,7 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 
 Для начала скачайте [ZIP файл](https://github.com/ConstantineZz/learning-area/raw/master/javascript/building-blocks/gallery/gallery-start-rv.zip) для примера и распакуйте его содержимое у себя на компьютере.
 
-> **Примечание:** **Замечание**: вы также можете использовать такие сайты как [JSBin](http://jsbin.com/) или [Thimble](https://thimble.mozilla.org/) для выполнения задания. Вы можете скопировать HTML, CSS и JavaScript в один из этих редакторов. Если онлайн редактор, который вы выбрали, не имеет отдельных панелей для JavaScript/CSS, вы можете выставить код в теги `<script>`/`<style>` расположенные на самой HTML странице.
+> **Примечание:** вы также можете использовать такие сайты как [JSBin](http://jsbin.com/) или [Thimble](https://thimble.mozilla.org/) для выполнения задания. Вы можете скопировать HTML, CSS и JavaScript в один из этих редакторов. Если онлайн редактор, который вы выбрали, не имеет отдельных панелей для JavaScript/CSS, вы можете выставить код в теги `<script>`/`<style>` расположенные на самой HTML странице.
 
 ## Обзор проекта
 
