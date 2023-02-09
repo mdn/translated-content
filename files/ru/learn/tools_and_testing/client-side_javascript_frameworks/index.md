@@ -21,7 +21,7 @@ JavaScript-фреймворки являются неотъемлемой час
 
 **[Начните прямо сейчас с "Введение в фронтенд фреймворки"](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
 
-## Prerequisites
+## Необходимые знания
 
 You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), and especially [JavaScript](/ru/docs/Learn/JavaScript).
 
