@@ -9910,10 +9910,6 @@
       "maedca"
     ]
   },
-  "Web/HTTP/CORS/Errors": {
-    "modified": "2019-03-18T21:26:43.815Z",
-    "contributors": ["nchevobbe"]
-  },
   "Web/HTTP/CORS/Errors/CORSDidNotSucceed": {
     "modified": "2020-03-20T09:22:59.137Z",
     "contributors": ["javier.camus", "rotcl", "MarianoRDZ"]
