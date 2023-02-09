@@ -5,7 +5,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-在这篇文章中，我们将教会你如何安装自己的自动化测试环境，并使用 Selenium（或 WebDriver）和一种测试库（如 selenium-webdriver for Node）运行自己的测试。我们还将着眼于如何将本地测试环境与上一篇文章中讨论的商业工具集成在一起。
+在这篇文章中，我们将教会你如何安装自己的自动化测试环境，并使用 Selenium/WebDriver 和一种测试库（如 selenium-webdriver for Node）运行自己的测试。我们还将着眼于如何将本地测试环境与上一篇文章中讨论的商业工具集成在一起。
 
 <table>
   <tbody>
@@ -51,7 +51,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
     npm install selenium-webdriver
     ```
 
-> **备注：** 即使你已经安装过 selenium-webdriver 并下载了浏览器驱动，我们仍然建议你按照步骤再来一遍，确定所有东西都是最新的。
+> **备注：** 即使你已经安装过 selenium-webdriver 并下载了浏览器驱动，我们仍然建议你按照步骤再来一遍，确保所有东西都是最新的。
 
 接下来，你需要下载相应的驱动，使 WebDriver 能控制你需要测试的浏览器。在 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver)（第一部分的表格）页面查看如何下载。显然，有些浏览器是操作系统特定的，我们将坚持使用 Firefox 和 Chrome，因为它们可以在所有主要的操作系统上使用。
 
@@ -87,7 +87,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
 
 6. 你应该可以在打印出来的信息中找到刚刚设置的路径。
 
-在 Windows 下设置 `PATH` 变量，参考 [如何添加一个新的文件目录到系统路径？](https://www.itprotoday.com/)
+在 Windows 下设置 `PATH` 变量，参考[如何添加一个新的文件目录到系统路径？](https://www.itprotoday.com/)
 
 OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 
@@ -137,7 +137,7 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
 
 接下来，让我们来试一下同时在多个浏览器上进行测试。这也是你经常碰到的情况！
 
-1. 在你的工程目录下创建另外一个新文件 `google_test_multiple.js`。你可以根据实际需要测试的浏览器情况，对我们添加的浏览器进行修改或删除等操作。但确保系统安装了正确的浏览器驱动。关于如何填写`.forBrowser()` 方法中对浏览器描述的字符串，请参考 [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html)。
+1. 在你的工程目录下创建另外一个新文件 `google_test_multiple.js`。你可以根据实际需要测试的浏览器情况，对我们添加的浏览器进行修改或删除等操作。但确保系统安装了正确的浏览器驱动。关于如何填写 `.forBrowser()` 方法中对浏览器描述的字符串，请参考 [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html)。
 2. 将下面代码复制到文件中保存：
 
    ```js
@@ -207,7 +207,7 @@ const By = webdriver.By;
 const until = webdriver.until;
 ```
 
-接下来，通过 `new webdriver.Builder()` 构造器来创建一个新的驱动实例，通过 `forBrowser()` 方法指定测试的浏览器类型，最后调用 `build()` 来实际创建它。（查看 [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html) 了解更多）。
+接下来，通过 `new webdriver.Builder()` 构造器来创建一个新的驱动实例，通过 `forBrowser()` 方法指定测试的浏览器类型，最后调用 `build()` 来实际创建它。（关于这些功能的详细信息，请参见 [Builder 类参考资料](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html)）。
 
 ```js
 let driver = new webdriver.Builder()
@@ -498,7 +498,7 @@ driver.quit();
 
 > **备注：** LambdaTest 自动测试仪表板上的 _HELP_ 按钮将为你提供大量的信息，帮助你开始使用 LambdaTest 自动化。你也可以关注我们关于[在 Node JS 中运行第一个 Selenium 脚本](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/)的文档。
 
-> **备注：** 如果你不想手写测试的 capability 对象，你可以用 [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)来生成它们。
+> **备注：** 如果你不想手写测试的 capability 对象，你可以用 [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) 来生成它们。
 
 #### 编程填充 LambdaTest 的测试详情
 
@@ -640,7 +640,7 @@ driver.quit();
 
 代码很直观——测试一完成，就会发送一个 API 调用到 BrowserStack 来更新测试状态是通过还是完成，并且给出相关的原因。
 
-现在回到 [BrowserStack 自动化仪表盘](https://www.browserstack.com/automate) 页面，你会看到测试会话如之前一样正常运行，并且增加了更新的数据：
+现在回到 [BrowserStack 自动化仪表盘](https://www.browserstack.com/automate)页面，你会看到测试会话如之前一样正常运行，并且增加了更新的数据：
 
 ![BrowserStack 自定义结果](bstack_custom_results.png)
 
@@ -737,7 +737,7 @@ driver.quit();
    });
    ```
 
-   同样，用真实的用户名和访问密钥来替换 `YOUR-USER-NAME` 和 `YOUR-ACCESS-KEY` 的值（注意，saucelabs 的 npm 包使用的是 `password`，而不是`accessKey`）。由于你现在正在使用这些东西两次，你可能需要创建几个辅助变量来存储它们。
+   同样，用真实的用户名和访问密钥来替换 `YOUR-USER-NAME` 和 `YOUR-ACCESS-KEY` 的值（注意，saucelabs 的 npm 包使用的是 `password`，而不是 `accessKey`）。由于你现在正在使用这些东西两次，你可能需要创建几个辅助变量来存储它们。
 
 4. 在 `driver` 变量定义的下方（就在 `build()` 行后面）添加下面代码块，它将获取正确的驱动 `sessionID` 来将数据写入进程（你可以在下一个代码块中看到它的动作）：
 
@@ -768,9 +768,9 @@ driver.quit();
    });
    ```
 
-这里，我们根据测试结果是通过或失败，将 `testPassed` 变量设置为 `true` 或 `false` , 然后使用 `saucelabs.updateJob()` 方法来更新详情。
+这里，我们根据测试结果是通过或失败，将 `testPassed` 变量设置为 `true` 或 `false`，然后使用 `saucelabs.updateJob()` 方法来更新详情。
 
-回到 [Sauce Labs 自动化测试仪表盘](https://app.saucelabs.com/dashboard/tests) 页面，你应该看到你刚创建的 job 现在有更新的数据附在上面：
+回到 [Sauce Labs 自动化测试仪表盘](https://app.saucelabs.com/dashboard/tests)页面，你应该看到你刚创建的 job 现在有更新的数据附在上面：
 
 ![Sauce Labs 更新过的 Job 信息](sauce_labs_updated_job_info.png)
 
@@ -779,7 +779,7 @@ driver.quit();
 如果你不想使用 Sauce Labs 或 BrowserStack 之类的服务，你也可以设置自己的远程测试服务器。具体操作如下：
 
 1. Selenium 的远端服务器要求运行 Java，从 [Java SE 下载页面](https://www.oracle.com/java/technologies/downloads/)下载适合你平台的最新 JDK 并安装。
-2. 接着，下载最新的 [Selenium 单机服务器](http://selenium-release.storage.googleapis.com/index.html)，它作为你的脚本和浏览器驱动之间的一个代理。选择最新的稳定版本（最好不要选 beta 版本），从列表中选择以“selenium-server-standalone”开头的文件。下载完成后，放到一个靠谱的地方，比如家目录下。如果你还没有将位置添加到 `PATH`，现在就需要添加了（查看[在 Node 中创建 Selenium](#在 Node 下建立 Selenium)章节）。
+2. 接着，下载最新的 [Selenium 单机服务器](http://selenium-release.storage.googleapis.com/index.html)，它作为你的脚本和浏览器驱动之间的一个代理。选择最新的稳定版本（最好不要选 beta 版本），从列表中选择以“selenium-server-standalone”开头的文件。下载完成后，放到一个靠谱的地方，比如家目录下。如果你还没有将位置添加到 `PATH`，现在就需要添加了（查看[在 Node 中创建 Selenium](#在_node_下建立_selenium) 小节）。
 3. 在作为服务器的电脑终端上执行如下代码，安装单机版服务器
 
    ```bash
