@@ -15,29 +15,29 @@ l10n:
 
 {{CSSRef}}
 
-[CSS containment](/es/docs/Web/CSS/CSS_Containment) proporciona una nueva forma para aislar secciones de una página e indicarle al navegador que estas secciones son independientes del resto de la página en términos de estilos y disposición (_layout_).
+[CSS Containment](/es/docs/Web/CSS/CSS_Containment) proporciona una nueva forma para aislar secciones de una página e indicarle al navegador que estas secciones son independientes del resto de la página en términos de estilos y disposición (_layout_).
 
-Si estás creando un [diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design), a menudo usas [media queries](/en-US/docs/Web/CSS/Media_Queries) para cambiar la disposición de la página con referencia al {{Glossary("viewport")}}.
+Si estás creando un [diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design), a menudo usas [_media queries_](/es/docs/Web/CSS/Media_Queries) para cambiar la disposición de la página con referencia al {{Glossary("viewport")}}.
 Es bastante común agrupar elementos HTML dentro de componentes reutilizables que tienen una determinada disposición dependiendo del espacio disponible en la página.
-Es posible que el espacio disponible no solo dependa del tamaño del viewport, pues también puede depender del contexto donde el componente se muestra.
+Es posible que el espacio disponible no solo dependa del tamaño del _viewport_, pues también puede depender del contexto donde el componente se muestra.
 
 ![Una media query basada en el ancho del viewport, que representa el ancho total del navegador, y una container query basada en el ancho del contexto contenedor, el cual representa el ancho del elemento contenedor ](container-query-diagram.png)
 
-Las container queries nos permiten observar el tamaño del contenedor en vez de observar únicamente el viewport u otras características del dispositivo, esto para aplicar estilos al contenido según el tamaño del contenedor.
+Las _container queries_ nos permiten observar el tamaño del contenedor en vez de observar únicamente el _viewport_ u otras características del dispositivo, esto para aplicar estilos al contenido según el tamaño del contenedor.
 Si el contenedor tiene menos espacio en el contexto que lo envuelve, puedes optar por ocultar algunos elementos o utilizar una fuente más pequeña, por ejemplo.
 
 ![Una página web con tres componentes de cartas que se muestran en diferentes disposiciones según el tamaño del contenedor](container-query-examples.png)
 
 ## Utilizando container queries
 
-Para usar container queries, necesitas declarar un **containment context** (en un elemento, de esta manera el navegador sabrá que estás interesado en consultar las dimensiones del contenedor.
+Para usar container queries, necesitas declarar un **containment context** en un elemento, de esta manera el navegador sabrá que estás interesado en consultar las dimensiones del contenedor.
 Para hacer esto, usa la propiedad {{Cssxref("container-type")}} con los valores de `size`, `inline-size`, o `normal`.
 Estos valores tienen los siguientes efectos:
 
-- `size`: la consulta toma como referencia las dimensiones [inline y block](/es/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) del contenedor.
+- `size`: La consulta toma como referencia las dimensiones de [bloque y en línea](/es/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) del contenedor.
   Aplica contención de disposición, estilo y tamaño al contenedor.
-- `inline-size`: la consulta se basa únicamente en la dimensión [inline](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) del contenedor.
-  Aplica contención de disposición, estilo y tamaño _inline_ al contenedor.
+- `inline-size`: La consulta se basa únicamente en la dimensión [en línea](/es/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) del contenedor.
+  Aplica contención de disposición, estilo y tamaño en línea al contenedor.
 - `normal`: El elemento no es un _query container_ para consultas de tamaño, pero se sigue comportando como un _query container_ para consultas de estilos de contenedor (_container style queries_).
 
 En el siguiente fragmento de HTML se muestra un ejemplo de un componente tipo tarjeta que tiene una imagen, un título y algo de texto:
@@ -52,7 +52,7 @@ En el siguiente fragmento de HTML se muestra un ejemplo de un componente tipo ta
 </div>
 ```
 
-Puedes crear un containment context en el contenedor `div` al usar la propiedad `container-type`:
+Puedes crear un _containment context_ en el contenedor `div` al usar la propiedad `container-type`:
 
 ```css
 .container {
@@ -60,9 +60,9 @@ Puedes crear un containment context en el contenedor `div` al usar la propiedad 
 }
 ```
 
-Una vez que el containment context es creado, puedas utilizar la [regla-at](/es/docs/Web/CSS/At-rule) {{cssxref("@container")}} para escribir una _container query_.
-La _query_ en el siguiente ejemplo aplicará ciertos estilos a los elementos según el tamaño del ancestro más cercano con un containment context.
-Específicamente, esta query aumentará el tamaño de fuente del título de la carta si el contenedor es más ancho que `700px`:
+Una vez que el _containment context_ es creado, puedes utilizar la [regla _at_](/es/docs/Web/CSS/At-rule) {{cssxref("@container")}} para escribir una _container query_.
+La _query_ en el siguiente ejemplo aplicará ciertos estilos a los elementos según el tamaño del elemento padre más cercano con un _containment context_.
+Específicamente, esta _query_ aumentará el tamaño de fuente del título de la carta si el contenedor es más ancho que `700px`:
 
 ```css
 /* Estilos por defecto para el título de la carta */
@@ -78,16 +78,16 @@ Específicamente, esta query aumentará el tamaño de fuente del título de la c
 }
 ```
 
-Si existen otras áreas dentro de la página que también sean containment contexts, puedes utilizar el mismo componente en esas areas y éste se adaptará a los distintos contextos.
+Si existen otras áreas dentro de la página que también sean _containment contexts_, puedes utilizar el mismo componente en esas areas y éste se adaptará a los distintos contextos.
 Esto hace que los componentes reutilizables sean aún más flexibles sin la necesidad de saber específicamente dónde serán utilizados en cada ocasión.
 
-Para más información sobre la sintaxis de las container queries, mira la página de {{cssxref("@container")}}.
+Para más información sobre la sintaxis de las _container queries_, mira la página de {{cssxref("@container")}}.
 
 ### Containment context con nombre
 
-En la sección anterior vimos cómo utilizar una container query para aplicar estilos tomando como referencia al ancestro más cercano con un containment context.
-Puedes darle un nombre a un containment context utilizando la propiedad {{Cssxref("container-name")}}. Una vez con un nombre asociado, el nombre puede ser usado en una `@container` query para especificar un contenedor como objetivo específico.
-El siguiente ejemplo crea un containment context con el nombre `sidebar`:
+En la sección anterior vimos cómo utilizar una _container query_ para aplicar estilos tomando como referencia al elmento padre más cercano con un _containment context_.
+Puedes darle un nombre a un _containment context_ utilizando la propiedad {{cssxref("container-name")}}. Una vez con un nombre asociado, el nombre puede ser usado en una `@container` _query_ para especificar un contenedor como objetivo específico.
+El siguiente ejemplo crea un _containment context_ con el nombre `sidebar`:
 
 ```css
 .container {
@@ -96,7 +96,7 @@ El siguiente ejemplo crea un containment context con el nombre `sidebar`:
 }
 ```
 
-Ahora puedes hacer referencia a este containment context usando la regla-at `@container`:
+Ahora puedes hacer referencia a este _containment context_ usando la regla _at_ `@container`:
 
 ```css
 @container sidebar (min-width: 700px) {
@@ -107,11 +107,11 @@ Ahora puedes hacer referencia a este containment context usando la regla-at `@co
 }
 ```
 
-Para más información sobre los containment context con nombre, visita la página de la propiedad {{cssxref("container-name")}}.
+Para más información sobre los _containment context_ con nombre, visita la página de la propiedad {{cssxref("container-name")}}.
 
 ### Atajo para la sintaxis de contenedores
 
-La forma rápida para declarar un containment context es por medio de la propipedad `container`:
+La forma rápida para declarar un _containment context_ es por medio de la propiedad `container`:
 
 ```css
 .container {
@@ -123,20 +123,20 @@ Para más información sobre esta propiedad, visita la referencia de {{Cssxref("
 
 ### Unidades de longitud de container queries
 
-Cuando se usan container queries para aplicar estilos a un contenedor, puedes utilizar unidades de longitud de container queries.
+Cuando se usan _container queries_ para aplicar estilos a un contenedor, puedes utilizar unidades de longitud de _container queries_.
 Con estas unidades se pueden definir longitudes relativas a las dimensiones del contenedor.
 Aquellos componentes que utilizan unidades de longitud relativas a su contenedor, permiten mayor flexibilidad para ser usados en distintos contenedores sin la necesidad de recalcular valores de longitud concretos.
 
-las unidades de longitud de container queries son:
+Las unidades de longitud de _container queries_ son:
 
 - `cqw`: 1% del ancho del contenedor
 - `cqh`: 1% de la altura del contenedor
-- `cqi`: 1% del tamaño _inline_ del contenedor
-- `cqb`: 1% del tamaño _block_ del contenedor
+- `cqi`: 1% del tamaño en línea del contenedor
+- `cqb`: 1% del tamaño de bloque del contenedor
 - `cqmin`: El valor más pequeño entre `cqi` y `cqb`
 - `cqmax`: El valor más grande entre `cqi` y `cqb`
 
-En el siguiente ejemplo se usa la unidad `cqi` para cambiar el tamaño de fuente de un título según el tamaño inline del contenedor.
+En el siguiente ejemplo se usa la unidad `cqi` para cambiar el tamaño de fuente de un título según el tamaño en línea del contenedor.
 
 ```css
 @container (min-width: 700px) {
@@ -150,7 +150,7 @@ Para más información acerca de estas unidades, mira la referencia de [Unidades
 
 ## Propiedades de respaldo para container queries
 
-Se puede utilizar {{cssxref("grid")}} y {{cssxref("flex")}} para crear un efecto similar en los navegadores que aún no soportan las container queries.
+Se puede utilizar {{cssxref("grid")}} y {{cssxref("flex")}} para crear un efecto similar en los navegadores que aún no soportan las _container queries_.
 En el siguiente ejemplo se usa una declaración {{cssxref("grid-template-columns")}} para crear una disposición de dos columnas para el componente de tipo tarjeta.
 
 ```css
@@ -160,7 +160,7 @@ En el siguiente ejemplo se usa una declaración {{cssxref("grid-template-columns
 }
 ```
 
-Si deseas utilizar una disposición de una sola columna en dispositivos con un viewport más pequeño, puedas utilizar una media query para modificar la configuración de la cuadrícula.
+Si deseas utilizar una disposición de una sola columna en dispositivos con un _viewport_ más pequeño, puedas utilizar una _media query_ para modificar la configuración de la cuadrícula.
 
 ```css
 @media (max-width: 700px) {
@@ -173,7 +173,7 @@ Si deseas utilizar una disposición de una sola columna en dispositivos con un v
 ## Véase también
 
 - [Media queries](/es/docs/Web/CSS/Media_Queries)
-- La regla-at {{Cssxref("@container")}} de CSS
+- La regla _at_ {{Cssxref("@container")}} de CSS
 - La propiedad {{Cssxref("contain")}} de CSS
 - La propiedad atajo {{Cssxref("container")}} de CSS
 - La propiedad {{Cssxref("container-name")}} de CSS
