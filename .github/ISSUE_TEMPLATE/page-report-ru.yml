@@ -54,7 +54,7 @@ body:
     attributes:
       value: |
         ---
-        Готово! Остальные поля заполнятся сами. Пожалуйста, нажмите **Submit new issue**.
+        Готово! Остальные поля заполнятся сами. Нажмите **Submit new issue**, чтобы отправить форму.
   - type: textarea
     id: metadata
     attributes:
