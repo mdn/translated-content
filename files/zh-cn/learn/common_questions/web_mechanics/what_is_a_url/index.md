@@ -83,7 +83,7 @@ https://developer.mozilla.org/en-US/search?q=URL
 
 ## 锚点
 
-![Anchor](mdn-url-anchor@x2.png)
+![锚点](mdn-url-anchor@x2.png)
 
 `#SomewhereInTheDocument` 是资源本身的另一部分的锚点。锚点表示资源中的一种“书签”，给浏览器显示位于该“加书签”位置的内容的方向。例如，在 HTML 文档上，浏览器将滚动到定义锚点的位置;在视频或音频文档上，浏览器将尝试转到锚代表的时间。值得注意的是，＃后面的部分（也称为片段标识符）从来没有发送到请求的服务器。
 
