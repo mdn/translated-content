@@ -411,8 +411,8 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
-## 在本单元中
+## 本章目录
 
 - [HTML 表格入门](/zh-CN/docs/Learn/HTML/Tables/Basics)
 - [HTML 表格高级特性和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced)
-- [作业：构建行星数据](/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)
+- [构建行星数据](/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)
