@@ -526,7 +526,7 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
-## 在此模块
+## 本章目录
 
 - [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
 - [HTML：无障碍的良好的基础](/zh-CN/docs/Learn/Accessibility/HTML)
