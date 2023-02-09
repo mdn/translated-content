@@ -9,7 +9,7 @@ Aplicativos da Microsoft, como Edge e Internet Explorer, suportam uma série de 
 
 ## Propriedades somente para Microsoft (evite usar em sites)
 
-> **Note:** **Nota:** Essas propriedades funcionarão apenas em aplicativos da Microsoft e não estão em uma faixa de padrões.
+> **Nota:** Essas propriedades funcionarão apenas em aplicativos da Microsoft e não estão em uma faixa de padrões.
 
 - {{CSSxRef("-ms-acelerador")}}
 - {{CSSxRef("-ms-block-progression")}}

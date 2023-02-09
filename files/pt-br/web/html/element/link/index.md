@@ -23,7 +23,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este atributo define a codificação de caracteres do recurso vinculado. O valor é umespaço e/ou lista delimitada por vírgulas de conjuntos de caracteres, conformedefinido na RFC 2045. O valor padrão é ISO-8859-1.
 
-    > **Note:** **Nota:** Este atributo é obsoleto em HTML5 e **não deve ser usada por autores**. Para atingir seu efeito, use o cabeçalho HTTP Content-Type sobre o recurso vinculado.
+    > **Nota:** Este atributo é obsoleto em HTML5 e **não deve ser usada por autores**. Para atingir seu efeito, use o cabeçalho HTTP Content-Type sobre o recurso vinculado.
 
 - {{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}
 
@@ -40,7 +40,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este atributo é usado para desativa uma relação com o link. Em conjunto com o script, esse atributo poderia ser usado para ligar e desligar várias relações com stylesheets.
 
-    > **Note:** **Nota:** Embora, não haja nenhum atributo desativado no padrão HTML, há um atributo desabilitado no `HTMLLinkElement` DOM object.
+    > **Nota:** Embora, não haja nenhum atributo desativado no padrão HTML, há um atributo desabilitado no `HTMLLinkElement` DOM object.
     >
     > The use of `disabled` as an HTML attribute is non-standard and only used by some browsers ([W3 #27677](https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677)). **Do not use it**. To achieve a similar effect, use one of the following techniques:
     >
@@ -124,7 +124,7 @@ function sheetError() {
 <link rel="stylesheet" href="mystylesheet.css" onload="sheetLoaded()" onerror="sheetError()">
 ```
 
-> **Note:** **Nota:** O `load` event é carregado quando a stylesheet e quando todo o conteúdo importado foi carregado e analisado, e imediatamente antes que styles comecem a ser aplicados ao conteúdo.
+> **Nota:** O `load` event é carregado quando a stylesheet e quando todo o conteúdo importado foi carregado e analisado, e imediatamente antes que styles comecem a ser aplicados ao conteúdo.
 
 ## Notas
 

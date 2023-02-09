@@ -24,7 +24,7 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR
 - {{ htmlattrdef("autoplay") }}
   - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
 
-> **Note:** Nota: Algumas versões do Chrome aceitam somente o `autostart` e não o autoplay
+> **Nota:** Algumas versões do Chrome aceitam somente o `autostart` e não o autoplay
 
 - {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{ obsolete_inline() }}
 
@@ -68,7 +68,7 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
 
-> **Note:** **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
+> **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
 
 ## Exemplos
 
