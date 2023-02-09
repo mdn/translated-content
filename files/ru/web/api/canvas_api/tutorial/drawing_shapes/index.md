@@ -5,7 +5,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 Теперь, установив наше [окружение canvas](/ru/docs/Web/API/Canvas_API/Tutorial/Basic_usage), мы можем погрузиться в детали того, как рисовать в canvas. К концу этой статьи, вы научитесь рисовать прямоугольники, треугольники, линии, дуги и кривые, при условии что вы хорошо знакомы с основными геометрическими фигурами. Работа с путями весьма важна, когда рисуете объекты на canvas и мы увидим как это может быть сделано.
 
