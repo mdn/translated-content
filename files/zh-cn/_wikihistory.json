@@ -33686,9 +33686,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2019-11-11T06:43:23.528Z",
-    "contributors": ["codimiracle"]
   }
 }

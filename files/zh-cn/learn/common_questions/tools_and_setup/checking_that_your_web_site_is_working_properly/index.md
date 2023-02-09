@@ -2,7 +2,6 @@
 title: 如何确保你的网站正常运行？
 slug: >-
   Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-original_slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

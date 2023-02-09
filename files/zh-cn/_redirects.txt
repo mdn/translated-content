@@ -1897,7 +1897,7 @@
 /zh-CN/docs/Web/API/XMLDocument/async	/zh-CN/docs/Web/API/XMLDocument
 /zh-CN/docs/Web/API/XMLDocument/load	/zh-CN/docs/Web/API/XMLDocument
 /zh-CN/docs/Web/API/XMLHttpRequest/FormData	/zh-CN/docs/Web/API/FormData
-/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /zh-CN/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-CN/docs/Web/API/XMLHttpRequest/readystatechange_event
 /zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onabort	/zh-CN/docs/Web/API/XMLHttpRequest/abort_event
 /zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onerror	/zh-CN/docs/Web/API/XMLHttpRequest/error_event

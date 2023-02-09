@@ -1,7 +1,6 @@
 ---
 title: 互联网是如何工作的
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
-original_slug: Learn/Common_questions/How_does_the_Internet_work
 ---
 
 这篇文章讨论什么是互联网以及它是如何工作的。

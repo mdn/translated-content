@@ -1,7 +1,6 @@
 ---
 title: 何为无障碍？
 slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
-original_slug: Learn/Common_questions/What_is_accessibility
 ---
 
 本文介绍了 Web 无障碍背后的一些基本概念。
