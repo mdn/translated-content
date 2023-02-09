@@ -145,7 +145,7 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
     Starting with Firefox 3, secondary windows are always resizable ({{Bug(177838)}})
 
-    > **Nota:** **Tip**: For accessibility reasons, it is strongly recommended to set this feature always on
+    > **Nota:** For accessibility reasons, it is strongly recommended to set this feature always on
 
     Mozilla and Firefox users can force new windows to be easily resizable by setting
     `dom.disable_window_open_feature.resizable`
@@ -155,7 +155,7 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
   - : If this feature is on, the new secondary window will show horizontal and/or vertical scrollbar(s) if the document doesn't fit into the window's viewport.
 
-    > **Nota:** **Tip**: For accessibility reasons, it is strongly encouraged to set this feature always on.
+    > **Nota:** For accessibility reasons, it is strongly encouraged to set this feature always on.
 
     Mozilla and Firefox users can force this option to be always enabled for new windows by setting
     `dom.disable_window_open_feature.scrollbars`
