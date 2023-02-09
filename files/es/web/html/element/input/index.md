@@ -317,7 +317,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 ### Introducción de archivos
 
-> **Nota:** A partir de {{Gecko("2.0")}}, llamar al método `click()` en un elemento `<input>` de tipo "file" abre el selector de archivos y permite al usuario seleccionar archivos. Véase [Utilizar ficheros desde aplicaciones web](/es/docs/Using_files_from_web_applications) para ejemplos y más detalles.
+> **Nota:** A partir de Gecko 2.0, llamar al método `click()` en un elemento `<input>` de tipo "file" abre el selector de archivos y permite al usuario seleccionar archivos. Véase [Utilizar ficheros desde aplicaciones web](/es/docs/Using_files_from_web_applications) para ejemplos y más detalles.
 
 No se puede establecer el valor de un selector de archivos desde un script. Hacer algo como lo siguiente no tiene efecto alguno:
 
