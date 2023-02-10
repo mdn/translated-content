@@ -1,14 +1,6 @@
 ---
 title: MediaStreamTrack.enabled
 slug: Web/API/MediaStreamTrack/enabled
-tags:
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaStreamTrack/enabled
 ---
 {{APIRef("Media Capture and Streams")}}
 
@@ -39,7 +31,7 @@ track.enabled = [true | false]
 
 ## 예제
 
-다음 코드는 {{event("click")}} 이벤트 처리기를 사용해 일시정지를 구현합니다.
+다음 코드는 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트 처리기를 사용해 일시정지를 구현합니다.
 
 ```js
 pauseButton.onclick = function(evt) {

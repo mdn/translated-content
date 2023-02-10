@@ -51,7 +51,7 @@ slug: Web/HTML/Element/output
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("status")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/status_role">status</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可された ARIA ロール</th>

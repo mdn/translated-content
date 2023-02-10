@@ -1,14 +1,6 @@
 ---
 title: Window.console
 slug: Web/API/Window/console
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - console
-translation_of: Web/API/Window/console
 ---
 
 {{APIRef}}

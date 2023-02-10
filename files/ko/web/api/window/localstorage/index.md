@@ -1,17 +1,6 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Storage
-  - Web Storage
-  - Window
-  - WindowLocalStorage
-  - 로컬스토리지
-translation_of: Web/API/Window/localStorage
 ---
 
 {{APIRef("Web Storage API")}}

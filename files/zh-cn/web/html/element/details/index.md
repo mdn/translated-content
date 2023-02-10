@@ -81,7 +81,7 @@ details.addEventListener("toggle", event => {
 });
 ```
 
-## 例子
+## 示例
 
 ### A simple disclosure example
 

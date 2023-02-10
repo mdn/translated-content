@@ -1,7 +1,6 @@
 ---
 title: Classes
 slug: Web/JavaScript/Reference/Classes
-translation_of: Web/JavaScript/Reference/Classes
 ---
 {{JsSidebar("Classes")}}
 

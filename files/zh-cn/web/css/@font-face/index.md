@@ -44,9 +44,7 @@ slug: Web/CSS/@font-face
 
 下面的例子简单定义了一个可下载的字体，并应用到了文档的整个 body 标签上。
 
-[View live sample](/@api/deki/files/2935/=webfont-sample.html)
-
-```
+```html
 <html>
 <head>
   <title>Web Font Sample</title>

@@ -34,7 +34,7 @@ border-top-style: unset;
 
 选取以上可用关键字之一作为 {{cssxref("border-style")}} 的 **border-top-style** 属性的值。
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -90,7 +90,7 @@ tr, td {
 
 #### 输出结果
 
-{{ EmbedLiveSample('Examples', 300, 200) }}
+{{ EmbedLiveSample('示例', 300, 200) }}
 
 ## 规范
 
@@ -102,7 +102,7 @@ tr, td {
 
 {{Compat}}
 
-## 相关词条
+## 参见
 
 - The other style-related border properties: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-bottom-style") }}, and {{ Cssxref("border-style") }}.
 - The other top-border-related properties: {{ Cssxref("border-top") }}, {{ Cssxref("border-top-color") }}, and {{ Cssxref("border-top-width") }}.

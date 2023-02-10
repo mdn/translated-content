@@ -1,15 +1,6 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - WeakMap
-  - Polyfill
-browser-compat: javascript.builtins.WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
 
 {{JSRef}}

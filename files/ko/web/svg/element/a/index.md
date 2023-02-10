@@ -1,11 +1,6 @@
 ---
 title: <a>
 slug: Web/SVG/Element/a
-tags:
-  - Element
-  - SVG
-  - SVG Anchor 엘리먼트
-translation_of: Web/SVG/Element/a
 ---
 
 {{SVGRef}}

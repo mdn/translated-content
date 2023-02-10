@@ -1,7 +1,6 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
-translation_of: Web/API/AudioBufferSourceNode
 ---
 {{APIRef("Web Audio API")}}
 
@@ -97,13 +96,11 @@ button.onclick = function() {
 
 > **참고:** For a `decodeAudioData` example, see the {{domxref("AudioContext.decodeAudioData")}} page.
 
-## Specification
+## 명세서
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-audiobuffersourcenode-interface', 'AudioBufferSourceNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

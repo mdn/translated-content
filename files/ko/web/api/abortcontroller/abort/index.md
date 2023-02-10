@@ -1,15 +1,6 @@
 ---
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
-tags:
-  - API
-  - AbortController
-  - Fetch
-  - abort()
-  - 레퍼런스
-  - 메소드
-  - 실험적
-translation_of: Web/API/AbortController/abort
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}

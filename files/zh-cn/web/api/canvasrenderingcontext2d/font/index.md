@@ -33,8 +33,8 @@ ctx.font = value;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.font = "bold 48px serif";
 ctx.strokeText("Hello world", 50, 100);
@@ -42,44 +42,7 @@ ctx.strokeText("Hello world", 50, 100);
 
 #### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="编辑" />
-  <input id="reset" type="button" value="重置" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.font = "bold 48px serif";
-ctx.strokeText("Hello world", 50, 100);</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{EmbedLiveSample('Playable_code', 700, 360)}}
+{{ EmbedLiveSample('使用自定义字体', 700, 180) }}
 
 ### 使用 CSS 字体加载 API 加载字体
 
@@ -93,7 +56,7 @@ f.load().then(function() {
 });
 ```
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

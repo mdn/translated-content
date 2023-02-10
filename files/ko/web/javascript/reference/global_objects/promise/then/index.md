@@ -1,13 +1,6 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Promise
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
 
 {{JSRef}}

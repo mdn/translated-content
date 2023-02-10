@@ -1,12 +1,6 @@
 ---
 title: WebGL로 3D 객체 만들기
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-tags:
-  - 3D
-  - 3차원
-  - WebGL
-  - 입체
-translation_of: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

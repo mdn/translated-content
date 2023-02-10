@@ -1,14 +1,6 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
-tags:
-  - API
-  - Geolocation
-  - Geolocation API
-  - Method
-  - Reference
-  - Secure context
-translation_of: Web/API/Geolocation/watchPosition
 ---
 
 {{securecontext_header}}{{ APIref("Geolocation API") }}

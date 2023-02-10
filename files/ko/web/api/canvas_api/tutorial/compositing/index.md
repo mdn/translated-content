@@ -1,11 +1,6 @@
 ---
 title: 도형 합성
 slug: Web/API/Canvas_API/Tutorial/Compositing
-tags:
-  - HTML5
-  - 그래픽
-  - 캔버스
-translation_of: Web/API/Canvas_API/Tutorial/Compositing
 original_slug: Web/HTML/Canvas/Tutorial/Compositing
 ---
 

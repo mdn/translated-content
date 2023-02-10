@@ -29,17 +29,58 @@ element.scrollTop = intValue;
 
 ## 範例
 
-padding-top
+### Scrolling an element
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+In this example, try scrolling the inner container with the dashed border, and see how the value of `scrollTop` changes.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+#### HTML
 
-padding-bottom
+```html
+<div id="container">
+  <div id="scroller">
+    <p>
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Orbiting this at a distance of roughly ninety-two million miles is an
+      utterly insignificant little blue green planet whose ape-descended life
+      forms are so amazingly primitive that they still think digital watches are
+      a pretty neat idea.
+    </p>
+  </div>
+</div>
 
-**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
+<div id="output">scrollTop: 0</div>
+```
 
-![Image:scrollTop.png](/@api/deki/files/842/=ScrollTop.png)
+#### CSS
+
+```css
+#scroller {
+  overflow: scroll;
+  height: 150px;
+  width: 150px;
+  border: 5px dashed orange;
+}
+
+#output {
+  padding: 1rem 0;
+}
+```
+
+#### JavaScript
+
+```js
+const scroller = document.querySelector("#scroller");
+const output = document.querySelector("#output");
+
+scroller.addEventListener("scroll", (event) => {
+  output.textContent = `scrollTop: ${scroller.scrollTop}`;
+});
+```
+
+#### 結果
+
+{{EmbedLiveSample("Scrolling_an_element", 400, 250)}}
 
 ## 規範
 

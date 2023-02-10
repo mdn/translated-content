@@ -1,158 +1,198 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
+l10n:
+  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
 {{JSRef}}
 
-**`bind()`** メソッドは、呼び出された際に `this` キーワードに指定された値が設定される新しい関数を生成します。この値は新しい関数が呼び出されたとき、一連の引数の前に置かれます。
+**`bind()`** メソッドは新しい関数を生成し、これは呼び出された際に `this` キーワードに指定された値が設定されます。この値は新しい関数が呼び出されたとき、一連の引数の前に置かれます。
 
 {{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
 
 ## 構文
 
-```js
+```js-nolint
 bind(thisArg)
 bind(thisArg, arg1)
 bind(thisArg, arg1, arg2)
-bind(thisArg, arg1, ... , argN)
+bind(thisArg, arg1, arg2, /* …, */ argN)
 ```
 
 ### 引数
 
 - `thisArg`
-  - : バインドされた関数が呼び出される際、 `this` 引数としてターゲット関数 `func` に渡される値です。バインドされた関数が {{jsxref("Operators/new", "new")}} 演算子によって構築された場合、この引数は無視されます。 `bind` を使用して `setTimeout` の中で (コールバックとして提供する) 関数を生成する場合、 `thisArg` として渡されたプリミティブ値はオブジェクトに変換されます。引数が `bind` に提供されなかった場合、または `thisArg` が `null` または `undefined` であった場合は、実行スコープの `this` は新しい関数のための `thisArg` として扱われます。
-- `arg1, arg2, ...argN` {{optional_inline}}
-  - : `func` を呼び出す時、バインドされた関数に与えられる引数の前に付けて渡す引数。
+  - : バインド済み関数が呼び出される際、 `this` 引数としてターゲット関数 `func` に渡される値です。関数が[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でない場合、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) と [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) はグローバルオブジェクトに置き換わり、プリミティブ値はオブジェクトに変換されます。バインド済み関数が {{jsxref("Operators/new", "new")}} 演算子によって構築された場合、この引数は無視されます。
+- `arg1, …, argN` {{optional_inline}}
+  - : `func` を呼び出す時、バインド済み関数に与えられる引数の前に付けて渡す引数。
 
 ### 返値
 
-`this` の値と初期の引数を指定された関数のコピーです。
+`this` の値と初期の引数（提供された場合）が指定された関数のコピーです。
 
 ## 解説
 
-**bind()** 関数は、新しい**バインドされた関数**、すなわち元の関数オブジェクトをラップする*特殊関数オブジェクト (exotic function object)* (ECMAScript 2015 からの用語) を生成します。バインドされた関数を呼び出すと、通常はラップされた関数が実行される結果になります。
+`bind()` 関数は新しい「バインド済み関数 (_bound function_)」を生成します。バインド済み関数を呼び出すと、通常はラップされた関数のほうが実行され、それは「ターゲット関数 (_target function_)」とも呼ばれます。バインド済み関数は、渡された引数、すなわち `this` の値と最初のいくつかの引数を内部の状態として格納します。これらの値は、呼び出し時に渡されるのではなく、あらかじめ格納されています。一般に、`const boundFn = fn.bind(thisArg, arg1, arg2)` は、`const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)` と呼ばれるのと同じだと考えてよいでしょう（ただし `boundFn` が構築されたときではなく、呼び出されたときに効果があります）。
 
-バインドされた関数は、以下の内部プロパティを持ちます。
+バインド済み関数は、 `boundFn.bind(thisArg, /* その他の引数 */)` を呼び出すことでさらにバインドすることができ、別のバインド済み関数 `boundFn2` が作成されます。なぜなら、`boundFn2` の対象となる関数 `boundFn` はすでに `this` というバインド済み関数を持っているからです。`boundFn2` が呼ばれると、 `boundFn` を呼び出すことになり、それが `fn` を呼び出すことになります。最終的に `fn` が受け取る引数は、順に `boundFn` にバインドされた引数、 `boundFn2` にバインドされた引数、 `boundFn2` で受け取った引数になります。
 
-- **`[[BoundTargetFunction]]`**
-  - : ラップされた関数オブジェクト
-- **`[[BoundThis]]`**
-  - : ラップされた関数を呼び出す時に常に **this** に渡される値。
-- **`[[BoundArguments]]`**
-  - : ラップされた関数を呼び出す時に、その要素が第 1 引数として使われる値のリスト。
-- **`[[Call]]`**
-  - : オブジェクトに関連する実行コード。関数呼び出し式を通じて実行される。内部メソッドへの引数は `this` 値と呼び出し式によって関数に渡される引数を含むリスト。
+```js
+"use strict"; // `this` がラッパーオブジェクトの中に入ってしまうのを防ぐ
 
-バインドされた関数が呼び出されると、内部メソッド `[[Call]]` を `[[BoundTargetFunction]]` 上で、 `Call(boundThis, ...args)` の引数で呼び出します。ここで `boundThis` は `[[BoundThis]]`、 `args` は `[[BoundArguments]]` で、その後に関数呼び出しで渡された引数が続きます。
+function log(...args) {
+  console.log(this, ...args);
+}
+const boundLog = log.bind("this value", 1, 2);
+const boundLog2 = boundLog.bind("new this value", 3, 4);
+boundLog2(5, 6); // "this value", 1, 2, 3, 4, 5, 6
+```
 
-バインドされた関数は {{jsxref("Operators/new", "new")}} 演算子でも生成されます。これを行うとターゲット関数が代わりに生成されたようになります。与えられた `this` の値は無視され、追加された引数はエミュレートされた関数に提供されます。
+バインド済み関数は、そのターゲット関数が構築可能であれば、{{jsxref("Operators/new", "new")}} 演算子を使用してオブジェクトを構築することもできます。これは、あたかもターゲット関数で構築されたかのように動作します。前置された引数は通常通りターゲット関数に提供されますが、指定された `this` 値は無視されます（コンストラクターは {{jsxref("Reflect.construct")}} の引数で見られるように、自分自身で `this` を用意するためです）。バインド済み関数が直接構築された場合、代わりに [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) がターゲット関数になります（つまり、バインドされた関数は `new.target` に対して透過的です）。
+
+```js
+class Base {
+  constructor(...args) {
+    console.log(new.target === Base);
+    console.log(args);
+  }
+}
+
+const BoundBase = Base.bind(null, 1, 2);
+
+new BoundBase(3, 4); // true, [1, 2, 3, 4]
+```
+
+しかし、バインド済み関数は [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを持たないので、 [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) の基底クラスとして使用することはできません。
+
+```js example-bad
+class Derived extends class {}.bind(null) {}
+// TypeError: Class extends value does not have valid prototype property undefined
+```
+
+バインド済み関数を [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) の右辺として使用する場合、 `instanceof` はターゲット関数（これはバインド済み関数の内部に格納されています）に到達し、 代わりにその `prototype` を読み取ります。
+
+```js
+class Base {}
+const BoundBase = Base.bind(null, 1, 2);
+console.log(new Base() instanceof BoundBase); // true
+```
+
+バインド済み関数には以下のようなプロパティがあります。
+
+- [`length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/length)
+  - : ターゲット関数の `length` から、バインドされる引数の数（ `thisArg` 引数はカウントしない）を引いた値で、0が最小値になります。
+- [`name`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
+  - : 対象となる関数の `name` に `"bound "` という接頭辞を加えたものです。
+
+バインド済み関数は、ターゲット関数の[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)も引き継ぎます。しかし、他にターゲット関数の独自のプロパティ（ターゲット関数がクラスの場合は[静的プロパティ](/ja/docs/Web/JavaScript/Reference/Classes/static)など）を持つことはありません。
 
 ## 例
 
-### バインドされた関数の生成
+### バインド済み関数の生成
 
 最もシンプルな `bind()` の使い方は、どのように呼び出された場合でも特定の `this` 値を持つ関数を生成することです。
 
-初心者の JavaScript プログラマーがよくやる間違いは、あるオブジェクトからメソッドを取り出し、後でその関数を呼び出すとき、その内側の `this` 値が元のオブジェクトになると考えてしまうことです (例えば、そのメソッドをコールバック関数に使う場合)。
+初心者の JavaScript プログラマーがよくやる間違いは、あるオブジェクトからメソッドを抽出し、後でその関数を呼び出すとき、その内側の `this` 値が元のオブジェクトになると考えてしまうことです（例えば、そのメソッドをコールバック関数に使う場合）。
 
-特に配慮しなければ、ふつうは元のオブジェクトが見えなくなります。その関数に元々のオブジェクトを `bind()` してバインドされた関数を生成すれば、この問題をきちんと解決することができます。
+特に配慮しなければ、ふつうは元のオブジェクトが見えなくなります。その関数に元々のオブジェクトを `bind()` してバインド済み関数を生成すれば、この問題をきちんと解決することができます。
 
 ```js
-this.x = 9;    // 'this' はここではブラウザーのグローバルな 'window' オブジェクト
+this.x = 9; // 'this' はここではブラウザーのグローバルな 'window' オブジェクト
 const module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX() {
+    return this.x;
+  },
 };
 
-module.getX();
-// 81 を返します
+console.log(module.getX()); // 81
 
 const retrieveX = module.getX;
-retrieveX();
-// 9 を返します。この関数はグローバルスコープで呼び出されるためです。
+console.log(retrieveX()); // 9。この関数はグローバルスコープで呼び出されるためです。
 
 // 'this' を module に結びつけた新しい関数を生成
 // 初心者のプログラマーはグローバル変数の x と
 // モジュールプロパティの x とを混同するかもしれません。
 const boundGetX = retrieveX.bind(module);
-boundGetX();
-// 81 を返します
+console.log(boundGetX()); // 81
 ```
+
+> **メモ:** この例を[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で呼び出すと（例えば ECMAScript モジュール内や `"use strict"` ディレクティブを通して）、グローバルな `this` 値は不定となり、 `retrieveX` 呼び出しに失敗する原因となります。
+>
+> これを Node CommonJS モジュール内で実行すると、厳格モードかどうかに関わらず、最上位スコープの `this` は `globalThis` ではなく `module.exports` を指すようになります。しかし、関数内では、バインドされていない `this` の参照は、それでも「厳格モードでなければ `globalThis` 、厳格モードならば `undefined`」というルールに従います。したがって、厳格モードでない場合（既定）は、 `retrieveX` は `undefined` を返します。これは、 `this.x = 9` が、 `getX` が読んでいるオブジェクト (`globalThis`) とは異なるオブジェクト (`module.exports`) に書き込んでいるためです。
+
+実際、いくつかの組み込みの「メソッド」はバインド済み関数を返すゲッターでもあります。注目すべき例は [`Intl.NumberFormat.prototype.format()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format#using_format_with_map) で、アクセスすると、コールバックとして直接渡すことのできる、バインド済み関数を返します。
 
 ### 部分的に適用された関数
 
-次にシンプルな `bind()` の使い方は、あらかじめ引数が指定された関数を生成することです。
+次のシンプルな `bind()` の使い方は、あらかじめ引数が指定された関数を生成することです。
 
-これらの引数は、`this` 値の後に続けます (指定しないことも可能)。すると、バインドされた関数がいつ呼ばれても、この指定された引数を先頭にしてバインドされた関数の引数がターゲット関数に渡されます。
+これらの引数は（もしあれば）指定された `this` 値の後に続き、ターゲット関数に渡される引数の先頭に挿入され、その後に、バインドされた関数が呼ばれる際に渡される引数が続きます。
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments);
+function list(...args) {
+  return args;
 }
 
 function addArguments(arg1, arg2) {
   return arg1 + arg2;
 }
 
-const list1 = list(1, 2, 3);
-//  [1, 2, 3]
+console.log(list(1, 2, 3)); // [1, 2, 3]
 
-const result1 = addArguments(1, 2);
-//  3
+console.log(addArguments(1, 2)); // 3
 
 // 先頭の引数が設定済みの関数を生成します。
-const leadingThirtysevenList = list.bind(null, 37);
+const leadingThirtySevenList = list.bind(null, 37);
 
 // 第一引数が設定済みの関数を生成します。
 const addThirtySeven = addArguments.bind(null, 37);
 
-const list2 = leadingThirtysevenList();
-//  [37]
-
-const list3 = leadingThirtysevenList(1, 2, 3);
-//  [37, 1, 2, 3]
-
-const result2 = addThirtySeven(5);
-//  37 + 5 = 42
-
-const result3 = addThirtySeven(5, 10);
-//  37 + 5 = 42
-//  (the second argument is ignored)
+console.log(leadingThirtySevenList()); // [37]
+console.log(leadingThirtySevenList(1, 2, 3)); // [37, 1, 2, 3]
+console.log(addThirtySeven(5)); // 42
+console.log(addThirtySeven(5, 10)); // 42
+// (最後の引数 10 は無視されます)
 ```
 
-### `setTimeout` での利用
+### setTimeout() での利用
 
-既定では、 {{domxref("WindowOrWorkerGlobalScope.setTimeout()", "window.setTimeout()")}} 内部の `this` キーワードは {{domxref("window")}} (または `global` オブジェクト) に設定されます。クラスインスタンスを参照する `this` が必要なクラスメソッドを使う場合、 `this` をコールバック関数と明確に結びつけて (バインドして)、インスタンスを維持することができます。
+既定では、 {{domxref("setTimeout()")}} 内部の `this` キーワードは [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis)、すなわちブラウザーでは {{domxref("window")}} に設定されます。暮らすメソッドを使用して `this` がクラスインスタンスを参照するようにする必要がある場合、インスタンスを保守するために、明示的に `this` をコールバック関数にバインドすることができます。
 
 ```js
-function LateBloomer() {
-  this.petalCount = Math.floor(Math.random() * 12) + 1;
+class LateBloomer {
+  constructor() {
+    this.petalCount = Math.floor(Math.random() * 12) + 1;
+  }
+  bloom() {
+    // 1 秒間の遅延の後に開花を宣言
+    setTimeout(this.declare.bind(this), 1000);
+  }
+  declare() {
+    console.log(`わたしは花びらが ${this.petalCount} 枚の綺麗な花です！`);
+  }
 }
-
-// 1 秒遅延させてから bloom を宣言する
-LateBloomer.prototype.bloom = function() {
-  window.setTimeout(this.declare.bind(this), 1000);
-};
-
-LateBloomer.prototype.declare = function() {
-  console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
-};
 
 const flower = new LateBloomer();
 flower.bloom();
-//  after 1 second, calls 'flower.declare()'
+// After 1 second, calls 'flower.declare()'
 ```
 
-### コンストラクターとして使用するバインドされた関数
+このために[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用することもできます。
 
-> **警告:** この節では、 JavaScript の機能性を実演するため、 `bind()` メソッドの極端な例を説明しています。
->
-> 以下の方法は何かを実現するのに最適な方法ではなく、むしろ本番環境では使用するべきでない方法です。
+```js
+class LateBloomer {
+  bloom() {
+    // 1 秒間の遅延の後に開花を宣言
+    setTimeout(() => this.declare(), 1000);
+  }
+}
+```
 
-バインドされた関数は自動的に、 {{jsxref("Operators/new", "new")}} 演算子を使ってターゲット関数の新しいインスタンスを構築できるようになっています。新たな値を構築するためにバインドされた関数を使った場合、 `this` を与えても無視されます。
+### コンストラクターとして使用するバインド済み関数
 
-しかし、同時に与える引数はコンストラクター呼び出しの先頭部分に挿入されます。
+バインド済み関数は自動的に、 {{jsxref("Operators/new", "new")}} 演算子を使ってターゲット関数の新しいインスタンスを構築できるようになっています。新たな値を構築するためにバインド済み関数を使った場合、 `this` を与えても無視されます。しかし、同時に与える引数はコンストラクター呼び出しの先頭部分に挿入されます。
 
 ```js
 function Point(x, y) {
@@ -160,7 +200,7 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
+Point.prototype.toString = function () {
   return `${this.x},${this.y}`;
 };
 
@@ -168,44 +208,57 @@ const p = new Point(1, 2);
 p.toString();
 // '1,2'
 
-//  以下のポリフィルには対応していません。
-
-//  ネイティブの bind ではうまく動作します。
-
-const YAxisPoint = Point.bind(null, 0/*x*/);
-
-const emptyObj = {};
-const YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+// thisArg の値は無視されるため、重要ではない
+const YAxisPoint = Point.bind(null, 0 /*x*/);
 
 const axisPoint = new YAxisPoint(5);
-axisPoint.toString();                    // '0,5'
+axisPoint.toString(); // '0,5'
 
-axisPoint instanceof Point;              // true
-axisPoint instanceof YAxisPoint;         // true
+axisPoint instanceof Point; // true
+axisPoint instanceof YAxisPoint; // true
 new YAxisPoint(17, 42) instanceof Point; // true
 ```
 
-バインドされた関数を {{jsxref("Operators/new", "new")}} で使えるように生成するのに特別なことをする必要は無いので注意してください。
+{{jsxref("Operators/new", "new")}}で使用するためのバインド済み関数を作成するために、特別なことをする必要はないことに注意してください。[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target), [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof), [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) などはすべて期待通り、まるでこのコンストラクターがバインドされていないかのように処理されます。唯一の異なる形は、 [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) には使用できなくなるということです。
 
-当然、普通に呼び出されるバインドされた関数を生成する際も特別なことは必要ありません。もしその関数を {{jsxref("Operators/new", "new")}} 演算子とともに呼び出すことにしか使いたくないと思っても、普通に呼び出すことはできてしまいます。
+このことから、たとえバインド済み関数が {{jsxref("Operators/new", "new")}} を使用してのみ呼び出すことを要求したい場合でも、プレーンに呼び出される関数を作成することと比べて、特別なことをする必要はないことがわかります。 `new` を使わずに呼び出すと、バインドされた `this` は突然無視されなくなります。
 
 ```js
-// この例は JavaScript コンソールで直接実行できます
-// ...上の例のつづき
+const emptyObj = {};
+const YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 
 // 普通の関数としても実行できます
 // (あまり必要にはなりませんが)
 YAxisPoint(13);
 
-`${emptyObj.x},${emptyObj.y}`;
-// >  '0,13'
+// これで `this` に対する変更が外から監視できるようになりました。
+console.log(emptyObj); // { x: 0, y: 13 }
 ```
 
-バインドされた関数を {{jsxref("Operators/new", "new")}} でしか使えないように制限したい場合、または通常の呼び出しだけに制限したい場合には、ターゲット関数がその制限を強制するようにしなければなりません。
+バインドされた関数が {{jsxref("Operators/new", "new")}} でしか呼び出せないように制限したい場合、あるいは `new` なしでのみ呼び出せるようにしたい場合、ターゲット関数は `new.target !== undefined` を参照するか、代わりに[クラス](/ja/docs/Web/JavaScript/Reference/Classes)を使用して、その制限を実施しなければなりません。
 
-### ショートカットの作成
+### クラスのバインド
 
-`bind()` は、特定の `this` を必要とするような関数のショートカットを作成するのにも便利です。
+クラスに対して `bind()` を使用すると、そのクラスの意味づけはほとんど維持されますが、現在のクラスのすべての静的な自分自身のプロパティは失われます。しかし、プロトタイプチェーンは維持されるので、親クラスから継承された静的プロパティにアクセスすることは可能です。
+
+```js
+class Base {
+  static baseProp = "base";
+}
+
+class Derived extends Base {
+  static derivedProp = "derived";
+}
+
+const BoundDerived = Derived.bind(null);
+console.log(BoundDerived.baseProp); // "base"
+console.log(BoundDerived.derivedProp); // undefined
+console.log(new BoundDerived() instanceof Derived); // true
+```
+
+### メソッドのユーティリティ関数への変換
+
+`bind()` は特定の `this` 値を必要とするメソッドを、前回の `this` 引数を通常の引数として受け入れるプレーンなユーティリティ関数に変換したい場合にも役立ちます。これは、汎用的なユーティリティ関数の動作方法に似ています。 `array.map(callback)` を呼び出す代わりに、 `map(array, callback)` を使うと、 `Array.prototype` を変更することを避け、配列でない配列風オブジェクト（例えば [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) など）でも、 `map` が使用できるようになります。
 
 例として、{{jsxref("Array.prototype.slice()")}} を取り上げます。この関数は、配列に似たオブジェクトを本物の配列へ変換するために使えます。まず、次のようにショートカットを作成するとします。
 
@@ -214,102 +267,20 @@ const slice = Array.prototype.slice;
 
 // ...
 
-slice.apply(arguments);
+slice.call(arguments);
 ```
 
-`bind()` を使うと、さらにシンプルにできます。
-
-次のコードでは、 `slice()` が {{jsxref("Function")}} の {{jsxref("Function.prototype.apply()", "apply()")}} 関数に結びつけられた関数になり、その内側の `this` 値は {{jsxref("Array.prototype")}} の{{jsxref("Array.prototype.slice()", "slice()")}} 関数にセットされます。こうすると、いちいち `apply()` を呼び出す必要がなくなります。
+`slice.call` を保存して、普通の関数として呼び出すことはできないことに注意してください。なぜなら、 `call()` メソッドは、呼び出すべき関数である `this` の値も読み取るからです。この場合、 `bind()` を使用して、 `call()` に `this` の値をバインドすることができます。以下のコードでは、 `slice()` は {{jsxref("Function.prototype.call()")}} のバインド版で、 `this` の値は {{jsxref("Array.prototype.slice()")}} にバインドされます。これは、追加の `call()` 呼び出しを省くことができることを意味しています。
 
 ```js
 // ひとつ前の例の "slice" と同じ
 const unboundSlice = Array.prototype.slice;
-const slice = Function.prototype.apply.bind(unboundSlice);
+const slice = Function.prototype.call.bind(unboundSlice);
 
 // ...
 
 slice(arguments);
 ```
-
-## ポリフィル
-
-古いブラウザーは一般的に遅いブラウザーでもあるので、古いブラウザーでの閲覧を少しでも悪くなくすために、性能の良いポリフィルを作成することは、多くの人が認識しているよりもはるかに重要なことです。
-
-したがって、 `Function.prototype.bind()` のポリフィルの選択肢を二つ示します。
-
-1. 最初の方の方がずっと小さくて性能が良いのですが、 `new` 演算子を使うとうまくいきません。
-2. 2 番目の方が大きくて性能が低いですが、`new` 演算子を使ってバインドされた関数を使用することができます。
-
-一般的に、ほとんどのコードでは、バインドされた関数で `new` が使用されることはとても稀なので、一般的には最初の選択肢を使用するのがベストです。
-
-```js
-//  Does not work with `new (funcA.bind(thisArg, args))`
-if (!Function.prototype.bind) (function(){
-  var slice = Array.prototype.slice;
-  Function.prototype.bind = function() {
-    var thatFunc = this, thatArg = arguments[0];
-    var args = slice.call(arguments, 1);
-    if (typeof thatFunc !== 'function') {
-      // closest thing possible to the ECMAScript 5
-      // internal IsCallable function
-      throw new TypeError('Function.prototype.bind - ' +
-             'what is trying to be bound is not callable');
-    }
-    return function(){
-      var funcArgs = args.concat(slice.call(arguments))
-      return thatFunc.apply(thatArg, funcArgs);
-    };
-  };
-})();
-```
-
-以下のコードをスクリプトの先頭に挿入すれば、その状況をいくらか変えることができます。ネイティブで対応されていない実装において、 `bind()` の多くの機能を使えるようになります。
-
-```js
-//  Yes, it does work with `new (funcA.bind(thisArg, args))`
-if (!Function.prototype.bind) (function(){
-  var ArrayPrototypeSlice = Array.prototype.slice;
-  Function.prototype.bind = function(otherThis) {
-    if (typeof this !== 'function') {
-      // closest thing possible to the ECMAScript 5
-      // internal IsCallable function
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
-    }
-
-    var baseArgs= ArrayPrototypeSlice.call(arguments, 1),
-        baseArgsLength = baseArgs.length,
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          baseArgs.length = baseArgsLength; // reset to default base arguments
-          baseArgs.push.apply(baseArgs, arguments);
-          return fToBind.apply(
-                 fNOP.prototype.isPrototypeOf(this) ? this : otherThis, baseArgs
-          );
-        };
-
-    if (this.prototype) {
-      // Function.prototype doesn't have a prototype property
-      fNOP.prototype = this.prototype;
-    }
-    fBound.prototype = new fNOP();
-
-    return fBound;
-  };
-})();
-```
-
-このアルゴリズムと仕様上のアルゴリズムとの間には、いくつか大きな違いがあります (真剣に網羅することを目指したわけではないので、他にも差はあるかもしれません)。
-
-- この部分的な実装は、 {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}}, {{jsxref("Function.prototype.apply()")}} という、それぞれオリジナルの値を持つ組み込みメソッドに依存している。
-- この不完全な実装では、不変の「毒薬」のような {{jsxref("Function.caller", "caller")}} および `arguments` プロパティを作成し、取得、設定、削除の際に {{jsxref("Global_Objects/TypeError", "TypeError")}} を発生させます。 (これは実装が ({{jsxref("Object.defineProperty")}} に対応している場合は追加され、[`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) と [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) に対応している実装では部分的に \[削除時に例外を発生しない形で] 実装されています。)
-- この部分的な実装では、 (正規のバインドされた関数には存在しない) `prototype` プロパティを持つ関数を生成します。
-- この部分的な実装では、 {{jsxref("Function.length", "length")}} プロパティが ECMA-262 で示されているものと一致しないバインドされた関数を生成します。これは `length` が `0` である関数を生成します。完全な実装では、ターゲット関数の長さとあらかじめ定義された引数の数によりますが、 length が 0 でないものを返すことがあります。
-- この部分的な実装では、生成されたバインドされた関数の {{jsxref("Function.name", "name")}} プロパティが元の関数名から派生したものではありません。 ECMA-262 によれば、返されるバインドされた関数の名前は "bound " + ターゲット関数の名前です (空白文字に注意してください)。
-
-この部分的な実装を使用することを選択した場合、 **ECMA-262 第 5 版から動作が逸脱している場合には、それに頼ってはいけません!** ありがたいことに、このような仕様からの逸脱は、ほとんどのコーディングの状況では (今までにも) ほとんど出てきません。上記の仕様からの逸脱を理解していない場合は、この特定のケースでは、これらの非準拠の逸脱の詳細を気にしないのが安全です。
-
-どうしても必要で、性能が気にならない場合は、はるかに遅い (しかし、より仕様に準拠した) 解決法が <https://github.com/Raynos/function-bind> にあります。
 
 ## 仕様書
 
@@ -321,6 +292,7 @@ if (!Function.prototype.bind) (function(){
 
 ## 関連情報
 
+- [`Function.prototype.bind` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-function)
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Functions", "Functions", "", 1)}}
+- {{jsxref("Functions", "関数", "", 1)}}

@@ -127,9 +127,9 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           括号匹配的最后一个子字符串的反向引用 (计算左括号)。例如，<code
             >/apple(,)\sorange\1/</code
           >
-          匹配“apple，orange，cherry，peach”中的 "apple，orange，"，其中
-          <code>\1</code> 引用了 之前使用 <code>（）</code> 捕获的
-          <code>，</code>
+          匹配“apple, orange, cherry, peach”中的 "apple, orange,"，其中
+          <code>\1</code> 引用了 之前使用 <code>()</code> 捕获的
+          <code>,</code>
         </p>
       </td>
     </tr>
@@ -169,19 +169,9 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
   </tbody>
 </table>
 
-## 一些例子
+## 示例
 
-### 计算元音数
-
-```js
-var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
-var regexpVowels = /[aeiouy]/g;
-
-console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
-// Number of vowels: 25
-```
-
-### 使用 组
+### 使用组
 
 ```js
 let personList = `First_Name: John, Last_Name: Doe
@@ -213,7 +203,7 @@ do {
 
 > **备注：** 并不是所有的浏览器都支持这个功能; 参考兼容表： [compatibility table](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility).
 
-## 另请参阅
+## 参见
 
 - [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
 

@@ -1,13 +1,6 @@
 ---
 title: URL.pathname
 slug: Web/API/URL/pathname
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/pathname
 ---
 {{ApiRef("URL API")}}
 

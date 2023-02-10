@@ -1,14 +1,6 @@
 ---
 title: ImageCapture() 생성자
 slug: Web/API/ImageCapture/ImageCapture
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - ImageCapture
-  - MediaStream Image Capture API
-  - Reference
-translation_of: Web/API/ImageCapture/ImageCapture
 ---
 {{APIRef("MediaStream Image")}}
 

@@ -1,10 +1,6 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - 브라우저
-  - 상태 코드
-translation_of: Web/HTTP/Status/404
 ---
 
 {{HTTPSidebar}}

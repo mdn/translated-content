@@ -9,7 +9,7 @@ l10n:
 
 **`postMessage()`** は {{domxref("DedicatedWorkerGlobalScope")}} インターフェイスのメソッドで、それを生成したメインスレッドにメッセージを送信します。
 
-これは data 引数を受け入れ、そこにワーカーからメインスレッドにコピーされるデータが入ります。 data は任意の値、または[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムで処理される JavaScript オブジェクトであり、循環参照を含むことができます。
+これは data 引数を受け入れ、そこにワーカーからメインスレッドにコピーされるデータが入ります。 data は任意の値、または[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で処理される JavaScript オブジェクトであり、循環参照を含むことができます。
 
 このメソッドは、メインスレッドに*移譲*するための{{Glossary("Transferable objects", "移譲可能オブジェクト")}}の配列もオプションで受け入れます。
 data 引数とは異なり、移譲されたオブジェクトはワーカスレッドでは使えなくなります（可能であれば、オブジェクトは高性能なゼロコピー処理で移譲されます）。
@@ -26,7 +26,7 @@ postMessage(aMessage, transferList)
 
 - `aMessage`
   - : メインスレッドに配信するオブジェクト。これは {{domxref("Worker.message_event")}} に配信されるイベント内の data フィールドに格納されます。
-    これは、[構造化クローン](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) アルゴリズムによって処理される任意の値または JavaScript オブジェクトであり、循環参照を含むことができます。
+    これは、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)によって処理される任意の値または JavaScript オブジェクトであり、循環参照を含むことができます。
 - `transferList` {{optional_inline}}
 
   - : 所有権を移譲するための、{{Glossary("Transferable objects", "移譲可能オブジェクト")}}の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)（オプション）。

@@ -1,73 +1,73 @@
 ---
-title: Common questions
+title: 常見問題
 slug: Learn/Common_questions
 ---
 
 {{LearnSidebar}}
 
-This section of the Learning Area is designed to provide answers to common questions that may come up, which are not necessarily part of the structured core learning pathways (e.g. the [HTML](/zh-TW/docs/Learn/HTML) or [CSS](/zh-TW/docs/Learn/CSS) learning articles.) These articles are designed to work on their own.
+學習專區的這個區塊被設計來為可能遇到的常見問題提供解答，這並非核心學習路線的必要途徑（譬如 [HTML](/zh-TW/docs/Learn/HTML) 或 [CSS](/zh-TW/docs/Learn/CSS) 的教學文章）。這些文章為獨立成群。
 
-## How the Web works
+## Web 的運作方式
 
-This section covers web mechanics —questions relating to general knowledge of the Web ecosystem and how it works.
+這個區塊包含網路運作機制──有關網路環境及其如何運作的一般知識。
 
-- [How does the Internet work?](/zh-TW/docs/Learn/Common_questions/How_does_the_Internet_work)
-  - : The **Internet** is the backbone of the Web, the technical infrastructure that makes the Web possible. At its most basic, the Internet is a large network of computers which communicate all together. This article discusses how it works, at a basic level.
-- [What is the difference between webpage, website, web server, and search engine?](/zh-TW/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
-  - : In this article we describe various web-related concepts: webpages, websites, web servers, and search engines. These terms are often confused by newcomers to the Web, or are incorrectly used. Let's learn what they each mean!
-- [What is a URL?](/zh-TW/docs/Learn/Common_questions/What_is_a_URL)
-  - : With {{Glossary("Hypertext")}} and {{Glossary("HTTP")}}, URL is one of the key concepts of the Web. It is the mechanism used by {{Glossary("Browser","browsers")}} to retrieve any published resource on the web.
-- [What is a domain name?](/zh-TW/docs/Learn/Common_questions/What_is_a_domain_name)
-  - : Domain names are a key part of the Internet infrastructure. They provide a human-readable address for any web server available on the Internet.
-- [What is a web server?](/zh-TW/docs/Learn/Common_questions/What_is_a_web_server)
-  - : The term "Web server" can refer to the hardware or software that serves web sites to clients across the Web — or both of them working together. In this article we go over how web servers work, and why they're important.
-- [What are hyperlinks?](/zh-TW/docs/Learn/Common_questions/What_are_hyperlinks)
-  - : In this article, we'll go over what hyperlinks are and why they matter.
+- [網際網路如何運作？](/zh-TW/docs/Learn/Common_questions/How_does_the_Internet_work)
+  - : **網際網路**是網路的骨幹，讓網路成為現實的技術基礎架構。簡單來說，網際網路是讓所有電腦互相溝通的超大型網絡。這篇文章用最淺顯的文字探討它是如何運作的。
+- [網頁、網站、網路伺服器及搜尋引擎有什麼區別？](/zh-TW/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
+  - : 這篇文章講述網路相關的各種概念：網頁、網站、網路伺服器及搜尋引擎。這些術語常常被新手混淆或誤用。讓我們來認識它們各自的意思吧！
+- [URL 是什麼？](/zh-TW/docs/Learn/Common_questions/What_is_a_URL)
+  - : 結合 {{Glossary("Hypertext")}} 與 {{Glossary("HTTP")}}，URL 是最重要的網路概念之一。它是被 {{Glossary("Browser","browsers")}} 用來獲取發佈到網路的任何資源的機制。
+- [網域名稱是什麼？](/zh-TW/docs/Learn/Common_questions/What_is_a_domain_name)
+  - : 網域名稱是網際網路基礎架構中關鍵的一部份，它提供指向網際網路上可被找到的網路伺服器一個可被人讀懂的地址。
+- [網路伺服器是什麼？](/zh-TW/docs/Learn/Common_questions/What_is_a_web_server)
+  - : 「網路伺服器」指能橫跨網路將網站提供給用戶端的硬體或軟體──或是軟硬體結合。這篇文章探討網路伺服器怎麼運作，以及為何它很重要。
+- [超連結是什麼？](/zh-TW/docs/Learn/Common_questions/What_are_hyperlinks)
+  - : 這篇文章中，我們會學到超連結是什麼，以及為何它很重要。
 
-## Tools and setup
+## 工具與設定
 
-Questions related to the tools/software you can use to build websites.
+有關能用來建立網站的工具/軟體的問題。
 
-- [How much does it cost to do something on the Web?](/zh-TW/docs/Learn/Common_questions/How_much_does_it_cost)
-  - : When you're launching a website, you may spend nothing or your costs may go through the roof. In this article we discuss how much everything costs and what you get for what you pay (or don't pay).
-- [What software do I need to build a website?](/zh-TW/docs/Learn/Common_questions/What_software_do_I_need)
-  - : In this article we explain which software components you need when you're editing, uploading, or viewing a website.
-- [What text editors are available?](/zh-TW/docs/Learn/Common_questions/Available_text_editors)
-  - : In this article we highlight some things to think about when choosing and installing a text editor for web development.
-- [What are browser developer tools?](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)
-  - : Every browser features a set of devtools for debugging HTML, CSS, and other web code. This article explains how to use the basic functions of your browser's devtools.
-- [How do you make sure your website works properly?](/zh-TW/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly)
-  - : So you've published your website online — very good! But are you sure it works properly? This article provides some basic troubleshooting steps.
-- [How do you set up a local testing server?](/zh-TW/docs/Learn/Common_questions/set_up_a_local_testing_server)
-  - : This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.
-- [How do you upload files to a web server?](/zh-TW/docs/Learn/Common_questions/Upload_files_to_a_web_server)
-  - : This article shows how to publish your site online with [FTP](/zh-TW/docs/Glossary/FTP) tools — one of the most common ways to get a website online so others can access it from their computers.
-- [How do I use GitHub Pages?](/zh-TW/docs/Learn/Common_questions/Using_GitHub_Pages)
-  - : This article provides a basic guide to publishing content using GitHub's gh-pages feature.
-- [How do you host your website on Google App Engine?](/zh-TW/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
-  - : Looking for a place to host your website? Here's a step-by-step guide to hosting your website on Google App Engine.
-- [What tools are available to debug and improve website performance?](/zh-TW/docs/Tools/Performance)
-  - : This set of articles shows you how to use the Developer Tools in Firefox to debug and improve performance of your website, using the tools to check the memory usage, the JavaScript call tree, the amount of DOM nodes being rendered, and more.
+- [在網路上做事要花多少錢？](/zh-TW/docs/Learn/Common_questions/How_much_does_it_cost)
+  - : 當你啟動一個網站時，可能不用花錢，可能成本高得嚇人。這篇文章中我們會探討每個細節的成本，以及你花一筆錢（或者不花錢）能獲得什麼。
+- [架一個網站需要什麼軟體？](/zh-TW/docs/Learn/Common_questions/What_software_do_I_need)
+  - : 這篇文章解釋當你編輯、上傳或檢視網站時需要用到的軟體。
+- [哪個文字編輯器比較適合？](/zh-TW/docs/Learn/Common_questions/Available_text_editors)
+  - : 這篇文章中，我們列出為網路開發選擇與安裝文字編輯器時一些值得思考的重點。
+- [瀏覽器開發者工具是什麼？](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)
+  - : 每個瀏覽器皆有一系列對 HTML、CSS 及其它網路程式碼除錯的開發工具。這篇文章將解釋如何使用你的瀏覽器開發工具的基本功能。
+- [如何確保我的網站會正常運作？](/zh-TW/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly)
+  - : 你將你的網站發佈到網路上了──非常好！但是你確定它能正確運行嗎？這篇文章提供一些基本的問題解決步驟。
+- [如何架設本地端測試伺服器](/zh-TW/docs/Learn/Common_questions/set_up_a_local_testing_server)
+  - : 這篇文章將解釋如何在你的電腦上設置一個簡單的本地端測試伺服器，以及基本使用方式。
+- [如何上傳檔案到網路伺服器？](/zh-TW/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+  - : 這篇文章示範如何透過 [FTP](/zh-TW/docs/Glossary/FTP) 工具將你的網站發佈到網路上──這是將網站放到線上，讓別人可從他們的電腦存取的常見方式之一。
+- [如何使用 GitHub 頁面？](/zh-TW/docs/Learn/Common_questions/Using_GitHub_Pages)
+  - : 這篇文章提供如何透過 Github 頁面發佈內容的基礎指南。
+- [如何在 Google App Engine 上架設網站？](/zh-TW/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
+  - : 想找個地方架設你的網站嗎？這是一篇手把手教你在 Google App Engine 上架設網站的指南。
+- [為網站除錯及改良效能需要什麼工具？](/zh-TW/docs/Tools/Performance)
+  - : 本系列文章教你如何用 Firefox 開發者工具來除錯與改良網站效能，將會運用工具來檢視記憶體使用量、JavaScript Call Tree、被渲染的 DOM 節點數及其它東西。
 
-## Design and accessibility
+## 設計與網頁親和力
 
-This section lists questions related to aesthetics, page structure, accessibility techniques, etc.
+這個區塊列舉有關美感、網頁架構、網頁親和力技巧等等的問題。
 
-- [How do I start to design my website?](/zh-TW/docs/Learn/Common_questions/Thinking_before_coding)
-  - : This article covers the all-important first step of every project: define what you want to accomplish with it.
-- [What do common web layouts contain?](/zh-TW/docs/Learn/Common_questions/Common_web_layouts)
-  - : When designing pages for your website, it's good to have an idea of the most common layouts. This article runs thorugh some typical web layouts, looking at the parts that make up each one.
-- [What is accessibility?](/zh-TW/docs/Learn/Common_questions/What_is_accessibility)
-  - : This article introduces the basic concepts behind web accessibility.
-- [How can we design for all types of users?](/zh-TW/docs/Learn/Common_questions/Design_for_all_types_of_users)
-  - : This article provides basic techniques to help you design websites for any kind of user — quick accessibility wins, and other such things.
-- [What HTML features promote accessibility?](/zh-TW/docs/Learn/Common_questions/HTML_features_for_accessibility)
-  - : This article describes specific features of HTML that can be used to make a web page more accessible to people with different disabilities.
+- [如何開始設計我的網站？](/zh-TW/docs/Learn/Common_questions/Thinking_before_coding)
+  - : 這篇文章會探討每個專案最重要的第一步：定義你想透過這個網站達成什麼目標？
+- [常見網頁布局包含什麼？](/zh-TW/docs/Learn/Common_questions/Common_web_layouts)
+  - : 當你為你的網站設計網頁時，最好對一些常見的布局有所了解。這篇文章帶你遍覽幾個典型的網頁布局，仔細檢視組成它的每個部份。
+- [網頁親和力是什麼？](/zh-TW/docs/Learn/Common_questions/What_is_accessibility)
+  - : 這篇文章將介紹網頁親和力背後的基本概念。
+- [如何設計能兼容所有使用者的網站？](/zh-TW/docs/Learn/Common_questions/Design_for_all_types_of_users)
+  - : 這篇文章提供幫助你設計能兼容所有使用者的網站的基本技巧。
+- [哪些 HTML 功能可以增進網頁親和力？](/zh-TW/docs/Learn/Common_questions/HTML_features_for_accessibility)
+  - : 這篇文章講述讓網頁對不同的身心障礙更顯親和的特定 HTML 功能。
 
-## HTML, CSS and JavaScript questions
+## HTML、CSS 與 JavaScript 問題
 
-For common solutions to HTML/CSS/JavaScript problems, try the following articles:
+有關 HTML、CSS 與 JavaScript 的常見問題解決方式，可以參考以下文章：
 
-- [Use HTML to solve common problems](/zh-TW/docs/Learn/HTML/Howto)
-- [Use CSS to solve common problems](/zh-TW/docs/Learn/CSS/Howto)
-- [Use JavaScript to solve common problems](/zh-TW/docs/Learn/JavaScript/Howto)
+- [使用 HTML 解決常見問題](/zh-TW/docs/Learn/HTML/Howto)
+- [使用 CSS 解決常見問題](/zh-TW/docs/Learn/CSS/Howto)
+- [使用 JavaScript 解決常見問題](/zh-TW/docs/Learn/JavaScript/Howto)

@@ -33,13 +33,13 @@ margin-block: unset;
 
 `margin-block`属性采用和{{CSSxRef("margin-left")}}属性相同的值。
 
-### 正规语法
+### 形式语法
 
 {{CSSSyntax}}
 
 ## 示例
 
-### HTML 部分
+### HTML
 
 ```html
 <div>
@@ -47,7 +47,7 @@ margin-block: unset;
 </div>
 ```
 
-### CSS 部分
+### CSS
 
 ```css
 div {
@@ -63,7 +63,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Example", 140, 140)}}
+{{EmbedLiveSample("示例", 140, 140)}}
 
 ## 规范
 
@@ -75,7 +75,7 @@ div {
 
 {{Compat}}
 
-## 请参考
+## 参见
 
 - 所映射的物理特性： {{CSSxRef("margin-top")}}，{{CSSxRef("margin-right")}}，{{CSSxRef("margin-bottom")}}和{{CSSxRef("margin-left")}}
 - {{CSSxRef("writing-mode")}}，{{CSSxRef("direction")}}，{{CSSxRef("text-orientation")}}

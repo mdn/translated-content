@@ -21,7 +21,7 @@ slug: Web/HTML/Element/blink
 
 ### 結果（已經過淡化！）
 
-![Image:HTMLBlinkElement.gif](/@api/deki/files/247/=HTMLBlinkElement.gif)
+![Image:HTMLBlinkElement.gif](htmlblinkelement.gif)
 
 ## 規範
 

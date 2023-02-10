@@ -1,12 +1,6 @@
 ---
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Symbol
-browser-compat: javascript.builtins.Symbol.for
 ---
 
 {{JSRef}}

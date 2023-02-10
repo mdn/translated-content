@@ -1,9 +1,6 @@
 ---
 title: if
 slug: Web/XSLT/Element/if
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/if
 original_slug: Web/XSLT/if
 ---
 

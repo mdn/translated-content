@@ -1,7 +1,6 @@
 ---
 title: The structured clone algorithm
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
-translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
 
 The structured clone 알고리즘은 복잡한 자바스크립트 객체의 직렬화을 위해서 [HTML5 specification](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data)에 의해서 정의된 새로운 알고리즘 입니다. 이것은 순환그래프를 포함하는 객체의 직렬화를 지원하기 때문에 [JSON](/en/JSON)보다 더 유용합니다. — 객체는 같은 그래프에서 다른객체를 참조하는 객체를 참조할 수 있습니다. 이러한 케이스들에서는 structured clone알고리즘이 아마도 JSON보다 더 효율적일 것입니다.

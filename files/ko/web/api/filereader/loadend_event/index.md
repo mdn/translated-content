@@ -1,9 +1,6 @@
 ---
 title: 'FileReader: loadend event'
 slug: Web/API/FileReader/loadend_event
-page-type: web-api-event
-browser-compat: api.FileReader.loadend_event
-translation_of: Web/API/FileReader/loadend_event
 ---
 
 {{APIRef}}

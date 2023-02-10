@@ -83,7 +83,7 @@ grid-auto-columns: unset;
 
 ## 示例
 
-### HTML content
+### HTML
 
 ```html
 <div id="grid">
@@ -93,7 +93,7 @@ grid-auto-columns: unset;
 </div>
 ```
 
-### CSS content
+### CSS
 
 ```css
 #grid {
@@ -109,7 +109,7 @@ grid-auto-columns: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", "410px", "100px")}}
+{{EmbedLiveSample("示例", "410px", "100px")}}
 
 ## 规范
 

@@ -1,13 +1,6 @@
 ---
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-tags:
-  - ECMAScript 2015
-  - NeedsMarkupWork
-  - 공유
-  - 용어집
-  - 자바스크립트
-translation_of: Glossary/Symbol
 original_slug: Glossary/Symbol
 ---
 이 용어집 페이지에서는 "**심볼(symbol)**"이라는 데이터 형식과 **심볼** 데이터 형식의 인스턴스를 생성하는 클래스와 유사한(class-like) "{{jsxref ("Symbol ")}}`()`"이라는 함수를 설명합니다.

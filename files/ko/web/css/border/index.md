@@ -1,14 +1,6 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-shorthand-property
-translation_of: Web/CSS/border
 ---
 
 {{CSSRef("CSS Borders")}}

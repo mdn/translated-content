@@ -1,7 +1,6 @@
 ---
 title: HTTP에서의 압축
 slug: Web/HTTP/Compression
-translation_of: Web/HTTP/Compression
 ---
 
 {{HTTPSidebar}}

@@ -1,10 +1,6 @@
 ---
 title: AudioParamMap
 slug: Web/API/AudioParamMap
-tags:
-  - Draft
-  - Experimental
-browser-compat: api.AudioParamMap
 ---
 {{APIRef("Web Audio API")}}
 

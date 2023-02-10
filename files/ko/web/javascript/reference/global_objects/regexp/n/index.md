@@ -1,7 +1,6 @@
 ---
 title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
 
 {{JSRef}} {{non-standard_header}}

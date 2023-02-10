@@ -14,9 +14,9 @@ slug: Web/HTTP/Methods/HEAD
 | 请求是否有正文                                         | 否  |
 | ------------------------------------------------------ | --- |
 | 成功的响应是否有正文                                   | 否  |
-| {{Glossary("安全")}}                           | 是  |
-| {{Glossary("幂等")}}                           | 是  |
-| {{Glossary("可缓存")}}                       | 是  |
+| {{Glossary("Safe/HTTP", "安全")}}                           | 是  |
+| {{Glossary("Idempotent", "幂等")}}                           | 是  |
+| {{Glossary("Cacheable", "可缓存")}}                       | 是  |
 | [HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms) 是否支持 | 否  |
 
 ## 语法

@@ -8,7 +8,7 @@ original_slug: Web/HTML/Elemento/code
 
 - Es el apropiado para marcar el código de un programa.
   - : **Sus etiquetas son**: \<code> y \</code> (ambas obligatorias)
-  
+
     **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
     **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).

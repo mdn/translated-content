@@ -1,11 +1,6 @@
 ---
 title: MDN content and style guides
 slug: conflicting/MDN/Writing_guidelines
-tags:
-  - Diretrizes
-  - MDN Meta
-  - Página de destino
-translation_of: MDN/Guidelines
 original_slug: MDN/Guidelines
 ---
 

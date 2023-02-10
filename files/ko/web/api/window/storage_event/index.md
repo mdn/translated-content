@@ -1,14 +1,6 @@
 ---
 title: WindowEventHandlers.onstorage
 slug: Web/API/Window/storage_event
-tags:
-  - API
-  - Event Handler
-  - Property
-  - Reference
-  - Web Storage
-  - WindowEventHandlers
-translation_of: Web/API/WindowEventHandlers/onstorage
 original_slug: Web/API/WindowEventHandlers/onstorage
 ---
 

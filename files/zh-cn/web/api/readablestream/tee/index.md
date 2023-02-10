@@ -57,14 +57,14 @@ function fetchStream(stream, list) {
       console.log("Stream complete");
       return;
     }
-  
+
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
     let listItem = document.createElement('li');
     listItem.textContent = 'Read ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
     list.appendChild(listItem);
-    
+
     // Read some more, and call this function again
     return reader.read().then(processText);
   });

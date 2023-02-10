@@ -1,15 +1,6 @@
 ---
 title: 문서 객체 모델(DOM)
 slug: Web/API/Document_Object_Model
-tags:
-  - API
-  - DOM
-  - Document
-  - Document Object Model
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/API/Document_Object_Model
 ---
 {{DefaultAPISidebar("DOM")}}
 

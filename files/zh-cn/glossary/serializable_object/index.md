@@ -7,7 +7,7 @@ slug: Glossary/Serializable_object
 
 序列化可能不包括原始对象的所有属性和其它方面的内容。例如，对 {{domxref("DOMException")}} 的序列化必须包含 `name` 和 `message` 属性，但是否包含其它属性则取决于具体实现。因此，反序列化的对象并不一定是与原始对象相同的拷贝。但是，反序列化得到的新的对象将会是一个{{glossary("deep copy", "深拷贝")}}，因此任何从原始对象序列化并反序列化到新的对象的属性都不会和原始对象共享任何引用。
 
-在某些情况下，当序列化和反序列化一个对象时，可能会转移一些资源而非拷贝它们。可以转移的对象被称为{{Glossary("Transferable objects", "可转移对象")}}。
+在某些情况下，当序列化和反序列化一个对象时，可能会转移一些资源而非拷贝它们。可以转移的对象被称为[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。
 
 ## 支持的对象
 

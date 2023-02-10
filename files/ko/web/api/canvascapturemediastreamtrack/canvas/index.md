@@ -1,10 +1,6 @@
 ---
 title: CanvasCaptureMediaStreamTrack.canvas
 slug: Web/API/CanvasCaptureMediaStreamTrack/canvas
-tags:
-  - 웹
-  - 캔버스
-translation_of: Web/API/CanvasCaptureMediaStreamTrack/canvas
 ---
 
 {{APIRef}}

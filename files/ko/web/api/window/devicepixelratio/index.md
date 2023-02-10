@@ -1,13 +1,6 @@
 ---
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Window
-translation_of: Web/API/Window/devicePixelRatio
 ---
 {{APIRef}}
 
