@@ -1,7 +1,6 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
 
 {{JSRef}}

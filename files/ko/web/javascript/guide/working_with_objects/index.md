@@ -1,15 +1,6 @@
 ---
 title: 객체로 작업하기
 slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Beginner
-  - Comparing object
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

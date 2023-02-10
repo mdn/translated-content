@@ -1,9 +1,9 @@
 ---
 title: Introduction
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
 original_slug: Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Introduction
 ---
+
 ## 개요
 
 [XSLT](/ko/XSLT_in_Gecko)를 지원하는 현대의 브라우저를 가지고, 개발자는 XSLT가 제공하는 힘에 접근하기 위해 자바스크립트를 지금 사용할 수 있다. 자바스크립트는 웹 프로그램이 XML자료를 로드하고, XSLT를 통해 표현가능한 형태로 처리하고 존재하는 문서안에 넣는 것을 가능하게 한다. XML자료는 아무런 표현자료 없이 오직 날 정보만을 포함하므로, 다이얼업에서도 빠르게 로드할 수 있다.

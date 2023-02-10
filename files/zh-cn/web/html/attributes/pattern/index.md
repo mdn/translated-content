@@ -27,7 +27,7 @@ slug: Web/HTML/Attributes/pattern
 
 模式的正则表达式在与值匹配时，其开始部分必须确定在字符串的开始部分，其结束部分必须确定在字符串的结束部分，这与 JavaScript 正则表达式略有不同：在模式属性的情况下，我们是与整个字符串匹配，而不仅仅是任何子集，就像在模式的开始部分隐含一个 `^(? :`，而在结束部分隐含 `)$`。
 
-## 例子
+## 示例
 
 ### 匹配一个电话号
 
@@ -53,7 +53,7 @@ input:invalid {
 }
 ```
 
-{{EmbedLiveSample("Matching_a_phone_number", 300, 80)}}
+{{EmbedLiveSample("匹配一个电话号", 300, 80)}}
 
 如果我们用 [`minlength`](/zh-CN/docs/Web/HTML/Attributes/minlength) 和 [`maxlength`](/zh-CN/docs/Web/HTML/Attributes/maxlength) 属性代替，我们可能会看到 {{domxref('validityState.tooLong')}} 或 {{domxref('validityState.tooShort')}} 为真。
 
@@ -108,7 +108,7 @@ input:valid+span:after {
 
 这将渲染为如下形式：
 
-{{ EmbedLiveSample('Specifying_a_pattern', 600, 110) }}
+{{ EmbedLiveSample('指定一种模式', 600, 110) }}
 
 ### 无障碍注意事项
 

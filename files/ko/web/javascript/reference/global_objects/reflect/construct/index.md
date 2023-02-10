@@ -1,13 +1,6 @@
 ---
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
 {{JSRef}}
 

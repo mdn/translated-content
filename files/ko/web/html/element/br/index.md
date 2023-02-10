@@ -1,13 +1,6 @@
 ---
 title: '<br>: 줄바꿈 요소'
 slug: Web/HTML/Element/br
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/br
 ---
 
 {{HTMLSidebar}}

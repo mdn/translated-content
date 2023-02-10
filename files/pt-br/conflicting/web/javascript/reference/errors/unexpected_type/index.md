@@ -1,11 +1,6 @@
 ---
 title: 'TypeError: can''t access property "x" of "y"'
 slug: conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
-tags:
-  - Erros
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Cant_access_property
 original_slug: Web/JavaScript/Reference/Errors/Cant_access_property
 ---
 

@@ -1,16 +1,8 @@
 ---
 title: '<input>: 입력 요소'
 slug: Web/HTML/Element/Input
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<input>` 요소**는 웹 기반 양식에서 사용자의 데이터를 받을 수 있는 대화형 컨트롤을 생성합니다. {{glossary("user agent", "사용자 에이전트")}}에 따라서 다양한 종류의 입력 데이터 유형과 컨트롤 위젯이 존재합니다. 입력 유형과 특성의 다양한 조합 가능성으로 인해, `<input>` 요소는 HTML에서 제일 강력하고 복잡한 요소 중 하나입니다.
@@ -425,7 +417,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : A Boolean attribute which, if present, indicates that the user should not be able to interact with the input. Disabled inputs are typically rendered with a dimmer color or using some other form of indication that the field is not available for use.
 
-    Specifically, disabled inputs do not receive the {{event("click")}} event, and disabled inputs are not submitted with the form.
+    Specifically, disabled inputs do not receive the [`click`](/ko/docs/Web/API/Element/click_event) event, and disabled inputs are not submitted with the form.
 
     > **참고:** Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 

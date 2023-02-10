@@ -1,9 +1,6 @@
 ---
 title: FormData.set()
 slug: Web/API/FormData/set
-page-type: web-api-instance-method
-browser-compat: api.FormData.set
-translation_of: Web/API/FormData/set
 ---
 {{APIRef("XMLHttpRequest")}}
 

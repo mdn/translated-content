@@ -1,13 +1,6 @@
 ---
 title: CSS Table
 slug: Web/CSS/CSS_Table
-tags:
-  - CSS
-  - CSS Table
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Table
 ---
 
 {{CSSRef}}
@@ -25,8 +18,6 @@ translation_of: Web/CSS/CSS_Table
 - {{cssxref("table-layout")}}
 - {{cssxref("vertical-align")}}
 
-## 명세
+## 명세서
 
-| 명세                                             | 상태                     | 설명      |
-| ------------------------------------------------ | ------------------------ | --------- |
-| {{SpecName("CSS2.1", "tables.html")}} | {{Spec2("CSS2.1")}} | 초기 정의 |
+{{Specifications}}

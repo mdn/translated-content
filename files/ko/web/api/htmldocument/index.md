@@ -1,12 +1,6 @@
 ---
 title: HTMLDocument
 slug: Web/API/HTMLDocument
-tags:
-  - API
-  - HTML DOM
-  - 레퍼런스
-  - 인터페이스
-translation_of: Web/API/HTMLDocument
 ---
 {{ APIRef("HTML DOM") }}
 

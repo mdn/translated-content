@@ -1,18 +1,6 @@
 ---
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
-tags:
-  - JavaScript
-  - Largest Number
-  - Largest Value
-  - Math
-  - Method
-  - Maximum
-  - Reference
-  - Largest
-  - max
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
-browser-compat: javascript.builtins.Math.max
 ---
 
 {{JSRef}}

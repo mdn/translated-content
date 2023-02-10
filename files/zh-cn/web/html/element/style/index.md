@@ -59,7 +59,7 @@ slug: Web/HTML/Element/style
 </html>
 ```
 
-{{EmbedLiveSample('A_simple_stylesheet', '100%', '60')}}
+{{EmbedLiveSample('一个简单的样式表', '100%', '60')}}
 
 ### 多种样式元素
 
@@ -90,7 +90,7 @@ slug: Web/HTML/Element/style
 </html>
 ```
 
-{{EmbedLiveSample('Multiple_style_elements', '100%', '60')}}
+{{EmbedLiveSample('多种样式元素', '100%', '60')}}
 
 ### 包含媒体 (media) 选择
 
@@ -121,7 +121,7 @@ slug: Web/HTML/Element/style
 </html>
 ```
 
-{{EmbedLiveSample('Including_a_media_query', '100%', '60')}}
+{{EmbedLiveSample('包含媒体 (media) 选择', '100%', '60')}}
 
 ## 规范
 

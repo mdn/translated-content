@@ -1,22 +1,6 @@
 ---
 title: JavaScript의 queueMicrotask()와 함께 마이크로태스크 사용하기
 slug: Web/API/HTML_DOM_API/Microtask_guide
-tags:
-  - API
-  - Batch
-  - Guide
-  - HTML DOM
-  - JavaScript
-  - Microtask
-  - Queue
-  - Reference
-  - ServiceWorker
-  - SharedWorker
-  - Window
-  - Worker
-  - asynchronous
-  - queueMicrotask
-translation_of: Web/API/HTML_DOM_API/Microtask_guide
 ---
 
 {{APIRef("HTML DOM")}}

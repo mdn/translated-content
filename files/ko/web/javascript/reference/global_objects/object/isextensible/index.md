@@ -1,12 +1,6 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
 {{JSRef}}
 

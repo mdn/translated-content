@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.installing
 slug: Web/API/ServiceWorkerRegistration/installing
-translation_of: Web/API/ServiceWorkerRegistration/installing
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

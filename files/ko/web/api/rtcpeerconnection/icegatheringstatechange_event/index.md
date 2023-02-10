@@ -1,7 +1,6 @@
 ---
 title: 'RTCPeerConnection: icegatheringstatechange event'
 slug: Web/API/RTCPeerConnection/icegatheringstatechange_event
-translation_of: Web/API/RTCPeerConnection/icegatheringstatechange_event
 ---
 
 {{APIRef("WebRTC")}}

@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.restartIce()
 slug: Web/API/RTCPeerConnection/restartIce
-translation_of: Web/API/RTCPeerConnection/restartIce
 ---
 
 {{APIRef("WebRTC API")}}
@@ -48,11 +47,9 @@ pc.addEventListener("iceconnectionstatechange", event => {
 
 위의 코드를 사용하여 ICE 협상 중 `failed` 상태로 전환되면 코드가 정상적으로 재협상 되어야 하기 때문에 {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} 이벤트가 발생합니다. 그러나, `restartIce()`를 호출했기 때문에 `negotiationneeded`에 대한 핸들러에서 발생하는 {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} 호출은 일반적으로 수행되는 재협상이 아니라 ICE 재시작을 발생시킵니다.
 
-## 사양서
+## 명세서
 
-| 사양서                                                                                                                           | 상태                             | 코멘트              |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-restartice', 'RTCPeerConnection.restartIce()')}} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

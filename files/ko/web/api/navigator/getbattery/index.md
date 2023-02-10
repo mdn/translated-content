@@ -1,19 +1,7 @@
 ---
 title: window.navigator.battery
 slug: Web/API/Navigator/getBattery
-tags:
-  - API
-  - Battery
-  - Battery API
-  - Deprecated
-  - Device API
-  - Navigator
-  - Non-standard
-  - Property
-  - Reference
-translation_of: Web/API/Navigator/battery
 original_slug: Web/API/Navigator/battery
-browser-compat: api.Navigator.battery
 ---
 {{ Apiref() }}
 

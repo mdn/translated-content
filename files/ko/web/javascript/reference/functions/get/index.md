@@ -1,15 +1,6 @@
 ---
 title: 접근자
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
-browser-compat: javascript.functions.get
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
 
 {{jsSidebar("Functions")}}

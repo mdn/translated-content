@@ -1,9 +1,6 @@
 ---
 title: SVG In HTML Introduction
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
-tags:
-  - SVG
-translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
 
 ### 개요

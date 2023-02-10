@@ -43,11 +43,13 @@ This is the framework for the entire site. At the top is the site's header regio
 
 Finally comes the main body. We start with an empty {{HTMLElement("main")}} element here. This box will be populated using script later.
 
-## Styling the site with CSS
+## 搭建网站
+
+### Styling the site with CSS
 
 With the structure of the site defined, we turn to the styling for the site. Let's look at the style for each component of the page individually.
 
-### The basics
+#### The basics
 
 We provide styles for the {{HTMLElement("body")}} and {{HTMLElement("main")}} elements to define the site's background as well as the grid the various parts of the site will be placed in.
 
@@ -75,7 +77,7 @@ The first row will be used specially for the site header. The rows are sized the
 
 The wrapper's width is fixed at 700px so that it will fit in the available space when presented inline on MDN below.
 
-### The header
+#### The header
 
 The header is fairly simple, since for this example all it contains is some text. Its style looks like this:
 
@@ -89,7 +91,7 @@ header {
 
 {{cssxref("grid-row")}} is set to 1, since we want the header to be placed in the top row of the site's grid. More interesting is our use of {{cssxref("grid-column")}} here; here we specify that we want the column to start in the first column and ends in the first column past the last grid line—in other words, the header spans across all of the columns within the grid. Perfect for our needs.
 
-### The sidebar
+#### The sidebar
 
 Our sidebar is used to present links to other pages on the site. None of them work in our example here, but they exist to help with the presentation of a blog-like experience. The sidebar is represented using an {{HTMLElement("aside")}} element, and is styled as follows:
 
@@ -116,7 +118,7 @@ aside ul li a {
 
 The most important thing to note here is that the {{cssxref("grid-column")}} is set to 1, to place the sidebar on the left-hand side of the screen. If you change this to -1, it will appear on the right (although some other elements will need some adjustments made to their margins to get the spacing just right). The {{cssxref("grid-row")}} is set to 2, to place it alongside the site body.
 
-### The content body
+#### The content body
 
 Speaking of the site's body: the main content of the site is kept in a {{HTMLElement("main")}} element. The following style is applied to that:
 
@@ -132,7 +134,7 @@ main {
 
 The primary feature here is that the grid position is set to place the body content in column 2, row 2.
 
-### Articles
+#### Articles
 
 Each article is contained in an {{HTMLElement("article")}} element, styled like this:
 
@@ -153,7 +155,7 @@ article h2 {
 
 This creates article boxes with a white background which float atop the blue background, with a small margin around the article. Every article which isn't the last item in the container has an 8px bottom margin to space things apart.
 
-### Ads
+#### Ads
 
 Finally, the ads have the following initial styling. Individual ads may customize the style somewhat, as we'll see later.
 
@@ -189,7 +191,7 @@ Finally, the ads have the following initial styling. Individual ads may customiz
 
 There's nothing magic in here. It's fairly basic CSS.
 
-## Tying it together with JavaScript
+### Tying it together with JavaScript
 
 That brings us to the JavaScript code which makes everything work. Let's start with the global variables:
 
@@ -219,7 +221,7 @@ These are used as follows:
 - `refreshIntervalID`
   - : Used to store the interval ID returned by {{domxref("setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.
 
-### Setting up
+#### Setting up
 
 To set things up, we run the `startup()` function below when the page loads:
 
@@ -255,7 +257,7 @@ We then call a function `buildContents()`, which we'll define later to actually 
 
 Finally, we set up an interval which triggers once a second to handle any necessary refreshing. We need a one second refresh since we're displaying timers in all visible ads for the purposes of this example. You may not need an interval at all, or you might do it differently or using a different time interval.
 
-### Handling document visibility changes
+#### Handling document visibility changes
 
 Let's take a look at the handler for the [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/zh-CN/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
 
@@ -286,7 +288,7 @@ To pause the timers, all we need to do is remove the ads from the set of visible
 
 If the document has just become visible, we reverse this process: first we go through `previouslyVisibleAds` and set each one's `dataset.lastViewStarted` to the current document's time (in milliseconds since the document was created) using the {{domxref("Performance.now", "performance.now()")}} method. Then we set `visibleAds` back to `previouslyVisibleAds` and set the latter to `null`. Now the ads are all restarted, and configured to know that they became visible at the current time, so that they will not add up the duration of time the page was tabbed away the next time they're updated.
 
-### Handling intersection changes
+#### Handling intersection changes
 
 Once per pass through the browser's event loop, each {{domxref("IntersectionObserver")}} checks to see if any of its target elements have passed through any of the observer's intersection ratio thresholds. For each observer, a list of targets that have done so is compiled, and sent to the observer's callback as an array of {{domxref("IntersectionObserverEntry")}} objects. Our callback, `intersectionCallback()`, looks like this:
 
@@ -314,7 +316,7 @@ As previously mentioned, the {{domxref("IntersectionObserver")}} callback receiv
 
 If the ad has transitioned to the not-intersecting state, we remove the ad from the set of visible ads. Then we have one special behavior: we look to see if {{domxref("IntersectionObserverEntry.intersectionRatio", "entry.ratio")}} is 0.0; if it is, that means the element has become totally obscured. If that's the case, and the ad has been visible for at least a minute total, we call a function we'll create called `replaceAd()` to replace the existing ad with a new one. This way, the user sees a variety of ads over time, but the ads are only replaced while they can't be seen, resulting in a smooth experience.
 
-### Handling periodic actions
+#### Handling periodic actions
 
 Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("WindowOrGlobalScope.setInterval", "setInterval")}} made in the `startup()` function [described above](#setting_up). Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
 
@@ -347,7 +349,7 @@ Then, for each of the visible ads, we save the value of `dataset.totalViewTime` 
 
 Finally, if there's at least one element to redraw, we use {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} to schedule a function that will redraw each element in the `redrawList` during the next animation frame.
 
-### Updating an ad's visibility timer
+#### Updating an ad's visibility timer
 
 Previously (see [Handling document visibility changes](#handling_document_visibility_changes) and [Handling periodic actions](#handling_periodic_actions)), we've seen that when we need to update an ad's "total visible time" counter, we call a function named `updateAdTimer()` to do so. This function takes as an input an ad's {{domxref("HTMLDivElement")}} object. Here it is:
 
@@ -381,7 +383,7 @@ If `lastStarted` is non-zero—meaning the timer is currently running, we comput
 
 Finally, the last-viewed time for the ad is updated to the current time. This is done whether the ad was running when this function was called or not; this causes the ad's timer to always be running when this function returns. This makes sense because this function is only called if the ad is visible, even if it's just now become visible.
 
-### Drawing an ad's timer
+#### Drawing an ad's timer
 
 Inside each ad, for demonstration purposes, we draw the current value of its `totalViewTime`, converted into minutes and seconds. This is handled by passing the ad's element into the `drawAdTimer()` function:
 
@@ -398,7 +400,7 @@ function drawAdTimer(adBox) {
 
 This code finds the ad's timer using its ID, `"timer"`, and computes the number of seconds elapsed by dividing the ad's `totalViewTime` by 1000. Then it calculates the number of minutes and seconds elapsed before setting the timer's {{domxref("Node.innerText", "innerText")}} to a string representing that time in the form m:ss. The {{jsxref("String.padStart()")}} method is used to ensure that the number of seconds is padded out to two digits if it's less than 10.
 
-### Building the page contents
+#### Building the page contents
 
 The `buildContents()` function is called by the [startup code](#setting_up) to select and insert into the document the articles and ads to be presented:
 
@@ -428,7 +430,7 @@ The variable `loremIpsum` contains the text we'll use for the body of all of our
 
 The ads are created using a function called `loadRandomAd()`, which both creates the ad and inserts it into the page. We'll see later that this same function can also replace an existing ad, but for now, we're simply appending ads to the existing content.
 
-### Creating an article
+#### Creating an article
 
 To create the {{HTMLElement("article")}} element for an article (as well as all of its contents), we use the `createArticle()` function, which takes as input a string which is the full text of the article to add to the page.
 
@@ -451,7 +453,7 @@ function createArticle(contents) {
 
 First, the `<article>` element is created and its ID is set to the unique value `nextArticleID` (which starts at 1 and goes up for each article). Then we create and append an {{HTMLElement("h2")}} element for the article title and then we append the HTML from `contents` to that. Finally, `nextArticleID` is incremented (so that the next element gets a new unique ID) and we return the new `<article>` element to the caller.
 
-### Creating an ad
+#### Creating an ad
 
 The `loadRandomAd()` function simulates loading an ad and adding it to the page. If you don't pass a value for `replaceBox`, a new element is created to contain the ad; the ad is then appended to the page. if you specify a `replaceBox`, that box is treated as an existing ad element; instead of creating a new one, the existing element is changed to contain the new ad's style, content, and other data. This avoids the risk of lengthy layout work being done when you update the ad, which could happen if you first delete the old element then insert a new one.
 
@@ -548,7 +550,7 @@ Finally, we set the ID of the `<div>` which will show the timer we'll present in
 
 If we're not replacing an existing ad, we need to append the element to the content area of the page using {{domxref("Node.appendChild", "Document.appendChild()")}}. If we're replacing an ad, it's already there, with its contents replaced with the new ad's. Then we call the {{domxref("IntersectionObserver.observe", "observe()")}} method on our Intersection Observer, `adObserver`, to start watching the ad for changes to its intersection with the viewport. From now on, any time the ad becomes 100% obscured or even a single pixel becomes visible, or the ad passes through 75% visible in one way or another, the [observer's callback](#handling_intersection_changes) is executed.
 
-### Replacing an existing ad
+#### Replacing an existing ad
 
 Our [observer's callback](#handling_intersection_changes) keeps an eye out for ads which become 100% obscured and have a total visible time of at least one minute. When that happens, the `replaceAd()` function is called with that ad's element as an input, so that the old ad can be replaced with a new one.
 
@@ -571,13 +573,13 @@ Then we load a new ad by calling [`loadRandomAd()`](#creating_an_ad), specifying
 
 The new ad's element object is returned to the caller in case it's needed.
 
-## Result
+### 结果
 
 The resulting page looks like this. Try experimenting with scrolling around and watch how visibility changes affect the timers in each ad. Also note that each ad is replaced after one minute of visibility, and how the timers pause while the document is tabbed into the background.
 
-{{EmbedLiveSample("fullpage_example", 750, 800)}}
+{{EmbedLiveSample("搭建网站", 750, 800)}}
 
-## See also
+## 参见
 
 - [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API)
 - [Page Visibility API](/zh-CN/docs/Web/API/Page_Visibility_API)

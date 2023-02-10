@@ -1,12 +1,12 @@
 ---
-title: WindowOrWorkerGlobalScope.setTimeout
+title: setTimeout
 slug: Web/API/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
 
 {{APIRef("HTML DOM")}}
 
-El método **`setTimeout()`** del mixin {{domxref("WindowOrWorkerGlobalScope")}} establece un temporizador que ejecuta una función o una porción de código después de que transcurre un tiempo establecido.
+El método **`setTimeout()`** establece un temporizador que ejecuta una función o una porción de código después de que transcurre un tiempo establecido.
 
 ## Sintaxis
 
@@ -31,13 +31,13 @@ var idTimeout = scope.setTimeout(codigo[, retraso]);
 
 ### Valor retornado
 
-El valor retornado `IDtemporizador` es númerico y no es cero; identifica el temporizador creado con la llamada a `setTimeout()`; este valor puede pasarse a {{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}} para cancelar el temporizador.
+El valor retornado `IDtemporizador` es númerico y no es cero; identifica el temporizador creado con la llamada a `setTimeout()`; este valor puede pasarse a {{domxref("clearTimeout()")}} para cancelar el temporizador.
 
-Puede ser útil advertir que `setTimeout()` y {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} comparten la misma piscina de IDs, y que tanto `clearTimeout()` como {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} pueden intercambiarse. Por claridad, sin embargo, debe hacerlos coincidir para evitar confusiones cuando mantenga su código.
+Puede ser útil advertir que `setTimeout()` y {{domxref("setInterval", "setInterval()")}} comparten la misma piscina de IDs, y que tanto `clearTimeout()` como {{domxref("clearInterval", "clearInterval()")}} pueden intercambiarse. Por claridad, sin embargo, debe hacerlos coincidir para evitar confusiones cuando mantenga su código.
 
 ## Ejemplo
 
-El siguiente ejemplo establece dos botenes simples en una página web y los engancha a las rutinas `setTimeout()` y `clearTimeout()`. Presionando el primer botón establecerá un temporizador que llama un diálogo de alerta después de dos segundos y guarda el id del temporizador para usarlo con `clearTimeout()`. Opcionalmente puede cancelar este temporizador presionando el segundo botón.
+El siguiente ejemplo establece dos botones simples en una página web y los engancha a las rutinas `setTimeout()` y `clearTimeout()`. Presionando el primer botón establecerá un temporizador que llama un diálogo de alerta después de dos segundos y guarda el id del temporizador para usarlo con `clearTimeout()`. Opcionalmente puede cancelar este temporizador presionando el segundo botón.
 
 HTML
 

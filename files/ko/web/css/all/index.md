@@ -1,13 +1,6 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/all
 ---
 
 {{CSSRef}}

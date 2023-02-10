@@ -1,15 +1,6 @@
 ---
 title: 일반 대열 속 블록 및 인라인 레이아웃
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
-tags:
-  - 대열
-  - CSS
-  - CSS 대열 레이아웃
-  - 안내서
-  - 여백
-  - 레이아웃
-  - 중급
-translation_of: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 original_slug: Web/CSS/CSS_Flow_Layout/일반_흐름_속_블록_및_인라인_레이아웃
 ---
 

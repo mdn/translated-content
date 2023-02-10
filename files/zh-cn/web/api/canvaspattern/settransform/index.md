@@ -100,9 +100,9 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 380) }}
+{{ EmbedLiveSample('使用 setTransform 方法', 700, 380) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

@@ -1,7 +1,6 @@
 ---
 title: 히트(Hit) 영역과 접근성
 slug: orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
-translation_of: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 original_slug: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 ---
 

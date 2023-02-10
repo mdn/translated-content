@@ -1,13 +1,6 @@
 ---
 title: click
 slug: Web/API/Element/click_event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-translation_of: Web/API/Element/click_event
 ---
 
 {{APIRef}}
@@ -87,7 +80,7 @@ button.addEventListener('click', event => {
 - {{event("mousedown")}}
 - {{event("mouseup")}}
 - {{event("mousemove")}}
-- {{event("click")}}
+- [`click`](/ko/docs/Web/API/Element/click_event)
 - {{event("dblclick")}}
 - {{event("mouseover")}}
 - {{event("mouseout")}}

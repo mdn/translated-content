@@ -1,11 +1,9 @@
 ---
 title: number
 slug: Web/XSLT/Element/number
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/number
 original_slug: Web/XSLT/number
 ---
+
 {{ XsltRef() }}
 
 `<xsl:number>` 요소는 숫자를 연속으로 셉니다. 또한 숫자를 빠르게 구성하는(format) 데도 쓸 수 있습니다.

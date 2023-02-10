@@ -1,7 +1,6 @@
 ---
 title: 애니메이션 잘라내기
 slug: Web/API/WebGL_API/By_example/Scissor_animation
-translation_of: Web/API/WebGL_API/By_example/Scissor_animation
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}

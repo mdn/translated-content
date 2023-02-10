@@ -109,7 +109,7 @@ CSS 为控制继承提供了五个特殊的通用属性值。每个 CSS 属性�
 - {{cssxref("unset")}}
   - : 将属性重置为自然值，也就是如果属性是自然继承那么就是 `inherit`，否则和 `initial` 一样
 
-> **备注：** 见 {{SectionOnPage("/zh-CN/docs/Web/CSS/Cascade", "CSS 声明的源")}} 有更多信息和具体是怎么工作的。
+> **备注：** 见 [CSS 声明的源](/zh-CN/docs/Web/CSS/Cascade#css_声明的源)有更多信息和具体是怎么工作的。
 
 我们可以查看一个链接列表来探索这些值是如何运作的。在下面的实例中，你可以通过修改 CSS 来查看它们的功能，写代码是掌握 HTML 和 CSS 最好的办法。
 

@@ -1,14 +1,6 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/legend
 ---
 
 {{HTMLSidebar}}

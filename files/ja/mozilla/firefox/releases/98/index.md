@@ -34,7 +34,7 @@ slug: Mozilla/Firefox/Releases/98
 
 - 非推奨の [WebVR API](/ja/docs/Web/API/WebVR_API) を、すべてのビルドでデフォルトで無効にしました (以前は Windows、macOS およびすべての nightly/dev ビルドで有効でした)。
   これは `about:config` で、`dom.vr.enabled` を `true` に設定すると再び有効にできます ({{bug(1750902)}})。
-  
+
 ### WebDriver conformance (Marionette)
 
 - 新たに開いたタブで、最初のページ読み込み確認を改良しました ({{bug(1747359)}})。

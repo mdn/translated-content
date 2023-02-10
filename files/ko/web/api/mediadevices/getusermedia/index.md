@@ -1,16 +1,6 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Method
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaDevices/getUserMedia
 ---
 
 {{APIRef("Media Capture and Streams")}}

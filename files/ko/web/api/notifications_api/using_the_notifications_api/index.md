@@ -1,7 +1,6 @@
 ---
 title: 알림 API 사용하기
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 original_slug: WebAPI/Using_Web_Notifications
 ---
 
@@ -247,11 +246,9 @@ window.addEventListener('load', function () {
 
 {{ EmbedLiveSample('Tag_example', '100%', 30) }}
 
-## 규격
+## 명세서
 
-| 규격                                         | 상태                                     | 비고      |
-| -------------------------------------------- | ---------------------------------------- | --------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | 현행 표준 |
+{{Specifications}}
 
 ## 브라우저 호환성
 

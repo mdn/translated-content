@@ -1,12 +1,6 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
-page-type: web-api-instance-method
-tags:
-  - 파일
-  - 파일 API
-browser-compat: api.FileReader.readAsText
-translation_of: Web/API/FileReader/readAsText
 ---
 {{APIRef("File API")}}
 

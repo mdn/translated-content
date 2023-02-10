@@ -1,14 +1,6 @@
 ---
 title: '고급 기법: 오디오 생성 및 시퀸싱'
 slug: Web/API/Web_Audio_API/Advanced_techniques
-tags:
-  - API
-  - Advanced
-  - Audio
-  - Guide
-  - Reference
-  - Web Audio API
-  - sequencer
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}

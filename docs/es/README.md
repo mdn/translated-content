@@ -1,6 +1,6 @@
 # Bienvenido a la localización de MDN en español
 
-Puedes comenzar en la siguiente [guía de contribución](https://developer.mozilla.org/es/docs/MDN/Contribute)
+Puedes comenzar en la siguiente [guía de contribución][]
 
 ## Pasos para configurar el entorno local
 
@@ -86,6 +86,8 @@ Telegram: <https://t.me/+Dr6qKQCAepw4MjFj>
 
 Matrix: <https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org>
 
+MDN Discord, canal #spanish: <https://discord.gg/MkEg2ATW>
+
 <details>
   <summary><h2>Enlaces relevantes</h2></summary>
 
@@ -115,3 +117,5 @@ Guía de markdown
 </details>
 
 Más información [aqui](https://github.com/mdn/translated-content/discussions/4029)
+
+[guía de contribución]: https://developer.mozilla.org/es/docs/MDN/Contribute

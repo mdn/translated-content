@@ -1,17 +1,8 @@
 ---
 title: <time>
 slug: Web/HTML/Element/time
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/time
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<time>` 요소**는 시간의 특정 지점 또는 구간을 나타냅니다. `datetime` 특성의 값을 지정해 보다 적절한 검색 결과나, 알림 같은 특정 기능을 구현할 때 사용할 수 있습니다.

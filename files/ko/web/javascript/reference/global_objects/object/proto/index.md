@@ -1,15 +1,6 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-tags:
-  - Deprecated
-  - ECMAScript 2015
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 
 {{JSRef}}{{Deprecated_header}}

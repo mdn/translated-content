@@ -15,19 +15,19 @@ slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 
 首先，我們考慮一個最簡單的 list item。他並不屬於任何一個 list 中，並且也沒有項目符號 (意思就是沒有 bullet )。如 Figure 1 所示：
 
-![Figure 1](/@api/deki/files/619/=Consistent-list-indentation-figure1.gif)
+![Figure 1](consistent-list-indentation-figure1.gif)
 
 這裡的紅點線框是 list 內容的外框。在這裡的例子中， list item 並沒有設定 padding 或 borders。現在我們加上兩個 list item，如圖二：
 
-![Figure 2](/@api/deki/files/620/=Consistent-list-indentation-figure2.gif)
+![Figure 2](consistent-list-indentation-figure2.gif)
 
 接著我們加上 parent element，這裡我們以 unordered list (i.e., `<ul>`)為例。根據 CSS box model，這些 list item 都會被包裹在 parent element 的範圍中。如下圖中的紫色外框，他包住了三個 list item 的外圍：
 
-![Figure 3](/@api/deki/files/621/=Consistent-list-indentation-figure3.gif)
+![Figure 3](consistent-list-indentation-figure3.gif)
 
 然後我們加上 list item markers。因為我們用的是 unordered list，因此使用預設的 filled-circle "bullets"。結果如下：
 
-![Figure 4](/@api/deki/files/622/=Consistent-list-indentation-figure4.gif)
+![Figure 4](consistent-list-indentation-figure4.gif)
 
 好的，現在看出來了，這些 marker 在 `<ul> 空間之外。但更重要的是，這些 marker 其實是在 <li> 之外！這個結果使得 list item 看起來像是附加在 marker 之上。`
 
@@ -53,11 +53,11 @@ ul, li {margin-left: 0; padding-left: 0;}
 
 現在讓我們來瞧瞧後兩種作法的差異。在 Internet Explorer 及 Opera 中，\<ul> element 為了縮排需要被設定了 40 pixel 的 left margin。假如我們此時在 `<ul>` element 設定背景顏色，其結果如下：
 
-![Figure 5](/@api/deki/files/623/=Consistent-list-indentation-figure5.gif)
+![Figure 5](consistent-list-indentation-figure5.gif)
 
 Gecko 則不太一樣，他為 `<ul>` element 設定了 40 pixel 的 left _padding_。因此造成上圖的程式碼會在 Gecko 中變成下圖：
 
-![Figure 6](/@api/deki/files/624/=Consistent-list-indentation-figure6.gif)
+![Figure 6](consistent-list-indentation-figure6.gif)
 
 從結果來說，marker 都很好的附著在 `<li>` element 之前並未消失。唯一的不同點是發生在你替 `<ul>` element 設定背景顏色時。
 

@@ -1,18 +1,6 @@
 ---
 title: Element.getClientRects()
 slug: Web/API/Element/getClientRects
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Method
-  - Reference
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
-browser-compat: api.Element.getClientRects
 ---
 
 {{APIRef("DOM")}}
@@ -33,7 +21,7 @@ let rectCollection = object.getClientRects();
 
 원래 Microsoft는 각각의 텍스트 _줄_ 에 대한 `TextRectangle` 객체를 반환하기 위해 이 메서드를 만들었습니다. 하지만 CSSOM 작업 초안은 이 메서드가 각각의 _테두리 박스_ 에 대한 {{DOMxRef("DOMRect")}}를 반환하도록 명세합니다. 인라인 엘리먼트의 경우 두 정의가 동일합니다. 하지만 블록 엘리먼트의 경우 Mozilla는 단 하나의 사각형만 반환합니다.
 
-{{Fx_MinVersion_Note(3.5, "Firefox 3.5는 <code>width</code>와 <code>height</code> 프로퍼티를 <code>TextRectangle</code> 객체에 추가합니다.")}}
+> **참고:** Firefox 3.5는 `width`와 `height` 속성을 `TextRectangle` 객체에 추가합니다.
 
 뷰포트 영역(또는 기타 스크롤 가능한 엘리먼트)에서 수행된 스크롤 양은 사각형을 계산할 때 고려됩니다.
 

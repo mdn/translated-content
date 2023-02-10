@@ -1,11 +1,6 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - 엄격모드
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 
 {{JsSidebar("More")}}

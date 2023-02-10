@@ -1,7 +1,6 @@
 ---
 title: 클릭을 통한 청소
 slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
-translation_of: Web/API/WebGL_API/By_example/Clearing_by_clicking
 ---
 {{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}
 

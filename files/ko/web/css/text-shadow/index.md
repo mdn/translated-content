@@ -1,10 +1,6 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/text-shadow
 ---
 
 {{CSSRef}}

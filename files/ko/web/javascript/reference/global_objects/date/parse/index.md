@@ -1,8 +1,6 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
-browser-compat: javascript.builtins.Date.parse
 ---
 
 {{JSRef}}

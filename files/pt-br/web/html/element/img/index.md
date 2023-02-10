@@ -29,17 +29,17 @@ O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserçã
 
 Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}} Use the {{cssxref('vertical-align')}} CSS property
-  - : The alignment of the image with respect to its surrounding context.
+- {{htmlattrdef("align")}} {{deprecated_inline}}
+  - : The alignment of the image with respect to its surrounding context. Use the {{cssxref('vertical-align')}} CSS property.
 - {{htmlattrdef("alt")}}
 
   - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](#supported_image_formats) ou até a imagem ser baixada .
 
     > **Note:** **Usage note:** Omitting this attribute indicates that the image _is_ a key part of the content, but no textual equivalent is available. Setting this attribute to the empty string indicates that this image is _not_ a key part of the content; non-visual browsers may omit it from rendering.
 
-- {{htmlattrdef("border")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("border")}} {{deprecated_inline}}
   - : The width of a border around the image.
-- {{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("crossorigin")}}
 
   - : This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. [CORS-enabled images](/pt-BR/docs/CORS_Enabled_Image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
@@ -52,7 +52,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("height")}}
   - : The height of the image in {{HTMLVersionInline(5)}} CSS pixels, or {{HTMLVersionInline(4)}} in pixels or as a percentage.
-- {{htmlattrdef("hspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("hspace")}} {{deprecated_inline}}
   - : The number of pixels of white space to insert to the left and right of the image.
 - {{htmlattrdef("ismap")}}
 
@@ -60,13 +60,13 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 
     > **Note:** **Usage note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute.
 
-- {{htmlattrdef("longdesc")}}{{HTMLVersionInline(4)}} only
-  - : The URL of a description of the image to be displayed, which supplements the **alt** text. In {{HTMLVersionInline(5)}}, use a regular {{HTMLElement("a")}} element to link to the description.
-- {{htmlattrdef("name")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
-  - : A name for the element. It is supported in {{HTMLVersionInline(4)}} only for backward compatibility. Use the **id** attribute instead.
+- {{htmlattrdef("longdesc")}} {{deprecated_inline}}
+  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
+- {{htmlattrdef("name")}} {{deprecated_inline}}
+  - : A name for the element. Use the {{htmlattrxref("id")}} attribute instead.
 - {{htmlattrdef("src")}}
   - : Image URL, this attribute is obligatory for the `<img>` element. On browsers supporting **srcset**, **src** is ignored if this one is provided.
-- {{htmlattrdef("srcset")}}{{HTMLVersionInline(5)}}
+- {{htmlattrdef("srcset")}}
 
   - : A list of one or more strings separated by commas indicating a set of possible images for the user agent to use. Each string is composed of:
 
@@ -85,7 +85,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 
     > **Note:** **Usage note:** You cannot use this attribute if the `<img>` element is a descendant of an {{htmlelement("a")}} or {{HTMLElement("button")}} element.
 
-- {{htmlattrdef("vspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("vspace")}} {{deprecated_inline}}
   - : The number of pixels of white space to insert above and below the image.
 
 ## Formato de imagens suportadas

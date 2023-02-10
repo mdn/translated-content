@@ -142,7 +142,7 @@ console.log(eval(s2.valueOf())); // returns the number 4
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 相同的算法转换数字。
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) 相同的算法转换 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。
 - [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 抛出 {{jsxref("TypeError")}}。
-- 首先，对象通过依次调用 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#primitive_coercion)。然后将生成的原始值转换为一个字符串。
+- 首先，对象通过依次调用 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为一个字符串。
 
 有几种方法可以在 JavaScript 中实现几乎相同的效果。
 

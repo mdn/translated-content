@@ -1,12 +1,8 @@
 ---
 title: Resources and URIs
 slug: Web/HTTP/Resources_and_URIs
-tags:
-  - HTTP
-  - Overview
-  - Reference
-translation_of: Web/HTTP/Resources_and_URIs
 ---
+
 {{HTTPSidebar}}
 
 HTTP는 브라우저 혹은 사용자 에이전트에게 인터넷 상 다른 리소스와의 통신을 허용합니다: 이를 위해 브라우저에는 자원의 신분(*identity)*와 위치(*location)*가 필요합니다. 이 두 비트의 정보는 {{glossary("URI")}}로 설명됩니다.

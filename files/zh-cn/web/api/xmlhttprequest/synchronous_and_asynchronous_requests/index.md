@@ -127,7 +127,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 如上，我们指定的超时时间为 2000 ms。
 
-> **备注：** `timeout`属性添加于 Gecko 12.0 {{Gecko("12.0")}}。
+> **备注：** `timeout` 属性添加于 Gecko 12.0。
 
 ## 同步请求
 

@@ -1,17 +1,10 @@
 ---
 title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - Element
-  - Interface
-  - Reference
-translation_of: Web/API/Element
 ---
 {{APIRef("DOM")}}
 
-**`Element`**는 {{domxref("Document")}} 안의 모든 객체가 상속하는 제일 범용적인 기반 클래스로 공통 메서드와 속성만 가지고 있으며, 특정 요소를 더 상세하게 표현하는 클래스가 `Element`를 상속합니다. 예를 들어 {{domxref("HTMLElement")}} 인터페이스는 HTML 요소의 기반 인터페이스이고 {{domxref("SVGElement")}} 인터페이스는 모든 SVG 요소의 기초입니다.
+**`Element`** 는 {{domxref("Document")}} 안의 모든 객체가 상속하는 제일 범용적인 기반 클래스로 공통 메서드와 속성만 가지고 있으며, 특정 요소를 더 상세하게 표현하는 클래스가 `Element`를 상속합니다. 예를 들어 {{domxref("HTMLElement")}} 인터페이스는 HTML 요소의 기반 인터페이스이고 {{domxref("SVGElement")}} 인터페이스는 모든 SVG 요소의 기초입니다.
 
 XUL의 `XULElement`처럼 웹 플랫폼 밖에서도 `Element`를 구현합니다.
 

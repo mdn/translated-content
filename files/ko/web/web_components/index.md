@@ -1,15 +1,6 @@
 ---
 title: 웹 컴포넌트
 slug: Web/Web_Components
-tags:
-  - Landing
-  - NeedsTranslation
-  - Template
-  - Web Components
-  - custom elements
-  - slot
-  - 웹 컴포넌트
-translation_of: Web/Web_Components
 ---
 {{DefaultAPISidebar("Web Components")}}
 
@@ -113,7 +104,7 @@ translation_of: Web/Web_Components
   - : shadow DOM shadow 트리내의 slot을 엘리먼트로 할당합니다.
 - {{domxref("Slotable")}}
   - : {{domxref("Element")}} 와 {{domxref("Text")}} 노드로 구현된 믹스인입니다. {{htmlelement("slot")}} 엘리먼트의 컨텐츠로 만들기 위한 기능들을 정의합니다. 믹스인은 노드가 삽입된 슬롯의 참조를 반환하는 하나의 어트리뷰트 {{domxref("Slotable.assignedSlot")}} 을 정의합니다.
-  
+
 - {{domxref("Element")}} 확장 기능
 
   - : 슬롯과 관련된 `Element` 인터페이스 확장 기능

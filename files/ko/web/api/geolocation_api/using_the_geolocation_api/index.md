@@ -1,11 +1,6 @@
 ---
 title: Geolocation API 사용하기
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
-tags:
-  - Geolocation API
-  - Guide
-  - Intermediate
-translation_of: Web/API/Geolocation_API/Using_the_Geolocation_API
 original_slug: WebAPI/Using_geolocation
 ---
 

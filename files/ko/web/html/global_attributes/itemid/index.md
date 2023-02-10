@@ -1,15 +1,8 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-tags:
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-  - 마이크로데이터
-translation_of: Web/HTML/Global_attributes/itemid
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemid`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 아이템의 고유한 전역 식별자의 형태로 마이크로데이터를 제공합니다. `itemid` 특성은 {{htmlattrxref("itemscope")}}, {{htmlattrxref("itemtype")}} 특성 모두 가진 요소에만 지정할 수 있습니다. 또한 `itemscope` 특성에 대응하는 `itemtype`이 전역 식별자 어휘를 참조하거나 정의해야 합니다.
@@ -73,7 +66,7 @@ translation_of: Web/HTML/Global_attributes/itemid
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.itemid")}}
+{{compat}}
 
 ## 같이 보기
 

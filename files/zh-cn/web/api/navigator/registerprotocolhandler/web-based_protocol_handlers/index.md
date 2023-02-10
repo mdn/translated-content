@@ -33,7 +33,7 @@ navigator.registerProtocolHandler("mailto",
 
 当一个浏览器执行这段代码时，它应该向用户显示一个请求，让用户许可为处理这个协议而注册一个 Web 应用程序的请求。Firefox 在通知栏区域显示一个提示：
 
-![Image:wph-notification.png](/@api/deki/files/972/=Wph-notification.png)
+![Screenshot of a prompt that reads: Add Burger handler (google.co.uk) as an application for burger links. An Add Application button is next to the text.](protocolregister.png)
 
 > **备注：** 试图执行登记或注册时，当前网页必须与提供的 URL 模板在相同的域，否则将会失败。例如，`http://example.com/homepage.html` 可以为 `http://example.com/handle_mailto/%s` 注册一个协议处理程序，但 `http://example.org/handle_mailto/%s` 不可以。
 
@@ -63,8 +63,6 @@ navigator.registerProtocolHandler("mailto",
 ## 激活
 
 现在，只要用户点击链接，使用注册协议，浏览器将跳转到 Web 应用程序注册时提供的 URL。Firefox 在默认情况下，跳转前会提示用户操作。
-
-![Image:wph-launch.png](/@api/deki/files/971/=Wph-launch.png)
 
 ### Example
 

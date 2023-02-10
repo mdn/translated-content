@@ -29,7 +29,7 @@ slug: Web/HTML/Element/optgroup
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
-   <td>{{ARIARole("group")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -74,7 +74,7 @@ slug: Web/HTML/Element/optgroup
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

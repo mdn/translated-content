@@ -1,14 +1,6 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
-browser-compat: javascript.builtins.Object.constructor
 ---
 
 {{JSRef}}

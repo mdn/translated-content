@@ -7,9 +7,7 @@ slug: Web/API/WebGL_API/By_example/Boilerplate_1
 
 这个例子描述了从现在开始将要隐藏重复的代码片断，以及定义一个 JavaScript 函数复用以简化 WebGL 初始化。
 
-{{EmbedLiveSample("boilerplate-1-source",660,400)}}
-
-### 用于设置 WebGL 呈现上下文的复用代码
+## 用于设置 WebGL 呈现上下文的复用代码
 
 现在你很习惯看到相同的{{Glossary("HTML")}}, {{Glossary("CSS")}}和{{Glossary("JavaScript")}}重复一遍又一遍。所以我们从现在起要隐藏他们。这将使我们能够专注于代码最有趣的部分相关学习{{Glossary("WebGL")}}。
 

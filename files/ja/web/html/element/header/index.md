@@ -93,8 +93,8 @@ slug: Web/HTML/Element/header
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}},
-        {{ARIARole("none")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>
       </td>
     </tr>
     <tr>
@@ -123,7 +123,7 @@ slug: Web/HTML/Element/header
 ```html
 <header>
   <h1>Main Page Title</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo">
+  <img src="mdn-logo-sm.png" alt="MDN logo" />
 </header>
 ```
 
@@ -133,10 +133,17 @@ slug: Web/HTML/Element/header
 <article>
   <header>
     <h2>The Planet Earth</h2>
-    <p>Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by Jane Smith</p>
+    <p>
+      Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by
+      Jane Smith
+    </p>
   </header>
-  <p>We live on a planet that's blue and green, with so many things still unseen.</p>
-  <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
+  <p>
+    We live on a planet that's blue and green, with so many things still unseen.
+  </p>
+  <p>
+    <a href="https://janesmith.com/the-planet-earth/">Continue reading....</a>
+  </p>
 </article>
 ```
 

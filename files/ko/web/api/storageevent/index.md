@@ -1,14 +1,6 @@
 ---
 title: StorageEvent
 slug: Web/API/StorageEvent
-tags:
-  - API
-  - Interface
-  - Reference
-  - StorageEvent
-  - Web Storage API
-browser-compat: api.StorageEvent
-translation_of: Web/API/StorageEvent
 ---
 
 {{APIRef("Web Storage API")}}

@@ -1,13 +1,6 @@
 ---
 title: Document.compatMode
 slug: Web/API/Document/compatMode
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-translation_of: Web/API/Document/compatMode
 ---
 
 {{ApiRef("DOM")}}

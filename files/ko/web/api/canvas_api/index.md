@@ -1,13 +1,6 @@
 ---
 title: Canvas API
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - Canvas
-  - JavaScript
-  - 개요
-  - 레퍼런스
-translation_of: Web/API/Canvas_API
 original_slug: Web/HTML/Canvas
 ---
 

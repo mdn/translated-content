@@ -16,7 +16,7 @@ Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article four
 
 ### HTML
 
-- La propriété `profile` de {{domxref("HTMLHeadElement")}} a été supprimée, cette propriété est obsolète depuis {{gecko("2.0")}}.
+- La propriété `profile` de {{domxref("HTMLHeadElement")}} a été supprimée, cette propriété est obsolète depuis Gecko 2.0.
 - Les propriétés `x` et `y` de {{domxref("HTMLImageElement")}} ont été supprimées.
 - Le paramètre `before` de la méthode `add()` de {{domxref("HTMLSelectElement")}} est désormais optionnel.
 - L'attribut {{htmlattrxref("background", "body")}} de l'élément {{HTMLElement("body")}} n'est plus résolu en tant qu'URI, ce qui est conforme à la spécification HTML courante.

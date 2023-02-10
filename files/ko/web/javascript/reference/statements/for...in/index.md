@@ -1,10 +1,6 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
 
 {{jsSidebar("Statements")}}

@@ -202,7 +202,7 @@ window.addEventListener("load", function () {
 
 {{EmbedLiveSample("使用绑定到表单元素上的_FormData", "100%", 50)}}
 
-你甚至可以通过使用表单的{{domxref("HTMLFormElement.elements", "elements")}} 属性来更多的参与此过程，来得到一个包含表单里所有数据元素的列表，并且逐一手动管理他们。想了解更多，请参阅这里的例子：{{SectionOnPage("/en-US/docs/Web/API/HTMLFormElement.elements", "Accessing the element list's contents")}}
+你甚至可以通过使用表单的{{domxref("HTMLFormElement.elements", "elements")}} 属性来更多的参与此过程，来得到一个包含表单里所有数据元素的列表，并且逐一手动管理他们。想了解更多，请参见示例[访问表单控件](/zh-CN/docs/Web/API/HTMLFormElement/elements#访问表单控件)。
 
 ### 在隐藏的 iframe 中构建 DOM
 

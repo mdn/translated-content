@@ -1,7 +1,6 @@
 ---
 title: Element.tagName
 slug: Web/API/Element/tagName
-translation_of: Web/API/Element/tagName
 ---
 {{ApiRef("DOM")}}
 
@@ -39,11 +38,9 @@ console.log(span.tagName);
 
 XHTML (또는 여느 XML 방식) 문서의 경우, 정의한 태그 명 그대로 가져오기 때문에, `"span"` 같은 소문자 태그명을 가져오게 될 것이다.그에 반해 HTML 문서에서는, 원본 문서에 정의된 태그명과 달리 대소문자를 무시하면서 대문자로만 이루어진 `"SPAN"` 값을 가져오게 된다.
 
-## 규격
+## 명세서
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('DOM WHATWG', '#dom-element-tagname', 'Element: tagName')}} | {{Spec2('DOM WHATWG')}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 
