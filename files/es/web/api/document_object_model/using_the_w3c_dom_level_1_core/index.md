@@ -22,7 +22,7 @@ Many HTML authors may think of HTML as something flat -- a bunch of text with ta
 </html>
 ```
 
-![image:Using_the_W3C_DOM_Level_1_Core-doctree.jpg](/@api/deki/files/415/=Using_the_W3C_DOM_Level_1_Core-doctree.jpg)
+![image:Using_the_W3C_DOM_Level_1_Core-doctree.jpg](using_the_w3c_dom_level_1_core-doctree.jpg)
 
 When Mozilla parses a document, it builds a content tree and then uses it to display the document.
 
@@ -75,7 +75,7 @@ Suppose the author wants to take the above document and change the contents of t
 
 {{ EmbedLiveSample('A_simple_example', 800, 300) }}
 
-You can see this script as [a complete example](/@api/deki/files/2866/=example.html).
+You can see this script as [a complete example](example.html).
 
 ## How can I learn more?
 

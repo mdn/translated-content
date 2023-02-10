@@ -66,7 +66,7 @@ Link: </images/big.jpeg>; rel=prefetch
 
 ### 預先取回有限制嗎 ?
 
-有。只有 http\:// (and, starting in {{ Gecko("1.9.1") }} https\://) URLs 能被預先取回，其它如 FTP 則無法。
+有。只有 http\:// (and, starting in Gecko 1.9.1 https\://) URLs 能被預先取回，其它如 FTP 則無法。
 
 ### Mozilla 會預先取回不同網域的文件嗎 ?
 

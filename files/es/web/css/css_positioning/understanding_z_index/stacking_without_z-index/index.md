@@ -19,7 +19,7 @@ En el siguiente ejemplo, los bloques con posiciones absolutas y relativas son ap
 > - Dado un grupo homogéneo de elementos sin propiedad z-index, tales como los bloques posicionados (DIV #1 al #4) en el ejemplo, el orden de apilamiento de los elementos es su orden en la jerarquía HTML, independientemente de su posición.
 > - Bloques estándar (DIV #5) en el flujo normal, sin ninguna propiedad de posicionamiento, siempre son renderizados antes de los elementos posicionados y aparecen debajo de los mismos, incluso si están después en la jerarquía HTML.
 
-![understanding_zindex_01.png](/@api/deki/files/910/=understanding_zindex_01.png)
+![understanding_zindex_01.png](understanding_zindex_01.png)
 
 ## Ejemplo
 

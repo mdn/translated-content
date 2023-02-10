@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/compile
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.compile()`** 関数は WebAssembly バイナリーコードを {{jsxref("WebAssembly.Module")}} の形にコンパイルします。この関数は、モジュールをインスタンス化する前にコンパイルする必要がある場合に便利です (それ以外の場合は、 {{jsxref("WebAssembly.instantiate()")}} 関数を使用してください)。</p>
 

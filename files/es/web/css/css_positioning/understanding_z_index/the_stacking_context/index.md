@@ -38,7 +38,7 @@ En resumen:
 
 ## El ejemplo
 
-![Example of stacking rules modified using z-index](/@api/deki/files/913/=Understanding_zindex_04.png)
+![Example of stacking rules modified using z-index](understanding_zindex_04.png)
 
 En este ejemplo cada elemento posicionado crea su propio contexto de apilamiento, debido a sus valores de posicionamiento y z-index. La jerarquía de contextos de apilamiento es organizada de la siguiente manera:
 

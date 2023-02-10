@@ -4,7 +4,8 @@ slug: WebAssembly/JavaScript_interface/compileStreaming
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
-{{JSRef}}
+
+{{WebAssemblySidebar}}
 
 Функция **`WebAssembly.compileStreaming()`** компилирует {{jsxref("WebAssembly.Module")}} непосредственно из потокового исходника. Эта функция полезна, если необходимо скомпилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiateStreaming()")}}.
 

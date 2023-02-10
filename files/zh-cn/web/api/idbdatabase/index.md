@@ -49,7 +49,7 @@ IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/z
 
 ## 示例
 
-在下面的代码中，异步打开了一个数据库连接 ({{domxref("IDBFactory")}}), 并处理成功或者异常事件，如果触发了 upgrade 事件就需要创建一个新的 object store ({{ domxref("IDBdatabase") }})。如果想看完整的例子，可以使用 [To-do Notifications](https://github.com/mdn/to-do-notifications/) 应用 ([view example live](http://mdn.github.io/to-do-notifications/).)
+在下面的代码中，异步打开了一个数据库连接 ({{domxref("IDBFactory")}}), 并处理成功或者异常事件，如果触发了 upgrade 事件就需要创建一个新的 object store ({{ domxref("IDBdatabase") }})。如果想看完整的例子，可以使用 [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) 应用 ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 ```js
 // 我们先打开一个数据库
@@ -119,4 +119,4 @@ IndexedDB 中的 **`IDBDatabase`** 接口提供一个到 [数据库的连接](/z
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

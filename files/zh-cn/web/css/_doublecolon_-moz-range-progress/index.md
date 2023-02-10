@@ -32,7 +32,7 @@ input[type=range]::-moz-range-progress {
 
 ### 结果
 
-{{EmbedLiveSample("Example", 300, 50)}}
+{{EmbedLiveSample("示例", 300, 50)}}
 
 使用了这个样式的进度条可能会看起来这样：
 
@@ -46,7 +46,7 @@ input[type=range]::-moz-range-progress {
 
 {{Compat}}
 
-## 相关阅读
+## 参见
 
 - Gecko 用于设置范围输入的其他部分样式的伪元素：
 
