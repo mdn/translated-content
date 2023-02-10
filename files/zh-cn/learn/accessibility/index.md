@@ -39,7 +39,7 @@ Firefox 浏览器无障碍检查器是一个非常有用的工具，用于检查
 
 - [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
   - : 这篇文章开头很好地阐述了到底什么是无障碍——这包括我们要考虑哪一群人，为什么要考虑这些人，不同用户使用什么工具与网页交互，以及我们如何在 web 开发工作流中构建无障碍部分。
-- [HTML: 确保无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
+- [HTML: 无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
   - : 只要确保恰当的 HTML 元素被用于适当的目的，大量的网页内容即可具有无障碍，这篇文章详细地讲述了 HTML 的用法，以确保网页有最大的无障碍性。
 - [CSS 与 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
   - : 当正确使用 CSS 与 JavaScript 的时候，也能够使得网页具有很好的无障碍，但是如果错误地使用它们将极大地破坏无障碍。这篇文章罗列了一些应该被考虑的 CSS 和 JavaScript 的最佳实践，确保再复杂的内容都可以有尽可能好的无障碍。
@@ -47,7 +47,7 @@ Firefox 浏览器无障碍检查器是一个非常有用的工具，用于检查
   - : 继上一篇文章之后，有时候制作复杂的 UI 控件会涉及到非语义的 HTML 和动态的 JavaScript 更新内容会很难。WAI-ARIA 是一种可以帮助解决这些问题的技术，通过增加浏览器和辅助技术可以识别和使用的进一步语义来让用户知道正在发生的事情。在这里，我们将展示如何在基本级别上使用它来提高无障碍。
 - [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
   - : 可以提高无障碍的另一类内容是多媒体——视频，音频和图像内容需要提供适当的文本替代方案，以便辅助技术和相应的用户能够理解。这篇文章展示了如何这样做。
-- [移动设备无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
+- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
   - : 随着移动设备上网页访问的流行，以及主流平台（如 iOS 和 Android）具备了完善的辅助功能工具，考虑在这些平台上 Web 内容的无障碍也是非常重要的。本文讨论针对移动设备的无障碍注意事项。
 
 ## 评估
