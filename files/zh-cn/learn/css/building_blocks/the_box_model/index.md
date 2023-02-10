@@ -133,7 +133,7 @@ CSS 中组成一个块级盒子需要：
 }
 ```
 
-如果使用标准模型宽度 = 410px (350 + 25 + 25 + 5 + 5)，高度 = 210px (150 + 25 + 25 + 5 + 5)，padding 加 border 再加 content box。
+如果使用标准模型, 实际占用宽度 = 410px (350 + 25 + 25 + 5 + 5)，高度 = 210px (150 + 25 + 25 + 5 + 5)，padding 加 border 再加 content box。
 
 ![Showing the size of the box when the standard box model is being used.](standard-box-model.png)
 
