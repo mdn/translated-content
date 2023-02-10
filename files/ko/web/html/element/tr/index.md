@@ -1,7 +1,6 @@
 ---
 title: <tr>
 slug: Web/HTML/Element/tr
-translation_of: Web/HTML/Element/tr
 ---
 
 ## 개요

@@ -92,7 +92,7 @@ transition.addEventListener('transitionend', function() {
 });
 ```
 
-{{ EmbedLiveSample('Examples', '100%', '150px') }}
+{{ EmbedLiveSample('运行实例', '100%', '150px') }}
 
 不同的地方是：
 

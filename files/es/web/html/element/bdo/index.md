@@ -9,7 +9,7 @@ original_slug: Web/HTML/Elemento/bdo
 
 - La dirección de escritura del texto está relacionada con el idioma y se declara con el atributo dir. Pero en ocasiones esto no es suficiente, entonces entra en juego el elemento [bdo](/es/HTML/Elemento/bdo) (anulación del algoritmo bidireccional) que al anular el algoritmo permite un control total de la direccionalidad.
   - : **Sus etiquetas son**: \<bdo> y \</bdo> (ambas obligatorias).
-  
+
     **Crea una caja**: En línea.
 
     **Está definido como**: [Elemento especial](/es/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).

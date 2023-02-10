@@ -50,15 +50,15 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
     <tr>
       <th scope="row">Regras ARIA permitidas</th>
       <td>
-        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
-        {{ARIARole("application")}}, {{ARIARole("banner")}},
-        {{ARIARole("complementary")}},
-        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
-        {{ARIARole("document")}}, {{ARIARole("feed")}},
-        {{ARIARole("log")}}, {{ARIARole("main")}},
-        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
-        {{ARIARole("search")}}, {{ARIARole("status")}},
-        {{ARIARole("tabpanel")}}
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>,
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>,
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>,
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>,
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>,
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>,
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>,
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>, <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>,
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code>
       </td>
     </tr>
     <tr>

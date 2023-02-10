@@ -1,13 +1,6 @@
 ---
 title: 종속
 slug: Web/CSS/Cascade
-tags:
-  - CSS
-  - Guide
-  - Introduction
-  - Layout
-  - Reference
-translation_of: Web/CSS/Cascade
 ---
 
 {{CSSRef}}

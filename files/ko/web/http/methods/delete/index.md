@@ -1,11 +1,6 @@
 ---
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
-tags:
-  - HTTP
-  - Reference
-  - Request method
-translation_of: Web/HTTP/Methods/DELETE
 ---
 
 {{HTTPSidebar}}

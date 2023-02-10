@@ -1,7 +1,6 @@
 ---
 title: AbstractRange.collapsed
 slug: Web/API/AbstractRange/collapsed
-translation_of: Web/API/AbstractRange/collapsed
 ---
 
 {{APIRef("DOM WHATWG")}}

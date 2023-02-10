@@ -35,9 +35,9 @@ in 属性标识输入的原语。
 
 ## BackgroundImage 的解决方案
 
-我们需要使用 < feimage >原语引入一个图像混合到过滤器本身内来替代使用"BackgroundImage".
+我们需要使用 `<feimage>` 原语引入一个图像混合到过滤器本身内来替代使用"BackgroundImage".
 
-### HTML Content
+### HTML
 
 ```html
 <div style="width: 420px; height: 220px;">
@@ -67,7 +67,7 @@ in 属性标识输入的原语。
 
 ### 效果
 
-{{ EmbedLiveSample('Workaround_for_backgroundImage') }}
+{{ EmbedLiveSample('BackgroundImage 的解决方案') }}
 
 ## 元素
 

@@ -1,13 +1,6 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Web
-translation_of: Web/HTML/Element/textarea
 ---
 
 {{HTMLSidebar}}

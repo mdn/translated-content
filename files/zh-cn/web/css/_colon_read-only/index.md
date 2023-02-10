@@ -49,9 +49,9 @@ p:read-only { background: lightgray; }
 p[contenteditable="true"] { color: blue; }
 ```
 
-### 输出
+### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

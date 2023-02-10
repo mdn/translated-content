@@ -1,15 +1,6 @@
 ---
 title: <cite>
 slug: Web/HTML/Element/cite
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - 인용
-  - 출처
-translation_of: Web/HTML/Element/cite
 ---
 
 {{HTMLSidebar}}

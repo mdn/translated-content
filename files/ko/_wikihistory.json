@@ -170,6 +170,10 @@
     "modified": "2020-08-05T01:06:55.575Z",
     "contributors": ["alattalatta"]
   },
+  "Glossary/CSS_Descriptor": {
+    "modified": "2020-06-18T03:48:31.777Z",
+    "contributors": ["DeadIntegral"]
+  },
   "Glossary/CSS_preprocessor": {
     "modified": "2019-04-18T12:04:13.994Z",
     "contributors": ["alattalatta", "ByeongGi"]
@@ -209,10 +213,6 @@
   "Glossary/DOM": {
     "modified": "2019-03-18T21:26:45.962Z",
     "contributors": ["cs09g"]
-  },
-  "Glossary/Descriptor_(CSS)": {
-    "modified": "2020-06-18T03:48:31.777Z",
-    "contributors": ["DeadIntegral"]
   },
   "Glossary/Doctype": {
     "modified": "2019-10-31T03:37:46.868Z",
@@ -647,13 +647,13 @@
     "modified": "2019-11-17T09:43:44.308Z",
     "contributors": ["enfroze"]
   },
-  "Glossary/XHR_(XMLHttpRequest)": {
-    "modified": "2019-05-26T04:21:15.494Z",
-    "contributors": ["alattalatta", "frankradio", "OKCHANGWON", "kidkkr"]
-  },
   "Glossary/XHTML": {
     "modified": "2019-12-26T10:45:10.722Z",
     "contributors": ["04SeoHyun", "jeonnoej", "teoli", "Sebuls"]
+  },
+  "Glossary/XMLHttpRequest": {
+    "modified": "2019-05-26T04:21:15.494Z",
+    "contributors": ["alattalatta", "frankradio", "OKCHANGWON", "kidkkr"]
   },
   "Glossary/array": {
     "modified": "2019-03-18T21:24:02.576Z",
@@ -4294,10 +4294,6 @@
     "modified": "2020-04-05T10:19:30.624Z",
     "contributors": ["peacekimjapan"]
   },
-  "Web/API/WebRTC_API/adapter.js": {
-    "modified": "2020-08-14T03:48:29.087Z",
-    "contributors": ["breadfit"]
-  },
   "Web/API/WebSocket": {
     "modified": "2020-10-15T21:42:28.844Z",
     "contributors": ["alattalatta", "TaeYoon2", "pjc0247"]
@@ -6170,6 +6166,10 @@
     "modified": "2020-10-15T22:29:00.912Z",
     "contributors": ["ahnzaz"]
   },
+  "Web/HTML/Attributes/rel": {
+    "modified": "2020-10-15T21:56:00.564Z",
+    "contributors": ["alattalatta", "limjungmok", "young-gratia"]
+  },
   "Web/HTML/Block-level_elements": {
     "modified": "2020-01-20T08:47:15.147Z",
     "contributors": [
@@ -6865,10 +6865,6 @@
   "Web/HTML/Inline_elements": {
     "modified": "2020-02-12T03:45:21.056Z",
     "contributors": ["SphinxKnight", "alattalatta", "teoli", "Gilchris"]
-  },
-  "Web/HTML/Link_types": {
-    "modified": "2020-10-15T21:56:00.564Z",
-    "contributors": ["alattalatta", "limjungmok", "young-gratia"]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-18T20:35:03.733Z",
@@ -10456,58 +10452,6 @@
     "modified": "2019-03-23T23:41:54.185Z",
     "contributors": ["ExE-Boss", "teoli", "Netaras"]
   },
-  "Web/XPath/Axes/ancestor": {
-    "modified": "2019-03-23T23:41:51.868Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/ancestor-or-self": {
-    "modified": "2019-03-23T23:41:53.193Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/attribute": {
-    "modified": "2019-01-16T16:16:10.374Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/child": {
-    "modified": "2019-01-16T16:16:18.107Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/descendant": {
-    "modified": "2019-01-16T16:16:11.286Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/descendant-or-self": {
-    "modified": "2019-01-16T16:16:11.121Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/following": {
-    "modified": "2019-01-16T16:16:17.035Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/following-sibling": {
-    "modified": "2019-01-16T16:16:13.970Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/namespace": {
-    "modified": "2019-03-23T23:41:52.884Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/parent": {
-    "modified": "2019-01-16T16:16:10.076Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/preceding": {
-    "modified": "2019-01-16T16:16:13.085Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/preceding-sibling": {
-    "modified": "2019-01-16T16:16:15.097Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/self": {
-    "modified": "2019-01-16T16:16:15.156Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
   "Web/XPath/Functions": {
     "modified": "2019-03-23T23:41:49.260Z",
     "contributors": ["ExE-Boss", "teoli", "mete0r", "Netaras"]
@@ -11709,6 +11653,10 @@
     "modified": "2020-10-15T22:22:07.358Z",
     "contributors": ["chansbro"]
   },
+  "orphaned/Web/API/WebRTC_API/adapter.js": {
+    "modified": "2020-08-14T03:48:29.087Z",
+    "contributors": ["breadfit"]
+  },
   "orphaned/Web/API/WindowEventHandlers": {
     "modified": "2020-10-15T21:46:21.497Z",
     "contributors": ["alattalatta", "fscholz"]
@@ -11954,6 +11902,58 @@
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2019-03-23T22:05:46.762Z",
     "contributors": ["daebum-lee"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor": {
+    "modified": "2019-03-23T23:41:51.868Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor-or-self": {
+    "modified": "2019-03-23T23:41:53.193Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/attribute": {
+    "modified": "2019-01-16T16:16:10.374Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/child": {
+    "modified": "2019-01-16T16:16:18.107Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/descendant": {
+    "modified": "2019-01-16T16:16:11.286Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/descendant-or-self": {
+    "modified": "2019-01-16T16:16:11.121Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/following": {
+    "modified": "2019-01-16T16:16:17.035Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/following-sibling": {
+    "modified": "2019-01-16T16:16:13.970Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/namespace": {
+    "modified": "2019-03-23T23:41:52.884Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/parent": {
+    "modified": "2019-01-16T16:16:10.076Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/preceding": {
+    "modified": "2019-01-16T16:16:13.085Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/preceding-sibling": {
+    "modified": "2019-01-16T16:16:15.097Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/self": {
+    "modified": "2019-01-16T16:16:15.156Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
   },
   "orphaned/WebAssembly/Caching_modules": {
     "modified": "2019-03-18T21:26:57.835Z",

@@ -1,11 +1,6 @@
 ---
 title: '@import'
 slug: Web/CSS/@import
-tags:
-  - At-rule
-  - CSS
-  - Reference
-translation_of: Web/CSS/@import
 ---
 
 {{CSSRef}}

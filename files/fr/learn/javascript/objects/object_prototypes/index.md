@@ -215,7 +215,7 @@ Personne.prototype.aurevoir = function() {
 }
 ```
 
-Même si nous l'avons déclaré après, la méthode `aurevoir()` est disponible pour l'instance `personne1`. Son existence a mis à jour dynamiquement les méthodes de l'instance. Cela démontre ce que nous expliquions plus haut au sujet de la chaine de prototypage&nbsp;: le navigateur la parcourt de manière ascendante. Ainsi, il est possible de trouver directement les méthodes qui n'ont pas été définies au niveau de l'instance, plutôt que de les recopier au sein de l'instance. Cela nous permet de bénéficier d'un système extensible de manière simple et élégante.  
+Même si nous l'avons déclaré après, la méthode `aurevoir()` est disponible pour l'instance `personne1`. Son existence a mis à jour dynamiquement les méthodes de l'instance. Cela démontre ce que nous expliquions plus haut au sujet de la chaine de prototypage&nbsp;: le navigateur la parcourt de manière ascendante. Ainsi, il est possible de trouver directement les méthodes qui n'ont pas été définies au niveau de l'instance, plutôt que de les recopier au sein de l'instance. Cela nous permet de bénéficier d'un système extensible de manière simple et élégante.
 
 Vous verrez peu d'attributs définis au sein de l'attribut `prototype`, pour la simple et bonne raison que c'est assez peu pratique. Vous pourriez avoir&nbsp;:
 

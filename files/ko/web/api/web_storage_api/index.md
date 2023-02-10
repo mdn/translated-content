@@ -1,18 +1,6 @@
 ---
 title: Web Storage API
 slug: Web/API/Web_Storage_API
-tags:
-  - API
-  - Reference
-  - Storage
-  - Web Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
-  - 로컬스토리지
-  - 세션스토리지
-  - 웹 스토리지
-translation_of: Web/API/Web_Storage_API
 ---
 
 {{DefaultAPISidebar("Web Storage API")}}

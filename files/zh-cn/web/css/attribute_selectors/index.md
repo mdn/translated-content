@@ -105,7 +105,7 @@ a[href$=".org"] {
 
 #### 结果
 
-{{EmbedLiveSample("Links")}}
+{{EmbedLiveSample("链接")}}
 
 ### 多语言
 
@@ -152,7 +152,7 @@ div[data-lang="zh-TW"] {
 
 #### 结果
 
-{{EmbedLiveSample("Languages")}}
+{{EmbedLiveSample("多语言")}}
 
 ### HTML 有序列表
 
@@ -188,7 +188,7 @@ ol[type="A" s] {
 
 #### 结果
 
-{{EmbedLiveSample("HTML_ordered_lists")}}
+{{EmbedLiveSample("HTML 有序列表")}}
 
 ## 规范
 

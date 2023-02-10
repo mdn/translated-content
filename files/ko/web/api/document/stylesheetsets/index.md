@@ -1,14 +1,6 @@
 ---
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Property
-  - Reference
-  - Stylesheets
-translation_of: Web/API/Document/styleSheetSets
 ---
 
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}

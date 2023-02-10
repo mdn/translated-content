@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: identifier starts immediately after numeric literal'
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
-tags:
-  - 구문 에러
-  - 변수 이름
-  - 식별자
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
 
 {{JSSidebar("Errors")}}

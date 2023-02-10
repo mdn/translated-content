@@ -1,15 +1,6 @@
 ---
 title: WebGL by example
 slug: Web/API/WebGL_API/By_example
-tags:
-  - Beginner
-  - Example
-  - Graphics
-  - Learn
-  - NeedsTranslation
-  - TopicStub
-  - WebGL
-translation_of: Web/API/WebGL_API/By_example
 ---
 
 {{Next("Learn/WebGL/By_example/Detect_WebGL")}}

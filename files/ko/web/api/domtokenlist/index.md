@@ -1,13 +1,6 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
-tags:
-  - API
-  - DOM
-  - DOMTokenList
-  - Interface
-  - Reference
-translation_of: Web/API/DOMTokenList
 ---
 
 {{APIRef("DOM")}}

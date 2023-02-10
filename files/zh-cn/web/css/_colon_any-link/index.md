@@ -14,7 +14,7 @@ slug: Web/CSS/:any-link
 }
 ```
 
-## 语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -43,12 +43,12 @@ a:-webkit-any-link {
 }
 ```
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('示例')}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

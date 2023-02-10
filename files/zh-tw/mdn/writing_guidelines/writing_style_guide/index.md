@@ -94,7 +94,7 @@ original_slug: MDN/Guidelines/Writing_style_guide
 
 > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-TW/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
 >
-> For more details and further examples, see {{SectionOnPage("/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+> For more details and further examples, see the [Text](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 #### 涵蓋所有相關的範例
 

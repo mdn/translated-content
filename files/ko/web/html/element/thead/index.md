@@ -1,14 +1,6 @@
 ---
 title: '<thead>: 표 머릿글 요소'
 slug: Web/HTML/Element/thead
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-browser-compat: html.elements.thead
 ---
 
 {{HTMLSidebar}}

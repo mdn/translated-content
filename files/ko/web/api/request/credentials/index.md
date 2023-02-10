@@ -1,17 +1,6 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
-tags:
-  - API
-  - Cookies
-  - Fetch
-  - Networking
-  - Property
-  - Reference
-  - Security
-  - credentials
-  - request
-translation_of: Web/API/Request/credentials
 ---
 
 {{APIRef("Fetch")}}

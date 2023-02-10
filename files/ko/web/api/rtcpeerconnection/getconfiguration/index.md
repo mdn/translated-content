@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.getConfiguration()
 slug: Web/API/RTCPeerConnection/getConfiguration
-translation_of: Web/API/RTCPeerConnection/getConfiguration
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}

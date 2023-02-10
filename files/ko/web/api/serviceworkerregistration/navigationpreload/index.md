@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.navigationPreload
 slug: Web/API/ServiceWorkerRegistration/navigationPreload
-translation_of: Web/API/ServiceWorkerRegistration/navigationPreload
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

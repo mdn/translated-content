@@ -29,7 +29,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 - {{jsxref("Error")}} 类型（仅限部分 [Error 类型](#error_类型)）。
 - {{jsxref("Map")}}
 - {{jsxref("Object")}} objects: but only plain objects (e.g. from object literals).
-- 除 `symbol` 以外的[基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#primitive_values)。
+- 除 `symbol` 以外的[基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)。
 - {{jsxref("RegExp")}}：`lastIndex` 字段不会被保留。
 - {{jsxref("Set")}}
 - {{jsxref("String")}}
@@ -46,7 +46,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 ## 参见
 
 - [HTML 规范：安全地传递结构化数据](https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data)
-- {{Glossary("Transferable objects", "可转移对象")}}
+- [可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)
 - {{domxref("structuredClone()")}}
 - {{domxref("window.history")}}
 - {{domxref("window.postMessage()")}}

@@ -1,12 +1,6 @@
 ---
 title: Event.isTrusted
 slug: Web/API/Event/isTrusted
-tags:
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/Event/isTrusted
-browser-compat: api.Event.isTrusted
 ---
 {{APIRef("DOM")}}
 

@@ -1,15 +1,6 @@
 ---
 title: in 연산자
 slug: Web/JavaScript/Reference/Operators/in
-tags:
-  - JavaScript
-  - Operator
-  - Relational Operators
-  - 관계형 연산자
-  - 연산자
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Operators/in
-browser-compat: javascript.operators.in
 ---
 
 {{jsSidebar("Operators")}}

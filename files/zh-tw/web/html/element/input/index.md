@@ -51,27 +51,27 @@ To get an idea of how different the various `<input>` types look, try editing th
       <td>
         <ul>
           <li>
-            <code>type=button</code>: {{ARIARole("link")}},
-            {{ARIARole("menuitem")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("menuitemradio")}},
-            {{ARIARole("radio")}}, {{ARIARole("switch")}},
-            {{ARIARole("tab")}}
+            <code>type=button</code>: <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>
           </li>
           <li>
-            <code>type=checkbox</code>: {{ARIARole("button")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("option")}}, {{ARIARole("switch")}}
+            <code>type=checkbox</code>: <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>, <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>
           </li>
           <li>
-            <code>type=image</code>: {{ARIARole("link")}},
-            {{ARIARole("menuitem")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("menuitemradio")}},
-            {{ARIARole("radio")}}, {{ARIARole("switch")}}
+            <code>type=image</code>: <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
+            <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>
           </li>
           <li>
-            <code>type=radio</code>: {{ARIARole("menuitemradio")}}
+            <code>type=radio</code>: <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>
           </li>
           <li>
             <code>type=color|date|datetime|datetime-local|email|file</code>:
@@ -320,7 +320,7 @@ You can find multiple examples of `<input>` element usage on the pages covering 
 
 ### File inputs
 
-1. Starting in {{Gecko("2.0")}}, calling the `click()` method on an `<input>` element of type `file` opens the file picker and lets the user select files. See [Using files from web applications](/zh-TW/docs/Using_files_from_web_applications) for an example and more details.
+1. Starting in Gecko 2.0, calling the `click()` method on an `<input>` element of type `file` opens the file picker and lets the user select files. See [Using files from web applications](/zh-TW/docs/Using_files_from_web_applications) for an example and more details.
 2. You cannot set the value of a file picker from a script — doing something like the following has no effect:
 
     ```js
@@ -351,19 +351,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
 - Try the language specified by any Content-Language HTTP header or
 - If none specified, use the browser's locale.
 
-### Using mozactionhint on Firefox mobile
-
-You can use the {{htmlattrxref("mozactionhint", "input")}} attribute to specify the text for the label of the enter key on the virtual keyboard when your form is rendered on Firefox mobile. For example, to have a "Next" label, you can do this:
-
-```html
-<input type="text" mozactionhint="next">
-```
-
-The result is:
-
-![mozactionhint.png](/@api/deki/files/4970/=mozactionhint.png?size=webview)
-
-## See also
+## 參見
 
 - Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)

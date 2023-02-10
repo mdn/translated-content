@@ -1,13 +1,6 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/domain
 ---
 
 {{ApiRef}}

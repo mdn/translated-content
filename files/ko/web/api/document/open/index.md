@@ -1,7 +1,6 @@
 ---
 title: Document.open()
 slug: Web/API/Document/open
-translation_of: Web/API/Document/open
 ---
 {{APIRef("DOM")}}
 
@@ -72,12 +71,9 @@ Where `type` 인자는 문서를 작성할 MIME 형식을 정의하며(예: `tex
 
 하지만 이런 호출은 더 이상 사용할 수 없으며, 예외 또한 발생하지 않는다.대신 인자가 없는 `document.open()` 메소드가 호출되는 효과를 지니며, 대신 브라우저 히스토리 대체는 그대로 작동한다.
 
-## 규격
+## 명세서
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}} | {{Spec2("HTML WHATWG")}} |         |
-| {{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}} | {{Spec2("DOM2 HTML")}}     |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

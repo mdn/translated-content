@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
-translation_of: Web/API/RTCPeerConnection/currentRemoteDescription
 ---
 
 {{APIRef("WebRTC")}}

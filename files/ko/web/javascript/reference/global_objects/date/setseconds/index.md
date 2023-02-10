@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-browser-compat: javascript.builtins.Date.setSeconds
 ---
 
 {{JSRef}}

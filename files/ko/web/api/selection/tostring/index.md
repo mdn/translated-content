@@ -1,7 +1,6 @@
 ---
 title: Selection.toString()
 slug: Web/API/Selection/toString
-translation_of: Web/API/Selection/toString
 ---
 
 {{ ApiRef("DOM") }}{{SeeCompatTable}}

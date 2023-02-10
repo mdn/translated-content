@@ -2,15 +2,19 @@
 title: clearTimeout()
 slug: Web/API/clearTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
+l10n:
+  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
 {{APIRef("HTML DOM")}}
 
 グローバルの **`clearTimeout()`** メソッドは、 {{domxref("setTimeout()")}} の呼び出しによって以前に確立されたタイムアウトを解除します。
 
+指定された引数で前回確立されたアクションを識別できなかった場合、このメソッドは何も行いません。
+
 ## 構文
 
-```js
+```js-nolint
 clearTimeout(timeoutID)
 ```
 
@@ -21,32 +25,36 @@ clearTimeout(timeoutID)
 
 注目すべきは、 {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} で使用される ID のプールは共有されますので、技術的には `clearTimeout()` および {{domxref("clearInterval()")}} は互いに交換できます。しかし、明確化のため、そのようなことは避けてください。
 
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
 ## 例
 
 ウェブページのコンテキストで以下のスクリプトを実行し、ページを一度クリックしてください。１秒後にメッセージがポップアップします。１秒間に複数回ページをクリックしても、アラートは一度しか表示されません。
 
 ```js
 const alarm = {
-  remind: function(aMessage) {
+  remind(aMessage) {
     alert(aMessage);
     this.timeoutID = undefined;
   },
 
-  setup: function() {
+  setup() {
     if (typeof this.timeoutID === 'number') {
       this.cancel();
     }
 
-    this.timeoutID = setTimeout(function(msg) {
+    this.timeoutID = setTimeout((msg) => {
       this.remind(msg);
-    }.bind(this), 1000, 'Wake up!');
+    }, 1000, 'Wake up!');
   },
 
-  cancel: function() {
+  cancel() {
     clearTimeout(this.timeoutID);
   }
 };
-window.addEventListener('click', () => alarm.setup() );
+window.addEventListener('click', () => alarm.setup());
 ```
 
 ## メモ
@@ -67,4 +75,3 @@ window.addEventListener('click', () => alarm.setup() );
 - {{domxref("setInterval()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ 管理](/ja/docs/JavaScript/Timers/Daemons)

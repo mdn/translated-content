@@ -1,7 +1,6 @@
 ---
 title: IndexedDB 사용하기
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

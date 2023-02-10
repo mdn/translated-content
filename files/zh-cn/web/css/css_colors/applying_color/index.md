@@ -29,7 +29,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 - {{cssxref("background-color")}}
   - : The text's background color.
 - {{cssxref("text-shadow")}}
-  - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See {{SectionOnPage("/en-US/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} to learn more.
+  - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See [Text drop shadows](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#文字阴影) to learn more.
 - {{cssxref("text-decoration-color")}}
   - : By default, text decorations (such as underlines, strikethroughs, etc) use the `color` property as their colors. However, you can override that behavior and use a different color for them with the `text-decoration-color` property.
 - {{cssxref("text-emphasis-color")}}
@@ -52,7 +52,7 @@ Every element is a box with some sort of content, and has a background and a bor
 
 ### 边框
 
-Any element can have a [border](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) drawn around it. A basic element border is a line drawn around the edges of the element's content. See {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) to learn more about applying styles to borders.
+Any element can have a [border](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders) drawn around it. A basic element border is a line drawn around the edges of the element's content. See [Margins, padding, and borders](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#盒子模型和内联盒子) to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) to learn more about applying styles to borders.
 
 You can use the {{cssxref("border")}} shorthand property, which lets you configure everything about the border in one shot (including non-color features of borders, such as its [width](/zh-CN/docs/Web/CSS/border-width), [style](/zh-CN/docs/Web/CSS/border-style) (solid, dashed, etc.), and so forth.
 
@@ -86,7 +86,7 @@ For more detailed discussion of each of the color value types, see the reference
 
 A set of standard color names have been defined, letting you use these keywords instead of numeric representations of colors if you choose to do so and there's a keyword representing the exact color you want to use. Color keywords include the standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`.
 
-See {{SectionOnPage("/en-US/docs/Web/CSS/color_value", "Color keywords", "code")}} for a list of all available color keywords.
+See [Named colors](/zh-CN/docs/Web/CSS/named-color) for more information on color keywords.
 
 ### RGB 值
 
@@ -200,7 +200,7 @@ th {
 </table>
 ```
 
-{{EmbedLiveSample("hsl-swatches", 300, 260)}}
+{{EmbedLiveSample("HSL 函数表示法s", 300, 260)}}
 
 > **备注：** Note that when you omit the hue's unit, it's assumed to be in degrees (`deg`).
 
@@ -214,7 +214,7 @@ The easiest way to apply color to elements—and the way you'll usually do it—
 
 Let's take a look at an example, starting by looking at the results we're trying to achieve:
 
-{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 150)}}
+{{EmbedLiveSample("在样式表中指定颜色", 650, 150)}}
 
 #### HTML
 
@@ -317,7 +317,7 @@ The `<input>` element represents a color only in the [hexadecimal string notatio
 
 Let's look at a simple example, in which the user can choose a color. As the user adjusts the color, the border around the example changes to reflect the new color. After finishing up and picking the final color, the color picker's value is displayed.
 
-{{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
+{{EmbedLiveSample("示例：选择一个颜色", 525, 275)}}
 
 > **备注：** On macOS, you indicate that you've finalized selection of the color by closing the color picker window.
 
@@ -470,7 +470,7 @@ You can set `color-adjust` to `exact` to tell the browser that the element or el
 
 > **备注：** There is no guarantee, though, that `color-adjust: exact` will result in your CSS being used exactly as given. If the browser provides user preferences to change the output (such as a "don't print backgrounds" checkbox in a print dialog box), that overrides the value of `color-adjust`.
 
-## 相关链接
+## 参见
 
 - [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Graphics on the web](/zh-CN/docs/Web/Guide/Graphics)

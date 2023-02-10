@@ -1,11 +1,6 @@
 ---
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - Method
-  - Reference
-browser-compat: api.EventTarget.removeEventListener
-translation_of: Web/API/EventTarget/removeEventListener
 ---
 
 {{APIRef("DOM")}}

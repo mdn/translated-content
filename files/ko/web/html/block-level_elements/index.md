@@ -1,14 +1,6 @@
 ---
 title: 블록 레벨 요소
 slug: Web/HTML/Block-level_elements
-tags:
-  - Beginner
-  - Development
-  - Guide
-  - HTML
-  - HTML5
-  - Web
-translation_of: Web/HTML/Block-level_elements
 ---
 
 **HTML**(Hypertext Markup Language)의 요소는 역사적으로 "블록 레벨" 요소와 ["인라인" 요소](/ko/docs/Web/HTML/Inline_elements)로 분류됐습니다. 기본적으로 블록 레벨 요소는 부모 요소의 전체 공간을 차지하여 "블록"을 만듭니다. 이 글에서 자세한 설명을 읽을 수 있습니다.

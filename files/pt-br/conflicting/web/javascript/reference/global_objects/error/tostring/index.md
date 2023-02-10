@@ -1,12 +1,6 @@
 ---
 title: Error.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
-tags:
-  - JavaScript
-  - Não padronizado
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
 ---
 

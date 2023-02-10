@@ -1,14 +1,6 @@
 ---
 title: AudioNode.channelInterpretation
 slug: Web/API/AudioNode/channelInterpretation
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - channelInterpretation
-browser-compat: api.AudioNode.channelInterpretation
 ---
 {{ APIRef("Web Audio API") }}
 

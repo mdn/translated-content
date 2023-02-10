@@ -1,13 +1,6 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Landing
-  - Reference
-translation_of: Web/API/Fetch_API
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

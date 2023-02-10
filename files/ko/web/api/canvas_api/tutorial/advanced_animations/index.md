@@ -1,7 +1,6 @@
 ---
 title: 발전된 애니메이션
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
-translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 original_slug: Web/HTML/Canvas/Tutorial/Advanced_animations
 ---
 

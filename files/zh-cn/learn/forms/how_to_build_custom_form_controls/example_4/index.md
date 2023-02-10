@@ -8,7 +8,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_4
 
 ## 改变状态
 
-### HTML 内容
+### HTML
 
 ```html
 <form class="no-widget">
@@ -33,7 +33,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_4
 </form>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 .widget select,
@@ -160,7 +160,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_4
 }
 ```
 
-### JavaScript 内容
+### JavaScript
 
 ```js
 // ------- //
@@ -293,4 +293,4 @@ window.addEventListener('load', function () {
 
 ### 结果
 
-{{ EmbedLiveSample('Change_states') }}
+{{ EmbedLiveSample('改变状态') }}

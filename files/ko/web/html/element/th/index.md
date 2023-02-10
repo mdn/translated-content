@@ -1,13 +1,6 @@
 ---
 title: <th>
 slug: Web/HTML/Element/th
-tags:
-  - HTML
-  - 레퍼런스
-  - 요소
-  - 웹
-  - 표
-translation_of: Web/HTML/Element/th
 ---
 
 {{HTMLSidebar}}

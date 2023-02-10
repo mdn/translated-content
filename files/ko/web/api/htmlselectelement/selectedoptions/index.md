@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
-translation_of: Web/API/HTMLSelectElement/selectedOptions
 ---
 
 {{APIRef("HTML DOM")}}
@@ -87,7 +86,7 @@ orderButton.addEventListener("click", function() {
 }, false);
 ```
 
-This script sets up a {{event("click")}} event listener on the "Order Now" button. When clicked, the event handler fetches the list of selected options using `selectedOptions`, then iterates over the options in the list. A string is constructed to list the ordered items, with logic to build the list using proper English grammar rules (including a [serial comma](https://en.wikipedia.org/wiki/Serial_comma).
+This script sets up a [`click`](/ko/docs/Web/API/Element/click_event) event listener on the "Order Now" button. When clicked, the event handler fetches the list of selected options using `selectedOptions`, then iterates over the options in the list. A string is constructed to list the ordered items, with logic to build the list using proper English grammar rules (including a [serial comma](https://en.wikipedia.org/wiki/Serial_comma).
 
 ### Result
 

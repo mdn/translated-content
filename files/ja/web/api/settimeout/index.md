@@ -2,6 +2,8 @@
 title: setTimeout()
 slug: Web/API/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
+l10n:
+  sourceCommit: c09b8e9dd0022a33cf84355704ca281d6a5f29f5
 ---
 
 {{APIRef("HTML DOM")}}
@@ -10,22 +12,34 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 
 ## 構文
 
-```js
-var timeoutID = setTimeout(function[, delay, arg1, arg2, ...]);
-var timeoutID = setTimeout(function[, delay]);
-var timeoutID = setTimeout(code[, delay]);
+```js-nolint
+setTimeout(code)
+setTimeout(code, delay)
+
+setTimeout(functionRef)
+setTimeout(functionRef, delay)
+setTimeout(functionRef, delay, param1)
+setTimeout(functionRef, delay, param1, param2)
+setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 ```
 
 ### 引数
 
-- `function`
+- `functionRef`
   - : タイマーが満了した後に実行する{{jsxref("function", "関数")}}。
 - `code`
   - : 関数の代わりに文字列を含める代替構文も許容されており、タイマーが満了したときに文字列をコンパイルして実行します。 {{jsxref("Global_Objects/eval", "eval()")}} の使用にリスクがあるのと同じ理由で、この構文は**推奨しません**。
 - `delay` {{optional_inline}}
-  - : 指定した関数やコードを実行する前に待つタイマーの時間をミリ秒 (1/1000 秒) 単位で指定します。この引数を省略すると値 0 を使用しますので "直ちに" 実行する、より正確に言えばできるだけ早く実行することを意味します。どちらの場合も、実際の遅延が想定より長くなることがあります。後述する[遅延が指定値より長い理由](#遅延が指定値より長い理由)をご覧ください。
-- `arg1, ..., argN` {{optional_inline}}
-  - : タイマーが満了したときに、 `function` で指定された関数に渡す追加の引数です。
+
+  - : 指定した関数やコードを実行する前に待つタイマーの時間をミリ秒 (1/1000 秒) 単位で指定します。この引数を省略すると値 0 を使用しますので "直ちに" 実行する、より正確に言えばできるだけ早く実行することを意味します。
+
+    なお、どちらの場合も、実際の遅延が想定より長くなることがあります。後述する[遅延が指定値より長い理由](#遅延が指定値より長い理由)をご覧ください。
+
+     また、値が数値でない場合、暗黙のうちに[型強制](/ja/docs/Glossary/Type_coercion)が行われ、数値に変換されることにも注意してください。これは予期しない、驚くべき結果につながる可能性があります。例として、[delay の値が数値でない場合は暗黙に数値に強制される](#delay_の値が数値でない場合は暗黙に数値に強制される)を参照してください。
+
+- `param1`, …, `paramN` {{optional_inline}}
+
+  - : タイマーが満了したときに、 `functionRef` で指定された関数に渡す追加の引数です。
 
 ## 返値
 
@@ -38,6 +52,32 @@ var timeoutID = setTimeout(code[, delay]);
 タイムアウトは、 {{domxref("clearTimeout()")}} を使用して取り消すことができます。
 
 関数を繰り返して（例えば _N_ ミリ秒ごとに）呼び出すには、 {{domxref("setInterval()")}} を使用することを検討してください。
+
+### delay の値が数値でない場合は暗黙に数値に強制される
+
+もし `setTimeout()` が呼び出されたときの [_delay_](#delay) 値が数値でなかった場合、暗黙のうちに[型強制](/ja/docs/Glossary/Type_coercion)が行われ、その値を数値に変換します。例えば、以下のコードは _delay_ の値として、数値 `1000` ではなく文字列 `"1000"` を使用しています。しかし、コードが実行されると文字列が数値 `1000` に強制されるため、どのみち動作し、 1 秒後にコードが実行されます。
+
+```js example-bad
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, "1000")
+```
+
+しかし、多くの場合、暗黙の型強制は予期しない、驚くべき結果をもたらす可能性があります。例えば、以下のコードを実行すると、文字列 `"1 second"` は最終的に数字 `0` に強制され、その結果、コードは遅延ゼロで直ちに実行されます。
+
+```js example-bad
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, "1 second")
+```
+
+したがって、 _delay_ の値には文字列を使用せず、常に数字を使用してください。
+
+```js example-good
+setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, 1000)
+```
 
 ### 非同期関数の動作
 
@@ -103,15 +143,19 @@ setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // 同じエラー
 この問題の一般的な解決策は、`this` に必要な値を設定するラッパー関数を使用することです。
 
 ```js
-setTimeout(function(){myArray.myMethod()}, 2.0*1000); // "zero,one,two" と 2 秒後に表示
-setTimeout(function(){myArray.myMethod('1')}, 2.5*1000); // "one" と 2.5 秒後に表示
+setTimeout(function () {
+  myArray.myMethod();
+}, 2.0 * 1000); // "zero,one,two" と 2 秒後に表示
+setTimeout(function () {
+  myArray.myMethod('1');
+}, 2.5 * 1000); // "one" と 2.5 秒後に表示
 ```
 
 代わりにアロー関数も使用することができます。
 
 ```js
-setTimeout(() => {myArray.myMethod()}, 2.0*1000); // "zero,one,two" と 2 秒後に表示
-setTimeout(() => {myArray.myMethod('1')}, 2.5*1000); // "one" と 2.5 秒後に表示
+setTimeout(() => {myArray.myMethod()}, 2.0 * 1000); // "zero,one,two" と 2 秒後に表示
+setTimeout(() => {myArray.myMethod('1')}, 2.5 * 1000); // "one" と 2.5 秒後に表示
 ```
 
 ##### bind() の使用
@@ -141,12 +185,12 @@ setTimeout("console.log('Hello World!');", 500);
 
 ```js example-good
 // こうすればよい
-setTimeout(function() {
+setTimeout(() => {
   console.log('Hello World!');
 }, 500);
 ```
 
-`{{domxref("setTimeout()")}}` に渡した文字列はグローバルコンテキストで評価されます。そのため、`{{domxref("setTimeout()")}}` が呼び出されたコンテキストのローカルシンボルは、文字列を評価したコードからは利用できません。
+{{domxref("setTimeout()")}} に渡した文字列はグローバルコンテキストで評価されます。そのため、{{domxref("setTimeout()")}} が呼び出されたコンテキストのローカルシンボルは、文字列を評価したコードからは利用できません。
 
 ### 遅延が指定値より長い理由
 
@@ -154,7 +198,7 @@ setTimeout(function() {
 
 #### 入れ子のタイムアウト
 
-[HTML 標準](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers)で指定されているとおり、ブラウザーは `setTimeout` の入れ子になった呼び出しが5回スケジュールされると、最小 4 ミリ秒のタイムアウトを強制します。
+[HTML 標準](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers)で指定されているとおり、ブラウザーは `setTimeout` の入れ子になった呼び出しが5回スケジュールされると、最小 4 ミリ秒のタイムアウトを強制します。
 
 この例では、 `setTimeout` の呼び出しを `0` ミリ秒の遅延でネストし、ハンドラーが呼び出されるたびに遅延時間を記録しています。最初の 4 回は遅延が約 0 ミリ秒、その後は約 4 ミリ秒になります。
 
@@ -296,7 +340,7 @@ function clearMessage() {
 
 ```css hidden
 #output {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 ```
 

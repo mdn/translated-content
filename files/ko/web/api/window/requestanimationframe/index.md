@@ -1,23 +1,6 @@
 ---
 title: window.requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
-tags:
-  - API
-  - Animations
-  - DOM
-  - DOM 레퍼런스
-  - requestAnimationFrame
-  - 게임
-  - 그래픽
-  - 그리기
-  - 레퍼런스
-  - 메소드
-  - 성능
-  - 스케줄링
-  - 윈도우
-  - 자바스크립트 타이머
-  - 중급
-translation_of: Web/API/window/requestAnimationFrame
 ---
 
 {{APIRef}}

@@ -1,10 +1,6 @@
 ---
 title: 선택자로 DOM 요소 선택하기
 slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
-tags:
-  - Beginner
-  - DOM
-translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 ---
 {{DefaultAPISidebar("DOM")}}
 

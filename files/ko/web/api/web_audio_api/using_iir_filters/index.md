@@ -1,13 +1,6 @@
 ---
 title: IIR 필터 사용하기
 slug: Web/API/Web_Audio_API/Using_IIR_filters
-tags:
-  - API
-  - Audio
-  - Guide
-  - IIRFilter
-  - Using
-  - Web Audio API
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 

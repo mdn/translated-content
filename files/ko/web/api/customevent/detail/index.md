@@ -1,12 +1,6 @@
 ---
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
-tags:
-  - Property
-  - Reference
-  - Read-only
-browser-compat: api.CustomEvent.detail
-translation_of: Web/API/CustomEvent/detail
 ---
 
 {{APIRef("DOM")}}

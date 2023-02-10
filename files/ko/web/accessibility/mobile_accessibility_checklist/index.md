@@ -1,7 +1,6 @@
 ---
 title: 모바일 접근성 점검항목
 slug: Web/Accessibility/Mobile_accessibility_checklist
-translation_of: Web/Accessibility/Mobile_accessibility_checklist
 ---
 
 이 문서는 모바일 앱 개발자를 위한 접근성 요구 사항에 대한 간결한 체크리스트를 제공한다. 더 많은 패턴이 발생할수록 지속적으로 진화하려는 의도다.

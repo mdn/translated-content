@@ -36,7 +36,7 @@ element = el.previousElementSibling;
 </script>
 ```
 
-この例は読み込み時に、ぺ0時に以下のような出力を行います。
+この例は読み込み時に、ページに以下のような出力を行います。
 
 ```
 Siblings of div-03
