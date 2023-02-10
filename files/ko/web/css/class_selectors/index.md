@@ -1,11 +1,6 @@
 ---
 title: 클래스 선택자
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Class_selectors
 ---
 
 {{CSSRef}}

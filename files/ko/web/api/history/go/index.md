@@ -1,7 +1,6 @@
 ---
 title: History.go()
 slug: Web/API/History/go
-translation_of: Web/API/History/go
 ---
 {{APIRef("History API")}}
 

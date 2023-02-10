@@ -1,13 +1,6 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/Input/file
-tags:
-  - HTML
-  - HTML forms
-  - Input Type
-  - Reference
-  - 파일
-translation_of: Web/HTML/Element/input/file
 ---
 
 {{HTMLSidebar}}

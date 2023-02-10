@@ -32,7 +32,7 @@ slug: Web/API/Element/mouseup_event
 
 ## 示例
 
-{{page("/en-US/docs/Web/API/Element/mousemove_event", "Examples")}}
+参见 [`mousemove` 事件](/zh-CN/docs/Web/API/Element/mousemove_event#示例)以获取示例代码。
 
 ## 规范
 

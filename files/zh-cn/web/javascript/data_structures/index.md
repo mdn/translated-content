@@ -76,7 +76,7 @@ Undefined 类型只有一个值：[`undefined`](/zh-CN/docs/Web/JavaScript/Refer
 
 ### Number 类型
 
-{{jsxref("Number")}} 类型是一种[基于 IEEE 754 标准的双精度 64 位二进制格式的值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)。它能够存储 2<sup>-1074</sup>（{{jsxref("Number.MIN_VALUE")}}）和 2<sup>1024</sup>（{{jsxref("Number.MAX_VALUE")}}）之间的正浮点数，以及 -2<sup>-1074</sup> 和 -2<sup>1024</sup> 之间的负浮点数，但是它仅能安全地存储在 -(2<sup>53</sup> − 1)（{{jsxref("Number.MIN_SAFE_INTEGER")}}）到 2<sup>53</sup> − 1（{{jsxref("Number.MAX_SAFE_INTEGER")}}）范围内的整数。超出这个范围，JavaScript 将不能安全地表示整数；相反，它们将由双精度浮点近似表示。你可以使用 {{jsxref("Number.isSafeInteger()")}} 检查一个数是否在安全的整数范围内。
+{{jsxref("Number")}} 类型是一种[基于 IEEE 754 标准的双精度 64 位二进制格式的值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_编码)。它能够存储 2<sup>-1074</sup>（{{jsxref("Number.MIN_VALUE")}}）和 2<sup>1024</sup>（{{jsxref("Number.MAX_VALUE")}}）之间的正浮点数，以及 -2<sup>-1074</sup> 和 -2<sup>1024</sup> 之间的负浮点数，但是它仅能安全地存储在 -(2<sup>53</sup> − 1)（{{jsxref("Number.MIN_SAFE_INTEGER")}}）到 2<sup>53</sup> − 1（{{jsxref("Number.MAX_SAFE_INTEGER")}}）范围内的整数。超出这个范围，JavaScript 将不能安全地表示整数；相反，它们将由双精度浮点近似表示。你可以使用 {{jsxref("Number.isSafeInteger()")}} 检查一个数是否在安全的整数范围内。
 
 ±(2<sup>-1074</sup> 到 2<sup>1024</sup>) 范围之外的值会自动转换：
 
@@ -96,7 +96,7 @@ console.log(42 / -0); // -Infinity
 
 {{jsxref("NaN")}}（“**N**ot **a** **N**umber”）是一个特殊种类的数值，当算术运算的结果不表示数值时，通常会遇到它。它也是 JavaScript 中唯一不等于自身的值。
 
-虽然 number 在概念上是一个“数学的值”，并且总是隐式的编码为浮点类型，但是 JavaScript 提供了 [按位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)。当应用按位运算符时，number 首先转换为 32 位整数。
+虽然 number 在概念上是一个“数学的值”，并且总是隐式的编码为浮点类型，但是 JavaScript 提供了[按位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)。当应用按位运算符时，number 首先转换为 32 位整数。
 
 > **备注：** 尽管按位运算符*可以*使用[位掩码](https://zh.wikipedia.org/wiki/掩码)来表示单个数值中的几个布尔值，但通常这不是一个好的做法。JavaScript 提供了表示一组布尔值的其它方法（如布尔数组，或将布尔值分配给命名属性的对象）。位掩码也往往会使代码更难读取、理解和维护。
 
@@ -121,11 +121,11 @@ Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true because bot
 
 你可以使用大多数运算符为 BigInt工作，包括 `+`、`*`、`-`、`**` 和 `%`——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，但是它是[宽松的](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)。
 
-BigInt 值并不总是更精确的，也不总是比 number 精确，因为 BigInt 不能表示分数，但是可以表示更准确的大整数。这两种类型都包含各自的类型，并且它们不能相互替代。如果 BigInt 值在算术表达式中与正则数值混合，或者它们相互[隐式转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)，则抛出 {{jsxref("TypeError")}}。
+BigInt 值并不总是更精确的，也不总是比 number 精确，因为 BigInt 不能表示分数，但是可以表示更准确的大整数。这两种类型都包含各自的类型，并且它们不能相互替代。如果 BigInt 值在算术表达式中与正则数值混合，或者它们相互[隐式转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，则抛出 {{jsxref("TypeError")}}。
 
 ### String 类型
 
-{{jsxref("String")}} 类型表示文本数据并编码为 [UTF-16 代码单位](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters)的 16 位无符号整数值序列。字符串中的每个元素在字符串中占据一个位置。第一个元素的索引为 `0`，下一个是索引 `1`，依此类推。字符串的长度是它的元素的数量。字符串的[长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)是其中的 UTF-16 代码单元的数量，这可能与 Unicode 字符的实际数量不符；更多细节参见 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) 参考页面。
+{{jsxref("String")}} 类型表示文本数据并编码为 [UTF-16 代码单位](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）)的 16 位无符号整数值序列。字符串中的每个元素在字符串中占据一个位置。第一个元素的索引为 `0`，下一个是索引 `1`，依此类推。字符串的长度是它的元素的数量。字符串的[长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)是其中的 UTF-16 代码单元的数量，这可能与 Unicode 字符的实际数量不符；更多细节参见 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）) 参考页面。
 
 JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就不可能修改它。字符串方法基于当前字符串的内容创建一个新的字符串——例如：
 
@@ -235,9 +235,9 @@ JavaScript 有一个内置对象的标准库。发现更多关于内置对象，
 - [`+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) 运算符——如果运算对象是字符串，执行字符串串联；否则，执行数值相加。
 - [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality) 运算符——如果一个运算对象是原始值，而另一个运算对象是对象（object），则该对象将转换为没有首选类型的原始值。
 
-如果值已经是原始值，则此操作不会进行任何转换。对象按以下顺序调用它的 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（将 hint 作为 `default`）、`valueOf()` 和 `toString()` 方法，将其转换为原始值。注意，原始值转换会在 `toString()` 方法之前调用 `valueOf()` 方法，这与[强制数字类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#强制数字类型转换)的行为相似，但与[强制字符串类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)不同。
+如果值已经是原始值，则此操作不会进行任何转换。对象按以下顺序调用它的 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（将 hint 作为 `default`）、`valueOf()` 和 `toString()` 方法，将其转换为原始值。注意，原始值转换会在 `toString()` 方法之前调用 `valueOf()` 方法，这与[强制数字类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)的行为相似，但与[强制字符串类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)不同。
 
-`[@@toPrimitive]()` 方法，如果存在，则必须返回原始值——返回对象，会导致 {{jsxref("TypeError")}}。对于 `valueOf()` 和 `toString()`，如果其中一个返回对象，则忽略其返回值，从而使用另一个的返回值；如果两者都不存在，或者两者都返回一个原始值，则抛出 {{jsxref("TypeError")}}。例如，以下代码：
+`[@@toPrimitive]()` 方法，如果存在，则必须返回原始值——返回对象，会导致 {{jsxref("TypeError")}}。对于 `valueOf()` 和 `toString()`，如果其中一个返回对象，则忽略其返回值，从而使用另一个的返回值；如果两者都不存在，或者两者都没有返回一个原始值，则抛出 {{jsxref("TypeError")}}。例如，以下代码：
 
 ```js
 console.log({} + []); // "[object Object]"
@@ -249,19 +249,19 @@ console.log({} + []); // "[object Object]"
 
 ### 强制数字类型转换
 
-有两种数字类型：[number](#number_类型) 和 [BigInt](#bigint_类型)。有时候，该语言尤其希望是 number 或 BigInt（例如 {{jsxref("Array.prototype.slice()")}}，其中索引必须是一个数字）；其它时候，它可能容忍并且根据运算对象的类型不同执行不同的运算。有关不允许从其它类型隐式转换的严格强制转换过程，请参阅[强制 number 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)和[强制 BigInt 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion)。
+有两种数字类型：[number](#number_类型) 和 [BigInt](#bigint_类型)。有时候，该语言尤其希望是 number 或 BigInt（例如 {{jsxref("Array.prototype.slice()")}}，其中索引必须是一个数字）；其它时候，它可能容忍并且根据运算对象的类型不同执行不同的运算。有关不允许从其它类型隐式转换的严格强制转换过程，请参阅[强制 number 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)和[强制 BigInt 转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion)。
 
-强制数字类型转换与[强制 number 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)几乎相同，只是 BigInt 会按原样返回，而不是引起 {{jsxref("TypeError")}}。强制数字类型转换用于所有算术运算，因为它们重载了 number 和 BigInt 类型。唯一例外的是[一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)，它总是强制 number 类型转换。
+强制数字类型转换与[强制 number 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)几乎相同，只是 BigInt 会按原样返回，而不是引起 {{jsxref("TypeError")}}。强制数字类型转换用于所有算术运算，因为它们重载了 number 和 BigInt 类型。唯一例外的是[一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)，它总是强制 number 类型转换。
 
 ### 强制其它类型转换
 
-所有的数据类型，除了 Null、Undefined 以及 Symbol，都有它们各自的强制过程。更多细节，请参见[强制字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)、[强制布尔值转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)以及[强制对象转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)。
+所有的数据类型，除了 Null、Undefined 以及 Symbol，都有它们各自的强制过程。更多细节，请参见[强制字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)、[强制布尔值转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)以及[强制对象转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)。
 
 你可能已经注意到，有三种不同的路径可以将对象转换为原始值：
 
 - [强制原始值转换](#强制原始值转换)：`[@@toPrimitive]("default")` → `valueOf()` → `toString()`
-- [强制数字类型转换](#强制数字类型转换)、[强制 number 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)、[强制 BigInt 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#转化)：`[@@toPrimitive]("number")` → `valueOf()` → `toString()`
-- [强制字符串类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)：`[@@toPrimitive]("string")` → `toString()` → `valueOf()`
+- [强制数字类型转换](#强制数字类型转换)、[强制 number 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)、[强制 BigInt 类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#转化)：`[@@toPrimitive]("number")` → `valueOf()` → `toString()`
+- [强制字符串类型转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)：`[@@toPrimitive]("string")` → `toString()` → `valueOf()`
 
 在所有情况下，`[@@toPrimitive]()` 如果存在，必须可调用并返回原始值，而如果它们不可调用或返回对象，`valueOf` 或 `toString` 将被忽略。在过程结束时，如果成功，结果保证是原始值。然后，由此产生的原始值会进一步强制类型转换，具体取决于上下文。
 

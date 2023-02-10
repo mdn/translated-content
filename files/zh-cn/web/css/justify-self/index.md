@@ -60,7 +60,7 @@ justify-self: unset;
   - `center`， `start`， `end`， `flex-start`， `flex-end`， `self-start`， `self-end`， `left`，或者 `right`。
   - 加上可选的 `safe` 或者`unsafe`。
 
-### Values
+### 值
 
 - `auto`
   - : 该值使用其父级元素盒子的 `justify-items` 属性的值，除非它没有父级元素，或者是绝对定位的，这些情况下，`auto` 代表了 `normal`。
@@ -103,15 +103,15 @@ justify-self: unset;
 - `unsafe`
   - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
 
-## 形式化定义
+## 形式定义
 
 {{cssinfo}}
 
-## 形式化语法
+## 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### 简单演示
 
@@ -179,7 +179,7 @@ article {
 
 #### 结果
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
+{{EmbedLiveSample('简单演示', '100%', 200)}}
 
 ## 规范
 
@@ -189,7 +189,7 @@ article {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
 - [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)

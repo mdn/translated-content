@@ -1,11 +1,6 @@
 ---
 title: Finale
 slug: Web/API/Canvas_API/Tutorial/Finale
-tags:
-  - 그래픽
-  - 캔버스
-  - 튜토리얼
-translation_of: Web/API/Canvas_API/Tutorial/Finale
 original_slug: Web/HTML/Canvas/Tutorial/Finale
 ---
 

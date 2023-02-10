@@ -1,14 +1,6 @@
 ---
 title: AudioNode.channelCountMode
 slug: Web/API/AudioNode/channelCountMode
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - channelCountMode
-browser-compat: api.AudioNode.channelCountMode
 ---
 
 {{ APIRef("Web Audio API") }}

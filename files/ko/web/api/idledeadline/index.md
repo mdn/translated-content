@@ -1,7 +1,6 @@
 ---
 title: IdleDeadline
 slug: Web/API/IdleDeadline
-translation_of: Web/API/IdleDeadline
 ---
 {{APIRef("Background Tasks")}}
 

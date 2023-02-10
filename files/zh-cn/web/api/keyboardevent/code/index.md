@@ -54,7 +54,7 @@ window.addEventListener("keydown", function(event) {
 
 To ensure that keystrokes go to the sample, click in the output box below before pressing keys.
 
-{{ EmbedLiveSample('Exercising_KeyboardEvent', 600, 300) }}
+{{ EmbedLiveSample('练习 KeyboardEvent', 600, 300) }}
 
 ### Handle keyboard events in a game
 

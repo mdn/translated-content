@@ -1,11 +1,6 @@
 ---
 title: 쉼표 연산자
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
-tags:
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 ---
 
 {{jsSidebar("Operators")}}

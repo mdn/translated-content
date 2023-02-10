@@ -10,7 +10,7 @@ original_slug: Web/HTML/Elemento/b
 
 - Indica que el texto debe ser representado con una variable **bold**, o **negrita**,de la tipografía que se esté usando.
   - : **Sus etiquetas son**: `<b>` y `</b>` (Ambas obligatorias).
-  
+
     **Crea una caja**: en línea.
 
     **Está definido como**: Elemento [de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente) y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).

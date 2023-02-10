@@ -1,14 +1,6 @@
 ---
 title: MediaStreamTrack.getConstraints()
 slug: Web/API/MediaStreamTrack/getConstraints
-tags:
-  - API
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Method
-  - Reference
-translation_of: Web/API/MediaStreamTrack/getConstraints
 ---
 
 {{APIRef("Media Capture and Streams")}}

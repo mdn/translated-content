@@ -1,7 +1,6 @@
 ---
 title: PushMessageData
 slug: Web/API/PushMessageData
-translation_of: Web/API/PushMessageData
 ---
 
 {{APIRef("Push API")}}{{SeeCompatTable()}}

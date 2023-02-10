@@ -9,7 +9,7 @@ original_slug: Web/HTML/Elemento/area
 
 - Sirve para crear las distintas secciones en las que se puede dividir un [mapas de imágenes](http://html.conclase.net/w3c/html401-es/struct/objects.html#include-maps) en el cliente.
   - : **Sus etiquetas son**: \<area> (solo tiene una).
-  
+
     **Crea una caja**: No.
 
     **Es un**: Elemento para mapas de imágenes.

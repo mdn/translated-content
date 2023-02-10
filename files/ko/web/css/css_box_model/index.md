@@ -1,12 +1,6 @@
 ---
 title: CSS Basic Box Model
 slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-  - CSS Box Model
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Box_Model
 ---
 
 {{CSSRef}}

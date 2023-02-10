@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 translation_of: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 Интерфейс {{domxref("RTCDataChannel")}} является функциональностью [WebRTC API](/ru/docs/Web/API/WebRTC_API) , который позволяет открыть канал между узлами соединения, по которому можно отправлять и получать произвольные данные. Эти API намеренно сходны с [WebSocket API](/ru/docs/Web/API/WebSocket_API), для использования единой программной модели.
 

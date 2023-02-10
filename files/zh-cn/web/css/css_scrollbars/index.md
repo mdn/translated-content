@@ -5,9 +5,9 @@ slug: Web/CSS/CSS_Scrollbars
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**CSS Scrollbars**标准化了由 ie5 引入的废弃的滚动条颜色属性
+**CSS Scrollbars** 标准化了由 ie5 引入的废弃的滚动条颜色属性
 
-## 基础例子
+## 示例
 
 在这个例子里 我们选择使用一个比较细的 滚动轨道为绿色，滚动块为紫色的滚动条
 
@@ -33,9 +33,9 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 </div>
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## Reference
 
@@ -44,7 +44,7 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -54,6 +54,6 @@ When you customize scrollbars, consider they have enough contrast and that their
 
 - [Baseline Rules for Scrollbar Usability | Adrian Roselli](http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

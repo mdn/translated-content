@@ -42,120 +42,7 @@ font-weight: initial;
 font-weight: unset;
 ```
 
-```html hidden
-<div class="row">
-  <ul class="cell">
-    <li><em>lighter:</em> <span class="fwLighter">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em> normal:</em> <span class="fwNormal">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em>   bold:</em> <span class="fwBold">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em> bolder:</em> <span class="fwBolder">The quick brown fox jumps over the lazy dog</span></li>
-  </ul>
-
-  <ul class="cell">
-    <li><em>    100:</em> <span class="fw100">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em>    200:</em> <span class="fw200">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em>    300:</em> <span class="fw300">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em>    400:</em> <span class="fw400">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em>    500:</em> <span class="fw500">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em>    600:</em> <span class="fw600">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em>    700:</em> <span class="fw700">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em>    800:</em> <span class="fw800">The quick brown fox jumps over the lazy dog</span></li>
-    <li><em>    900:</em> <span class="fw900">The quick brown fox jumps over the lazy dog</span></li>
-  </ul>
-
-  <div class="cell note">
-    The weight above can vary, depending on the font you are using:
-    <input id="fontName" value="Gill Sans">
-  </div>
-</div>
-```
-
-```css hidden
-html,body {
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.row {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background: #EEE;
-  flex-direction: column;
-}
-
-.cell {
-  flex: 1;
-  white-space: nowrap;
-  margin: .5em .5em 0;
-  padding: .5em;
-  background-color: #FFF;
-  font: 1em monospace;
-  overflow: auto;
-}
-
-.note {
-  background: #fff3d4;
-  padding: 1em;
-  margin: 0 .5em .5em;
-  font: .8em sans-serif;
-  text-align: center;
-  white-space: initial;
-  flex: none;
-}
-
-ul {
-  list-style: none;
-}
-
-ul.cell {
-  padding: 1em 2em;
-  font: 1rem/170% "Gill Sans", monospace;
-}
-
-ul.cell:first-child {
-  flex:none;
-}
-
-li em {
-  font-family: monospace;
-  white-space: pre;
-  font-style: normal;
-}
-
-.fwNormal  { font-weight: normal; }
-.fwBold    { font-weight: bold; }
-.fwLighter { font-weight: lighter; }
-.fwBolder  { font-weight: Bolder; }
-.fw100 { font-weight: 100; }
-.fw200 { font-weight: 200; }
-.fw300 { font-weight: 300; }
-.fw400 { font-weight: 400; }
-.fw500 { font-weight: 500; }
-.fw600 { font-weight: 600; }
-.fw700 { font-weight: 700; }
-.fw800 { font-weight: 800; }
-.fw900 { font-weight: 900; }
-```
-
-```js hidden
-function updateFontFamily() {
-  var fontName   = document.getElementById('fontName').value;
-  var fontFamily = '"' + fontName + '", monospace';
-  var UL = document.querySelectorAll('ul.cell');
-
-  UL[0].style.fontFamily = fontFamily;
-  UL[1].style.fontFamily = fontFamily;
-}
-
-window.addEventListener('load', function () {
-  var INPUT = document.getElementById('fontName');
-  INPUT.addEventListener('change', updateFontFamily);
-  INPUT.addEventListener('input', updateFontFamily);
-});
-```
-
-{{EmbedLiveSample("font-weight", "100%", 500, "", "", "example-outcome-frame")}}
+{{EmbedGHLiveSample("css-examples/variable-fonts/font-weight.html", '100%', 860)}}
 
 {{cssinfo}}
 
@@ -232,11 +119,11 @@ window.addEventListener('load', function () {
 
 `font-weight` 数值采取离散式定义（使用 100 的整倍数）。数值为实数，非 100 的整数倍的值将被四舍五入转换为 100 的整倍数，遇到 \*50 时，将向上转换，如 150 将转换为 200。
 
-### 正式的语法
+### 形式语法
 
 {{csssyntax("font-weight")}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -277,7 +164,7 @@ span {
 
 ### 结果
 
-{{EmbedLiveSample("Examples","400","300")}}
+{{EmbedLiveSample("示例","400","300")}}
 
 ## 规范
 

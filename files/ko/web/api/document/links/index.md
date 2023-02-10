@@ -1,13 +1,6 @@
 ---
 title: Document.links
 slug: Web/API/Document/links
-tags:
-  - Document
-  - Links
-  - a
-  - area
-  - href
-translation_of: Web/API/Document/links
 ---
 
 {{ APIRef("DOM") }}
@@ -32,13 +25,10 @@ for(var i = 0; i < links.length; i++) {
 }
 ```
 
-## Specifications
+## 명세서
 
-| Specification                                                                                | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-document-links', 'Document.links')}} | {{ Spec2('HTML WHATWG') }} |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-7068919", "document.links")}}     | {{Spec2("DOM2 HTML")}}         | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

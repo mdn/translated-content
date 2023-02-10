@@ -1,14 +1,6 @@
 ---
 title: <span>
 slug: Web/HTML/Element/span
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/span
 ---
 
 {{HTMLSidebar}}

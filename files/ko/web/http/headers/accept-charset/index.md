@@ -1,65 +1,34 @@
 ---
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
-translation_of: Web/HTTP/Headers/Accept-Charset
 ---
 
 {{HTTPSidebar}}
 
-**`Accept-Charset`** 요청 HTTP 헤더는 클라이언트가 이해할 수 있는 캐릭터셋이 무엇인지를 알려줍니다. [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)을 사용하여, 서버는 제안된 것 중 하나를 선택하고, 사용하며 {{HTTPHeader("Content-Type")}} 응답 헤더를 통해 선택된 캐릭터셋을 클라이언트에게 알려줍니다. 브라우저들은 각각의 컨텐츠 타입에 대한 기본 값이 일반적으로 정확하고 그것을 전송하는 것이 더 쉽게 행적을 남기게 될 가능성이 있으므로 이 헤더를 설정하지 않습니다.
+> **경고:** 이 헤더를 사용하지 마십시오. 브라우저는 이 헤더를 생략하고 서버는 이를 무시해야 합니다.
 
-서버가 일치하는 캐릭터셋을 서브하지 못할 경우, 이론적으로 {{HTTPStatus("406")}} (Not Acceptable) 오류 코드를 회신할 수 있습니다. 그러나, 더 나은 사용자 경험을 위해, 그런 경우는 드물며 더 일반적인 방법은 이런 경우 `Accept-Charset` 헤더를 무시하는 겁니다.
+**`Accept-Charset`** 요청 HTTP 헤더는 클라이언트가 지원하는 {{glossary("character encoding", "문자 인코딩")}}을 알리는 헤더였습니다. 이는 더 이상 널리 사용되지 않습니다.
 
-> **참고:** HTTP/1.1 초기 버전에서는, 기본 캐릭터셋(`ISO-8859-1`)이 정의됐었습니다. 더 이상 실제로 그렇지 않으며 이제 각각의 컨텐츠 타입이 기본 값을 가지고 있을 수도 있습니다.
+현재는 UTF-8이 잘 지원되고 있고 문자 인코딩을 위해 압도적으로 선호되는 선택입니다. [더 적은 설정 기반의 엔트로피(불확실성)를 통해 좀 더 나은 개인정보 보호를 보장하기 위해](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), 모든 브라우저들은 `Accept-Charset` 헤더를 생략합니다. Chrome, Firefox, Internet Explorer, Opera, Safari는 이 헤더를 폐기했습니다.
+
+오늘날 `Accept-Charset`은 널리 알려진 [금지된 헤더](/en-US/docs/Glossary/Forbidden_header_name) 중 하나입니다.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">헤더 타입</th>
-      <td>{{Glossary("Request header")}}</td>
+      <td>{{Glossary("Request header", "요청 헤더")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden header name", "금지된 헤더")}}</th>
+      <td>예</td>
     </tr>
   </tbody>
 </table>
 
-## 문법
-
-```
-Accept-Charset: <charset> // Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax: Accept-Charset: utf-8, iso-8859-1;q=0.5
-```
-
-## 디렉티브
-
-- `<charset>`
-  - : `utf-8` 혹은 `iso-8859-15`와 같은 캐릭터셋.
-- `*`
-  - : 헤더 내 다른 곳에서 언급되지 않은 모든 캐릭터셋; 와일드카드로 사용되는`'*'.`
-- `;q=` (q-인자 가중치)
-  - : *weight*라고 불리는 상대적 [품질 값](/ko/docs/Glossary/Quality_values)을 사용해 표현되는 선호도에 따라 대체되는 값.
-
-## 예제
-
-```
-Accept-Charset: iso-8859-1
-
-Accept-Charset: utf-8, iso-8859-1;q=0.5
-
-Accept-Language: utf-8, iso-8859-1;q=0.5, *;q=0.1
-```
-
-## 명세
-
-{{Specifications}}
-
-## 브라우저 호환성
-
-{{Compat}}
-
 ## 함께 참고할 내용
 
 - HTTP [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)
+- [Accept-Charset is no more](https://hsivonen.fi/accept-charset/)
 - 컨텐츠 협상 결과를 이용하는 헤더: {{HTTPHeader("Content-Type")}}
 - 다른 유사한 헤더들: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}

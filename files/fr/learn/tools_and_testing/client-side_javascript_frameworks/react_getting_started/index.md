@@ -519,9 +519,9 @@ Dans React&nbsp;:
   - [Utiliser les <i lang="en">stores</i> Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
   - [Prise en charge de TypeScript avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
   - [Déploiement et prochaines étapes](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-  
+
 - Angular
-  
+
   - [Démarrer avec Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - [Débuter notre application Angular de liste de tâches](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - [Mettre en forme notre application Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)

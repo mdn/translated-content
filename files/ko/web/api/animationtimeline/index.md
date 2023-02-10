@@ -1,17 +1,6 @@
 ---
 title: AnimationTimeline
 slug: Web/API/AnimationTimeline
-tags:
-  - API
-  - Animation
-  - AnimationTimeline
-  - Experimental
-  - Interface
-  - Reference
-  - Web Animations
-  - waapi
-  - web animations api
-translation_of: Web/API/AnimationTimeline
 ---
 
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}

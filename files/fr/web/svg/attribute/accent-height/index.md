@@ -21,7 +21,7 @@ Pour les éléments [`<font-face>`](/fr/docs/Web/SVG/Element/font-face), `accent
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>  
+      <td>
         <a href="/fr/docs/Web/SVG/Content_type#number"><code>&lt;number&gt;</code></a>
       </td>
     </tr>

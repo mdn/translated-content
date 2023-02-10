@@ -1,15 +1,6 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - CSS Custom Properties
-  - CSS Function
-  - CSS Variable
-  - CSS 변수
-  - Experimental
-  - Reference
-translation_of: Web/CSS/var()
 original_slug: Web/CSS/var()
 ---
 {{CSSRef}}

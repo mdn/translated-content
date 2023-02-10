@@ -21,14 +21,14 @@ slug: Web/API/File/webkitRelativePath
 
 这个示例展示了目录选择器，它让用户选择一个或多个目录。[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件触发时，所选目录包含的所有文件的列表，会生成并展示，带有所选目录的层次结构。
 
-### HTML 内容
+### HTML
 
 ```html
 <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
 <ul id="listing"></ul>
 ```
 
-### JavaScript 内容
+### JavaScript
 
 ```js
 document.getElementById("filepicker").addEventListener("change", function(event) {
@@ -45,7 +45,7 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ### 结果
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('示例') }}
 
 特别提醒：假设文件路径是 C:\f1\f2\f3\file.txt, 用户选择的是 f1 文件夹，则 Chrome、Firefox、Edge 都能正确返回 f2/f3/file.txt 值。而国产的 QQ 浏览器、360 浏览器、UC 浏览器、搜狗浏览器都只能返回 f3/file.txt。也就是国产浏览器调用 webkitRelativePath 返回的结果都不会是你希望得到的路径，请注意使用时的细微差距。
 

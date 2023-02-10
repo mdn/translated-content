@@ -1,7 +1,6 @@
 ---
 title: Alternative style sheets
 slug: Web/CSS/Alternative_style_sheets
-translation_of: Web/CSS/Alternative_style_sheets
 ---
 Firefox는
 _대체 스타일시트_
@@ -23,10 +22,14 @@ _대체 스타일시트_
 
 기본 스타일시트에는 `rel="stylesheet"` 속성을 사용하고 대체 스타일시트에는 `rel="alternate stylesheet"`를 사용하세요. 이를 통해 Firefox는 어떤 스타일시트 제목을 처음 선택해야 할지 알 수 있으며, 대체 스타일시트를 지원하지 않는 브라우저에게 기본 스타일시트가 무엇인지를 알려줍니다.
 
-### 실제 예제
+## 실제 예제
 
 실제로 동작하는 예제는 [여기에서](http://developer.mozilla.org/samples/cssref/altstyles/index.html) 볼 수 있습니다.
 
-### 명세
+## 명세
 
 {{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}

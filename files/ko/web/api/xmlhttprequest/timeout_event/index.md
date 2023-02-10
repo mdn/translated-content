@@ -1,7 +1,6 @@
 ---
 title: timeout
 slug: Web/API/XMLHttpRequest/timeout_event
-translation_of: Web/API/XMLHttpRequest/timeout_event
 original_slug: Web/API/XMLHttpRequest/timeout
 ---
 

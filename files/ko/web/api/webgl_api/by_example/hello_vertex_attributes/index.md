@@ -1,7 +1,6 @@
 ---
 title: Hello vertex attributes
 slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
-translation_of: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}

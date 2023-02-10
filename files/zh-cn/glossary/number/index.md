@@ -13,5 +13,5 @@ slug: Glossary/Number
 
 ### 技术参考
 
-- JavaScript 数据结构：[Number](/zh-CN/docs/Web/JavaScript/Data_structures#Number_type)
+- JavaScript 数据结构：[Number](/zh-CN/docs/Web/JavaScript/Data_structures#number_类型)
 - JavaScript 全局对象 {{jsxref("Number")}}

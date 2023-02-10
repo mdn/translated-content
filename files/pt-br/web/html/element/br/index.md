@@ -61,7 +61,7 @@ Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a
 
 Este elemento inclue os [Atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("clear")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("clear")}} {{Deprecated_Inline}}
 
   - : Indica onde começar a próxima linha depois da quebra.
 

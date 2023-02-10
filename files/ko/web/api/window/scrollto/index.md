@@ -1,7 +1,6 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
-translation_of: Web/API/Window/scrollTo
 ---
 
 {{ APIRef }}
@@ -31,8 +30,6 @@ window.scrollTo( 0, 1000 );
 
 이 함수는 [window.scroll](/ko/docs/DOM/Window.scroll)과 효과적으로 같습니다. 스크롤링 관련 정보는 [window.scrollBy](/ko/docs/DOM/Window.scrollBy), [window.scrollByLines](/ko/docs/DOM/Window.scrollByLines), 그리고 [window.scrollByPages](/ko/docs/DOM/Window.scrollByPages)가 있습니다.
 
-## 사양
+## 명세서
 
-| 사양                                                                                         | 상태                             | 주해                |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Initial definition. |
+{{Specifications}}

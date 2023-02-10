@@ -1,12 +1,6 @@
 ---
 title: CSS Charsets
 slug: Web/CSS/CSS_Charsets
-tags:
-  - CSS
-  - CSS Charsets
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Charsets
 ---
 
 {{CSSRef}}
@@ -19,8 +13,6 @@ translation_of: Web/CSS/CSS_Charsets
 
 - {{cssxref("@charset")}}
 
-## 명세
+## 명세서
 
-| 명세                                                                     | 상태                     | 설명      |
-| ------------------------------------------------------------------------ | ------------------------ | --------- |
-| {{SpecName('CSS2.1', 'syndata.html#x57', '@charset')}} | {{Spec2('CSS2.1')}} | 초기 정의 |
+{{Specifications}}

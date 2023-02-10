@@ -1,13 +1,6 @@
 ---
 title: '<caption>: 표 설명 요소'
 slug: Web/HTML/Element/caption
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/caption
 ---
 
 {{HTMLSidebar}}

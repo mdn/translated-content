@@ -1,14 +1,6 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - 구문
-  - 반복문
-  - 비동기
-  - 식
-  - 열거
-  - 열거자
-translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
 {{jsSidebar("Statements")}}
 

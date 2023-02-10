@@ -19,7 +19,7 @@ slug: Web/CSS/percentage
 
 使用 `<percentage>` 的值可以插值为动画。在这种情况下，它们被内插为实数或浮点数。插值的速度取决于与动画相关联的 [timing function](/zh-CN/docs/Web/CSS/single-transition-timing-function)。
 
-## 例子
+## 示例
 
 ### 作为 width 与 margin-left 的值的单位
 
@@ -32,7 +32,7 @@ slug: Web/CSS/percentage
 
 以上 HTML 将输出：
 
-{{EmbedLiveSample('Width_and_margin-left', '600', 140)}}
+{{EmbedLiveSample('作为 width 与 margin-left 的值的单位', '600', 140)}}
 
 ### 作为 font-size 的值的单位
 
@@ -46,7 +46,7 @@ slug: Web/CSS/percentage
 
 以上 HTML 将输出：
 
-{{EmbedLiveSample('Font-size', 'auto', 160)}}
+{{EmbedLiveSample('作为 font-size 的值的单位', 'auto', 160)}}
 
 ## 规范
 

@@ -1,7 +1,6 @@
 ---
 title: WebRTC data channel 사용하기
 slug: Web/API/WebRTC_API/Using_data_channels
-translation_of: Web/API/WebRTC_API/Using_data_channels
 ---
 
 {{DefaultAPISidebar('WebRTC')}}

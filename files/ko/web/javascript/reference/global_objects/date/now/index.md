@@ -1,15 +1,6 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
-  - Time
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
-browser-compat: javascript.builtins.Date.now
 ---
 {{JSRef}}
 

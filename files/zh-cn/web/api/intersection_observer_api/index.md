@@ -92,7 +92,7 @@ let callback =(entries, observer) => {
 
 请留意，你注册的回调函数将会在主线程中被执行。所以该函数执行速度要尽可能的快。如果有一些耗时的操作需要执行，建议使用 {{domxref("Window.requestIdleCallback()")}} 方法。
 
-### How intersection is calculated -- 交集的计算
+### 交集的计算
 
 所有区域均被 Intersection Observer API 当做一个矩形看待。如果元素是不规则的图形也将会被看成一个包含元素所有区域的最小矩形，相似的，如果元素发生的交集部分不是一个矩形，那么也会被看作是一个包含他所有交集区域的最小矩形。
 
@@ -280,7 +280,7 @@ intersectionCallback = (entries) => {
 startup();
 ```
 
-{{EmbedLiveSample("Threshold_example", 500, 500)}}
+{{EmbedLiveSample("Thresholds", 500, 500)}}
 
 #### Clipping and the intersection rectangle
 

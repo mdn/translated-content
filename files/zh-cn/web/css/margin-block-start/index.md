@@ -28,19 +28,19 @@ margin-block-start: unset
 
 {{cssinfo}}
 
-## Syntax
+## 语法
 
-### Values
+### 值
 
 `margin-block-start` 属性有着和 {{cssxref("margin-left")}} 属性一样的值。
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
-## 案例
+## 示例
 
-### HTML Content
+### HTML
 
 ```html
 <div>
@@ -48,7 +48,7 @@ margin-block-start: unset
 </div>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 div {
@@ -64,17 +64,17 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Example", 140, 140)}}
+{{EmbedLiveSample("示例", 140, 140)}}
 
-## Specification
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## 同样推荐
+## 参见
 
 - 标记的物理属性：{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

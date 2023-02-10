@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointerenter
 slug: Web/API/Element/pointerenter_event
-translation_of: Web/API/GlobalEventHandlers/onpointerenter
 original_slug: Web/API/GlobalEventHandlers/onpointerenter
 ---
 

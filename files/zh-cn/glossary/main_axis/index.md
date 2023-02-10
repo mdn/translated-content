@@ -1,7 +1,6 @@
 ---
 title: 主轴
 slug: Glossary/Main_Axis
-original_slug: Glossary/主轴
 ---
 
 主轴是由弹性容器 {{glossary("flexbox")}} 中弹性方向 {{cssxref("flex-direction")}} 属性所定义的的。弹性方向 `flex-direction` 有 4 个可能的值，分别是：

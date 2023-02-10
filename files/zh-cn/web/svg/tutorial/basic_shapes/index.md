@@ -11,7 +11,7 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 
 要想插入一个形状，你可以在文档中创建一个元素。不同的元素对应着不同的形状，并且使用不同的属性来定义图形的大小和位置。有一些形状因为可以由其他的形状创建而略显冗余，但是它们用起来方便，可让我们的 SVG 文档简洁易懂。右边的图片展示了所有的基本形状。生成它们的代码如下：
 
-![](/@api/deki/files/359/=Shapes.png)
+![](shapes.png)
 
 ```plain
 <?xml version="1.0" standalone="no"?>

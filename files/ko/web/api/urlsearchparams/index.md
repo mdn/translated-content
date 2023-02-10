@@ -1,16 +1,6 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Landing
-  - Reference
-  - URL API
-  - URLSearchParams
-  - Polyfill
-translation_of: Web/API/URLSearchParams
 ---
 
 {{ApiRef("URL API")}}

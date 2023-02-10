@@ -1,7 +1,6 @@
 ---
 title: 웹 비디오 코덱 가이드
 slug: Web/Media/Formats/Video_codecs
-translation_of: Web/Media/Formats/Video_codecs
 original_slug: Web/Media/Formats/비디오코덱
 ---
 압축되지 않은 비디오 데이터는 그 크기가 엄청나기 때문에, 저장하거나 네트워크를 통해 전송하기 위해서는 아주 작게 압축해야 합니다. 압축되지 않은 비디오를 저장하는 과정을 상상해 봅시다:
@@ -863,7 +862,7 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 support</th>
-              <td>No</td>
+              <td>107</td>
               <td>
                 18<sup><a href="#hevc-foot--1">[1]</a></sup>
               </td>

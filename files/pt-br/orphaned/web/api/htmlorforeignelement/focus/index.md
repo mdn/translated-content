@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.focus()
 slug: orphaned/Web/API/HTMLOrForeignElement/focus
-translation_of: Web/API/HTMLOrForeignElement/focus
 original_slug: Web/API/HTMLOrForeignElement/focus
 ---
 

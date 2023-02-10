@@ -1,11 +1,6 @@
 ---
 title: aria-label 속성 사용
 slug: orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
-tags:
-  - ARIA
-  - Accessibility
-  - aria-label
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 ---
 

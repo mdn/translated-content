@@ -26,11 +26,11 @@ slug: Web/CSS/angle
 
 ## 示例
 
-| ![Angle90.png](/@api/deki/files/5704/=Angle90.png)           | 直角：`90deg = 100grad = 0.25turn ≈ 1.5708rad`               |
+| ![Angle90.png](angle90.png)           | 直角：`90deg = 100grad = 0.25turn ≈ 1.5708rad`               |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Angle180.png](/@api/deki/files/5706/=Angle180.png)         | 平角：`180deg = 200grad = 0.5turn ≈ 3.1416rad`               |
-| ![AngleMinus90.png](/@api/deki/files/5707/=AngleMinus90.png) | 直角（逆时针）：`-90deg = -100grad = -0.25turn ≈ -1.5708rad` |
-| ![Angle0.png](/@api/deki/files/5708/=Angle0.png)             | 零角：`0 = 0deg = 0grad = 0turn = 0rad`                      |
+| ![Angle180.png](angle180.png)         | 平角：`180deg = 200grad = 0.5turn ≈ 3.1416rad`               |
+| ![AngleMinus90.png](angleminus90.png) | 直角（逆时针）：`-90deg = -100grad = -0.25turn ≈ -1.5708rad` |
+| ![Angle0.png](angle0.png)             | 零角：`0 = 0deg = 0grad = 0turn = 0rad`                      |
 
 ## 规范
 

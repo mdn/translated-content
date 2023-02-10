@@ -1,11 +1,6 @@
 ---
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
-tags:
-  - Constructor
-  - Reference
-browser-compat: api.EventTarget.EventTarget
-translation_of: Web/API/EventTarget/EventTarget
 ---
 
 {{APIRef("DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: window.screen.unlockOrientation
 slug: Web/API/Screen/unlockOrientation
-translation_of: Web/API/Screen/unlockOrientation
 ---
 
 {{APIRef("CSSOM View")}}{{Deprecated_header}}

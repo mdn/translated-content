@@ -1,18 +1,6 @@
 ---
 title: AudioWorklet을 사용하는 백그라운드 오디오 프로세싱
 slug: Web/API/Web_Audio_API/Using_AudioWorklet
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - Background
-  - Examples
-  - Guide
-  - Processing
-  - Web Audio
-  - Web Audio API
-  - WebAudio API
-  - sound
 ---
 
 {{APIRef("Web Audio API")}}

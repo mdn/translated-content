@@ -1,17 +1,6 @@
 ---
 title: MediaDevices
 slug: Web/API/MediaDevices
-tags:
-  - API
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Reference
-  - Screen Capture API
-  - WebRTC
-translation_of: Web/API/MediaDevices
 ---
 {{APIRef("Media Capture and Streams")}}
 

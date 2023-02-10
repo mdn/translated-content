@@ -1,13 +1,6 @@
 ---
 title: 클로저
 slug: Web/JavaScript/Closures
-tags:
-  - Closure
-  - ES5
-  - Intermediate
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Closures
 original_slug: Web/JavaScript/Guide/Closures
 ---
 

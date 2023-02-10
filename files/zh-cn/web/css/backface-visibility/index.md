@@ -37,7 +37,7 @@ backface-visibility: unset;
 
 {{csssyntax}}
 
-## 举例
+## 示例
 
 这个示例展示了一个拥有透明表面的立方体。
 
@@ -173,7 +173,7 @@ th, p, td {
 
 ### 结果
 
-{{EmbedLiveSample('Example', '100%', 360)}}
+{{EmbedLiveSample('示例', '100%', 360)}}
 
 ## 规范
 

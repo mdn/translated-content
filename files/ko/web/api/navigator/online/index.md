@@ -1,11 +1,6 @@
 ---
 title: Online and offline events
 slug: Web/API/Navigator/onLine
-tags:
-  - AJAX
-  - DOM
-  - Web Development
-translation_of: Web/API/Navigator/Online_and_offline_events
 original_slug: Web/API/Navigator/Online_and_offline_events
 ---
 

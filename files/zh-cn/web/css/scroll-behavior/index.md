@@ -33,11 +33,11 @@ scroll-behavior: unset;
 - `smooth`
   - : 滚动框通过一个用户代理预定义的时长、使用预定义的时间函数，来实现平稳的滚动，用户代理应遵循其平台的约定，如果有的话。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -88,9 +88,9 @@ scroll-page {
 }
 ```
 
-### 输出
+### 结果
 
-{{ EmbedLiveSample('Example', "100%", 250) }}
+{{ EmbedLiveSample('示例', "100%", 250) }}
 
 ## 规范
 

@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/compile
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{WebAssemblySidebar}} {{SeeCompatTable}}
 
 **`WebAssembly.compile()`** 方法编译 WebAssembly 二进制代码到一个{{jsxref("WebAssembly.Module")}} 对象。如果在实例化之前有必要去编译一个模块，那么这个方法是有用的（否则，将会使用{{jsxref("WebAssembly.instantiate()")}} 方法）
 

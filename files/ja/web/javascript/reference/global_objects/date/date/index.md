@@ -29,7 +29,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 Date()
 ```
 
-> **メモ:** `Date()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) ありデモなしでも呼び出すことができますが、効果は異なります。[返値](#返値)を参照してください。
+> **メモ:** `Date()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) ありでも `new` なしでも呼び出すことができますが、効果は異なります。[返値](#返値)を参照してください。
 
 ### 引数
 

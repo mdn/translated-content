@@ -117,7 +117,7 @@ div:nth-child(3) {
 
 ### 结果
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

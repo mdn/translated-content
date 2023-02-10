@@ -6,7 +6,7 @@ slug: Web/HTML/Element/var
 {{HTMLSidebar}}
 
 [HTML](/zh-CN/docs/Web/HTML) **`<var>`** 元素表示数学表达式或编程上下文中的变量名称。尽管该行为取决于浏览器，但通常使用当前字体的斜体形式显示。
-  
+
 {{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
 
 <table class="properties">
@@ -61,13 +61,13 @@ slug: Web/HTML/Element/var
 ## 属性
 
 本元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
-  
+
 ## 使用说明
 
 ### 相关元素
-  
+
 与 `<var>` 一同使用的元素一般包含：
-  
+
 - {{HTMLElement("code")}}：HTML 代码元素
 - {{HTMLElement("kbd")}}：HTML 键盘输入元素
 - {{HTMLElement("samp")}}：HTML 示例输出元素

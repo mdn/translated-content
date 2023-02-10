@@ -1,12 +1,6 @@
 ---
 title: 인코딩 API
 slug: Web/API/Encoding_API
-tags:
-  - API
-  - 개요
-  - 레퍼런스
-  - 인코딩
-translation_of: Web/API/Encoding_API
 ---
 
 {{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}

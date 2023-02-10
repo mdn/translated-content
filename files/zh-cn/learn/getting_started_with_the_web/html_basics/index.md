@@ -71,7 +71,7 @@ My cat is very grumpy
 不包含任何内容的元素称为空元素。比如 {{htmlelement("img")}} 元素：
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 本元素包含两个属性，但是并没有 `</img>` 结束标签，元素里也没有内容。这是因为图像元素不需要通过内容来产生效果，它的作用是向其所在的位置嵌入一个图像。
@@ -107,7 +107,7 @@ My cat is very grumpy
 重温一下 {{htmlelement("img")}} 元素：
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 像之前所讲，该元素通过包含图像文件路径的地址属性 `src`，可在所在位置嵌入图像。

@@ -1,13 +1,6 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - NeedsContent
-  - Reference
-translation_of: Web/CSS/flex-shrink
 ---
 {{CSSRef}}
 

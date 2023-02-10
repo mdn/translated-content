@@ -89,7 +89,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
     ```js
     const lowOrHi = document.querySelector('lowOrHi');
     ```
-  
+
 6. 여기서는 문서 HTML의 요소 참조를 변수에 저장하려고 시도하고 있습니다. 48번째 줄이 실행된 후에 `lowOrHi`가 `null`인지 확인해 봅시다. 49번째 줄에 아래의 코드를 추가하세요.
 
     ```js
