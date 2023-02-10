@@ -1,16 +1,8 @@
 ---
 title: CSS Container Queries
 slug: Web/CSS/CSS_Container_Queries
-page-type: guide
-tags:
-  - CSS
-  - CSS Containment
-  - CSS Container Queries
-  - Guide
-  - Paint
-  - Responsive Design
 l10n:
-  sourceCommit: 674fd4fb4225dfad82eab7425f9fc8e52d67a7db
+  sourceCommit: 43edd92d6fe6da31cd5ee0874b888244826fb1f7
 ---
 
 {{CSSRef}}
