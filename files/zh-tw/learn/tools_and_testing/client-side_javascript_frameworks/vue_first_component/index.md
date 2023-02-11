@@ -124,11 +124,11 @@ export default {
 
 ![目前應用程式的渲染狀態——包含一個標題（ To-Do List ），一個 checkbox 和 label](rendered-todoitem.png)
 
-## 使用 props 讓元件變得更彈性
+## 使用 prop 讓元件變得更彈性
 
 到目前爲止我們的 `ToDoItem` 元件還不是很實用，因為這個元件一個頁面只能使用一次（元件內 label 的 id 是唯一值），而且我們也沒有辦法設定 label 的文字內容。
 
-所以我們可以透過 props 新增一些狀態到我們的元件，你可以將 props 想像成是傳入函式的參數，它會讓元件有一些初始狀態可以用來渲染到畫面上。
+所以我們可以透過 prop 新增一些狀態到我們的元件，你可以將 prop 想像成是傳入函式的參數，它會讓元件有一些初始狀態可以用來渲染到畫面上。
 
 ### Registering props
 
