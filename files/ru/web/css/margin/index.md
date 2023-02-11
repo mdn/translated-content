@@ -12,7 +12,7 @@ translation_of_original: Web/CSS/margin-new
 
 {{CSSRef}}
 
-Свойство **`margin`** [CSS](/ru/CSS) определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
+[CSS](/ru/docs/Web/CSS) свойство **`margin`** определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
 
 {{EmbedInteractiveExample("pages/css/margin.html")}}
 
@@ -149,7 +149,7 @@ margin: auto;               /* верх и низ: отступ 0 */
 
 ## Смотрите также
 
-- [CSS Box Model](/ru/docs/Web/CSS/box_model)
+- [Введение в базовую блочную модель CSS](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}
 - Логические свойства: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}} и {{cssxref("margin-inline-end")}}. А так же сокращенные варианты: {{cssxref("margin-block")}} и {{cssxref("margin-inline")}}
