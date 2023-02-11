@@ -34,7 +34,7 @@ toLocaleUpperCase(locales)
 
 `theLocaleUpperCase()` 메서드는 지역 특정 대/소문자 맴핑에 따른 대문자로 변환된 문자열 값을 반환합니다. `toLocaleUpperCase()`는 문자열 자체 값에 영향을 미치지 않습니다. 대부분의 경우, {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}와 같은 결과를 제공하지만 터키와 같은 일부 지역에서는 대/소문자 매핑이 유니코드의 기존 대/소문자 매핑을 따르지 않아 다른 결과가 있을 수 있습니다.
 
-또한 대문자로 변환될 때 어떤 문자는 두 개 (혹은 그 이상) 문자를 생성할 수 있으므로 변환이 반드시 1:1 문자 맴핑일 필요는 없다는 것을 알아야 합니다. 그러므로 문자열 결과 길이는 입력 길이와 다를 수 있습니다. 이것은 또한 변환이 안정적이지 않음을 의미합니다. 즉, `false`: `x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()`를 반환할 수 있습니다.
+또한 대문자로 변환될 때 어떤 문자는 두 개 (혹은 그 이상) 문자를 생성할 수 있으므로 변환이 반드시 1:1 문자 맴핑일 필요는 없다는 것을 알아야 합니다. 그러므로 문자열 결과 길이는 입력 길이와 다를 수 있습니다. 이것은 또한 변환이 안정적이지 않음을 의미합니다. 즉, 구문 `x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()`는 `false`를 반환할 수 있습니다.
 
 ## 예제
 
