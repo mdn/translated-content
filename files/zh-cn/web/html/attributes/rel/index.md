@@ -40,7 +40,7 @@ slug: Web/HTML/Attributes/rel
 | [`stylesheet`](#attr-stylesheet)                                     | 导入样式表。                                                                                                                                                                                                                                                                       | 外部资源         | 不允许                                          | 不允许               |
 | [`tag`](#attr-tag)                                                   | 给出一个适用于当前文档的标签（由给定地址识别）。                                                                                                                                                                                                          | 不允许               | 链接                                                 | 链接               |
 
-`rel' 属性与 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}} 和 {{htmlelement('form')}} 元素有关，但有些值只与这些元素的子集有关。像所有的 HTML 关键字属性值一样，这些值是不区分大小写的。
+`rel` 属性与 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}} 和 {{htmlelement('form')}} 元素有关，但有些值只与这些元素的子集有关。像所有的 HTML 关键字属性值一样，这些值是不区分大小写的。
 
 `rel` 属性没有默认值。如果该属性被省略，或者该属性中没有一个值被支持，那么除了两者之间有一个超链接之外，文档与目标资源没有特别的关系。在这种情况下，在 {{htmlelement('link')}} 和 {{htmlelement('form')}} 元素上，如果 `rel` 属性不存在，没有关键词，或者如果不是上述一个或多个空格分隔的关键词，那么该元素就不会创建任何链接。{{htmlelement('a')}} 和 {{htmlelement('area')}} 仍将创建链接，但没有定义关系。
 
@@ -159,7 +159,7 @@ slug: Web/HTML/Attributes/rel
     这与 [opener](#opener) 具有的含义相反。
 
 - {{htmlattrdef("noreferrer")}}
-  - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，包括这个值使得 referrer 未知（不会包含 `Referer` 标头），并创建一个顶级的浏览上下文，就像 `noopener' 也被设置一样。
+  - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，包括这个值使得 referrer 未知（不会包含 `Referer` 标头），并创建一个顶级的浏览上下文，就像 `noopener` 也被设置一样。
 - {{htmlattrdef("opener")}}
   - : 如果超链接会创建一个非辅助浏览上下文的顶级浏览上下文（即以“`_blank`”作为 `target` 属性值），则创建一个辅助浏览上下文。与 [noopener](#noopener) 作用相反。
 - {{htmlattrdef("pingback")}}
