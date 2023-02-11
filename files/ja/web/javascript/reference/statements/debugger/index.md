@@ -28,7 +28,7 @@ function potentiallyBuggyCode() {
 
 デバッガーが起動していると、実行は `debugger` 文で停止します。スクリプトのソース内でのブレークポイントと似ています。
 
-[![Paused at a debugger statement.](/en-US/docs/Web/JavaScript/Reference/Statements/debugger/screen_shot_2014-02-07_at_9.14.35_am.png)](/en-US/docs/Web/JavaScript/Reference/Statements/debugger/screen_shot_2014-02-07_at_9.14.35_am.png)
+[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](screen_shot_2014-02-07_at_9.14.35_am.png)
 
 ## 仕様書
 

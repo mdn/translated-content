@@ -25,11 +25,11 @@ slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 
 英語のように書字方向が横書きのブロック要素は、垂直方向に、1 つずつ下方向にレイアウトされます。
 
-![](/en-US/docs/web/css/css_flow_layout/block_and_inline_layout_in_normal_flow/mdn-horizontal.png)
+![](mdn-horizontal.png)
 
 書字方向が縦書きである場合は、水平方向にレイアウトされるでしょう。
 
-![](/en-US/docs/web/css/css_flow_layout/block_and_inline_layout_in_normal_flow/mdn-vertical.png)
+![](mdn-vertical.png)
 
 このガイドでは、英語、すなわち横書きモードでの作業となります。しかし、文書が縦書きの場合でも、説明したことはすべて同じように動作するはずです。
 
@@ -57,7 +57,7 @@ slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 
 > **メモ:** マージンが相殺されているかどうか分からない場合は、ブラウザーのの DevTools でボックスモデルの値を確認してください。これにより、マージンの実際のサイズが表示されるので、何が起こっているかを特定するのに役立ちます。
 >
-> ![](/en-US/docs/web/css/css_flow_layout/block_and_inline_layout_in_normal_flow/box-model.png)
+> ![](box-model.png)
 
 ## インライン整形コンテキストに参加する要素
 
