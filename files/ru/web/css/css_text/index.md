@@ -1,6 +1,7 @@
 ---
 title: CSS Text
 slug: Web/CSS/CSS_Text
+page-type: css-module
 tags:
   - CSS
   - CSS Text
@@ -11,6 +12,7 @@ spec-urls:
   - https://drafts.csswg.org/css-text/
 translation_of: Web/CSS/CSS_Text
 ---
+
 {{CSSRef}}
 
 **CSS Text** – модуль в CSS, который определяет, как совершать манипуляции с текстом, такие как разрыв строки, выравнивание, переносы и преобразование текста.
