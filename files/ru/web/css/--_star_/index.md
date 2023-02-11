@@ -98,4 +98,3 @@ browser-compat: css.properties.custom-property
 
 - [Использование переменных в CSS](/ru/docs/Web/CSS/Using_CSS_custom_properties)
 - Функция {{cssxref("var", "var()")}}
-
