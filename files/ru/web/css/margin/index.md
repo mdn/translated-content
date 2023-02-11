@@ -18,7 +18,7 @@ translation_of_original: Web/CSS/margin-new
 
 ## Составные свойства
 
-Данное свойство является сокращением для следующих свойств CSS:
+Данное свойство является сокращением для следующих CSS свойств:
 
 - {{cssxref("margin-top")}}
 - {{cssxref("margin-right")}}
@@ -30,7 +30,7 @@ translation_of_original: Web/CSS/margin-new
 ```css
 /* Применяется ко всем четырём сторонам */
 margin: 1em;
-margin: 3px;
+margin: -3px;
 
 /* по вертикали | по горизонтали */
 margin: 5% auto;
@@ -67,7 +67,7 @@ margin: unset;
 
 {{cssinfo}}
 
-## Формальный синтаксис
+## Синтаксис
 
 {{csssyntax}}
 
@@ -151,4 +151,5 @@ margin: auto;               /* верх и низ: отступ 0 */
 
 - [CSS Box Model](/ru/docs/Web/CSS/box_model)
 - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
-- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, и {{cssxref("margin-left")}}
+- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}
+- Логические свойства: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}} и {{cssxref("margin-inline-end")}}. А так же сокращенные варианты: {{cssxref("margin-block")}} и {{cssxref("margin-inline")}}
