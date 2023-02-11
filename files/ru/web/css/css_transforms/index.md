@@ -1,6 +1,7 @@
 ---
 title: CSS Transforms
 slug: Web/CSS/CSS_Transforms
+page-type: css-module
 tags:
   - CSS
   - CSS Transforms
@@ -10,9 +11,10 @@ tags:
 spec-urls: https://drafts.csswg.org/css-transforms/
 translation_of: Web/CSS/CSS_Transforms
 ---
+
 {{CSSRef}}
 
-**CSS Transforms** – модуль CSS, который определяет, как элементы, стилизованные с помощью CSS, могут быть преобразованы в двухмерном или трёхмерном пространстве.
+**CSS Transforms** – модуль CSS, который определяет, как стилизованные с помощью CSS элементы, могут быть преобразованы в двухмерном или трёхмерном пространстве.
 
 ## Справка
 
@@ -29,13 +31,13 @@ translation_of: Web/CSS/CSS_Transforms
 - {{cssxref("transform-style")}}
 - {{cssxref("translate")}}
 
-### Data types
+### Типы данных
 
 - {{cssxref("&lt;transform-function&gt;")}}
 
 ## Руководства
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Использование CSS-трансформаций](/ru/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
   - : Пошаговое руководство о том, как преобразовывать элементы с помощью CSS.
 
 ## Спецификации
