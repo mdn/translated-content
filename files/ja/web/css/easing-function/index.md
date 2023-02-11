@@ -126,7 +126,7 @@ steps(number_of_steps, direction)
 
 - `steps(3, jump-both)`
 
-  ![](/en-US/docs/web/css/easing-function/step3both.png)
+  ![](step3both.png)
 
 ##### step-start
 
