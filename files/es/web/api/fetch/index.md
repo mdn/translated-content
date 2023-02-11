@@ -1,16 +1,16 @@
 ---
-title: WindowOrWorkerGlobalScope.fetch()
+title: fetch()
 slug: Web/API/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 
 {{APIRef("Fetch API")}}
 
-El método **`fetch()`** del mixin {{domxref("WindowOrWorkerGlobalScope")}} lanza el proceso de solicitud de un recurso de la red. Esto devuelve una promesa que resuelve al objeto {{domxref("Response")}} que representa la respuesta a la solicitud realizada.
+El método **`fetch()`** lanza el proceso de solicitud de un recurso de la red. Esto devuelve una promesa que resuelve al objeto {{domxref("Response")}} que representa la respuesta a la solicitud realizada.
 
 Tanto {{domxref("Window")}} como {{domxref("WorkerGlobalScope")}} implementan `WorkerOrGlobalScope`, por lo que el método `fetch()` está disponible en prácticamente cualquier contexto desde el que se pueda necesitar solicitar un recurso.
 
-Una promesa {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} se rechaza con un {{jsxref("TypeError")}} cuando sucede un error en la red, aunque normalmente significa un tema de permisos o similar. Una comprobación más precisa de una solicitud con `fetch()` debería comprobar que la promesa se resuelve, y que la propiedad {{domxref("Response.ok")}} tiene valor `true`. Un estatus HTTP 404 no constituye un error de red.
+Una promesa {{domxref("fetch","fetch()")}} se rechaza con un {{jsxref("TypeError")}} cuando sucede un error en la red, aunque normalmente significa un tema de permisos o similar. Una comprobación más precisa de una solicitud con `fetch()` debería comprobar que la promesa se resuelve, y que la propiedad {{domxref("Response.ok")}} tiene valor `true`. Un estatus HTTP 404 no constituye un error de red.
 
 El método `fetch()` es controlado por la directiva `connect-src` de la [Política de Seguridad de Contenido (Content Security Policy)](/es/docs/Security/CSP/CSP_policy_directives) en lugar de la directiva del recurso que se solicita.
 

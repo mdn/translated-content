@@ -128,7 +128,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 2 аргумент функции `loadFile` устанавливает время ожидание равное 2000ms.
 
-> **Примечание:** Поддержка `timeout` была добавлена начиная с {{Gecko("12.0")}}.
+> **Примечание:** Поддержка `timeout` была добавлена начиная с Gecko 12.0.
 
 ## Synchronous request
 
