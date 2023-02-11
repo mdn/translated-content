@@ -23,7 +23,7 @@ slug: Web/API/ContentVisibilityAutoStateChangeEvent
 _从其父接口 {{DOMxRef("Event")}} 继承属性。_
 
 - {{domxref("ContentVisibilityAutoStateChangeEvent.skipped", "skipped")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-- : 如果用户代理正在跳过元素的渲染，则返回 `true`，否则返回 `false`。
+  - : 如果用户代理正在跳过元素的渲染，则返回 `true`，否则返回 `false`。
 
 ## 示例
 
