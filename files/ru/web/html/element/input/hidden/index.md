@@ -67,7 +67,7 @@ translation_of: Web/HTML/Element/input/hidden
 <form>
   <div>
     <label for="title">Заголовок поста:</label>
-    <input type="text" id="title" name="title" value="My excellent blog post" />
+    <input type="text" id="title" name="title" value="Мой замечательный пост" />
   </div>
   <div>
     <label for="content">Контент:</label>
@@ -123,7 +123,7 @@ textarea {
 
 При отправке на сервер данные формы будут выглядеть примерно так:
 
-`title=Пост+в+блоге&content=Некий+контент+внутри+поста.&postId=34657`
+`title=Мой+замечательный+пост&content=Некий+контент+внутри+поста.&postId=34657`
 
 Даже несмотря на то, что скрытый `input` не виден для пользователей при отправке формы, он содержит данные и они всё равно передаются на сервер.
 
