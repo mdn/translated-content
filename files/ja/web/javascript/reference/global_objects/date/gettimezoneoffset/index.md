@@ -51,7 +51,7 @@ getTimezoneOffset()` が返す分の値は、ローカルのタイムゾーン�
 // 現在の時刻を表す Date インスタンスを作成する
 const currentLocalDate = new Date();
 // 2016 年 5 月 1 日 03:24 GMT-0200 の Date インスタンスを作成する
-const laborDay2016at0324GMTminus2 = new Date('2016-05-01T03:24:00Z-02:00');
+const laborDay2016at0324GMTminus2 = new Date('2016-05-01T03:24:00-02:00');
 currentLocalDate.getTimezoneOffset() === laborDay2016at0324GMTminus2.getTimezoneOffset();
 // 夏時間に毎年移行しないタイムゾーンでは常に true となります。
 // 毎年夏時間に移行するあらゆるタイムゾーンは、 false になることがあります。

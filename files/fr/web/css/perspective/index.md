@@ -123,6 +123,7 @@ perspective: unset;
             <div class="face top">5</div>
             <div class="face bottom">6</div>
           </div>
+        </div>
       </td>
     </tr>
   </tbody>

@@ -70,16 +70,16 @@ slug: Web/HTML/Element/section
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
-        {{ARIARole("application")}}, {{ARIARole("banner")}},
-        {{ARIARole("complementary")}},
-        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
-        {{ARIARole("document")}}, {{ARIARole("feed")}},
-        {{ARIARole("log")}}, {{ARIARole("main")}},
-        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
-        {{ARIARole("none")}}, {{ARIARole("note")}},
-        {{ARIARole("presentation")}}, {{ARIARole("search")}},
-        {{ARIARole("status")}}, {{ARIARole("tabpanel")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/alert_role">alert</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/log_role">log</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/marquee_role">marquee</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/note_role">note</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/status_role">status</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tabpanel_role">tabpanel</a></code>
       </td>
     </tr>
     <tr>

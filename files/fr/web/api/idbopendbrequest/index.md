@@ -37,7 +37,7 @@ _Pas de méthodes, mais hérite des méthodes de ses parents {{domxref("IDBReque
 
 ## Exemple
 
-Dans l'exemple ci-dessous, le gestionnaire `onupgradeneeded` est utilisé pour mettre à jour la structure de la base de données, si une base plus récente est chargée. Pour voir un exemple complet, référez-vous à notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir cet exemple réel](http://mdn.github.io/to-do-notifications/))
+Dans l'exemple ci-dessous, le gestionnaire `onupgradeneeded` est utilisé pour mettre à jour la structure de la base de données, si une base plus récente est chargée. Pour voir un exemple complet, référez-vous à notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir cet exemple réel](https://mdn.github.io/dom-examples/to-do-notifications/))
 
 ```js
 var db;
@@ -103,4 +103,4 @@ DBOpenRequest.onupgradeneeded = function(event) {
 - Définition un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupération et modification des données : {{domxref("IDBObjectStore")}}
 - Utilisation de curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

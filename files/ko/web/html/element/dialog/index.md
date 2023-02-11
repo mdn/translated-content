@@ -49,7 +49,7 @@ slug: Web/HTML/Element/dialog
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/alertdialog_role'><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>

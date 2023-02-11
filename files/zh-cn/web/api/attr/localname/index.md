@@ -45,7 +45,7 @@ element.addEventListener("click", function() {
 
 本文档中属性的“本名 (local name)”指的是属性“限定名称 (qualified names)”的命名空间冒号之后的部分。“限定名称”通常作为 XML 文档命名空间的一部分用在 XML 代码内。
 
-> **备注：** 在 {{Gecko("1.9.2")}} 以及跟早的版本中，HTML DOM 访问该属性将返回 HTML 节点属性的大写字符串本名（有别于 XML DOM 的 XHTML 属性）。在后来的版本中，为遵循 HTML5 标准，该属性返回 DOM 内部存储的名称，即，不论 HTML DOM 的 HTML 属性还是 XML DOM 的 XHTML 属性都是小写字符串。
+> **备注：** 在 Gecko 1.9.2 以及跟早的版本中，HTML DOM 访问该属性将返回 HTML 节点属性的大写字符串本名（有别于 XML DOM 的 XHTML 属性）。在后来的版本中，为遵循 HTML5 标准，该属性返回 DOM 内部存储的名称，即，不论 HTML DOM 的 HTML 属性还是 XML DOM 的 XHTML 属性都是小写字符串。
 
 ## 规范
 

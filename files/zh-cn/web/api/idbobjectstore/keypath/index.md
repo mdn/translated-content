@@ -27,7 +27,7 @@ var mykeyPath = objectStore.keyPath;
 
 ## 例子
 
-在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用`add()`向一个 objectStore 中添加了一些数据。在 objectStore 被创建之后，我们在 console 中打印了 objectStore.keyPath 的值。想查看完整的例子，请查看我们的[To-do Notifications](https://github.com/mdn/to-do-notifications/)应用（[查看在线例子](http://mdn.github.io/to-do-notifications/)）。
+在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用`add()`向一个 objectStore 中添加了一些数据。在 objectStore 被创建之后，我们在 console 中打印了 objectStore.keyPath 的值。想查看完整的例子，请查看我们的[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)应用（[查看在线例子](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
 ```js
 // Let us open our database
@@ -90,4 +90,4 @@ function addData() {
 - 值域 range 的使用：{{domxref("IDBKeyRange")}}
 - 检索、修改：{{domxref("IDBObjectStore")}}
 - 使用游标：{{domxref("IDBCursor")}}
-- 相关例子：[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- 相关例子：[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

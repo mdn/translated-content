@@ -35,7 +35,7 @@ slug: Web/HTML/Element/summary
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>{{ARIARole("button")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/button_role'><code>button</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

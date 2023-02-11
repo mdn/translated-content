@@ -1,7 +1,6 @@
 ---
 title: Web 游戏开发简介
 slug: Games/Introduction
-original_slug: Games/简介
 ---
 
 {{GamesSidebar}}

@@ -92,13 +92,13 @@ grid-area: unset;
 
     如果忽略 \<integer> ，它就默认设为 `1`。它的值也不能为 0。
 
-### 形式文法
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <div id="grid">
@@ -108,7 +108,7 @@ grid-area: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 #grid {
@@ -131,7 +131,7 @@ grid-area: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "150px")}}
+{{EmbedLiveSample("示例", "100%", "150px")}}
 
 ## 规范
 
@@ -141,7 +141,7 @@ grid-area: unset;
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
 - Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}
 - Grid Layout Guide: _[Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
