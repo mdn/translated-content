@@ -1,5 +1,5 @@
 ---
-title: 'HTML: 为无障碍提供一个良好的基础'
+title: 'HTML：无障碍的良好基础'
 slug: Learn/Accessibility/HTML
 ---
 
@@ -529,9 +529,9 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 ## 本章目录
 
 - [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML：无障碍的良好的基础](/zh-CN/docs/Learn/Accessibility/HTML)
+- [HTML：无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
 - [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
 - [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体的无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端的无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍问题的解决处理](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
+- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
+- [无障碍疑难解答](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)
