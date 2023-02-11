@@ -127,7 +127,7 @@ slug: Web/HTML/Attributes/rel
 
     如果有多个 `<link rel="icon">`，浏览器会使用它们的 [`media`]（媒体）[`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 和 [`size`]（尺寸）属性来选择最合适的图标。如果几个图标同样合适，则使用最后一个。如果后来发现最合适的图标不合适，例如使用了不支持的格式，浏览器就会继续选择下一个最合适的，以此类推。
 
-    > **备注：** 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支 持`rel="icon"`，也有 [Chrome 的一个开放问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
+    > **备注：** 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支持 `rel="icon"`，也有 [Chrome 的一个开放问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
 
     > **备注：** 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`size`](size)属性，来选择网页夹或启动占位符的网页图标。
     > 相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
