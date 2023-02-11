@@ -12,8 +12,6 @@ user](https://www.w3.org/TR/css-contain-2/#relevant-to-the-user) 的css属性的
 这可以显著提高页面渲染速度。{{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
 为应用程序的代码提供了一种在不需要渲染过程时启动或停止渲染过程（例如在｛{{htmlelement("canvas")}}上绘制）的方法，从而提升了性能。
 
-**Note:** 在过去的提案中我们曾使用 `contentvisibilityautostatechanged`为命名，但在最新的提案中，我们将其更名为 `contentvisibilityautostatechange`。
-
 {{InheritanceDiagram}}
 
 ## 构造函数
