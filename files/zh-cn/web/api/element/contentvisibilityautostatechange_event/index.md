@@ -22,7 +22,7 @@ contentvisibilityautostatechange = (event) => {};
 
 > **Note:** 事件的类型为 {{domxref("ContentVisibilityAutoStateChangeEvent")}}.
 
-## Examples
+## 示例
 
 ```js
 const canvasElem = document.querySelector('canvas');
