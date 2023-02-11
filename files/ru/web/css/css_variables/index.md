@@ -1,6 +1,7 @@
 ---
-title: CSS Custom Properties for Cascading Variables
+title: Кастомные свойства в CSS
 slug: Web/CSS/CSS_Variables
+page-type: css-module
 tags:
   - CSS
   - CSS Variables
@@ -10,9 +11,10 @@ tags:
 spec-urls: https://drafts.csswg.org/css-variables/
 translation_of: Web/CSS/CSS_Variables
 ---
+
 {{CSSRef}}
 
-**CSS Custom Properties for Cascading Variables** – CSS модуль, который позволяет создавать переиспользуемые переменные (кастомные свойства).
+**Кастомные свойства в CSS** – модуль [CSS](/ru/docs/Web/CSS), который позволяет создавать переиспользуемые переменные (кастомные свойства).
 
 ## Справка
 
