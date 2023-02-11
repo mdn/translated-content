@@ -145,7 +145,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        {{ARIARole("link")}} when <code>href</code> attribute is
+        <code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code> when <code>href</code> attribute is
         present, otherwise
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >no corresponding role</a
@@ -157,16 +157,16 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
       <td>
         <p>When <code>href</code> attribute is present:</p>
         <ul>
-          <li>{{ARIARole("button")}}</li>
-          <li>{{ARIARole("checkbox")}}</li>
-          <li>{{ARIARole("menuitem")}}</li>
-          <li>{{ARIARole("menuitemcheckbox")}}</li>
-          <li>{{ARIARole("menuitemradio")}}</li>
-          <li>{{ARIARole("option")}}</li>
-          <li>{{ARIARole("radio")}}</li>
-          <li>{{ARIARole("switch")}}</li>
-          <li>{{ARIARole("tab")}}</li>
-          <li>{{ARIARole("treeitem")}}</li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></li>
+          <li><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/_role"></a></code></li>
         </ul>
         <p>When <code>href</code> attribute is not present:</p>
         <ul>

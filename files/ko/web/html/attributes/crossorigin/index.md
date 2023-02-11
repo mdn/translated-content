@@ -35,12 +35,9 @@ Media element의 `crossorigin` 속성은 CORS 세팅입니다.
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
 ```
 
-## 사양
+## 명세서
 
-| 사양                                                                                                                                     | 상태                             | 설명 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}                     | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## 브라우저 호환성
 

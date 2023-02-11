@@ -22,7 +22,7 @@ counter(countername, upper-roman)
 >
 > 在使用此功能之前，请仔细检查[浏览器兼容性表](#Browser_compatibility)。
 
-**语法**
+## 语法
 
 ### 值
 
@@ -31,7 +31,7 @@ counter(countername, upper-roman)
 - `<counter-style> 计数器样式`
   - : 计数器样式名称或 [`symbols()`](/zh-CN/docs/Web/CSS/symbols) 函数，其中计数器样式名称是数字，字母或符号的简单预定义计数器样式，复杂的东亚或埃塞俄比亚长手预定义计数器样式，或其他[预定义计数器样式](/zh-CN/docs/Web/CSS/CSS_Counter_Styles)。如果省略，则计数器样式默认为十进制。
 
-### 正式语法
+### 形式语法
 
 ```
 counter( <custom-ident>, <counter-style>? )
@@ -43,7 +43,7 @@ where
 <counter-style-name> = <custom-ident>
 ```
 
-**示例**
+## 示例
 
 ### default value compared to upper Roman
 
@@ -74,7 +74,7 @@ li::after {
 
 #### 结果
 
-{{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}
+{{EmbedLiveSample("default value compared to upper Roman", "100%", 150)}}
 
 ### _decimal-leading-zero_ compared to lower-alpha
 
@@ -107,7 +107,7 @@ li::after {
 
 {{EmbedLiveSample("decimal-leading-zero_compared_to_lower-alpha", "100%", 150)}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -115,7 +115,7 @@ li::after {
 
 {{Compat}}
 
-**另请参阅**
+## 参见
 
 - [使用 CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
 - {{cssxref("counter-reset")}}

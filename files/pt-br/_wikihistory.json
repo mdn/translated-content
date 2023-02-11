@@ -656,10 +656,6 @@
     "modified": "2020-08-07T11:26:36.555Z",
     "contributors": ["rafhaelfitzpatrick", "Fernandolrs"]
   },
-  "Glossary/XHR_(XMLHttpRequest)": {
-    "modified": "2019-04-26T09:39:50.976Z",
-    "contributors": ["helton-mori-dev"]
-  },
   "Glossary/XHTML": {
     "modified": "2019-03-23T23:39:12.153Z",
     "contributors": ["-", "LeonardoPacheco", "fvargaspf@gmail.com"]
@@ -667,6 +663,10 @@
   "Glossary/XML": {
     "modified": "2019-03-23T22:17:58.150Z",
     "contributors": ["psergiojr"]
+  },
+  "Glossary/XMLHttpRequest": {
+    "modified": "2019-04-26T09:39:50.976Z",
+    "contributors": ["helton-mori-dev"]
   },
   "Glossary/array": {
     "modified": "2019-06-22T20:19:15.594Z",

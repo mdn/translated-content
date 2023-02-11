@@ -63,7 +63,7 @@ slug: Learn/Server-side/Django/Tutorial_local_library_website
 
 {{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
-## 本系列教學
+## 本系列課程
 
 - [Django 介紹](/zh-TW/docs/Learn/Server-side/Django/Introduction)
 - [設定 Django 開發環境](/zh-TW/docs/Learn/Server-side/Django/development_environment)

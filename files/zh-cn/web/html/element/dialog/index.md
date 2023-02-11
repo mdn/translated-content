@@ -53,7 +53,7 @@ slug: Web/HTML/Element/dialog
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>

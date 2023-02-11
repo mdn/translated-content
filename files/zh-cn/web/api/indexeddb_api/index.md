@@ -82,7 +82,7 @@ IndexedDB 是一个事务型数据库系统，类似于基于 SQL 的 RDBMS。�
 ## 示例
 
 - [eLibri:](https://marco-c.github.io/eLibri/) 由 IndexedDB Mozilla DevDerby 的获奖者 Marco Castelluccio 编写的一个功能强大的图书馆和电子书阅读器应用。
-- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/)): 参考文档中示例的应用程序。
+- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)): 参考文档中示例的应用程序。
 - [Storing images and files in IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 
 ## 规范

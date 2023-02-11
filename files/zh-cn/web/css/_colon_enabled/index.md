@@ -14,7 +14,7 @@ input:enabled {
 }
 ```
 
-## 语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -22,7 +22,7 @@ input:enabled {
 
 下面的代码，当文本输入框处于启用状态时，输入框 {{htmlElement("input")}} 的文本是绿色的，处于禁用状态时，输入框的文本则是灰色的。这样可以把元素是否可用反馈给用户。
 
-HTML：
+### HTML
 
 ```html
 <form action="url_of_form">
@@ -36,7 +36,7 @@ HTML：
 </form>
 ```
 
-CSS：
+### CSS
 
 ```css
 input:enabled {
@@ -50,7 +50,7 @@ input:disabled {
 
 ### 结果
 
-{{EmbedLiveSample("Enabled_Disabled_Inputs_Example",550,95)}}
+{{EmbedLiveSample("示例",550,95)}}
 
 ## 规范
 

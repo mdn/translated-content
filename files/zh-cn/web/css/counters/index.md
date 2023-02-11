@@ -22,7 +22,7 @@ counters(countername, '.', upper-roman)
 >
 > 在使用此功能之前，请仔细检查[浏览器兼容性表](/zh-CN/docs/Web/CSS/counter#Browser_compatibility) 。
 
-## Syntax
+## 语法
 
 ### Values
 
@@ -33,7 +33,7 @@ counters(countername, '.', upper-roman)
 - `<string> 字符串`
   - : 任意数量的文本字符。非拉丁字符必须使用其 Unicode 转义序列进行编码：例如，`\ 000A9`表示版权符号。
 
-### Formal syntax
+### 形式语法
 
 ```plain
 counters( <custom-ident>, <string>, <counter-style>? )
@@ -45,7 +45,7 @@ where
 <counter-style-name> = <custom-ident>
 ```
 
-## Examples
+## 示例
 
 ### default value compared to upper Roman
 
@@ -94,9 +94,9 @@ li::before {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}
+{{EmbedLiveSample("default value compared to upper Roman", "100%", 150)}}
 
 ### _decimal-leading-zero_ compared to lower-alpha
 
@@ -145,19 +145,19 @@ li::before {
 }
 ```
 
-#### Result
+#### 结果
 
 {{EmbedLiveSample("decimal-leading-zero_compared_to_lower-alpha", "100%", 150)}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [Using CSS Counters](/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
 - {{cssxref("counter-set")}}

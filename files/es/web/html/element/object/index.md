@@ -71,8 +71,8 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("image")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>
       </td>
     </tr>
     <tr>

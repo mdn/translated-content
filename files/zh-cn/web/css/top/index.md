@@ -76,11 +76,11 @@ div {
 }
 ```
 
-```plain
+```html
 <div>The size of this content is determined by the position of its edges.</div>
 ```
 
-{{EmbedLiveSample('Example','100%','200')}}​​​​​​
+{{EmbedLiveSample('示例','100%','200')}}​​​​​​
 
 ## 规范
 

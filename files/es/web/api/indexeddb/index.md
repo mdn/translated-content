@@ -1,12 +1,12 @@
 ---
-title: WindowOrWorkerGlobalScope.indexedDB
+title: indexedDB
 slug: Web/API/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
 
 {{ APIRef() }}
 
-La propiedad **`indexedDB`** del mixin {{domxref("WindowOrWorkerGlobalScope")}} proporciona un mecanismo para que las aplicaciones puedan acceder asíncronamente a las capacidades de las bases de datos indexadas.
+La propiedad **`indexedDB`** proporciona un mecanismo para que las aplicaciones puedan acceder asíncronamente a las capacidades de las bases de datos indexadas.
 
 ## Sintaxis
 

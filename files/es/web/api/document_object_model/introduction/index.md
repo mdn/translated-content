@@ -211,7 +211,7 @@ La creación de una página de prueba con una paleta de botones, campos de texto
 
 Figura 0.1 Muestra DOM página de prueba
 
-![](/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif)
+![](dom_ref_introduction_to_the_dom.gif)
 
 En este ejemplo, los menúes desplegables actualizan dinámicamente los aspectos de la página web accesibles al DOM como el color de fondo (`bgColor`), de los hiper-enlaces (`aLink`), y el del texto (`text`). El hecho de diseñar páginas, testar las interfaces que se encuentren a lo largo de la lectura son una parte importante del aprendizaje para una utilización eficaz del DOM.
 

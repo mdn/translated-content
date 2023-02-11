@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Объект **`WebAssembly.Table()`** - это JavaScript обёртка — структура похожая на массив, представляющая таблицу функций WebAssembly. Таблица, созданная через JavaScript или в коде WebAssembly, будет доступна и может быть изменена как из JavaScript, так и из WebAssembly.
 

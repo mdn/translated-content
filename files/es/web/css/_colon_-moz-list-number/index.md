@@ -38,5 +38,5 @@ li::-moz-list-number {
 
 ### Resultado
 
-![moz-list-number.png](/@api/deki/files/4668/=moz-list-number.png)
+![moz-list-number.png](moz-list-number.png)
 {{EmbedLiveSample("Example")}}

@@ -63,11 +63,11 @@ One or more `<repeat-style>` values, separated by commas.
     | `round`     | As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. When the next image is added, all of the current ones compress to allow room. Example: An image with an original width of 260px, repeated three times, might stretch until each repetition is 300px wide, and then another image will be added. They will then compress to 225px. |
     | `no-repeat` | The image is not repeated (and hence the mask painting area will not necessarily be entirely covered). The position of the non-repeated mask image is defined by the {{cssxref("mask-position")}} CSS property.                                                                                                                                                                                                       |
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### 单值
 
@@ -104,7 +104,7 @@ repetition.addEventListener("change", function (evt) {
 });
 ```
 
-{{EmbedLiveSample("Single_value", "290px", "290px")}}
+{{EmbedLiveSample("单值", "290px", "290px")}}
 
 ### 使用多个遮罩图片
 

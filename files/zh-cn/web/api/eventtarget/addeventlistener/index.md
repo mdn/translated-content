@@ -50,7 +50,7 @@ addEventListener(type, listener, useCapture);
 - `useCapture` {{optional_inline}}
   - : 一个布尔值，表示在 DOM 树中注册了 `listener` 的元素，是否要先于它下面的 `EventTarget` 调用该 `listener`。当 useCapture（设为 true）时，沿着 DOM 树向上冒泡的事件不会触发 listener。当一个元素嵌套了另一个元素，并且两个元素都对同一事件注册了一个处理函数时，所发生的事件冒泡和事件捕获是两种不同的事件传播方式。事件传播模式决定了元素以哪个顺序接收事件。进一步的解释可以查看 [DOM Level 3 事件](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)及 [JavaScript 事件顺序](https://www.quirksmode.org/js/events_order.html#link4)文档。如果没有指定，`useCapture` 默认为 `false`。
 
-  > **备注：** 对于事件目标上的事件监听器来说，事件会处于“目标阶段”，而不是冒泡阶段或者捕获阶段。捕获阶段的事件监听器会在任何非捕获阶段的事件监听器之前被调用。
+    > **备注：** 对于事件目标上的事件监听器来说，事件会处于“目标阶段”，而不是冒泡阶段或者捕获阶段。捕获阶段的事件监听器会在任何非捕获阶段的事件监听器之前被调用。
 
 - `wantsUntrusted` {{optional_inline}} {{Non-standard_inline}}
   - : 如果为 `true`，则事件处理程序会接收网页自定义的事件。此参数只适用于 Gecko（{{glossary("chrome")}} 的默认值为 `false`，其它常规网页的默认值为 `true`），主要用于附加组件的代码和浏览器本身。

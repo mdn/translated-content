@@ -22,7 +22,7 @@ Este elemento no es soportado y por lo tanto implementa la interface {domxref("H
 
 ### Resultado
 
-![Image:HTMLBlinkElement.gif](/@api/deki/files/247/=HTMLBlinkElement.gif)
+![Image:HTMLBlinkElement.gif](htmlblinkelement.gif)
 
 ## Especificación
 

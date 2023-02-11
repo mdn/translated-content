@@ -76,8 +76,8 @@ slug: Web/HTML/Element/footer
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}},
-        {{ARIARole("none")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>
       </td>
     </tr>
     <tr>
