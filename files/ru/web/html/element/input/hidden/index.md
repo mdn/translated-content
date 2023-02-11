@@ -15,37 +15,6 @@ translation_of: Web/HTML/Element/input/hidden
 
 {{HTMLElement("input")}} c атрибутом `type="hidden"` скрыт со страницы. Разработчик может использовать его, например, для хранения ID товара, который в данный момент заказывается через форму, или другой сопутствующей информации. Пользователи никак не смогут увидеть это поле ввода через свой интерфейс.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#Значение">Значение</a></strong></td>
-      <td>
-        Строка со скрытыми от пользователя данными.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>События</strong></td>
-      <td>Нету.</td>
-    </tr>
-    <tr>
-      <td><strong>Поддерживаемые общие атрибуты</strong></td>
-      <td>{{htmlattrxref("autocomplete", "input")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Атрибуты IDL</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM интерфейс</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Методы</strong></td>
-      <td>Нету.</td>
-    </tr>
-  </tbody>
-</table>
-
 > **Примечание:** События {{domxref("HTMLElement/input_event", "input")}} и {{domxref("HTMLElement/change_event", "change")}} не применимы для скрытых полей ввода. Их нельзя взять в фокус даже с помощью JavaScript (например, используя `hiddenInput.focus()`).
 
 ## Значение
@@ -78,7 +47,7 @@ translation_of: Web/HTML/Element/input/hidden
 
 Вы можете посмотреть пример такой логики в секции [Примеры](#Примеры) ниже.
 
-### Улучшение безопасности
+### Улучшение безопасности веб-сайта
 
 Скрытые `input` также используются для хранения и отправки токенов безопасности. Основная идея заключается в том, что если пользователь заполняет некую конфиденциальную форму, например, в своём банковском аккаунте для перевода денег на другой счёт, ему будет выдан токен безопасности. Этот токен докажет, что отправитель действительно тот, за кого себя выдаёт, и что он использует нужную форму для отправки своего перевода.
 
@@ -113,11 +82,83 @@ translation_of: Web/HTML/Element/input/hidden
 </form>
 ```
 
-Сервер свяжет ID "`postId`" скрытого `input` с ID записи блога, чтобы знать, какую часть базы данных следует обновить. На сервере данные формы будут выглядеть примерно так:
+Также добавим немного простого CSS:
+
+```css
+html {
+  font-family: sans-serif;
+}
+form {
+  width: 500px;
+}
+div {
+  display: flex;
+  margin-bottom: 10px;
+}
+label {
+  flex: 2;
+  line-height: 2;
+  text-align: right;
+  padding-right: 20px;
+}
+input,
+textarea {
+  flex: 7;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+textarea {
+  height: 60px;
+}
+```
+
+Сервер свяжет ID "`postId`" скрытого `input` с ID записи блога, чтобы знать, какую часть базы данных следует обновить. Никакого дополнительного клиентского кода для этого не потребуется.
+
+Результат:
+
+{{ EmbedLiveSample('Examples', '100%', 200) }}
+
+> **Примечание:** Вы также можете найти данный пример на GitHub (смотрите [исходный код](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html), а так же [рабочее демо](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
+
+При отправке на сервер данные формы будут выглядеть примерно так:
 
 `title=Пост+в+блоге&content=Некий+контент+внутри+поста.&postId=34657`
 
 Даже несмотря на то, что скрытый `input` не виден для пользователей при отправке формы, он содержит данные и они всё равно передаются на сервер.
+
+## Техническая сводка
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#Значение">Значение</a></strong></td>
+      <td>
+        Строка со скрытыми от пользователя данными.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>События</strong></td>
+      <td>Нету.</td>
+    </tr>
+    <tr>
+      <td><strong>Поддерживаемые общие атрибуты</strong></td>
+      <td>{{htmlattrxref("autocomplete", "input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Атрибуты IDL</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM интерфейс</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Методы</strong></td>
+      <td>Нету.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Спецификации
 
