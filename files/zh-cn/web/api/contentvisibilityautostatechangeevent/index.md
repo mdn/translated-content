@@ -5,12 +5,9 @@ slug: Web/API/ContentVisibilityAutoStateChangeEvent
 
 {{APIRef("CSS Containment")}}{{SeeCompatTable}}
 
-**`ContentVisibilityAutoStateChangeEvent`** 实现了 [CSS Containment Module Level 2](https://www.w3.org/TR/css-contain-2/#content-visibility-auto-state-changed) {{domxref("element/contentvisibilityautostatechanged_event"，"contentvisibilityautostatechanged")}} 接口，对于设置了 `content-visibility: auto` [relevant to the
-user](https://www.w3.org/TR/css-contain-2/#relevant-to-the-user) 的css属性的元素，元素所呈现(渲染)的状态被相关属性或其他业务逻辑触发的变化而进一步随之变化的时候， `contentvisibilityautostatechanged`将被触发。
+**`ContentVisibilityAutoStateChangeEvent`** 实现了 [CSS Containment Module Level 2](https://www.w3.org/TR/css-contain-2/#content-visibility-auto-state-changed) {{domxref("element/contentvisibilityautostatechanged_event","contentvisibilityautostatechanged")}} 事件，对于设置了css `content-visibility: auto` 属性的元素，浏览器对这些元素 是否与用户相关 且 是否可跳过其内容 [CSS containment](/zh-CN/docs/Web/CSS/CSS_Containment)的判定发生变化时， contentvisibilityautostatechange 事件就会被触发。
 
-这样做的用意是想帮助开发人员更好地控制，以及明确何时去停止或开始渲染，用户代理跳过元素的渲染，包括布局和绘制。
-这可以显著提高页面渲染速度。{{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
-为应用程序的代码提供了一种在不需要渲染过程时启动或停止渲染过程（例如在｛{{htmlelement("canvas")}}上绘制）的方法，从而提升了性能。
+这样做的用意是想帮助开发人员更好地控制，以及明确何时去停止或开始渲染，用户代理跳过元素的渲染，包括布局和绘制。这可以显著提高页面渲染速度。{{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}。为应用程序的代码提供了一种在不需要渲染过程时启动或停止渲染过程（例如在｛{{htmlelement("canvas")}}上绘制）的方法，从而提升了性能。
 
 {{InheritanceDiagram}}
 
@@ -61,7 +58,7 @@ function stopCanvasUpdates(canvas) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [contentvisibilityautostatechange](/zh-CN/docs/Web/API/Element/contentvisibilityautostatechange_event)
 - [CSS containment](/zh-CN/docs/Web/CSS/CSS_Containment)
