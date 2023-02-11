@@ -133,8 +133,7 @@ CSS 中组成一个块级盒子需要：
 }
 ```
 
-如果使用标准模型,实际占用宽度 = 410px (350 + 25 + 25 + 5 + 5)，高度 = 210px (150 + 25 + 25 + 5 + 5)，padding 加 border 再加 content box。
-
+如果使用标准模型，实际占用空间的宽高分别为：宽度 = 410px (350 + 25 + 25 + 5 + 5)，高度 = 210px (150 + 25 + 25 + 5 + 5)，即 padding 加 border 再加 content box。
 ![Showing the size of the box when the standard box model is being used.](standard-box-model.png)
 
 > **备注：** margin 不计入实际大小 —— 当然，它会影响盒子在页面所占空间，但是影响的是盒子外部空间。盒子的范围到边框为止 —— 不会延伸到 margin。
