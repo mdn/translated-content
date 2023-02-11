@@ -7,21 +7,21 @@ l10n:
 
 {{DefaultAPISidebar("WebRTC")}}
 
-[WebRTC](/ja/docs/Web/API/WebRTC_API)は、デバイス間のリアルタイムなP2P(ピア・ツー・ピア)接続を通した情報交換を可能にします。接続は **シグナリング** と呼ばれる、ピアの発見とピアとの交渉のプロセスを通じて確立されます。このチュートリアルでは、双方向のビデオ通話を実装していきます。
+[WebRTC](/ja/docs/Web/API/WebRTC_API) は、デバイス間のリアルタイムな P2P(ピア・ツー・ピア) 接続を通した情報交換を可能にします。接続は **シグナリング** と呼ばれる、ピアの発見とピアとの交渉のプロセスを通じて確立されます。このチュートリアルでは、双方向のビデオ通話を実装していきます。
 
-[WebRTC](/ja/docs/Web/API/WebRTC_API)は制約のある状況下で、音声、動画、データをリアルタイムでやり取りするための完全なピア・ツー・ピアな技術です。ピア同士の発見と交渉のプロセスは、[他の記事でも議論されているように](/ja/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection)、お互いに異なるネットワーク上にいるデバイス同士で行われることになります。この **シグナリング** と呼ばれるプロセスは、デバイス同士がお互いに合意済みの第三者のサーバへの接続を含みます。この第三者サーバを通してデバイスはお互いの位置を確認し、交渉のためのメッセージをやり取りすることが出来ます。
- 
-このドキュメントでは、私達の WebSocket のドキュメント(この記事へのリンクは追加予定で、まだ存在しません。)の中で作られた[WebSocket チャット](https://webrtc-from-chat.glitch.me/) を、ユーザ間の双方向ビデオ通話をサポートするように改良していきます。もしコードを実際に動かしてみたい場合は、[Glitch example](https://webrtc-from-chat.glitch.me/)や、[remix the example](https://glitch.com/edit/#!/remix/webrtc-from-chat)を試すことが出来ます。また Github で[プロジェクト全体](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)も公開されています。
+[WebRTC](/ja/docs/Web/API/WebRTC_API) は制約のある状況下で、音声、動画、データをリアルタイムでやり取りするための完全なピア・ツー・ピアな技術です。ピア同士の発見と交渉のプロセスは、[他の記事でも議論されているように](/ja/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection)、お互いに異なるネットワーク上にいるデバイス同士で行われることになります。この **シグナリング** と呼ばれるプロセスは、デバイス同士がお互いに合意済みの第三者のサーバへの接続を含みます。この第三者サーバを通してデバイスはお互いの位置を確認し、交渉のためのメッセージをやり取りすることが出来ます。
+
+このドキュメントでは、私達の WebSocket のドキュメント(この記事へのリンクは追加予定で、まだ存在しません。)の中で作られた[WebSocket チャット](https://webrtc-from-chat.glitch.me/) を、ユーザ間の双方向ビデオ通話をサポートするように改良していきます。もしコードを実際に動かしてみたい場合は、[Glitch example](https://webrtc-from-chat.glitch.me/) や、[remix the example](https://glitch.com/edit/#!/remix/webrtc-from-chat) を試すことが出来ます。また Github で[プロジェクト全体](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)も公開されています。
 
 > **注意:** Glitch の例を試す場合、コードの小さな更新でも接続がリセットされることになります。加えて、Glitch インスタンスは手軽な試行とテストのためにあるので、タイムアウト期間が短く設定されています。
 
-## The signaling server
+## シグナリングサーバ
 
-Establishing a WebRTC connection between two devices requires the use of a **signaling server** to resolve how to connect them over the internet. A signaling server's job is to serve as an intermediary to let two peers find and establish a connection while minimizing exposure of potentially private information as much as possible. How do we create this server and how does the signaling process actually work?
+インターネット越しに二つのデバイス間で WebRTC 接続を確立するためには **シグナリングサーバ** が必要になります。シグナリングサーバの仕事は、出来得る限り最小のプライベートな情報の露出で、ピア同士がお互いを発見し接続するよう仲介者となることです。どうやってこのサーバを作れるのでしょうか、また、シグナリングのプロセスはどのように行われるのでしょうか？
 
-First we need the signaling server itself. WebRTC doesn't specify a transport mechanism for the signaling information. You can use anything you like, from [WebSocket](/en-US/docs/Web/API/WebSockets_API) to {{domxref("XMLHttpRequest")}} to carrier pigeons to exchange the signaling information between the two peers.
+まずシグナリングサーバ自体が必要です。 WebRTC はシグナリング情報に特定の伝送プロトコルを指定していません。 [WebSocket](/en-US/docs/Web/API/WebSockets_API) や {{domxref("XMLHttpRequest")}} から伝書鳩だって構いません。好きなものを使用して二つのピア間でシグナリング情報を交換できます。
 
-It's important to note that the server doesn't need to understand or interpret the signaling data content. Although it's {{Glossary("SDP")}}, even this doesn't matter so much: the content of the message going through the signaling server is, in effect, a black box. What does matter is when the {{Glossary("ICE")}} subsystem instructs you to send signaling data to the other peer, you do so, and the other peer knows how to receive this information and deliver it to its own ICE subsystem. All you have to do is channel the information back and forth. The contents don't matter at all to the signaling server.
+サーバはシグナリング情報の中身を理解したり解釈したりする必要はない、と把握しておくことが重要です。 {{Glossary("SDP")}} ですが、これもそれほど大事な情報ではありません。シグナリングサーバを通過するメッセージの内容は、事実上、ブラックボックスです。重要なのは、 {{Glossary("ICE")}} サブシステムあるピアに対して、もう一方のピアにシグナリング情報を送信するよう指示する場合です。もしピアがシグナリング情報を送信すると、他方のピアはその情報を受信して​​独自の ICE サブシステムへと渡す方法を知ることが出来ます。 シグナリングサーバの役割は、こうした情報を仲介することだけです。情報の中身は内容はサーバにとってまったく関係ありません。
 
 ### Readying the chat server for signaling
 
