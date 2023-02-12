@@ -78,32 +78,6 @@
 | Parameters | 매개변수 | [링크][AudioWorkletNode] |
 | Value | 값 | [링크][target] |
 
-## 안내 문구
-
-각 페이지의 안내 문구에 대한 단어 정의입니다.
-
-**사전 순으로 용어집을 편집해주세요.**
-
-| 용어 | 번역 | 참고 링크 |
-| --- | --- | --- |
-| Note | 참고 | |
-| Warning | 경고 | |
-| Callout | 알림 | |
-| Objective | 목표 | [링크][What_is_accessibility] |
-| Prerequisites | 필요한 사전 지식 | [링크][What_is_accessibility] |
-
-- callout
-
-```markdown
-> **알림:**
->
-> #### 프론트엔드 웹 개발자가 되고자 하시나요?
->
-> 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
->
-> [**시작하기**](/en-US/docs/Learn/Front-end_web_developer)
-```
-
 ## 공통 용어
 
 **사전 순으로 용어집을 편집해주세요.**
