@@ -75,7 +75,7 @@ document.addEventListener("visibilitychange", function logData() {
 
 과거에는 많은 웹 사이트들이 세션 끝에서 분석 정보를 보내기 위해 [`unload`](/en-US/docs/Web/API/Window/unload_event)
 나 [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) 를 사용했습니다.
-그러나, 이건 매우 안정성이 없습니다. 많은 상황에서 (특히 모바일), 브라우저는 `unload`, `beforeunload` 나 `pagehide` 같은 이벤트들을 발생하지 않을 것입니다. 예를 들어, 이러한 이벤트들은 다음과 같은 상황에서 발생되지 않을 것입니다.
+그러나, 이건 매우 안정성이 없는 방법입니다. 많은 상황에서 (특히 모바일), 브라우저는 `unload`, `beforeunload` 나 `pagehide` 같은 이벤트들을 발생하지 않을 것입니다. 예를 들어, 이러한 이벤트들은 다음과 같은 상황에서 발생되지 않을 것입니다.
 
 1. 유저가 페이지를 로드하고 페이지와 상호작용한다.
 2. 유저가 끝났을때, 탭을 닫는 것 대신 다른 앱으로 전환한다.
