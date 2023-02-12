@@ -52,8 +52,6 @@ slug: Web/Guide/Introduction_to_Web_development
 
 ## 资源
 
-- [w3schools](http://www.w3schools.com.cn/)
-  - : 免费 Web 开发教程，从 HTML 入门到进阶 Web 技术。
 - [SitePoint](https://www.sitepoint.com/blog/)
   - : 一个学习 HTML、CSS 和 JavaScript 的可靠参考网站，其中还提到了不同浏览器的功能支持和已知的浏览器错误。
 - [HTMLDog](https://htmldog.com/)
