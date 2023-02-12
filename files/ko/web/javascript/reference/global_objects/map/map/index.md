@@ -1,6 +1,8 @@
 ---
 title: Map() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
+l10n:
+  sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
 ---
 
 {{JSRef}}
