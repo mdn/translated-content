@@ -7,7 +7,7 @@ slug: Web/Guide/Parsing_and_serializing_XML
   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Guide")}}
 </section>
 
-有时，你可能需要解析 {{Glossary("XML")}} 内容，并把它转换为 {{Glossary("DOM")}} 树，或者，反过来将现有的 DOM 树序列化成 XML。在本文中，我们将了解 web 平台提供的对象，以便轻松地序列化和解析 XML 的常见任务。
+有时，你可能需要解析 {{Glossary("XML")}} 内容，并把它转换为 {{Glossary("DOM")}} 树，或者，反过来将现有的 DOM 树序列化成 XML。在本文中，我们将了解 web 平台提供的对象，以便轻松地完成序列化和解析 XML 的常见任务。
 
 - {{domxref("XMLSerializer")}}
   - : 序列化 DOM 树，把它们转换成包含 XML 的字符串。
