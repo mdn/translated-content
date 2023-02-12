@@ -1,6 +1,8 @@
 ---
 title: <object> 로부터 <iframe>까지 — 기타 임베딩 기술
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
+l10n:
+  sourceCommit: 2b9c5bb9eaa56df82286c06e4405851b5d87c8aa
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
