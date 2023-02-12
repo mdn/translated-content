@@ -30930,10 +30930,6 @@
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
   },
-  "conflicting/Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2020-08-13T08:20:58.326Z",
-    "contributors": ["eltociear"]
-  },
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T23:28:42.286Z",
     "contributors": ["yyss", "teoli"]
