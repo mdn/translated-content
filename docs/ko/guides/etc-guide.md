@@ -1,4 +1,4 @@
-# 기타 지침
+# 기타 안내서
 
 ## code formatter
 

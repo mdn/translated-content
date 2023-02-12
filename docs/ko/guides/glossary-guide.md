@@ -1,4 +1,4 @@
-# 용어 지침
+# 용어 안내서
 
 새로운 용어를 추가할 때, 기존 문서의 레거시와 [국립 국어원 한국어 어문 규범](https://kornorms.korean.go.kr/main/main.do)을 고려해 추가할 것을 권장합니다.
 [국립 국어원 온라인가나다](https://www.korean.go.kr/front/onlineQna/onlineQnaList.do?mn_id=216)에서 어문 규범, 어법, 표준국어대사전 내용 등에 대하여 문의할 수 있습니다.
@@ -21,7 +21,7 @@
   - 예: 정수 값, 소수 값, 반환 값, 기본 값
   - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
 
-## 용어 지침 `참고 링크` 우선 순위
+## 용어 안내서 `참고 링크` 우선 순위
 
 - 1. 해당 단어에 대한 의견을 나눈 PR 링크
 - 2. 적절한 ko MDN 문서 링크
@@ -48,7 +48,7 @@
 | Description | 설명 | [링크][Array]
 | Example | 예제 | [링크][target] |
 | Examples | 예제 | [링크](https://github.com/mdn/translated-content/blob/main/files/ko/web/javascript/reference/global_objects/proxy/proxy/apply/index.md) |
-| Guides | 지침 | |
+| Guides | 안내서 | |
 | In this module | 이번 과정에서는 | [링크][React_getting_started] |
 | Learn More | 더 알아보기 | [링크][Mutable] |
 | Next steps | 다음 단계 | [링크][2D_breakout_game_Phaser] |
