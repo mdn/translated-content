@@ -8,7 +8,7 @@ slug: Web/API/Navigator/sendBeacon
 **`navigator.sendBeacon()`**
 메서드는 작은 양의 데이터를 포함하는 [HTTP POST](/ko/docs/Web/HTTP/Methods/POST) 요청을 {{glossary("Asynchronous", "비동기적")}}으로 웹 서버로 보냅니다.
 
-이것은 웹서버에 분석 정보를 보내고 {{domxref("XMLHttpRequest","XMLHttpRequest")}} 같은 오래된 기술들로 이것을 구현하는 것에서 생길 수 있는 몇몇 문제들을 피하기 위해 고안됐습니다.
+웹 서버에 분석 정보를 보내고 {{domxref("XMLHttpRequest","XMLHttpRequest")}} 같은 오래된 기술로 분석을 전송하며 생길 수 있는 몇몇 문제를 피하기 위해 고안됐습니다.
 
 > **참고:** 요청을 `POST` 외의 다른 메서드를 사용하거나, 요청 속성을 바꾸어서 보내야 하거나, 서버로부터의 응답이 필요하면 Beacon 대신 [`fetch()`](/en-US/docs/Web/API/fetch) 를 [`keepalive`](/en-US/docs/Web/API/fetch#keepalive) 를 `true` 로 설정한 체로 사용하세요.
 
