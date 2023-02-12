@@ -1,5 +1,5 @@
 ---
-title: style
+title: <style> - элемент для указания стилей
 slug: Web/HTML/Element/style
 tags:
   - HTML

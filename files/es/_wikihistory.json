@@ -15649,10 +15649,6 @@
     "modified": "2019-03-23T23:01:29.892Z",
     "contributors": ["fscholz"]
   },
-  "orphaned/Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2019-03-23T22:16:40.400Z",
-    "contributors": ["ivannieto", "chrisdavidmills"]
-  },
   "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
     "modified": "2020-12-02T07:09:06.472Z",
     "contributors": [

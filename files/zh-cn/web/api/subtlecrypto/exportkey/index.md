@@ -42,7 +42,7 @@ exportKey(format, key)
 
 ### 异常
 
-当发生以下集中异常时，promise 会被拒绝：
+当发生以下几种异常时，promise 会被拒绝：
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : 若尝试导出不可导出的密钥，则会抛出此异常。

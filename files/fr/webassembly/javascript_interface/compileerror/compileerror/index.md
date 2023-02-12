@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/
 browser-compat: javascript.builtins.WebAssembly.CompileError.CompileError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.CompileError()`** crée un nouvel objet `CompileError` WebAssembly qui représente une erreur qui se produit lors du décodage ou de la validation du code WebAssembly.
 
