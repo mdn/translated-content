@@ -59,4 +59,4 @@ body:
     id: metadata
     attributes:
       label: MDN metadata
-      description: 자동으로 설정되니 수정하지마세요.
+      description: 자동으로 설정되니 수정하지 마세요.
