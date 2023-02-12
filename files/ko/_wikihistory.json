@@ -896,15 +896,31 @@
     "modified": "2020-07-17T04:53:21.623Z",
     "contributors": ["AlexChoi", "rudolfo"]
   },
-  "Learn/Common_questions/Checking_that_your_web_site_is_working_properly": {
-    "modified": "2020-07-16T22:35:50.357Z",
-    "contributors": ["best8248"]
-  },
-  "Learn/Common_questions/HTML_features_for_accessibility": {
+  "Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility": {
     "modified": "2020-07-16T22:35:51.295Z",
     "contributors": ["woojin.jo"]
   },
-  "Learn/Common_questions/How_does_the_Internet_work": {
+  "Learn/Common_questions/Design_and_accessibility/Thinking_before_coding": {
+    "modified": "2020-07-16T22:35:34.712Z",
+    "contributors": ["Silvermist", "ssilb4", "daebum-lee"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
+    "modified": "2020-07-16T22:35:50.357Z",
+    "contributors": ["best8248"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server": {
+    "modified": "2020-07-16T22:35:41.806Z",
+    "contributors": ["Je-Gwan", "kuil09"]
+  },
+  "Learn/Common_questions/Tools_and_setup/What_software_do_I_need": {
+    "modified": "2020-07-16T22:35:33.374Z",
+    "contributors": ["ssilb4"]
+  },
+  "Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server": {
+    "modified": "2020-11-29T09:15:10.698Z",
+    "contributors": ["yr4978", "anoncaco", "rkdxofyd", "jungyh0218", "dolmoon"]
+  },
+  "Learn/Common_questions/Web_mechanics/How_does_the_Internet_work": {
     "modified": "2020-07-16T22:35:37.384Z",
     "contributors": [
       "FreelyReceivedFreelyGive",
@@ -914,31 +930,23 @@
       "ssilb4"
     ]
   },
-  "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
+  "Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines": {
     "modified": "2020-07-16T22:35:40.167Z",
     "contributors": ["doong-jo", "ssilb4"]
   },
-  "Learn/Common_questions/Thinking_before_coding": {
-    "modified": "2020-07-16T22:35:34.712Z",
-    "contributors": ["Silvermist", "ssilb4", "daebum-lee"]
-  },
-  "Learn/Common_questions/Upload_files_to_a_web_server": {
-    "modified": "2020-07-16T22:35:41.806Z",
-    "contributors": ["Je-Gwan", "kuil09"]
-  },
-  "Learn/Common_questions/What_are_hyperlinks": {
+  "Learn/Common_questions/Web_mechanics/What_are_hyperlinks": {
     "modified": "2020-07-16T22:35:43.271Z",
     "contributors": ["ssilb4"]
   },
-  "Learn/Common_questions/What_is_a_URL": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_URL": {
     "modified": "2020-07-16T22:35:29.813Z",
     "contributors": ["ssilb4"]
   },
-  "Learn/Common_questions/What_is_a_domain_name": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_domain_name": {
     "modified": "2020-07-16T22:35:44.305Z",
     "contributors": ["peacekimjapan", "hyunjinyoon", "ssilb4"]
   },
-  "Learn/Common_questions/What_is_a_web_server": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_web_server": {
     "modified": "2020-11-29T22:15:28.062Z",
     "contributors": [
       "yr4978",
@@ -949,14 +957,6 @@
       "namwoo",
       "woojin.jo"
     ]
-  },
-  "Learn/Common_questions/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:33.374Z",
-    "contributors": ["ssilb4"]
-  },
-  "Learn/Common_questions/set_up_a_local_testing_server": {
-    "modified": "2020-11-29T09:15:10.698Z",
-    "contributors": ["yr4978", "anoncaco", "rkdxofyd", "jungyh0218", "dolmoon"]
   },
   "Learn/Forms": {
     "modified": "2020-07-16T22:20:59.522Z",
