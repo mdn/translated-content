@@ -1,6 +1,8 @@
 ---
 title: Accessibility (접근성)
 slug: Glossary/Accessibility
+l10n:
+  sourceCommit: 9d53a300e0baae28dcad8c60080fa0152dd2b023
 ---
 
 **웹 접근성** (**A11Y**)은 신체적, 기술적 제한에도 불구하고 웹 사이트를 계속 사용할 수 있도록 하는 모범 사례를 말합니다. 웹 접근성은 {{Glossary("WAI","Web Accessibility Initiative")}} (WAI)를 통해 {{Glossary("W3C")}}에서 공식적으로 정의되고 논의됩니다.
