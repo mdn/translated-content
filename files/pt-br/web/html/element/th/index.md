@@ -131,7 +131,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     > **Note:**Não use esse atributo, pois ele está obsoleto no padrão mais recente.
 
-- {{htmlattrdef("height")}} {{Deprecated_inline("html 4")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("height")}} {{Deprecated_inline}}, {{obsolete_inline("html5")}}
 
   - : Esse atributo é usado para definir uma altura recomendada da célula.
 
@@ -150,7 +150,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("vertical-align")}}.
 
-- {{htmlattrdef("width")}} {{Deprecated_inline("html 4")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("width")}} {{Deprecated_inline}}, {{obsolete_inline("html5")}}
 
   - : Este atributo é usado para definir uma largura de célula recomendada. Espaço adicional pode ser adicionado com as propriedades {{domxref("HTMLTableElement.cellSpacing", "cellspacing")}} e {{domxref("HTMLTableElement.cellPadding", "cellpadding")}}, e a largura do elemento {{HTMLElement("col")}} pode criar largura extra. Mas, se a largura de uma coluna for muito estreita para mostrar uma célula específica corretamente, ela será ampliada quando exibida.
 
