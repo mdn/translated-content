@@ -1,6 +1,8 @@
 ---
 title: 어떤 HTML 기능이 접근성을 촉진할까?
-slug: Learn/Common_questions/HTML_features_for_accessibility
+slug: >-
+  Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
+original_slug: Learn/Common_questions/HTML_features_for_accessibility
 ---
 
 이번 내용은 웹 페이지를 좀 더 서로 다른 장애를 가진 사람들에게 좀 더 접근하기 쉽게 만들 수 있는 HTML의 특정한 기능을 서술합니다.

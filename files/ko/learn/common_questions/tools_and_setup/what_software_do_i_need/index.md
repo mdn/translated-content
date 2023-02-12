@@ -1,7 +1,9 @@
 ---
 title: What software do I need to build a website?
-slug: Learn/Common_questions/What_software_do_I_need
+slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
+original_slug: Learn/Common_questions/What_software_do_I_need
 ---
+
 이 글에서, 우리는 당신이 편집하고, 업로드하고, 웹사이트를 볼 때 어떤 소프트웨어 구성품이 필요한 지 제시한다.
 
 <table class="learn-box nostripe standard-table">

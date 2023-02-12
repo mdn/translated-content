@@ -1,7 +1,9 @@
 ---
 title: 로컬 테스트 서버 설치하기
-slug: Learn/Common_questions/set_up_a_local_testing_server
+slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
+original_slug: Learn/Common_questions/set_up_a_local_testing_server
 ---
+
 이 글에서는 간단한 로컬 테스트 서버를 여러분의 장비에 설치하는 법과 기본적인 사용법을 설명합니다.
 
 <table class="learn-box standard-table">

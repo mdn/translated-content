@@ -1,7 +1,9 @@
 ---
 title: What is a domain name?
-slug: Learn/Common_questions/What_is_a_domain_name
+slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
+original_slug: Learn/Common_questions/What_is_a_domain_name
 ---
+
 이 글에서 domain name(도메인명)에 대해 다룹니다. : 도메인이 무엇인 지, 어떻게 구성되어있는지, 도메인을 어떻게 얻을 수 있는지.
 
 <table class="learn-box standard-table">
