@@ -1,24 +1,12 @@
 ---
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
-page-type: web-api-instance-method
-tags:
-  - API
-  - Beacon
-  - Method
-  - Navigator
-  - NeedsExample
-  - Networking
-  - Reference
-  - Web Performance
-  - sendBeacon
-browser-compat: api.Navigator.sendBeacon
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`navigator.sendBeacon()`**
-메서드는 작은 양의 데이터를 포함하는 [HTTP POST](/ko/docs/Web/HTTP/Methods/POST) 요청을 {{glossary("Asynchronous", "비동기적이게")}} 웹 서버로 보냅니다.
+메서드는 작은 양의 데이터를 포함하는 [HTTP POST](/ko/docs/Web/HTTP/Methods/POST) 요청을 {{glossary("Asynchronous", "비동기적")}}으로 웹 서버로 보냅니다.
 
 이것은 웹서버에 분석 정보를 보내고 {{domxref("XMLHttpRequest","XMLHttpRequest")}} 같은 오래된 기술들로 이것을 구현하는 것에서 생길 수 있는 몇몇 문제들을 피하기 위해 고안됐습니다.
 
@@ -51,14 +39,14 @@ sendBeacon(url, data)
 유저가 페이지와 끝났을 때 분석 정보를 보내길 원합니다.
 이럴 경우 브라우저가 페이지를 언로드 하려 할 때 브라우저는 비동기적인 {{domxref("XMLHttpRequest")}} 요청을 보내지 않을 수도 있습니다.
 
-과거에는, 웹 페이지들은 이러한 데이터를 보내기 위해 페이지가 언로드되는 걸 지연시키 위해 다음과 같은 제2해결책 등을 사용했습니다.
+과거에는, 웹 페이지들은 데이터를 보내기 충분하도록 페이지가 언로드되는 것을 지연시키기도 했습니다. 이를 위해 다음과 같은 대안적 방법을 사용했습니다.
 
 - 사용자와 브라우저간의 상호작용을 차단하고 동기적으로 실행되는 `XMLHttpRequest` 로 데이터를 보내기.
-- {{HTMLElement("img")}} 태그를 만들고 src 를 설정하기. 이것은 대부분의 사용자 에이전트가 이미지를 로드하기 위해 페이지를 언로드하는 것을 미룰 것입니다.
+- {{HTMLElement("img")}} 태그를 만들고 src 를 설정하기. 대부분의 사용자 에이전트는 이미지를 로드하기 위해 페이지를 언로드하는 것을 미룰 것입니다.
 - 의미 없는 무한 반복 루프를 몇 초동안 실행하기.
 
-이러한 방법들은 모두 문서가 언로드되는 것을 막아 다음 페이지로 이동하는 것에 대한 속도를 저하시킵니다.
-다음 페이지가 이러한 것을 피하기 위해 할 수 있는 것은 없습니다, 그래서 그 새로운 페이지는 그 전의 페이지의 잘못인데도 느리게 보일 것입니다.
+이러한 방법들은 모두 문서가 언로드되는 것을 막아 다음 페이지로 이동하는 속도를 늦춥니다.
+다음 페이지가 이를 피하기 위해 할 수 있는 것은 없습니다. 따라서 문제는 그 전의 페이지에 있는데도 새로운 페이지가 느리게 보일 것입니다.
 
 `sendBeacon()` 메서드를 사용하면 언로딩이나 다음 페이지를 지연시키는 것 없이 사용자 에이전트가 할 수 있을 때 데이터가 비동기적으로 전송될 수 있게 합니다.
 
@@ -72,8 +60,8 @@ sendBeacon(url, data)
 
 ### 세션이 끝날 때 분석 정보 보내기
 
-웹사이트들은 대게 유저가 페이지에서 더이상 볼 일이 없을 때 진단 정보나 분석 정보를 보내고 싶어합니다.
-이것을 할 가장 신뢰성있는 방법은 [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) 이벤트가 바뀌었을 때 보내는 것입니다.
+웹 사이트는 대게 유저가 페이지에서 더이상 볼 일이 없을 때 진단 정보나 분석 정보를 보내고 싶어합니다.
+가장 신뢰성 있는 방법은 [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) 이벤트가 바뀌었을 때 데이터를 보내는 것입니다.
 
 ```js
 document.addEventListener("visibilitychange", function logData() {
@@ -85,7 +73,7 @@ document.addEventListener("visibilitychange", function logData() {
 
 #### unload 와 beforeunload 를 피하라
 
-과거에는 많은 웹사이트들이 세션이 끝났을 때 분석 정보를 보내기 위해 [`unload`](/en-US/docs/Web/API/Window/unload_event)
+과거에는 많은 웹 사이트들이 세션 끝에서 분석 정보를 보내기 위해 [`unload`](/en-US/docs/Web/API/Window/unload_event)
 나 [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) 를 사용했습니다.
 그러나, 이건 매우 안정성이 없습니다. 많은 상황에서 (특히 모바일), 브라우저는 `unload`, `beforeunload` 나 `pagehide` 같은 이벤트들을 발생하지 않을 것입니다. 예를 들어, 이러한 이벤트들은 다음과 같은 상황에서 발생되지 않을 것입니다.
 
@@ -95,7 +83,7 @@ document.addEventListener("visibilitychange", function logData() {
 
 추가적으로, `unload` 이벤트는 많은 모던 브라우저에서 구현된 bfcache([bfcache](https://web.dev/bfcache/)) 와 호환되지 않습니다. Firefox 등의 몇몇 브라우저들은 unload 이벤트 처리기가 포함되어 있을 때 bfcache를 제외함으로써 호환되지 않는 이슈를 해결합니다, 따라서 성능을 저하시킵니다. Safari 나 Android Chrome 같은 다른 브라우저들은 `unload` 이벤트를 발생시키지 않음으로써 bfcache와 호환되게 합니다.
 
-Firefox 는 또한 `beforeunload` 처리기가 포함돼 있어도 bfcache를 제외합니다.
+또한 Firefox 는 `beforeunload` 처리기가 포함돼 있어도 bfcache를 제외합니다.
 
 #### pagehide 를 대비책으로 사용하기
 
