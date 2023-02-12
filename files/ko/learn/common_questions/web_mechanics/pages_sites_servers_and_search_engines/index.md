@@ -1,6 +1,7 @@
 ---
 title: 웹페이지, 웹사이트, 웹서버 그리고 검색엔진의 차이는 무엇일까요?
-slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
+slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
+original_slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 ---
 
 이번 글에서는 다양한 웹 관련 개념들을 이야기합니다: 웹, 페이지, 웹사이트, 웹서버, 검색엔진. 이런 용어들은 흔히ㅣ웹을 처음 배우는 사람이나 잘못 배운 사람들에게 혼란스럽습니다. 이것들이 무엇을 의미하는 지 배워봅시다!
