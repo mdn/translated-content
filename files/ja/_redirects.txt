@@ -3726,7 +3726,6 @@
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
-/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /ja/docs/Web/API/XMLHttpRequest/onreadystatechange	/ja/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onabort	/ja/docs/Web/API/XMLHttpRequest/abort_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onerror	/ja/docs/Web/API/XMLHttpRequest/error_event
