@@ -2456,27 +2456,70 @@
     "modified": "2020-07-16T22:35:24.880Z",
     "contributors": ["Uemmra3", "tsmd", "T.Ukegawa", "kurank", "shuuji3"]
   },
-  "Learn/Common_questions/Available_text_editors": {
-    "modified": "2020-07-16T22:35:49.223Z",
-    "contributors": ["Chuji-volunteer", "silverskyvicto"]
-  },
-  "Learn/Common_questions/Checking_that_your_web_site_is_working_properly": {
-    "modified": "2020-07-25T11:17:05.518Z",
-    "contributors": ["pcw", "silverskyvicto"]
-  },
-  "Learn/Common_questions/Common_web_layouts": {
+  "Learn/Common_questions/Design_and_accessibility/Common_web_layouts": {
     "modified": "2020-07-16T22:35:42.531Z",
     "contributors": ["silverskyvicto"]
   },
-  "Learn/Common_questions/Design_for_all_types_of_users": {
+  "Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users": {
     "modified": "2020-07-16T22:35:50.940Z",
     "contributors": ["xianheiba", "silverskyvicto"]
   },
-  "Learn/Common_questions/HTML_features_for_accessibility": {
+  "Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility": {
     "modified": "2020-07-16T22:35:51.220Z",
     "contributors": ["Uemmra3", "mzmjp"]
   },
-  "Learn/Common_questions/How_does_the_Internet_work": {
+  "Learn/Common_questions/Design_and_accessibility/Thinking_before_coding": {
+    "modified": "2020-07-16T22:35:34.585Z",
+    "contributors": ["Uemmra3", "talken-sakurament", "silverskyvicto"]
+  },
+  "Learn/Common_questions/Design_and_accessibility/What_is_accessibility": {
+    "modified": "2020-07-16T22:35:46.884Z",
+    "contributors": ["silverskyvicto", "xianheiba"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Available_text_editors": {
+    "modified": "2020-07-16T22:35:49.223Z",
+    "contributors": ["Chuji-volunteer", "silverskyvicto"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
+    "modified": "2020-07-25T11:17:05.518Z",
+    "contributors": ["pcw", "silverskyvicto"]
+  },
+  "Learn/Common_questions/Tools_and_setup/How_much_does_it_cost": {
+    "modified": "2020-07-16T22:35:45.730Z",
+    "contributors": ["talken-sakurament", "Chuji-volunteer", "silverskyvicto"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server": {
+    "modified": "2020-07-16T22:35:41.700Z",
+    "contributors": ["Chuji-volunteer", "silverskyvicto"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
+    "modified": "2020-07-16T22:35:51.844Z",
+    "contributors": [
+      "hamasaki",
+      "dskmori",
+      "Uemmra3",
+      "Suuzuukii",
+      "silverskyvicto"
+    ]
+  },
+  "Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools": {
+    "modified": "2020-07-16T22:35:47.649Z",
+    "contributors": ["silverskyvicto", "Uemmra3", "chameleonhead"]
+  },
+  "Learn/Common_questions/Tools_and_setup/What_software_do_I_need": {
+    "modified": "2020-07-16T22:35:33.225Z",
+    "contributors": [
+      "Chuji-volunteer",
+      "silverskyvicto",
+      "mfuji09",
+      "tanabota889"
+    ]
+  },
+  "Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server": {
+    "modified": "2020-07-16T22:35:53.060Z",
+    "contributors": ["dlwe", "silverskyvicto"]
+  },
+  "Learn/Common_questions/Web_mechanics/How_does_the_Internet_work": {
     "modified": "2020-07-16T22:35:37.254Z",
     "contributors": [
       "Naokiakazawa",
@@ -2487,11 +2530,7 @@
       "T.Ukegawa"
     ]
   },
-  "Learn/Common_questions/How_much_does_it_cost": {
-    "modified": "2020-07-16T22:35:45.730Z",
-    "contributors": ["talken-sakurament", "Chuji-volunteer", "silverskyvicto"]
-  },
-  "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
+  "Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines": {
     "modified": "2020-07-16T22:35:40.018Z",
     "contributors": [
       "mfuji09",
@@ -2502,60 +2541,21 @@
       "T.Ukegawa"
     ]
   },
-  "Learn/Common_questions/Thinking_before_coding": {
-    "modified": "2020-07-16T22:35:34.585Z",
-    "contributors": ["Uemmra3", "talken-sakurament", "silverskyvicto"]
-  },
-  "Learn/Common_questions/Upload_files_to_a_web_server": {
-    "modified": "2020-07-16T22:35:41.700Z",
-    "contributors": ["Chuji-volunteer", "silverskyvicto"]
-  },
-  "Learn/Common_questions/Using_Github_pages": {
-    "modified": "2020-07-16T22:35:51.844Z",
-    "contributors": [
-      "hamasaki",
-      "dskmori",
-      "Uemmra3",
-      "Suuzuukii",
-      "silverskyvicto"
-    ]
-  },
-  "Learn/Common_questions/What_are_browser_developer_tools": {
-    "modified": "2020-07-16T22:35:47.649Z",
-    "contributors": ["silverskyvicto", "Uemmra3", "chameleonhead"]
-  },
-  "Learn/Common_questions/What_are_hyperlinks": {
+  "Learn/Common_questions/Web_mechanics/What_are_hyperlinks": {
     "modified": "2020-07-16T22:35:43.176Z",
     "contributors": ["silverskyvicto"]
   },
-  "Learn/Common_questions/What_is_a_URL": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_URL": {
     "modified": "2020-07-16T22:35:29.582Z",
     "contributors": ["mfuji09", "silverskyvicto"]
   },
-  "Learn/Common_questions/What_is_a_domain_name": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_domain_name": {
     "modified": "2020-07-16T22:35:44.165Z",
     "contributors": ["mfuji09", "Uemmra3", "silverskyvicto"]
   },
-  "Learn/Common_questions/What_is_a_web_server": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_web_server": {
     "modified": "2020-07-16T22:35:31.482Z",
     "contributors": ["Chuji-volunteer", "silverskyvicto", "mfuji09"]
-  },
-  "Learn/Common_questions/What_is_accessibility": {
-    "modified": "2020-07-16T22:35:46.884Z",
-    "contributors": ["silverskyvicto", "xianheiba"]
-  },
-  "Learn/Common_questions/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:33.225Z",
-    "contributors": [
-      "Chuji-volunteer",
-      "silverskyvicto",
-      "mfuji09",
-      "tanabota889"
-    ]
-  },
-  "Learn/Common_questions/set_up_a_local_testing_server": {
-    "modified": "2020-07-16T22:35:53.060Z",
-    "contributors": ["dlwe", "silverskyvicto"]
   },
   "Learn/Forms": {
     "modified": "2020-07-16T22:20:58.979Z",
@@ -15043,10 +15043,6 @@
       "saneyuki_s",
       "Potappo"
     ]
-  },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6": {
-    "modified": "2020-08-13T08:20:58.326Z",
-    "contributors": ["eltociear"]
   },
   "Web/API/XMLHttpRequest/XMLHttpRequest": {
     "modified": "2019-03-18T21:37:11.435Z",
@@ -30932,6 +30928,10 @@
   },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
+    "contributors": ["eltociear"]
+  },
+  "conflicting/Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
+    "modified": "2020-08-13T08:20:58.326Z",
     "contributors": ["eltociear"]
   },
   "conflicting/Web/Accessibility/ARIA": {
