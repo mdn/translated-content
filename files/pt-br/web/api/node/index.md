@@ -95,7 +95,7 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 - {{domxref("Node.insertBefore")}}
 - {{domxref("Node.isDefaultNamespace")}}
 - {{domxref("Node.isEqualNode")}}
-- {{domxref("Node.isSameNode")}} {{deprecated_inline("9.0")}} {{obsolete_inline("10.0")}}
+- {{domxref("Node.isSameNode")}} {{deprecated_inline}} {{obsolete_inline("10.0")}}
 - {{domxref("Node.isSupported")}} {{obsolete_inline("22.0")}}
 - {{domxref("Node.lookupPrefix")}}
 - {{domxref("Node.lookupNamespaceURI")}}

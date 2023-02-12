@@ -50,7 +50,7 @@ O elemento **HTML `<col>` **define uma tabela contendo colunas e sendo utilizada
 
 This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("align")}} {{Deprecated_inline}}, {{obsolete_inline("html5")}}
 
   - : This enumerated attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
 
@@ -86,13 +86,13 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
     > **Note:** **Usage note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{HTMLElement("col")}} element should be styled using [CSS](/pt-BR/docs/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/pt-BR/docs/CSS) property {{cssxref("background-color")}}, on the relevant {{HTMLElement("td")}} elements.
 
-- {{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("char")}} {{Deprecated_inline}}, {{obsolete_inline("html5")}}
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "col")}} is not set to `char`, this attribute is ignored.
 
     > **Note:**Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "col")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "col")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
-- {{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("charoff")}} {{Deprecated_inline}}, {{obsolete_inline("html5")}}
 
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
 
@@ -101,7 +101,7 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 - {{htmlattrdef("span")}}
   - : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
 
-- {{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("valign")}} {{Deprecated_inline}}, {{obsolete_inline("html5")}}
 
   - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
 
