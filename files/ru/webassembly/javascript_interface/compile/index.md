@@ -4,7 +4,8 @@ slug: WebAssembly/JavaScript_interface/compile
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
-{{JSRef}}
+
+{{WebAssemblySidebar}}
 
 Функция **`WebAssembly.compile()`** компилирует {{jsxref("WebAssembly.Module")}} из двоичного кода WebAssembly. Эта функция полезна, если необходимо компилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiate()")}}.
 

@@ -163,7 +163,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 ```
 
 - 首先，我们使用 {{DOMxRef("worker.Worker()", "Worker()")}} 构造函数创建 worker。我们传递一个指向 worker 脚本的 URL。只要 worker 被创建了，woker 脚本就会执行。
-- 其次，与同步版本一样，我们向 "Generate primes" 按钮添加一个 `click` 事件处理器。但是现在，我们不再调用 `generatePrimes()` 函数，而是使用 {{DOMxRef("worker.postMessage()", "worker.postMessage()")}} 像 worker 发送一条消息。这条消息可以携带一个参数，在本示例中我们传递一个包含两个属性的 JSON 对象：
+- 其次，与同步版本一样，我们向 "Generate primes" 按钮添加一个 `click` 事件处理器。但是现在，我们不再调用 `generatePrimes()` 函数，而是使用 {{DOMxRef("worker.postMessage()", "worker.postMessage()")}} 向 worker 发送一条消息。这条消息可以携带一个参数，在本示例中我们传递一个包含两个属性的 JSON 对象：
   - `command`：一个用于标识我们希望 worker 所做事情的字符串（以防我们的 worker 可以做多个事情）。
   - `quota`：要生成的质数的数量。
 - 然后，我们向 worker 添加一个 `message` 消息处理器。这样 worker 就能告诉我们它是什么时候完成的，并且传递给我们任何结果数据。我们的处理器从消息的 `data` 属性获取数据，然后将其写入 output 元素（数据与 `quota` 是完全相同的，这虽然没有意义，但是这展示了其中原理）。

@@ -10,7 +10,7 @@ translation_of: Web/API/Performance/memory
 
 {{APIRef}}
 
-{{Non-standardGeneric('header')}}
+{{Non-standard_Header}}
 
 ## Syntaxe
 

@@ -298,14 +298,9 @@ for (var i = 0, n = inputValues.length; i < n; ++i) {
 }
 ```
 
-## 명세
+## 명세서
 
-| Specification                                                                | Status                       | Comment             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.5', 'String')}}                 | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-string-objects', 'String')}}         | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-string-objects', 'String')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## 브라우저 호환성
 

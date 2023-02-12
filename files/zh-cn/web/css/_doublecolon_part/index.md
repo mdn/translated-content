@@ -85,7 +85,7 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
 
 ### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

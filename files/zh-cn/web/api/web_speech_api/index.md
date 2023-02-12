@@ -54,7 +54,7 @@ Web Speech API 使 Web 应用能够处理语音数据，该项 API 包含以下�
 
 ## 示例
 
-GitHub 上的 [Web Speech API repo](https://github.com/mdn/web-speech-api/) 的示例程序展示了语音识别及合成。
+GitHub 上的 [Web Speech API repo](https://github.com/mdn/dom-examples/tree/main/web-speech-api) 的示例程序展示了语音识别及合成。
 
 ## 规范
 

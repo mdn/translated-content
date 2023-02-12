@@ -174,9 +174,9 @@ div:not(.outer) p {
 
 会在屏幕上出现以下结果：
 
-{{EmbedLiveSample("The_not_exception-example")}}
+{{EmbedLiveSample(":is() 和 :not() 例外规则")}}
 
-### `:where()` 例外规则 {{Experimental_Inline}}
+### `:where()` 例外规则
 
 {{SeeCompatTable}}
 
@@ -224,7 +224,7 @@ div p {
 
 会在屏幕上出现以下结果：
 
-{{EmbedLiveSample("The_where_exception")}}
+{{EmbedLiveSample(":where() 例外规则")}}
 
 ### 基于形式的优先级（Form-based specificity）
 

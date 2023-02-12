@@ -5,7 +5,8 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/Tutorial
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL](http://www.khronos.org/webgl/) позволяет использовать API, основанную на [OpenGL ES](http://www.khronos.org/opengles/) 2.0 для осуществления 3D рендеринга в HTML {{HTMLElement("canvas")}} в браузерах, которые его поддерживают без использования плагинов. WebGL программы состоят из программ, написанных на JavaScript, и специального кода шейдеров, который выполняется на видеокарте. WebGL элементы могут использоваться с HTML-элементами и скомпонованы с другими частями страницы или фона страницы.
 

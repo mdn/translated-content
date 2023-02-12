@@ -166,8 +166,8 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 
 我们还希望你可以：
 
-- 添加 `alt`文字，添加完成后，可以故意把 URL 写错，来检查 {{htmlelement("alt")}} 的效果。
-- 设置图片正确的 `width` 和 `height` 属性（提示：宽 200px，高 171px），然后再将宽和高的值进行改变，看看会有什么影响。
+- 添加一些备选文字，添加完成后，可以故意把 URL 写错，来检查该属性的效果。
+- 设置图片正确的 `width` 和 `height` 属性（提示：宽为 200px，高为 171px），然后再将宽和高的值进行改变，看看会有什么影响。
 - 在图片上设置 `title` 属性。
 
 如果你遇到了错误，你可以按 reset 按钮来重置。如果你遇到了困难无法完成，按下 Show solution 按钮来看一下答案。

@@ -115,9 +115,9 @@ Consulta [Especificación de un patrón](#especificación_de_un_patrón) para ob
 
 El atributo {{HTMLAttrDef("placeholder")}} es una cadena que proporciona una breve pista al usuario sobre el tipo de información que se espera en el campo. Debe ser una palabra o frase corta que demuestre el tipo de datos esperado, en lugar de un mensaje explicativo. El texto _no debe_ incluir retornos de carro o saltos de línea.
 
-Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}) pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar caracteres de formato de algoritmo bidireccional Unicode para anular la direccionalidad dentro del marcador de posición; consulta {{SectionOnPage("/es/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Anulación de BiDi mediante caracteres de control Unicode")}} para esos caracteres.
+Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}) pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar caracteres de formato de algoritmo bidireccional Unicode para anular la direccionalidad dentro del marcador de posición; consulta [Anulación de BiDi mediante caracteres de control Unicode](/es/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm#anulación_de_bidi_mediante_caracteres_de_control_unicode) para esos caracteres.
 
-> **Nota:** Evita utilizar el atributo {{HTMLAttrDef("placeholder")}} si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta {{SectionOnPage("/es/docs/Web/HTML/Element/input", "Etiquetas y marcadores de posición")}} para obtener más información.
+> **Nota:** Evita utilizar el atributo {{HTMLAttrDef("placeholder")}} si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta [Etiquetas y marcadores de posición](/es/docs/Web/HTML/Element/input#etiquetas_y_marcadores_de_posición) para obtener más información.
 
 ### {{HTMLAttrDef("readonly")}}
 

@@ -68,7 +68,7 @@ The computation of values depends on the image's intrinsic dimensions (width and
 - CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.
 - Background images created with the {{cssxref("element()")}} function use the intrinsic dimensions and proportions of the generating element.
 
-> **참고:** The behavior of `<gradient>`s changed in Gecko 8.0 {{geckoRelease("8.0")}}. Before this, they were treated as images with no intrinsic dimensions, but with intrinsic proportions identical to that of the background positioning area.
+> **참고:** The behavior of `<gradient>`s changed in Gecko 8.0. Before this, they were treated as images with no intrinsic dimensions, but with intrinsic proportions identical to that of the background positioning area.
 
 > **참고:** In Gecko, background images created using the {{cssxref("element()")}} function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
 
