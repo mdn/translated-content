@@ -17,7 +17,7 @@ Beacon API의 주된 용도로는 클라이언트 사이드 이벤트나 세션 
 
 이 API는 {{domxref("navigator.sendBeacon()")}} 라는 하나의 메서드를 정의합니다.
 
-이 메서드는 URL과 서버로 보낼 데이터, 두 개의 인수를 필요로 합니다. 서버로 보낼 데이터는 필수 사항이 아니며, 타입은 {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("Blob")}}, 문자열 이나 객체, {{domxref("FormData")}} 객체가 될 수도 있습니다. 브라우저가 요청을 성공적으로 대기열에 넣으면 `true` 를 반환하고 그 외에는 `false` 를 반환합니다.
+이 메서드는 URL과 서버로 보낼 데이터, 두 개의 인수를 필요로 합니다. 서버로 보낼 데이터는 필수 사항이 아니며, 데이터의 타입은 {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("Blob")}}, 문자열 이나 객체, {{domxref("FormData")}} 객체가 될 수도 있습니다. 브라우저가 요청을 성공적으로 대기열에 넣으면 `true` 를 반환하고 그 외에는 `false` 를 반환합니다.
 
 ## 명세서
 
