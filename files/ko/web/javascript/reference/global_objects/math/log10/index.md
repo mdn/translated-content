@@ -1,6 +1,8 @@
 ---
 title: Math.log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
+l10n:
+  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
 ---
 
 {{JSRef}}
