@@ -61,7 +61,7 @@ xhr.responseType = "document";
 xhr.send();
 ```
 
-在 `xhr` 对象 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 域中返回的值是一个通过解析 XML 构造的 {{domxref("Document")}}。
+在 `xhr` 对象 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 字段中返回的值是一个通过解析 XML 构造的 {{domxref("Document")}}。
 
 如果这个文档是 {{Glossary("HTML")}}，上面实例代码将会返回一个 {{domxref("Document")}}。如果它是 XML，那获取的结果对象实际上是一个 {{domxref("XMLDocument")}}。这两种类型实质上是一样的，不同点大部分是历史遗留的，尽管区分它们也会有一些实际好处。
 
