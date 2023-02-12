@@ -1,41 +1,5 @@
 # 번역 지침
 
-## 메타데이터
-
-문서의 상단에 있는 메타데이터는 `title`, `slug`, `original_slug` 그리고 `l10n.*`만 번역해줍니다. (참고: [#7412](https://github.com/mdn/translated-content/issues/7412))
-
-영어 원문
-
-```markdown
----
-title: Proxy
-slug: Web/JavaScript/Reference/Global_Objects/Proxy
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
-- browser-compat: javascript.builtins.Proxy
----
-{{JSRef}}
-
-The `Proxy` object enables you to create a proxy for another ...
-  :
-```
-
-번역본
-
-```markdown
----
-title: Proxy
-slug: Web/JavaScript/Reference/Global_Objects/Proxy
----
-{{JSRef}}
-
-**`Proxy`** 객체는 기본적인 동작(속성 접근, 할당, 순회, 열거, 함수 ...
-  :
-```
-
 ## heading ID 번역
 
 기사 제목에는 거의 항상 ID가 주어지는데, 기사 내에서 네비게이션을 자동으로 생성하고 실시간 샘플을 생성하기 위한 코드 블록을 식별하는 등의 이유가 있습니다. 제목을 번역 할 때 ID도 같이 번역 할 필요가 없습니다. 나머지 슬러그는 번역되지 않으므로 모든 것이 일관되게 유지됩니다.

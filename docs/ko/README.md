@@ -64,8 +64,10 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 지침은 기여 과정을 원활하고 효율적으로 만드는 데 매우 유용합니다. 기여하기 전에 다음 지침들을 주의 깊게 읽어주세요.
 
 - [번역 지침](./guides/translation-guide.md)
+- [메타 데이터 안내서](./guides/meta-data-guide.md)
 - [용어 지침](./guides/glossary-guide.md)
 - [macro 지침](./guides/macro-guide.md)
+- [markdown lint 안내서](./guides/markdown-lint-guide.md)
 - [기타 지침](./guides/etc-guide.md)
 
 다음은 리뷰어를 위한 지침입니다.

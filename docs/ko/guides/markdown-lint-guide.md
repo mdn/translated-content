@@ -1,4 +1,4 @@
-# Markdown Lint 가이드
+# Markdown Lint 안내서
 
 Markdown Lint 오류는 Github Actions에서 발생하는 로그를 참고하여, 기여자가 수정해야 합니다. 다음은 염두에 두어야 할 몇 가지 지침입니다. [참고](https://github.com/mdn/translated-content/pull/11031#discussion_r1066091908)
 
