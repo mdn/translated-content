@@ -2,7 +2,7 @@
 
 Markdown Lint 오류는 Github Actions에서 발생하는 로그를 참고하여, 기여자가 수정해야 합니다. 다음은 염두에 두어야 할 몇 가지 지침입니다. [참고](https://github.com/mdn/translated-content/pull/11031#discussion_r1066091908)
 
-## `/ko/guides/*.*`
+## 한국 가이드 파일들에 대한 링크 규칙 (경로: `/ko/guides/*.*`)
 
 Markdown Lint 규칙을 우회하기위해 `https://developer.mozilla.org/`로 시작하는 링크들은 맨 아래로 이동해서 작성합니다.
 
