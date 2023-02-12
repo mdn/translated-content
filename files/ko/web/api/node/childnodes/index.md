@@ -3,7 +3,7 @@ title: element.childNodes
 slug: Web/API/Node/childNodes
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
 ## 요약
 
@@ -45,12 +45,6 @@ while (box.firstChild)
   };
 ```
 
-## 주의
-
-노드 모음의 항목은 문자열이 아니라 개체입니다. 그 노드 개체에서 데이터를 얻으려면, 속성(예컨대 이름을 얻으려면 `elementNodeReference.childNodes{{ mediawiki.external(1) }}.nodeName` 등)을 써야 합니다.
-
-`document` 개체는 자식이 둘입니다. Doctype 선언과 `HTML` 요소.
-
 ## 명세
 
 {{Specifications}}
@@ -58,3 +52,11 @@ while (box.firstChild)
 ## 브라우저 호환성
 
 {{Compat}}
+
+## 같이 보기
+
+- {{domxref("Node.firstChild")}}
+- {{domxref("Node.lastChild")}}
+- {{domxref("Node.nextSibling")}}
+- {{domxref("Node.previousSibling")}}
+- {{domxref("Element.children")}}

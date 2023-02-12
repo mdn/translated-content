@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/RuntimeError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.RuntimeError`** オブジェクトは、 WebAssembly が[トラップ](https://webassembly.org/docs/semantics/#traps)を指定するたびに例外として発生するエラー型です。
 

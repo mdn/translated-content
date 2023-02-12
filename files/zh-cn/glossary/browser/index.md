@@ -1,7 +1,6 @@
 ---
 title: 浏览器
 slug: Glossary/Browser
-original_slug: Glossary/浏览器
 ---
 
 网页浏览器是一种从 {{Glossary("World Wide Web","Web")}} 获取和显示页面的程序，并且让用户通过 {{Glossary("hyperlink","超链接")}} 访问更多页面。

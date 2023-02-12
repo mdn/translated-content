@@ -862,7 +862,7 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 support</th>
-              <td>No</td>
+              <td>107</td>
               <td>
                 18<sup><a href="#hevc-foot--1">[1]</a></sup>
               </td>

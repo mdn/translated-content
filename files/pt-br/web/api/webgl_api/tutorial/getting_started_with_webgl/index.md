@@ -3,7 +3,7 @@ title: Começando com WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{DefaultAPISidebar("WebGL")}}{{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
 [WebGL](http://www.khronos.org/webgl/) permite que o contéudo web use uma API baseada em [OpenGL ES](http://www.khronos.org/opengles/) 2.0 para realizar renderização 3D em um [`canvas`](/pt-BR/docs/Web/API/Canvas_API) HTML em browsers que o suportam sem o uso de plugins. Programas WebGL consistem em um código de controle escrito em JavaScript e códigos de efeitos especiais (shader code) que é executado na Unidade Gráfica de Processamento (GPU) de um computador. Elementos WebGL podem ser utilizados junto com outros elementos HTML e com outras partes da página ou do fundo.
 

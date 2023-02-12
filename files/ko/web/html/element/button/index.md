@@ -75,11 +75,11 @@ slug: Web/HTML/Element/button
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("checkbox")}}, {{ARIARole("link")}},
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("radio")}},
-        {{ARIARole("switch")}}, {{ARIARole("tab")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/checkbox_role'><code>checkbox</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/link_role'><code>link</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitem_role'><code>menuitem</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role'><code>menuitemcheckbox</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role'><code>menuitemradio</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/radio_role'><code>radio</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/switch_role'><code>switch</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tab_role'><code>tab</code></a>
       </td>
     </tr>
     <tr>

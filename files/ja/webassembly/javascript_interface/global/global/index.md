@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Global/Global
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Global()`** コンストラクターは、グローバル変数のインスタンスを表す新しい `Global` オブジェクトを表し、これは JavaScript からアクセス可能で、 1 つ以上の {{jsxref("WebAssembly.Module")}} インスタンスの間でインポート/エクスポート可能です。これにより、複数のモジュールを動的リンクすることができます。
 

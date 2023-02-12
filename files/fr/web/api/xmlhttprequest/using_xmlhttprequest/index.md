@@ -150,9 +150,9 @@ oReq.open();
 
 > **Note :** Actuellement, il y a encore des bugs ouverts pour les évènements de progression qui affectent la version 25 de Firefox sur [OS X](https://bugzilla.mozilla.org/show_bug.cgi?id=908375) et [Linux](https://bugzilla.mozilla.org/show_bug.cgi?id=786953).
 
-> **Note :** A partir de {{Gecko("9.0")}}, les évènements de progression peuvent désormais être assurément présents pour chaque morceau de données reçu, y compris le dernier morceau dans les cas où le dernier paquet est reçu et la connexion fermée avant que l'évènement ne soit lancé. Dans ce cas, l'évènement de progression est automatiquement lancé quand l'évènement load se produit pour ce paquet. Cela vous permet de surveiller fiablement la progression grâce à son évènement.
+> **Note :** A partir de Gecko 9.0, les évènements de progression peuvent désormais être assurément présents pour chaque morceau de données reçu, y compris le dernier morceau dans les cas où le dernier paquet est reçu et la connexion fermée avant que l'évènement ne soit lancé. Dans ce cas, l'évènement de progression est automatiquement lancé quand l'évènement load se produit pour ce paquet. Cela vous permet de surveiller fiablement la progression grâce à son évènement.
 
-> **Note :** Dans {{Gecko("12.0")}}, si votre évènement de progression est appelé avec un `responseType` "moz-blob", la valeur de la réponse est un {{domxref("Blob")}} contenant les données reçues jusqu'à présent.
+> **Note :** Dans Gecko 12.0, si votre évènement de progression est appelé avec un `responseType` "moz-blob", la valeur de la réponse est un {{domxref("Blob")}} contenant les données reçues jusqu'à présent.
 
 Une fonction peut aussi être appelée peu importe le status de fin de la requête (`abort`, `load`, ou `error`) en utilisant l'évènement `loadend`&nbsp;:
 

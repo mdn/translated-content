@@ -56,8 +56,8 @@ Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("img")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>
       </td>
     </tr>
     <tr>

@@ -16,8 +16,6 @@ l10n:
 - {{HTMLElement("source")}} 要素で、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Element/source#attr-height) および [`width`](/ja/docs/Web/HTML/Element/source#attr-width) 属性をサポートしました。
   この機能は設定項目 `dom.picture_source_dimension_attributes.enabled` で制御しており、既定値を `true` にしました ({{bug(1795953)}})。
 
-#### 廃止
-
 ### CSS
 
 - 設定項目 `layout.css.trig.enabled` の既定値を `true` に設定して、[三角関数](/ja/docs/Web/CSS/CSS_Functions#trigonometric_functions) が使用可能になりました。
@@ -28,11 +26,9 @@ l10n:
   これらの単位について、詳しくは [CSS Container Queries](/ja/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) の文書をご覧ください ({{bug(1744231)}})。
 - 設定項目 `layout.css.font-variant-emoji.enabled` で、[`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji) プロパティをサポートしました。設定項目の既定値は `false` です。このプロパティで、絵文字を表示するときの既定の表現スタイルを設定できます ({{bug(1461589)}})。
 
-#### 廃止
-
 ### JavaScript
 
-#### 廃止
+変更なし。
 
 ### HTTP
 
@@ -41,27 +37,16 @@ l10n:
 - [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP ヘッダーの [`script-src-elem`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) および [`script-src-attr`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) ディレクティブをサポートしました。
   サーバーはそれぞれのディレクティブを使用して、`<script>` 要素の JavaScript、および `onclick` などのイベントハンドラーのインラインスクリプトの正当な提供元を指定できます ({{bug(1529337)}})。
 
-#### 廃止
-
-### セキュリティ
-
-#### 廃止
-
 ### API
 
-#### DOM
+- [Import maps](/ja/docs/Web/HTML/Element/script/type/importmap) をサポートしました。
+  Import maps は、[JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules) をインポートするときにブラウザーがモジュール指定子を解決する方法に柔軟性や追加の制御手段を提供するものです ({{bug(1795647)}})。
 
 #### Media、WebRTC、Web Audio
 
 - [Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) が、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) で使用可能になりました。
   [`navigator.requestMIDIAccess()`](/ja/docs/Web/API/Navigator/requestMIDIAccess) を呼び出すとアクティブな MIDI デバイスを持つユーザーに対して、API を有効にするために必要な [Site Permission Add-On](https://support.mozilla.org/ja/kb/site-permission-add-ons) のインストールを促します。
   詳しくは {{bug(1795025)}} をご覧ください。
-
-#### 廃止
-
-### WebAssembly
-
-#### 廃止
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -81,10 +66,6 @@ l10n:
 ## アドオン開発者向けの変更点一覧
 
 - [バージョン番号](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) が推奨するフォーマットに従っていない拡張機能がインストールされているときに、Firefox が警告を表示するようになりました ({{bug(1793925)}})。
-
-### 廃止
-
-### その他
 
 ## 過去のバージョン
 

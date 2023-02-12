@@ -36,11 +36,9 @@ navigator.getBattery().then(function(battery) {
 
 {{ EmbedLiveSample('Example', '100%', 30) }}
 
-## 설명서
+## 명세서
 
-| 사양 (설명)                          | 상태 (설명)                      | 관련 (설명) |
-| ------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName("Battery API")}} | {{Spec2("Battery API")}} | 최초 정의   |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -28,10 +28,6 @@ slug: Web/CSS/CSS_Text_Decoration
 - {{cssxref("white-space")}}
 - {{cssxref("word-spacing")}}
 
-## 명세
+## 명세서
 
-| 명세                                             | 상태                                         | 설명      |
-| ------------------------------------------------ | -------------------------------------------- | --------- |
-| {{SpecName('CSS3 Text Decoration')}} | {{Spec2('CSS3 Text Decoration')}} |           |
-| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                     |           |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                     | 초기 정의 |
+{{Specifications}}
