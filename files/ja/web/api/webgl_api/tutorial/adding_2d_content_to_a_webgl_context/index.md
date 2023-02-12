@@ -69,23 +69,23 @@ WebGL コンテンツを描画するときに実行される 2 つのシェー�
 
 ```js
 //
-// Initialize a shader program, so WebGL knows how to draw our data
+// シェーダープログラムを初期化し、WebGLにデータの描画方法を教える
 //
 function initShaderProgram(gl, vsSource, fsSource) {
   const vertexShader = loadShader(gl, gl.VERTEX_SHADER, vsSource);
   const fragmentShader = loadShader(gl, gl.FRAGMENT_SHADER, fsSource);
 
-  // Create the shader program
+  // シェーダープログラムの作成
 
   const shaderProgram = gl.createProgram();
   gl.attachShader(shaderProgram, vertexShader);
   gl.attachShader(shaderProgram, fragmentShader);
   gl.linkProgram(shaderProgram);
 
-  // If creating the shader program failed, alert
+  // シェーダープログラムの作成に失敗した場合、アラートを出す
 
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
-    alert('Unable to initialize the shader program: ' + gl.getProgramInfoLog(shaderProgram));
+    alert('シェーダープログラムを初期化出来ません: ' + gl.getProgramInfoLog(shaderProgram));
     return null;
   }
 
@@ -93,24 +93,24 @@ function initShaderProgram(gl, vsSource, fsSource) {
 }
 
 //
-// creates a shader of the given type, uploads the source and
-// compiles it.
+// 指定されたタイプのシェーダを作成し、ソースをアップロード、
+// そしてコンパイル。
 //
 function loadShader(gl, type, source) {
   const shader = gl.createShader(type);
 
-  // Send the source to the shader object
+  // シェーダーオブジェクトにソースを送信
 
   gl.shaderSource(shader, source);
 
-  // Compile the shader program
+  // シェーダープログラムをコンパイル
 
   gl.compileShader(shader);
 
-  // See if it compiled successfully
+  // コンパイルが成功したか確認する
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    alert('An error occurred compiling the shaders: ' + gl.getShaderInfoLog(shader));
+    alert('シェーダーのコンパイル時にエラーが発生しました: ' + gl.getShaderInfoLog(shader));
     gl.deleteShader(shader);
     return null;
   }
@@ -119,21 +119,21 @@ function loadShader(gl, type, source) {
 }
 ```
 
-The `loadShader()` function takes as input the WebGL context, the shader type, and the source code, then creates and compiles the shader as follows:
+`loadShader()`関数はWebGLコンテキスト、シェーダーのタイプ、シェーダーのソースコードを入力として受け取り、以下の順序でシェーダーを作成しコンパイルします:
 
-1. A new shader is created by calling {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.
-2. The shader's source code is sent to the shader by calling {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.
-3. Once the shader has the source code, it's compiled using {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.
-4. To check to be sure the shader successfully compiled, the shader parameter `gl.COMPILE_STATUS` is checked. To get its value, we call {{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}, specifying the shader and the name of the parameter we want to check (`gl.COMPILE_STATUS`). If that's `false`, we know the shader failed to compile, so show an alert with log information obtained from the compiler using {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}, then delete the shader and return `null` to indicate a failure to load the shader.
-5. If the shader was loaded and successfully compiled, the compiled shader is returned to the caller.
+1. 新たなシェーダーは{{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}を呼ぶことで作成される。
+2. シェーダーのソースコードは{{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}を呼ぶことでシェーダーに送られる。
+3. シェーダーはソースコードを得るとすぐに、{{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}を用いてコンパイルする。
+4. シェーダーのコンパイルが成功したか確かめるため、シェーダーのパラメータである`gl.COMPILE_STATUS`をチェックする。このパラメータを得るために{{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}を呼び、シェーダーとチェックしたいパラメータの名前を指定する(`gl.COMPILE_STATUS`)。もし`false`ならシェーダーがコンパイルに失敗したという事であり、{{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}を用いてコンパイラから得たログと共にアラートを表示する。そしてシェーダーを削除し、シェーダーの読み込みに失敗したことを示すため`null`を返す。
+5. シェーダーのコンパイルに成功した場合、コンパイルされたシェーダーを呼び出し元に返す。
 
-To use this code we call it like this
+このコードは以下のように呼び出し、使用します。
 
 ```js
   const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 ```
 
-After we've created a shader program we need to look up the locations that WebGL assigned to our inputs. In this case we have one attribute and two uniforms. Attributes receive values from buffers. Each iteration of the vertex shader receives the next value from the buffer assigned to that attribute. [Uniforms](/ja/docs/Web/API/WebGL_API/Data#Uniforms) are similar to JavaScript global variables. They stay the same value for all iterations of a shader. Since the attribute and uniform locations are specific to a single shader program we'll store them together to make them easy to pass around
+シェーダープログラムを作成した後、WebGLが入力に割り当てた位置を調べる必要があります。この場合、一つの属性と二つのユニフォームがあります。属性はバッファから値を受け取ります。頂点シェーダは実行される度にその属性に割り当てられたバッファから次の値を受け取ります。[ユニフォーム](/ja/docs/Web/API/WebGL_API/Data#Uniforms) はJavaScriptのグローバル変数に似ており、シェーダーのどの実行時においても値は不変です。属性とユニフォームの位置は、単一のシェーダプログラムに固有のものなので、それらをまとめて保存して、簡単に受け渡しできるようにします。
 
 ```js
   const programInfo = {
@@ -148,23 +148,22 @@ After we've created a shader program we need to look up the locations that WebGL
   };
 ```
 
-## Creating the square plane
+## 正方形を作成する
 
-Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.
+正方形をレンダリングする前に、正方形の各頂点の座標を含むバッファを作成し、そこに頂点座標を書き込む必要があります。これを行うのに`initBuffers()`関数を利用します。より高度なWebGLの概念に踏み込むにつれて、この操作はより多くの(そしてより複雑な)3Dオブジェクトを作成するために拡張されるでしょう。
 
 ```js
 function initBuffers(gl) {
 
-  // Create a buffer for the square's positions.
+  // 正方形の頂点の位置を保存するためのバッファを作成する
 
   const positionBuffer = gl.createBuffer();
 
-  // Select the positionBuffer as the one to apply buffer
-  // operations to from here out.
+  // 以降でpositionBufferをバッファ操作の適応対象として指定する
 
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 
-  // Now create an array of positions for the square.
+  // 正方形の頂点座標の配列を作成する
 
   const positions = [
     -1.0,  1.0,
@@ -173,9 +172,9 @@ function initBuffers(gl) {
      1.0, -1.0,
   ];
 
-  // Now pass the list of positions into WebGL to build the
-  // shape. We do this by creating a Float32Array from the
-  // JavaScript array, then use it to fill the current buffer.
+  // 形を作るために頂点座標のリストをWebGLに渡す。
+  // JavaScriptの配列からFloat32Arrayに変換したもので
+  // バッファを埋める。
 
   gl.bufferData(gl.ARRAY_BUFFER,
                 new Float32Array(positions),
@@ -187,68 +186,63 @@ function initBuffers(gl) {
 }
 ```
 
-This routine is pretty simplistic given the basic nature of the scene in this example. It starts by calling the `gl` object's {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} method to obtain a buffer into which we'll store the vertex positions. This is then bound to the context by calling the {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}} method.
+このルーチンは、この例のシーンの基本的な性質を考えると、かなり単純なものです。まず、`gl`オブジェクトの {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} メソッドを呼び出してバッファを取得し、そこに頂点の位置を格納します。次に、{{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}} メソッドを呼び出すことで、このバッファをコンテキストに関連付けます。
 
-Once that's done, we create a JavaScript array containing the position for each vertex of the square plane. This is then converted into an array of floats and passed into the `gl` object's {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}} method to establish the vertex positions for the object.
+それが完了すると、正方形の各頂点の座標を持ったJavaScriptの配列を作成します。そしてこの配列は浮動小数点数の配列へと変換され、`gl`オブジェクトの{{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}}メソッドへとオブジェクトの頂点座標を作るために渡されます。
 
-## Rendering the scene
+## シーンをレンダリングする
 
-Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
+シェーダーを確立し、位置を調べ、正方形の頂点位置をバッファに格納したら、実際にシーンをレンダリングすることができます。この例では、何もアニメーション行わないため、`drawScene()` 関数は非常にシンプルです。この関数では、後述するいくつかのユーティリティルーチンを使用しています。
 
-> **メモ:** You might get a JavaScript error saying " mat4 is not defined". This means there is a dependency on `glmatrix`. You can include [gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js) to resolve this issue, as suggested [here](https://github.com/mdn/webgl-examples/issues/20).
+> **メモ:** "mat4 is not defined" という JavaScript エラーが発生することがあります。これは、`glmatrix`に依存があることを意味します。この問題を解決するには、[ここ](https://github.com/mdn/webgl-examples/issues/20)で提案されているように、[gl-matrix.js](https://mdn.github.io/webgl-examples/tutorial/gl-mat)をインクルードする必要があります。
 
 ```js
 function drawScene(gl, programInfo, buffers) {
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
-  gl.clearDepth(1.0);                 // Clear everything
-  gl.enable(gl.DEPTH_TEST);           // Enable depth testing
-  gl.depthFunc(gl.LEQUAL);            // Near things obscure far things
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);  // 黒でクリア、完全に不透明
+  gl.clearDepth(1.0);                 // 全てをクリア
+  gl.enable(gl.DEPTH_TEST);           // 深度テストを有効化
+  gl.depthFunc(gl.LEQUAL);            // 奥にあるものは隠れるようにする
 
-  // Clear the canvas before we start drawing on it.
+  // 描写を行う前にキャンバスをクリアする
 
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-  // Create a perspective matrix, a special matrix that is
-  // used to simulate the distortion of perspective in a camera.
-  // Our field of view is 45 degrees, with a width/height
-  // ratio that matches the display size of the canvas
-  // and we only want to see objects between 0.1 units
-  // and 100 units away from the camera.
+  // カメラで遠近感を再現するために使用される特殊な行列、
+  // パースペクティブマトリクスを作成します。視野角は45度、
+  // 幅と高さの比率はキャンバスの表示サイズに合わせ、
+  // カメラから0.1単位から100単位までのオブジェクトのみを
+  // 表示するようにします。
 
-  const fieldOfView = 45 * Math.PI / 180;   // in radians
+  const fieldOfView = 45 * Math.PI / 180;   // ラジアンにする
   const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
   const zNear = 0.1;
   const zFar = 100.0;
   const projectionMatrix = mat4.create();
 
-  // note: glmatrix.js always has the first argument
-  // as the destination to receive the result.
+  // メモ: glmatrix.js は常に第一引数として結果の受け取り先を取る
   mat4.perspective(projectionMatrix,
                    fieldOfView,
                    aspect,
                    zNear,
                    zFar);
 
-  // Set the drawing position to the "identity" point, which is
-  // the center of the scene.
+  // 描写位置をシーンの中央である"identity"ポイントにセットする
   const modelViewMatrix = mat4.create();
 
-  // Now move the drawing position a bit to where we want to
-  // start drawing the square.
+  // そして描写位置を正方形を描写し始めたい位置に少しだけ動かす
 
-  mat4.translate(modelViewMatrix,     // destination matrix
-                 modelViewMatrix,     // matrix to translate
-                 [-0.0, 0.0, -6.0]);  // amount to translate
+  mat4.translate(modelViewMatrix,     // 変換結果の格納先
+                 modelViewMatrix,     // 変換する行列
+                 [-0.0, 0.0, -6.0]);  // 変換量
 
-  // Tell WebGL how to pull out the positions from the position
-  // buffer into the vertexPosition attribute.
+  // WebGLにどのように座標バッファからvertexPosition属性に座標を引き出すか伝える
   {
-    const numComponents = 2;  // pull out 2 values per iteration
-    const type = gl.FLOAT;    // the data in the buffer is 32bit floats
-    const normalize = false;  // don't normalize
-    const stride = 0;         // how many bytes to get from one set of values to the next
-                              // 0 = use type and numComponents above
-    const offset = 0;         // how many bytes inside the buffer to start from
+    const numComponents = 2;  // 2つの値をイテレーションの度に引き出す
+    const type = gl.FLOAT;    // バッファのデータは32bit浮動小数点数
+    const normalize = false;  // 正規化を行わない
+    const stride = 0;         // ある値のセットから次の値まで何バイト取得するか
+                              // 0 = typeとnumComponentsの値を用いる
+    const offset = 0;         // バッファの何バイトから開始するか
     gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
     gl.vertexAttribPointer(
         programInfo.attribLocations.vertexPosition,
@@ -261,11 +255,11 @@ function drawScene(gl, programInfo, buffers) {
         programInfo.attribLocations.vertexPosition);
   }
 
-  // Tell WebGL to use our program when drawing
+  // WebGLに、描写するのに我々のプログラムを用いるように伝える
 
   gl.useProgram(programInfo.program);
 
-  // Set the shader uniforms
+  // シェーダユニフォームをセット
 
   gl.uniformMatrix4fv(
       programInfo.uniformLocations.projectionMatrix,
@@ -284,19 +278,19 @@ function drawScene(gl, programInfo, buffers) {
 }
 ```
 
-The first step is to clear the canvas to our background color; then we establish the camera's perspective. We set a field of view of 45°, with a width to height ratio that match the display dimensions of our canvas. We also specify that we only want objects between 0.1 and 100 units from the camera to be rendered.
+最初のステップはキャンバスを背景色でクリアし、カメラ視点を確立します。今回は視野角は45°、縦横比はキャンバスの表示寸法に合わせました。また、カメラから0.1単位から100単位までのオブジェクトのみをレンダリングするように指定しました。
 
-Then we establish the position of the square plane by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the attribute the shader is using for `aVertexPosition` and we tell WebGL how to pull the data out of it. Finally we draw the object by calling the {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} method.
+次に、identity 位置をロードして正方形の位置をカメラから 6単位だけ遠ざかるように平行移動させ、確定します。その後、正方形の頂点バッファをシェーダーが `aVertexPosition` に使用している属性にバインドし、そこからデータを引き出す方法を WebGL に指示します。最後に、{{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} メソッドを呼び出してオブジェクトを描画します。
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
 [View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Open this demo on a new page](http://mdn.github.io/webgl-examples/tutorial/sample2/)
 
-## Matrix utility operations
+## マトリックスユーティリティの操作
 
-Matrix operations might seem complicated but [they are actually pretty simple if you take them one step at a time](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). Generally people use a matrix library rather than writing their own. In our case we're using the popular [glMatrix library](http://glmatrix.net/).
+行列の操作は複雑に見えるかもしれませんが、[一歩ずつ進めていけば、実はとても簡単です](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html)。一般に、人々は自分で書くよりも行列ライブラリを使用します。この例では、人気のある [glMatrix ライブラリ](http://glmatrix.net/)を使用しています。
 
-See also
+関連情報
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) on WebGLFundamentals
 - [Matrices](http://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
