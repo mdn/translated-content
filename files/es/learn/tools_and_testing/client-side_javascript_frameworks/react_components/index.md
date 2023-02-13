@@ -118,7 +118,7 @@ Con este componente importado, podemos reemplazar todos los elementos `li` en `A
 
 Cuando vuelves a mirar tu navegador, notarás algo desafortunado: ¡tu lista ahora repite la primera tarea 3 veces!
 
-![Our todo list app, with todo components repeating because the label is hardcoded into the component](todo-list-repeating-todos.png)
+![Nuestra aplicación de lista de tareas, con componentes que se repiten porque la etiqueta está codificada en el componente](todo-list-repeating-todos.png)
 
 No queremos comer unicamente; tenemos otras cosas que - bueno - que hacer. A continuación veremos cómo podemos hacer que diferentes llamadas de componentes genere contenido único.
 
@@ -171,7 +171,7 @@ export default function Todo(props) {
 
 _Ahora_ su navegador debería mostrar tres tareas únicas. Sin embargo, queda otro problema: todos siguen marcados de forma predeterminada.
 
-![Our todo list, with different todo labels now they are passed into the components as props](todo-list-unique-todos.png)
+![Nuestra lista de tareas, con diferentes etiquetas de tareas ahora se pasan a los componentes como propiedades](todo-list-unique-todos.png)
 
 ### ¿Está `completado`?
 
@@ -193,7 +193,7 @@ Para usar estos _props_, debemos volver a `Todo.js`. Cambia el atributo `default
 
 Y su navegador debería actualizarse para mostrar que solo `Eat` está marcado:
 
-![Our todo list app, now with differing checked states - some checkboxes are checked, others not](todo-list-differing-checked-states.png)
+![Nuestra aplicación de lista de tareas, ahora con diferentes estados marcados: algunas casillas están marcadas, otras no](todo-list-differing-checked-states.png)
 
 Si cambia el _prop_ `completed` en cada componente `<Todo />`, su navegador marcará o desmarcará los checkbox equivalentes respectivamente.
 
@@ -275,7 +275,7 @@ Intentemos reemplazar todos los hijos de `<ul>` con `taskList`:
 Este nos ayuda a mostrar nuevamente todos los componentes, pero tenemos mas trabajo que hacer: el navegador representa el nombre de cada tarea como texto no estructurado.
 Falta la estructura de nuestro HTML - ¡la etiqueta `<li>` y sus casillas de verificación y botones!.
 
-![Our todo list app with the todo item labels just shown bunched up on one line](todo-list-unstructured-names.png)
+![Nuestra aplicación de lista de tareas con las etiquetas de elementos de tareas que se muestran agrupadas en una línea](todo-list-unstructured-names.png)
 
 Para corregirlo, necesitamos devolver un componente `<Todo />`  de nuestra función `map()` - ¡recuerda que JSX permite mezclar JavaScript y estructura de marcado! Probemos lo siguiente reemplazando lo que ya tenemos.
 
