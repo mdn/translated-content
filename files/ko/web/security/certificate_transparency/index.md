@@ -1,6 +1,8 @@
 ---
 title: 인증서 투명성
 slug: Web/Security/Certificate_Transparency
+l10n:
+  sourceCommit: 199c317d91bf506a81a6f68f53d6c63499651dff
 ---
 
 {{QuickLinksWithSubpages("/ko/docs/Web/Security")}}
