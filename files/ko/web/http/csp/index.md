@@ -1,6 +1,8 @@
 ---
 title: 컨텐츠 보안 정책 (CSP)
 slug: Web/HTTP/CSP
+l10n:
+  sourceCommit: 6d7b5cdaac05334b7e8b94e4cf46549d8ecc9bf7
 ---
 
 {{HTTPSidebar}}
