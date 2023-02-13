@@ -15,12 +15,12 @@ En este punto, nuestra aplicación es un monolito. Antes de hacer que haga cosas
       <th scope="row">Prerequesitos:</th>
       <td>
         <p>
-          Estar familiarizado con los lenguajes básicos <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, y
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>,
+          Estar familiarizado con los lenguajes básicos <a href="/es/docs/Learn/HTML">HTML</a>,
+          <a href="/es/docs/Learn/CSS">CSS</a>, y
+          <a href="/es/docs/Learn/JavaScript">JavaScript</a>,
           conocimientos de la
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/linea de comandos</a
           >.
         </p>
@@ -69,7 +69,7 @@ export default function Todo() {
 }
 ```
 
-Esto esta bien hasta ahora, ¡pero nuestro componente debe devolver algo!, Vamos de vuelta a `src/App.js`, copie el primer [`<li>`](/en-US/docs/Web/HTML/Element/li) de la lista desordenada y péguelo en `Todo.js` para que se lea así:
+Esto esta bien hasta ahora, ¡pero nuestro componente debe devolver algo!, Vamos de vuelta a `src/App.js`, copie el primer [`<li>`](/es/docs/Web/HTML/Element/li) de la lista desordenada y péguelo en `Todo.js` para que se lea así:
 
 ```jsx
 export default function Todo() {
