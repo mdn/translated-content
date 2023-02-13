@@ -57,7 +57,7 @@ function fetchVideo() {
 }
 ```
 
-> **참고:** **노트**: `abort()`가 호출되면, `fetch()` promise는 <code dir="ltr">AbortError</code>과 함께 reject됩니다.
+> **참고:** `abort()`가 호출되면, `fetch()` promise는 <code dir="ltr">AbortError</code>과 함께 reject됩니다.
 
 > **경고:** 현재 버전의 Firefox는 `DOMException`으로 promise를 reject합니다.
 

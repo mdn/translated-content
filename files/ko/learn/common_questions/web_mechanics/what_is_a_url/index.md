@@ -69,7 +69,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 - ![Parameters](mdn-url-parameters@x2.png)
   - : `?key1=value1&key2=value2` 는 웹서버에 제공하는 추가 파라미터입니다. 이 파라미터들은 `&` 기호로 구분된 키/값으로 짝을 이룬 리스트입니다. 웹 서버는 자원을 반환하기 전에 추가적인 작업을 위해 이런 파라미터들을 사용할 수 있습니다. 각각의 웹서버는 파라미터들을 언급하는 자신의 규칙을 갖고 있습니다. 그리고, 특정한 웹서버가 파라미터를 다루는 지 알기 위한 유일한 방법은 웹서버 소유자에게 묻는 것입니다.
 - ![Anchor](mdn-url-anchor@x2.png)
-  - : `#SomewhereInTheDocument` 는 자원 자체의 다른 부분에 대한 anchor(닻) 입니다. An anchor 는 일종의 자원 안에서 "bookmark" 입니다. 즉, "bookmarked" 지점에 위치된 내용을 보여주기 위해 브라우저에게 방향을 알려줍니다. 예를 들어, HTML 문서에서 브라우저는 anchor가 정의한 곳의 점을 스크롤할 것입니다; 비디오나 오디오 문서에서, 브라우저는 앵커가 나타내는 시간을 찾으려 할 것입니다. **#**뒤에 오는 부분은 가치가 없습니다. 또한,_ **fragment identifier(부분 식별자)** 라고 알려져, 요청이 서버에 절대 보내지지 않습니다._
+  - : `#SomewhereInTheDocument` 는 자원 자체의 다른 부분에 대한 anchor(닻) 입니다. An anchor 는 일종의 자원 안에서 "bookmark" 입니다. 즉, "bookmarked" 지점에 위치된 내용을 보여주기 위해 브라우저에게 방향을 알려줍니다. 예를 들어, HTML 문서에서 브라우저는 anchor가 정의한 곳의 점을 스크롤할 것입니다; 비디오나 오디오 문서에서, 브라우저는 앵커가 나타내는 시간을 찾으려 할 것입니다. **#** 뒤에 오는 부분은 가치가 없습니다. 또한,_**fragment identifier(부분 식별자)**_ 라고 알려져, 요청이 서버에 절대 보내지지 않습니다._
 
 > **참고:** URLs을 말하면 [몇몇의 추가적인 부분과 규칙](http://en.wikipedia.org/wiki/Uniform_Resource_Locator)이 있다, 그러나 그것들은 일반적인 유저와 웹 개발자들에게 상관이 없다. 이것에 대해 걱정하지 말고, 완전한 기능적인 URLs를 구축하고 사용하기 위해 알 필요는 없다.
 
