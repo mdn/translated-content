@@ -1,6 +1,8 @@
 ---
 title: 웹 보안
 slug: Web/Security
+l10n:
+  sourceCommit: d75d870c8718608d6b27568b8b0803ead94d1d7a
 ---
 
 {{QuickLinksWithSubpages}}
