@@ -1,11 +1,11 @@
 ---
-title: Web Components
+title: Web Component
 slug: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}
 
-Web Components 是一套不同的技术，允许您创建可重用的定制元素（它们的功能封装在您的代码之外）并且在您的 web 应用中使用它们。
+Web Component 是一套不同的技术，允许你创建可重用的定制元素（它们的功能封装在你的代码之外）并且在你的 web 应用中使用它们。
 
 ## 概念和使用
 
@@ -13,9 +13,9 @@ Web Components 是一套不同的技术，允许您创建可重用的定制元�
 
 Web Components 旨在解决这些问题 — 它由三项主要技术组成，它们可以一起使用来创建封装功能的定制元素，可以在你喜欢的任何地方重用，不必担心代码冲突。
 
-- **Custom elements（自定义元素）**：一组 JavaScript API，允许您定义 custom elements 及其行为，然后可以在您的用户界面中按照需要使用它们。
+- **Custom element（自定义元素）**：一组 JavaScript API，允许您定义 custom elements 及其行为，然后可以在您的用户界面中按照需要使用它们。
 - **Shadow DOM（影子 DOM）**：一组 JavaScript API，用于将封装的“影子”DOM 树附加到元素（与主文档 DOM 分开呈现）并控制其关联的功能。通过这种方式，您可以保持元素的功能私有，这样它们就可以被脚本化和样式化，而不用担心与文档的其他部分发生冲突。
-- **HTML templates（HTML 模板）：** {{HTMLElement("template")}} 和 {{HTMLElement("slot")}} 元素使您可以编写不在呈现页面中显示的标记模板。然后它们可以作为自定义元素结构的基础被多次重用。
+- **HTML template（HTML 模板）：** {{HTMLElement("template")}} 和 {{HTMLElement("slot")}} 元素使您可以编写不在呈现页面中显示的标记模板。然后它们可以作为自定义元素结构的基础被多次重用。
 
 实现 web component 的基本方法通常如下所示：
 
@@ -28,15 +28,15 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 ## 教程
 
 - [使用自定义元素](/zh-CN/docs/Web/Web_Components/Using_custom_elements)
-  - : 介绍如何使用自定义元素的功能来创建简单的 web components，以及生命周期回调和其他更高级的功能。
+  - : 介绍如何使用自定义元素的功能来创建简单的 web component，以及生命周期回调和其他更高级的功能。
 - [使用 shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM)
   - : 介绍 shadow DOM 的基础知识，展示如何向元素中附加 shadow DOM，添加到 shadow DOM 树，添加样式等等。
-- [使用 templates 和 slots](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)
-  - : 介绍如何使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 元素定义可重用的 HTML 结构，然后在 Web components 中使用该结构。
+- [使用 template 和 slot](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)
+  - : 介绍如何使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 元素定义可重用的 HTML 结构，然后在 Web component 中使用该结构。
 
 ## 参考
 
-### Custom elements
+### 自定义元素
 
 - {{domxref("CustomElementRegistry")}}
   - : 包含自定义元素相关功能，最值得注意的是 {{domxref("CustomElementRegistry.define()")}} 方法用来注册新的自定义元素，这样就可以在文档中使用它们。
@@ -77,7 +77,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
     - {{domxref("Event.composed")}}：返回 {{jsxref("Boolean")}} 它表明事件是否会通过 shadow DOM 边界传播到标准 DOM。
     - {{domxref("Event.composedPath")}}：返回事件的路径（侦听器将被调用的对象）。如果 shadow root 是使用 {{domxref("ShadowRoot.mode")}} 为 closed 创建的，则不包括 shadow 树中的节点。
 
-### HTML templates
+### HTML template
 
 - {{htmlelement("template")}}
   - : 包含一个 HTML 片段，不会在文档初始化时渲染。但是可以在运行时使用 JavaScript 显示。主要用作自定义元素结构的基础。关联的 DOM 接口是{{domxref("HTMLTemplateElement")}}。
