@@ -17,7 +17,7 @@ Pour envoyer une requête HTTP, on pourra&nbsp;:
 2. Ouvrir une URL
 3. Envoyer la requête
 
-Lorsque la transaction sera terminée, l'objet `XMLHttpRequest` contiendra les informations de la réponse, comme son corps le [statut HTTP](/fr/docs/Web/HTTP/Status) résultant.
+Lorsque la transaction sera terminée, l'objet `XMLHttpRequest` contiendra les informations de la réponse, comme son corps et le [statut HTTP](/fr/docs/Web/HTTP/Status) résultant.
 
 ```js
 function reqListener() {
@@ -53,7 +53,7 @@ Lorsqu'on utilise `XMLHttpRequest` pour obtenir le contenu d'un document XML dis
 
 ### Traiter une propriété `responseText` contenant un document HTML
 
-Lorsqu'on utilise `XMLHttpRequest` afin d'obtenir le contenu d'une page HTML distante, la propriété [`responseText`](/fr/docs/Web/API/XMLHttpRequest/responseText) sera une chaîne de caractères contenant le document HTML brut.La manipulation et l'analyse d'un tel résultat n'est pas nécessairement simple. Il existe trois méthodes principales pour analyser un tel document HTML&nbsp;:
+Lorsqu'on utilise `XMLHttpRequest` afin d'obtenir le contenu d'une page HTML distante, la propriété [`responseText`](/fr/docs/Web/API/XMLHttpRequest/responseText) sera une chaîne de caractères contenant le document HTML brut. La manipulation et l'analyse d'un tel résultat n'est pas nécessairement simple. Il existe trois méthodes principales pour analyser un tel document HTML&nbsp;:
 
 1. Utiliser la propriété `XMLHttpRequest.responseXML` comme indiqué dans l'article [Prise en charge de HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
 2. Injecter le contenu dans le corps d'un [fragment de document](/fr/docs/Web/API/DocumentFragment) à l'aide de `fragment.body.innerHTML` et traverser le DOM de ce fragment.
@@ -98,7 +98,7 @@ Pour suivre l'évolution d'un transfert avec `XMLHttpRequest`, on utilisera [`pr
 - [`progress`](/fr/docs/Web/API/XMLHttpRequest/progress_event)
   - : La quantité de données reçues a changé.
 - [`load`](/fr/docs/Web/API/XMLHttpRequest/load_event)
-  - : Le transfert est terminé. Toutes les données sont désormais écrites dans `response`
+  - : Le transfert est terminé. Toutes les données sont désormais écrites dans `response`.
 
 ```js
 const req = new XMLHttpRequest();
