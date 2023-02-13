@@ -1,6 +1,8 @@
 ---
 title: "CSP: worker-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
+l10n:
+  soruceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
 {{HTTPSidebar}}
