@@ -11,7 +11,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Web/API/Canvas_API/Tutorial/Рисование_текста
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 После того, как мы увидели в предыдущей главе, как [применять стили и цвета](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors), взглянем на написание текста в canvas.
 

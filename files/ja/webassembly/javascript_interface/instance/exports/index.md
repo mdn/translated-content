@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Instance/exports
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`exports`** は {{jsxref("WebAssembly.Instance")}} オブジェクトプロトタイプの読み取り専用プロパティで、 WebAssembly モジュールインスタンスからエクスポートされたすべての関数をメンバ－として持つオブジェクトを返します。これらは、 JavaScript からアクセスして使用することができます。
 

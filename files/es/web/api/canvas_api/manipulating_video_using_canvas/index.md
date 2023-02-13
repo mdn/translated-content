@@ -135,11 +135,11 @@ El método `computeFrame()`, que se muestra a continuación, se encarga de ir a 
 
 Cuando esta rutina es llamada, el elemento video muestra el fotograma de datos de video más reciente, que tiene este aspecto:
 
-![video.png](/@api/deki/files/3282/=video.png)
+![video.png](video.png)
 
 En la línea 2, ese fotograma de video se copia al contexto gráfico `ctx1` del primer lienzo, especificando como alto y ancho los valores que previamente guardamos para dibujar el fotograma a mitad de tamaño. Ten en cuenta que puedes pasar simplemente el elemento de video al método `drawImage()` del contexto para dibujar el fotograma de video actual en dicho contexto. El resultado es:
 
-![sourcectx.png](/@api/deki/files/3284/=sourcectx.png)
+![sourcectx.png](sourcectx.png)
 
 Línea 3 obtiene una copia de los datos gráficos del actual fotograma de video llamando al método `getImageData()` en el primer contexto. Esto proporciona los datos de imagen en píxeles de 32 bits sin procesar que podemos después manipular. Línea 4 calcula el número de píxeles de la imagen al dividir entre cuatro el tamaño total de los datos de la imagen del fotograma.
 
@@ -149,7 +149,7 @@ Cada píxel de datos de imagen del fotograma que se encuentra que está dentro d
 
 La imagen resultante tiene este aspecto:
 
-![output.png](/@api/deki/files/3283/=output.png)
+![output.png](output.png)
 
 Esto se hace en varias ocasiones mientras el video se reproduce, de manera que fotograma tras fotograma se procesa y se muestra con el efecto de croma.
 

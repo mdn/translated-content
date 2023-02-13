@@ -60,7 +60,7 @@ function test() {
 
 ## No utilice `eval` innecesariamente
 
-`eval()` es una función peligrosa, quel ejecuta el código el cual es pasado con los privilegios de quien llama. Si ejecuta `eval()` con una cadena de carcteres que podría ser afectada por un elemento malicioso, podría terminar ejecutando código malicioso dentro de la computadora del usuario con los permisos de su página o extensión web . Más importante aún, una parte del código de terceros podría accesar al ámbito en el cual `eval()` fue invocada, lo que puede permitir la entrada a posibles ataques de formas a las que el constructor {{jsxref("Global_Objects/Function", "Function")}} (art. en inglés) el cual es similar, no es susceptible.
+`eval()` es una función peligrosa, quel ejecuta el código el cual es pasado con los privilegios de quien llama. Si ejecuta `eval()` con una cadena de caracteres que podría ser afectada por un elemento malicioso, podría terminar ejecutando código malicioso dentro de la computadora del usuario con los permisos de su página o extensión web . Más importante aún, una parte del código de terceros podría accesar al ámbito en el cual `eval()` fue invocada, lo que puede permitir la entrada a posibles ataques de formas a las que el constructor {{jsxref("Global_Objects/Function", "Function")}} (art. en inglés) el cual es similar, no es susceptible.
 
 `eval()` es generalmente también más lenta que otras alternativas desde que se invoca en el intérprte de JS, mientras que otros muchos constructores son optimizados por los motores JS modernos.
 

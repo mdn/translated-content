@@ -83,7 +83,7 @@ self.addEventListener('install', function(event) {
 });
 ```
 
-> **Примечание:** **Important**: When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](http://www.chromium.org) doesn't support CORS.
+> **Примечание:** When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](http://www.chromium.org) doesn't support CORS.
 
 ## Specifications
 
