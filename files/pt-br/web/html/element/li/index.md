@@ -23,7 +23,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     > **Note:** **Nota**: Este atributo, abandonado na HTML4, foi reintroduzido na HTML5.
 
-    > **Note:** **Nota:** Antes de {{Gecko("9.0")}}, os valores negativos eram, incorretamente, convertidos a 0. A partir de {{Gecko("9.0")}} todos os valores inteiros são analisados corretamente.
+    > **Note:** **Nota:** Antes de Gecko 9.0, os valores negativos eram, incorretamente, convertidos a 0. A partir de Gecko 9.0 todos os valores inteiros são analisados corretamente.
 
 - {{htmlattrdef("type")}} {{Deprecated_inline}}
 

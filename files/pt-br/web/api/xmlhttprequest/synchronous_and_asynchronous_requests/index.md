@@ -130,7 +130,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 Here, we're specifying a timeout of 2000 ms.
 
-> **Nota:** Support for `timeout` was added in {{Gecko("12.0")}}.
+> **Nota:** Support for `timeout` was added in Gecko 12.0.
 
 ## Synchronous request
 
