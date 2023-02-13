@@ -84,7 +84,7 @@ str.normalize('NFKD'); // '\u0073\u0323\u0307'
 
 ## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.String.normalize")}}
+{{Compat}}
 
 ## Vea también
 

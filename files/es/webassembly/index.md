@@ -68,9 +68,9 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
 
 {{Specifications}}
 
-## Compatibilidad con navegadores
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Ver también
 

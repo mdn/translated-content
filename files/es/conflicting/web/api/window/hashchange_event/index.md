@@ -60,6 +60,6 @@ El evento `hashchange` enviado, tiene los siguientes campos:
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad de Navegadores
 
-{{Compat("api.WindowEventHandlers.onhashchange")}}
+{{Compat}}

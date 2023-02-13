@@ -27,6 +27,6 @@ Mira la documentación para el evento [`change`](/es/docs/Web/Reference/Events/c
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad de Navegadores
 
-{{Compat("api.GlobalEventHandlers.onchange")}}
+{{Compat}}

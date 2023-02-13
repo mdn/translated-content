@@ -69,11 +69,11 @@ Para obtener más información, consulta {{JSxRef("Errors/Too_much_recursion", "
 
 ## Especificaciones
 
-No forma parte de ningún estándar.
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.InternalError")}}
+{{Compat}}
 
 ## Ve también
 

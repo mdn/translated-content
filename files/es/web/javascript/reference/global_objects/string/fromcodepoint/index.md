@@ -131,9 +131,9 @@ if (!String.fromCodePoint) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.String.fromCodePoint")}}
+{{Compat}}
 
 ## See also
 

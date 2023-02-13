@@ -29,9 +29,9 @@ mySet.size; // 3
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Set.size")}}
+{{Compat}}
 
 ## Ver también
 

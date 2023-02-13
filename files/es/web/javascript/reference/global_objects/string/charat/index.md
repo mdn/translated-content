@@ -57,9 +57,9 @@ El carácter en el índice 999 es ''
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.String.charAt")}}
+{{Compat}}
 
 ## Vea También
 

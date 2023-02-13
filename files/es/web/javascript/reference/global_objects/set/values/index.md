@@ -43,10 +43,10 @@ console.log(setIter.next().value); // "baz"
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Set.values")}}
+{{Compat}}
 
-## See also
+## Ver también
 
 - {{jsxref("Set.prototype.entries()")}}

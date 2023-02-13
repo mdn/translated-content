@@ -71,4 +71,4 @@ Solo se puede asignar un controlador `click` a un objeto a la vez con esta propi
 
 ## Compatibilidad de Navegadores
 
-{{Compat("api.GlobalEventHandlers.onclick")}}
+{{Compat}}

@@ -37,11 +37,11 @@ El método `toSource` devuelve los siguientes valores:
 
 ## Especificaciones
 
-No está reflejado en ningún estándar. Implementaso en JavaScript 1.3.
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Function.toSource")}}
+{{Compat}}
 
 ## Ver también
 

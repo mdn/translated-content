@@ -37,11 +37,11 @@ unescape("%u0107");     // "ć"
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.unescape")}}
+{{Compat}}
 
-## See also
+## Ver tambien
 
 - {{jsxref("decodeURI")}}
 - {{jsxref("decodeURIComponent")}}

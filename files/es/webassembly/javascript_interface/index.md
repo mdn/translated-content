@@ -78,7 +78,7 @@ fetch('simple.wasm').then(response =>
 
 ## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Ver también
 

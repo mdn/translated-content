@@ -49,11 +49,11 @@ alpha.toSource();
 
 ## Especificaciones
 
-No hace parte de ningún estándar. Implementado en JavaScript 1.3.
+{{Specifications}}
 
-## Compatibilidad con navegadores
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Array.toSource")}}
+{{Compat}}
 
 ## Ver también
 

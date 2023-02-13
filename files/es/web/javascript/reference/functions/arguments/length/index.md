@@ -40,9 +40,9 @@ function adder(base /*, n2, ... */) {
 
 {{Specifications}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.functions.arguments.length")}}
+{{Compat}}
 
 ## Véase también
 

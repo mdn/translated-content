@@ -112,11 +112,11 @@ theDog.toSource();
 
 ## Especificaciones
 
-No es parte de ningún estándar. Implementado en JavaScript 1.3.
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Object.toSource")}}
+{{Compat}}
 
 ## Ver también
 

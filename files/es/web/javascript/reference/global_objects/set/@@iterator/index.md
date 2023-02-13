@@ -56,9 +56,9 @@ for (const v of mySet) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Set.@@iterator")}}
+{{Compat}}
 
 ## Vea también
 

@@ -34,11 +34,11 @@ donde estos atributos corresponden a las propiedades respectivas de la instancia
 
 ## Especificaciones
 
-No forma parte de ningún estándar.
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Error.toSource")}}
+{{Compat}}
 
 ## Ve también
 

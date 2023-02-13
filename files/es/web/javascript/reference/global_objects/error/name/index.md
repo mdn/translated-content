@@ -28,9 +28,9 @@ throw e;
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Error.name")}}
+{{Compat}}
 
 ## Ve también
 

@@ -77,9 +77,9 @@ String.raw({
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.String.raw")}}
+{{Compat}}
 
 ## Tambien ver
 

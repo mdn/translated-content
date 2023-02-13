@@ -24,11 +24,11 @@ throw e;
 
 ## Especificaciones
 
-No forma parte de ningún estándar.
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Error.fileName")}}
+{{Compat}}
 
 ## Ve también
 

@@ -41,9 +41,9 @@ const y = new Error('¡Fui construido con la palabra clave "new"!')
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Error.Error")}}
+{{Compat}}
 
 ## Ve también
 

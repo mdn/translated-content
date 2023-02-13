@@ -73,9 +73,9 @@ console.log(e.toString()); // 'hola'
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad de Navegadores
 
-{{Compat("javascript.builtins.Error.toString")}}
+{{Compat}}
 
 ## Ve también
 
