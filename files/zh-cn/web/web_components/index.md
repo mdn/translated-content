@@ -51,7 +51,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 
 - 创建自定义内置元素的扩展
   - : 定义了以下扩展：
-    - {{htmlattrxref("is")}} 全局 HTML 属性：允许您指定一个标准 HTML 元素应该表现得像一个已注册的自定义内置元素。
+    - [`is`](/zh-CN/docs/Web/HTML/Global_attributes/is) 全局 HTML 属性：允许你指定标准 HTML 元素像定义的内置元素一样工作。
     - {{domxref("Document.createElement()")}} 方法的“is”选项：允许您创建一个标准 HTML 元素的实例，表现得像一个给定的已注册的自定义内置元素。
 - CSS 伪类
   - : 与自定义元素特别相关的伪类：
@@ -64,8 +64,6 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 
 - {{domxref("ShadowRoot")}}
   - : 表示 shadow DOM 子树的根节点。
-- {{domxref("DocumentOrShadowRoot")}}
-  - : 定义了可在文档和 shadow 根中使用的功能的 mixin。
 - {{domxref("Element")}} extensions
   - : 与 shadow DOM 有关的 `Element` 接口的扩展：
     - {{domxref("Element.attachShadow()")}} 方法将 shadow DOM 树附加给特定元素。
@@ -77,7 +75,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 - {{domxref("Event")}} 拓展
   - : 与 shadow DOM 相关的 `Event` 接口的扩展：
     - {{domxref("Event.composed")}}：返回 {{jsxref("Boolean")}} 它表明事件是否会通过 shadow DOM 边界传播到标准 DOM。
-    - 返回事件的路径（侦听器将被调用的对象）。如果 shadow root 是使用 {{domxref("ShadowRoot.mode")}} 为 closed 创建的，则不包括 shadow 树中的节点。
+    - {{domxref("Event.composedPath")}}：返回事件的路径（侦听器将被调用的对象）。如果 shadow root 是使用 {{domxref("ShadowRoot.mode")}} 为 closed 创建的，则不包括 shadow 树中的节点。
 
 ### HTML templates
 
@@ -87,17 +85,18 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
   - : web component 中的一个占位符，你可以填充自己的标记，这样你就可以创建单独的 DOM 树并将它们呈现在一起。关联的 DOM 接口是{{domxref("HTMLSlotElement")}}。
 - The [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot) global HTML attribute
   - : 将在 shadow DOM 树中的插槽分配给一个元素。
-- {{domxref("Slotable")}}
-  - : 由 {{domxref("Element")}} 和 {{domxref("Text")}} 节点实现的 mixin，定义了允许它们成为 {{htmlelement("slot")}} 元素内容的特性。mixin 定义了一个属性， {{domxref("Slotable.assignedSlot")}}，返回节点所插入的插槽的引用。
-
-- {{domxref("Element")}} extensions
+- {{domxref("Element.assignedSlot")}}
+  - : 一个只读属性，它返回对插入此元素的 {{htmlelement("slot")}} 的引用。
+- {{domxref("Text.assignedSlot")}}
+  - : 一个只读属性，它返回对插入此文本节点的 {{htmlelement("slot")}} 的引用。
+- {{domxref("Element")}} 扩展
   - : 与插槽相关的 `Element` 接口的扩展：
     - {{domxref("Element.slot")}}：返回附加到元素上的 shadow DOM 插槽的名字。
 - CSS pseudo-elements
   - : slots 特别相关的伪元素：
     - {{cssxref("::slotted")}}：匹配任何已经插入一个 slot 的内容。
-- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event
-  - : 当插槽中的节点改变时在 {{domxref("HTMLSlotElement")}} 实例（[`<slot>`](/zh-CN/docs/Web/HTML/Element/slot) 元素）上触发。
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} 事件
+  - : 当插槽中的节点改变时在 {{domxref("HTMLSlotElement")}} 实例（{{htmlelement("slot")}} 元素）上触发。
 
 ## 示例
 
@@ -111,12 +110,14 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [webcomponents.org](https://www.webcomponents.org/) — site featuring web components examples, tutorials, and other information.
-- [Hybrids](https://github.com/hybridsjs/hybrids) — Open source web components library, which favors plain objects and pure functions over `class` and this syntax. It provides a simple and functional API for creating custom elements.
-- [Polymer](https://www.polymer-project.org/) — Google's web components framework — a set of polyfills, enhancements, and examples. Currently the easiest way to use web components cross-browser.
-- [Snuggsi.es](https://github.com/devpunks/snuggsi#readme) — Easy Web Components in \~1kB _Including polyfill_ — All you need is a browser and basic understanding of HTML, CSS, and JavaScript classes to be productive.
+- [Open Web Components](https://open-wc.org/) — Guides, tools and libraries for developing web components.
+- [DataFormsJS](https://www.dataformsjs.com/) — Open source web components library — Set of Web Components that can be used to build Single Page Apps (SPA), Display JSON data from API's and Web Services, and bind data to different elements on screen. All Web Components are plain JavaScript and require no build process.
+- [FAST](https://www.fast.design/) is a web component library built by Microsoft which offers several packages to leverage depending on your project needs. [Fast Element](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-element) is a lightweight means to easily build performant, memory-efficient, standards-compliant Web Components. [Fast Foundation](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-foundation) is a library of Web Component classes, templates, and other utilities built on fast-element intended to be composed into registered Web Components.
+- [Hybrids](https://github.com/hybridsjs/hybrids) — Open source web components library, which favors plain objects and pure functions over `class` and `this` syntax. It provides a simple and functional API for creating custom elements.
+- [Lit](https://lit.dev/) — Google's web components library, the core of which is a component base class designed to reduce boilerplate while providing reactive state, scoped styles, and a declarative template system.
+- [Snuggsi](https://github.com/devpunks/snuggsi#readme) — Easy Web Components in \~1kB _Including polyfill_ — All you need is a browser and basic understanding of HTML, CSS, and JavaScript classes to be productive.
 - [Slim.js](https://github.com/slimjs/slim.js) — Open source web components library — a high-performant library for rapid and easy component authoring; extensible and pluggable and cross-framework compatible.
-- [Smart.js](https://www.htmlelements.com/) — Web Components library with simple API for creating cross-browser custom elements.
 - [Stencil](https://stenciljs.com/) — Toolchain for building reusable, scalable design systems in web components.
+- [omi](https://tencent.github.io/omi/) - Front End Cross-Frameworks Framework
