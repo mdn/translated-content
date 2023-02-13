@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table
 browser-compat: javascript.builtins.WebAssembly.Table.Table
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.Table()`** crée un nouvel objet `Table` de la taille et du type d'élément donné.
 

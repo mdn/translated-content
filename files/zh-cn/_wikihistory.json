@@ -2312,23 +2312,105 @@
       "Yidada"
     ]
   },
-  "Learn/Common_questions/Available_text_editors": {
-    "modified": "2020-07-16T22:35:49.753Z",
-    "contributors": ["A-rise"]
-  },
-  "Learn/Common_questions/Checking_that_your_web_site_is_working_properly": {
-    "modified": "2020-10-06T06:46:00.886Z",
-    "contributors": ["kuailekai", "Chor"]
-  },
-  "Learn/Common_questions/Common_web_layouts": {
+  "Learn/Common_questions/Design_and_accessibility/Common_web_layouts": {
     "modified": "2020-08-08T20:06:40.833Z",
     "contributors": ["DarkStory", "秋色楓", "TpOut"]
   },
-  "Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine": {
+  "Learn/Common_questions/Design_and_accessibility/Thinking_before_coding": {
+    "modified": "2020-07-16T22:35:35.095Z",
+    "contributors": [
+      "yuandengcheng",
+      "StarryForce",
+      "Snailight",
+      "gaoyia",
+      "ziyouwa",
+      "Zeng",
+      "MinimalistYing",
+      "ziyunfei",
+      "wth"
+    ]
+  },
+  "Learn/Common_questions/Design_and_accessibility/What_is_accessibility": {
+    "modified": "2020-07-16T22:35:46.965Z",
+    "contributors": ["ziyunfei", "wth"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Available_text_editors": {
+    "modified": "2020-07-16T22:35:49.753Z",
+    "contributors": ["A-rise"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
+    "modified": "2020-10-06T06:46:00.886Z",
+    "contributors": ["kuailekai", "Chor"]
+  },
+  "Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine": {
     "modified": "2020-07-16T22:35:52.536Z",
     "contributors": ["DaniellaAngel", "sky5454"]
   },
-  "Learn/Common_questions/How_does_the_Internet_work": {
+  "Learn/Common_questions/Tools_and_setup/How_much_does_it_cost": {
+    "modified": "2020-11-12T06:17:33.350Z",
+    "contributors": [
+      "咸鱼快去读书",
+      "kidonng",
+      "SirnoChan",
+      "Yang_Hanlin",
+      "Geno1024",
+      "bingxl",
+      "xiwusheng",
+      "JohnJiangLA",
+      "sher",
+      "ArcherGrey"
+    ]
+  },
+  "Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server": {
+    "modified": "2020-07-16T22:35:42.078Z",
+    "contributors": [
+      "bingxl",
+      "xiwusheng",
+      "PokimLee",
+      "summerstarlee",
+      "ArcherGrey"
+    ]
+  },
+  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
+    "modified": "2020-07-16T22:35:52.151Z",
+    "contributors": [
+      "WoodCube",
+      "TeabugCC",
+      "zhangtianle",
+      "zhuangyin",
+      "Bernie_Lai"
+    ]
+  },
+  "Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools": {
+    "modified": "2020-08-09T19:35:32.533Z",
+    "contributors": [
+      "DarkStory",
+      "eelord",
+      "ziyouwa",
+      "Atractylodes",
+      "wth",
+      "ziyunfei",
+      "zhaoy875"
+    ]
+  },
+  "Learn/Common_questions/Tools_and_setup/What_software_do_I_need": {
+    "modified": "2020-07-16T22:35:33.819Z",
+    "contributors": ["What-username-will-make-you-feel-cute", "GHLgh"]
+  },
+  "Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server": {
+    "modified": "2020-07-16T22:35:53.993Z",
+    "contributors": [
+      "yi2sun",
+      "Singee",
+      "chaosdog",
+      "zihengCat",
+      "ElliottZheng",
+      "Kiekerti",
+      "overcat",
+      "Selence1988"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/How_does_the_Internet_work": {
     "modified": "2020-07-16T22:35:39.172Z",
     "contributors": [
       "simon.woo",
@@ -2347,22 +2429,7 @@
       "TanJrJie"
     ]
   },
-  "Learn/Common_questions/How_much_does_it_cost": {
-    "modified": "2020-11-12T06:17:33.350Z",
-    "contributors": [
-      "咸鱼快去读书",
-      "kidonng",
-      "SirnoChan",
-      "Yang_Hanlin",
-      "Geno1024",
-      "bingxl",
-      "xiwusheng",
-      "JohnJiangLA",
-      "sher",
-      "ArcherGrey"
-    ]
-  },
-  "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
+  "Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines": {
     "modified": "2020-07-16T22:35:41.034Z",
     "contributors": [
       "DaniellaAngel",
@@ -2374,53 +2441,7 @@
       "wth"
     ]
   },
-  "Learn/Common_questions/Thinking_before_coding": {
-    "modified": "2020-07-16T22:35:35.095Z",
-    "contributors": [
-      "yuandengcheng",
-      "StarryForce",
-      "Snailight",
-      "gaoyia",
-      "ziyouwa",
-      "Zeng",
-      "MinimalistYing",
-      "ziyunfei",
-      "wth"
-    ]
-  },
-  "Learn/Common_questions/Upload_files_to_a_web_server": {
-    "modified": "2020-07-16T22:35:42.078Z",
-    "contributors": [
-      "bingxl",
-      "xiwusheng",
-      "PokimLee",
-      "summerstarlee",
-      "ArcherGrey"
-    ]
-  },
-  "Learn/Common_questions/Using_Github_pages": {
-    "modified": "2020-07-16T22:35:52.151Z",
-    "contributors": [
-      "WoodCube",
-      "TeabugCC",
-      "zhangtianle",
-      "zhuangyin",
-      "Bernie_Lai"
-    ]
-  },
-  "Learn/Common_questions/What_are_browser_developer_tools": {
-    "modified": "2020-08-09T19:35:32.533Z",
-    "contributors": [
-      "DarkStory",
-      "eelord",
-      "ziyouwa",
-      "Atractylodes",
-      "wth",
-      "ziyunfei",
-      "zhaoy875"
-    ]
-  },
-  "Learn/Common_questions/What_are_hyperlinks": {
+  "Learn/Common_questions/Web_mechanics/What_are_hyperlinks": {
     "modified": "2020-07-16T22:35:43.473Z",
     "contributors": [
       "jingkaimori",
@@ -2431,7 +2452,7 @@
       "wth"
     ]
   },
-  "Learn/Common_questions/What_is_a_URL": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_URL": {
     "modified": "2020-10-09T04:39:23.544Z",
     "contributors": [
       "benniks",
@@ -2445,7 +2466,7 @@
       "wth"
     ]
   },
-  "Learn/Common_questions/What_is_a_domain_name": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_domain_name": {
     "modified": "2020-08-08T19:40:26.068Z",
     "contributors": [
       "DarkStory",
@@ -2461,7 +2482,7 @@
       "wth"
     ]
   },
-  "Learn/Common_questions/What_is_a_web_server": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_web_server": {
     "modified": "2020-07-16T22:35:32.316Z",
     "contributors": [
       "grape",
@@ -2474,27 +2495,6 @@
       "GHLgh",
       "ziyunfei",
       "wth"
-    ]
-  },
-  "Learn/Common_questions/What_is_accessibility": {
-    "modified": "2020-07-16T22:35:46.965Z",
-    "contributors": ["ziyunfei", "wth"]
-  },
-  "Learn/Common_questions/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:33.819Z",
-    "contributors": ["What-username-will-make-you-feel-cute", "GHLgh"]
-  },
-  "Learn/Common_questions/set_up_a_local_testing_server": {
-    "modified": "2020-07-16T22:35:53.993Z",
-    "contributors": [
-      "yi2sun",
-      "Singee",
-      "chaosdog",
-      "zihengCat",
-      "ElliottZheng",
-      "Kiekerti",
-      "overcat",
-      "Selence1988"
     ]
   },
   "Learn/Forms": {
@@ -5082,6 +5082,10 @@
   "Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow": {
     "modified": "2020-10-15T22:13:56.821Z",
     "contributors": ["wbamberg", "ClassJm"]
+  },
+  "Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot": {
+    "modified": "2020-10-15T22:35:17.746Z",
+    "contributors": ["liuyuxiang806"]
   },
   "Mozilla/Add-ons/WebExtensions/API/downloads": {
     "modified": "2020-10-15T22:24:32.261Z",
@@ -9189,10 +9193,6 @@
   "Web/API/Element/nextElementSibling": {
     "modified": "2019-10-05T16:51:15.466Z",
     "contributors": ["VictorDu", "rguanghui", "teoli", "khalid32", "ziyunfei"]
-  },
-  "Web/API/Element/openOrClosedShadowRoot": {
-    "modified": "2020-10-15T22:35:17.746Z",
-    "contributors": ["liuyuxiang806"]
   },
   "Web/API/Element/outerHTML": {
     "modified": "2019-03-24T00:15:11.770Z",
@@ -16533,10 +16533,6 @@
       "ziyunfei",
       "ethertank"
     ]
-  },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6": {
-    "modified": "2019-11-11T06:43:23.528Z",
-    "contributors": ["codimiracle"]
   },
   "Web/API/XMLHttpRequest/XMLHttpRequest": {
     "modified": "2020-05-20T05:15:18.208Z",
