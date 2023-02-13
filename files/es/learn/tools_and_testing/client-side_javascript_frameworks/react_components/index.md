@@ -39,14 +39,14 @@ En este punto, nuestra aplicación es un monolito. Antes de hacer que haga cosas
 
 Definir un componente puede parecer complicado hasta que tenga algo de practica, pero el principio es:
 
-- Si este representa un `fragmento` obvia de tu aplicación, probablemente sea un componente.
+- Si este representa un "fragmento" obvio de tu aplicación, probablemente sea un componente.
 - Si se reutiliza frecuentemente, probablemente sea un componente.
 
-El segundo punto es especialmente valiosa: crear un componente a partir de los elementos comunes de la UI permite que cambies tu código en un solo lugar y ver esos cambios en todos los lugares donde se usa ese componente. Tampoco es necesario dividir todo en componentes. Tomemos el segundo punto como inspiración y hagamos un componente a partir de la parte más importante y más reutilizada de la interfaz de usuario: un elemento de la lista de tareas pendientes.
+El segundo punto es especialmente valioso: crear un componente a partir de los elementos comunes de la UI permite que cambies tu código en un solo lugar y ver esos cambios en todos los lugares donde se usa ese componente. Tampoco es necesario dividir todo en componentes. Tomemos el segundo punto como inspiración y hagamos un componente a partir de la parte más importante y más reutilizada de la interfaz de usuario: un elemento de la lista de tareas pendientes.
 
 ## Haz un `<Todo />`
 
-Antes de que podamos crear un componente, debemos crear un archivo nuevo para el. De echo, debemos crear un directorio para nuestros componentes. Los siguientes comandos crean un directorio `components` y luego, dentro de este, un archivo llamado `Todo.js`. Asegurate de estar en la raiz de tu aplicación antes de ejecutarlas.
+Antes de que podamos crear un componente, debemos crear un archivo nuevo para él. De echo, debemos crear un directorio para nuestros componentes. Los siguientes comandos crean un directorio `components` y luego, dentro de este, un archivo llamado `Todo.js`. Asegurate de estar en la raíz de tu aplicación antes de ejecutarlas.
 
 ```bash
 mkdir src/components
