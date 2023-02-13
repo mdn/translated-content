@@ -1,5 +1,5 @@
 ---
-title: Componentizando nuestra app de React
+title: Creando componentes en nuestra app de React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 l10n:
   sourceCommit: 16d3095f33bd0655b01098ce662e3014510fdef6
@@ -29,7 +29,7 @@ En este punto, nuestra aplicación es un monolito. Antes de hacer que haga cosas
     <tr>
       <th scope="row">Objetivo:</th>
       <td>
-        Mostrar una forma sensata de dividir nuestra aplicación todo list en componentes.
+        Mostrar una forma sensata de dividir nuestra aplicación _Todo list_ (lista de tareas) en componentes.
       </td>
     </tr>
   </tbody>
@@ -53,7 +53,7 @@ mkdir src/components
 touch src/components/Todo.js
 ```
 
-Nuestro archivo nuevo `Todo.js` esta vacio actualmente! Abrelo y agrega la primera linea:
+Nuestro archivo nuevo `Todo.js` esta vació actualmente! Ábrelo y agrega la primera linea:
 
 ```jsx
 import React from "react";
@@ -124,13 +124,13 @@ No queremos comer unicamente; tenemos otras cosas que - bueno - que hacer. A con
 
 ## Haz un `<Todo />` único
 
-Los componentes son poderosos porque nos permiten reutilizar partes de nuestra UI, y hacer referencia a un lugar para el origen de nuestra UI. El problema es que normalmente no queremos reutilizar todos los componentes, queremos reutilizar la mayoria, y cambiar piezas pequeñas. Aqui es donde llegan los props.
+Los componentes son poderosos porque nos permiten reutilizar partes de nuestra UI, y hacer referencia a un lugar para el origen de nuestra UI. El problema es que normalmente no queremos reutilizar todos los componentes, queremos reutilizar la mayoría, y cambiar piezas pequeñas. Aquí es donde llegan los _props_ (propiedades).
 
 ### ¿Que hay en un `name`?
 
 Para rastrear los nombres de las tareas que queremos completar, debemos asegurarnos de que cada componente `<Todo />` renderize un nombre único.
 
-En `App.js` asigna una propiedad name a cada `<Todo />`. Vamos a usar los nombres de nuestras tareas que teniamos anteriormente:
+En `App.js` asigna una propiedad `name` a cada `<Todo />`. Vamos a usar los nombres de nuestras tareas que teníamos anteriormente:
 
 ```jsx
 <Todo name="Eat" />
@@ -138,11 +138,11 @@ En `App.js` asigna una propiedad name a cada `<Todo />`. Vamos a usar los nombre
 <Todo name="Repeat" />
 ```
 
-Cuando actualize su navegador, verá... exactamente lo mismo que antes. Le agregamos algunas props a nuestro `<Todo />`, pero no lo estamos usando todavia. Vamos de vuelta a `Todo.js` y solucionemos eso.
+Cuando actualice su navegador, verá... exactamente lo mismo que antes. Le agregamos algunas _props_ a nuestro `<Todo />`, pero no lo estamos usando todavía. Vamos de vuelta a `Todo.js` y solucionemos eso.
 
 Primero modifique la definición de su función `Todo()` para que tome `props` como parámetro. Puede imprimir los `props` en un `console.log()`, si desea comprobar que el componente los recibe correctamente.
 
-Una vez que este seguro que su componente esta obteniendo los `props`, puede reemplazar todas las ocurrencias de `Eat` por el prop `name`. Recuerde: cuando está en medio de una expresión JSX, use llaves para inyectar el valor de una variable.
+Una vez que este seguro que su componente esta obteniendo los `props`, puede reemplazar todas las ocurrencias de `Eat` por el _prop_ `name`. Recuerde: cuando está en medio de una expresión JSX, use llaves para inyectar el valor de una variable.
 
 Poniendo todo eso junto, su función `Todo()` debería quedar así:
 
@@ -175,9 +175,9 @@ _Ahora_ su navegador debería mostrar tres tareas únicas. Sin embargo, queda ot
 
 ### ¿Está `completado`?
 
-Nuestra lista estática original, únicamente `Eat` estaba marcado. Una vez más, queremos reutilizar la mayoria de la UI que constituye el componente `<Todo />`, pero cambia una cosa. ¡Eso es un buen trabajo para otra prop!.
+En nuestra lista estática original, únicamente `Eat` estaba marcado. Una vez más, queremos reutilizar la mayoría de la UI que constituye el componente `<Todo />`, pero cambia una cosa. ¡Eso es un buen trabajo para otra _prop_!.
 
-Agrega una nueva prop a cada `<Todo />` en `App.js` llamado `completed`. El primero (`Eat`) debería tener el valor `true`; el resto debería ser `false`:
+Agrega una nueva _prop_ a cada `<Todo />` en `App.js` llamado `completed`. El primero (`Eat`) debería tener el valor `true`; el resto debería ser `false`:
 
 ```jsx
 <Todo name="Eat" completed={true} />
@@ -185,7 +185,7 @@ Agrega una nueva prop a cada `<Todo />` en `App.js` llamado `completed`. El prim
 <Todo name="Repeat" completed={false} />
 ```
 
-Para usar estos props, debemos volver a `Todo.js`. Cambia el atributo `defaultChecked` en el `<input />` para que su valor sea igual a la prop `completed`. Una vez terminado, el elemento `<input />` del componente `Todo` se verá así:
+Para usar estos _props_, debemos volver a `Todo.js`. Cambia el atributo `defaultChecked` en el `<input />` para que su valor sea igual a la _prop_ `completed`. Una vez terminado, el elemento `<input />` del componente `Todo` se verá así:
 
 ```jsx
 <input id="todo-0" type="checkbox" defaultChecked={props.completed} />
@@ -195,11 +195,11 @@ Y su navegador debería actualizarse para mostrar que solo `Eat` está marcado:
 
 ![Our todo list app, now with differing checked states - some checkboxes are checked, others not](todo-list-differing-checked-states.png)
 
-Si cambia el prop `completed` en cada componente `<Todo />`, su navegador marcará o desmarcará los checkboxes equivalentes respectivamente.
+Si cambia el _prop_ `completed` en cada componente `<Todo />`, su navegador marcará o desmarcará los checkbox equivalentes respectivamente.
 
 ### Asigna algún `id`, porfavor
 
-Ahora, nuestro componente `<Todo />` asigna un atributo `id` `todo-0` a cada tarea. Esto es una mala practica en HTML porque los [atributos `id`](/es/docs/Web/HTML/Global_attributes/id) deben ser únicos (son utilizados como un identificador único para fragmentos de documentos, por CSS, JavaScript, etc.). Esto significa que debemos darle a nuestro componente un `id` que tome un valor único para cada `Todo`
+Ahora, nuestro componente `<Todo />` asigna un atributo `id` con el valor `todo-0` a cada tarea. Esto es una mala practica en HTML porque los [atributos `id`](/es/docs/Web/HTML/Global_attributes/id) deben ser únicos (son utilizados como un identificador único para fragmentos de documentos, por CSS, JavaScript, etc.). Esto significa que debemos darle a nuestro componente un `id` que tome un valor único para cada `Todo`
 
 Para seguir con el mismo patron que teníamos inicialmente, vamos a darle a cada instancia del componente `<Todo />` un ID con el formato `todo-i`, donde `i` cada vez es mas grande por uno:
 
@@ -209,7 +209,7 @@ Para seguir con el mismo patron que teníamos inicialmente, vamos a darle a cada
 <Todo name="Repeat" completed={false} id="todo-2" />
 ```
 
-Ahora vuelve a `Todo.js` y usa la prop `id`. Es necesario reemplazar el valor del atributo `id` del elemento `<input />`, así como el valor del atributo `htmlFor` de su etiqueta:
+Ahora vuelve a `Todo.js` y usa la _prop_ `id`. Es necesario reemplazar el valor del atributo `id` del elemento `<input />`, así como el valor del atributo `htmlFor` de su etiqueta:
 
 ```jsx
 <div className="c-cb">
@@ -222,7 +222,7 @@ Ahora vuelve a `Todo.js` y usa la prop `id`. Es necesario reemplazar el valor de
 
 ## Hasta ahora, ¿Todo bien?
 
-Estamos haciendo un bueno uso de React, ¡pero podemos hacerlo mejor!, nuestro código es repetitivo. Las tres lineas que renderiza nuestro componente `<Todo />` son muy idénticos, con una sola diferencia: el valor de cada prop.
+Estamos haciendo un bueno uso de React, ¡pero podemos hacerlo mejor! nuestro código es repetitivo. Las tres lineas que renderiza nuestro componente `<Todo />` son muy idénticos, con una sola diferencia: el valor de cada _prop_.
 
 Podemos limpiar nuestro código con uno de las capacidades principales de JavaScript: La iteración. Para usar la iteración, primero debemos repensar nuestras tasks.
 
@@ -240,7 +240,7 @@ const DATA = [
 ];
 ```
 
-A continuación pasaremos `DATA` a `<App />` como una prop, llamado `tasks`, quedando de la siguiente manera nuestro código:
+A continuación pasaremos `DATA` a `<App />` como una _prop_, llamado `tasks`, quedando de la siguiente manera nuestro código:
 
 ```jsx
 ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
@@ -295,7 +295,7 @@ Ahora la aplicación luce como antes, y nuestro código es menos repetitivo.
 
 ## Claves únicas
 
-Ahora que React está renderizando nuestras tareas desde un arreglo, tiene que hacer un seguimiento de cuál es cuál para hacerlo correctamente. React intenta hacer esto por si mismo, pero podemos ayudarlo pasandole una prop `key` a nuestros componentes `<Todo />`. La `key` es un prop especial que es administrado por React - no puede usar la palabra `key` para cualquier otro próposito.
+Ahora que React está renderizando nuestras tareas desde un arreglo, tiene que hacer un seguimiento de cuál es cuál para hacerlo correctamente. React intenta hacer esto por si mismo, pero podemos ayudarlo pasándole una _prop_ `key` a nuestros componentes `<Todo />`. La `key` es un _prop_ especial que es administrado por React - no puede usar la palabra `key` para cualquier otro propósito.
 
 Debido a que las claves deben ser únicas, vamos a reutilizar el `id` de cada objeto de tarea como su clave. Actualize su constante `taskList` así.
 
@@ -313,7 +313,7 @@ const taskList = props.tasks.map((task) => (
 
 **Siempre debe pasar una clave unica a cualquier cosa que renderice con iteración.** Obviamente no cambiará nada en tu navegador, pero si no usas claves únicas, ¡React mostrará una advertencia en la consola y tal vés tu aplicación se comporte extraño!
 
-## Componentizando el resto de la aplicación
+## Creando el resto de componentes de la aplicación
 
 Ahora que hemos resuelto nuestro componente mas importante, podemos dividir el resto de nuestra aplicación en componentes.
 Recordando que los componentes son piezas obvias de la UI, o piezas reutilizables de la UI, o ambos, podemos hacer 2 componentes mas:
@@ -329,7 +329,7 @@ touch src/components/Form.js src/components/FilterButton.js
 
 ### El `<Form />`
 
-Abre `components/Form.js` ya haz lo siguiente:
+Abre `components/Form.js` y haz lo siguiente:
 
 - Importa `React` hasta arriba del archivo, como lo hicimos en `Todo.js`.
 - Crea un nuevo componente `Form()` con la misma estructura básica como `Todo()`, y exportalo.
@@ -368,9 +368,9 @@ export default Form;
 
 ### El \<FilterButton />
 
-Haz lo mismo que hiciste para crear `Form.js` dentro de `FilterButton.js`, pero llamando el componente `FilterButton()` y copia el HTML del primer botón dentro del `<div>` con la `clase` `filters` de `App.js` pegalo dentro del `return`
+Haz lo mismo que hiciste para crear `Form.js` dentro de `FilterButton.js`, pero llamando el componente `FilterButton()` y copia el HTML del primer botón dentro del `<div>` con la `class` `filters` de `App.js` pegalo dentro del `return`
 
-El arhivo debería leerse así:
+El archivo debería leerse así:
 
 ```jsx
 import React from "react";
@@ -388,15 +388,15 @@ function FilterButton(props) {
 export default FilterButton;
 ```
 
-> **Nota:** Podrias notar que estamos cometiendo el mismo error que cometimos por primera vez con el componente `<Todo />`, en que cada botón será lo mismo. ¡Esta bién! Vamos arreglarlo mas adelante en [Volver a los botones de filtro](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
+> **Nota:** Podrias notar que estamos cometiendo el mismo error que cometimos por primera vez con el componente `<Todo />`, en que cada botón será lo mismo. ¡Esta bien! Vamos arreglarlo mas adelante en [Volver a los botones de filtro](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
 
 ## Importando todos nuestros componentes
 
 Hagamos uso de nuestros nuevos componentes.
 
-Agrega mas `import` en `App.js` para importarlos.
+Agrega más `import` en `App.js` para importarlos.
 
-Luego, actualize el `return` de `App()` para que renderice nuestros componentes. Cuando termine, `App.js` se leerá así:
+Luego, actualice el `return` de `App()` para que renderice nuestros componentes. Cuando termine, `App.js` se leerá así:
 
 ```jsx
 import React from "react";
@@ -438,7 +438,7 @@ function App(props) {
 export default App;
 ```
 
-Con esto en su lugar, ¡estamos casi listos para abordar algo de interactividad en nuestra aplicación React!
+Con esto en su lugar, ¡estamos _casi_ listos para abordar algo de interactividad en nuestra aplicación React!
 
 ## Resumen
 
@@ -454,7 +454,7 @@ Y eso es todo en este artículo — hemos profundizado un poco en cómo dividir 
 
   - [Primeros pasos con React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - [Comenzando nuestro React todo list](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizando nuestra aplicación React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [Creando componentes en nuestra aplicación React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - [Interactividad en React: Eventos y estados](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - [Interactividad en React: Edición, filtrado, renderizado condicional](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - [Accesibilidad en React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
@@ -463,7 +463,7 @@ Y eso es todo en este artículo — hemos profundizado un poco en cómo dividir 
 - Ember
 
   - [Primeros pasos con Ember](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Structura y componentización de una aplicación Ember](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Estructura y componentes de una aplicación Ember](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
   - [Interactividad en Ember: Eventos, classes y estado](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
   - [Interactividad en Ember: funcionalidad del pie de pagina, renderizado condicional](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
   - [Enrutamiento en Ember](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
@@ -484,9 +484,9 @@ Y eso es todo en este artículo — hemos profundizado un poco en cómo dividir 
 - Svelte
 
   - [Primeros pasos con Svelte](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Comenzando nuestra aplicación Todo list en Svelte](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
   - [Comportamiento dinamico en Svelte: trabajando con variables y props](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Crenado componententes en nuestra aplicación de Svelte](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
   - [Svelte avanzado: Reactividad, ciclo de vida, accessibilidad](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
   - [Trabajando con Svelte stores](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
   - [Soporte de TypeScript en Svelte](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
