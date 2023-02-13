@@ -2578,7 +2578,6 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/parseFloat	/es/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/parseInt	/es/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/undefined	/es/docs/Web/JavaScript/Reference/Global_Objects/undefined
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/unescape	/es/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /es/docs/Web/JavaScript/Referencia/Objetos_globlales	/es/docs/Web/JavaScript/Reference/Global_Objects
 /es/docs/Web/JavaScript/Referencia/Operadores	/es/docs/Web/JavaScript/Reference/Operators
 /es/docs/Web/JavaScript/Referencia/Operadores/Adición	/es/docs/Web/JavaScript/Reference/Operators/Addition

@@ -13137,10 +13137,6 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/unescape": {
-    "modified": "2020-03-12T19:43:34.960Z",
-    "contributors": ["DracotMolver"]
-  },
   "Web/JavaScript/Reference/Iteration_protocols": {
     "modified": "2020-03-12T19:41:22.496Z",
     "contributors": ["SphinxKnight", "oagarcia"]
