@@ -13,7 +13,7 @@ Este tipo de funcionalidad se conseguía previamente haciendo uso de {{domxref("
 La especificación fetch difiere de `JQuery.ajax()` en dos formas principales:
 
 - El objeto Promise devuelto desde `fetch()` **no será rechazado con un estado de error HTTP** incluso si la respuesta es un error HTTP 404 o 500. En cambio, este se resolverá normalmente (con un estado `ok` configurado a false), y este solo sera rechazado ante un fallo de red o si algo impidió completar la solicitud.
-- Por defecto, `fetch` no enviará ni recibirá cookies del servidor, resultando en peticiones no autenticadas si el sitio permite mantentener una sesión de usuario (para mandar cookies, _credentials_ de la opción [init](/es/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) deberan ser configuradas). Desde [el 25 de agosto de 2017](https://github.com/whatwg/fetch/pull/585). La especificación cambió la politica por defecto de las credenciales a `same-origin`. Firefox cambió desde la versión 61.0b13.
+- Por defecto, `fetch` no enviará ni recibirá cookies del servidor, resultando en peticiones no autenticadas si el sitio permite mantentener una sesión de usuario (para mandar cookies, _credentials_ de la opción [init](/es/docs/Web/API/fetch#Parameters) deberan ser configuradas). Desde [el 25 de agosto de 2017](https://github.com/whatwg/fetch/pull/585). La especificación cambió la politica por defecto de las credenciales a `same-origin`. Firefox cambió desde la versión 61.0b13.
 
 Una petición básica de `fetch` es realmente simple de realizar. Eche un vistazo al siguente código:
 

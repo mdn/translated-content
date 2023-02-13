@@ -120,7 +120,7 @@ Scripts trying to access a frame's content are subject to the [same-origin polic
 
 ## Notas
 
-> **Note:** Starting in {{Gecko("6.0")}}, rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{cssxref("border-radius")}}.
+> **Note:** Starting in Gecko 6.0, rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{cssxref("border-radius")}}.
 
 ## Especificações
 

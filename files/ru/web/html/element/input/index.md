@@ -169,7 +169,7 @@ translation_of: Web/HTML/Element/input
 
 ### File inputs
 
-> **Примечание:** Starting in {{Gecko("2.0")}}, calling the `click()` method on an {{HTMLElement("input")}} element of type "file" opens the file picker and lets the user select files. See [Using files from web applications](/ru/docs/Using_files_from_web_applications) for an example and more details.
+> **Примечание:** Starting in Gecko 2.0, calling the `click()` method on an {{HTMLElement("input")}} element of type "file" opens the file picker and lets the user select files. See [Using files from web applications](/ru/docs/Using_files_from_web_applications) for an example and more details.
 
 You can't set the value of a file picker from a script; doing something like the following has no effect:
 
