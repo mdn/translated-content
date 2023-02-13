@@ -27,11 +27,11 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 
 ## 教程
 
-- [Using custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements)
+- [使用自定义元素](/zh-CN/docs/Web/Web_Components/Using_custom_elements)
   - : 介绍如何使用自定义元素的功能来创建简单的 web components，以及生命周期回调和其他更高级的功能。
-- [Using shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM)
+- [使用 shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM)
   - : 介绍 shadow DOM 的基础知识，展示如何向元素中附加 shadow DOM，添加到 shadow DOM 树，添加样式等等。
-- [Using templates and slots](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)
+- [使用 templates 和 slots](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)
   - : 介绍如何使用{{htmlelement("template")}} 和 {{htmlelement("slot")}} 元素定义可重用的 HTML 结构，然后在 Web components 中使用该结构。
 
 ## 参考
@@ -83,7 +83,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
   - : 包含一个 HTML 片段，不会在文档初始化时渲染。但是可以在运行时使用 JavaScript 显示。主要用作自定义元素结构的基础。关联的 DOM 接口是{{domxref("HTMLTemplateElement")}}。
 - {{htmlelement("slot")}}
   - : web component 中的一个占位符，你可以填充自己的标记，这样你就可以创建单独的 DOM 树并将它们呈现在一起。关联的 DOM 接口是{{domxref("HTMLSlotElement")}}。
-- The [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot) global HTML attribute
+- [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot) 全局 HTML 属性
   - : 将在 shadow DOM 树中的插槽分配给一个元素。
 - {{domxref("Element.assignedSlot")}}
   - : 一个只读属性，它返回对插入此元素的 {{htmlelement("slot")}} 的引用。
@@ -92,7 +92,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 - {{domxref("Element")}} 扩展
   - : 与插槽相关的 `Element` 接口的扩展：
     - {{domxref("Element.slot")}}：返回附加到元素上的 shadow DOM 插槽的名字。
-- CSS pseudo-elements
+- CSS 伪元素
   - : slots 特别相关的伪元素：
     - {{cssxref("::slotted")}}：匹配任何已经插入一个 slot 的内容。
 - {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} 事件
