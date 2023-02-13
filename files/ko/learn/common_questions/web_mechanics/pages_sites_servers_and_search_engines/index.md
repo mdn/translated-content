@@ -68,7 +68,7 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 - _scripts(스크립트)_ — 페이지에 interactivity(대화식 이용)을 첨가
 - _media_(미디어) — 사진, 소리, 동영상
 
-> **참고:**브라우저는 또한 {{Glossary("PDF")}} 파일이나 이미지를 보여줄 수 있다. 그러나 **웹 페이지**는 HTML 문서를 의미하는 용어이다. 아니라면 우리는 **문서(document)**라는 용어를 사용한다.
+> **참고:**브라우저는 또한 {{Glossary("PDF")}} 파일이나 이미지를 보여줄 수 있다. 그러나 **웹 페이지**는 HTML 문서를 의미하는 용어이다. 아니라면 우리는 **문서**(**document**)라는 용어를 사용한다.
 
 웹에서 이용하는 모든 웹 페이지는 유일한 주소를 통해 접근할 수 있습니다. 한 페이지에 접근하기 위해서는, 브라우저의 주소창에 주소를 적으면 됩니다.
 
