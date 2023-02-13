@@ -34,6 +34,6 @@ slug: Learn/Tools_and_testing/Cross_browser_testing
 - [实现特征检查](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
   - : 特征检查包括确定浏览器是否支持确定的代码块，据此运行不同的代码，让浏览器能一直正常工作，而不是在一些浏览器上崩溃/报错。本文详细介绍了愈合如何写简单的特征检查，怎么使用库来加速实现，和一些像 `@supports` 的本地特性来进行特征检查。
 - [自动测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-  - : 每天多次在几个浏览器和设备上手动运行可能会枯燥，浪费时间。有效处理这个问题，你需要熟悉自动化工具。在本文中，我们介绍可用的方法，怎么使用任务运行程序，以及学习怎么使用商业浏览器自动化测试工具（如 Sauce Labs 和 Browser Stack）的基础知识。
+  - : 每天多次在几个浏览器和设备上手动运行可能会枯燥，浪费时间。有效处理这个问题，你需要熟悉自动化工具。在本文中，我们介绍可用的方法，怎么使用任务运行程序，以及学习如何使用商业浏览器自动化测试工具（如 Sauce Labs 和 Browser Stack）。
 - [建立你自己的自动化测试环境](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)
   - : 在本文中，我们会教你怎么安装你自己的自动化环境，并使用 Selenium / WebDriver 和测试库（如 selenium-webdriver for Node）运行自己的测试。我们还将介绍如何将本地测试环境与商业应用程序集成在一起，正如上一篇文章所讨论的。
