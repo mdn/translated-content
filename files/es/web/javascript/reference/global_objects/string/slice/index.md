@@ -69,9 +69,9 @@ cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.slice")}}
+{{Compat}}
 
 ## Vea También
 
