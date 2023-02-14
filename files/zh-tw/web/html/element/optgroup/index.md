@@ -46,7 +46,7 @@ This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("範例")}}
 
 ## 規範
 

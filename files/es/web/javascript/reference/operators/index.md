@@ -1,13 +1,6 @@
 ---
 title: Expresiones y operadores
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - Descripción
-  - JavaScript
-  - Operadores
-  - Operators
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators
 original_slug: Web/JavaScript/Referencia/Operadores
 ---
 

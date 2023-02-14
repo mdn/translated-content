@@ -1,14 +1,6 @@
 ---
 title: AnalyserNode.minDecibels
 slug: Web/API/AnalyserNode/minDecibels
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - minDecibels
-browser-compat: api.AnalyserNode.minDecibels
 ---
 
 {{ APIRef("Web Audio API") }}

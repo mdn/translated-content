@@ -199,7 +199,7 @@ if ("Promise" in window) {
 
 這個範例從點擊按鈕開始。您的瀏覽器需要支援 Promise。在短時間內點擊按鈕許多次，您甚至將看到不同的 promises 一個接一個地被實現。
 
-{{EmbedLiveSample("Advanced_Example", "500", "200")}}
+{{EmbedLiveSample("進階範例", "500", "200")}}
 
 ## 使用 XHR 載入圖片
 

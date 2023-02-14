@@ -1,14 +1,6 @@
 ---
 title: DOMRect.fromRect()
 slug: Web/API/DOMRect/fromRect
-tags:
-  - API
-  - DOMRect
-  - Geometry
-  - Method
-  - Reference
-browser-compat: api.DOMRect.fromRect
-translation_of: Web/API/DOMRect/fromRect
 ---
 
 {{APIRef("Geometry Interfaces")}}

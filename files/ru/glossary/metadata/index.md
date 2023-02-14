@@ -9,10 +9,6 @@ original_slug: Глоссарий/Метаданные
 
 ## Смотрите также
 
-### Общие знания
-
-- {{interwiki("wikipedia", "metadata", "metadata")}} в Википедии
-
 ### Метаданные в HTML
 
 - Элемент {{htmlelement("meta")}} в MDN

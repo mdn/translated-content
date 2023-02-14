@@ -1,14 +1,6 @@
 ---
 title: OffscreenCanvas.width
 slug: Web/API/OffscreenCanvas/width
-tags:
-  - API
-  - Canvas
-  - Experimental
-  - OffscreenCanvas
-  - Property
-  - Reference
-translation_of: Web/API/OffscreenCanvas/width
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
@@ -31,11 +23,9 @@ offscreen.width; // 256
 offscreen.width = 512;
 ```
 
-## 상세
+## 명세서
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "#dom-offscreencanvas-width", "OffscreenCanvas.width")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

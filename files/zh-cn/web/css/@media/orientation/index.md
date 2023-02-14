@@ -20,7 +20,7 @@ slug: Web/CSS/@media/orientation
 - `landscape`
   - : viewport 处于横向，即宽度大于高度。
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -56,7 +56,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

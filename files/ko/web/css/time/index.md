@@ -1,12 +1,6 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - CSS
-  - CSS Date Type
-  - Reference
-  - Web
-translation_of: Web/CSS/time
 ---
 {{CSSRef}}
 

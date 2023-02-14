@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: illegal character'
 slug: Web/JavaScript/Reference/Errors/Illegal_character
-tags:
-  - ZWSP
-  - 구문 에러
-  - 자바스크립트
-  - 폭 없는 공백
-translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 ---
 
 {{jsSidebar("Errors")}}

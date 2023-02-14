@@ -38,19 +38,19 @@ vertical-align: unset;
 
 ```html hidden
 <p>
-top:<img style="vertical-align:top" src="https://mdn.mozillademos.org/files/15189/star.png"/>
-middle:<img style="vertical-align:middle" src="https://mdn.mozillademos.org/files/15189/star.png"/>
-bottom:<img style="vertical-align:bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/>
-super:<img style="vertical-align:super" src="https://mdn.mozillademos.org/files/15189/star.png"/>
-sub:<img style="vertical-align:sub" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+top:<img style="vertical-align:top" src="star.png"/>
+middle:<img style="vertical-align:middle" src="star.png"/>
+bottom:<img style="vertical-align:bottom" src="star.png"/>
+super:<img style="vertical-align:super" src="star.png"/>
+sub:<img style="vertical-align:sub" src="star.png"/>
 </p>
 <p>
-text-top:<img style="vertical-align:text-top" src="https://mdn.mozillademos.org/files/15189/star.png"/>
-text-bottom:<img  style="vertical-align:text-bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/>
-0.2em:<img style="vertical-align:0.2em" src="https://mdn.mozillademos.org/files/15189/star.png"/>
--1em:<img  style="vertical-align:-1em" src="https://mdn.mozillademos.org/files/15189/star.png"/>
-20%:<img style="vertical-align:20%" src="https://mdn.mozillademos.org/files/15189/star.png"/>
--100%:<img  style="vertical-align:-100%" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+text-top:<img style="vertical-align:text-top" src="star.png"/>
+text-bottom:<img  style="vertical-align:text-bottom" src="star.png"/>
+0.2em:<img style="vertical-align:0.2em" src="star.png"/>
+-1em:<img  style="vertical-align:-1em" src="star.png"/>
+20%:<img style="vertical-align:20%" src="star.png"/>
+-100%:<img  style="vertical-align:-100%" src="star.png"/>
 </p>
 ```
 
@@ -109,7 +109,7 @@ td {
 
 {{EmbedLiveSample("vertical-align-table", 1200, 230)}}
 
-> **Примечание:** **Обратите внимание:** свойство vertical-align применяется только к строчным элементам и элементам ячеек таблицы: его нельзя использовать для вертикального позиционирования [блочных элементов](/ru/docs/Web/HTML/Block-level_elements).
+> **Примечание:** свойство vertical-align применяется только к строчным элементам и элементам ячеек таблицы: его нельзя использовать для вертикального позиционирования [блочных элементов](/ru/docs/Web/HTML/Block-level_elements).
 
 {{cssinfo}}
 
@@ -173,10 +173,10 @@ td {
 ### HTML
 
 ```html
-<div>Изображение <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по умолчанию.</div>
-<div>Изображение <img class="top" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по верхнему краю.</div>
-<div>Изображение <img class="bottom" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по нижнему краю.</div>
-<div>Изображение <img class="middle" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по центру.</div>
+<div>Изображение <img src="frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по умолчанию.</div>
+<div>Изображение <img class="top" src="frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по верхнему краю.</div>
+<div>Изображение <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по нижнему краю.</div>
+<div>Изображение <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /> с выравниванием по центру.</div>
 ```
 
 ### CSS

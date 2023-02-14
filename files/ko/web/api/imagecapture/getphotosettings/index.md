@@ -1,14 +1,6 @@
 ---
 title: ImageCapture.getPhotoSettings()
 slug: Web/API/ImageCapture/getPhotoSettings
-tags:
-  - API
-  - Experimental
-  - ImageCapture
-  - MediaStream Image Capture API
-  - Method
-  - Reference
-translation_of: Web/API/ImageCapture/getPhotoSettings
 ---
 
 {{APIRef("MediaStream Image")}}

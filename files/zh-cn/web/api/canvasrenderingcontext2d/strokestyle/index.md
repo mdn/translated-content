@@ -28,7 +28,7 @@ ctx.strokeStyle = pattern;
 
 ## 示例
 
-### 使用 `strokeStyle` 属性设置不同的颜色
+### 更改形状的轮廓线颜色
 
 这是一段简单的代码片段，使用 `strokeStyle` 属性设置不同的颜色。
 
@@ -41,80 +41,46 @@ ctx.strokeStyle = pattern;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.strokeStyle = "blue";
 ctx.strokeRect(10, 10, 100, 100);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.strokeStyle = "blue";
-ctx.strokeRect(10, 10, 100, 100);</textarea>
-```
+{{ EmbedLiveSample('更改形状的轮廓线颜色', 700, 160) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+### 使用循环创建多种轮廓线颜色
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-### `strokeStyle` 例子
-
-这个例子使用 `strokeStyle 属性改变图形轮廓线的颜色。`我们使用 {{domxref("CanvasRenderingContext2D.arc", "arc()")}} 绘制圆形来代替正方形。
-
-```js
-var ctx = document.getElementById('canvas').getContext('2d');
-for (var i=0;i<6;i++){
-  for (var j=0;j<6;j++){
-    ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' +
-                      Math.floor(255-42.5*j) + ')';
-    ctx.beginPath();
-    ctx.arc(12.5+j*25,12.5+i*25,10,0,Math.PI*2,true);
-    ctx.stroke();
-  }
-}
-```
+这个例子使用 `strokeStyle` 属性改变图形轮廓线的颜色。我们使用 {{domxref("CanvasRenderingContext2D.arc", "arc()")}} 绘制圆形来代替正方形。
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
+```js
+const ctx = document.getElementById("canvas").getContext("2d");
+
+for (let i = 0; i < 6; i++) {
+  for (let j = 0; j < 6; j++) {
+    ctx.strokeStyle = `rgb(
+        0,
+        ${Math.floor(255 - 42.5 * i)},
+        ${Math.floor(255 - 42.5 * j)})`;
+    ctx.beginPath();
+    ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+    ctx.stroke();
+  }
+}
+```
+
 结果如下显示：
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
+{{EmbedLiveSample("使用循环创建多种轮廓线颜色", "180", "180", "canvas_strokestyle.png")}}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

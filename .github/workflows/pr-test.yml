@@ -10,6 +10,9 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - ".github/workflows/pr-test.yml"
+      - "files/**"
 
 jobs:
   tests:
@@ -33,7 +36,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: 18
           cache: "yarn"
           cache-dependency-path: mdn/content/yarn.lock
 
@@ -47,16 +50,15 @@ jobs:
           # Use the GitHub API to get the list of changed files
           # documenation: https://docs.github.com/rest/commits/commits#compare-two-commits
           DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
-            --paginate \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
 
-          # filter out files that are not markdown or html
-          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(html|md)$" | xargs)
+          # filter out files that are not markdown files
+          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
           echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> $GITHUB_ENV
 
           # filter out files that are not attachments
           # note that we should get the absolute path of the changed attachments
-          GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs readlink -e | tr "\n" " ")
+          GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs readlink -e | xargs)
           echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

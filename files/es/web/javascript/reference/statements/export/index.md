@@ -1,13 +1,6 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Módulos
-  - Sentencia
-  - export
-translation_of: Web/JavaScript/Reference/Statements/export
 original_slug: Web/JavaScript/Referencia/Sentencias/export
 ---
 

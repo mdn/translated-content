@@ -15,8 +15,8 @@ CSS 网格是一个用于 web 的二维布局系统。利用网格，你可以�
         HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">
           HTML 简介</a
         >)，以及了解 CSS 如何工作的 (学习
-        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">CSS 简介</a> 和
-        <a href="/zh-CN/docs/Learn/CSS/Styling_boxes">盒子样式</a>。)
+        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">CSS 简介</a>和<a
+          href="/zh-CN/docs/Learn/CSS/Building_blocks">盒子样式</a>。)
       </td>
     </tr>
     <tr>
@@ -28,8 +28,6 @@ CSS 网格是一个用于 web 的二维布局系统。利用网格，你可以�
   </tbody>
 </table>
 
-> **备注：** 本篇中旧版教程主要讲如何自己编写网格布局，最后过渡到浏览器支持的 CSS Grid Layout。而当前（2019-04-29）大多数浏览器已经支持了 CSS Grid Layout，没必要自己编写了，新版教程仅介绍 CSS Grid Layout 的用法
-
 ## 什么是网格布局？
 
 网格是由一系列水平及垂直的线构成的一种布局模式。根据网格，我们能够将设计元素进行排列，帮助我们设计一系列具有固定位置以及宽度的元素的页面，使我们的网站页面更加统一。
@@ -37,8 +35,6 @@ CSS 网格是一个用于 web 的二维布局系统。利用网格，你可以�
 一个网格通常具有许多的**列（column）**与**行（row）**，以及行与行、列与列之间的间隙，这个间隙一般被称为**沟槽（gutter）**。
 
 ![](grid.png)
-
-\[临时图；将很快替换更好的图片。]
 
 > **备注：** 任何有设计背景的人似乎都感到惊讶，CSS 没有内置的网格系统，而我们似乎使用各种次优方法来创建网格状的设计。正如你将在本文的最后一部分中发现的那样，这将被改变，但是你可能需要知道在未来一段时间内创建网格的现有方法。
 
@@ -52,28 +48,28 @@ CSS 网格是一个用于 web 的二维布局系统。利用网格，你可以�
 
 ### 定义一个网格
 
-一如既往，你可以下载教程[文件](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html)（你可以在线看到[效果](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)）。例子中有一个容器，容器中有一些子项。默认情况下，子项按照正常布局流自顶而下排布。在这篇文章中，我们会从这开始，对这些文件做一些改变，来了解网格是如何工作的。
+和往常一样，你可以下载，然后在文本编辑器中打开并浏览教程的[起始文件](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/0-starting-point.html)（你可以[在这里查看实时的效果](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)）。你会看到一个带有容器的示例，容器中有一些子项。默认情况下，子项按照正常布局流自顶而下排布。在这篇教程的第一部分，我们会从这开始，通过对这个文件做一些改变，来了解网格是如何工作的。
 
-首先，将容器的{{cssxref("display")}}属性设置为`grid`来定义一个网络。与弹性盒子一样，将父容器改为网格布局后，他的直接子项会变为网格项。把下面的 css 规则加到你的文件中。
+首先，我们通过把容器的 {{cssxref("display")}} 属性设置为 `grid` ,来定义一个网格。与弹性盒子一样，将父容器改为网格布局后，他的直接子项会变为网格项。把下面的 css 规则加到你的文件中。
 
-```plain
+```css
 .container {
-    display: grid;
+  display: grid;
 }
 ```
 
-与弹性盒子不同的是，在定义网格后，网页并不会马上发生变化。因为`display: grid`的声明只创建了一个只有一列的网格，所以你的子项还是会像正常布局流那样从上而下一个接一个的排布。
+与弹性盒子不同的是，在定义网格后，网页并不会马上发生变化。因为 `display: grid` 的声明只创建了一个只有一列的网格，所以子项还是会像正常布局流那样，自上而下、一个接一个的排布。
 
 为了让我们的容器看起来更像一个网格，我们要给刚定义的网格加一些列。那就让我们加三个宽度为`200px`的列。当然，这里可以用任何长度单位，包括百分比。
 
-```plain
+```css
 .container {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
 }
 ```
 
-在规则里加入你的第二个声明。刷新页面后，你会看到子项们排进了新定义的网格中。
+在你的 CSS 中加入第二个规则。刷新页面后，你会看到子项们排进了新定义的网格中。
 
 ```css hidden
 body {
@@ -114,27 +110,27 @@ body {
 
 ### 使用 fr 单位的灵活网格
 
-除了长度和百分比，我们也可以用`fr`这个单位来灵活地定义网格的行与列的大小。这个单位表示了可用空间的一个比例，可能有点抽像，看看下面的例子吧。
+除了长度和百分比，我们也可以用 `fr` 这个单位来灵活地定义网格的行与列的大小。这个单位代表网格容器中可用空间的一份，可能有点抽像，看看下面的例子吧。
 
-使用下面的规则来创建 3 个`1fr`的列：
+使用下面的规则来修改你的网格轨道，创建 3 个宽度为 `1fr` 的列：
 
-```plain
+```css
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 ```
 
 将窗口调窄（由于示例中设定了{{cssxref("max-width")}}，可能需要很窄），你应该能看到每一列的宽度可以会随着可用空间变小而变小。`fr` 单位按比例划分了可用空间，如果没有理解，可以试着改一下数值，看看会发生什么，比如下面的代码：
 
-```plain
+```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 ```
 
-这个定义里，第一列被分配了`2fr`可用空间，余下的两列各被分配了`1fr`的可用空间，这会使得第一列的宽度是第二第三列的两倍。另外，`fr`可以与一般的长度单位混合使用，比如`grid-template-columns: 300px 2fr 1fr`，那么第一列宽度是`300px`，剩下的两列会根据除去`300px`后的可用空间按比例分配。
+这个定义里，第一列被分配了 `2fr` 可用空间，余下的两列各被分配了 `1fr` 的可用空间，这会使得第一列的宽度更大。另外，`fr`可以与一般的长度单位混合使用。比如设置 `grid-template-columns: 300px 2fr 1fr`，那么第一列宽度是`300px`，剩下的两列会根据剩余的可用空间按比例分配。
 
 ```css hidden
 body {
@@ -225,9 +221,9 @@ body {
 
 {{ EmbedLiveSample('网格间隙', '100%', 400) }}
 
-> **备注：** `*gap`属性曾经有一个`grid-`前缀，不过后来的标准进行了修改，目的是让他们能够在不同的布局方法中都能起作用。尽管现在这个前缀不会影响语义，但为了代码的健壮性，你可以把两个属性都写上。
+> **备注：** `gap`属性曾经有一个`grid-`前缀，不过后来的标准进行了修改，目的是让他们能够在不同的布局方法中都能起作用。尽管现在这个前缀不会影响语义，但为了代码的健壮性，你可以把两个属性都写上。
 
-```plain
+```css
 .container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -236,25 +232,25 @@ body {
 }
 ```
 
-### 重复构建行/列
+### 重复构建轨道组
 
 你可以使用`repeat`来重复构建具有某些宽度配置的某些列。举个例子，如果要创建多个等宽轨道，可以用下面的方法。
 
-```plain
+```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 ```
 
-和之前一样，你仍然得到了 3 个`1fr`的列。第一个传入 repeat 函数的值（`3`）表明了后续列宽的配置要重复多少次，而第二个值（`1fr`）表示需要重复的构建配置，这个配置可以具有多个长度设定。例如`repeat(2, 2fr 1fr)`，如果你仍然不明白，可以实际测试一下效果，这相当于填入了`2fr 1fr 2fr 1fr`。
+和之前一样，你仍然得到了 3 个 `1fr` 的列。第一个传入 repeat 函数的值（`3`）表明了后续列宽的配置要重复多少次，而第二个值（`1fr`）表示需要重复的构建配置，这个配置可以具有多个长度设定。例如`repeat(2, 2fr 1fr)`，如果你仍然不明白，可以实际测试一下效果，这相当于填入了 `2fr 1fr 2fr 1fr`。
 
 ### 显式网格与隐式网格
 
-到目前为止，我们定义过了列，但还没有管过行。但在这之前，我们要来理解一下显式网格和隐式网格。显式网格是我们用`grid-template-columns` 或 `grid-template-rows` 属性创建的。而隐式网格则是当有内容被放到网格外时才会生成的。显式网格与隐式网格的关系与弹性盒子的 main 和 cross 轴的关系有些类似。
+到目前为止，我们定义过了列，但还没有管过行。但在这之前，我们要来理解一下显式网格和隐式网格。显式网格是我们用 `grid-template-columns` 或 `grid-template-rows` 属性创建的。而隐式网格则是当有内容被放到网格外时才会生成的。显式网格与隐式网格的关系与弹性盒子的 main 和 cross 轴的关系有些类似。
 
-隐式网格中生成的行/列大小是参数默认是`auto`，大小会根据放入的内容自动调整。当然，你也可以使用{{cssxref("grid-auto-rows")}}和{{cssxref("grid-auto-columns")}}属性手动设定隐式网格的大小。下面的例子将`grid-auto-rows`设为了`100px`，然后你可以看到那些隐式网格中的行（因为这个例子里没有设定{{cssxref("grid-template-rows")}}，因此，所有行都位于隐式网格内）现在都是 100 像素高了。
+隐式网格中生成的行/列大小是参数默认是 `auto` ，大小会根据放入的内容自动调整。当然，你也可以使用{{cssxref("grid-auto-rows")}}和{{cssxref("grid-auto-columns")}}属性手动设定隐式网格轨道的大小。下面的例子将`grid-auto-rows`设为了`100px`，然后你可以看到那些隐式网格中的行（因为这个例子里没有设定{{cssxref("grid-template-rows")}}，因此，所有行都位于隐式网格内）现在都是 100 像素高了。
 
 译者注：简单来说，隐式网格就是为了放显式网格放不下的元素，浏览器根据已经定义的显式网格自动生成的网格部分。
 
@@ -298,26 +294,26 @@ body {
 
 {{ EmbedLiveSample('显式网格与隐式网格', '100%', 400) }}
 
-### 方便的 minmax() 函数
+### minmax() 函数
 
-100 像素高的行/列有时可能会不够用，因为时常会有比 100 像素高的内容加进去。所以，我们希望可以将其设定为至少 100 像素，而且可以跟随内容来自动拓展尺寸保证能容纳所有内容。显而易见，你很难知道网页上某个元素的尺寸在不同情况下会变成多少，一些额外的内容或者更大的字号就会导致许多能做到像素级精准的设计出现问题。所以，我们有了{{cssxref("minmax")}}函数。
+100 像素高的轨道有时可能会不够用，因为时常会有比 100 像素高的内容加进去。所以，我们可以将其设定为至少 100 像素，并且能够跟随内容来自动拓展尺寸，从而保证能容纳所有内容。显而易见，你很难知道网页上某个元素的尺寸在不同情况下会变成多少，一些额外的内容或者更大的字号就会导致许多能做到像素级精准的设计出现问题。所以，我们有了{{cssxref("minmax")}}函数。
 
 {{cssxref("minmax")}} 函数为一个行/列的尺寸设置了取值范围。比如设定为 `minmax(100px, auto)`，那么尺寸就至少为 100 像素，并且如果内容尺寸大于 100 像素则会根据内容自动调整。在这里试一下把 `grid-auto-rows` 属性设置为`minmax`函数。
 
-```plain
+```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
 }
 ```
 
-如果所有网格内的内容均小于 100 像素，那么看起来不会有变化，但如果在某一项中放入很长的内容或者图片，你可以看到这个格子所在的哪一行的高度变成能刚好容纳内容的高度了。注意我们修改的是 `grid-auto-rows`，因此只会作用于隐式网格。当然，这一项属性也可以应用于显式网格，更多内容可以参考 {{cssxref("minmax")}} 页面。
+如果所有网格内的内容均小于 100 像素，看起来不会有变化。但如果在某一项中放入很长的内容或者图片，你可以看到这个格子所在的哪一行的高度变成能刚好容纳内容的高度了。注意我们修改的是 `grid-auto-rows`，因此只会作用于隐式网格。当然，这一项属性也可以应用于显式网格，更多内容可以参考 {{cssxref("minmax")}} 页面。
 
 ### 自动使用多列填充
 
-现在来试试把学到的关于网格的一切，包括 repeat 与 minmax 函数，组合起来，来实现一个非常有用的功能。某些情况下，我们需要让网格自动创建很多列来填满整个容器。通过设置`grid-template-columns`属性，我们可以实现这个效果，不过这一次我们会用到{{cssxref("repeat")}}函数中的一个关键字`auto-fill`来替代确定的重复次数。而函数的第二个参数，我们使用{{cssxref("minmax")}}函数来设定一个行/列的最小值，以及最大值`1fr`。
+现在来试试把学到的关于网格的一切，包括 repeat 与 minmax 函数，组合起来，来实现一个非常有用的功能。某些情况下，我们需要让网格自动创建很多列来填满整个容器。通过设置`grid-template-columns`属性，我们可以实现这个效果，不过这一次我们会用到 {{cssxref("repeat")}} 函数中的一个关键字`auto-fill`来替代确定的重复次数。而函数的第二个参数，我们使用{{cssxref("minmax")}}函数来设定一个行/列的最小值，以及最大值 `1fr`。
 
 在你的文件中试试看，你也许可以用到以下的代码。
 
@@ -385,7 +381,7 @@ body {
 
 接下来，尝试用定义网格线的方法将所有元素放置到网格中。将以下规则加入到你的 css 的末尾：
 
-```plain
+```css
 header {
   grid-column: 1 / 3;
   grid-row: 1;
@@ -409,17 +405,17 @@ footer {
 
 ```css hidden
 body {
-                    width: 90%;
-                    max-width: 900px;
-                    margin: 2em auto;
-                    font: .9em/1.2 Arial, Helvetica, sans-serif;
-                }
+    width: 90%;
+    max-width: 900px;
+    margin: 2em auto;
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
 
-                .container {
-                    display: grid;
-                    grid-template-columns: 1fr 3fr;
-                    grid-gap: 20px;
-                }
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+}
 header {
     grid-column: 1 / 3;
     grid-row: 1;
@@ -472,7 +468,7 @@ aside {
 
 {{ EmbedLiveSample('基于线的元素放置', '100%', 400) }}
 
-> **备注：** 你也可以用`-1`来定位到最后一条列分隔线或是行分隔线，并且可以用负数来指定倒数的某一条分隔线。但是这只能用于显式网格，对于[隐式网格](/zh-CN/docs/Glossary/Grid)`-1`不一定能定位到最后一条分隔线。
+> **备注：** 你也可以用 `-1` 来定位到最后一条列分隔线或是行分隔线，并且可以用负数来指定倒数的某一条分隔线。但是这只能用于显式网格，对于[隐式网格](/zh-CN/docs/Glossary/Grid)`-1`不一定能定位到最后一条分隔线。
 
 ## 使用 grid-template-areas 属性放置元素
 
@@ -480,15 +476,15 @@ aside {
 
 将之前基于线的元素放置代码删除（或者重新下载一份新的文件），然后加入以下 CSS 规则：
 
-```plain
+```css
 .container {
   display: grid;
   grid-template-areas:
-      "header header"
-      "sidebar content"
-      "footer footer";
+    "header header"
+    "sidebar content"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
-  grid-gap: 20px;
+  gap: 20px;
 }
 
 header {
@@ -515,47 +511,20 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
   border-right: 1px solid #999;
 }
-
-.container {
-  display: grid;
-  grid-template-areas:
-  "header header"
-  "sidebar content"
-  "footer footer";
-  grid-template-columns: 1fr 3fr;
-  grid-gap: 20px;
-}
-
-header {
-  grid-area: header;
-}
-
-article {
-  grid-area: content;
-}
-
-aside {
-  grid-area: sidebar;
-}
-
-footer {
-  grid-area: footer;
-}
-
 ```
 
 ```html hidden
@@ -563,14 +532,36 @@ footer {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
@@ -592,7 +583,7 @@ footer {
 
 下载这个[初始文件](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/11-grid-system-starting-point.html)，文件中包含了一个定义了 12 列网格的容器。文件中的一些内容我们曾在前两个示例中使用过，我们暂时可以先用基于线的元素放置模式来将我们的内容放到这个 12 列的网格中。
 
-```plain
+```css
 header {
   grid-column: 1 / 13;
   grid-row: 1;
@@ -619,47 +610,26 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
-  grid-gap: 20px;
-}
-
-header {
-  grid-column: 1 / 13;
-  grid-row: 1;
-}
-
-article {
-  grid-column: 4 / 13;
-  grid-row: 2;
-}
-
-aside {
-  grid-column: 1 / 4;
-  grid-row: 2;
-}
-
-footer {
-  grid-column: 1 / 13;
-  grid-row: 3;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
   border-right: 1px solid #999;
 }
-
 ```
 
 ```html hidden
@@ -667,14 +637,36 @@ aside {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 

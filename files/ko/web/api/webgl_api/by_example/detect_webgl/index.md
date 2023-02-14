@@ -1,7 +1,6 @@
 ---
 title: WebGL 찾기
 slug: Web/API/WebGL_API/By_example/Detect_WebGL
-translation_of: Web/API/WebGL_API/By_example/Detect_WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}

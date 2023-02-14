@@ -1,40 +1,47 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
+page-type: web-api-instance-method
+browser-compat: api.Element.closest
+l10n:
+  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
-{{APIRef}}
+{{APIRef('DOM')}}
 
-El método `closest()` de la interfaz {{domxref("Element")}} devuelve el ascendiente más cercano al elemento actual (o el propio elemento actual) que coincida con el selector proporcionado por parámetro. Si no existe dicho ascendiente, devuelve `null`.
+El método **`closest()`** de la interfaz {{domxref("Element")}} recorre el elemento y sus padres (dirigiéndose hacia la raiz del documento) hasta encontrar un nodo que coincida con el [CSS selector](/es/docs/Learn/CSS/Building_blocks/Selectors) especificado.
 
 ## Sintaxis
 
-```js
-var closestElement = element.closest(selectors);
+```js-nolint
+closest(selectors)
 ```
 
 ### Parámetros
 
-- `selectors` es un {{domxref("DOMString")}} que contiene una lista de selectores como `"p:hover, .toto + q"`
-- `element` es el {{domxref("Element")}} en la parte superior del árbol de elementos a tratar.
+- `selectors`
+  - : Una cadena de [selector de CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) válido para comparar {{domxref("Element")}} y sus ancestros.
 
-### Valor del resultado
+### Valor de retorno
 
-- `closestElement` es el {{domxref("Element")}} ascendiente más cercano al elemento actual. Puede ser `null`.
+El ancestro más cercano {{domxref("Element")}} que coincida con los `selectors` , o él mismo. Si no hay tal elemento devolverá `null` .
 
 ### Excepciones
 
-- Se lanza una excepción [`SyntaxError`](/es/docs/Web/API/DOMException#syntaxerror) si `selectors` no es una lista de selectores válida.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Se lanza si `selectors` no es un selector CSS válido.
 
-## Ejemplo
+## Ejemplos
 
 ### HTML
 
 ```html
 <article>
-  <div id="div-01">Here is div-01
-    <div id="div-02">Here is div-02
-      <div id="div-03">Here is div-03</div>
+  <div id="div-01">
+    Aquí está div-01
+    <div id="div-02">
+      Aquí está div-02
+      <div id="div-03">Aquí está div-03</div>
     </div>
   </div>
 </article>
@@ -43,60 +50,19 @@ var closestElement = element.closest(selectors);
 ### JavaScript
 
 ```js
-var el = document.getElementById('div-03');
+const el = document.getElementById('div-03');
 
-var r1 = el.closest("#div-02");
-// returns the element with the id=div-02
+// El ancestro más cercano con el id de "div-02"
+console.log(el.closest('#div-02')); // <div id="div-02">
 
-var r2 = el.closest("div div");
-// returns the closest ancestor which is a div in div, here is div-03 itself
+//  El ancestro más cercano que es un div dentro de un div
+console.log(el.closest('div div')); // <div id="div-03">
 
-var r3 = el.closest("article > div");
-// returns the closest ancestor which is a div and has a parent article, here is div-01
+// El ancestro más cercano que es un div y tiene un padre article
+console.log(el.closest("article > div")); // <div id="div-01">
 
-var r4 = el.closest(":not(div)");
-// returns the closest ancestor which is not a div, here is the outmost article
-```
-
-## Polyfill
-
-Para los navegadores que no tengan soporte para `Element.closest()`, pero sí lo tengan para `document.querySelectorAll()` (o un equivalente prefijado, es decir IE9+), existe un polyfill:
-
-```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches = Element.prototype.msMatchesSelector ||
-                              Element.prototype.webkitMatchesSelector;
-}
-
-if (!Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
-    var el = this;
-
-    do {
-      if (el.matches(s)) return el;
-      el = el.parentElement || el.parentNode;
-    } while (el !== null && el.nodeType === 1);
-    return null;
-  };
-}
-```
-
-Sin embargo, si realmente se necesita soporte para IE 8, entonces el siguiente polyfill servirá para conseguirlo de forma muy lenta, pero lo hará. Sin embargo, sólo admitirá selectores CSS 2.1 en IE 8, puede causar picos severos de retraso en sitios web en producción.
-
-```js
-if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest =
-  function(s) {
-    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-        i,
-        el = this;
-    do {
-      i = matches.length;
-      while (--i >= 0 && matches.item(i) !== el) {};
-    } while ((i < 0) && (el = el.parentElement));
-    return el;
-  };
-}
+// El ancestro más cercano que no sea un div
+console.log(el.closest(":not(div)")); // <article>
 ```
 
 ## Especificaciones
@@ -109,10 +75,9 @@ if (window.Element && !Element.prototype.closest) {
 
 ### Notas de compatibilidad
 
-- En Edge `document.createElement(element).closest(element)` devolverá `null` si el elemento no es el primero del DOM
+- En Edge 15-18 `document.createElement(tagName).closest(tagName)` devolverá `null` si el elemento no está conectado (directa o indirectamente) al objeto de contexto, por ejemplo el objeto {{domxref("Document")}} en el caso del DOM normal.
 
 ## Véase también
 
-- La interfaz {{domxref("Element")}}.
-- [Sintaxis de los Selectores](/es/docs/Web/CSS/Introducción/Selectors)
-- Otros métodos que toman selectores: {{domxref("element.querySelector()")}} y {{domxref("element.matches()")}}.
+- [Referencia de selectores CSS](/es/docs/Web/CSS/CSS_Selectors)
+- Otros métodos {{domxref("Element")}} que toman selectores: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}} y {{domxref("Element.matches()")}}.

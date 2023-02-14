@@ -1,14 +1,6 @@
 ---
 title: '<meta>: 문서 레벨 메타데이터 요소'
 slug: Web/HTML/Element/meta
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - Reference
-  - Web
-  - metadata
-translation_of: Web/HTML/Element/meta
 ---
 
 {{HTMLSidebar}}

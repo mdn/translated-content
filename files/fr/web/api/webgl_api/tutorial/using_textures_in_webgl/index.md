@@ -8,7 +8,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Maintenant que notre programme peut faire tourner un cube 3D, appliquons lui une texture, au lieu d'avoir des couleurs unies pour ses faces.
 
@@ -281,12 +281,12 @@ Le chargement des textures WebGL est soumis aux contrôles d'accès inter-domain
 
 Voir cet [article sur hacks.mozilla.org](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) pour une explication de l'utilisation des images approuvées CORS comme textures WebGL, avec [un exemple complet](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
 
-> **Note :** le support CORS pour les texture WebGL et l'attribut `crossOrigin` pour les éléments image est implémenté dans {{Gecko("8.0")}}.
+> **Note :** le support CORS pour les texture WebGL et l'attribut `crossOrigin` pour les éléments image est implémenté dans Gecko 8.0.
 
 Les canevas 2D dégradés (en écriture seule) ne peuvent pas être utilisés comme des textures WebGL. Un {{HTMLElement ("canvas")}} 2D devient dégradé par exemple lorsqu'il est utilisé pour dessiner une image inter-domaine.
 
-> **Note :** le support CORS pour `drawImage` de Canvas 2D est implémenté dans {{Gecko ("9.0")}}. Cela signifie que l'utilisation d'une image inter-domaine ayant l'approbation CORS ne dégrade plus le canevas 2D, de sorte que le canevas 2D reste utilisable comme source d'une texture WebGL.
+> **Note :** le support CORS pour `drawImage` de Canvas 2D est implémenté dans Gecko 9.0. Cela signifie que l'utilisation d'une image inter-domaine ayant l'approbation CORS ne dégrade plus le canevas 2D, de sorte que le canevas 2D reste utilisable comme source d'une texture WebGL.
 
-> **Note :** le support CORS pour les vidéos inter-domaines et l'attribut `crossorigin` pour les éléments {{HTMLElement ("video")}} est implémenté dans {{Gecko ("12.0")}}.
+> **Note :** le support CORS pour les vidéos inter-domaines et l'attribut `crossorigin` pour les éléments {{HTMLElement ("video")}} est implémenté dans Gecko 12.0.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

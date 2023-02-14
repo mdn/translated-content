@@ -1,7 +1,6 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 ---
 
 {{JSRef}}
@@ -45,28 +44,15 @@ console.log(str.search(re)); // returns 4, which is the index of the first capit
 console.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation
 ```
 
-## 사양
+## 명세서
 
-| 사양                                                                                                         | 상태                         | 주석                                               |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## 브라우저 호환성
 
 {{Compat}}
 
-## Gecko-specific notes
-
-- `flags` was a non standard second argument only available in Gecko : _str_.search(_regexp, flags_)
-- Prior to {{Gecko("8.0")}}, `search()` was implemented incorrectly; when it was called with no parameters or with {{jsxref("undefined")}}, it would match against the string 'undefined', instead of matching against the empty string. This is fixed; now `'a'.search()` and `'a'.search(undefined)` correctly return 0.
-- Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard `flags` argument is deprecated and throws a console warning ({{bug(1142351)}}).
-- Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard `flags` argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).
-- Starting with Gecko 49 {{geckoRelease(49)}}, the non-standard `flags` argument is no longer supported ({{bug(1108382)}}).
-
-## See also
+## 같이 보기
 
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}

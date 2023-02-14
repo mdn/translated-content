@@ -1,7 +1,6 @@
 ---
 title: 웹 워커 사용하기
 slug: Web/API/Web_Workers_API/Using_web_workers
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: Web/API/Web_Workers_API/basic_usage
 ---
 
@@ -88,8 +87,6 @@ myWorker.onmessage = function(e) {
 ```
 
 Here we grab the message event data and set it as the `textContent` of the result paragraph, so the user can see the result of the calculation.
-
-> **참고:** **Note**: The URI passed as a parameter to the `Worker` constructor must obey the [same-origin policy](/ko/docs/Web/Security/Same-origin_policy) .There is currently disagreement among browsers vendors on what URIs are of the same-origin; Gecko 10.0 {{geckoRelease("10.0")}} and later do allow data URIs and Internet Explorer 10 does not allow Blob URIs as a valid script for workers.
 
 > **참고:** Notice that `onmessage` and `postMessage()` need to be hung off the `Worker` object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.
 

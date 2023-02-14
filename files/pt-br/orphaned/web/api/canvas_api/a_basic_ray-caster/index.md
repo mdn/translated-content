@@ -1,11 +1,10 @@
 ---
 title: A basic ray-caster
 slug: orphaned/Web/API/Canvas_API/A_basic_ray-caster
-translation_of: Web/API/Canvas_API/A_basic_ray-caster
 original_slug: Web/API/Canvas_API/A_basic_ray-caster
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 Esse artigo disponibiliza um exemplo interessante do mundo real do uso do elemento {{HTMLElement("canvas")}} para fazer renderização via software de um ambiente em 3D utilizando _ray-casting_.
 

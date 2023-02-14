@@ -1,12 +1,6 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Deprecated
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/contextmenu
 ---
 
 {{HTMLSidebar("Global_attributes")}}

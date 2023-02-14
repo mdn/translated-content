@@ -1,7 +1,6 @@
 ---
 title: 空元素
 slug: Glossary/Void_element
-original_slug: Glossary/Empty_element
 ---
 一个**空元素**（empty element）可能是 HTML、SVG，或者 MathML 里的一个不能存在子节点（例如内嵌的元素或者元素内的文本）的{{Glossary("element", "元素")}}。
 

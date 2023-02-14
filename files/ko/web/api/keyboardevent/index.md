@@ -1,21 +1,6 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-  - DOM
-  - Event
-  - Input
-  - Interface
-  - Key Events
-  - Keyboard Events
-  - KeyboardEvent
-  - MakeBrowserAgnostic
-  - Reference
-  - UI Events
-  - keyboard
-  - user input
-browser-compat: api.KeyboardEvent
 ---
 
 {{APIRef("UI Events")}}
@@ -251,21 +236,6 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 8. `keyup`
 
 불행하게도 이러한 환경에서는 웹 컨텐츠가 이 키가 자동 반복되고 있는 키인지, 아니면 반복해서 눌리고 있는 키인지를 구별할 수 있는 방법이 없습니다.
-
-#### Gecko 5.0 이전의 자동 반복 처리
-
-Gecko 5.0 {{geckoRelease('5.0')}} 이전에는, 플랫폼 간의 키보드 처리의 일관성이 떨어졌습니다.
-
-- Windows
-  - : 자동 반복은 Gecko 4.0 이후와 동일합니다.
-- Mac
-  - : 첫 `keydown` 이벤트 이후에는 `keyup` 이벤트가 발생하기 전까진 `keypress` 이벤트만 전송됩니다. 간격을 두고 발생하는 `keydown` 이벤트는 전송되지 않습니다.
-- Linux
-  - : 플랫폼에 따라 이벤트 동작이 다릅니다. 기본 이벤트 모델의 동작에 따라 Windows 또는 Mac 처럼 동작합니다.
-
-> **참고:** 이벤트를 수동으로 실행하더라도 해당 이벤트와 관련된 기본 동작을 생성하지 않습니다.
-> 예를 들어, 키 이벤트를 수동으로 실행해도 포커스된 텍스트 입력 부분에 해당 문자가 표시되지는 않습니다.
-> UI 이벤트의 경우, 브라우저와 상호 작용하는 사용자의 작업 시뮬레이션 스크립트를 막으므로 보안상의 이유로 중요합니다.
 
 ## 예제
 

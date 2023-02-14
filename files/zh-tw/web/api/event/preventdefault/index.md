@@ -89,13 +89,13 @@ function checkName(evt) {
 
 Here is the result of the preceding code:
 
-{{ EmbedLiveSample('preventDefault_invalid_text', '', '', '') }}
+{{ EmbedLiveSample('範例', '', '', '') }}
 
 ## 備註
 
 Calling `preventDefault` during any stage of event flow cancels the event, meaning that any default action normally taken by the implementation as a result of the event will not occur.
 
-> **備註：** As of {{Gecko("6.0")}}, calling `preventDefault()` causes the {{ domxref("event.defaultPrevented") }} property's value to become `true`.
+> **備註：** As of Gecko 6.0, calling `preventDefault()` causes the {{ domxref("event.defaultPrevented") }} property's value to become `true`.
 
 你可以查看 {{domxref("Event.cancelable")}} 屬性來檢查事件是否能夠被取消。對一個不能被取消的事件呼叫 `preventDefault()` 方法是沒有任何效果的。
 

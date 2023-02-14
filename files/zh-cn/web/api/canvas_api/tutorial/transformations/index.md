@@ -3,11 +3,11 @@ title: 变形 Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 在本教程前面的部分中，我们已经了解了 Canvas 网格和坐标空间。到目前为止，我们只是根据我们的需要使用默认的网格，改变整个画布的大小。变形是一种更强大的方法，可以将原点移动到另一点、对网格进行旋转和缩放。
 
-## 状态的保存和恢复 Saving and restoring state
+## 状态的保存和恢复
 
 在了解变形之前，我先介绍两个在你开始绘制复杂图形时必不可少的方法。
 
@@ -26,7 +26,7 @@ Canvas 状态存储在栈中，每当`save()`方法被调用后，当前的状�
 
 ### `save` 和 `restore` 的应用例子
 
-![](/@api/deki/files/104/=Canvas_savestate.png)我们尝试用这个连续矩形的例子来描述 canvas 的状态栈是如何工作的。
+![](canvas_savestate.png)我们尝试用这个连续矩形的例子来描述 canvas 的状态栈是如何工作的。
 
 第一步是用默认设置画一个大四方形，然后保存一下状态。改变填充颜色画第二个小一点的蓝色四方形，然后再保存一下状态。再次改变填充颜色绘制更小一点的半透明的白色四方形。
 
@@ -34,7 +34,7 @@ Canvas 状态存储在栈中，每当`save()`方法被调用后，当前的状�
 
 当第二次调用 `restore` 时，已经恢复到最初的状态，因此最后是再一次绘制出一个黑色的四方形。
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
+{{EmbedLiveSample("save 和 restore 的应用例子", "180", "180", "canvas_savestate.png")}}
 
 ```js
 function draw() {
@@ -69,7 +69,7 @@ draw();
 
 ## 移动 Translating
 
-![](/@api/deki/files/85/=Canvas_grid_translate.png)
+![](canvas_grid_translate.png)
 
 我们先介绍 `translate`方法，它用来移动 canvas 和它的原点到一个不同的位置。
 
@@ -107,11 +107,11 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
+{{EmbedLiveSample("translate 的例子", "160", "160", "translate.png")}}
 
 ## 旋转 Rotating
 
-![](/@api/deki/files/84/=Canvas_grid_rotate.png)
+![](canvas_grid_rotate.png)
 
 第二个介绍 `rotate`方法，它用于以原点为中心旋转 canvas。
 
@@ -122,11 +122,41 @@ draw();
 
 ### `rotate` 的例子
 
-![](/@api/deki/files/103/=Canvas_rotate.png)
-
-在这个例子里，见右图，我用 `rotate`方法来画圆并构成圆形图案。当然你也可以分别计算出 _x_ 和 _y_ 坐标（`x = r*Math.cos(a); y = r*Math.sin(a)`）。这里无论用什么方法都无所谓的，因为我们画的是圆。计算坐标的结果只是旋转圆心位置，而不是圆本身。即使用 `rotate`旋转两者，那些圆看上去还是一样的，不管它们绕中心旋转有多远。
+在这个例子里，我们将会使用 `rotate()` 方法来画圆并构成圆形图案。当然你也可以分别计算出 _x_ 和 _y_ 坐标（`x = r*Math.cos(a); y = r*Math.sin(a)`）。这里无论用什么方法都无所谓的，因为我们画的是圆。计算坐标的结果只是旋转圆心位置，而不是圆本身。即使用 `rotate`旋转两者，那些圆看上去还是一样的，不管它们绕中心旋转有多远。
 
 这里我们又用到了两层循环。第一层循环决定环的数量，第二层循环决定每环有多少个点。每环开始之前，我都保存一下 canvas 的状态，这样恢复起来方便。每次画圆点，我都以一定夹角来旋转 canvas，而这个夹角则是由环上的圆点数目的决定的。最里层的环有 6 个圆点，这样，每次旋转的夹角就是 360/6 = 60 度。往外每一环的圆点数目是里面一环的 2 倍，那么每次旋转的夹角随之减半。
+
+```js
+function draw() {
+  const ctx = document.getElementById("canvas").getContext("2d");
+
+  // left rectangles, rotate from canvas origin
+  ctx.save();
+  // blue rect
+  ctx.fillStyle = "#0095DD";
+  ctx.fillRect(30, 30, 100, 100);
+  ctx.rotate((Math.PI / 180) * 25);
+  // grey rect
+  ctx.fillStyle = "#4D4E53";
+  ctx.fillRect(30, 30, 100, 100);
+  ctx.restore();
+
+  // right rectangles, rotate from rectangle center
+  // draw blue rect
+  ctx.fillStyle = "#0095DD";
+  ctx.fillRect(150, 30, 100, 100);
+
+  ctx.translate(200, 80); // translate to rectangle center
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
+  ctx.rotate((Math.PI / 180) * 25); // rotate
+  ctx.translate(-200, -80); // translate back
+
+  // draw grey rect
+  ctx.fillStyle = "#4D4E53";
+  ctx.fillRect(150, 30, 100, 100);
+}
+```
 
 ```html hidden
 <canvas id="canvas" width="300" height="200"></canvas>
@@ -136,28 +166,7 @@ draw();
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
-
-```js
-function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.translate(75,75);
-
-  for (var i=1;i<6;i++){ // Loop through rings (from inside to out)
-    ctx.save();
-    ctx.fillStyle = 'rgb('+(51*i)+','+(255-51*i)+',255)';
-
-    for (var j=0;j<i*6;j++){ // draw individual dots
-      ctx.rotate(Math.PI*2/(i*6));
-      ctx.beginPath();
-      ctx.arc(0,i*12.5,5,0,Math.PI*2,true);
-      ctx.fill();
-    }
-
-    ctx.restore();
-  }
-}
-```
+{{EmbedLiveSample("rotate 的例子", "310", "260", "rotate.png")}}
 
 ## 缩放 Scaling
 
@@ -199,7 +208,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
+{{EmbedLiveSample("scale 的例子", "160", "160", "scale.png")}}
 
 ## 变形 Transforms
 
@@ -233,7 +242,7 @@ draw();
 - {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
   - : 重置当前变形为单位矩阵，它和调用以下语句是一样的：`ctx.setTransform(1, 0, 0, 1, 0, 0);`
 
-### `transform` / `setTransform` 的例子
+### `transform`/`setTransform` 的例子
 
 ```js
 function draw() {
@@ -264,6 +273,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("transform_setTransform_的例子", "230", "280", "canvas_transform.png")}}
+{{EmbedLiveSample("transform/setTransform 的例子", "230", "280", "canvas_transform.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

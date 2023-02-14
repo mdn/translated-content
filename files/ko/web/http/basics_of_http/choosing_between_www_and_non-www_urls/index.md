@@ -1,8 +1,8 @@
 ---
 title: www와 비-www URL 중에서 선택하기
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-translation_of: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
+
 {{HTTPSidebar}}
 
 웹 사이트 소유자들이 반복해서 하게 되는 질문은 비-www 혹은 www URL 중 무엇을 선택해야 하는가입니다. 이 페이지는 그에 대해 최선의 결론을 내기 위한 조언을 제공합니다.

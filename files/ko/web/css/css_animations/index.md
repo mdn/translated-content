@@ -1,12 +1,6 @@
 ---
 title: CSS Animations
 slug: Web/CSS/CSS_Animations
-tags:
-  - CSS
-  - CSS Animations
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Animations
 ---
 
 {{CSSRef}}

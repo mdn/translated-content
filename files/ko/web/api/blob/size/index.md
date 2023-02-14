@@ -1,18 +1,6 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
-tags:
-  - API
-  - Blob
-  - Bytes
-  - File API
-  - Files
-  - Property
-  - Reference
-  - length
-  - size
-browser-compat: api.Blob.size
-translation_of: Web/API/Blob/size
 ---
 
 {{APIRef("File API") }}

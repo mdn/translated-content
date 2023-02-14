@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/Element/contextmenu_event
-translation_of: Web/API/GlobalEventHandlers/oncontextmenu
 original_slug: Web/API/GlobalEventHandlers/oncontextmenu
 ---
 

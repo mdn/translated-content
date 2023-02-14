@@ -42,7 +42,7 @@ Puede especificar una fuente por nombre en la computadora local del usuario util
 
 Este ejemplo simplemente especifica una fuente que puede ser descargada para utilizar, aplicando la fuente a todo el cuerpo del documento.
 
-[Muestra en vivo](/@api/deki/files/2935/=webfont-sample.html)
+[Muestra en vivo](webfont-sample.html)
 
 ```
 <html>

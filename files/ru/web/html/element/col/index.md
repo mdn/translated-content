@@ -27,7 +27,7 @@ translation_of: Web/HTML/Element/col
 
 Этот элемент включает [общие атрибуты](/ru/docs/Web/HTML/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B).
 
-- {{htmlattrdef("align")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("align")}} {{deprecated_inline}}, {{obsolete_inline("html5")}}
   - : Этот перечисляемый атрибут указывает, как будет обрабатываться горизонтальное выравнивание контента каждой ячейки столбца. Возможные значения:
     - `left`, выравнивает контент к левой стороне ячейки
     - `center`, центрирует контент ячейки

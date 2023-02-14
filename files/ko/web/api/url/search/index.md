@@ -1,13 +1,6 @@
 ---
 title: URL.search
 slug: Web/API/URL/search
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/search
 ---
 
 {{ApiRef("URL API")}}

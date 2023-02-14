@@ -1,7 +1,6 @@
 ---
 title: Streams API 컨셉
 slug: Web/API/Streams_API/Concepts
-translation_of: Web/API/Streams_API/Concepts
 original_slug: Web/API/Streams_API/컨셉
 ---
 
@@ -20,7 +19,7 @@ There are two types of underlying source:
 
 The data is read sequentially in small pieces called **chunks**. A chunk can be a single byte, or it can be something larger such as a [typed array](/ko/docs/Web/JavaScript/Typed_arrays) of a certain size. A single stream can contain chunks of different sizes and types.
 
-![](https://mdn.mozillademos.org/files/15819/Readable%20streams.png)
+![](readable_streams.png)
 
 The chunks placed in a stream are said to be **enqueued** — this means they are waiting in a queue ready to be read. An **internal queue** keeps track of the chunks that have not yet been read (see the Internal queues and queueing strategies section below).
 
@@ -44,7 +43,7 @@ In JavaScript, this is achieved via the {{domxref("ReadableStream.tee()")}} meth
 
 You might do this for example in a [ServiceWorker](/ko/docs/Web/API/Service_Worker_API) if you want to fetch a response from the server and stream it to the browser, but also stream it to the ServiceWorker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you’d need two copies to do this.
 
-![](https://mdn.mozillademos.org/files/15820/tee.png)
+![](tee.png)
 
 ## Writable streams
 
@@ -58,7 +57,7 @@ An **internal queue** keeps track of the chunks that have been written to the st
 
 There is also a construct you’ll use called a controller — each writer has an associated controller that allows you to control the stream (for example, to abort it if wished).
 
-![](https://mdn.mozillademos.org/files/15821/writable%20streams.png)
+![](writable_streams.png)
 
 You can make use of writable streams using the {{domxref("WritableStream.WritableStream()")}} constructor. These currently have very limited availability in browsers.
 
@@ -71,7 +70,7 @@ The Streams API makes it possible to pipe streams into one another (or at least 
 
 The start of the pipe chain is called the **original source**, and the end is called the **ultimate sink**.
 
-![](https://mdn.mozillademos.org/files/15818/PipeChain.png)
+![](pipechain.png)
 
 > **참고:** This functionality isn't fully thought through yet, or available in many browsers. At some point the spec writers hope to add something like a `TransformStream` class to make creating transform streams easier.
 

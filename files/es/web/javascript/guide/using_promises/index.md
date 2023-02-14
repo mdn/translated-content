@@ -1,13 +1,6 @@
 ---
 title: Usar promesas
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Asíncrono
-  - Guía
-  - Intermedio
-  - Promesa
-  - Promesas
-translation_of: Web/JavaScript/Guide/Using_promises
 original_slug: Web/JavaScript/Guide/Usar_promesas
 ---
 
@@ -191,7 +184,7 @@ async function foo() {
 }
 ```
 
-Se construye sobre `promesas`, por ejemplo, `hazAlgo()` es la misma función que antes. Puedes leer más sobre la sintaxis [aquí](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions).
+Se construye sobre `promesas`, por ejemplo, `hazAlgo()` es la misma función que antes. Puedes leer más sobre la sintaxis [aquí](https://web.dev/async-functions/).
 
 Las `promesas` resuelven un fallo fundamental de la pirámide de funciones callback, capturando todos los errores, incluso excepciones lanzadas y errores de programación. Esto es esencial para la composición funcional de operaciones asíncronas.
 

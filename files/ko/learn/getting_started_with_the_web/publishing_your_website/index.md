@@ -25,7 +25,7 @@ original_slug: Learn/Getting_started_with_the_web/웹사이트_출판하기
 
 게다가, 여러분은 서버로 웹사이트 파일들을 실제로 전송하기 위한 파일 전송 프로토콜 (FTP) 프로그램 (자세한 내용은 [얼마나 드나요: 소프트웨어](/en-US/Learn/How_much_does_it_cost#Software) 에서 확인하세요) 이 필요할 것입니다. FTP 프로그램은 아주 다양합니다, 하지만 일반적으로 호스팅 회사에 의해 제공된 정보 (예로 사용자 이름, 비밀번호, 호스트 이름) 를 사용해 여러분의 웹서버에 로그인을 해야 합니다. 그러면 프로그램은 여러분의 로컬 파일들과 웹 서버의 파일을 두 창에서 보여주므로, 그것들을 외부로 전송하거나 다시 돌려 놓을 수 있습니다:
 
-![](https://mdn.mozillademos.org/files/9469/ftp.jpg)
+![](ftp.jpg)
 
 #### 호스팅과 도메인을 찾는 팁
 
@@ -53,7 +53,7 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 - [Thimble](https://thimble.webmaker.org/)
 - [JSBin](http://jsbin.com/)
 
-![](https://mdn.mozillademos.org/files/9471/jsbin-screen.png)
+![](jsbin-screen.png)
 
 ## GitHub 를 통한 출판
 
@@ -65,21 +65,21 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 2. 다음으로, [GitHub 계정을 위해 가입하세요](https://github.com/join). 간단하고 쉽습니다.
 3. 가입을 하셨다면, github.com 에 여러분의 유저 이름과 암호로 로그인하세요.
 4. 그리고나서, 여러분의 파일들이 들어가게될 새로운 repo 를 생성해야 합니다. GitHub 홈페이지의 오른쪽 상단에 있는 플러스 (+) 를 클릭하고, _New Repository_ 를 선택하세요.
-5. 이 페이지에서, _Repository name_ 박스 안에, _username_.github.io 를 입력하세요, _username_ 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 _bobsmith.github.io_ 를 입력할 것입니다.![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
-6. _Create repository_ 를 클릭하세요. 다음과 같은 페이지로 이동하실 겁니다:![](https://mdn.mozillademos.org/files/9481/github-populate-repo.png)
+5. 이 페이지에서, _Repository name_ 박스 안에, _username_.github.io 를 입력하세요, _username_ 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 _bobsmith.github.io_ 를 입력할 것입니다.![](github-create-repo.png)
+6. _Create repository_ 를 클릭하세요. 다음과 같은 페이지로 이동하실 겁니다:![](github-populate-repo.png)
 
 ### GitHub 에 파일 올리기
 
 이것은 GitHub 에 있는 우리의 repository 를 놓기 위해 사용해볼 커맨드 라인입니다. 커맨드 라인은 파일을 생성하거나 프로그램을 실행하는 것 같은 일을 하기 위해 유저 인터페이스 안에서 클릭을 하는 것 대신 명령어를 입력하는 창입니다. 이렇게 생긴 것입니다:
 
-![](https://mdn.mozillademos.org/files/9483/command-line.png)
+![](command-line.png)
 
-> **참고:** **노트**: 만약 커맨드라인이 불편하시다면, 같은 일을 하기 위해서 [Git graphical user interface](http://git-scm.com/downloads/guis) 를 사용하는것도 고려해 볼 수 있습니다.
+> **참고:** 만약 커맨드라인이 불편하시다면, 같은 일을 하기 위해서 [Git graphical user interface](http://git-scm.com/downloads/guis) 를 사용하는것도 고려해 볼 수 있습니다.
 
 모든 운영 체제는 커맨드 라인 도구를 갖습니다:
 
 - **윈도우즈**: **Command Prompt** 는 윈도우 키를 누르고 명령 프롬프트 를 입력하고 나타난 리스트에서 이것을 선택하는 것으로 접근할 수 있습니다. 윈도우즈는 리눅스와 맥 OS 와는 다른 그들만의 명령 규칙이 있으므로, 여러분의 장치에 따라 서로 다르다는것을 기억하세요.
-- **맥 OS**: _Applications > Utilities 안에_ **Terminal** 이 있습니다.
+- **맥 OS**: _Applications > Utilities 안에 _**Terminal**_ 이 있습니다.
 - **리눅스**: 보통 _Ctrl + Alt + T_ 로 터미널을 꺼낼 수 있습니다. 만약 작동하지 않는다면 app 바 또는 메뉴에서 **Terminal** 을 찾아보세요.
 
 처음에는 좀 두려우실 수 있지만, 걱정하지마세요 — 기본적인 것들은 금방 익히실 수 있을 것입니다. 무언가를 하기 위해선 명령어를 입력하고 엔터를 누르는 것으로 컴퓨터에게 알려줘야합니다.
@@ -117,7 +117,7 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 
 6. 이제 새 브라우저 탭 (_username.github.io_) 에서 여러분의 GitHub 페이지의 웹 주소로 갈 때, 여러분의 사이트를 온라인에서 보실 수 있습니다! 친구들에게 메일을 보내서 여러분의 실력을 뽐내보세요.
 
-> **참고:** **노트**: 만약 막히셨다면, [GitHub Pages 홈페이지](https://pages.github.com/) 또한 아주 도움이 될 것입니다.
+> **참고:** 만약 막히셨다면, [GitHub Pages 홈페이지](https://pages.github.com/) 또한 아주 도움이 될 것입니다.
 
 ### 더 많은 GitHub 이해
 
@@ -137,7 +137,7 @@ _another commit_ 대신에 여러분이 막 변경했던 것을 설명할 수 �
 
 이 지점에서, 특정 웹 주소에서 여러분의 예시 웹사이트를 사용하실 수 있을 것입니다. 수고하셨습니다!
 
-![](https://mdn.mozillademos.org/files/9485/hosted-final-site.png)
+![](hosted-final-site.png)
 
 ## 더 읽을거리
 

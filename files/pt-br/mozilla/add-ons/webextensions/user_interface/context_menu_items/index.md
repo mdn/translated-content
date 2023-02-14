@@ -8,13 +8,13 @@ original_slug: Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_con
 
 Esta opção da interface de usuário adiciona um ou mais itens para o menu de contexto do navegador.Este é o menu de contexto disponível quando um usuário clica com o botão direito numa página web. As guias também podem ter menus de contexto, disponível através da API [browser.menus](/pt-BR/Add-ons/WebExtensions/API/menus).
 
-![Example of content menu items added by a WebExtension, from the context-menu-demo example](https://mdn.mozillademos.org/files/15756/context_menu_example.png)
+![Example of content menu items added by a WebExtension, from the context-menu-demo example](context_menu_example.png)
 
 Você usaria essa opção para expor recursos relevantes para contextos específicos de navegadores ou páginas da web. Por exemplo, você poderia mostrar recursos para abrir um editor gráfico quando o usuário clica em uma imagem ou pode oferecer um recurso para salvar o conteúdo da página quando uma parte da página é selecionada. Você pode adicionar itens planos de menu, caixas de seleção, grupos de botões de rádio, e separadores para os menus. Quando um item de menu de contexto for adicionado usando {{WebExtAPIRef("contextMenus.create")}}, é mostrado em todas as guias do navegador, mas você pode escondê-lo usando {{WebExtAPIRef("contextMenus.remove")}}.
 
 A lista inteira dos contextos suportados está disponível em {{WebExtAPIRef("menus.ContextType")}} e inclui contextos de fora de uma página web, como itens de favoritos na interface do navegador. Por exemplo, a extensão "[Open bookmark in Container Tab](https://github.com/Rob--W/bookmark-container-tab)" adiciona um item de menu que permite que o usuário abra a URL dos favoritos em uma nova guia de container:
 
-![](https://mdn.mozillademos.org/files/16554/extension_context_menu.png)
+![](extension_context_menu.png)
 
 ## Especificando itens do menu de contexto
 

@@ -1,18 +1,6 @@
 ---
 title: 조건 (삼항) 연산자
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-tags:
-  - Conditional
-  - Decision
-  - JS
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - else
-  - if
-  - ternary
-browser-compat: javascript.operators.conditional
 ---
 
 {{jsSidebar("Operators")}}

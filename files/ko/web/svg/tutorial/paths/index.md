@@ -1,10 +1,6 @@
 ---
 title: 패스
 slug: Web/SVG/Tutorial/Paths
-tags:
-  - SVG
-  - 학습서
-translation_of: Web/SVG/Tutorial/Paths
 ---
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
@@ -37,7 +33,7 @@ translation_of: Web/SVG/Tutorial/Paths
 
 아래의 예제에서는 좌표 (10,10)에만 점을 찍었다. 일반적으로 패스를 그릴 때는 이 점이 나타나지 않는다는 점에 주의해야 한다.
 
-![](/@api/deki/files/45/=Blank_Path_Area.png)
+![10x10 크기의 흰색 사각형에 빨간색 점이 그려집니다. 이 점은 일반적으로 표시되지 않지만 "이동 위치" 명령 후 커서가 시작되는 위치의 예로 사용됩니다.](blank_path_area.png)
 
 ```xml
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -63,9 +59,9 @@ translation_of: Web/SVG/Tutorial/Paths
  V y (혹은 v dy)
 ```
 
-도형 그리기부터 시작해 보자. 사각형을 그려볼 텐데(`<rect>`를 이용해 쉽게 그릴 수도 있다), 시작점부터 가로, 세로선도 함께 사용되었다.
+도형 그리기부터 시작해 보자. 사각형을 그려볼 텐데({{SVGElement("rect")}}를 이용해 쉽게 그릴 수도 있다), 시작점부터 가로, 세로선도 함께 사용되었다.
 
-![](/@api/deki/files/292/=Path_Line_Commands.png)
+![검은색으로 채워진 흰색 사각형이 그려집니다. 검은색 사각형의 모서리는 (10,10) 좌표에서 시작하여 (90,10) 위치로 수평 이동하고, (90,90)로 수직 이동하며, (10,90)로 수평 이동한뒤 원래 위치(10,10)로 돌아옵니다](path_line_commands.png)
 
 ```xml
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +113,7 @@ translation_of: Web/SVG/Tutorial/Paths
 
 마지막으로 지정된 좌표 (x, y)는 곡선의 끝점이다. 나머지 두 개는 제어점이며, 첫 번째 제어점은 (x1, y1), 두 번째 제어점은 (x2, y2)이다. 제어점은 기본적으로 시작점과 끝점에서 곡선의 방향을 기술한다. 베지어 함수는 각 제어점의 방향을 이용해 부드러운 곡선을 만드는 기능을 한다.
 
-![Cubic Bézier Curves with grid](https://mdn.mozillademos.org/files/10401/Cubic_Bezier_Curves_with_grid.png)
+![Cubic Bézier Curves with grid](cubic_bezier_curves_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -145,7 +141,7 @@ translation_of: Web/SVG/Tutorial/Paths
 
 `S`는 위와 같은 형태의 곡선을 그리지만, 다른 `S`나 `C` 명령어 다음에 올 경우 첫 번째 제어점은 이전에 사용했던 제어점을 뒤집은 것으로 간주된다. `S` 명령어가 다른 `S`나 `C` 명령어 다음에 오지 않을 경우에는 현재 커서 위치가 첫 번째 제어점으로 사용되며, 이 경우에 그려지는 결과는 Q 명령어로 같은 파라미터를 사용해서 그린 결과와 같게 된다. 아래에 이 명령어의 예제가 있으며, 왼쪽의 미리보기에서 패스에 명시적으로 표시된 제어점은 빨간색, 생략된 제어점은 파란색으로 표시한다.
 
-![ShortCut_Cubic_Bezier_with_grid.png](https://mdn.mozillademos.org/files/10405/ShortCut_Cubic_Bezier_with_grid.png)
+![ShortCut_Cubic_Bezier_with_grid.png](shortcut_cubic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -159,7 +155,7 @@ translation_of: Web/SVG/Tutorial/Paths
  Q x1 y1, x y (혹은 q dx1 dy1, dx dy)
 ```
 
-![Quadratic Bézier with grid](https://mdn.mozillademos.org/files/10403/Quadratic_Bezier_with_grid.png)
+![격자에 그려진 2차 베지어 곡선](quadratic_bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -177,7 +173,7 @@ translation_of: Web/SVG/Tutorial/Paths
 
 > **참고:** Q나 T 명령어 다음에 올 때만 적용된다. 그렇지 않을 경우 제어점은 시작점의 좌표로 간주되며, 직선만 그릴 수 있게 된다.
 
-![Shortcut_Quadratic_Bezier_with_grid.png](https://mdn.mozillademos.org/files/10407/Shortcut_Quadratic_Bezier_with_grid.png)
+![](shortcut_quadratic_bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -198,7 +194,7 @@ SVG로 그릴 수 있는 다른 형태의 곡선으로는 A라고 부르는 호(
 
 A 명령어는 일단 x축, y축 반지름을 매개변수로 받는다. 혹시 필요하다면 [ellipse](/ko/docs/Web/SVG/Element/ellipse) 문서에서 두 매개변수가 어떻게 작동하는지 확인해볼 수 있다. 세 번째 매개변수는 호의 회전각을 기술한다. 이는 아래 예제에서 잘 확인할 수 있다.
 
-![SVGArcs_XAxisRotation_with_grid](https://mdn.mozillademos.org/files/10409/SVGArcs_XAxisRotation_with_grid.png)
+![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
 
 ```xml
 <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
@@ -215,7 +211,7 @@ A 명령어는 일단 x축, y축 반지름을 매개변수로 받는다. 혹시 
 
 위에서 언급한 네 가지 경로는 이어지는 두 개의 매개변수 플래그에 의해 결정된다. 앞서 언급했듯이, 두 점을 잇는 타원도 2개, 각각 취할 수 있는 방향도 2개이므로 모두 네 가지 경로가 가능하다. 첫 번째 인수는 큰 호 플래그(large-arc-flag)이며, 중심각이 180도 이상이 될지를 결정한다. 결국, 이 플래그는 호가 주어진 원의 어느 방향을 따라 돌지를 결정한다. 두 번째 인수는 쓸기 방향 플래그(sweep-flag)이며, 호가 이동해야 할 각이 음인지 양인지를 결정한다. 이 각은 본질적으로 두 개의 원 중 어느 쪽을 따를지를 결정한다. 아래 예는 네 가지 가능한 조합을 각 사례별로 두 개의 원과 함께 표시하고 있다.
 
-![](/@api/deki/files/345/=SVGArcs_Flags.png)
+![Show the 4 arcs on the Ellipse example](svgarcs_xaxisrotation_with_grid_ellipses.png)
 
 ```xml
 <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
@@ -233,6 +229,8 @@ A 명령어는 일단 x축, y축 반지름을 매개변수로 받는다. 혹시 
            L 275 230 Z" fill="blue"/>
 </svg>
 ```
+
+![](svgarcs_flags.png)
 
 마지막 두 개의 매개변수는 호가 끝나는 x와 y 좌표를 지정한다. 호는 도면에서 원 또는 타원 조각을 쉽게 만들 수 있는 방법이다. 예를 들어 원그래프는 각 조각마다 다른 호가 필요하다.
 

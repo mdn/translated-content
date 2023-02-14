@@ -18,7 +18,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 
 Для лучшего понимания рассмотрим аналогию с домашними электросетями. Когда вы хотите использовать какой-то электроприбор, вы просто подключаете его к розетке, и всё работает. Вы не пытаетесь подключить провода напрямую к источнику тока — делать это бесполезно и, если вы не электрик, сложно и опасно.
 
-![](https://mdn.mozillademos.org/files/14317/plug-socket.png)
+![](plug-socket.png)
 
 _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/) by [The Clear Communication People](https://www.flickr.com/photos/easy-pics/), on Flickr._
 
@@ -33,7 +33,7 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 - **API браузера** встроены в веб-браузер и способны использовать данные браузера и компьютерной среды для осуществления более сложных действий с этими данными. К примеру, [API Геолокации (Geolocation API)](/ru/docs/Web/API/Geolocation/Using_geolocation) предоставляет простые в использовании конструкции JavaScript для работы с данными местоположения, так что вы сможете, допустим, отметить своё расположение на карте Google Map. На самом деле, в браузере выполняется сложный низкоуровневый код (например, на C++) для подключения к устройству GPS (или любому другому устройству геолокации), получения данных и передачи их браузеру для обработки вашей программой, но, как было сказано выше, эти детали скрыты благодаря API.
 - **Сторонние API** не встроены в браузер по умолчанию. Такие API и информацию о них обычно необходимо искать в интернете. Например, [Twitter API](https://dev.twitter.com/overview/documentation) позволяет размещать последние твиты (tweets) на вашем веб-сайте. В данном API определён набор конструкций, осуществляющих запросы к сервисам Twitter и возвращающих определённые данные.
 
-![](https://mdn.mozillademos.org/files/13508/browser.png)
+![](browser.png)
 
 ### Взаимодействие JavaScript, API и других средств JavaScript
 
@@ -88,7 +88,7 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 - {{domxref("Position")}}, предоставляет данные о местоположении устройства в заданный момент времени — содержит {{domxref("Coordinates")}} - объект, хранящий координаты и отметку о текущем времени.
 - {{domxref("Coordinates")}}, содержит много полезной информации о расположении устройства, включая широту и долготу, высоту, скорость и направление движения и т.д.
 
-Так как же эти объекты взаимодействуют? Если вы посмотрите на наш пример [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) ([see it live also](http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), вы увидите следующий код:
+Так как же эти объекты взаимодействуют? Если вы посмотрите на наш пример [web audio example](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/web-audio/index.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/)), вы увидите следующий код:
 
 ```js
 navigator.geolocation.getCurrentPosition(function(position) {
@@ -238,7 +238,7 @@ request.onload = function() {
 
 [Notifications API](/ru/docs/Web/API/Notifications_API) запрашивает разрешение подобным образом:
 
-![](https://mdn.mozillademos.org/files/14315/notification-permission.png)
+![](notification-permission.png)
 
 Запросы разрешений необходимы для обеспечения безопасности пользователей — не будь их, сайты могли бы скрытно отследить ваше местоположение, не создавая множество надоедливых уведомлений.
 

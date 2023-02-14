@@ -3,7 +3,7 @@ title: Agregando Contenido 2D en el Contexto WebGL
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 Una vez que has logrado [crear el contexto WebGL](/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), estás listo para crear objetos dentro del mismo. Algo sencillo que podemos hacer es pintar un simple cuadrado plano sin texturas, así que vamos a empezar desde ahí, creando el código para dibujar el cuadrado plano.
 

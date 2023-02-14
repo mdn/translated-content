@@ -33,7 +33,7 @@ slug: Web/SVG/Element/feGaussianBlur
 
 该示例的结果如下所示：
 
-{{EmbedLiveSample("Simple_example",232,124,"/files/4227/feGaussianBlur.png")}}
+{{EmbedLiveSample("简单示例",232,124)}}
 
 ### 投影示例
 
@@ -58,7 +58,7 @@ slug: Web/SVG/Element/feGaussianBlur
 
 该示例的结果如下所示：
 
-{{EmbedLiveSample("Drop_shadow_example",125,124,"/files/4229/feGaussianBlur-dropshadow.png")}}
+{{EmbedLiveSample("投影示例",125,124)}}
 
 ## 属性
 

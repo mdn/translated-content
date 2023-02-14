@@ -12,15 +12,15 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_1
 
 现在唯一的层叠上下文就是根元素的上下文。因为没有 `z-index` 值，所有的元素按照出现（在 HTML 中）的顺序层叠。
 
-![Stacking context example 1](/@api/deki/files/914/=Understanding_zindex_05a.png)
+![Stacking context example 1](understanding_zindex_05a.png)
 
 如果给 DIV #2 设置一个正的 `z-index` 值 (不能是 `0` 或 `auto`) ，那么 DIV #2 会渲染在其他所有 DIV 之上。
 
-![Stacking context example 1](/@api/deki/files/915/=Understanding_zindex_05b.png)
+![Stacking context example 1](understanding_zindex_05b.png)
 
 然后如果给 DIV #4 也设置一个正的 `z-index` 值，且这个值比给的 DIV #2 设置的值要大，则 DIV #4 会渲染在其他所有 DIV（包括 DIV #2）之上。
 
-![Stacking context example 1](/@api/deki/files/916/=Understanding_zindex_05c.png)
+![Stacking context example 1](understanding_zindex_05c.png)
 
 在这个列子中，DIV #2 和 DIV #4 不是兄弟关系（因为它们的父元素不同）。即便如此，我们也可以通过 `z-index` 来控制 DIV #4 和 DIV #2 的层叠关系。这是因为，DIV #1 和 DIV #3 没有设置 `z-index` 的值，所以它们不会创建层叠上下文。这就意味着 DIV #1 和 DIV #3 的所有内容（包括 DIV #2 和 DIV #4）都属于同一个层叠上下文（即根元素的层叠上下文）。
 

@@ -1,75 +1,45 @@
 ---
 title: 'TextTrack: cuechange イベント'
 slug: Web/API/TextTrack/cuechange_event
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef}}
+{{APIRef("WebVTT")}}
 
-**`cuechange`** イベントは、 {{domxref("TextTrack")}} が現在表示しているキューが変更されたときに発生します。このイベントは、もし表示されているものがあれば、 `TextTrack` _および_ {{domxref("HTMLTrackElement")}} の両方に発生します。
+**`cuechange`** イベントは、 {{domxref("TextTrack")}} が現在表示しているキューが変更されたときに発生します。このイベントは、表示されているものがあれば、 `TextTrack` および {{domxref("HTMLTrackElement")}} の両方に発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.oncuechange")}}</td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('cuechange', (event) => { })
+
+oncuechange = (event) => { }
+```
+
+## イベント型
+
+一般的な {{DOMxRef("Event")}} で、追加のプロパティはありません。
 
 ## 例
-
-### TextTrack 上で
 
 `cuechange` イベントのリスナーを `TextTrack` に設定するには、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッドを使用します。
 
 ```js
-track.addEventListener('cuechange', function () {
-  let cues = track.activeCues;  // 現在のキューの配列
+track.addEventListener('cuechange', () => {
+  const cues = track.activeCues;  // 現在のキューの配列
+  // …
 });
 ```
 
-あるいは、 [`oncuechange`](/ja/docs/Web/API/TextTrack/oncuechange) イベントハンドラ－プロパティを設定しても構いません。
+あるいは、 `oncuechange` イベントハンドラープロパティを設定しても構いません。
 
 ```js
-track.oncuechange = function () {
+track.oncuechange = (event) => {
   let cues = track.activeCues; // 現在のキューの配列
 }
-```
-
-### track 要素上で
-
-基本となる {{domxref("TextTrack")}} は、 {{domxref("HTMLTrackElement.track", "track")}} プロパティで識別されますが、現在表示されているキューが変更されるたびに {{domxref("TextTrack.cuechange_event", "cuechange")}} イベントを受け取ります。これは、トラックがメディア要素に結び付けられていなくても発生します。
-
-トラックがメディア要素に結び付けられて*いる*場合、 {{HTMLElement("track")}} 要素を {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の子として使用すると、 `cuechange` イベントは {{domxref("HTMLTrackElement")}} にも送信されます。
-
-```js
-let textTrackElem = document.getElementById("texttrack");
-
-textTrackElem.addEventListener("cuechange", (event) => {
-  let cues = event.target.track.activeCues;
-});
-```
-
-また、`oncuechange` イベントハンドラーを使用することもできます。
-
-```js
-let textTrackElem = document.getElementById("texttrack");
-
-textTrackElem.oncuechange = (event) => {
-  let cues = event.target.track.activeCues;
-});
 ```
 
 ## 仕様書
@@ -78,8 +48,9 @@ textTrackElem.oncuechange = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.TextTrack.cuechange_event")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{glossary("WebVTT")}}
+- {{domxref("HTMLTrackElement")}} における同一のイベント: {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}}

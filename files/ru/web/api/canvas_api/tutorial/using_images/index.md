@@ -7,7 +7,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
 original_slug: Web/API/Canvas_API/Tutorial/Использование_изображений
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Трансформации")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Трансформации")}}
 
 До сих пор мы создавали наши собственные фигуры и применяли стили к ним. Одна из самых впечатляющих функций {{HTMLElement("canvas")}} это возможность использования изображений. Они могут быть использованы для динамического композитинга фото или как фоны графиков, для спрайтов в играх, и так далее. Внешние изображения могут быть использованы в любых поддерживаемых браузером форматах, таких как PNG, GIF, или JPEG. Вы можете даже использовать изображение, произведённое другими canvas элементами на той же странице как источник!
 
@@ -138,13 +138,13 @@ function draw() {
     ctx.lineTo(170,15);
     ctx.stroke();
   };
-  img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+  img.src = 'backdrop.png';
 }
 ```
 
 Получившийся график выглядит так:
 
-{{EmbedLiveSample("Пример_Простой_линейный_график", 220, 160, "https://mdn.mozillademos.org/files/206/Canvas_backdrop.png")}}
+{{EmbedLiveSample("Пример_Простой_линейный_график", 220, 160, "canvas_backdrop.png")}}
 
 ## Изменение размеров
 
@@ -157,7 +157,7 @@ function draw() {
 
 В этом примере, мы будем использовать изображение в качестве обоев и повторим его в canvas несколько раз. Это может быть сделано просто через цикл, располагая изменённые изображения на разных позициях. В коде внизу, первый цикл `for` проходит по рядам. Второй цикл `for` проходит по колонкам. Изображение уменьшено на треть от реального размера, которое было 50x38 пикселей.
 
-> **Примечание:** **Обратите внимание**: Изображения могут стать размытыми, при большом увеличении или зернистыми при значительном уменьшении. Возможно, лучше всего не изменять размеры изображения, если на них есть текст, который должен остаться читаемым.
+> **Примечание:** Изображения могут стать размытыми, при большом увеличении или зернистыми при значительном уменьшении. Возможно, лучше всего не изменять размеры изображения, если на них есть текст, который должен остаться читаемым.
 
 ```html hidden
 <html>
@@ -178,13 +178,13 @@ function draw() {
       }
     }
   };
-  img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+  img.src = 'rhino.jpg';
 }
 ```
 
 Получившийся рисунок canvas выглядит так:
 
-{{EmbedLiveSample("Пример_Тайлинг_изображения", 160, 160, "https://mdn.mozillademos.org/files/251/Canvas_scale_image.png")}}
+{{EmbedLiveSample("Пример_Тайлинг_изображения", 160, 160, "canvas_scale_image.png")}}
 
 ## Нарезка
 
@@ -193,7 +193,7 @@ function draw() {
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)")}}
   - : В данном изображении, эта функция берёт фрагмент из изображения, в виде прямоугольника, левый верхний угол которого - (`sx`, `sy`), ширина и высота - `sWidth` и `sHeight` и рисует в canvas, располагая его в точке (`dx`, `dy`) и изменяя его размер на указанные величины в `dWidth` и `dHeight`.
 
-![](https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg)Чтобы понять что делает нарезка, можно посмотреть на изображение справа. Первые четыре параметра определяют местоположение и размер фрагмента исходного изображения. Последние четыре параметра определяют прямоугольник, в который будет вписано изображение на целевом рисунке canvas.
+![](canvas_drawimage.jpg)Чтобы понять что делает нарезка, можно посмотреть на изображение справа. Первые четыре параметра определяют местоположение и размер фрагмента исходного изображения. Последние четыре параметра определяют прямоугольник, в который будет вписано изображение на целевом рисунке canvas.
 
 Нарезка может быть полезным инструментом, когда вы захотите сделать композицию. Вы могли бы собрать все элементы в одном файле изображения и использовать этот метод для создания композиции. Например, если вы захотите сделать график, вы могли бы сделать PNG изображение, содержащее все необходимые тексты в одном файле и в зависимости от ваших данных, могли бы достаточно просто изменять график. Другим преимуществом является то, что нет необходимости загружать каждое изображение по отдельности, получив возможность увеличить скорость загрузки.
 
@@ -206,8 +206,8 @@ function draw() {
  <body onload="draw();">
    <canvas id="canvas" width="150" height="150"></canvas>
    <div style="display:none;">
-     <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
-     <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
+     <img id="source" src="rhino.jpg" width="300" height="227">
+     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
    </div>
  </body>
 </html>
@@ -229,7 +229,7 @@ function draw() {
 
 В этот раз мы применили другой способ загрузки изображения. Вместо загрузки методом создания новых {{domxref("HTMLImageElement")}} объектов, мы включили их как {{HTMLElement("img")}} тэги прямо в наш HTML файл и из них выбрали изображения. Изображения скрыты с помощью CSS-свойства {{cssxref("display")}}, установленного в "none" для этих изображений.
 
-{{EmbedLiveSample("Пример_Обрамление_изображения", 160, 160, "https://mdn.mozillademos.org/files/226/Canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("Пример_Обрамление_изображения", 160, 160, "canvas_drawimage2.jpg")}}
 
 Скрипт, сам по себе, очень простой. Каждому {{HTMLElement("img")}} присвоен атрибут ID, который делает удобным их выбор с использованием {{domxref("document.getElementById()")}}. Потом мы просто используем функцию `drawImage()`, чтобы из первого изображения вырезать фрагмент носорога и вставить его в canvas, затем рисуем рамку сверху, используя второй вызов функции `drawImage()`.
 
@@ -246,19 +246,19 @@ function draw() {
  <body onload="draw();">
      <table>
       <tr>
-        <td><img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg"></td>
+        <td><img src="gallery_2.jpg"></td>
+        <td><img src="gallery_3.jpg"></td>
+        <td><img src="gallery_4.jpg"></td>
       </tr>
       <tr>
-        <td><img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg"></td>
+        <td><img src="gallery_6.jpg"></td>
+        <td><img src="gallery_7.jpg"></td>
+        <td><img src="gallery_8.jpg"></td>
       </tr>
      </table>
-     <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
+     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
  </body>
 </html>
 ```
@@ -267,7 +267,7 @@ function draw() {
 
 ```css
 body {
-  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
   margin: 10px;
 }
 

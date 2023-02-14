@@ -1,12 +1,6 @@
 ---
 title: HTML autocomplete 특성
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - Attribute
-  - HTML
-  - Reference
-  - 자동완성
-translation_of: Web/HTML/Attributes/autocomplete
 ---
 
 {{HTMLSidebar("Global_attributes")}}

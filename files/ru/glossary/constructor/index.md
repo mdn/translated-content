@@ -34,10 +34,6 @@ var defaultReference = new Default();
 
 ## Смотреть также
 
-### Основные знания
-
-- {{Interwiki("wikipedia", "Constructor_%28object-oriented_programming%29", "Constructor")}} на Wikipedia
-
 ### Техническая справка
 
 - [Конструктор в ООП для JavaScript](/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Constructor) на MDN

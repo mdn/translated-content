@@ -342,7 +342,7 @@ python3 manage.py runserver
 
 Com o servidor funcionando, você pode ver seu site colocando o endereço `http://127.0.0.1:8000/` em seu navegador local. Você deve ver uma página de erro como essa:
 
-![Django Debug page for Django 2.0](https://mdn.mozillademos.org/files/15729/django_404_debug_page.png)
+![Django Debug page for Django 2.0](django_404_debug_page.png)
 
 Não se assuste! Essa página de erro é esperada, pois nós não temos nehuma página ou url definida no módulo `catalogs.urls` (que é para onde somos redirecionados quando usamos a URL para a raíz do site).
 

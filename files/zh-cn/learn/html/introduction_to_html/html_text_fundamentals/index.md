@@ -1,5 +1,5 @@
 ---
-title: HTML 文字处理基础
+title: HTML 文本处理基础
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
@@ -866,9 +866,9 @@ if you drink it, <strong>you may <em>die</em></strong>.</p>
 
 ### 斜体字、粗体字、下划线...
 
-迄今为止我们已经讨论的元素都是意义清楚的语义元素。{{htmlelement("b")}}, {{htmlelement("i")}}, 和 {{htmlelement("u")}} 的情况却有点复杂。它们出现于人们要在文本中使用粗体、斜体、下划线但 CSS 仍然不被完全支持的时期。像这样的元素，仅仅影响表象而且没有语义，被称为**表象元素（presentational elements）**并且不应该再被使用。因为正如我们在之前看到的，语义对无障碍，SEO（搜索引擎优化）等非常重要。
+迄今为止我们已经讨论的元素都是意义清楚的语义元素。{{htmlelement("b")}}、{{htmlelement("i")}} 和 {{htmlelement("u")}} 的情况却有点复杂。它们出现于人们要在文本中使用粗体、斜体、下划线但 CSS 仍然不被完全支持的时期。像这样的元素，仅仅影响表象而且没有语义，被称为**表象元素**（presentational elements）并且不应该再被使用。因为正如我们在之前看到的，语义对无障碍、SEO（搜索引擎优化）等非常重要。
 
-HTML5 用新的语义规则重新定义了 `<b>`、`<i>` 和 `<u>`,使得它们的语言显得稍微有点混乱。
+HTML5 用新的语义规则重新定义了 `<b>`、`<i>` 和 `<u>`，使得它们的语言显得稍微有点混乱。
 
 这里是最好的经验法则：如果没有更合适的元素，那么使用 `<b>`、`<i>` 或 `<u>` 来表达传统上的粗体、斜体或下划线表达的意思是合适的。然而，始终拥有[无障碍](/zh-CN/docs/learn/Accessibility)的思维模式是至关重要的。斜体的概念对人们使用屏幕阅读器是没有帮助的，对使用其他书写系统而不是拉丁文书写系统的人们也是没有帮助的。
 
@@ -876,7 +876,7 @@ HTML5 用新的语义规则重新定义了 `<b>`、`<i>` 和 `<u>`,使得它们�
 - {{HTMLElement('b')}} 被用来传达传统上用粗体表达的意义：关键字，产品名称，引导句……
 - {{HTMLElement('u')}} 被用来传达传统上用下划线表达的意义：专有名词，拼写错误……
 
-> **备注：** 使用下划线的忠告：因为我们常常会认为网页中的下划线代表着一个超链接**，**所以最好只用下划线来代表超链接。而在语义适合的情况下不得不使用\<u>元素时，可以使用 CSS 来改变\<u>元素对应的下划线的默认样式，从而和超链接的下划线区分开来。下面是一个具体的例子：
+> **备注：** 使用下划线的忠告：因为我们常常会认为网页中的下划线代表着一个超链接，所以最好只用下划线来代表超链接。而在语义适合的情况下不得不使用 `<u>` 元素时，可以使用 CSS 来改变 `<u>` 元素对应的下划线的默认样式，从而和超链接的下划线区分开来。下面是一个具体的例子：
 
 ```html
 <!-- 学名 -->
@@ -915,12 +915,12 @@ HTML5 用新的语义规则重新定义了 `<b>`、`<i>` 和 `<u>`,使得它们�
 
 ## 本章目录
 
-- [开始学习 HTML](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started)
-- [“头”里有什么？HTML 元信息](/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML 文字处理初步](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [“头”里有什么——HTML 元信息](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML 文本处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高级文字格式](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文档和站点结构](/zh-CN/docs/learn/HTML/Introduction_to_HTML/文件和网站结构)
+- [文本格式进阶](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [文档和站点结构](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
 - [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [课程测验：为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [课程测验：构建内容丰富的网页](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
+- [为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [构建网页内容](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

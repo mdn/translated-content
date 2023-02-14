@@ -1,14 +1,6 @@
 ---
 title: WindowEventHandlers
 slug: orphaned/Web/API/WindowEventHandlers
-tags:
-  - API
-  - HTML-DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/WindowEventHandlers
 original_slug: Web/API/WindowEventHandlers
 ---
 

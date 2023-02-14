@@ -18,5 +18,4 @@ original_slug: Глоссарий/TCP
 
 ### Общая информация
 
-- {{Interwiki("wikipedia", "Transmission Control Protocol")}} на Wikipedia
 - [Обзор протокола HTTP](/ru/docs/Web/HTTP/Overview)

@@ -7,9 +7,9 @@ slug: Web/API/WebGL_API/By_example/Clearing_with_colors
 
 这个例子将展示如何用一个单色清除画布
 
-{{EmbedLiveSample("clearing-with-colors-source",660,425)}}
+### 使用单一颜色清除 WebGl 区域
 
-### 清除画布（使用单一颜色清除 WebGl 区域）
+{{EmbedLiveSample("使用单一颜色清除 WebGl 区域",660,425)}}
 
 这是一个最简单的 WebGL 代码。通过{{domxref("WebGLRenderingContext","rendering context", "", 1)}}设置好状态后，直接将整个区域清除为绿色。要注意 css 已经将 canvas 画布设置为黑色了，所以当画布变为绿色时，我们就知道神奇的 WebGL 魔法起作用了！
 

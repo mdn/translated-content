@@ -1,17 +1,10 @@
 ---
 title: Canvas API
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - Canvas
-  - JavaScript
-  - 개요
-  - 레퍼런스
-translation_of: Web/API/Canvas_API
 original_slug: Web/HTML/Canvas
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 **Canvas API**는 [JavaScript](/ko/docs/Web/JavaScript)와 [HTML](/ko/docs/Web/HTML) {{HtmlElement("canvas")}} 엘리먼트를 통해 그래픽을 그리기위한 수단을 제공합니다. 무엇보다도 애니메이션, 게임 그래픽, 데이터 시각화, 사진 조작 및 실시간 비디오 처리를 위해 사용됩니다.
 

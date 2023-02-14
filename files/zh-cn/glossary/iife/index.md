@@ -1,7 +1,6 @@
 ---
 title: IIFE（立即调用函数表达式）
 slug: Glossary/IIFE
-original_slug: Glossary/立即执行函数表达式
 ---
 
 **IIFE**（立即调用函数表达式）是一个在定义时就会立即执行的 {{glossary("JavaScript")}} {{glossary("function","函数")}}。

@@ -120,8 +120,9 @@
     },
     // MD049 is set to underscore upstream, not yet fixed here
     "MD049": false,
-    // MD050 is set to asterisk upstream, not yet fixed here
-    "MD050": false,
+    "MD050": {
+      "style": "asterisk"
+    },
     // MD051 - Link fragments should be valid.
     // -> Disabled, as yari generates link fragments by replacing spaces with underscores, not dashes.
     "MD051": false,
@@ -136,6 +137,19 @@
           "replace": " ",
           "skipCode": false
         },
+        {
+          "name": "relative-link-path",
+          "message": "Don't use relative paths",
+          "search": "](..",
+          "skipCode": true
+        },
+        {
+          "name": "trailing-spaces",
+          "message": "Avoid trailing spaces",
+          "searchPattern": "/  +$/gm",
+          "replace": "",
+          "skipCode": false
+        },
         // This will be replaced with Prettier in the long run
         {
           "name": "double-spaces",
@@ -143,10 +157,24 @@
           "searchPattern": "/([^\\s>])  ([^\\s|])/g",
           "replace": "$1 $2",
           "skipCode": true
+        },
+        {
+          "name": "stuck-definition",
+          "message": "Character is stuck to definition description marker",
+          "searchPattern": "/- :(\\w)/g",
+          "replace": "- : $1",
+          "skipCode": true
+        },
+        {
+          "name": "fqdn-moz-links",
+          "message": "Don't use developer.mozilla.org for links",
+          "search": "](https://developer.mozilla.org/",
+          "replace": "](/",
+          "skipCode": true
         }
       ]
     }
   },
   "customRules": ["markdownlint-rule-search-replace"],
-  "ignores": ["node_modules", "**/conflicting/**", "**/orphaned/**", ".github/", "files/**/web/api/window/frames/index.md"]
+  "ignores": ["node_modules", "**/conflicting/**", "**/orphaned/**", ".github/"]
 }

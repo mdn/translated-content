@@ -1,11 +1,10 @@
 ---
 title: WebAssembly.LinkError()
 slug: WebAssembly/JavaScript_interface/LinkError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 The **`WebAssembly.LinkError()`** constructor creates a new WebAssembly `LinkError` object, which indicates an error during module instantiation (besides [traps](http://webassembly.org/docs/semantics/#traps) from the start function).
 

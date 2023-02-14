@@ -1,10 +1,6 @@
 ---
 title: <font>
 slug: Web/HTML/Element/font
-tags:
-  - 요소
-  - 폐기됨
-translation_of: Web/HTML/Element/font
 ---
 
 ## 개요

@@ -3,9 +3,7 @@ title: Usando Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 
-{{ServiceWorkerSidebar}}
-
-{{ SeeCompatTable() }}
+{{DefaultAPISidebar("Service Workers API")}}
 
 Esse artigo contém informações de como começar com service workers, incluindo a arquitetura básica, registro de um service worker, o processo de instalação e ativação de um novo service worker, atualização de seu service worker, controle de cache e respostas customizadas, tudo isso no contexto de um simples app com a funcionalidade offline.
 
@@ -42,11 +40,11 @@ Com service workers, os seguintes passos geralmente são observados como configu
 6. O próximo é a ativação. Quando um service worker é instalado, ele recebe um evento de ativação. O uso primário do `onactivate é` para limpeza de recursos usado em versões anterioires do script de um Service worker.
 7. O Service worker agora vai controlar páginas, mas apenas aquelas abertas após o `register()` tiver sido bem-sucedido. Isto é, um documento inicia a vida com ou sem Service worker e mantém isso durante seu tempo de vida. Logo, documentos terão de ser recarregados para serem controlados.
 
-![](https://mdn.mozillademos.org/files/12636/sw-lifecycle.png)
+![](sw-lifecycle.png)
 
 O gráfico abaixo mostra um resumo dos eventos de service worker disponíveis:
 
-![install, activate, message, fetch, sync, push](https://mdn.mozillademos.org/files/12632/sw-events.png)
+![install, activate, message, fetch, sync, push](sw-events.png)
 
 ### Promises
 
@@ -139,7 +137,7 @@ Tudo isto acontece assincronamente.
 
 Para demonstrar apenas o básico de registro e instalação de um service worker, criamos uma simples demonstração chamada [sw-test](https://github.com/mdn/sw-test), que é uma simples galeria de imagens de Star Wars Lego. Usa uma função ativada por promise para ler dados de imagem a partir de um objeto JSON e carrega as imagens usando Ajax, antes de exibir as imagens em uma linha ao longo da página. Mantivemos as coisas estáticas e simples por enquanto. Também registra, instala e ativa um service worker, e quando mais especificações são suportadas pelos navegadores, armazena em cache todos os arquivos necessários para que funcione offline!
 
-![](https://mdn.mozillademos.org/files/8243/demo-screenshot.png)
+![](demo-screenshot.png)
 
 Você pode ver o [código-fonte no GitHub](https://github.com/mdn/sw-test/), e [ver um exemplo vivo](https://mdn.github.io/sw-test/). A parte que mencionaremos aqui é a promise (veja [app.js linhas 22-47](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47)), que é uma versão modificada do que você leu a respeito acima, em [Promises test demo](https://github.com/mdn/promises-test). É diferente das seguintes formas:
 
@@ -190,7 +188,7 @@ This could be for the following reasons:
 2. The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app’s root directory. In our example, the worker is at `https://mdn.github.io/sw-test/sw.js`, and the app’s root is `https://mdn.github.io/sw-test/`. But the path needs to be written as `/sw-test/sw.js`, not `/sw.js`.
 3. The service worker being pointed to is on a different origin to that of your app. This is also not allowed.
 
-![](https://mdn.mozillademos.org/files/12630/important-notes.png)
+![](important-notes.png)
 
 Also note:
 
@@ -243,7 +241,7 @@ this.addEventListener('install', function(event) {
 
 Now you’ve got your site assets cached, you need to tell service workers to do something with the cached content. This is easily done with the `fetch` event.
 
-![](https://mdn.mozillademos.org/files/12634/sw-fetch.png)
+![](sw-fetch.png)
 
 A `fetch` event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if `index.html` makes a cross origin request to embed an image, that still goes through its service worker.)
 
@@ -439,6 +437,6 @@ Firefox has also started to implement some useful tools related to service worke
 
 - [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- Download the [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
+- Download the [Service Workers 101 cheatsheet](sw101.png).
 - [Promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/pt-BR/docs/Web/Guide/Performance/Using_web_workers)

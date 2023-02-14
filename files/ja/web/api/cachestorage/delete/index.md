@@ -1,61 +1,64 @@
 ---
 title: CacheStorage.delete()
 slug: Web/API/CacheStorage/delete
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
 {{APIRef("Service Workers API")}}
 
-{{domxref("CacheStorage")}} インターフェイスの **`delete()`** メソッドは、`cacheName` に一致する {{domxref("Cache")}} オブジェクトを見つけ、見つかった場合は {{domxref("Cache")}} オブジェクトを削除し、`true` に解決される {{jsxref("Promise")}} を返します。 {{domxref("Cache")}} オブジェクトが見つからない場合、`false` に解決されます。
+**`delete()`** は {{domxref("CacheStorage")}} インターフェイスのメソッドで、`cacheName` に一致する {{domxref("Cache")}} オブジェクトを見つけ、見つかった場合は {{domxref("Cache")}} オブジェクトを削除し、 `true` に解決される {{jsxref("Promise")}} を返します。
+{{domxref("Cache")}} オブジェクトが見つからない場合は、`false` に解決されます。
 
-グローバルな {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} プロパティを介して `CacheStorage` にアクセスできます。
+`CacheStorage` には、グローバルな {{domxref("caches")}} プロパティを介してアクセスできます。
 
 ## 構文
 
-```
-caches.delete(cacheName).then(function(boolean) {
-  // キャッシュが削除されました
-});
+```js-nolint
+delete(cacheName)
 ```
 
-### パラメーター
+### 引数
 
 - `cacheName`
   - : 削除するキャッシュの名前。
 
-### 戻り値
+### 返値
 
-{{domxref("Cache")}} オブジェクトが見つかって削除された場合は `true`、そうでない場合は `false` に解決される {{jsxref("Promise")}}。
+{{jsxref("Promise")}} で、 {{domxref("Cache")}} オブジェクトが見つかって削除された場合は `true`、そうでない場合は `false` に解決されます。
 
 ## 例
 
-このコードスニペットでは、`activate` イベントを待機してから、新しいサービスワーカーがアクティブになる前に、古い未使用のキャッシュをクリアする {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} ブロックを実行します。 ここに、保持したいキャッシュ名の配列（`cachesToKeep`）があります。 {{domxref("CacheStorage.keys")}} を使用して {{domxref("CacheStorage")}} オブジェクトのキャッシュのキーを返し、各キーをチェックしてその配列内にあるかどうかを確認します。 ない場合は、`delete()` を使用して削除します。
+このコードスニペットでは、`activate` イベントを待機してから、新しいサービスワーカーがアクティブになる前に、古い未使用のキャッシュをクリアする {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} ブロックを実行します。 ここに、保持したいキャッシュ名の配列 (`cachesToKeep`) があります。 {{domxref("CacheStorage")}} オブジェクトのキャッシュのキーを {{domxref("CacheStorage.keys")}} を使用して返し、各キーをチェックしてその配列内にあるかどうかを確認します。 ない場合は、 `delete()` を使用して削除します。
 
 ```js
-this.addEventListener('activate', function(event) {
-  var cachesToKeep = ['v2'];
+this.addEventListener("activate", (event) => {
+  const cachesToKeep = ["v2"];
 
   event.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cachesToKeep.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+    caches.keys().then((keyList) =>
+      Promise.all(
+        keyList.map((key) => {
+          if (!cachesToKeep.includes(key)) {
+            return caches.delete(key);
+          }
+        })
+      )
+    )
   );
 });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.CacheStorage.delete")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WindowOrWorkerGlobalScope.caches")}}
+- {{domxref("caches")}}

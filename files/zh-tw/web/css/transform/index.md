@@ -102,7 +102,7 @@ p {
 
 ### 結果
 
-{{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
+{{EmbedLiveSample("平移、旋轉元素", "400", "160")}}
 
 ### 更多範例
 

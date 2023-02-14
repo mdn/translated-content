@@ -402,6 +402,7 @@
 /zh-TW/docs/Learn/CSS/Using_the_:target_selector	/zh-TW/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 /zh-TW/docs/Learn/CSS/文字樣式	/zh-TW/docs/Learn/CSS/Styling_text
 /zh-TW/docs/Learn/CSS/樣式化容器	/en-US/docs/Learn/CSS/Building_blocks
+/zh-TW/docs/Learn/Common_questions/What_is_a_web_server	/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
 /zh-TW/docs/Learn/HTML/Forms	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form	/zh-TW/docs/Learn/Forms/How_to_structure_a_web_form
 /zh-TW/docs/Learn/HTML/HTML介紹	/zh-TW/docs/Learn/HTML/Introduction_to_HTML
@@ -543,6 +544,7 @@
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/DOMString	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-TW/docs/Web/API/Document/keyup_event	/zh-TW/docs/Web/API/Element/keyup_event
+/zh-TW/docs/Web/API/Document/registerElement	/zh-TW/docs/Web/API/CustomElementRegistry/define
 /zh-TW/docs/Web/API/Document/width	/zh-TW/docs/Web/API/Element/clientWidth
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
 /zh-TW/docs/Web/API/DocumentTemp/createElement	/zh-TW/docs/Web/API/Document/createElement

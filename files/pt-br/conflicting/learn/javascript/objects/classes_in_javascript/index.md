@@ -1,7 +1,6 @@
 ---
 title: JavaScript orientado a objetos para iniciantes
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
-translation_of: Learn/JavaScript/Objects/Object-oriented_JS
 original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
 
@@ -49,13 +48,13 @@ Vamos considerar um programa simples que exibe informações sobre os alunos e p
 
 Para começar, poderíamos retornar ao nosso tipo de objeto Person do nosso [primeiro artigo de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics), que define os dados genéricos e a funcionalidade de uma pessoa. Há muitas coisas que você poderia saber sobre uma pessoa (endereço, altura, tamanho do sapato, perfil de DNA, número de passaporte, traços de personalidade significativos ...), mas neste caso estamos interessados apenas em mostrar seu nome, idade, sexo e interesses, e também queremos ser capazes de escrever uma breve introdução sobre eles com base nesses dados e fazê-los dizer oi. Isso é conhecido como **abstração** — criando um modelo simples de uma coisa mais complexa, que representa seus aspectos mais importantes de uma forma que é fácil trabalhar com os objetivos do nosso programa.
 
-![](https://mdn.mozillademos.org/files/13889/person-diagram.png)
+![](person-diagram.png)
 
 ### Criando objetos reais
 
 De nossa classe, podemos criar **instâncias de objeto** — objetos que contêm os dados e a funcionalidade definidos na classe. Da nossa classe Person, podemos criar algumas pessoas reais:
 
-![](https://mdn.mozillademos.org/files/15163/MDN-Graphics-instantiation-2-fixed.png)
+![](mdn-graphics-instantiation-2-fixed.png)
 
 Quando uma instância de objeto é criada a partir de uma classe, a **função construtora** da classe é executada para criá-la. Esse processo de criação de uma instância de objeto de uma classe é chamado de **instanciação** — a instância do objeto é **instanciada** a partir da classe.
 
@@ -63,7 +62,7 @@ Quando uma instância de objeto é criada a partir de uma classe, a **função c
 
 Neste caso, não queremos pessoas genéricas — queremos professores e alunos, que são tipos mais específicos de pessoas. Em OOP, podemos criar novas classes com base em outras classes — essas novas **classes filhas** podem **herdar** os recursos de dados e código de sua **classe pai**, para que você possa reutilizar a funcionalidade comum a todos os tipos de objetos em vez de duplicá-los. Onde a funcionalidade difere entre as classes, você pode definir recursos especializados diretamente sobre eles, conforme necessário.
 
-![](https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png)
+![](mdn-graphics-inherited-3.png)
 
 Isso é realmente útil — professores e alunos compartilham muitos recursos comuns, como nome, sexo e idade, por isso é conveniente definir apenas esses recursos uma vez. Você também pode definir o mesmo recurso separadamente em classes diferentes, já que cada definição desse recurso estará em um namespace diferente. Por exemplo, a saudação de um aluno pode estar no formato "Yo, I'm \[firstName]" (por exemplo, _Yo, I'm Sam_), enquanto um professor pode usar algo mais formal, como "Olá, meu nome é \[Prefixo \[lastName], e eu ensino \[Subject]. " (por exemplo _Olá, Meu nome é Mr Griffiths, e eu ensino Química_).
 
@@ -71,7 +70,7 @@ Isso é realmente útil — professores e alunos compartilham muitos recursos co
 
 Agora você pode criar instâncias de objetos de suas classes filhas. Por exemplo:
 
-![](https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png)
+![](mdn-graphics-instantiation-teacher-3.png)
 
 No restante do artigo, começaremos a analisar como a teoria da POO pode ser colocada em prática no JavaScript.
 

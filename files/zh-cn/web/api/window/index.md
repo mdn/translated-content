@@ -251,8 +251,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Moves the window to the specified coordinates.
 - {{domxref("Window.open()")}}
   - : 打开一个新窗口。
-- {{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{Deprecated_Inline}}
-  - : 打开一个新的对话框窗口。
 - {{domxref("Window.postMessage()")}}
   - : 为一个窗口向另一个窗口发送数据字符串提供了一种安全方法，该窗口不必与第一个窗口处于相同的域中。
 - {{domxref("Window.print()")}}
@@ -328,7 +326,7 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface._
 
-> **备注：** Starting in {{Gecko("9.0")}}, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/zh-CN/docs/DOM/DOM_event_handlers) for details.
+> **备注：** Starting in Gecko 9.0, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/zh-CN/docs/DOM/DOM_event_handlers) for details.
 
 - {{domxref("Window.onappinstalled")}}
   - : Called when the page is installed as a webapp. See `appinstalled` event.

@@ -1,8 +1,6 @@
 ---
 title: '@font-face'
 slug: Web/CSS/@font-face
-translation_of: Web/CSS/@font-face
-browser-compat: css.at-rules.font-face
 ---
 {{CSSRef}}
 
@@ -38,8 +36,6 @@ browser-compat: css.at-rules.font-face
 
 아래는 다운로드하여 사용가능한 폰트를 설정하는 간단한 예제이며, document의 전체 body 영역에 폰트가 적용된다.
 
-[View live sample](/@api/deki/files/2935/=webfont-sample.html)
-
 ```
 <html>
 <head>
@@ -58,6 +54,9 @@ browser-compat: css.at-rules.font-face
 </body>
 </html>
 ```
+
+실행 결과는 다음과 같다.
+{{EmbedGHLiveSample("css-examples/web-fonts/basic-web-font.html", '100%', '100')}}
 
 아래 예제에서는 로컬에 설치된 "Helvetica Neue Bold" 폰트가 사용된다. 만약 해당 폰트가 설치되어 있지 않다면(다른 2개의 폰트를 적용하기 위한 시도를 하고), 다운로드 가능한 "MgOpenModernaBold.ttf" 폰트가 대신 사용된다.
 

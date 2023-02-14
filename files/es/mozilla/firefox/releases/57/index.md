@@ -64,7 +64,7 @@ _No hay ningún cambio._
 #### API nuevas
 
 - Se ha activado de manera predeterminada la API {{domxref("PerformanceObserver")}} ({{bug(1386021)}}).
-- Añadimos las interfaces {{domxref("AbortController")}} y {{domxref("AbortSignal")}} (conocidas como la API «Abort»), que permiten interrumpir las solicitudes del DOM (como las de [recuperación](/es/docs/Web/API/WindowOrWorkerGlobalScope/fetch)) si así se desea ({{bug(1378342)}}).
+- Añadimos las interfaces {{domxref("AbortController")}} y {{domxref("AbortSignal")}} (conocidas como la API «Abort»), que permiten interrumpir las solicitudes del DOM (como las de [recuperación](/es/docs/Web/API/fetch)) si así se desea ({{bug(1378342)}}).
 
 #### DOM
 
@@ -81,7 +81,7 @@ _No hay ningún cambio._
 
 #### Multimedia y WebRTC
 
-- Ahora se admiten mensajes de cualquier tamaño (hasta 1 GiB, aunque 256 kiB es más interoperativo) en {{domxref("RTCDataChannel")}} por medio del uso de la opción «end-of-record» (EOR) en los mensajes de SCTP. Consúltese {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}} para obtener más información ({{bug(979417)}}).
+- Ahora se admiten mensajes de cualquier tamaño (hasta 1 GiB, aunque 256 kiB es más interoperativo) en {{domxref("RTCDataChannel")}} por medio del uso de la opción «end-of-record» (EOR) en los mensajes de SCTP. Consúltese [Understanding message size limits](/es/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits) para obtener más información ({{bug(979417)}}).
 
   > **Nota:** Como Firefox aún no admite el protocolo ndata de SCTP, que permite intercalar mensajes de SCTP de varias fuentes, enviar objetos de datos grandes puede causar retardos importantes en el resto del tránsito SCTP. Véase el {{bug(1381145)}} para estar al tanto de la implementación de ndata en Firefox.
 

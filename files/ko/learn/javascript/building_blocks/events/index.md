@@ -539,7 +539,7 @@ video.onclick = function() {
 - 브라우저는 선택된 요소가 버블링 단계에 대해 그것에 등록된 `onclick` 이벤트 핸들러를 가지고 있는지 확인하기 위해 검사하고, 만약 그렇다면 실행합니다.
 - 그리고서 그것은 바로 다음의 조상 요소로 이동하고 같은 일을 하고, 그리고서 그 다음 요소로 이동하고, `<html>` 요소에 닿을 때까지 계속합니다.
 
-[![](bubbling-capturing.png)](https://mdn.mozillademos.org/files/14075/bubbling-capturing.png)
+[![](bubbling-capturing.png)](bubbling-capturing.png)
 
 (더 큰 도표를 보려면 이미지를 클릭하세요)
 

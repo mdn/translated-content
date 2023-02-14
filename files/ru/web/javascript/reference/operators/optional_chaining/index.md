@@ -1,5 +1,5 @@
 ---
-title: "Оператор_опциональной последовательности"
+title: "Оператор опциональной последовательности"
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 
 ## Синтаксис
 
-```
+```js
 obj?.prop
 obj?.[expr]
 arr?.[index]
@@ -43,7 +43,7 @@ let nestedProp = obj.first?.second;
 
 Это эквивалентно следующему (кроме создания временной переменной):
 
-```
+```js
 let temp = obj.first;
 let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
 ```
@@ -58,7 +58,7 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 let result = someInterface.customMethod?.();
 ```
 
-> **Примечание:** **Обратите внимание:** Для существующего свойства, не являющегося функцией, использование конструкции `x.y?.()` всё равно выбросит {{jsxref("TypeError")}} исключение (`x.y не является функцией`).
+> **Примечание:** Для существующего свойства, не являющегося функцией, использование конструкции `x.y?.()` всё равно выбросит {{jsxref("TypeError")}} исключение (`x.y не является функцией`).
 
 ### Работа с колбэк-функциями и обработчиками событий
 
@@ -145,7 +145,7 @@ let duration = vacations.trip?.getTime?.();
 
 Оператор {{JSxRef("Operators/Nullish_Coalescing_Operator", "??", '', 1)}} может использоваться после опциональной последовательности для установления значения по умолчанию:
 
-```
+```js
 let customer = {
   name: "Carl",
   details: { age: 82 }

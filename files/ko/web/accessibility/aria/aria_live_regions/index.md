@@ -1,7 +1,6 @@
 ---
 title: ARIA live regions
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
-translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 ---
 
 JavaScript를 이용하면, 전체 페이지를 다시 로드할 필요 없이 페이지의 일부를 동적으로 변경하는 것이 가능합니다. 예를 들면, 검색 결과 리스트를 즉시 업데이트 하거나, 사용자 상호 작용이 필요 없는 경고 또는 알림을 표시합니다. 이러한 변경사항들은 일반적으로 페이지를 볼 수 있는 사용자에게 시각적으로 분명하게 보이지만, 보조과학기술 사용자들에겐 분명하지 않을 수 있습니다. ARIA live regions은 이 간격을 메우고, 보조과학기술에 의해 발표될 수 있는 방식으로 동적 컨텐츠 변화들을 프로그래밍 방식으로 노출할 수 있는 방법을 제공합니다.
@@ -103,7 +102,7 @@ As the user selects a new planet, the information in the live region will be ann
 
 Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) to the live region:
 
-![A screenshot of VoiceOver on Mac announcing the update to a live region. Subtitles are shown in the picture.](https://mdn.mozillademos.org/files/15815/Web_Accessibility_ARIA_ARIA_Live_Regions.png)
+![A screenshot of VoiceOver on Mac announcing the update to a live region. Subtitles are shown in the picture.](web_accessibility_aria_aria_live_regions.png)
 
 ## Preferring specialized live region roles
 

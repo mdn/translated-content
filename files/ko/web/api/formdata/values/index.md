@@ -1,9 +1,6 @@
 ---
 title: FormData.values()
 slug: Web/API/FormData/values
-page-type: web-api-instance-method
-browser-compat: api.FormData.values
-translation_of: Web/API/FormData/values
 ---
 
 {{APIRef("XMLHttpRequest")}}

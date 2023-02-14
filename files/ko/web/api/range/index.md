@@ -1,33 +1,28 @@
 ---
 title: range
 slug: Web/API/Range
-tags:
-  - API
-  - DOM
-  - Reference
-translation_of: Web/API/Range
 ---
 {{ APIRef("DOM") }}
 
 **`Range`** 객체는 주어진 document 내의 텍스트 노드들의 부분들(parts)과 document의 단편화에 포함된 노드들을 나타내고 있다.
 
-Range 오브젝트는 [`Document`](ko/DOM/document) 객체에 포함되어 있는 [`createRange`](ko/DOM/document.createRange) 메소드를 사용하여 생성할 수 있다. 또한 [`selection`](ko/DOM/Selection) 객체에 포함되어 있는 [`getRangeAt`](ko/DOM/Selection/getRangeAt) 메소드를 사용하여 추출할 수 있다.
+Range 오브젝트는 [`Document`](/ko/DOM/document) 객체에 포함되어 있는 [`createRange`](/ko/DOM/document.createRange) 메소드를 사용하여 생성할 수 있다. 또한 [`selection`](/ko/DOM/Selection) 객체에 포함되어 있는 [`getRangeAt`](/ko/DOM/Selection/getRangeAt) 메소드를 사용하여 추출할 수 있다.
 
 {{domxref("Range.Range()", "Range()")}} 생성자 또한 사용 가능하다.
 
 ## 속성
 
-- [collapsed](ko/DOM/range.collapsed)
+- [collapsed](/ko/DOM/range.collapsed)
   - : Range의 시작점과 끝점이 같인 위치인지를 알 수 있는 boolean 값을 반환한다.
-- [commonAncestorContainer](ko/DOM/range.commonAncestorContainer)
+- [commonAncestorContainer](/ko/DOM/range.commonAncestorContainer)
   - : startContainer와 endContainer 노드들을 포함한 최상위 노드를 반환한다.
-- [endContainer](ko/DOM/range.endContainer)
+- [endContainer](/ko/DOM/range.endContainer)
   - : Range의 끝 위치를 포함하는 Node를 반환한다.
-- [endOffset](ko/DOM/range.endOffset)
+- [endOffset](/ko/DOM/range.endOffset)
   - : endContainer 안에 있는 Range 끝을 나타내는 숫자(offset)를 반환한다.
-- [startContainer](ko/DOM/range.startContainer)
+- [startContainer](/ko/DOM/range.startContainer)
   - : Range의 시작 위치를 포함하는 Node를 반환한다.
-- [startOffset](ko/DOM/range.startOffset)
+- [startOffset](/ko/DOM/range.startOffset)
   - : startContainer 안에 있는 Range 시작을 나타내는 숫자(offset)를 반환한다.
 
 ## 생성자

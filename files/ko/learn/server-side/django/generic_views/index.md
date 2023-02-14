@@ -427,11 +427,11 @@ def book_detail_view(request, primary_key):
 
 책 목록을 보기 위해 **All books** 링크를 클릭하세요.
 
-![Book List Page](https://mdn.mozillademos.org/files/14049/book_list_page_no_pagination.png)
+![Book List Page](book_list_page_no_pagination.png)
 
 그리고 당신의 책들 중 하나를 클릭해보세요. 만약, 현재까지의 과정을 성공적으로 따라왔다면, 당신은 다음과 같은 스크린샷을 볼 수 있을 겁니다.
 
-![Book Detail Page](https://mdn.mozillademos.org/files/14051/book_detail_page_no_pagination.png)
+![Book Detail Page](book_detail_page_no_pagination.png)
 
 ## Pagination
 
@@ -491,7 +491,7 @@ pagination 링크를 만들기 위해 우리는 `{{ request.path }}` 를 이용�
 
 next/previous 링크와 함께 보이는 밑에 pagination 링크는 당신이 어느 페이지에 있느냐에 따라 달리 표시가 됩니다.
 
-![Book List Page - paginated](https://mdn.mozillademos.org/files/14057/book_list_paginated.png)
+![Book List Page - paginated](book_list_paginated.png)
 
 ## 도전과제
 
@@ -502,7 +502,7 @@ next/previous 링크와 함께 보이는 밑에 pagination 링크는 당신이 �
 
 URL mappers에 필요한 코드들과 view들은 ,사실상, 우리가 위에서 만들었던 `Book` 목록과 세부 사항 view들과 동일해야 합니다. template들은 다르겠지만, 비슷한 동작을 가지고 있을 겁니다.
 
-> **참고:** :
+> **참고:**
 >
 > - 작가 목록 페이지를 위한 URL mapper를 만들고나면, **All authors** base template에 있는 **All authors** 링크 또한 업데이트 해야될 필요를 느끼게 될 겁니다. 우리가 **All books** 링크 업데이트 때 했던, [수행 과정](#Update_the_base_template)을 따라해주세요.
 > - 작가 세부 사항 페이지에 대한 URL mapper를 만들고나면, 당신은 [book detail view template](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) 또한 업데이트 해야 합니다. 그래야 작가 링크가 당신이 새로 만든 작가 세부 사항 페이지를 가리키거든요. (비어 있는 URL로 있기 보다는 말이죠). 굵게 되어 있는 부분을 template 내의 태그에 넣어주세요.
@@ -513,9 +513,9 @@ URL mappers에 필요한 코드들과 view들은 ,사실상, 우리가 위에서
 
 모두 마치면, 당신의 페이즈들은 아마 밑의 스크린샷과 비슷하게 보일 겁니다.
 
-![Author List Page](https://mdn.mozillademos.org/files/14053/author_list_page_no_pagination.png)
+![Author List Page](author_list_page_no_pagination.png)
 
-![Author Detail Page](https://mdn.mozillademos.org/files/14055/author_detail_page_no_pagination.png)
+![Author Detail Page](author_detail_page_no_pagination.png)
 
 ## 요약
 

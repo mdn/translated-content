@@ -1,15 +1,6 @@
 ---
 title: PWA를 설치가능하게 만드는 방법
 slug: Web/Progressive_web_apps/Installable_PWAs
-tags:
-  - PWA
-  - a2hs
-  - js13kGames
-  - 설치가능
-  - 프로그레시브
-  - 프로그레시브 웹 앱
-  - 홈 화면에 추가
-translation_of: Web/Progressive_web_apps/Installable_PWAs
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
@@ -39,7 +30,7 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 <link rel="manifest" href="js13kpwa.webmanifest">
 ```
 
-> **참고:** **노트**: 과거에 manifest로 사용되던 몇 가지 흔한 확장자들이 있습니다: `manifest.webapp` 은 Firefox OS 웹 manifest로 유명하며, 많은 사람들이 JSON 구조로 내용이 구성된 `manifest.json`을 사용합니다. 하지만, `.webmanifest` 확장자는 [W3C manifest 명세](https://w3c.github.io/manifest/)에 명시적으로 언급되고 있으므로 이를 그대로 사용하도록 하겠습니다.
+> **참고:** 과거에 manifest로 사용되던 몇 가지 흔한 확장자들이 있습니다: `manifest.webapp` 은 Firefox OS 웹 manifest로 유명하며, 많은 사람들이 JSON 구조로 내용이 구성된 `manifest.json`을 사용합니다. 하지만, `.webmanifest` 확장자는 [W3C manifest 명세](https://w3c.github.io/manifest/)에 명시적으로 언급되고 있으므로 이를 그대로 사용하도록 하겠습니다.
 
 파일의 내용은 다음과 같습니다.
 
@@ -87,19 +78,19 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 사용자가 모바일 브라우저를 지원하는 PWA에 방문할 때, PWA로써 앱 설치를 가능하게하는 배너가 나타나야합니다.
 
-![Add to Home screen popup of js13kPWA.](https://mdn.mozillademos.org/files/15928/js13kpwa-icon.png)
+![Add to Home screen popup of js13kPWA.](js13kpwa-icon.png)
 
 사용자가 이 배너를 클릭하면 설치 배너가 나타납니다. 배너는 브라우저에의해 자동으로 생성되며, manifest 파일의 정보(프롬프트에 보여질 이름, 아이콘)를 기반으로합니다.
 
-![Install banner of js13kPWA.](https://mdn.mozillademos.org/files/15927/js13kpwa-banner.png)
+![Install banner of js13kPWA.](js13kpwa-banner.png)
 
 사용자가 버튼을 클릭하면 앱이 어떻게 표시될지를 보여주며, 사용자에게 정말 앱 추가를 원하는지 선택하도록 하는 마지막 단계가 있습니다.
 
-![Add to Home screen popup of js13kPWA.](https://mdn.mozillademos.org/files/15926/js13kpwa-add.png)
+![Add to Home screen popup of js13kPWA.](js13kpwa-add.png)
 
 확인을 하면 앱이 홈 화면에 설치됩니다.
 
-![](https://mdn.mozillademos.org/files/15834/js13kpwa-installed.png)
+![](js13kpwa-installed.png)
 
 그 후, 즉시 아이콘을 사용해 이를 실행하여 시작할 수 있습니다. PWA가 가끔(여러분이 사용하는 브라우저나 운영체제에 따라) 아이콘의 우측 하단에 작은 브라우저 이미지가 있어 사용자에게 웹 특성에 대한 정보를 줍니다.
 
@@ -107,7 +98,7 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 일부 브라우저에서, PWA가 실행될 때 보여지는 스플래시 화면 역시 manifest의 정보로부터 생성됩니다.
 
-![](https://mdn.mozillademos.org/files/15835/js13kpwa-splash.png)
+![](js13kpwa-splash.png)
 
 아이콘과 테마 그리고 배경 색상은 이 화면을 생성하기 위해 사용됩니다.
 

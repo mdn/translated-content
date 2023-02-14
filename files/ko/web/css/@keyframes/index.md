@@ -1,12 +1,6 @@
 ---
 title: '@keyframes'
 slug: Web/CSS/@keyframes
-tags:
-  - Animations
-  - At-rule
-  - CSS
-  - Reference
-translation_of: Web/CSS/@keyframes
 ---
 {{CSSRef}}
 

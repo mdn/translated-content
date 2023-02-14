@@ -27,8 +27,6 @@ slug: Web/CSS/:checked
 
 ### 基础示例
 
-### Basic example
-
 #### HTML
 
 ```html
@@ -82,13 +80,11 @@ option:checked {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Basic_example")}}
+{{EmbedLiveSample("基础示例")}}
 
 ### 借用隐藏的 checkbox 来切换元素的样式（显示/隐藏）
-
-### Toggling elements with a hidden checkbox
 
 这个例子利用了`:checked`伪类，让用户基于复选框的状态切换内容，而无需使用 JavaScript。
 
@@ -148,15 +144,9 @@ option:checked {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample("Toggling_elements_with_a_hidden_checkbox", "auto", 220)}}
-
-### 图片相册
-
-同时，可以使用隐藏的 radioboxes 中的:checked 伪类来构建一个**只有在鼠标单击“预览”时，图片才会以全尺寸展示的图片相册，**查看[演示](/@api/deki/files/6268/=css-checked-gallery.zip)。
-
-> **备注：** 一个类似的效果，基于[`:hover`](/zh-CN/docs/CSS/:hover)伪类和没有隐藏的 radioboxes，查看[这个演示](/@api/deki/files/6247/=css-gallery.zip)，来自[:hover](/zh-CN/docs/CSS/:hover)页面。
+{{EmbedLiveSample("借用隐藏的 checkbox 来切换元素的样式（显示/隐藏）", "auto", 220)}}
 
 ## 规范
 

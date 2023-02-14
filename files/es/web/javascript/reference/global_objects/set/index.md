@@ -1,9 +1,7 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set
 original_slug: Web/JavaScript/Reference/Global_Objects/Set
-browser-compat: javascript.builtins.Set
 ---
 
 {{JSRef}}
@@ -60,7 +58,7 @@ El método [`has`](/es/docs/Web/JavaScript/Reference/Global_Objects/Set/has) de 
   - : Un alias para {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
   - : Devuelve un nuevo objeto iterador que contiene **un arreglo de `[value, value]`** para cada elemento del objeto `Set`, en orden de inserción.
-  
+
     Esto es similar al objeto {{jsxref("Map")}}, de modo que la _clave_ de cada entrada es la misma que su _valor_ para un `Set`.
 - {{jsxref("Set.forEach", "Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}
   - : Llama a `callbackFn` una vez por cada valor presente en el objeto `Set`, en orden de inserción. Si se proporciona un parámetro `thisArg`, se utilizará como valor `this` para cada invocación de `callbackFn`.

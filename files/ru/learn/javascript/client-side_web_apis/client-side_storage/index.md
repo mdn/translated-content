@@ -29,7 +29,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 Пользователь должен будет загрузить музыкальные файлы только один раз - при последующих посещениях они будут извлечены из локальной базы данных.
 
-> **Примечание:** **Примечание.** Существуют ограничения на объем данных, которые вы можете хранить с помощью API-интерфейсов на стороне клиента (возможно, как для отдельных API, так и в совокупности). Точный лимит варьируется в зависимости от браузера и, возможно, в зависимости от пользовательских настроек. Смотри [Ограничения хранилища браузера и критерии переполнения](/ru/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) для большей информации.
+> **Примечание:** Существуют ограничения на объем данных, которые вы можете хранить с помощью API-интерфейсов на стороне клиента (возможно, как для отдельных API, так и в совокупности). Точный лимит варьируется в зависимости от браузера и, возможно, в зависимости от пользовательских настроек. Смотри [Ограничения хранилища браузера и критерии переполнения](/ru/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) для большей информации.
 
 ### Старый подход: куки
 
@@ -134,7 +134,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 Вы можете найти пример HTML на [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) — он содержит простой веб-сайт с заголовком, контентом и нижним колонтитулом, а также форму для ввода вашего имени.
 
-![](https://mdn.mozillademos.org/files/15735/web-storage-demo.png)
+![](web-storage-demo.png)
 
 Давайте создадим пример, чтобы вы могли понять, как он работает.
 
@@ -241,7 +241,7 @@ Here we'll run you through an example that allows you to store notes in your bro
 
 The app looks something like this:
 
-![](https://mdn.mozillademos.org/files/15744/idb-demo.png)
+![](idb-demo.png)
 
 Each note has a title and some body text, each individually editable. The JavaScript code we'll go through below has detailed comments to help you understand what's going on.
 
@@ -644,7 +644,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
 Пример ниже показывает, как создать приложение, которое будет хранить данные большого объёма в хранилище IndexedDB, избегая необходимости скачивать их повторно. Это важное улучшение пользовательского опыта, но есть одно замечание — основной HTML, CSS, и файлы JavaScript все ещё нужно загружать каждый раз при запросе сайта, это значит, что данный пример не будет работать при отсутствии сетевого соединения.
 
-![](https://mdn.mozillademos.org/files/15759/ff-offline.png)
+![](ff-offline.png)
 
 Это тот случай, когда [Service workers](/ru/docs/Web/API/Service_Worker_API) и [Cache API](/ru/docs/Web/API/Cache) приходят на помощь.
 

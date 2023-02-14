@@ -1,17 +1,7 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - Característica del lenguaje
-  - Declaración de variable
-  - ECMAScript 2015
-  - JavaScript
-  - Variables
-  - let
-  - sentencias
-translation_of: Web/JavaScript/Reference/Statements/let
 original_slug: Web/JavaScript/Referencia/Sentencias/let
-browser-compat: javascript.statements.let
 ---
 
 {{jsSidebar("Statements")}}

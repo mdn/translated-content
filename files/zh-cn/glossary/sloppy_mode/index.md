@@ -1,7 +1,6 @@
 ---
 title: 正常模式
 slug: Glossary/Sloppy_mode
-original_slug: Glossary/正常模式
 ---
 
 因为翻译原因，正常模式也被翻译为——马虎模式/稀松模式/懒散模式

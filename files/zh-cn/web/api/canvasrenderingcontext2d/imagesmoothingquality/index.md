@@ -21,7 +21,7 @@ value = ctx.imageSmoothingQuality
 
 ## 示例
 
-### 使用 imageSmoothingQuality 属性
+### 设置图像平滑质量
 
 这是一段简单的代码片段，对缩放的图片使用 `imageSmoothingQuality` 属性。
 
@@ -34,69 +34,20 @@ value = ctx.imageSmoothingQuality
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-var img = new Image();
-img.src = 'canvas_createpattern.png';
-img.onload = function() {
- ctx.mozImageSmoothingEnabled = false;
- ctx.imageSmoothingQuality = "Medium";
- ctx.webkitImageSmoothingEnabled = false;
- ctx.msImageSmoothingEnabled = false;
- ctx.imageSmoothingEnabled = false;
- ctx.drawImage(img, 0, 0, 400, 200);
+let img = new Image();
+img.src = "canvas_createpattern.png";
+img.onload = () => {
+  ctx.imageSmoothingQuality = "low";
+  ctx.drawImage(img, 0, 0, 300, 150);
 };
 ```
 
-编辑下面代码，在线查看 Canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code" style="height:140px;">
-var img = new Image();
-img.src = 'canvas_createpattern.png';
-img.onload = function() {
- ctx.mozImageSmoothingEnabled = false;
- ctx.webkitImageSmoothingEnabled = false;
- ctx.imageSmoothingQuality = "Medium";
- ctx.msImageSmoothingEnabled = false;
- ctx.imageSmoothingEnabled = false;
- ctx.drawImage(img, 0, 0, 400, 200);
-};</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 400) }}
+{{ EmbedLiveSample('设置图像平滑质量', 700, 180) }}
 
 ## 规范
 

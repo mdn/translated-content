@@ -1,14 +1,6 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
-tags:
-  - API
-  - CustomElementRegistry
-  - Interface
-  - Reference
-  - Web Components
-browser-compat: api.CustomElementRegistry
-translation_of: Web/API/CustomElementRegistry
 ---
 
 {{DefaultAPISidebar("Web Components")}}

@@ -1,13 +1,6 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Example
-  - JavaScript
-  - Promise
-  - async
-  - await
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
 
 {{jsSidebar("Statements")}}

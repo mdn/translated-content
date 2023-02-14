@@ -3,7 +3,7 @@ title: 變形效果
 slug: Web/API/Canvas_API/Tutorial/Transformations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 ## 畫布狀態儲存與復原
 
@@ -71,7 +71,7 @@ draw();
 
 第五步：再畫一個矩形 我們再取出更早之前儲存的黑色(第一狀態)
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
+{{EmbedLiveSample("畫布狀態儲存與復原範例", "180", "180", "canvas_savestate.png")}}
 
 ## 移動畫布
 
@@ -130,7 +130,7 @@ function drawSpirograph(ctx,R,r,O){
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "330", "330", "canvas_translate.png")}}
+{{EmbedLiveSample("移動畫布範例", "330", "330", "canvas_translate.png")}}
 
 ## 旋轉
 
@@ -176,7 +176,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "180", "180", "canvas_rotate.png")}}
+{{EmbedLiveSample("旋轉範例", "180", "180", "canvas_rotate.png")}}
 
 ## 縮放
 
@@ -278,7 +278,7 @@ draw();
 
 第二排藍色圖案我們只改變 Y 軸的縮放倍率，X 軸維持不變，因而產生一個比一個更扁的橢圓圖形。同理，第三排綠色圖案改變 X 軸的縮放倍率，Y 軸維持不變。
 
-{{EmbedLiveSample("A_scale_example", "330", "330", "canvas_scale.png")}}
+{{EmbedLiveSample("縮放範例", "330", "330", "canvas_scale.png")}}
 
 ## 變形
 
@@ -289,7 +289,7 @@ draw();
 - `setTransform(m11, m12, m21, m22, dx, dy)`
   - : 復原目前矩陣為恆等矩陣(Identiy matrix，也就是預設矩陣)，然後再以輸入參數呼叫 transform()。
 
-### `transform` / `setTransform`範例
+### `transform` / `setTransform` 範例
 
 ```js
 function draw() {
@@ -320,6 +320,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("transform_.2F_setTransform_examples", "230", "280", "canvas_transform.png")}}
+{{EmbedLiveSample("transform_setTransform_範例", "230", "280", "canvas_transform.png")}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors", "Web/Guide/HTML/Canvas_tutorial/Compositing")}}

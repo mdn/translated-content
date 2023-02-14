@@ -1,13 +1,6 @@
 ---
 title: <colgroup>
 slug: Web/HTML/Element/colgroup
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/colgroup
 ---
 
 {{HTMLSidebar}}

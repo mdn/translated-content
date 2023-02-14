@@ -16,17 +16,17 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 Какую проблему мы пытаемся решить адаптивными изображениями? Давайте рассмотрим типичный сценарий. Обычный веб-сайт может содержать изображение в заголовке, для улучшения визуального восприятия пользователем, а также несколько изображений в контенте под ним. Вы, вероятно, захотите, чтобы изображение в заголовке занимало всю ширину окна, а изображения в контенте размещались где-то внутри колонки с контентом. Давайте посмотрим на следующий простой пример:
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
 Такая вёрстка хорошо выглядит на широкоформатных экранах ноутбуков и настольных ПК, (вы можете посмотреть [посмотреть демо-пример](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) и найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) на Github.) Мы не будем подробно рассматривать CSS, скажем только следующее:
 
-- Содержимому тега `main` задана максимальная ширина 1200 пикселей. Если окно браузера выше этой ширины, то содержимое сайта остаётся на 1200 пикселей и центрирует себя в доступном пространстве. Если окно браузера ниже этой ширины, содержимое устанавливается в 100% от ширины экрана.
+- Содержимому тега `main` задана максимальная ширина 1200 пикселей. Если ширина окна браузера больше этого значения, то содержимое сайта остаётся на 1200 пикселей и центрирует себя в доступном пространстве. Если ширина окна браузера меньше, содержимое устанавливается в 100% от ширины экрана.
 - Изображение в шапке всегда будет оставаться в центре тега header вне зависимости от ширины браузера. Если сайт будет просматриваться на узких экранах, то важные детали в центре изображения (люди) всё равно будут видны. Все, что выходит за пределы ширины экрана будет скрыто. Высота шапки 200 пикселей.
 - Изображения в содержимом заданы так, что если ширина body становится меньше чем ширина изображения, то изображения начинают сжиматься и остаются всегда внутри body и не выступают за его пределы.
 
 Всё хорошо, однако проблемы начинаются, когда вы просматриваете сайт на устройстве с небольшим экраном – шапка внизу выглядит нормально, но теперь она занимает значительную высоту экрана; первое изображение в контенте напротив, выглядит ужасно – при таком размере едва можно рассмотреть людей!
 
-![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](https://mdn.mozillademos.org/files/12936/non-responsive-narrow.png)
+![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
 
 Было бы намного лучше показывать обрезанную версию изображения, на котором видны важные детали снимка, когда сайт отображается на узком экране, и, возможно, что-то среднее между обрезанным и оригинальным изображениями для экранов средней ширины, таких как планшеты – это известно как **art direction problem**.
 
@@ -52,7 +52,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
 ```
 
-Однако есть два новых атрибута — {{htmlattrxref("srcset", "img")}} and {{htmlattrxref("sizes", "img")}} — позволяющих добавить дополнительные изображения с пометками, чтобы браузер выбрал подходящее. Пример на Github: [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) (также смотри [источник кода](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)).
+Однако есть два новых атрибута — {{htmlattrxref("srcset", "img")}} и {{htmlattrxref("sizes", "img")}} — позволяющих добавить дополнительные изображения с пометками, чтобы браузер выбрал подходящее. Пример на Github: [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) (также смотри [источник кода](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)).
 
 ```html
 <img srcset="elva-fairy-320w.jpg 320w,
@@ -103,7 +103,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ### Полезные инструменты разработчика
 
-Есть несколько полезных браузерных [инструментов разработчика](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools), чтобы помочь с определением необходимой ширины слотов и т. д., которые вам нужно использовать. Когда я работал над ними, я сначала загружал фиксированную версию моего примера (`not-responsive.html`), затем открывал [Responsive Design View](/ru/docs/Tools/Responsive_Design_Mode) (_Tools > Web Developer > Responsive Design View_), который позволяем взглянуть на layout вашей веб-страницы как если бы они были просмотрены через устройства с различными размерами экрана.
+Есть несколько полезных браузерных [инструментов разработчика](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools), чтобы помочь с определением необходимой ширины слотов и т. д., которые вам нужно использовать. Когда я работал над ними, я сначала загружал фиксированную версию моего примера (`not-responsive.html`), затем открывал [Responsive Design View](/ru/docs/Tools/Responsive_Design_Mode) (_Tools > Web Developer > Responsive Design View_), который позволяет взглянуть на layout вашей веб-страницы как если бы они были просмотрены через устройства с различными размерами экрана.
 
 Я устанавливал viewport width на 320px, затем на 480px; для каждой я обращался к [DOM Inspector,](/ru/docs/Tools/Page_Inspector) кликал по элементу {{htmlelement("img")}} в котором мы заинтересованы, далее смотрел размер во вкладке Box Model с правой стороны дисплея. Это должно дать вам необходимую ширину изображения
 
@@ -124,7 +124,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
      src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](https://mdn.mozillademos.org/files/12942/resolution-example.png)В данном примере, к изображению применяется CSS таким образом, что оно имеет ширину в 320 пикселей на экране (также называемое CSS-пикселями):
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)В данном примере, к изображению применяется CSS таким образом, что оно имеет ширину в 320 пикселей на экране (также называемое CSS-пикселями):
 
 ```css
 img {
@@ -136,7 +136,7 @@ img {
 
 ### Художественное оформление
 
-Подводя итоги, **проблема художественного оформления** заключается в желании изменить отображаемое изображение чтобы оно соответствовало разным размерам отображения изображения. Например, если на веб-сайте отображается большой пейзажный снимок с человеком посередине при просмотре в браузере на настольном компьютере, то при просмотре веб-сайта в мобильном браузере он уменьшается; он будет выглядеть плохо так как человек будет очень меленьким и его будет тяжело разглядеть. Вероятно будет лучше показать меньшую портретную картинку в мобильной версии на которой человек отображается в увеличении (в приближении). Элемент {{htmlelement("picture")}} позволяет нам применять именно такое решение.
+Подводя итоги, **проблема художественного оформления** заключается в желании изменить отображаемое изображение чтобы оно соответствовало разным размерам отображения изображения. Например, если на веб-сайте отображается большой пейзажный снимок с человеком посередине при просмотре в браузере на настольном компьютере, то при просмотре веб-сайта в мобильном браузере он уменьшается; он будет выглядеть плохо так как человек будет очень маленьким, и его будет тяжело разглядеть. Вероятно будет лучше показать меньшую портретную картинку в мобильной версии на которой человек отображается в увеличении (в приближении). Элемент {{htmlelement("picture")}} позволяет нам применять именно такое решение.
 
 Возвращаясь к нашему оригинальному примеру [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), мы имеем изображение которое очень нуждается в художественном оформлении:
 
@@ -160,7 +160,7 @@ img {
 
 Этот код позволяет нам выводить отзывчивое изображение и на широких, и на узких экранах, как показано ниже:
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-narrow.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-narrow.png)
 
 > **Примечание:** вам следует использовать атрибут `media` только при художественном оформлении; когда вы используете `media`, не применяйте медиа-условия с атрибутом `sizes`.
 

@@ -3,7 +3,7 @@ title: 使用影像
 slug: Web/API/Canvas_API/Tutorial/Using_images
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 使用影像是{{HTMLElement("canvas")}}另一個有趣的功能，這個功能可以用來動態組合圖片或作為背景等等。任何瀏覽器支援的外部圖片格式都可以使用，例如 PNG, GIF, 或 JPEG，甚至也可以利用同一份頁面上其他畫布元素產生的影像.
 
@@ -140,7 +140,7 @@ function draw() {
 
 結果如下:
 
-{{EmbedLiveSample("Example.3A_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
+{{EmbedLiveSample("範例: 一條簡單的線段影像", 220, 160, "canvas_backdrop.png")}}
 
 ## 縮放
 
@@ -180,7 +180,7 @@ function draw() {
 
 結果如下:
 
-{{EmbedLiveSample("Example.3A_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}
+{{EmbedLiveSample("範例: 排列影像", 160, 160, "canvas_scale_image.png")}}
 
 ## 切割影像
 
@@ -225,7 +225,7 @@ function draw() {
 
 這次我們不產生新的{{domxref("HTMLImageElement")}}物件，改採用直接把影像包入 HTML 的{{HTMLElement("img")}}標籤，然後再取得影像元素，其中 HTML 上的影像已經透過設定 CSS 屬性{{cssxref("display")}}為 none 來隱藏起來了.
 
-{{EmbedLiveSample("Example.3A_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("範例: 畫一個有畫框的影像", 160, 160, "canvas_drawimage2.jpg")}}
 
 程式碼相當簡單，每個{{HTMLElement("img")}}有自己的 ID 屬性，這樣便可以利用{{domxref("document.getElementById()")}}輕易取得，之後再簡單地用 drawImage()方法切割犀牛影像然後縮放並放到畫布上，最後第二個 drawImage()再把畫框放到上面.
 

@@ -1,7 +1,6 @@
 ---
 title: 웹 비디오 코덱 가이드
 slug: Web/Media/Formats/Video_codecs
-translation_of: Web/Media/Formats/Video_codecs
 original_slug: Web/Media/Formats/비디오코덱
 ---
 압축되지 않은 비디오 데이터는 그 크기가 엄청나기 때문에, 저장하거나 네트워크를 통해 전송하기 위해서는 아주 작게 압축해야 합니다. 압축되지 않은 비디오를 저장하는 과정을 상상해 봅시다:
@@ -97,10 +96,10 @@ original_slug: Web/Media/Formats/비디오코덱
         </p>
       </td>
       <td>
-        <a href="https://mdn.mozillademos.org/files/16680/moire-pattern.jpg"
+        <a href="moire-pattern.jpg"
           ><img
             alt=""
-            src="https://mdn.mozillademos.org/files/16680/moire-pattern.jpg"
+            src="moire-pattern.jpg"
             style="height: 250px; width: 205px"
         /></a>
       </td>
@@ -115,10 +114,10 @@ original_slug: Web/Media/Formats/비디오코덱
         </p>
       </td>
       <td>
-        <a href="https://mdn.mozillademos.org/files/16681/staircase-effect.jpg"
+        <a href="staircase-effect.jpg"
           ><img
             alt=""
-            src="https://mdn.mozillademos.org/files/16681/staircase-effect.jpg"
+            src="staircase-effect.jpg"
             style="height: 250px; width: 206px"
         /></a>
       </td>
@@ -143,10 +142,10 @@ original_slug: Web/Media/Formats/비디오코덱
       </td>
       <td>
         <a
-          href="https://mdn.mozillademos.org/files/16682/stroboscopic-effect.gif"
+          href="stroboscopic-effect.gif"
           ><img
             alt=""
-            src="https://mdn.mozillademos.org/files/16682/stroboscopic-effect.gif"
+            src="stroboscopic-effect.gif"
         /></a>
       </td>
     </tr>
@@ -165,9 +164,9 @@ original_slug: Web/Media/Formats/비디오코덱
 
 ### 링잉 효과(Ringing)
 
-손실 압축 알고리즘은 링잉 효과 **[ringing artifacts](https://en.wikipedia.org/wiki/Ringing_artifacts)**를 일으킬 수 있습니다. 링잉 효과는 압축 알고리즘에 의해 오브젝트의 경계면에 픽셀이 오염되는 현상을 의미합니다. 압축 알고리즘이 오브젝트와 배경의 경계면이 포함된 블럭을 사용했을 때 발생할 수 있습니다. 보통 압축율이 높을 때 주로 발생합니다.
+손실 압축 알고리즘은 링잉 효과 [**ringing artifacts**](https://en.wikipedia.org/wiki/Ringing_artifacts)를 일으킬 수 있습니다. 링잉 효과는 압축 알고리즘에 의해 오브젝트의 경계면에 픽셀이 오염되는 현상을 의미합니다. 압축 알고리즘이 오브젝트와 배경의 경계면이 포함된 블럭을 사용했을 때 발생할 수 있습니다. 보통 압축율이 높을 때 주로 발생합니다.
 
-[![Example of the ringing effect](https://mdn.mozillademos.org/files/16684/Ringing-effects.png)](https://mdn.mozillademos.org/files/16684/Ringing-effects.png)
+[![Example of the ringing effect](ringing-effects.png)](ringing-effects.png)
 
 위 별 모양의 경계 부분에 파랑 및 분홍 부분을 보세요 (계단 현상 등 다른 압축 아티팩트도 나타남). 저 부분이 링잉 효과입니다. 링잉은 어떤 면에서는 [mosquito noise](#mosquito_noise)와 비슷합니다, 다만 모기 효과는 일렁거리거나 움직이는데 반해 링잉 효과는 정지한 채로 변하지 않습니다.
 
@@ -177,7 +176,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 **포스터리제이션**은 압축된 결과물이 그라디언트 부분에서 색상 디테일을 잃는 현상을 의미합니다. 그라디언트 영역이 부드럽게 색상이 변하지 않고 원본과 비슷한 색상의 블록 형태로 얼룩이 묻은 듯한 이미지로 표현 됩니다.
 
-[![](https://mdn.mozillademos.org/files/16686/posterize-effect.jpg)](https://mdn.mozillademos.org/files/16686/posterize-effect.jpg)
+[![](posterize-effect.jpg)](posterize-effect.jpg)
 
 위 이미지상 흰머리 수리의 깃털 부분의 색상이 블록처럼 보이는 것을 보세요(배경의 흰색 올빼미도요). 포스터리제이션 효과로 인해 깃털의 디테일을 상당 부분 잃었습니다.
 
@@ -185,7 +184,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 **컨투어링** 또는 **컬러 밴딩**은 포스터리제이션의 특별한 형태로 이미지에서 색상 블록이 줄무늬 형태로 나타나는 현상을 의미합니다. 이는 비디오 인코딩 시 양자화 설정이 제대로 이뤄지지 않은 경우 발생할 수 있습니다. 결과적으로 부드럽게 변해야 할 그라디언트 부분에 "층"이 생긴 것처럼 줄무늬가 보입니다.
 
-[![Example of an image whose compression has introduced contouring](https://mdn.mozillademos.org/files/16685/contouring-effect.jpg)](https://mdn.mozillademos.org/files/16685/contouring-effect.jpg)
+[![Example of an image whose compression has introduced contouring](contouring-effect.jpg)](contouring-effect.jpg)
 
 위 이미지를 보시면 하늘에서 지평선으로 부드럽게 변해야 하는데 파란색이 층층이 져 있는 것을 볼 수 있습니다. 이 것이 컨투어링 효과입니다.
 
@@ -193,7 +192,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 **모스키토 노이즈**는 시간적 아티팩트 중 하나로 배경과 물체의 경계면의 차이가 큰 부분에서 노이즈나 **edge busyness**가 흐릿하게 일렁거리는 현상을 의미합니다. 시각적으로는 [ringing](#ringing) 효과와 유사합니다.
 
-![](https://mdn.mozillademos.org/files/16687/mosquito-effect-sm.png)
+![](mosquito-effect-sm.png)
 
 위 이미지상 다리 여러군데의 주변 하늘에서 모스키토 노이즈를 볼 수 있습니다. 우측 상단에 모스키토 노이즈가 발생한 부분을 확대해 놓았습니다.
 
@@ -203,7 +202,7 @@ original_slug: Web/Media/Formats/비디오코덱
 
 일반적인 비디오 압축은 두 프레임을 비교한 뒤 프레임간 차이점을 마지막 프레임까지 저장하는 방식으로 진행됩니다. 고정된 카메라에 촬영되는 물체들도 정지해 있다면 이 압축 방식은 매우 잘 동작하겠지만 프레임마다 움직임이 커지면 압축률을 높이기가 쉽지 않습니다.
 
-**[움직임 보상](https://ko.wikipedia.org/wiki/%EC%9B%80%EC%A7%81%EC%9E%84_%EB%B3%B4%EC%83%81)**은 물체가 각각의 방향으로 얼마만큼 많은 픽셀이 이동했는지 움직임(카메라 자체의 이동 또는 프레임 상의 물체의 이동)을 추적하는 기술입니다. 그리고 단순 움직임 만으로는 설명할 수 없는 픽셀의 추가 정보와 함께 움직임을 저장합니다. 요약하자면 인코더가 움직이는 물체를 찾아낸 후 원본과 동일해 보이지만 새로운 위치로 이동한 인터널 프레임을 생성하는 방식입니다. 이론적으로는 새로운 프레임이 나타난 것과 거의 동일합니다. 새 프레임에 남아있는 다른 차이점이 발견된다면 물체의 움직임과 픽셀 차이점을 저장하여 작업을 마무리 합니다. 이렇게 움직임과 픽셀 차이점이 기록된 물체를 **residual frame**이라 부릅니다.
+[**움직임 보상**](https://ko.wikipedia.org/wiki/%EC%9B%80%EC%A7%81%EC%9E%84_%EB%B3%B4%EC%83%81)은 물체가 각각의 방향으로 얼마만큼 많은 픽셀이 이동했는지 움직임(카메라 자체의 이동 또는 프레임 상의 물체의 이동)을 추적하는 기술입니다. 그리고 단순 움직임 만으로는 설명할 수 없는 픽셀의 추가 정보와 함께 움직임을 저장합니다. 요약하자면 인코더가 움직이는 물체를 찾아낸 후 원본과 동일해 보이지만 새로운 위치로 이동한 인터널 프레임을 생성하는 방식입니다. 이론적으로는 새로운 프레임이 나타난 것과 거의 동일합니다. 새 프레임에 남아있는 다른 차이점이 발견된다면 물체의 움직임과 픽셀 차이점을 저장하여 작업을 마무리 합니다. 이렇게 움직임과 픽셀 차이점이 기록된 물체를 **residual frame**이라 부릅니다.
 
 <table class="standard-table">
   <thead>
@@ -218,21 +217,21 @@ original_slug: Web/Media/Formats/비디오코덱
       <td>
         <img
           alt="Original frame of video"
-          src="https://mdn.mozillademos.org/files/16688/motion-comp-orig.jpg"
+          src="motion-comp-orig.jpg"
           style="height: 102px; width: 182px"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/16689/motion-comp-diff.jpg"
+          src="motion-comp-diff.jpg"
           style="height: 102px; width: 182px"
         />
       </td>
       <td>
         <img
           alt="Differences between the frames after shifting two pixels right"
-          src="https://mdn.mozillademos.org/files/16690/motion-comp-compensated.jpg"
+          src="motion-comp-compensated.jpg"
           style="height: 102px; width: 182px"
         />
       </td>
@@ -626,7 +625,7 @@ ITU의 H.263 코덱은 저대역폭 환경에서 쓰기 위해 설계하였습�
 
 H.263은 웹에서 널리 쓰인 적이 없습니다. H.263의 변형 포맷이 Flash 비디오나 Sorenson 코덱 같은 상용 소프트웨어에서 사용된 적은 있습니다. 하지만 주요 브라우저 중 H.263를 기본으로 지원하는 제품은 없습니다. 특정 플러그인이 H.263을 지원하고는 있습니다.
 
-대부분의 코덱과 다르게 H.263은 인코딩 된 비디오의 프레임별 최대 비트레이트(**BPPmaxKb)**의 기본값을 정의하고 있습니다. 인코딩시에 BPPmaxKb값을 지정하면 각 프레임은 해당 수치를 넘어설 수 없습니다. 최종 프레임은 이 값과 프레임 레이트, 압축, 선택한 해상도와 블록 포맷에 따라 결정됩니다.
+대부분의 코덱과 다르게 H.263은 인코딩 된 비디오의 프레임별 최대 **비트레이트**(**BPPmaxKb**)의 기본값을 정의하고 있습니다. 인코딩시에 BPPmaxKb값을 지정하면 각 프레임은 해당 수치를 넘어설 수 없습니다. 최종 프레임은 이 값과 프레임 레이트, 압축, 선택한 해상도와 블록 포맷에 따라 결정됩니다.
 
 H.263은 H.264로 대체되었으며 가능한한 이전의 미디어 포맷은 사용하지 않아야 합니다. H.263이 최선일 정도로 오래된 장치를 지원해야 하는 프로젝트일 경우에만 H.263을 지원할테죠.
 
@@ -863,7 +862,7 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 support</th>
-              <td>No</td>
+              <td>107</td>
               <td>
                 18<sup><a href="#hevc-foot--1">[1]</a></sup>
               </td>
@@ -1330,7 +1329,7 @@ MPEG-2는 서로 다른 스펙을 가진 여러 프로파일이 있습니다. �
 
 ### Theora
 
-[Xiph.org](https://xiph.org/)가 **[Theora](https://en.wikipedia.org/wiki/Theora)**는 로열티와 라이선스 없이 사용 가능한 오픈소스 자유 비디오 코덱입니다. Theora의 품질과 압축율은 MPEG-4 Part 2 Visual과 AVC에 견줄만하며, 비디오 인코딩 시 반드시 최고를 고수해야 하는 경우가 아니라면 매우 좋은 선택이 될 수 있습니다. 하지만 라이선스-프리로 특허 문제가 없으며 상대적으로 저사양 CPU에서도 충분히 돌아가는 스펙 덕분에 최근 많은 소프트웨어와 웹프로젝트에서 선택하고 있습니다. 현재로써는 Theroa를 위한 하드웨어 디코더가 없기 때문에 저사양 CPU에서도 원할하다는 점은 아주 중요합니다.
+[Xiph.org](https://xiph.org/)가 [**Theora**](https://en.wikipedia.org/wiki/Theora)는 로열티와 라이선스 없이 사용 가능한 오픈소스 자유 비디오 코덱입니다. Theora의 품질과 압축율은 MPEG-4 Part 2 Visual과 AVC에 견줄만하며, 비디오 인코딩 시 반드시 최고를 고수해야 하는 경우가 아니라면 매우 좋은 선택이 될 수 있습니다. 하지만 라이선스-프리로 특허 문제가 없으며 상대적으로 저사양 CPU에서도 충분히 돌아가는 스펙 덕분에 최근 많은 소프트웨어와 웹프로젝트에서 선택하고 있습니다. 현재로써는 Theroa를 위한 하드웨어 디코더가 없기 때문에 저사양 CPU에서도 원할하다는 점은 아주 중요합니다.
 
 Theora는 원래 On2 Technologies의 VC3 코덱을 베이스로 하고 있습니다. VC3 코덱과 사양은 Xiph.org 관리 하에 LGPL 라이선스로 등재되어 있으며 이후 Theora 표준으로 인입하였습니다.
 

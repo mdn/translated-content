@@ -3,7 +3,7 @@ title: 基礎動畫
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 控制{{HTMLElement("canvas")}}元素來產生互動式動畫不是一件難事，當然，如果產生的動畫越複雜越需要多費一些力氣，未來如果有機會我們將說明這一塊。
 
@@ -310,7 +310,7 @@ function draw() {
 
 **Live sample**
 
-{{EmbedLiveSample("A_looping_panorama", "830", "230")}}
+{{EmbedLiveSample("循環景色", "830", "230")}}
 
 ## 其他範例
 

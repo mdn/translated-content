@@ -16,7 +16,7 @@ translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 Первый пример, который мы рассмотрим, - это классический информационный блок с вкладками - очень распространённая функция, используемая, когда вы хотите упаковать много информации в небольшую область. Сюда входят информационные приложения, такие как стратегии / военные игры, мобильные версии веб-сайтов, где экран и пространство ограничены и необходимы компактные информационные окна, где вы можете сделать много информации, не заполняя весь пользовательский интерфейс. Наш простой пример будет выглядеть так, как только мы закончим:
 
-![](https://mdn.mozillademos.org/files/13368/tabbed-info-box.png)
+![](tabbed-info-box.png)
 
 > **Примечание:**Вы можете увидеть, что готовый пример работает в прямом эфире [info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). Проверьте его, чтобы понять, что вы будете строить в этом разделе статьи.
 
@@ -225,7 +225,7 @@ That's it for the first example. Keep your code open, as we'll be adding to it i
 
 In our second example, we will take our first example — our info-box — and add it into the context of a full web page. But not only that — we'll give it fixed position so that it stays in the same position in the browser window. When the main content scrolls, the info-box will stay in the same position on the screen. Our finished example will look like this:
 
-![](https://mdn.mozillademos.org/files/13364/fixed-info-box.png)
+![](fixed-info-box.png)
 
 > **Примечание:** You can see the finished example running live at [fixed-info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
@@ -290,7 +290,7 @@ The final example we'll present here is a panel that slides on and off the scree
 
 Our finished example will look like this:
 
-![](https://mdn.mozillademos.org/files/13366/hidden-sliding-panel.png)
+![](hidden-sliding-panel.png)
 
 > **Примечание:** You can see the finished example running live at [hidden-info-panel.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
 

@@ -1,7 +1,6 @@
 ---
 title: 알림 API 사용하기
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 original_slug: WebAPI/Using_Web_Notifications
 ---
 
@@ -11,7 +10,7 @@ original_slug: WebAPI/Using_Web_Notifications
 
 일반적으로 시스템 알림은 운영 체계의 표준 알림 메커니즘을 말합니다. 예를 들어 일반적인 데스크톱 시스템이나 모바일 장치의 브로드캐스트 알림을 생각해봅시다.
 
-![](https://mdn.mozillademos.org/files/10959/android-notification.png)
+![](android-notification.png)
 
 물론 시스템 알림 시스템은 플랫폼 및 브라우저에 따라 다양하지만 괜찮습니다. 알림 API는 범용적으로 작성돼서 대부분의 시스템 알림 시스템과 호환됩니다.
 
@@ -19,7 +18,7 @@ original_slug: WebAPI/Using_Web_Notifications
 
 웹 알림의 대표적인 사용 사례는 웹 기반 메일이나 IRC 애플리케이션입니다. 새 메시지가 도착하면 사용자가 다른 애플리케이션으로 다른 일을 하더라도 사용자에게 알릴 필요가 있습니다. 요즘은 [Slack](https://slack.com/) 등 이러한 사례를 많이 찾아볼 수 있습니다.
 
-우리는 웹 알림을 사용하는 방법을 좀더 잘 알 수 있도록 실제적인 예시 — 할 일 목록 앱 —를 작성했습니다. 데이터는 로컬에서 [IndexedDB](/ko/docs/Web/API/IndexedDB_API)로 저장하고 사용자 알림은 할 일 기한이 됐을 때 시스템 알림을 사용합니다. [할 일 목록 코드를 다운로드하거나](https://github.com/mdn/to-do-notifications/tree/gh-pages), [앱의 라이브 실행을 보세요](https://mdn.github.io/to-do-notifications/).
+우리는 웹 알림을 사용하는 방법을 좀더 잘 알 수 있도록 실제적인 예시 — 할 일 목록 앱 —를 작성했습니다. 데이터는 로컬에서 [IndexedDB](/ko/docs/Web/API/IndexedDB_API)로 저장하고 사용자 알림은 할 일 기한이 됐을 때 시스템 알림을 사용합니다. [할 일 목록 코드를 다운로드하거나](https://github.com/mdn/dom-examples/tree/main/to-do-notifications), [앱의 라이브 실행을 보세요](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## 권한 요청하기
 
@@ -247,11 +246,9 @@ window.addEventListener('load', function () {
 
 {{ EmbedLiveSample('Tag_example', '100%', 30) }}
 
-## 규격
+## 명세서
 
-| 규격                                         | 상태                                     | 비고      |
-| -------------------------------------------- | ---------------------------------------- | --------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | 현행 표준 |
+{{Specifications}}
 
 ## 브라우저 호환성
 

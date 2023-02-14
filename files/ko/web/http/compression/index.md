@@ -1,7 +1,6 @@
 ---
 title: HTTP에서의 압축
 slug: Web/HTTP/Compression
-translation_of: Web/HTTP/Compression
 ---
 
 {{HTTPSidebar}}
@@ -32,13 +31,13 @@ translation_of: Web/HTTP/Compression
 
 압축에 있어, 종단간 압축은 웹 사이트의 가장 큰 성능 이득이 발생하는 곳입니다. 종단간 압축은 서버에 의해 처리되고 클라이언트에 도달할 때까지 결코 변하지 않을 메시지 바디의 압축을 나타냅니다. 중간 노드가 무엇이든지, 바디는 건들이지 않고 그대로 둡니다.
 
-![](https://mdn.mozillademos.org/files/13801/HTTPEnco1.png)
+![](httpenco1.png)
 
 모든 모던 브라우저와 서버들은 종단간 압축을 지원하며 협상하는 유일한 것은 사용할 압축 알고리즘입니다. 이런 압축 알고리즘들은 텍스트에 최적화되어 있습니다. 1990년대에, 압축 기술은 급격한 속도로 진보되고 있었으며 많은 수의 성공적인 알고리즘들이 선택 가능한 후보군에 추가되었습니다. 오늘날에는, 오직 두 개의 알고리즘만이 적절한 후보군입니다: 가장 일반적인 `gzip`, 그리고 새로운 도전자인 `br`이 그것이죠.
 
 사용할 알고리즘을 선택하기 위해, 브라우저와 서버는 [사전 컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)을 사용합니다. 브라우저는 브라우저가 지원하는 알고리즘 그리고 그것의 우선순위와 함께 {{HTTPHeader("Accept-Encoding")}} 헤더를 전송하며, 서버는 그 헤더를 뽑아내서 응답의 바디를 압축하는데 사용하고 서버가 선택한 알고리즘을 {{HTTPHeader("Content-Encoding")}} 헤더를 사용해 브라우저에게 알려줍니다. 컨텐츠 협상이 그것의 인코딩에 근거한 표현을 선택하는데 사용되므로써, 적어도 {{HTTPHeader("Content-Encoding")}}을 포함하는 하나의 {{HTTPHeader("Vary")}} 헤더가 반드시 응답 내 해당 헤더에 붙어 전송되어야 합니다; 그러한 방법으로, 캐시는 리소스의 다른 표현을 캐시하는게 가능해질 겁니다.
 
-![](https://mdn.mozillademos.org/files/13811/HTTPCompression1.png)
+![](httpcompression1.png)
 
 압축이 명확한 성능 향상을 가져다주므로, 모든 파일에 대해 활성화하는 것을 추천하지만, 이미지, 오디오나 비디오와 같은 파일들은 이미 압축되어 있을 겁니다.
 
@@ -48,11 +47,11 @@ Apache는 압축을 지원하며 [mod_deflate](http://httpd.apache.org/docs/curr
 
 종단간 압축과 비슷하긴 하지만, hop-by-hop 압축은 한 가지 필수적인 엘리먼트에 의해 차이가 납니다: 전송되게 될 구체적인 표현을 만들어내는, 서버 내에서 리소스에 대한 압축이 일어나지 않고, 클라이언트와 서버 사이의 경로 상에 있는 어떤 두 노드 사이에서 메서지의 바디에 압축이 일어납니다. 이따르는 중간 노드 간의 커넥션들은 다른 압축을 적용할수도 있습니다.
 
-![](https://mdn.mozillademos.org/files/13807/HTTPTE1.png)
+![](httpte1.png)
 
 이를 위해, HTTP는 종단간 압축에서의 컨텐츠 협상과 유사한 메커니즘을 사용합니다: 요청을 전송하는 노드는 노드의 요청이 {{HTTPHeader("TE")}} 헤더를 사용하고 있다는 것을 알려주고 다른 노드들은 알맞는 방법을 선택하여 적용하고 {{HTTPHeader("Transfer-Encoding")}} 헤더를 사용해 선택한 내용을 가리킵니다.
 
-![](https://mdn.mozillademos.org/files/13809/HTTPComp2.png)
+![](httpcomp2.png)
 
 실제로, hop-by-hop 압축은 서버와 클라이언트에게는 보이지 않으며 드물게 사용되고 있습니다.{{HTTPHeader("TE")}} 헤더와 {{HTTPHeader("Transfer-Encoding")}} 헤더는 리소스의 길이를 알지 못한 상태로 전송을 시작하도록, 청크에 의해 응답을 전송하는데 대부분 사용됩니다.
 

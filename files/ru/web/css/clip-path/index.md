@@ -7,7 +7,7 @@ translation_of: Web/CSS/clip-path
 
 [CSS](/ru/docs/Web/CSS) свойство **`clip-path`** создаёт ограниченную область, которая определяет какая часть элемента должна быть видимой. Те части, которые находятся внутри области, видимы, в то время как части вне области, скрыты. Обрезанная область - это траектория, определяемая либо как внутренняя ссылка, либо как внешний SVG , либо как фигура, такая как круг ([`circle()`](/ru/docs/Web/SVG/%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82/circle)).
 
-> **Примечание:** **Историческая справка:** Свойство clip-path заменило устаревшее свойство {{cssxref("clip")}} .
+> **Примечание:** Свойство clip-path заменило устаревшее свойство {{cssxref("clip")}} .
 
 ```css
 /* Keyword values */
@@ -524,7 +524,7 @@ svg text.em {
 ### HTML
 
 ```html
-<img id="clipped" src="https://mdn.mozillademos.org/files/12668/MDN.svg"
+<img id="clipped" src="mdn.svg"
     alt="MDN logo">
 <svg height="0" width="0">
   <defs>

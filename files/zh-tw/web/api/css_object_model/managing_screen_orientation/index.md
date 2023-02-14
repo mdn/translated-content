@@ -107,7 +107,7 @@ li {
 
 | Portrait                                                                                             | Landscape                                                                                            |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 180, 350) }} | {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 350, 180) }} |
+| {{ EmbedLiveSample('根據方向而調整配置', 180, 350) }} | {{ EmbedLiveSample('根據方向而調整配置', 350, 180) }} |
 
 > **備註：** 方向 Media Query 其實是以瀏覽器視窗 (或 iframe) 的方向為準，而非裝置本身的方向。
 

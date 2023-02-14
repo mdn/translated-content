@@ -1,11 +1,13 @@
 ---
 title: SourceBuffer.mode
 slug: Web/API/SourceBuffer/mode
+l10n:
+  sourceCommit: 7455f0c585ea29fa85ea09e11716b70f76241f5b
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
-{{domxref("SourceBuffer")}} インターフェイスの **`mode`** プロパティは、メディアセグメントを `SourceBuffer` に任意の順序で追加できるか、厳密な順序で追加できるかを制御します。
+**`mode`** は {{domxref("SourceBuffer")}} インターフェイスのプロパティで、メディアセグメントを `SourceBuffer` に任意の順序で追加できるか、厳密な順序で追加できるかを制御します。
 
 使用可能な 2 つの値は次のとおりです。
 
@@ -18,45 +20,37 @@ slug: Web/API/SourceBuffer/mode
 
 このプロパティは、`SourceBuffer` が {{domxref("SourceBuffer.appendBuffer","appendBuffer()")}} または {{domxref("SourceBuffer.remove","remove()")}} の呼び出しを処理している間は変更できません。
 
-## 構文
+## 値
 
-```
-var myMode = sourceBuffer.mode;
-
-sourceBuffer.mode = 'sequence';
-```
-
-### 値
-
-{{domxref("DOMString")}}。
+文字列です。
 
 ### 例外
 
 このプロパティに新しい値を設定すると、次の例外がスローされる場合があります。
 
-| 例外                 | 説明                                                                                                                                                                                                                                                                                                             |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidAccessError` | 初期値が `sequence` の場合に、値を `segments` に設定しようとしました。                                                                                                                                                                                                                                           |
-| `InvalidStateError`  | {{domxref("SourceBuffer")}} オブジェクトが更新中（つまり、その {{domxref("SourceBuffer.updating")}} プロパティが現在 `true`）、この `SourceBuffer` に追加された最後のメディアセグメントが不完全、またはこの `SourceBuffer` が {{domxref("MediaSource")}} から取り除かれています。 |
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : 初期値が `sequence` の場合に、値を `segments` に設定しようとした場合に発生します。
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : {{domxref("SourceBuffer")}} オブジェクトが更新中（つまり、その {{domxref("SourceBuffer.updating")}} プロパティが現在 `true`）、この `SourceBuffer` に追加された最後のメディアセグメントが不完全、またはこの `SourceBuffer` が {{domxref("MediaSource")}} から取り除かれていた場合に発生します。
 
 ## 例
 
 このスニペットは、`sourceBuffer` のモードが、 現在 `'segments'` に設定されている場合、`'sequence'` に設定します。 したがって、再生順序は、メディアセグメントを追加した順に設定されます。
 
 ```js
-var curMode = sourceBuffer.mode;
-if (curMode == 'segments') {
+const curMode = sourceBuffer.mode;
+if (curMode === 'segments') {
   sourceBuffer.mode = 'sequence';
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer.mode")}}
+{{Compat}}
 
 ## 関連情報
 
