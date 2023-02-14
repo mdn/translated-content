@@ -1,5 +1,5 @@
 ---
-title: Primeros pasos en Svelte
+title: Introducción a Svelte
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 
@@ -67,17 +67,17 @@ De forma adicional, con la ayuda de [Sapper](https://sapper.svelte.dev/) (un _fr
 
 ## ¿Cómo funciona Svelte?
 
-Al tratarse de un compilador, Svelte puede extender HTML, CSS, y JavaScript, generando código Javascript optimizado sin agregar sobrecarga en tiempo de ejecución. Para lograr esto, Svelte se aprovecha de tecnologías web nativas de la siguiente forma:
+Al tratarse de un compilador, Svelte puede extender HTML, CSS, y JavaScript, generando código Javascript optimizado sin agregar sobrecarga en tiempo de ejecución. Para lograr esto, Svelte añade características sobre tecnologías web nativas de la siguiente forma:
 
-- It extends HTML by allowing JavaScript expressions in markup and providing directives to use conditions and loops, in a fashion similar to handlebars.
-- It extends CSS by adding a scoping mechanism, allowing each component to define its own styles without the risk of clashing with other components' styles.
-- It extends JavaScript by reinterpreting specific directives of the language to achieve true reactivity and ease component state management.
+- Extiende a HTML al permitir expresiones de JavaScript dentro del marcado HTML, proporcionando directivas para utilizar condiciones y ciclos.
+- Extiende a CSS al agregar mecanismos de contención, permitiendo a cada componente definir sus propios estilos sin el riesgo de que colisionen con estilos de otros componentes.
+- Extiende a JavaScript al reinterpretar directivas específicas del lenguaje para lograr verdadera reactividad y facilitar el manejo del estado de los componentes.
 
-The compiler only intervenes in very specific situations and only in the context of Svelte components. Extensions to the JavaScript language are minimal and carefully picked in order not to break JavaScript syntax or alienate developers. In fact, you will be mostly working with vanilla JavaScript.
+El compiliador solo interfiere bajo situaciones muy específicas y únicamente en el contexto de componentes Svelte. Las pocas extensiones que se aplican sobre el lenguaje de JavaScript fueron elegidas cuidadosamente para no violar la sintaxis de JavaScript o confundir a los desarrolladores. Es decir, principalmente estarás trabajando con Javascript puro.
 
-## First steps with Svelte
+## Primeros pasos con Svelte
 
-Since Svelte is a compiler, you can't just add a `<script src="svelte.js">` tag to your page and import it into your app. You'll have to set up your development environment in order to let the compiler do its job.
+Debido a que Svelte es un compilador, no es posible simplemente agregar una etiqueta `<script src="svelte.js">` en tu página para y luego importarla en tu aplicación. Deberás configurar tu entorno de desarrollo para que el compilador pueda hacer su trabajo.
 
 ### Requirements
 
