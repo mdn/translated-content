@@ -217,7 +217,7 @@ _To-do: 添加事件名称到下表中。_
       <td>Progress Events</td>
       <td><code>"ProgressEvent"</code></td>
       <td>
-        {{domxref("ProgressEvent.initProgressEvent()")}}{{deprecated_inline("22.0")}}{{non-standard_inline()}}
+        {{domxref("ProgressEvent.initProgressEvent()")}}{{deprecated_inline}}{{non-standard_inline()}}
       </td>
     </tr>
     <tr>
@@ -227,7 +227,7 @@ _To-do: 添加事件名称到下表中。_
         <code>"WebKitAnimationEvent"</code> for WebKit/Blink-based browsers)
       </td>
       <td>
-        {{domxref("AnimationEvent.initAnimationEvent()")}}{{deprecated_inline("23.0")}}{{non-standard_inline()}}
+        {{domxref("AnimationEvent.initAnimationEvent()")}}{{deprecated_inline}}{{non-standard_inline()}}
       </td>
     </tr>
     <tr>
@@ -237,7 +237,7 @@ _To-do: 添加事件名称到下表中。_
         <code>"WebKitTransitionEvent"</code> for WebKit/Blink-based browsers)
       </td>
       <td>
-        {{domxref("TransitionEvent.initTransitionEvent()")}}{{deprecated_inline("23.0")}}{{non-standard_inline()}}
+        {{domxref("TransitionEvent.initTransitionEvent()")}}{{deprecated_inline}}{{non-standard_inline()}}
       </td>
     </tr>
   </tbody>

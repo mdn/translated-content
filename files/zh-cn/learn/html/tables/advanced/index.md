@@ -91,7 +91,7 @@ slug: Learn/HTML/Tables/Advanced
 
 7. 先保存，再刷新，然后观察一下结果。如果没有 `<tbody>` 和 `<tfoot>` 元素，你也许会写更加复杂的选择器来应用同样的样式。
 
-> **备注：** 我们并不期望目前你可以理解所有 CSS 的内容。当你经过我们的 CSS 模块的时候，你应该会了解更多 ([Introduction to CSS](/zh_CN/docs/Learn/CSS/Introduction_to_CSS) 是一个好的起点；我们也有专门的文章 [styling tables](/zh_CN/docs/Learn/CSS/Styling_boxes/Styling_tables)).
+> **备注：** 我们并不期望你现在就能完全理解 CSS。在你阅读我们的 CSS 模块时，你会学到更多这方面的知识（[CSS 介绍](/zh-CN/docs/Learn/CSS/First_steps)是一个好的起点；文章[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)也专门讲述了如何对表格添加样式）。
 
 你完成的表格应该如下所示：
 
@@ -408,3 +408,9 @@ slug: Learn/HTML/Tables/Advanced
 关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。在此刻，如果你想学习关于 HTML 表格的样式，可以阅读 [Styling Tables](/zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+
+## 本章目录
+
+- [HTML 表格入门](/zh-CN/docs/Learn/HTML/Tables/Basics)
+- [HTML 表格高级特性和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced)
+- [构建行星数据](/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)

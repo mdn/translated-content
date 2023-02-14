@@ -17,7 +17,7 @@ localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');
 </pre>
 
-> **참고:** **노트**: 일반 객체를 key-value 저장소로 사용할 때 [pitfalls](http://www.2ality.com/2012/01/objects-as-maps.html)과 관련된 사항을 막기 위해 Web Storage API(`setItem`, `getItem`, `removeItem`, `key`, `length`)를 사용하는 걸 권장합니다.
+> **참고:** 일반 객체를 key-value 저장소로 사용할 때 [pitfalls](http://www.2ality.com/2012/01/objects-as-maps.html)과 관련된 사항을 막기 위해 Web Storage API(`setItem`, `getItem`, `removeItem`, `key`, `length`)를 사용하는 걸 권장합니다.
 
 Web Storage는 두 메커니즘을 가지고 있습니다.
 

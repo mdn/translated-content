@@ -64,7 +64,7 @@ _No hay ningún cambio._
 #### API nuevas
 
 - Se ha activado de manera predeterminada la API {{domxref("PerformanceObserver")}} ({{bug(1386021)}}).
-- Añadimos las interfaces {{domxref("AbortController")}} y {{domxref("AbortSignal")}} (conocidas como la API «Abort»), que permiten interrumpir las solicitudes del DOM (como las de [recuperación](/es/docs/Web/API/WindowOrWorkerGlobalScope/fetch)) si así se desea ({{bug(1378342)}}).
+- Añadimos las interfaces {{domxref("AbortController")}} y {{domxref("AbortSignal")}} (conocidas como la API «Abort»), que permiten interrumpir las solicitudes del DOM (como las de [recuperación](/es/docs/Web/API/fetch)) si así se desea ({{bug(1378342)}}).
 
 #### DOM
 

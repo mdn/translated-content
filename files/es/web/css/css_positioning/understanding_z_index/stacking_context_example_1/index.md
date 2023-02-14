@@ -10,15 +10,15 @@ Empecemos con un ejemplo básico. En el contexto de apilamiento raíz tenemos do
 
 El único contexto de apilamiento es el contexto raíz. Sin la propiedad z-index, los elementos son apilados por orden de ocurrencia.
 
-![Stacking context example 1](/@api/deki/files/914/=Understanding_zindex_05a.png)
+![Stacking context example 1](understanding_zindex_05a.png)
 
 Si a DIV #2 le asignamos un valor z-index positivo (no-cero y no-auto), es renderizado encima de todos los otros DIVs.
 
-![Stacking context example 1](/@api/deki/files/915/=Understanding_zindex_05b.png)
+![Stacking context example 1](understanding_zindex_05b.png)
 
 Luego si al DIV #4 también se le asigna un z-index positivo mayor que el z-index del DIV #2, es renderizado encima de los otros DIVs incluyendo DIV #2.
 
-![Stacking context example 1](/@api/deki/files/916/=Understanding_zindex_05c.png)
+![Stacking context example 1](understanding_zindex_05c.png)
 
 En este último ejemplo puedes ver que el DIV #2 y el DIV #4 no son hermanos, porque pertenecen a padres distintos en la jerarquía de elementos HTML. A pesar de esto, el apilamiento del DIV #4 con respecto al DIV #2 puede ser controlado a través de z-index. Pasa que, dado a que al DIV #1 y al DIV #3 no se le ha asignado ningún valor z-index, ellos no han creado un contexto de apilamiento. Esto significa que todos sus contenidos, incluyendo el DIV #2 y el DIV #4, pertenecen al mismo contexto de apilamiento raíz.
 
