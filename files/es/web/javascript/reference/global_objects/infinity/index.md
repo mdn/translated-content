@@ -30,7 +30,7 @@ Para la especificación ECMAScript 5, `Infinity` es de solo lectura (implementad
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

@@ -94,7 +94,7 @@ if (!String.prototype.codePointAt) {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

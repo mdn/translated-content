@@ -61,7 +61,7 @@ delete o.latest;
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

@@ -43,7 +43,7 @@ console.log(setIter.next().value); // "baz"
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

@@ -39,7 +39,7 @@ El método `toSource` devuelve los siguientes valores:
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

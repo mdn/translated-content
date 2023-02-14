@@ -36,7 +36,7 @@ donde estos atributos corresponden a las propiedades respectivas de la instancia
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

@@ -225,7 +225,7 @@ var fct2 = eval(fctStr2)  // deuelve una función
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

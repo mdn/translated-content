@@ -82,7 +82,7 @@ str.normalize('NFKD'); // '\u0073\u0323\u0307'
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

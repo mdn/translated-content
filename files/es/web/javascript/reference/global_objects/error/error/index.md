@@ -41,7 +41,7 @@ const y = new Error('¡Fui construido con la palabra clave "new"!')
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

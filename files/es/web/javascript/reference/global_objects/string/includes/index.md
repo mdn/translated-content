@@ -78,7 +78,7 @@ console.log(str.includes(''))             // true
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

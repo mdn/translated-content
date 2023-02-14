@@ -40,7 +40,7 @@ Se _puede_ y se _debería_ controlar este evento con {{domxref("EventTarget.addE
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

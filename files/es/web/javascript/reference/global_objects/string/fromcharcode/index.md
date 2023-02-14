@@ -41,7 +41,7 @@ String.fromCharCode(65,66,67)
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

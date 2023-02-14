@@ -189,7 +189,7 @@ Para poder usar los métodos de `Array` en el objeto `arguments`, se debe conver
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

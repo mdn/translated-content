@@ -69,6 +69,6 @@ Solo se puede asignar un controlador `click` a un objeto a la vez con esta propi
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}

@@ -65,7 +65,7 @@ console.log(str.startsWith('Esa es la', 16)); // true
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

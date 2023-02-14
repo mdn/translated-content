@@ -57,7 +57,7 @@ El carácter en el índice 999 es ''
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

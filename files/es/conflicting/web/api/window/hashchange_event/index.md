@@ -60,6 +60,6 @@ El evento `hashchange` enviado, tiene los siguientes campos:
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}

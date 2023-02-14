@@ -37,7 +37,7 @@ Un {{jsxref("String")}} de la longitud específicada con la cadena de relleno ap
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

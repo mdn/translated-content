@@ -28,7 +28,7 @@ window.addEventListener('input', function (e) {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

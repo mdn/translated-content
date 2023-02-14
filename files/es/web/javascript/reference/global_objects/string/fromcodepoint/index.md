@@ -131,7 +131,7 @@ if (!String.fromCodePoint) {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

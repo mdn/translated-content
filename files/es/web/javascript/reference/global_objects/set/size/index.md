@@ -29,7 +29,7 @@ mySet.size; // 3
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

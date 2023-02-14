@@ -40,7 +40,7 @@ function adder(base /*, n2, ... */) {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

@@ -73,7 +73,7 @@ console.log(e.toString()); // 'hola'
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

@@ -288,7 +288,7 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

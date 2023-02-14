@@ -39,7 +39,7 @@ Este método usualmente es llamado internamente por JavaScript y no explícitame
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

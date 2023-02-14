@@ -29,6 +29,6 @@ El evento keyup se lanza cuando el usuario suelta la tecla que ha sido presionad
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}

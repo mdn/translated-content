@@ -58,7 +58,7 @@ if (!String.prototype.trim) {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

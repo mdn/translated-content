@@ -37,7 +37,7 @@ unescape("%u0107");     // "ć"
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

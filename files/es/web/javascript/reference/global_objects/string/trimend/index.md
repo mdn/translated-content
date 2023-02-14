@@ -53,7 +53,7 @@ console.log(str);        // '   foo'
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

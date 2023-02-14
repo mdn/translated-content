@@ -71,7 +71,7 @@ Para obtener más información, consulta {{JSxRef("Errors/Too_much_recursion", "
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

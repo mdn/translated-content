@@ -62,7 +62,7 @@ console.log(str.endsWith('to be', 19))  // true
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

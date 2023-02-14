@@ -22,6 +22,6 @@ El evento `keydown` se lanza cuando el usuario presiona una tecla.
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}

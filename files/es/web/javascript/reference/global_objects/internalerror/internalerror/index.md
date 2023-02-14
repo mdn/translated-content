@@ -35,7 +35,7 @@ new InternalError("Fallo del motor");
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 

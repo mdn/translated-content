@@ -40,7 +40,7 @@ mySet.has("bar");  // retorna false
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
