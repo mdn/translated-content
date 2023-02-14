@@ -52,9 +52,9 @@ let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.toLocaleLowerCase")}}
+{{Compat}}
 
 ## Vea también
 
