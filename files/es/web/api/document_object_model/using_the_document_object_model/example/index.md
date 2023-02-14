@@ -1,6 +1,7 @@
 ---
 title: Example
-slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
+slug: Web/API/Document_object_model/Using_the_Document_Object_Model/Example
+original_slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
 ---
 
 ```

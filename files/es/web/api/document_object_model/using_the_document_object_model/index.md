@@ -1,7 +1,7 @@
 ---
 title: Using the W3C DOM Level 1 Core
-slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
-original_slug: Using_the_W3C_DOM_Level_1_Core
+slug: Web/API/Document_object_model/Using_the_Document_Object_Model
+original_slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 ---
 
 The W3C's DOM Level 1 Core is a powerful object model for changing the content tree of documents. It is supported in all major browsers including Mozilla Firefox and Microsoft Internet Explorer. It is a powerful base for scripting on the web.
