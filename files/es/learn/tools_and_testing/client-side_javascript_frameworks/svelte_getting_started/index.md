@@ -1,5 +1,5 @@
 ---
-title: Getting started with Svelte
+title: Primeros pasos en Svelte
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 
@@ -53,21 +53,21 @@ Sus mayores incovenientes vienen dados por su corta edad, pues su ecosistema se 
 
 Te recomendamos que sigas el [Tutorial de Svelte](https://svelte.dev/tutorial/basics) para una introducción rápida a los conceptos básicos, para después regresar a este tutorial y aprender a construir algo más complicado.
 
-## Use cases
+## Casos de uso
 
-Svelte can be used to develop small pieces of an interface or whole applications. You can either start from scratch letting Svelte drive your UI or you can incrementally integrate it into an existing application.
+Svelte puede ser utilizado para desarrollar porciones de una interfaz o una aplicación completa. Puedes construir tu aplicación desde cero y dejar que Svelte maneje tu IU o incluso puedes integrar Svelte de forma incremental en una aplicación existente.
 
-Nevertheless, Svelte is particularly appropriate to tackle the following situations:
+Tomando en cuenta lo anterior, Svelte es una excelente solución para los siguientes casos:
 
-- Web applications intended for low-power devices: Applications built with Svelte have smaller bundle sizes, which is ideal for devices with slow network connections and limited processing power. Less code means fewer KB to download, parse, execute, and keep hanging around in memory.
-- Highly interactive pages or complex visualizations: If you are building data-visualizations that need to display a large number of DOM elements, the performance gains that come from a framework with no runtime overhead will ensure that user interactions are snappy and responsive.
-- Onboarding people with basic web development knowledge: Svelte has a shallow learning curve. Web developers with basic HTML, CSS, and JavaScript knowledge can easily grasp Svelte specifics in a short time and start building web applications.
+- Aplicaciones web enfocadas a dispositivos de bajo rendimiento: Las aplicaciones con Svelte son más ligeras, lo cual las vuelve ideal para dispositivos con redes lentas y poder de procesamiento limitado. 
+- Páginas altamente interactivas o visualizaciones complejas: Si te encuentras construyendo una aplicación para visualización de datos que necesite mostrar una gran cantidad de elementos en el DOM, la ganancia de rendimiento que viene de la mano de un _framework_ sin sobrecarga en tiempo de ejecución, ayudará a que las interacciones del usuario se mantengan ágiles y responsivas.
+- Gente que se encuentre iniciando en el mundo del desarrollo web: La curva de aprendizaje de Svelte es muy accesible. Desarrolladores web con conocimientos básicos de HTML, CSS y Javascript, fácilmente pueden familiarizarse con los conceptos de Svelte y empezar a construir aplicaciones web.
 
-Moreover, with the help of [Sapper](https://sapper.svelte.dev/) (a framework based on Svelte), you can also develop applications with advanced features like server-side rendering, code splitting, file-based routing and offline support. And then there's also [Svelte Native](https://svelte-native.technology/), which lets you build native mobile applications.
+De forma adicional, con la ayuda de [Sapper](https://sapper.svelte.dev/) (un _framework_ que se basa en Svelte), puedes desarrollar aplicaciones con características avanzadas como renderizado del lado del servidor (_SSR_), _code splitting_, enrutamiento basado en archivos y soporte de modo fuera de línea. Incluso existe [Svelte Native](https://svelte-native.technology/), que te permite crear aplicaciones nativas para móviles.
 
-## How does Svelte work?
+## ¿Cómo funciona Svelte?
 
-Being a compiler, Svelte can extend HTML, CSS, and JavaScript, generating optimal JavaScript code without any runtime overhead. To achieve this, Svelte extends vanilla web technologies in the following ways:
+Al tratarse de un compilador, Svelte puede extender HTML, CSS, y JavaScript, generando código Javascript optimizado sin agregar sobrecarga en tiempo de ejecución. Para lograr esto, Svelte se aprovecha de tecnologías web nativas de la siguiente forma:
 
 - It extends HTML by allowing JavaScript expressions in markup and providing directives to use conditions and loops, in a fashion similar to handlebars.
 - It extends CSS by adding a scoping mechanism, allowing each component to define its own styles without the risk of clashing with other components' styles.
