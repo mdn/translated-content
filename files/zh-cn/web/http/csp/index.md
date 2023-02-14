@@ -131,7 +131,7 @@ Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.e
 
 然后你需要设置你的服务器能够接收报告；使其能够以你认为恰当的方式存储并处理这些报告。
 
-## 违例报告的语法
+## 违规报告的语法
 
 作为报告的 JSON 对象和 `application/csp-report` {{HTTPHeader("Content-Type")}} 一起发送，并包含了以下数据：
 
@@ -148,13 +148,13 @@ Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.e
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 违规发生处的文档引用（地址）。
 - `script-sample`
-  - : 导致该违例的内联代码、事件处理器或样式的前 40 个字符。只适用于 `script-src*` 或 `style-src*` 包含 `'report-sample'` 的情况。
+  - : 导致该违规的内联代码、事件处理器或样式的前 40 个字符。只适用于 `script-src*` 或 `style-src*` 包含 `'report-sample'` 的情况。
 - `status-code`
   - : 全局对象被实例化的资源的 HTTP 状态代码。
 - `violated-directive` {{deprecated_inline}}
   - : 导致违反策略的指令。`violated-directive` 是 `effective-directive` 字段的历史名称，并包含相同的值。
 
-## 违例报告样本
+## 违规报告的样本
 
 我们假设页面位于 `http://example.com/signup.html`。它使用如下策略，该策略禁止任何资源的加载，除了来自 `cdn.example.com` 的样式表。
 
