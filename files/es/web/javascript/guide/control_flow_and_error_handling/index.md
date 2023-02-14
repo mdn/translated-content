@@ -136,7 +136,7 @@ Los siguientes valores se evalúan como `false` (también conocidos como valores
 
 Todos los demás valores, incluidos todos los objetos, se evalúan como `true` cuando se pasan a una declaración condicional.
 
-> **Advertencia:** ¡No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}!.Por ejemplo:```js
+> **Nota:** ¡No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}!.Por ejemplo:```js
 > var b = new Boolean(false);
 > if (b) // esta condición se evalúa como verdadera
 > if (b == true) // esta condición se evalúa como false
