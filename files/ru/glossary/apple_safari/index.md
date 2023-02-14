@@ -16,7 +16,6 @@ original_slug: Глоссарий/Apple_Safari
 
 ### Общая информация
 
-- {{Interwiki("wikipedia", "Safari")}} на Википедии
 - [Safari на сайте apple.com](http://www.apple.com/safari/)
 
 ### Техническая информация

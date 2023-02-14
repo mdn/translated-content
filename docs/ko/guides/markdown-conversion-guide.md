@@ -1,6 +1,6 @@
-> 참고: 2022.11월부터 모든 .html 파일들이 .md 파일로 변환 되었습니다. 이 파일을 참고용으로만 사용 부탁드립니다.
-
 # MDN ko locale Markdown 번역에 대한 일반 지침
+
+> 참고: 2022.11월부터 모든 .html 파일들이 .md 파일로 변환 되었습니다. 이 파일을 참고용으로만 사용 부탁드립니다.
 
 ## .html 확장자에서 .md 확장자로의 파일 변경일 경우
 
@@ -15,7 +15,7 @@ html 파일에 대한 commit은 오로지 확장자를 바꾸는 것만 허용�
 
 현재 진행 사항은 [[ko] Markdown conversion for ko RoadMap](https://github.com/mdn/translated-content/issues/2894)을 참고 부탁드립니다.
 
-### 리뷰
+## 리뷰
 
 리뷰로 인해 수정사항이 발생할 경우, 예외적으로 **수정 사항에 대해서 commit의 개수를 1개를 추가적으로 허용합니다.**
 

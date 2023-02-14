@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Module/customSections
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.customSections()`** 関数はモジュールと文字列名を指定して、すべてのカスタムセクションのコンテンツのコピーを返します。
 

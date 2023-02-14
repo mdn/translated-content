@@ -5,7 +5,7 @@ slug: Web/API/Event/preventDefault
 
 {{APIRef("DOM")}}
 
-{{domxref("Event")}} 接口的 **`preventDefault()`**方法，告诉{{Glossary("user agent")}}：如果此事件没有被显式处理，它默认的动作也不应该照常执行。此事件还是继续传播，除非碰到事件侦听器调用{{domxref("Event.stopPropagation", "stopPropagation()")}} 或{{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}，才停止传播。
+{{domxref("Event")}} 接口的 **`preventDefault()`** 方法，告诉{{Glossary("user agent", "用户代理")}}：如果此事件没有被显式处理，它默认的动作也不应该照常执行。此事件还是继续传播，除非碰到事件监听器调用 {{domxref("Event.stopPropagation", "stopPropagation()")}} 或 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}，才停止传播。
 
 ### 语法
 
@@ -53,11 +53,11 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 你可以看到如下的行为：
 
-{{EmbedLiveSample("Blocking_default_click_handling")}}
+{{EmbedLiveSample("阻止默认的点击事件执行")}}
 
 ### 在编辑域中阻止按键
 
-下面的这个例子说明了如何使用`preventDefault()`在文本编辑域中阻止有效的文本输入。如今，你通常可以使用[原生的 HTML 表单验证](/zh-CN/docs/Learn/HTML/Forms/Data_form_validation)来代替。
+下面的这个例子说明了如何使用 `preventDefault()` 在文本编辑域中阻止有效的文本输入。如今，你通常可以使用[原生的 HTML 表单验证](/zh-CN/docs/Learn/HTML/Forms/Data_form_validation)来代替。
 
 #### HTML
 
@@ -90,14 +90,14 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 #### JavaScript
 
-这里是相关的 JavaScript 代码。首先，监听[`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)事件：
+这里是相关的 JavaScript 代码。首先，监听 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件：
 
 ```js
 var myTextbox = document.getElementById('my-textbox');
 myTextbox.addEventListener('keypress', checkName, false);
 ```
 
-`checkName()`方法可以监听按键并且决定是否允许按键的默认行为发生。
+`checkName()` 方法可以监听按键并且决定是否允许按键的默认行为发生。
 
 ```js
 function checkName(evt) {
@@ -114,7 +114,7 @@ function checkName(evt) {
 }
 ```
 
-`displayWarning()`方法显示了一个问题的通知。这不是一种优雅的方法，但是确实可以达到我们的目的。
+`displayWarning()` 方法显示了一个问题的通知。这不是一种优雅的方法，但是确实可以达到我们的目的。
 
 ```js
 var warningTimeout;
@@ -142,18 +142,18 @@ function displayWarning(msg) {
 
 这里就是代码的执行结果：
 
-{{ EmbedLiveSample('Stopping_keystrokes_from_reaching_an_edit_field', 600, 200) }}
+{{ EmbedLiveSample('在编辑域中阻止按键', 600, 200) }}
 
 ## 备注
 
-在事件流的任何阶段调用`preventDefault()`都会取消事件，这意味着任何通常被该实现触发并作为结果的默认行为都不会发生。
+在事件流的任何阶段调用 `preventDefault()` 都会取消事件，这意味着任何通常被该实现触发并作为结果的默认行为都不会发生。
 
-你可以使用 {{domxref("Event.cancelable")}} 来检查该事件是否支持取消。为一个不支持 cancelable 的事件调用`preventDefault()`将没有效果。
+你可以使用 {{domxref("Event.cancelable")}} 来检查该事件是否支持取消。为一个不支持 cancelable 的事件调用 `preventDefault()` 将没有效果。
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

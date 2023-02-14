@@ -6,7 +6,7 @@ tags:
 translation_of: Web/API/WebRTC_API/Taking_still_photos
 original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 В этой статье объясняется как использовать WebRTC для получения доступа к камере компьютера или мобильного устройства, и захвата кадров с их помощью. [Ознакомьтесь с примером,](https://mdn-samples.mozilla.org/s/webrtc-capturestill) а затем узнайте как это работает.
 
@@ -211,7 +211,7 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Затем, если ширина и высота не равны нулю (имеется в виду, что есть, по крайней мере, потенциально допустимые данные изображения), мы устанавливаем ширину и высоту `canvas`, чтобы они соответствовали ширине захваченного кадра, затем вызываем метод {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} , что бы отрисовать текущий кадр видео в контексте `canvas`, заполнив весь холст изображением кадра.
 
-> **Примечание:** **Примечание :** Используется факт того, что интерфейс {{domxref("HTMLVideoElement")}} похож на интерфейс {{domxref("HTMLImageElement")}} для любых API , которые принимают `HTMLImageElement` в качестве параметра, с текущим кадром видео, представленным как содержимое изображения.
+> **Примечание:** Используется факт того, что интерфейс {{domxref("HTMLVideoElement")}} похож на интерфейс {{domxref("HTMLImageElement")}} для любых API , которые принимают `HTMLImageElement` в качестве параметра, с текущим кадром видео, представленным как содержимое изображения.
 
 Как только `canvas` будет содержать захваченное видео, конвертируем его в PNG формат, вызывая метод {{domxref("HTMLCanvasElement.toDataURL()")}} на нем; наконец вызываем метод {{domxref("Element.setAttribute", "photo.setAttribute()")}} отображая захваченное изображение в элементе изображения (бокса фотографии).
 

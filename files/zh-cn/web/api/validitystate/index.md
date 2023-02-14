@@ -24,7 +24,7 @@ DOM 接口 `ValidityState` 代表一个元素可有的有效性状态（_validit
 - {{domxref("ValidityState.stepMismatch", "stepMismatch")}} {{ReadOnlyInline}}
   - : 一个 {{jsxref("Boolean")}}，`true` 表示值不符合由 {{htmlattrxref("step", "input")}} 属性规定的规则（即该值不能被步长值除尽，译注：假设最小值是 0）。`false` 表示其符合步长值规则。`true` 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。
 - {{domxref("ValidityState.tooLong", "tooLong")}} {{ReadOnlyInline}}
-  - : 一个 {{jsxref("Boolean")}}，`true` 表示值超过了{{domxref("HTMLInputElement")}} 或 {{domxref("HTMLTextAreaElement")}} 对象中规定的 `maxlength`， `false` 表示值的长度小于或等于最大长度。**注意**：This 这个属性在 Gecko 中永远不会是 `true`，因为元素值不允许比 `maxlength` 长。`true` 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。
+  - : 一个 {{jsxref("Boolean")}}，`true` 表示值超过了{{domxref("HTMLInputElement")}} 或 {{domxref("HTMLTextAreaElement")}} 对象中规定的 `maxlength`， `false` 表示值的长度小于或等于最大长度。**注意**：这个属性在 Gecko 中永远不会是 `true`，因为元素值不允许比 `maxlength` 长。`true` 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。
 - {{domxref("ValidityState.tooShort", "tooShort")}} {{ReadOnlyInline}}
   - : 一个 {{jsxref("Boolean")}}，`true` 表示值的长度小于 {{domxref("HTMLInputElement")}} 或 {{domxref("HTMLTextAreaElement")}} 对象中规定的 `minlength`， `false` 表示值的长度大于或等于最大长度。`true` 的时候元素可用 CSS 伪类 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 匹配。
 - {{domxref("ValidityState.typeMismatch", "typeMismatch")}} {{ReadOnlyInline}}
@@ -44,5 +44,5 @@ DOM 接口 `ValidityState` 代表一个元素可有的有效性状态（_validit
 
 ## 参见
 
-- [约束验证](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- [表单数据校验](/zh-CN/docs/Learn/HTML/Forms/Data_form_validation)
+- [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
+- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)

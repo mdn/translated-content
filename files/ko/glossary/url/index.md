@@ -11,16 +11,8 @@ slug: Glossary/URL
 
 URL은 파일 전송({{glossary("FTP")}}), 이메일({{glossary("SMTP")}}) 등 다른 응용 프로그램에서도 사용할 수 있습니다.
 
-## 더 알아보기
+## 같이 보기
 
-### 일반적인 지식
-
-- 위키백과 [URL](https://ko.wikipedia.org/wiki/URL)
-
-### 배워보기
-
-- [URL과 URL 구조 이해하기](/ko/docs/Learn/Common_questions/What_is_a_URL)
-
-### 명세
-
-- URL 구문은 [URL Living Standard](https://url.spec.whatwg.org/)가 정의합니다.
+- [URL](https://en.wikipedia.org/wiki/URL) on Wikipedia
+- [Understanding URLs and their structure](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- The syntax of URLs is defined in the [URL Living Standard](https://url.spec.whatwg.org/)

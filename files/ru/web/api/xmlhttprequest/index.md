@@ -579,7 +579,7 @@ void overrideMimeType(DOMString mimetype);
 
 Отправляет запрос. Если запрос асинхронный (а по умолчанию это так), этот метод вернёт значение сразу после того как метод вызван.
 
-> **Примечание:** **Примечание переводчика:** в этом случае, в ответе не будет содержаться информации, которая пришла с сервера, поскольку она ещё не пришла. Для того чтобы получить эту информацию, нужно слушать события загрузки, или использовать promise.
+> **Примечание:** в этом случае, в ответе не будет содержаться информации, которая пришла с сервера, поскольку она ещё не пришла. Для того чтобы получить эту информацию, нужно слушать события загрузки, или использовать promise.
 
 Если запрос синхронный, то метод вернёт значение только после того, как придёт запрос от сервера.
 
@@ -702,7 +702,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 ## Notes
 
 - By default, Firefox 3 limits the number of `XMLHttpRequest` connections per server to 6 (previous versions limit this to 2 per server). Some interactive web sites may keep an `XMLHttpRequest` connection open, so opening multiple sessions to such sites may result in the browser hanging in such a way that the window no longer repaints and controls don't respond. This value can be changed by editing the `network.http.max-persistent-connections-per-server` preference in [`about:config`](/about:config).
-- From {{ gecko("7.0") }} headers set by [setRequestHeader](#setrequestheader) are sent with the request when following a redirect. Previously these headers would not be sent.
+- From Gecko 7.0 headers set by [setRequestHeader](#setrequestheader) are sent with the request when following a redirect. Previously these headers would not be sent.
 - `XMLHttpRequest` is implemented in Gecko using the `nsIXMLHttpRequest`, `nsIXMLHttpRequestEventTarget`, and `nsIJSXMLHttpRequest` interfaces.
 - When a request reaches its timeout value, a "timeout" event is raised.
 

@@ -35,7 +35,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}} または {{ARIARole("none")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> または <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

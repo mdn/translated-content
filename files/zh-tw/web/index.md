@@ -10,11 +10,11 @@ slug: Web
 ### 基礎
 
 - [HTML](/zh-TW/docs/Web/HTML)
-  - : **超文字標記語言 (HyperText Markup Language)** 是一種用來結構化描述及定義網頁內容的語言。
+  - : **超文字標記語言**（HyperText Markup Language）是一種用來結構化描述及定義網頁內容的語言。
 - [CSS](/zh-TW/docs/Web/CSS)
-  - : **階層樣式表 (Cascading Style Sheets)** 可用來描述網頁內容的外觀。
+  - : **階層樣式表**（Cascading Style Sheets）可用來描述網頁內容的外觀。
 - [HTTP](/zh-TW/docs/Web/HTTP)
-  - : **_超文字傳輸協議 (Hypertext Transfer Protocol) _**用於傳送網路的 HTML 及其他網頁中會使用到的 hypermedia 文件。
+  - : **超文字傳輸協議**（Hypertext Transfer Protocol）用於傳送網路的 HTML 及其他網頁中會使用到的 hypermedia 文件。
 
 ### 腳本語言
 

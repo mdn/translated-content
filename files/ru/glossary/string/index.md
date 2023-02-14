@@ -16,5 +16,4 @@ original_slug: Глоссарий/Строка
 
 ### Общие сведения
 
-- {{Interwiki("wikipedia", "String (computer science)")}} на Wikipedia
 - [JavaScript data types and data structures](/ru/docs/Web/JavaScript/Data_structures#String_type)

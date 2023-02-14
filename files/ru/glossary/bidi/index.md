@@ -13,10 +13,6 @@ original_slug: Глоссарий/BiDi
 
 ## Подробности
 
-### Общие сведения
-
-- {{Interwiki("wikipedia", "Bi-directional text")}} on Wikipedia
-
 ### Техническая справка
 
 - [Разработка Bidi приложений](/ru/docs/Archive/B2G_OS/Firefox_OS_apps/Localization/Developing_Bidi_Apps)

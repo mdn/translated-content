@@ -169,7 +169,7 @@ console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 
 #### 长度属性的规范化
 
-`length` 属性被[转换为一个数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)，被截断为一个整数，然后固定为 0 到 2<sup>53</sup> - 1 之间的范围。`NaN` 变成 `0`，所以即使 `length` 没有出现或 `undefined`，它也会表现得好像它的值是 `0`。
+`length` 属性被[转换为一个数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，被截断为一个整数，然后固定为 0 到 2<sup>53</sup> - 1 之间的范围。`NaN` 变成 `0`，所以即使 `length` 没有出现或 `undefined`，它也会表现得好像它的值是 `0`。
 
 ```js
 Array.prototype.flat.call({}); // []

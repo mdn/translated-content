@@ -15,7 +15,7 @@ MVC 소프트웨어 디자인 패턴의 세 가지 부분은 다음과 같이 �
 
 간단한 쇼핑 리스트 앱이 있다고 상상해봅시다. 우리가 원하는 것은 이번 주에 사야할 각 항목의 이름, 개수, 가격의 목록입니다. MVC 를 사용해 이 기능의 일부를 구현하는 방법을 아래에서 설명할 것입니다.
 
-![Diagram to show the different parts of the mvc architecture.](https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png)
+![Diagram to show the different parts of the mvc architecture.](model-view-controller-light-blue.png)
 
 ### 모델
 

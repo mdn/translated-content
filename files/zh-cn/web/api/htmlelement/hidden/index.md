@@ -105,15 +105,15 @@ h1 {
 }
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('示例', 560, 200) }}
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

@@ -13,7 +13,7 @@ slug: Web/CSS/scrollbar-color
 
 {{CSSInfo}}
 
-## 句法
+## 语法
 
 ```css
 /* Keyword values */
@@ -50,7 +50,7 @@ scrollbar-color: unset;
 
 {{CSSSyntax}}
 
-## 例子
+## 示例
 
 ### CSS
 
@@ -71,7 +71,7 @@ scrollbar-color: unset;
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 无障碍问题
 

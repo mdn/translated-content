@@ -100,7 +100,7 @@ putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
 
 #### Результат
 
-{{ EmbedLiveSample('Понимание_putImageData', '', '', '', 'Web/API/CanvasRenderingContext2D/putImageData',800) }}
+{{ EmbedLiveSample('Понимание_putImageData') }}
 
 ### Потеря данных из-за оптимизации браузера
 

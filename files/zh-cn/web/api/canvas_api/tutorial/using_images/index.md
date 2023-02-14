@@ -1,5 +1,5 @@
 ---
-title: 使用图像 Using images
+title: 使用图像
 slug: Web/API/Canvas_API/Tutorial/Using_images
 ---
 
@@ -108,7 +108,7 @@ function getMyVideo() {
 
 > **备注：** SVG 图像必须在 \<svg> 根指定元素的宽度和高度。
 
-### 例子：一个简单的线图
+### 示例：一个简单的线图
 
 ![](canvas_backdrop.png)
 
@@ -141,7 +141,7 @@ function getMyVideo() {
 
 结果看起来是这样的：
 
-{{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
+{{EmbedLiveSample("示例：一个简单的线图", 220, 160, "canvas_backdrop.png")}}
 
 ## 缩放 Scaling
 
@@ -150,7 +150,7 @@ function getMyVideo() {
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y, width, height)")}}
   - : 这个方法多了 2 个参数：`width` 和 `height，`这两个参数用来控制 当向 canvas 画入时应该缩放的大小
 
-### 例子：平铺图像
+### 示例：平铺图像
 
 ![](canvas_scale_image.png)
 
@@ -183,7 +183,7 @@ function draw() {
 
 结果看起来像这样：
 
-{{EmbedLiveSample("Example_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}
+{{EmbedLiveSample("示例：平铺图像", 160, 160, "canvas_scale_image.png")}}
 
 ## 切片 Slicing
 
@@ -196,7 +196,7 @@ function draw() {
 
 切片是个做图像合成的强大工具。假设有一张包含了所有元素的图像，那么你可以用这个方法来合成一个完整图像。例如，你想画一张图表，而手上有一个包含所有必需的文字的 PNG 文件，那么你可以很轻易的根据实际数据的需要来改变最终显示的图表。这方法的另一个好处就是你不需要单独装载每一个图像。
 
-### 例子：相框
+### 示例：相框
 
 ![](canvas_drawimage2.jpg)
 
@@ -230,7 +230,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("示例：相框", 160, 160, "canvas_drawimage2.jpg")}}
 
 ## 画廊示例
 

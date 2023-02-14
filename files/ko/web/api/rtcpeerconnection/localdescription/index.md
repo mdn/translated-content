@@ -33,11 +33,9 @@ else {
 }
 ```
 
-## 사양서
+## 명세서
 
-| 사양서                                                                                                                                               | 상태                             | 코멘트                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{ SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-localDescription', 'RTCPeerConnection.localDescription') }} | {{ Spec2('WebRTC 1.0') }} | Initial specification. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -42,11 +42,11 @@ Puedes usar la propiedad CSS {{ cssxref("orient") }} permite especificar la orie
 
 En Mac OS X, Se vería como esto:
 
-![progress-1.png](/@api/deki/files/4946/=progress-1.png)
+![progress-1.png](progress-1.png)
 
 En Windows, el resultante sería este:
 
-![progress-firefox.JPG](/@api/deki/files/6031/=progress-firefox.JPG)
+![progress-firefox.JPG](progress-firefox.jpg)
 
 ## Especificaciones
 
