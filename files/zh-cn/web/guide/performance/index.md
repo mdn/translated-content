@@ -20,4 +20,3 @@ slug: Web/Guide/Performance
 
 - _web.dev_ 上的[快速加载时间](https://web.dev/fast/)
 
-{{LandingPageListSubpages}}
