@@ -79,17 +79,17 @@ El compiliador solo interfiere bajo situaciones muy específicas y únicamente e
 
 Debido a que Svelte es un compilador, no es posible simplemente agregar una etiqueta `<script src="svelte.js">` en tu página para y luego importarla en tu aplicación. Deberás configurar tu entorno de desarrollo para que el compilador pueda hacer su trabajo.
 
-### Requirements
+### Requisitos
 
-In order to work with Svelte, you need to have [Node.js](https://nodejs.org/en/) installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner). Note that you can also use the Yarn package manager in place of npm, but we'll assume you are using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
+Para poder trabajar con Svelte, debes tener [Node.js](https://nodejs.org/en/) instalado. Es recomendable que uses una versión con soporte a largo plazo (LTS). Node incluye `npm` (el administrador de paquetes de Node), y `npx` (El lanzador de paquetes de Node). Toma en cuenta que también puedes utilizar el administrador de paquetes Yarn en lugar de npm, no obstante, para este tutorial asumiremos que estás trabajando con npm. Visita [Conceptos básicos de administradores de paquetes](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) para más información de npm y yarn.
 
-If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. Gitbash (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/about) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
+Si estás utilizando Windows, deberás instalar algunos programas que te proporcionen características de la terminal de sistemas Unix/macOS para poder ejecutar comandos de este tutorial. Dos herramientas que te pueden servir son Gitbash (que forma parte de las [herramientas de git para Windows](https://gitforwindows.org/)) o el [Subsistema de Linux para Windows (WSL)](https://docs.microsoft.com/windows/wsl/about). Visita el [Curso introductorio a la línea de comandos](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) para más información sobre estas herramientas y la línea de comandos en general.
 
-Also see the following for more information:
+También puedes visitar los siguientes artículos para más información:
 
-- ["What is npm"](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) on nodejs.org
-- ["Introducing npx"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) on the npm blog
-- ["The easiest way to get started with Svelte"](https://svelte.dev/blog/the-easiest-way-to-get-started) on the Svelte blog
+- ["¿Qué es npm? (en-US)"](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) en nodejs.org
+- ["Introducción a npx (en-US)"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) en el blog de npm
+- ["La forma sencilla de iniciar con svelte (en-US)"](https://svelte.dev/blog/the-easiest-way-to-get-started) en el blog de Svelte
 
 ### Creating your first Svelte app
 
