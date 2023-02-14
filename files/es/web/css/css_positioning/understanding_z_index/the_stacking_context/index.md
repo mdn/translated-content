@@ -38,7 +38,7 @@ En resumen:
 
 ## El ejemplo
 
-![Example of stacking rules modified using z-index](/@api/deki/files/913/=Understanding_zindex_04.png)
+![Example of stacking rules modified using z-index](understanding_zindex_04.png)
 
 En este ejemplo cada elemento posicionado crea su propio contexto de apilamiento, debido a sus valores de posicionamiento y z-index. La jerarquía de contextos de apilamiento es organizada de la siguiente manera:
 
@@ -54,7 +54,7 @@ En este ejemplo cada elemento posicionado crea su propio contexto de apilamiento
 
 Es importante notar que el DIV #4, DIV #5 y el DIV #6 son hijos del DIV #3, así que el apilamiento de esos elementos es completamente resuelto dentro del DIV#3. Una vez que el apilamiento y el renderizado dentro del DIV#3 ha sido completado, todo el elemento DIV#3 es apilado en el elemento raíz con respecto a sus DIV hermanos.
 
-> **Nota:** **Notas:**
+> **Nota:**
 >
 > - DIV #4 es renderizado debajo de DIV #1 porque el z-index (5) de DIV #1 es válido dentro del contexto de apilamiento del elemento raiz, mientras que el z-index (6) de DIV #4 es válido dentro del contexto de apilamiento de DIV #3. Así que DIV #4 está debajo de DIV #1, porque DIV #4 pertenece a DIV #3, que tiene un valor z-index menor.
 > - Por la misma razón DIV #2 (z-index 2) es renderizado bajo DIV#5 (z-index 1) porque DIV #5 pertenece a DIV #3, que tiene un valor z-index mayor.

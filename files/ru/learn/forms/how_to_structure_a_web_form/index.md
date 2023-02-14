@@ -281,7 +281,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 Вы можете увидеть законченную форму в действии ниже (также её можно найти на GitHub — посмотрите [payment-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) и [живой пример](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-{{EmbedLiveSample("A_payment_form","100%",620, "", "Learn/HTML/Forms/How_to_structure_an_HTML_form/Example")}}
+{{ EmbedLiveSample("A_payment_form","100%",660, "", "Learn/Forms/How_to_structure_a_web_form/Example") }}
 
 ## Протестируйте себя!
 

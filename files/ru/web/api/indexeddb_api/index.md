@@ -103,7 +103,7 @@ IndexedDB транзакционная система базы данных, к�
 ## Примеры
 
 - [eLibri:](http://marco-c.github.io/eLibri/) Мощная библиотека и приложение для чтения электронных книг, написанное Марко Кастеллуччо, победителем IndexedDB Mozilla DevDerby.
-- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/)): Эталонное приложение для примеров в справочной документации.
+- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)): Эталонное приложение для примеров в справочной документации.
 - [Storing images and files in IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 
 ## Спецификации

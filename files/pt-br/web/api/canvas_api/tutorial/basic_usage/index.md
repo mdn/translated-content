@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 original_slug: Web/Guide/HTML/Canvas_tutorial/Utilizacao_basica
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}Vamos começar este tutorial olhando para o elemento {{HTMLElement("canvas")}} {{Glossary("HTML")}} em si. No final desta página, você saberá como configurar um contexto de canvas 2D e desenhar um primeiro exemplo em seu navegador.
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}Vamos começar este tutorial olhando para o elemento {{HTMLElement("canvas")}} {{Glossary("HTML")}} em si. No final desta página, você saberá como configurar um contexto de canvas 2D e desenhar um primeiro exemplo em seu navegador.
 
 ## O elemento `<canvas>`
 

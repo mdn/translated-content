@@ -35,7 +35,7 @@ Web サーバーはクライアントからの要求を待ちうけ、受信し�
 
 サーバーは要求された文書をファイルシステムから取り出し、[成功ステータス](/ja/docs/Web/HTTP/Status#Successful_responses)(通常は"200 OK")と一緒に HTTP レスポンスに入れて送り返します。何らかの原因でファイルが取り出せないときは、エラーステータス([クライアント側エラー](/ja/docs/Web/HTTP/Status#Client_error_responses)あるいは[サーバー側エラー](/ja/docs/Web/HTTP/Status#Server_error_responses))を送り返します。
 
-![A simplified diagram of a static web server.](Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](Basic_Static_App_Server.png)
 
 ### 動的サイト
 
@@ -49,7 +49,7 @@ Web サーバーはクライアントからの要求を待ちうけ、受信し�
 
 静的データを要求されたときは、静的サイトと同じ動作をします。静的データはファイルとして保存されており、変更されることはありません。例えば、CSS、JavaScript、画像、事前に作成された PDF ファイルなどが、これにあたります。
 
-![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](Web%20Application%20with%20HTML%20and%20Steps.png)
+![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](Web_Application_with_HTML_and_Steps.png)
 
 動的データを要求されたときは、② の矢印が示すように、（図では「Web アプリケーション」と表示されている）他のサーバーサイドコードに転送されます。そこで要求を解釈し、必要なデータをデータベースから取り出し（③）、HTML 雛型に埋め込みます（④）。それを応答としてブラウザーに送り返します（⑤ と ⑥）。
 

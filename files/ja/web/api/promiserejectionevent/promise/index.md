@@ -41,7 +41,7 @@ window.onunhandledrejection = (event) => {
 
 ## 関連情報
 
-- {{SectionOnPage("/ja/docs/Web/JavaScript/Guide/Using_promises", "プロミスの拒否イベント")}}
+- [プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#%E3%83%97%E3%83%AD%E3%83%9F%E3%82%B9%E3%81%AE%E6%8B%92%E5%90%A6%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88)
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
 - {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}

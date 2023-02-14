@@ -1,5 +1,5 @@
 ---
-title: <strong>
+title: <strong> - элемент выделения важного текста
 slug: Web/HTML/Element/strong
 tags:
   - HTML

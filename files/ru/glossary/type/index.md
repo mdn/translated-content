@@ -19,5 +19,4 @@ original_slug: Глоссарий/Type
 
 ### Общие сведения
 
-- {{Interwiki("wikipedia", "Data type")}} на Википедии
 - [Типы данных в JavaScript](/ru/docs/Web/JavaScript/Data_structures)

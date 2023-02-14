@@ -76,7 +76,7 @@ _它並不繼承任何屬性，但其實做已被定義於 {{domxref("NavigatorI
   - : Returns the {{domxref("window.navigator.id", "id")}} object which you can use to add support for [BrowserID](/zh-TW/docs/BrowserID) to your web site.
 - {{domxref("Navigator.mediaDevices")}} {{non-standard_inline}}
   - : Returns a reference to a {{domxref("MediaDevices")}} object which can then be used to get information about available media devices ({{domxref("MediaDevices.enumerateDevices()")}}), find out what constrainable properties are supported for media on the user's computer and user agent ({{domxref("MediaDevices.getSupportedConstraints()")}}), and to request access to media using {{domxref("MediaDevices.getUserMedia()")}}.
-- {{domxref("Navigator.mozNotification")}} {{deprecated_inline("22")}} {{non-standard_inline}}
+- {{domxref("Navigator.mozNotification")}} {{deprecated_inline}} {{non-standard_inline}}
   {{domxref("Navigator.webkitNotification")}}
   - : Returns a {{domxref("navigator.mozNotification", "notification")}} object you can use to deliver notifications to the user from your web application.
 - {{domxref("Navigator.mozSocial")}} {{non-standard_inline}}
@@ -118,7 +118,7 @@ _Doesn't inherit any method, but implements those defined in {{domxref("Navigato
   - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
 - {{domxref("Navigator.share()")}}{{experimental_inline}}
   - : Invokes the native sharing mechanism of the current platform.
-- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline("1.7.8")}} {{experimental_inline}}
+- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline}} {{experimental_inline}}
   - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
 - {{domxref("Navigator.vibrate()")}}
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
