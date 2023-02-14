@@ -26,10 +26,6 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ## Смотрите также
 
-### Основные знания
-
-- {{Interwiki("wikipedia", "Структура данных массива", "Массив")}} на Википедии
-
 ### Техническая справка
 
 - JavaScript {{jsxref("Array")}} на MDN
