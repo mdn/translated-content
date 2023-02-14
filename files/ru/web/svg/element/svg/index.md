@@ -29,13 +29,13 @@ html,body,svg { height:100% }
 
 ## Атрибуты
 
-- {{SVGAttr("baseProfile")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : The minimum SVG language profile that the document requires.
     _Value type_: **\<string>** ; _Default value_: none; _Animatable_: **no**
-- {{SVGAttr("contentScriptType")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("contentScriptType")}} {{deprecated_inline}}
   - : Язык сценариев по умолчанию, используемый фрагментом SVG.
     _Value type_: **\<string>** ; _Default value_: `application/ecmascript`; _Animatable_: **no**
-- {{SVGAttr("contentStyleType")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("contentStyleType")}} {{deprecated_inline}}
   - : Язык таблицы стилей по умолчанию, используемый фрагментом SVG.
     _Value type_: **\<string>** ; _Default value_: `text/css`; _Animatable_: **no**
 - {{SVGAttr("height")}}
@@ -44,7 +44,7 @@ html,body,svg { height:100% }
 - {{SVGAttr("preserveAspectRatio")}}
   - : How the `svg` fragment must be deformed if it is displayed with a different aspect ratio.
     _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
-- {{SVGAttr("version")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("version")}} {{deprecated_inline}}
   - : Какая версия SVG используется для внутреннего содержимого элемента.
     _Value type_: **[\<number>](/ru/docs/Web/SVG/Content_type#Number)** ; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("viewBox")}}
