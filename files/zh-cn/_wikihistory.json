@@ -33682,9 +33682,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/API/DOMMatrix": {
-    "modified": "2020-10-15T22:22:00.749Z",
-    "contributors": ["diozhu"]
   }
 }

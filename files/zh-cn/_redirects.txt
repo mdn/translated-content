@@ -1719,7 +1719,7 @@
 /zh-CN/docs/Web/API/RTCPeerConnection/ontrack	/zh-CN/docs/Web/API/RTCPeerConnection/track_event
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
-/zh-CN/docs/Web/API/SVGMatrix	/zh-CN/docs/conflicting/Web/API/DOMMatrix
+/zh-CN/docs/Web/API/SVGMatrix	/zh-CN/docs/Web/API/DOMMatrix
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength
 /zh-CN/docs/Web/API/Screen.availHeight	/zh-CN/docs/Web/API/Screen/availHeight
 /zh-CN/docs/Web/API/Screen.availLeft	/zh-CN/docs/Web/API/Screen/availLeft
