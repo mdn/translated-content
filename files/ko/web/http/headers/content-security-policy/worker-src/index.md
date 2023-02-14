@@ -49,7 +49,7 @@ Content-Security-Policy: worker-src <source> <source>;
 
 ### 위반 사례
 
-주어진 CSP 해더:
+주어진 CSP 해더가 다음과 같다면
 
 ```http
 Content-Security-Policy: worker-src https://example.com/
