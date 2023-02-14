@@ -89,7 +89,7 @@ Referrer-Policy: unsafe-url
 
 {{Compat("http.headers.Referrer-Policy")}}
 
-> **Nota:** **Notas**:
+> **Nota:**
 >
 > - A partir de la versión 53 en adelante, Gecko incluye una preferencia de `about:config` para permitir a los usuarios definir su directiva `Referrer-Policy` predeterminada: `network.http.referer.userControlPolicy`.
 > - A partir de la versión 59 (consulte el informe n.º [587523](https://bugzilla.mozilla.org/show_bug.cgi?id=587523)), esta preferencia ha cambiado de nombre: ahora son `network.http.referer.defaultPolicy` y `network.http.referer.defaultPolicy.pbmode`.
