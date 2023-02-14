@@ -47,14 +47,6 @@ alpha.toSource();
 //devuelve ['a', 'b', 'c']
 ```
 
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
-
 ## Ver también
 
 - {{jsxref("Object.prototype.toSource()")}}
