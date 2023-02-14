@@ -219,7 +219,7 @@ canvas { width: 100%; height: 100%; }
 
 ### Результат
 
-{{ EmbedLiveSample('Финальный_вариант', '100%', '400', '', 'Games/Techniques/3D_on_the_web/GLSL_Shaders') }}
+{{ EmbedLiveSample('Финальный_вариант') }}
 
 ## Заключение
 
