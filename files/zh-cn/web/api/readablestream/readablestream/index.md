@@ -34,7 +34,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
     - autoAllocateChunkSize {{optional_inline}}
       - : 对于字节流，开发人员可以使用正整数值设置 `autoAllocateChunkSize` 以打开流的自动分配功能。启用此功能后，流实现将自动分配一个具有给定整数大小的 {{domxref("ArrayBuffer")}}，并调用底层源代码，就好像消费者正在使用 BYOB 阅读器一样。
 
-- queueingStrategy {{optional_inline}}
+- QueuingStrategy {{optional_inline}}
 
   - : 一个可选择定义流的队列策略的对象。这需要两个参数：
 
