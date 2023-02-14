@@ -9,7 +9,7 @@ slug: Web/HTTP/CSP
 
 CSP 被设计成完全向后兼容（除 CSP2 在向后兼容有明确提及的不一致; 更多细节查看[这里](https://www.w3.org/TR/CSP2) 章节 1.1）。不支持 CSP 的浏览器也能与实现了 CSP 的服务器正常工作，反之亦然：不支持 CSP 的浏览器只会忽略它，如常运行，默认为网页内容使用标准的同源策略。如果网站不提供 CSP 标头，浏览器也使用标准的[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
 
-为使 CSP 可用，你需要配置你的网络服务器返回 {{HTTPHeader("Content-Security-Policy")}} HTTP 标头（偶尔会提及 `X-Content-Security-Policy` 标头，但那是旧版本，并且你无须再如此指定它）。
+为使 CSP 可用，你需要配置你的网络服务器返回 {{HTTPHeader("Content-Security-Policy")}} HTTP 标头（有时你会看到 `X-Content-Security-Policy` 标头，但那是旧版本，并且你无须再如此指定它）。
 
 除此之外，{{HTMLElement("meta")}} 元素也可以被用来配置该策略，例如
 
