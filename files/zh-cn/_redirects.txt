@@ -1421,6 +1421,7 @@
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/getSelection	/zh-CN/docs/Web/API/Document/getSelection
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/zh-CN/docs/Web/API/Document/pointerLockElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/styleSheets	/zh-CN/docs/Web/API/Document/styleSheets
+/zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
 /zh-CN/docs/Web/API/EffectTiming	/zh-CN/docs/Web/API/KeyframeEffect/KeyframeEffect
 /zh-CN/docs/Web/API/EffectTiming/easing	/zh-CN/docs/Web/API/KeyframeEffect/KeyframeEffect
 /zh-CN/docs/Web/API/Element.classList	/zh-CN/docs/Web/API/Element/classList
@@ -1718,6 +1719,7 @@
 /zh-CN/docs/Web/API/RTCPeerConnection/ontrack	/zh-CN/docs/Web/API/RTCPeerConnection/track_event
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
+/zh-CN/docs/Web/API/SVGMatrix	/zh-CN/docs/conflicting/Web/API/DOMMatrix
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength
 /zh-CN/docs/Web/API/Screen.availHeight	/zh-CN/docs/Web/API/Screen/availHeight
 /zh-CN/docs/Web/API/Screen.availLeft	/zh-CN/docs/Web/API/Screen/availLeft

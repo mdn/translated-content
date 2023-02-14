@@ -1,6 +1,7 @@
 ---
 title: SVGMatrix
-slug: Web/API/SVGMatrix
+slug: conflicting/Web/API/DOMMatrix
+original_slug: Web/API/SVGMatrix
 ---
 
 {{APIRef("SVG")}}{{deprecated_header}}

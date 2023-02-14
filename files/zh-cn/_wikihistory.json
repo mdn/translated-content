@@ -8668,13 +8668,13 @@
       "Heagle"
     ]
   },
-  "Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core": {
-    "modified": "2019-12-13T21:06:35.933Z",
-    "contributors": ["wbamberg", "alwxkxk", "xhlsrj", "EugeneZeng"]
-  },
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2020-01-30T13:21:03.275Z",
     "contributors": ["chrisdavidmills", "lon", "ziyunfei"]
+  },
+  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
+    "modified": "2019-12-13T21:06:35.933Z",
+    "contributors": ["wbamberg", "alwxkxk", "xhlsrj", "EugeneZeng"]
   },
   "Web/API/DragEvent": {
     "modified": "2019-03-23T22:58:48.150Z",
@@ -13650,10 +13650,6 @@
   "Web/API/SVGGraphicsElement/getBBox": {
     "modified": "2020-02-02T12:42:57.619Z",
     "contributors": ["xgqfrms"]
-  },
-  "Web/API/SVGMatrix": {
-    "modified": "2020-10-15T22:22:00.749Z",
-    "contributors": ["diozhu"]
   },
   "Web/API/SVGPathElement": {
     "modified": "2019-03-23T22:46:19.708Z",
@@ -33686,5 +33682,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Web/API/DOMMatrix": {
+    "modified": "2020-10-15T22:22:00.749Z",
+    "contributors": ["diozhu"]
   }
 }
