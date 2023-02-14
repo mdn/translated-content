@@ -33,7 +33,7 @@ new InternalError("Fallo del motor");
 
 ## Especificaciones
 
-{{Specifications}}
+No forma parte de ningún estándar.
 
 ## Compatibilidad con navegadores
 

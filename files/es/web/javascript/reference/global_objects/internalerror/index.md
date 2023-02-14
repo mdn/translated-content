@@ -69,7 +69,7 @@ Para obtener más información, consulta {{JSxRef("Errors/Too_much_recursion", "
 
 ## Especificaciones
 
-{{Specifications}}
+No forma parte de ningún estándar.
 
 ## Compatibilidad con navegadores
 
