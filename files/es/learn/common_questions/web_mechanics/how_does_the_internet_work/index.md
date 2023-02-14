@@ -1,6 +1,7 @@
 ---
 title: ¿Cómo funciona Internet?
-slug: Learn/Common_questions/How_does_the_Internet_work
+slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
+original_slug: Learn/Common_questions/How_does_the_Internet_work
 ---
 
 En este artículo se describe qué es Internet y cómo funciona.
