@@ -1,5 +1,5 @@
 ---
-title: 内容安全策略 ( CSP )
+title: 内容安全策略（CSP）
 slug: Web/HTTP/CSP
 ---
 
