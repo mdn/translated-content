@@ -1,6 +1,8 @@
 ---
 title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
+l10n:
+  sourceCommit: c4e3558ee1045803df4a685f11f94dca273cd5fe
 ---
 
 {{JSRef}}
@@ -15,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 
 내장된 모든 함수는 개별 플래그 접근자를 읽는 대신 `flags` 속성을 읽습니다.
 
-`flags`의 설정 접근자가 `undefined`라면 이 속성을 직접 변경할 수 없습니다.
+`flags`의 set 접근자는 정의되지 않았습니다. 이 속성을 직접 변경할 수 없습니다.
 
 ## 예제
 

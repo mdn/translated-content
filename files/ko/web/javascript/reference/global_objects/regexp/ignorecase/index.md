@@ -1,6 +1,8 @@
 ---
 title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
+l10n:
+  sourceCommit: c4e3558ee1045803df4a685f11f94dca273cd5fe
 ---
 
 {{JSRef}}
@@ -15,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 
 정규식에 [`unicode`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) 플래그가 있는 경우 대/소문자 케이스 매핑은 [`CaseFolding.txt`](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt)에 명시된 대로 수행됩니다. 그렇지 않으면 대/소문자 매핑은 [Unicode Default Case Conversion](https://unicode-org.github.io/icu/userguide/transforms/casemappings.html)을 사용합니다. 이 알고리즘은 [`String.prototype.toUpperCase()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) 및 [`String.prototype.toLowerCase()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)에서 사용되는 알고리즘과 동일합니다.
 
-`ignoreCase`의 설정 접근자는 `undefined` 입니다. 이 값을 직접 변경할 수 없습니다.
+`ignoreCase`의 set 접근자는 `undefined`, 즉 정의되지 않았습니다. 이 속성을 직접 변경할 수 없습니다.
 
 ## 예제
 
