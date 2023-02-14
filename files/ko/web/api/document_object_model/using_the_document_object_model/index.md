@@ -1,7 +1,9 @@
 ---
 title: W3C DOM Level 1 Core 사용하기
-slug: Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
+slug: Web/API/Document_object_model/Using_the_Document_Object_Model
+original_slug: Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The W3C's DOM Level 1 Core 는 documents의 콘텐츠 트리를 변경하기 위한 강력한 객체형 모델입니다. 웹 스크립팅을 위한 초석이기도 한 이 모델은 Mozilla Firefox and Microsoft Internet Explorer를 포함한 주요 브라우저에서 지원합니다.
