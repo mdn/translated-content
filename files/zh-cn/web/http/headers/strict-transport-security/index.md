@@ -43,9 +43,9 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 如果一个网站接受 HTTP 的请求，然后重定向到 HTTPS，用户可能在开始重定向前，通过没有加密的方式与服务器通信，比如，用户输入 `http://foo.com` 或者仅是输入 foo.com。这样为中间人攻击创造了机会。可以利用重定向将用户引导至恶意站点，而不是原始站的安全版本。
 
-网站通过 HTTP Strict Transport Security 通知浏览器，这个网站禁止使用 HTTP 方式加载，并且浏览器应该自动把所有尝试使用 HTTP 的请求自动替换为 HTTPS 请求。
+网站通过 HTTP Strict Transport Security 标头通知浏览器，这个网站禁止使用 HTTP 方式加载，并且浏览器应该自动把所有尝试使用 HTTP 的请求自动替换为 HTTPS 请求。
 
-> **备注：** `Strict-Transport-Security` 在通过 HTTP 访问时会被浏览器**忽略**。只有在你的网站通过 HTTPS 访问并且没有证书错误时，浏览器才认为你的网站支持 HTTPS，然后遵守 `Strict-Transport-Security` 标头。浏览器这样做是因为攻击者可以拦截到站点的 HTTP 连接，然后注入或者删除标头。
+> **备注：** `Strict-Transport-Security` 标头在通过 HTTP 访问时会被浏览器**忽略**。只有在你的网站通过 HTTPS 访问并且没有证书错误时，浏览器才认为你的网站支持 HTTPS，然后遵守 `Strict-Transport-Security` 标头。浏览器这样做是因为攻击者可以拦截到站点的 HTTP 连接，然后注入或者删除标头。
 
 ### 示例场景
 
@@ -70,7 +70,7 @@ Strict Transport Security 解决了这个问题；只要你通过 HTTPS 请求�
 
 ## 示例
 
-现在和未来的所有子域名会自动使用 HTTPS，连接长达一年（`max-age` 值为 1）。同时阻止了只能通过 HTTP 访问页面或者子域的内容。
+现在和未来的所有子域名会自动使用 HTTPS，有效期（`max-age`）为一年。同时阻止了只能通过 HTTP 访问页面或者子域的内容。
 
 ```http
 Strict-Transport-Security: max-age=31536000; includeSubDomains
@@ -97,6 +97,6 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 - 博文：[HTTP Strict Transport Security 已经落地！](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
 - 博文：[HTTP Strict Transport Security（强制 HTTPS）](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP 文章：[HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
-- 维基百科：[HTTP Strict Transport Security](https://zh.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
+- 维基百科：[HTTP Strict Transport Security](https://zh.wikipedia.org/wiki/HTTP严格传输安全)
 - [HSTS 预加载服务](https://hstspreload.org/)
 - [仅限于安全上下文的功能](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
