@@ -9,9 +9,18 @@ HTTP **`Strict-Transport-Security`**（通常简称为 {{Glossary("HSTS")}}）�
 
 > **备注：** 这比在你的服务器上简单地配置 HTTP 到 HTTPS（301）重定向要安全，因为初始的 HTTP 连接仍然易受到中间人攻击。
 
-| 标头类型                                               | {{Glossary("Response header","响应标头")}} |
-| ------------------------------------------------------ | ------------------------------------------ |
-| {{Glossary("Forbidden header name","禁止修改的标头")}} | 无                                         |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header","响应标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name","禁止修改的标头")}}</th>
+      <td>无</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
@@ -40,7 +49,7 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 ### 示例场景
 
-你连接到一个免费 WiFi 热点，然后开始浏览网站，访问你的网上银行，查看你的支出，并且支付一些订单。很不幸，你接入的 Wi-Fi 实际上是黑客的笔记本热点，他们拦截了你最初的 HTTP 请求，然后重定向到一个你银行网站一模一样的钓鱼网站。现在，你的隐私数据暴露给黑客了。
+你连接到一个免费 Wi-Fi 热点，然后开始浏览网站，访问你的网上银行，查看你的支出，并且支付一些订单。很不幸，你接入的 Wi-Fi 实际上是黑客的笔记本热点，他们拦截了你最初的 HTTP 请求，然后重定向到一个与你银行网站一模一样的钓鱼网站。现在，你的隐私数据暴露给黑客了。
 
 Strict Transport Security 解决了这个问题；只要你通过 HTTPS 请求访问银行网站，并且银行网站配置好 Strict Transport Security，你的浏览器知道自动使用 HTTPS 请求，这可以阻止黑客的中间人攻击的把戏。
 
@@ -67,9 +76,9 @@ Strict Transport Security 解决了这个问题；只要你通过 HTTPS 请求�
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-然而，如果域可以接受 1 年的 `max-age`，则推荐两年的，正如 <https://hstspreload.org> 描述的那样。
+然而，如果域可以接受 1 年的 `max-age`，则推荐使用两年的，正如 <https://hstspreload.org> 中描述的那样。
 
-在以下示例中，`max-age` 被设置为 2 年，并且后缀是 `preload`，这是包含在所有主流的 web 浏览器的 HSTS 预加载列表中（如 Chromium、Edge 以及 Firefox）所必要的。
+在以下示例中，`max-age` 被设置为 2 年，并且后缀是 `preload`，这是包含在所有主流的 web 浏览器（如 Chromium、Edge 以及 Firefox）的 HSTS 预加载列表中所必要的选项。
 
 ```http
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
