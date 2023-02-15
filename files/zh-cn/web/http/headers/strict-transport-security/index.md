@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Strict-Transport-Security
 
 {{HTTPSidebar}}
 
-**`HTTP-Strict-Transport-Security`**（通常简称为 {{Glossary("HSTS")}}）响应标头用来通知浏览器应该只通过 HTTPS 访问该站点，并且以后使用 HTTP 访问该站点的所有尝试都应自动转换为 HTTPS。
+**`HTTP-Strict-Transport-Security`**（通常简称为 {{Glossary("HSTS")}}）响应标头用来通知浏览器应该只通过 HTTPS 访问该站点，并且以后使用 HTTP 访问该站点的所有尝试都应自动重定向到 HTTPS。
 
 > **备注：** 这比在你的服务器上简单地配置 HTTP 到 HTTPS（301）重定向要安全，因为初始的 HTTP 连接仍然易受到中间人的攻击。
 
@@ -28,11 +28,11 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 - `includeSubDomains` {{optional_inline}}
   - : 如果这个可选的参数被指定，那么说明此规则也适用于该网站的所有子域名。
 - `preload` {{optional_inline}} {{non-standard_inline}}
-  - : 查看 [预加载 HSTS](#预加载_hsts) 获得详情。当使用 `preload`，`max-age` 指令必须至少是 `31536000`（一年），并且必须存在 `includeSubDomains` 指令。这不是标准的一部分。
+  - : 查看[预加载 HSTS](#预加载_hsts) 获得详情。当使用 `preload`，`max-age` 指令必须至少是 `31536000`（一年），并且必须存在 `includeSubDomains` 指令。这不是标准的一部分。
 
 ## 描述
 
-如果一个网站接受一个 HTTP 的请求，然后重定向到 HTTPS，用户可能在开始跳转前，通过没有加密的方式和服务器对话，比如，用户输入 `http://foo.com` 或者直接是 foo.com。这样存在中间人攻击潜在威胁，跳转过程可能被恶意网站利用来直接接触用户信息，而不是原来的加密信息。可以利用重定向直接将访问者引导至一个恶意网站，而不是原始站到安全版本。
+如果一个网站接受一个 HTTP 的请求，然后重定向到 HTTPS，用户可能在开始重定向前，通过没有加密的方式和服务器对话，比如，用户输入 `http://foo.com` 或者直接是 foo.com。这样存在中间人攻击潜在威胁，重定向过程可能被恶意网站利用来直接接触用户信息，而不是原来的加密信息。可以利用重定向直接将访问者引导至一个恶意网站，而不是原始站到安全版本。
 
 网站通过 HTTP Strict Transport Security 通知浏览器，这个网站禁止使用 HTTP 方式加载，浏览器应该自动把所有尝试使用 HTTP 的请求自动替换为 HTTPS 请求。
 
@@ -40,7 +40,7 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 ### 示例场景
 
-你连接到一个免费 WiFi 热点，然后开始浏览网站，访问你的网上银行，查看你的支出，并且支付一些订单。很不幸，你接入的 WiFi 实际上是黑客的笔记本热点，他们拦截了你最初的 HTTP 请求，然后跳转到一个你银行网站一模一样的钓鱼网站。现在，你的隐私数据暴露给黑客了。
+你连接到一个免费 WiFi 热点，然后开始浏览网站，访问你的网上银行，查看你的支出，并且支付一些订单。很不幸，你接入的 Wi-Fi 实际上是黑客的笔记本热点，他们拦截了你最初的 HTTP 请求，然后重定向到一个你银行网站一模一样的钓鱼网站。现在，你的隐私数据暴露给黑客了。
 
 Strict Transport Security 解决了这个问题；只要你通过 HTTPS 请求访问银行网站，并且银行网站配置好 Strict Transport Security，你的浏览器知道自动使用 HTTPS 请求，这可以阻止黑客的中间人攻击的把戏。
 
@@ -48,7 +48,7 @@ Strict Transport Security 解决了这个问题；只要你通过 HTTPS 请求�
 
 你的网站第一次通过 HTTPS 请求，服务器响应 `Strict-Transport-Security` 标头，浏览器记录下这些信息，然后后面尝试访问这个网站的请求都会自动把 HTTP 替换为 HTTPS。
 
-当 `Strict-Transport-Security` 标头设置的过期时间到了，后面通过 HTTP 的访问恢复到正常模式，不会再自动跳转到 HTTPS。
+当 `Strict-Transport-Security` 标头设置的过期时间到了，后面通过 HTTP 的访问恢复到正常模式，不会再自动重定向到 HTTPS。
 
 每次浏览器接收到 Strict-Transport-Security 标头，它都会更新这个网站的过期时间，所以网站可以刷新这些信息，防止过期发生。如果有禁用 Strict-Transport-Security 的需求，将 `max-age` 设置为 0（通过 https 连接）将立即使 `Strict-Transport-Security` 标头失效，从而可以通过 http 访问。
 
