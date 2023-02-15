@@ -17,7 +17,7 @@ HTTP **`Strict-Transport-Security`**（通常简称为 {{Glossary("HSTS")}}）�
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name","禁止修改的标头")}}</th>
-      <td>无</td>
+      <td>否</td>
     </tr>
   </tbody>
 </table>
