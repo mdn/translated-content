@@ -78,9 +78,9 @@ console.log(str.includes(''))             // true
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.includes")}}
+{{Compat}}
 
 ## Ver también
 

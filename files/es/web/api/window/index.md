@@ -54,7 +54,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : Returns the XUL controller objects for the current chrome window.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : Returns the browser crypto object.
-- {{domxref("Window.defaultStatus")}} {{deprecated_inline("gecko23")}}
+- {{domxref("Window.defaultStatus")}} {{deprecated_inline}}
   - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
@@ -70,7 +70,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : Returns an array of the subframes in the current window.
 - {{domxref("Window.fullScreen")}}
   - : Esta propiedad indica si la ventana esta desplegada en pantalla completa o no.
-- `{{domxref("window.globalStorage")}}` {{Non-standard_inline}} {{deprecated_inline("gecko13")}}
+- `{{domxref("window.globalStorage")}}` {{Non-standard_inline}} {{deprecated_inline}}
   - : Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.
     Was: Multiple storage objects that are used for storing data across multiple pages.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}

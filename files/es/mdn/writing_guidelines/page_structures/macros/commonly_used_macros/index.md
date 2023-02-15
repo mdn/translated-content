@@ -123,12 +123,11 @@ No utilices el parámetro en ningún área independiente del navegador (HTML, AP
 
 ##### Sintaxis
 
-`\{{Deprecated_Inline}}` o `\{{Deprecated_Inline("gecko5")}}`
+`\{{Deprecated_Inline}}`
 
-##### Ejemplos
+##### Ejemplo
 
 - Icon: {{Deprecated_Inline}}
-- Insignia: {{Deprecated_Inline("gecko5")}}
 
 ### Plantilla de insignias
 

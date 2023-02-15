@@ -122,7 +122,7 @@ If the `strWindowFeatures` parameter is used and if no position features are def
     Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png), ![Opera 6+](opera6.gif)
 - personalbar
   - : If this feature is on, then the new secondary window renders the Personal Toolbar in Netscape 6.x, Netscape 7.x and Mozilla browser. It renders the Bookmarks Toolbar in Firefox. In addition to the Personal Toolbar, Mozilla browser will render the Site Navigation Bar if such toolbar is visible, present in the parent window. Mozilla and Firefox users can force new windows to always render the Personal Toolbar/Bookmarks toolbar by setting `dom.disable_window_open_feature.personalbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
-- directories {{deprecated_inline("2")}}
+- directories {{deprecated_inline}}
   - : Obsolete synonym of personalbar. In IE, it rendered the Links bar. Supported in Gecko up to 1.9.2 and in IE up to 6.
 - status
   - : If this feature is on, then the new secondary window has a status bar. Users can force the rendering of status bar in all Mozilla-based browsers, in MSIE 6 SP2 ([Note on status bar in XP SP2](#Note_on_security_issues_of_the_status_bar_presence)) and in Opera 6+. The default preference setting in recent Mozilla-based browser releases and in Firefox 1.0 is to force the presence of the status bar. [Note on status bar](#Note_on_status_bar) Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
@@ -145,7 +145,7 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
     Starting with Firefox 3, secondary windows are always resizable ({{Bug(177838)}})
 
-    > **Nota:** **Tip**: For accessibility reasons, it is strongly recommended to set this feature always on
+    > **Nota:** For accessibility reasons, it is strongly recommended to set this feature always on
 
     Mozilla and Firefox users can force new windows to be easily resizable by setting
     `dom.disable_window_open_feature.resizable`
@@ -155,7 +155,7 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
   - : If this feature is on, the new secondary window will show horizontal and/or vertical scrollbar(s) if the document doesn't fit into the window's viewport.
 
-    > **Nota:** **Tip**: For accessibility reasons, it is strongly encouraged to set this feature always on.
+    > **Nota:** For accessibility reasons, it is strongly encouraged to set this feature always on.
 
     Mozilla and Firefox users can force this option to be always enabled for new windows by setting
     `dom.disable_window_open_feature.scrollbars`
