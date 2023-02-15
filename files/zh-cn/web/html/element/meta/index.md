@@ -26,7 +26,7 @@ slug: Web/HTML/Element/meta
     </tr>
     <tr>
       <th>允许的内容</th>
-      <td>无；这是一个 {{Glossary("void element", "空元素")}}</td>
+      <td>无；这是一个 {{Glossary("void element", "空元素")}}。</td>
     </tr>
     <tr>
       <th>标签省略</th>
@@ -39,7 +39,7 @@ slug: Web/HTML/Element/meta
       <td>
         <ul>
           <li>
-            <code>&#x3C;meta charset></code>，<code
+            <code>&#x3C;meta charset></code>、<code
             >&#x3C;meta http-equiv></code>：{{HTMLElement("head")}} 元素。如果
             {{htmlattrxref("http-equiv", "meta")}} 不是编码声明，它也可以放在
             {{HTMLElement("noscript")}} 元素中，它本身在一个
@@ -92,7 +92,7 @@ slug: Web/HTML/Element/meta
 
 此元素包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** {{htmlattrxref("name", "meta")}} 属性在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。
+> **备注：** {{htmlattrxref("name", "meta")}} 属性在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 {{htmlattrxref("name", "meta")}}、{{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。
 
 **{{htmlattrdef("charset")}}**
 
