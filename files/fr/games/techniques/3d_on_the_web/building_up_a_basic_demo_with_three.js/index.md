@@ -280,4 +280,3 @@ Voici le code final&nbsp;
 Vous pouvez aussi [consulter le code sur GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/shapes.html) et [faire une copie du dépôt](https://github.com/end3r/MDN-Games-3D/) si vous souhaitez manipuler le code sur votre ordinateur. Maintenant que vous avez découvert les bases de Three.js, vous pouvez revenir à la page parente, [la 3D sur le Web](/fr/docs/Games/Techniques/3D_on_the_web).
 
 Vous pouvez aussi apprendre à utiliser l'API WebGL de façon brute, pour mieux comprendre ce qui se passe sous le capot de Three.js. Pour cela, consultez notre page sur [la documentation WebGL](/fr/docs/Web/API/WebGL_API).
-
