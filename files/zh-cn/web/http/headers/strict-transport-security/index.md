@@ -1,5 +1,5 @@
 ---
-title: HTTP Strict Transport Security
+title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
 ---
 
@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Strict-Transport-Security
 
 HTTP **`Strict-Transport-Security`**（通常简称为 {{Glossary("HSTS")}}）响应标头用来通知浏览器应该只通过 HTTPS 访问该站点，并且以后使用 HTTP 访问该站点的所有尝试都应自动重定向到 HTTPS。
 
-> **备注：** 这比在你的服务器上简单地配置 HTTP 到 HTTPS（301）重定向要安全，因为初始的 HTTP 连接仍然易受到中间人的攻击。
+> **备注：** 这比在你的服务器上简单地配置 HTTP 到 HTTPS（301）重定向要安全，因为初始的 HTTP 连接仍然易受到中间人攻击。
 
 | 标头类型                                               | {{Glossary("Response header","响应标头")}} |
 | ------------------------------------------------------ | ------------------------------------------ |
@@ -32,7 +32,7 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 ## 描述
 
-如果一个网站接受一个 HTTP 的请求，然后重定向到 HTTPS，用户可能在开始重定向前，通过没有加密的方式和服务器对话，比如，用户输入 `http://foo.com` 或者直接是 foo.com。这样存在中间人攻击潜在威胁，重定向过程可能被恶意网站利用来直接接触用户信息，而不是原来的加密信息。可以利用重定向直接将访问者引导至一个恶意网站，而不是原始站到安全版本。
+如果一个网站接受一个 HTTP 的请求，然后重定向到 HTTPS，用户可能在开始重定向前，通过没有加密的方式与服务器通信，比如，用户输入 `http://foo.com` 或者只是 foo.com。这样为中间人攻击创造了机会。可以利用重定向将用户引导至恶意站点，而不是原始站的安全版本。
 
 网站通过 HTTP Strict Transport Security 通知浏览器，这个网站禁止使用 HTTP 方式加载，浏览器应该自动把所有尝试使用 HTTP 的请求自动替换为 HTTPS 请求。
 
