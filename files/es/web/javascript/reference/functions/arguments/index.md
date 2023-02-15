@@ -210,9 +210,9 @@ func(); // undefined
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.arguments")}}
+{{Compat}}
 
 ## Ve también
 

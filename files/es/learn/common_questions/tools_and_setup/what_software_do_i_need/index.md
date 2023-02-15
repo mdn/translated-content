@@ -1,7 +1,7 @@
 ---
 title: ¿Qué software necesito para construir un sitio web?
-slug: Learn/Common_questions/What_software_do_I_need
-original_slug: Learn/Common_questions/Que_software_necesito
+slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
+original_slug: Learn/Common_questions/What_software_do_I_need
 ---
 
 En este artículo se explican cuales componentes de software necesita para editar, cargar, o visualizar un sitio web.

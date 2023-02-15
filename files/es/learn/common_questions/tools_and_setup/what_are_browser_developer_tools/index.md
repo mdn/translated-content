@@ -1,6 +1,7 @@
 ---
 title: ¿Cuáles son las herramientas de desarrollo del navegador?
-slug: Learn/Common_questions/What_are_browser_developer_tools
+slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
+original_slug: Learn/Common_questions/What_are_browser_developer_tools
 ---
 
 Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.

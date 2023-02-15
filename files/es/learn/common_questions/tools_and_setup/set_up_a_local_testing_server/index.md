@@ -1,6 +1,7 @@
 ---
 title: ¿Cómo se configura un servidor de prueba local?
-slug: Learn/Common_questions/set_up_a_local_testing_server
+slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
+original_slug: Learn/Common_questions/set_up_a_local_testing_server
 ---
 
 En este artículo explica cómo configurar un servidor de prueba local simple en su equipo y los conceptos básicos de cómo utilizarlo.

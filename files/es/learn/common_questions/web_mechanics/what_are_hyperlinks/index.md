@@ -1,6 +1,7 @@
 ---
 title: Qué son los hipervínculos?
-slug: Learn/Common_questions/What_are_hyperlinks
+slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
+original_slug: Learn/Common_questions/What_are_hyperlinks
 ---
 
 En este artículo, repasaremos qué son los hipervínculos y por qué son importantes.

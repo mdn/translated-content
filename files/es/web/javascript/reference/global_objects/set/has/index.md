@@ -40,9 +40,9 @@ mySet.has("bar");  // retorna false
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.has")}}
+{{Compat}}
 
 ## Ver también
 
