@@ -63,7 +63,7 @@ Strict Transport Security 解决了这个问题；只要你通过 HTTPS 请求�
 
 ## 预加载 HSTS
 
-谷歌维护着一个 [HSTS 预加载服务](https://hstspreload.appspot.com/)。按照如下指示成功提交你的域名后，浏览器将会永不使用非安全的方式连接到你的域名。虽然该服务是由谷歌提供的，但所有浏览器都在使用这个预加载列表。但是，这不是 HSTS 标准的一部分，也不该被当作正式的内容。
+谷歌维护着一个 [HSTS 预加载服务](https://hstspreload.org/)。按照如下指示成功提交你的域名后，浏览器将会永不使用非安全的方式连接到你的域名。虽然该服务是由谷歌提供的，但所有浏览器都在使用这个预加载列表。但是，这不是 HSTS 标准的一部分，也不该被当作正式的内容。
 
 - Chrome 的 HSTS 预加载列表：<https://www.chromium.org/hsts>
 - Firefox 的 HSTS 预加载列表：[nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
