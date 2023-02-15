@@ -23,39 +23,39 @@ JavaScript-фреймворки являются неотъемлемой час
 
 ## Необходимые знания
 
-You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), and especially [JavaScript](/ru/docs/Learn/JavaScript).
+Вам действительно следует сначала изучить основы основных веб-языков, прежде чем пытаться перейти к изучению клиентских фреймворков — [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS) и особенно [JavaScript](/ru/docs/Learn/JavaScript).
 
-Your code will be richer and more professional as a result, and you'll be able to troubleshoot problems with more confidence if you understand the fundamental web platform features that the frameworks are building on top of.
+В результате ваш код станет богаче и профессиональнее, и вы сможете с большей уверенностью устранять ошибки, если будете понимать основные функции веб-платформы, на основе которых создаются фреймворки.
 
-## Introductory guides
+## Вводные руководства
 
-- [1. Introduction to client-side frameworks](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-  - : We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
-- [2. Framework main features](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-  - : Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of “the big 4” frameworks, looking at how frameworks tend to work from a high level, and the differences between them.
+- [1. Введение в клиентские фреймворки](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+  - : Мы начинаем наш обзор фреймворков с общего обзора области, рассматривая краткую историю JavaScript и фреймворков, почему фреймворки существуют и что они нам дают, как начать думать о выборе фреймворка для изучения и какие существуют альтернативы клиентским фреймворкам.
+- [2. Основные характеристики фреймворка](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+  - : Каждый основной JavaScript фреймворк имеет свой подход к обновлению DOM, обработке событий браузера и обеспечению приятного взаимодействия с разработчиком. В этой статье будут рассмотрены основные особенности фреймворков “большой четверки”, рассмотрено, как фреймворки, как правило, работают на высоком уровне, и различия между ними.
 
-## React tutorials
+## Учебные пособия по React
 
-> **Примечание:** React tutorials last tested in May 2020, with React/ReactDOM 16.13.1 and create-react-app 3.4.1.
+> **Примечание:** Учебные пособия по React последний раз тестировались в мае 2020 года с React/ReactDOM 16.13.1 и create-react-app 3.4.1.
 >
-> If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react-build/>.
+> Если вам нужно сверить свой код с нашей версией, вы можете найти готовую версию примера кода приложения React в нашем [репозитории todo-react](https://github.com/mdn/todo-react). Для получения информации о текущей версии смотрите <https://mdn.github.io/todo-react-build />.
 
-- [1. Getting started with React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [1. Начало работы с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - : In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app, learning a bit about how React works in the process.
-- [2. Beginning our React todo list](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+- [2. Первое todo на React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - : Let's say that we’ve been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.
-- [3. Componentizing our React app](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+- [3. Компонентизация нашего приложения React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - : At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn’t have any hard rules for what is and isn’t a component – that’s up to you! In this article we will show you a sensible way to break our app up into components.
-- [4. React interactivity: Events and state](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+- [4. Интерактивность React: события и состояние](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - : With our component plan worked out, it's now time to start updating our app from a completely static UI to one that actually allows us to interact and change things. In this article we'll do this, digging into events and state along the way.
-- [5. React interactivity: Editing, filtering, conditional rendering](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+- [5. Интерактивность React: редактирование, фильтрация, условный рендеринг](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - : As we near the end of our React journey (for now at least), we'll add the finishing touches to the main areas of functionality in our Todo list app. This includes allowing you to edit existing tasks, and filtering the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.
-- [6. Accessibility in React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+- [6. Доступность в React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
   - : In our final tutorial article, we'll focus on (pun intended) accessibility, including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screenreader users.
-- [7. React resources](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+- [7. Ресурсы для изучения React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
   - : Our final article provides you with a list of React resources that you can use to go further in your learning.
 
-## Ember tutorials
+## Учебные пособия по Ember
 
 > **Примечание:** Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
 >
@@ -74,7 +74,7 @@ Your code will be richer and more professional as a result, and you'll be able t
 - [6. Ember resources and troubleshooting](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
   - : Our final Ember article provides you with a list of resources that you can use to go further in your learning, plus some useful troubleshooting and other information.
 
-## Vue tutorials
+## Учебные пособия по Vue
 
 > **Примечание:** Vue tutorials last tested in May 2020, with Vue 2.6.11.
 >
@@ -99,7 +99,7 @@ Your code will be richer and more professional as a result, and you'll be able t
 - [9. Vue resources](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
   - : Now we'll round off our study of Vue by giving you a list of resources that you can use to go further in your learning, plus some other useful tips.
 
-## Which frameworks did we choose?
+## Какие фреймворки выбрали мы?
 
 We are publishing our initial set of articles with guides focusing on three of the major frameworks out there — React/ReactDOM, Ember, and Vue. There is a variety of reasons for this:
 
