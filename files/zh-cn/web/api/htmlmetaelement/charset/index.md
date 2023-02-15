@@ -5,7 +5,7 @@ slug: Web/API/HTMLMetaElement/charset
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMetaElement.charset`** 属性是一个字符串，用于指定文档所使用的 {{Glossary("character_encoding", "character encoding")}}。**强烈建议不要使用非 UTF-8 字符编码**，因为这可能在提交表单或 URL 编码时产生预期外的结果。如需了解更多详细信息，请查看 [HTML 中的字符编码](/zh-CN/docs/Web/HTML/Element/meta#attr-charset).
+**`HTMLMetaElement.charset`** 属性是一个字符串，用于指定文档所使用的 {{Glossary("character_encoding", "character encoding")}}。**强烈建议不要使用非 UTF-8 字符编码**，因为这可能在提交表单或 URL 编码时产生预期外的结果。如需了解更多详细信息，请查看 [HTML 中的字符编码](/zh-CN/docs/Web/HTML/Element/meta#attr-charset)。
 
 ## 值
 
