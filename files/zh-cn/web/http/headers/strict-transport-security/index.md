@@ -78,7 +78,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 然而，如果域可以接受 1 年的 `max-age`，则推荐使用两年的，正如 <https://hstspreload.org> 中描述的那样。
 
-在以下示例中，`max-age` 被设置为 2 年，并且后缀是 `preload`，这是包含在所有主流的 web 浏览器（如 Chromium、Edge 以及 Firefox）的 HSTS 预加载列表中所必要的选项。
+在以下示例中，`max-age` 被设置为 2 年，并且后缀是 `preload`，这是必要的，它是包含在所有主流的 web 浏览器（如 Chromium、Edge 以及 Firefox）的 HSTS 预加载列表。
 
 ```http
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
