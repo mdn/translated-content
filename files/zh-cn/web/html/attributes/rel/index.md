@@ -17,7 +17,7 @@ slug: Web/HTML/Attributes/rel
 | [`author`](#attr-author)                                             | 当前文档或文章的作者。                                                                                                                                                                                                                                                   | 链接                      | 链接                                                 | 不允许               |
 | [`bookmark`](#attr-bookmark)                                         | 到最近祖先章节的永久链接。                                                                                                                                                                                                                                                  | 不允许               | 链接                                                 | 不允许               |
 | [`canonical`](#attr-canonical)                                       | 当前文档的首要 URL。                                                                                                                                                                                                                                                     | 链接                      | 不允许                                          | 不允许               |
-| [`dns-prefetch`](/zh-CN/docs/Web/HTML/Attributes/rel/dns-prefetch)   | 告知浏览器为目标资源的来源预先执行DNS解析。                                                                                                                                                                                                    | 外部资源         | 不允许                                          | 不允许               |
+| [`dns-prefetch`](/zh-CN/docs/Web/HTML/Attributes/rel/dns-prefetch)   | 告知浏览器为目标资源的来源预先执行 DNS 解析。                                                                                                                                                                                                    | 外部资源         | 不允许                                          | 不允许               |
 | [`external`](#attr-external)                                         | 引用的文档与当前的文档不属于同一个站点。                                                                                                                                                                                                                | 不允许               | 注解                                           | 注解                |
 | [`help`](#attr-help)                                                 | 链接到上下文相关的帮助。                                                                                                                                                                                                                                                              | 链接                      | 链接                                                 | 链接                      |
 | [`icon`](#attr-icon)                                                 | 代表当前文档的图标。                                                                                                                                                                                                                                                   | 外部资源         | 不允许                                          | 不允许               |
@@ -76,7 +76,7 @@ slug: Web/HTML/Attributes/rel
     - 否则，它将创建一个超链接，引用当前文档的另一种表述，其性质由 [`hreflang`](/zh-CN/docs/Web/HTML/Element/link#attr-hreflang) 和 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性赋予。
 
       - 如果一起给出 `hreflang` 和 `alternate`，并且 `hreflang` 的值与当前文档的语言不同，则表明引用的文档是一个翻译。
-      - 如果一起给出 `type` 和 `alternate` 一起给出，它表示被引用的文件是一种替代格式（如 PDF）。
+      - 如果一起给出 `type` 和 `alternate`，它表示被引用的文件是一种替代格式（如 PDF）。
       - `hreflang` 和 `type` 属性可以与 `alternate` 一同给出。
 
       ```html
@@ -110,7 +110,7 @@ slug: Web/HTML/Attributes/rel
 - {{htmlattrdef("canonical")}}
   - : 对 {{htmlelement('link')}} 元素有效，它定义了当前文档的首选 URL，这有助于搜索引擎减少重复内容。
 - {{htmlattrdef("dns-prefetch")}}
-  - : 在 {{htmlelement('body')}} 和 {{htmlelement('head')}} 元素内与 {{htmlelement('link')}} 元素相关。它告诉浏览器为目标资源的来源预先执行 DNS 解析。对于用户可能需要的资源来说，它有助于减少延迟，从而提高用户访问资源时的性能，因为浏览器会预先对指定资源的来源进行 DNS 解析。参见[资源提示](https://w3c.github.io/resource-hints/)中描述的 [dns-refetch](/zh-CN/docs/Web/Performance/dns-refetch)。
+  - : 在 {{htmlelement('body')}} 和 {{htmlelement('head')}} 元素内与 {{htmlelement('link')}} 元素相关。它告诉浏览器为目标资源的来源预先执行 DNS 解析。对于用户可能需要的资源来说，它有助于减少延迟，从而提高用户访问资源时的性能，因为浏览器会预先对指定资源的来源进行 DNS 解析。参见[资源提示](https://w3c.github.io/resource-hints/)中描述的 [dns-prefetch](/zh-CN/docs/Web/Performance/dns-prefetch)。
 - {{htmlattrdef("external")}}
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，它表示引用的文档不是当前网站的一部分。这可以与属性选择器一起使用，使外部链接的样式向用户表明他们将离开当前网站。
 - {{htmlattrdef("help")}}
@@ -182,7 +182,7 @@ slug: Web/HTML/Attributes/rel
 
   - : 与{{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`search` 关键字表示该超链接引用一个文档，其界面是专门为在当前文档、站点和相关资源中搜索而设计的，提供一个可以用来搜索的资源链接。
 
-    如果 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性被设置为`application/opensearchdescription+xml`，则该资源是一个 [OpenSearch](/zh-CN/docs/Web/OpenSearch) 插件，可以很容易地添加到一些浏览器（如 Firefox 或 Internet Explorer）的界面中。
+    如果 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性被设置为 `application/opensearchdescription+xml`，则该资源是一个 [OpenSearch](/zh-CN/docs/Web/OpenSearch) 插件，可以很容易地添加到一些浏览器（如 Firefox 或 Internet Explorer）的界面中。
 
 - {{htmlattrdef("stylesheet")}}
 
