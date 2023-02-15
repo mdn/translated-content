@@ -7,7 +7,7 @@ slug: Web/HTML/Attributes/rel
 
 **`rel`** 属性定义了所链接的资源与当前文档的关系，在 {{HTMLElement("a")}}、{{HTMLElement("area")}} 和 {{HTMLElement("link")}} 元素上有效。支持的值取决于拥有该属性的元素。
 
-关系的类型是由 `rel` 属性的值给出的，如果存在的话，它的值必须是一组无序的、唯一的、用空格隔开的关键字。与不表达语义的 `class` 名称不同，`rel` 属性必须使用对机器和人类都有语义的标记。目前关于 `rel` 属性的可能值的注册表是 [IANA 链接关系注册表](https://www.iana.org/assignments/link-relations/link-relations.xhtml)、[HTML 现行标准](https://html.spec.whatwg.org/multipage/links.html#linkTypes)和 microformats wiki 中可自由编辑的 [existing-rel-values 页面](https://microformats.org/wiki/existing-rel-values)（根据[现行标准](https://html.spec.whatwg.org/multipage/links.html#other-link-types)的建议）。如果使用一个不存在于上述三个来源之一的 `rel` 属性，一些 HTML 验证器（如 [W3C Markup Validation Service](https://validator.w3.org/)）会产生一个警告。
+关系的类型是由 `rel` 属性的值给出的，如果存在的话，它的值必须是一组无序的、唯一的、用空格隔开的关键字。与不表达语义的 `class` 名称不同，`rel` 属性必须使用对机器和人类都有语义的标记。目前关于 `rel` 属性的可能值的注册表是 [IANA 链接关系注册表](https://www.iana.org/assignments/link-relations/link-relations.xhtml)、[HTML 现行标准](https://html.spec.whatwg.org/multipage/links.html#linkTypes)和 microformats wiki 中可自由编辑的 [existing-rel-values 页面](https://microformats.org/wiki/existing-rel-values)（根据现行标准的[建议](https://html.spec.whatwg.org/multipage/links.html#other-link-types)）。如果使用一个不存在于上述三个来源之一的 `rel` 属性，一些 HTML 验证器（如 [W3C Markup Validation Service](https://validator.w3.org/)）会产生一个警告。
 
 下表列出了一些最重要的现有关键词。在一个以空格分隔的值内的每个关键词在该值内都应该是唯一的。
 
@@ -103,7 +103,7 @@ slug: Web/HTML/Attributes/rel
 
     {{htmlelement('link')}} 元素代表了整个文档的作者信息。
 
-    > **备注：** 由于历史原因，废弃的属性值 `rev="made"` 视为 `rel="author"`。
+    > **备注：** 由于历史原因，废弃的属性值 `rev="made"` 被视为 `rel="author"`。
 
 - {{htmlattrdef("bookmark")}}
   - : 与 {{htmlelement('a')}} 和 {{htmlelement('area')}} 元素的 `rel` 属性值相关。如果有的话，给最近的祖先 {{htmlelement('article')}} 元素提供一个固定链接。如果没有祖先 `<article>` 元素，则给出链接元素与之联系最紧密的部分的固定链接。
@@ -119,18 +119,17 @@ slug: Web/HTML/Attributes/rel
 
   - : 对 {{htmlelement('link')}} 元素有效，链接的资源代表了当前文档的图标，这是一种在用户界面上代表页面资源的方法。
 
-    `icon` 值最常见的用途是 favicon：
+    `icon` 值最常见的用途是网站图标：
 
     ```html
     <link rel="icon" href="favicon.ico" />
     ```
 
-    如果有多个 `<link rel="icon">`，浏览器会使用它们的 [`media`](/zh-CN/docs/Web/HTML/Element/link#attr-media) [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#attr-sizes) 属性来选择最合适的图标。如果几个图标同样合适，则使用最后一个。如果后来发现最合适的图标不合适，例如使用了不支持的格式，浏览器就会继续选择下一个最合适的，以此类推。
+    如果有多个 `<link rel="icon">`，浏览器会使用它们的 [`media`](/zh-CN/docs/Web/HTML/Element/link#attr-media)、[`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#attr-sizes) 属性来选择最合适的图标。如果几个图标同样合适，则使用最后一个。如果后来发现最合适的图标不合适，例如使用了不支持的格式，浏览器就会继续选择下一个最合适的，以此类推。
 
-    > **备注：** 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支持 `rel="icon"`，也有 [Chrome 的一个开放问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
+    > **备注：** 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支持 `rel="icon"`，而 [Chrome 也仍有一个未解决的问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
 
-    > **备注：** 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#attr-sizes) 属性，来选择网页夹或启动占位符的网页图标。
-    > 相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
+    > **备注：** 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#attr-sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
 
     > **备注：** `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
 
@@ -151,7 +150,7 @@ slug: Web/HTML/Attributes/rel
 - {{htmlattrdef("next")}}
   - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`next` 值表示当前文档是一个系列的一部分，引用文档是该系列的下一个文档。当包含在 `<link>` 中时，浏览器可能会假定将要获取那个文档，并将其作为一个资源提示。
 - {{htmlattrdef("nofollow")}}
-  - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关， `nofollow` 关键字告诉搜索引擎蜘蛛忽略链接关系。nofollow 关系可能表明当前文档的所有者并不认可被引用的文档。它经常被搜索引擎优化者包括在内，假装他们的链接养殖场不是垃圾页面。
+  - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关， `nofollow` 关键字告诉搜索引擎蜘蛛忽略链接关系。nofollow 关系可能表明当前文档的所有者并不认可被引用的文档。它经常被搜索引擎优化者包括在内，假装他们的链接农场不是垃圾页面。
 - {{htmlattrdef("noopener")}}
 
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，如果超链接一开始就会创建其中之一（即有一个适当的 `target` 属性值），则会创建一个顶级浏览环境，而不是一个辅助浏览环境。换句话说，它使链接的行为如同 [`window.opener`](/zh-CN/docs/Web/API/Window/opener)是空的，并且 `target="_parent"` 被设置。
@@ -176,11 +175,11 @@ slug: Web/HTML/Attributes/rel
 
   - : 与 [`next`](#attr-next) 关键字类似，与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`prev` 值表示当前文档是一个系列的一部分，而链接引用该系列中的一个先前文档就是被引用的文档。
 
-    备注：同义词 `previous` 不正确的，必须避免使用。
+    备注：同义词 `previous` 并不正确，不应被使用。
 
 - {{htmlattrdef("search")}}
 
-  - : 与{{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`search` 关键字表示该超链接引用一个文档，其界面是专门为在当前文档、站点和相关资源中搜索而设计的，提供一个可以用来搜索的资源链接。
+  - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`search` 关键字表示该超链接引用一个文档，其界面是专门为在当前文档、站点和相关资源中搜索而设计的，提供一个可以用来搜索的资源链接。
 
     如果 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性被设置为 `application/opensearchdescription+xml`，则该资源是一个 [OpenSearch](/zh-CN/docs/Web/OpenSearch) 插件，可以很容易地添加到一些浏览器（如 Firefox 或 Internet Explorer）的界面中。
 
