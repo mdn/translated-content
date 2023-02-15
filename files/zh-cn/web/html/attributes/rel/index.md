@@ -11,7 +11,7 @@ slug: Web/HTML/Attributes/rel
 
 下表列出了一些最重要的现有关键词。在一个以空格分隔的值内的每个关键词在该值内都应该是唯一的。
 
-| `rel` 值                                                          | 描述                                                                                                                                                                                                                                                                                  | `{{htmlelement('link')}}` | `{{htmlelement('a')}}` 和 `{{htmlelement('area')}}` | `{{htmlelement('form')}}` |
+| `rel` 值                                                          | 描述                                                                                                                                                                                                                                                                                  | {{htmlelement('link')}} | {{htmlelement('a')}} 和 {{htmlelement('area')}} | {{htmlelement('form')}} |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ---------------------------------------------------- | ------------------------- |
 | [`alternate`](#attr-alternate)                                       | 当前文档的替代描述。                                                                                                                                                                                                                                           | 链接                      | 链接                                                 | 不允许               |
 | [`author`](#attr-author)                                             | 当前文档或文章的作者。                                                                                                                                                                                                                                                   | 链接                      | 链接                                                 | 不允许               |
@@ -125,11 +125,11 @@ slug: Web/HTML/Attributes/rel
     <link rel="icon" href="favicon.ico" />
     ```
 
-    如果有多个 `<link rel="icon">`，浏览器会使用它们的 [`media`]（媒体）[`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 和 [`size`]（尺寸）属性来选择最合适的图标。如果几个图标同样合适，则使用最后一个。如果后来发现最合适的图标不合适，例如使用了不支持的格式，浏览器就会继续选择下一个最合适的，以此类推。
+    如果有多个 `<link rel="icon">`，浏览器会使用它们的 [`media`](/zh-CN/docs/Web/HTML/Element/link#attr-media) [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#attr-sizes) 属性来选择最合适的图标。如果几个图标同样合适，则使用最后一个。如果后来发现最合适的图标不合适，例如使用了不支持的格式，浏览器就会继续选择下一个最合适的，以此类推。
 
     > **备注：** 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支持 `rel="icon"`，也有 [Chrome 的一个开放问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
 
-    > **备注：** 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`size`](size)属性，来选择网页夹或启动占位符的网页图标。
+    > **备注：** 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#attr-sizes) 属性，来选择网页夹或启动占位符的网页图标。
     > 相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
 
     > **备注：** `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
@@ -156,7 +156,7 @@ slug: Web/HTML/Attributes/rel
 
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，如果超链接一开始就会创建其中之一（即有一个适当的 `target` 属性值），则会创建一个顶级浏览环境，而不是一个辅助浏览环境。换句话说，它使链接的行为如同 [`window.opener`](/zh-CN/docs/Web/API/Window/opener)是空的，并且 `target="_parent"` 被设置。
 
-    这与 [opener](#opener) 具有的含义相反。
+    这与 [`opener`](#attr-opener) 具有的含义相反。
 
 - {{htmlattrdef("noreferrer")}}
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，包括这个值使得 referrer 未知（不会包含 `Referer` 标头），并创建一个顶级的浏览上下文，就像 `noopener` 也被设置一样。
@@ -169,12 +169,12 @@ slug: Web/HTML/Attributes/rel
 - {{htmlattrdef("prefetch")}}
   - : 指定用户代理应预先获取并缓存目标资源，因为后续导航可能需要该资源。[链接预取常见问题](/zh-CN/docs/Web/HTTP/Link_prefetching_FAQ)有关于哪些链接可以被预取以及替代方法的详细信息
 - {{htmlattrdef("preload")}}
-  - : 指定用户代理必须根据 [`as`]（as）属性给出的潜在目的地（以及与相应目的地相关的优先级），为当前导航预先获取和缓存目标资源。参见 [`preload`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 值的页面。
+  - : 指定用户代理必须根据 [`as`](/zh-CN/docs/Web/HTML/Element/link#attr-as) 属性给出的潜在目的地（以及与相应目的地相关的优先级），为当前导航预先获取和缓存目标资源。参见 [`preload`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 值的页面。
 - {{htmlattrdef("prerender")}}
   - : 指定用户代理应抢先获取目标资源，并以有助于在未来提供更快的响应的方式对其进行处理，例如，获取其子资源或执行一些渲染。
 - {{htmlattrdef("prev")}}
 
-  - : 与 [next](#next) 关键字类似，与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`prev` 值表示当前文档是一个系列的一部分，而链接引用该系列中的一个先前文档就是被引用的文档。
+  - : 与 [`next`](#attr-next) 关键字类似，与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`prev` 值表示当前文档是一个系列的一部分，而链接引用该系列中的一个先前文档就是被引用的文档。
 
     备注：同义词 `previous` 不正确的，必须避免使用。
 
@@ -190,9 +190,9 @@ slug: Web/HTML/Attributes/rel
 
     虽然这个属性将链接定义为一个样式表，但与其他属性的交互以及 rel 值中的其他关键术语会影响样式表是否被下载和/或使用。
 
-    当与 [alternate](#alternate) 关键字一起使用时，它定义了一个替代的样式表。在这种情况下，包括一个非空的 [`title`]（类型）。
+    当与 [`alternate`](#attr-alternate) 关键字一起使用时，它定义了一个替代的样式表。在这种情况下，包括一个非空的 [`title`](/zh-CN/docs/Web/HTML/Element/link#attr-title)。
 
-    如果媒体与 [`media`](media) 属性的值不匹配，外部样式表将不会被使用，甚至不会下载。
+    如果媒体与 [`media`](/zh-CN/docs/Web/HTML/Element/link#attr-media) 属性的值不匹配，外部样式表将不会被使用，甚至不会下载。
 
     需要使用 CORS 协议进行跨源获取。
 
