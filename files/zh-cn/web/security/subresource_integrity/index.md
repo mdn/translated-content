@@ -3,6 +3,8 @@ title: 子资源完整性
 slug: Web/Security/Subresource_Integrity
 ---
 
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
+
 **子资源完整性**（Subresource Integrity，SRI）是允许浏览器检查其获得的资源（例如从 [CDN](/zh-CN/docs/Glossary/CDN) 获得的）是否被篡改的一项安全特性。它通过验证获取文件的哈希值是否和你提供的哈希值一样来判断资源是否被篡改。
 
 > **备注：** 对于从嵌入文件以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
@@ -119,7 +121,5 @@ Access-Control-Allow-Origin: *
 - [内容安全策略](/zh-CN/docs/Web/HTTP/CSP)
 - HTTP 标头 {{httpheader("Content-Security-Policy")}}
 - [一个不能对你进行 XSS 的 CDN：使用 SRI](https://frederik-braun.com/using-subresource-integrity.html)
-- [来自W3C的 SRI 测试](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
+- [来自 W3C 的 SRI 测试](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
 - [SRI Hash 生成器](https://www.srihash.org/)
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
