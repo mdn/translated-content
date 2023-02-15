@@ -40,7 +40,7 @@ slug: Web/HTML/Element/meta
       <td>
         <ul>
           <li>
-            <code>&#x3C;meta charset></code>，<code
+            <code>&#x3C;meta charset></code>、<code
             >&#x3C;meta http-equiv></code>：{{HTMLElement("head")}} 元素。如果
             {{htmlattrxref("http-equiv", "meta")}} 不是编码声明, 它也可以放在
             {{HTMLElement("noscript")}} 元素中, 它本身在一个
