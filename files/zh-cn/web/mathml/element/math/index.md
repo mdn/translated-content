@@ -24,7 +24,7 @@ slug: Web/MathML/Element/math
 
 ## 示例
 
-该示例包含两个 MathML 公式。第一个在其自己的中心块中渲染，根据需要占用足够的空间。第二个公式则在其文本段落中渲染，缩小其尺寸和间距以最小化其高度。
+该示例包含两个 MathML 公式。第一个在其自己的居中的块中渲染，根据需要占用足够的空间。第二个公式则在其文本段落中渲染，缩小其尺寸和间距以最小化其高度。
 
 ```html
 <p>
@@ -77,5 +77,5 @@ slug: Web/MathML/Element/math
 
 ## 参见
 
-- HTML 顶层元素：{{ HTMLElement("html") }}
-- SVG 顶层元素：{{ SVGElement("svg") }}
+- HTML 顶级元素：{{ HTMLElement("html") }}
+- SVG 顶级元素：{{ SVGElement("svg") }}
