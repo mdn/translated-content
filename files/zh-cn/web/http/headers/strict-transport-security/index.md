@@ -28,7 +28,7 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 - `includeSubDomains` {{optional_inline}}
   - : 如果这个可选的参数被指定，那么说明此规则也适用于该网站的所有子域名。
 - `preload` {{optional_inline}} {{non-standard_inline}}
-  - : 查看 [预加载 HSTS](#预加载_hsts) 获得详情。当使用 `preload`，`max-age` 指令必须至少是 `31536000`（一年），并且必须存在 `includeSubDomains` 指令。不是标准的一部分。
+  - : 查看 [预加载 HSTS](#预加载_hsts) 获得详情。当使用 `preload`，`max-age` 指令必须至少是 `31536000`（一年），并且必须存在 `includeSubDomains` 指令。这不是标准的一部分。
 
 ## 描述
 
