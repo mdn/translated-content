@@ -15,7 +15,7 @@ slug: Web/Security/Subresource_Integrity
 
 ## SRI 如何使用
 
-使用子资源完整性功能的方法是，在任何 {{HTMLElement("script")}} 或 {{HTMLElement("link")}} 元素的  `integrity` 属性值中，指定你要告诉浏览器所获取的资源（或文件）的 base64 编码的加密哈希值。
+使用子资源完整性功能的方法是，在任何 {{HTMLElement("script")}} 或 {{HTMLElement("link")}} 元素的 `integrity` 属性值中，指定你要告诉浏览器所获取的资源（或文件）的 base64 编码的加密哈希值。
 
 `integrity` 值至少由一个字符串开始，每个字符串包括一个前缀，表示一个特定的哈希算法（目前允许的前缀是 `sha256`、`sha384` 和 `sha512`），后面是一个短横线（-），最后是实际的 base64 编码的哈希。
 
