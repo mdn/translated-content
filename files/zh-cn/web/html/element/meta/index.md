@@ -27,7 +27,7 @@ slug: Web/HTML/Element/meta
     </tr>
     <tr>
       <th>允许的内容</th>
-      <td>无；这是一个 {{Glossary("void element", "空元素")}}</td>
+      <td>无；这是一个 {{Glossary("void element", "空元素")}}。</td>
     </tr>
     <tr>
       <th>标签省略</th>
