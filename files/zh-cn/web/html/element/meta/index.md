@@ -16,11 +16,11 @@ slug: Web/HTML/Element/meta
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#元数据内容"
           >元数据内容</a
-        >。仅限于<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#flow_content"
+        >。仅限于<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
           >流式内容</a
-        >，<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        >，<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#分段内容"
           >分段内容</a
         >中存在 <a href="/zh-CN/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> 属性时
       </td>
@@ -40,22 +40,21 @@ slug: Web/HTML/Element/meta
       <td>
         <ul>
           <li>
-            <code>&#x3C;meta charset></code>，
-            <code>&#x3C;meta http-equiv></code>：
-            {{HTMLElement("head")}} 元素。如果
+            <code>&#x3C;meta charset></code>，<code
+            >&#x3C;meta http-equiv></code>：{{HTMLElement("head")}} 元素。如果
             {{htmlattrxref("http-equiv", "meta")}} 不是编码声明, 它也可以放在
             {{HTMLElement("noscript")}} 元素中, 它本身在一个
             <code>&#x3C;head></code> 元素内部。
           </li>
           <li>
             <code>&#x3C;meta name></code>：任何可以接受<a
-              href="/zh-CN/docs/Web/Guide/HTML/Content_categories#metadata_content"
+              href="/zh-CN/docs/Web/Guide/HTML/Content_categories#元数据内容"
               >元数据内容</a
             >的元素。
           </li>
           <li>
             <code>&#x3C;meta itemprop></code>：任何可以接受<a
-              href="/zh-CN/docs/Web/Guide/HTML/Content_categories#metadata_content"
+              href="/zh-CN/docs/Web/Guide/HTML/Content_categories#元数据内容"
               >元数据内容</a
             >或<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#flow_content"
               >流数据内容</a
