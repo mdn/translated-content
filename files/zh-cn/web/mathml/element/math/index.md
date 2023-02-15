@@ -61,7 +61,7 @@ slug: Web/MathML/Element/math
       </msup>
       <mn>6</mn>
     </mfrac></math
-  >.
+  >。
 </p>
 ```
 
