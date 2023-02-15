@@ -93,7 +93,7 @@ slug: Web/HTML/Element/meta
 
 此元素包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** {{htmlattrxref("name", "meta")}} 属性在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。
+> **备注：** {{htmlattrxref("name", "meta")}} 属性在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 {{htmlattrxref("name", "meta")}}、{{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。
 
 **{{htmlattrdef("charset")}}**
 
