@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 
 {{JSRef}}
 
-**`Symbol()`** 构造函数返回一个 **symbol** 类型的值，但是它不完全是一个构造函数，因为它不支持 `"new Symbol()"` 语法，也不可被继承。它可以作为 `class` 定义中 {{JSxRef("extends")}} 子句的值，但对它使用 {{JSxRef("super")}} 调用会导致异常。
+**`Symbol()`** 构造函数返回一个 **symbol** 类型的值，但是它是一个不完整的构造函数，因为它既不支持 `"new Symbol()"` 语法，也不可被继承。它可以作为 `class` 定义中 [extends](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 子句的值，但对它使用 [super](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 调用会导致异常。
 
 {{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
 
@@ -16,7 +16,7 @@ Symbol()
 Symbol(description)
 ```
 
-> **备注：** **`Symbol()`** 只能在没有 {{JSxRef("new")}} 的情况下调用，尝试用 `new` 构造调用会抛出 `{{JSxRef("TypeError")}}`
+> **备注：** **`Symbol()`** 只能在没有 {{jsxref("Operators/new", "new")}} 的情况下调用，尝试用 `new` 构造调用会抛出 `{{jsxref("TypeError")}}`
 
 ## 参数
 
