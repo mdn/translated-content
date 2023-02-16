@@ -6,7 +6,8 @@ slug: Web/Guide/Audio_and_video_manipulation
 <section id="Quick_links">
   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Guide")}}
 </section>
-网页的迷人之处在于你可以结合各种技术创造出新的形式。拥有浏览器中的原生音频和视频意味着我们可在像 {{htmlelement("canvas")}}、 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 或者 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等技术的辅助下，使用数据流来直接修改音频视频，例如：为音频添加混响和压缩效果，或为视频添加灰度/暗色滤镜。本文将为你提供参考
+
+网页的迷人之处在于你可以结合各种技术创造出新的形式。拥有浏览器中的原生音频和视频意味着我们可在像 {{htmlelement("canvas")}}、[WebGL](/zh-CN/docs/Web/API/WebGL_API)或者[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)等技术的辅助下，使用数据流来直接修改音频视频，例如：为音频添加混响和压缩效果，或为视频添加灰度/暗色滤镜。本文将为你提供参考
 
 ## 视频处理
 
@@ -22,7 +23,7 @@ The general technique is to:
 
 1. 从 {{htmlelement("video")}} 元素中读取一帧写到 {{htmlelement("canvas")}} 元素中。
 2. 读取 `<canvas>` 元素中的数据并处理。
-3. 将处理完成的数据写入 `display` 的 `<canvas>` 中（实际上可以是相同的元素）。
+3. 将处理完成的数据写入 “display” 的 `<canvas>` 中（实际上可以是相同的元素）。
 4. 暂停并重复。
 
 例如，我们要处理一个视频，将其灰度显示。在本例中，我们需展示出源视频和输出的灰度帧。正常情况下，如果你要实现“添加灰度滤镜”功能，那也许可以在 `<video>` 元素的样式里添加 `dispaly: none`，目的是防止源视频被绘制到屏幕上，同时只展示显示已被更改了帧数的画布。
