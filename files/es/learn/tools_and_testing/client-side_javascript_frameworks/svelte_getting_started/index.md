@@ -91,11 +91,11 @@ También puedes visitar los siguientes artículos para más información:
 - ["Introducción a npx (en-US)"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) en el blog de npm
 - ["La forma sencilla de iniciar con svelte (en-US)"](https://svelte.dev/blog/the-easiest-way-to-get-started) en el blog de Svelte
 
-### Creating your first Svelte app
+### Creando tu primer aplicación con Svelte
 
-The easiest way to create a starter app template is to just download the starter template application. You can do that by visiting [sveltejs/template](https://github.com/sveltejs/template) on GitHub, or you can avoid having to download and unzip it and just use [degit](https://github.com/Rich-Harris/degit).
+La forma más sencilla de crear la base inicial de una aplicación es descargando el _template_ oficial. Para hacerlo, visita [sveltejs/template](https://github.com/sveltejs/template) en GitHub, incluso puedes utilizar [degit](https://github.com/Rich-Harris/degit) y evitar tener que descargarlo y descomprimirlo.
 
-To create your starter app template, run the following terminal commands:
+Para crear la base inicial de tu aplicación, ejecuta los siguientes comandos en la terminal:
 
 ```bash
 npx degit sveltejs/template moz-todo-svelte
@@ -104,15 +104,16 @@ npm install
 npm run dev
 ```
 
-> **Note:** degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using `git clone` because it will not download all the history of the repo, or create a complete local clone.
+> **Nota:** el funcionamiento de degit no es mágico — simplemente te permite descargar y descomprimir la última versión del contenido de un repositorio de git. Esto es mucho más rápido que utilizar el comando `git clone` ya que no se descarga todo el historial del repositorio ni se crea un clon local completo. 
 
-After running `npm run dev`, Svelte will compile and build your application. It will start a local server at `localhost:8080`. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:
+Después de ejecutar `npm run dev`, Svelte compila y construye tu aplicación.
+Además, inicia un servidor local en la dirección `localhost:8080`. Svelte estará a la espera de modificaciones en el código fuente de tu aplicación para compilar y actualizar la app. Tu navegador mostrará algo parecido a lo siguiente:
 
-![A simple start page that says hello world, and gives a link to the official svelte tutorials](01-svelte-starter-app.png)
+![Una página inicial simple que dice hola mundo y proporciona un enlace a los tutoriales de svelte oficiales ](01-svelte-starter-app.png)
 
-### Application structure
+### Estructura de la aplicación
 
-The starter template comes with the following structure:
+El _template_ inicial viene con la siguiente estructura:
 
 ```
 moz-todo-svelte
@@ -137,30 +138,32 @@ moz-todo-svelte
     └── main.js
 ```
 
-The contents are as follows:
+El contenido del proyecto consta de los siguientes archivos:
 
-- `package.json` and `package-lock.json`: Contains information about the project that Node.js/npm uses to keep it organized. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file `package.json`](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)? on NodeJS.org; we also talk about it in our [Package management basics tutorial](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
-- `node_modules`: This is where node saves the project dependencies. These dependencies won't be sent to production, they are just used for development purposes.
-- `.gitignore`: Tells git which files or folder to ignore from the project — useful if you decide to include your app in a git repo.
-- `rollup.config.js`: Svelte uses [rollup.js](https://rollupjs.org/) as a module bundler. This configuration file tells rollup how to compile and build your app. If you prefer [webpack](https://webpack.js.org/), you can create your starter project with `npx degit sveltejs/template-webpack svelte-app` instead.
-- `scripts`: Contains setup scripts as required. Currently should only contain `setupTypeScript.js`.
+- `package.json` y `package-lock.json`: Contienen información sobre el proyecto, son utilizados por Node.js/npm para manterlo organizado. No necesitas entender estos archivos para completar el tutorial, sin embargo, si quieres saber más sobre este tema puedes leer el artículo [¿Qué es el archivo `package.json`? (en-US)](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) en NodeJS.org; también lo analizamos en nuestro [Tutorial básico de administradores de paquetes](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
+- `node_modules`: Aquí Node guarda las dependencias del proyecto. Estas dependencias no estarán presentes en producción, son usadas únicamente en el entorno de desarrollo.
+- `.gitignore`: Le indica a Git cuales son los archivos y carpetas que debe ignorar del proyecto. Esto será de gran ayuda si decides incluir tu aplicación en un repositorio de git.
+- `rollup.config.js`: Svelte usa [rollup.js](https://rollupjs.org/) como un 
+_module bundler_. Este archivo de configuración le dice a _rollup_ cómo compilar y construir tu aplicación. Si prefieres utilizar [webpack](https://webpack.js.org/), en su lugar puedes crear tu proyecto con `npx degit sveltejs/template-webpack svelte-app`.
+- `scripts`: Contiene los _scripts_ de configuración requeridos. Actualmente debería contener únicamente `setupTypeScript.js`.
 
-  - `setupTypeScript.js`: This script sets up TypeScript support in Svelte. We'll talk about this more in the last article.
+  - `setupTypeScript.js`: Este script configura el soporte de Typescript dentro de Svelte. Hablaremos más a detalle de este tema en el último artículo.
 
-- `src`: This directory is where the source code for your application lives — where you'll be creating the code for your app.
+- `src`: En este directorio se encuentra el código fuente de tu aplicación. Es decir, donde crearás la mayor parte de código.
 
-  - `App.svelte`: This is the top-level component of your app. So far it just renders the 'Hello World!' message.
-  - `main.js`: The entry point to our application. It just instantiates the `App` component and binds it to the body of our HTML page.
+  - `App.svelte`: Este es el componente principal de tu aplicación. De momento solo renderiza el mensaje 'Hello world'.
+  - `main.js`: El punto de entrada a nuestra aplicación. Se encarga de instanciar el componente `App` y lo enlaza con el _body_ de tu página HTML.
 
-- `public`: This directory contains all the files that will be published in production.
+- `public`: Este directorio contiene todos los archivos que serán publicados en producción.
 
-  - `favicon.png`: This is the favicon for your app. Currently, it's the Svelte logo.
-  - `index.html`: This is the main page of your app. Initially it's just an empty HTML page that loads the CSS files and js bundles generated by Svelte.
-  - `global.css`: This file contains unscoped styles. It's a regular CSS file that will be applied to the whole application.
-  - `build`: This folder contains the generated CSS and JavaScript source code.
+  - `favicon.png`: Este es el _favicon_ para tu aplicación. Actualmente es el logo de Svelte.
+  - `index.html`: Esta es la página principal de tu aplicación. 
+  Inicialmente es simplemente una página HTML vacía que carga los paquetes de archivos CSS y js generados por Svelte.
+  - `global.css`: Este archivo contiene los estilos globales. Es un archivo regular de CSS que será aplicado a toda tu aplicación.
+  - `build`: Este directorio contiene el código fuente de JavaScript y CSS que fue generado.
 
-    - `bundle.css`: The CSS file that Svelte generated from the styles defined for each component.
-    - `bundle.js`: The JavaScript file compiled from all your JavaScript source code.
+    - `bundle.css`: El archivo CSS generado por Svelte a partir de los estilos definidos por cada componente.
+    - `bundle.js`: El archivo de código Javascript compilado a partir de todo el código fuente de tu aplicación.
 
 ## Having a look at our first Svelte component
 
