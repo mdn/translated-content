@@ -10,14 +10,16 @@ slug: Web/Guide/Audio_and_video_manipulation
 
 ## 视频处理
 
-读取视频中每帧的像素值的能力是十分实用的。 
+读取视频中每帧的像素值的能力是十分实用的。
 
 ### 视频与canvas
+
 {{htmlelement("canvas")}} 元素能提供一个平面，让你能在网页上画图，该功能十分强大并且可以与视频紧密耦合
 
 The general technique is to:
 
 总体技术过程为：
+
 1. 从 {{htmlelement("video")}} 元素中读取一帧写到 {{htmlelement("canvas")}} 元素中。
 2. 读取 `<canvas>` 元素中的数据并处理。
 3. 将处理完成的数据写入 `display` 的 `<canvas>` 中（实际上可以是相同的元素）。
@@ -26,6 +28,7 @@ The general technique is to:
 例如，我们要处理一个视频，将其灰度显示。在本例中，我们需展示出源视频和输出的灰度帧。正常情况下，如果你要实现“添加灰度滤镜”功能，那也许可以在 `<video>` 元素的样式里添加 `dispaly: none`，目的是防止源视频被绘制到屏幕上，同时只展示显示已被更改了帧数的画布。
 
 #### HTML
+
 我们可将视频播放器和 `<canvas>` 元素如此设置：
 
 ```html
@@ -47,6 +50,7 @@ The general technique is to:
 ```
 
 #### JavaScript
+
 该代码负责更变帧数。
 
 ```js
