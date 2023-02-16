@@ -1,6 +1,6 @@
 ---
-title: Symbol() constructor
-slug: Web/JavaScript/Reference/Global_Objects/symbol/symbol
+title: Symbol() 构造函数
+slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 ---
 
 {{JSRef}}
@@ -21,13 +21,13 @@ Symbol(description)
 ## 参数
 
 - `description` {{optional_inline}}
-  - : 一个字符串，用来表示 Symbol 的描述，可以用于调试 Symbol 但不能直接访问 Symbol 自身。
+  - : 一个字符串，用来表示 symbol 的描述，可以用于调试, 但不能直接访问 symbol 自身。
 
 ## 示例
 
-### 创建 Symbols
+### 创建 Symbol
 
-要创建一个新的原始 Symbol，你可以传递一个可选的字符串作为 `description` 参数来创建 `Symbol()`:
+要创建一个新的原始 Symbol，你可以传递一个可选的字符串作为 `description` 参数来创建 `Symbol()`：
 
 ```js-nolint
 const sym1 = Symbol();
@@ -35,7 +35,7 @@ const sym2 = Symbol("foo");
 const sym3 = Symbol("foo");
 ```
 
-上面的代码创建了三个新的 symbols，注意 `Symbol("foo")` 不会将字符串 `"foo"` 强制转换成 symbol，而是每次总是创建一个新的 symbol:
+上面的代码创建了三个新的 symbol，注意 `Symbol("foo")` 不会将字符串 `"foo"` 强制转换成 symbol，而是每次总是创建一个新的 symbol：
 
 ```js-nolint
 Symbol("foo") === Symbol("foo"); // false
@@ -68,6 +68,6 @@ typeof symObj; // "object"
 
 {{Compat}}
 
-## 查看更多
+## 参见
 
 - [`core-js` 中 `Symbol` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
