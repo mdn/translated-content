@@ -67,3 +67,7 @@ typeof symObj; // "object"
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 查看更多
+
+- [`core-js` 中 `Symbol` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
