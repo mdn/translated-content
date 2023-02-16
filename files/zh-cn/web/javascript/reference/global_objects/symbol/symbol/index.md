@@ -43,7 +43,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-下面带有 {{JSxRef("new")}} 操作符的语法都将会抛出一个 {{JSxRef("TypeError")}}:
+下面带有 {{jsxref("Operators/new", "new")}} 操作符的语法都将会抛出一个 {{jsxref("TypeError")}}:
 
 ```js-nolint
 const sym = new Symbol(); // TypeError
