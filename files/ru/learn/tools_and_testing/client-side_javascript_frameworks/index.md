@@ -55,7 +55,7 @@ JavaScript-фреймворки являются неотъемлемой час
 
 > **Примечание:** Учебные пособия по React последний раз тестировались в мае 2020 года с React/ReactDOM 16.13.1 и create-react-app 3.4.1.
 >
-> Если вам нужно сверить свой код с нашей версией, вы можете найти готовую версию примера кода приложения React в нашем [todo-react](https://github.com/mdn/todo-react). Для получения информации о текущей версии смотрите <https://mdn.github.io/todo-react-build />.
+> Если вам нужно сверить свой код с нашей версией, вы можете найти готовую версию примера кода приложения React в нашем [todo-react](https://github.com/mdn/todo-react). Для получения информации о текущей версии смотрите <https://mdn.github.io/todo-react/>.
 
 - [1. Начало работы с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - : In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app, learning a bit about how React works in the process.
