@@ -21,7 +21,7 @@ l10n:
 
 ## 構文
 
-```js
+```js-nolint
 // アロー関数
 reduce((previousValue, currentValue) => { /* … */ } )
 reduce((previousValue, currentValue, currentIndex) => { /* … */ } )
@@ -248,8 +248,9 @@ const people = [
 function groupBy(objectArray, property) {
   return objectArray.reduce((acc, obj) => {
     const key = obj[property];
+    const curGroup = acc[key] ?? [];
 
-    return { ...acc, [key]: [...acc[key], obj] };
+    return { ...acc, [key]: [...curGroup, obj] };
   }, {});
 }
 
