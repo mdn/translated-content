@@ -29,7 +29,7 @@ Math.expm1(x)
 ## 示例
 
 ```js
-Math.expm1(1)     // 1.7182818284590453
+Math.expm1(1)     // 1.718281828459045
 Math.expm1(-38)   // -1
 Math.expm1("-38") // -1
 Math.expm1("foo") // NaN
