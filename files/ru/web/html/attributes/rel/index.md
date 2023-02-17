@@ -72,7 +72,7 @@ original_slug: Web/HTML/Link_types
       <td><em>Нет</em></td>
     </tr>
     <tr>
-      <td><code>archives</code> {{obsolete_inline}}</td>
+      <td><code>archives</code></td>
       <td>
         Defines a hyperlink to a document that contains an archive link to this
         one. For example, a blog entry could link to a monthly index page this
@@ -143,7 +143,7 @@ original_slug: Web/HTML/Link_types
       <td>{{HTMLElement("link")}}</td>
     </tr>
     <tr>
-      <td><code>first</code> {{obsolete_inline}}</td>
+      <td><code>first</code></td>
       <td>
         Indicates that the hyperlink leads to the first resource of the
         <em>sequence</em> the current page is in.<br /><br /><strong
@@ -218,7 +218,7 @@ original_slug: Web/HTML/Link_types
       <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
     </tr>
     <tr>
-      <td><code>index</code> {{obsolete_inline}}</td>
+      <td><code>index</code></td>
       <td>
         Indicates that the page is part of a <em>hierarchical</em> structure and
         that the hyperlink leads to the top level resource of that structure.<br /><br />If
@@ -233,7 +233,7 @@ original_slug: Web/HTML/Link_types
       <td><em>Нет</em></td>
     </tr>
     <tr>
-      <td><code>last</code> {{obsolete_inline}}</td>
+      <td><code>last</code></td>
       <td>
         Indicates that the hyperlink leads to the <em>last</em> resource of the
         <em>sequence</em> the current page is in.<br /><br /><strong
@@ -477,7 +477,7 @@ original_slug: Web/HTML/Link_types
       <td>{{HTMLElement("link")}}</td>
     </tr>
     <tr>
-      <td><code>up</code> {{obsolete_inline}}</td>
+      <td><code>up</code></td>
       <td>
         Indicates that the page is part of a <em>hierarchical</em> structure and
         that the hyperlink leads to the higher level resource of that

@@ -25,19 +25,19 @@ _Данный интерфейс наследует свойства из инт
   - : Точка доступа к богатой функциональности [XPCOM](/ru/docs/XPCOM). Некоторые свойства, т.к. [classes](/ru/docs/Components.classes), доступны только для достаточно привилегированного кода. **Web-код не должен использовать эти свойства.**
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Возвращает ссылку на объект консоли, обеспечивающего доступ к консоли браузера.
-- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает ссылку на элемент содержимого в текущем окне. Устаревший вариант в нижним подчёркиванием более не доступен для Web-содержимого.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает XUL контроллер объектов для текущего окна chrome.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : Возвращает зашифрованный объект браузера.
-- {{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}
+- {{domxref("Window.defaultStatus")}}
   - : Получает/устанавливает текст статус-бара для данного окна.
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает соотношение между физическими пикселями и пикселями на дисплее текущего устройства.
 - {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
   - : Получает аргументы, переданные в окно (если это диалоговое окно) в момент вызова {{domxref("window.showModalDialog()")}}. Это `nsIArray`.
-- {{domxref("Window.directories")}} {{obsolete_inline}}
+- {{domxref("Window.directories")}}
   - : Синоним {{domxref("window.personalbar")}}
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Возвращает ссылку на содержащийся в окне документ.
@@ -47,7 +47,7 @@ _Данный интерфейс наследует свойства из инт
   - : Возвращает массив дополнительных фреймов в текущем окне.
 - {{domxref("Window.fullScreen")}}
   - : Это свойство указывает, отображается ли окно в полноэкранном режиме или нет.
-- {{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- {{domxref("Window.globalStorage")}} {{Non-standard_inline}}
   - : Не поддерживает с Gecko 13 (Firefox 13). Использовать вместо него{{domxref("Window.localStorage")}}. Было: Множественные объекты хранения, которые используются для хранения данных на нескольких страницах.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
   - : Возвращает ссылку на объект истории.
@@ -101,7 +101,7 @@ _Данный интерфейс наследует свойства из инт
   - : Обеспечивает главенствующее пространство для атрибутов, [относящихся к производительности](/ru/docs/Navigation_timing).
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Возвращает объект personalbar, который может быть добавлен и убран из окна.
-- {{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}
+- {{domxref("Window.pkcs11")}}
   - : Раньше предоставлял доступ к установке и удалению PKCS11 модуля.
 - {{domxref("Window.returnValue")}}
   - : Возвращаемое значение, которое будет передано в функцию, которая вызвала {{domxref("window.showModalDialog()")}} для отображения окна как модального диалога.
@@ -159,7 +159,7 @@ _Этот интерфейс наследует методы от интерфе
 
 - {{domxref("Window.alert()")}}
   - : Отображает предупреждающее диалоговое окно.
-- {{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.back()")}} {{Non-standard_inline}}
   - : Возвращается на один шаг назад в истории окна.
 - {{domxref("Window.blur()")}}
   - : Убирает фокус с окна.
@@ -177,19 +177,19 @@ _Этот интерфейс наследует методы от интерфе
   - : Закрывает текущее окно.
 - {{domxref("Window.confirm()")}}
   - : Отображает диалог с сообщением, на которое пользователь должен ответить.
-- {{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.disableExternalCapture()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.dispatchEvent()")}}
   - : Используется для вызова события.
 - {{domxref("Window.dump()")}}
   - : Отправляет сообщение в консоль.
-- {{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.enableExternalCapture()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.find()")}}
   - : Ищет необходимую строку в окне window.
 - {{domxref("Window.focus()")}}
   - : Устанавливает фокус на текущем окне.
-- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.forward()")}} {{Non-standard_inline}}
   - : Переходит на один документ вперёд в текущей истории окна.
 - {{domxref("Window.getAttention()")}}
   - : Заставляет мигать иконку приложения.
@@ -201,7 +201,7 @@ _Этот интерфейс наследует методы от интерфе
   - : Получает подсчитанные стили по умолчанию для определённого элемента, игнорируя авторские стили.
 - {{domxref("Window.getSelection()")}}
   - : Возвращает выбранный объект, представляющий выбранный элемент(ы).
-- {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.home()")}} {{Non-standard_inline}}
   - : Возвращает браузер на домашнюю страницу.
 - {{domxref("Window.matchMedia()")}}
   - : Возвращает объект {{domxref("MediaQueryList")}}, представляющий указанную строку медиавыражения.
@@ -237,7 +237,7 @@ _Этот интерфейс наследует методы от интерфе
   - : Динамически меняет размер окна.
 - {{domxref("Window.restore()")}}
   - : {{todo("NeedsContents")}}
-- {{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.routeEvent()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.

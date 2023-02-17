@@ -74,9 +74,9 @@ translation_of: Web/JavaScript/Reference/Statements
 
 - {{jsxref("Statements/debugger", "debugger")}}
   - : Вызывает любую доступную функциональность отладки. Если функциональность отладки не доступна, эта инструкция ничего не делает.
-- {{obsolete_inline}} {{jsxref("Statements/export", "export")}}
+- {{jsxref("Statements/export", "export")}}
   - : Используется для экспорта подписанным скриптом свойств, функций и объектов в другие подписанные или неподписанные скрипты. Эта древняя функциональность Netscape была удалена и будет пересмотрена модулями ECMAScript 6.
-- {{obsolete_inline}} {{jsxref("Statements/import", "import")}}
+- {{jsxref("Statements/import", "import")}}
   - : Используется для импорта скриптом свойств, функций и объектов из подписанного скрипта, который предоставил эту информацию. Эта древняя функциональность Netscape была удалена и будет пересмотрена модулями ECMAScript 6.
 - {{jsxref("Statements/label", "label")}}
   - : Предоставляет инструкцию с идентификатором, на который вы можете сослаться с помощью инструкций `break` или `continue`.

@@ -44,13 +44,13 @@ translation_of: Web/API/Attr
 
 - `attributes`
   - : Это свойство всегда возвращает значение `NULL`.
-- `childNodes` {{obsolete_inline(14)}}
+- `childNodes`
   - : Это свойство всегда возвращает пустой {{domxref("NodeList")}}.
-- `firstChild` {{obsolete_inline(14)}}
+- `firstChild`
   - : Это свойство всегда возвращает значение `NULL`.
 - `isId` {{readOnlyInline}}
   - : Указывает, является ли атрибут "ID attribute". "ID attribute" - это атрибут, значение которого должно быть уникальным в документе DOM. В HTML DOM "id" является единственным атрибутом ID, но XML-документы могут определять иные. Уникальность атрибута часто определяется {{Glossary("DTD")}} или другим описанием схемы.
-- `lastChild` {{obsolete_inline(14)}}
+- `lastChild`
   - : Это свойство всегда возвращает значение `NULL`.
 - `nextSibling`
   - : Это свойство всегда возвращает значение `NULL`.
@@ -66,7 +66,7 @@ translation_of: Web/API/Attr
   - : Это свойство всегда возвращает значение `NULL`.
 - `previousSibling`
   - : Это свойство всегда возвращает значение `NULL`.
-- `schemaTypeInfo` {{obsolete_inline}} {{readOnlyInline}}
+- `schemaTypeInfo` {{readOnlyInline}}
   - : Сведения о типе, связанные с этим атрибутом. В то время как информация о типе, содержащаяся в этом атрибуте, гарантированно будет правильной после загрузки документа или вызова {{domxref("Document.normalizeDocument")}}, это свойство может быть ненадёжным, если узел был перемещён.
 - `specified`
 
@@ -77,7 +77,7 @@ translation_of: Web/API/Attr
 
 The following methods have been deprecated:
 
-- `appendChild()` {{obsolete_inline(14)}}
+- `appendChild()`
   - : Измените значение {{domxref("Attr.value")}} взамен.
 - `cloneNode()`
   - : Вы не должны были использовать это в первую очередь, поэтому вам, вероятно, всё равно, что это больше не используется.
@@ -89,7 +89,7 @@ The following methods have been deprecated:
   - : Используйте {{domxref("Element.getAttribute()")}} взамен.
 - `getAttributeNodeNS()`
   - : Используйте {{domxref("Element.getAttributeNS()")}} взамен.
-- `hasAttributes()`{{obsolete_inline("21.0")}}
+- `hasAttributes()`
   - : Этот метод всегда возвращает значение false.
 - `hasChildNodes()`
   - : Этот метод всегда возвращает значение false.
@@ -103,9 +103,9 @@ The following methods have been deprecated:
   - : Вы не должны были использовать это в первую очередь, поэтому вам, вероятно, всё равно, что это больше не используется.
 - `removeAttributeNode()`
   - : Используйте {{domxref("Element.removeAttribute()")}} взамен.
-- `removeChild()` {{obsolete_inline(14)}}
+- `removeChild()`
   - : Измените значение {{domxref("Attr.value")}} взамен..
-- `replaceChild()` {{obsolete_inline(14)}}
+- `replaceChild()`
   - : Modify the value of {{domxref("Attr.value")}} взамен.
 - `setAttributeNode()`
   - : Используйте {{domxref("Element.setAttribute()")}} взамен.
