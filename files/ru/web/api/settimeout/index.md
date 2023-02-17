@@ -251,7 +251,7 @@ Browsers including Internet Explorer, Chrome, Safari, and Firefox store the dela
 
 #### Неактивные вкладки
 
-In and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or [crbug.com/66078](http://crbug.com/66078) for details about this in Chrome.
+In Gecko 5.0 and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or [crbug.com/66078](http://crbug.com/66078) for details about this in Chrome.
 
 ## Совместимость с браузерами
 
