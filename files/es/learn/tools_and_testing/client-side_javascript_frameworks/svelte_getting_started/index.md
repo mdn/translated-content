@@ -237,7 +237,7 @@ Svelte utiliza la palabra clave [`export`](/en-US/docs/Web/JavaScript/Reference/
 
 ### The markup section
 
-In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expressions inside single curly brackets (`{}`). In this case we are embedding the value of the `name` prop right after the `Hello` text.
+En la sección de marcado puedes insertar todo el HTML que quieras y, adicionalmente, puedes insertar expresiones válidas de JavaScript dentro de llaves (`{}`). En este caso estamos incrustando el valor de la prop `name` justo después del texto `Hello`. 
 
 ```html
 <main>
@@ -248,8 +248,7 @@ In the markup section you can insert any HTML you like, and in addition you can 
   </p>
 </main>
 ```
-
-Svelte also supports tags like `{#if}`, `{#each}`, and `{#await}` — these examples allow you to conditionally render a portion of the markup, iterate through a list of elements, and work with async values, respectively.
+Svelte además soporta etiquetas como `{#if}`, `{#each}`, y `{#await}`, que te permiten renderizar condicionalmente un fragmento del marcado, iterar sobre una lista de elementos y trabajar con valores asíncronos, respectivamente.
 
 ### The `<style>` section
 
