@@ -126,8 +126,8 @@ Desde que cada cara de nuestro cubo está compuesto de dos triángulos, tenemos 
 
 En este punto ahora tenemos un cubo animado rebotando y rotando, cuenta con seis caras coloreadas vívidamente.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[Ver el Código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [Abrir esta demostración en una página nueva](http://mdn.github.io/webgl-examples/tutorial/sample5/)
+[Ver el Código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample5) | [Abrir esta demostración en una página nueva](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

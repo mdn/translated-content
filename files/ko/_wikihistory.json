@@ -2699,7 +2699,7 @@
     "modified": "2019-05-29T17:36:17.250Z",
     "contributors": ["jswisher", "alattalatta"]
   },
-  "Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core": {
+  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
     "modified": "2020-03-10T10:48:51.010Z",
     "contributors": ["kimploo"]
   },

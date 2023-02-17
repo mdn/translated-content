@@ -8,10 +8,6 @@ original_slug: Глоссарий/Codec
 
 ## Смотрите также
 
-### Общие сведения
-
-- {{Interwiki("wikipedia", "Codec")}} Википедия
-
 ### Технические ссылки
 
 - [Медиа форматы, поддерживаемые audio и video элементами HTML](/ru/docs/Web/HTML/Supported_media_formats)

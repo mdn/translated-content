@@ -92,7 +92,7 @@ void close(
 - `SYNTAX_ERR`
   - : A string `reason é muito longa ou contém substitutos não comparados.`
 
-> **Nota:** `Note: No Gecko, este método não suporta nenhum parâmetro antes do Gecko 8.0 {{geckoRelease("8.0")}}.`
+> **Nota:** `Note: No Gecko, este método não suporta nenhum parâmetro antes do Gecko 8.0.`
 
 ### `send()`
 

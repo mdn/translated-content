@@ -17,10 +17,6 @@ _WebSocket_ - это {{Glossary("protocol", "протокол")}}, которы�
 
 ## Узнать больше
 
-### Общие сведения
-
-- {{interwiki("wikipedia", "WebSocket", "WebSocket")}} на Wikipedia
-
 ### Техническая справка
 
 - [WebSocket на MDN](/ru/docs/Web/API/WebSocket)

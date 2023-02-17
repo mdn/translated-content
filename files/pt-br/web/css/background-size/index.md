@@ -138,7 +138,7 @@ background-size: 50% 25%, contain, 3em;
 
 A interpretação dos possíveis valores depende das dimensões intrínsecas da imagem (largura e altura) e da proporção intrínseca (proporção da largura e altura). Um imagem bitmap sempre tem dimensões intrínsecas e uma proporção intrínseca. Uma imagem pode conter ambas as dimensões intrínsecas (e portanto deve ter uma proporção intrínseca). Poderá contar também uma ou nenhuma dimensão intrínseca, e portanto pode ou não pode conter uma proporção intrínseca. Gradients são tratados como imagens sem dimensões ou proporções intrínsecas.
 
-> **Nota:** Esse comportamento mudou no Gecko 8.0 {{geckoRelease("8.0")}}. Antes disso, gradients eram tratados como imagens sem dimensões intrínsecas, porém com uma proporção intrínseca idêntica a da área do elemento pai.
+> **Nota:** Esse comportamento mudou no Gecko 8.0. Antes disso, gradients eram tratados como imagens sem dimensões intrínsecas, porém com uma proporção intrínseca idêntica a da área do elemento pai.
 
 Imagens geradas por elementos usando {{cssxref("-moz-element")}} (que na realidade casa com um elemento) são atualmente tratadas como imagens com as dimensões do elemento, ou da área de posicionamento de fundo se o elemento é SVG, com a proporção intrínseca correspondente.
 

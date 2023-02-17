@@ -262,7 +262,7 @@ p {
 
 ![A highlighted declaration block](declaration-block.png)
 
-마지막으로, CSS 선언 블록은 _선택자_ 와 쌍을 이루어 _CSS Rulesets_ (또는 _CSS **규칙** _) 를 생성합니다. 이미지에는 `h1` 선택자 및 `p` 선택자의 두 가지 규칙이 있습니다. `h1` 의 규칙이 강조 표시됩니다.
+마지막으로, CSS 선언 블록은 _선택자_ 와 쌍을 이루어 _CSS Rulesets_ (또는 **CSS 규칙**) 를 생성합니다. 이미지에는 `h1` 선택자 및 `p` 선택자의 두 가지 규칙이 있습니다. `h1` 의 규칙이 강조 표시됩니다.
 
 ![The rule for h1 highlighted](rules.png)
 

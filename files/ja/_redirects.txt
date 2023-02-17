@@ -4141,6 +4141,7 @@
 /ja/docs/Web/CSS/counters()	/ja/docs/Web/CSS/counters
 /ja/docs/Web/CSS/counters1	/ja/docs/Web/CSS/counters
 /ja/docs/Web/CSS/cross-fade()	/ja/docs/Web/CSS/cross-fade
+/ja/docs/Web/CSS/display/two-value_syntax_of_display	/ja/docs/Web/CSS/display/multi-keyword_syntax_of_display
 /ja/docs/Web/CSS/element()	/ja/docs/Web/CSS/element
 /ja/docs/Web/CSS/env()	/ja/docs/Web/CSS/env
 /ja/docs/Web/CSS/filter-function/blur()	/ja/docs/Web/CSS/filter-function/blur

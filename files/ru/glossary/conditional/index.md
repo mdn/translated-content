@@ -16,10 +16,6 @@ original_slug: Глоссарий/Conditional
 
 ## Узнать больше
 
-### Общие сведения
-
-- {{interwiki("wikipedia", "Exception_handling#Condition_systems", "Condition")}} on Wikipedia
-
 ### Техническая справка
 
 - {{Glossary('Control_flow','Control flow')}} on MDN

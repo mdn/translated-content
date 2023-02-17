@@ -93,7 +93,7 @@ O output será algo assim:
 
 #### Uso de substituição de string
 
-O Gecko 9.0 {{geckoRelease("9.0")}} introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
+O Gecko 9.0 introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
 
 | String de substituição | Descrição                                                                  |
 | ---------------------- | -------------------------------------------------------------------------- |

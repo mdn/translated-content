@@ -97,7 +97,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Примеры', '480', '320', '', 'Web/CSS/border-image-width') }}
+{{ EmbedLiveSample('Примеры', '100%', '200') }}
 
 ## Спецификации
 

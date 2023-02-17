@@ -18,7 +18,6 @@ HTTP/2 никоим образом не изменяет семантику пр
 1. Основные сведения
 
     1. [HTTP на MDN](/ru/docs/Web/HTTP)
-    2. {{interwiki("wikipedia", "HTTP/2", "HTTP/2")}} на Википедии
 
 2. [Справка](/ru/docs/Glossary)
 
