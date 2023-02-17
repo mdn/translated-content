@@ -53,7 +53,7 @@ HTML의 Applet 태그 (`<applet>`) 는 자바 애플릿을 보이게 하는 곳�
 
 ## Browser compatibility
 
-{{Compat("html.elements.applet")}}
+{{Compat}}
 
 ## Notes
 

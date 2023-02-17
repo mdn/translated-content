@@ -129,7 +129,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 ## Browser compatibility
 
-{{Compat("html.elements.summary")}}
+{{Compat}}
 
 ## See also
 

@@ -33,11 +33,11 @@ updateConnectionStatus();
 
 ### NetworkInformation
 
-{{Compat("api.NetworkInformation")}}
+{{Compat}}
 
 ### Navigator.connection
 
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## 같이 보기
 

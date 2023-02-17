@@ -153,7 +153,7 @@ slug: Web/HTML/Element/main
 </main>
 ```
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## 같이 보기
 

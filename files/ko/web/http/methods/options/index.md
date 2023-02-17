@@ -111,7 +111,7 @@ Content-Type: text/plain
 
 ## Browser compatibility
 
-{{Compat("http.methods.OPTIONS")}}
+{{Compat}}
 
 ## See also
 

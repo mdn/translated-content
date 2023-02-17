@@ -77,7 +77,7 @@ multiline title">예제</abbr>처럼요.</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.title")}}
+{{Compat}}
 
 ## 같이 보기
 

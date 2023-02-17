@@ -97,7 +97,7 @@ slug: Web/HTML/Element/small
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.small")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -98,7 +98,7 @@ If you display this in a web browser it should look like the following.
 
 ## Browser compatibility
 
-{{Compat("html.elements.content")}}
+{{Compat}}
 
 ## See also
 

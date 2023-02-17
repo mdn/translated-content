@@ -45,7 +45,7 @@ Age: 24
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Age")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

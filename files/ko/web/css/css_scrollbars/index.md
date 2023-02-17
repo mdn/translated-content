@@ -58,11 +58,11 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 
 ### scrollbar-width
 
-{{Compat("css.properties.scrollbar-width")}}
+{{Compat}}
 
 ### scrollbar-color
 
-{{Compat("css.properties.scrollbar-color")}}
+{{Compat}}
 
 ## 같이 보기
 

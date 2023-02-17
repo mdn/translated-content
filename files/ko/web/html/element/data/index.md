@@ -81,7 +81,7 @@ slug: Web/HTML/Element/data
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.data")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -116,7 +116,7 @@ public void destroy() {
 
 ## Browser compatibility
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## 참고
 
