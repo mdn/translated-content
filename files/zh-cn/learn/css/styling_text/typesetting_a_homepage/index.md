@@ -83,11 +83,3 @@ original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 如果你将本测评作为课程的一部分，你应该能够将你的作品交给你的老师/指导员打分。如果你是自学的，你可以很轻松地在[discussion thread for this exercise](https://discourse.mozilla.org/t/typesetting-a-community-school-home-page-assessment/24683)，或者[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道上获得打分。先尝试完成本次练习——作弊是学不到任何东西的！
 
 {{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
-
-## 在本单元中
-
-- [Fundamental text and font styling](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/zh-CN/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/zh-CN/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/zh-CN/Learn/CSS/Styling_text/Typesetting_a_homepage)

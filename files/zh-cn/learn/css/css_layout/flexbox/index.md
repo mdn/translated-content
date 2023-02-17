@@ -354,18 +354,3 @@ button {
 - [弹性盒子青蛙游戏](https://flexboxfroggy.com/)——学习和更好地了解弹性盒子基础知识的教育游戏
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
-
-## 模块
-
-- [介绍 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [常规流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [多栏布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [初学者媒体查询的指导](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
-- [传统的布局方法](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧的浏览器](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [几本布局理解](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
