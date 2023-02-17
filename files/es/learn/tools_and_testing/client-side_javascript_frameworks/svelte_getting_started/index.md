@@ -165,27 +165,27 @@ _module bundler_. Este archivo de configuración le dice a _rollup_ cómo compil
     - `bundle.css`: El archivo CSS generado por Svelte a partir de los estilos definidos por cada componente.
     - `bundle.js`: El archivo de código Javascript compilado a partir de todo el código fuente de tu aplicación.
 
-## Having a look at our first Svelte component
+## Analizando nuestro primer componente de Svelte
 
-Components are the building blocks of Svelte applications. They are written into `.svelte` files using a superset of HTML.
+Componentes son los bloques para construir aplicaciones con Svelte. Se definen en archivos `.svelte` usando una versión extendida de HTML.
 
-All three sections — `<script>`, `<style>`, and markup — are optional, and can appear in any order you like.
+Las tres secciones: `<script>`, `<style>`, y el marcado, son completamente opcionales y pueden aparecer en cualquier orden.
 
 ```html
 <script>
-  // logic goes here
+  // aquí va la lógica
 </script>
 
 <style>
-  /* styles go here */
+  /* aquí van los estilos */
 </style>
 
-<!-- markup (zero or more HTML elements) goes here -->
+<!-- el marcado (cero o más elementos HTML) va aquí -->
 ```
 
-> **Note:** For more information on the component format, have a look at the [Svelte documentation](https://svelte.dev/docs#Component_format).
+> **Nota:** Para más información del formato para componentes, dale un vistazo a la [Documentación de Svelte](https://svelte.dev/docs#Component_format).
 
-With this in mind, let's have a look at the `src/App.svelte` file that came with the starter template. You should see something like the following:
+Una vez revisado lo anterior, miremos el archivo `src/App.svelte` que viene incluir en el _template_ inicial. Deberías ver algo como lo siguiente:
 
 ```html
 <script>
@@ -225,7 +225,7 @@ With this in mind, let's have a look at the `src/App.svelte` file that came with
 
 ### The `<script>` section
 
-The `<script>` block contains JavaScript that runs when a component instance is created. Variables declared (or imported) at the top level are 'visible' from the component's markup. Top-level variables are the way Svelte handles the component state, and they are reactive by default. We will explain in detail what this means later on.
+El bloque `<script>` contiene JavaScript que se ejecuta cuando se crea una instancia del componente. Las variables declaradas (o importadas) en el nivel más alto pueden ser referenciadas por el marcado del componente. Svelte usa las variables del nivel más alto para manejar el estado del componente, estas variables son reactivas por defecto. En breve explicaremos esto con más detalle.
 
 ```html
 <script>
@@ -233,7 +233,7 @@ The `<script>` block contains JavaScript that runs when a component instance is 
 </script>
 ```
 
-Svelte uses the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) keyword to mark a variable declaration as a property (or prop), which means it becomes accessible to consumers of the component (e.g. other components). This is one example of Svelte extending JavaScript syntax to make it more useful, while keeping it familiar.
+Svelte utiliza la palabra clave [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) para marcar la declaración de una variable como una propiedad (abreviado como prop), lo cual significa que ahora es visible para los consumidores del componente (e.g. otros componentes). Este es un claro ejemplo de cómo Svelte extiende la sintaxis de JavaScript para hacerlo más útil, sin dejar de ser familiar.
 
 ### The markup section
 
