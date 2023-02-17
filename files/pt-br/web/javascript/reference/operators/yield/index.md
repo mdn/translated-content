@@ -70,8 +70,8 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ## Notas específicas do Firefox
 
-- A partir do Gecko 29 {{geckoRelease(29)}}, uma generator function completada não invoca mais um {{jsxref("TypeError")}} "generator has already finished". Ao invés, isso retorna um objeto `IteratorResult` como `{ value: undefined, done: true }` ({{bug(958951)}}).
-- A partir do Gecko 33 {{geckoRelease(33)}}, a análise (parsing) de uma expressão `yield` foi atualizada para se conformar com a especificação do ES2015 ({{bug(981599)}}):
+- A partir do Gecko 29, uma generator function completada não invoca mais um {{jsxref("TypeError")}} "generator has already finished". Ao invés, isso retorna um objeto `IteratorResult` como `{ value: undefined, done: true }` ({{bug(958951)}}).
+- A partir do Gecko 33, a análise (parsing) de uma expressão `yield` foi atualizada para se conformar com a especificação do ES2015 ({{bug(981599)}}):
 
   - A expressão após a palavra-chave `yield` é opcional e omitir isso não invoca mais um {{jsxref("SyntaxError")}}: `function* foo() { yield; }`
 
