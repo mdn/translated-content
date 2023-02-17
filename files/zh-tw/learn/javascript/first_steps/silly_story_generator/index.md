@@ -106,15 +106,3 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 如果您將這個測驗視為正規課程的一部分，建議將成果提供您的老師或指導者以利幫助您達到最好的學習效益。如果您是自學者，您可以輕鬆的透過右方網頁 [discussion thread for this exercise](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686) 得到建議，或者在[Mozilla IRC](https://wiki.mozilla.org/IRC)上的 [#mdn](irc://irc.mozilla.org/mdn) IRC 頻道。提醒您：第一次嘗試這個測驗時，作弊可不會得到任何收穫喔！
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## 相關學習模組
-
-- [什麼是 JavaScript?](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [和 JavaScript 的第一次接觸](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [什麼出錯了？ JavaScript 的疑難排解（除錯）](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [儲存你需要的資訊 — 變數](/zh-TW/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 的基本運算— 數字 與 運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math)
-- [處理文字 — JavaScript 的字串](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods) [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays) [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
-- [傻故事產生器](/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator)

@@ -164,11 +164,3 @@ p {
 你已經快完成這個主題了，但是還差臨門一腳，在下篇文章裡，你將會[利用你學到的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)來重新美化一個範例，並在過程中重溫你所學到的 CSS 技巧。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## 在這個主題中
-
-1. [CSS 是什麼？](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入門](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 是如何組織的](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 是如何運作的](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [利用你學到的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
