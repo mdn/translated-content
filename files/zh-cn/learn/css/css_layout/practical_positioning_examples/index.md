@@ -412,12 +412,3 @@ input[type=checkbox]:checked + aside {
 这样完成了我们对定位的关注——现在，你应该理解基本机制的工作原理，同样理解了怎样应用这些知识去构建一些有趣的用户界面功能，不要由于你还未完全理解所有的知识而担心——定位是一个相当高级的话题，你可以随时读这篇文章来帮助你的理解。下一个主题我们将转向 Flexbox。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## 在本单元中
-
-- [Introduction to CSS layout](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [Floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)

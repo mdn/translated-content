@@ -613,12 +613,3 @@ body {
 我相信你用基本定位愉快地玩耍；它是创建复杂的 CSS 布局和 UI 功能背后的基本工具之一。考虑到这一点，在下一篇文章中，我们将更有趣的定位——我们将进一步，开始建立一些真实世界有用的东西。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout")}}
-
-## 在本单元中
-
-- [布局介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [定位练习案例](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
