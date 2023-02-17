@@ -1,7 +1,6 @@
 ---
 title: 表单数据校验
 slug: Learn/Forms/Form_validation
-original_slug: Learn/HTML/Forms/Data_form_validation
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
@@ -396,20 +395,20 @@ email.addEventListener("input", function (event) {
 
 #### 约束校验的 API 及属性
 
-| 属性                       | 描述                                                                                                                                                                                     |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `validationMessage`        | 一个本地化消息，描述元素不满足校验条件时（如果有的话）的文本信息。如果元素无需校验（`willValidate` 为 `false`），或元素的值满足校验条件时，为空字符串。                                  |
-| `validity`                 | 一个 {{domxref("ValidityState")}} 对象，描述元素的验证状态。详见有关可能的验证状态的文章。                                                                                       |
-| `validity.customError`     | 如果元素设置了自定义错误，返回 `true` ；否则返回`false`。                                                                                                                                |
-| `validity.patternMismatch` | 如果元素的值不匹配所设置的正则表达式，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                       |
-| `validity.rangeOverflow`   | 如果元素的值高于所设置的最大值，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                             |
-| `validity.rangeUnderflow`  | 如果元素的值低于所设置的最小值，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                             |
-| `validity.stepMismatch`    | 如果元素的值不符合 step 属性的规则，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                         |
-| `validity.tooLong`         | 如果元素的值超过所设置的最大长度，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                           |
-| `validity.typeMismatch`    | 如果元素的值出现语法错误，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                                   |
+| 属性                       | 描述                                                                                                                                                                    |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `validationMessage`        | 一个本地化消息，描述元素不满足校验条件时（如果有的话）的文本信息。如果元素无需校验（`willValidate` 为 `false`），或元素的值满足校验条件时，为空字符串。                 |
+| `validity`                 | 一个 {{domxref("ValidityState")}} 对象，描述元素的验证状态。详见有关可能的验证状态的文章。                                                                              |
+| `validity.customError`     | 如果元素设置了自定义错误，返回 `true` ；否则返回`false`。                                                                                                               |
+| `validity.patternMismatch` | 如果元素的值不匹配所设置的正则表达式，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                |
+| `validity.rangeOverflow`   | 如果元素的值高于所设置的最大值，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                      |
+| `validity.rangeUnderflow`  | 如果元素的值低于所设置的最小值，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                      |
+| `validity.stepMismatch`    | 如果元素的值不符合 step 属性的规则，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                  |
+| `validity.tooLong`         | 如果元素的值超过所设置的最大长度，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                    |
+| `validity.typeMismatch`    | 如果元素的值出现语法错误，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                            |
 | `validity.valid`           | 如果元素的值不存在校验问题，返回 `true`，否则返回 `false`。当此属性为 `true` 时，元素将命中 {{cssxref(":valid")}} CSS 伪类，否则命中 {{cssxref(":invalid")}} CSS 伪类。 |
-| `validity.valueMissing`    | 如果元素设置了 required 属性且值为空，返回 `true`，否则返回 `false`。当此属性为 true 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                         |
-| `willValidate`             | 如果元素在表单提交时将被校验，返回 `true`，否则返回 `false`。                                                                                                                            |
+| `validity.valueMissing`    | 如果元素设置了 required 属性且值为空，返回 `true`，否则返回 `false`。当此属性为 true 时，元素将命中 {{cssxref(":invalid")}} CSS 伪类。                                  |
+| `willValidate`             | 如果元素在表单提交时将被校验，返回 `true`，否则返回 `false`。                                                                                                           |
 
 #### 约束校验 API 的方法
 
