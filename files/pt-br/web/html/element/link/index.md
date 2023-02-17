@@ -19,7 +19,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("as")}}
   - : Esse atributo é usado apenas quando `rel="preload"` foi enviado no elemento `<link>`. Especifica o tipo de conteúdo carregado pelo `<link>`, que é necessário para a priorização do conteúdo, solicitação de correspondência, aplicação de [política de segurança de conteúdo](/pt-BR/docs/Web/HTTP/CSP) correta, e configuração do cabeçalho de pedido {{httpheader("Accept")}} correta.
-- {{htmlattrdef("charset")}}{{obsolete_inline}}
+- {{htmlattrdef("charset")}}
 
   - : Este atributo define a codificação de caracteres do recurso vinculado. O valor é umespaço e/ou lista delimitada por vírgulas de conjuntos de caracteres, conformedefinido na RFC 2045. O valor padrão é ISO-8859-1.
 
@@ -63,7 +63,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
   - : The value of this attribute provides information about the functions that might be performed on an object. The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link. For example, the browser might choose a different rendering of a link as a function of the methods specified; something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site. This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4. See [Methods Property (MSDN)](http://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
 - {{htmlattrdef("rel")}}
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of the [link types values](/pt-BR/docs/Web/HTML/Link_types). The most common use of this attribute is to specify a link to an external style sheet: the **rel** attribute is set to `stylesheet`, and the **href** attribute is set to the URL of an external style sheet to format the page. WebTV also supports the use of the value `next` for **rel** to preload the next page in a document series.
-- {{htmlattrdef("rev")}}{{obsolete_inline}}
+- {{htmlattrdef("rev")}}
 
   - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{htmlattrxref("href", "link")}} attribute. The attribute thus defines the reverse relationship compared to the value of the **rel** attribute. [Link types values](/pt-BR/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for {{htmlattrxref("rel", "link")}}.
 

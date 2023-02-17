@@ -23,7 +23,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
 
 - {{ htmlattrdef("autoplay") }}
   - : Um atributo Booleano; se especificado (mesmo se o valor for "false"!), o áudio iniciará automaticamente assim que possível sem parar de carregar os dados.
-- {{ htmlattrdef("autobuffer") }} {{ obsolete_inline("2.0") }}
+- {{ htmlattrdef("autobuffer") }}
   - : Um atributo Booleano; se especificado, o audio será baixado automaticamente, mesmo se não está configurado para reprodução automática. Isto continua até que o cache de mídia esteja cheio, ou até que o o arquivo de áudio completo tenha sido baixado, o que vier primeiro. Isto deve ser utilizado apenas quando é esperado que o usuário escolherá tocar o áudio; por exemplo, se o usuário navegou para a página utilizando um link "Reproduzir". Este atributo foi removido no Gecko 2.0 em razão do atributo `preload`.
 - {{ htmlattrdef("buffered") }}
   - : Um atributo que pode ser lido para determinar os intervalos do áudio que já foram carregados. Este atributo contém um objeto {{ domxref("TimeRanges") }}.

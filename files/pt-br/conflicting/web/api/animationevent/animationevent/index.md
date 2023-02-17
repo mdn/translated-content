@@ -4,7 +4,7 @@ slug: conflicting/Web/API/AnimationEvent/AnimationEvent
 original_slug: Web/API/AnimationEvent/initAnimationEvent
 ---
 
-{{obsolete_header}}{{non-standard_header}}{{ apiref("Web Animations API") }}
+{{non-standard_header}}{{ apiref("Web Animations API") }}
 
 ## Sumário
 
