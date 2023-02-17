@@ -247,7 +247,7 @@ The result is:
 
 ### Gecko notes
 
-Starting in Gecko 9.0 {{geckoRelease("9.0")}}, Firefox for Android lets users capture images using their camera and upload them, without having to leave the browser. Web developers can implement this feature by simply specifying setting the `accept` attribute's value to "image/\*" on their `file` input, like this:
+Starting in Gecko 9.0, Firefox for Android lets users capture images using their camera and upload them, without having to leave the browser. Web developers can implement this feature by simply specifying setting the `accept` attribute's value to "image/\*" on their `file` input, like this:
 
 `<input type="file" accept="image/*">`
 
