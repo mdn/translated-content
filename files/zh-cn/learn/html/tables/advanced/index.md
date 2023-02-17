@@ -408,9 +408,3 @@ slug: Learn/HTML/Tables/Advanced
 关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。在此刻，如果你想学习关于 HTML 表格的样式，可以阅读 [Styling Tables](/zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
-
-## 本章目录
-
-- [HTML 表格入门](/zh-CN/docs/Learn/HTML/Tables/Basics)
-- [HTML 表格高级特性和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced)
-- [构建行星数据](/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)

@@ -155,7 +155,7 @@ table-layout: fixed;
     - `{{htmlelement('script')}}`
       DHTML 脚本通常在页面完全加载或者所有必要的对象（objects）已初始化完毕之后才能运行。没有必要在页面内容之前加载这些脚本，这只会拖慢页面加载和初始化的体验。在调试维护中把不相关的 script 拆分在不同文件中，且尽量减少文件的数量可以提高性能。如有图像用到了反转效果，你应该在页面内容下载完后预加载这些图像。
 
-## 相关链接
+## 参见
 
 - 书籍：["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
 - 非常棒、讲的很全 [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html) (Yahoo!)

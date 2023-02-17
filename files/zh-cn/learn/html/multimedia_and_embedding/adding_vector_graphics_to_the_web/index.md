@@ -320,7 +320,7 @@ textarea.onkeyup = function(){
 
 在本模块的最后一篇文章中，我们将详细探索响应式图像，查看 HTML 可以让您的图像在不同设备上更好地适配。
 
-## 相关链接
+## 参见
 
 - [SVG tutorial](/zh-CN/docs/Web/SVG/Tutorial/Getting_Started) on MDN
 - [Quick tips for responsive SVGs](http://thenewcode.com/744/Making-SVG-Responsive)
@@ -329,12 +329,3 @@ textarea.onkeyup = function(){
 - [How to scale SVGs](https://css-tricks.com/scale-svg/)（它不像光栅图形那么简单！）
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## 本章目录
-
-- [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [从 \<object> 到 \<iframe>：其它嵌入技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [为网页添加矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla 宣传页面](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
