@@ -164,5 +164,4 @@ socket.addEventListener('message', function (event) {
 
 ## Смотрите также
 
-- [Writing WebSocket client applications](/en/WebSockets/Writing_WebSocket_client_applications)
-- [HTML5: WebSockets](http://dev.w3.org/html5/websockets/)
+- [Написание клиентских приложений с помощью веб-сокетов](/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
