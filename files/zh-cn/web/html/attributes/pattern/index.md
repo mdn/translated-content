@@ -5,7 +5,7 @@ slug: Web/HTML/Attributes/pattern
 
 {{HTMLSidebar}}
 
-**`pattern`** 属性规定了一个表单控件的值应该匹配的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。如果一个非 `null` 值不满足 `pattern` 值设置的约束，{{domxref('ValidityState')}} 对象的只读 {{domxref('ValidityState.patternMismatch','patternMismatch')}} 属性将为 true。
+**`pattern`** 属性规定了一个表单控件的值应该匹配的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。如果一个非 `null` 值不满足 `pattern` 值设置的约束，{{domxref('ValidityState')}} 对象的只读属性 {{domxref('ValidityState.patternMismatch','patternMismatch')}} 将为 true。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-pattern.html", "tabbed-shorter")}}
 
@@ -13,7 +13,7 @@ slug: Web/HTML/Attributes/pattern
 
 `pattern` 属性是 {{HTMLElement("input/text", "text")}}、{{HTMLElement("input/tel", "tel")}}、{{HTMLElement("input/email", "email")}}、{{HTMLElement("input/url", "url")}}、{{HTMLElement("input/password", "password")}} 和 {{HTMLElement("input/search", "search")}} 等输入类型的属性。
 
-当指定 `pattern` 属性时，它是一个正则表达式，代表输入的 {{htmlattrxref("value")}} 必须与之匹配，以便该值能够通过 [约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。它必须是一个有效的 JavaScript 正则表达式，如 {{jsxref("RegExp")}} 类型，并且如同我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中所述：在编译正则表达式时指定 `'u'` 标志，以便将该模式作为 Unicode 码点序列，而不是 ASCII。模式文本周围不应指定正斜杠。
+当指定 `pattern` 属性时，它是一个正则表达式，代表输入的 {{htmlattrxref("value")}} 必须与之匹配，以便该值能够通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。它必须是一个有效的 JavaScript 正则表达式，它会被 {{jsxref("RegExp")}} 类型所使用，正如我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中所述；在编译正则表达式时指定 `'u'` 标志，以便将该模式作为 Unicode 码点序列，而不是 ASCII。模式文本周围不应指定正斜杠。
 
 如果没有指定模式或无效，则不应用正则表达式，此属性被忽略。
 
@@ -29,7 +29,7 @@ slug: Web/HTML/Attributes/pattern
 
 如果输入的值不是空字符串，并且该值与整个正则表达式不匹配，那么 {{domxref('ValidityState')}} 对象的 {{domxref('ValidityState.patternMismatch','patternMismatch')}} 属性为 `true`，就会出现违反约束条件的现象。模式的正则表达式在与值匹配时，其开始部分必须确定在字符串的开始部分，其结束部分必须确定在字符串的结束部分，这与 JavaScript 正则表达式略有不同：在模式属性的情况下，我们是与整个字符串匹配，而不仅仅是任何子集，如同在模式的开始部分隐含 `^(?:`，而在结束部分隐含 `)$`。
 
-> **备注：** 如果 `pattern` 属性被指定为空值，其值隐含为空字符串。因此，**任何非空的** 输入 `value` 都会导致约束违反。
+> **备注：** 如果 `pattern` 属性被指定为空值，其值隐含为空字符串。因此，**任何非空的**输入 `value` 都会导致约束违反。
 
 ## 示例
 
