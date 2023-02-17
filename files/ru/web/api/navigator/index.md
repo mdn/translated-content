@@ -99,7 +99,7 @@ translation_of: Web/API/Navigator
   - : Разрешает веб-сайту зарегистрировать себя в качестве возможного обработчика для данного MIME типа.
 - {{domxref("navigator.registerProtocolHandler", "navigator.registerProtocolHandler")}}
   - : Разрешает веб-сайту зарегистрировать себя в качестве возможного обработчика для данного протокола.
-- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline}} {{obsolete_inline("9.0")}} {{experimental_inline}}
+- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline}} {{experimental_inline}}
   - : Возвращает `false`. JavaScript taint/untaint функции отключены в JavaScript 1.2.
 - {{domxref("Navigator.vibrate()")}}
   - : Причина вибрации устройства с поддержкой её. Не делает ничего, если нет поддержки вибрации.
@@ -110,7 +110,7 @@ translation_of: Web/API/Navigator
   - : Позволяет коду проверить, есть ли документ в данном URI без использования сети.
 - {{domxref("window.navigator.mozPay", "navigator.mozPay")}} {{non-standard_inline}}
   - : Разрешает оплату в приложении.
-- {{domxref("window.navigator.preference", "navigator.preference")}} {{obsolete_inline("2.0")}} {{non-standard_inline}}
+- {{domxref("window.navigator.preference", "navigator.preference")}} {{non-standard_inline}}
   - : Устанавливает предпочтение пользователя. Этот метод доступен [только для привилегированного кода](http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en) и является устаревшим; вы должны использовать вместо него XPCOM [Preferences API](/ru/docs/Preferences_API).
 - {{domxref("window.navigator.requestWakeLock", "navigator.requestWakeLock")}} {{non-standard_inline}}
   - : Запрос установки блокировки пробуждения для ресурса. Блокировка пробуждения препятствует определённой части устройства включится автоматически.

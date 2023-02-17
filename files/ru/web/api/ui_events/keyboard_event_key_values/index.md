@@ -4353,7 +4353,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <th scope="col" style="text-align: left">Android</th>
     </tr>
     <tr>
-      <td><code>"Decimal"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Decimal"</code> [1]</td>
       <td>
         <p>
           Клавиша десятичной точки (обычно <kbd>.</kbd> или <kbd>,</kbd> в
@@ -4393,7 +4393,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <td></td>
     </tr>
     <tr>
-      <td><code>"Multiply"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Multiply"</code> [1]</td>
       <td>Клавиша умножения на цифровой панели, <kbd>*</kbd>.</td>
       <td><code>VK_MULTIPLY</code> (0x6A)</td>
       <td><code>kVK_ANSI_KeypadMultiply</code> (0x43)</td>
@@ -4406,7 +4406,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <td><code>KEYCODE_NUMPAD_MULTIPLY</code> (155)</td>
     </tr>
     <tr>
-      <td><code>"Add"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Add"</code> [1]</td>
       <td>Клавиша сложения на цифровой панели, <kbd>+</kbd>.</td>
       <td><code>VK_ADD</code> (0x6B)</td>
       <td><code>kVK_ANSI_KeypadPlus</code> (0x45)</td>
@@ -4425,7 +4425,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <td><code>KEYCODE_CLEAR</code> (28)</td>
     </tr>
     <tr>
-      <td><code>"Divide"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Divide"</code> [1]</td>
       <td>Клавиша деления на цифровой панели, <kbd>/</kbd>.</td>
       <td><code>VK_DIVIDE</code> (0x6F)</td>
       <td><code>kVK_ANSI_KeypadDivide</code> (0x4B)</td>
@@ -4436,7 +4436,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <td><code>KEYCODE_NUMPAD_DIVIDE</code> (154)</td>
     </tr>
     <tr>
-      <td><code>"Subtract"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Subtract"</code> [1]</td>
       <td>Клавиша вычитания на цифровой панели, <kbd>-</kbd>.</td>
       <td><code>VK_SUBTRACT</code> (0x6D)</td>
       <td><code>kVK_ANSI_KeypadMinus</code> (0x4E)</td>

@@ -14,7 +14,7 @@ translation_of: Web/API/RTCPeerConnection
 
 Метод ниже, является устаревшим и не будет в дальнейшем реализован в современных браузерах.
 
-- {{domxref("RTCPeerConnection.createDTMFSender()")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.createDTMFSender()")}}
   - : Создаёт новый объект типа {{domxref("RTCDTMFSender")}}, связанный с определённым объектом {{domxref("MediaStreamTrack")}}, который сможет отправить объект сигнализации {{Glossary("DTMF")}} поверх соединения..
 
 ## События
@@ -54,21 +54,21 @@ translation_of: Web/API/RTCPeerConnection
 
 ### Устаревшие события
 
-- {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.addstream_event", "addstream")}}
   - : Возникает, когда новый объект {{domxref("MediaStream")}} был добавлен в соединение. Вместо наблюдения за этим устаревшим событием, разработчику следует наблюдать за каждым событием {{domxref("RTCPeerConnection.track_event", "track")}}, возникающим при добавлении в соединение объекта {{domxref("MediaStreamTrack")}}..
     Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onaddstream", "onaddstream")}} .
-- {{domxref("RTCPeerConnection.identityresult_event", "identityresult")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.identityresult_event", "identityresult")}}
   - : В старой версии спецификации WebRTC это событие использовалось для указания доступности подтверждения идентичности. Теперь, следует ждать возвращение промиса от {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} для подтверждения личности.
     Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onidentityresult", "onidentityresult")}}.
-- {{domxref("RTCPeerConnection.idpassertionerror_event", "idpassertionerror")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.idpassertionerror_event", "idpassertionerror")}}
   - : В старой версии спецификации WebRTC это событие использовалось для определения возникшей ошибки при попытке генерации подтверждения идентичности. Теперь, нужно ожидать результата работы промиса, возвращаемого методом доступа {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} , передающий в метод перехвата ошибок промиса, возникшую ошибку.
     Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onidpassertionerror", "onidpinsertionerror")}}..
-- {{domxref("RTCPeerConnection.idpvalidationerror_event", "idpvalidationerror")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.idpvalidationerror_event", "idpvalidationerror")}}
   - : В старой версии спецификации WebRTC это событие использовалось для определения того, что ошибка возникла при попытке подтверждения идентичности. Теперь, следует ожидать результат работы промиса, возвращаемого методом доступа {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}}, для перехвата ошибки в соответствующем методе.
     Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onpeeridentity", "onpeerdentity")}} .
-- {{domxref("RTCPeerConnection.peeridentity_event", "peeridentity")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.peeridentity_event", "peeridentity")}}
   - : В старой версии спецификации WebRTC это событие использовалось для доставки полученной идентичности. Теперь, нужно ожидать результата работы промиса, возвращаемого методом доступа {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}}, для получения идентичности.
-- {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{obsolete_inline}}
+- {{domxref("RTCPeerConnection.removestream_event", "removestream")}}
   - : Возникает на объекте `RTCPeerConnection`, когда объект {{domxref("MediaStream")}} удаляется из соединения. Теперь, необходимо наблюдать за событиями {{domxref("MediaStream.removetrack_event", "removetrack")}} на каждом потоке, входящем в состав объекта соединения `RTCPeerConnection`.
     Установка обработчика возможна через свойство {{domxref("RTCPeerConnection.onremovestream", "onaddstream")}} .
 
@@ -117,7 +117,7 @@ translation_of: Web/API/RTCPeerConnection
 | Константа                           | Описание                                                                                                                         |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | `"all"`                             | Все ICE кандидаты будут рассмотрены.                                                                                             |
-| `"public"`{{obsolete_inline}} | Будут рассматриваться ICE кандидаты, только имеющие публичные IP адреса. _Удалён в спецификации от 13 мая 2016 (working draft)._ |
+| `"public"` | Будут рассматриваться ICE кандидаты, только имеющие публичные IP адреса. _Удалён в спецификации от 13 мая 2016 (working draft)._ |
 | `"relay"`                           | Будут рассматриваться ICE кандидаты, только с переданными IP адресами через TURN сервер.                                         |
 
 ### Перечисление RTCPeerConnectionState
@@ -213,7 +213,7 @@ translation_of: Web/API/RTCPeerConnection
       </td>
     </tr>
     <tr>
-      <td><code>"closed"</code> {{obsolete_inline}}</td>
+      <td><code>"closed"</code></td>
       <td>
         <p>Закрыто. Соединение закрыто.</p>
         <div class="note">

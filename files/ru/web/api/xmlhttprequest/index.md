@@ -427,7 +427,7 @@ var myRequest = new XMLHttpRequest();
     </tr>
     <tr id="mozResponseArrayBuffer">
       <td>
-        <code>mozResponseArrayBuffer</code> {{ obsolete_inline("6") }}
+        <code>mozResponseArrayBuffer</code>
         {{ReadOnlyInline()}}
       </td>
       <td>
@@ -444,7 +444,7 @@ var myRequest = new XMLHttpRequest();
       </td>
     </tr>
     <tr id="multipart">
-      <td><code>multipart</code> {{ obsolete_inline("22") }}</td>
+      <td><code>multipart</code></td>
       <td><code>boolean</code></td>
       <td>
         <p>
