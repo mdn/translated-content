@@ -17,7 +17,7 @@ class ChildClass extends ParentClass { ... }
 
 `extends` 关键字用来创建一个普通类或者内建对象的子类。
 
-继承的 `.prototype` 必须是一个{{jsxref("Object")}} 或者 {{jsxref("null")}}。
+继承的 `.prototype` 必须是一个 {{jsxref("Object")}} 或者 {{jsxref("null")}}。
 
 ## 示例
 
