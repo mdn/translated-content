@@ -100,23 +100,23 @@ Windows で選択するオプションに関しては、WSL をインストー�
 
 コマンドラインから利用できるツールは豊富にありますが、[Visual Studio Code](https://code.visualstudio.com/) などのツールを使用している場合は、プロキシとして使用できる拡張機能も多数あります。 端末を直接使用せずに端末コマンドを使用します。 ただし、やりたいことすべてに対応するコードエディター拡張機能が見つかるわけではありません。最終的には、ターミナルである程度の経験を積む必要があります。
 
-## Basic built-in terminal commands
+## 基本的な組み込み端末コマンド
 
-Enough talk — let's start looking at some terminal commands! Out of the box, here are just a few of the things the command line can do, along with the names of relevant tools in each case:
+説明はもう十分です — いくつかの端末コマンドを見てみましょう! コマンドラインですぐに実行できることのほんの一部を、それぞれの場合に関連するツールの名前とともに以下に示します。
 
-- Navigate your computer's file system along with base-level tasks such as create, copy, rename, and delete:
+- 作成、コピー、名前変更、削除などの基本レベルのタスクとともに、コンピューターのファイル システムをナビゲートします。
 
-  - Move around your directory structure: `cd`
-  - Create directories: `mkdir`
-  - Create files (and modify their metadata): `touch`
-  - Copy files: `cp`
-  - Move files: `mv`
-  - Delete files or directories: `rm`
+  - ディレクトリを移動: `cd`
+  - ディレクトリの作成: `mkdir`
+  - ファイルを作成 (およびそのメタデータを変更): `touch`
+  - ファイルのコピー: `cp`
+  - ファイルの移動: `mv`
+  - ファイルまたはディレクトリの削除: `rm`
 
-- Download files found at specific URLs: `curl`
-- Search for fragments of text inside larger bodies of text: `grep`
-- View a file's contents page by page: `less`, `cat`
-- Manipulate and transform streams of text (for example changing all the instances of `<div>`s in an HTML file to `<article>`): `awk`, `tr`, `sed`
+- 特定の URL にあるファイルのダウンロードs: `curl`
+- より大きなテキスト本文内のテキストの断片を検索: `grep`
+- ファイルの内容をページごとに表示: `less`, `cat`
+- テキストのストリームを操作および変換 (たとえば、HTML ファイル内の `<div>` のすべてのインスタンスを `<article>` に変更します。): `awk`, `tr`, `sed`
 
 > **Note:** There are a number of good tutorials on the web that go much deeper into the command line on the web — this is only a brief introduction!
 
