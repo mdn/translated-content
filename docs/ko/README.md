@@ -73,7 +73,7 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 - [메타 데이터 안내서](./guides/meta-data-guide.md)
 - [용어 안내서](./guides/glossary-guide.md)
 - [macro 안내서](./guides/macro-guide.md)
-- [markdown lint 안내서](./guides/markdown-lint-guide.md)
+- [github actions 안내서](./guides/github-actions-guide.md)
 - [기타 안내서](./guides/etc-guide.md)
 
 다음은 리뷰어를 위한 안내서입니다.
