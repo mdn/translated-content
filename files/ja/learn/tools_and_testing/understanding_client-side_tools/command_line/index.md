@@ -50,15 +50,15 @@ l10n:
 
 とにかく、ターミナルはすぐにはなくなりません。
 
-### What does the terminal look like?
+### ターミナルはどのように見えますか？
 
-Below you can see some of the different flavors of programs that are available that can get you to a terminal.
+以下に、端末にアクセスできるさまざまな種類のプログラムをいくつか示します。
 
-The next images show the command prompts available in Windows — there's a good range of options from the "cmd" program to "powershell" — which can be run from the start menu by typing the program name.
+次の画像は、Windows で使用できるコマンドプロンプトを示しています。「cmd」プログラムから「powershell」まで、さまざまなオプションがあり、プログラム名を入力してスタート メニューから実行できます。
 
 ![A vanilla windows cmd line window, and a windows powershell window](win-terminals.png)
 
-And below, you can see the macOS terminal application.
+そして、その下にmacOS ターミナル アプリケーションが表示されます。
 
 ![A basic vanilla macOS terminal](mac-terminal.png)
 
