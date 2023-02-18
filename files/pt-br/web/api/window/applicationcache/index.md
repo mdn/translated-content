@@ -21,7 +21,7 @@ cache = window.applicationCache
 
 ## Especificação
 
-{{Specifications}}
+Não faz parte de denhuma especificação.
 
 ## Compatibilidade com navegadores
 

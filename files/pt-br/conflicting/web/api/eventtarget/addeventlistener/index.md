@@ -35,7 +35,7 @@ Conforme a interface for marcada com a flag `[function]`, todos os objetos [Func
 
 ## Especificação
 
-{{Specifications}}
+Não faz parte de denhuma especificação.
 
 ## Compatibilidade com navegadores
 

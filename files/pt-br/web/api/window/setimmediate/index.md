@@ -37,7 +37,7 @@ Todas essas técnicas são incorporadas em um [setImmediate polyfill](https://gi
 
 ## Especificação
 
-{{Specifications}}
+Não faz parte de denhuma especificação.
 
 ## Compatibilidade com navegadores
 
