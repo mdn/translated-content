@@ -475,15 +475,3 @@ HTML 은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 �
 HTML 텍스트 시맨틱에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 [HTML element reference](/ko/docs/Web/HTML/Element) 를 살펴보십시오.([Inline text semantics](/ko/docs/Web/HTML/Element#Inline_text_semantics) 섹션은 시작하기에 좋은 장소입니다.). 다음 문서에서는 HTML 문서의 다른 부분을 구성하는 데 사용할 HTML 요소를 살펴 보겠습니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/ko/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/ko/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
