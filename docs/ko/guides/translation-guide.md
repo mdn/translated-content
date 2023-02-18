@@ -1,5 +1,17 @@
 # 번역 안내서
 
+## 문서 연결 경로
+
+한글 문서가 존재하지 않더라도 `/en-US` 문서로 넘겨주기 때문에 한국 문서의 모든 경로는 `/ko`로 표기합니다.
+
+```
+// bad
+[`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+// good
+[`Array`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)
+```
+
 ## code block 번역
 
 코드 블록을 번역 할 때 주석, 문자열, 변수 이름 및 출력물을 번역하는 것이 좋습니다.
