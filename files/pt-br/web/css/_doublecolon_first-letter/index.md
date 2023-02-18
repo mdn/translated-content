@@ -38,7 +38,7 @@ Como toda essa lista será estendida no futuro, é recomendado que você não us
 >
 > Como vários navegadores já implementaram a versão CSS 2 em uma versão de lançamento, todos os navegadores que suportam a sintaxe de dois pontos também suportam a antiga sintaxe de dois pontos.
 >
-> > **Warning:** Mas isso pode mudar, portanto use SEMPRE `::` para pseudolementos
+> > **Aviso:** Mas isso pode mudar, portanto use SEMPRE `::` para pseudolementos
 > >
 > > ...a não se que você **precise muito** que seu código seja compatível com Internet Explore 8, então use um carectere de dois pontos.
 
