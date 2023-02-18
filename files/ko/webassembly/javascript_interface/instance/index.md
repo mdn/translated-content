@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Instance
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Instance`** 개체는 [WebAssembly.Module](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)의 상태 저장되고 실행 가능한 인스턴스입니다. `Instance` 객체에는 JavaScript에서 WebAssembly 코드로 호출 할 수있는 모든 [Exported WebAssembly functions](/ko/docs/WebAssembly/Exported_functions)가 포함되어 있습니다.
 

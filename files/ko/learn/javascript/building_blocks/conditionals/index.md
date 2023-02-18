@@ -772,13 +772,3 @@ textarea.onkeyup = function(){
 - [삼항연산자 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
-
-## 이 과정에서는
-
-- **판단 내리기 — 조건문**
-- [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [함수 — 코드 재사용](/ko/docs/Learn/JavaScript/Building_blocks/Functions)
-- [함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [함수 반환 값](/ko/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events)
-- [이미지 갤러리](/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery)

@@ -22,5 +22,4 @@ WHATWG (_Рабочая группа по вебу, гипертексту, пр
 
 ### Общие знания
 
-- {{Interwiki("wikipedia", "WHATWG")}} на Wikipedia
 - [Сайт WHATWG](https://whatwg.org/)

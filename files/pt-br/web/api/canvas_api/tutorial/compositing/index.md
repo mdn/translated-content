@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 original_slug: Web/Guide/HTML/Canvas_tutorial/Compositing
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 Em todo os nossos [exemplos prévios](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Transformations), formas estavam sempre desenhadas uma em cima das outras. Este é mais do que adequado para a maioria das situações, mas é limita a ordem no qual a composição das formas são construídas.
 

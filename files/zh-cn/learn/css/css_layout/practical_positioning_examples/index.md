@@ -315,7 +315,7 @@ function setTabHandler(tab, tabPos) {
 
 > **备注：** 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)预览完成后的效果，仔细看看哪些部分是你在这篇文章里你要制作的。
 
-在一开始，老规矩在我们的 Githib 代码仓库拷贝[hideen-info-panel-start.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)([源码](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html))。这个例子并没有用先前的例子，所以我们需要一个新的开始文件。让我们来仔细观察一下这个 HTML 文件：
+在一开始，老规矩在我们的 GitHub 代码仓库拷贝 [hideen-info-panel-start.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)（[源码](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。这个例子并没有用先前的例子，所以我们需要一个新的开始文件。让我们来仔细观察一下这个 HTML 文件：
 
 ```css
 <label for="toggle">❔</label>
@@ -412,12 +412,3 @@ input[type=checkbox]:checked + aside {
 这样完成了我们对定位的关注——现在，你应该理解基本机制的工作原理，同样理解了怎样应用这些知识去构建一些有趣的用户界面功能，不要由于你还未完全理解所有的知识而担心——定位是一个相当高级的话题，你可以随时读这篇文章来帮助你的理解。下一个主题我们将转向 Flexbox。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## 在本单元中
-
-- [Introduction to CSS layout](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [Floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)

@@ -8,7 +8,7 @@ tags:
   - wysiwyg
 translation_of: Web/API/Document/execCommand
 ---
-{{ApiRef("DOM")}}{{Obsolete_header}}
+{{ApiRef("DOM")}}
 
 ## Обзор
 

@@ -537,9 +537,9 @@ setTimeout( () => {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.arrow_functions")}}
+{{Compat}}
 
 ## Ve también
 

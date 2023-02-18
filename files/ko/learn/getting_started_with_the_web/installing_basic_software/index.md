@@ -45,14 +45,3 @@ original_slug: Learn/Getting_started_with_the_web/기본_소프트웨어_설치�
 어떤 예제는 제대로 작동하려면 웹 서버가 필요합니다. [로컬 테스트 서버 설치하기](/ko/docs/Learn/Common_questions/set_up_a_local_testing_server)에서 설치하는 방법을 알아보세요!
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
-
-## 이번 과정에서는
-
-- [기본 소프트웨어 설치하기](/ko/docs/Learn/Getting_started_with_the_web/%EA%B8%B0%EB%B3%B8_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0)
-- [What will your website look like?](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/ko/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/ko/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/ko/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/ko/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/ko/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

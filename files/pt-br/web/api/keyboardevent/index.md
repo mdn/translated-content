@@ -171,7 +171,7 @@ In these environments, unfortunately, there's no way for web content to tell the
 
 #### Auto-repeat handling prior to Gecko 4.0
 
-Before Gecko 4.0 {{geckoRelease('4.0')}}, keyboard handling was less consistent across platforms.
+Before Gecko 4.0, keyboard handling was less consistent across platforms.
 
 - Windows
   - : Auto-repeat behavior is the same as in Gecko 4.0 and later.

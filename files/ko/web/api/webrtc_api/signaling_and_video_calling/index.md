@@ -321,7 +321,7 @@ function createPeerConnection() {
 
 웹서버와 같은 호스트에 STUN/TURN 서버를 돌리고 있기 때문에, STUN/TURN 서버의 도메인 이름을 [`location.hostname`](/en-US/docs/Web/API/Location/hostname)을 사용하여 설정했다. 만약 다른 서버의 STUN/TURN 서버를 사용한다면 urls 값을 그 서버로 바꿔주면 된다.
 
-`RTCPeerConnection`을 만들 때, call을 구성하는 파라미터들을 명시해줘야한다. 가장 중요한 것은 STUN/TURN 서버의 리스트([ICE](/en-US/docs/Glossary/ICE) layer에서 caller와 callee의 경로를 찾는데 사용되는 서버)를 담고 있는 `iceServers`이다**(주의. 웹소켓을 이용한 시그널링 서버와 전혀 다른 개념이다)**. WebRTC는 두 피어가 방화벽이나 NAT 뒤에 숨어 있어도, 각 피어들의 서로 연결될 수 있도록 피어간 연결 경로를 찾아주는 프로토콜(STUN, TURN)을 사용한다.
+`RTCPeerConnection`을 만들 때, call을 구성하는 파라미터들을 명시해줘야한다. 가장 중요한 것은 STUN/TURN 서버의 리스트([ICE](/en-US/docs/Glossary/ICE) layer에서 caller와 callee의 경로를 찾는데 사용되는 서버)를 담고 있는 `iceServers`이다. **(주의. 웹소켓을 이용한 시그널링 서버와 전혀 다른 개념이다)**. WebRTC는 두 피어가 방화벽이나 NAT 뒤에 숨어 있어도, 각 피어들의 서로 연결될 수 있도록 피어간 연결 경로를 찾아주는 프로토콜(STUN, TURN)을 사용한다.
 
 > **참고:** 직접 만든 혹은 사용할 권한을 가지고 있는 STUN/TURN 서버를 사용해야 한다.
 

@@ -11,10 +11,6 @@ original_slug: Глоссарий/Specification
 
 ## Узнайте больше
 
-### Основная информация
-
-- {{Interwiki("wikipedia", "Specification")}} на Википедия
-
 ### Technical reference
 
 - [Open Web platform specifications](/ru/docs/Web/Specification_list)

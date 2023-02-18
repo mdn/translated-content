@@ -29,7 +29,7 @@ battery.addEventListener("levelchange", updateBatteryStatus);
 updateBatteryStatus();
 ```
 
-명세서의 예제도 **[확인](http://dev.w3.org/2009/dap/system-info/battery-status.html#introduction)**해보세요.
+명세서의 예제도 [**확인**](http://dev.w3.org/2009/dap/system-info/battery-status.html#introduction)해보세요.
 
 ## 명세
 

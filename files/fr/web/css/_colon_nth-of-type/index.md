@@ -28,7 +28,7 @@ p:nth-of-type(4n) {
 
 La pseudo-classe `nth-of-type` ne prend qu'un argument qui représente le motif de répétition pour les éléments ciblés.
 
-Pour une explication plus détaillée de sa syntax voir {{Cssxref(":nth-child")}}
+Pour une explication plus détaillée de sa syntaxe voir {{Cssxref(":nth-child")}}
 
 ### Syntaxe formelle
 

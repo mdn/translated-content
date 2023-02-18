@@ -5,8 +5,6 @@ slug: Web/API/Notification/close_event
 
 {{APIRef("Web Notifications")}}
 
-## Summary
-
 {{domxref("Notification")}} 接口的 **onclose** 属性指定一个事件侦听器来接收 `close` 事件。
 
 当一个{{domxref("Notification")}}关闭时，会发生这些事件。
