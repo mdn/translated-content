@@ -311,24 +311,3 @@ html {
 다음 단원에서는 [배경과 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)를 사용하여 평범한 보이는 박스를 더욱 흥미롭게 보이려면 어떤 방법이 있는지 살펴보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## 이번 단위에는
-
-1. [계단식 나열과 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택기](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [유형과 클레스, 아이디 선택기 selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [딸린 속성 선택기](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [의사 클래스와 의사 요소](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [조합기](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/%EC%83%81%EC%9E%90_%EB%AA%A8%EB%8D%B8)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [서로 다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [대열이탈 콘텐츠](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [속성값과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 항목 크기 설정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지와 미디아, 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [테이블 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 체계화](/ko/docs/Learn/CSS/Building_blocks/Organizing)

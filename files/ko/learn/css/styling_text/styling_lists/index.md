@@ -386,11 +386,3 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article we'll get on to link styling techniques.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## In this module
-
-- [Fundamental text and font styling](/ko/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/ko/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/ko/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/ko/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
