@@ -5826,10 +5826,6 @@
     "modified": "2019-03-23T22:14:36.556Z",
     "contributors": ["UshioSan"]
   },
-  "Web/API/Worker": {
-    "modified": "2019-03-23T22:48:01.797Z",
-    "contributors": ["benjroy"]
-  },
   "Web/API/Worker/terminate": {
     "modified": "2019-03-23T22:19:14.265Z",
     "contributors": ["AzazelN28"]
