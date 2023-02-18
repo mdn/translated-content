@@ -474,8 +474,8 @@ Prettier を使用すると、自動化を実現する方法がいくつかあ�
 
 上記の提案のいくつかは、Prettier で行ったように npm を使用してインストールする必要がある場合があることに注意してください。
 
-## Summary
+## まとめ
 
-That brings us to the end of our brief tour of the terminal/command line. Next up we'll be looking in more detail at package managers, and what we can do with them.
+これでターミナル/コマンドラインの簡単なツアーは終了です。 次はパッケージマネージャーで何ができるかについて詳しく見ていきます。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
