@@ -12,7 +12,11 @@
 [`Array`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)
 ```
 
-## code block 번역
+## Inline code 
+
+원문의 인라인 코드는 번역하지 않습니다.
+
+## Block code
 
 코드 블록을 번역 할 때 주석, 문자열, 변수 이름 및 출력물을 번역하는 것이 좋습니다.
 
