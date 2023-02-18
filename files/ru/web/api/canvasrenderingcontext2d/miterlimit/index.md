@@ -84,7 +84,7 @@ window.addEventListener("load", drawCanvas);
 
 ### Gecko-specific notes
 
-- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `miterLimit` to a negative value no longer throws an exception; instead, it properly ignores non-positive values.
+- Starting Gecko 2.0, setting `miterLimit` to a negative value no longer throws an exception; instead, it properly ignores non-positive values.
 
 ## See also
 

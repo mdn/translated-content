@@ -155,11 +155,3 @@ p {
 恭喜你完成本模块，下面的文章你将会[使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)来完成覆盖样式的案例，在这个过程中测试一些 CSS 样式。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## 模块目标
-
-1. [什么是 CSS](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [入门 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 的结构](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 如何运行](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [使用新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

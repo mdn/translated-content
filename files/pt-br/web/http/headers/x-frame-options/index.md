@@ -41,7 +41,7 @@ Se você especifica `DENY`, não somente tentativas em carregar a página em um 
   - : A página não pode ser mostrada em um enquadramento, independente do site que esteja tentando fazer isso.
 - `SAMEORIGIN`
   - : A página só pode ser exibida em um enquadramento se for da mesma origem da página em si. A especificação deixa a cargo do navegador para decidir se esta opção se aplica ao nível mais alto, ao parente, ou à cadeia inteira, entretanto é discutido se a opção não é muito útil a não ser que todos os ancestrias estejam na mesma origem (veja {{bug(725490)}}). Veja também [Browser compatibility](#browser_compatibility) para mais detalhes de suporte.
-- `ALLOW-FROM uri` {{obsolete_inline()}}
+- `ALLOW-FROM uri`
   - : Esta é uma diretiva obsoleta que não funciona mais em navegadores modernos. Não a utilize. Em navegadores legado que a suportam, a página pode ser mostrada em um enquadramento somente na URI de origem especificada. Note que implementação legada do Firefox isso ainda sofria do mesmo problema que a `SAMEORIGIN` sofreu — ela não checa se os enquadramentos ancestrais para ver se eles são da mesma origem. O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}} tem a diretiva `frame-ancestors` que você pode usar ao invés disso.
 
 ## Exemplos

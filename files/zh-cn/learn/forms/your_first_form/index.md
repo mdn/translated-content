@@ -371,19 +371,6 @@ button {
 
 {{NextMenu("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms")}}
 
-## 本章目录
-
-- [创建我的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 web 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [样式化 web 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [高级 form 样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
 ### 高级主题
 
 - [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)

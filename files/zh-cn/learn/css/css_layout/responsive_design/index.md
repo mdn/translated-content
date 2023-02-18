@@ -290,18 +290,3 @@ h1 {
 在这些课里学到的布局方式的帮助下，实现响应式设计也变得愈加简单。如果你今天新近了解 Web 开发，那么你与响应式设计早期相比，手边有多得多的工具。因而，你有必要检查下你所引用的任何材料的年纪。尽管历史上的文章仍然有用，现代的 CSS 和 HTML 的使用让创建一个优雅且实用的设计变得远远更加容易，且无论你的访客使用什么设备浏览网站。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
-
-## 模块目录
-
-- [介绍 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [媒体查询入门指南](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
-- [传统布局方法](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧浏览器](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基本布局掌握测验](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -33,6 +33,10 @@ void handleEvent(
 
 Conforme a interface for marcada com a flag `[function]`, todos os objetos [Function](/en/JavaScript/Reference/Global_Objects/Function "en/Core_JavaScript_1.5_Reference/Global_Objects/Function") automaticamente implementtam essa interface. Chamar o método [handleEvent](#handleevent) em uma dessas implementaçōes automaticamente invoca a função.
 
-## Veja também
+## Especificação
 
-- {{ spec("https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}
+Não faz parte de denhuma especificação.
+
+## Compatibilidade com navegadores
+
+{{Compat}}

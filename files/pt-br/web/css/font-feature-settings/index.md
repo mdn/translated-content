@@ -9,7 +9,7 @@ slug: Web/CSS/font-feature-settings
 
 A propriedade **`font-feature-settings`** do CSS te dá controle sobre tipografia avançada nas fontes do tipo OpenType.
 
-> **Note:** **Nota:** Sempre que possível, deve usar o {{cssxref("font-variant")}} propriedade abreviada ou uma propriedade extensa associada, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.
+> **Nota:** Sempre que possível, deve usar o {{cssxref("font-variant")}} propriedade abreviada ou uma propriedade extensa associada, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.
 >
 > Esta propriedade é um recurso de baixo nível projetado para lidar com casos especiais onde não existe outra maneira de habilitar ou acessar um recurso de fonte OpenType.
 >

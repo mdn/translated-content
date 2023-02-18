@@ -4,7 +4,7 @@ slug: conflicting/Web/HTTP/Headers/Cookie
 original_slug: Web/HTTP/Headers/Cookie2
 ---
 
-{{HTTPSidebar}} {{obsolete_header}}
+{{HTTPSidebar}}
 
 O obsoleto cabeçalho de requisição HTTP **`Cookie2`** costumava aconselhar o servidor que o agente de usuário entende _cookies_ de "novo estilo", mas atualmente os agentes de usuário vão usar o cabeçalho {{HTTPHeader("Cookie")}} ao invés disso, não este.
 

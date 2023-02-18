@@ -567,12 +567,3 @@ Most modern Web APIs are promise-based, so you'll need to understand promises to
 - [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
-
-## In this module
-
-- [General asynchronous programming concepts](/zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Introducing asynchronous JavaScript](/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Cooperative asynchronous JavaScript: Timeouts and intervals](/zh-TW/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Graceful asynchronous programming with Promises](/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Making asynchronous programming easier with async and await](/zh-TW/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choosing the right approach](/zh-TW/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

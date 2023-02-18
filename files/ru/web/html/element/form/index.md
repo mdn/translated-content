@@ -22,7 +22,7 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
 
 Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("accept")}} {{HTMLVersionInline(4)}} {{obsolete_inline}}
+- {{htmlattrdef("accept")}} {{HTMLVersionInline(4)}}
   - : Список типов содержимого, разделённых запятой, которые принимает сервер.
     > **Примечание:** Этот атрибут был удалён в HTML5 и его не следует больше использовать. Взамен, используйте {{htmlattrxref("accept", "input")}} атрибут заданного {{HTMLElement("input")}} элемента.
 - {{htmlattrdef("accept-charset")}}

@@ -528,11 +528,3 @@ padding- left: 10px;
 了解一下浏览器如何将 HTML 和 CSS 转换成网页是很有用的，所以在下一篇文章——[CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)——我们将看看这个过程。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## 在这个模块中
-
-1. [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [开始使用 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3. [如何构建 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)
