@@ -40,7 +40,7 @@ l10n:
 表面的には、それらは歓迎とはほど遠いものですが、それらを使用してできることはたくさんあります。少しのガイダンスと練習を行うことで、それらをより簡単に使用できるようになることをお約束します!
 これが、私たちがこの章を提供している理由です — この一見不親切な環境であなたが始めるのを助けるために.
 
-### ターミナルはどこから来たのですか？
+### ターミナルはどこから来たのか？
 
 端末は 1950 年代から 60 年代頃に誕生し、その元の形は現在私たちが使用しているものとはまったく似ていません (感謝すべきことです)。 ウィキペディアの[コンピューターターミナル](https://en.wikipedia.org/wiki/Computer_terminal) のエントリで歴史の一部を読むことができます。
 
@@ -92,7 +92,7 @@ Windows でターミナル エクスペリエンスを提供するための優�
 
 Windows で選択するオプションに関しては、WSL をインストールすることを強くお勧めします。 デフォルトのコマンド プロンプト (`cmd`) をそのまま使用することもできます。多くのツールは正常に動作しますが、Unix ツールとの同等性が向上すると、すべてがより簡単になります。
 
-#### 補足: コマンドラインとターミナルの違いは何ですか?
+#### 補足: コマンドラインとターミナルの違いは何か?
 
 通常、これら 2 つの用語は同じ意味で使用されます。 技術的には、ターミナルはシェルを起動して接続するソフトウェアです。 シェルは、セッションおよびセッション環境です (プロンプトやショートカットなどをカスタマイズできます)。 コマンドラインは、コマンドを入力してカーソルが点滅するリテラル行です。
 
@@ -231,35 +231,35 @@ ls -l
 
 次のセクションでは、それを 1 段階 (実際には数段階) 上げて、コマンド ラインでツールを接続する方法を見て、通常のデスクトップ ユーザー インターフェースよりもターミナルがどのように有利になるかを実際に見てみましょう。
 
-## Connecting commands together with pipes
+## コマンドをパイプで接続する
 
-The terminal really comes into its own when you start to chain commands together using the `|` (pipe) symbol. Let's look at a very quick example of what this means.
+`|` (パイプ) 記号を使用してコマンドを連鎖させ始めると、ターミナルは真価を発揮します。 これが何を意味するかの非常に簡単な例を見てみましょう。
 
-We've already looked at `ls`, which outputs the contents of the current directory:
+現在のディレクトリの内容を出力する `ls` については既に説明しました。:
 
 ```bash
 ls
 ```
 
-But what if we wanted to quickly count the number of files and directories inside the current directory? `ls` can't do that on its own.
+しかし、現在のディレクトリ内のファイルとディレクトリの数をすばやくカウントしたい場合はどうでしょうか? `ls` だけではできません。
 
-There is another Unix tool available called `wc`. This counts the number of words, lines, characters, or bytes of whatever is inputted into it. This can be a text file — the below example outputs the number of lines in `myfile.txt`:
+`wc` と呼ばれる利用可能な別の Unix ツールがあります。 これは、入力されたものの単語、行、文字、またはバイトの数をカウントします。 これはテキスト ファイルである可能性があります — 以下の例は、`myfile.txt` の行数を出力します。:
 
 ```bash
 wc -l myfile.txt
 ```
 
-But it can also count the number of lines of whatever output is **piped** into it. For example, the below command counts the number of lines outputted by the `ls` command (what it would normally print to the terminal if run on its own) and outputs that count to the terminal instead:
+しかし、**パイプ**された出力の行数をカウントすることもできます。 たとえば、以下のコマンドは、`ls` コマンドによって出力された行数 (通常、単独で実行した場合に端末に出力されるもの) をカウントし、代わりにそのカウントを端末に出力します。:
 
 ```bash
 ls | wc -l
 ```
 
-Since `ls` prints each file or directory on its own line, that effectively gives us a directory and file count.
+`ls` は各ファイルまたはディレクトリをそれぞれの行に出力するため、実質的にディレクトリとファイルの数がわかります。
 
-So what is going on here? A general philosophy of (unix) command line tools is that they print text to the terminal (also referred to "printing to standard output" or `STDOUT`). A good deal of commands can also read content from streamed input (known as "standard input" or `STDIN`).
+それで、ここで何が起こっているのか？ (unix) コマンド ライン ツールの一般的な考え方は、テキストを端末に出力することです (「標準出力への出力」または `STDOUT` とも呼ばれます)。 多くのコマンドは、ストリーム入力 (「標準入力」または `STDIN` として知られている) からコンテンツを読み取ることもできます。
 
-The pipe operator can _connect_ these inputs and outputs together, allowing us to build up increasingly more complex operations to suit our needs — the output from one command can become the input to the next command. In this case, `ls` would normally print its output to `STDOUT`, but instead `ls`'s output is being piped into `wc`, which takes that output as an input, counting the number of lines it contains, and prints that count to `STDOUT` instead.
+パイプ演算子は、これらの入力と出力を一緒に _接続_ できるため、ニーズに合わせてますます複雑な操作を構築できます — 1 つのコマンドからの出力が次のコマンドへの入力になる可能性があります。 この場合、`ls` は通常その出力を `STDOUT` に出力しますが、代わりに `ls` の出力は `wc` にパイプされます。 代わりに、そのカウントを `STDOUT` に出力します。
 
 ## A slightly more complex example
 
