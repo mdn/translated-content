@@ -145,7 +145,7 @@ Você pode referenciar aos argumentos da função dentro da função utilizando 
 
 - [`arguments`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments): Um objeto array-like contendo os argumentos passados para a função atualmente em execução.
 - [`arguments.callee`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: A função atualmente em execução.
-- [`arguments.caller`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) : A função que invocou a função atualmente em execução.
+- [`arguments.caller`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller): A função que invocou a função atualmente em execução.
 - [`arguments.length`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): O número de argumentos passados para a função.
 
 ## Definindo Métodos de Funções
