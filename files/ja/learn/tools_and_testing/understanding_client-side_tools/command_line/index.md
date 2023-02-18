@@ -325,30 +325,30 @@ Prettier は、「いくつかのオプション」しかない独自のコー�
 オプションが少ないほど、シンプルになる傾向があります。
 複雑さの点でツールが手に負えなくなることがあることを考えると、「選択肢が少ない」ことは非常に魅力的です。
 
-### Where to install our CLI tools?
+### CLI ツールをどこにインストールしますか?
 
-Before we dive into installing Prettier, there's a question to answer — "where should we install it?"
+Prettier のインストールに飛び込む前に、答えるべき質問があります — 「どこにインストールすればよいですか?」
 
-With `npm` we have the choice of installing tools globally — so we can access them anywhere — or locally to the current project directory.
+`npm` を使用すると、ツールをグローバルにインストールする (どこからでもアクセスできるようにする) か、現在のプロジェクト ディレクトリにローカルにインストールするかを選択できます。
 
-There are pros and cons each way — and the following lists of pros and cons for installing globally are far from exhaustive.
+それぞれに長所と短所があります。グローバルにインストールする場合の以下の長所と短所のリストは、すべてを網羅しているわけではありません。
 
-**Pros of installing globally:**
+**グローバルにインストールする利点:**
 
-- Accessible anywhere in your terminal
-- Only install once
-- Uses less disk space
-- Always the same version
-- Feels like any other unix command
+- 端末のどこからでもアクセス可能
+- 一度だけインストール
+- 使用するディスク容量が少ない
+- 常に同じバージョン
+- 他の UNIX コマンドと同じ感覚
 
-**Cons of installing globally:**
+**グローバルにインストールすることの短所:**
 
-- May not be compatible with your project's codebase
-- Other developers in your team won't have access to these tools, for example if you are sharing the codebase over a tool like git.
-- Related to the previous point, it makes project code harder to replicate (if you install your tools locally, they can be set up as dependencies and installed with <code>npm install</code>).
+- プロジェクトのコードベースと互換性がない可能性があります。
+- チーム内の他の開発者は、これらのツールにアクセスできません。たとえば、git などのツールでコードベースを共有している場合です。
+- 前のポイントに関連して、プロジェクト コードの複製が難しくなります (ツールをローカルにインストールする場合、ツールを依存関係として設定し、<code>npm install</code> でインストールできます)。
 
-Although the _cons_ list is shorter, the negative impact of global installing is potentially much larger than the benefits.
-Here we'll install locally, but feel free to install globally once you understand the relative risks.
+_cons_ リストは短くなりますが、グローバル インストールのマイナスの影響は、メリットよりもはるかに大きい可能性があります。
+ここではローカルにインストールしますが、相対的なリスクを理解したら、自由にグローバルにインストールしてください。
 
 ### Installing Prettier
 
