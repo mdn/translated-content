@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-開発プロセスでは、ターミナル (または「コマンド ライン」 — これらは事実上同じことです) でいくつかのコマンドを実行する必要があることは間違いありません。 この記事では、ターミナルの概要、ターミナルに入力する必要がある重要なコマンド、コマンドを連結する方法、および独自のコマンド ライン インターフェイス (CLI) ツールを追加する方法について説明します。
+開発プロセスでは、ターミナル (または「コマンドライン」 — これらは事実上同じことです) でいくつかのコマンドを実行する必要があることは間違いありません。 この記事では、ターミナルの概要、ターミナルに入力する必要がある重要なコマンド、コマンドを連結する方法、および独自のコマンドライン インターフェイス (CLI) ツールを追加する方法について説明します。
 
 <table>
   <tbody>
@@ -20,25 +20,25 @@ l10n:
     <tr>
       <th scope="row">目的：</th>
       <td>
-        ターミナル／コマンド ラインとは何か、学ぶべき基本的なコマンドは何か、新しいコマンド ライン ツールをインストールする方法を理解します。。
+        ターミナル／コマンドラインとは何か、学ぶべき基本的なコマンドは何か、新しいコマンドラインツールをインストールする方法を理解します。。
       </td>
     </tr>
   </tbody>
 </table>
 
-## Welcome to the terminal
+## ターミナルへようこそ 
 
-The terminal is a text interface for executing text-based programs. If you're running any tooling for web development there's a near-guaranteed chance that you'll have to pop open the command line and run some commands to use your chosen tools (you'll often see such tools referred to as **CLI tools** — command line interface tools).
+端末は、テキストベースのプログラムを実行するためのテキスト インターフェイスです。 Web 開発用のツールを実行している場合、選択したツールを使用するために、コマンドラインを開いていくつかのコマンドを実行する必要がある可能性がほぼ保証されています (**CLI ツール**と呼ばれるツールをよく見かけます — コマンドラインインターフェイスツール）。
 
-A large number of tools can be used by typing commands into the command line; many come pre-installed on your system, and a huge number of others are installable from package registries.
-Package registries are like app stores, but (mostly) for command line based tools and software.
-We'll see how to install some tools later on in this chapter, and we'll learn more about package registries in the next chapter.
+コマンドラインにコマンドを入力すると、多数のツールを使用できます。 多くはシステムにプリインストールされており、その他の膨大な数はパッケージレジストリからインストールできます。
+パッケージレジストリはアプリストアに似ていますが、(ほとんどの場合) コマンドラインベースのツールとソフトウェア用です。
+この章の後半でいくつかのツールをインストールする方法を説明し、次の章でパッケージレジストリについて詳しく学びます。
 
-One of the biggest criticisms of the command line is that it lacks hugely in user experience.
-Viewing the command line for the first time can be a daunting experience: a blank screen and a blinking cursor, with very little obvious help available on what to do.
+コマンドラインに対する最大の批判の 1 つは、ユーザーエクスペリエンスが大幅に不足していることです。
+コマンドラインを初めて表示するときは、気が遠くなるような体験になる可能性があります。空白の画面と点滅するカーソルが表示され、何をすべきかについての明確なヘルプはほとんどありません。
 
-On the surface, they're far from welcoming but there's a lot you can do with them, and we promise that, with a bit of guidance and practice, using them will get easier!
-This is why we are providing this chapter — to help you get started in this seemingly unfriendly environment.
+表面的には、それらは歓迎とはほど遠いものですが、それらを使用してできることはたくさんあります。少しのガイダンスと練習を行うことで、それらをより簡単に使用できるようになることをお約束します!
+これが、私たちがこの章を提供している理由です — この一見不親切な環境であなたが始めるのを助けるために.
 
 ### Where did the terminal come from?
 
