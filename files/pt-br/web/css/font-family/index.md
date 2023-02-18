@@ -13,7 +13,7 @@ Programadores WEB devem sempre adicionar pelo menos uma família genérica para 
 
 É também conveniente usar de antemão a propriedade {{cssxref("font")}} para definir a `font-size` e outras propriedades relacionadas a fonte todas de uma só vez.
 
-> **Note:** **Nota:** A propriedade `font-family` especifica a lista de fontes, da prioridade mais alta para a mais baixa.```
+> **Nota:** A propriedade `font-family` especifica a lista de fontes, da prioridade mais alta para a mais baixa.```
 > A seleção de fontes não para simplesmente na primeira fonte nomeada na lista que está no sistema do usuário. Em vez disso, a seleção de fontes é feita um caractere de cada vez, para que, se uma fonte disponível não tiver um glifo que possa exibir um caracter necessário, as fontes disponíveis mais tarde sejam tentadas. No entanto, isso não funciona no Internet Explorer 6 ou anterior.
 >
 > Quando uma fonte está disponível apenas em alguns estilos, variantes ou tamanhos, essas propriedades também podem influenciar qual família de fontes é escolhida.

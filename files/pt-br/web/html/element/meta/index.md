@@ -63,7 +63,7 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-> **Note:** **Nota:** o atributo global {{htmlattrxref("name", "meta")}} tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo {{htmlattrxref("itemprop", "meta")}} não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}}.
+> **Nota:** o atributo global {{htmlattrxref("name", "meta")}} tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo {{htmlattrxref("itemprop", "meta")}} não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}}.
 
 - {{htmlattrdef("charset")}}
 
@@ -118,7 +118,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
       - : este pragma define um [cookie](/pt-BR/docs/cookie) para a página. este conteúdo deve seguir a sintaxe definida em [IETF HTTP Cookie Specification](https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14).
 
-        > **Note:** **Nota:** não use este pragma está obsoleto. Use HTTP header set-cookie instead.
+        > **Nota:** não use este pragma está obsoleto. Use HTTP header set-cookie instead.
 
 - {{htmlattrdef("name")}}
 
@@ -127,7 +127,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     - `application-name`, define o nome da aplicação que esta rodando na página;
 
-      > **Note:** **Nota:**- Browsers podem usar isso para identificar a aplicação. isso é diferente do elemento {{HTMLElement("title")}}, que geralmente constituí no nome da aplicação, mas também contém informações específicas como o nome do documento ou status;
+      > **Nota:**- Browsers podem usar isso para identificar a aplicação. isso é diferente do elemento {{HTMLElement("title")}}, que geralmente constituí no nome da aplicação, mas também contém informações específicas como o nome do documento ou status;
       >
       > - Webpages simples não deveriam definir application-name meta.
 
@@ -144,9 +144,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `origin-when-crossorigin`    | Envia uma URL completa (sem parâmetros) ao executar uma solicitação de mesma origem, mas envie apenas a origem do documento para outros casos.                                                            |
       | `unsafe-URL`                 | Envia um URL completo (sem parâmetros) ao executar uma solicitação de mesma origem ou origem cruzada.                                                                                                     |
 
-      > **Note:** **Nota:** alguns browsers suportam keywords `always`, `default`, e `never` para referenciar. estes valores estão descontinuados.
+      > **Nota:** alguns browsers suportam keywords `always`, `default`, e `never` para referenciar. estes valores estão descontinuados.
 
-      > **Note:** **Nota:** dinamicamente inseridos `<meta name="referrer">` (por document.write ou appendChild) cria um nao-determinismo quando isso vem para enviar referências ou não. Note também quando muitas politicas conflitantes são definidas, o No-referrer politia é aplicada.
+      > **Nota:** dinamicamente inseridos `<meta name="referrer">` (por document.write ou appendChild) cria um nao-determinismo quando isso vem para enviar referências ou não. Note também quando muitas politicas conflitantes são definidas, o No-referrer politia é aplicada.
 
     o atributo também pode ter um valor retirado de uma extensa lista definida em [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions). Embora nenhum tenha sido formalmente aceito ainda, alguns nomes comumente usados ​​estão entre as propostas:
 

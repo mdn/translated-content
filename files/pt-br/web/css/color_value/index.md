@@ -19,7 +19,7 @@ Associado à cor no espaço sRGB, um valor \<color> também pode consistir de um
 
 Embora os valores de cores CSS sejam definidos com precisão, eles podem aparecer de forma diferente em dispositivos de saída diferentes. A maioria deles não está calibrada e alguns navegadores não suportam o [perfil de cores](https://pt.wikipedia.org/wiki/Perfil_de_cores_ICC) dos dispositivos de saída. Sem estes, a renderização de cores pode variar muito.
 
-> **Note:** **Nota:** A recomendação [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) do W3C aconselha fortemente aos autores web não usarem cor como o único meio para transmitir uma mensagem específica, ação ou resultado. Alguns usuários têm problemas em distinguir cores e as informações transmitidas podem não ser compreendidas. Claro, isso não impede o uso da cor, mas o seu uso apenas como o único meio para descrever certas coisas (veja [Cor e contraste de cor](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast) para mais informações).
+> **Nota:** A recomendação [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) do W3C aconselha fortemente aos autores web não usarem cor como o único meio para transmitir uma mensagem específica, ação ou resultado. Alguns usuários têm problemas em distinguir cores e as informações transmitidas podem não ser compreendidas. Claro, isso não impede o uso da cor, mas o seu uso apenas como o único meio para descrever certas coisas (veja [Cor e contraste de cor](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast) para mais informações).
 
 ## Interpolação
 
@@ -999,7 +999,7 @@ A cor deste texto é a mesma da linha:  <div style="background:currentcolor; hei
 
 ### `rgb()`
 
-> **Note:** **Nota**: Na especificação Módulo de cor CSS Color nível 4, a rgba() foi definida como uma função herdada com gramática e comportamento idênticos à rgb(); na verdade, um apelido. Mais para frente, ambas podem aceitar exatamente os mesmos parâmetros.
+> **Nota:** Na especificação Módulo de cor CSS Color nível 4, a rgba() foi definida como uma função herdada com gramática e comportamento idênticos à rgb(); na verdade, um apelido. Mais para frente, ambas podem aceitar exatamente os mesmos parâmetros.
 
 RGB colors can be expressed through both hexadecimal (prefixed with `#`) and functional (`rgb()`, `rgba()`) notations.
 
