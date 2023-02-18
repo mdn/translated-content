@@ -85,7 +85,7 @@
 
 다만 진짜 강조를 해야하는 상황에는, 따옴표로 강조하고 PR로 소명합니다.
 
-## `:` 쌍점, `;` 쌍반점 안내서
+## `:` 쌍점, `;` 쌍반점
 
 뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-964241518)
 
@@ -135,7 +135,7 @@ The properties of these objects are as follows:
 이 객체들의 속성은 다음과 같습니다.
 ```
 
-## `—` 대시 안내서
+## `—` 대시
 
 `: 쌍점,  ; 쌍반점 안내서`과 같은 맥락에서 `. 온점`으로 치환하는 것을 권장합니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-965500282)
 
