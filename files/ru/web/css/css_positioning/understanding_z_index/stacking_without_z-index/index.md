@@ -111,7 +111,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index
 
 (If the image does not display in CodePen, click the Tidy button in the CSS section)
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index') }}
+{{ EmbedLiveSample('Пример') }}
 
 ### Так же посмотрите
 

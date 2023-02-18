@@ -305,13 +305,3 @@ var myNotification = new Notification('Hello!');
 다음 장에서는 객체지향(OOP) 이론을 배우고, JavaScript 에서는 객체지향이 어떻게 사용되었는지 알아볼 것입니다.
 
 {{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
-
-## 이 과정에서는
-
-- [객체 기본](/ko/docs/Learn/JavaScript/Objects/Basics)
-- [입문자를위한 객체 지향 JavaScript](/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [객체 프로토타입](/ko/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [JavaScript 에서의 상속](/ko/docs/Learn/JavaScript/Objects/Inheritance)
-- [JSON 데이터와 작업](/ko/docs/Learn/JavaScript/Objects/JSON)
-- [객체 생성 실습](/ko/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [bouncing balls demo 에 기능들 추가하기](/ko/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

@@ -319,7 +319,7 @@ Ce sont des propriétés de l'objet window qui peuvent être définies pour éta
 
 _Cette interface hérite des gestionnaires d'événements de l'interface {{domxref("EventTarget")}} et elle implémente les gestionnaires d'événements de {{domxref("WindowEventHandlers")}}._
 
-> **Note :** à partir de {{Gecko ("9.0")}}, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
+> **Note :** à partir de Gecko 9.0, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
 

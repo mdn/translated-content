@@ -290,15 +290,3 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 这就是链接！当你开始查看样式时，你将在稍后的课程中返回链接。接下来是 HTML，我们将返回文本语义，并查看一些更高级/不寻常的功能，你会发现有用的——高级文本格式是你的下一站。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
-
-## 本章目录
-
-- [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [\<head> 标签里有什么？Metadata-HTML 中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML 文本基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高级文字格式](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文档和网站架构](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [测验：标记信件](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [测验：构建网页内容](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

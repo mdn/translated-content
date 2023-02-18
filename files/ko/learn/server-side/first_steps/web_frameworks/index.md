@@ -297,10 +297,3 @@ This article has shown that web frameworks can make it easier to develop and mai
 For the next article in this module we'll change direction slightly and consider web security.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/ko/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/ko/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/ko/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/ko/docs/Learn/Server-side/First_steps/Website_security)

@@ -36,7 +36,7 @@ Notification.requestPermission(callback);
 
 ### Paramètres
 
-- `callback` {{optional_inline}} {{deprecated_inline("gecko46")}}
+- `callback` {{optional_inline}} {{deprecated_inline}}
   - : Une fonction de rappel facultative qui est appelée avec la valeur d'autorisation. Déconseillé en faveur de la valeur de retour de la promesse.
 
 ### Retour

@@ -180,9 +180,9 @@ try {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error")}}
+{{Compat}}
 
 ## Ve también
 

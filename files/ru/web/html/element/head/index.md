@@ -30,7 +30,7 @@ translation_of: Web/HTML/Element/head
 
 К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-- {{htmlattrdef("profile")}} {{obsolete_inline}}
+- {{htmlattrdef("profile")}}
   - : {{glossary("URI")}} одного или более профилей метаданных, разделённых пробелами.
 
 ## Пример

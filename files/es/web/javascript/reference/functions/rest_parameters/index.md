@@ -189,9 +189,9 @@ Para poder usar los métodos de `Array` en el objeto `arguments`, se debe conver
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.rest_parameters")}}
+{{Compat}}
 
 ## Ver también
 

@@ -19,7 +19,7 @@ _intElemClientWidth_ será un entero que corresponde con el **clientWidth** del 
 
 ## Ejemplo
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+![Image:Dimensions-client.png](dimensions-client.png)
 
 ## Especificaciones
 

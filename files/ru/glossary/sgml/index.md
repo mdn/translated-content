@@ -14,5 +14,4 @@ original_slug: Глоссарий/SGML
 
 ## Узнать больше
 
-- {{Interwiki("wikipedia", "SGML")}} на Wikipedia
 - [Введение в SGML](http://www.isgmlug.org/)

@@ -268,11 +268,3 @@ body h1 + p .special {
 在下一节中，我们将看到样式表的结构是什么样的。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## 在此模块
-
-1. [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [开始学习 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 代码是如何组织的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [开始使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

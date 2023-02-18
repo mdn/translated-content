@@ -661,15 +661,3 @@ HTML5 에서는 `<b>`, `<i>,` `<u>` 를 조금 혼란스럽긴 하지만 새로�
 일단 이게 다에요! 이 글을 통해 여러분은 HTML에서 텍스트를 표현하기 시작하는 방법에 대해 좋은 아이디어를 얻었고, 이 영역에서 가장 중요한 몇가지 요소들을 알게되었습니다. 이 코스에에서 다룰 의미론적 요소는 훨씬 더 많으며 [하이퍼링크를 만드는 방법](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)에 대해 자세히 알아보도록 합시다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/ko/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/ko/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
