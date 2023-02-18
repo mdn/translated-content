@@ -183,8 +183,9 @@
 | Reject | 거부 | | |
 | Resolve | 이행 | | |
 | Rest parameters | 나머지 매개변수 | | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files) |
-| Settled | 처리 | | |
 | Scope | 범위 | | |
+| Settled | 처리 | | |
+| Sparse array | 희소 배열 | | |
 | Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) |
 | TypedArray | 형식화 배열 | | |
 
