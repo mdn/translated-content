@@ -52,7 +52,7 @@ forEach(function(value, key, map) { /* … */ }, thisArg)
 ## 설명
 
 `forEach` 메서드는 실제로 존재하는 맵의 각 키에 대해 제공된 `callback`을 한 번씩 실행합니다. 삭제된 키에 대해서는
-호출되지않습니다. 그러나 값은 존재하지만 `undefined`값일 경우에는 `callback`이 실행됩니다.
+호출되지 않습니다. 그러나 값은 존재하지만 `undefined`값일 경우에는 `callback`이 실행됩니다.
 
 `callback`은 **인자 3개**와 함께 호출됩니다.
 
