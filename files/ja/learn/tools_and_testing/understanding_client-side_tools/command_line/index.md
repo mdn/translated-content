@@ -463,16 +463,16 @@ Prettier を使用すると、自動化を実現する方法がいくつかあ�
 
 私たちの個人的な好みは 2 番目のものです。たとえば、VS Code を使用しているときに、Prettier が起動し、保存するたびに必要なフォーマットをクリーンアップします。 [Prettier docs](https://prettier.io/docs/en/) で、さまざまな方法で Prettier を使用する方法についてさらに多くの情報を見つけることができます。
 
-## Other tools to play with
+## その他の実行ツール
 
-If you want to play with a few more tools, here's a brief list that are fun to try out:
+さらにいくつかのツールを試してみたい場合は、試してみるのが楽しいツールの簡単なリストを次に示します。:
 
-- [`bat`](https://github.com/sharkdp/bat) — A "nicer" `cat` (`cat` is used to print the contents of files).
-- [`prettyping`](https://denilson.sa.nom.br/prettyping/) — `ping` on the command line, but visualized (`ping` is a useful tool to check if a server is responding).
-- [`htop`](https://htop.dev/) — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.
-- [`tldr`](https://tldr.sh/#installation) — mentioned earlier in this chapter, but available as a command line tool.
+- [`bat`](https://github.com/sharkdp/bat) — 「より良い」`cat` (`cat` はファイルの内容を出力するために使用されます)。
+- [`prettyping`](https://denilson.sa.nom.br/prettyping/) — コマンドラインでの `ping` ですが、視覚化されています (`ping` は、サーバーが応答しているかどうかを確認するための便利なツールです)。
+- [`htop`](https://htop.dev/) — プロセスビューアー。何かが原因で CPU ファンがジェットエンジンのように動作し、問題のプログラムを特定したい場合に役立ちます。
+- [`tldr`](https://tldr.sh/#installation) — この章で前述しましたが、コマンドラインツールとして使用できます。
 
-Note that some of the above suggestions may need installing using npm, like we did with Prettier.
+上記の提案のいくつかは、Prettier で行ったように npm を使用してインストールする必要がある場合があることに注意してください。
 
 ## Summary
 
