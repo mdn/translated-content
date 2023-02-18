@@ -50,15 +50,21 @@
 | Examples | 예제 | [링크](https://github.com/mdn/translated-content/blob/main/files/ko/web/javascript/reference/global_objects/proxy/proxy/apply/index.md) |
 | Guides | 안내서 | |
 | In this module | 이번 과정에서는 | [링크][React_getting_started] |
+| Instance properties | 인스턴스 속성 | |
+| Instance methods | 인스턴스 메서드 | |
 | Learn More | 더 알아보기 | [링크][Mutable] |
 | Next steps | 다음 단계 | [링크][2D_breakout_game_Phaser] |
 | Polyfill | 폴리필 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Reference | 참고서 | |
 | See also | 같이 보기 | [링크][target] |
 | Specifications | 명세서 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Static properties | 정적 속성 | |
+| Static methods  | 정적 메서드 | |
+| Sticky activation | 고정 활성화 | |
 | Summary | 요약 | |
 | Syntax | 구문 | [링크][target] |
 | Tools & resources | 도구 & 리소스 | [링크][JavaScript] |
+| Transient activation | 임시 활성화 | |
 | Tutorial | 자습서 | |
 | Usage notes | 사용 일람 | |
 | Web Technologies | 웹 기술들 | [링크][Introduction_to_HTML5_Game_Development] |
@@ -75,7 +81,9 @@
 | Directives | 지시어 | [링크][https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106] |
 | Guide | 안내서 | [링크][https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106] |
 | Instruction | 지침 | [링크][https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106] |
+| Naming | 이름 지정 | |
 | Parameters | 매개변수 | [링크][AudioWorkletNode] |
+| Requirements | 요구 사항 | |
 | Value | 값 | [링크][target] |
 
 ## 공통 용어
@@ -100,6 +108,7 @@
 | Global | 전역 | |
 | Glossary | 용어 사전 | |
 | Grammar | 문법 | |
+| In modern browsers | 최신 브라우저 | |
 | Literal | 리터럴 | |
 | Method | 메서드 | [국립국어원 Method](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=11976) |
 | Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | |
@@ -173,7 +182,7 @@
 | Resolve | 이행 | | |
 | Rest parameters | 나머지 매개변수 | | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files) |
 | Settled | 처리 | | |
-| Scope | 스코프 | | |
+| Scope | 범위 | | |
 | Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) |
 | TypedArray | 형식화 배열 | | |
 
