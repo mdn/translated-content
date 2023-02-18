@@ -216,20 +216,20 @@ ls -l
 
 > **注:** 多くの端末コマンドでは、アスタリスクを「ワイルドカード」文字として使用できます。これは、「任意の文字列」を意味します。 これにより、潜在的に多数のファイルに対して一度に操作を実行でき、そのすべてが指定されたパターンに一致します。 例として、 `rm mdn-*` は `mdn-` で始まるすべてのファイルを削除します。 `rm mdn-*.bak` は、 `mdn-`で始まり `.bak` で終わるすべてのファイルを削除します。
 
-## Terminal — considered harmful?
+## ターミナル — 有害と見なされますか?
 
-We've alluded to this before, but to be clear — you need to be careful with the terminal. Simple commands do not carry too much danger, but as you start putting together more complex commands, you need to think carefully about what the command will do, and try testing them out first before you finally run them in the intended directory.
+これについては以前にも言及しましたが、明確にするために、端末には注意する必要があります。 単純なコマンドにはそれほど危険はありませんが、より複雑なコマンドをまとめ始めるときは、そのコマンドが何をするかを慎重に検討し、目的のディレクトリで最終的に実行する前に、最初にそれらをテストする必要があります。
 
-Let's say you had 1000 text files in a directory, and you wanted to go through them all and only delete the ones that have a certain substring inside the filename. If you are not careful, then you might end up deleting something important, losing you a load of your work in the process.
-One good habit to get into is to write your terminal command out inside a text editor, figure out how you think it should look, and then make a backup copy of your directory and try running the command on that first, to test it.
+ディレクトリに 1000 個のテキスト ファイルがあり、それらすべてを調べて、ファイル名の中に特定の部分文字列を含むものだけを削除したいとします。 注意しないと、重要なものを削除してしまい、その過程で作業の負荷が失われる可能性があります。
+良い習慣の 1 つは、端末コマンドをテキスト エディター内に書き出し、それがどのように表示されるかを考え、ディレクトリのバックアップ コピーを作成し、最初にそのコマンドを実行してテストすることです。
 
-Another good tip — if you're not comfortable trying terminal commands out on your own machine, a nice safe place to try them is over at [Glitch.com](https://glitch.com/). Along with being a great place to try out web development code, the projects also give you access to a terminal, so you can run all these commands directly in that terminal, safe in the knowledge that you won't break your own machine.
+もう 1 つのヒント — 自分のマシンでターミナル コマンドを試すのが苦手な場合は、 [Glitch.com](https://glitch.com/) で安全に試すことができます。 プロジェクトは、Web 開発コードを試すのに最適な場所であるだけでなく、端末へのアクセスも提供するため、これらすべてのコマンドをその端末で直接実行できます。自分のマシンを壊すことはないので安全です。
 
 ![a double screenshot showing the glitch.com home page, and the glitch terminal emulator](glitch.png)
 
-A great resource for getting a quick overview of specific terminal commands is [tldr.sh](https://tldr.sh/). This is a community-driven documentation service, similar to MDN, but specific to terminal commands.
+[tldr.sh](https://tldr.sh/) は、特定の端末コマンドの概要をすばやく把握するための優れたリソースです。 これはコミュニティ主導のドキュメンテーション サービスで、MDN に似ていますが、ターミナル コマンドに固有です。
 
-In the next section let's step it up a notch (or several notches in fact) and see how we can connect tools together on the command line to really see how the terminal can be advantageous over the regular desktop user interface.
+次のセクションでは、それを 1 段階 (実際には数段階) 上げて、コマンド ラインでツールを接続する方法を見て、通常のデスクトップ ユーザー インターフェースよりもターミナルがどのように有利になるかを実際に見てみましょう。
 
 ## Connecting commands together with pipes
 
