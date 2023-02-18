@@ -118,9 +118,9 @@ Windows で選択するオプションに関しては、WSL をインストー�
 - ファイルの内容をページごとに表示: `less`, `cat`
 - テキストのストリームを操作および変換 (たとえば、HTML ファイル内の `<div>` のすべてのインスタンスを `<article>` に変更します。): `awk`, `tr`, `sed`
 
-> **Note:** There are a number of good tutorials on the web that go much deeper into the command line on the web — this is only a brief introduction!
+> **注:** Web には、Web 上のコマンド ラインをさらに深く掘り下げた優れたチュートリアルが多数あります。これは簡単な紹介にすぎません。
 
-Let's move forward and look at using a few of these tools on the command line. Before you go any further, open your terminal program!
+これらのツールのいくつかをコマンド ラインで使用する方法を見てみましょう。 先に進む前に、ターミナル プログラムを開きます。
 
 ### Navigation on the command line
 
