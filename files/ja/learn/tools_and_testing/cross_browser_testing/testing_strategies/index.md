@@ -1,271 +1,272 @@
 ---
 title: テスト実行のための戦略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
+l10n:
+  sourceCommit: 4a5ceb89ac004d087669aeee3c26475c2207787f
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-この記事では「(クロス)ブラウザーテストとは何？」「最もよくある問題は何？」「問題をテスト、特定、修正する主な手法は何？」といった質問に答えることで、(クロス)ブラウザーテストの概観を与えることから始めます。
+この記事では、ブラウザー間のテストの方法として、テストするブラウザーや機器を選ぶ方法、それらのブラウザーや機器を実際にテストする方法、ユーザーグループに分かれてテストする方法について説明します。
 
-| 前提条件: | [HTML](/ja/docs/Learn/HTML), [CSS](/ja/docs/Learn/CSS), [JavaScript](/ja/docs/Learn/JavaScript) 言語に通じていること; 高レベルの[クロスブラウザーテストの原理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)の理解。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | クロスブラウザーテストに含まれる高レベルのコンセプトの理解。                                                                                                                                                                                |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、<a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語の主要部に通じていること。
+        <a
+          href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          >クロスブラウザーブラウザーテストの基本</a
+        >について高水準の考えを持っていること。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        クロスブラウザーテストに関わる高いレベルの概念を理解すること。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## 全部がテスト済み？
+## テストするブラウザーと端末の選択
 
-クロスブラウザーテストを実行するとき、ブラウザーのリストを作成する必要があります。ユーザーがあなたのサイトを見る可能性のあるすべてのブラウザーとデバイスの組み合わせをテストする方法はありません — 単に多スすぎるし、新しいものが常に出てきます。
+すべてのブラウザーと端末の組み合わせをテストすることはできないので、サイトが最も重要なブラウザーで確実に動作することを確認すれば十分です。実際のアプリケーションでは、「重要な」というのは「対象となるユーザーが一般的に使用している」という意味であることが多いのです。
 
-その代わりに、最も重要なターゲットブラウザー/デバイスを明確にし、それに対して最大限のサポートを広げていくよう守備的にコーディングします。
+ブラウザーの対応や 端末の分類は、対応する量によって決めるとよいでしょう。例を挙げます。
 
-守備的にコーディングするとは、ブラウザーで機能やスタイルが動作しない場合に、フォールバックを作るようにすることで、サイトが多少面白みが薄れても受容できるユーザー体験までダウングレードできる — 例えば見た目のすばらしさが失われても、核となる情報にアクセスできることです。
+1. A グレード: 一般的な／現代のブラウザー - 能力があることが知られている。徹底的にテストし、完全なサポートを提供する。
+2. B グレード: 古い/性能の低いブラウザー - 機能がないことが分かっている。テストし、主要な情報とサービスに完全にアクセスできる、より基本的な使い勝手を提供する。
+3. C グレード: 稀少なブラウザー、未知のブラウザー - テストはしませんが、動作可能であるとみなします。少なくとも防御的なコーディングによって提供された代替手段を用いて、作業するはずのサイト全体を配信してください。
 
-このねらいは、テスト時に参照できるブラウザー/デバイスの図を作ることです。できるだけ簡単にすることも、できるだけ複雑にすることも、お好みに合わせてできます — 例えば、よくある手法はサポートレベルを次のように複数のグレードに分けることです:
-
-1. A グレード: よくある/モダンなブラウザー — 能力のあると知られている。徹底的にテストしてフルサポートを提供する。
-2. B グレード: 古い/機能が多くないブラウザー — 能力がないと知られている。基本的な体験をテスト/提供するが、主要な情報やサービスにはするアクセスできるようにする。
-3. C グレード: まれな/未知のブラウザー — テストしないが、アクセスを想定する。フルサイトを提供し、少なくとも守備的なコーディングによるフォールバックは動作するようにする。
-
-下記のセクションを通じて、このフォーマットでサポート図を作ります。
+以下の節では、この形式で対応表を作り上げていきます。
 
 > **メモ:** Yahoo は最初にこの手法を、[Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) アプローチとして広めました。
 
-### 経験則
+### 視聴者が最も使用するブラウザーを予測する
 
-これを "仮定"や"感情"と呼ぶかもしれません。これは正確な科学的手法ではありませんが、もウェブ産業の経験のある人にとっては、テストすべきブラウザーについてよくわかるでしょう。サポート図のよい基本となりえます。
+これには通常、ユーザーの属性に基づいた推測が必要です。例えば、ユーザーが北米と西ヨーロッパにいるとします。
 
-例えば、西ヨーロッパや北アメリカに住んでいる場合、多くが Windows と Mac のデスクトップ/ノート PC を使っていて、主なブラウザーは Chrome, Firefox, Safari, IE, Edge です。このブラウザーは定期的な更新があるため、おそらく最初の 3 つの最新版だけをテストしたいでしょう。Edge と IE では、いくつかの最新バージョンをテストしたくなるでしょう; これらはすべて A グレード区分にすべきでしょう.
+軽くネット検索してみると、北米と西ヨーロッパではほとんどの人が Windows または Mac のデスクトップ／ラップトップを使用しており、主要なブラウザーは Chrome、Firefox、Safari、Edge であることが分かります。これらのブラウザーは定期的にアップデートを取得しているため、最新版をテストするのがよいでしょう。これらはすべて A グレードに入るはずです。
 
-> **メモ:** You can only have one version of IE or Edge installed on a machine at once, so you will probably have to use virtual machine, or other strategy to do the testing you need. See [Virtual machines](#virtual_machines) later on.
+この層のほとんどの人は、iOS または Android の携帯電話も使用しているので、iOS の Safari の最新バージョン、Android の古い純正ブラウザーの最後の数バージョン、iOS と Android 用の Chrome と Firefox をテストするのがよいでしょう。また、レスポンシブデザインが確実に動作するように、携帯電話とタブレットの両方でテストすることが理想的です。
 
-多くの人が iOS と Android を使っているので、iOS Safari の最新版、古い Android 内蔵ブラウザーの最新版いくつか、iOS と Android 用の Chrome と Firefox もテストしたくなるでしょう。これらをスマフォとタブレットの両方でテストし、レスポンシブデザインの動作が問題ないのを確認するのが理想でしょう。
+IE の場合、最後の 2、3 バージョンをテストするのがよいでしょう。まだ IE 9 を使用している人もいます。IE は古くて能力が低く、マイクロソフトは IE のサポートを段階的に縮小しているので、B グレードの階層に入れましょう。
 
-それなりの数の人がまだ IE 9 を使っていることも知っているかもしれません。これは古くて能力もないので、B グレード区分に区分しましょう。
+Opera Mini は[複雑な JavaScript を実行する能力がとても低い](https://dev.opera.com/articles/opera-mini-and-javascript/)ので、これも B ランクにしましょう。
 
-ここまでで以下のサポート図ができました:
+このように、どのブラウザーでテストを行うかは、ユーザーが使用すると予想されるブラウザーに基づいて決定します。
+その結果、対応表は以下のようになります。
 
-1. A グレード: Windows/Mac 用の Chrome と Firefox、Mac 用の Safari、Windows 用の Edge と IE (それぞれ最新の 2 バージョン)、iPhone/iPad 用の iOS Safari、スマフォ/タブレット用の Android 内蔵ブラウザー (最新 2 バージョン)、スマフォ/タブレット用の Chrome と Firefox(最新 2 バージョン)。
-2. B グレード: Windows 用 IE 9
-3. C グレード: n/a
+1. A グレード: Windows/Mac 用の Chrome と Firefox、Mac 用の Safari、Windows 用の Edge、iPhone/iPad 用の iOS Safari、スマートフォン/タブレット用の Android 内蔵ブラウザー（最新 2 バージョン）、スマートフォン/タブレット用の Chrome と Firefox（最新 2 バージョン）。
+2. B グレード: Windows 用 IE、Opera Mini
+3. C グレード: ナシ
 
-どこか別の場所に住んでいる場合や、どこか別の場所向けの (例 ある国やロケール)サイトを制作している場合、テストする主なブラウザーはたぶん別のものでしょう。
+もし、対象となるユーザーがほとんど別の場所にいる場合は、一般的なブラウザーや OS が上記とは異なる形になる可能性があります。
 
-> **メモ:** "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be a persuasive argument.
+> **メモ:** 「うちの会社の社長はブラックベリーを使用しているから、そっちで見栄えがするようにしたほうがいい」というのも、考えることができるんです。
 
-### ブラウザーサポートステータス
+### ブラウザーの統計
 
-ブラウザーテスト選択で求められる、便利な対策は、ブラウザーサポートステータスです。こんなステータスを提供するサイトはたくさんあります。例えば、:
+指定された地域でどのブラウザーが人気があるのかを示すウェブサイトもあります。例えば、[Statcounter](https://gs.statcounter.com/)は、北米のトレンドを知ることができます。
 
-- [Netmarketshare](https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0)
-- [Statcounter](http://gs.statcounter.com/)
+### Analytics の使用
 
-これらはいずれも北米中心で、正確でないですが、幅広いトレンドの理解を得られます。
+もっと正確なデータ源は、利用できるのであれば、[Google Analytics](https://marketingplatform.google.com/about/analytics/) のような分析アプリで、人々がサイトを閲覧するために使用しているブラウザーを正確に教えてくれます。もちろん、これは既に分析対象のサイトがあることに頼っているので、完全に新しいサイトに適したものではありません。
 
-例えば、[Netmarketshare](https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0)を見てみましょう。Opera が少しだが、使用される数が見えるので、C グレードとしてサポート図に追加するべきでしょう。
+[Open Web Analytics](https://www.openwebanalytics.com/) や [Matomo](https://matomo.org) のような、オープンソースでプライバシーに重点を置いた分析プラットフォームを使用することも検討できます。これらは、分析プラットフォームをセルフホスティングすることを前提としています。
 
-IE8 もある程度ありますが、古くてもはや利用できません Opera Mini もいくらかありますが、複雑な JavaScript 実行など (詳しくは [Opera Mini and JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/) を見てください)が利用できません。これはグレード B に追加すべきでしょう。
+#### Google analytics のセットアップ
 
-### アクセス解析を使う
+1. まず、Google のアカウントが必要です。このアカウントを使用して、[Google Analytics](https://marketingplatform.google.com/about/analytics/) にログインします。
+2. [Google Analytics](https://analytics.google.com/analytics/web/) （ウェブ）のオプションを選び、_サインアップ_ ボタンをクリックしてください。
+3. サインアップページであなたのウェブサイト/アプリケーションの詳細を入力します。これはかなり直感的に設定することができます。正しく取得するために最も重要なフィールドは、ウェブサイトの URL です。これは、あなたのサイト/アプリのルート URL である必要があります。
+4. 入力が完了したら、_トラッキング ID を取得_ ボタンを押し、表示されるサービスの利用規約に同意してください。
+5. 次のページでは、いくつかのコードスニペットとその他の説明を提供します。基本的なウェブサイトの場合、必要なことは _Website tracking_ のコードブロックをコピーして、あなたのサイトで Google Analytics を使用してトラッキングしたい異なるページすべてに貼り付けることです。スニペットは閉じられた `</body>` タグの下に所有するか、アプリケーションのコードと混同しないような適切な場所に配置してください。
+6. 変更内容を開発用サーバー、またはあなたのコードが必要な場所にアップロードしてください。
 
-A much more accurate source of data, if you can get it, comes from an analytics app like [Google Analytics](https://www.google.com/analytics/). This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.
+これで完了です。これで、あなたのサイトは解析データの報告を始めることができるはずです。
 
-But an analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site. If you have these available, they are far more accurate than global browser stats like those mentioned above.
+#### アナリティクスデータの検討
 
-You may also consider using open source and privacy focussed analytics platforms like [Open Web Analytics](http://www.openwebanalytics.com) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
+これで、[Analytics Web](https://analytics.google.com/analytics/web) のホームページに戻り、あなたのサイトについて収集したデータを見始めることができるはずです（もちろん、いくつかのデータが実際に収集されるまで、少し時間を空ける必要があります）。
 
-#### Setting up Google analytics
+既定では、このようにレポートタブが表示されるはずです。
 
-1. First of all, you'll need a Google account. Use this account to sign into [Google Analytics](https://www.google.com/analytics/).
-2. Choose the [Google Analytics](https://analytics.google.com/analytics/web/) (web) option, and click the _Sign Up_ button.
-3. Enter your web site/app details into the signup page. This is fairly intuitive to set up; the most important field to get right is the Website URL. This needs to be your site/app's root URL.
-4. Once you've finished filling in everything, press the _Get Tracking ID_ button, then accept the terms of service that appear.
-5. The next page provides you with some code snippets and other instructions. For a basic website, what you need to do is copy the _Website tracking_ code block and paste it into all the different pages you want to track using Google Analytics on your site. You could below your closing `</body>` tag, or somewhere else appropriate that keeps it from getting muddled up with your application code.
-6. Upload the changes to the development server, or wherever else you need your code.
+![Google アナリティクスがメインレポートダッシュボードでデータを収集する方法](analytics-reporting.png)
 
-That's it! Your site should now be ready to start reporting analytics data.
+様々なカテゴリーでカスタマイズされたレポートなど、Google アナリティクスを使用して見ることができるデータは膨大で、そのすべてについて説明する時間はありません。
+[アナリティクスをはじめよう](https://support.google.com/analytics/answer/9306384?visit_id=637855964517698041-2103767437&rd=1)では、初心者に有益なレポート（など）についてのガイダンスを提供しています。
 
-#### Studying analytics data
+左側のメニューから _ユーザー > テクノロジー > ブラウザと OS_ を選択すると、ユーザーが使用するブラウザーや演算子を確認することができます。
 
-Now you should be able to go back to the [Analytics Web](https://analytics.google.com/analytics/web) homepage, and start looking at the data you've collected about your site (you need to leave a little bit of time for some data to actually be collected, of course.)
+> **メモ:** Google アナリティクスを使用する場合、誤解を招くような偏見に注意する必要があります。例えば、「Firefox モバイルのユーザーがいない」という情報は、Firefox モバイルにわざわざ対応していないということにつながるかもしれません。しかし、最初の段階でサイトが Firefox モバイルで壊れていた場合、Firefox モバイルユーザーは一人もいないことになります。
 
-既定では, you should see the reporting tab, like so:
+### その他の考慮事項
 
-![](analytics-reporting.png)
+アクセシビリティをグレード A のテスト要件に含める必要があります（何をテストすべきかは、「よくあるアクセシビリティの問題の対処」の記事で詳しく説明します）。
 
-There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all. [Getting started with Analytics](https://support.google.com/analytics/answer/1008015) provides some useful guidance on reporting (and more) for beginners.
+また、状況固有のニーズも認識しておく必要があります。例えば、売上数値を管理職に配信するための社内イントラネットを作成していて、管理職全員に Windows Phone が指定されている場合、モバイルIEのサポートを優先させた方が良いでしょう。
 
-You should also be encouraged to look at the different options on the left hand side, and see what kinds of data you can find out. 例えば、you can find out what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left hand menu.
+### 最終的な対応表
 
-> **メモ:** When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
+ですから、最終的な対応表は次のようなものに仕上がります。
 
-### その他の考慮
-
-There are other considerations that you should probably include as well. You should definitely include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our Handling common accessibility problems article)
-
-Plus you might have other considerations. If you are creating some kind of company intranet for delivering sales figures to managers, and all the managers have been provided with Windows phones 例えば、you might want to make mobile IE support a priority.
-
-### 最終的なサポート図
-
-So, our final support chart will end up looking like so:
-
-1. A grade: Chrome and Firefox for Windows/Mac, Safari for Mac, Edge and IE for Windows (last two versions of each), iOS Safari for iPhone/iPad, Android stock browser (last two versions) on phone/tablet, Chrome and Firefox for Android (last two versions) on phone tablet. Accessibility passing common tests.
-2. B grade: IE 8 and 9 for Windows, Opera Mini.
-3. C grade: Opera, other niche modern browsers.
+1. A グレード: Windows/Mac 版 Chrome と Firefox、Mac 版Safari、Windows 版 Edge と IE（それぞれ最新 2 バージョン）、iPhone/iPad 版 iOS Safari、スマホ/タブレット版 Android 純正ブラウザー（最新 2 バージョン）、スマホタブレット版 Chrome と Android 版 Firefox（最新 2 バージョン）。アクセシビリティは一般的なテストに合格していること。
+2. B グレード: Windows 版 IE 8 および 9、Opera Mini。
+3. C グレード: Opera などのニッチな現代のブラウザー。
 
 ## これから何をテストしていくのか？
 
-When you've got a new addition to your codebase that needs testing, before you start testing you should write out a list of testing requirements that need to pass to be accepted. These requirements can be visual or functional — both combine to make a usable web site feature.
+コードベースに新しい機能を追加してテストする必要がある場合、テストを開始する前に、合格しなければ受け入れられないテスト要件のリストを書き出す必要があります。これらの要件は、視覚的なものであっても機能的なものであってもかまいません。
 
-Consider the following example (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), and also the [example running live](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)):
+以下の例のものがあるとします（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)を参照してください。[ライブ実行版](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)もあります）。
 
-![](sliding-box-demo.png)
+![設計とユーザー要件を機能させたテストシナリオを準備する方法](sliding-box-demo.png)
 
-Test criteria for this feature could written like so:
+この機能のテスト基準は、次のように書くことができます。
 
-A and B grade:
+A および B グレード:
 
-- Button should be activatable by the user's primary control mechanism, whatever it is — this should include mouse, keyboard, and touch.
-- Toggling the button should make the information box appear/disappear.
-- The text should be readable.
-- Visually impaired users using screenreaders should be able to access the text.
+- ボタンは、ユーザーの主な制御機構（マウス、キーボード、タッチなど、それが何であれ）により起動できるようにする必要があります。
+- ボタンを押すと、情報ボックスが現れたり消えたりすること。
+- テキストは読み取り可能でなければなりません。
+- 画面の内側から画面リーダーを使用する視覚障碍を持つユーザーも、テキストにアクセスできること。
 
-A grade:
+A グレード:
 
-- The information box should animate smoothly as it appears/disappears.
-- The gradient and text shadow should appear to enhance the look of the box.
+- 情報ボックスは、現れたり消えたりするときにスムーズにアニメーションする必要があります。
+- グラデーションとテキストの影が現れて、ボックスの見栄えがよくなるようにします。
 
-You may notice from the text in the example that it won't work in IE8 — this is a problem according to our support chart, which you'll have to work on, perhaps by using a feature detection library to implement the functionality in a different way if the browser doesn't support CSS transitions (see Implementing feature detection, later on in the course).
+例のテキストから、IE8 では動作しないことに気づいたかもしれません。これは私たちの対応表による問題で、おそらくブラウザーが CSS のトランジションに対応していない場合は、機能検出ライブラリーを使用して、異なる形で機能を実装する必要があります（このコースの後半の機能検出を実装するを参照してください）。
 
-You might also notice that the button isn't usable using only the keyboard — this also needs to be remedied. Maybe we could use some JavaScript to implement a keyboard control for the toggle, or use some other method entirely?
+また、ボタンがキーボードだけで使用できないことにもお気づきでしょう。これも改善する必要があります。JavaScript でトグルのキーボード制御を実装するか、他にも全く別のメソッドを使用することができるかもしれません。
 
-These test criteria are useful, because:
+これらのテスト基準は、以下の理由で有益なものです。
 
-- They give you a set of steps to follow when you are performing tests.
-- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard...") — see [User testing](#user_testing), below.
-- They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see Using an automation tool to automate browser testing, later in the series).
+- テストを実施する際に、以下に従うべき手順の集合を与えます。
+- これらは、ユーザーグループがテストを行う際に従うべき指示の集合に簡単に変えることができます（例えば、「マウスを使ってボタンをアクティブにしてみて、次にキーボードを使って...」など） - 下記の [ユーザーテスト](#ユーザーテスト) を参照ください。
+- これらはまた、自動化されたテストを書くための基礎となります。何をテストしたいのか、そして成功条件は何なのかを正確に知っていれば、そのようなテストを書くのはより簡単です（このシリーズの後の [Selenium](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#selenium) を見てください）。
 
-## Putting together a testing lab
+## テストラボを用意する
 
-One option for carrying out browser tests is to do the testing yourself. To do this, you will probably use a combination of actual physical devices, and emulated environments (using either an emulator or a virtual machine).
+ブラウザーテストを実施するための一つのオプションは、自分自身でテストを行うことです。そのためには、実際の物理的な端末とエミュレートされた環境（エミュレータまたは仮想マシンのいずれかを使用）を組み合わせて使用することになると思います。
 
-### 物理デバイス
+### 物理的な端末
 
-It is generally better to have a real device running the browser you want to test — this provides the greatest accuracy in terms of behaviour and overall user experience. You'll probably want something like the following, for a reasonable low level device lab:
+一般的には、テストしたいブラウザを実行する実機があった方がよいでしょう。この方が、動作や全体的な使い勝手の面で最も高い精度が提供されます。低レベルの機器ラボとしては、おそらく以下のようなものが必要でしょう。
 
-- A Mac, with the browsers installed that you need to test — this can include Firefox, Chrome, Opera, and Safari.
-- A Windows PC, with the browsers installed that you need to test — this can include Edge (or IE), Chrome, Firefox, and Opera.
-- A higher spec Android phone and tablet with browser installed that you need to test — this can include Chrome, Firefox, and Opera Mini for Android, as well as the original Android stock browser.
-- A higher spec iOS phone and tablet with the browsers installed that you need to test — this can include iOS Safari, and Chrome, Firefox, and Opera Mini for iOS.
+- テストが必要なブラウザーがインストールされた Mac - Firefox、Chrome、Opera、Safari を含めることができます。
+- テストに必要なブラウザーがインストールされた Windows PC - Edge（または IE）、Chrome、Firefox、Opera を含めることができます。
+- テストに必要なブラウザーがインストールされている高スペックの Android 携帯電話およびタブレット - Android 用の Chrome、Firefox、Opera Mini、Android 純正のブラウザーが含まれます。
+- テストに必要なブラウザーがインストールされた、よりハイスペックな iOS 携帯電話およびタブレット - これには、iOS Safari および iOS 用の Chrome、Firefox、Opera Mini を含めることができます。
 
-The following are also good options, if you can get them:
+以下のようなものも、入手できれば良いオプションです。
 
-- A Linux PC available, in case you need to test bugs specific to Linux versions of browsers. Linux users comonly use Firefox, Opera, and Chrome. If you only have one machine available, you could consider creating a dual boot machine running Linux and Windows on separate partitions. Ubuntu's installer makes this quite easy to set up; see [WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot) for help with this.
-- A couple of lower spec mobile devices, so you can test performance of features like animations on lower powered processors.
+- Linux 版のブラウザーに固有のバグをテストする必要がある場合に備えて、利用できる Linux PC。Linux ユーザーは、一般的に Firefox、Opera、Chrome を使用します。もし利用できるマシンが 1 台しかない場合は、Linux と Windows を別々のパーティションで動作させるデュアルブートマシンを作成することを考えることができます。Ubuntu のインストーラーを使えば、かなり簡単に設定できます。これを支援するために、[WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot) を参照してください。
+- 低スペックのモバイル端末をいくつか用意すると、性能の低いプロセッサーでトランジションなどの機能をテストすることができます。
 
-Your main work machine can also be a place to install other tools for specific purposes, such as accessibility auditing tools, screen readers, and emulators/virtual machines.
+あなたのメインの著作物は、アクセシビリティ監査ツール、画面リーダー、エミュレーター/仮想マシンなど、特定の目的のために他のツールをインストールする場所にもなりえます。
 
-Some larger companies have device labs that stock a very large selection of different devices, enabling developers to hunt down bugs on very specific browser/device combinations. Smaller companies and individuals are generally not able to afford such a sophisticated lab, so tend to make do with smaller labs, emulators, virtual machines, and commercial testing apps.
+大企業の中には、非常に多くの異なる形の端末を選択できる端末ラボを保有し、開発者がとても特殊なブラウザーと端末の組み合わせでバグを突き止めることを可能にしているところもあります。小規模な企業や個人は、一般的にそのような高度なラボを持つことができないので、小規模なラボ、エミュレータ、仮想マシン、商用テストアプリでやりくりする傾向があります。
 
-We will cover each of the other options below.
+下記では、他にも様々なオプションがあることを説明します。
 
-> **メモ:** Some efforts have been made to create publically accessible device labs — see [Open Device Labs](https://opendevicelab.com/).
+> **メモ:** 一般に公開された端末ラボを作成する取り組みもあります。[Open Device Labs](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/) を参照してください。
 
-> **メモ:** We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
+> **メモ:** アクセシビリティについても考慮する必要があります。アクセシビリティのテストを容易にするために、マシンにインストールできる有益なツールがいくつかありますが、このコースの後半にある「よくあるアクセシビリティの問題の処理」の記事で、それらのツールを取り扱います。
 
 ### エミュレーター
 
-Emulators are basically programs that run inside your computer and emulate a device or particular device conditions of some kind, allowing you to do some of your testing more conveniently than having to find a particular combination of hardware/software to test.
+エミュレーターとは、基本的にコンピューター内で実行され、ある端末や特定の端末の状態をエミュレートするプログラムのことです。テストするハードウェアとソフトウェアの具体的な組み合わせを保有するよりも、より便利にテストの一部を実行できるようになります。
 
-An emulator might be as simple as testing a device condition. 例えば、if you want to do some quick and dirty testing of your width/height media queries for responsive design, you could use Firefox's [Responsive Design Mode](/ja/docs/Tools/Responsive_Design_Mode). Safari has a similar mode too, which can be enabled by going to _Safari > Preferences_, and checking _Show Develop menu_, then choosing _Develop > Enter Responsive Design Mode_. Chrome also has something similar: Device mode (see [Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/)).
+エミュレーターは、機器の状態をテストするような単純なものであるかもしれません。例えば、レスポンシブデザイン用の幅/高さのメディアクエリーをすばやくテストしたい場合、Firefox の[レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)を使用することができます。Safari にも同様のモードがあり、_Safari > Preferences_ で、_Show Develop menu_ を調べ、_Develop > Enter Responsive Design Mode_ を選べば、このモードを有効にすることができます。Chrome にも同様のものがあります。デバイスモード（[デバイスモードでモバイル端末をシミュレートする](https://developer.chrome.com/docs/devtools/device-mode/)を参照）。
 
-More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:
+しかし、多くの場合、何らかのエミュレーターを保有しなければならないでしょう。最も一般的にテストしたい端末/ブラウザーは以下の通りです。
 
-- The official [Android Studio IDE](https://developer.android.com/studio/) for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust [emulator](https://developer.android.com/studio/run/emulator.html). If you want something a bit more lightweight, [LeapDroid](http://leapdroid.com/) is a good option for Windows, and [Andy](http://www.andyroid.net/) is a reasonable option that runs on both Windows and Mac.
-- Apple provides an app called [Simulator](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html) that runs on top of the [XCode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
+- Android アプリを開発するための公式の [Android Studio IDE](https://developer.android.com/studio/) は、Google Chrome や古い純正 Android ブラウザーでウェブサイトをテストするには少し重いですが、しっかりとした [emulator](https://developer.android.com/studio/run/emulator.html) が実行されています。もう少し軽量なものをお望みなら、Windows と Mac の両方で動作する [Andy](https://www.andyroid.net/) が合理的なオプションとなります。
+- Apple は、[XCode](https://developer.apple.com/xcode/) 開発環境の上で動作し、iPad/iPhone/Apple Watch/Apple TV をエミュレートする [Simulator](https://help.apple.com/simulator/mac/current/) というアプリを提供されています。これには iOS ネイティブのブラウザー Safari が搭載されています。これは残念ながら Mac 上でしか動作しません。
 
-You can often find simulators for other mobile device environments too, 例えば、:
+他にもモバイル端末環境用のシミュレーターなどもよく見つかります。
 
-- [Blackberry](https://developer.blackberry.com/develop/simulator/) (emulator available for Windows, Mac OSX and Linux).
-- You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
-- There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
+- [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) をテストしたい場合は、自分自身でエミュレートすることができます。
+- Windows Mobile OS 用のエミュレーターも利用できます。[Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>) や [Microsoft Emulator for Windows 10 Mobile を使ったテスト](https://docs.microsoft.com/windows/uwp/debug-test-perf/test-with-the-emulator) （これらはWindows 上でのみ動作する）を参照してください。
 
-> **メモ:** Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
+> **メモ:** 多くのエミュレーターは、実際には仮想マシンを使用する必要があります（下記参照）。このような場合、指定された手順が提供されたり、仮想マシンの使用がエミュレーターのインストーラーに組み込まれたりすることがよくあります。
 
 ### 仮想マシン
 
-Virtual machines are applications that run on your desktop computer and allow you to run emulations of entire operating systems, each compartmentalized in its own virtual hard drive (often represented by a single large file existing on the host machine's hard drive). There are a number of popular virtual machine apps available, such as [Parallels](www.parallels.com/), [VMWare](http://www.vmware.com/), and [Virtual Box](https://www.virtualbox.org/wiki/Downloads); we personally like the latter, because it is free.
+仮想マシンは、デスクトップコンピューター上で動作するアプリケーションで、自分自身で仮想ハードディスク（多くはホストマシンのハードディスク上に存在する単一の大きなファイルで表される）に区分されたオペレーティングシステム全体のエミュレーションを実行することができる。[Parallels](www.parallels.com/)、[VMWare](https://www.vmware.com/)、[Virtual Box](https://www.virtualbox.org/wiki/Downloads) などの有名な仮想マシンアプリが利用でき、個人的には後者が無料なので気に入っています。
 
-> **メモ:** You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a **dynamically allocated** hard drive that grows and shrinks as the need arises.
+> **メモ:** 仮想マシンのエミュレーションを実行するには、多くのハードディスク空間が利用できる必要があります。エミュレートする各オペレーティングシステムは、多くのメモリーを占めることがあります。インストールするたびに必要なハードディスク空間を選ぶ傾向があります。10GB 程度でも十分ですが、オペレーティングシステムを確実に実行するために 50GB 以上を推奨する情報もあります。ほとんどの仮想マシンアプリで提供された良いオプションは、**動的に割り当てられた**ハードドライブを作成し、必要に応じて拡大・縮小させることです。
 
-To use a Virtual Box, you need to:
+Virtual Box を使用するには、次のことを行う必要があります。
 
-1. Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
-2. [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
-3. Open the app; you'll be presented with a view like the following: ![](virtualbox.png)
-4. To create a new virtual machine, press the _New_ button in the top left hand corner.
-5. Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
+1. エミュレートしたい OS のインストーラーディスクや画像（ISO ファイルなど）を取得します。Virtual Box ではこれらを提供することができません。Windows OS など、ほとんどが商用製品であり、自由に配布することができません。
+2. 自分のオペレーティングシステムの[適切なインストーラーをダウンロード](https://www.virtualbox.org/wiki/Downloads)し、インストールしてください。
+3. アプリを開いてください。次のような画面が表示されます。 ![アプリケーションウィンドウの左パネルには、WindowsのOSとOpera TVのエミュレーターが掲載されています。右側のパネルには、一般、システム、ディスプレイ、設定、音声、ネットワーク、プレビューを含むいくつかのサブパネルが記載されています。](virtualbox.png)
+4. 新しい仮想マシンを作成するには、左上にある _New_ ボタンを押します。
+5. 指示に従い、以下のダイアログボックスを適宜埋めてください。
 
-    1. Provide a name for the new virtual machine
-    2. Choose with operating system and version you are installing on it
-    3. Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)
-    4. Create a virtual hard disk (choose the default options across the three dialog boxes containing _Create a virtual hard disk now_, _VDI (virtual disk image)_, and _Dynamically allocated_).
-    5. Choose the file location and size for the virtual hard disk (choose a sensible name and location to keep it, and for the size specify around 50GB, or as much as you are comfortable with specifying).
+   1. 新しい仮想マシンに名前を付けます
+   2. どの OS とバージョンをインストールするかを選びます。
+   3. RAM の割り当て量を設定してください（2048MB、または 2GB 程度を推奨）。
+   4. 仮想ハードディスクを作成します（_Create a virtual hard disk now_、_VDI (virtual disk image)_、_Dynamically allocated_ を含む 3 つのダイアログボックスで既定のオプションを選びます）。
+   5. 仮想ハードディスクのファイルの保存場所とサイズを選びます（名前と保存場所は適当なものを選び、サイズは 50GB 程度、または指定しても差し支えない範囲で指定します）。
 
-Now the new virtual box should appear in the left hand menu of the main Virtual Box UI window. At this point, you can double-click to open it — it will start to boot up the virtual machine, but it won't yet have the operating system (OS) installed. At this point you need to point the dialog box at the installer image/disk, and it will run through the steps to install the OS just like on a physical machine.
+これで、Virtual Box UI のメインウィンドウの左側のメニューに新しい仮想ボックスが表示されるはずです。この点で、ダブルクリックして開くことができます。仮想マシンの起動が始まりますが、まだオペレーティングシステム (OS) はインストールされていません。この時点でダイアログボックスをインストーラ画像/ディスクに向ける必要があり、物理マシンと同じように OS をインストールする手順が実行されます。
 
-![](virtualbox-installer.png)
+![特定の仕様に合わせた Virtual Box をインストールする方法](virtualbox-installer.png)
 
-> **警告:** You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.
+> **警告:** この時点で仮想マシンにインストールしたいオペレーティングシステムのイメージが利用できることを確認し、すぐにインストールする必要があります。この点で処理を取り消すと、仮想マシンが使用不能になり、削除して再度作成しなければならなくなることがあります。これは致命的なものではありませんが、面倒です。
 
-After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.
+処理が完全に終了すると、ホストコンピューター上のウィンドウ内で OS を実行している仮想マシンがあるはずです。
 
-![](virtualbox-running.png)
+![Windows オペレーティングシステム上で動作する Virtual box マシン](virtualbox-running.png)
 
-You need to treat this virtual operating system installation just like you would any real installation — 例えば、as well as installing the browsers you want to test, install an anti-virus program to protect it from viruses.
+この仮想 OS のインストールは、実際のインストールと同じように扱う必要があります。例えば、テストするブラウザーと同様に、ウイルスから保護するためにアンチウイルスプログラムをインストールします。
 
-Having multiple virtual machines is very useful, particularly for Windows IE/Edge testing — on Windows, you are not able to have multiple versions of the default browser installed side by side, so you might want to build up a library of virtual machines to handle different tests as required, e.g.:
+複数の仮想マシンを持つことは、特に Windows IE/Edge のテストに非常に有効です。Windows では、複数のバージョンの既定ブラウザーを同時にインストールすることができないため、必要に応じて異なるテストを行うするために仮想マシンのライブラリーを構築するとよいでしょう。
 
-- Windows 10 with Edge 14
-- Windows 10 with Edge 13
-- Windows 8.1 with IE11
-- Windows 8 with IE10
-- Windows 7 with IE9
-- Windows XP with IE8
-- Windows XP with IE7
-- Windows XP with IE6
+- Windows 10 と Edge 14
+- Windows 10 と Edge 13
 
-> **メモ:** Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running, if it is a licensed product.
+> **メモ:** 仮想マシンのもう一つの良いところは、仮想ディスクイメージがかなり自己完結していることです。チームで作業している場合、1 つの仮想ディスクイメージを作成し、それをコピーして周りに渡すことができます。ただ、Windows やその他のライセンス製品であれば、それらのコピーをすべて実行するのに必要なライセンスがあることを確認してください。
 
 ### 自動化と商用アプリ
 
-As mentioned in the last chapter, you can take a lot of the pain out of browser testing by using some kind of automation system. You can set up your own testing automation system ([Selenium](http://www.seleniumhq.org/) being the popular app of choice), which does take some setup, but can be very rewarding when you get it worked out.
+前の章で述べたように、ある種の自動化システムを使用することで、ブラウザーテストの苦労を軽減することができます。自分自身でテスト自動化システム（[Selenium](https://www.selenium.dev/)はよく選ばれるアプリです）を設定することができます。多少のセットアップが必要ですが、うまく作業を進めるととてもやりがいのあるものになるでしょう。
 
-There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/) and [Browser Stack](https://www.browserstack.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
+[Sauce Labs](https://saucelabs.com/)、[Browser Stack](https://www.browserstack.com/)、[LambdaTest](https://www.lambdatest.com/) のような商用ツールもあり、テストにお金をかけたい場合は、設定を気にせずにこのようなことを行うことも可能です。
 
-We will look at how to use such tools later on in the module.
+もう一つの選択肢は、[Endtest](https://endtest.io) のようなノーコードのテスト自動化ツールを使用することです。
+
+このモジュールの後のほうで、そのようなツールを使用する方法を見ていきます。
 
 ## ユーザーテスト
 
-Before we move on, we'll finish this article off by talking a bit about user testing — this can be a good option if you have a willing user group to test your new functionality on. Bear in mind that this can be as lo-fi or as sophisticated as you like — your user group could be a group of friends, a group of colleagues, or a group of unpaid or paid volunteers, depending on whether you have any money to spend on testing.
+次に進む前に、ユーザーテストについて少し話して、この記事を締めくくります。これは、新しい機能をテストする意欲的なユーザーグループがある場合に有効なオプションです。ユーザーグループは、テストに費やすお金があるかどうかにもよりますが、友人のグループ、同僚のグループ、あるいは無給または有給のボランティアのグループでもかまいません。
 
-Generally you'll get your users to look at the page or view containing the new functionality on some kind of a development server, so you are not putting the final site or change live until it is finished. You should get them to follow some steps and report the results they get. It is useful to provide a set of steps (sometimes called a script) so that you get more reliable results pertaining to what you were trying to test. We mentioned this in the [What are you going to test](#what_are_you_going_to_test) section above — it is easy to turn the test criteria detailed there into steps to follow. 例えば、the following would work for a sighted user:
+一般的には、ある種の開発サーバーにある新しい機能を含むページやビューをユーザーに見てもらうことになるので、最終的なサイトや変更が完了するまで本稼働させることはありません。ユーザーにいくつかの手順を踏んでもらい、取得した結果を報告してもらう必要があります。あなたがテストしようとしたことに関連する、より信頼性の高い結果を取得するために、一連の手順（スクリプトと呼ばれることもあります）を提供することは有益です。このことは、上記の [これから何をテストしていくのか？](#これから何をテストしていくのか？)の節で述べました。そこで詳述したテスト基準を、従うべき手順に変えるのは簡単です。例えば、以下のようにすれば、目の見えるユーザーに対して作業することができます。
 
-- Click the question mark button using the mouse on your desktop computer a few times. Refresh the browser window.
-- Select and activate the question mark button using the keyboard on your desktop computer a few times.
-- Tap the question mark button a few times on your touch screen device.
-- Toggling the button should make the information box appear/disappear. Does it do this, in each of the above three cases?
-- Is the text readable?
-- Does the information box animate smoothly as it appears/disappears?
+- デスクトップコンピューターでマウスを使用してクエスチョンマークボタンを数回クリックする。ブラウザーウィンドウを更新する。
+- デスクトップコンピューターで、キーボードを使用してクエスチョンマークボタンをいくつか選択し、アクティブにする。
+- タッチ画面の機器へ、クエスチョンマークボタンをいくつかタップする。
+- ボタンをトグルすると、情報ボックスが現れたり消えたりするはずである。上記の 3 つのケースで、それぞれこのように表示されるか？
+- テキストは読み取り可能か？
+- 情報ボックスが現れたり消えたりするときに、スムーズにアニメーションするか？
 
-When running tests, it can also be a good idea to:
+テストを実行する際にも、よいアイディアになります。
 
-- Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see [Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles) and [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), 例えば、).
-- Use browser's private mode functionality when running tests, where available (e.g. [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) in Firefox, [Incognito Mode](https://support.google.com/chrome/answer/95464) in Chrome) so things like cookies and temp files are not saved.
+- 可能であれば、ブラウザーの拡張機能などを無効にして、別のブラウザープロファイルを設定し、そのプロファイルでテストを実行しましょう（例えば、[プロファイルマネージャーを使用して、Firefox のプロファイルを作成または削除する](https://support.mozilla.org/ja/kb/profile-manager-create-remove-switch-firefox-profiles) や[複数のプロフィールで Chrome を使用する](https://support.google.com/chrome/answer/2364824)などを参照してください）。
+- テストを実行する際には、ブラウザーのプライベートモード機能が利用できる場合はそれを使用し（例：Firefox の [Private Browsing](https://support.mozilla.org/ja/kb/private-browsing-use-firefox-without-history) 、Chrome の [Incognito Mode](https://support.google.com/chrome/answer/95464) ）、クッキーや一時ファイルといったものは保存しないようにします。
 
-These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.
+これらの手順は、テストするブラウザーが可能な限り「純粋」であること、つまり、テスト結果に影響を与えるようなものがインストールされていないことを確認するためのものです。
 
-> **メモ:** Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
+> **メモ:** ハードウェアを利用できる場合は、ローエンドの携帯電話など端末でサイトをテストすることも有益なオプションです。サイトの規模が大きくなり、より多くの機能を搭載すると、サイトの速度が低下する可能性が高くなるので、パフォーマンスをより考慮するように始める必要があります。ローエンドの端末で機能を実現するようにすれば、ハイエンドの端末でも良い使い勝手が得られる可能性が高くなります。
 
-> **メモ:** Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/jsocol/django-waffle).
+> **メモ:** サーバーサイドの開発環境の中には、サイトの変更を一部のユーザーだけにロールアウトするための有益なメカニズムを提供しているものがあり、別の開発サーバーを使用することなく、一部のユーザーによって機能をテストしてもらうための有益なメカニズムを提供しています。その例が、[Django Waffle Flags](https://github.com/django-waffle/django-waffle) です。
 
 ## まとめ
 
@@ -274,14 +275,3 @@ These steps are designed to make sure that the browser you are testing in is as 
 次には HTML と CSS から始めて、テストで見つけにくいコードの問題に注目していきましょう。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## このモジュール内
-
-- [Introduction to cross browser testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)
