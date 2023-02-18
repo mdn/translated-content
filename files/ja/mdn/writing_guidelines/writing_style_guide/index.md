@@ -540,7 +540,8 @@ markdown の見出しレベルをスキップすることなく、小さい順�
 
 ### おすすめのスタイルガイド
 
-ここで取り扱われていない用法とスタイルについて疑問があれば、 [Microsoft Writing スタイルガイド](https://docs.microsoft.com/style-guide/welcome/) を、それでもダメなら [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206) を参照してください。 [非公式の crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) がオンラインで利用できます。
+ここで取り扱われていない用法とスタイルについて疑問があれば、 [Microsoft Writing スタイルガイド](https://docs.microsoft.com/style-guide/welcome/) を、それでもダメなら [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206) を参照してください。
+[非公式の crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) がオンラインで利用できます。
 
 ### おすすめの辞書
 
