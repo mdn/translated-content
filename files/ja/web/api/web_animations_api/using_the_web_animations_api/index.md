@@ -25,7 +25,7 @@ Web Animations API を学習するためのより身近な手法は、多くの 
 
 アリスがうさぎの穴から落ちてワンダーランドに導かれる様子を示した CSS で書かれている転がり落ちるアニメーションです。(完全な [Codepen のコード](http://codepen.io/rachelnabors/pen/QyOqqW) を参照してください)
 
-[![Alice Tumbling down the rabbit's hole.](https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
+[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
 
 背景が移動しながら、アリスが回転し、回転からのオフセットで色が変化することに注目してください。このチュートリアルでは、アリスのみに焦点を当てます。アリスのアニメーションを制御する簡単な CSS は次のとおりです。
 
@@ -135,7 +135,7 @@ document.getElementById("alice").animate(
 ## Play() / pause() / reverse() / playbackRate を使って再生制御する
 
 Web Animation API を使用して CSS アニメーションを作成することが可能ですが、API が本当に役立つ時はアニメーションの再生を制御するときです。Web Animation API は、再生を制御するための便利ないくつかのメソッドを提供しています。アリスが拡大/縮小するゲームでのアニメーションの一時停止と再生を見てみましょう( [Codepen の完全なコード](http://codepen.io/rachelnabors/pen/PNYGZQ)をご覧ください。)
-[![Playing the growing and shrinking game with Alice.](https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
+[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
 
 このゲームでは、アリスは小さなボトルから大きなボトルに移動するアニメーションを使用しており、ボトルとカップケーキを使い制御します。どちらにも独自のアニメーションがあります。
 
@@ -210,7 +210,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);
 
 [鏡の国のアリス](https://ja.wikipedia.org/wiki/%E9%8F%A1%E3%81%AE%E5%9B%BD%E3%81%AE%E3%82%A2%E3%83%AA%E3%82%B9)では、アリスは走り続けなければならない世界に移動します。レッドクイーンのレースの例では、アリスとレッドクイーンが所定の位置にとどまっています。([Codepen の](http://codepen.io/rachelnabors/pen/PNGGaV) 完全なコードを参照してください。)
 
-[![Alice and the Red Queen race to get to the next square in this game.](https://mdn.mozillademos.org/files/13847/red-queen-race_optimized.gif)](http://codepen.io/rachelnabors/pen/PNGGaV)
+[![Alice and the Red Queen race to get to the next square in this game.](red-queen-race_optimized.gif)](http://codepen.io/rachelnabors/pen/PNGGaV)
 
 小さな子どもたちは、オートマトンのチェスのコマとは異なり、疲れやすいのでアリスは常に速度を落としています。彼女のアニメーションの `playbackRate` に衰えを設定することでコードでこれを表現しました。
 

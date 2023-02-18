@@ -93,7 +93,7 @@ O output será algo assim:
 
 #### Uso de substituição de string
 
-O Gecko 9.0 {{geckoRelease("9.0")}} introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
+O Gecko 9.0 introduziu o suporte à substituição de strings. Ao fornecer uma string para um dos métodos do console que aceitam uma string, você pode utilizar estas strings de substituição:
 
 | String de substituição | Descrição                                                                  |
 | ---------------------- | -------------------------------------------------------------------------- |
@@ -199,7 +199,7 @@ The output in the console looks something like this:
 ## Notes
 
 - At least in Firefox, if a page defines a console object, that object overrides the one built into Firefox.
-- Prior to {{Gecko("12.0")}}, the console object's methods only work when the Web Console is open. Starting with {{Gecko("12.0")}}, output is cached until the Web Console is opened, then displayed at that time.
+- Prior to Gecko 12.0, the console object's methods only work when the Web Console is open. Starting with Gecko 12.0, output is cached until the Web Console is opened, then displayed at that time.
 - It's worth noting that the Firefox's built-in `console` object is compatible with the one provided by [Firebug](http://getfirebug.com/).
 
 ## See also

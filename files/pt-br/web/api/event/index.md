@@ -97,9 +97,9 @@ _Esta interface não herda nenhum método._
 
 - {{domxref("Event.initEvent()")}} {{deprecated_inline}}
   - : Inicializa o valor de um evento criado. Se o evento já está sendo despachado, este método não faz nada.
-- {{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+- {{domxref("Event.preventBubble()")}} {{non-standard_inline}}
   - : Impede o evento de borbulhar. Obsoleto, use {{domxref ("event.stopPropagation")}} em vez disso.
-- {{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+- {{domxref("Event.preventCapture()")}} {{non-standard_inline}}
   - : Obsoleto, use {{domxref("event.stopPropagation")}} ao invés.
 - {{domxref("Event.preventDefault()")}}
   - : Cancela o evento (caso seja cancelável).

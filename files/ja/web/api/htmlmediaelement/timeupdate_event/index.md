@@ -1,48 +1,37 @@
 ---
 title: 'HTMLMediaElement: timeupdate イベント'
 slug: Web/API/HTMLMediaElement/timeupdate_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
 `timeupdate` イベントは、`currentTime` 属性で示される時刻が更新されたときに発生します。
 
-イベントの頻度はシステムの負荷に依存しますが、およそ 4Hz と 66Hz との間で発生します（イベントハンドラーが実行するのに 250 ms 以上かかることはないと仮定します）。ユーザーエージェントはシステム負荷とその都度イベントを処理する平均コストに基づいて、イベントの頻度を変えることが推奨されているため、ユーザーエージェントがビデオのデコード中に快適に処理できるよりも頻繁に UI 更新が行われることはありません。
+イベントの頻度はシステムの負荷に依存しますが、およそ 4Hz と 66Hz との間で発生します（イベントハンドラーが実行するのに 250ms 以上かかることはないと仮定します）。ユーザーエージェントはシステム負荷とその都度イベントを処理する平均コストに基づいて、イベントの頻度を変えることが推奨されているため、ユーザーエージェントがビデオのデコード中に快適に処理できるよりも頻繁に UI 更新が行われることはありません。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.ontimeupdate")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('timeupdate', (event) => {});
+
+ontimeupdate = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 これらの例は、 HTMLMediaElement の `timeupdate` イベントのイベントリスナーを追加し、イベントが発生してイベントハンドラーが動作するときにメッセージを投稿します。なお、イベントの頻度はシステムの稼働状況に依存します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
 const video = document.querySelector('video');
@@ -52,7 +41,7 @@ video.addEventListener('timeupdate', (event) => {
 });
 ```
 
-`ontimeupdate` イベントハンドラープロパティを使用する場合
+`ontimeupdate` イベントハンドラープロパティを使用する場合:
 
 ```js
 const video = document.querySelector('video');

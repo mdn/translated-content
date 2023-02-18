@@ -74,7 +74,7 @@ translation_of: Web/HTML/Element/dfn
 
 Это выглядит так в вашем браузере:
 
-{{ EmbedLiveSample('Базовая_идентификация_термина', '', '', '', 'Web/HTML/Element/dfn') }}
+{{ EmbedLiveSample('Базовая_идентификация_термина') }}
 
 ### Ссылки на определения
 
@@ -106,7 +106,7 @@ enim possumus hoc agere divinius?</p>
 
 Полученный контент выглядит так:
 
-{{ EmbedLiveSample('HTML_2', '', '', '', 'Web/HTML/Element/dfn') }}
+{{ EmbedLiveSample('Ссылки_на_определения') }}
 
 ### Использование сокращений и определений вместе
 
@@ -130,7 +130,7 @@ enim possumus hoc agere divinius?</p>
 
 Вывод приведённого выше кода выглядит следующим образом:
 
-{{ EmbedLiveSample('HTML_3', '', '', '', 'Web/HTML/Element/dfn') }}
+{{ EmbedLiveSample('Использование_сокращений_и_определений_вместе') }}
 
 ## Спецификации
 

@@ -25,7 +25,7 @@ console.log(littleEndian); // true または false
 
 ### 64 ビット整数値
 
-一部のブラウザーは {{jsxref("DataView.prototype.setBigInt64()")}} および {{jsxref("DataView.prototype.setBigUint64()")}} に対応していません。そのため、各ブラウザーで動作するコードで 64 ビット操作ができるようにするには、独自の `getUint64()` 関数を実装し、 {{jsxref("Number.MAX_SAFE_INTEGER")}} までの制度の値を受け取れるようにします。これで十分な場合もあるでしょう。
+一部のブラウザーは {{jsxref("DataView.prototype.setBigInt64()")}} および {{jsxref("DataView.prototype.setBigUint64()")}} に対応していません。そのため、各ブラウザーで動作するコードで 64 ビット操作ができるようにするには、独自の `getUint64()` 関数を実装し、 {{jsxref("Number.MAX_SAFE_INTEGER")}} までの精度の値を受け取れるようにします。これで十分な場合もあるでしょう。
 
 ```js
 function getUint64(dataview, byteOffset, littleEndian) {

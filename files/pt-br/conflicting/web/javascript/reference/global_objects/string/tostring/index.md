@@ -4,7 +4,7 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
 original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 ---
 
-{{JSRef}} {{obsolete_header}}
+{{JSRef}}
 
 O método `toSource()` retorna uma string que representa o código-fonte do objeto.
 

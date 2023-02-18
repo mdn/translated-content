@@ -715,15 +715,3 @@ textarea.onkeyup = function(){
 不可否認當網站在跟人們互相溝通時，處理文字和句子在程式設計中是相當重要的，尤其是在 JavaScript 中。這篇文章已經傳授你如何去處理字串的方法，應該對以後深入了解其他更複雜主題的你會很有幫助。接下來，我們將會看看最後一個近期內我們需要關注的主要的資料型態 — 陣列。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## 在這個學習模組中
-
-- [什麼是 JavaScript?](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [和 JavaScript 的第一次接觸](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [什麼出錯了？ JavaScript 的疑難排解（除錯）](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [儲存你需要的資訊 — 變數](/zh-TW/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 的基本運算— 數字 與 運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math)
-- [處理文字 — JavaScript 的字串](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
-- [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
-- [附錄：笑話產生器](/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator)

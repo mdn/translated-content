@@ -34,7 +34,7 @@ overflow:  visible | hidden | scroll | {{ cssxref("auto") }} | {{ cssxref("inher
 
 #### Extensões da Mozilla
 
-- `-moz-scrollbars-none` {{ obsolete_inline() }}
+- `-moz-scrollbars-none`
   - : Use `overflow:hidden` no lugar.
 - `-moz-scrollbars-horizontal` {{ Deprecated_inline() }}
   - : O uso de {{ Cssxref("overflow-x") }} e {{ Cssxref("overflow-y") }} é preferido.

@@ -48,14 +48,12 @@ detectando qué pantalla tiene el navegador centrada.
 
 ## Métodos
 
+_También hereda métodos de su padre {{domxref("EventTarget")}}:_
+
 - {{DOMxRef("Screen.lockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Bloquea la orientación de la pantalla (sólo funciona en pantalla completa o para aplicaciones instaladas)
 - {{DOMxRef("Screen.unlockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Desbloquea la orientación de pantalla (sólo funciona en pantalla completa o para aplicaciones instaladas)
-
-_Métodos heredados de {{domxref("EventTarget")}}:_
-
-{{Page("/es/docs/Web/API/EventTarget", "Methods")}}
 
 ## Ejemplo
 

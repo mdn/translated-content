@@ -88,7 +88,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este enumerado atributo define a pragma isso pode alterar o comportamento de servers e user-agents. o valor do pragma é definido usando {{htmlattrxref("content", "meta")}} e pode ser um dos seguintes:
 
-    - `"content-language"` {{obsolete_inline}}
+    - `"content-language"`
 
       - : este pragma define a linguagem default da página
 
@@ -96,7 +96,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     - `"Content-Security-Policy"`
       - : Este valor permite os administradores do web site definam uma [política de conteúdo](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) para a página atual. Com algumas exceções, politicas de conteúdo envolvem especificar origens de servidores e endpoints de scripts permitidos, isso ajuda na defesa de cross-server scripting attacks.
-    - `"content-type"` {{obsolete_inline}}
+    - `"content-type"`
 
       - : Esse atributo define o [MIME type](/pt-BR/docs/MIME) e o conjunto de caracteres do documento. Isso segue a mesma sintaxe como o HTTP `content-type` entity-header field, mas isto esta dentro de um elemento HTML, a maioria dos valores não é possível. Sendo assim a sintaxe válida para este conteúdo é a literal string '`text/html`' eventualmente seguido por estes caracteres com a seguinte sintaxe: '`; charset=`_`IANAcharset`_' onde `IANAcharset` é o _MIME preferido nome para um conjunto de caracteres como_ [definido pela IANA.](https://www.iana.org/assignments/character-sets)
 
@@ -114,7 +114,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
         - o numero de segundos até a página ser recarregada, se o atributo {{htmlattrxref("content", "meta")}} contém apenas um número inteiro não negativo;
         - o número de segundos até a página ser redirecionada para outro lugar, se o atributo {{htmlattrxref("content", "meta")}} contém um inteiro não negativo seguido de uma string '`;url=`' e uma URL válida.
 
-    - `"set-cookie"` {{obsolete_inline}}
+    - `"set-cookie"`
 
       - : este pragma define um [cookie](/pt-BR/docs/cookie) para a página. este conteúdo deve seguir a sintaxe definida em [IETF HTTP Cookie Specification](https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14).
 
@@ -204,7 +204,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       >
       > - Para aprender sobre esse pragma no Firefox para celular, veja [este artigo](/pt-BR/docs/Mobile/Viewport_meta_tag).
 
-- {{htmlattrdef("scheme")}} {{obsolete_inline}}
+- {{htmlattrdef("scheme")}}
 
   - : Este atributo define o esquema no qual os metadados são descritos. Um esquema é um contexto que leva às interpretações corretas dos {{htmlattrxref("content", "meta")}} valores, como um formato.
 

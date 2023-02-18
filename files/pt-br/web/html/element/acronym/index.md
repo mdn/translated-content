@@ -3,8 +3,6 @@ title: <acronym>
 slug: Web/HTML/Element/acronym
 ---
 
-{{obsolete_header}}
-
 ## Resumo
 
 O Elemento HTML Acrônimo (`<acronym>)` permite à autores claramente indicar que uma seqüência de caracteres compõe um acrônimo ou uma abreviação de uma palavra.

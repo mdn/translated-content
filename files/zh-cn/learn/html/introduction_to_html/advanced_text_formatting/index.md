@@ -728,15 +728,3 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 到这里你就完成了 HTML 语义文本元素的学习。但要记住，你在本课程中学到的并不是 HTML 文本元素的详细列表——我们想要尽量覆盖主要的、通用的、常见的，或者至少是有趣的部分。如果你想找到更多的 HTML 元素，可以看一看我们的 [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)（从[内联文本语义](/zh-CN/docs/Web/HTML/Element#内联文本语义)部分开始会是一个好的选择）。在下一篇文章中我们将会学习用来[组织 HTML 文档不同部分的 HTML 元素](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
-
-## 本章目录
-
-- [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [“头”里有什么——HTML 元信息](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML 文本处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [文本格式进阶](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文档和站点结构](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [构建网页内容](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

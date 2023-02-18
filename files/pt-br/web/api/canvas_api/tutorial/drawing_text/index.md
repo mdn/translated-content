@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_text
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 Após entender como [aplicar estilos e cores](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) no capítulo anterior, nós veremos agora como desenhar texto dentro do contexto de uma canvas.
 
