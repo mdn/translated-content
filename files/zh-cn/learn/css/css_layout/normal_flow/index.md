@@ -86,18 +86,3 @@ span {
 现在你对正常布局流有所了解，知晓浏览器默认怎么组织元素，继续下一节，学习如何改变默认布局以产出符合你的设计的布局。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## 在这个模块中
-
-- [CSS 介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流（Normal Flow）](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒子（Flexbox）](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格（Grid）](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动（Floats）](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [位置（Positioning）](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局（Multiple-column Layout）](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [媒体查询入门指南](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
-- [传统的布局实现（Legacy Layout Methods）](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧有浏览器（Supporting older browsers）](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [评估你对布局的理解](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

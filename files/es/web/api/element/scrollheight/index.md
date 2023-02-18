@@ -35,7 +35,7 @@ _intElemScrollHeight_ es una variable que almacena un número entero correspondi
 
 {{EmbedLiveSample("",400,350)}}
 
-![Image:scrollHeight.png](/@api/deki/files/840/=ScrollHeight.png)
+![Image:scrollHeight.png](scrollheight.png)
 
 ## Problemas y Soluciones
 

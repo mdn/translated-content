@@ -69,7 +69,7 @@ p { border:dotted;  position:relative; }
 }
 ```
 
-![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg)
+![hut.jpg](hut.jpg) ![hut.jpg](hut.jpg) ![hut.jpg](hut.jpg)
 
 ## Especificaciones
 

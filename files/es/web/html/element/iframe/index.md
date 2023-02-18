@@ -160,17 +160,17 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
 Estos atributos están obsoletos y es posible que ya no sean compatibles con todos los agentes de usuario. No debe utilizarlos en contenido nuevo y tratar de eliminarlos del contenido existente.
 
-- {{htmlattrdef("align")}} {{deprecated_inline("html4.01")}}, {{deprecated_inline("html5")}}
+- {{htmlattrdef("align")}} {{deprecated_inline}}
   - : La alineación de este elemento con respecto al contexto que lo rodea.
-- {{ htmlattrdef("frameborder") }} {{ deprecated_inline("html5")}}
+- {{ htmlattrdef("frameborder") }} {{ deprecated_inline}}
   - : El valor 1 (por defecto) indica al navegador establecer una frontera entre este marco y todo otro marco. El valor 0 indica que el navegador no establece una frontera entre este marco y otros marcos.
-- {{ htmlattrdef("longdesc") }} {{ deprecated_inline("html5")}}
+- {{ htmlattrdef("longdesc") }} {{ deprecated_inline}}
   - : Una URI de una descripción larga del marco. Debido al mal uso generalizado, esto no es útil para navegadores no visuales.
-- {{ htmlattrdef("marginheight") }} {{ deprecated_inline("html5") }}
+- {{ htmlattrdef("marginheight") }} {{ deprecated_inline }}
   - : La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes superior e inferior.
-- {{ htmlattrdef("marginwidth") }} {{ deprecated_inline("html5") }}
+- {{ htmlattrdef("marginwidth") }} {{ deprecated_inline }}
   - : La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes izquierdo y derecho.
-- {{ htmlattrdef("scrolling") }} {{ deprecated_inline("html5") }}
+- {{ htmlattrdef("scrolling") }} {{ deprecated_inline }}
 
   - : Indica cuándo el navegador debe proporcionar una barra de desplazamiento para el marco:
 

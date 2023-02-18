@@ -348,13 +348,3 @@ imgThumb.onblur = hideImg;
 下一篇内容是，WAI-ARIA！
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## 在本模块中
-
-- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍的最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基础知识基础知识](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [无障碍的多媒体](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍故障排除](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

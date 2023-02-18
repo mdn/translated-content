@@ -431,18 +431,3 @@ article {
 你还能通过加入不同的组件进行实验，看下加入媒体查询，或者使用类似弹性盒或者网格的布局方式，哪个是让组件可响应的最佳途径。经常是没有什么对错的，你应该实验下，看看哪个对你的设计和内容效果最好。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
-
-## 模块目录
-
-- [Introduction to CSS layout](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

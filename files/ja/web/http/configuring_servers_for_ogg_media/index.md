@@ -71,7 +71,7 @@ One common way to reduce the load on a web server is to use [gzip or deflate com
 
 Also, Apache servers don't send the Content-Length response header if gzip encoding is used.
 
-> **メモ:** Starting in {{Gecko("2.0") }}, Gecko will no longer request gzip or deflate compression when downloading media. The above is only relevant for Firefox 3.5/3.6.
+> **メモ:** Starting in Gecko 2.0, Gecko will no longer request gzip or deflate compression when downloading media. The above is only relevant for Firefox 3.5/3.6.
 
 ### Getting the duration of Ogg media
 

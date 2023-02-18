@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 В предыдущей главе мы сделали несколько [базовых анимаций](/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations) и узнали, как можно двигать вещи. В этой части мы более подробно рассмотрим само движение и собираемся добавить некоторую физику, чтобы сделать наши анимации более продвинутыми.
 

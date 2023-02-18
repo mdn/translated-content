@@ -85,18 +85,3 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 如果您将此评估作为有组织的课程的一部分，您应该能够将您的工作交给您的老师/导师进行打分。如果您是自学的，那么您可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得打分指南。首先尝试练习 - 作弊学不到什么！
 
 {{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
-
-## 在本单元中
-
-- [How CSS works](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
-- [CSS syntax](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Syntax)
-- [Selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors)
-- [Simple selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Simple_selectors)
-- [Attribute selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Attribute_selectors)
-- [Pseudo-classes and pseudo-elements](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Pseudo-classes_and_pseudo-elements)
-- [Combinators and multiple selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Combinators_and_multiple_selectors)
-- [CSS values and units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
-- [Cascade and inheritance](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
-- [The box model](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model)
-- [Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
-- [Fundamental CSS comprehension](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)

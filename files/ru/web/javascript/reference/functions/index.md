@@ -162,7 +162,7 @@ new Function (arg1, arg2, ... argN, functionBody)
 
 - [`arguments`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments): Объект, похожий на массив и содержащий все аргументы, переданные в текущую функцию.
 - [`arguments.callee`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: Функция, исполняемая в текущий момент.
-- [`arguments.caller`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) {{Obsolete_inline}} : Функция, которая вызвала текущую функцию.
+- [`arguments.caller`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) : Функция, которая вызвала текущую функцию.
 - [`arguments.length`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): Число аргументов, переданных в функцию.
 
 ## Определение методов

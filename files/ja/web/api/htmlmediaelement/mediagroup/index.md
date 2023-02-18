@@ -1,21 +1,17 @@
 ---
 title: HTMLMediaElement.mediaGroup
 slug: Web/API/HTMLMediaElement/mediaGroup
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 **`HTMLMediaElement.mediaGroup`** プロパティは HTML の {{htmlattrxref("mediaGroup", "video")}} 属性を反映し、所属する要素のグループの名前を示します。メディア要素のグループは、共通の `controller` を共有します。
 
 ## 値
 
 文字列です。
-
-## 例
-
-```js
-...
-```
 
 ## 仕様書
 

@@ -105,7 +105,7 @@ python3 manage.py runserver
 
 이제 **Home** 페이지로 되돌아가서 (홈 링크를 사용해서) **Author** 와 **Genre** 목록들을 보세요 — 새로운 책들을 추가하면서 이미 몇 가지 목록들이 있겠지만, 조금 더 추가해도 됩니다.
 
-아직 가지고 있지 않은 것은 Book Instance들입니다. 왜냐하면 Books에서 만들어지지 않았기 때문이죠( `BookInstance`에서 `Book`을 만들 수 있긴 하지만 — 이것은 `ForeignKey` 필드의 특성입니다). Home 페이지로 되돌아가서 연관된 **추가(Add)**버튼을 눌러 아래의 Add book Instance 화면을 나타내세요. 크고 전역적으로 고유한 id에 주의하세요. 이것은 도서관에서 한 권의 책을 개별적으로 식별하는 데 사용할 수 있습니다.
+아직 가지고 있지 않은 것은 Book Instance들입니다. 왜냐하면 Books에서 만들어지지 않았기 때문이죠( `BookInstance`에서 `Book`을 만들 수 있긴 하지만 — 이것은 `ForeignKey` 필드의 특성입니다). Home 페이지로 되돌아가서 연관된 **추가**(**Add**)버튼을 눌러 아래의 Add book Instance 화면을 나타내세요. 크고 전역적으로 고유한 id에 주의하세요. 이것은 도서관에서 한 권의 책을 개별적으로 식별하는 데 사용할 수 있습니다.
 
 ![Admin Site - BookInstance Add](admin_bookinstance_add.png)
 

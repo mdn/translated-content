@@ -20,4 +20,3 @@ For example:
 ### General knowledge
 
 - [Introduction to servers](/en-US/Learn/What_is_a_web_server)
-- {{Interwiki("wikipedia", "Server (computing)")}} on Wikipedia

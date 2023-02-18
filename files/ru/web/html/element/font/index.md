@@ -4,8 +4,6 @@ slug: Web/HTML/Element/font
 translation_of: Web/HTML/Element/font
 ---
 
-{{obsolete_header}}
-
 ## Summary
 
 _HTML фонт элемент_(`<font>`) определяет размер шрифта, цвета и лицо для его содержимого

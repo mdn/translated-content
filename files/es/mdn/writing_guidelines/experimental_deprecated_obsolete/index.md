@@ -143,7 +143,7 @@ A veces, necesitas reutilizar el mismo texto en varias páginas (o deseas usar e
   4. Abre la interfaz de usuario del editor de la página donde deseas pegar.
   5. Pega el contenido del portapapeles.
 
-  > **Nota:** **Usuarios de Chrome:** Chrome generalmente no incluye las clases aplicadas al contenido al copiar y pegar documentos en nuestro editor. Debes revisar el contenido después de hacer esto y volver a aplicar los estilos perdidos. Checa las tablas, cuadros de sintaxis, resaltado de sintaxis y secciones ocultas de contenido en particular.
+  > **Nota:** Chrome generalmente no incluye las clases aplicadas al contenido al copiar y pegar documentos en nuestro editor. Debes revisar el contenido después de hacer esto y volver a aplicar los estilos perdidos. Checa las tablas, cuadros de sintaxis, resaltado de sintaxis y secciones ocultas de contenido en particular.
 
 - A veces, literalmente, deseas utilizar el mismo contenido en muchas páginas. En este caso, es mejor que coloques el contenido en una página y luego uses la macro [`Page`](https://github.com/mdn/yari/tree/main/kumascript/macros/Page.ejs) para trasladar el material de una página a otra. De esta forma, siempre que se actualice el texto de la página fuente, la página de destino también se actualizará (es decir, esto sucederá en una actualización forzada o cuando la página destino pase por una reconstrucción programada).
 

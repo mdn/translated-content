@@ -586,7 +586,7 @@ Skeleton을 사용하기 위해서는 `container` 클래스를 랩퍼(바깥쪽)
 
 HTML 파일을 저장하고 브라우저에 불러들여 효과를 확인하십시오.
 
-> **참고:** :위의 예제를 제대로 적용하기가 어렵다면, 그것을 우리의 [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) 파일과 비교해 보십시요. (그것을 [라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
+> **참고:** 위의 예제를 제대로 적용하기가 어렵다면, 그것을 우리의 [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) 파일과 비교해 보십시요. (그것을 [라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
 
 당신이 (앞서 다운로드한) skeleton.css 내용을 보면 어떻게 작동하는지 알 수 있습니다. 예를 들어, Skeleton 파일에는 다음과 같이 "three columns" 클래스가 적용되는 요소를 스타일링하기 위한 정의가 부여되어 있습니다.
 
