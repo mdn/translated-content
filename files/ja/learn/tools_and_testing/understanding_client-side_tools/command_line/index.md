@@ -167,17 +167,17 @@ cd Desktop/project/src
 
 > **注:**Windows では、スラッシュの代わりにバックスラッシュを使用します。 `cd Desktop\project\src` — これは非常に奇妙に思えるかもしれませんが、その理由に興味がある場合は、マイクロソフトのプリンシパル エンジニアの 1 人の[この YouTube クリップをご覧ください](https://www.youtube.com/watch?v=5T3IJfBfBmI) 。
 
-### Listing directory contents
+### ディレクトリの内容の一覧表示
 
-Another built-in Unix command is `ls` (short for list), which lists the contents of the directory you're currently in. Note that this won't work if you're using the default Windows command prompt (`cmd`) — the equivalent there is `dir`.
+別の組み込み Unix コマンドは `ls` (list の略) で、現在のディレクトリの内容を一覧表示します。デフォルトの Windows コマンド プロンプト (`cmd`) を使用している場合、これは機能しないことに注意してください。 ) — 同等のものは `dir`です。
 
-Try running this now in your terminal:
+ターミナルでこれを実行してみてください:
 
 ```bash
 ls
 ```
 
-This gives you a list of the files and directories in your present working directory, but the information is really basic — you only get the name of each item present, not whether it is a file or a directory, or anything else. Fortunately, a small change to the command usage can give you a lot more information.
+これにより、現在の作業ディレクトリ内のファイルとディレクトリのリストが得られますが、情報は本当に基本的なものです。ファイルやディレクトリなどではなく、存在する各項目の名前のみを取得します。 幸いなことに、コマンドの使用法を少し変更するだけで、より多くの情報を得ることができます。
 
 ### Introducing command options
 
