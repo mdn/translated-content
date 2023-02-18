@@ -29,7 +29,7 @@ Somente um pequeno subconjunto de todas as propriedades CSS pode ser usado dentr
 
 Como toda essa lista será estendida no futuro, é recomendado que você não use qualquer propriedade dentro da declaração do bloco, afim de manter o CSS a qualquer prova.
 
-> **Note:** No CSS 2, os pseudoelementos eram prefixados com um caractere de dois pontos (`:`). Como as pseudo-classes também estavam seguindo a mesma convenção, elas eram indistinguíveis. Para resolver isso, o CSS 2.1 mudou a convenção para pseudoelementos. Agora, um pseudoelemento é prefixado com dois caracteres de dois pontos (`::`) e uma pseudo-classe ainda é prefixado com um único dois pontos (`:`).
+> **Nota:** No CSS 2, os pseudoelementos eram prefixados com um caractere de dois pontos (`:`). Como as pseudo-classes também estavam seguindo a mesma convenção, elas eram indistinguíveis. Para resolver isso, o CSS 2.1 mudou a convenção para pseudoelementos. Agora, um pseudoelemento é prefixado com dois caracteres de dois pontos (`::`) e uma pseudo-classe ainda é prefixado com um único dois pontos (`:`).
 >
 > Exemplo de **pseudoclasse**:
 > `.classedoelemento:hover { ... }`
