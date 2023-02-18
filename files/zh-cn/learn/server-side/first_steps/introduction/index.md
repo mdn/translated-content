@@ -184,10 +184,3 @@ web 开发者无法控制用户可能会使用哪一种浏览器来浏览网站�
 在接下来的文章中我们会帮助你选择一个对于你的第一个网站来说最好的 web 框架；但是，再接下来我们稍微详细一点地带你过一遍主要的客户端 - 服务器交互行为。
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
-
-## 在这个模块中
-
-- [服务端介绍](/zh-CN/docs/Learn/Server-side/First_steps/Introduction)
-- [客户端——服务器概览](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [服务端 web 框架](/zh-CN/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)
