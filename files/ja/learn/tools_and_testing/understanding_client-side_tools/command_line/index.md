@@ -78,19 +78,19 @@ macOS には、グラフィカルユーザーインターフェイスの下に�
 
 #### Windows
 
-As with some other programming tools, using the terminal (or command line) on Windows has traditionally not been as simple or easy as on other operating systems. But things are getting better.
+他のプログラミングツールと同様に、Windows でターミナル (またはコマンド ライン) を使用することは、従来、他のオペレーティングシステムほど単純でも簡単でもありませんでした。 しかし、状況は良くなっています。
 
-Windows has traditionally had its own terminal-like program called cmd ("the command prompt") for a long time, but this definitely doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
+Windows には伝統的に cmd ("コマンドプロンプト") と呼ばれる独自の端末のようなプログラムがありましたが、これは明らかに Unix コマンドと同等ではなく、古いスタイルの Windows DOS プロンプトと同等です。
 
-Better programs exist for providing a terminal experience on Windows, such as Powershell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset)
+Windows でターミナル エクスペリエンスを提供するための優れたプログラムが存在します。たとえば、Powershell ([インストーラーを見つけるにはこちらをご覧ください](https://github.com/PowerShell/PowerShell)) や Gitbash ([git for Windows](https://gitforwindows.org/) ツールセットの一部として提供されます)
 
-However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
+ただし、現代の Windows に最適なオプションは、Windows Subsystem for Linux (WSL) です。これは、Linux オペレーティングシステムを Windows 10 内から直接実行するための互換性レイヤーであり、仮想マシンを必要とせずに、Windows 上で直接「真の端末」を実行できます。
 
-This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl/).
+これは、無料で Windows ストアから直接インストールできます。 必要なすべてのドキュメントは、[Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl/) にあります。
 
 ![a screenshot of the Windows subsystem for Linux documentation](wsl.png)
 
-In terms of what option to choose on Windows, we'd strongly recommend trying to install the WSL. You could stick with the default command prompt (`cmd`), and many tools will work OK, but you'll find everything easier if you have better parity with Unix tools.
+Windows で選択するオプションに関しては、WSL をインストールすることを強くお勧めします。 デフォルトのコマンド プロンプト (`cmd`) をそのまま使用することもできます。多くのツールは正常に動作しますが、Unix ツールとの同等性が向上すると、すべてがより簡単になります。
 
 #### Side note: what's the difference between a command line and a terminal?
 
