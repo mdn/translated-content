@@ -68,7 +68,7 @@ l10n:
 
 #### Linux/Unix
 
-As hinted at above, Linux/Unix systems have a terminal available by default, listed among your Applications.
+上で記したように、Linux/Unix システムにはデフォルトで利用可能なターミナルがあり、アプリケーションの中にリストされています。
 
 #### macOS
 
