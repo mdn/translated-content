@@ -62,9 +62,9 @@ l10n:
 
 ![A basic vanilla macOS terminal](mac-terminal.png)
 
-### How do you access the terminal?
+### ターミナルへのアクセス方法を教えてください。
 
-Many developers today are using Unix-based tools (e.g. the terminal, and the tools you can access through it). Many tutorials and tools that exist on the web today support (and sadly assume) Unix-based systems, but not to worry — they are available on most systems. In this section, we'll look at how to get access to the terminal on your chosen system.
+今日、多くの開発者は Unix ベースのツールを使用しています (例: ターミナルと、そこからアクセスできるツール)。 今日 Web 上に存在する多くのチュートリアルやツールは、Unix ベースのシステムをサポートしています (残念ながらそれを想定しています) が、心配する必要はありません。ほとんどのシステムで利用できます。 このセクションでは、選択したシステムの端末にアクセスする方法を見ていきます。
 
 #### Linux/Unix
 
