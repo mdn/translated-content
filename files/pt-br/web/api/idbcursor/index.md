@@ -43,8 +43,6 @@ Pode ter um número ilimitado de cursores ao mesmo tempo. Você sempre consegue 
 
 ## Constantes
 
-{{ obsolete_header(25) }}
-
 > **Aviso:** These constants are no longer available. You should use the string constants directly instead. ({{ bug(891944) }})
 
 - `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).

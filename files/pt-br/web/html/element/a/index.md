@@ -65,23 +65,23 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
 ### Obsolete attributes
 
-- {{HTMLAttrDef("charset")}}{{Obsolete_Inline("HTML5")}}
+- {{HTMLAttrDef("charset")}}
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
     > **Note:** This attribute is obsolete and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
-- {{HTMLAttrDef("coords")}}{{Obsolete_Inline("HTML5")}}
+- {{HTMLAttrDef("coords")}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
-- {{HTMLAttrDef("name")}}{{Obsolete_Inline("HTML5")}}
+- {{HTMLAttrDef("name")}}
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
 
-- {{HTMLAttrDef("rev")}}{{Obsolete_Inline("HTML5")}}
+- {{HTMLAttrDef("rev")}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
-- {{HTMLAttrDef("shape")}}{{Obsolete_Inline("HTML5")}}
+- {{HTMLAttrDef("shape")}}
 
   - : The shape of the hyperlink’s region in an image map.
 
