@@ -359,13 +359,3 @@ myString
 - [Official JSON web site with link to ECMA standard](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
-
-## 다음 단계
-
-- [Object basics](/ko/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/ko/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/ko/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/ko/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/ko/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/ko/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
