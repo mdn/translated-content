@@ -18,10 +18,6 @@ typeof null === 'object'
 
 ## Узнать больше
 
-### Общая информация
-
-- {{Interwiki("wikipedia", "Нулевой указатель")}} на Википедии
-
 ### Техническая информация
 
 - [Типы данных JavaScript и структуры данных](/ru/docs/Web/JavaScript/Data_structures)

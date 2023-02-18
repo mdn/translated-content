@@ -1,6 +1,8 @@
 ---
 title: 'HTMLMediaElement: durationchange イベント'
 slug: Web/API/HTMLMediaElement/durationchange_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTMLMediaElement")}}
@@ -12,9 +14,9 @@ slug: Web/API/HTMLMediaElement/durationchange_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('durationchange', event => { });
+addEventListener('durationchange', (event) => { });
 
-ondurationchange = event => { };
+ondurationchange = (event) => { };
 ```
 
 ## イベント型
@@ -25,7 +27,7 @@ ondurationchange = event => { };
 
 これらの例では、`HTMLMediaElement` の `durationchange` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
 const video = document.querySelector('video');
@@ -35,7 +37,7 @@ video.addEventListener('durationchange', (event) => {
 });
 ```
 
-`ondurationchange` イベントハンドラープロパティを使用する場合
+`ondurationchange` イベントハンドラープロパティを使用する場合:
 
 ```js
 const video = document.querySelector('video');

@@ -795,17 +795,3 @@ function updateValue(select, index) {
 如果你想更进一步，本例中的代码需要一些改进，才能变得更加通用和可重用。这是一个你可以尝试去做的练习。这里有两个提示可以帮到你：我们所有函数的第一个参数是相同的，这意味着这些函数需要相同的上下文。构建一个对象来共享那些上下文是更聪明的做法。还有，你需要让它的特性适用性更好；也就是说，它要能在一系列对 Web 标准的兼容性不同的浏览器上工作良好。祝愉快！
 
 {{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
-
-## 在本单元中
-
-- [Your first HTML form](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/zh-CN/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/zh-CN/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

@@ -336,13 +336,3 @@ This is the second.
 本章概述了多媒体内容的无障碍问题，以及一些实用的解决方案。
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## 本章目录
-
-- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML：无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍疑难解答](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

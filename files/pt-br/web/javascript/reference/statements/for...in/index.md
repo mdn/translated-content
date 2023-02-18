@@ -96,7 +96,7 @@ for (var prop in obj) {
 
 ## Compatibilidade: Initializer expressions
 
-Anterior ao SpiderMonkey 40 {{geckoRelease(40)}}, era possível usar uma expressão inicial com o laço for...in, conforme exemplo que se segue:
+Anterior ao SpiderMonkey 40, era possível usar uma expressão inicial com o laço for...in, conforme exemplo que se segue:
 
 ```js example-bad
 var obj = {a:1, b:2, c:3};

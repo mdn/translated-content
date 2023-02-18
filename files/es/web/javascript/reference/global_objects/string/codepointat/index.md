@@ -94,9 +94,9 @@ if (!String.prototype.codePointAt) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.codePointAt")}}
+{{Compat}}
 
 ## See also
 

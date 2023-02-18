@@ -435,13 +435,3 @@ function subFunction3(value) {
 - [預設參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[箭頭函數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — 進階概念參考文件
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
-
-## 本模組中
-
-- [於程式碼中決策 — 條件](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [程式碼迴圈](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [函數 — 可重複使用的程式碼區塊](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions)
-- [建立自己的函數](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [函數回傳值](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [事件介紹](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
-- [圖庫](/zh-TW/docs/Learn/JavaScript/Building_blocks/Image_gallery)

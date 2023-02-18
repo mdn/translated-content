@@ -267,24 +267,3 @@ HTML 是一组嵌套的列表—我们总共有三个列表，并且两个示例
 例如，理解 [`<image>`](/zh-CN/docs/Web/CSS/image)还允许你创建一个颜色渐变有意义的，但也许这个章节并不会提供太多明显的相关知识！
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
-
-## 模块目录
-
-1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

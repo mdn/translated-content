@@ -69,7 +69,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
   </tbody>
 </table>
 
-> **Nota:** **Nota de uso**: La mayoría de los navegadores modernos automáticamente agregarán comillas alrededor del texto dentro de un elemento `<q>`. Es posible que se necesite una regla de estilo para agregar comillas en navegadores antiguos.
+> **Nota:** La mayoría de los navegadores modernos automáticamente agregarán comillas alrededor del texto dentro de un elemento `<q>`. Es posible que se necesite una regla de estilo para agregar comillas en navegadores antiguos.
 
 ## Atributos
 

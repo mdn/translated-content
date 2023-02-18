@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.load()
 slug: Web/API/HTMLMediaElement/load
+l10n:
+  sourceCommit: e60194342c9666ad8a2e6e5e6c25705fe818bcde
 ---
 
 {{APIRef("HTML DOM")}}
@@ -13,7 +15,7 @@ slug: Web/API/HTMLMediaElement/load
 
 ## 構文
 
-```js
+```js-nolint
 load()
 ```
 
@@ -27,7 +29,7 @@ load()
 
 ## 使用上のメモ
 
-`load()` を呼び出すと、このメディア要素を含む進行中のすべての操作が中止され、{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素で指定されたオプションとその {{htmlattrxref("src", "video")}} 属性または子の {{HTMLElement("source")}} 要素を指定して適切なメディアリソースの選択と読み込みのプロセスが開始されます。 これについては、[動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)の[複数の形式の対応](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#複数のソース形式を使用して互換性を向上させる)で詳しく説明しています。
+`load()` を呼び出すと、このメディア要素を含む進行中のすべての操作が中止され、{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素で指定されたオプションとその {{htmlattrxref("src", "video")}} 属性または子の {{HTMLElement("source")}} 要素を指定して適切なメディアリソースの選択と読み込みのプロセスが開始されます。 これについては、[動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#複数のソース形式を使用して互換性を向上させる)で詳しく説明しています。
 
 進行中のアクティビティを中止するプロセスにより、 {{domxref("HTMLMediaElement.play", "play()")}} によって返された未処理のプロミス ({{jsxref("Promise")}}) が、新しいメディアの読み込みが開始される前に、そのステータスに基づいて適切に解決または拒否されます。保留中の再生用のプロミスは、 `"AbortError"` {{domxref("DOMException")}} で中止されます。
 
@@ -44,7 +46,7 @@ load()
 この例では、文書内の {{HTMLElement("video")}} 要素を見つけて、`load()` を呼び出してそれをリセットします。
 
 ```js
-var mediaElem = document.querySelector("video");
+const mediaElem = document.querySelector("video");
 mediaElem.load();
 ```
 

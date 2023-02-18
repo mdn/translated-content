@@ -88,7 +88,7 @@ var args = [...arguments];
 
 - [`arguments.callee`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee)
   - : Ссылка на функцию, которая выполняется в текущий момент.
-- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller) {{ Obsolete_inline() }}
+- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller)
   - : Ссылка на функцию, которая вызвала функцию, выполняющуюся в текущий момент.
 - [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : Количество переданных в функцию аргументов.

@@ -78,14 +78,3 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 ![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [安裝基本軟體](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [你的網站看起來會是什麼樣子？](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [與各式各樣檔案打交道](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基本概念](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基本概念](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基本概念](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [將你的網站發佈上線](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [網站的運作方式](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)
