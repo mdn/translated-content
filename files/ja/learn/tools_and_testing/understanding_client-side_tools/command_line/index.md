@@ -96,9 +96,9 @@ Windows で選択するオプションに関しては、WSL をインストー�
 
 通常、これら 2 つの用語は同じ意味で使用されます。 技術的には、ターミナルはシェルを起動して接続するソフトウェアです。 シェルは、セッションおよびセッション環境です (プロンプトやショートカットなどをカスタマイズできます)。 コマンドラインは、コマンドを入力してカーソルが点滅するリテラル行です。
 
-### Do you have to use the terminal?
+### ターミナルを使用する必要がありますか？
 
-Although there's a great wealth of tools available from the command line, if you're using tools like [Visual Studio Code](https://code.visualstudio.com/) there's also a mass of extensions that can be used as a proxy to use terminal commands without needing to use the terminal directly. However, you won't find a code editor extension for everything you want to do — you'll have to get some experience with the terminal eventually.
+コマンドラインから利用できるツールは豊富にありますが、[Visual Studio Code](https://code.visualstudio.com/) などのツールを使用している場合は、プロキシとして使用できる拡張機能も多数あります。 端末を直接使用せずに端末コマンドを使用します。 ただし、やりたいことすべてに対応するコードエディター拡張機能が見つかるわけではありません。最終的には、ターミナルである程度の経験を積む必要があります。
 
 ## Basic built-in terminal commands
 
