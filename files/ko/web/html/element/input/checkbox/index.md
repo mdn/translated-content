@@ -1,6 +1,8 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
+l10n:
+  sourceCommit: 256f83064a7cc588df6d7c635e9db28e7572665a
 ---
 
 {{HTMLSidebar}}
