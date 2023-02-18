@@ -19,7 +19,7 @@ Es similar al estatus {{HTTPStatus("403")}}, pero en este caso , la autenticaci√
 
 ## Respuesta de ejemplo
 
-```
+```http
 HTTP/1.1 401 Unauthorized
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 WWW-Authenticate: Basic realm="Access to staging site"
