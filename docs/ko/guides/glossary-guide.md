@@ -167,6 +167,7 @@
 | Argument | 전달인자, 인수 | | [참고 링크](https://github.com/mdn/translated-content/pull/3888) |
 | Blocking operation | 블로킹 연산 | | |
 | Callback | 콜백 | | |
+| Dictionary | 사전 | | [참고 링크](https://github.com/mdn/translated-content/pull/10976#discussion_r1073704799) |
 | Fulfilled | 이행(함) | | |
 | Handler | 처리기 | 이벤트 처리기 | |
 | Interface | 인터페이스 | | |
