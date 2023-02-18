@@ -307,23 +307,23 @@ https://developer.mozilla.org/en-US/docs/Web/API/fetch
 これらのコマンドを組み合わせることで、`/docs/Web/API/WindowOrWorkerGlobalScope/fetch` URL をリクエストしたときに Mozilla サーバーがリダイレクトしている完全な URL を表示するように出力をカスタマイズしました。
 システムを理解することは、今後何年にもわたって役立つことが証明されます。これらの単一サービス ツールがどのように機能し、ニッチな問題を解決するツールキットの一部になることができるかを学びましょう。
 
-## Adding powerups
+## パワーアップの追加
 
-Now we've had a look at some of the built-in commands your system comes equipped with, let's look at how we can install a third-party CLI tool and make use of it.
+システムに組み込まれている組み込みコマンドのいくつかを見てきたので、サードパーティの CLI ツールをインストールしてそれを利用する方法を見てみましょう。
 
-The vast ecosystem of installable tools for front-end web development currently exists mostly inside [npm](https://www.npmjs.com), a privately owned, package hosting service that works closely together with Node.js.
-This is slowly expanding — you can expect to see more package providers as time goes on.
+フロントエンド Web 開発用のインストール可能なツールの広大なエコシステムは現在、主に [npm](https://www.npmjs.com) 内に存在します。これは、Node.js と密接に連携する個人所有のパッケージ ホスティング サービスです。
+これは徐々に拡大しています — 時間が経つにつれて、より多くのパッケージ プロバイダーが表示されることが期待できます。
 
-[Installing Node.js](https://nodejs.org/en/) also installs the npm command line tool (and a supplementary npm-centric tool called npx), which offers a gateway to installing additional command line tools. Node.js and npm work the same across all systems: macOS, Windows, and Linux.
+[Node.js](https://nodejs.org/en/) をインストールすると、 追加のコマンド ライン ツールをインストールするためのゲートウェイを提供する npm コマンド ライン ツール (および npx と呼ばれる補助的な npm 中心のツール) もインストールされます。 Node.js と npm は、macOS、Windows、および Linux のすべてのシステムで同じように機能します。
 
-Install npm on your system now, by going to the URL above and downloading and running a Node.js installer appropriate to your operating system. If prompted, make sure to include npm as part of the installation.
+上記の URL にアクセスし、お使いのオペレーティング システムに適した Node.js インストーラーをダウンロードして実行することにより、今すぐシステムに npm をインストールします。 プロンプトが表示されたら、必ず npm をインストールの一部として含めてください。 
 
 ![the Node.js installer on windows, showing the option to include npm](npm-install-option.png)
 
-Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on [Prettier](https://prettier.io/).
-Prettier is an opinionated code formatter that only has a "few options".
-Fewer options tends to mean simpler.
-Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.
+次の記事以降ではさまざまなツールを見ていきますが、[Prettier](https://prettier.io/) について詳しく説明します。
+Prettier は、「いくつかのオプション」しかない独自のコード フォーマッタです。
+オプションが少ないほど、シンプルになる傾向があります。
+複雑さの点でツールが手に負えなくなることがあることを考えると、「選択肢が少ない」ことは非常に魅力的です。
 
 ### Where to install our CLI tools?
 
