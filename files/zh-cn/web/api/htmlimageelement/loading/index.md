@@ -73,7 +73,6 @@ function addImageToList(url) {
 
 ## 参见
 
-- The {{HTMLElement("img")}} element
-- [Web performance](/zh-CN/docs/Learn/Performance) in the MDN Learning Area
-- [Lazy loading](/zh-CN/docs/Web/Performance/Lazy_loading) in the MDN web performance guide
-- {{SectionOnPage("/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages", "Use lazy loading for images")}}
+- {{HTMLElement("img")}} 元素
+- MDN 学习专区中的 [Web 性能](/zh-CN/docs/Learn/Performance)
+- MDN web 性能指南中的[懒加载](/zh-CN/docs/Web/Performance/Lazy_loading)

@@ -35,72 +35,40 @@ CanvasGradient ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
 
 ## 示例
 
-### 使用 `createRadialGradient` 方法
+### 用径向渐变填充矩形
 
 这是一段简单的代码片段，使用 `createRadialGradient` 方法创建一个指定了开始和结束圆的 {{domxref("CanvasGradient")}} 对象。一旦创建，你可以使用 {{domxref("CanvasGradient.addColorStop()")}} 方法根据指定的偏移和颜色定义一个新的终止。你可以将当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}设置成此渐变，当使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果，如示例所示。
 
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
+<canvas id="canvas" width="200" height="200"></canvas>
 ```
 
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-var gradient = ctx.createRadialGradient(100,100,100,100,100,0);
-gradient.addColorStop(0,"white");
-gradient.addColorStop(1,"green");
+// Create a radial gradient
+// The inner circle is at x=110, y=90, with radius=30
+// The outer circle is at x=100, y=100, with radius=70
+const gradient = ctx.createRadialGradient(110, 90, 30, 100, 100, 70);
+
+// Add three color stops
+gradient.addColorStop(0, "pink");
+gradient.addColorStop(0.9, "white");
+gradient.addColorStop(1, "green");
+
+// Set the fill style and draw a rectangle
 ctx.fillStyle = gradient;
-ctx.fillRect(0,0,200,200);
+ctx.fillRect(20, 20, 160, 160);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-var gradient = ctx.createRadialGradient(100,100,100,100,100,0);
-gradient.addColorStop(0,"white");
-gradient.addColorStop(1,"green");
-ctx.fillStyle = gradient;
-ctx.fillRect(0,0,200,200);</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('用径向渐变填充矩形', 700, 240) }}
 
 ## 规范描述
 
@@ -109,11 +77,6 @@ window.addEventListener("load", drawCanvas);
 ## 浏览器兼容性
 
 {{Compat}}
-
-### Gecko-specific 注解
-
-- 从 Gecko 2.0 开始，指定非限制的值会抛出 `NOT_SUPPORTED_ERR`，用来替代 `SYNTAX_ERR`。
-- 从 Gecko 5.0 开始，指定一个负的半径会抛出 `INDEX_SIZE_ERR`。
 
 ## 参见
 

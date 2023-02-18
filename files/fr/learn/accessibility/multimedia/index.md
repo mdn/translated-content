@@ -84,7 +84,7 @@ Les instances audio et vidéo HTML5 sont même fournies avec un ensemble de comm
 </video>
 ```
 
-L'attribut controls comporte des boutons de lecture / pause, une barre de recherche, etc. - les commandes de base que vous êtes en droit d'attendre d'un lecteur multimédia. Il semble que dans Firefox et Chrome :
+L'attribut controls comporte des boutons de lecture / pause, une barre de recherche, etc. - les commandes de base que vous êtes en droit d'attendre d'un lecteur multimédia. Il ressemble à ceci dans Firefox et Chrome :
 
 ![Screenshot of Video Controls in Firefox](native-controls-firefox.png)
 
@@ -248,7 +248,7 @@ Nous avons également créé un exemple avancé pour montrer comment créer un s
 
 ## Transcriptions audio
 
-Pour permettre aux sourds d'accéder au contenu audio, vous devez créer des transcriptions de texte. Ceux-ci peuvent être soit inclus sur la même page que l'audio d'une manière ou d'une autre, soit inclus sur une page séparée et liés à.
+Pour permettre aux sourds d'accéder au contenu audio, vous devez créer des transcriptions de texte. Ceux-ci peuvent être soit inclus sur la même page que l'audio d'une manière ou d'une autre, soit inclus sur une page séparée et liée à la page principale.
 
 En termes de création de la transcription, vos options sont les suivantes:
 

@@ -1,5 +1,5 @@
 ---
-title: <head>标签里有什么？Metadata-HTML 中的元数据
+title: “头”里有什么——HTML 元信息
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 
@@ -267,15 +267,3 @@ Twitter 还拥有自己的类型的专有元数据协议（称为：[Twitter Car
 已经到了我们快速学习 HTML head 标签的尾声——你还能学到更多的相关的，但是现阶段详尽的讲的太多会令人无聊且困惑，我们只希望你现在在这学到最基本的概念！下一篇我们将要学习 [HTML 文字处理基础](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
-
-## 本章目录
-
-- [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [\<head>标签里有什么？Metadata-HTML 中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高阶文字排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文档与网站架构](/zh-CN/docs/Learn/HTML/introduction_to_html/document_and_website_structure)
-- [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [课程测验：为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [课程测验：构建内容丰富的网页](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -998,7 +998,7 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
           </tbody>
         </table>
         <p>
-          Internet Explorer と Edge は、ハードウェアコーデックを搭載した機器でのみ HEVC に対応しています。
+          Internet Explorer、Chrome、Edge は、ハードウェアコーデックを搭載した機器でのみ HEVC に対応しています。
         </p>
         <p>Mozilla は、特許に邪魔されている間は、 HEVC に対応しない予定です。</p>
       </td>

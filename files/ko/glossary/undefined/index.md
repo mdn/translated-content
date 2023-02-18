@@ -3,7 +3,7 @@ title: undefined
 slug: Glossary/undefined
 ---
 
-**`undefined`**는 {{Glossary("primitive", "원시값")}}으로, 선언한 후 값을 할당하지 않은 {{glossary("variable", "변수")}} 혹은 값이 주어지지 않은 {{Glossary("argument","인수")}}에 자동으로 할당됩니다.
+**`undefined`** 는 {{Glossary("primitive", "원시값")}}으로, 선언한 후 값을 할당하지 않은 {{glossary("variable", "변수")}} 혹은 값이 주어지지 않은 {{Glossary("argument","인수")}}에 자동으로 할당됩니다.
 
 ## 예제
 

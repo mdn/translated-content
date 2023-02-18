@@ -14,7 +14,7 @@ original_slug: MDN/Guidelines/Conventions_definitions
 
 - 전체 페이지를 복사하고 싶다면:
 
-  1. 복사하고 싶은 페이지를 보는 동안, **고급** (톱니바퀴) 메뉴의 **[이 글 복제](/ko/docs/MDN/Contribute/Creating_and_editing_pages#Clone_of_an_existing_page)**를 고르세요. 이는 새 페이지를 위한 편집기 UI를 엽니다, 복제된 페이지의 콘텐츠로 이미 채워진 채로.
+  1. 복사하고 싶은 페이지를 보는 동안, **고급** (톱니바퀴) 메뉴의 [**이 글 복제**](/ko/docs/MDN/Contribute/Creating_and_editing_pages#Clone_of_an_existing_page)를 고르세요. 이는 새 페이지를 위한 편집기 UI를 엽니다, 복제된 페이지의 콘텐츠로 이미 채워진 채로.
   2. 복제된 페이지를 위한 새로운 **한국어 제목** 및 **슬러그**를 입력하세요.
   3. 필요에 따라 페이지의 콘텐츠를 편집하고 평소대로 저장하세요.
 

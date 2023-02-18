@@ -3,16 +3,16 @@ title: 域
 slug: Glossary/Domain
 ---
 
-域是互联网中控制其自身资源的"权威"。它的“域名”是一种在{{Glossary("URL")}}中作为这个层次结构的一部分来标记出这种“权威性”的方式 - 通常是最令人难忘的部分，例如品牌名称。
+域是互联网中控制其自身资源的“代表”（authority，有时被直译为“权威”）。它的“域名”是 {{Glossary("URL")}} 层次结构的一部分，是对“代表”的称呼。域名通常也是 URL 中最令人难忘的地方，例如品牌名称。
 
-完全限定域名（FQDN）包含通过 {{Glossary("DNS")}} 系统明确地按名称查找此“权威”的所有必要部分。
+一个全限定域名（FQDN）包含可以使用互联网的{{Glossary("DNS","域名系统")}}明确地按名称查询该机构的所有必要部分。
 
-For example, in "developer.mozilla.org":
+例如，在“developer.mozilla.org”中：
 
-1. "org" is called a [top-level domain](https://zh.wikipedia.org/wiki/Top-level_domain). They are registered as an internet standard by the [IANA](https://zh.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority) . Here, "org" means "organization" which is defined in a top-level _domain registry_.
-2. "mozilla" is the domain. If you like to own a domain you have to register it with one of the many [registrars](https://zh.wikipedia.org/wiki/Domain_name_registrar) who are allowed to do so with a top-level domain registry.
-3. "developer" is a "sub-domain", something you as the owner of a domain may define yourself. Many owners choose to have a subdomain "www" to point to their {{Glossary("World_Wide_Web")}} resource, but that's not required (and has even fallen somewhat out of favor).
+1. “org”被称为[顶级域](https://zh.wikipedia.org/wiki/頂級域)，它们由 [IANA](https://zh.wikipedia.org/wiki/互联网号码分配局) 注册为互联网标准。这里，“org”是指“组织”，它被定义在一个顶级的*域名注册表*中。
+2. “mozilla”是域名。如果你需要拥有一个域名，必须在[注册商](https://zh.wikipedia.org/wiki/域名注册商)中注册。在顶级域域名注册商委派下，注册商可以为你注册域名。
+3. “developer”是子域名，作为域名的所有者，你可以自己定义。许多域名所有者选择将子域“www”指向他们的{{Glossary("World_Wide_Web","万维网")}}资源，但这并不是必须的（甚至已经有些失宠了）。
 
-## 学习更多
+## 参见
 
-- 在维基百科中的 [域](https://zh.wikipedia.org/wiki/域)
+- 维基百科词条[域名](https://zh.wikipedia.org/wiki/域名)

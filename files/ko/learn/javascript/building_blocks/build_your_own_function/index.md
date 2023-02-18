@@ -298,13 +298,3 @@ btn.onclick = displayMessage();
 끝에 도달하신 것을 축하드립니다! 이 문서는 여러분이 실용적인 사용자 정의 함수를 만들어보는 전체 과정을 익히도록 했는데, 이는 조금의 추가적인 작업과 함께 실제 프로젝트로 이식될 수도 있습니다. 다음 문서에서 우리는 또 다른 관련된 필수적인 개념 — 반환 값을 설명함으로써 함수를 마무리지을 것입니다.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
-
-## 이 과정에서는
-
-- [판단 내리기 — 조건문](/ko/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [함수 — 코드 재사용](/ko/docs/Learn/JavaScript/Building_blocks/Functions)
-- **함수 만들기**
-- [함수 반환 값](/ko/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events)
-- [이미지 갤러리](/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery)

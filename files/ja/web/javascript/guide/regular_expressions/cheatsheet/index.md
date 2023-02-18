@@ -234,7 +234,7 @@ l10n:
       </td>
       <td>
         <p>
-          <strong>論理和: </strong>"x" または "y" に一致します。パイプ (<code>|<code>) で区切られた各成分は、代替 (<em>alternative</em>)と呼ばれます。例えば、<code>/green|red/</code> は "green apple" の "green" と "red apple" の "red" に一致します。
+          <strong>論理和: </strong>"x" または "y" に一致します。パイプ (<code>|</code>) で区切られた各成分は、代替 (<em>alternative</em>)と呼ばれます。例えば、<code>/green|red/</code> は "green apple" の "green" と "red apple" の "red" に一致します。
         </p>
         <div class="notecard note">
           <p>
@@ -248,7 +248,7 @@ l10n:
 
 ## アサーション
 
-[サーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)には、行や単語の先頭と末尾を示す境目、他にも何らかの形で一致が可能であることを示すパターン（先読み、後読み、条件式など）が含まれます。
+[アサーション](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)には、行や単語の先頭と末尾を示す境目、他にも何らかの形で一致が可能であることを示すパターン（先読み、後読み、条件式など）が含まれます。
 
 ### 境界型のアサーション
 

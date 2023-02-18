@@ -5,13 +5,13 @@ slug: Web/API/IDBDatabase
 
 {{APIRef()}}
 
-IndexedDB API の `IDBDatabase` インターフェイスは、[データベースへの接続](/ja/docs/IndexedDB#database_connection)を提供します。`IDBDatabase` オブジェクトで、データベースの[トランザクション](/ja/docs/IndexedDB#gloss_transaction)を開き、データベースのオブジェクト（データ）を生成したり、操作したり、削除したりできます。このインターフェイスはデータベースのバージョンを取得したり、統合したりする唯一の方法を提供します。
+IndexedDB API の `IDBDatabase` インターフェイスは、[データベースへの接続](/ja/docs/Web/API/IndexedDB_API#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%B8%E3%81%AE%E6%8E%A5%E7%B6%9A)を提供します。`IDBDatabase` オブジェクトで、データベースの[トランザクション](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3)を開き、データベースのオブジェクト（データ）を生成したり、操作したり、削除したりできます。このインターフェイスはデータベースのバージョンを取得したり、統合したりする唯一の方法を提供します。
 
-> **メモ:** IndexedDB 内で行う全ての操作は、データベース内のデータとの作用を表す[トランザクション](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction)の文脈で起こります。IndexedDB 内の全てのオブジェクト (オブジェクトストア、インデックス、カーソルを含みます) は、特定のトランザクションに紐づいています。そのため、トランザクション外では、コマンドを実行したり、データにアクセスしたり、何かを開いたりできません。
+> **メモ:** IndexedDB 内で行う全ての操作は、データベース内のデータとの作用を表す[トランザクション](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3)の文脈で起こります。IndexedDB 内の全てのオブジェクト (オブジェクトストア、インデックス、カーソルを含みます) は、特定のトランザクションに紐づいています。そのため、トランザクション外では、コマンドを実行したり、データにアクセスしたり、何かを開いたりできません。
 
 ## インスタンスメソッド
 
-[EventTarget](/ja/docs/DOM/EventTarget) から継承します。
+{{domxref("EventTarget")}} から継承します。
 
 - {{domxref("IDBDatabase.close")}}
   - : 即座に応答して、別スレッドでデータベースを閉じます。
@@ -29,7 +29,7 @@ IndexedDB API の `IDBDatabase` インターフェイスは、[データベー�
 - {{domxref("IDBDatabase.version")}} {{readonlyInline}}
   - : 接続しているデータベースのバージョンを含む [64-bit integer](</ja/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>)。データベースが初めて作られた場合、この属性は空文字です。
 - {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
-  - : 接続しているデータベースの[オブジェクトストア](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む{{ domxref("DOMStringList") }}。
+  - : 接続しているデータベースの[オブジェクトストア](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%B9%E3%83%88%E3%82%A2)名のリストを含む{{ domxref("DOMStringList") }}。
 
 ### イベント
 

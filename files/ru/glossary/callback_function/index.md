@@ -68,6 +68,5 @@ navigator.geolocation.getCurrentPosition(function(position) {
 
 ### Основное
 
-- {{Interwiki("wikipedia", "Callback (программирование)", "Callback")}} на Википедии
 - [Колбэки и события на компонентах](https://learn.javascript.ru/custom-events)
 - [Ад обратных вызовов](http://callbackhell.ru/)

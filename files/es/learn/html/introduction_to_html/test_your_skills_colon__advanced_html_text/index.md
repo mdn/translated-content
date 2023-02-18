@@ -20,7 +20,7 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el puno de partida para esta tarea](/es/docs/https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) to work in your own editor or in an online editor.
+> **Nota:** [Descarga el puno de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) to work in your own editor or in an online editor.
 
 ## Texto HTML avanzado 2
 
@@ -35,7 +35,7 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2.html", '100%', 700)}}
 
-> **Nota:** [Descarga el punto de partida para esta tarea](/es/docs/https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) para trabajar en su propio editor o en un editor en línea.
+> **Nota:** [Descarga el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 

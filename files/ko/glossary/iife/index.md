@@ -3,7 +3,7 @@ title: IIFE
 slug: Glossary/IIFE
 ---
 
-**즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)**은 정의되자마자 즉시 실행되는 {{glossary("Javascript")}} {{glossary("Function")}} 를 말한다.
+**즉시 실행 함수 표현**(**IIFE, Immediately Invoked Function Expression**)은 정의되자마자 즉시 실행되는 {{glossary("Javascript")}} {{glossary("Function")}} 를 말한다.
 
 ```js
 (function () {

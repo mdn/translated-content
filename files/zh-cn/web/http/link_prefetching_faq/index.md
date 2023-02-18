@@ -66,7 +66,7 @@ Link: </images/big.jpeg>; rel=prefetch
 
 ### 对预取内容是否有限制？
 
-是的，只有 http\:// (从 {{ Gecko("1.9.1") }} 开始支持 https\:// ) 的 URL 可以被预取。其他协议（如 FTP）没有对客户端缓存提供足够的支持。
+是的，只有 http\:// (从 Gecko 1.9.1 开始支持 https\:// ) 的 URL 可以被预取。其他协议（如 FTP）没有对客户端缓存提供足够的支持。
 
 ### Mozilla 能够预取不同宿主的文档吗？
 

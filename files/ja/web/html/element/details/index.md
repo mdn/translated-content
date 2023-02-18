@@ -49,7 +49,7 @@ CSS を使用して折り畳みウィジェットのスタイルを設定する�
     </tr>
     <tr>
       <th scope="row">暗黙的な ARIA ロール</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

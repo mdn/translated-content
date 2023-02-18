@@ -55,7 +55,7 @@ function handleOrientation(orientData) {
 - {{ domxref("DeviceOrientationEvent.beta") }} 表示设备在 x 轴上的旋转角度，范围为 -180\~180。它描述的是设备由前向后旋转的情况。
 - {{ domxref("DeviceOrientationEvent.gamma") }} 表示设备在 y 轴上的旋转角度，范围为 -90\~90。它描述的是设备由左向右旋转的情况。
 
-### 例子
+### 示例
 
 这个例子会成功运行在支持检测自己方向的设备中的支持[`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件的浏览器中。
 
@@ -129,9 +129,9 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 输出结果：
 
-在{{LiveSampleLink("Orientation_example", "这里")}}以新窗口打开此示例；因为有些浏览器中的 [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件不支持跨域。
+在{{LiveSampleLink("示例", "这里")}}以新窗口打开此示例；因为有些浏览器中的 [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件不支持跨域。
 
-{{EmbedLiveSample('Orientation_example', '230', '260')}}
+{{EmbedLiveSample('示例', '230', '260')}}
 
 > **警告：** Chrome 和 Firefox 处理角度的机制不同，所以某些轴上的方向是相反的。
 

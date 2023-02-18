@@ -263,12 +263,3 @@ Javascript 基本上是一個同步性的、阻塞的，且是跑在單一執行
 如果我們正在執行一些需要花一點時間的操作，就好比查詢資料庫並將結果填充到模板上，最好的方式是不要在主執行緒上執行並用非同步的方法來完成。隨著時間的學習，你將會了解到在更多的情況下，選擇使用非同步的技巧會比選擇同步的方式來的更合理。
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
-
-## 在本單元
-
-- [非同步程式設計通用概念](/zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [非同步的 JavaScript 介紹](/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [協同的非同步 JavaScript ： Timeout 和 interval](/zh-TW/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [優雅的使用 Promise 來處理非同步操作](/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises)
-- [利用 async 及 await 讓非同步程式設計變得更容易](/zh-TW/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [選擇正確的方法](/zh-TW/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

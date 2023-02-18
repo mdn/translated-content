@@ -1,13 +1,6 @@
 ---
 title: Client hints(클라이언트 힌트)
 slug: Web/HTTP/Client_hints
-tags:
-  - Client hints
-  - Reference
-  - UA 대안
-  - User-agent
-  - 클라이언트 힌트
-translation_of: Glossary/Client_hints
 original_slug: Glossary/Client_hints
 ---
 

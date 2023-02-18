@@ -5,8 +5,6 @@ slug: Web/API/Notification/error_event
 
 {{APIRef("Web Notifications")}}
 
-## Summary
-
 {{domxref("Notification")}} 接口的 onerror 属性指定一个事件侦听器来接收 [`error`](/zh-CN/docs/Web/API/Element/error_event) 事件。
 
 当一个 {{domxref("Notification")}} 发生错误时，会发生这些事件（在许多情况下，一个错误阻止显示通知）。

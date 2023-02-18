@@ -9,7 +9,7 @@ Aplicativos da Microsoft, como Edge e Internet Explorer, suportam uma série de 
 
 ## Propriedades somente para Microsoft (evite usar em sites)
 
-> **Note:** **Nota:** Essas propriedades funcionarão apenas em aplicativos da Microsoft e não estão em uma faixa de padrões.
+> **Nota:** Essas propriedades funcionarão apenas em aplicativos da Microsoft e não estão em uma faixa de padrões.
 
 - {{CSSxRef("-ms-acelerador")}}
 - {{CSSxRef("-ms-block-progression")}}
@@ -21,7 +21,7 @@ Aplicativos da Microsoft, como Edge e Internet Explorer, suportam uma série de 
 - {{CSSxRef("-ms-content-zoom-snap")}}
 - {{CSSxRef("-ms-content-zoom-snap-points")}}
 - {{CSSxRef("-ms-content-zoom-snap-type")}}
-- {{CSSxRef("-ms-filter")}} {{Obsolete_Inline}}
+- {{CSSxRef("-ms-filter")}}
 - {{CSSxRef("-ms-flow-from")}}
 - {{CSSxRef("-ms-flow-into")}}
 - {{CSSxRef("-ms-high-contrast-adjust")}}
@@ -30,14 +30,14 @@ Aplicativos da Microsoft, como Edge e Internet Explorer, suportam uma série de 
 - {{CSSxRef("-ms-hifenate-limit-zone")}}
 - {{CSSxRef("-ms-ime-align")}}
 - {{CSSxRef("-ms-overflow-style")}}
-- {{CSSxRef("-ms-scrollbar-3dlight-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-seta-cor")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-base-cor")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-darkshadow-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-face-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-highlight-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-shadow-color")}} {{Obsolete_Inline}}
-- {{CSSxRef("-ms-scrollbar-track-color")}} {{Obsolete_Inline}}
+- {{CSSxRef("-ms-scrollbar-3dlight-color")}}
+- {{CSSxRef("-ms-scrollbar-seta-cor")}}
+- {{CSSxRef("-ms-scrollbar-base-cor")}}
+- {{CSSxRef("-ms-scrollbar-darkshadow-color")}}
+- {{CSSxRef("-ms-scrollbar-face-color")}}
+- {{CSSxRef("-ms-scrollbar-highlight-color")}}
+- {{CSSxRef("-ms-scrollbar-shadow-color")}}
+- {{CSSxRef("-ms-scrollbar-track-color")}}
 - {{CSSxRef("-ms-scroll-chaining")}}
 - {{CSSxRef("-ms-scroll-limit")}}
 - {{CSSxRef("-ms-scroll-limit-x-max")}}

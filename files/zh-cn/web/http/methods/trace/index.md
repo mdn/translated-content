@@ -14,9 +14,9 @@ slug: Web/HTTP/Methods/TRACE
 | 有主体（body）的请求（request）          | 否  |
 | ---------------------------------------- | --- |
 | 包含主体（body）的成功的响应（response） | 否  |
-| {{Glossary("Safe")}}             | 否  |
-| {{Glossary("Idempotent")}}     | 是  |
-| {{Glossary("Cacheable")}}         | 否  |
+| {{Glossary("Safe/HTTP", "安全")}}             | 否  |
+| {{Glossary("Idempotent", "幂等")}}     | 是  |
+| {{Glossary("Cacheable", "可缓存")}}         | 否  |
 | 允许用于 HTML 表单（form）               | 否  |
 
 ## 语法

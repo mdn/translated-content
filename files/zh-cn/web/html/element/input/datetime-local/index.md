@@ -60,7 +60,7 @@ slug: Web/HTML/Element/Input/datetime-local
 
 ## 取值
 
-一个输入到控件上的表示日期的字符串。关于此类型的输入控件使用的日期和的输入格式在 {{SectionOnPage("/zh-CN/docs/Web/HTML/Date_and_time_formats", "Local date and time strings")}} 中描述了。
+一个输入到控件上的表示日期的字符串。[本地日期时间字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#本地日期时间字符串)中描述了关于此类型的输入控件使用的日期和的输入格式。
 
 你可以将一个包含日期和时间的值放在 {{htmlattrxref("value", "input")}} 属性中以为控件设置一个默认值，像这样：
 

@@ -28,8 +28,8 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 - {{jsxref("Date")}}
 - {{jsxref("Error")}} 类型（仅限部分 [Error 类型](#error_类型)）。
 - {{jsxref("Map")}}
-- {{jsxref("Object")}} objects: but only plain objects (e.g. from object literals).
-- 除 `symbol` 以外的[基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#primitive_values)。
+- {{jsxref("Object")}} 对象：仅限简单对象（如使用对象字面量创建的）。
+- 除 `symbol` 以外的[基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)。
 - {{jsxref("RegExp")}}：`lastIndex` 字段不会被保留。
 - {{jsxref("Set")}}
 - {{jsxref("String")}}

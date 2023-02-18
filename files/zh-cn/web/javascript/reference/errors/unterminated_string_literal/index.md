@@ -17,7 +17,7 @@ SyntaxError: unterminated string literal
 
 ## 哪里出错了？
 
-某处 js 解析字符串出错。字符串必须使用单引号或双引号来正确的关闭。在 Javascript 中使用单引号的字符和双引号的字符串是没有区别的。字符串用[转义字符](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation)不是单引号就是双引。为解决这个错误，检查一下：
+某处 js 解析字符串出错。字符串必须使用单引号或双引号来正确的关闭。在 Javascript 中使用单引号的字符和双引号的字符串是没有区别的。字符串用[转义字符](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#转义序列)不是单引号就是双引。为解决这个错误，检查一下：
 
 - 你字符串的引号是否成对。
 - 你是否正确使用了转义序列

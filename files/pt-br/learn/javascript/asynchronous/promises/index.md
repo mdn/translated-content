@@ -57,7 +57,7 @@ Aqui estamos:
 
 1. chamando a API `fetch()`, e atribuindo o valor de retorno a variável `fetchPromise`.
 2. imediatamente depois, exibimos no console a variável `fetchPromise`. Você deve ver algo parecido com: `Promise { <state>: "pending" }`, nos dizendo que temos um objeto `Promise`, ele tem uma propriedade `state` cujo valor no momento em que foi impresso é `"pending"` (`"pendente"`). O estado `"pending"` significa que a busca pela resposta ainda está ocorrendo.
-3. passando uma função manipuladora dentro do método da Promise **`then()`**. Qunado (e se) a operação de busca tiver exito a Promise vai chamar a função manipuladora, passando um objeto {{domxref("Response")}}, que contém a resposta do servidor.
+3. passando uma função manipuladora dentro do método da Promise **`then()`**. Quando (e se) a operação de busca tiver exito a Promise vai chamar a função manipuladora, passando um objeto {{domxref("Response")}}, que contém a resposta do servidor.
 4. imprimindo um log dizendo que iniciamos a requisição.
 
 A saída completa deve ser algo parecido com:

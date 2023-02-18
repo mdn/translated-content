@@ -1364,11 +1364,35 @@
       "chrisdavidmills"
     ]
   },
-  "Learn/Common_questions/Common_web_layouts": {
+  "Learn/Common_questions/Design_and_accessibility/Common_web_layouts": {
     "modified": "2020-07-16T22:35:42.298Z",
     "contributors": ["Beatriz_Ortega_Valdes"]
   },
-  "Learn/Common_questions/How_does_the_Internet_work": {
+  "Learn/Common_questions/Design_and_accessibility/Thinking_before_coding": {
+    "modified": "2020-07-16T22:35:34.085Z",
+    "contributors": ["Beatriz_Ortega_Valdes", "LourFabiM", "DaniNz"]
+  },
+  "Learn/Common_questions/Tools_and_setup/How_much_does_it_cost": {
+    "modified": "2020-07-16T22:35:45.385Z",
+    "contributors": ["Beatriz_Ortega_Valdes"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
+    "modified": "2020-07-16T22:35:51.571Z",
+    "contributors": ["DaniNz", "LuyisiMiger", "TAXIS"]
+  },
+  "Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools": {
+    "modified": "2020-09-13T07:49:07.373Z",
+    "contributors": ["rockoldo", "IsraFloores", "Nachec", "John19D", "DaniNz"]
+  },
+  "Learn/Common_questions/Tools_and_setup/What_software_do_I_need": {
+    "modified": "2020-07-16T22:35:32.855Z",
+    "contributors": ["Beatriz_Ortega_Valdes"]
+  },
+  "Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server": {
+    "modified": "2020-07-16T22:35:52.759Z",
+    "contributors": ["rjpu24", "iseafa", "DaniNz"]
+  },
+  "Learn/Common_questions/Web_mechanics/How_does_the_Internet_work": {
     "modified": "2020-09-07T00:56:10.834Z",
     "contributors": [
       "IsraFloores",
@@ -1381,39 +1405,23 @@
       "DaniNz"
     ]
   },
-  "Learn/Common_questions/How_much_does_it_cost": {
-    "modified": "2020-07-16T22:35:45.385Z",
-    "contributors": ["Beatriz_Ortega_Valdes"]
-  },
-  "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
+  "Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines": {
     "modified": "2020-07-16T22:35:39.645Z",
     "contributors": ["benelliraul", "MarcosN", "DaniNz"]
   },
-  "Learn/Common_questions/Thinking_before_coding": {
-    "modified": "2020-07-16T22:35:34.085Z",
-    "contributors": ["Beatriz_Ortega_Valdes", "LourFabiM", "DaniNz"]
-  },
-  "Learn/Common_questions/Using_Github_pages": {
-    "modified": "2020-07-16T22:35:51.571Z",
-    "contributors": ["DaniNz", "LuyisiMiger", "TAXIS"]
-  },
-  "Learn/Common_questions/What_are_browser_developer_tools": {
-    "modified": "2020-09-13T07:49:07.373Z",
-    "contributors": ["rockoldo", "IsraFloores", "Nachec", "John19D", "DaniNz"]
-  },
-  "Learn/Common_questions/What_are_hyperlinks": {
+  "Learn/Common_questions/Web_mechanics/What_are_hyperlinks": {
     "modified": "2020-07-16T22:35:42.995Z",
     "contributors": ["ezzep66"]
   },
-  "Learn/Common_questions/What_is_a_URL": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_URL": {
     "modified": "2020-07-16T22:35:29.126Z",
     "contributors": ["ezzep66", "BubuAnabelas"]
   },
-  "Learn/Common_questions/What_is_a_domain_name": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_domain_name": {
     "modified": "2020-07-16T22:35:43.888Z",
     "contributors": ["Beatriz_Ortega_Valdes", "hmendezm90"]
   },
-  "Learn/Common_questions/What_is_a_web_server": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_web_server": {
     "modified": "2020-10-27T18:34:43.608Z",
     "contributors": [
       "noksenberg",
@@ -1424,14 +1432,6 @@
       "flaki53",
       "welm"
     ]
-  },
-  "Learn/Common_questions/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:32.855Z",
-    "contributors": ["Beatriz_Ortega_Valdes"]
-  },
-  "Learn/Common_questions/set_up_a_local_testing_server": {
-    "modified": "2020-07-16T22:35:52.759Z",
-    "contributors": ["rjpu24", "iseafa", "DaniNz"]
   },
   "Learn/Forms": {
     "modified": "2019-03-24T00:17:58.788Z",
@@ -3781,10 +3781,6 @@
     "modified": "2019-03-23T22:46:17.268Z",
     "contributors": ["Codejobs"]
   },
-  "Web/API/Document/registerElement": {
-    "modified": "2019-03-23T22:58:15.536Z",
-    "contributors": ["SphinxKnight", "AlePerez92", "mclo", "chrisdavidmills"]
-  },
   "Web/API/Document/scripts": {
     "modified": "2019-03-23T22:57:42.662Z",
     "contributors": ["MauroEldritch"]
@@ -3852,11 +3848,11 @@
     "modified": "2020-06-14T19:56:35.416Z",
     "contributors": ["snickArg"]
   },
-  "Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core": {
+  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
     "modified": "2019-12-13T21:06:41.403Z",
     "contributors": ["wbamberg", "jswisher"]
   },
-  "Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example": {
+  "Web/API/Document_object_model/Using_the_Document_Object_Model/Example": {
     "modified": "2019-03-23T22:06:28.946Z",
     "contributors": ["BrodaNoel"]
   },
@@ -6278,11 +6274,11 @@
     "modified": "2019-03-23T22:33:38.436Z",
     "contributors": ["pekechis"]
   },
-  "Web/CSS/:-moz-locale-dir(ltr)": {
+  "Web/CSS/:-moz-locale-dir_ltr": {
     "modified": "2019-03-23T22:33:43.908Z",
     "contributors": ["pekechis"]
   },
-  "Web/CSS/:-moz-locale-dir(rtl)": {
+  "Web/CSS/:-moz-locale-dir_rtl": {
     "modified": "2019-03-23T22:33:44.356Z",
     "contributors": ["pekechis"]
   },
@@ -8904,6 +8900,17 @@
     "modified": "2020-09-08T01:48:55.405Z",
     "contributors": ["Nachec"]
   },
+  "Web/HTML/Attributes/rel": {
+    "modified": "2019-03-23T22:46:17.969Z",
+    "contributors": [
+      "cmmp0112",
+      "_delta_",
+      "moisesalmonte",
+      "alvaromontoro",
+      "ivansx",
+      "vltamara"
+    ]
+  },
   "Web/HTML/Block-level_elements": {
     "modified": "2019-03-18T20:44:10.775Z",
     "contributors": [
@@ -9769,17 +9776,6 @@
   "Web/HTML/Inline_elements": {
     "modified": "2019-03-23T22:46:15.359Z",
     "contributors": ["juanbrujo", "raecillacastellana", "vltamara"]
-  },
-  "Web/HTML/Link_types": {
-    "modified": "2019-03-23T22:46:17.969Z",
-    "contributors": [
-      "cmmp0112",
-      "_delta_",
-      "moisesalmonte",
-      "alvaromontoro",
-      "ivansx",
-      "vltamara"
-    ]
   },
   "Web/HTML/Microdata": {
     "modified": "2019-03-23T22:12:50.480Z",
@@ -14032,54 +14028,6 @@
     "modified": "2019-03-18T20:59:19.791Z",
     "contributors": ["SphinxKnight", "ExE-Boss", "Mgjbot", "Jorolo", "Cmayo"]
   },
-  "Web/XPath/Axes/ancestor": {
-    "modified": "2019-01-16T16:11:09.049Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/ancestor-or-self": {
-    "modified": "2019-01-16T16:11:00.606Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/attribute": {
-    "modified": "2019-01-16T16:11:03.106Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/child": {
-    "modified": "2019-01-16T16:11:02.142Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/descendant": {
-    "modified": "2019-01-16T16:11:00.301Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/descendant-or-self": {
-    "modified": "2019-01-16T16:11:00.088Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/following": {
-    "modified": "2019-01-16T16:10:55.079Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/following-sibling": {
-    "modified": "2019-01-16T16:11:02.465Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/namespace": {
-    "modified": "2019-01-16T16:10:55.086Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/parent": {
-    "modified": "2019-01-16T16:10:56.130Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/preceding": {
-    "modified": "2019-01-16T16:11:08.778Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "Web/XPath/Axes/preceding-sibling": {
-    "modified": "2019-01-16T16:10:57.298Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
   "Web/XPath/Functions": {
     "modified": "2019-03-23T22:09:03.742Z",
     "contributors": ["ExE-Boss", "Zoditu"]
@@ -14556,6 +14504,10 @@
   "conflicting/Web/API/Crypto/getRandomValues": {
     "modified": "2019-03-23T22:25:15.548Z",
     "contributors": ["Jeremie"]
+  },
+  "conflicting/Web/API/CustomElementRegistry/define": {
+    "modified": "2019-03-23T22:58:15.536Z",
+    "contributors": ["SphinxKnight", "AlePerez92", "mclo", "chrisdavidmills"]
   },
   "conflicting/Web/API/Document_Object_Model": {
     "modified": "2019-03-24T00:02:47.149Z",
@@ -15413,17 +15365,6 @@
     "modified": "2020-09-30T16:48:19.234Z",
     "contributors": ["chrisdavidmills", "wbamberg", "juan-ferrer-toribio"]
   },
-  "orphaned/MDN/Yari": {
-    "modified": "2019-09-09T15:52:33.535Z",
-    "contributors": [
-      "SphinxKnight",
-      "clarii",
-      "wbamberg",
-      "Jeremie",
-      "Diio",
-      "atlas7jean"
-    ]
-  },
   "orphaned/Migrar_aplicaciones_desde_Internet_Explorer_a_Mozilla": {
     "modified": "2019-03-23T23:59:56.566Z",
     "contributors": [
@@ -15707,10 +15648,6 @@
   "orphaned/Web/API/WindowEventHandlers": {
     "modified": "2019-03-23T23:01:29.892Z",
     "contributors": ["fscholz"]
-  },
-  "orphaned/Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2019-03-23T22:16:40.400Z",
-    "contributors": ["ivannieto", "chrisdavidmills"]
   },
   "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
     "modified": "2020-12-02T07:09:06.472Z",
@@ -16005,6 +15942,54 @@
   "orphaned/Web/SVG/SVG_en_Firefox_1.5": {
     "modified": "2019-03-23T23:42:07.791Z",
     "contributors": ["teoli", "Mgjbot", "Jorolo", "Arcnor"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor": {
+    "modified": "2019-01-16T16:11:09.049Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor-or-self": {
+    "modified": "2019-01-16T16:11:00.606Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/attribute": {
+    "modified": "2019-01-16T16:11:03.106Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/child": {
+    "modified": "2019-01-16T16:11:02.142Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/descendant": {
+    "modified": "2019-01-16T16:11:00.301Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/descendant-or-self": {
+    "modified": "2019-01-16T16:11:00.088Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/following": {
+    "modified": "2019-01-16T16:10:55.079Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/following-sibling": {
+    "modified": "2019-01-16T16:11:02.465Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/namespace": {
+    "modified": "2019-01-16T16:10:55.086Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/parent": {
+    "modified": "2019-01-16T16:10:56.130Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/preceding": {
+    "modified": "2019-01-16T16:11:08.778Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
+  },
+  "orphaned/Web/XPath/Axes/preceding-sibling": {
+    "modified": "2019-01-16T16:10:57.298Z",
+    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
   },
   "orphaned/XPInstall_API_Reference": {
     "modified": "2019-01-16T15:37:54.457Z",

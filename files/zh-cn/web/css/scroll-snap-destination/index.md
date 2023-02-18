@@ -28,13 +28,13 @@ scroll-snap-destination: unset;
 - `<position>`
   - : 定义从滚动容器的可视视图边缘开始偏移的 snap 坐标。第一个值给定了 snap 坐标的 x 坐标，第二个值为它的 y 坐标。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <div id="container">
@@ -67,7 +67,7 @@ scroll-snap-destination: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 #container {
@@ -118,7 +118,7 @@ scroll-snap-destination: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "170")}}
+{{EmbedLiveSample("示例", "100%", "170")}}
 
 ## 规范
 

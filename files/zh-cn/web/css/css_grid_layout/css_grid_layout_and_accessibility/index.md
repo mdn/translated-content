@@ -74,7 +74,7 @@ slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 </div>
 ```
 
-{{ EmbedLiveSample('accessibility_1', '500', '330') }}
+{{ EmbedLiveSample('视觉的而非逻辑的排序', '500', '330') }}
 
 规范声称在这种情况下，如果 box1 在此位置确的有逻辑上的意义，那就应该返回去修改源代码，而不是使用网格布局来重新排序。此例就是视觉的排序与逻辑的排序的对比，逻辑排序对于文档的意义和结构非常重要，一定要确保文档中的逻辑顺序正确。
 

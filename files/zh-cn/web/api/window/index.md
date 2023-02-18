@@ -326,7 +326,7 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface._
 
-> **备注：** Starting in {{Gecko("9.0")}}, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/zh-CN/docs/DOM/DOM_event_handlers) for details.
+> **备注：** Starting in Gecko 9.0, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/zh-CN/docs/DOM/DOM_event_handlers) for details.
 
 - {{domxref("Window.onappinstalled")}}
   - : Called when the page is installed as a webapp. See `appinstalled` event.

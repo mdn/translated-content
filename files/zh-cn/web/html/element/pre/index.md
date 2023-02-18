@@ -66,7 +66,7 @@ body {
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 无障碍
 

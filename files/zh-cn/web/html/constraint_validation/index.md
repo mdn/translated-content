@@ -6,397 +6,417 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 {{HTMLSidebar}}
 
-创建 web 表单始终是一个复杂的任务。仅仅组装表单是容易的，但是检查每一个字段的值是否有效并且一致是一件更加困难的事情，而向用户指明错误可能会令人头痛。[HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5) 引入了表单相关的一些新的机制：为{{ HTMLElement("input") }}元素和强制校验增加了一些新的语义类型，使得在客户端检查表单内容的工作变得容易。基本上，在填写字段时，通常这些约束都会被检查，而不需要额外的 JavaScript 代码进行校验；对于更复杂的约束条件的校验可以尝试使用 HTML5 [Constraint Validation API](/zh-CN/docs/Web/Guide/HTML/Forms_in_HTML#Constraint_Validation_API).
+创建 web 表单始终是一个复杂的任务。仅仅组装表单是容易的，但是检查每一个字段的值是否有效并且一致是一件更加困难的事情，而如何告知用户错误所在可能会令人头痛。[HTML5](/zh-CN/docs/Glossary/HTML5) 引入了表单相关的一些新机制：它为 {{ HTMLElement("input") }} 元素和*约束验证*增加了一些新的语义类型，使得客户端检查表单内容变得容易。基本上，通过设置一些新的属性，常用的约束条件可以无需 JavaScript 代码而检测到；对于更复杂的约束条件的校验可以尝试使用约束验证 API。
 
-> **备注：** HTML5 Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent by non-compliant browsers (for instance, browsers without HTML5 and without JavaScript) or by bad guys trying to trick your web application. Therefore, like with HTML4, you need to also validate input constraints on the server side, in a way that is consistent with what is done on the client side.
+对于这些概念的基本介绍和示例，参阅[表单数据校验教程](/zh-CN/docs/Learn/Forms/Form_validation)一页的介绍。
+
+> **备注：** HTML 约束验证并不能移除*服务端*验证的需要。尽管无效的表单请求要少得多，但无效的表单请求仍然可能被发送，例如被试图欺骗你的网络应用的坏人发送。因此，你需要始终在服务端验证输入约束，其方式与在客户端所做的一致。
 
 ## 固有和基本的约束
 
-在 HTML5 中，声明基本的约束有两种方式：
+在 HTML 中，有两种方式声明基本的约束：
 
-- 给 {{ HTMLElement("input") }} 元素的 {{ htmlattrxref("type", "input") }} 特性选择最合适的语义化的值，比如，选择 email 类型将会自动创建一个约束用于检查输入的值是否是一个有效的 e-mail 地址。
-- 设置验证相关的特性值，允许用一种简单的方式来描述基本的约束，而不必要使用 JavaScript。
+- 给 {{ HTMLElement("input") }} 元素的 {{ htmlattrxref("type", "input") }} 属性选择最合适的语义化的值，比如，选择 `email` 类型将会自动创建一个约束，用于检查输入的值是否是一个有效的电子邮件地址。
+- 设置验证相关的属性值，允许用一种简单的方式来描述基本的约束，而不必要使用 JavaScript。
 
 ### 语义的 input 类型
 
-{{ htmlattrxref("type", "input") }} 特性中固有约束：
+{{ htmlattrxref("type", "input") }} 属性中的固有约束有：
 
-<table class="no-markdown">
+| Input 类型                                                         | 约束描述                                                                                                                                           | 相关违约                                                                    |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [`<input type="URL">`](/zh-CN/docs/Web/HTML/Element/input/url)     | 值必须为 [URL 现行标准](https://url.spec.whatwg.org/)定义的绝对 [URL](/zh-CN/docs/Learn/Common_questions/What_is_a_URL) 地址。    | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
+| [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) | 该值必须是一个语法上有效的电子邮件地址，其格式一般为 `username@hostname.tld`，但也可以是本地的，如 `username@hostname`。 | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
+
+对于这两种输入类型，如果设置了 {{ htmlattrxref("multiple", "input") }} 属性，可以设置几个值，作为一个逗号分隔的列表。如果其中任何一个不满足这里描述的条件，就会触发 **TypeMismatch** 约束的违反。
+
+请注意，大多数 input 类型没有内在的约束，因为有些类型被禁止在约束验证中使用，或者有一个净化算法将不正确的值转化为正确的默认值。
+
+### 验证相关的属性
+
+除了上面描述的 `type` 属性外，以下属性用于描述基本约束。
+
+<table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Input 类型</th>
-      <th scope="col">约束描述</th>
-      <th scope="col">Associated violation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>&#x3C;input type="URL"></td>
-      <td>
-        值必须是绝对的 URL，即，是下面的某一种：
-        <ul>
-          <li>
-            a valid URI (as defined in
-            <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>)
-          </li>
-          <li>
-            a valid IRI, without a query component (as defined in
-            <a href="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)
-          </li>
-          <li>
-            a valid IRI, with a query component without any unescaped non-ASCII
-            character (as defined in
-            <a href="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)
-          </li>
-          <li>
-            a valid IRI, and the character set for the document is UTF-8 or
-            UTF-16 (as defined in
-            <a href="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)
-          </li>
-        </ul>
-      </td>
-      <td><strong>Type mismatch </strong>constraint violation</td>
-    </tr>
-    <tr>
-      <td>&#x3C;input type="email"></td>
-      <td>
-        The value must follow the
-        <a href="http://www.ietf.org/rfc/std/std68.txt">ABNF</a> production:
-        <code>1*( atext / "." ) "@" ldh-str 1*( "." ldh-str )</code> where:
-        <ul>
-          <li>
-            <code>atext</code> is defined in
-            <a href="http://tools.ietf.org/html/rfc5322">RFC 5322</a>, i.e., a
-            US-ASCII letter (A to Z and a-z), a digit (0 to 9) or one of the
-            following! # $ % &#x26; ' * + - / = ? ` { } | ~ special character,
-          </li>
-          <li>
-            <code>ldh-str</code> is defined in
-            <a href="http://www.apps.ietf.org/rfc/rfc1034.html#sec-3.5"
-              >RFC 1034</a
-            >, i.e., US-ASCII letters, mixed with digits and - grouped in words
-            separated by a dot (.).
-          </li>
-        </ul>
-        <div class="note">
-          <strong>Note:</strong> if the
-          {{ htmlattrxref("multiple", "input") }} attribute is set,
-          several e-mail addresses can be set, as a comma-separated list, for
-          this input. If any of these do not satisfy the condition described
-          here, the <strong>Type mismatch </strong>constraint violation is
-          triggered.
-        </div>
-      </td>
-      <td><strong>Type mismatch </strong>constraint violation</td>
-    </tr>
-  </tbody>
-</table>
-
-Note that most input types don't have intrinsic constraints, as some are simply barred from constraint validation or have a sanitization algorithm transforming incorrect values to a correct default.
-
-### 验证相关的特性（Attribute）
-
-下列特性用于描述基本的约束：
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">特性</th>
+      <th scope="col">属性</th>
       <th scope="col">支持该特性的 Input 类型</th>
       <th scope="col">可接受的值</th>
       <th scope="col">约束描述</th>
-      <th scope="col">Associated violation</th>
+      <th scope="col">相关违约</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>{{ htmlattrxref("pattern", "input") }}</td>
-      <td>text, search, url, tel, email, password</td>
       <td>
-        A
-        <a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions"
-          >JavaScript regular expression</a
+        <code
+          ><a href="/zh-CN/docs/Web/HTML/Attributes/pattern">pattern</a></code
         >
-        (compiled with the
-        <a
-          href="http://www.ecma-international.org/publications/standards/Ecma-262.htm"
-          >ECMAScript 5</a
+      </td>
+      <td>
+        <code>text</code>、<code>search</code>、<code>url</code>、<code>tel</code>、<code>email</code>、<code>password</code>
+      </td>
+      <td>
+        一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions"
+          >JavaScript 正则表达式</a
+        >（以 {{jsxref("RegExp.global", "global")}}、{{jsxref("RegExp.ignoreCase", "ignoreCase")}} 标志编译，且<em>禁用</em>了 {{jsxref("RegExp.multiline", "multiline")}} 标志）
+      </td>
+      <td>输入的值必须符合模式。</td>
+      <td>
+        <a href="/zh-CN/docs/Web/API/ValidityState/patternMismatch"
+          ><strong><code>patternMismatch</code></strong></a
         >
-        <code title="">global</code>, <code title="">ignoreCase</code>, and
-        <code title="">multiline</code> flags <em>disabled)</em>
+        约束违反
       </td>
-      <td>输入的值必须匹配设置的模式。</td>
-      <td><strong>Pattern mismatch</strong> constraint violation</td>
     </tr>
     <tr>
-      <td rowspan="3">{{ htmlattrxref("min", "input") }}</td>
-      <td>range, number</td>
-      <td>A valid number</td>
-      <td rowspan="3">输入的值必须大于等于设置的最小值。</td>
-      <td rowspan="3"><strong>Underflow</strong> constraint violation</td>
+      <td rowspan="3">
+        <code><a href="/zh-CN/docs/Web/HTML/Attributes/min">min</a></code>
+      </td>
+      <td><code>range</code>、<code>number</code></td>
+      <td>一个有效的数字</td>
+      <td rowspan="3">输入的值必须大于等于该属性值。</td>
+      <td rowspan="3">
+        <strong
+          ><code
+            ><a href="/zh-CN/docs/Web/API/ValidityState/rangeUnderflow"
+              >rangeUnderflow</a
+            ></code
+          ></strong
+        >
+        约束违反
+      </td>
     </tr>
     <tr>
-      <td>date, month, week</td>
-      <td>A valid date</td>
+      <td><code>date</code>、<code>month</code>、<code>week</code></td>
+      <td>一个有效的日期值</td>
     </tr>
     <tr>
-      <td>datetime, datetime-local, time</td>
-      <td>A valid date and time</td>
-    </tr>
-    <tr>
-      <td rowspan="3">{{ htmlattrxref("max", "input") }}</td>
-      <td>range, number</td>
-      <td>A valid number</td>
-      <td rowspan="3">输入的值必须小于等于设置的最大值。</td>
-      <td rowspan="3"><strong>Overflow</strong> constraint violation</td>
-    </tr>
-    <tr>
-      <td>date, month, week</td>
-      <td>A valid date</td>
-    </tr>
-    <tr>
-      <td>datetime, datetime-local, time</td>
-      <td>A valid date and time</td>
-    </tr>
-    <tr>
-      <td>{{ htmlattrxref("required", "input") }}</td>
       <td>
-        text, search, url, tel, email, password, date, datetime, datetime-local,
-        month, week, time, number, checkbox, radio, file; also on the
-        {{ HTMLElement("select") }} and
-        {{ HTMLElement("textarea") }} elements
+        <code>datetime-local</code>、<code>time</code>
       </td>
-      <td>
-        <em>none</em> as it is a Boolean attribute: its presence means
-        <em>true</em>, its absence means <em>false</em>
-      </td>
-      <td>There must be a value (if set).</td>
-      <td><strong>Missing</strong> constraint violation</td>
+      <td>一个有效的日期时间值</td>
     </tr>
     <tr>
-      <td rowspan="5">{{ htmlattrxref("step", "input") }}</td>
-      <td>date</td>
-      <td>An integer number of days</td>
+      <td rowspan="3">
+        <code><a href="/zh-CN/docs/Web/HTML/Attributes/max">max</a></code>
+      </td>
+      <td><code>range</code>、<code>number</code></td>
+      <td>一个有效的数字</td>
+      <td rowspan="3">输入的值必须小于等于该属性值。</td>
+      <td rowspan="3">
+        <strong
+          ><code
+            ><a href="/zh-CN/docs/Web/API/ValidityState/rangeOverflow"
+              >rangeOverflow</a
+            ></code
+          ></strong
+        >
+        约束违反
+      </td>
+    </tr>
+    <tr>
+      <td><code>date</code>、<code>month</code>、<code>week</code></td>
+      <td>一个有效的日期值</td>
+    </tr>
+    <tr>
+      <td>
+        <code>datetime-local</code>、<code>time</code>
+      </td>
+      <td>一个有效的日期时间值</td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/HTML/Attributes/required">required</a></code
+        >
+      </td>
+      <td>
+        <code>text</code>、<code>search</code>、<code>url</code>、<code>tel</code>、<code>email</code>、<code>password</code>、<code>date</code>、<code>datetime-local</code>、<code>month</code>、<code>week</code>、<code>time</code>、<code>number</code>、<code>checkbox</code>、<code>radio</code>、<code>file</code>；也在 {{ HTMLElement("select") }} 和 {{ HTMLElement("textarea") }} 元素上可用
+      </td>
+      <td>
+        由于是一个布尔属性，所以为 <em>none</em>：如果存在这个属性，则为 <em>true</em>；否则为 <em>false</em>
+      </td>
+      <td>如果指定了这个属性，则必须输入一个值。</td>
+      <td>
+        <strong
+          ><code
+            ><a href="/zh-CN/docs/Web/API/ValidityState/valueMissing"
+              >valueMissing</a
+            ></code
+          ></strong
+        >
+        约束违反
+      </td>
+    </tr>
+    <tr>
       <td rowspan="5">
-        Unless the step is set to the any literal, the value must be
-        <strong>min</strong> + an integral multiple of the step.
+        <code><a href="/zh-CN/docs/Web/HTML/Attributes/step">step</a></code>
       </td>
-      <td rowspan="5"><strong>Step mismatch </strong>constraint violation</td>
+      <td><code>date</code></td>
+      <td>一个代表天数的整数</td>
+      <td rowspan="5">
+        如果 step 没有设置为字面量 <code>any</code>，则输入值必须为 <strong>min</strong> + step 值的整数倍。
+      </td>
+      <td rowspan="5">
+        <strong
+          ><code
+            ><a href="/zh-CN/docs/Web/API/ValidityState/stepMismatch"
+              >stepMismatch</a
+            ></code
+          ></strong
+        >
+        约束违反
+      </td>
     </tr>
     <tr>
-      <td>month</td>
-      <td>An integer number of months</td>
+      <td><code>month</code></td>
+      <td>一个代表月数的整数</td>
     </tr>
     <tr>
-      <td>week</td>
-      <td>An integer number of weeks</td>
+      <td><code>week</code></td>
+      <td>一个代表周数的整数</td>
     </tr>
     <tr>
-      <td>datetime, datetime-local, time</td>
-      <td>An integer number of seconds</td>
-    </tr>
-    <tr>
-      <td>range, number</td>
-      <td>An integer</td>
-    </tr>
-    <tr>
-      <td>{{ htmlattrxref("maxlength", "input") }}</td>
       <td>
-        text, search, url, tel, email, password; also on the
-        {{ HTMLElement("textarea") }} element
+        <code>datetime-local</code>、<code>time</code>
       </td>
-      <td>An integer length</td>
+      <td>一个代表秒数的整数</td>
+    </tr>
+    <tr>
+      <td><code>range</code>、<code>number</code></td>
+      <td>一个整数</td>
+    </tr>
+    <tr>
       <td>
-        The number of characters (code points) must not exceed the value of the
-        attribute.
+        <code
+          ><a href="/zh-CN/docs/Web/HTML/Attributes/minlength"
+            >minlength</a
+          ></code
+        >
       </td>
-      <td><strong>Too long</strong> constraint violation</td>
+      <td>
+        <code>text</code>、<code>search</code>、<code>url</code>、<code>tel</code>、<code>email</code>、<code>password</code>；也在 {{ HTMLElement("textarea") }} 元素上可用
+      </td>
+      <td>一个整数长度</td>
+      <td>
+        如果输入值非空，则其字符数（码点）不得少于该属性的值。对于 {{ HTMLElement("textarea") }}，所有换行符都被规范化为一个字符（相对于 CRLF 对）。
+      </td>
+      <td>
+        <strong
+          ><code
+            ><a href="/zh-CN/docs/Web/API/ValidityState/tooShort"
+              >tooShort</a
+            ></code
+          ></strong
+        >
+        约束违反
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/HTML/Attributes/maxlength"
+            >maxlength</a
+          ></code
+        >
+      </td>
+      <td>
+        <code>text</code>、<code>search</code>、<code>url</code>、<code>tel</code>、<code>email</code>、<code>password</code>；也在 {{ HTMLElement("textarea") }} 元素上可用
+      </td>
+      <td>一个整数长度</td>
+      <td>
+        字符数（码点）不得超过该属性的值。
+      </td>
+      <td>
+        <strong
+          ><code
+            ><a href="/zh-CN/docs/Web/API/ValidityState/tooLong"
+              >tooLong</a
+            ></code
+          ></strong
+        >
+        约束违反
+      </td>
     </tr>
   </tbody>
 </table>
 
-## Constraint validation process
+## 约束验证过程
 
-Constraint validation is done through the Constraint Validation API either on a single form element or at the form level, on the {{ HTMLElement("form") }} element itself. The constraint validation is done in the following ways:
+约束验证是通过约束验证 API 在单个表单元素上或在表单层面上，通过 {{ HTMLElement("form") }} 元素本身完成。约束验证是通过以下方式完成的：
 
-- By a call to the checkValidity() method of a form-related [DOM](/zh-CN/docs/DOM) interface ([`HTMLInputElement`](/zh-CN/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/zh-CN/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/zh-CN/docs/Web/API/HTMLButtonElement) or [`HTMLTextAreaElement`](/zh-CN/docs/Web/API/HTMLTextAreaElement)), which evaluates the constraints only on this element, allowing a script to get this information. (This is typically done by the user-agent when determining which of the [CSS](/zh-CN/docs/Web/CSS) pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.)
-- By a call to the checkValidity() function on the [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement) interface, which is called _statically validating the constraints_.
-- By submitting the form itself, which is called _interactively validating the constraints_.
+- 通过调用表单相关的 DOM 接口（[`HTMLInputElement`](/zh-CN/docs/Web/API/HTMLInputElement)、[`HTMLSelectElement`](/zh-CN/docs/Web/API/HTMLSelectElement)、[`HTMLButtonElement`](/zh-CN/docs/Web/API/HTMLButtonElement) 、[`HTMLOutputElement`](/zh-CN/docs/Web/API/HTMLOutputElement) 或 [`HTMLTextAreaElement`](/zh-CN/docs/Web/API/HTMLTextAreaElement)）的 `checkValidity()` 或 `reportValidity()` 方法，只对这个元素进行约束评估，允许脚本获得这些信息。`checkValidity()` 方法返回一个布尔值，表示该元素的值是否通过其约束（这通常是由用户代理在确定哪个 CSS 伪类，{{ Cssxref(":valid") }} 或 {{ Cssxref(":invalid") }} 适用时完成的）。相反，`reportValidity()` 方法会向用户报告任何约束失败的情况。
+- 通过调用 [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement) 接口上的 `checkValidity()` 或 `reportValidity()` 方法。
+- 通过提交表单本身。
 
+调用 `checkValidity()` 也被称为约束的*静态*验证，调用 `reportValidity()` 也被称为约束的*交互*认证。
 > **备注：**
 >
-> - If the {{ htmlattrxref("novalidate", "form") }} attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.
-> - Calling the send() method on the [HTMLFormElement](/zh-CN/DOM/HTMLFormElement) interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if doesn't satisfy the constraints.
+> - 如果 {{ HTMLElement("form") }} 元素上设置了 {{ htmlattrxref("novalidate", "form") }} 属性，则不发生约束验证交互。
+> - 在 [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement) 接口上调用 `submit()` 方法并不触发约束条件验证。换句话说，即使表单数据不满足约束条件，该方法也会将其发送到服务器。在提交按钮上调用 `click()` 方法来代替。
 
-## Complex constraints using HTML5 Constraint API
+## 使用约束验证 API 进行复杂的约束
 
-Using JavaScript and the Constraint API, it is possible to implement more complex constraints, for example, constraints combining several fields, or constraints involving complex calculations.
+使用 JavaScript 和约束验证 API，可以实现更复杂的约束，例如，结合几个字段的约束，或涉及复杂计算的约束。
 
-Basically, the idea is to trigger JavaScript on some form field event (like **onchange**) to calculate whether the constraint is violated, and then to use the method `field.setCustomValidity()` to set the result of the validation: an empty string means the constraint is satisfied, and any other string means there is an error and this string is the error message to display to the user.
+基本上，这个想法是在某个表单字段事件（比如 **onchange**）上触发 JavaScript，以计算是否违反约束，然后使用 `field.setCustomValidity()` 方法来设置验证的结果：一个空字符串意味着满足约束条件，任何其他字符串意味着有一个错误，这个字符串是显示给用户的错误信息。
 
-### Constraint combining several fields: Postal code validation
+### 包含多个字段的约束：邮政编码验证
 
-The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
+每个国家的邮政编码都不相同。大多数国家允许有一个可选的国家代码前缀（如德国的 `D-`，法国或瑞士的 `F-`），还有其它一些国家的邮政编码只有固定的数字；其他国家，如英国，有更复杂的结构，允许在一些特定的位置有字母。
 
-> **备注：**This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
+> **备注：** 这不是一个全面的邮政编码验证库，而是关键概念的演示。
 
-As an example, we will add a script checking the constraint validation for this simple form:
+作为示例，我们会向以下这个简单的表单中添加一段代码来进行约束验证：
 
 ```html
 <form>
-    <label for="ZIP">ZIP : </label>
-    <input type="text" id="ZIP">
-    <label for="Country">Country : </label>
-    <select id="Country">
-      <option value="ch">Switzerland</option>
-      <option value="fr">France</option>
-      <option value="de">Germany</option>
-      <option value="nl">The Netherlands</option>
-    </select>
-    <input type="submit" value="Validate">
+  <label for="ZIP">ZIP 码：</label>
+  <input type="text" id="ZIP" />
+  <label for="Country">国家：</label>
+  <select id="Country">
+    <option value="ch">瑞士</option>
+    <option value="fr">法国</option>
+    <option value="de">德国</option>
+    <option value="nl">荷兰</option>
+  </select>
+  <input type="submit" value="验证" />
 </form>
 ```
 
-This displays the following form:
+以上代码显示了像这样的表单：
 
-{{EmbedLiveSample("Constraint combining several fields: Postal code validation")}}
+{{EmbedLiveSample("包含多个字段的约束：邮政编码验证")}}
 
-First, we write a function checking the constraint itself:
+首先，我们来写一个函数来检查本身包含的约束：
 
 ```js
 function checkZIP() {
-  // For each country, defines the pattern that the ZIP has to follow
-  var constraints = {
-    ch : [ '^(CH-)?\\d{4}$', "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950" ],
-    fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
-    de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
-    nl : [ '^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$',
-                    "Nederland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS" ]
+  // 为每个国家定义 ZIP 码需要满足的模式
+  const constraints = {
+    ch: [
+      "^(CH-)?\\d{4}$",
+      "瑞士的 ZIP 码必须恰好有 4 位数字，如 CH-1950 或 1950",
+    ],
+    fr: [
+      "^(F-)?\\d{5}$",
+      "法国的 ZIP 码必须恰好有 5 位数字，如 F-75012 或 75012",
+    ],
+    de: [
+      "^(D-)?\\d{5}$",
+      "德国的 ZIP 码必须恰好有 5 位数字，如 D-12345 或 12345",
+    ],
+    nl: [
+      "^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$",
+      "荷兰的 ZIP 码必须恰好有 4 位数字，后跟除 SA、SD 和 SS 的 2 位字母",
+    ],
   };
 
-  // Read the country id
-  var country = document.getElementById("Country").value;
+  // 读取国家 ID
+  const country = document.getElementById("Country").value;
 
-  // Get the NPA field
-  var ZIPField = document.getElementById("ZIP");
+  // 获取 NPA 字段内容
+  const ZIPField = document.getElementById("ZIP");
 
-  // Build the constraint checker
-  var constraint = new RegExp(constraints[country][0], "");
-    console.log(constraint);
+  // 构建约束检查器
+  const constraint = new RegExp(constraints[country][0], "");
+  console.log(constraint);
 
-
-  // Check it!
+  // 检查它！
   if (constraint.test(ZIPField.value)) {
-    // The ZIP follows the constraint, we use the ConstraintAPI to tell it
+    // ZIP 码满足约束条件，我们使用 Constraint API 告知用户
     ZIPField.setCustomValidity("");
-  }
-  else {
-    // The ZIP doesn't follow the constraint, we use the ConstraintAPI to
-    // give a message about the format required for this country
+  } else {
+    // ZIP 不满足约束条件，我们使用 Constraint API 告知该国家所需的 ZIP 码格式
     ZIPField.setCustomValidity(constraints[country][1]);
   }
 }
 ```
 
-Then we link it to the **onchange** event for the {{ HTMLElement("select") }} and the **oninput** event for the {{ HTMLElement("input") }}:
+然后我们把它链接到 {{ HTMLElement("select") }} 的 **onchange** 事件和 {{ HTMLElement("input") }} 的 **oninput** 事件。
 
 ```js
-window.onload = function () {
-    document.getElementById("Country").onchange = checkZIP;
-    document.getElementById("ZIP").oninput = checkZIP;
-}
+window.onload = () => {
+  document.getElementById("Country").onchange = checkZIP;
+  document.getElementById("ZIP").oninput = checkZIP;
+};
 ```
 
-You can see a [live example](/@api/deki/files/4744/=constraint.html) of the postal code validation.
+### 限制所上传文件的大小
 
-### Limiting the size of a file before its upload
+另一个常见的约束是限制要上传的文件的大小。在文件传输到服务器之前，在客户端检查这个问题需要将约束条件验证 API，特别是 `field.setCustomValidity()` 方法，与另一个 JavaScript API 结合起来，这里是文件 API。
 
-Another common constraint is to limit the size of a file to be uploaded. Checking this on the client side before the file is transmitted to the server requires combining the Constraint API, and especially the field.setCustomValidity() method, with another JavaScript API, here the HTML5 File API.
-
-Here is the HTML part:
+这里是 HTML 部分：
 
 ```html
-<label for="FS">Select a file smaller than 75 kB : </label>
-<input type="file" id="FS">
+<label for="FS">选择一个小于 75 kB 的文件：</label>
+<input type="file" id="FS" />
 ```
 
-This displays:
+会显示：
 
-{{EmbedLiveSample("Limiting the size of a file before its upload")}}
+{{EmbedLiveSample("限制所上传文件的大小")}}
 
-The JavaScript reads the file selected, uses the File.size() method to get its size, compares it to the (hard coded) limit, and calls the Constraint API to inform the browser if there is a violation:
+JavaScript 代码会读取所选的文件，使用 `File.size()` 方法来获取其大小，将其与（硬编码的）限制进行比较，如果有违反，则调用约束 API 来通知浏览器。
 
 ```js
 function checkFileSize() {
-  var FS = document.getElementById("FS");
-  var files = FS.files;
+  const FS = document.getElementById("FS");
+  const files = FS.files;
 
-  // If there is (at least) one file selected
+  // 如果选择了（至少）一个文件
   if (files.length > 0) {
-     if (files[0].size > 75 * 1024) { // Check the constraint
-       FS.setCustomValidity("The selected file must not be larger than 75 kB");
-       return;
-     }
+    if (files[0].size > 75 * 1024) {
+      // 检查约束条件
+      FS.setCustomValidity("选择的文件不能超过 75 kB");
+      return;
+    }
   }
-  // No custom constraint violation
+  // 没有违反自定义约束条件
   FS.setCustomValidity("");
 }
 ```
 
-Finally we hook the method with the correct event:
+最终，我们将这个方法链接到一个正确的事件上：
 
 ```js
-window.onload = function () {
+window.onload = () => {
   document.getElementById("FS").onchange = checkFileSize;
-}
+};
 ```
 
-You can see a [live example](/@api/deki/files/4745/=fileconstraint.html) of the File size constraint validation.
+## 约束验证的可视化样式
 
-## Visual styling of constraint validation
+除了设置约束条件外，web 开发者还想控制向用户显示什么信息以及它们的样式。
 
-Apart from setting constraints, web developers want to control what messages are displayed to the users and how they are styled.
+### 控制元素的外观
 
-### Controlling the look of elements
+元素的外观可以通过 CSS 伪类进行控制。
 
-The look of elements can be controlled via CSS pseudo-classes.
+#### :required、:optional CSS 伪类
 
-#### :required and :optional CSS pseudo-classes
+{{cssxref(':required')}} 和 {{cssxref(':optional')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)允许开发者编写选择器，以匹配有 {{ htmlattrxref("required") }} 属性或没有该属性的表单元素。
 
-The [`:required`](/zh-CN/docs/Web/CSS/:required) and [`:optional`](/zh-CN/docs/Web/CSS/:optional) [pseudo-classes](/zh-CN/docs/Web/CSS/Pseudo-classes) allow writing selectors that match form elements that have the {{ htmlattrxref("required") }} attribute, or that don't have it.
+#### :placeholder-shown CSS 伪类
 
-#### :-moz-placeholder CSS pseudo-class
+参见 {{cssxref(':placeholder-shown')}}。
 
-See [:-moz-placeholder](/zh-CN/docs/Web/CSS/:-moz-placeholder).
+#### :valid、:invalid CSS 伪类
 
-#### :valid :invalid CSS pseudo-classes
+{{cssxref(':valid')}} 和 {{cssxref(':invalid')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)用于表示 \<input> 元素，根据输入的类型设置，这些元素的内容分别可以验证和无法验证。这些类允许用户对有效或无效的表单元素进行样式设计，以使其更容易识别格式正确或不正确的元素。
 
-The [:valid](/zh-CN/docs/Web/CSS/:valid) and [:invalid](/zh-CN/docs/Web/CSS/:invalid) [pseudo-classes](/zh-CN/docs/Web/CSS/Pseudo-classes) are used to represent \<input> elements whose content validates and fails to validate respectively according to the input's type setting. These classes allow the user to style valid or invalid form elements to make it easier to identify elements that are either formatted correctly or incorrectly.
+### 控制约束验证的文字
 
-#### Default styles
+以下一些方法可以控制违反约束条件的文本：
 
-### Controlling the text of constraints violation
+- 以下元素上的 `setCustomValidity(message)` 方法：
 
-#### The x-moz-errormessage attribute
+  - {{HTMLElement("fieldset")}}。备注：大多数浏览器中，在 fieldset 元素上设定自定义验证信息不会阻止表单提交。
+  - {{HTMLElement("input")}}
+  - {{HTMLElement("output")}}
+  - {{HTMLElement("select")}}
+  - 提交按钮（使用类型为 `submit` 的 {{HTMLElement("button")}} 元素，或类型为 {{HTMLElement("input/submit", "submit")}} 的 `input` 元素创建。其它类型的按钮不参与约束验证。
+  - {{HTMLElement("textarea")}}
 
-The x-moz-errormessage attribute is a Mozilla extension that allows you to specify the error message to display when a field does not successfully validate.
-
-> **备注：** Note: This extension is non-standard.
-
-#### Constraint API's element.setCustomValidity()
-
-The element.setCustomValidity(error) method is used to set a custom error message to be displayed when a form is submitted. The method works by taking a string parameter error. If error is a non-empty string, the method assumes validation was unsuccessful and displays error as an error message. If error is an empty string, the element is considered validated and resets the error message.
-
-#### Constraint API's ValidityState object
-
-The DOM [`ValidityState`](/zh-CN/docs/Web/API/ValidityState) interface represents the _validity states_ that an element can be in, with respect to constraint validation. Together, they help explain why an element's value fails to validate, if it's not valid.
-
-### Examples of personalized styling
-
-### HTML4 fallback
-
-#### Trivial fallback
-
-#### JS fallback
-
-## Conclusion
+- [`ValidityState`](/zh-CN/docs/Web/API/ValidityState) 接口描述了由上述元素类型的 `validity` 属性返回的对象。它表示一个输入值可能无效的各种方式。它们共同解释了为什么一个元素的值是无效的，则不能被验证。

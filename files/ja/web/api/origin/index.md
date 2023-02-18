@@ -1,39 +1,35 @@
 ---
-title: WindowOrWorkerGlobalScope.origin
+title: origin
 slug: Web/API/origin
 original_slug: Web/API/WindowOrWorkerGlobalScope/origin
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef()}}
 
-{{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティ **`origin`** は、グローバルスコープの文字列としてシリアライズされた origin を返します。
+グローバルの **`origin`** プロパティは読み取り専用で、文字列としてシリアライズされた、グローバルスコープのオリジンを返します。
 
-## 構文
+## 値
 
-```
-var myOrigin = self.origin; // or just origin
-```
-
-### 値
-
-{{domxref("USVString")}}.
+文字列です。
 
 ## 例
 
-worker script 内から実行される以下のスニペットは、メッセージを受け取る度にワーカーのグローバルスコープの origin をコンソールに記録します。
+ワーカースクリプト内から以下のスニペットを実行すると、メッセージを受け取る度にワーカーのグローバルスコープのオリジンをコンソールに記録します。
 
 ```js
-onmessage = function() {
+onmessage = () => {
   console.log(self.origin);
 };
 ```
 
-もし origin が scheme/host/port tuple 出ない場合 (あなたがローカルで実行しようとしている、言い換えると `file://` という URL の場合)、 `origin` は `"null"` という文字列を返すでしょう。
+もしオリジンがスキーム/ホスト名/ポート番号の組み合わせでない場合（すなわち、ローカルで実行しようとしている、つまり `file://` の URL の場合）、 `origin` は `"null"` という文字列を返すでしょう。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat}}

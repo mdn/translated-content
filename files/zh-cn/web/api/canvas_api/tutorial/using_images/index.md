@@ -1,5 +1,5 @@
 ---
-title: 使用图像 Using images
+title: 使用图像
 slug: Web/API/Canvas_API/Tutorial/Using_images
 ---
 
@@ -108,7 +108,7 @@ function getMyVideo() {
 
 > **备注：** SVG 图像必须在 \<svg> 根指定元素的宽度和高度。
 
-### 例子：一个简单的线图
+### 示例：一个简单的线图
 
 ![](canvas_backdrop.png)
 
@@ -141,7 +141,7 @@ function getMyVideo() {
 
 结果看起来是这样的：
 
-{{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
+{{EmbedLiveSample("示例：一个简单的线图", 220, 160, "canvas_backdrop.png")}}
 
 ## 缩放 Scaling
 
@@ -150,7 +150,7 @@ function getMyVideo() {
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y, width, height)")}}
   - : 这个方法多了 2 个参数：`width` 和 `height，`这两个参数用来控制 当向 canvas 画入时应该缩放的大小
 
-### 例子：平铺图像
+### 示例：平铺图像
 
 ![](canvas_scale_image.png)
 
@@ -183,7 +183,7 @@ function draw() {
 
 结果看起来像这样：
 
-{{EmbedLiveSample("Example_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}
+{{EmbedLiveSample("示例：平铺图像", 160, 160, "canvas_scale_image.png")}}
 
 ## 切片 Slicing
 
@@ -196,7 +196,7 @@ function draw() {
 
 切片是个做图像合成的强大工具。假设有一张包含了所有元素的图像，那么你可以用这个方法来合成一个完整图像。例如，你想画一张图表，而手上有一个包含所有必需的文字的 PNG 文件，那么你可以很轻易的根据实际数据的需要来改变最终显示的图表。这方法的另一个好处就是你不需要单独装载每一个图像。
 
-### 例子：相框
+### 示例：相框
 
 ![](canvas_drawimage2.jpg)
 
@@ -230,17 +230,15 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("示例：相框", 160, 160, "canvas_drawimage2.jpg")}}
 
-## 示例：画廊 Art gallery example
-
-![](/@api/deki/files/57/=Canvas_art_gallery.jpg)
+## 画廊示例
 
 我这一章最后的示例是弄一个小画廊。画廊由挂着几张画作的格子组成。当页面装载好之后，为每张画创建一个 canvas 元素并用加上画框然后插入到画廊中去。
 
 在我这个例子里面，所有“画”都是固定宽高的，画框也是。你可以做些改进，通过脚本用画的宽高来准确控制围绕它的画框的大小。
 
-下面的代码应该是蛮简单易懂的了。就是遍历图像对象数组，依次创建新的 canvas 元素并添加进去。可能唯一需要注意的，对于那些并不熟悉 DOM 的朋友来说，是 [`insertBefore`](/En/DOM/Node.insertBefore) 方法的用法。`insertBefore` 是父节点（单元格）的方法，用于将新节点（canvas 元素）插入到我们想要插入的节点之前。
+下面的代码应该是蛮简单易懂的了。就是遍历图像对象数组，依次创建新的 canvas 元素并添加进去。可能唯一需要注意的，对于那些并不熟悉 DOM 的朋友来说，是 {{domxref("Node.insertBefore")}} 方法的用法。`insertBefore` 是父节点（单元格）的方法，用于将新节点（canvas 元素）插入到我们想要插入的节点之前。
 
 ```html
 <html>
@@ -312,9 +310,9 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Art_gallery_example", 725, 400)}}
+{{EmbedLiveSample("画廊示例", 725, 400)}}
 
-## 控制图像的缩放行为 Controlling image scaling behavior
+## 控制图像的缩放行为
 
 如同前文所述，过度缩放图像可能会导致图像模糊或像素化。您可以通过使用绘图环境的{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}属性来控制是否在缩放图像时使用平滑算法。默认值为`true`，即启用平滑缩放。您也可以像这样禁用此功能：
 

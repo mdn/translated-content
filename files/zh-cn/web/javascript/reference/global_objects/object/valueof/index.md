@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 {{JSRef}}
 
-{{jsxref("Object")}} 的 **`valueOf()`** 方法将 `this` 值转换[为一个对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)。此方法旨在用于自定义[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#type_coercion)的逻辑时，重写派生类对象。
+{{jsxref("Object")}} 的 **`valueOf()`** 方法将 `this` 值转换[为一个对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)。此方法旨在用于自定义[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)的逻辑时，重写派生类对象。
 
 {{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
 
@@ -27,11 +27,11 @@ valueOf()
 
 ## 描述
 
-JavaScript 调用 `valueOf` 方法[将对象转换为一个原始值](/zh-CN/docs/Web/JavaScript/Data_structures#type_coercion)。你很少需要自己去调用 `valueOf` 方法；当遇到需要原始值的对象时，JavaScript 会自己调用它。
+JavaScript 调用 `valueOf` 方法[将对象转换为一个原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)。你很少需要自己去调用 `valueOf` 方法；当遇到需要原始值的对象时，JavaScript 会自己调用它。
 
-该方法由[数字转换](/zh-CN/docs/Web/JavaScript/Data_structures#numeric_coercion)和[原始值转换](/zh-CN/docs/Web/JavaScript/Data_structures#primitive_coercion)优先调用，但是[字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)会优先调用 `toString()`，并且 `toString()` 非常可能返回一个字符串类型（即使原始实现了 {{jsxref("Object.prototype.toString()")}}），所以 `valueOf()` 在这种情况下通常不会被调用。
+该方法由[数字转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制数字类型转换)和[原始值转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)优先调用，但是[字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)会优先调用 `toString()`，并且 `toString()` 非常可能返回一个字符串类型（即使原始实现了 {{jsxref("Object.prototype.toString()")}}），所以 `valueOf()` 在这种情况下通常不会被调用。
 
-所有继承自 `Object.prototype` 的对象（当然，除了 [`null`-prototype 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)之外）都继承 `toString()` 方法。对于这些对象，`Object.prototype.valueOf()` 基本的实现是没有效果的：它返回对象自身，它的返回值将永远不会被任何[原始值转换算法](/zh-CN/docs/Web/JavaScript/Data_structures#type_coercion)使用。许多内置对象返回一个适当的原始值覆盖这个方法。当你创建一个自定义对象，你可以调用一个自定义方法去覆盖 `valueOf()`，以至于你自定义的对象可以转换为一个原始值。总的来说，`valueOf()` 用于返回对象最有意义的值——与 `toString()` 不同，它不需要是字符串。或者，你可以增加一个 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，该方法允许对转换过程有更多的控制，并且对于任意的类型转换，且总是优先于 `valueOf` 或 `toString`。
+所有继承自 `Object.prototype` 的对象（当然，除了 [`null`-prototype 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)之外）都继承 `toString()` 方法。对于这些对象，`Object.prototype.valueOf()` 基本的实现是没有效果的：它返回对象自身，它的返回值将永远不会被任何[原始值转换算法](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)使用。许多内置对象返回一个适当的原始值覆盖这个方法。当你创建一个自定义对象，你可以调用一个自定义方法去覆盖 `valueOf()`，以至于你自定义的对象可以转换为一个原始值。总的来说，`valueOf()` 用于返回对象最有意义的值——与 `toString()` 不同，它不需要是字符串。或者，你可以增加一个 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，该方法允许对转换过程有更多的控制，并且对于任意的类型转换，且总是优先于 `valueOf` 或 `toString`。
 
 ## 示例
 
@@ -81,7 +81,7 @@ box.valueOf();
 
 ### 在对象上使用一元加运算符
 
-[一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)对其操作数会执行[强制数字转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)，对于大多数没有 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 的对象，意味这调用它的 `valueOf()`。然而，如果对象没有一个自定义的 `valueOf()` 方法，基本的实现将会导致 `valueOf()` 被忽略，转而使用 `toString()` 的返回值。
+[一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)对其操作数会执行[强制数字转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，对于大多数没有 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 的对象，意味这调用它的 `valueOf()`。然而，如果对象没有一个自定义的 `valueOf()` 方法，基本的实现将会导致 `valueOf()` 被忽略，转而使用 `toString()` 的返回值。
 
 ```js
 +new Date(); // the current timestamp; same as new Date().getTime()

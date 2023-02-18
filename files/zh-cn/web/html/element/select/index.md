@@ -139,7 +139,7 @@ slug: Web/HTML/Element/select
 
 #### 结果
 
-{{EmbedLiveSample("Basic_select", "", "100")}}
+{{EmbedLiveSample("基本选择", "", "100")}}
 
 ### 使用多选的进阶选择
 
@@ -162,7 +162,7 @@ slug: Web/HTML/Element/select
 </label>
 ```
 
-{{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
+{{EmbedLiveSample("使用多选的进阶选择", "", "100")}}
 
 你会看见：
 
@@ -193,11 +193,11 @@ slug: Web/HTML/Element/select
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
-   <td>{{ARIARole("combobox")}} with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise {{ARIARole("listbox")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a> with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("menu")}} with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise no <code>role</code> permitted</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a> with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise no <code>role</code> permitted</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>

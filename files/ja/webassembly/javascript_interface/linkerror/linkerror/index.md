@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/LinkError/LinkError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.LinkError()`** コンストラクターは、新しい WebAssembly `LinkError` オブジェクトを生成します。これは、 (関数開始後の[トラップ](https://webassembly.org/docs/semantics/#traps)ではなく) モジュールがインスタンス化される間に発生したエラーを発生します。
 

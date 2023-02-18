@@ -10,9 +10,9 @@ translation_of: Web/API/Document/height
 original_slug: Web/API/Document/height
 ---
 
-{{APIRef("DOM")}} {{Obsolete_header}}
+{{APIRef("DOM")}}
 
-> **Примечание:** Начиная с {{Gecko("6.0")}},` document.height `больше не поддерживается. Используйте `document.body.clientHeight`. Также смотрите: {{domxref("element.clientHeight")}}.
+> **Примечание:** Начиная с Gecko 6.0,` document.height `больше не поддерживается. Используйте `document.body.clientHeight`. Также смотрите: {{domxref("element.clientHeight")}}.
 
 Возвращает высоту {{domxref("document")}} объекта. В большинстве случаев, она соответствует {{HTMLElement("body")}} элементу документа.
 

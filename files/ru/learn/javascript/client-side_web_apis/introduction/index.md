@@ -88,7 +88,7 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 - {{domxref("Position")}}, предоставляет данные о местоположении устройства в заданный момент времени — содержит {{domxref("Coordinates")}} - объект, хранящий координаты и отметку о текущем времени.
 - {{domxref("Coordinates")}}, содержит много полезной информации о расположении устройства, включая широту и долготу, высоту, скорость и направление движения и т.д.
 
-Так как же эти объекты взаимодействуют? Если вы посмотрите на наш пример [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) ([see it live also](http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), вы увидите следующий код:
+Так как же эти объекты взаимодействуют? Если вы посмотрите на наш пример [web audio example](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/web-audio/index.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/)), вы увидите следующий код:
 
 ```js
 navigator.geolocation.getCurrentPosition(function(position) {

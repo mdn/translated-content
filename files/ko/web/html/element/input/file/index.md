@@ -1,13 +1,6 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/Input/file
-tags:
-  - HTML
-  - HTML forms
-  - Input Type
-  - Reference
-  - 파일
-translation_of: Web/HTML/Element/input/file
 ---
 
 {{HTMLSidebar}}
@@ -84,7 +77,7 @@ translation_of: Web/HTML/Element/input/file
 
 ### {{htmlattrdef("accept")}}
 
-[`accept`](/ko/docs/Web/HTML/Attributes/accept) 특성은 파일 입력 칸이 허용할 파일 유형을 나타내는 문자열로, 쉼표로 구분한 **[고유 파일 유형 지정자](#고유_파일_유형_지정자)**의 목록입니다. 주어진 파일 유형의 식별 방법이 여러 가지일 수도 있으므로, 특정 파일 형식이 필요할 땐 유형의 집합을 제공하는 것이 좋습니다.
+[`accept`](/ko/docs/Web/HTML/Attributes/accept) 특성은 파일 입력 칸이 허용할 파일 유형을 나타내는 문자열로, 쉼표로 구분한 [**고유 파일 유형 지정자**](#고유_파일_유형_지정자)의 목록입니다. 주어진 파일 유형의 식별 방법이 여러 가지일 수도 있으므로, 특정 파일 형식이 필요할 땐 유형의 집합을 제공하는 것이 좋습니다.
 
 예를 들어, Microsoft Word 파일을 식별하는 방법은 여러가지이므로, Word 파일을 허용하는 `<input>`은 다음과 같은 형태를 갖게 됩니다.
 

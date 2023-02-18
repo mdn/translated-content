@@ -87,7 +87,7 @@ JavaScript는 이것보다 훨씬 많은 일을 할 수 있습니다. 어떤 일
 
 - 변수에 값을 저장할 수 있습니다. 바로 위의 예제를 보면, 요청해서 받은 새로운 이름을 `name`이라는 변수에 저장합니다.
 - 프로그래밍에서 "문자열"(string)이라고 부르는, 텍스트 조각을 조작합니다. 위 예제에서는 문자열 "플레이어 1: "과 `name` 변수의 값을 합쳐 온전한 텍스트 레이블("Player 1: Chris")을 생성합니다.
-- 웹 페이지에서 발생하는 어떤 이벤트에 코드가 응답하도록 합니다. 예제에서는 {{event("click")}} 이벤트를 사용해서 레이블을 클릭하는 순간을 탐지하고, 그 후에 텍스트 레이블을 업데이트하고 있습니다.
+- 웹 페이지에서 발생하는 어떤 이벤트에 코드가 응답하도록 합니다. 예제에서는 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트를 사용해서 레이블을 클릭하는 순간을 탐지하고, 그 후에 텍스트 레이블을 업데이트하고 있습니다.
 - 그밖에 더 많은 것들!
 
 하지만 위 목록보다 더 흥미진진한건 클라이언트 사이드 JavaScript 언어 위에 올라가있는 기능들입니다. **애플리케이션 프로그래밍 인터페이스**(**API**)라고 부르는 이 기능들은 여러분의 JavaScript 코드에서 사용할 수 있는 강력한 마법을 추가로 제공합니다.
@@ -421,15 +421,3 @@ for (const button of buttons) {
 지금 당장은 JavaScript가 약간 버겁게 느껴질지도 모르겠지만, 너무 걱정하지 마세요. 이 과정에 걸친 간단한 단계들을 밟다 보면 전체적인 모습이 보일겁니다. 다음 글에서는 [바로 실전으로 들어가서](/ko/docs/Learn/JavaScript/First_steps/A_first_splash) 스스로 JavaScript 예제를 만들어보도록 합시다.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
-
-## 이 과정은
-
-- [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [텍스트 다루기 — JavaScript의 문자열](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [유용한 문자열 메서드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [평가: 바보같은 이야기 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

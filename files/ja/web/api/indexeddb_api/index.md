@@ -61,7 +61,7 @@ IndexedDB を扱う操作は非同期に実行しますので、他のアプリ�
 - {{domxref("IDBKeyRange")}}
   - : データベースから一定の範囲のデータを取り出すために使用可能な、キーの範囲を定義します。
 - {{domxref("IDBLocaleAwareKeyRange")}} {{Non-standard_inline}}
-  - : データベースから一定の範囲のデータを取り出すために使用可能な、インデックス用に指定したロケール ([`createIndex()` の optionalParameters](/ja/docs/Web/API/IDBObjectStore/createIndex#parameters) をご覧ください) の規則によって並べ替えたキーの範囲を定義します。
+  - : データベースから一定の範囲のデータを取り出すために使用可能な、インデックス用に指定したロケール ([`createIndex()`](/ja/docs/Web/API/IDBObjectStore/createIndex) の引数 [`options`](/ja/docs/Web/API/IDBObjectStore/createIndex#options) をご覧ください) の規則によって並べ替えたキーの範囲を定義します。
 
 ### カスタムイベントインターフェイス
 

@@ -26,7 +26,7 @@ var timeoutID = window.setTimeout(code [, delay]);
 
 Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел [Аргументы колбэк-функции](#Аргументы_колбэк-функции)).
 
-> **Предупреждение:** **Important:** Prior to Gecko 13 {{ geckoRelease("13.0") }}, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
+> **Предупреждение:** **Important:** Prior to Gecko 13, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
 
 ## Пример
 
@@ -241,7 +241,7 @@ String literals are evaluated in the global context, so local symbols in the con
 
 [Historically](http://code.google.com/p/chromium/issues/detail?id=792#c10) browsers implement `setTimeout()` "clamping": successive `setTimeout()` calls with `delay` smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, `DOM_MIN_TIMEOUT_VALUE`, is 4 ms (stored in a preference in Firefox: `dom.min_timeout_value`), with a `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` of 5ms.
 
-In fact, 4ms is [specified by the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) and is consistent across browsers released in 2010 and onward. Prior to {{ geckoRelease("5.0") }}, the minimum timeout value for nested timeouts was 10 ms.
+In fact, 4ms is [specified by the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) and is consistent across browsers released in 2010 and onward. Prior to Gecko 5.0, the minimum timeout value for nested timeouts was 10 ms.
 
 In addition to "clamping", the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks.
 
@@ -251,7 +251,7 @@ Browsers including Internet Explorer, Chrome, Safari, and Firefox store the dela
 
 #### Неактивные вкладки
 
-In {{ geckoRelease("5.0") }} and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or [crbug.com/66078](http://crbug.com/66078) for details about this in Chrome.
+In Gecko 5.0 and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or [crbug.com/66078](http://crbug.com/66078) for details about this in Chrome.
 
 ## Совместимость с браузерами
 

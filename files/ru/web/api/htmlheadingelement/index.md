@@ -14,7 +14,7 @@ translation_of: Web/API/HTMLHeadingElement
 
 _Наследует свойства родителя, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLHeadingElement.align")}} {{obsolete_inline}}
+- {{domxref("HTMLHeadingElement.align")}}
   - : Is a {{domxref("DOMString")}} representing an enumerated attribute indicating alignment of the heading with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 
 ## Методы

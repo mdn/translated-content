@@ -186,29 +186,8 @@ DevTools는 CSS 문제를 해결할 때 큰 도움이 될 수 있으므로 CSS�
 
 여전히 문제를 해결하는 데 어려움을 겪고 있다면 테스트 케이스를 축소하면 포럼에 게시하거나 동료에게 보여줌으로써 도움을 요청할 수 있습니다. 도움을 요청하기 전에 문제를 줄이고 문제가 발생한 위치를 정확히 식별하는 작업을 완료했음을 보여줄 수 있다면 도움을 받을 가능성이 훨씬 더 높습니다. 경험이 더 많은 개발자는 문제를 신속하게 찾아내고 올바른 방향으로 안내할 수 있으며, 그렇지 않더라도 축소된 테스트 사례를 통해 빠르게 살펴보고 최소한 도움을 줄 수 있기를 바랍니다.<!-- 피-->
 
-문제가 실제로 브라우저의 버그인 경우 축소된 테스트 사례를 사용하여 관련 브라우저 공급업체에 버그 보고서를 제출할 수도 있습니다(예: Mozilla의 [bugzilla 사이트](<https://bugzilla .mozilla.org>)).
+문제가 실제로 브라우저의 버그인 경우 축소된 테스트 사례를 사용하여 관련 브라우저 공급업체에 버그 보고서를 제출할 수도 있습니다(예: Mozilla의 [bugzilla 사이트](https://bugzilla.mozilla.org)).
 
 CSS에 대한 경험이 많을수록 문제를 더 빨리 파악하게 될 것입니다. 그러나 우리 중 가장 경험이 많은 사람들조차도 때때로 도대체 무슨 일이 일어나고 있는지 궁금해합니다. 체계적인 접근 방식을 취하고 축소된 테스트 사례를 만들고 다른 사람에게 문제를 설명하면 일반적으로 수정 사항을 찾을 수 있습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1. [Cascade and inheritance](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/ko/docs/Learn/CSS/Building_blocks/Organizing)

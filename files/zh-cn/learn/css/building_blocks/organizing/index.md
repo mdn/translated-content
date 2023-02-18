@@ -349,7 +349,7 @@ $base-color: #c6538c;
 
 在[这篇博文](https://www.lauraleeflores.com/blog/how-to-organize-your-css-files)里面，你可以看下一个开发者是如何处理这个问题的。
 
-> **备注：**一个简单的尝试 Sass 的方式是使用[CodePen](https://codepen.io)，你可以为一个 Pen 在设置中启用用于你的 CSS 的 Sass，CodePen 将会为你运行 Sass 语法分析功能，这样你就能看到应用了普通 CSS 的生成网页。有时你会发现 CSS 教程在它们的 CodePen 演示里面使用了 Sass 而不是普通 CSS，所以了解一点点关于 Sass 的事情是有用的。
+> **备注：** 一个简单的尝试 Sass 的方式是使用 [CodePen](https://codepen.io)，你可以为一个 Pen 在设置中启用用于你的 CSS 的 Sass，CodePen 将会为你运行 Sass 语法分析功能，这样你就能看到应用了普通 CSS 的生成网页。有时你会发现 CSS 教程在它们的 CodePen 演示里面使用了 Sass 而不是普通 CSS，所以了解一点点关于 Sass 的事情是有用的。
 
 #### 后处理以进行优化
 
@@ -364,24 +364,3 @@ $base-color: #c6538c;
 你应该也有了探索[MDN CSS](/zh-CN/docs/Web/CSS)学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的[CSS Cookbook](/zh-CN/docs/Web/CSS/Layout_cookbook)来了解可用的排布，在诸如[Guide to CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)的一些更加专门的指导里阅读更多。.
 
 {{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
-
-## 模块目录
-
-1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

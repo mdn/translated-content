@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/custo
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La méthode **`WebAssembly.customSections()`** renvoie un tableau qui contient les sections personnalisées (_custom sections_) disponibles dans un module WebAssembly et qui ont un nom donné.
 

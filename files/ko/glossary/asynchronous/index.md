@@ -1,10 +1,6 @@
 ---
 title: 비동기(Asynchronous)
 slug: Glossary/Asynchronous
-tags:
-  - Web
-  - WebMechanics
-  - asynchronous
 ---
 
 **비동기**는 주로 두 개 이상의 객체나 이벤트가 동시에 **존재하지 않거나 발생하지 않는 것**을 의미합니다 (여러 관련된 작업이 원래의 일이 끝날 때까지 기다리지 않는 것도 포함됩니다). 프로그래밍에서 비동기는 다음 두 가지 맥락에서 사용됩니다.
