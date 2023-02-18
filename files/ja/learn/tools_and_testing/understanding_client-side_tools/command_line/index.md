@@ -201,20 +201,20 @@ ls -l
 
 2 つの基本的なコマンドについて説明したので、ディレクトリを少し調べて、ある場所から次の場所に移動できるかどうかを確認してください。
 
-### Creating, copying, moving, removing
+### 作成、コピー、移動、削除
 
-There are a number of other basic utility commands that you'll probably end up using quite a lot as you work with the terminal. They are pretty simple, so we won't explain them all in quite as much detail as the previous couple.
+端末で作業する際におそらくかなり頻繁に使用することになる、その他の基本的なユーティリティ コマンドが多数あります。 それらは非常に単純なので、前の2つのコマンドほど詳細には説明しません。
 
-Have a play with them in a test directory you've created somewhere so that you don't accidentally delete anything important, using the example commands below for guidance:
+重要なものを誤って削除しないように、以下のコマンド例をガイダンスとして使用して、どこかに作成したテスト ディレクトリでそれらを試してみてください。:
 
-- `mkdir` — this creates a new directory inside the current directory you are in, with the name you provide after the command name. For example, `mkdir my-awesome-website` will make a new directory called `my-awesome-website`.
-- `rmdir` — removes the named directory, but only if it's empty. For example, `rmdir my-awesome-website` will remove the directory we created above. If you want to remove a directory that is not empty (and also remove everything it contains), then you can use the `-r` option (recursive), but this is dangerous. Make sure there is nothing you might need inside the directory later on, as it will be gone forever.
-- `touch` — creates a new empty file, inside the current directory. For example, `touch mdn-example.md` creates a new empty file called `mdn-example.md`.
-- `mv` — moves a file from the first specified file location to the second specified file location, for example `mv mdn-example.md mdn-example.txt` (the locations are written as file paths). This command moves a file called `mdn-example.md` in the current directory to a file called `mdn-example.txt` in the current directory. Technically the file is being moved, but from a practical perspective, this command is actually renaming the file.
-- `cp` — similar in usage to `mv`, `cp` creates a copy of the file in the first location specified, in the second location specified. For example, `cp mdn-example.txt mdn-example.txt.bak` creates a copy of `mdn-example.txt` called `mdn-example.txt.bak` (you can of course call it something else if you wish).
-- `rm` — removes the specified file. For example, `rm mdn-example.txt` deletes a single file called `mdn-example.txt`. Note that this delete is permanent and can't be undone via the recycle bin that you might have on your desktop user interface.
+- `mkdir` — これにより、現在のディレクトリ内に新しいディレクトリが作成され、コマンド名の後に指定した名前が付けられます。 たとえば、 `mkdir my-awesome-website` は `my-awesome-website` という名前の新しいディレクトリを作成します。
+- `rmdir` — 指定されたディレクトリを削除しますが、それが空の場合のみです。 たとえば、 `rmdir my-awesome-website` は上で作成したディレクトリを削除します。 空ではないディレクトリを削除したい場合 (およびそこに含まれるすべてのものも削除したい場合)、`-r` オプション (再帰的) を使用できますが、これは危険です。 ディレクトリは永久に失われるため、後でディレクトリ内に必要なものがないことを確認してください。
+- `touch` — 現在のディレクトリ内に新しい空のファイルを作成します。 たとえば、`touch mdn-example.md` は `mdn-example.md` という新しい空のファイルを作成します。
+- `mv` — 最初に指定されたファイルの場所から 2 番目に指定されたファイルの場所にファイルを移動します。たとえば、 `mv mdn-example.md mdn-example.txt` (場所はファイル パスとして書き込まれます)。 このコマンドは、  `mdn-example.md` 現在のディレクトリにあるファイルに `mdn-example.txt` 現在のディレクトリに。 技術的にはファイルは移動されていますが、実用的な観点から見ると、このコマンドは実際にはファイルの名前を変更しています。
+- `cp` — 使い方は `mv` と似ていますが、`cp` は指定された最初の場所と 2 番目に指定された場所にファイルのコピーを作成します。 たとえば、`cp mdn-example.txt mdn-example.txt.bak` は、`mdn-example.txt.bak` という名前の `mdn-example.txt` のコピーを作成します (もちろん、必要に応じて別の名前にすることもできます）。
+- `rm` — 指定されたファイルを削除します。 たとえば、 `rm mdn-example.txt` は `mdn-example.txt` という単一のファイルを削除します。 この削除は永続的であり、デスクトップ ユーザー インターフェイスにあるごみ箱から元に戻すことはできないことに注意してください。
 
-> **Note:** Many terminal commands allow you to use asterisks as "wild card" characters, meaning "any sequence of characters". This allows you to run an operation against a potentially large number of files at once, all of which match the specified pattern. As an example, `rm mdn-*` would delete all files beginning with `mdn-`. `rm mdn-*.bak` would delete all files that start with `mdn-` and end with `.bak`.
+> **注:** 多くの端末コマンドでは、アスタリスクを「ワイルドカード」文字として使用できます。これは、「任意の文字列」を意味します。 これにより、潜在的に多数のファイルに対して一度に操作を実行でき、そのすべてが指定されたパターンに一致します。 例として、 `rm mdn-*` は `mdn-` で始まるすべてのファイルを削除します。 `rm mdn-*.bak` は、 `mdn-`で始まり `.bak` で終わるすべてのファイルを削除します。
 
 ## Terminal — considered harmful?
 
