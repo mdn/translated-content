@@ -289,14 +289,3 @@ You may notice from the text in the example that it won't work in IE8 — this i
 接下来，我们将把注意力转向测试可能发现的实际代码问题，从 HTML 和 CSS 开始。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-**本章内容**
-
-- [跨浏览器测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [进行测试的策略](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [处理常见的辅助功能问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [执行特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [自动化测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [搭建你自己的自动化测试环境](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)
