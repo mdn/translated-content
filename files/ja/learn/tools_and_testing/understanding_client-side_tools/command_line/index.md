@@ -80,7 +80,7 @@ macOS には、グラフィカルユーザーインターフェイスの下に�
 
 他のプログラミングツールと同様に、Windows でターミナル (またはコマンド ライン) を使用することは、従来、他のオペレーティングシステムほど単純でも簡単でもありませんでした。 しかし、状況は良くなっています。
 
-Windows には伝統的に cmd ("コマンドプロンプト") と呼ばれる独自の端末のようなプログラムがありましたが、これは明らかに Unix コマンドと同等ではなく、古いスタイルの Windows DOS プロンプトと同等です。
+Windows には伝統的に cmd (「コマンドプロンプト」) と呼ばれる独自の端末のようなプログラムがありましたが、これは明らかに Unix コマンドと同等ではなく、古いスタイルの Windows DOS プロンプトと同等です。
 
 Windows でターミナル エクスペリエンスを提供するための優れたプログラムが存在します。たとえば、Powershell ([インストーラーを見つけるにはこちらをご覧ください](https://github.com/PowerShell/PowerShell)) や Gitbash ([git for Windows](https://gitforwindows.org/) ツールセットの一部として提供されます)
 
@@ -122,33 +122,34 @@ Windows で選択するオプションに関しては、WSL をインストー�
 
 これらのツールのいくつかをコマンド ラインで使用する方法を見てみましょう。 先に進む前に、ターミナル プログラムを開きます。
 
-### Navigation on the command line
+### コマンドラインでのナビゲーション
 
-When you visit the command line you will inevitably need to navigate to a particular directory to "do something". All the operating systems (assuming a default setup) will launch their terminal program in your "home" directory, and from there you're likely to want to move to a different place.
+コマンドラインにアクセスすると、必然的に特定のディレクトリに移動して「何かをする」必要があります。 すべてのオペレーティングシステム (デフォルトのセットアップを想定) は、ターミナルプログラムを「ホーム」ディレクトリで起動するので、そこから別の場所に移動したくなるでしょう。
 
-The `cd` command lets you Change Directory. Technically, cd isn't a program but a built-in. This means your operating system provides it out of the box, and also that you can't accidentally delete it — thank goodness! You don't need to worry too much about whether a command is built-in or not, but bear in mind that built-ins appear on all unix-based systems.
+`cd` コマンドを使用すると、ディレクトリを変更できます。 技術的には、cd はプログラムではなく組み込みです。 これは、オペレーティング システムがすぐに使用できることを意味し、誤って削除することはできません。 コマンドが組み込みかどうかについてあまり心配する必要はありませんが、組み込みはすべての UNIX ベースのシステムに表示されることに注意してください。
 
-To change the directory, you type `cd` into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use `cd Desktop` (see the screenshots below).
+ディレクトリを変更するには、端末に `cd` と入力し、その後に移動先のディレクトリを入力します。 ディレクトリがホームディレクトリ内にあると仮定すると、`cd Desktop` を使用できます (以下のスクリーンショットを参照)。
 
 ![results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop](win-terminals-cd.png)
 
-Try typing this into your system's terminal:
+これをシステムの端末に入力してみてください:
 
 ```bash
 cd Desktop
 ```
 
-If you want to move back up to the previous directory, you can use two dots:
+前のディレクトリに戻りたい場合は、2 つのドットを使用します。:
 
 ```bash
 cd ..
 ```
 
-> **Note:** A very useful terminal shortcut is using the <kbd>tab</kbd> key to autocomplete names that you know are present, rather than having to type out the whole thing. For example, after typing the above two commands, try typing `cd D` and pressing <kbd>tab</kbd> — it should autocomplete the directory name `Desktop` for you, provided it is present in the current directory. Bear this in mind as you move forward.
+> **注:** 非常に便利なターミナル ショートカットは、 <kbd>tab</kbd> キーを使用して、すべてを入力するのではなく、存在することがわかっている名前をオートコンプリートすることです。 たとえば、上記の 2 つのコマンドを入力した後、 `cd D` と入力して <kbd>tab</kbd> を押してみてください。現在のディレクトリに存在する場合、ディレクトリ名 `Desktop` が自動補完されます。 前進するときは、このことを念頭に置いてください。
 
-If the directory you want to go to is nested deep, you need to know the path to get to it. This usually becomes easier as you get more familiar with the structure of your file system, but if you are not sure of the path you can usually figure it out with a combination of the `ls` command (see below), and by clicking around in your Explorer/Finder window to see where a directory is, relative to where you currently are.
+行きたいディレクトリが深くネストされている場合、そこに到達するためのパスを知る必要があります。 これは通常、ファイル システムの構造に慣れるにつれて簡単になりますが、パスがわからない場合は、通常、`ls` コマンド (以下を参照) を組み合わせて、パスをクリックして見つけることができます。 Explorer/Finder ウィンドウを使用して、現在の場所に関連するディレクトリの場所を確認します。
 
-For example, if you wanted to go to a directory called `src`, located inside a directory called `project`, located on the `Desktop`, you could type these three commands to get there from your home folder:
+
+たとえば、`Desktop` にある `project` というディレクトリ内にある `src` というディレクトリに移動する場合は、次の 3 つのコマンドを入力して、ホーム フォルダからそこに移動できます。:
 
 ```bash
 cd Desktop
@@ -156,15 +157,15 @@ cd project
 cd src
 ```
 
-But this a waste of time — instead, you can type one command, with the different items in the path separated by forward slashes, just like you do when specifying paths to images or other assets in CSS, HTML, or JavaScript code:
+しかし、これは時間の無駄です — 代わりに、CSS、HTML、または JavaScript コードで画像やその他のアセットへのパスを指定するときと同じように、パス内のさまざまな項目をスラッシュで区切って 1 つのコマンドを入力できます。
 
 ```bash
 cd Desktop/project/src
 ```
 
-Note that including a leading slash on your path makes the path absolute, for example `/Users/your-user-name/Desktop`. Omitting the leading slash as we've done above makes the path relative to your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the website", whereas omitting the slash means "the URL is relative to my current page".
+パスの先頭にスラッシュを含めると、パスが絶対パスになることに注意してください (例: `/Users/your-user-name/Desktop`)。 上記のように先頭のスラッシュを省略すると、パスは現在の作業ディレクトリからの相対パスになります。 これは、Web ブラウザの URL で表示されるものとまったく同じです。 先頭のスラッシュは「Web サイトのルート」を意味し、スラッシュを省略すると「現在のページに関連する URL」を意味します。
 
-> **Note:** On windows, you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
+> **注:**Windows では、スラッシュの代わりにバックスラッシュを使用します。 `cd Desktop\project\src` — これは非常に奇妙に思えるかもしれませんが、その理由に興味がある場合は、マイクロソフトのプリンシパル エンジニアの 1 人の[この YouTube クリップをご覧ください](https://www.youtube.com/watch?v=5T3IJfBfBmI) 。
 
 ### Listing directory contents
 
