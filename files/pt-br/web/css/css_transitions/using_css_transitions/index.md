@@ -17,7 +17,7 @@ Animações CSS permitem que você decida quais propriedades animar (listando-os
 
 Você mesmo pode definir qual propriedade será transicionada e de qual maneira. E isso permite a criação de transições complexas. Como não faz sentido animar algumas propriedades, existe uma lista finita [com propriedades que podem ser transicionadas](/pt-BR/docs/Web/CSS/CSS_animated_properties).
 
-> **Nota:** Observação: A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.
+> **Nota:** A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.
 
 > **Nota:** O valor `automatico` , geralmente é complexo. A especificação recomenda não animar com valores automaticos. Alguns [user agents](/pt-BR/docs/Web/HTTP/Headers/User-Agent), como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor `automatico`, podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.
 
@@ -1048,7 +1048,7 @@ el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);
 ```
 
-> **Nota:** **Observação**: O evento `transitionend` não dispara se a transição é abortada antes de a transição ser concluída, porque o efeito é feito com {{cssxref("display")}}`: none`
+> **Nota:**: O evento `transitionend` não dispara se a transição é abortada antes de a transição ser concluída, porque o efeito é feito com {{cssxref("display")}}`: none`
 
 ## Especificações
 
