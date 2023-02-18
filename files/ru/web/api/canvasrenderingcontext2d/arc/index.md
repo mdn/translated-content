@@ -147,7 +147,7 @@ for (i=0;i<4;i++){
 
 ## Примечания относительно Gecko
 
-Начиная с Gecko 2.0 {{geckoRelease("2.0")}}:
+Начиная с Gecko 2.0:
 
 - Параметр `anticlockwise` опциональный,
 - Указывание отрицательного радиуса теперь приводит к ошибке {{domxref("DOMError", "IndexSizeError")}} error ("Index or size is negative or greater than the allowed amount").

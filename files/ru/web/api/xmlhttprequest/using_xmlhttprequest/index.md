@@ -22,7 +22,7 @@ oReq.send();
 
 Запрос, сделанный посредством `XMLHttpRequest`, может загружать данные синхронно или асинхронно. Это определяется третьим аргументом метода [open()](</ru/docs/DOM/XMLHttpRequest#open()> "DOM/XMLHttpRequest#open()") объекта XMLHttpRequest: если он равен true или не определён, запрос выполнится асинхронно, в противном случае — синхронно. Детальное обсуждение и демонстрации обоих типов запросов могут быть найдены на странице [synchronous and asynchronous requests](/ru/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). Использовать синхронные запросы приходится очень редко.
 
-> **Примечание:** Начиная с Gecko 30.0 {{ geckoRelease("30.0") }} не рекомендуется использовать синхронные запросы, так как они отрицательно влияют на пользовательский опыт.
+> **Примечание:** Начиная с Gecko 30.0 не рекомендуется использовать синхронные запросы, так как они отрицательно влияют на пользовательский опыт.
 
 ## Обработка запросов
 
@@ -508,7 +508,7 @@ AJAXSubmit(myForm);
 
 > **Примечание:** The best way to send binary content is via [ArrayBuffers](/ru/docs/JavaScript/Typed_arrays/ArrayBuffer) or [Blobs](/ru/docs/DOM/Blob) in conjuncton with the [`send()`](/ru/docs/DOM/XMLHttpRequest#send%28%29) method and possibly the [`readAsArrayBuffer()`](</ru/docs/DOM/FileReader#readAsArrayBuffer()>) method of the [`FileReader`](/ru/docs/DOM/FileReader) API. But, since the aim of this script is to work with a [stringifiable](/ru/docs/JavaScript/Reference/Global_Objects/JSON/stringify) raw data, we used the [`sendAsBinary()`](/ru/docs/DOM/XMLHttpRequest#sendAsBinary%28%29) method in conjunction with the [`readAsBinaryString()`](/ru/docs/DOM/FileReader#readAsBinaryString%28%29) method of the [`FileReader`](/ru/docs/DOM/FileReader) API. As such, the above script makes sense only when you are dealing with small files. If you do not intend to upload binary content, consider instead using the [`FormData`](/ru/docs/DOM/XMLHttpRequest/FormData) API.
 
-> **Примечание:** The non-standard `sendAsBinary` method is considered deprecated as of Gecko 31 {{ geckoRelease(31) }} and will be removed soon. The standard `send(Blob data)` method can be used instead.
+> **Примечание:** The non-standard `sendAsBinary` method is considered deprecated as of Gecko 31 and will be removed soon. The standard `send(Blob data)` method can be used instead.
 
 ### Используя объекты FormData
 

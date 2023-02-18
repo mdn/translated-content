@@ -107,7 +107,7 @@ El atributo {{HTMLAttrDef("pattern")}}, cuando se especifica, es una expresión 
 
 Si el patrón especificado no se especifica o no es válido, no se aplica ninguna expresión regular y este atributo se ignora por completo.
 
-> **Nota:** **Consejo**:: Utiliza el atributo {{HTMLAttrxRef("title", "input")}} para especificar el texto que la mayoría de los navegadores mostrarán como información sobre herramientas para explicar cuáles son los requisitos para coincidir con el patrón. También debes incluir otro texto explicativo cercano.
+> **Nota:** Utiliza el atributo {{HTMLAttrxRef("title", "input")}} para especificar el texto que la mayoría de los navegadores mostrarán como información sobre herramientas para explicar cuáles son los requisitos para coincidir con el patrón. También debes incluir otro texto explicativo cercano.
 
 Consulta [Especificación de un patrón](#especificación_de_un_patrón) para obtener más detalles y un ejemplo.
 

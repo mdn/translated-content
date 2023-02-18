@@ -26,7 +26,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
   - : Una lista separada por comas de los tipos de contenido que el servidor acepta.
 
-    > **Nota:** **Nota de uso:** este atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/HTML/Element/Input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
+    > **Nota:** este atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/HTML/Element/Input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
 
 - {{ htmlattrdef("accept-charset") }}
 
