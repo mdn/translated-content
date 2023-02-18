@@ -329,7 +329,7 @@ Prettier は、「いくつかのオプション」しかない独自のコー�
 
 Prettier のインストールに飛び込む前に、答えるべき質問があります — 「どこにインストールすればよいですか?」
 
-`npm` を使用すると、ツールをグローバルにインストールする (どこからでもアクセスできるようにする) か、現在のプロジェクト ディレクトリにローカルにインストールするかを選択できます。
+`npm` を使用すると、ツールをグローバルにインストールする (どこからでもアクセスできるようにする) か、現在のプロジェクトディレクトリにローカルにインストールするかを選択できます。
 
 それぞれに長所と短所があります。グローバルにインストールする場合の以下の長所と短所のリストは、すべてを網羅しているわけではありません。
 
@@ -345,39 +345,39 @@ Prettier のインストールに飛び込む前に、答えるべき質問が�
 
 - プロジェクトのコードベースと互換性がない可能性があります。
 - チーム内の他の開発者は、これらのツールにアクセスできません。たとえば、git などのツールでコードベースを共有している場合です。
-- 前のポイントに関連して、プロジェクト コードの複製が難しくなります (ツールをローカルにインストールする場合、ツールを依存関係として設定し、<code>npm install</code> でインストールできます)。
+- 前のポイントに関連して、プロジェクトコードの複製が難しくなります (ツールをローカルにインストールする場合、ツールを依存関係として設定し、<code>npm install</code> でインストールできます)。
 
 _cons_ リストは短くなりますが、グローバル インストールのマイナスの影響は、メリットよりもはるかに大きい可能性があります。
 ここではローカルにインストールしますが、相対的なリスクを理解したら、自由にグローバルにインストールしてください。
 
-### Installing Prettier
+### Prettier のインストール
 
-Prettier is an opinionated code formatting tool for front-end developers, focusing on JavaScript-based languages and adding support for HTML, CSS, SCSS, JSON, and more.
+Prettier は、JavaScript ベースの言語に焦点を当て、HTML、CSS、SCSS、JSON などのサポートを追加するフロントエンド開発者向けの独自のコード フォーマットツールです。
 
-Prettier can:
+Prettier のできること:
 
-- Save the cognitive overhead of getting the style consistent manually across all your code files; Prettier can do this for you automatically.
-- Help newcomers to web development format their code in best-practice fashion.
-- Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you're using.
-- Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we'll see later on in the module).
+- すべてのコード ファイルで一貫したスタイルを手動で取得するための認知的オーバーヘッドを節約します。 Pretier はこれを自動的に行うことができます。 
+- Web 開発の初心者がベスト プラクティスの方法でコードをフォーマットできるようにします。
+- 任意のオペレーティング システムにインストールでき、プロジェクトツールの直接の一部としてもインストールできます。これにより、コードに取り組む同僚や友人が、あなたが使用しているコードスタイルを確実に使用できるようになります。
+- 保存時、入力時、またはコードを公開する前に実行するように構成します (モジュールの後半で説明する追加のツールを使用)。
 
-For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html)
+この記事では、[Prettier インストールガイド](https://prettier.io/docs/en/install.html) で提案されているように、Prettier をローカルにインストールします。
 
-Once you've installed node, open up the terminal and run the following command to install Prettier:
+ノードをインストールしたらターミナルを開き、次のコマンドを実行して Prettier をインストールします。:
 
 ```bash
 npm install prettier
 ```
 
-You can now run the file locally using the [npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner/) tool.
-Running the command without any arguments, as with many other commands, will offer up usage and help information.
-Try this now:
+[npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner/) ツールを使用して、ファイルをローカルで実行できるようになりました。
+他の多くのコマンドと同様に、引数を指定せずにコマンドを実行すると、使用方法とヘルプ情報が表示されます。
+これを試してください:
 
 ```bash
 npx prettier
 ```
 
-Your output should look something like this:
+出力は次のようになります。:
 
 ```bash
 Usage: prettier [options] [file/glob ...]
@@ -388,12 +388,12 @@ Stdin is read if it is piped to Prettier and no files are given.
 …
 ```
 
-It's always worth at the very least skimming over the usage information, even if it is long.
-It'll help you to understand better how the tool is intended to be used.
+たとえそれが長くても、少なくとも使用法情報に目を通すことは常に価値があります。
+ツールがどのように使用されることを意図しているかをよりよく理解するのに役立ちます。
 
-> **Note:** If you have not first installed Prettier locally, then running `npx prettier` will download and run the latest version of Prettier all in one go _just for that command_.
-> While that might sound great, new versions of Prettier may slightly modify the output.
-> You want to install it locally so that you are fixing the version of Prettier that you are using for formatting until you are ready to change it.
+> **注:** 最初に Prettier をローカルにインストールしていない場合、`npx prettier` を実行すると、_そのコマンドだけ_で、Prettier の最新バージョンがダウンロードされて実行されます。
+> 素晴らしいと思われるかもしれませんが、Prettier の新しいバージョンでは出力がわずかに変更される場合があります。
+> ローカルにインストールして、フォーマットに使用している Prettier のバージョンを変更する準備が整うまで修正する。
 
 ### Playing with Prettier
 
