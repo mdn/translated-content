@@ -261,51 +261,51 @@ ls | wc -l
 
 パイプ演算子は、これらの入力と出力を一緒に _接続_ できるため、ニーズに合わせてますます複雑な操作を構築できます — 1 つのコマンドからの出力が次のコマンドへの入力になる可能性があります。 この場合、`ls` は通常その出力を `STDOUT` に出力しますが、代わりに `ls` の出力は `wc` にパイプされます。 代わりに、そのカウントを `STDOUT` に出力します。
 
-## A slightly more complex example
+## もう少し複雑な例
 
-Let's go through something a bit more complicated.
+もう少し複雑なことを見てみましょう。
 
-We will first try to fetch the contents of MDN's "fetch" page using the `curl` command (which can be used to request content from URLs), from `https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch`.
-Try it now:
+最初に、MDN の「fetch」ページ `https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch` を `curl` コマンド (URL からコンテンツを要求するために使用できる) を使用してコンテンツを取得します。
+やってみよう:
 
 ```bash
 curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
-You won't get an output because the page has been redirected (to [/Web/API/fetch](/en-US/docs/Web/API/fetch)).
-We need to explicitly tell `curl` to follow redirects using the `-L` flag.
+ページが ([/Web/API/fetch](/en-US/docs/Web/API/fetch) に) リダイレクトされているため、出力は得られません。
+`-L` フラグを使用してリダイレクトに従うように `curl` に明示的に指示する必要があります。
 
-Let's also look at the headers that `developer.mozilla.org` returns using `curl`'s `-I` flag, and print all the location redirects it sends to the terminal, by piping the output of `curl` into `grep` (we will ask `grep` to return all the lines that contain the word "location").
+また `curl` の `-I` フラグを使用して `developer.mozilla.org` が返すヘッダーを見て、 `curl` の出力を `grep` にパイプすることにより、ターミナルに送信されるすべてのロケーション リダイレクトを出力します。 (「 location」という単語を含むすべての行を返すように `grep` に依頼します)。
 
-Try running the following (you'll see that there is just one redirect before we reach the final page):
+以下を実行してみてください (最終ページに到達する前にリダイレクトが 1 つだけあることがわかります)。:
 
 ```bash
 curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
 ```
 
-Your output should look something like this (`curl` will first output some download counters and suchlike):
+出力は次のようになります (`curl` は最初にいくつかのダウンロードカウンターなどを出力します)。:
 
 ```bash
 location: /en-US/docs/Web/API/fetch
 ```
 
-Although contrived, we could take this result a little further and transform the `location:` line contents, adding the base origin to the start of each one so that we get complete URLs printed out.
-For that, we'll add `awk` to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!).
+人為的ではありますが、この結果をもう少し進めて `location:` 行の内容を変換し、それぞれの先頭に基本オリジンを追加して、完全な URL を出力できるようにすることができます。
+そのために、`awk` をミックスに追加します (これは、JavaScript や Ruby、Python に似たプログラミング言語で、はるかに古いものです!)。
 
-Try running this:
+これを実行してみてください:
 
 ```bash
 curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
 ```
 
-Your final output should look something like this:
+最終的な出力は次のようになります:
 
 ```bash
 https://developer.mozilla.org/en-US/docs/Web/API/fetch
 ```
 
-By combining these commands we've customized the output to show the full URLs that the Mozilla server is redirecting through when we request the `/docs/Web/API/WindowOrWorkerGlobalScope/fetch` URL.
-Getting to know your system will prove useful in years to come — learn how these single serving tools work and how they can become part of your toolkit to solve niche problems.
+これらのコマンドを組み合わせることで、`/docs/Web/API/WindowOrWorkerGlobalScope/fetch` URL をリクエストしたときに Mozilla サーバーがリダイレクトしている完全な URL を表示するように出力をカスタマイズしました。
+システムを理解することは、今後何年にもわたって役立つことが証明されます。これらの単一サービス ツールがどのように機能し、ニッチな問題を解決するツールキットの一部になることができるかを学びましょう。
 
 ## Adding powerups
 
