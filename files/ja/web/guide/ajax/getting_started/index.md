@@ -98,7 +98,7 @@ if (httpRequest.readyState === XMLHttpRequest.DONE) {
 - 3 （対話中）または（**リクエストを処理中です**）
 - 4 （完了）または（**リクエストが完了してレスポンスの準備ができました**）
 
-次に、 HTTP レスポンスの [レスポンスコード](/ja/docs/Web/HTTP/#HTTP_Response_Codes)を調べます。返ってくる可能性があるコードは [W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) でリスト化されています。以下の例では、 AJAX 呼び出しが成功したか失敗したかを {{HTTPStatus("200", "200 OK")}} レスポンスコードをチェックすることで判別します。
+次に、 HTTP レスポンスの [レスポンスコード](/ja/docs/Web/HTTP#http_response_codes)を調べます。返ってくる可能性があるコードは [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) でリスト化されています。以下の例では、 AJAX 呼び出しが成功したか失敗したかを {{HTTPStatus("200", "200 OK")}} レスポンスコードをチェックすることで判別します。
 
 ```js
 if (httpRequest.status === 200) {
