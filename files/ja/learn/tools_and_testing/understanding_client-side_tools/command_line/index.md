@@ -179,27 +179,27 @@ ls
 
 これにより、現在の作業ディレクトリ内のファイルとディレクトリのリストが得られますが、情報は本当に基本的なものです。ファイルやディレクトリなどではなく、存在する各項目の名前のみを取得します。 幸いなことに、コマンドの使用法を少し変更するだけで、より多くの情報を得ることができます。
 
-### Introducing command options
+### コマンドオプションの紹介
 
-Most terminal commands have options — these are modifiers that you add onto the end of a command, which make it behave in a slightly different way. These usually consist of a space after the command name, followed by a dash, followed by one or more letters.
+ほとんどの端末コマンドにはオプションがあります。これらは、コマンドの最後に追加する修飾子であり、コマンドの動作を少し異なるものにします。 これらは通常、コマンド名の後にスペースがあり、その後にダッシュが続き、その後に 1 つ以上の文字が続きます。
 
-For example, give this a go and see what you get:
+たとえば、これを試してみて、何が得られるかを確認してください。:
 
 ```bash
 ls -l
 ```
 
-In the case of `ls`, the `-l` (_dash ell_) option gives you a listing with one file or directory on each line, and a lot more information shown. Directories can be identified by looking for a letter "d" on the very left-hand side of the lines. Those are the ones we can `cd` into.
+`ls` の場合、`-l` (_dash ell_) オプションを指定すると、各行に 1 つのファイルまたはディレクトリが表示され、さらに多くの情報が表示されます。 ディレクトリは、行の一番左側にある文字「d」を探すことで識別できます。 これらは、`cd` できるものです。
 
-Below is a screenshot with a "vanilla" macOS terminal at the top, and a customized terminal with some extra icons and colors to keep it looking lively — both showing the results of running `ls -l`:
+以下は、上部に「普通の」macOS ターミナルが表示されたスクリーンショットと、生き生きと見えるようにいくつかのアイコンと色が追加されたカスタマイズされたターミナルのスクリーンショットです。どちらも `ls -l` を実行した結果を示しています。:
 
 ![A vanilla macOS terminal and a more colorful custom macOS terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
-> **Note:** To find out exactly what options each command has available, you can look at its [man page](https://en.wikipedia.org/wiki/Man_page). This is done by typing the `man` command, followed by the name of the command you want to look up, for example `man ls`. This will open up the man page in the terminal's default text file viewer (for example, [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>) in my terminal), and you should then be able to scroll through the page using the arrow keys, or some similar mechanism. The man page lists all the options in great detail, which may be a bit intimidating to begin with, but at least you know it's there if you need it. Once you are finished looking through the man page, you need to quit out of it using your text viewer's quit command ("q" in `less`; you may have to search on the web to find it if it isn't obvious).
+> **注:** 各コマンドで使用できるオプションを正確に確認するには、[man ページ](https://en.wikipedia.org/wiki/Man_page) を参照してください。 これを行うには、 `man` コマンドの後に、検索するコマンドの名前を入力します ( `man ls` など)。 これにより、端末のデフォルトのテキスト ファイル ビューアー (たとえば、私の端末では [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>)) で man ページが開きます。 その後、矢印キーまたは同様のメカニズムを使用してページをスクロールできる必要があります。 man ページには、すべてのオプションが非常に詳細にリストされています。最初は少し戸惑うかもしれませんが、少なくとも必要な場合はそこにあることを知っています。 man ページを読み終えたら、テキスト ビューアーの quit コマンドを使用して終了する必要があります (`less` の "q"。明らかでない場合は、Web で検索して見つける必要がある場合があります)。 .
 
-> **Note:** To run a command with multiple options at the same time, you can usually put them all in a single string after the dash character, for example `ls -lah`, or `ls -ltrh`. Try looking at the `ls` man page to work out what these extra options do!
+> **注:** 複数のオプションを指定してコマンドを同時に実行するには、通常、 `ls -lah` や `ls -ltrh` のように、ダッシュ文字の後にすべてのオプションを 1 つの文字列に入れることができます。 `ls` の man ページを見て、これらの追加オプションが何をするかを調べてみてください!
 
-Now that we've discussed two fundamental commands, have a little poke around your directory and see if you can navigate from one place to the next.
+2 つの基本的なコマンドについて説明したので、ディレクトリを少し調べて、ある場所から次の場所に移動できるかどうかを確認してください。
 
 ### Creating, copying, moving, removing
 
