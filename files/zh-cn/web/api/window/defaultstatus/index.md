@@ -3,11 +3,7 @@ title: Window.defaultStatus
 slug: Web/API/Window/defaultStatus
 ---
 
-{{deprecated_header}}
-
-{{ APIRef() }}
-
-## Summary
+{{ APIRef() }}{{deprecated_header}}
 
 获取或设置给定窗口的状态栏文本。
 

@@ -20,6 +20,5 @@ original_slug: Глоссарий/Object
 
 ### Общие сведения
 
-- {{Interwiki("wikipedia", "Объектно-ориентированное программирование")}} на Wikipedia
 - {{jsxref("Object")}} в [справочнике JavaScript](/ru/docs/Web/JavaScript/Reference)
 - [Object data structures in JavaScript](/ru/docs/Web/JavaScript/Data_structures#Objects)

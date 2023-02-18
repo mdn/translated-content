@@ -41,9 +41,9 @@ String.fromCharCode(65,66,67)
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.fromCharCode")}}
+{{Compat}}
 
 ## Vea También
 

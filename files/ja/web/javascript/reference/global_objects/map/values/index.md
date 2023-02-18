@@ -1,6 +1,8 @@
 ---
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
+l10n:
+  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
 {{JSRef}}
@@ -11,8 +13,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/values
 
 ## 構文
 
-```
-myMap.values()
+```js-nolint
+values()
 ```
 
 ### 返値
@@ -24,12 +26,12 @@ myMap.values()
 ### values() の使用
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set('0', 'foo');
 myMap.set(1, 'bar');
 myMap.set({}, 'baz');
 
-var mapIter = myMap.values();
+const mapIter = myMap.values();
 
 console.log(mapIter.next().value); // "foo"
 console.log(mapIter.next().value); // "bar"
@@ -42,7 +44,7 @@ console.log(mapIter.next().value); // "baz"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Map.values")}}
+{{Compat}}
 
 ## 関連情報
 

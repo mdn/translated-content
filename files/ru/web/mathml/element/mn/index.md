@@ -136,4 +136,4 @@ translation_of: Web/MathML/Element/mn
 
 ## Особенности ядра Gecko
 
-- Некоторые значения `mathvariant` реализованы только начиная с Gecko 28.0 {{ geckoRelease("28.0") }} и требуют соответствующих [математических шрифтов](/ru/docs/Mozilla/MathML_Project/Fonts).
+- Некоторые значения `mathvariant` реализованы только начиная с Gecko 28.0 и требуют соответствующих [математических шрифтов](/ru/docs/Mozilla/MathML_Project/Fonts).

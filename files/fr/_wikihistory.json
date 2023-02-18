@@ -2457,75 +2457,51 @@
     "modified": "2020-08-07T08:34:09.122Z",
     "contributors": ["ramakuzhou", "As-Sinder", "JeffD", "Willyntobila"]
   },
-  "Learn/Common_questions/Available_text_editors": {
-    "modified": "2020-07-16T22:35:48.990Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Checking_that_your_web_site_is_working_properly": {
-    "modified": "2020-07-16T22:35:50.068Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Common_web_layouts": {
+  "Learn/Common_questions/Design_and_accessibility/Common_web_layouts": {
     "modified": "2020-07-16T22:35:42.406Z",
     "contributors": ["SphinxKnight", "Goofy", "ValPom"]
   },
-  "Learn/Common_questions/Design_for_all_types_of_users": {
+  "Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users": {
     "modified": "2020-07-16T22:35:50.809Z",
     "contributors": ["SphinxKnight"]
   },
-  "Learn/Common_questions/How_does_the_Internet_work": {
-    "modified": "2020-07-16T22:35:36.757Z",
-    "contributors": ["TheStarrK", "Porkepix", "SphinxKnight", "ValPom"]
-  },
-  "Learn/Common_questions/How_much_does_it_cost": {
-    "modified": "2020-07-16T22:35:45.519Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
-    "modified": "2020-07-16T22:35:39.748Z",
-    "contributors": ["SphinxKnight", "fndiaye", "ValPom"]
-  },
-  "Learn/Common_questions/Thinking_before_coding": {
+  "Learn/Common_questions/Design_and_accessibility/Thinking_before_coding": {
     "modified": "2020-07-16T22:35:34.202Z",
     "contributors": ["SphinxKnight", "rtabusse"]
   },
-  "Learn/Common_questions/Upload_files_to_a_web_server": {
-    "modified": "2020-07-16T22:35:41.575Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Using_Github_pages": {
-    "modified": "2020-07-16T22:35:51.735Z",
-    "contributors": ["tonybengue", "SphinxKnight"]
-  },
-  "Learn/Common_questions/What_are_browser_developer_tools": {
-    "modified": "2020-07-16T22:35:47.424Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/What_are_hyperlinks": {
-    "modified": "2020-07-16T22:35:43.089Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/What_is_a_URL": {
-    "modified": "2020-07-16T22:35:29.353Z",
-    "contributors": ["clamb", "Porkepix", "SphinxKnight"]
-  },
-  "Learn/Common_questions/What_is_a_domain_name": {
-    "modified": "2020-07-16T22:35:44.035Z",
-    "contributors": ["Porkepix", "SphinxKnight"]
-  },
-  "Learn/Common_questions/What_is_a_web_server": {
-    "modified": "2020-07-16T22:35:31.313Z",
-    "contributors": ["jswisher", "adupays", "LooDom", "SphinxKnight"]
-  },
-  "Learn/Common_questions/What_is_accessibility": {
+  "Learn/Common_questions/Design_and_accessibility/What_is_accessibility": {
     "modified": "2020-07-16T22:35:46.786Z",
     "contributors": ["SphinxKnight"]
   },
-  "Learn/Common_questions/What_software_do_I_need": {
+  "Learn/Common_questions/Tools_and_setup/Available_text_editors": {
+    "modified": "2020-07-16T22:35:48.990Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
+    "modified": "2020-07-16T22:35:50.068Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn/Common_questions/Tools_and_setup/How_much_does_it_cost": {
+    "modified": "2020-07-16T22:35:45.519Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server": {
+    "modified": "2020-07-16T22:35:41.575Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
+    "modified": "2020-07-16T22:35:51.735Z",
+    "contributors": ["tonybengue", "SphinxKnight"]
+  },
+  "Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools": {
+    "modified": "2020-07-16T22:35:47.424Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn/Common_questions/Tools_and_setup/What_software_do_I_need": {
     "modified": "2020-07-16T22:35:33.023Z",
     "contributors": ["JNa0", "SphinxKnight"]
   },
-  "Learn/Common_questions/set_up_a_local_testing_server": {
+  "Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server": {
     "modified": "2020-07-16T22:35:52.861Z",
     "contributors": [
       "Duth",
@@ -2536,6 +2512,30 @@
       "TheStarrK",
       "Albynton"
     ]
+  },
+  "Learn/Common_questions/Web_mechanics/How_does_the_Internet_work": {
+    "modified": "2020-07-16T22:35:36.757Z",
+    "contributors": ["TheStarrK", "Porkepix", "SphinxKnight", "ValPom"]
+  },
+  "Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines": {
+    "modified": "2020-07-16T22:35:39.748Z",
+    "contributors": ["SphinxKnight", "fndiaye", "ValPom"]
+  },
+  "Learn/Common_questions/Web_mechanics/What_are_hyperlinks": {
+    "modified": "2020-07-16T22:35:43.089Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn/Common_questions/Web_mechanics/What_is_a_URL": {
+    "modified": "2020-07-16T22:35:29.353Z",
+    "contributors": ["clamb", "Porkepix", "SphinxKnight"]
+  },
+  "Learn/Common_questions/Web_mechanics/What_is_a_domain_name": {
+    "modified": "2020-07-16T22:35:44.035Z",
+    "contributors": ["Porkepix", "SphinxKnight"]
+  },
+  "Learn/Common_questions/Web_mechanics/What_is_a_web_server": {
+    "modified": "2020-07-16T22:35:31.313Z",
+    "contributors": ["jswisher", "adupays", "LooDom", "SphinxKnight"]
   },
   "Learn/Forms": {
     "modified": "2020-07-16T22:20:56.659Z",

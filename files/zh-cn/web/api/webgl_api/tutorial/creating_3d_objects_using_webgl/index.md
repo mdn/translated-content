@@ -125,8 +125,8 @@ gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
 
 到现在为止，我们已经创建了一个颜色生动的并且会在场景中移动和旋转的立方体，这一定很酷吧。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[查看全部源代码](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [在新页面打开示例](http://mdn.github.io/webgl-examples/tutorial/sample5/)
+[查看全部源代码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample5) | [在新页面打开示例](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

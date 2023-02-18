@@ -59,9 +59,3 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 如果您将此评估作为有组织的课程的一部分，您应该能够将您的工作交给您的老师/导师进行评改。如果您是自学习的，那么您可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得标记指南。首先尝试练习 - 作弊对你没有益处！
 
 {{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## 本章目录
-
-- [HTML 表格入门](/zh-CN/docs/Learn/HTML/Tables/Basics)
-- [HTML 表格高级特性和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced)
-- [构建行星数据](/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)

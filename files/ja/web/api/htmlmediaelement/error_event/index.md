@@ -1,34 +1,29 @@
 ---
 title: 'HTMLMediaElement: error イベント'
 slug: Web/API/HTMLMediaElement/error_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef}}
 
 **`error`** イベントは、リソースがエラーのために読み込めなかったときに発生します（例えば、ネットワーク接続の問題など）。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onerror", "onerror")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('error', (event) => {});
+
+onerror = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 

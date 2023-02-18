@@ -20,23 +20,23 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : Is a {{domxref("DOMSettableTokenList")}} describing a list of `id` of {{HTMLElement("th")}} elements that represents headers associated with the cell. It reflects the {{htmlattrxref("headers", "td")}} attribute.
 - {{domxref("HTMLTableCellElement.cellIndex")}} {{readonlyInline}}
   - : Is a `long` representing the cell position in the cells collection of the {{HTMLElement("tr")}} it belongs to. If the cell doesn't belong to a `<tr>`, it returns `-1`.
-- {{domxref("HTMLTableCellElement.align")}} {{obsolete_inline}}
+- {{domxref("HTMLTableCellElement.align")}}
   - : Is a {{domxref("DOMString")}} containing an enumerated value reflecting the {{htmlattrxref("align", "td")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
-- {{domxref("HTMLTableCellElement.bgColor")}} {{obsolete_inline}}
+- {{domxref("HTMLTableCellElement.bgColor")}}
   - : Is a {{domxref("DOMString")}} containing the background color of the cells. It reflects the obsolete {{htmlattrxref("bgColor", "td")}} attribute.
-- {{domxref("HTMLTableCellElement.axis")}} {{obsolete_inline}}
+- {{domxref("HTMLTableCellElement.axis")}}
   - : Is a {{domxref("DOMString")}} containing a name grouping cells in virtual. It reflects the obsolete {{htmlattrxref("axis", "td")}} attribute.
-- {{domxref("HTMLTableCellElement.height")}} {{obsolete_inline}}
+- {{domxref("HTMLTableCellElement.height")}}
   - : Is a {{domxref("DOMString")}} containing a length of pixel of the hinted height of the cell. It reflects the obsolete {{htmlattrxref("height", "td")}} attribute.
-- {{domxref("HTMLTableCellElement.width")}} {{obsolete_inline}}
+- {{domxref("HTMLTableCellElement.width")}}
   - : Is a {{domxref("DOMString")}} containing a length of pixel of the hinted width of the cell. It reflects the obsolete {{htmlattrxref("width", "td")}} attribute.
-- {{domxref("HTMLTableCellElement.ch")}} {{obsolete_inline}}
+- {{domxref("HTMLTableCellElement.ch")}}
   - : Is a {{domxref("DOMString")}} containing one single chararcter. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "td")}} and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
-- {{domxref("HTMLTableCellElement.chOff")}} {{obsolete_inline}}
+- {{domxref("HTMLTableCellElement.chOff")}}
   - : Is a {{domxref("DOMString")}} containing a integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableCellElement.ch`. This property was optional and was not very well supported.
-- {{domxref("HTMLTableCellElement.noWrap")}} {{obsolete_inline}}
+- {{domxref("HTMLTableCellElement.noWrap")}}
   - : Is a {{domxref("Boolean")}} value reflecting the {{htmlattrxref("nowrap", "td")}} attribute and indicating if cell content can be broken in several lines.
-- {{domxref("HTMLTableCellElement.vAlign")}} {{obsolete_inline}}
+- {{domxref("HTMLTableCellElement.vAlign")}}
   - : Is a {{domxref("DOMString")}} representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the {{htmlattrxref("valign", "td")}} attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`.
 
 ## Methods
