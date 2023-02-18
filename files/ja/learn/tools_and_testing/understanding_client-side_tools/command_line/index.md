@@ -40,15 +40,15 @@ l10n:
 表面的には、それらは歓迎とはほど遠いものですが、それらを使用してできることはたくさんあります。少しのガイダンスと練習を行うことで、それらをより簡単に使用できるようになることをお約束します!
 これが、私たちがこの章を提供している理由です — この一見不親切な環境であなたが始めるのを助けるために.
 
-### Where did the terminal come from?
+### ターミナルはどこから来たのですか？
 
-The terminal originates from around the 1950s-60s and its original form really doesn't resemble what we use today (for that we should be thankful). You can read a bit of the history on Wikipedia's entry for [Computer Terminal](https://en.wikipedia.org/wiki/Computer_terminal).
+端末は 1950 年代から 60 年代頃に誕生し、その元の形は現在私たちが使用しているものとはまったく似ていません (感謝すべきことです)。 ウィキペディアの[コンピューターターミナル](https://en.wikipedia.org/wiki/Computer_terminal) のエントリで歴史の一部を読むことができます。
 
-Since then, the terminal has remained a constant feature of all operating systems — from desktop machines to servers tucked away in the cloud, to microcomputers like the Raspberry PI Zero, and even to mobile phones. It provides direct access to the computer's underlying file system and low-level features, and is therefore incredibly useful for performing complex tasks rapidly, if you know what you are doing.
+それ以来、ターミナルは、デスクトップ マシンからクラウドに格納されたサーバー、Raspberry PI Zero のようなマイクロコンピューター、さらには携帯電話に至るまで、すべてのオペレーティングシステムの一貫した機能であり続けています。 コンピューターの基盤となるファイル システムと低レベルの機能への直接アクセスを提供するため、複雑なタスクをすばやく実行するのに非常に役立ちます。
 
-It is also useful for automation — for example, to write a command to update the titles of hundreds of files instantly, say from "ch01-xxxx.png" to "ch02-xxxx.png". If you updated the file names using your finder or explorer GUI app, it would take you a long time.
+自動化にも役立ちます。たとえば、「ch01-xxxx.png」から「ch02-xxxx.png」など、数百のファイルのタイトルを即座に更新するコマンドを作成します。 ファインダーまたはエクスプローラー GUI アプリを使用してファイル名を更新すると、長い時間がかかります。
 
-Anyway, the terminal is not going away anytime soon.
+とにかく、ターミナルはすぐにはなくなりません。
 
 ### What does the terminal look like?
 
