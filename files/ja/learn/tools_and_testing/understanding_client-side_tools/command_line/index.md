@@ -92,9 +92,9 @@ Windows でターミナル エクスペリエンスを提供するための優�
 
 Windows で選択するオプションに関しては、WSL をインストールすることを強くお勧めします。 デフォルトのコマンド プロンプト (`cmd`) をそのまま使用することもできます。多くのツールは正常に動作しますが、Unix ツールとの同等性が向上すると、すべてがより簡単になります。
 
-#### Side note: what's the difference between a command line and a terminal?
+#### 補足: コマンドラインとターミナルの違いは何ですか?
 
-Generally, you'll find these two terms used interchangeably. Technically, a terminal is a software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customized). The command line is the literal line where you enter commands and the cursor blinks.
+通常、これら 2 つの用語は同じ意味で使用されます。 技術的には、ターミナルはシェルを起動して接続するソフトウェアです。 シェルは、セッションおよびセッション環境です (プロンプトやショートカットなどをカスタマイズできます)。 コマンドラインは、コマンドを入力してカーソルが点滅するリテラル行です。
 
 ### Do you have to use the terminal?
 
