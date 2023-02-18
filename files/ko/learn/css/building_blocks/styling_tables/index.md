@@ -290,24 +290,3 @@ caption {
 지금 우리 뒤에 스타일링 표가 있기 때문에, 우리의 시간을 차지할 다른 것이 필요합니다. 다음 기사에서는 CSS 디버깅에 대해 살펴봅니다 — 레이아웃이 제대로 보이지 않거나 적용할 때 적용되지 않는 속성과 같은 문제를 해결하는 방법. 여기에는 브라우저 DevTools 를 사용하여 문제점에 대한 솔루션을 찾는 방법에 대한 정보가 포함됩니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
-
-## 이번 강의에서는
-
-1. [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [콘텐츠 overflow](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 정리](/ko/docs/Learn/CSS/Building_blocks/Organizing)

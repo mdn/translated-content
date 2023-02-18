@@ -374,12 +374,3 @@ PDF는 종이와 디지털을 연결하는 필수적인 징검다리 역할을 �
 여기서 다룬 것 외에도 외부 콘텐츠를 삽입하는 기술은 여럿 존재합니다. 이전 글에서 다룬 {{htmlelement("video")}}나 {{htmlelement("audio")}}, {{htmlelement("img")}} 등이 있으며, 아직 살펴보지 않은 기술로는 JavaScript로 생성한 2D, 3D 그래픽을 삽입하는 {{htmlelement("canvas")}}, 벡터 그래픽을 삽입하는 {{SVGElement("svg")}} 등이 있습니다. 이 과정의 다음 글에서 [SVG](/ko/docs/Web/SVG)를 살펴보겠습니다.
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
-
-## 이번 과정에서는
-
-- [Images in HTML](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/ko/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/ko/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

@@ -148,14 +148,3 @@ _another commit_ 대신에 여러분이 막 변경했던 것을 설명할 수 �
 - Scott Murray 의 [Cheap or free static web hosting](http://alignedleft.com/resources/cheap-web-hosting) 에는 이용가능한 서비스를 위한 유용한 정보가 있습니다.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)
