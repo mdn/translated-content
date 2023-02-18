@@ -41,7 +41,7 @@ console.log(minutos); // 15
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getMinutes")}}
+{{Compat}}
 
 ## Ver también
 

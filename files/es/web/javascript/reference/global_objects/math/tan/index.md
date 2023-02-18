@@ -54,9 +54,9 @@ function getTanDeg(deg) {
 
 {{Specifications}}
 
-## Compatibilidad con el navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.tan")}}
+{{Compat}}
 
 ## Ver también
 

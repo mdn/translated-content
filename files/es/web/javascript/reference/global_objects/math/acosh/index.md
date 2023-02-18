@@ -57,9 +57,9 @@ Math.acosh = Math.acosh || function(x) {
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.acosh")}}
+{{Compat}}
 
 ## Ver también
 

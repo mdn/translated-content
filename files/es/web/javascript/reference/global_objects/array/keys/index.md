@@ -50,7 +50,7 @@ console.log(denseKeys);  // [0, 1, 2]
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.keys")}}
+{{Compat}}
 
 ## Ver también
 

@@ -59,9 +59,9 @@ console.log(o.gimmeFive); // 5
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.defineGetter")}}
+{{Compat}}
 
 ## Mira también
 

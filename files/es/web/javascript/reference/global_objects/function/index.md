@@ -74,9 +74,9 @@ Si bien este código funciona en los navegadores web, `f1()` producirá un `Refe
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## Ve también
 

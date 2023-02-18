@@ -72,11 +72,9 @@ constructor(...args) {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes.constructor")}}
-
-La tabla de compatibilidad de esta pagina está generada a partir de data estructurada. Si quieres contribuir a la data, por favor dirígete a <https://github.com/mdn/browser-compat-data> y envíanos una solicitud de extracción
+{{Compat}}
 
 ## Ver también
 

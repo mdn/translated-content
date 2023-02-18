@@ -37,7 +37,7 @@ Vea "[Mostrando texto en la consola](/es/docs/Web/API/console#Outputting_text_to
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.console.error")}}
+{{Compat}}
 
 ## Vea también
 

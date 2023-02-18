@@ -24,9 +24,9 @@ var nodes = myShadowObject.getDistributedNodes();
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLShadowElement.getDistributedNodes")}}
+{{Compat}}
 
 ## See also
 

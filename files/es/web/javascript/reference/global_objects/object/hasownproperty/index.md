@@ -103,9 +103,9 @@ Observe que en el último caso no han habido nuevos objetos creados.
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.hasOwnProperty")}}
+{{Compat}}
 
 ## Véase también
 

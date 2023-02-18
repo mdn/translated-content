@@ -48,7 +48,7 @@ theBigDay.setFullYear(1997);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.setFullYear")}}
+{{Compat}}
 
 ## Ver también
 

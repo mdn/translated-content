@@ -51,9 +51,9 @@ new RegExp('\n').toString() === "/\\n/"; // true, desde ES5
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.toString")}}
+{{Compat}}
 
 ## Vea también
 

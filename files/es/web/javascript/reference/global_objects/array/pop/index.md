@@ -50,7 +50,7 @@ console.log(popped); // 'sturgeon'
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.pop")}}
+{{Compat}}
 
 ## Vea también
 

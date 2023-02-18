@@ -246,9 +246,9 @@ for (let i of arr) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.for_of")}}
+{{Compat}}
 
 ## Vea también
 

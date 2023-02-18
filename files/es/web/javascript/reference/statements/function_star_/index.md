@@ -83,7 +83,7 @@ console.log(gen.next().value); // 20
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.generator_function")}}
+{{Compat}}
 
 ## Ver también
 

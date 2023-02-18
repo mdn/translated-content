@@ -122,7 +122,7 @@ Para un simple Polyfill del Navegador, mira [Javascript - Compatibilidad de Obje
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.keys")}}
+{{Compat}}
 
 ## Mira también
 
