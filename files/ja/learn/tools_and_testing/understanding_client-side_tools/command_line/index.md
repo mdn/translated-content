@@ -393,15 +393,15 @@ Stdin is read if it is piped to Prettier and no files are given.
 
 > **注:** 最初に Prettier をローカルにインストールしていない場合、`npx prettier` を実行すると、_そのコマンドだけ_で、Prettier の最新バージョンがダウンロードされて実行されます。
 > 素晴らしいと思われるかもしれませんが、Prettier の新しいバージョンでは出力がわずかに変更される場合があります。
-> ローカルにインストールして、フォーマットに使用している Prettier のバージョンを変更する準備が整うまで修正する。
+> ローカルにインストールして、フォーマットに使用している Prettier のバージョンを変更する準備が整うまで修正します。
 
-### Playing with Prettier
+### Prettier を始める
 
-Let's have a quick play with Prettier, so you can see how it works.
+Prettier で簡単に実行して、どのように機能するかを見てみましょう。
 
-First of all, create a new directory somewhere on your file system that is easy to find. Maybe a directory called `prettier-test` on your `Desktop`.
+まず、ファイル システムの見つけやすい場所に新しいディレクトリを作成します。 `Desktop` の `prettier-test` というディレクトリかもしれません。
 
-Now save the following code in a new file called `index.js`, inside your test directory:
+次のコードを test ディレクトリ内の `index.js` という名前の新しいファイルに保存します。
 
 ```js-nolint
 const myObj = {
@@ -410,13 +410,13 @@ function printMe(obj){console.log(obj.b.c)}
 printMe(myObj)
 ```
 
-We can run Prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
+コードベースに対して Prettier を実行して、コードの調整が必要かどうかを確認できます。 ディレクトリに `cd` して、次のコマンドを実行してみてください。:
 
 ```bash
 npx prettier --check index.js
 ```
 
-You should get an output along the lines of:
+次の行に沿って出力されるはずです:
 
 ```bash
 Checking formatting...
@@ -424,9 +424,9 @@ index.js
 Code style issues found in the above file(s). Forgot to run Prettier?
 ```
 
-So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the `prettier` command will fix those up, leaving us to focus on actually writing useful code.
+それで修正できるコードスタイルがいくつかあります。大丈夫です。 `prettier` コマンドに `--write` オプションを追加すると、これらの問題が修正され、有用なコードを実際に書くことに集中できるようになります。
 
-Now try running this version of the command:
+次のバージョンのコマンドを実行してみてください。:
 
 ```bash
 npx prettier --write index.js
@@ -440,7 +440,7 @@ index.js
 Code style issues fixed in the above file(s).
 ```
 
-But more importantly, if you look back at your JavaScript file you'll find it has been reformatted to something like this:
+しかしもっと重要なことは、JavaScript ファイルを振り返ると、次のように再フォーマットされていることがわかります。:
 
 ```js
 const myObj = {
@@ -453,15 +453,15 @@ function printMe(obj) {
 printMe(myObj);
 ```
 
-Depending on your workflow (or the workflow that you pick) you can make this an automated part of your process. Automation is really where tools excel; our personal preference is the kind of automation that "just happens" without having to configure anything.
+ワークフロー (または選択したワークフロー) によっては、これをプロセスの自動化することができます。 自動化は、ツールが優れているところです。 私たちの個人的な好みは、何も構成する必要なく「ただ起こる」ような自動化です。
 
-With Prettier there's a number of ways automation can be achieved and though they're beyond the scope of this article, there's some excellent resources online to help (some of which have been linked to). You can invoke Prettier:
+Prettier を使用すると、自動化を実現する方法がいくつかあります。それらはこの記事の範囲を超えていますが、役立つオンラインの優れたリソースがいくつかあります (その一部はリンクされています)。 Prettier を呼び出すことができます:
 
-- Before you commit your code into a git repository using [Husky](https://github.com/typicode/husky).
-- Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
-- As part of continuous integration checks using tools like [GitHub Actions](https://github.com/features/actions).
+- git リポジトリにコミットする前に[Husky](https://github.com/typicode/husky) を使用します。
+- コード エディターで「保存」をクリックするたびに使用します。[VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) または [Sublime Text](https://packagecontrol.io/packages/JsPrettier)。
+- [GitHub Actions](https://github.com/features/actions) などのツールを使用した継続的な統合チェックの一環として使用します。
 
-Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/en/).
+私たちの個人的な好みは 2 番目のものです。たとえば、VS Code を使用しているときに、Prettier が起動し、保存するたびに必要なフォーマットをクリーンアップします。 [Prettier docs](https://prettier.io/docs/en/) で、さまざまな方法で Prettier を使用する方法についてさらに多くの情報を見つけることができます。
 
 ## Other tools to play with
 
