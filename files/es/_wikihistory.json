@@ -5558,10 +5558,6 @@
     "modified": "2020-02-12T20:20:09.829Z",
     "contributors": ["joseluisq", "anfuca", "haxdai"]
   },
-  "Web/API/Web_Speech_API": {
-    "modified": "2020-10-15T22:29:46.339Z",
-    "contributors": ["dianarryanti707"]
-  },
   "Web/API/Web_Speech_API/Using_the_Web_Speech_API": {
     "modified": "2020-05-10T18:32:28.954Z",
     "contributors": ["mcarou"]
