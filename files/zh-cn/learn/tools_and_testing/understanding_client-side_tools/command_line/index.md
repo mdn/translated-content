@@ -504,11 +504,3 @@ printMe(myObj);
 这使我们结束了对终端/命令行的简短浏览。接下来，我们将更详细地介绍软件包管理器，以及如何使用它们。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
-
-## In this module
-
-- [Client-side tooling overview](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- [Command line crash course](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
-- [Package management basics](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
-- [Introducing a complete toolchain](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)
