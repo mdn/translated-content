@@ -72,9 +72,9 @@ l10n:
 
 #### macOS
 
-macOS has a system called Darwin that sits underneath the graphical user interface. Darwin is a Unix-like system, which provides the terminal, and access to the low-level tools. macOS Darwin mostly has parity with Unix, certainly good enough to not cause us any worries as we work through this article.
+macOS には、グラフィカルユーザーインターフェイスの下に位置する Darwin と呼ばれるシステムがあります。 Darwin は Unix に似たシステムであり、ターミナルと低レベルツールへのアクセスを提供します。 macOS Darwin はほとんどの場合 Unix と同等であり、この記事を読み進める上で心配する必要はありません。
 
-The terminal is available on macOS at Applications/Utilities/Terminal.
+ターミナルは、Applications/Utilities/Terminal で macOS で利用できます。
 
 #### Windows
 
