@@ -25,8 +25,7 @@ l10n:
 ### JavaScript
 
 - [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) および [`structuredClone()`](/ja/docs/Web/API/structuredClone) を使用したとき、[ネイティブなエラーの型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) をシリアライズした結果に worker の [`stack`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) プロパティも含まれるようになりました。
-  この機能追加によりメインスレッドと worker の両方で、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) を使用するすべてのメソッドでネイティブエラーのスタックの複製が機能するようになりました。
-  (詳しくは {{bug(1774866)}} をご覧ください)。
+  この機能追加によりメインスレッドと worker の両方で、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) を使用するすべてのメソッドでネイティブエラーのスタックの複製が機能するようになりました (詳しくは {{bug(1774866)}} をご覧ください)。
 
 ### API
 
@@ -36,8 +35,7 @@ l10n:
 - {{domxref("ReadableStream")}} で、`for await...of` 構文を使用する [ストリーム内のチャンクの非同期反復処理](/ja/docs/Web/API/ReadableStream#async_iteration) をサポートしました ({{bug(1734244)}})。
 
 - WebRTC で、ピア接続にトランシーバーを追加する際に使用可能なエンコーディングのセットを送信すること、および送信元に紐づいたアクティブなエンコーディングを取得することをサポートしました。
-  特に {{domxref("RTCPeerConnection.addTransceiver()")}} で、[`init`](/ja/docs/Web/API/RTCPeerConnection/addTransceiver#init) パラメーターオブジェクトで [`sendEncodings`](/ja/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) オプションを使用すること、および送信データでエンコーディングが使用されているかを確認するために使用できる [`RTCRtpEncodingParameters.active`](/ja/docs/Web/API/RTCRtpEncodingParameters#active) をサポートしました
-  (詳しくは {{bug(1676855)}} をご覧ください)。
+  特に {{domxref("RTCPeerConnection.addTransceiver()")}} で、[`init`](/ja/docs/Web/API/RTCPeerConnection/addTransceiver#init) パラメーターオブジェクトで [`sendEncodings`](/ja/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) オプションを使用すること、および送信データでエンコーディングが使用されているかを確認するために使用できる [`RTCRtpEncodingParameters.active`](/ja/docs/Web/API/RTCRtpEncodingParameters#active) をサポートしました (詳しくは {{bug(1676855)}} をご覧ください)。
 
 - WebRTC の {{domxref("RTCRtpSender.getParameters()")}}、{{domxref("RTCRtpSender.setParameters()")}}、{{domxref("RTCRtpReceiver.getParameters()")}} メソッドが仕様書に準拠するようになりました ({{bug(1401592)}})。
 
