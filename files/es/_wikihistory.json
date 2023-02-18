@@ -4624,14 +4624,6 @@
     "modified": "2020-10-15T22:21:29.656Z",
     "contributors": ["raul-arias"]
   },
-  "Web/API/HTMLShadowElement": {
-    "modified": "2019-03-23T22:10:24.059Z",
-    "contributors": ["dkocho4", "Sebastianz"]
-  },
-  "Web/API/HTMLShadowElement/getDistributedNodes": {
-    "modified": "2019-03-23T22:10:23.317Z",
-    "contributors": ["dkocho4"]
-  },
   "Web/API/HTMLStyleElement": {
     "modified": "2019-03-24T00:07:06.618Z",
     "contributors": [
