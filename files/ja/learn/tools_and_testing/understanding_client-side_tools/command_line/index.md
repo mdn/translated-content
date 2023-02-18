@@ -1,34 +1,26 @@
 ---
-title: Command line crash course
+title: コマンドライン短期集中講座
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-tags:
-  - Beginner
-  - CLI
-  - Command Line
-  - Learn
-  - Terminal
-  - Tools
-  - client-side
-  - npm
+l10n:
+  sourceCommit: 4a5ceb89ac004d087669aeee3c26475c2207787f
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-In your development process, you'll undoubtedly be required to run some commands in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.
+開発プロセスでは、ターミナル (または「コマンド ライン」 — これらは事実上同じことです) でいくつかのコマンドを実行する必要があることは間違いありません。 この記事では、ターミナルの概要、ターミナルに入力する必要がある重要なコマンド、コマンドを連結する方法、および独自のコマンド ライン インターフェイス (CLI) ツールを追加する方法について説明します。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">前提条件：</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+        主要な <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、と <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目的：</th>
       <td>
-        To understand what the terminal/command line is, what basic commands you should learn, and how to install new command line tools.
+        ターミナル／コマンド ラインとは何か、学ぶべき基本的なコマンドは何か、新しいコマンド ライン ツールをインストールする方法を理解します。。
       </td>
     </tr>
   </tbody>
