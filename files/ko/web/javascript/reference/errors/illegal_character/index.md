@@ -68,14 +68,14 @@ var colors = ['#000', '#333', '#666'];
 다른 곳에서 코드를 복사하여 붙여넣은 경우 잘못된 문자가 포함돼 있을 수 있습니다. 주의하세요!
 
 ```js example-bad
-var foo = 'bar';
+var foo = 'bar';​
 // SyntaxError: illegal character
 ```
 
 Vim과 같은 편집기에서 아래 코드를 체크하면 폭 없는 공백([zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space)) 문자가 있는 것을 확인할 수 있습니다.
 
 ```js
-var foo = 'bar';<200b>
+var foo = 'bar';​<200b>
 ```
 
 ## 같이 보기
