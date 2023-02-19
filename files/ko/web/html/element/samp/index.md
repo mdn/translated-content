@@ -139,7 +139,7 @@ samp > kbd {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.samp")}}
+{{Compat}}
 
 ## 같이 보기
 

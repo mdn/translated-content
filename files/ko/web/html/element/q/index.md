@@ -81,7 +81,7 @@ slug: Web/HTML/Element/q
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.q")}}
+{{Compat}}
 
 ## 같이 보기
 

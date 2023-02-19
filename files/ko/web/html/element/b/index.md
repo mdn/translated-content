@@ -101,7 +101,7 @@ Keywords are displayed with the default style of the <b>element, likely in bold<
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.b")}}
+{{Compat}}
 
 ## 같이 보기
 

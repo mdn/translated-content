@@ -49,7 +49,7 @@ X-Forwarded-Host: id42.example-cdn.com
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.X-Forwarded-Host")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 
