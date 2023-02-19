@@ -1,6 +1,8 @@
 ---
 title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
+l10n:
+  sourceCommit: 1c70095257ba7f6d1195d1d33340e234dfc80b3e
 ---
 
 {{JSRef}}
@@ -34,7 +36,9 @@ forEach(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : 각 요소에 대해 실행할 함수. 다음 세 가지 매개변수를 받습니다.
+  - : 각 요소에 대해 실행할 함수.
+
+    다음 세 가지 매개변수를 받습니다.
 
     - `element`
       - : 현재 처리할 현재 요소.

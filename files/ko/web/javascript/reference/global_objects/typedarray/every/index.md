@@ -1,6 +1,8 @@
 ---
 title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
+l10n:
+  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
 {{JSRef}}
@@ -34,14 +36,16 @@ every(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : 각 요소를 시험할 함수. 다음 세 가지 인수를 받습니다.
+  - : 각 요소를 시험할 함수.
+
+    다음 세 가지 인수를 받습니다.
 
     - `element`
-      - : 배열에서 처리되는 현재 요소
+      - : 배열에서 처리되는 현재 요소.
     - `index`
-      - : 이 형식화 배열에서 처리할 현재 요소의 인덱스
+      - : 이 형식화 배열에서 처리할 현재 요소의 인덱스.
     - `array`
-      - : `every`를 호출한 형식화 배열
+      - : `every`를 호출한 형식화 배열.
 
 - `thisArg` {{Optional_inline}}
   - : `callbackFn`을 실행할 때 `this`로 사용하는 값.
@@ -53,7 +57,7 @@ every(function(element, index, array) { /* ... */ }, thisArg)
 
 ## 설명
 
-`every`는 `callbackFn`이 {{Glossary("falsy")}}을 반환하는 요소를 찾을때까지 형식화 배열에 있는
+`every`는 `callbackFn`이 {{Glossary("falsy")}}을 반환하는 요소를 찾을 때까지 형식화 배열에 있는
 각 요소에 대해 한 번씩 `callbackFn` 함수를 실행합니다. 해당하는 요소를 발견한 경우 `every`는 즉시 `false`를
 반환합니다. 그렇지 않으면, 즉 모든 값에서 {{Glossary("truthy")}}을 반환하면 `true`를 반환합니다.
 
