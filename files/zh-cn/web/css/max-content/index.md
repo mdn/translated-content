@@ -7,7 +7,7 @@ slug: Web/CSS/max-content
 
 ## 语法
 
-```js
+```css
 /* 作为长度使用 */
 width: max-content;
 inline-size: max-content;
@@ -107,4 +107,4 @@ max-content: unset;
 
 ## 参见
 
-- 相关的尺寸关键字：{{cssxref("min-content")}}, {{cssxref("fit-content")}}
+- 其他的尺寸关键字：{{cssxref("min-content")}}, {{cssxref("fit-content")}}
