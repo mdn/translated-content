@@ -457,7 +457,7 @@ printMe(myObj);
 
 Prettier を使用すると、自動化を実現する方法がいくつかあります。それらはこの記事の範囲を超えていますが、役立つオンラインの優れたリソースがいくつかあります (その一部はリンクされています)。 Prettier を呼び出すことができます:
 
-- git リポジトリにコミットする前に[Husky](https://github.com/typicode/husky) を使用します。
+- git リポジトリーにコミットする前に [Husky](https://github.com/typicode/husky) を使用します。
 - コード エディターで「保存」をクリックするたびに使用します。[VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) または [Sublime Text](https://packagecontrol.io/packages/JsPrettier)。
 - [GitHub Actions](https://github.com/features/actions) などのツールを使用した継続的な統合チェックの一環として使用します。
 
