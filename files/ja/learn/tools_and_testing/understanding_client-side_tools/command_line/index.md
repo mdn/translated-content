@@ -58,7 +58,7 @@ l10n:
 
 ![A vanilla windows cmd line window, and a windows powershell window](win-terminals.png)
 
-そして、その下にmacOS ターミナルアプリケーションが表示されます。
+そして、その下に macOS ターミナルアプリケーションが表示されます。
 
 ![A basic vanilla macOS terminal](mac-terminal.png)
 
