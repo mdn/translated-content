@@ -42,6 +42,8 @@ gap: calc(20px + 10%) calc(10% - 5px);
 gap: inherit;
 gap: initial;
 gap: unset;
+gap: revert;
+gap: revert-layer;
 ```
 
 `gap`은 `<'row-gap'>` 값을 사용해 지정하며, 선택적으로 `<'column-gap'>`을 추가할 수 있습니다. `<'column-gap'>`을 생략한 경우 `<'row-gap'>`과 동일한 값을 사용합니다.
