@@ -76,7 +76,7 @@ Da mesma forma, o elemento de link pode ser usado para resolver nomes de host se
 <link rel="dns-prefetch" href="//www.spreadfirefox.com">
 ```
 
-Pré-busca forçada de nomes de host pode ser útil, por exemplo, na página inicial de um site para forçar a pré-resolução de nomes de domínio que são referenciados com frequência em todo o site, mesmo que eles não sejam usados ​​na própria home page. Isso melhorará o desempenho geral do site, mesmo que o desempenho da página inicial não seja afetado.
+Pré-busca forçada de nomes de host pode ser útil, por exemplo, na página inicial de um site para forçar a pré-resolução de nomes de domínio que são referenciados com frequência em todo o site, mesmo que eles não sejam usados na própria home page. Isso melhorará o desempenho geral do site, mesmo que o desempenho da página inicial não seja afetado.
 
 ## Compatibilidade com navegadores
 

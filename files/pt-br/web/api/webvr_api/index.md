@@ -22,7 +22,7 @@ O método {{domxref("HMDVRDevice.getEyeParameters()")}} retorna um objeto {{domx
 {{domxref("VRDisplay")}}
 Representa qualquer dispositivo VR suportado por esta API. Ele inclui informações genéricas, como IDs de dispositivo e descrições, bem como métodos para começar a apresentar uma cena VR, recuperar os parâmetros do olho e exibir capacidades e outras funcionalidades importantes.
 {{domxref("VRDisplayCapabilities")}}
-Descreve os recursos de um {{domxref("VRDisplay")}} - seus recursos podem ser usados ​​para executar testes de capacidade do dispositivo VR, por exemplo, ele pode retornar informações de posição.
+Descreve os recursos de um {{domxref("VRDisplay")}} - seus recursos podem ser usados para executar testes de capacidade do dispositivo VR, por exemplo, ele pode retornar informações de posição.
 {{domxref("VRPose")}}
 Representa o estado de posição em um dado carimbo de data/hora (que inclui orientação, posição, velocidade e aceleração).
 {{domxref ("VREyeParameters")}}
