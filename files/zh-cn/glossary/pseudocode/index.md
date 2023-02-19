@@ -1,4 +1,3 @@
-
 ---
 title: 伪代码
 slug: Glossary/Pseudocode
