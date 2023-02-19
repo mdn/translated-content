@@ -713,10 +713,6 @@ oReq.send(null);
 
 ## Безопасность
 
-{{fx_minversion_note(3, "Versions of Firefox prior to Firefox 3 allowed you to set the preference `capability.policy.<policyname>.XMLHttpRequest.open</policyname>` to `allAccess` to give specific sites cross-site access. This is no longer supported.")}}
-
-{{fx_minversion_note(5, "Versions of Firefox prior to Firefox 5 could use `netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");` to request cross-site access. This is no longer supported, even though it produces no warning and permission dialog is still presented.")}}
-
 The recommended way to enable cross-site scripting is to use the `Access-Control-Allow-Origin` HTTP header in the response to the XMLHttpRequest.
 
 ### XMLHttpRequests being stopped
