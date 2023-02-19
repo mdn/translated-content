@@ -1,5 +1,5 @@
 ---
-title: gap (grid-gap)
+title: gap
 slug: Web/CSS/gap
 ---
 
@@ -10,6 +10,8 @@ slug: Web/CSS/gap
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
+
+`grid-gap` 은 해당 속성의 별칭입니다.
 
 ## 구문
 
