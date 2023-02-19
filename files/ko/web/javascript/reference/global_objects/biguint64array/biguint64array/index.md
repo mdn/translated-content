@@ -1,11 +1,13 @@
 ---
 title: BigUint64Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array/BigUint64Array
+l10n:
+  sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
 ---
 
 {{JSRef}}
 
-**`BigUint64Array()`** 생성자는 플랫폼의 바이트 순서를 따르는 64비트 부호없는 정수의 형식화 배열(TypedArray)
+**`BigUint64Array()`** 생성자는 플랫폼의 바이트 순서를 따르는 64비트 부호 없는 정수의 형식화 배열(TypedArray)
 {{jsxref("BigUint64Array")}}을 생성합니다. 배열의 내용은 `0n`으로 초기화됩니다. 배열이 생성되면 객체의 메서드를
 사용하거나 표준 배열 인덱스 구문(즉, 대괄호 표기법 사용)을 사용하여 배열의 요소를 참조할 수 있습니다.
 
@@ -28,7 +30,7 @@ new BigUint64Array(buffer, byteOffset, length)
 
 ### 매개변수
 
-[`TypedArray`](/en/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#parameters)를 참조하세요.
+[`TypedArray`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#parameters)를 참조하세요.
 
 ### 예외
 
