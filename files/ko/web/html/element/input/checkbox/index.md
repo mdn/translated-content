@@ -258,7 +258,7 @@ otherCheckbox.addEventListener('change', () => {
 
 {{EmbedLiveSample('Examples', '100%', 300)}}
 
-## 기술 명세
+## 기술 요약
 
 <table class="properties">
   <tbody>
@@ -269,7 +269,7 @@ otherCheckbox.addEventListener('change', () => {
       </td>
     </tr>
     <tr>
-      <td><strong>Events</strong></td>
+      <td><strong>이벤트</strong></td>
       <td>{{domxref("HTMLElement/change_event", "change")}} 그리고 {{domxref("HTMLElement/input_event", "input")}}</td>
     </tr>
     <tr>
@@ -280,22 +280,22 @@ otherCheckbox.addEventListener('change', () => {
       <td><strong>IDL 특성</strong></td>
       <td>
         <code><a href="#attr-checked">checked</a></code>,
-        <code><a href="#attr-indeterminate">indeterminate</a></code> and
+        <code><a href="#attr-indeterminate">indeterminate</a></code> 그리고
         <code><a href="#attr-value">value</a></code>
       </td>
     </tr>
     <tr>
-      <td><strong>DOM interface</strong></td>
+      <td><strong>DOM 인터페이스</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
+      <td><strong>메서드</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}}
       </td>
     </tr>
     <tr>
-      <td><strong>Implicit ARIA Role</strong></td>
+      <td><strong>암시적 ARIA 역할</strong></td>
       <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></td>
     </tr>
   </tbody>
