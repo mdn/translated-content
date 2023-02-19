@@ -28,13 +28,13 @@ PHP（PHP: Hypertext Preprocessor 的遞歸縮寫，意為「PHP：超文字預�
 ### PHP 變數
 
 ```php
-​​​​​​​​​​​​​​<?php
+<?php
  // 變數
  $nome='Danilo';
  $sobrenome='Santos';
  $pais='Brasil';
  $email='danilocarsan@gmailcom';
-​​​​​​​
+
  // 印出變數
  echo $nome;
  echo $sobrenome;

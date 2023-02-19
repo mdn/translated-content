@@ -54,7 +54,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 基本設定：
 
 1. 在有`index.html`的資料夾中建立一個新檔案稱之為 `main.js`
-2. 請在`index.html`中引用第一點建立的外部 JavaScript 檔案，引用方法是在`</body>` tag 前插入一組 {{htmlelement("script")}}元素 ，並在 opening tag 上加入`src=" main.js"​​​​​​`
+2. 請在`index.html`中引用第一點建立的外部 JavaScript 檔案，引用方法是在`</body>` tag 前插入一組 {{htmlelement("script")}}元素 ，並在 opening tag 上加入`src=" main.js"`
 
 初始化變數與函數：
 
