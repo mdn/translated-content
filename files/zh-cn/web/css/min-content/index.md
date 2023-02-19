@@ -7,7 +7,7 @@ slug: Web/CSS/min-content
 
 ## 语法
 
-```js
+```css
 /* 作为长度使用 */
 width: min-content;
 inline-size: min-content;
