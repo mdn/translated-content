@@ -57,7 +57,7 @@ slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
     ```
 
 - 空的元素
-  - : 當同一個元素上邊界範圍可以直接貼到下邊界範圍時，也會發生邊界重疊。這種情況會發生在一個元素完全沒有設定邊框 ( border ) 、 內距 ( padding )、高度 ( height )​ 、最小高度 ( min-height ) 、最大高度 ( max-height )​ 、內容設定為 inline 或是加上 clear-fix 的時候。例如：
+  - : 當同一個元素上邊界範圍可以直接貼到下邊界範圍時，也會發生邊界重疊。這種情況會發生在一個元素完全沒有設定邊框 ( border ) 、 內距 ( padding )、高度 ( height ) 、最小高度 ( min-height ) 、最大高度 ( max-height ) 、內容設定為 inline 或是加上 clear-fix 的時候。例如：
 
     ```html
     <style>

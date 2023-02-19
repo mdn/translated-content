@@ -201,7 +201,7 @@ Many of the methods used in Typed Arrays can be polyfilled using the methods pre
 
 ```js example-bad
 var typedArrayTypes = [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array,
-          Uint16Array, ​​​Int32Array, Uint32Array, ​​​Float32Array, Float64Array];
+          Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array];
 
 for (var k in typedArrayTypes)
     for (var v in Array.prototype)
