@@ -927,9 +927,6 @@ Isto imprime "Smith, John".
 
 As expressões regulares possuem quatro flags opcionais as quais se incluem a pesquisa global e case insensitive. Para realizar uma pesquisa global, utilize a flag g. Para realizar uma pesquisa sem diferenciar letras maiúsculas de minúsculas, utilize a flag i. Para realizar uma pesquisa multi-linhas, utilize a flag m. Ao realizar uma pesquisa "sticky", o ponto de partida será a posição corrente da string alvo, use com a flag y.Estas flags podem ser usadas separadamente ou juntas, em qualquer ordem, e serão inclusas como parte da expressão regular.
 
-{{Fx_minversion_note (3, "Suporte para o sinalizador <code>y </code>foi adicionado no Firefox 3. <br>
- O sinalizador <code>y </code>falha se a correspondência não for bem-sucedida na posição atual na cadeia de destino.")}}
-
 Para incluir um sinalizador com a expressão regular, use esta sintaxe:
 
 ```js
