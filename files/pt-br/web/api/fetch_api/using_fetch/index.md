@@ -128,7 +128,7 @@ fetch(myRequest)
 });
 ```
 
-`Request()` aceita exatamente os mesmos parâmetros do método `fetch()`. Você pode até mesmo passar um objeto de solicitação existente para criar uma cópia dele:​​​​​​
+`Request()` aceita exatamente os mesmos parâmetros do método `fetch()`. Você pode até mesmo passar um objeto de solicitação existente para criar uma cópia dele:
 
 ```js
 var anotherRequest = new Request(myRequest,myInit);
