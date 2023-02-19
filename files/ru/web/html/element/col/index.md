@@ -143,4 +143,3 @@ Please see the {{HTMLElement("table")}} page for examples on `<col>`.
   - свойство {{cssxref("width")}} позволяет контролировать ширину колонок;
   - псевдо-селектор {{cssxref(":nth-child")}} чтобы задать стили определенным ячейкам;
   - свойство {{cssxref("text-align")}} для выравнивания текста внутри ячейки.
-  
