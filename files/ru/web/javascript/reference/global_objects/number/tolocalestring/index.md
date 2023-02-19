@@ -53,7 +53,7 @@ function toLocaleStringSupportsLocales() {
   try {
     number.toLocaleString('i');
   } catch (e) {
-    return e​.name === 'RangeError';
+    return e.name === 'RangeError';
   }
   return false;
 }
