@@ -61,7 +61,7 @@ p:nth-child(2){
 
 ```html
 <style>
-​​​​​​p {
+p {
   margin: 0;
 }
 div {

@@ -391,7 +391,7 @@ module.exports = app;
 
 ### 路由
 
-路由文档 **/routes/users.js** 如下所示（由于路由文件均使用类似结构，所以 **index.js** 略过不讲）。首先加载 `express` 模块 ​​ 并获取 `express.Router` 对象（命名为 `router`）。然后为 `router` 指定路由，最后导出 `router`（就可以导入 **app.js** 了）。
+路由文档 **/routes/users.js** 如下所示（由于路由文件均使用类似结构，所以 **index.js** 略过不讲）。首先加载 `express` 模块 并获取 `express.Router` 对象（命名为 `router`）。然后为 `router` 指定路由，最后导出 `router`（就可以导入 **app.js** 了）。
 
 ```js
 var express = require('express');

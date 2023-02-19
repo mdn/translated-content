@@ -11,7 +11,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
   <tbody>
     <tr>
       <th scope="row">先决条件：</th>
-      <td>在尝试此评估之前，您应该已经完成​​了本模块中的所有文章。</td>
+      <td>在尝试此评估之前，您应该已经完成了本模块中的所有文章。</td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
