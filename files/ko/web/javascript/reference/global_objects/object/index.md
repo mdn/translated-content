@@ -59,7 +59,7 @@ JavaScript의 거의 모든 객체는 {{jsxref("Object")}}의 인스턴스입니
 - {{jsxref("Object.getPrototypeOf","Object.getPrototypeOf()")}}
   - : 지정한 객체의 프로토타입(내부 `[[Prototype]]` 속성)을 반환합니다.
 - {{jsxref("Object.is","Object.is()")}}
-  - : 두 값이 같은지를 비교합니다. 모든 `NaN` 값을 같다고 처리합니다. (추상 동등 비교 및 ​​엄격한 동등 비교와 다른 점입니다.)
+  - : 두 값이 같은지를 비교합니다. 모든 `NaN` 값을 같다고 처리합니다. (추상 동등 비교 및 엄격한 동등 비교와 다른 점입니다.)
 - {{jsxref("Object.isExtensible","Object.isExtensible()")}}
   - : 객체의 확장이 가능한지 여부를 확인합니다.
 - {{jsxref("Object.isFrozen","Object.isFrozen()")}}
