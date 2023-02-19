@@ -432,7 +432,7 @@ Code style issues found in the above file(s). Forgot to run Prettier?
 npx prettier --write index.js
 ```
 
-You'll get an output like this
+このような出力が得られます。
 
 ```bash
 Checking formatting...
