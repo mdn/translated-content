@@ -33,7 +33,7 @@ Note that navigation requests for {{domxref("Window","Windows")}} and {{domxref(
 ```js
 fetchEvent.respondWith(
   // Promise that resolves to a Response.
-​)
+)
 ```
 
 ### Parameters
