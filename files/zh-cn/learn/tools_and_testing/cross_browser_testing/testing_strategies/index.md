@@ -54,7 +54,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 > **备注：** 您一次只能在计算机上安装一个版本的 IE 或 Edge，因此您可能必须使用虚拟机或其他方法来执行所需的测试。稍后请参阅[虚拟机](#虚拟机)部分。
 
-很多人使用 iOS 和 Android，因此您可能还想测试最新版本的 iOS Safari，最近几个版本的 Android stock 浏览器，以及适用于 iOS 和 Android 的 Chrome 和 Firefox。理想情况下，您应该在手机和平 ​​ 板电脑上测试它们，以确保响应式设计正常运行。
+很多人使用 iOS 和 Android，因此您可能还想测试最新版本的 iOS Safari，最近几个版本的 Android stock 浏览器，以及适用于 iOS 和 Android 的 Chrome 和 Firefox。理想情况下，您应该在手机和平 板电脑上测试它们，以确保响应式设计正常运行。
 
 您也许知道很多人仍然在使用 IE 9，它版本老旧而且功能较少，所以我们把它列为 B 级别。
 
