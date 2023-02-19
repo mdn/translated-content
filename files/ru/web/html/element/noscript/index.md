@@ -6,7 +6,6 @@ translation_of: Web/HTML/Element/noscript
 
 {{HTMLSidebar}}
 
-
 [HTML](/ru/docs/Web/HTML)-элемент **`<noscript>`** определяет секцию HTML кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
 
 - _[Категории контента](/ru/docs/HTML/Content_categories)_ [метаданные](/ru/docs/HTML/Content_categories#Metadata_content), [основной поток](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).
@@ -43,11 +42,7 @@ Rocks!
 
 ## Спецификации
 
-| Specification                                                                                                        | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.3.1', '&lt;noscript&gt;')}}             | {{Spec2('HTML4.01')}}     |         |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
