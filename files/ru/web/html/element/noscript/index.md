@@ -32,7 +32,7 @@ translation_of: Web/HTML/Element/noscript
 <p>Камни!</p>
 ```
 
-### Пример с включённым JavaScript
+### Результат с включённым JavaScript
 
 Rocks!
 
