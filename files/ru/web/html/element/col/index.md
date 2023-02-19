@@ -20,14 +20,14 @@ The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines a column within a t
 
 `<col>` allows styling columns using CSS, but only a few properties will have an effect on the column ([see the CSS 2.1 specification](https://www.w3.org/TR/CSS21/tables.html#columns) for a list).
 
-## Attributes
+## Атрибуты
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("span")}}
   - : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
 
-### Deprecated attributes
+### Устаревшие атрибуты
 
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
@@ -76,11 +76,11 @@ The following attributes are deprecated and should not be used. They are documen
 - {{htmlattrdef("width")}} {{deprecated_inline}}
   - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` also can be used.
 
-## Examples
+## Примеры
 
 Please see the {{HTMLElement("table")}} page for examples on `<col>`.
 
-## Technical summary
+## Техническое резюме
 
 <table class="properties">
   <tbody>
@@ -128,19 +128,19 @@ Please see the {{HTMLElement("table")}} page for examples on `<col>`.
   </tbody>
 </table>
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Браузерная совместимость
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- CSS properties and pseudo-classes that may be specially useful to style the `<col>` element:
+- Свойства CSS и псевдоклассы, которые могут быть особенно полезны для оформления элемента `<col>`:
 
-  - the {{cssxref("width")}} property to control the width of the column;
-  - the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
-  - the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.
+  - свойство {{cssxref("width")}} позволяет контролировать ширину колонок;
+  - псевдо-селектор {{cssxref(":nth-child")}} чтобы задать стили определенным ячейкам;
+  - свойство {{cssxref("text-align")}} для выравнивания текста внутри ячейки.
   
