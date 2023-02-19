@@ -8,7 +8,7 @@ translation_of: Web/HTML/Element/noscript
 
 [HTML](/ru/docs/Web/HTML)-элемент **`<noscript>`** определяет секцию HTML кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
 
-- _[Категории контента](/ru/docs/HTML/Content_categories)_ [метаданные](/ru/docs/HTML/Content_categories#Metadata_content), [основной поток](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).
+- _[Категории контента](/ru/docs/Web/HTML/Content_categories)_ [метаданные](/ru/docs/Web/HTML/Content_categories#метаданные), [основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [фразовый контент](/ru/docs/Web/HTML/Content_categories#фразовый_контент).
 - _Разрешенный контент_ Когда выполнение JavaScript отключено и когда он вложен в элемент {{HTMLElement("head")}}: в любом порядке, ноль или более элементов {{HTMLElement("link")}}, ноль или более элементов {{HTMLElement("style")}} и ноль или более элементов {{HTMLElement("meta")}}.
 Когда выполнение JavaScript отключено и когда он не вложен в элемент {{HTMLElement("head")}}: любое [прозрачный контент](/ru/docs/Web/HTML/Content_categories#transparent_content_model), но среди его потомков не должно быть элемента `<noscript>`.
   В противном случае: основной поток или фразовый контент.
