@@ -121,9 +121,9 @@ Les événements ont trois fonctions :
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.onShown", 10)}}
+{{Compat}}
 
 ## Exemples
 

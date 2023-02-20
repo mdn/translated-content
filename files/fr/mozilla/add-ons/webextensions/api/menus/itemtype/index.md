@@ -31,9 +31,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 - separator
   - : Une ligne séparant un groupe d'éléments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.ItemType", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 
