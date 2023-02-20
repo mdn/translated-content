@@ -97,11 +97,9 @@ console.log(digestHex);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.SubtleCrypto.digest")}}
-
-> **Nota:** En Chrome 60, se añadió una característica que deshabilita crypto.subtle para conexiones no TLS.
+{{Compat}}
 
 ## Ver también
 

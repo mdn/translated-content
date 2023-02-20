@@ -55,7 +55,7 @@ navigator.storage.estimate().then(function(estimate) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.StorageManager.estimate")}}
+{{Compat}}
 
 ## Ver también
 

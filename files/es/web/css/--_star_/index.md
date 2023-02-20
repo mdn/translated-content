@@ -78,7 +78,7 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
 ## Ver también
 

@@ -64,9 +64,9 @@ _The `URL` interface implements methods defined in {{domxref("URLUtils")}}._
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## See also
 

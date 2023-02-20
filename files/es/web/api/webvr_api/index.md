@@ -109,9 +109,9 @@ You can find a number of examples at these locations:
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.Navigator.getVRDisplays")}}
+{{Compat}}
 
 ## See also
 

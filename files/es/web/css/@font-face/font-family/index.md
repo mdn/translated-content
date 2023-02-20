@@ -71,6 +71,6 @@ p {
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.font-family")}}
+{{Compat}}
