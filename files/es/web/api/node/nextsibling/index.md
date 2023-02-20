@@ -62,14 +62,13 @@ En el ejemplo anterior, se puede observar que los nodos `#text` se insertan en e
 
 La posible inclusión de los nodos de texto en el DOM se debe permitir cuando se atraviese el DOM utilizando `nextSibling`. Vea los recursos en la sección Notas.
 
-## Especificación
+## Especificaciones
 
-- [DOM Level 1 Core: nextSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
-- [DOM Level 2 Core: nextSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.nextSibling")}}
+{{Compat}}
 
 ## Ver también
 

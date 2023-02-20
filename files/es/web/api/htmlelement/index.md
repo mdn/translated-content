@@ -106,9 +106,9 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement")}}
+{{Compat}}
 
 ## See also
 

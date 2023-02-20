@@ -62,7 +62,7 @@ document.body.appendChild(p);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Node.appendChild")}}
+{{Compat}}
 
 ## Ver también
 

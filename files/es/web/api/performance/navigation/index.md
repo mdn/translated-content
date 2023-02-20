@@ -21,9 +21,9 @@ navObject = performance.navigation;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Performance.navigation")}}
+{{Compat}}
 
 ## Ver también
 

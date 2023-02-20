@@ -78,9 +78,9 @@ video.onloadeddata = (event) => {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement.loadeddata_event")}}
+{{Compat}}
 
 ## Eventos Relacionados
 

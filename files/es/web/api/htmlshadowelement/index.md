@@ -24,9 +24,9 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}._
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLShadowElement")}}
+{{Compat}}
 
 ## See also
 

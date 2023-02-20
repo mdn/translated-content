@@ -28,7 +28,7 @@ console.log(navigator.doNotTrack);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Navigator.doNotTrack")}}
+{{Compat}}
 
 ## Vea también
 
