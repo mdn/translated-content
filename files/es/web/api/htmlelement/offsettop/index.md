@@ -36,3 +36,7 @@ if (topPos > 10) {
 ## Compatibilidad con navegadores
 
 {{Compat}}
+
+De conformidad con la especificación, esta propiedad devolverá el valor `null` en Webkit si el elemento está oculto (`style.display` de este elemento o de cualquier padre es `"none"`) o si `style.position` del elemento en sí está configurada como `"fixed"`.
+
+Esta propiedad devolverá `null` en Internet Explorer (9) si `style.position` del elemento en sí se establece en `"fixed"`. (Tener `display:none` no afecta a este navegador).
