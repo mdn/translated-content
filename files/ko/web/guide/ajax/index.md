@@ -4,7 +4,7 @@ slug: Web/Guide/AJAX
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("/ko/docs/Web/Guide/Ajax")}}
+  {{ListSubpagesForSidebar("/ko/docs/Web/Guide/AJAX")}}
   <ol>
     <li class="toggle">
       <details>
