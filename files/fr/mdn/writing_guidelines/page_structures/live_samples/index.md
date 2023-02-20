@@ -14,7 +14,7 @@ Les exemples "live", vous permettent de voir à quoi ressemble le résultat d'un
 ## Compétences nécessaires pour cette tâche
 
 - Comprendre le HTML, CSS et/ou JavaScript, selon le code implémenté.
-- Savoir utiliser les macros [KumaScript](en/docs/kumascript)(en anglais) dans les articles du MDN.
+- Savoir utiliser les macros [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript)(en anglais) dans les articles du MDN.
 
 ## Quelles étapes pour réaliser cette tâche ?
 
