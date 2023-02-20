@@ -86,6 +86,6 @@ browser.tabs.hide([15, 14, 1]).then(onHidden, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.hide")}}
+{{Compat}}

@@ -62,9 +62,9 @@ browser.tabs.onCreated.addListener(handleCreated);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onCreated")}}
+{{Compat}}
 
 > **Note :**
 >

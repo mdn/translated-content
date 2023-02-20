@@ -85,8 +85,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `weaknessReasons` {{optional_inline}}
   - : `String`. Si l'`état` est "faible", cela indique la raison. Actuellement, il ne peut contenir qu'une seule valeur "chiffre", ce qui indique que la suite de chiffres négociée est considérée comme faible.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.SecurityInfo", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}

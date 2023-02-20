@@ -36,9 +36,9 @@ browser.theme.update(
 - `theme`
   - : `object`. Un objet {{WebExtAPIRef("theme.Theme", "Theme")}} spécifiant des valeurs pour les éléments de l'interface utilisateur que vous voulez modifier
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.theme.update", 10)}}
+{{Compat}}
 
 ## Exemples
 

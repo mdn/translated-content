@@ -76,9 +76,9 @@ browser.tabs.onRemoved.addListener(handleRemoved);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onRemoved")}}
+{{Compat}}
 
 > **Note :**
 >

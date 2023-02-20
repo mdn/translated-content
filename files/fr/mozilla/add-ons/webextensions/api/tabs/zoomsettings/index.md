@@ -29,9 +29,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `scope`{{optional_inline}}
   - : {{WebExtAPIRef('tabs.ZoomSettingsScope')}}. Définit si les changements de zoom persisteront pour l'origine de la page ou ne prendront effet que dans cet onglet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.ZoomSettings")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
