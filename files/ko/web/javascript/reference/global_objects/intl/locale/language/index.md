@@ -33,11 +33,11 @@ let langObj = new Intl.Locale("en-Latn-US", {language: "es"});
 console.log(langObj.language); // Prints "es"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -35,11 +35,11 @@ The Intl.Locale object has the following properties and methods:
 - {{jsxref("Locale.prototype", "Intl.Locale.prototype")}}
   - : The prototype object for the `Locale` constructor.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

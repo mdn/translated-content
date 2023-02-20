@@ -17,11 +17,11 @@ swClients = self.clients
 
 특정한 워커와 관련된 {{domxref("Clients")}} 객체.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

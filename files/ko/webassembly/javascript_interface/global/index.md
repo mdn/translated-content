@@ -64,11 +64,11 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 
 <div class="note"><p><strong>Note</strong>: GitHub에서 실행 중인 예제(<a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a>)를 볼 수 있습니다. <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>도 참조하십시오.</p></div>
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -59,11 +59,11 @@ Object.defineProperty(o, 'gimmeFive', {
 console.log(o.gimmeFive); // 5
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -19,11 +19,11 @@ screen.onorientationchange = funcRef;
 
 `funcRef` 는 함수로의 참조 이다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

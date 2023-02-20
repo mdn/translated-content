@@ -49,7 +49,7 @@ RegExp.$2; // "Smith"
 
 Non-standard. Not part of any current specification.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

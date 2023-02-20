@@ -41,7 +41,7 @@ Math.sin(1);           // 0.8414709848078965
 Math.sin(Math.PI / 2); // 1
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

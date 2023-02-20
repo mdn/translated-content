@@ -20,11 +20,11 @@ elt.id = idStr; // 아이디를 부여합니다
 
 - *`idStr`*는 요소의 식별자입니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

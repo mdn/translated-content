@@ -182,7 +182,7 @@ var showBookmark = (function () {
 })();
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

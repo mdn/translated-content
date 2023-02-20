@@ -48,7 +48,7 @@ var selectForm = document.forms[index];
 var selectFormElement = document.forms[index].elements[index];
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
