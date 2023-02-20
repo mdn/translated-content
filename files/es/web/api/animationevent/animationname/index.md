@@ -17,9 +17,9 @@ name = AnimationEvent.animationName
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.AnimationEvent.animationName")}}
+{{Compat}}
 
 ## Ver también
 

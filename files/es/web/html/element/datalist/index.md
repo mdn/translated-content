@@ -86,14 +86,9 @@ Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.datalist")}}
-
-## sección de relleno
-
-Incluya este polyfill para proporcionar soporte para navegadores antiguos y actualmente incompatibles:
-[datalist-polyfill](https://github.com/mfranzke/datalist-polyfill)
+{{Compat}}
 
 ## Ver también
 

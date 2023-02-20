@@ -43,19 +43,9 @@ In addition, the Notifications API spec specifies a number of additions to the [
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.Notification")}}
-
-## Firefox OS permissions
-
-When using notifications in a Firefox OS app, be sure to add the `desktop-notification` permission in your manifest file. Notifications can be used at any permission level, hosted or above:
-
-```json
-"permissions": {
-  "desktop-notification": {}
-}
-```
+{{Compat}}
 
 ## See also
 

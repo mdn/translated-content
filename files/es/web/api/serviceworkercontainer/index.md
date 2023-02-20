@@ -79,9 +79,9 @@ if ('serviceWorker' in navigator) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.ServiceWorkerContainer")}}
+{{Compat}}
 
 ## See also
 

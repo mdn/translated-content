@@ -129,27 +129,9 @@ De momento, no todos los navegadores están implementando la versión sin prefij
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenElement`
-
-{{Compat("api.Document.fullscreenElement")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
-
-### `Document.exitFullscreen`
-
-{{Compat("api.Document.exitFullscreen")}}
-
-### `Element.requestFullscreen`
-
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## Véase también
 

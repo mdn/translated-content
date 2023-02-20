@@ -97,9 +97,9 @@ A better way to track changes to the user's selection is to watch for the [`chan
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## See also
 

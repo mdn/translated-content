@@ -69,9 +69,9 @@ function setStyles() {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Storage")}}
+{{Compat}}
 
 ## Ver también
 

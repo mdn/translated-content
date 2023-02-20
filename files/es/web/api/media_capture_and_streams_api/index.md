@@ -216,9 +216,13 @@ Remueve una MediaStreamTrack de la lista de pistas.
 - Excepciones
   - : INVALID_STATE_ERR if the stream is finished (all tracks have ended).
 
+## Especificaciones
+
+{{Specifications}}
+
 ## Compatibilidad con navegadores
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## Ver también
 

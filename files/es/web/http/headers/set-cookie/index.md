@@ -172,18 +172,11 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Especificaciones
 
-| Especificación                                                                                   | Título                                                        |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}                                                 | Mecanismo de gestión del estado HTTP                          |
-| [draft-ietf-httpbis-rfc6265bis-05](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Set-Cookie", 5)}}
-
-## Notas de compatibilidad
-
-- Empezando con Chrome 52 y Firefox 52, sitios inseguros (`http:`) no pueden definirse cookies con la directiva 'secure'.
+{{Compat}}
 
 ## Ver también
 

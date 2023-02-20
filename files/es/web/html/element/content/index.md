@@ -87,9 +87,9 @@ Si muestras esto en un explorador web , debe de verse como lo siguiente .
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.content")}}
+{{Compat}}
 
 ## Ver también
 

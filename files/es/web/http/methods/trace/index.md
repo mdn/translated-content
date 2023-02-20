@@ -25,13 +25,11 @@ TRACE /index.html
 
 ## Especificaciones
 
-| Specification                                | Title                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "TRACE", "4.3.8")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad con Buscadores
+## Compatibilidad con navegadores
 
-{{Compat("http.methods.TRACE")}}
+{{Compat}}
 
 ## Ver también
 

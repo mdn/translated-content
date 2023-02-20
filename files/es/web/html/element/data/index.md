@@ -39,9 +39,9 @@ El siguiente ejemplo muestra nombres de productos pero también asocia a cada un
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.data")}}
+{{Compat}}
 
 ## Ver también
 

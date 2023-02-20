@@ -31,9 +31,9 @@ var result = url.port; // Devuelve:'80'
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.URL.port")}}
+{{Compat}}
 
 ## Ver también
 

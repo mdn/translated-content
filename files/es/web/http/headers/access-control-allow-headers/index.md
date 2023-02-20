@@ -38,16 +38,7 @@ Access-Control-Allow-Headers: X-Custom-Header
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Headers")}}
-
-## Notas de compatibilidad
-
-- El carácter comodín (\*) que es mencionado en la última especificación, todavía no está implementado en los navegadores:
-
-  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
-  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
-  - WebKit: [Issue 165508](https://bugs.webkit.org/show_bug.cgi?id=165508)
+{{Compat}}
 
 ## Véase también
 

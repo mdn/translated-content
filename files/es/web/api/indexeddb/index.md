@@ -34,9 +34,9 @@ function openDB() {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.indexedDB")}}
+{{Compat}}
 
 ## Ver también
 
