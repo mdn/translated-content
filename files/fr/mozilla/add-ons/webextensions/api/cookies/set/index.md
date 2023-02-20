@@ -61,9 +61,9 @@ var setting = browser.cookies.set(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie')}} contenant les détails sur le cookie qui a été défini. Si l'appel échoue pour une quelconque raison, la promesse sera rejetée avec un message d’erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.set")}}
+{{Compat}}
 
 ## Exemples
 

@@ -28,9 +28,9 @@ None.
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contentScripts.RegisteredContentScript.unregister", 10)}}
+{{Compat}}
 
 ## Exemples
 

@@ -38,9 +38,9 @@ Pour créer un `ExtensionSidebarPane`, appelez la fonction [`browser.devtools.pa
 - [`devtools.panels.ExtensionSidebarPane.onHidden`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden)
   - : Lancé lorsque le volet de la barre latérale est masqué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane", 10)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
