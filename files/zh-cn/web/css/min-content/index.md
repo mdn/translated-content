@@ -14,7 +14,7 @@ inline-size: min-content;
 height: min-content;
 block-size: min-content;
 
-/* 在 grid tracks 中使用 */
+/* 在 grid track 中使用 */
 grid-template-columns: 200px 1fr min-content;
 
 /* 全局值 */
@@ -49,7 +49,7 @@ min-content: unset;
 
 ### 结果
 
-{{EmbedLiveSample("Using_min-content_for_box_sizing", "100%", 200)}}
+{{EmbedLiveSample("使用 min-content 调整盒子的大小", "100%", 200)}}
 
 ### 通过 min-content 调整网格列的大小
 
@@ -87,7 +87,7 @@ min-content: unset;
 
 #### 结果
 
-{{EmbedLiveSample("Sizing_grid_columns_with_min-content", "100%", 200)}}
+{{EmbedLiveSample("通过 min-content 调整网格列的大小", "100%", 200)}}
 
 ## 规范
 
