@@ -14,10 +14,10 @@ inline-size: max-content;
 height: max-content;
 block-size: max-content;
 
-/* 在 grid tracks 中使用 */
+/* 在 grid track 中使用 */
 grid-template-columns: 200px 1fr max-content;
 
-/* 全局值*/
+/* 全局值 */
 max-content: inherit;
 max-content: initial;
 max-content: revert;
@@ -57,7 +57,7 @@ max-content: unset;
 
 #### 结果
 
-{{EmbedLiveSample("Using_max-content_for_box_sizing", "100%", 200)}}
+{{EmbedLiveSample("使用 max-content 调整盒子大小", "100%", 200)}}
 
 ### 使用 max-content 调整网格列的大小
 
@@ -95,7 +95,7 @@ max-content: unset;
 
 #### 结果
 
-{{EmbedLiveSample("Sizing_grid_columns_with_max-content", "100%", 200)}}
+{{EmbedLiveSample("使用 max-content 调整网格列的大小", "100%", 200)}}
 
 ## 规范
 
@@ -107,4 +107,4 @@ max-content: unset;
 
 ## 参见
 
-- 其他的尺寸关键字：{{cssxref("min-content")}}, {{cssxref("fit-content")}}
+- 其它尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}
