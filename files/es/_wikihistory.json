@@ -5369,10 +5369,6 @@
     "modified": "2020-10-15T22:27:30.018Z",
     "contributors": ["joseluisq"]
   },
-  "Web/API/TextTrack": {
-    "modified": "2020-10-15T22:33:08.345Z",
-    "contributors": ["joeyparrish"]
-  },
   "Web/API/TextTrack/cuechange_event": {
     "modified": "2020-10-15T22:33:09.063Z",
     "contributors": ["Pablo-No"]
