@@ -53,7 +53,7 @@ block-size: fit-content;
 
 #### 结果
 
-{{EmbedLiveSample("Using_fit-content_for_box_sizing", "100%", 200)}}
+{{EmbedLiveSample("使用 fit-content 调整盒子大小", "100%", 200)}}
 
 ## 规范
 
@@ -65,4 +65,4 @@ block-size: fit-content;
 
 ## 参见
 
-- 相关的尺寸关键字：{{cssxref("min-content")}}, {{cssxref("max-content")}}
+- 其它尺寸关键字：{{cssxref("min-content")}}、{{cssxref("max-content")}}
