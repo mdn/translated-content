@@ -33,7 +33,7 @@ for (var i = 0; i < files.length; i++) {
 
 ## Especificaciones
 
-{{Specifications}}
+_Aunque estaba presente en las primeras versiones de la especificacion de File API, esta propiedad ha sido eliminada de esta y ahora es no-estandar. Usar {{domxref("File.lastModified")}} como reemplazo._
 
 ## Compatibilidad con navegadores
 
