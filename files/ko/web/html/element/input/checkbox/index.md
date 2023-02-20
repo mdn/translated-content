@@ -167,7 +167,7 @@ function updateDisplay() {
 
 ## 유효성 검증하기
 
-체크박스는 모든 {{HTMLElement("input")}} 요소들에 제공되는 [유효성 검증](/en-US/docs/Web/Guide/HTML/Constraint_validation) 을 지원합니다. 하지만 대부분의 {{domxref("ValidityState")}} 값은 `false`입니다. 만약 체크박스가 {{htmlattrxref("required", "input")}} 특성을 가졌지만 활성화되지 않은 경우에, {{domxref("ValidityState.valueMissing")}} 값은 `true`가 됩니다.
+체크박스는 모든 {{HTMLElement("input")}} 요소들에 제공되는 [유효성 검증](/ko/docs/Web/Guide/HTML/Constraint_validation) 을 지원합니다. 하지만 대부분의 {{domxref("ValidityState")}} 값은 `false`입니다. 만약 체크박스가 {{htmlattrxref("required", "input")}} 특성을 가졌지만 활성화되지 않은 경우에, {{domxref("ValidityState.valueMissing")}} 값은 `true`가 됩니다.
 
 ## 예제
 
@@ -296,7 +296,7 @@ otherCheckbox.addEventListener('change', () => {
     </tr>
     <tr>
       <td><strong>암시적 ARIA 역할</strong></td>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></td>
+      <td><a href="/ko/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></td>
     </tr>
   </tbody>
 </table>
@@ -313,4 +313,4 @@ otherCheckbox.addEventListener('change', () => {
 
 - {{HTMLElement("input")}} 과 그를 구현하는 {{domxref("HTMLInputElement")}} 인터페이스
 - {{cssxref(":checked")}} 그리고 현재 상태를 기반으로 체크박스를 꾸밀 수 있는 {{cssxref(":indeterminate")}} CSS 선택자
-- [CSS 속성 호환성](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 속성 호환성](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
