@@ -60,7 +60,7 @@ ul li::marker {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.marker")}}
+{{Compat}}
 
 ## Véase también
 

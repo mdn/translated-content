@@ -60,9 +60,13 @@ Donde:
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.properties.-webkit-mask-composite")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

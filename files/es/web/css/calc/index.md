@@ -108,9 +108,9 @@ El formulario usa 1/6 del ancho disponible. Para asegurar que los campos de entr
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.calc")}}
+{{Compat}}
 
 ## Ver también
 

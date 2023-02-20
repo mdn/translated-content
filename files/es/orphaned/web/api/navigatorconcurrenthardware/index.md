@@ -25,9 +25,9 @@ _The `NavigatorConcurrentHardware`_ _mixin has no methods._
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.NavigatorConcurrentHardware")}}
+{{Compat}}
 
 ## See also
 

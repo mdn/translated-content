@@ -49,6 +49,6 @@ Habiendo diferentes maneras de definir la codificación de caracteres en una hoj
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

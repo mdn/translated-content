@@ -87,9 +87,13 @@ svg {
 
 Este elemento implementa la interfaz [`SVGRectElement`](/en/DOM/SVGRectElement).
 
-## Compatibilidad de los Navegadores
+## Especificaciones
 
-{{Compat("svg.elements.rect")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

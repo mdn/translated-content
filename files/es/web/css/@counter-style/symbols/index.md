@@ -69,9 +69,9 @@ symbols: indic-numbers;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.counter-style.symbols")}}
+{{Compat}}
 
 ## Véase también
 

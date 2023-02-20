@@ -156,7 +156,7 @@ tr:nth-last-child(n+1){
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.nth-last-child")}}
+{{Compat}}
 
 ## Ver también
 

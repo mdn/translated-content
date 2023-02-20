@@ -29,17 +29,7 @@ _Ninguna._
 
 ## Compatibilidad con navegadores
 
-### `color` property
-
-{{Compat("css.properties.color")}}
-
-### `print-color-adjust` property
-
-{{Compat("css.properties.print-color-adjust")}}
-
-### `opacity` property
-
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Ver también
 

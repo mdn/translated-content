@@ -88,9 +88,9 @@ Cada _característica de medios_ verifica una característica específica del na
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media")}}
+{{Compat}}
 
 ## Véase también
 

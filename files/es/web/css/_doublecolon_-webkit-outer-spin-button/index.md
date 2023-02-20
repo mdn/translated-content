@@ -31,9 +31,9 @@ input::-webkit-outer-spin-button {
 
 No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-webkit-outer-spin-button")}}
+{{Compat}}
 
 ## Ver además
 

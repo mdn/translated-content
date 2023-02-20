@@ -105,7 +105,7 @@ La propiedad `overflow-y` es especificada con una sola palabra clave escogida de
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.overflow-y")}}
+{{Compat}}
 
 ## Ver también
 

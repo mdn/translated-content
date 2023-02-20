@@ -64,9 +64,13 @@ Where:
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.properties.-webkit-mask-box-image")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

@@ -297,9 +297,9 @@ Usuarios con discapacidades cognitivas como dislexia pueden encontrar dificultad
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-transform")}}
+{{Compat}}
 
 ## Véase también
 
