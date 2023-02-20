@@ -57,7 +57,7 @@ Aqui estão os eixos registrados, juntamente com suas propriedades CSS correspon
 
 Os eixos personalizados podem ser qualquer coisa que o designer da fonte deseje variar em sua fonte, por exemplo, alturas ascendentes ou descendentes, o tamanho das serifas ou qualquer outra coisa que possam imaginar. Qualquer eixo pode ser usado desde que seja dado um eixo exclusivo de 4 caracteres. Alguns acabam se tornando mais comuns e podem até se registrar com o tempo.
 
-> **Note:** **Nota**: As tags de eixo registrados são identificadas usando tags minúsculas, enquanto os eixos personalizados devem receber tags maiúsculas. Observe que os designers de fontes não são forçados a seguir essa prática de maneira alguma, e alguns não o fazem. O ponto importante aqui é que as tags de eixo diferenciam maiúsculas de minúsculas.
+> **Nota:** As tags de eixo registrados são identificadas usando tags minúsculas, enquanto os eixos personalizados devem receber tags maiúsculas. Observe que os designers de fontes não são forçados a seguir essa prática de maneira alguma, e alguns não o fazem. O ponto importante aqui é que as tags de eixo diferenciam maiúsculas de minúsculas.
 
 ## Exemplos
 

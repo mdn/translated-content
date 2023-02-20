@@ -97,13 +97,13 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui o periódico (.) quando se alinha valores monetários. Se {{htmlattrxref("align", "tfoot")}} não é definido para `char`, este atributo é ignorado
 
-    > **Note:** **Nota:** Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use {{htmlattrxref("char", "tfoot")}} no CSS3, você pode usar o atributo {{htmlattrxref("char", "tfoot")}} com a propriedade {{cssxref("text-align")}}.
+    > **Nota:** Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use {{htmlattrxref("char", "tfoot")}} no CSS3, você pode usar o atributo {{htmlattrxref("char", "tfoot")}} com a propriedade {{cssxref("text-align")}}.
 
 - {{htmlattrdef("charoff")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, no {{HTMLVersionInline("5")}}
 
   - : O atributo é usado para indicar um número de caracteres para compensar os dados da coluna dos caracteres de alinhamento especificados pelo atributo **char**.
 
-    > **Note:** **Nota:** Não use esse atributo o mesmo está obsoleto (e não é mais suportado) na última versão padrão.
+    > **Nota:** Não use esse atributo o mesmo está obsoleto (e não é mais suportado) na última versão padrão.
 
 - {{htmlattrdef("valign")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, no {{HTMLVersionInline("5")}}
 
@@ -114,7 +114,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `middle`, centraliza o texto na célula;
     - e `top`, coloca o texto o mais próximo possível do topo da célula.
 
-    > **Note:** **Nota:** Não use este atributo eles está obsoleto (e não é suportado) no último padrão: em vez disso use a propriedade {{cssxref("vertical-align")}} do CSS.
+    > **Nota:** Não use este atributo eles está obsoleto (e não é suportado) no último padrão: em vez disso use a propriedade {{cssxref("vertical-align")}} do CSS.
 
 ## Exemplos
 

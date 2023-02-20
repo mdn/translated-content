@@ -51,7 +51,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
   - : JavaScript에 대해 알고 있다고 _생각하는_ 사람들을 위한 개요.
 - [JavaScript 데이터 구조](/ko/docs/Web/JavaScript/Data_structures)
   - : JavaScript에서 이용 가능한 데이터 구조 개요.
-- [동등성 비교 및 ​​동일성](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [동등성 비교 및 동일성](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)
   - : JavaScript는 세 가지 값 비교 연산을 제공합니다: `===`를 사용한 엄격한(strict) 동등성, `==`를 사용한 느슨한 동등성 및 {{jsxref("Global_Objects/Object/is", "Object.is()")}} 메서드.
 - [클로저](/ko/docs/Web/JavaScript/Closures)
   - : 클로저는 함수와 그 함수가 선언된 어휘 (lexical) 환경의 조합입니다.

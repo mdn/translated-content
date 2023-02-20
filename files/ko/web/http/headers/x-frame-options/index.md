@@ -110,7 +110,7 @@ rspadd X-Frame-Options:\ sameorigin
 
 ## Browser compatibility
 
-{{Compat("http.headers.X-Frame-Options")}}
+{{Compat}}
 
 ## See also
 

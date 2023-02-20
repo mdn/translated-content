@@ -68,11 +68,11 @@ add_header "X-XSS-Protection" "1; mode=block";
 
 ## Specifications
 
-Not part of any specifications or drafts.
+{{Specifications}}
 
 ## 지원 브라우저
 
-{{Compat("http.headers.X-XSS-Protection")}}
+{{Compat}}
 
 ## See also
 

@@ -64,7 +64,7 @@ _Doesn't inherit any property, but implements those defined in {{domxref("Naviga
   - : Returns an {{domxref("window.navigator.mozApps", "Apps")}} object you can use to install, manage, and control [Open Web apps](/Open_Web_Apps).
 - {{domxref("Navigator.mozAudioChannelManager", "navigator.mozAudioChannelManager")}} {{non-standard_inline}}
   - : The `navigator.mozAudioChannelManager` object provides access to the {{domxref("mozAudioChannelManager")}} interface, which is used to manage your Firefox OS device's audio channels, including setting what channel's volume to affect when the volume buttons are pressed inside a particular app.
-- {{domxref("window.navigator.mozNotification","navigator.mozNotification")}} {{deprecated_inline("22")}} {{non-standard_inline}}
+- {{domxref("window.navigator.mozNotification","navigator.mozNotification")}} {{deprecated_inline}} {{non-standard_inline}}
   {{domxref("window.navigator.webkitNotification","navigator.webkitNotification")}}
   - : Returns a {{domxref("navigator.mozNotification", "notification")}} object you can use to deliver notifications to the user from your web application.
 - {{domxref("navigator.mozSocial")}} {{non-standard_inline}}
@@ -94,7 +94,7 @@ _Doesn't inherit any method, but implements those defined in {{domxref("Navigato
   - : Allows web sites to register themselves as a possible handler for a given MIME type.
 - {{domxref("navigator.registerProtocolHandler", "navigator.registerProtocolHandler")}}
   - : Allows web sites to register themselves as a possible handler for a given protocol.
-- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline("1.7.8")}} {{experimental_inline}}
+- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline}} {{experimental_inline}}
   - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
 - {{domxref("Navigator.vibrate()")}}
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.

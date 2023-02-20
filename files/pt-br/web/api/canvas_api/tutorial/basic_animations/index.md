@@ -299,7 +299,7 @@ function draw() {
 }
 ```
 
-Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a largura e a altura especificadas aqui devem corresponder aos valores das variáveis ​​CanvasXZSize e CanvasYSize no código JavaScript.
+Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a largura e a altura especificadas aqui devem corresponder aos valores das variáveis CanvasXZSize e CanvasYSize no código JavaScript.
 
 ```html
 <canvas id="canvas" width="800" height="200"></canvas>

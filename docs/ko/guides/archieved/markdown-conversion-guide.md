@@ -1,4 +1,4 @@
-# MDN ko locale Markdown 번역에 대한 일반 지침
+# MDN ko locale Markdown 번역에 대한 일반 안내서
 
 > 참고: 2022.11월부터 모든 .html 파일들이 .md 파일로 변환 되었습니다. 이 파일을 참고용으로만 사용 부탁드립니다.
 
@@ -26,7 +26,7 @@ html 파일에 대한 commit은 오로지 확장자를 바꾸는 것만 허용�
 
 일반 PR 방식대로 진행합니다.
 
-## MDN ko locale Markdown 번역에 대한 일반 지침 (리뷰어)
+## MDN ko locale Markdown 번역에 대한 일반 안내서 (리뷰어)
 
 1. `존재하는 파일에 대한 변경 (존재하는 파일이 .html 확장자일 경우)`에 대해서는 `squash and merge`가 아닌 `rebase and merge`를 진행해야합니다.
 2. 파일에 대한 Git History가 유지되는지 확인해주세요.

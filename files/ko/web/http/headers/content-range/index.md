@@ -59,7 +59,7 @@ Content-Range: bytes 200-1000/67589
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Content-Range")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

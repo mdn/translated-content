@@ -126,7 +126,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Browser compatibility
 
-{{Compat("http.headers.Set-Cookie")}}
+{{Compat}}
 
 ## Compatibility notes
 

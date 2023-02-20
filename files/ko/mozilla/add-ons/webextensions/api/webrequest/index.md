@@ -122,7 +122,7 @@ To do this, you must have the "webRequestBlocking" API permission as well as the
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.webRequest")}}
+{{Compat}}
 
 [Extra notes on Chrome incompatibilities](/ko/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities).
 

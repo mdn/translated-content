@@ -38,15 +38,15 @@ navigator.clipboard.readText().then(
 
 ### Clipboard
 
-{{Compat("api.Clipboard")}}
+{{Compat}}
 
 ### ClipboardEvent
 
-{{Compat("api.ClipboardEvent")}}
+{{Compat}}
 
 ### ClipboardItem
 
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 ## 같이 보기
 

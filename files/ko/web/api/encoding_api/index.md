@@ -26,7 +26,7 @@ slug: Web/API/Encoding_API
 
 ### `TextDecoder`
 
-{{Compat("api.TextDecoder")}}
+{{Compat}}
 
 ### `TextEncoder`
 

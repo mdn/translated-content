@@ -50,7 +50,7 @@ Origin: https://developer.mozilla.org
 
 ## 브라우저 적합성
 
-{{Compat("http.headers.Origin")}}
+{{Compat}}
 
 ## See also
 
