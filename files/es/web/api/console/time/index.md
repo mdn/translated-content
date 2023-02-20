@@ -26,9 +26,9 @@ console.time(label);
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.time")}}
+{{Compat}}
 
 ## See also
 

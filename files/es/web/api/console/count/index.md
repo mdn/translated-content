@@ -86,6 +86,6 @@ console.count([label]);
 
 {{Specifications}}
 
-## Compatibilidad en los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.count")}}
+{{Compat}}

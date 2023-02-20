@@ -33,9 +33,9 @@ Devuelve un valor de largo(`long`) que representa la función de devolución de 
 
 {{Specifications}}
 
-## Compatibilidad en navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ## Ver también
 

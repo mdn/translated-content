@@ -42,21 +42,9 @@ ul.addEventListener('click', hide, false);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Event.target")}}
-
-## Notas de compatibilidad
-
-En IE 6-8 el evento 'model' es diferente. Los eventos 'listeners' son are incluidos con el método no estándar {{domxref('EventTarget.attachEvent')}}. En este modelo, el evento 'object' tiene una propiedad {{domxref('Event.srcElement')}}, en vez de la propiedad `target`, y tiene la misma semántica que `event.target`.
-
-```js
-function hide(e) {
-  // Soporte en IE6-8
-  var target = e.target || e.srcElement;
-  target.style.visibility = 'hidden';
-}
-```
+{{Compat}}
 
 ## También ver
 

@@ -25,6 +25,10 @@ bool = event.defaultPrevented
  }
 ```
 
-### Compatibilidad del Navegador
+## Especificaciones
 
-{{Compat("api.Event.defaultPrevented")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
