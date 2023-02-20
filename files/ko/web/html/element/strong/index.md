@@ -111,7 +111,7 @@ While `<em>` is used to change the meaning of a sentence as spoken emphasis does
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.strong")}}
+{{Compat}}
 
 ## 같이 보기
 

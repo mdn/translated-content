@@ -15,7 +15,7 @@ p:first-of-type {
 }
 ```
 
-> **Note:** **Nota**: Originalmente definido, o elemento selecionado tinha que ter um pai. Desde o Seletores Nível 4, isso não é mais necessário.
+> **Nota:** Originalmente definido, o elemento selecionado tinha que ter um pai. Desde o Seletores Nível 4, isso não é mais necessário.
 
 ## Sintaxe
 

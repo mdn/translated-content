@@ -67,7 +67,7 @@ html,body,svg { height:100% }
 
 This element implements the [`SVGRectElement`](/en/DOM/SVGRectElement) interface.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

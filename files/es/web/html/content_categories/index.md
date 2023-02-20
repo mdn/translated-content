@@ -14,7 +14,7 @@ Hay tres tipos de categorías de contenido:
 
 > **Nota:** Una explicación comparativa más detallada de estas categorías de contenido y su funcionalidad está más allá del alcance de este artículo; para eso, posiblemente desees leer las [partes relevantes de la especificación HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
 
-[![Un diagrama de Venn que muestra cómo se interrelacionan las distintas categorías de contenido. Las siguientes secciones explican estas relaciones en texto.](/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](/@api/deki/files/6244/=Content_categories_venn.png)
+[![Un diagrama de Venn que muestra cómo se interrelacionan las distintas categorías de contenido. Las siguientes secciones explican estas relaciones en texto.](content_categories_venn.png?size=webview)](content_categories_venn.png)
 
 ## Categorías de contenido principal
 

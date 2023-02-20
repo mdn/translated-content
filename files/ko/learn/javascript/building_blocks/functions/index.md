@@ -441,13 +441,3 @@ function subFunction3(value) {
 - [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters), [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — 고급 개념 참고서
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
-
-## 이 과정에서는
-
-- [판단 내리기 — 조건문](/ko/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- **함수 — 코드 재사용**
-- [함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [함수 반환 값](/ko/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events)
-- [이미지 갤러리](/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery)

@@ -31,7 +31,7 @@ let settingItem = browser.storage.&#x3C;storageType>.set(
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.storage.StorageArea.set")}}
+{{Compat}}
 
 ## 예제
 

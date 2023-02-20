@@ -166,7 +166,7 @@ Let’s make the above assertions clearer by looking at a more involved memory e
 
 Note how we create the {{domxref("Uint32Array")}} view on the Memory object’s buffer ([`Memory.prototype.buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)), not on the Memory itself.
 
-As importações de memória funcionam como importações de função, apenas objetos de memória são passados ​​como valores em vez de funções JavaScript. As importações de memória são úteis por dois motivos:
+As importações de memória funcionam como importações de função, apenas objetos de memória são passados como valores em vez de funções JavaScript. As importações de memória são úteis por dois motivos:
 
 - Eles permitem que o JavaScript busque e crie o conteúdo inicial da memória antes ou simultaneamente com a compilação do módulo.
 - Eles permitem que um único objeto Memory seja importado por várias instâncias do módulo, o que é um bloco de construção crítico para implementar a vinculação dinâmica no WebAssembly.

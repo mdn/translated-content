@@ -49,11 +49,11 @@ _The events properties, of the form `onXYZ`, are defined on the {{domxref("Windo
 
 _This interface defines no method._
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

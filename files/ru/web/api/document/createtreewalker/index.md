@@ -37,7 +37,7 @@ document.createTreeWalker(root, whatToShow[, filter[, entityReferenceExpansion]]
 
 - `filter` {{optional_inline}}
   - : A {{domxref("NodeFilter")}}, that is an object with a method `acceptNode`, which is called by the {{domxref("TreeWalker")}} to determine whether or not to accept a node that has passed the `whatToShow` check.
-- `entityReferenceExpansion` {{optional_inline}} {{obsolete_inline}}
+- `entityReferenceExpansion` {{optional_inline}}
   - : A {{domxref("Boolean")}} flag indicating if when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
 
 ### Return value

@@ -1,5 +1,5 @@
 ---
-title: 移动设备上的无障碍
+title: 移动端无障碍
 slug: Learn/Accessibility/Mobile
 ---
 
@@ -266,13 +266,3 @@ panel.ontouchend = stopMove;
 - [使您的网站在触摸设备上工作](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — 有关使用触摸事件来获得在移动设备上进行交互的有用文章。
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
-
-## 本章目录
-
-- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML：无障碍的好基础](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [测验：无障碍疑难解答](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

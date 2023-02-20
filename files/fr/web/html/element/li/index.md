@@ -25,7 +25,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     > **Note :** Cet attribut a été déprécié en HTML4 mais a été réintroduit en HTML5.
 
-    > **Note :** Avant {{Gecko("9.0")}}, des valeurs négatives étaient incorrectement converties en 0. A partir de {{Gecko("9.0")}}, toutes les valeurs entières ont été correctement analysées.
+    > **Note :** Avant Gecko 9.0, des valeurs négatives étaient incorrectement converties en 0. A partir de Gecko 9.0, toutes les valeurs entières ont été correctement analysées.
 
 - {{htmlattrdef("type")}} {{Deprecated_inline}}
 

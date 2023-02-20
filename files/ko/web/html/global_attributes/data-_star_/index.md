@@ -38,7 +38,7 @@ HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이�
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.data_attributes")}}
+{{Compat}}
 
 ## 같이 보기
 

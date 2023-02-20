@@ -39,11 +39,11 @@ formData.append('username', 'Chris');
 formData.has('username'); // Returns true
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

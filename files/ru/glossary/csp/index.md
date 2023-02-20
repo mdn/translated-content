@@ -16,10 +16,6 @@ CSP ([Политика безопасности контента](/ru/docs/Web/H
 
 ## Узнать больше
 
-### Общие сведения
-
-- {{interwiki('wikipedia','CSP','Content Security Policy')}} на Википедии
-
 ### Техническая информация
 
 - [Content Security Policy на MDN](/ru/docs/Web/HTTP/CSP)

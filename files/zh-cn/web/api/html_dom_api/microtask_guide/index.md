@@ -15,7 +15,7 @@ JavaScript 中的 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/
 
 ### 任务（Tasks）
 
-一个 **任务** 就是由执行诸如从头执行一段程序、执行一个事件回调或一个 interval/timeout 被触发之类的标准机制而被调度的任意 JavaScript 代码。这些都在 **任务队列（task queue）**上被调度。
+一个**任务**就是由执行诸如从头执行一段程序、执行一个事件回调或一个 interval/timeout 被触发之类的标准机制而被调度的任意 JavaScript 代码。这些都在**任务队列**（task queue）上被调度。
 
 在以下时机，任务会被添加到任务队列：
 
@@ -299,7 +299,7 @@ log("Main program exiting");
 
 {{EmbedLiveSample("来自函数的微任务", 640, 100)}}
 
-## See also
+## 参见
 
 - [In depth: Microtasks and the JavaScript runtime environment](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
 - {{domxref("queueMicrotask()")}}

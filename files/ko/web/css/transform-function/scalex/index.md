@@ -116,7 +116,7 @@ div {
 
 {{EmbedLiveSample("Examples","200","200")}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

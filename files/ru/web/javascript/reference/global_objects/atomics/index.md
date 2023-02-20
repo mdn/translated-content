@@ -65,7 +65,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 
 ## Похожие заметки
 
-До SpiderMonkey 48 {{geckoRelease(48)}}, финальные имена API и семантика не были ещё реализованы. Изменения между Firefox v. 46 и v. 48:
+До SpiderMonkey 48, финальные имена API и семантика не были ещё реализованы. Изменения между Firefox v. 46 и v. 48:
 
 - Методы `Atomics.futexWakeOrRequeue()` и `Atomics.fence()` полностью удалены ({{bug(1259544)}} и {{bug(1225028)}}).
 - Методы {{jsxref("Atomics.wait()")}} и {{jsxref("Atomics.wake()")}} были названы `Atomics.futexWait()` и `Atomics.futexWake()` ({{bug(1260910)}}). Примечание: старые имена были удалены в версии 49 и младше ({{bug(1262062)}}).

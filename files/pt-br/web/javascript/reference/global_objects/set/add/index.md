@@ -49,7 +49,7 @@ console.log(mySet);
 
 ## Notas específicas para Firefox
 
-- Antes do Firefox 33 {{geckoRelease("33")}}, `Set.prototype.add retornava` `undefined` e não era possível encadear chamadas. Isto foi resolvido ({{bug(1031632)}}). O comportamento pode ser encontrado no Chrome/v8 ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
+- Antes do Firefox 33, `Set.prototype.add retornava` `undefined` e não era possível encadear chamadas. Isto foi resolvido ({{bug(1031632)}}). O comportamento pode ser encontrado no Chrome/v8 ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
 
 ## Veja também
 

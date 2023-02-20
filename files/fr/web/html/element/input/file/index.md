@@ -180,7 +180,7 @@ Dans tous les cas (et comme pour les autres éléments envoyés au serveur), il 
 
 ### Notes
 
-1. À partir de {{Gecko("2.0")}}, appeler la méthode `click()` sur un élément de type `file` ouvre le sélecteur de fichier et permet à un utilisateur de sélectionner les fichiers sur son système d'opération. Pour plus d'exemples, voir Utiliser des fichiers avec des applications web.
+1. À partir de Gecko 2.0, appeler la méthode `click()` sur un élément de type `file` ouvre le sélecteur de fichier et permet à un utilisateur de sélectionner les fichiers sur son système d'opération. Pour plus d'exemples, voir Utiliser des fichiers avec des applications web.
 2. Il n'est pas possible de définir la valeur du sélecteur de fichier via un script. Le code suivant n'aura aucun effet :
 
     ```js

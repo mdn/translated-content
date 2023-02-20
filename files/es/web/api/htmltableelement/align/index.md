@@ -16,7 +16,7 @@ varalignment =HTMLTableElement.align;
 
 ### Parámetros
 
-- `alignment` {{deprecatedGeneric('inline','HTML4')}}
+- `alignment` {{deprecated_inline}}
 
   - : `alignment` es una cadena con uno de los siguientes valores:
 

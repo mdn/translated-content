@@ -1,5 +1,5 @@
 ---
-title: 从对象到 iframe - 其他嵌入技术
+title: 从 object 到 iframe——其他嵌入技术
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
 

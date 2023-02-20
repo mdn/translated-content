@@ -5,8 +5,6 @@ slug: Web/HTML/Element/marquee
 
 {{HTMLSidebar}}
 
-{{obsolete_header}}
-
 O elemento html \<marquee> é usado para inserir uma área de rolagem de texto"scrolling" , similar a um letreiro. Você pode controlar o comportamento do conteúdo fornecendo alguns atributos extras.
 
 ## Atributos

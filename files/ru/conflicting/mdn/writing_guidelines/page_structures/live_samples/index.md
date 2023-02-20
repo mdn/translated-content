@@ -83,7 +83,7 @@ document.addEventListener('keyup', function () {
 });
 ```
 
-{{EmbedLiveSample('hidden_code_example', 120, 120)}}
+{{EmbedLiveSample('hidden_code', '100%', 200)}}
 
 If you take a look at that page HTML code with the MDN editor, you'll see the exact following HTML code:
 
@@ -92,7 +92,7 @@ If you take a look at that page HTML code with the MDN editor, you'll see the ex
 <p>Click on the following square to randomly change its color or just type an hexadecimal code color</p>
 
 <div class="hidden">
-<h4 id="hidden_code_example">hidden code example</h4>
+<h4 id="hidden_code">hidden code example</h4>
 
 <h5 id="HTML">HTML</h5>
 
@@ -156,7 +156,7 @@ document.addEventListener('keyup', function () {
 </pre>
 </div>
 
-\{{EmbedLiveSample('hidden_code_example', 120, 120)}}
+<pre>\{{EmbedLiveSample('hidden_code', '100%', 200)}}</pre>
 </div>
 ```
 
@@ -172,7 +172,7 @@ Let's how that sample looks when configured as if it were being embedded from a 
 
 Click on the following square to randomly change its color or just type a hexadecimal code color
 
-{{EmbedLiveSample('The_example', 120, 120, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}
+{{ EmbedLiveSample('The_example', 120, 120) }}
 
 This time, if you take a [look at that page's HTML using the MDN editor](/ru/docs/MDN/Contribute/Editor/Source_mode), you'll see no hidden code. If you want to see the code, just go to [the page that hosts it](/ru/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example).
 

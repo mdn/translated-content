@@ -40,7 +40,7 @@ A seguir, uma lista de todos os tópicos abordados na área de aprendizado da MD
 - [JavaScript — Script dinamico do lado do cliente](/pt-BR/docs/Learn/JavaScript)
   - : JavaScript é a linguagem de script usada para adicionar funcionalidade dinâmica a páginas da web. Este tópico ensina todos os elementos essenciais necessários para se sentir confortável com a escrita e a compreensão do JavaScript.
 - [Formulários web - Trabalhando com dados do usuário](/pt-BR/docs/Web/Guide/HTML/Forms)
-  - : Os formulários web são uma ferramenta muito poderosa para interagir com os usuários - geralmente são usados ​​para coletar dados dos usuários ou permitir que eles controlem uma interface do usuário. Nos artigos listados abaixo, abordaremos todos os aspectos essenciais da estruturação, estilo e interação com os formulários web.
+  - : Os formulários web são uma ferramenta muito poderosa para interagir com os usuários - geralmente são usados para coletar dados dos usuários ou permitir que eles controlem uma interface do usuário. Nos artigos listados abaixo, abordaremos todos os aspectos essenciais da estruturação, estilo e interação com os formulários web.
 - [Acessibilidade - torne a web utilizável por todos](/pt-BR/docs/Learn/Accessibility)
   - : Acessibilidade é a prática de disponibilizar o conteúdo web para o maior número possível de pessoas, independentemente da deficiência, dispositivo, localidade ou outros fatores de diferenciação. Este tópico fornece tudo o que você precisa saber.
 - [Desempenho da Web - tornando os sites rápidos e responsivos](/pt-BR/docs/Aprender/Performance)
