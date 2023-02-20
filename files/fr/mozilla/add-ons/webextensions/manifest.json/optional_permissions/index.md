@@ -102,6 +102,6 @@ Activez l'extension pour demander l'accès aux éléments privilégiés de l'API
 
 Activez l'extension pour demander les deux permissions ci-dessus.
 
-## Comptabilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.optional_permissions")}}
+{{Compat}}

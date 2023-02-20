@@ -27,9 +27,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"panel"`
 - `"devtools"`
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.WindowType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

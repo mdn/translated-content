@@ -128,6 +128,6 @@ Chargez deux scripts de fond.
 
 Chargez une page d'arrière-plan personnalisée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.background", 10)}}
+{{Compat}}

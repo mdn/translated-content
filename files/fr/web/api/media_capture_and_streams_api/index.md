@@ -67,7 +67,7 @@ Les articles qui suivent fournissent des manuels et guides pour utiliser cette A
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## Voir aussi
 

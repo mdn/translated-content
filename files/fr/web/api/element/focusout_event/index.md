@@ -34,7 +34,7 @@ L'évènement `focusout` est déclenché lorsqu'un élément du DOM est sur le p
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.focusout_event")}}
+{{Compat}}
 
 ## Evénements liés
 

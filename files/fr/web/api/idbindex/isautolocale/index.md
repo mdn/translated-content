@@ -69,7 +69,7 @@ Actuellement, cette propriété ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.isAutoLocale")}}
+{{Compat}}
 
 ## Voir aussi
 
