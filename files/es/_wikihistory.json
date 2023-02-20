@@ -5034,10 +5034,6 @@
     "modified": "2020-10-15T22:08:20.485Z",
     "contributors": ["SphinxKnight", "InfaSysKey", "jesumv"]
   },
-  "Web/API/Notifications_API": {
-    "modified": "2019-03-23T22:07:39.198Z",
-    "contributors": ["david_ross"]
-  },
   "Web/API/Notifications_API/Using_the_Notifications_API": {
     "modified": "2020-04-11T06:35:05.696Z",
     "contributors": ["davidelx", "IXTRUnai"]
