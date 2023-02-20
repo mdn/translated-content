@@ -203,14 +203,6 @@ Estos controladores de eventos se definen en el mixin {{DOMxRef("GlobalEventHand
 
 _Esta interfaz no define métodos_
 
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
-
 ## Ve también
 
 - {{DOMxRef("Element")}}

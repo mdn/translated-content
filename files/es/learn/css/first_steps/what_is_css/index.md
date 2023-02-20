@@ -113,8 +113,6 @@ Una vez se ha especificado el CSS, solo es útil en el desarrollo de páginas we
 
 Lo que sigue es el gráfico de datos de compatibilidad para la propiedad CSS [`font-family`](/es/docs/Web/CSS/font-family).
 
-{{Compat}}
-
 ## ¿Qué viene ahora?
 
 Ahora que comprendes mínimamente qué es el CSS, pasemos a [Comenzar con CSS](/es/docs/Learn/CSS/First_steps/Comenzando_CSS), donde puedes empezar a escribir algo de CSS tú mismo.
