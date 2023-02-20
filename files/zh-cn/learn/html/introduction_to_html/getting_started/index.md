@@ -239,7 +239,7 @@ textarea.onkeyup = () => {
 
 {{ EmbedLiveSample('空元素', 700, 300, "", "") }}
 
-> **备注：** HTML 中，无需在一个无效元素的标签末尾添加 `/`，例如：`<img src="images/cat.jpg" alt="cat" />`。然而，这也是一种有效的语法，当你希望你的 HTML 是有效的 XML 时，这么做也没问题。
+> **备注：** HTML 中，无需在一个空元素的标签末尾添加 `/`，例如 `<img src="images/cat.jpg" alt="cat" />`。然而，这也是一种有效的语法，当你希望你的 HTML 是有效的 XML 时，这么做也没问题。
 
 ## 属性
 
@@ -247,7 +247,7 @@ textarea.onkeyup = () => {
 
 ![含有‘class="editor-note"’属性的段落标签](grumpy-cat-attribute-small.png)
 
-属性包含元素的额外信息，这些信息不会出现在实际的内容中。在上述例子中，这个 **`class`** 属性是一个识别名称，用来为元素提供样式信息。
+属性包含元素的额外信息，这些信息不会出现在实际的内容中。在上述例子中，这个 **`class`** 属性是一个识别名称，以后为元素设置样式信息时更加方便。
 
 属性必须包含：
 
@@ -257,7 +257,7 @@ textarea.onkeyup = () => {
 
 ### 主动学习：为元素添加属性
 
-另一个例子是关于元素 {{htmlelement("a")}} 的——元素 {{htmlelement("a")}} 是*锚*，它使被标签包裹的内容成为一个超链接。锚点可以添加多种属性，部分如下：
+另一个例子是关于元素 {{htmlelement("a")}} 的——元素 {{htmlelement("a")}} 是*锚*，它使被标签包裹的内容成为一个超链接。锚元素可以添加多种属性，部分如下：
 
 - `href`
   - : 这个属性声明超链接的 web 地址。例如 `href="https://www.mozilla.org/"`。
@@ -473,7 +473,7 @@ textarea.onkeyup = () => {
 要这样做：
 
 ```html
-<a href='https://www.example.com' title='Isn&apos;t this fun?'>A link to my example.</a>
+<a href='https://www.example.com' title='Isn&apos;t this fun?'>示例站点链接</a>
 ```
 
 ## 剖析 HTML 文档
@@ -501,7 +501,7 @@ textarea.onkeyup = () => {
    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
    ```
 
-   文档类型是一个历史遗留问题，需要包含它才能使其他东西正常工作。现在，只需要知道 `<!DOCTYPE html>` 是最短有效的文档声明！
+   文档类型是一个历史遗留问题，需要包含它才能使其他东西正常工作。现在，只需要知道 `<!DOCTYPE html>` 是最短的有效文档声明！
 
 2. `<html></html>`: {{htmlelement("html")}} 元素。这个元素包裹了页面中所有的内容，有时被称为根元素。
 3. `<head></head>`: {{htmlelement("head")}} 元素。这个元素是一个容器，它包含了所有你想包含在 HTML 页面中但**不在 HTML 页面中显示**的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述、CSS 样式、字符集声明等等。以后的章节中会学到更多相关的内容。
@@ -732,7 +732,7 @@ HTML 拥有在代码中写注释的机制。浏览器会忽略注释，有效地
 
 你已经来到了这篇文章的结尾——希望你享受基础的 HTML 学习的旅程。
 
-在这里你应该可以理解 HTML 语言的全貌、它基本的工作原理。你应该还学会了一些元素和属性的使用。在这个模块的后续文章中，我们会深入一些你已经见过的东西的细节，并且展示语言的一些其它概念。
+在这里你应该可以理解 HTML 语言的全貌和基本的工作原理。你应该还学会了一些元素和属性的使用。在这个模块的后续文章中，我们会深入一些你已经见过的东西的细节，并且展示语言的一些其它概念。
 
 > **备注：** 当你开始学习更多的 HTML 知识时，可能也想了解一些层叠样式列表（[CSS](/zh-CN/docs/Learn/CSS)）的基础知识。CSS 是一种用来设计网页样式的语言（比如，用它改变字体、颜色或页面布局等）。你很快就会发现，HTML 和 CSS 能很好地协调配合。
 
