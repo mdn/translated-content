@@ -115,7 +115,7 @@ var removed = myFish.splice(2);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.splice")}}
+{{Compat}}
 
 ## Ver también
 

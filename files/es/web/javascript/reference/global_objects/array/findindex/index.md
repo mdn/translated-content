@@ -147,9 +147,9 @@ Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Objec
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.findIndex")}}
+{{Compat}}
 
 ## Ver también
 

@@ -64,9 +64,9 @@ One property is supported by all language sensitive constructors and functions: 
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Intl")}}
+{{Compat}}
 
 ## See also
 
