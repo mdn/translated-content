@@ -59,9 +59,9 @@ resulta en :
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.contextmenu")}}
+{{Compat}}
 
 ## Ver también
 

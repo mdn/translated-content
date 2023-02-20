@@ -249,10 +249,6 @@ En este ejemplo, se muestra un mapa de Google en un marco.
 
 {{Specifications}}
 
-## Notes
+## Compatibilidad con navegadores
 
-Starting in Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3), rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{ cssxref("border-radius") }}.
-
-## Browser compatibility
-
-{{Compat("html.elements.iframe", 3)}}
+{{Compat}}

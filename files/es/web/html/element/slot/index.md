@@ -108,11 +108,11 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 ```
 
 > **Nota:** Puedes ver este ejemplo en accion en [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (velo [running live](https://mdn.github.io/web-components-examples/element-details/)). Además, puedes encontrar una explicación en [Using templates and slots](/es/docs/Web/Web_Components/Using_templates_and_slots).
-
+>
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.slot")}}
+{{Compat}}

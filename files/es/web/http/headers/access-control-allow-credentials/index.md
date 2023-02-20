@@ -59,9 +59,9 @@ fetch(url, {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Credentials")}}
+{{Compat}}
 
 ## Ver también
 

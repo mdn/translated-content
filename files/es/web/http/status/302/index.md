@@ -19,13 +19,11 @@ En casos en los que quieras que el método usado para cambiar a {{HTTPMethod("GE
 
 ## Especificaciones
 
-| Especificación                                       | Título                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "302 Found" , "6.4.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.status.302")}}
+{{Compat}}
 
 ## Mira también
 

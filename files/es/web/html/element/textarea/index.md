@@ -102,9 +102,9 @@ Un _textarea_ tiene dimensiones intrínsecas, como una imagen agrandada.
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.textarea")}}
+{{Compat}}
 
 ## Ver además
 
