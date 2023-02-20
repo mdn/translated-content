@@ -5307,9 +5307,6 @@
     "modified": "2019-03-23T22:37:01.770Z",
     "contributors": ["aminguez", "spideep"]
   },
-  "Web/API/StorageManager": {
-    "modified": "2020-10-15T22:18:18.423Z"
-  },
   "Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T22:18:17.461Z",
     "contributors": ["AlePerez92"]
