@@ -1,196 +1,218 @@
 ---
 title: Использование XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
+page-type: guide
+tags:
+  - Advanced
+  - DOM
+  - Guide
+  - HTTP
+  - MakeBrowserAgnostic
+  - Tutorial
+  - XHR
+  - XML
+  - XMLHttpRequest
+browser-compat: api.XMLHttpRequest
 ---
-Это инструкция по использованию [`XMLHttpRequest`](/en-US/docs/DOM/XMLHttpRequest), для взаимодействия через HTTP-протокол.
 
-Для отправки HTTP-запроса нужно создать XMLHttpRequest-объект, открыть URL и отправить запрос. После выполнения запроса можно получить и обработать тело и статус ответа.
+{{APIRef("XMLHttpRequest")}}
+
+Это инструкция по использованию {{domxref("XMLHttpRequest")}} для обмена информацией между сайтом и сервером по [HTTP-протоколу](/en-US/docs/Web/HTTP).
+
+Мы разберём как частые примеры использования `XMLHttpRequest`, так и более редкие.
+
+Для отправки HTTP-запроса нужно создать `XMLHttpRequest`-объект, указать URL и отправить запрос. В результате запроса мы получим от сервера объект с подробной информацией, вроде тела ответа и [HTTP-статуса](/en-US/docs/Web/HTTP/Status).
 
 ```js
-function reqListener () {
+function reqListener() {
   console.log(this.responseText);
 }
 
-var oReq = new XMLHttpRequest();
-oReq.onload = reqListener;
-oReq.open("get", "yourFile.txt", true);
-oReq.send();
+const req = new XMLHttpRequest();
+req.addEventListener("load", reqListener);
+req.open("GET", "http://www.example.org/example.txt");
+req.send();
 ```
 
 ## Типы запросов
 
-Запрос, сделанный посредством `XMLHttpRequest`, может загружать данные синхронно или асинхронно. Это определяется третьим аргументом метода [open()](</ru/docs/DOM/XMLHttpRequest#open()> "DOM/XMLHttpRequest#open()") объекта XMLHttpRequest: если он равен true или не определён, запрос выполнится асинхронно, в противном случае — синхронно. Детальное обсуждение и демонстрации обоих типов запросов могут быть найдены на странице [synchronous and asynchronous requests](/ru/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). Использовать синхронные запросы приходится очень редко.
+Запрос, сделанный посредством `XMLHttpRequest`, может загружать данные синхронно или асинхронно. Тип запроса определяется опциональным `async` аргументом (третий по счёту) метода {{domxref("XMLHttpRequest.open()")}}. Если он равен `true` или не задан, запрос выполнится асинхронно, в противном случае — синхронно.
 
-> **Примечание:** Начиная с Gecko 30.0 не рекомендуется использовать синхронные запросы, так как они отрицательно влияют на пользовательский опыт.
+В чем разница между двумя типами запросов, а так же примеры использования, вы можете найти [в статье с подробным описанием синхронных и асинхронных запросов](/ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). По возможности избегайте синхронных запросов, они блокируют взаимодействие пользователя с сайтом.
+
+> **Обратите внимание:** Название `XMLHttpRequest` не означает, что вы можете передавать только XML документы. **"XML"** в названии остался из времён, когда основным форматом для обмена информацией был XML.
 
 ## Обработка запросов
 
-Есть несколько типов [атрибутов ответа](http://www.w3.org/TR/XMLHttpRequest2/#response), определённых спецификацией W3C XMLHttpRequest. Они сообщают запрашивающему важную информацию о статусе ответа. В некоторых случаях обработка нетекстовых типов ответа может потребовать дополнительных действий и анализа; эти случаи описаны ниже.
+Конструктором {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} определены несколько [типов ответа](https://xhr.spec.whatwg.org/). В ответе содержится важная информация о статусе запроса. При указании некоторых типов ответа могут потребоваться дополнительные действия для обработки и получения результата, рассмотрим эти случаи.
 
-### Анализ и использование свойства `responseXML`
+### Обработка и получение результата из responseXML
 
-Если скачать XML документ с помощью `XMLHttpRequest`, в свойстве `responseXML` будет объект DOM, содержащим распарсенный XML документ. Напрямую работать с ним будет сложно. Есть четыре основных способа анализа этого документа:
+Если с помощью `XMLHttpRequest` загрузить XML-документ, в свойстве {{domxref("XMLHttpRequest.responseXML", "responseXML")}} будет DOM-объект, содержащий распарсенный XML-документ, работать напрямую с которым будет сложно. Есть четыре основных способа анализа этого документа:
 
-1. Использовать [XPath](/ru/docs/XPath), чтобы указывать на его части.
-2. Использовать [JSON](/ru/docs/JXON), чтобы превратить его в дерево объектов JavaScript.
-3. Вручную [парсить и превращать XML](/ru/docs/Parsing_and_serializing_XML) в строки или объекты.
-4. Использовать [XMLSerializer](/ru/docs/XMLSerializer), чтобы превращать деревья DOM в строки или файлы.
-5. Можно использовать [регулярные выражения](/ru/docs/JavaScript/Reference/Global_Objects/RegExp), если вы заранее знаете содержимое документа. Возможно, стоит удалить переносы строк, если вы используете регулярные выражения с оглядкой на переносы. Однако этот метод стоит использовать только в крайнем случае, ведь если XML изменится, хотя бы чуть-чуть, то регулярное выражение, скорее всего, не справится.
+1. Использовать [XPath](/en-US/docs/Web/XPath) для обращения (или указания на) к части XML-документа.
+2. Вручную [конвертировать XML](/ru/docs/Web/Guide/Parsing_and_serializing_XML) в строку или объект.
+3. Использовать {{domxref("XMLSerializer")}} для сериализации **DOM-дерева в строку**.
+4. Использовать {{jsxref("RegExp")}}, если вам заранее известна структура документа. Возможно, потребуется удалить переносы строк из документа или учитывать их в `RegExp`. Однако, этот способ стоит использовать только в крайнем случае, ведь если XML-документ изменится хотя бы чуть-чуть, то регулярное выражение, скорее всего, уже не подойдёт.
 
-### Анализ и использование свойства `responseText,` содержащего `HTML` документ
+> **Обратите внимание:** Теперь с помощью {{domxref("XMLHttpRequest.responseXML", "responseXML")}} можно парсить HTML. Подробнее читайте в статье [HTML в XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
 
-> **Примечание:** Спецификация W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) позволяет парсить HTML через свойство `XMLHttpRequest.responseXML`. Подробнее об этом написано в статье [HTML в XMLHttpRequest](/ru/docs/HTML_in_XMLHttpRequest).
+### Получение HTML из responseText
 
-Если получить содержимое HTML страницы с помощью `XMLHttpRequest`, свойство `responseText` будет строкой, содержащей "кашу" изо всех HTML тэгов, с которой будет очень сложно работать. Есть три основных способа анализа этой HTML строки:
+Если вы используете `XMLHttpRequest` для получения содержимого HTML-страницы, в свойстве {{domxref("XMLHttpRequest.responseText", "responseText")}} будет "сырой" HTML, работать с которым неудобно. Есть три способа упростить работу с этим "сырым" HTML:
 
-1. Использовать свойство `XMLHttpRequest.responseXML.`
-2. Вставить содержимое в тело [фрагмента документа](/ru/docs/Web/API/DocumentFragment) с помощью `fragment.body.innerHTML` и работать уже с этим фрагментом.
-3. Можно использовать [регулярные выражения](/ru/docs/JavaScript/Reference/Global_Objects/RegExp), если вы заранее знаете содержимое документа.
+1. Использовать свойство `XMLHttpRequest.responseXML`, как показано в статье [HTML в XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+2. Вставить содержимое в [фрагмент](/ru/docs/Web/API/DocumentFragment) с помощью `fragment.body.innerHTML` и работать уже с содержимым фрагмента как с DOM-деревом.
+3. Использовать {{jsxref("RegExp")}}, если вам заранее известна структура HTML. Возможно, потребуется удалить переносы строк из содержимого или учитывать их в `RegExp`. Однако, этот способ стоит использовать только в крайнем случае, ведь если HTML изменится хотя бы чуть-чуть, то регулярное выражение, скорее всего, уже не подойдёт.
 
 ## Работа с двоичными данными
 
-Хотя обычно `XMLHttpRequest` используется, чтобы получать и загружать текст, с его помощью можно обмениваться и двоичными данными. Есть несколько проверенных способов заставить `XMLHttpRequest` посылать двоичные данные. Они используют метод `XMLHttpRequest`.overrideMimeType().
+Хотя обычно {{domxref("XMLHttpRequest")}} используется для отправки и получения текстового содержимого, с его помощью можно обмениваться и двоичными данными. Есть несколько проверенных способов заставить `XMLHttpRequest` посылать двоичные данные. Они заключаются в использовании метода {{domxref("XMLHttpRequest.overrideMimeType", "overrideMimeType()")}}.
 
 ```js
-var oReq = new XMLHttpRequest();
-oReq.open("GET", url, true);
-// получаем необработанные данные в виде двоичной строки
-oReq.overrideMimeType("text/plain; charset=x-user-defined");
+const req = new XMLHttpRequest();
+req.open("GET", url);
+// просим извлечь данные в виде двоичной строки без обработки
+req.overrideMimeType("text/plain; charset=x-user-defined");
 /* ... */
 ```
 
-Спецификация XMLHttpRequest Level 2 добавляет новые атрибуты [responseType](http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute), значительно облегчающие работу с двоичными данными:
+Однако, существуют и более современные способы, так как атрибут {{domxref("XMLHttpRequest.responseType", "responseType")}} теперь поддерживает ряд дополнительных типов содержимого, что существенно упрощает отправку и получение двоичных данных.
+
+Для примера рассмотрим фрагмент, где используется "`arraybuffer`" как значение `responseType` для загрузки содержимого как объекта {{jsxref("ArrayBuffer")}}, в котором хранятся сырые двоичные данные.
 
 ```js
-var oReq = new XMLHttpRequest();
+const req = new XMLHttpRequest();
 
-oReq.open("GET", url, true);
-oReq.responseType = "arraybuffer";
-oReq.onload = function(e) {
-  var arraybuffer = oReq.response; // not responseText
+req.onload = (e) => {
+  const arraybuffer = req.response; // именно response, не responseText
   /* ... */
-}
-oReq.send();
+};
+req.open("GET", url);
+req.responseType = "arraybuffer";
+req.send();
 ```
 
-Больше примеров можно найти на странице [Отправка и получение двоичных данных](/ru/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data).
+Больше примеров в статье [Отправка и получение бинарных данных](/ru/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data).
 
-## Отслеживание процесса загрузки
+## Отслеживание прогресса загрузки
 
-`XMLHttpRequest` позволяет подписываться на различные события, которые могут произойти в процессе обработки запроса. Сюда входят периодические уведомления о состоянии запроса, сообщения об ошибках и так далее.
+`XMLHttpRequest` позволяет подписываться на различные события, которые могут произойти в процессе обработки запроса: периодические уведомления о состоянии запроса, сообщения об ошибках и так далее.
 
-Отслеживание событий процесса загрузки следует спецификации Web API [progress events](http://dev.w3.org/2006/webapi/progress/Progress.html): эти события реализуют интерфейс {{domxref("ProgressEvent")}}.
+Следуя [спецификации](https://xhr.spec.whatwg.org/#interface-progressevent) `XMLHttpRequest` поддерживает событие {{domxref("XMLHttpRequest/progress_event", "progress")}} и реализует интерфейс {{domxref("ProgressEvent")}}. Для получения информации о прогрессе загрузки используйте события:
+
+- {{domxref("XMLHttpRequest/progress_event", "progress")}}
+  - : Наступает каждый раз при изменении объёма переданных данных.
+- {{domxref("XMLHttpRequest/load_event", "load")}}
+  - : Наступает по завершению передачи, когда все данные доступны в `response`.
 
 ```js
-var oReq = new XMLHttpRequest();
+const req = new XMLHttpRequest();
 
-oReq.addEventListener("progress", updateProgress, false);
-oReq.addEventListener("load", transferComplete, false);
-oReq.addEventListener("error", transferFailed, false);
-oReq.addEventListener("abort", transferCanceled, false);
+req.addEventListener("progress", updateProgress);
+req.addEventListener("load", transferComplete);
+req.addEventListener("error", transferFailed);
+req.addEventListener("abort", transferCanceled);
 
-oReq.open();
+req.open();
 
 // ...
 
-// состояние передачи от сервера к клиенту (загрузка)
-function updateProgress (oEvent) {
-  if (oEvent.lengthComputable) {
-    var percentComplete = oEvent.loaded / oEvent.total;
+// отслеживание прогресса передачи от сервера к клиенту (загрузка)
+function updateProgress(event) {
+  if (event.lengthComputable) {
+    const percentComplete = (event.loaded / event.total) * 100;
     // ...
   } else {
-    // Невозможно вычислить состояние загрузки, так как размер неизвестен
+    // невозможно вычислить состояние загрузки, так как размер неизвестен
   }
 }
 
 function transferComplete(evt) {
-  alert("Загрузка завершена.");
+  console.log("Загрузка завершена.");
 }
 
 function transferFailed(evt) {
-  alert("При загрузке файла произошла ошибка.");
+  console.log("При загрузке произошла ошибка.");
 }
 
 function transferCanceled(evt) {
-  alert("Пользователь отменил загрузку.");
+  console.log("Пользователь отменил загрузку.");
 }
 ```
 
-На строчках 3-6 добавляются обработчики для различных событий, происходящих при передаче данных с помощью `XMLHttpRequest`.
+В 3-6 строках добавляются обработчики для различных событий, происходящих при передаче данных с помощью `XMLHttpRequest`.
 
-> **Примечание:** Обработчики нужно добавлять до того, как вызвать `open(). В противном случае события не будут обработаны.`
+> **Важно:** Обработчики нужно добавлять до вызова метода `open()`. В противном случае `progress`-события не будут обработаны.
 
-Обработчик события `progress`, представленный функцией `updateProgress()` в этом примере, получает количество байт, которое должно быть передано, и количество уже переданных байт в полях `total` и `loaded.` Но если поле `lengthComputable` равняется `false`, значит, длина сообщения неизвестна и будет отображаться как ноль.
+Обработчик события `progress`, представленный функцией `updateProgress()` в этом примере, получает количество байт, которое должно быть передано, и количество уже переданных байт в полях `total` и `loaded.` Но если длина сообщения неизвестна, поле `lengthComputable` будет равно `false`.
 
-События `progress` есть и у входящих, и у исходящих передач. События входящих передач создаются для объекта `XMLHttpRequest`, как показано в примере выше; исходящих —для `XMLHttpRequest.upload:`
+События о ходе выполнения есть как у входящих, так и у исходящих передач. Обработчики событий входящих передач задаются для объекта `XMLHttpRequest`, как в примере выше, а для исходящих — на `XMLHttpRequest.upload`:
 
 ```js
-var oReq = new XMLHttpRequest();
+const req = new XMLHttpRequest();
 
-oReq.upload.addEventListener("progress", updateProgress, false);
-oReq.upload.addEventListener("load", transferComplete, false);
-oReq.upload.addEventListener("error", transferFailed, false);
-oReq.upload.addEventListener("abort", transferCanceled, false);
+req.upload.addEventListener("progress", updateProgress);
+req.upload.addEventListener("load", transferComplete);
+req.upload.addEventListener("error", transferFailed);
+req.upload.addEventListener("abort", transferCanceled);
 
-oReq.open();
+req.open();
 ```
 
-> **Примечание:** события progress недоступны для протокола `file: .`
+> **Обратите внимание:** отслеживание прогресса недоступно для протокола `file:`.
 
-> **Примечание:** На данный момент в событиях progress есть открытые ошибки, которые влияют на Firefox 25 для [OS X](https://bugzilla.mozilla.org/show_bug.cgi?id=908375) и [Linux](https://bugzilla.mozilla.org/show_bug.cgi?id=786953).
+События о ходе выполнения наступают для каждого полученного пакета данных, включая последний, поэтому в случае, когда последний пакет получен и соединение закрыто, событие `progress` всё равно наступит. Это позволяет нам отслеживать прогресс, добавляя обработчик только для `progress`-события.
 
-> **Примечание:** Начиная с Gecko 9.0, можно быть уверенным, что события progress будут приходить для каждого пакета данных, включая последний пакет в случаях, когда он получен, и соединение закрыто прежде, чем будет создано событие progress. В этом случае, событие progress автоматическисоздастся, когда будет получено событие load для этого пакета. Это позволяет следить за процессом загрузки с помощью только событий progress.
-
-> **Примечание:** В Gecko 12.0, если событие progress вызвано с `responseType` "moz-blob", значение ответа будет {{domxref("Blob")}}, содержащим все данные, полученные на текущий момент.
-
-Также возможно засечь все три события, завершающие загрузку (`abort`, `load`, or `error`) через событие `loadend`:
+Также можно обработать все три события, завершающие загрузку (`abort`, `load`, or `error`) через событие `loadend`:
 
 ```js
-req.addEventListener("loadend", loadEnd, false);
+req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
-  alert("Передача данных завершена (но мы не знаем, успешно ли).");
+  console.log(
+    "Передача данных завершена (но мы не знаем, успешно ли)."
+  );
 }
 ```
 
-Заметьте, что событие loadend никак не сообщает, что вызвало конец передачи. Впрочем, это никак не мешает использовать его, если нужно сделать что-то вне зависимости от причины.
+Заметьте, что событие `loadend` никак не сообщает, что вызвало конец передачи. Впрочем, это никак не мешает использовать его, если нужно сделать что-то вне зависимости от причины.
 
 ## Отправка форм и загрузка файлов
 
-Есть два способа передать данные форм с помощью экземпляра `XMLHttpRequest`:
+Есть два способа передать данные форм с помощью `XMLHttpRequest`:
 
-- используя только AJAX
-- используя API [`FormData`](/ru/docs/DOM/XMLHttpRequest/FormData)
+- без помощи других API, используя только XHR;
+- с помощью {{domxref("FormData")}} API.
 
-**Второй путь** — самый простой и быстрый, но данные, полученные с его помощью, нельзя превратить в строки с помощью [JSON.stringify](/ru/docs/JavaScript/Reference/Global_Objects/JSON/stringify). **Первый путь**, наоборот, самый сложный, но зато самый гибкий и мощный.
+FormData API – самый простой и быстрый способ, но данные, полученные с его помощью, нельзя превратить в строку с помощью [JSON.stringify](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify). Использование только XHR сложнее, но этот способ самый гибкий и мощный.
 
 ### Используя только `XMLHttpRequest`
 
-Отправка форм без [`FormData`](/ru/docs/DOM/XMLHttpRequest/FormData) не требует других API, кроме `FileReader` для загрузки файлов.
+Отправка формы без FormData API в большинстве случаев не требует других API. Единственное исключение, _если вам нужно отправить один или несколько файлов_, тогда придётся использовать {{domxref("FileReader")}} API.
 
 #### Краткое введение в методы отправки
 
-Есть четыре способа послать HTML {{ HTMLElement("form") }}:
+HTML-форму {{ HTMLElement("form") }} можно отправить четырьмя способами:
 
-- использовать метод `POST` и установить атрибут `enctype` = `application/x-www-form-urlencoded` (он установлен по умолчанию);
-- использовать метод `POST` и установить атрибут `enctype` = `text/plain`;
-- использовать метод `POST` и установить атрибут `enctype` = `multipart/form-data`;
+- использовать метод `POST` и установить атрибут `enctype` в значении `application/x-www-form-urlencoded` (способ по умолчанию);
+- использовать метод `POST` и установить атрибут `enctype` в значении `text/plain`;
+- использовать метод `POST` и установить атрибут `enctype` в значении `multipart/form-data`;
 - использовать метод `GET` (в этом случае атрибут `enctype` будет проигнорирован).
 
-Рассмотрим отправку формы с двумя полями, `foo` и `baz`. Если использовать метод `POST`, сервер получит строку, похожую на одну из показанных ниже, в зависимости от типа кодирования, который вы используете:
+Рассмотрим отправку формы с двумя полями: `foo` и `baz`. Если использовать метод `POST`, сервер получит строку, похожую на одну из показанных ниже, в зависимости от типа кодирования, который вы используете:
 
 - Метод: `POST`; тип кодирования: `application/x-www-form-urlencoded` (по умолчанию):
 
-  ```
+  ```plain
   Content-Type: application/x-www-form-urlencoded
 
-  foo=bar&baz=The+first+line.&#37;0D%0AThe+second+line.%0D%0A
+  foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
   ```
 
 - Метод: `POST`; тип кодирования: `text/plain`:
 
-  ```
+  ```plain
   Content-Type: text/plain
 
   foo=bar
@@ -198,9 +220,9 @@ function loadEnd(e) {
   The second line.
   ```
 
-- Метод: `POST`; тип кодирования: `multipart/form-data`:
+- Метод: `POST`; тип кодирования: [`multipart/form-data`](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data):
 
-  ```
+  ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
 
   -----------------------------314911788813839
@@ -216,534 +238,627 @@ function loadEnd(e) {
   -----------------------------314911788813839--
   ```
 
-Instead, if you are using the `GET` method, a string like the following will be simply added to the URL:
+А если вы решите использовать метод `GET`, к адресу формы будет добавлена строка вида:
 
-```
+```plain
 ?foo=bar&baz=The%20first%20line.%0AThe%20second%20line.
 ```
 
 #### Небольшой классический фреймворк
 
-Все данные эффекты достигаются с помощью веб браузера, когда вы отправляете {{ HTMLElement("form") }}. Но если вам требуется выполнить все операции с помощью лишь JavaScript, то вам придётся проинструктировать интерпретатор обо _всех_ выполняемых операциях. Для, того чтобы отправлять формы с помощью _чистого_ AJAX, потребуется слишком комплексное описание, чтобы тут рассуждать о нем во всех подробностях. В связи с этим, мы опубликовали здесь **полный(но все ещё дидактический) фреймворк,** который всё же способен использовать все четыре способа отправки и, так же поддерживает **файловую загрузку.**
+Всё это возможно благодаря браузеру и тегу {{HTMLElement("form")}}. Но если вам требуется выполнить все операции только с помощью JavaScript, вам придётся проинструктировать интерпретатор обо _всех_ выполняемых операциях. Отправка формы с помощью _чистого_ XHR слишком сложна, чтобы рассказать вам о ней во всех деталях. Поэтому мы решили опубликовать здесь **целый (пусть и учебный) фреймворк**, который поддерживает все четыре способа отправки и даже **загрузку файлов**:
 
 ```html
-<!doctype html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Sending forms with pure AJAX &ndash; MDN</title>
-<script type="text/javascript">
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sending forms with pure AJAX &ndash; MDN</title>
+    <script>
+      "use strict";
 
-"use strict";
-
-/*\
-|*|
-|*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
-|*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
-\*/
-
-if (!XMLHttpRequest.prototype.sendAsBinary) {
-  XMLHttpRequest.prototype.sendAsBinary = function(sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
-    for (var nIdx = 0; nIdx < nBytes; nIdx++) {
-      ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
-    }
-    /* send as ArrayBufferView...: */
-    this.send(ui8Data);
-    /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
-  };
-}
-
-/*\
-|*|
-|*|  :: AJAX Form Submit Framework ::
-|*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
-|*|
-|*|  This framework is released under the GNU Public License, version 3 or later.
-|*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
-|*|
-|*|  Syntax:
-|*|
-|*|   AJAXSubmit(HTMLFormElement);
-\*/
-
-var AJAXSubmit = (function () {
-
-  function ajaxSuccess () {
-    /* console.log("AJAXSubmit - Success!"); */
-    alert(this.responseText);
-    /* you can get the serialized data through the "submittedData" custom property: */
-    /* alert(JSON.stringify(this.submittedData)); */
-  }
-
-  function submitData (oData) {
-    /* the AJAX request... */
-    var oAjaxReq = new XMLHttpRequest();
-    oAjaxReq.submittedData = oData;
-    oAjaxReq.onload = ajaxSuccess;
-    if (oData.technique === 0) {
-      /* method is GET */
-      oAjaxReq.open("get", oData.receiver.replace(/(?:\?.*)?$/, oData.segments.length > 0 ? "?" + oData.segments.join("&") : ""), true);
-      oAjaxReq.send(null);
-    } else {
-      /* method is POST */
-      oAjaxReq.open("post", oData.receiver, true);
-      if (oData.technique === 3) {
-        /* enctype is multipart/form-data */
-        var sBoundary = "---------------------------" + Date.now().toString(16);
-        oAjaxReq.setRequestHeader("Content-Type", "multipart\/form-data; boundary=" + sBoundary);
-        oAjaxReq.sendAsBinary("--" + sBoundary + "\r\n" + oData.segments.join("--" + sBoundary + "\r\n") + "--" + sBoundary + "--\r\n");
-      } else {
-        /* enctype is application/x-www-form-urlencoded or text/plain */
-        oAjaxReq.setRequestHeader("Content-Type", oData.contentType);
-        oAjaxReq.send(oData.segments.join(oData.technique === 2 ? "\r\n" : "&"));
-      }
-    }
-  }
-
-  function processStatus (oData) {
-    if (oData.status > 0) { return; }
-    /* the form is now totally serialized! do something before sending it to the server... */
-    /* doSomething(oData); */
-    /* console.log("AJAXSubmit - The form is now serialized. Submitting..."); */
-    submitData (oData);
-  }
-
-  function pushSegment (oFREvt) {
-    this.owner.segments[this.segmentIdx] += oFREvt.target.result + "\r\n";
-    this.owner.status--;
-    processStatus(this.owner);
-  }
-
-  function plainEscape (sText) {
-    /* how should I treat a text/plain form encoding? what characters are not allowed? this is what I suppose...: */
-    /* "4\3\7 - Einstein said E=mc2" ----> "4\\3\\7\ -\ Einstein\ said\ E\=mc2" */
-    return sText.replace(/[\s\=\\]/g, "\\$&");
-  }
-
-  function SubmitRequest (oTarget) {
-    var nFile, sFieldType, oField, oSegmReq, oFile, bIsPost = oTarget.method.toLowerCase() === "post";
-    /* console.log("AJAXSubmit - Serializing form..."); */
-    this.contentType = bIsPost && oTarget.enctype ? oTarget.enctype : "application\/x-www-form-urlencoded";
-    this.technique = bIsPost ? this.contentType === "multipart\/form-data" ? 3 : this.contentType === "text\/plain" ? 2 : 1 : 0;
-    this.receiver = oTarget.action;
-    this.status = 0;
-    this.segments = [];
-    var fFilter = this.technique === 2 ? plainEscape : escape;
-    for (var nItem = 0; nItem < oTarget.elements.length; nItem++) {
-      oField = oTarget.elements[nItem];
-      if (!oField.hasAttribute("name")) { continue; }
-      sFieldType = oField.nodeName.toUpperCase() === "INPUT" ? oField.getAttribute("type").toUpperCase() : "TEXT";
-      if (sFieldType === "FILE" && oField.files.length > 0) {
-        if (this.technique === 3) {
-          /* enctype is multipart/form-data */
-          for (nFile = 0; nFile < oField.files.length; nFile++) {
-            oFile = oField.files[nFile];
-            oSegmReq = new FileReader();
-            /* (custom properties:) */
-            oSegmReq.segmentIdx = this.segments.length;
-            oSegmReq.owner = this;
-            /* (end of custom properties) */
-            oSegmReq.onload = pushSegment;
-            this.segments.push("Content-Disposition: form-data; name=\"" + oField.name + "\"; filename=\""+ oFile.name + "\"\r\nContent-Type: " + oFile.type + "\r\n\r\n");
-            this.status++;
-            oSegmReq.readAsBinaryString(oFile);
-          }
-        } else {
-          /* enctype is application/x-www-form-urlencoded or text/plain or method is GET: files will not be sent! */
-          for (nFile = 0; nFile < oField.files.length; this.segments.push(fFilter(oField.name) + "=" + fFilter(oField.files[nFile++].name)));
+      // :: XHR Form Submit Framework ::
+      //
+      // https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+      //
+      // This framework is released under the GNU Public License, version 3 or later.
+      // https://www.gnu.org/licenses/gpl-3.0-standalone.html
+      //
+      // Syntax:
+      //
+      // XHRSubmit(HTMLFormElement);
+      const XHRSubmit = (function () {
+        function xhrSuccess() {
+          console.log(this.responseText);
+          // you can get the serialized data through the "submittedData" custom property:
+          // console.log(JSON.stringify(this.submittedData));
         }
-      } else if ((sFieldType !== "RADIO" && sFieldType !== "CHECKBOX") || oField.checked) {
-        /* field type is not FILE or is FILE but is empty */
-        this.segments.push(
-          this.technique === 3 ? /* enctype is multipart/form-data */
-            "Content-Disposition: form-data; name=\"" + oField.name + "\"\r\n\r\n" + oField.value + "\r\n"
-          : /* enctype is application/x-www-form-urlencoded or text/plain or method is GET */
-            fFilter(oField.name) + "=" + fFilter(oField.value)
-        );
-      }
-    }
-    processStatus(this);
-  }
 
-  return function (oFormElement) {
-    if (!oFormElement.action) { return; }
-    new SubmitRequest(oFormElement);
-  };
+        function submitData(data) {
+          const req = new XMLHttpRequest();
+          req.submittedData = data;
+          req.onload = xhrSuccess;
+          if (data.technique === 0) {
+            // method is GET
+            req.open(
+              "get",
+              data.receiver.replace(
+                /(?:\?.*)?$/,
+                data.segments.length > 0 ? `?${data.segments.join("&")}` : ""
+              ),
+              true
+            );
+            req.send(null);
+          } else {
+            // method is POST
+            req.open("post", data.receiver, true);
+            if (data.technique === 3) {
+              // enctype is multipart/form-data
+              const boundary =
+                "---------------------------" + Date.now().toString(16);
+              req.setRequestHeader(
+                "Content-Type",
+                `multipart\/form-data; boundary=${boundary}`
+              );
+              req.sendAsBinary(
+                `--${boundary}\r\n` +
+                  data.segments.join(`--${boundary}\r\n`) +
+                  `--${boundary}--\r\n`
+              );
+            } else {
+              // enctype is application/x-www-form-urlencoded or text/plain
+              req.setRequestHeader("Content-Type", data.contentType);
+              req.send(data.segments.join(data.technique === 2 ? "\r\n" : "&"));
+            }
+          }
+        }
 
-})();
+        function processStatus(data) {
+          if (data.status > 0) {
+            return;
+          }
+          // the form is now totally serialized! do something before sending it to the server…
+          // doSomething(data);
+          // console.log("XHRSubmit - The form is now serialized. Submitting...");
+          submitData(data);
+        }
 
-</script>
-</head>
-<body>
+        function pushSegment(segment) {
+          this.owner.segments[this.segmentIdx] +=
+            segment.target.result + "\r\n";
+          this.owner.status--;
+          processStatus(this.owner);
+        }
 
-<h1>Sending forms with pure AJAX</h1>
+        function plainEscape(text) {
+          // How should I treat a text/plain form encoding?
+          // What characters are not allowed? this is what I suppose…:
+          // "4\3\7 - Einstein said E=mc2" ----> "4\\3\\7\ -\ Einstein\ said\ E\=mc2"
+          return text.replace(/[\s\=\\]/g, "\\$&");
+        }
 
-<h2>Using the GET method</h2>
+        function SubmitRequest(target) {
+          const isPost = target.method.toLowerCase() === "post";
+          this.contentType =
+            isPost && target.enctype
+              ? target.enctype
+              : "application\/x-www-form-urlencoded";
+          this.technique = isPost
+            ? this.contentType === "multipart\/form-data"
+              ? 3
+              : this.contentType === "text\/plain"
+              ? 2
+              : 1
+            : 0;
+          this.receiver = target.action;
+          this.status = 0;
+          this.segments = [];
+          const filter = this.technique === 2 ? plainEscape : escape;
+          for (const field of target.elements) {
+            if (!field.hasAttribute("name")) {
+              continue;
+            }
+            const fieldType =
+              field.nodeName.toUpperCase() === "INPUT" &&
+              field.hasAttribute("type")
+                ? field.getAttribute("type").toUpperCase()
+                : "TEXT";
+            if (fieldType === "FILE" && field.files.length > 0) {
+              if (this.technique === 3) {
+                // enctype is multipart/form-data
+                for (const file of field.files) {
+                  const segmReq = new FileReader();
 
-<form action="register.php" method="get" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+                  // Custom properties:
+                  segmReq.segmentIdx = this.segments.length;
+                  segmReq.owner = this;
 
-<h2>Using the POST method</h2>
-<h3>Enctype: application/x-www-form-urlencoded (default)</h3>
+                  segmReq.onload = pushSegment;
+                  this.segments.push(
+                    'Content-Disposition: form-data; name="' +
+                      field.name +
+                      '"; filename="' +
+                      file.name +
+                      '"\r\nContent-Type: ' +
+                      file.type +
+                      "\r\n\r\n"
+                  );
+                  this.status++;
+                  segmReq.readAsBinaryString(file);
+                }
+              } else {
+                // enctype is application/x-www-form-urlencoded or text/plain or
+                // method is GET: files will not be sent!
+                for (const file of field.files) {
+                  this.segments.push(
+                    `${filter(field.name)}=${filter(file.name)}`
+                  );
+                }
+              }
+            } else if (
+              (fieldType !== "RADIO" && fieldType !== "CHECKBOX") ||
+              field.checked
+            ) {
+              // NOTE: this will submit _all_ submit buttons. Detecting the correct one is non-trivial.
+              // field type is not FILE or is FILE but is empty.
+              if (this.technique === 3) {
+                // enctype is multipart/form-data
+                this.segments.push(
+                  `Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`
+                );
+              } else {
+                // enctype is application/x-www-form-urlencoded or text/plain or method is GET
+                this.segments.push(
+                  `${filter(field.name)}=${filter(field.value)}`
+                );
+              }
+            }
+          }
+          processStatus(this);
+        }
 
-<form action="register.php" method="post" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+        return (formElement) => {
+          if (!formeElement.action) {
+            return;
+          }
+          new SubmitRequest(formElement);
+        };
+      })();
+    </script>
+  </head>
+  <body>
+    <h1>Sending forms with XHR</h1>
 
-<h3>Enctype: text/plain</h3>
+    <h2>Using the GET method</h2>
 
-<form action="register.php" method="post" enctype="text/plain" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      Your name: <input type="text" name="user" />
-    </p>
-    <p>
-      Your message:<br />
-      <textarea name="message" cols="40" rows="8"></textarea>
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <form
+      action="register.php"
+      method="get"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>Last name: <input type="text" name="lastname" /></label>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-<h3>Enctype: multipart/form-data</h3>
+    <h2>Using the POST method</h2>
+    <h3>Enctype: application/x-www-form-urlencoded (default)</h3>
 
-<form action="register.php" method="post" enctype="multipart/form-data" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Upload example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" /><br />
-      Sex:
-      <input id="sex_male" type="radio" name="sex" value="male" /> <label for="sex_male">Male</label>
-      <input id="sex_female" type="radio" name="sex" value="female" /> <label for="sex_female">Female</label><br />
-      Password: <input type="password" name="secret" /><br />
-      What do you prefer:
-      <select name="image_type">
-        <option>Books</option>
-        <option>Cinema</option>
-        <option>TV</option>
-      </select>
-    </p>
-    <p>
-      Post your photos:
-      <input type="file" multiple name="photos[]">
-    </p>
-    <p>
-      <input id="vehicle_bike" type="checkbox" name="vehicle[]" value="Bike" /> <label for="vehicle_bike">I have a bike</label><br />
-      <input id="vehicle_car" type="checkbox" name="vehicle[]" value="Car" /> <label for="vehicle_car">I have a car</label>
-    </p>
-    <p>
-      Describe yourself:<br />
-      <textarea name="description" cols="50" rows="8"></textarea>
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <form
+      action="register.php"
+      method="post"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          <label>First name:
+            <input type="text" name="firstname" />
+          </label><br />
+          <label>Last name:
+            <input type="text" name="lastname" />
+          </label>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-</body>
+    <h3>Enctype: text/plain</h3>
+
+    <form
+      action="register.php"
+      method="post"
+      enctype="text/plain"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          <label>Your name:
+            <input type="text" name="user" />
+          </label>
+        </p>
+        <p>
+          <label>Your message:<br />
+            <textarea name="message" cols="40" rows="8"></textarea>
+          </label>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
+
+    <h3>Enctype: multipart/form-data</h3>
+
+    <form
+      action="register.php"
+      method="post"
+      enctype="multipart/form-data"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Upload example</legend>
+        <p>
+          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>Last name: <input type="text" name="lastname" /></label><br />
+          Sex:
+          <input id="sex_male" type="radio" name="sex" value="male" />
+          <label for="sex_male">Male</label>
+          <input id="sex_female" type="radio" name="sex" value="female" />
+          <label for="sex_female">Female</label><br />
+          Password: <input type="password" name="secret" /><br />
+          <label>What do you prefer:
+            <select name="image_type">
+              <option>Books</option>
+              <option>Cinema</option>
+              <option>TV</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>Post your photos:
+            <input type="file" multiple name="photos[]" />
+          </label>
+        </p>
+        <p>
+          <input
+            id="vehicle_bike"
+            type="checkbox"
+            name="vehicle[]"
+            value="Bike" />
+          <label for="vehicle_bike">I have a bike</label><br />
+          <input
+            id="vehicle_car"
+            type="checkbox"
+            name="vehicle[]"
+            value="Car" />
+          <label for="vehicle_car">I have a car</label>
+        </p>
+        <p>
+          <label>Describe yourself:<br />
+            <textarea name="description" cols="50" rows="8"></textarea>
+          </label>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
 </html>
 ```
 
-Для того, чтобы произвести его тест, создайте страницу с названием **register.php** (и укажите атрибут `action` одной из данных форм) и добавьте данный _минимальный_ контент
+Чтобы воспользоваться фреймворком, создайте страницу с названием **register.php** (и укажите его в атрибуте `action` одной из форм в примере) с _минимальным_ содержимым:
 
 ```php
 <?php
-/* register.php */
+  /* register.php */
 
-header("Content-type: text/plain");
+  header("Content-type: text/plain");
 
-/*
-NOTE: You should never use `print_r()` in production scripts, or
-otherwise output client-submitted data without sanitizing it first.
-Failing to sanitize can lead to cross-site scripting vulnerabilities.
-*/
+  /*
+  NOTE: You should never use `print_r()` in production scripts, or
+  otherwise output client-submitted data without sanitizing it first.
+  Failing to sanitize can lead to cross-site scripting vulnerabilities.
+  */
 
-echo ":: data received via GET ::\n\n";
-print_r($_GET);
+  echo ":: data received via GET ::\n\n";
+  print_r($_GET);
 
-echo "\n\n:: Data received via POST ::\n\n";
-print_r($_POST);
+  echo "\n\n:: Data received via POST ::\n\n";
+  print_r($_POST);
 
-echo "\n\n:: Data received as \"raw\" (text/plain encoding) ::\n\n";
-if (isset($HTTP_RAW_POST_DATA)) { echo $HTTP_RAW_POST_DATA; }
+  echo "\n\n:: Data received as \"raw\" (text/plain encoding) ::\n\n";
+  if (isset($HTTP_RAW_POST_DATA)) { echo $HTTP_RAW_POST_DATA; }
 
-echo "\n\n:: Files received ::\n\n";
-print_r($_FILES);
+  echo "\n\n:: Files received ::\n\n";
+  print_r($_FILES);
+>
 ```
 
-Синтаксис данного скрипта представлен ниже:
+Для активации выполните код:
 
+```js
+XHRSubmit(myForm);
 ```
-AJAXSubmit(myForm);
-```
 
-> **Примечание:** Данный фреймворк использует [`FileReader`](/ru/docs/DOM/FileReader) API для передачи загрузочных файлов. Это новый API и его невозможно использовать IE9 и ниже. В связи с этим, загрузки только с использованием AJAX воспринимаются, лишь как **экспериментальные**. Если вам не требуется загружать бинарные файлы, то данный фреймворк работает в большинстве современных браузерах.
+> **Важно:** Наш фреймворк использует {{domxref("FileReader")}} API для передачи файлов. Это новый API и его невозможно использовать в IE9 и ниже. В связи с этим, загрузки только с использованием AJAX воспринимаются лишь как **экспериментальные**. Если вам не требуется загружать бинарные файлы, то данный фреймворк работает в большинстве современных браузеров.
 
-> **Примечание:** The best way to send binary content is via [ArrayBuffers](/ru/docs/JavaScript/Typed_arrays/ArrayBuffer) or [Blobs](/ru/docs/DOM/Blob) in conjuncton with the [`send()`](/ru/docs/DOM/XMLHttpRequest#send%28%29) method and possibly the [`readAsArrayBuffer()`](</ru/docs/DOM/FileReader#readAsArrayBuffer()>) method of the [`FileReader`](/ru/docs/DOM/FileReader) API. But, since the aim of this script is to work with a [stringifiable](/ru/docs/JavaScript/Reference/Global_Objects/JSON/stringify) raw data, we used the [`sendAsBinary()`](/ru/docs/DOM/XMLHttpRequest#sendAsBinary%28%29) method in conjunction with the [`readAsBinaryString()`](/ru/docs/DOM/FileReader#readAsBinaryString%28%29) method of the [`FileReader`](/ru/docs/DOM/FileReader) API. As such, the above script makes sense only when you are dealing with small files. If you do not intend to upload binary content, consider instead using the [`FormData`](/ru/docs/DOM/XMLHttpRequest/FormData) API.
+> **Обратите внимание:** Лучший способ отправить бинарные данные – использовать {{jsxref("ArrayBuffer", "ArrayBuffers")}} или {{domxref("Blob", "Blobs")}} в связке с методом {{domxref("XMLHttpRequest.send()", "send()")}} и методом {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} из `FileReader` API. Но так как цель нашего примера – поддержка возможности представить сырые данные [в виде строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify), мы использовали метод {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} в связке с {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} из `FileReader` API. Таким образом, приведенный выше код имеет смысл использовать только в том случае, если вы имеете дело с небольшими файлами. Если вы не планируете загружать двоичное содержимое, вместо этого воспользуйтесь `FormData` API.
 
-> **Примечание:** The non-standard `sendAsBinary` method is considered deprecated as of Gecko 31 and will be removed soon. The standard `send(Blob data)` method can be used instead.
+### Используя FormData
 
-### Используя объекты FormData
-
-The [`FormData`](/ru/docs/DOM/XMLHttpRequest/FormData) constructor lets you compile a set of key/value pairs to send using `XMLHttpRequest`. Its primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data". FormData objects can be utilized in a number of ways with an XMLHttpRequest. For examples and explanations of how one can utilize FormData with XMLHttpRequests see the [Using FormData Objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects) page. For didactic purpose only we post here **a _translation_ of [the previous example](#A_little_vanilla_framework) transformed so as to make use of the `FormData` API**. Note the brevity of the code:
+The {{domxref("FormData")}} constructor lets you compile a
+set of key/value pairs to send using `XMLHttpRequest`. Its primary use is in
+sending form data, but can also be used independently from a form in order to transmit
+user keyed data. The transmitted data is in the same format the form's
+`submit()` method uses to send data, if the form's encoding type were set to
+"multipart/form-data". FormData objects can be utilized in a number of ways with an
+`XMLHttpRequest`. For examples, and explanations of how one can utilize
+FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects) page. For didactic purposes here is **a _translation_ of [the previous example](#a_little_vanilla_framework) transformed to use the
+`FormData` API**. Note the brevity of the code:
 
 ```html
-<!doctype html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Sending forms with FormData &ndash; MDN</title>
-<script type="text/javascript">
-"use strict";
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sending forms with FormData &ndash; MDN</title>
+    <script>
+      "use strict";
 
-function ajaxSuccess () {
-  alert(this.responseText);
-}
-
-function AJAXSubmit (oFormElement) {
-  if (!oFormElement.action) { return; }
-  var oReq = new XMLHttpRequest();
-  oReq.onload = ajaxSuccess;
-  if (oFormElement.method.toLowerCase() === "post") {
-    oReq.open("post", oFormElement.action, true);
-    oReq.send(new FormData(oFormElement));
-  } else {
-    var oField, sFieldType, nFile, sSearch = "";
-    for (var nItem = 0; nItem < oFormElement.elements.length; nItem++) {
-      oField = oFormElement.elements[nItem];
-      if (!oField.hasAttribute("name")) { continue; }
-      sFieldType = oField.nodeName.toUpperCase() === "INPUT" ? oField.getAttribute("type").toUpperCase() : "TEXT";
-      if (sFieldType === "FILE") {
-        for (nFile = 0; nFile < oField.files.length; sSearch += "&" + escape(oField.name) + "=" + escape(oField.files[nFile++].name));
-      } else if ((sFieldType !== "RADIO" && sFieldType !== "CHECKBOX") || oField.checked) {
-        sSearch += "&" + escape(oField.name) + "=" + escape(oField.value);
+      function xhrSuccess () {
+        console.log(this.responseText);
       }
-    }
-    oReq.open("get", oFormElement.action.replace(/(?:\?.*)?$/, sSearch.replace(/^&/, "?")), true);
-    oReq.send(null);
-  }
-}
-</script>
-</head>
-<body>
 
-<h1>Sending forms with FormData</h1>
+      function XHRSubmit (formElement) {
+        if (!formElement.action) { return; }
+        const req = new XMLHttpRequest();
+        req.onload = xhrSuccess;
+        if (fFormElement.method.toLowerCase() === "post") {
+          req.open("post", formElement.action);
+          req.send(new FormData(formElement));
+        } else {
+          let search = "";
+          for (const field of formElement.elements) {
+            if (!field.hasAttribute("name")) { continue; }
+            const fieldType = field.nodeName.toUpperCase() === "INPUT" && oField.hasAttribute("type")
+              ? field.getAttribute("type").toUpperCase()
+              : "TEXT";
+            if (fieldType === "FILE") {
+              for (const file of field.files) {
+                search += `&${escape(field.name)}=${escape(file.name)}`;
+            } else if ((fieldType !== "RADIO" && fieldType !== "CHECKBOX") || field.checked) {
+              search += `&${escape(field.name)}=${escape(field.value)}`;
+            }
+          }
+          req.open("get", formElement.action.replace(/(?:\?.*)?$/, search.replace(/^&/, "?")), true);
+          req.send(null);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Sending forms with FormData</h1>
 
-<h2>Using the GET method</h2>
+    <h2>Using the GET method</h2>
 
-<form action="register.php" method="get" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <form
+      action="register.php"
+      method="get"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" />
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-<h2>Using the POST method</h2>
-<h3>Enctype: application/x-www-form-urlencoded (default)</h3>
+    <h2>Using the POST method</h2>
+    <h3>Enctype: application/x-www-form-urlencoded (default)</h3>
 
-<form action="register.php" method="post" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <form
+      action="register.php"
+      method="post"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" />
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-<h3>Enctype: text/plain</h3>
+    <h3>Enctype: text/plain</h3>
 
-<p>The text/plain encoding is not supported by the FormData API.</p>
+    <p>The text/plain encoding is not supported by the FormData API.</p>
 
-<h3>Enctype: multipart/form-data</h3>
+    <h3>Enctype: multipart/form-data</h3>
 
-<form action="register.php" method="post" enctype="multipart/form-data" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Upload example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" /><br />
-      Sex:
-      <input id="sex_male" type="radio" name="sex" value="male" /> <label for="sex_male">Male</label>
-      <input id="sex_female" type="radio" name="sex" value="female" /> <label for="sex_female">Female</label><br />
-      Password: <input type="password" name="secret" /><br />
-      What do you prefer:
-      <select name="image_type">
-        <option>Books</option>
-        <option>Cinema</option>
-        <option>TV</option>
-      </select>
-    </p>
-    <p>
-      Post your photos:
-      <input type="file" multiple name="photos[]">
-    </p>
-    <p>
-      <input id="vehicle_bike" type="checkbox" name="vehicle[]" value="Bike" /> <label for="vehicle_bike">I have a bike</label><br />
-      <input id="vehicle_car" type="checkbox" name="vehicle[]" value="Car" /> <label for="vehicle_car">I have a car</label>
-    </p>
-    <p>
-      Describe yourself:<br />
-      <textarea name="description" cols="50" rows="8"></textarea>
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
-
-</body>
+    <form
+      action="register.php"
+      method="post"
+      enctype="multipart/form-data"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Upload example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" /><br />
+          Sex:
+          <input id="sex_male" type="radio" name="sex" value="male" />
+          <label for="sex_male">Male</label>
+          <input id="sex_female" type="radio" name="sex" value="female" />
+          <label for="sex_female">Female</label><br />
+          Password: <input type="password" name="secret" /><br />
+          What do you prefer:
+          <select name="image_type">
+            <option>Books</option>
+            <option>Cinema</option>
+            <option>TV</option>
+          </select>
+        </p>
+        <p>
+          Post your photos:
+          <input type="file" multiple name="photos[]" />
+        </p>
+        <p>
+          <input
+            id="vehicle_bike"
+            type="checkbox"
+            name="vehicle[]"
+            value="Bike" />
+          <label for="vehicle_bike">I have a bike</label><br />
+          <input
+            id="vehicle_car"
+            type="checkbox"
+            name="vehicle[]"
+            value="Car" />
+          <label for="vehicle_car">I have a car</label>
+        </p>
+        <p>
+          Describe yourself:<br />
+          <textarea name="description" cols="50" rows="8"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
 </html>
 ```
 
-> **Примечание:** As we said, **{{domxref("FormData")}} objects are not [stringifiable](/ru/docs/JavaScript/Reference/Global_Objects/JSON/stringify)objects**. If you want to stringify a submitted data, use [the previous _pure_-AJAX example](#A_little_vanilla_framework). Note also that, although in this example there are some `file` {{ HTMLElement("input") }} fields, **when you submit a form through the `FormData` API you do not need to use the [`FileReader`](/ru/docs/DOM/FileReader) API also**: files are automatically loaded and uploaded.
+> **Note:** As we said, **{{domxref("FormData")}}
+> objects are not [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) objects**. If you want to stringify a submitted data, use [the previous _pure_-AJAX example](#a_little_vanilla_framework). Note
+> also that, although in this example there are some `file` {{ HTMLElement("input") }} fields, **when you submit a form through the
+> `FormData` API you do not need to use the {{domxref("FileReader")}} API
+> also**: files are automatically loaded and uploaded.
 
-## Получить дату последнего изменения
+## Получаем дату последнего изменения
 
 ```js
-function getHeaderTime () {
-  alert(this.getResponseHeader("Last-Modified"));  /* A valid GMTString date or null */
+function getHeaderTime() {
+  console.log(this.getResponseHeader("Last-Modified")); // Дата вида GMTString или null
 }
 
-var oReq = new XMLHttpRequest();
-oReq.open("HEAD" /* use HEAD if you only need the headers! */, "yourpage.html", true);
-oReq.onload = getHeaderTime;
-oReq.send();
+const req = new XMLHttpRequest();
+req.open(
+  "HEAD", // используется HEAD только если сервер требует заголовки
+  "yourpage.html"
+);
+req.onload = getHeaderTime;
+req.send();
 ```
 
 ### Do something when last modified date changes
 
-Let's create these two functions:
+Let's create two functions:
 
 ```js
-function getHeaderTime () {
+function getHeaderTime() {
+  const lastVisit = parseFloat(
+    window.localStorage.getItem(`lm_${this.filepath}`)
+  );
+  const lastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
-  var
-    nLastVisit = parseFloat(window.localStorage.getItem('lm_' + this.filepath)),
-    nLastModif = Date.parse(this.getResponseHeader("Last-Modified"));
-
-  if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
-    window.localStorage.setItem('lm_' + this.filepath, Date.now());
-    isFinite(nLastVisit) && this.callback(nLastModif, nLastVisit);
+  if (isNaN(lastVisit) || lastModified > lastVisit) {
+    window.localStorage.setItem(`lm_${this.filepath}`, Date.now());
+    isFinite(lastVisit) && this.callback(lastModified, lastVisit);
   }
-
 }
 
-function ifHasChanged(sURL, fCallback) {
-  var oReq = new XMLHttpRequest();
-  oReq.open("HEAD" /* use HEAD - we only need the headers! */, sURL, true);
-  oReq.callback = fCallback;
-  oReq.filepath = sURL;
-  oReq.onload = getHeaderTime;
-  oReq.send();
+function ifHasChanged(URL, callback) {
+  const req = new XMLHttpRequest();
+  req.open("HEAD" /* use HEAD - we only need the headers! */, URL);
+  req.callback = callback;
+  req.filepath = URL;
+  req.onload = getHeaderTime;
+  req.send();
 }
 ```
 
-Test:
+And to test:
 
 ```js
-/* Let's test the file "yourpage.html"... */
-
-ifHasChanged("yourpage.html", function (nModif, nVisit) {
-  alert("The page '" + this.filepath + "' has been changed on " + (new Date(nModif)).toLocaleString() + "!");
+// Let's test the file "yourpage.html"
+ifHasChanged("yourpage.html", function (modified, visit) {
+  console.log(
+    `The page '${this.filepath}' has been changed on ${new Date(
+      nModified
+    ).toLocaleString()}!`
+  );
 });
 ```
 
-If you want to know **whether _the current page_ has changed**, please read the article about [`document.lastModified`](/ru/docs/Web/API/document.lastModified).
+If you want to know if the current page has changed, refer to the article about {{domxref("document.lastModified")}}.
 
 ## Межсайтовые XMLHttpRequest
 
-Современные браузеры поддерживают межсайтовые запросы по стандарту [Access Control for Cross-Site Requests](/ru/docs/HTTP_access_control). Для этого, серверу необходимо дополнительно указывать заголовок `origin`. В противном случае, выбрасывается исключение `INVALID_ACCESS_ERR`.
+Современные браузеры поддерживают межсайтовые запросы по стандарту [Cross-Origin Resource Sharing](/ru/docs/Web/HTTP/CORS) (CORS). Для этого серверу необходимо дополнительно указывать заголовок `origin`. В противном случае, выбрасывается исключение `INVALID_ACCESS_ERR`.
 
 ## Обход кеширования
 
-Для кросс-браузерного обхода кеширования в конец URL-запроса достаточно добавить случайную строку в GET-параметры, то есть сразу после «?», например:
+Для межсайтового обхода кеширования в конец URL-запроса достаточно добавить случайную строку в GET-параметры, то есть сразу после «?», например:
 
-```
+```plain
 http://foo.com/bar.html -> http://foo.com/bar.html?12345
 http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
 ```
 
-Таким образом, каждый новый запрос будет происходить по новому URL и кеширование страницы не будет производиться.
+Таким образом, каждый новый запрос будет происходить по новому URL, не браться из кэша.
 
-Автоматизировать этот подход можно следующим сниппетом:
+Автоматизировать этот подход можно следующим образом:
 
 ```js
-var oReq = new XMLHttpRequest();
+const req = new XMLHttpRequest();
 
-oReq.open("GET", url + ((/\?/).test(url) ? "&" : "?") + (new Date()).getTime(), true);
-oReq.send(null);
+req.open("GET", url + (/\?/.test(url) ? "&" : "?") + new Date().getTime());
+req.send(null);
 ```
 
 ## Безопасность
 
-The recommended way to enable cross-site scripting is to use the `Access-Control-Allow-Origin` HTTP header in the response to the XMLHttpRequest.
+Рекомендуемый способ разрешить межсайтовые запросы - использовать HTTP-заголовок `Access-Control-Allow-Origin` в ответе на XMLHttpRequest.
 
-### XMLHttpRequests being stopped
+### XMLHttpRequests был остановлен
 
-If you end up with an XMLHttpRequest having `status=0` and `statusText=null`, it means that the request was not allowed to be performed. It was [`UNSENT`](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). A likely cause for this is when the [`XMLHttpRequest` origin](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is then `open()`. This case can happen for example when one has an XMLHttpRequest that gets fired on an onunload event for a window: the XMLHttpRequest gets in fact created when the window to be closed is still there, and then the request is sent (ie `open()`) when this window has lost its focus and potentially different window has gained focus. The way to avoid this problem is to set a listener on the new window "activate" event that gets set when the old window has its "unload" event fired.
+Если в завершение XMLHttpRequest вы получаете `status=0` и `statusText=null` – это означает, что запрос не был разрешен к выполнению. Его статус остался [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent). Частая причина, что указанный [`XMLHttpRequest` origin](https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-origin) (во время создания XMLHttpRequest) был изменён в следствии вызова `open()`. Такое может произойти, например, когда есть XMLHttpRequest, который запускается при событии onunload окна. XMLHttpRequest создается, когда окно, которое должно быть закрыто, всё ещё существует, но отправка запроса (другими словами, вызов `open()`) происходит, когда это окно уже потеряло свой фокус, а другое – получило. Наиболее эффективный способ избежать этой проблемы - установить слушателя на событие нового окна {{domxref("Element/DOMActivate_event", "DOMActivate")}}, которое устанавливается, как только у закрытого окна срабатывает событие {{domxref("Window/unload_event", "unload")}}.
 
-## Using XMLHttpRequest from JavaScript modules / XPCOM components
+## Воркеры
 
-Instantiating `XMLHttpRequest` from a [JavaScript module](/ru/docs/JavaScript_code_modules/Using) or an XPCOM component works a little differently; it can't be instantiated using the `XMLHttpRequest()` constructor. The constructor is not defined inside components and the code results in an error. The best way to work around this is to use the XPCOM component constructor.
+Установка `overrideMimeType` не работает с {{domxref("Worker")}}. Это баг – {{bug(678057)}}. В разных браузерах поведение может отличаться.
 
-```js
-const XMLHttpRequest = Components.Constructor("@mozilla.org/xmlextras/xmlhttprequest;1", "nsIXMLHttpRequest");
-```
+## Спецификации
 
-Unfortunately in versions of Gecko prior to Gecko 16 there is a bug which can cause requests created this way to be cancelled for no reason. If you need your code to work on Gecko 15 or earlier, you can get the XMLHttpRequest constructor from the hidden DOM window like so.
+{{Specifications}}
 
-```js
-const { XMLHttpRequest } = Components.classes["@mozilla.org/appshell/appShellService;1"]
-                                     .getService(Components.interfaces.nsIAppShellService)
-                                     .hiddenDOMWindow;
-var oReq = new XMLHttpRequest();
-```
+## Поддержка браузерами
 
-## Дополнительные ссылки
+{{Compat}}
 
-1. [MDN AJAX introduction](/ru/docs/AJAX/Getting_Started)
-2. [HTTP access control](/ru/docs/HTTP_access_control)
-3. [How to check the security state of an XMLHTTPRequest over SSL](/ru/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-4. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-5. [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-6. [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
-7. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-8. [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
-9. [Web Progress Events specification](http://dev.w3.org/2006/webapi/progress/Progress.html)
+## Смотрите также
+
+- [AJAX. С чего начать](/ru/docs/Web/Guide/AJAX/Getting_Started)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTTP access control](/en-US/docs/Web/HTTP/CORS)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [Объект `XMLHttpRequest`: спецификация WHATWG](https://xhr.spec.whatwg.org/)
