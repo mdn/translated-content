@@ -125,8 +125,8 @@ window.addEventListener("load", drawCanvas);
 
 ## Notas
 
--  `drawImage()` solo funciona correctamente en un {{domxref("HTMLVideoElement")}} cuando su {{domxref("HTMLMediaElement.readyState")}} es mayor que 1 (es decir, el evento de búsqueda se activa después de configurar la propiedad `currentTime).
-- `drawImage()` siempre utilizará del elemento de origen _el tamaño intrínseco  en píxeles de CSS_ al dibujar, recortar o escalar.
+- `drawImage()` solo funciona correctamente en un {{domxref("HTMLVideoElement")}} cuando su {{domxref("HTMLMediaElement.readyState")}} es mayor que 1 (es decir, el evento de búsqueda se activa después de configurar la propiedad `currentTime`).
+- `drawImage()` siempre utilizará del elemento de origen _el tamaño intrínseco en píxeles de CSS_ al dibujar, recortar o escalar.
 - En algunas versiones anteriores del navegador, `drawImage()` ignorará todos los metadatos EXIF en las imágenes, incluida la Orientación. Este comportamiento es especialmente problemático en dispositivos iOS. Debe detectar la Orientación usted mismo y usar la función `rotate()` para corregirla.
 
 ## Mira también
