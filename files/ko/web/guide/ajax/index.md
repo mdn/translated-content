@@ -1,7 +1,29 @@
 ---
-title: AJAX
+title: Ajax
 slug: Web/Guide/AJAX
+tags:
+  - AJAX
+  - DOM
+  - JSON
+  - JavaScript
+  - References
+  - XMLHttpRequest
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/ko/docs/Web/Guide/AJAX")}}
+  <ol>
+    <li class="toggle">
+      <details>
+        <summary>Guides</summary>
+        <ol>
+          {{ListSubpagesForSidebar("/ko/docs/Web/Guide")}}
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>
+
 
 **[시작하기](/ko/AJAX/Getting_Started)** AJAX를 소개합니다.
 
