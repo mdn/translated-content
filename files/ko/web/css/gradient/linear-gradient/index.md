@@ -18,7 +18,7 @@ l10n:
   파란색에서 시작해서 빨간색으로 변화하는 그라데이션 */
 linear-gradient(45deg, blue, red);
 
-/* 오른쪽 아래에서 왼쪽 위으로,
+/* 오른쪽 아래에서 왼쪽 위로,
   파란색에서 시작해서 빨간색으로 변화하는 그라데이션 */
 linear-gradient(to left top, blue, red);
 
