@@ -67,17 +67,82 @@ CSS では数値データ型をいくつかみるでしょう。次のものは�
 
 Relative length units (相対的な長さの単位) は、何かとの比較によってサイズが決まります。それは、例えば、親要素のフォントサイズかもしれませんし、ビューポート(画面幅)かもしれません。この相対的な長さ単位はが便利なのは、それを作成するときにいくつかの点に注意して、そのページ内のテキストのサイズや他の要素の相対的なサイズで作成したときです。次の表にウェブ開発で便利な単位を紹介します。
 
-| Unit   | 関係先                                 |
-| ------ | -------------------------------------- |
-| `em`   | 親要素のフォントサイズ.                |
-| `ex`   | その要素のフォントの文字 "x" の高さ    |
-| `ch`   | その要素のフォントの文字 "0" の幅      |
-| `rem`  | ルート要素のフォントサイズ             |
-| `lh`   | その要素の line-hight プロパティと同じ |
-| `vw`   | ビューポート幅の 1%                    |
-| `vh`   | ビューポート高さの 1%                  |
-| `vmin` | ビューポート幅と高さの小さい方の 1%    |
-| `vmax` | ビューポート幅と高さの大きい方の 1%    |
+<table class="standard-table no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">単位</th>
+      <th scope="col">関係先</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>em</code></td>
+      <td>
+        <code><a href="/ja/docs/Web/CSS/font-size">font-size</a></code
+        > のようなタイポグラフィについての特性の場合は親のフォントサイズ、<code><a href="/ja/docs/Web/CSS/width">width</a></code> のような他の特性の場合は要素自体のフォントサイズ。
+      </td>
+    </tr>
+    <tr>
+      <td><code>ex</code></td>
+      <td>その要素のフォントの文字 "x" の高さ。</td>
+    </tr>
+    <tr>
+      <td><code>ch</code></td>
+      <td>
+        その要素のフォントの文字 "0" の advance measure（幅）。
+      </td>
+    </tr>
+    <tr>
+      <td><code>rem</code></td>
+      <td>ルート要素のフォントサイズ。</td>
+    </tr>
+    <tr>
+      <td><code>lh</code></td>
+      <td>その要素の行の高さ。</td>
+    </tr>
+    <tr>
+      <td><code>rlh</code></td>
+      <td>ルート要素の行の高さ。ルート要素の <code><a href="/ja/docs/Web/CSS/font-size">font-size</a></code> または <code><a href="/ja/docs/Web/CSS/line-height">line-height</a></code
+        > プロパティに使用する場合、プロパティの初期値を参照する。</td>
+    </tr>
+    <tr>
+      <td><code>vw</code></td>
+      <td>ビューポート幅の 1%。</td>
+    </tr>
+    <tr>
+      <td><code>vh</code></td>
+      <td>ビューポート高さの 1%。</td>
+    </tr>
+    <tr>
+      <td><code>vmin</code></td>
+      <td>ビューポート幅と高さの小さい方の 1%。</td>
+    </tr>
+    <tr>
+      <td><code>vmax</code></td>
+      <td>ビューポート幅と高さの大きい方の 1%。</td>
+    </tr>
+    <tr>
+      <td><code>vb</code></td>
+      <td>ルート要素の<a href="/ja/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">ブロック方向</a>に、最初に含むブロックの大きさの 1%。</td>
+    </tr>
+    <tr>
+      <td><code>vi</code></td>
+      <td>ルート要素の<a href="/ja/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">インライン方向</a>に、最初に含まれるブロックの大きさの 1%。</td>
+    </tr>
+    <tr>
+      <td><code>svw, svh</code></td>
+      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>の幅と高さの 1%。</td>
+    </tr>
+    <tr>
+      <td><code>lvw, lvh</code></td>
+      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>の幅と高さの 1%。</td>
+    </tr>
+    <tr>
+      <td><code>dvw, dvh</code></td>
+      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>の幅と高さの 1%。</td>
+    </tr>
+  </tbody>
+</table>
 
 #### 試してみる
 
