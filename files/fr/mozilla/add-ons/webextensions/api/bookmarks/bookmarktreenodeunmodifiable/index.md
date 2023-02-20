@@ -22,9 +22,9 @@ Un type **`bookmarks.BookmarkTreeNodeUnmodifiable`** est utilisé pour indiquer 
 
 `bookmarks.BookmarkTreeNodeUnmodifiable` est un {{jsxref("string")}} qui ne peut actuellement avoir qu'une seule valeur : `"managed"`. Cela indique que le nœud de signet a été configuré par un administrateur ou par le dépositaire d'un utilisateur supervisé (tel qu'un parent, dans le cas des contrôles parentaux).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeUnmodifiable")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

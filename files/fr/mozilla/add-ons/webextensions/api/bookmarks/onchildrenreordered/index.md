@@ -58,9 +58,9 @@ Les événements ont trois fonctions :
 - `childIds`
   - : `array` de `string`. Tableau contenant les ID de tous les éléments de signets de ce dossier, dans l'ordre où ils apparaissent maintenant dans l'interface utilisateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.onChildrenReordered")}}
+{{Compat}}
 
 ## Exemples
 

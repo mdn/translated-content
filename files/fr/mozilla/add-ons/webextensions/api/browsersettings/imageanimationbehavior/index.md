@@ -22,9 +22,9 @@ La valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs 
 - "none": n'anime pas les images du tout.
 - "once": joue une fois l'animation.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.imageAnimationBehavior", 10)}}
+{{Compat}}
 
 ## Exemples
 
