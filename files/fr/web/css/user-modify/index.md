@@ -77,7 +77,7 @@ La propriété `user-modify` est définie grâce à un mot-clé parmi ceux de la
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.user-modify")}}
+{{Compat}}
 
 ## Voir aussi
 
