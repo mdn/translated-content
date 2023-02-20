@@ -37,9 +37,9 @@ slug: Web/CSS/CSS_Animations
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## See also
 

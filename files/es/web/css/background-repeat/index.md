@@ -153,9 +153,9 @@ En este ejemplo,cada elemento de la listcoincide con un valor diferente de `back
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-repeat")}}
+{{Compat}}
 
 ## Mira también
 
