@@ -12,7 +12,7 @@
 [`Array`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)
 ```
 
-## Inline code 
+## Inline code
 
 원문의 인라인 코드는 번역하지 않습니다.
 
