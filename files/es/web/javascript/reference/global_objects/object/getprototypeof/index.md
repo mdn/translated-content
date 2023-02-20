@@ -50,7 +50,7 @@ String.prototype                   // ES6 code
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.getPrototypeOf")}}
+{{Compat}}
 
 ## Mira también
 

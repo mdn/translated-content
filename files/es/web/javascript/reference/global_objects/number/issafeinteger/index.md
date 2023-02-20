@@ -61,7 +61,7 @@ Number.isSafeInteger = Number.isSafeInteger || function (value) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.isSafeInteger")}}
+{{Compat}}
 
 ## Ver también
 

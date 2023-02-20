@@ -53,7 +53,7 @@ document.getElementById('yourElemId').style.color = 'red';
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.fontcolor")}}
+{{Compat}}
 
 ## Ver también
 
