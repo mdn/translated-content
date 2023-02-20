@@ -161,9 +161,9 @@ normalArray.constructor === Array;
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Int8Array")}}
+{{Compat}}
 
 ## Ve también
 

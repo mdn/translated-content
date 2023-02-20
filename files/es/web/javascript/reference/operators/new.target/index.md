@@ -57,9 +57,9 @@ var b = new B(); // escribe en el log "B"
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.new_target")}}
+{{Compat}}
 
 ## Ver también
 

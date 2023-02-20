@@ -95,9 +95,9 @@ console.log(generatorFunc.next(10).value); // 26
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.yield")}}
+{{Compat}}
 
 ## Ve también
 

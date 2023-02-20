@@ -24,9 +24,13 @@ El siguiente elemento puede usar el atributo `stop-color`
 
 - {{ SVGElement("stop") }}
 
-## Compatibilidad entre navegadores
+## Especificaciones
 
-{{Compat("svg.attributes.presentation.stop-color")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 
