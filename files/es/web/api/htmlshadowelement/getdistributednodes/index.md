@@ -22,7 +22,7 @@ var nodes = myShadowObject.getDistributedNodes();
 
 ## Especificaciones
 
-{{Specifications}}
+Esta función ya no está definida por ninguna especificación.
 
 ## Compatibilidad con navegadores
 

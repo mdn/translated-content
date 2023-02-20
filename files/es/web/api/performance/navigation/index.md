@@ -19,7 +19,7 @@ navObject = performance.navigation;
 
 ## Especificaciones
 
-{{Specifications}}
+Esta característica ya no está en camino de convertirse en un estándar, ya que la especificación [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) la ha marcado como obsoleta. Utilice la interfaz {{domxref("PerformanceNavigationTiming")}} en su lugar.
 
 ## Compatibilidad con navegadores
 
