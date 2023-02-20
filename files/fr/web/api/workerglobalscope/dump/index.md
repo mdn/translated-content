@@ -48,7 +48,7 @@ Cette méthode n’apparaît dans aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.dump")}}
+{{Compat}}
 
 ## Voir aussi
 

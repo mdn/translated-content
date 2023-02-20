@@ -49,7 +49,7 @@ L'opération inverse [`Node.nextSibling`](/fr/docs/Web/API/Node/nextSibling) per
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.previousSibling")}}
+{{Compat}}
 
 ## Voir aussi
 

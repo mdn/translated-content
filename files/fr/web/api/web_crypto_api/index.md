@@ -25,10 +25,8 @@ Certains navigateurs implémentent une interface appelée [`Crypto`](/fr/docs/We
 
 ## Spécifications
 
-| Spécification                                            |
-| -------------------------------------------------------- |
-| [API Web Cryptography](https://w3c.github.io/webcrypto/) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat}}
+{{Compat}}

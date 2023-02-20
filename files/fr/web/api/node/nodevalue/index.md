@@ -88,4 +88,4 @@ Lorsque `nodeValue` est défini comme étant `null`, l'assignation n'a aucun eff
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.nodeValue")}}
+{{Compat}}
