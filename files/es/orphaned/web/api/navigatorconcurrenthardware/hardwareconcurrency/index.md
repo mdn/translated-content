@@ -44,9 +44,9 @@ for (let i = 0; i < window.navigator.hardwareConcurrency; i++) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.NavigatorConcurrentHardware.hardwareConcurrency")}}
+{{Compat}}
 
 ## See also
 

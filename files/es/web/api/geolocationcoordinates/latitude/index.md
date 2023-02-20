@@ -17,9 +17,9 @@ lat = coordinates.latitude
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GeolocationCoordinates.latitude")}}
+{{Compat}}
 
 ## Mirar también
 

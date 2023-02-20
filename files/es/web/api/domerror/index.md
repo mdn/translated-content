@@ -38,14 +38,14 @@ La interfaz **`DOMError`** describe un objeto de error que contiene un nombre de
 | `InvalidNodeTypeError`       | El nodo (o uno de sus antecedentes) es incorrecto.                      |
 | `DataCloneError`             | El objeto no puede clonarse.                                            |
 
-## Compatibilidad de Navegadores
-
-{{Compat("api.DOMError")}}
-
 ## Especificaciones
 
-- [DOM 4 DOMError specification](https://www.w3.org/TR/dom/#interface-domerror)
+{{Specifications}}
 
-## Véase también
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Vér también
 
 - {{ domxref("DOMException") }}

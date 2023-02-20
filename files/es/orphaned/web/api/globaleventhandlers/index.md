@@ -207,9 +207,9 @@ _Esta interfaz no define métodos_
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers")}}
+{{Compat}}
 
 ## Ve también
 

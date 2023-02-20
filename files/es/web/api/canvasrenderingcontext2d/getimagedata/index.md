@@ -65,7 +65,7 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.getImageData")}}
+{{Compat}}
 
 ## Véase también
 

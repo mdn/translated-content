@@ -54,9 +54,13 @@ window.addEventListener("beforeunload", function (e) {
 });
 ```
 
-## Compatibilidad del navegador
+## Especificaciones
 
-{{Compat("api.BeforeUnloadEvent")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

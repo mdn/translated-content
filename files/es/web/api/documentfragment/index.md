@@ -77,9 +77,9 @@ list.appendChild(fragment)
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.DocumentFragment")}}
+{{Compat}}
 
 ## See also
 

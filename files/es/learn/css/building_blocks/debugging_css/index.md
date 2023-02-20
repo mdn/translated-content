@@ -158,7 +158,7 @@ Los navegadores simplemente ignoran el CSS que no entienden. Si la propiedad o e
 
 También puedes echar un vistazo a las tablas de compatibilidad de navegadores en la parte inferior de cada página de propiedades del proyecto MDN. Te muestran la compatibilidad de cada navegador para esa propiedad, a menudo desglosado si hay compatibilidad para un uso de la propiedad y no para otros. La tabla siguiente muestra los datos de compatibilidad para la propiedad {{cssxref ("shape-outside")}}.
 
-{{compat("css.shape-outside")}}
+{{compat}}
 
 ### ¿Hay algo más que anule tu CSS?
 

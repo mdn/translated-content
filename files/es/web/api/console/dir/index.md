@@ -28,9 +28,9 @@ console.dir(objeto);
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.dir")}}
+{{Compat}}
 
 ## Ver también
 

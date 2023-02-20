@@ -51,9 +51,9 @@ _This interface defines no method._
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.WindowEventHandlers")}}
+{{Compat}}
 
 ## See also
 
