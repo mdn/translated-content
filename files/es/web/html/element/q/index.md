@@ -91,11 +91,13 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 ## Especificaciones
 
+## Especificaciones
+
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{ Compat("html.elements.q") }}
+{{Compat}}
 
 ## Ve también
 
