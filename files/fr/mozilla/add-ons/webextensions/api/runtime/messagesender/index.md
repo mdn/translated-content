@@ -35,9 +35,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `tlsChannelId`{{optional_inline}}
   - : `string`. L'ID de canal TLS de la page ou du cadre qui a ouvert la connexion, si demandé par l'extension, et si disponible.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.MessageSender")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

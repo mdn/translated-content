@@ -76,9 +76,9 @@ discarding.then(onDiscarded, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.discard", 10)}}
+{{Compat}}
 
 > **Note :**
 >

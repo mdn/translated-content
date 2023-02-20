@@ -46,9 +46,9 @@ var sending = browser.runtime.sendNativeMessage(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'expéditeur a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. Si une erreur survient lors de la connexion à l'application native, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.sendNativeMessage")}}
+{{Compat}}
 
 ## Exemples
 
