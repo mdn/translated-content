@@ -68,11 +68,9 @@ Puedes encontrar una guía completa en [Usando la API de Solicitud de Pago](/es/
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-### Interfaz PaymentRequest
-
-{{Compat("api.PaymentRequest", 0)}}
+{{Compat}}
 
 ## Ver también
 

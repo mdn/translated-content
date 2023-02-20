@@ -21,6 +21,6 @@ parentObj = element.offsetParent;
 
 {{Specifications}}
 
-## Compatibilidad de Browser
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement.offsetParent")}}
+{{Compat}}

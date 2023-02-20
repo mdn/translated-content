@@ -88,9 +88,13 @@ La función `getUserMedia` llama a la función indicada en el errorCallback con 
 | MANDATORY_UNSATISFIED_ERROR | No se encontraron fuentes multimedia del tipo especificado en el constraints.                   |
 | NO_DEVICES_FOUND            | No se encontró ninguna webcam instalada.                                                        |
 
-## Compatibilidad con los navegadores
+## Especificaciones
 
-{{Compat("api.Navigator.getUserMedia")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Vease también
 

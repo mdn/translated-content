@@ -96,9 +96,9 @@ El comportamiento ateriror esta implementado en muchos navegadores. NodeList.pro
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.NodeList.forEach")}}
+{{Compat}}
 
 ## Ver también
 

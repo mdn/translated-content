@@ -27,7 +27,7 @@ document.getElementById('myform').reset();
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLFormElement.reset")}}
+{{Compat}}
 
 ## Vea también
 

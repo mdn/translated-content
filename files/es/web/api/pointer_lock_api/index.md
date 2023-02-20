@@ -207,9 +207,9 @@ While iframes work by default, "sandboxed" iframes block Pointer lock. The abili
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## See also
 

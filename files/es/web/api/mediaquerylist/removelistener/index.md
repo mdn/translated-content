@@ -51,9 +51,9 @@ mql.removeListener(screenTest);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.MediaQueryList.removeListener")}}
+{{Compat}}
 
 ## Ver también
 

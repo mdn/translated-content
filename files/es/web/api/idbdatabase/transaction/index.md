@@ -106,9 +106,9 @@ var objectStore = transaction.objectStore("toDoList");
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.IDBDatabase.transaction")}}
+{{Compat}}
 
 ## Ver también
 
