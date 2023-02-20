@@ -46,6 +46,6 @@ La interfaz **`DOMError`** describe un objeto de error que contiene un nombre de
 
 {{Compat}}
 
-## Vér también
+## Véase también
 
 - {{ domxref("DOMException") }}
