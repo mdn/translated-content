@@ -36,16 +36,6 @@ navigator.clipboard.readText().then(
 
 ## 브라우저 호환성
 
-### Clipboard
-
-{{Compat}}
-
-### ClipboardEvent
-
-{{Compat}}
-
-### ClipboardItem
-
 {{Compat}}
 
 ## 같이 보기

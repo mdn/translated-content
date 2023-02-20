@@ -287,7 +287,7 @@ let ripe_oranges = oranges.filter( fruit => fruit.match(/(?<=ripe )orange/));
 console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -192,11 +192,11 @@ p {
 
 {{ EmbedLiveSample('clear_both','100%','300') }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

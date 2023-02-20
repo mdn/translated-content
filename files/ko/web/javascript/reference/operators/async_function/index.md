@@ -63,11 +63,11 @@ ES2015에서와 같이 [arrow functions](/en-US/docs/Web/JavaScript/Reference/Fu
     });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

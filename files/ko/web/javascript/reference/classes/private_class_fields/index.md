@@ -184,11 +184,11 @@ private 인스턴스 메소드는 generator, async 그리고 async generator 함
     // expected output: "✨hello world✨"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

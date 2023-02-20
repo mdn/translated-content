@@ -45,7 +45,7 @@ function logKey(e) {
 
 {{EmbedLiveSample("Example")}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -120,7 +120,7 @@ To do this, you must have the "webRequestBlocking" API permission as well as the
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Fired when an error occurs.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

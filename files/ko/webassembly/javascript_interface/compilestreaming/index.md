@@ -42,11 +42,11 @@ WebAssembly.compileStreaming(fetch('simple.wasm'))
 
 결과 모듈 인스턴스는 {{jsxref ( "WebAssembly.instantiate ()")}}를 사용하여 인스턴스화되고 내 보낸 함수가 호출됩니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

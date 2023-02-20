@@ -91,32 +91,6 @@ Who thought scrollbars could be made weeeeird?
 
 ## 브라우저 호환성
 
-### `::-webkit-scrollbar`
-
-{{Compat}}
-
-### `::-webkit-scrollbar-button`
-
-{{Compat}}
-
-### `::-webkit-scrollbar-thumb`
-
-{{Compat}}
-
-### `::-webkit-scrollbar-track`
-
-{{Compat}}
-
-### `::-webkit-scrollbar-track-piece`
-
-{{Compat}}
-
-### `::-webkit-scrollbar-corner`
-
-{{Compat}}
-
-### `::-webkit-resizer`
-
 {{Compat}}
 
 ## 같이 보기

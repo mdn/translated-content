@@ -146,11 +146,11 @@ function replaceString(oldS, newS, fullS) {
 
 The code above serves as an example for substring operations. If you need to replace substrings, most of the time you will want to use {{jsxref("String.prototype.replace()")}}.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
