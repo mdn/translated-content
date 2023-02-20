@@ -35,6 +35,8 @@ browser.runtime.getManifest().version;
 
 ## Compatibilidad con navegadores
 
+Para un resumen extendido de las llaves y sub-llaves ver la [tabla completa de compatibilidad de `manifest.json` en navegadores](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
+
 {{Compat}}
 
 ## Ver También
