@@ -11,7 +11,7 @@ tags:
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("/ko/docs/Web/Guide/AJAX")}}
+  {{ListSubpagesForSidebar("/ko/docs/Web/Guide/Ajax")}}
   <ol>
     <li class="toggle">
       <details>
@@ -25,19 +25,19 @@ tags:
 </section>
 
 
-**[시작하기](/ko/AJAX/Getting_Started)** AJAX를 소개합니다.
+**[시작하기](/ko/AJAX/Getting_Started)** Ajax를 소개합니다.
 
-<strong>Asynchronous JavaScript + XML(AJAX)</strong>은 그 자체가 특정 기술은 아닙니다. 2005년 Jesse James Garrett이 처음 만들어낸 말로, [HTML](/ko/docs/Web/HTML) 또는 [XHTML](/ko/docs/Glossary/XHTML), [CSS](/ko/docs/Web/CSS), [JavaScript](/ko/docs/Web/JavaScript), [DOM](/ko/docs/Web/API/Document_Object_Model), [XML](/ko/docs/Web/XML), [XSLT](/ko/docs/Web/XSLT), 그리고 제일 중요한 [XMLHttpRequest 객체](/ko/docs/Web/API/XMLHttpRequest)를 비롯해 기존의 여러 기술을 사용하는 "새로운" 접근법을 설명하는 용어입니다.
-이렇게 다양한 기술을 AJAX 모델로서 결합했을 때, 웹 어플리케이션은 전체 페이지를 새로 고칠 필요 없이 사용자 인터페이스에 빠르고 점진적인 업데이트를 적용할 수 있습니다. 덕분에 어플리케이션은 보다 빨라지고, 사용자 행동에 대한 반응성도 좋아집니다.
+<strong>Asynchronous JavaScript + XML(Ajax)</strong>은 그 자체가 특정 기술은 아닙니다. 2005년 Jesse James Garrett이 처음 만들어낸 말로, [HTML](/ko/docs/Web/HTML) 또는 [XHTML](/ko/docs/Glossary/XHTML), [CSS](/ko/docs/Web/CSS), [JavaScript](/ko/docs/Web/JavaScript), [DOM](/ko/docs/Web/API/Document_Object_Model), [XML](/ko/docs/Web/XML), [XSLT](/ko/docs/Web/XSLT), 그리고 제일 중요한 [XMLHttpRequest 객체](/ko/docs/Web/API/XMLHttpRequest)를 비롯해 기존의 여러 기술을 사용하는 "새로운" 접근법을 설명하는 용어입니다.
+이렇게 다양한 기술을 Ajax 모델로서 결합했을 때, 웹 어플리케이션은 전체 페이지를 새로 고칠 필요 없이 사용자 인터페이스에 빠르고 점진적인 업데이트를 적용할 수 있습니다. 덕분에 어플리케이션은 보다 빨라지고, 사용자 행동에 대한 반응성도 좋아집니다.
 
-AJAX의 X가 XML을 의미하긴 하지만, 요즘은 더 가벼운 용량과 JavaScript의 일부라는 장점 때문에 {{glossary("JSON")}}을 더 많이 사용합니다. JSON과 XML 양쪽 모두 AJAX 모델에서 정보를 담을 때 사용합니다.
+Ajax의 X가 XML을 의미하긴 하지만, 요즘은 더 가벼운 용량과 JavaScript의 일부라는 장점 때문에 {{glossary("JSON")}}을 더 많이 사용합니다. JSON과 XML 양쪽 모두 Ajax 모델에서 정보를 담을 때 사용합니다.
 
 ## 문서
 
 - [시작하기](/ko/docs/Web/Guide/AJAX/Getting_Started)
-  - : AJAX 기초를 다룬 후에 간단한 연습 예제 두 개를 제공합니다.
+  - : Ajax 기초를 다룬 후에 간단한 연습 예제 두 개를 제공합니다.
 - [XMLHttpRequest API 사용하기](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - : {{domxref("XMLHttpRequest")}} API는 Ajax의 핵심입니다. 이 글은 몇 가지 AJAX 기술을 사용하는 법을 설명합니다.\* [analyzing and manipulating the response of the server](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Handling_responses)
+  - : {{domxref("XMLHttpRequest")}} API는 Ajax의 핵심입니다. 이 글은 몇 가지 Ajax 기술을 사용하는 법을 설명합니다.\* [analyzing and manipulating the response of the server](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Handling_responses)
     - [monitoring the progress of a request](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
     - [submitting forms and upload binary files](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files) – in _pure_ Ajax, or using {{domxref("FormData")}} objects
     - [creating synchronous or asynchronous requests](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Types_of_requests)
