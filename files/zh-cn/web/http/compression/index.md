@@ -20,7 +20,7 @@ slug: Web/HTTP/Compression
 - *无损压缩*。在压缩与解压缩的循环期间，不会对要恢复的数据进行修改。复原后的数据与原始数据是一致的（比特与比特之间一一对应）。对于图片文件来说，`gif` 或者 `png` 格式的文件就是采用了无损压缩算法。
 - *有损压缩*。在压缩与解压缩的循环期间，会对原始数据进行修改，但是会（希望）以用户无法觉察的方式进行。网络上的视频文件通常采用有损压缩算法，`jpeg` 格式的图片也是有损压缩。
 
-一些特定的文件格式既可以采用无损压缩算法，又可以采用有损压缩算法，例如 `webp`，并且有损压缩算法可以对压缩比率进行配置，当然这会导致压缩品质的不同。为了使一个站点获得更好的性能，理想情况是在保持可以接受的品质水准的前提下，压缩比率尽可能得高。对于图片来说，通过压缩工具生成的图片对于 Web 应用来说，优化程度可能依然不够高。一般建议选用在保持所要求的品质的前提下压缩比率尽可能高的工具。这里有[各种各样的工具](http://www.creativebloq.com/design/image-compression-tools-1132865)专门用来干这个。
+一些特定的文件格式既可以采用无损压缩算法，又可以采用有损压缩算法，例如 `webp`，并且有损压缩算法可以对压缩比率进行配置，当然这会导致压缩品质的不同。为了使一个站点获得更好的性能，理想情况是在保持可以接受的品质水准的前提下，压缩比率尽可能得高。对于图片来说，通过压缩工具生成的图片对于 Web 应用来说，优化程度可能依然不够高。一般建议选用在保持所要求的品质的前提下压缩比率尽可能高的工具。这里有[各种各样的工具](https://www.creativebloq.com/design/image-compression-tools-1132865)专门用来干这个。
 
 有损压缩通常会比无损压缩效率更高一些。
 
@@ -38,7 +38,7 @@ slug: Web/HTTP/Compression
 
 ![客户端使用“Accept-Encoding:br, gzip”标头请求内容。服务器使用 Brotli 算法压缩的主体以及所需的“Content-Encoding”和“Vary”标头进行响应。](httpcompression1.png)
 
-由于压缩技术可以带来很大的性能提升，建议对除了已经经过压缩的文件如图片、音频和视频文件之外的其它类型的文件均进行应用。
+由于压缩技术可以带来很大的性能提升，建议对除了已经经过压缩的文件如图片、音频和视频文件之外的其它类型的文件均进行压缩。
 
 Apache 服务器支持数据压缩，有 [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html)可供使用；nginx 中有[ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) 模块；在 IIS 中则可以使用 [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) 元素。
 
@@ -48,7 +48,7 @@ Apache 服务器支持数据压缩，有 [mod_deflate](http://httpd.apache.org/d
 
 ![服务器通过网络节点向客户端发送一个未经压缩的 HTTP 主体。该主体在到达客户端之前，由网络上的节点根据“Transfer-Encoding”标头进行压缩和解压缩。](httpte1.png)
 
-为了实现这个目的，HTTP 协议中采用了与端到端压缩技术所使用的内容协商机制相类似的机制：节点发送请求，使用 {{HTTPHeader("TE")}} 标头来宣布它的意愿，另外一个节点则从中选择合适的方法，进行应用，然后在 {{HTTPHeader("Transfer-Encoding")}} 标头中指出它所选择的方法。
+为了实现这个目的，HTTP 协议中采用了与端到端压缩技术所使用的内容协商机制相类似的机制：节点发送请求，使用 {{HTTPHeader("TE")}} 标头来宣告它的意愿，另外一个节点则从中选择合适的方法，进行应用，然后在 {{HTTPHeader("Transfer-Encoding")}} 标头中指出它所选择的方法。
 
 ![客户端从没有压缩相关标头的服务器请求内容。服务器会使用未经压缩的主体进行响应。该主体在到达客户端之前，由网络上的节点进行压缩和解压缩。](httpcomp2.png)
 
