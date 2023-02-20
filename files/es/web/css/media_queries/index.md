@@ -45,11 +45,9 @@ Puede obtener más información sobre el uso programático de consultas de medio
 
 {{Specifications}}
 
-## Compatibilidades con navegadores
+## Compatibilidad con navegadores
 
-### @media rule
-
-{{Compat("css.at-rules.media")}}
+{{Compat}}
 
 ## Ver también
 

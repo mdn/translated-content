@@ -99,9 +99,9 @@ img.opacity:hover {
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Más información
 

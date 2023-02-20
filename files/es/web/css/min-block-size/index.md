@@ -67,9 +67,9 @@ La propiedad `min-block-size` toma los mismos valores de las propiedades {{cssxr
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.min-block-size")}}
+{{Compat}}
 
 ## Mira también
 

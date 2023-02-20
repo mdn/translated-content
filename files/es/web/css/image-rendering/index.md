@@ -81,4 +81,4 @@ div {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.image-rendering")}}
+{{Compat}}
