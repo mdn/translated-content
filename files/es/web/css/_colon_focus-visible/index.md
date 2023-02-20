@@ -104,9 +104,9 @@ Puede que no sea obvio por qué el indicador de enfoque aparece y desaparece si 
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.focus-visible")}}
+{{Compat}}
 
 ## Vea también
 

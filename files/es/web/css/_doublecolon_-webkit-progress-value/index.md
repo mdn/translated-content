@@ -11,10 +11,6 @@ El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) *
 
 > **Nota:** para que `::-webkit-progress-value` tenga efecto en el elemento \<progress> {{cssxref("-webkit-appearance")}} deberá tener _none_ como valor.
 
-## Especificaciones
-
-No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
-
 ## Ejemplo
 
 ### Contenido CSS
@@ -43,9 +39,13 @@ Una barra de progreso con el estilo indicado anteriormente será similar a esta:
 
 ![](progress-value.png)
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.selectors.-webkit-progress-value")}}
+No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

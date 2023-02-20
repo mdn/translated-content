@@ -144,7 +144,7 @@ div em {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.nth-child")}}
+{{Compat}}
 
 ## Ver también
 

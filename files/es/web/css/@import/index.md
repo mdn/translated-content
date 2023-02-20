@@ -43,6 +43,6 @@ Dónde :
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.import")}}
+{{Compat}}

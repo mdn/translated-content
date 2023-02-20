@@ -17,9 +17,9 @@ La [pseudo-clase CSS](/es/docs/Web/CSS) **`:blank`** selecciona elementos de ent
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.blank")}}
+{{Compat}}
 
 ## Ver también
 

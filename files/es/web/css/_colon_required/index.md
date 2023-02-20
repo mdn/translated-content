@@ -41,7 +41,7 @@ Si el formulario también contiene entradas opcionales, las entradas requeridas 
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.required")}}
+{{Compat}}
 
 ## Ver también
 

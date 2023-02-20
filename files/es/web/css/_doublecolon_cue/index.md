@@ -75,9 +75,9 @@ El siguiente CSS ajusta el estilo de las anotaciones para que el texto sea blanc
 
 {{Specifications}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.cue")}}
+{{Compat}}
 
 ## Ver también
 
