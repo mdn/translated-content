@@ -264,4 +264,4 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation")}}
+{{Compat}}

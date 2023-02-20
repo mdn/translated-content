@@ -55,9 +55,9 @@ L'élément `circle` est un élément de la catégorie des Formes simples, utili
 
 Cet élément implémente l'interface {{ domxref("SVGCircleElement") }}.
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("svg.elements.circle")}}
+{{Compat}}
 
 ## Corrélat
 

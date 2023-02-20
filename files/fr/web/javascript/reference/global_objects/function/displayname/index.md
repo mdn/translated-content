@@ -82,4 +82,4 @@ N'appartient à aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.displayName")}}
+{{Compat}}
