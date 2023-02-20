@@ -5393,10 +5393,6 @@
       "maedca"
     ]
   },
-  "Web/API/UIEvent": {
-    "modified": "2019-03-23T23:01:34.700Z",
-    "contributors": ["fscholz"]
-  },
   "Web/API/UIEvent/which": {
     "modified": "2019-03-23T23:25:30.040Z",
     "contributors": ["fscholz", "jsx", "arthusu"]
