@@ -67,7 +67,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 ### 定义语义化的 HTML 结构
 
-现在控件的基本功能已经决定了，可以开始构建自定义控件了。第一步是要确定 HTML 结构并给予一些基本的语义规则。第一步就是去确定它的 HTML 结构并给予一些基本的语义。重构 {{HTMLElement("select")}} 元素需要怎么做如下：
+现在控件的基本功能已经决定了，可以开始构建自定义控件了。第一步就是去确定它的 HTML 结构并给予一些基本的语义规则。重构 {{HTMLElement("select")}} 元素需要这样做：
 
 ```html
 <!-- 这是我们小部件的主要容器。
@@ -313,7 +313,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 在我们开始之前，要记住一件和 JavaScript 有关的非常重要的事情：在浏览器中，**这是一种不可靠的技术**。当你构建一个自定义组件时，你会不得不得依赖于 JavaScript，因为这是将所有的东西联系在一起的线索。但是，很多情况下，JavaScript 不能在浏览器中运行。
 
-- 用户关掉了 JavaScript: 这是最不常见的情形。现在只有很少的人会关掉 JavaScript。
+- 用户关掉了 JavaScript：这是最不常见的情形。现在只有很少的人会关掉 JavaScript。
 - 脚本没有加载。这是最常见的情形，特别是在移动端上，在那些网络非常不可靠的地方。
 - 脚本是有问题的。你应该总是考虑这种可能性。
 - 脚本和第三方脚本冲突。这可能会由用户使用的跟踪脚本和一些书签工具引发。
@@ -416,7 +416,7 @@ window.addEventListener("load", function () {
 
 1. {{domxref("element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener")}}
-3. [`forEach`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/forEach) (这不是 DOM 而是现代 JavaScript )
+3. [`forEach`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/forEach)（这不是 DOM 而是现代 JavaScript）
 4. {{domxref("element.querySelector","querySelector")}} 和 {{domxref("element.querySelectorAll","querySelectorAll")}}
 
 除了那些特定特性的的可用性以外，在开始之前，仍然存在一个问题。由函数{{domxref("element.querySelectorAll","querySelectorAll()")}} 返回的对象是一个{{domxref("NodeList")}} 而不是 [`Array`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array)。这一点非常重要，因为 `Array` 对象支持 [`forEach`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/forEach) 函数，但是 {{domxref("NodeList")}} 不支持。由于 {{domxref("NodeList")}} 看起来实在是像一个 `Array` 并且因为 `forEach` 是这样的便于使用。我们可以轻易地添加对 {{domxref("NodeList")}} 的支持，使我们的生活更轻松一些，像这样：
