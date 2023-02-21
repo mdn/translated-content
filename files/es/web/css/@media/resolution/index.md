@@ -12,4 +12,4 @@ original_slug: Web/CSS/@media/resolución
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.resolution")}}
+{{Compat}}

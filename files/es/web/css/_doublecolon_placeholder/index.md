@@ -115,9 +115,9 @@ El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.placeholder")}}
+{{Compat}}
 
 ## Ver también
 

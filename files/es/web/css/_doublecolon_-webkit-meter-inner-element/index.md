@@ -9,10 +9,6 @@ slug: Web/CSS/::-webkit-meter-inner-element
 
 `El pseudo-elemento CSS ::-webkit-meter-inner-element` es un pseudo-elemento propietario de WebKit CSS para seleccionar y aplicar estilo al contenedor exterior de un elemento {{htmlelement("meter")}}. Es necesario una marca adicional para mostrar este elemento como si fuera de sólo lectura.
 
-## Especificaciones
-
-No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
-
 ## Ejemplos
 
 ```html
@@ -38,9 +34,13 @@ meter::-webkit-meter-inner-element {
 
 > **Nota:** Sólo funcionará en navegadores basasdo en Webkit/Blink.
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.selectors.-webkit-meter-inner-element")}}
+No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

@@ -43,9 +43,9 @@ Una barra de progreso que utilizara este estilo se visualizarías de la siguient
 
 No es parte de ninguna especificación. El un pseudo-elemento propietario de Gecko.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-range-thumb")}}
+{{Compat}}
 
 ## Ver además
 

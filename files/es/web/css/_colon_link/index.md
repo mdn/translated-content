@@ -53,7 +53,7 @@ a:link {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.link")}}
+{{Compat}}
 
 ## Ver también
 

@@ -109,7 +109,7 @@ Puede inhabilitar el brillo con el siguiente CSS o anularlo por completo para mo
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.invalid")}}
+{{Compat}}
 
 ## Ver también
 
