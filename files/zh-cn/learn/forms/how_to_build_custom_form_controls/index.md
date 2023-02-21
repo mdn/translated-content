@@ -408,23 +408,12 @@ window.addEventListener("load", function () {
 
 ### 让工作变得更简单
 
-在我们将要构建的代码之中，我们将会使用标准的 DOM API 来完成我们所要做的所有工作。尽管 DOM API 在浏览器中得到了更好支持，但是在旧的浏览器上还是会出现问题。( 特别是非常老的 Internet Explorer）。
-
+在我们将要构建的代码之中，我们将会使用标准的 DOM API 和 JavaScript 来完成要做的所有工作。我们准备使用的特性如下所示：
 
 1. {{domxref("element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener()")}}
-3. [`forEach`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/forEach)（这不是 DOM 而是现代 JavaScript）
+3. {{domxref("NodeList.forEach()")}}
 4. {{domxref("element.querySelector","querySelector()")}} 和 {{domxref("element.querySelectorAll","querySelectorAll()")}}
-
-除了那些特定特性的的可用性以外，在开始之前，仍然存在一个问题。由函数{{domxref("element.querySelectorAll","querySelectorAll()")}} 返回的对象是一个{{domxref("NodeList")}} 而不是 [`Array`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array)。这一点非常重要，因为 `Array` 对象支持 [`forEach`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/forEach) 函数，但是 {{domxref("NodeList")}} 不支持。由于 {{domxref("NodeList")}} 看起来实在是像一个 `Array` 并且因为 `forEach` 是这样的便于使用。我们可以轻易地添加对 {{domxref("NodeList")}} 的支持，使我们的生活更轻松一些，像这样：
-
-```js
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-}
-```
-
-我们没有开玩笑，这真的很容易实现。
 
 ### 构造事件回调
 
