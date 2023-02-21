@@ -11,7 +11,7 @@ El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS `::-moz-scrolled-page
 
 ## Especificaciones
 
-{{Specifications}}
+No es parte de ninguna especificación.
 
 ## Compatibilidad con navegadores
 

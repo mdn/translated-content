@@ -41,7 +41,7 @@ Un barra de progreso con ese estilo tendrá una apariencia similar a la siguient
 
 ## Especificaciones
 
-{{Specifications}}
+No es parte de ninguna especificación.
 
 ## Compatibilidad con navegadores
 
