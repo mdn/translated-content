@@ -214,7 +214,7 @@ Em resumo, usar tabelas para leiuate no lugar de usar [técnicas de leiaute CSS]
 
 ## Active learning: Criar sua primeira tabela
 
-Falamos o suficiente sobre teoria de tabelas, então, vamos partir para um exemplo prático e construir uma tabela simples. 
+Falamos o suficiente sobre teoria de tabelas, então, vamos partir para um exemplo prático e construir uma tabela simples.
 
 1. Antes de tudo, faça uma cópia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) e [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dentro de um novo diretório na sua máquina local.
 2. O conteúdo de cada tabela fica contido entre as duas tags : **[`<table></table>`](/pt-BR/docs/Web/HTML/Element/table)**. Acrescente-as dentro da seção body de seu HTML.
@@ -235,7 +235,7 @@ Falamos o suficiente sobre teoria de tabelas, então, vamos partir para um exemp
 
 Como podemos ver, as células não são posicionadas uma abaixo da outra, em vez disso elas são automaticamente alinhadas umas com as outras na mesma linha. Cada elemento `<td>` cria uma única célula que juntas formam a primeira linha. Cada célula adicionada faz a linha crescer e se tornar mais longa. 
 
-Para evitar que a linha cresça e começar a posicionar células em uma segunda linha, precisamos usar o elemento **[`<tr>`](/pt-BR/docs/Web/HTML/Element/tr)** ('tr' significa 'linha da tabela'). Vamos investigar isso agora. 
+Para evitar que a linha cresça e começar a posicionar células em uma segunda linha, precisamos usar o elemento **[`<tr>`](/pt-BR/docs/Web/HTML/Element/tr)** ('tr' significa 'linha da tabela'). Vamos investigar isso agora.
 
 1. Coloque as quatro células recém criadas dentro das tags `<tr>` tags, dessa maneira:
 
@@ -311,7 +311,7 @@ Agora veja como a tabela é exibida:
 | Owner         | Mother-in-law             | Me              | Me           | Sister-in-law             |
 | Eating Habits | Eats everyone's leftovers | Nibbles at food | Hearty eater | Will eat till he explodes |
 
-Aqui, o problema é que mesmo que possamos entender o que está acontecendo, não é tão fácil fazer uma referência cruzada dos dados, como poderia ser. Se os cabeçalhos das colunas e linhas se destacassem de alguma maneira, seria bem melhor. 
+Aqui, o problema é que mesmo que possamos entender o que está acontecendo, não é tão fácil fazer uma referência cruzada dos dados, como poderia ser. Se os cabeçalhos das colunas e linhas se destacassem de alguma maneira, seria bem melhor.
 
 ### Active learning: Cabeçalhos da tabela
 
@@ -327,7 +327,7 @@ Vamos tentar melhorar essa tabela.
 
 Já respondemos parcialmente essa pergunta - fica mais fácil encontrar os dados que estamos procurando quando o cabeçalho se destaca claramente, e o design simplesmente aparece mais bonito.
 
-> **Nota:** Cabeçalhos de tabelas têm alguns estilos padronizados — eles são fortes e centralizados mesmo que você não use nenhum estilo para a tabela, para ajudar a destacá-los. 
+> **Nota:** Cabeçalhos de tabelas têm alguns estilos padronizados — eles são fortes e centralizados mesmo que você não use nenhum estilo para a tabela, para ajudar a destacá-los.
 
 Cabeçalhos de tabelas também têm um benefício extra - juntamente com o atributo `scope` (que vamos aprender no próximo artigo), eles permitem tornar as tabelas mais acessíveis associando cada cabeçalho com todos os dados em uma mesma linha ou coluna. Leitores de tela podem então ler em voz alta uma coluna ou linha inteira de dados de uma vez só, o que é muito mais útil.
 
@@ -378,7 +378,7 @@ Mas o resultado final não é aquilo que queremos:
 
 Queremos uma maneira de fazer "Animals", "Hippopotamus", e "Crocodile" se estenderem por duas colunas, e "Horse" e "Chicken" se estenderem para baixo por duas linhas. Por sorte, os cabeçalhos das tabelas e células têm os atributos `colspan` e `rowspan`, que nos permite fazer esses ajustes. Ambos aceitam um valor de número sem unidade, que iguala o número de linhas e colunas que deseja estender. Por exemplo, `colspan="2"` faz com que uma célula se estender por duas colunas.
 
-Vamos usar `colspan` e `rowspan` para melhorar essa tabela. 
+Vamos usar `colspan` e `rowspan` para melhorar essa tabela.
 
 1. Primeiro, faça uma cópia local dos arquivos [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) e salve dentro de um novo diretório na sua máquina local. O arquivo HTML contém o mesmo exemplo de animais visto acima.
 2. Em seguida, use `colspan` para fazer "Animals", "Hippopotamus", e "Crocodile" se estender por duas colunas.
@@ -419,7 +419,7 @@ Que exibe o seguinte resultado:
 | Calcutta | Orange |
 | Robots   | Jazz   |
 
-Não é o ideal,  uma vez que temos de repetir os dados de estilo em todas as três células da coluna (provavelmente teríamos uma `class` configurada para as  três células em um projeto de verdade e especificaríamos o estilo em uma folha de estilo separada). Em vez disso, podemos especificar a informação uma única vez, no elemento `<col>`. Os elementos `<col>` são especificados dentro de um contêiner `<colgroup>` abaixo da tag de abertura `<table>`. Podemos criar o mesmo efeito que vimos acima espeficiando a tabela da seguinte maneira: 
+Não é o ideal,  uma vez que temos de repetir os dados de estilo em todas as três células da coluna (provavelmente teríamos uma `class` configurada para as  três células em um projeto de verdade e especificaríamos o estilo em uma folha de estilo separada). Em vez disso, podemos especificar a informação uma única vez, no elemento `<col>`. Os elementos `<col>` são especificados dentro de um contêiner `<colgroup>` abaixo da tag de abertura `<table>`. Podemos criar o mesmo efeito que vimos acima espeficiando a tabela da seguinte maneira:
 
 ```html
 <table>
