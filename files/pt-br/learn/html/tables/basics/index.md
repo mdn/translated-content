@@ -419,7 +419,7 @@ Que exibe o seguinte resultado:
 | Calcutta | Orange |
 | Robots   | Jazz   |
 
-Não é o ideal, uma vez que temos de repetir os dados de estilo em todas as três células da coluna (provavelmente teríamos uma `class` configurada para as  três células em um projeto de verdade e especificaríamos o estilo em uma folha de estilo separada). Em vez disso, podemos especificar a informação uma única vez, no elemento `<col>`. Os elementos `<col>` são especificados dentro de um contêiner `<colgroup>` abaixo da tag de abertura `<table>`. Podemos criar o mesmo efeito que vimos acima espeficando a tabela da seguinte maneira:
+Não é o ideal, uma vez que temos de repetir os dados de estilo em todas as três células da coluna (provavelmente teríamos uma `class` configurada para as três células em um projeto de verdade e especificaríamos o estilo em uma folha de estilo separada). Em vez disso, podemos especificar a informação uma única vez, no elemento `<col>`. Os elementos `<col>` são especificados dentro de um contêiner `<colgroup>` abaixo da tag de abertura `<table>`. Podemos criar o mesmo efeito que vimos acima espeficando a tabela da seguinte maneira:
 
 ```html
 <table>
