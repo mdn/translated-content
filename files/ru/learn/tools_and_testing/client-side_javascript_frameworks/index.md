@@ -60,7 +60,7 @@ JavaScript-фреймворки являются неотъемлемой час
 
 > **Примечание:** Учебные пособия по Ember последний раз тестировались в мае 2020 года с версией Ember/Ember CLI 3.18.0.
 >
-> Если вам нужно проверить свой код по нашей версии, вы можете найти готовую версию образца кода приложения Ember в [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). Для запущенной онлайн-версии воспользуйтесь  <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (здесь также есть несколько дополнительных функций, которые не рассматриваются в учебнике).
+> Если вам нужно проверить свой код по нашей версии, вы можете найти готовую версию образца кода приложения Ember в [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). Для запущенной онлайн-версии воспользуйтесь <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (здесь также есть несколько дополнительных функций, которые не рассматриваются в учебнике).
 
 - [1. Начало работы с Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
   - : В нашей первой статье по Ember мы рассмотрим, как работает Ember и для чего он полезен, установим локально инструментарий Ember, создадим образец приложения и выполним начальную настройку, чтобы подготовить его к разработке.
