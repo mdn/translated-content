@@ -74,13 +74,13 @@ Strict-Transport-Security 헤더가 브라우저에게 제공되면, 브라우�
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("http.headers.Strict-Transport-Security")}}
+{{Compat}}
 
 ## See also
 

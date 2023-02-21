@@ -18,5 +18,4 @@ original_slug: Глоссарий/Polymorphism
 
 ### Общие знания
 
-- {{Interwiki("wikipedia", "Полиморфизм (информатика)", "Полиморфизм")}} на Википедии.
 - [Polymorphism](https://en.wikipedia.org/wiki/Polymorphism_%28computer_science%29) на Википедии (англ.)

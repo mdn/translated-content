@@ -17,4 +17,3 @@ original_slug: Глоссарий/IETF
 ### Основные сведения
 
 - [Официальный сайт](https://www.ietf.org/)
-- {{interwiki("wikipedia", "Инженерный_совет_Интернета", "Статья на Wikipedia")}}

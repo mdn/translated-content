@@ -2818,7 +2818,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
 
 Приведённые ниже значения частично получены из ряда технических характеристик бытовой электроники:
 
-- [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (часть спецификации {{interwiki("wikipedia", "ATSC")}})
+- [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (часть спецификации [ATSC](https://ru.wikipedia.org/wiki/ATSC))
 - [Open Cable Application Platform 1.1.3](http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
 - [ANSI/CEA-2014-B](<http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI).aspx>): Веб-протокол и фреймворк для удалённого пользовательского интерфейса в сетях UPnP ™ и Интернете
 - [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
@@ -3510,8 +3510,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
     <tr>
       <td><code>"Teletext"</code></td>
       <td>
-        Включает и выключает отображение
-        {{interwiki("wikipedia", "телетекст")}}а,если
+        Включает и выключает отображение [телетекста](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BB%D0%B5%D1%82%D0%B5%D0%BA%D1%81%D1%82), если
         доступно.
       </td>
       <td><code>VK_TELETEXT</code></td>
@@ -4354,7 +4353,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <th scope="col" style="text-align: left">Android</th>
     </tr>
     <tr>
-      <td><code>"Decimal"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Decimal"</code> [1]</td>
       <td>
         <p>
           Клавиша десятичной точки (обычно <kbd>.</kbd> или <kbd>,</kbd> в
@@ -4394,7 +4393,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <td></td>
     </tr>
     <tr>
-      <td><code>"Multiply"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Multiply"</code> [1]</td>
       <td>Клавиша умножения на цифровой панели, <kbd>*</kbd>.</td>
       <td><code>VK_MULTIPLY</code> (0x6A)</td>
       <td><code>kVK_ANSI_KeypadMultiply</code> (0x43)</td>
@@ -4407,7 +4406,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <td><code>KEYCODE_NUMPAD_MULTIPLY</code> (155)</td>
     </tr>
     <tr>
-      <td><code>"Add"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Add"</code> [1]</td>
       <td>Клавиша сложения на цифровой панели, <kbd>+</kbd>.</td>
       <td><code>VK_ADD</code> (0x6B)</td>
       <td><code>kVK_ANSI_KeypadPlus</code> (0x45)</td>
@@ -4426,7 +4425,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <td><code>KEYCODE_CLEAR</code> (28)</td>
     </tr>
     <tr>
-      <td><code>"Divide"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Divide"</code> [1]</td>
       <td>Клавиша деления на цифровой панели, <kbd>/</kbd>.</td>
       <td><code>VK_DIVIDE</code> (0x6F)</td>
       <td><code>kVK_ANSI_KeypadDivide</code> (0x4B)</td>
@@ -4437,7 +4436,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <td><code>KEYCODE_NUMPAD_DIVIDE</code> (154)</td>
     </tr>
     <tr>
-      <td><code>"Subtract"</code> [1] {{obsolete_inline}}</td>
+      <td><code>"Subtract"</code> [1]</td>
       <td>Клавиша вычитания на цифровой панели, <kbd>-</kbd>.</td>
       <td><code>VK_SUBTRACT</code> (0x6D)</td>
       <td><code>kVK_ANSI_KeypadMinus</code> (0x4E)</td>

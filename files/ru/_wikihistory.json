@@ -895,7 +895,7 @@
     "modified": "2019-03-18T21:43:12.877Z",
     "contributors": ["KirilSlender"]
   },
-  "Glossary/Round_Trip_Time_(RTT)": {
+  "Glossary/Round_Trip_Time": {
     "modified": "2019-11-20T06:08:45.669Z",
     "contributors": ["Antosik"]
   },
@@ -1055,10 +1055,6 @@
     "modified": "2019-03-23T22:19:46.418Z",
     "contributors": ["smkoyan"]
   },
-  "Glossary/XHR_(XMLHttpRequest)": {
-    "modified": "2020-10-27T09:22:04.704Z",
-    "contributors": ["duckDominatrix"]
-  },
   "Glossary/XHTML": {
     "modified": "2019-03-24T00:04:41.651Z",
     "contributors": ["Sheppy", "teoli", "shaman"]
@@ -1066,6 +1062,10 @@
   "Glossary/XML": {
     "modified": "2019-03-26T03:12:53.364Z",
     "contributors": ["boxa6", "Houstton"]
+  },
+  "Glossary/XMLHttpRequest": {
+    "modified": "2020-10-27T09:22:04.704Z",
+    "contributors": ["duckDominatrix"]
   },
   "Glossary/application_context": {
     "modified": "2019-03-18T21:33:46.218Z",
@@ -1514,105 +1514,43 @@
     "modified": "2020-07-16T22:35:26.905Z",
     "contributors": ["gadjetron", "stephaniehobson"]
   },
-  "Learn/Common_questions/Available_text_editors": {
-    "modified": "2020-07-16T22:35:49.507Z",
-    "contributors": ["Waterdark"]
-  },
-  "Learn/Common_questions/Design_for_all_types_of_users": {
+  "Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users": {
     "modified": "2020-07-16T22:35:51.073Z",
     "contributors": ["podocenov"]
   },
-  "Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine": {
-    "modified": "2020-12-06T08:00:45.465Z",
-    "contributors": ["valandis", "zloypatrik88", "Glazir", "slychai85"]
-  },
-  "Learn/Common_questions/How_does_the_Internet_work": {
-    "modified": "2020-08-13T11:15:09.762Z",
-    "contributors": [
-      "bogpok",
-      "S-Sukhin",
-      "kss555",
-      "Sturmtiger",
-      "OrkVasya",
-      "andrey_fm",
-      "TinaSuhanovskaya",
-      "elcamlost"
-    ]
-  },
-  "Learn/Common_questions/How_much_does_it_cost": {
-    "modified": "2020-07-16T22:35:46.080Z",
-    "contributors": ["Mandy_May", "lasteris"]
-  },
-  "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
-    "modified": "2020-09-27T11:42:16.769Z",
-    "contributors": [
-      "sailonely",
-      "PinkDeer",
-      "beloglazof",
-      "OrkVasya",
-      "Kipelych",
-      "TinaSuhanovskaya",
-      "Hasyama",
-      "elcamlost"
-    ]
-  },
-  "Learn/Common_questions/Thinking_before_coding": {
+  "Learn/Common_questions/Design_and_accessibility/Thinking_before_coding": {
     "modified": "2020-12-06T16:34:14.303Z",
     "contributors": ["alkrukovsky", "aleshkanet", "GGWP"]
   },
-  "Learn/Common_questions/Upload_files_to_a_web_server": {
+  "Learn/Common_questions/Tools_and_setup/Available_text_editors": {
+    "modified": "2020-07-16T22:35:49.507Z",
+    "contributors": ["Waterdark"]
+  },
+  "Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine": {
+    "modified": "2020-12-06T08:00:45.465Z",
+    "contributors": ["valandis", "zloypatrik88", "Glazir", "slychai85"]
+  },
+  "Learn/Common_questions/Tools_and_setup/How_much_does_it_cost": {
+    "modified": "2020-07-16T22:35:46.080Z",
+    "contributors": ["Mandy_May", "lasteris"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server": {
     "modified": "2020-09-08T06:46:28.361Z",
     "contributors": ["mykhailo.pradosh", "Sireler", "zumgluck", "Sturmtiger"]
   },
-  "Learn/Common_questions/Using_Github_pages": {
+  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
     "modified": "2020-07-16T22:35:52.047Z",
     "contributors": ["slychai85"]
   },
-  "Learn/Common_questions/What_are_browser_developer_tools": {
+  "Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools": {
     "modified": "2020-07-16T22:35:48.058Z",
     "contributors": ["mirajane23", "fox67rus", "Metallman", "Dante103"]
   },
-  "Learn/Common_questions/What_are_hyperlinks": {
-    "modified": "2020-11-25T08:11:30.000Z",
-    "contributors": ["NikeSmitt", "Aalexashka", "vladislavukhov", "lerniri"]
-  },
-  "Learn/Common_questions/What_is_a_URL": {
-    "modified": "2020-07-16T22:35:30.373Z",
-    "contributors": ["Excent163", "gadjetron", "vladislavukhov", "lerniri"]
-  },
-  "Learn/Common_questions/What_is_a_domain_name": {
-    "modified": "2020-07-16T22:35:44.834Z",
-    "contributors": [
-      "StasBalia",
-      "sergeyshulzhenko",
-      "CLoud-Maker",
-      "thecodecreator",
-      "Glebowsky",
-      "elcamlost",
-      "makoviychuk",
-      "vladislavukhov"
-    ]
-  },
-  "Learn/Common_questions/What_is_a_web_server": {
-    "modified": "2020-07-16T22:35:32.096Z",
-    "contributors": [
-      "joshua1955",
-      "Dozorengel",
-      "beloglazof",
-      "Geloosa",
-      "erelena",
-      "Sumere4ny",
-      "talgautb",
-      "Xryak",
-      "uralbash",
-      "elcamlost"
-    ]
-  },
-  "Learn/Common_questions/What_software_do_I_need": {
+  "Learn/Common_questions/Tools_and_setup/What_software_do_I_need": {
     "modified": "2020-07-16T22:35:33.685Z",
     "contributors": ["Sturmtiger", "mr.raccoon.dev"]
   },
-  "Learn/Common_questions/set_up_a_local_testing_server": {
+  "Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server": {
     "modified": "2020-11-20T18:21:00.561Z",
     "contributors": [
       "rsvato",
@@ -1627,6 +1565,68 @@
       "Npmb",
       "cybspace",
       "teedree"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/How_does_the_Internet_work": {
+    "modified": "2020-08-13T11:15:09.762Z",
+    "contributors": [
+      "bogpok",
+      "S-Sukhin",
+      "kss555",
+      "Sturmtiger",
+      "OrkVasya",
+      "andrey_fm",
+      "TinaSuhanovskaya",
+      "elcamlost"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines": {
+    "modified": "2020-09-27T11:42:16.769Z",
+    "contributors": [
+      "sailonely",
+      "PinkDeer",
+      "beloglazof",
+      "OrkVasya",
+      "Kipelych",
+      "TinaSuhanovskaya",
+      "Hasyama",
+      "elcamlost"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/What_are_hyperlinks": {
+    "modified": "2020-11-25T08:11:30.000Z",
+    "contributors": ["NikeSmitt", "Aalexashka", "vladislavukhov", "lerniri"]
+  },
+  "Learn/Common_questions/Web_mechanics/What_is_a_URL": {
+    "modified": "2020-07-16T22:35:30.373Z",
+    "contributors": ["Excent163", "gadjetron", "vladislavukhov", "lerniri"]
+  },
+  "Learn/Common_questions/Web_mechanics/What_is_a_domain_name": {
+    "modified": "2020-07-16T22:35:44.834Z",
+    "contributors": [
+      "StasBalia",
+      "sergeyshulzhenko",
+      "CLoud-Maker",
+      "thecodecreator",
+      "Glebowsky",
+      "elcamlost",
+      "makoviychuk",
+      "vladislavukhov"
+    ]
+  },
+  "Learn/Common_questions/Web_mechanics/What_is_a_web_server": {
+    "modified": "2020-07-16T22:35:32.096Z",
+    "contributors": [
+      "joshua1955",
+      "Dozorengel",
+      "beloglazof",
+      "Geloosa",
+      "erelena",
+      "Sumere4ny",
+      "talgautb",
+      "Xryak",
+      "uralbash",
+      "elcamlost"
     ]
   },
   "Learn/Forms": {
@@ -4453,6 +4453,10 @@
     "modified": "2020-10-31T11:34:07.075Z",
     "contributors": ["tom93", "qkudev"]
   },
+  "Web/API/CustomElementRegistry/define": {
+    "modified": "2019-03-23T22:53:06.025Z",
+    "contributors": ["DenVdmj"]
+  },
   "Web/API/DOMHighResTimeStamp": {
     "modified": "2020-10-15T22:26:00.707Z",
     "contributors": ["Kiryhas"]
@@ -4742,10 +4746,6 @@
     "modified": "2020-10-15T21:38:46.139Z",
     "contributors": ["boxa6", "aethawalka"]
   },
-  "Web/API/Document/origin": {
-    "modified": "2019-03-23T22:40:35.301Z",
-    "contributors": ["vyushin"]
-  },
   "Web/API/Document/querySelector": {
     "modified": "2020-10-15T21:27:25.041Z",
     "contributors": [
@@ -4793,10 +4793,6 @@
   "Web/API/Document/referrer": {
     "modified": "2020-10-15T21:37:05.731Z",
     "contributors": ["alexxxxkkk", "boxa6", "Kochetkoff", "Vlad.Abdullin"]
-  },
-  "Web/API/Document/registerElement": {
-    "modified": "2019-03-23T22:53:06.025Z",
-    "contributors": ["DenVdmj"]
   },
   "Web/API/Document/scripts": {
     "modified": "2019-03-23T22:33:09.075Z",
@@ -4971,10 +4967,6 @@
   "Web/API/Element/contextmenu_event": {
     "modified": "2020-10-15T22:08:31.397Z",
     "contributors": ["Enroller"]
-  },
-  "Web/API/Element/createShadowRoot": {
-    "modified": "2019-03-18T21:17:10.452Z",
-    "contributors": ["Sparks"]
   },
   "Web/API/Element/error_event": {
     "modified": "2019-03-18T20:55:03.206Z",
@@ -5178,6 +5170,10 @@
   "Web/API/Element/setAttribute": {
     "modified": "2020-09-12T18:32:00.501Z",
     "contributors": ["andrewsmnv", "BychekRU", "kirill001"]
+  },
+  "Web/API/Element/shadowRoot": {
+    "modified": "2019-03-18T21:17:10.452Z",
+    "contributors": ["Sparks"]
   },
   "Web/API/Element/slot": {
     "modified": "2020-10-15T22:18:20.103Z",
@@ -6524,10 +6520,6 @@
     "modified": "2019-03-23T22:53:28.067Z",
     "contributors": ["AlexAlex"]
   },
-  "Web/API/Node/isSupported": {
-    "modified": "2019-03-23T22:53:39.075Z",
-    "contributors": ["AlexAlex"]
-  },
   "Web/API/Node/lastChild": {
     "modified": "2019-03-23T23:31:45.681Z",
     "contributors": ["kup", "fscholz", "jsx", "Yuri"]
@@ -7295,10 +7287,6 @@
     "modified": "2020-02-18T04:33:19.219Z",
     "contributors": ["mechtool"]
   },
-  "Web/API/WebRTC_API/adapter.js": {
-    "modified": "2020-02-18T04:29:30.086Z",
-    "contributors": ["mechtool"]
-  },
   "Web/API/WebSocket": {
     "modified": "2020-10-15T21:37:20.947Z",
     "contributors": [
@@ -7812,7 +7800,7 @@
     "modified": "2020-11-28T13:21:29.053Z",
     "contributors": ["ialexi-bl", "kjkoala", "RAPOS"]
   },
-  "Web/API/XMLDocument/async": {
+  "Web/API/XMLDocument": {
     "modified": "2019-04-24T21:17:23.958Z",
     "contributors": ["borseno"]
   },
@@ -7980,6 +7968,10 @@
   "Web/API/notification": {
     "modified": "2019-03-23T22:43:07.772Z",
     "contributors": ["Dimonasdf", "talgautb", "102", "teoli", "fsanano"]
+  },
+  "Web/API/origin": {
+    "modified": "2019-03-23T22:40:35.301Z",
+    "contributors": ["vyushin"]
   },
   "Web/API/performance_property": {
     "modified": "2019-03-18T21:36:16.802Z",
@@ -10133,21 +10125,6 @@
       "nedimaon"
     ]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2019-09-23T08:37:02.214Z",
-    "contributors": [
-      "niktariy",
-      "Sotik",
-      "KTatyana",
-      "Isk1n",
-      "Angelskih",
-      "Quaiby",
-      "chernysh2909",
-      "alexbaumgertner",
-      "Aleksej",
-      "Lambrusco.pro"
-    ]
-  },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2020-10-11T12:29:17.772Z",
     "contributors": ["Akhat", "bogpok"]
@@ -10220,6 +10197,10 @@
     "modified": "2020-12-10T15:09:08.081Z",
     "contributors": ["SedovDP"]
   },
+  "Web/HTML/Attributes/rel": {
+    "modified": "2019-03-23T22:35:07.110Z",
+    "contributors": ["BychekRU"]
+  },
   "Web/HTML/Block-level_elements": {
     "modified": "2019-03-23T23:03:37.270Z",
     "contributors": [
@@ -10238,6 +10219,21 @@
   "Web/HTML/CORS_enabled_image": {
     "modified": "2020-05-24T11:41:53.618Z",
     "contributors": ["sve-kai-itmo"]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2019-09-23T08:37:02.214Z",
+    "contributors": [
+      "niktariy",
+      "Sotik",
+      "KTatyana",
+      "Isk1n",
+      "Angelskih",
+      "Quaiby",
+      "chernysh2909",
+      "alexbaumgertner",
+      "Aleksej",
+      "Lambrusco.pro"
+    ]
   },
   "Web/HTML/Element": {
     "modified": "2019-03-24T00:04:23.071Z",
@@ -10898,10 +10894,6 @@
       "Chronosms"
     ]
   },
-  "Web/HTML/Link_types": {
-    "modified": "2019-03-23T22:35:07.110Z",
-    "contributors": ["BychekRU"]
-  },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-23T22:44:29.253Z",
     "contributors": ["chrisdavidmills", "mea612", "Natalya_Surikova", "lerniri"]
@@ -11086,14 +11078,6 @@
       "serieznyi",
       "mariag"
     ]
-  },
-  "Web/HTTP/Feature_Policy": {
-    "modified": "2020-10-15T22:16:37.399Z",
-    "contributors": ["ruslanlavrega81", "zwug", "moveax3"]
-  },
-  "Web/HTTP/Feature_Policy/Using_Feature_Policy": {
-    "modified": "2020-02-11T10:54:06.896Z",
-    "contributors": ["mechtool"]
   },
   "Web/HTTP/Headers": {
     "modified": "2020-10-01T10:57:48.980Z",
@@ -11350,6 +11334,10 @@
       "ENBelko",
       "SnejUgal"
     ]
+  },
+  "Web/HTTP/Permissions_Policy": {
+    "modified": "2020-10-15T22:16:37.399Z",
+    "contributors": ["ruslanlavrega81", "zwug", "moveax3"]
   },
   "Web/HTTP/Redirections": {
     "modified": "2019-11-21T10:53:45.387Z",
@@ -13234,10 +13222,6 @@
   },
   "Web/JavaScript/Reference/Global_Objects/Date/toDateString": {
     "modified": "2019-03-23T23:07:29.510Z",
-    "contributors": ["Mingun"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Date/toGMTString": {
-    "modified": "2019-03-23T23:07:35.386Z",
     "contributors": ["Mingun"]
   },
   "Web/JavaScript/Reference/Global_Objects/Date/toISOString": {
@@ -16688,7 +16672,7 @@
     "contributors": ["12kb", "FlowerDeLuce"]
   },
   "conflicting/Web/API/Node": {
-    "modified": "2019-03-23T22:53:30.789Z",
+    "modified": "2019-03-23T22:53:39.075Z",
     "contributors": ["AlexAlex"]
   },
   "conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556": {
@@ -16986,6 +16970,10 @@
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
     "modified": "2019-03-23T23:07:30.899Z",
+    "contributors": ["Mingun"]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString": {
+    "modified": "2019-03-23T23:07:35.386Z",
     "contributors": ["Mingun"]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Error": {
@@ -17697,6 +17685,10 @@
     "modified": "2019-12-29T10:30:40.493Z",
     "contributors": ["sh7dm"]
   },
+  "orphaned/Web/API/WebRTC_API/adapter.js": {
+    "modified": "2020-02-18T04:29:30.086Z",
+    "contributors": ["mechtool"]
+  },
   "orphaned/Web/API/Web_Crypto_API/Checking_authenticity_with_password": {
     "modified": "2019-04-10T04:25:54.752Z",
     "contributors": ["qkudev"]
@@ -17845,6 +17837,10 @@
       "Skolpov",
       "isatalkin"
     ]
+  },
+  "orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy": {
+    "modified": "2020-02-11T10:54:06.896Z",
+    "contributors": ["mechtool"]
   },
   "orphaned/Web/JavaScript/Guide/Об_этом_руководстве": {
     "modified": "2019-03-24T00:13:23.720Z",

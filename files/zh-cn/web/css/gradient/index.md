@@ -35,7 +35,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('linear-gradient', 240, 80)}}
+{{EmbedLiveSample('线形渐变', 240, 80)}}
 
 #### 径向渐变
 
@@ -58,7 +58,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('radial-gradient', 240, 80)}}
+{{EmbedLiveSample('径向渐变', 240, 80)}}
 
 #### 重复渐变
 
@@ -88,7 +88,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('repeating-gradient', 220, 180)}}
+{{EmbedLiveSample('重复渐变', 220, 180)}}
 
 ## 插值
 
@@ -102,7 +102,7 @@ div {
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [Using CSS gradients](/zh-CN/docs/CSS/Using_CSS_gradients),
 - 渐变方程：{{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}};

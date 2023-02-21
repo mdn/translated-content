@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 El objeto **`WebAssembly`** de JavaScript actua como un namespace para todas las funcionalidades realcionados con [WebAssembly](/es/docs/WebAssembly).
 
@@ -76,9 +76,9 @@ fetch('simple.wasm').then(response =>
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Ver también
 

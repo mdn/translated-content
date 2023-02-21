@@ -10,7 +10,7 @@ slug: Web/API/HTMLMediaElement/volume
 ## 语法
 
 ```plain
-var volume ​= video.volume; //1
+var volume = video.volume; //1
 ```
 
 ### 值

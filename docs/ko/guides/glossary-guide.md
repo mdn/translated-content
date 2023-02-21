@@ -1,4 +1,4 @@
-# 용어 지침
+# 용어 안내서
 
 새로운 용어를 추가할 때, 기존 문서의 레거시와 [국립 국어원 한국어 어문 규범](https://kornorms.korean.go.kr/main/main.do)을 고려해 추가할 것을 권장합니다.
 [국립 국어원 온라인가나다](https://www.korean.go.kr/front/onlineQna/onlineQnaList.do?mn_id=216)에서 어문 규범, 어법, 표준국어대사전 내용 등에 대하여 문의할 수 있습니다.
@@ -21,7 +21,7 @@
   - 예: 정수 값, 소수 값, 반환 값, 기본 값
   - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
 
-## 용어 지침 `참고 링크` 우선 순위
+## 용어 안내서 `참고 링크` 우선 순위
 
 - 1. 해당 단어에 대한 의견을 나눈 PR 링크
 - 2. 적절한 ko MDN 문서 링크
@@ -40,7 +40,7 @@
 | Aliasing | 별칭 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Brief history | 간략한 역사 | [링크][HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC] |
 | Browser compatibility | 브라우저 호환성 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
-| Browser support | 브라우저 지원 | [링크](http://localhost:5042/en-us/docs/Web/API/Web_Audio_API/Using_IIR_filters#browser_support) |
+| Browser support | 브라우저 지원 | [링크][Using_IIR_filters] |
 | Concept | 개념 | |
 | Conclusion | 결론 | |
 | Contact us | 문의하기 | |
@@ -48,17 +48,23 @@
 | Description | 설명 | [링크][Array]
 | Example | 예제 | [링크][target] |
 | Examples | 예제 | [링크](https://github.com/mdn/translated-content/blob/main/files/ko/web/javascript/reference/global_objects/proxy/proxy/apply/index.md) |
-| Guides | 지침 | |
+| Guides | 안내서 | |
 | In this module | 이번 과정에서는 | [링크][React_getting_started] |
+| Instance properties | 인스턴스 속성 | |
+| Instance methods | 인스턴스 메서드 | |
 | Learn More | 더 알아보기 | [링크][Mutable] |
 | Next steps | 다음 단계 | [링크][2D_breakout_game_Phaser] |
 | Polyfill | 폴리필 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Reference | 참고서 | |
 | See also | 같이 보기 | [링크][target] |
 | Specifications | 명세서 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Static properties | 정적 속성 | |
+| Static methods  | 정적 메서드 | |
+| Sticky activation | 고정 활성화 | |
 | Summary | 요약 | |
 | Syntax | 구문 | [링크][target] |
 | Tools & resources | 도구 & 리소스 | [링크][JavaScript] |
+| Transient activation | 임시 활성화 | |
 | Tutorial | 자습서 | |
 | Usage notes | 사용 일람 | |
 | Web Technologies | 웹 기술들 | [링크][Introduction_to_HTML5_Game_Development] |
@@ -72,34 +78,13 @@
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Compatibility notes | 호환성 참고 사항 | [링크][target] |
-| Parameters | 매개변수 | [링크](http://localhost:5042/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode#parameters) |
+| Directives | 지시어 | [링크][https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106] |
+| Guide | 안내서 | [링크][https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106] |
+| Instruction | 지침 | [링크][https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106] |
+| Naming | 이름 지정 | |
+| Parameters | 매개변수 | [링크][AudioWorkletNode] |
+| Requirements | 요구 사항 | |
 | Value | 값 | [링크][target] |
-
-## 안내 문구
-
-각 페이지의 안내 문구에 대한 단어 정의입니다.
-
-**사전 순으로 용어집을 편집해주세요.**
-
-| 용어 | 번역 | 참고 링크 |
-| --- | --- | --- |
-| Note | 참고 | |
-| Warning | 경고 | |
-| Callout | 알림 | |
-| Objective | 목표 | [링크][What_is_accessibility] |
-| Prerequisites | 필요한 사전 지식 | [링크][What_is_accessibility] |
-
-- callout
-
-```markdown
-> **알림:**
->
-> #### 프론트엔드 웹 개발자가 되고자 하시나요?
->
-> 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
->
-> [**시작하기**](/en-US/docs/Learn/Front-end_web_developer)
-```
 
 ## 공통 용어
 
@@ -123,7 +108,9 @@
 | Global | 전역 | |
 | Glossary | 용어 사전 | |
 | Grammar | 문법 | |
+| In modern browsers | 최신 브라우저 | |
 | Literal | 리터럴 | |
+| Mantissa | 가수부 | |
 | Method | 메서드 | [국립국어원 Method](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=11976) |
 | Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | |
 | Module | 과정 | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module) | |
@@ -180,6 +167,7 @@
 | Argument | 전달인자, 인수 | | [참고 링크](https://github.com/mdn/translated-content/pull/3888) |
 | Blocking operation | 블로킹 연산 | | |
 | Callback | 콜백 | | |
+| Dictionary | 사전 | | [참고 링크](https://github.com/mdn/translated-content/pull/10976#discussion_r1073704799) |
 | Fulfilled | 이행(함) | | |
 | Handler | 처리기 | 이벤트 처리기 | |
 | Interface | 인터페이스 | | |
@@ -195,8 +183,9 @@
 | Reject | 거부 | | |
 | Resolve | 이행 | | |
 | Rest parameters | 나머지 매개변수 | | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files) |
+| Scope | 범위 | | |
 | Settled | 처리 | | |
-| Scope | 스코프 | | |
+| Sparse array | 희소 배열 | | |
 | Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) |
 | TypedArray | 형식화 배열 | | |
 
@@ -209,10 +198,11 @@
 | Request Body | 요청 본문 | | |
 | Response Body | 응답 본문 | | |
 
+[AudioWorkletNode]: https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode#parameters
+[Using_IIR_filters]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters#browser_support
 [CSS 기본 박스 모델 입문]: https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 [Introduction_to_HTML5_Game_Development]: https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development
 [HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC]: https://developer.mozilla.org/ko/docs/Glossary/HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC
-[What_is_accessibility]: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility
 [target]: https://developer.mozilla.org/en-US/docs/Web/API/Event/target
 [GLSL_Shaders]: https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders#demo
 [Array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description

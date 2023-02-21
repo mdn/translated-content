@@ -80,14 +80,3 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 - [Cheap or Free Static Website Hosting](http://alignedleft.com/resources/cheap-web-hosting) by Scott Murray has some useful ideas on available services.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
-
-## 在本模組內
-
-- [安裝基本軟體](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [你的網站看起來會是什麼樣子？](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [與各式各樣檔案打交道](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基礎](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基本](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基礎](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [將你的網站發佈上線](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [網路的運作方式](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)

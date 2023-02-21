@@ -1,587 +1,207 @@
 ---
-title: 链接类型
+title: HTML 属性：rel
 slug: Web/HTML/Attributes/rel
-original_slug: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}
 
-在超文本标记语言中，在两种文档之间可以指定{{HTMLElement("a")}}, {{HTMLElement("area")}}或{{HTMLElement("link")}} 元素使一个页面链接到另一个页面。
+**`rel`** 属性定义了所链接的资源与当前文档的关系，在 {{HTMLElement("a")}}、{{HTMLElement("area")}} 和 {{HTMLElement("link")}} 元素上有效。支持的值取决于拥有该属性的元素。
 
-<table class="standard-table">
-  <caption>
-    下面是链接类型及其在 HTML 中的意义
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">链接类型</th>
-      <th scope="col">描述</th>
-      <th scope="col" style="width: 12em">支持的元素</th>
-      <th scope="col">不被支持的元素</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>alternate</code></td>
-      <td>
-        <ul>
-          <li>
-            如果是{{HTMLElement("link")}}元素，并且{{htmlattrxref("rel", "link")}}属性包括
-            stylesheet，则这个 link 定义为 alternate 样式表;那样的话
-            {{htmlattrxref("title", "link")}} 属性不能为空。
-          </li>
-          <li>
-            如果{{htmlattrxref("type","link")}}设置为<code>application/rss+xml</code>或者<code>application/atom+xml</code>,
-            则 link 被定义为<a
-              href="/zh-CN/docs/RSS/Getting_Started/Syndicating"
-              >syndication feed</a
-            >. 页面中第一个被定义的为默认的。
-          </li>
-          <li>
-            其它情况 link 定义为 alternate 页面：
-            <ul>
-              <li>
-                另一种介质，例如手持设备 (如果设置了
-                {{htmlattrxref("media","link")}} 属性),
-              </li>
-              <li>
-                另一种语言
-                (如果设置了{{htmlattrxref("hreflang","link")}}
-                属性),
-              </li>
-              <li>
-                另一种格式，例如 PDF
-                (如果设置了{{htmlattrxref("type","link")}} 属性),
-              </li>
-              <li>或者是以上这些的集合。</li>
-            </ul>
-          </li>
-        </ul>
-        <p>
-          （译注：link 的 alternate 定义了一个可替换的样式表，它和第一个 link
-          元素同时使用，第一个定义了首选样式，而 alternate
-          则让用户可选择替换的样式。但这个替换操作需要
-          浏览器支持，但很多浏览器比如 IE 都是不支持的。
-        </p>
-        <p>
-          所以使用到替换样式的网页，一般都用一些样式表切换的
-          JS，让用户可以自由切换界面样式。这个应该大家都见过，一些网站会给网页定义多种配色。
-          稍高阶的一些，还可以利用 JS
-          弄成随时间变化样式的，比如白天的时候显示成明色，晚上的时候显示成暗色。）
-        </p>
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td>
-        <p><em>None</em>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p><code>archives</code>{{Deprecated_Inline}}</p>
-      </td>
-      <td>
-        定义文档的超链接，该文档包含此文件的存档链接。例如。一个博客入口可以链接到每月索引页面。<br /><br /><strong
-          >Note:</strong
-        >虽然可以识别，但单数<code>archive</code>是不正确的，必须避免使用。
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td><code>author</code></td>
-      <td>
-        定义一个超链接到一个描述作者信息的页面或者提供一个方法联系作者。<br /><br /><strong
-          >Note:</strong
-        >
-        这个方法可能是
-        mailto:邮箱链接，但不推荐这样，这样可能导致机器人发送大量的垃圾邮件到这个邮箱。这种情况下，最好带一个包含联系方法的页面.。<br /><br />在{{HTMLElement("a")}},
-        {{HTMLElement("area")}} or{{HTMLElement("link")}}
-        标签的{{htmlattrxref("rev", "link")}}属性上，虽然能够识别
-        <code>made，但并不正确，应该用</code
-        >{{htmlattrxref("rel", "link")}} 属性替换。
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td><code>bookmark</code></td>
-      <td>
-        表明这个链接是一个固定链接，对于最近的{{HTMLElement("article")}}
-        祖先标签。如果没有，则表最近的 section 标签<br />bookmark
-        允许标识一个包括多个文档的页面，例如每月汇总的博客页面，或者博客集合。
-      </td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-      <td>{{HTMLElement("link")}}</td>
-    </tr>
-    <tr>
-      <td><code>canonical</code></td>
-      <td>
-        <p>
-          来自维基百科：
-          <a href="https://en.wikipedia.org/wiki/Canonical_link_element"
-            >Canonical_link_element</a
-          ><br />规范链接元素是一个 HTML 元素，它通过指定 web
-          页面的“规范”或“首选”版本作为搜索引擎优化的一部分，帮助网站管理员防止重复的内容问题。
-        </p>
-      </td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("form")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>dns-prefetch</code>{{experimental_inline}}</td>
-      <td>提示浏览器该资源需要在用户点击链接之前进行 DNS 查询和协议握手。</td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-    </tr>
-    <tr>
-      <td><code>external</code></td>
-      <td>
-        表明这个链接，是一个相对于当前网站的外部资源。点击这个链接会离开当前网站。
-      </td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-      <td>{{HTMLElement("link")}}</td>
-    </tr>
-    <tr>
-      <td><code>first</code> {{Deprecated_Inline}}</td>
-      <td>
-        表明这个链接是当前页面资源序列中的第一个<br /><br /><strong
-          >Note:</strong
-        >
-        其它选项<code>last</code>, <code>prev</code>,
-        <code>next</code
-        >.<br /><br />虽然可以识别，但同义词<code>begin</code>和<code>start</code>是不正确的，必须避免使用。
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td><code>help</code></td>
-      <td>
-        <ul>
-          <li>
-            如果是一个{{HTMLElement("a")}} 或者
-            {{HTMLElement("area")}}标签，help
-            表明这个链接，链接到一个关于父亲标签和它的后代的进一步帮助资源;
-          </li>
-          <li>
-            如果是一个{{HTMLElement("link")}}标签，help
-            表明这个链接，链接到一个关于整个页面的进一步帮助资源。
-          </li>
-        </ul>
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td><code>icon</code></td>
-      <td>
-        <p>
-          定义一个在用户界面上代表这个页面的资源，通常是一个图标（包括声音和图像）<br /><br />{{htmlattrxref("media","link")}},
-          {{htmlattrxref("type","link")}} and
-          {{htmlattrxref("sizes","link")}}
-          属性允许浏览器选择其上下文中最合适的图标。如果多种资源符合条件，浏览器会选择最后一个。
-        </p>
-        <p>
-          在树型序列中，由于这些属性只是提示，并且这些资源在进一步检查时可能是不适合的，浏览器可能选择另一个适合的。<br /><br /><strong
-            >Note:</strong
-          >
-          苹果 iOS 不支持此链接类型，也不支持
-          {{htmlattrxref("sizes","link")}}属性，就像其他移动端浏览器一样，为了
-          Web Clip 或者启动点位符选择一个页面图标。分别可使用不是标准方法的<a
-            href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"
-            ><code>apple-touch-icon</code></a
-          >
-          和<a
-            href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"
-            ><code>apple-touch-startup-image</code></a
-          >
-          替代。<br /><br /><code>在之前，经常可以看到 shortcut</code
-          >,但他不是标准的，<strong>应该不再使用</strong>。
-        </p>
-      </td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-    </tr>
-    <tr>
-      <td><code>import</code> {{Experimental_Inline}}</td>
-      <td>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/HTML_Imports"
-          >HTML Imports</a
-        >
-      </td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <p><code>index</code> {{Deprecated_Inline}}</p>
-      </td>
-      <td>
-        <p>
-          表明这个页面是一个等级体系的一部分，这个超链接指向该体系的最顶层资源。
-        </p>
-        <p>
-          如果存在一个或几个
-          <code>up</code
-          >链接，那么<code>up</code>链接的数目就是当前页面在这个等级体系里的深度。
-        </p>
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td><code>last</code> {{Deprecated_Inline}}</td>
-      <td>
-        <p>表明该超链接指向当前页面所在序列中的最后资源。</p>
-        <p>
-          <strong>Note:</strong>该序列中其他相关链接资源的 link 的 type
-          值是<code>first</code>, <code>prev</code>, <code>next。</code>
-        </p>
-        <p>虽然可以识别，但同义词<code>end</code>是不正确的，必须避免使用。</p>
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td><code>license</code></td>
-      <td>
-        <p>
-          表示超链接指向描述许可信息的文档。
-          如果不在{{HTMLElement("head")}}元素内，则该标准不会区分应用于文档特定部分或整个文档的超链接。
-          仅页面上的数据可以表明这一点。
-        </p>
-        <p>
-          <strong>Note:</strong
-          >虽然可以识别，但同义词<code>copyright</code>是不正确的，必须避免使用。
-        </p>
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td><code>manifest</code></td>
-      <td>
-        表示链接到的文件是
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest"
-          >Web App Manifest</a
-        >.
-      </td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-    </tr>
-    <tr>
-      <td><code>modulepreload</code></td>
-      <td><p>更早和更高优先级的加载模块脚本</p></td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},<br />{{HTMLElement("form")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>next</code></td>
-      <td>
-        <p>
-          表明该超链接指向的是当前页面所在序列中的下一个资源。<br /><br /><strong
-            >注意：</strong
-          >该序列中其他相关链接资源的 link 的 type 值是<code>first</code>,
-          <code>prev</code>, <code>last。</code>
-        </p>
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td><code>nofollow</code></td>
-      <td>
-        表示本文档的作者不想宣传链接的文档，例如，它是不受控的，它是一个坏的例子或如果它们有商业关系（销售环节）。nofollow
-        主要是被一些使用人气排名技术的搜索引擎所使用。
-      </td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-      <td>{{HTMLElement("link")}}</td>
-    </tr>
-    <tr>
-      <td>
-        <p><code>noopener</code></p>
-      </td>
-      <td>
-        <p>
-          指示浏览器打开链接而不授予新的浏览上下文对打开它的文档的访问权限 -
-          通过在打开的窗口中不设置{{domxref("Window.opener")}}属性（返回
-          null）。
-        </p>
-        <p>
-          当打开不受信任的链接时，这特别有用，以确保它们无法通过{{domxref("Window.opener")}}属性来篡改原始文档（有关更多详细信息，请参阅
-          <a href="https://mathiasbynens.github.io/rel-noopener/"
-            >About rel=noopener</a
-          >），同时仍提供 Referer HTTP 标头（除非也使用 noreferrer）。
-        </p>
-        <p>
-          请注意，使用<code>noopener</code>时，在决定是否打开新窗口/选项卡方面，除<code>_top</code>，<code>_self</code>和<code
-            >_parent</code
-          >
-          以外的非空目标名称都被视为<code>_blank</code> 。
-        </p>
-      </td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-      <td>{{HTMLElement("link")}}</td>
-    </tr>
-    <tr>
-      <td><code>noreferrer</code></td>
-      <td>
-        <p>
-          阻止浏览器导航到另一个页面时，通过 Referer：HTTP header
-          将该页面地址或任何其他值作为 Referrer 发送。<br />（在 Firefox 37
-          之前的 Firefox 中，此功能仅在页面中找到的链接中有效。在 UI
-          中单击的链接（例如通过上下文菜单“在新选项卡中打开”）被忽略了）。
-        </p>
-      </td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-      <td>{{HTMLElement("link")}}</td>
-    </tr>
-    <tr>
-      <td><code>opener</code> {{Experimental_Inline}}</td>
-      <td>
-        恢复带有<code>target="_blank"</code>的链接上的隐式<code>rel="noopener"</code>添加（请参阅<a
-          href="https://github.com/whatwg/html/issues/4078"
-          >相关的 HMTL 规范讨论</a
-        >,
-        <a href="https://trac.webkit.org/changeset/237144/webkit/"
-          >WebKit change</a
-        >和<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1503681"
-          >Firefox bug discussion</a
-        >）。
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},<br />{{HTMLElement("form")}}
-      </td>
-      <td>{{HTMLElement("link")}}</td>
-    </tr>
-    <tr>
-      <td><code>pingback</code><br /></td>
-      <td>
-        <p>
-          定义一个外部资源 URI，以便在对该网页发表评论或引用时调用。在
-          <a href="http://www.hixie.ch/specs/pingback/pingback">Pingback 1.0</a>
-          规范中定义了用于进行此类调用的协议。
-        </p>
-        <p>
-          注意：如果还存在 X-Pingback：HTTP
-          标头，则此标头优先于具有这种链接类型的{{HTMLElement("link")}}元素
-        </p>
-      </td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-    </tr>
-    <tr>
-      <td>
-        <p><code>preconnect</code>{{experimental_inline}}</p>
-      </td>
-      <td>
-        向浏览器提供提示，建议浏览器提前打开与链接网站的连接，而不会泄露任何私人信息或下载任何内容，以便在跟随链接时可以更快地获取链接内容。
-      </td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/zh-CN/docs/Web/HTML/Link_types/prefetch"
-          ><code>prefetch</code></a
-        >
-      </td>
-      <td>
-        提示浏览器提前加载链接的资源，因为它可能会被用户请求。
-        <p>
-          建议浏览器提前获取链接的资源，因为它很可能会被用户请求。从 Firefox 44
-          开始，考虑了{{HTMLAttrxRef("crossorigin", "link")}}属性的值，从而可以进行匿名预取。
-        </p>
-        <p>
-          注意：<a href="/zh-CN/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a
-          >详细说明了可以预取的链接以及替代方法。
-        </p>
-      </td>
-      <td>
-        {{HTMLElement("a")}} {{unimplemented_inline}},<br />{{HTMLElement("area")}}
-        {{unimplemented_inline}},<br />{{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/zh-CN/docs/Web/HTML/Link_types/preload"
-          ><code>preload</code></a
-        >
-      </td>
-      <td>
-        <p>
-          告诉浏览器下载资源，因为在当前导航期间稍后将需要该资源。有关详细信息，请参见
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content"
-            >Preloading content with rel="preload"</a
-          >
-        </p>
-      </td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},<br />{{HTMLElement("form")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>prerender</code>{{experimental_inline}}</td>
-      <td>
-        建议浏览器事先获取链接的资源，并建议将预取的内容显示在屏幕外，以便在需要时可以将其快速呈现给用户。
-      </td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-    </tr>
-    <tr>
-      <td><code>prev</code></td>
-      <td>
-        <p>指示超链接指向当前页面所在序列的优先资源。</p>
-        <p>
-          注意：与按相同顺序链接资源有关的其他链接类型是<code>first</code>，<code>last</code>，<code>next</code>。
-        </p>
-        <p>
-          虽然可以识别，但同义词<code>previous</code>是不正确的，必须避免使用。
-        </p>
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td><code>search</code></td>
-      <td>
-        <p>
-          表示超链接引用了一个文档，该文档的接口专门设计用于在此文档或站点及其资源中进行搜索。
-        </p>
-        <p>
-          如果将{{htmlattrxref("type","link")}}属性设置为<code>application/opensearchdescription+xml</code>，则该资源是<a
-            href="/zh-CN/docs/Creating_OpenSearch_plugins_for_Firefox"
-            >OpenSearch 插件</a
-          >，可以轻松将其添加到 Firefox 或 Internet Explorer
-          等某些浏览器的界面中。
-        </p>
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td><code>shortlink</code></td>
-      <td>
-        <p>
-          <a
-            href="https://code.google.com/archive/p/shortlink/wikis/Specification.wiki"
-            ><code>shortlink</code> 规范</a
-          ><br />来自维基百科：
-          <a href="https://en.wikipedia.org/wiki/URL_shortening"
-            >URL shortening</a
-          ><br />一些网站创建短链接，使通过即时消息共享链接更容易。
-        </p>
-      </td>
-      <td>{{HTMLElement("link")}}</td>
-      <td><em>None.</em></td>
-    </tr>
-    <tr>
-      <td>
-        <code>sidebar</code>
-        {{Non-standard_Inline}}{{Deprecated_Inline}}
-      </td>
-      <td>
-        <p>
-          表示超链接指向的资源更适合于辅助浏览上下文，如侧边栏。
-          没有此类上下文的浏览器将忽略此关键字。
-        </p>
-        <p>
-          虽然它曾经是 HTML 规范的一部分，但已从规范中删除，仅由 Firefox 63
-          之前的 Firefox 版本实现。
-        </p>
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td>{{HTMLElement("form")}}</td>
-    </tr>
-    <tr>
-      <td><code>stylesheet</code></td>
-      <td>
-        <p>
-          定义要用作样式表的外部资源。如果没有设置
-          <code>type</code>，在进一步检查之前，浏览器应该假定它是
-          <code>text/css</code> 样式表。<br /><br />如果与
-          <code>alternate</code> 关键字结合使用，则定义一个
-          <a href="/zh-CN/docs/Alternative_style_sheets">可选样式表</a>
-          ;在这种情况下，{{htmlattrxref("title", "link")}}
-          属性必须出现，而不能是空字符串。
-        </p>
-      </td>
-      <td>{{HTMLElement("link")}}</td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-    </tr>
-    <tr>
-      <td><code>tag</code></td>
-      <td>
-        <p>指示超链接引用了描述适用于该文档的标签的文档。</p>
-        <p>
-          <strong>注意</strong
-          >：不应在标签云的链接成员上设置此链接类型，因为这些链接对象不适用于单个文档，而不适用于一组页面。
-        </p>
-      </td>
-      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
-      <td><em>{{HTMLElement("link")}}.</em></td>
-    </tr>
-    <tr>
-      <td><code>up</code> {{Deprecated_Inline}}</td>
-      <td>
-        <p>
-          指示页面是层次结构的一部分，并且超链接指向该结构的更高级别的资源。
-        </p>
-        <p>上行链接类型的数量表示当前页面和链接资源之间的深度差。</p>
-      </td>
-      <td>
-        {{HTMLElement("a")}}, {{HTMLElement("area")}},
-        {{HTMLElement("link")}}
-      </td>
-      <td><em>None.</em></td>
-    </tr>
-  </tbody>
-</table>
+关系的类型是由 `rel` 属性的值给出的，如果存在的话，它的值必须是一组无序的、唯一的、用空格隔开的关键字。与不表达语义的 `class` 名称不同，`rel` 属性必须使用对机器和人类都有语义的标记。目前关于 `rel` 属性的可能值的注册表是 [IANA 链接关系注册表](https://www.iana.org/assignments/link-relations/link-relations.xhtml)、[HTML 现行标准](https://html.spec.whatwg.org/multipage/links.html#linkTypes)和 microformats wiki 中可自由编辑的 [existing-rel-values 页面](https://microformats.org/wiki/existing-rel-values)（根据现行标准的[建议](https://html.spec.whatwg.org/multipage/links.html#other-link-types)）。如果使用一个不存在于上述三个来源之一的 `rel` 属性，一些 HTML 验证器（如 [W3C Markup Validation Service](https://validator.w3.org/)）会产生一个警告。
+
+下表列出了一些最重要的现有关键词。在一个以空格分隔的值内的每个关键词在该值内都应该是唯一的。
+
+| `rel` 值                                                             | 描述                                                                                                                                            | {{htmlelement('link')}} | {{htmlelement('a')}} 和 {{htmlelement('area')}} | {{htmlelement('form')}} |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ----------------------------------------------- | ----------------------- |
+| [`alternate`](#attr-alternate)                                       | 当前文档的替代描述。                                                                                                                              | 链接                     | 链接                                            | 不允许                   |
+| [`author`](#attr-author)                                             | 当前文档或文章的作者。                                                                                                                            | 链接                     | 链接                                            | 不允许                   |
+| [`bookmark`](#attr-bookmark)                                         | 到最近祖先章节的永久链接。                                                                                                                         | 不允许                   | 链接                                            | 不允许                   |
+| [`canonical`](#attr-canonical)                                       | 当前文档的首要 URL。                                                                                                                              | 链接                    | 不允许                                           | 不允许                   |
+| [`dns-prefetch`](/zh-CN/docs/Web/HTML/Attributes/rel/dns-prefetch)   | 告知浏览器为目标资源的来源预先执行 DNS 解析。                                                                                                        | 外部资源                 | 不允许                                           | 不允许                   |
+| [`external`](#attr-external)                                         | 引用的文档与当前的文档不属于同一个站点。                                                                                                             | 不允许                   | 注解                                            | 注解                     |
+| [`help`](#attr-help)                                                 | 链接到上下文相关的帮助。                                                                                                                           | 链接                    | 链接                                             | 链接                     |
+| [`icon`](#attr-icon)                                                 | 代表当前文档的图标。                                                                                                                               | 外部资源                | 不允许                                           | 不允许                   |
+| [`license`](#attr-license)                                           | 表示当前文档的主要内容由被引用文件描述的版权许可所涵盖。                                                                                                | 链接                    | 链接                                             | 链接                    |
+| [`manifest`](/zh-CN/docs/Web/HTML/Attributes/rel/manifest)           | Web 应用清单                                                                                                                                     | 链接                    | 不允许                                           | 不允许                   |
+| [`me`](/zh-CN/docs/Web/HTML/Attributes/rel/me)                       | 表示当前文档代表拥有链接内容的人。                                                                                                                   | 链接                    | 链接                                             | 不允许                  |
+| [`modulepreload`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload) | 告知浏览器预先获取该脚本，并将其存储在文档的模块映射中，以便稍后评估。也可以一同获取该模块的依赖关系。                                                         | 外部资源                 | 不允许                                           | 不允许                  |
+| [`next`](#attr-next)                                                 | 表示当前文档是一个系列的一部分，被引用的文档是该系列中的下一个文档。                                                                                      | 链接                    | 链接                                             | 链接                    |
+| [`nofollow`](#attr-nofollow)                                         | 表示当前文档的原作者或出版商不认可被引用的文件。                                                                                                       | 不允许                  | 注解                                             | 注解                    |
+| [`noopener`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener)           | 创建一个顶级浏览上下文。如果该超链接一开始就会创建其中之一，则该浏览上下文不是一个辅助浏览上下文（即有一个适当的 `target` 属性值）。                              | 不允许                  | 不允许                                           | 注解                    |
+| [`noreferrer`](#attr-noreferrer)                                     | 不会包含 `Referer` 标头。和 `noopener` 效果类似。                                                                                                   | 不允许                  | 注解                                             | 注解                    |
+| [`opener`](#attr-opener)                                             | 如果超链接会创建一个非辅助浏览上下文的顶级浏览上下文（即以“`_blank`”作为 `target` 属性值），则创建一个辅助浏览上下文。                                        | 不允许                   | 注解                                            | 注解                    |
+| [`pingback`](#attr-pingback)                                         | 给出处理当前文档 pingback 的 pingback 服务器的地址。                                                                                                 | 外部资源                 | 不允许                                          | 不允许                   |
+| [`preconnect`](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)       | 指定用户代理应预先连接到目标资源的来源。                                                                                                              | 外部资源                 | 不允许                                          | 不允许                   |
+| [`prefetch`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch)           | 指定用户代理应预先获取并缓存目标资源，因为后续的导航可能需要它。                                                                                         | 外部资源                 | 不允许                                          | 不允许                   |
+| [`preload`](/zh-CN/docs/Web/HTML/Attributes/rel/preload)             | 指定用户代理必须根据 [`as`](/zh-CN/docs/Web/HTML/Element/link#attr-as) 属性给出的潜在目的地（以及与相应目的地相关的优先级），为当前导航预先获取和缓存目标资源。 | 外部资源                 | 不允许                                          | 不允许                   |
+| [`prerender`](/zh-CN/docs/Web/HTML/Attributes/rel/prerender)         | 指定用户代理应预先获取目标资源，并以有助于在未来提供更快的响应的方式处理它。                                                                               | 外部资源                 | 不允许                                          | 不允许                   |
+| [`prev`](#attr-prev)                                                 | 表示当前文档是系列的一部分，被引用的文档是该系列中的上一个文档。                                                                                          | 链接                    | 链接                                            | 链接                    |
+| [`search`](#attr-search)                                             | 给出一个资源的链接，可以用来搜索当前文件及其相关页面。                                                                                                  | 链接                    | 链接                                            | 链接                    |
+| [`stylesheet`](#attr-stylesheet)                                     | 导入样式表。                                                                                                                                      | 外部资源                 | 不允许                                          | 不允许                  |
+| [`tag`](#attr-tag)                                                   | 给出一个适用于当前文档的标签（由给定地址识别）。                                                                                                       | 不允许                   | 链接                                            | 链接                    |
+
+`rel` 属性与 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}} 和 {{htmlelement('form')}} 元素有关，但有些值只与这些元素的子集有关。像所有的 HTML 关键字属性值一样，这些值是不区分大小写的。
+
+`rel` 属性没有默认值。如果该属性被省略，或者该属性中没有一个值被支持，那么除了两者之间有一个超链接之外，文档与目标资源没有特别的关系。在这种情况下，在 {{htmlelement('link')}} 和 {{htmlelement('form')}} 元素上，如果 `rel` 属性不存在，没有关键词，或者如果不是上述一个或多个空格分隔的关键词，那么该元素就不会创建任何链接。{{htmlelement('a')}} 和 {{htmlelement('area')}} 仍将创建链接，但没有定义关系。
+
+## 值
+
+- {{htmlattrdef("alternate")}}
+
+  - : 表示当前文档的另一种方式。对 {{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 有效，其含义取决于其他属性的值。
+
+    - 在 `<link>` 上使用 [`stylesheet`](#stylesheet) 关键字，会创建一个[替代样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。
+
+      ```html
+      <!-- 一个永久样式表 -->
+      <link rel="stylesheet" href="default.css" />
+      <!-- 替代样式表 -->
+      <link
+        rel="alternate stylesheet"
+        href="highcontrast.css"
+        title="High contrast" />
+      ```
+
+    - [`hreflang`](/zh-CN/docs/Web/HTML/Element/link#attr-hreflang) 属性与文档所使用语言不同时，表示该页面的一个翻译。
+    - [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性值为 `"application/rss+xml"` 或 `"application/atom+xml"` 会创建一个 syndication feed 的参照链接。
+
+      ```html
+      <link
+        rel="alternate"
+        type="application/atom+xml"
+        href="posts.xml"
+        title="Blog" />
+      ```
+
+    - 否则，它将创建一个超链接，引用当前文档的另一种表述，其性质由 [`hreflang`](/zh-CN/docs/Web/HTML/Element/link#attr-hreflang) 和 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性赋予。
+
+      - 如果一起给出 `hreflang` 和 `alternate`，并且 `hreflang` 的值与当前文档的语言不同，则表明引用的文档是一个翻译。
+      - 如果一起给出 `type` 和 `alternate`，它表示被引用的文件是一种替代格式（如 PDF）。
+      - `hreflang` 和 `type` 属性可以与 `alternate` 一同给出。
+
+      ```html
+      <link
+        rel="alternate"
+        href="/fr/html/print"
+        hreflang="fr"
+        type="text/html"
+        media="print"
+        title="French HTML (for printing)" />
+      <link
+        rel="alternate"
+        href="/fr/pdf"
+        hreflang="fr"
+        type="application/pdf"
+        title="French PDF" />
+      ```
+
+- {{htmlattrdef("author")}}
+
+  - : 表示被引用的文档提供了关于当前文档或文章作者的进一步信息。与 {{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素有关。
+
+    {{htmlelement('a')}} 和 {{htmlelement('area')}} 元素表示链接的文档（或 `mailto:`）提供了最近的祖先 {{htmlelement('article')}} 元素的作者信息，如果无 article 元素就是整个文档的作者信息。
+
+    {{htmlelement('link')}} 元素代表了整个文档的作者信息。
+
+    > **备注：** 由于历史原因，废弃的属性值 `rev="made"` 被视为 `rel="author"`。
+
+- {{htmlattrdef("bookmark")}}
+  - : 与 {{htmlelement('a')}} 和 {{htmlelement('area')}} 元素的 `rel` 属性值相关。如果有的话，给最近的祖先 {{htmlelement('article')}} 元素提供一个固定链接。如果没有祖先 `<article>` 元素，则给出链接元素与之联系最紧密的部分的固定链接。
+- {{htmlattrdef("canonical")}}
+  - : 对 {{htmlelement('link')}} 元素有效，它定义了当前文档的首选 URL，这有助于搜索引擎减少重复内容。
+- {{htmlattrdef("dns-prefetch")}}
+  - : 在 {{htmlelement('body')}} 和 {{htmlelement('head')}} 元素内与 {{htmlelement('link')}} 元素相关。它告诉浏览器为目标资源的来源预先执行 DNS 解析。对于用户可能需要的资源来说，它有助于减少延迟，从而提高用户访问资源时的性能，因为浏览器会预先对指定资源的来源进行 DNS 解析。参见[资源提示](https://w3c.github.io/resource-hints/)中描述的 [dns-prefetch](/zh-CN/docs/Web/Performance/dns-prefetch)。
+- {{htmlattrdef("external")}}
+  - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，它表示引用的文档不是当前网站的一部分。这可以与属性选择器一起使用，使外部链接的样式向用户表明他们将离开当前网站。
+- {{htmlattrdef("help")}}
+  - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和{{htmlelement('area')}} 元素相关，`help` 关键字表示链接到的内容提供上下文敏感的帮助，为定义超链接的元素的父元素及其子元素提供信息。当在 `<link>` 中使用时，针对整个文档。当与 {{htmlelement('a')}} 和 {{htmlelement('area')}} 一起包含并支持这种使用方法时，默认的 {{cssxref('cursor')}} 将是 `help` 而不是 `pointer`。
+- {{htmlattrdef("icon")}}
+
+  - : 对 {{htmlelement('link')}} 元素有效，链接的资源代表了当前文档的图标，这是一种在用户界面上代表页面资源的方法。
+
+    `icon` 值最常见的用途是网站图标：
+
+    ```html
+    <link rel="icon" href="favicon.ico" />
+    ```
+
+    如果有多个 `<link rel="icon">`，浏览器会使用它们的 [`media`](/zh-CN/docs/Web/HTML/Element/link#attr-media)、[`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#attr-sizes) 属性来选择最合适的图标。如果几个图标同样合适，则使用最后一个。如果后来发现最合适的图标不合适，例如使用了不支持的格式，浏览器就会继续选择下一个最合适的，以此类推。
+
+    > **备注：** 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支持 `rel="icon"`，而 [Chrome 也仍有一个未解决的问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
+
+    > **备注：** 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#attr-sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
+
+    > **备注：** `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
+
+- {{htmlattrdef("license")}}
+
+  - : 在 {{HTMLElement("a")}}、{{HTMLElement("area")}}、{{HTMLElement("form")}}、 {{HTMLElement("link")}} 元素上有效，`license` 值表示该超链接指向描述许可信息的文件；当前文件的主要内容被引用文件描述的版权许可所覆盖。如果不在 {{HTMLElement("head")}} 元素内，标准并不区分适用于文档特定部分的超链接还是适用于整个文档的超链接。只有页面上的数据可以表明这一点。
+
+    ```html
+    <link rel="license" href="#license" />
+    ```
+
+    > **备注：** 虽然同义词 `copyright` 也是可以识别的，但它是不正确的，必须避免使用。
+
+- {{htmlattrdef("manifest")}}
+  - : 代表 [Web 应用清单](/zh-CN/docs/Web/Manifest)。需要使用 CORS 协议进行跨源获取。
+- {{htmlattrdef("modulepreload")}}
+  - : 对于提高性能很有用，并且与文档中的 {{htmlelement('link')}} 元素相关，设置 `rel="modulepreload"` 告诉浏览器预先获取脚本（和依赖关系）并存储在文档的模块映射中，以便以后评估。 `modulepreload` 链接可以确保网络抓取时，模块映射中的模块已经准备好（但没有评估），然后才一定需要它。参见 [`modulepreload`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
+- {{htmlattrdef("next")}}
+  - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`next` 值表示当前文档是一个系列的一部分，引用文档是该系列的下一个文档。当包含在 `<link>` 中时，浏览器可能会假定将要获取那个文档，并将其作为一个资源提示。
+- {{htmlattrdef("nofollow")}}
+  - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关， `nofollow` 关键字告诉搜索引擎蜘蛛忽略链接关系。nofollow 关系可能表明当前文档的所有者并不认可被引用的文档。它经常被搜索引擎优化者包括在内，假装他们的链接农场不是垃圾页面。
+- {{htmlattrdef("noopener")}}
+
+  - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，如果超链接一开始就会创建其中之一（即有一个适当的 `target` 属性值），则会创建一个顶级浏览环境，而不是一个辅助浏览环境。换句话说，它使链接的行为如同 [`window.opener`](/zh-CN/docs/Web/API/Window/opener)是空的，并且 `target="_parent"` 被设置。
+
+    这与 [`opener`](#attr-opener) 具有的含义相反。
+
+- {{htmlattrdef("noreferrer")}}
+  - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，包括这个值使得 referrer 未知（不会包含 `Referer` 标头），并创建一个顶级的浏览上下文，就像 `noopener` 也被设置一样。
+- {{htmlattrdef("opener")}}
+  - : 如果超链接会创建一个非辅助浏览上下文的顶级浏览上下文（即以“`_blank`”作为 `target` 属性值），则创建一个辅助浏览上下文。与 [noopener](#noopener) 作用相反。
+- {{htmlattrdef("pingback")}}
+  - : 给出处理当前文档的 pingback 的 pingback 服务器地址。详见 [Pingback 规范](https://www.hixie.ch/specs/pingback/pingback)。
+- {{htmlattrdef("preconnect")}}
+  - : 向浏览器提供提示，建议它提前打开与链接网站的连接，而不透露任何私人信息或下载任何内容，以便在跟踪链接时能更快地获取链接内容。
+- {{htmlattrdef("prefetch")}}
+  - : 指定用户代理应预先获取并缓存目标资源，因为后续导航可能需要该资源。[链接预取常见问题](/zh-CN/docs/Web/HTTP/Link_prefetching_FAQ)有关于哪些链接可以被预取以及替代方法的详细信息
+- {{htmlattrdef("preload")}}
+  - : 指定用户代理必须根据 [`as`](/zh-CN/docs/Web/HTML/Element/link#attr-as) 属性给出的潜在目的地（以及与相应目的地相关的优先级），为当前导航预先获取和缓存目标资源。参见 [`preload`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 值的页面。
+- {{htmlattrdef("prerender")}}
+  - : 指定用户代理应抢先获取目标资源，并以有助于在未来提供更快的响应的方式对其进行处理，例如，获取其子资源或执行一些渲染。
+- {{htmlattrdef("prev")}}
+
+  - : 与 [`next`](#attr-next) 关键字类似，与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`prev` 值表示当前文档是一个系列的一部分，而链接引用该系列中的一个先前文档就是被引用的文档。
+
+    备注：同义词 `previous` 并不正确，不应被使用。
+
+- {{htmlattrdef("search")}}
+
+  - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`search` 关键字表示该超链接引用一个文档，其界面是专门为在当前文档、站点和相关资源中搜索而设计的，提供一个可以用来搜索的资源链接。
+
+    如果 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性被设置为 `application/opensearchdescription+xml`，则该资源是一个 [OpenSearch](/zh-CN/docs/Web/OpenSearch) 插件，可以很容易地添加到一些浏览器（如 Firefox 或 Internet Explorer）的界面中。
+
+- {{htmlattrdef("stylesheet")}}
+
+  - : 对 {{htmlelement('link')}} 元素有效，它导入一个外部资源作为样式表使用。`text/css` 的样式表不需要 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性，因为这是该属性的默认值。如果它不是 `text/css` 类型的样式表，最好是声明这个类型。
+
+    虽然这个属性将链接定义为一个样式表，但与其他属性的交互以及 rel 值中的其他关键术语会影响样式表是否被下载和/或使用。
+
+    当与 [`alternate`](#attr-alternate) 关键字一起使用时，它定义了一个替代的样式表。在这种情况下，包括一个非空的 [`title`](/zh-CN/docs/Web/HTML/Element/link#attr-title)。
+
+    如果媒体与 [`media`](/zh-CN/docs/Web/HTML/Element/link#attr-media) 属性的值不匹配，外部样式表将不会被使用，甚至不会下载。
+
+    需要使用 CORS 协议进行跨源获取。
+
+- {{htmlattrdef("tag")}}
+  - : 对 {{htmlelement('a')}} 和 {{htmlelement('area')}} 元素有效，它给出了一个适用于当前文档的标签（由给定地址标识）。标签值表示该链接指向一个描述适用于其所在文档的标签的文档。这种链接类型不是指标签云中的标签，因为这些标签适用于一组页面，而 `rel` 属性的 `tag` 值是针对单个文档。
+
+### 非标准值
+
+- {{htmlattrdef("apple-touch-icon")}}
+  - : 指定 iOS 设备上的网络应用的图标。
 
 ## 规范
 
@@ -590,3 +210,9 @@ original_slug: Web/HTML/Link_types
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("HTMLLinkElement.relList")}}
+- {{domxref("HTMLAnchorElement.relList")}}
+- {{domxref("HTMLAreaElement.relList")}}

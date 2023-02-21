@@ -72,7 +72,7 @@ slug: Web/HTML/Element/object
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.object")}}
+{{Compat}}
 
 ## 같이 보기
 

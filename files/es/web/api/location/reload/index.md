@@ -37,9 +37,9 @@ reload.addEventListener('click', _ => { // el _ es para indicar la ausencia de p
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Location.reload")}}
+{{Compat}}
 
 ## Ver también
 

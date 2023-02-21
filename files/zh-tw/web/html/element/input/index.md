@@ -320,7 +320,7 @@ You can find multiple examples of `<input>` element usage on the pages covering 
 
 ### File inputs
 
-1. Starting in {{Gecko("2.0")}}, calling the `click()` method on an `<input>` element of type `file` opens the file picker and lets the user select files. See [Using files from web applications](/zh-TW/docs/Using_files_from_web_applications) for an example and more details.
+1. Starting in Gecko 2.0, calling the `click()` method on an `<input>` element of type `file` opens the file picker and lets the user select files. See [Using files from web applications](/zh-TW/docs/Using_files_from_web_applications) for an example and more details.
 2. You cannot set the value of a file picker from a script — doing something like the following has no effect:
 
     ```js

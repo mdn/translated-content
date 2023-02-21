@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 original_slug: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 ---
 
-{{JSRef}} {{obsolete_header}}
+{{JSRef}}
 
 Метод **`clear()`** удаляет все элементы из объекта WeakMap, но он больше не является частью ECMAScript и его реализаций.
 

@@ -1,5 +1,5 @@
 ---
-title: <br>
+title: <br> - элемент переноса строки
 slug: Web/HTML/Element/br
 tags:
   - HTML

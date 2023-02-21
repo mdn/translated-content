@@ -186,7 +186,7 @@ pip3 list
 
 安装了 Python 和 pip 之后，你就可以安装 virtualenvwrapper（包括了 virtualenv）。可以在[这里](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)找到正式的安装指南，或按照以下指导操作。
 
-使用 pip3 安装该工具：​​​​​​
+使用 pip3 安装该工具：
 
 ```bash
 sudo pip3 install virtualenvwrapper

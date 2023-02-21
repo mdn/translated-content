@@ -39,9 +39,9 @@ range.setStart(startNode,startOffset);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Range.setStart")}}
+{{Compat}}
 
 ## Ver también
 

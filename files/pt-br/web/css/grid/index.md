@@ -7,7 +7,7 @@ A propriedade **`grid`** do CSS é uma [abreviação](/pt-BR/docs/Web/CSS/Shorth
 
 {{EmbedInteractiveExample("pages/css/grid.html")}}
 
-> **Note:** **Nota:** Você pode especificar apenas as propriedades explícitas _ou_ implícitas da grade em uma única declaração `grid`. As subpropriedades que você não especifica são definidas como seu valor inicial, como é normal para abreviações. Além disso, as propriedades da medianiz NÃO são redefinidas por essa abreviação.
+> **Nota:** Você pode especificar apenas as propriedades explícitas _ou_ implícitas da grade em uma única declaração `grid`. As subpropriedades que você não especifica são definidas como seu valor inicial, como é normal para abreviações. Além disso, as propriedades da medianiz NÃO são redefinidas por essa abreviação.
 
 ## Sintaxe
 

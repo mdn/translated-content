@@ -33,7 +33,7 @@ Note that navigation requests for {{domxref("Window","Windows")}} and {{domxref(
 ```js
 fetchEvent.respondWith(
   // Promise that resolves to a Response.
-​)
+)
 ```
 
 ### Parameters
@@ -68,11 +68,11 @@ addEventListener('fetch', event => {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

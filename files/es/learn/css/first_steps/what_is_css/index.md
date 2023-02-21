@@ -107,13 +107,11 @@ El CSS Working Group desarrolla o especifica características nuevas del CSS. Al
 
 Como recién llegado al CSS, es probable que encuentres las especificaciones abrumadoras: están destinadas a que los ingenieros las utilicen para implementar soporte de sus características en los agentes de usuario en que trabajan, no para que lo lean los desarrolladores web para comprender el CSS. Muchos desarrolladores experimentados preferirán consultar la documentación disponible en MDN u otros tutoriales. Sin embargo, vale la pena saber que existen y comprender la relación que hay entre el CSS que estás utilizando, el soporte del navegador (ver más abajo) y las especificaciones.
 
-## Soporte del navegador
+## Compatibilidad con navegadores
 
 Una vez se ha especificado el CSS, solo es útil en el desarrollo de páginas web si uno o más navegadores lo han implementado. Esto significa que el código se ha escrito para convertir las instrucciones que se especifican en nuestro archivo CSS en algo que se pueda mostrar en pantalla. Veremos este proceso más en profundidad en el artículo [Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/Como_funciona_CSS). Es inusual que todos los navegadores puedan implementar una misma característica al mismo tiempo, por lo que suele haber una brecha en la que se pueden usar algunas partes del CSS en algunos navegadores pero no en otros. Por este motivo, es útil poder verificar el estado de implementación. En cada una de las páginas de propiedades que hay en la MDN se puede ver el estado de la propiedad de interés, por lo que se puede saber si será posible utilizarla en un sitio web.
 
 Lo que sigue es el gráfico de datos de compatibilidad para la propiedad CSS [`font-family`](/es/docs/Web/CSS/font-family).
-
-{{Compat("css.properties.font-family")}}
 
 ## ¿Qué viene ahora?
 

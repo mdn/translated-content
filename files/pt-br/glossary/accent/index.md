@@ -9,6 +9,6 @@ Na web, um acento às vezes é usado em elementos {{HTMLElement("input")}} para 
 
 ## Veja tmbém
 
-### CSS relaciondo ao **accent**
+### CSS relacionado ao **accent**
 
-Você pode definir a cor do acento para um determinado elemento definindo a propriedade CSS {{cssxref("accent-color")}} do elemento para o valor {{cssxref("&lt;color&gt;")}} apropriado.
+Você pode definir a cor do `accent` para um determinado elemento definindo a propriedade CSS {{cssxref("accent-color")}} do elemento para o valor {{cssxref("&lt;color&gt;")}} apropriado.

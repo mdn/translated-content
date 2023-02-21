@@ -42,7 +42,7 @@ var autoplay = HTMLMediaElement.autoplay;
 document.querySelector('#video').autoplay = false;
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

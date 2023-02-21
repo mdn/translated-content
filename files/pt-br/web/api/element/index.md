@@ -97,9 +97,9 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Recupera o valor do atributo nomeado do nó atual e o retorna como um {{jsxref("Object")}}.
 - {{ domxref("Element.getAttributeNS()") }}
   - : Recupera o valor do atributo com o nome especificado e [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual e o retorna como um {{jsxref("Object")}}.
-- {{ domxref("Element.getAttributeNode()") }} {{obsolete_inline}}
+- {{ domxref("Element.getAttributeNode()") }}
   - : Recupera a representação do nó de um atributo nomeado do nó atual e o retorna como um {{ domxref("Attr") }}.
-- {{ domxref("Element.getAttributeNodeNS()") }} {{obsolete_inline}}
+- {{ domxref("Element.getAttributeNodeNS()") }}
   - : Recupera a representação de nó do atributo com o nome especificado e [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual e o retorna como um {{ domxref("Attr") }}.
 - {{ domxref("Element.getBoundingClientRect()") }} {{experimental_inline}}
   - : ...
@@ -133,7 +133,7 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Remove um atributo nomeado do nó atual.
 - {{ domxref("Element.removeAttributeNS()") }}
   - : Remove o atributo com o nome especificado ou [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual.
-- {{ domxref("Element.removeAttributeNode()") }} {{obsolete_inline}}
+- {{ domxref("Element.removeAttributeNode()") }}
   - : Remove a representação do nó do atributo nomeado do nó atual.
 - {{ domxref("EventTarget.removeEventListener()") }}
   - : Remove um ouvinte de eventos do elemento.
@@ -147,9 +147,9 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Define o valor de um atributo nomeado do nó atual.
 - {{ domxref("Element.setAttributeNS()") }}
   - : Define o valor do atributo com o nome especificado e [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual.
-- {{ domxref("Element.setAttributeNode()") }} {{obsolete_inline}}
+- {{ domxref("Element.setAttributeNode()") }}
   - : Define a representação do nó de um atributo nomeado do nó atual.
-- {{ domxref("Element.setAttributeNodeNS()") }} {{obsolete_inline}}
+- {{ domxref("Element.setAttributeNodeNS()") }}
   - : Define a representação do nó do atributo com o nome especificado e [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual.
 - {{ domxref("Element.setCapture()") }} {{non-standard_inline}}
   - : Define a captura de evento do mouse, redirecionando todos os eventos de mouse para este elemento.

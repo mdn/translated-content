@@ -66,7 +66,7 @@ b instanceof Number; // is false
   - : Определяет, является ли тип переданного значения «числом», а само число — целым значением.
 - {{jsxref("Number.isSafeInteger()")}} {{experimental_inline}}
   - : Определяет, является ли переданное значение безопасным целым числом (числом в диапазоне от `-(253 - 1)` до `253 - 1`).
-- ~~{{jsxref("Number.toInteger()")}} {{obsolete_inline}}~~
+- ~~{{jsxref("Number.toInteger()")}}~~
   - : ~~Использовался для вычисления переданного значения и преобразования его в целое число (или бесконечность {{jsxref("Global_Objects/Infinity", "Infinity")}}), но был удалён.~~
 - {{jsxref("Number.parseFloat()")}} {{experimental_inline}}
   - : Представляет собой тот же самый метод, что и метод {{jsxref("Global_Objects/parseFloat", "parseFloat")}} глобального объекта.

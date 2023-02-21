@@ -289,7 +289,7 @@ pip3 install virtualenvwrapper-win
 
 一旦你安裝了 virtualenvwrapper 或 virtualenvwrapper-win，那麼在所有平台上使用虛擬環境都非常相似。
 
-現在，您可以使用`mkvirtualenv`命令創建新的虛擬環境。當此命令運行時，您將看到正在設置的環境（您看到的是略微特定 ​​ 於平台的）。當命令完成時，新的虛擬環境，將處於活動狀態 - 您可以看到這一點，因為提示的開頭，將是括號中環境的名稱（如下所示）。
+現在，您可以使用`mkvirtualenv`命令創建新的虛擬環境。當此命令運行時，您將看到正在設置的環境（您看到的是略微特定 於平台的）。當命令完成時，新的虛擬環境，將處於活動狀態 - 您可以看到這一點，因為提示的開頭，將是括號中環境的名稱（如下所示）。
 
   ```
   $ mkvirtualenv my_django_environment
@@ -395,21 +395,3 @@ Quit the server with CONTROL-C.
 - [How to install Django on Windows](https://docs.djangoproject.com/en/2.0/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
-
-## 本教程連結
-
-- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -48,11 +48,11 @@ transition: unset;
 
 [CSS 트랜지션 사용하기](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 에 다양한 CSS transition 예제가 있습니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

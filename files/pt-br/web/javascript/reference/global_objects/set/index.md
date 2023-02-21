@@ -26,7 +26,7 @@ Objetos `Set` são coleções de valores nas quais é possível iterar os elemen
 
 ### Igualdade de valores
 
-Como cada valor no Set deve ser único, a igualdade será checada e não é baseada no mesmo algoritmo que aquele usado no operador ===. Especificamente, para `Set`s, `+0` (que é exatamente igual a - 0) e `- 0` são valores diferentes. No entanto, isto foi modificado na última especificação ECMAScript 2015. Iniciado com o Gecko 29.0 {{geckoRelease("29")}} ({{bug("952870")}}) e pelo [recent nightly Chrome](https://code.google.com/p/v8/issues/detail?id=3069), +0 e -0 são tratados com sendo o mesmo valor em objetos conjunto (Set). Também, `NaN` e `undefined` podem ser armazenados em um conjunto Set.
+Como cada valor no Set deve ser único, a igualdade será checada e não é baseada no mesmo algoritmo que aquele usado no operador ===. Especificamente, para `Set`s, `+0` (que é exatamente igual a - 0) e `- 0` são valores diferentes. No entanto, isto foi modificado na última especificação ECMAScript 2015. Iniciado com o Gecko 29.0 ({{bug("952870")}}) e pelo [recent nightly Chrome](https://code.google.com/p/v8/issues/detail?id=3069), +0 e -0 são tratados com sendo o mesmo valor em objetos conjunto (Set). Também, `NaN` e `undefined` podem ser armazenados em um conjunto Set.
 
 ## Propriedades
 

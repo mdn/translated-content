@@ -1,10 +1,9 @@
 ---
 title: Лучшие практики WebGL
 slug: Web/API/WebGL_API/WebGL_best_practices
-translation_of: Web/API/WebGL_API/WebGL_best_practices
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 Эта статья содержит советы и рекомендации по улучшению качества ваших WebGL приложений. Следование данным советам поможет улучшить совместимость ваших веб-приложений с большим количеством устройств и браузеров, а также увеличить их производительность.
 

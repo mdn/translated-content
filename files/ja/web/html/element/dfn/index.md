@@ -48,7 +48,7 @@ slug: Web/HTML/Element/dfn
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("term")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/term_role">term</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

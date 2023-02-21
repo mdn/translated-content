@@ -60,7 +60,7 @@ function test() {
 
 ## No utilice `eval` innecesariamente
 
-`eval()` es una función peligrosa, quel ejecuta el código el cual es pasado con los privilegios de quien llama. Si ejecuta `eval()` con una cadena de carcteres que podría ser afectada por un elemento malicioso, podría terminar ejecutando código malicioso dentro de la computadora del usuario con los permisos de su página o extensión web . Más importante aún, una parte del código de terceros podría accesar al ámbito en el cual `eval()` fue invocada, lo que puede permitir la entrada a posibles ataques de formas a las que el constructor {{jsxref("Global_Objects/Function", "Function")}} (art. en inglés) el cual es similar, no es susceptible.
+`eval()` es una función peligrosa, quel ejecuta el código el cual es pasado con los privilegios de quien llama. Si ejecuta `eval()` con una cadena de caracteres que podría ser afectada por un elemento malicioso, podría terminar ejecutando código malicioso dentro de la computadora del usuario con los permisos de su página o extensión web . Más importante aún, una parte del código de terceros podría accesar al ámbito en el cual `eval()` fue invocada, lo que puede permitir la entrada a posibles ataques de formas a las que el constructor {{jsxref("Global_Objects/Function", "Function")}} (art. en inglés) el cual es similar, no es susceptible.
 
 `eval()` es generalmente también más lenta que otras alternativas desde que se invoca en el intérprte de JS, mientras que otros muchos constructores son optimizados por los motores JS modernos.
 
@@ -225,23 +225,9 @@ var fct2 = eval(fctStr2)  // deuelve una función
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.eval")}}
-
-## Observaciones específicas para Gecko
-
-- Históricamente `eval()` tenía un segundo argumento opcional, especificando un objeto en cuyo contexto la evaluación era ejecutada. Este argunmento no era estándar, y fue removido del _SpiderMonkey en_ Gecko 1.9.1 (Firefox 3.5). Vea {{bug(442333)}}.
-
-## Compatibilidad Hacia Atrás
-
-### JavaScript 1.3 y anteriores
-
-Puede usar `eval` indirectamente, aunque ésto está desaconsejado.
-
-### JavaScript 1.1
-
-`eval` también es un método de todos los objetos.
+{{Compat}}
 
 ## Vea También
 

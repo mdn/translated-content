@@ -69,13 +69,3 @@ original_slug: Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper
 如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。如果你是自学，可以很容易地在 [discussion thread for this exercise](https://discourse.mozilla.org/t/creating-fancy-letterheaded-paper-assessment/24684/1) 或[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！
 
 {{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Learn/CSS/Styling_boxes")}}
-
-## 在这个模块里
-
-- [盒模型概要](/zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap)
-- [背景](/zh-CN/docs/Learn/CSS/Styling_boxes/Backgrounds)
-- [边框](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders)
-- [样式化表格](/zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables)
-- [高级盒效果](/zh-CN/docs/Learn/CSS/Styling_boxes/Advanced_box_effects)
-- [创建精美的信纸](/zh-CN/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
-- [一个漂亮的盒子](/zh-CN/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)

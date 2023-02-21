@@ -383,15 +383,15 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
                   ></code
                 >
               </li>
-              <li>{{ARIARole("link")}}</li>
-              <li>{{ARIARole("menuitem")}}</li>
-              <li>{{ARIARole("menuitemcheckbox")}}</li>
-              <li>{{ARIARole("menuitemradio")}}</li>
-              <li>{{ARIARole("option")}}</li>
-              <li>{{ARIARole("progressbar")}}</li>
-              <li>{{ARIARole("scrollbar")}}</li>
-              <li>{{ARIARole("separator")}}</li>
-              <li>{{ARIARole("slider")}}</li>
+              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code></li>
+              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code></li>
+              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code></li>
+              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code></li>
+              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code></li>
+              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/progressbar_role">progressbar</a></code></li>
+              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role">scrollbar</a></code></li>
+              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role">separator</a></code></li>
+              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/slider_role">slider</a></code></li>
               <li>
                 <code
                   ><a
@@ -407,12 +407,12 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
                   ></code
                 >
               </li>
-              <li>{{ARIARole("treeitem")}}</li>
+              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code></li>
             </ul>
           </li>
           <li>
-            空の <code>alt</code> 属性がある場合、 {{ARIARole("none")}}
-            または {{ARIARole("presentation")}}
+            空の <code>alt</code> 属性がある場合、 <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>
+            または <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
           </li>
           <li>
             <code>alt</code> 属性がない場合、許可されている <code>role</code> なし

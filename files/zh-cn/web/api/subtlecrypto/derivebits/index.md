@@ -27,7 +27,7 @@ deriveBits(algorithm, baseKey, length)
     - 使用 [HKDF](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#hkdf)，则传入 [`HkdfParams`](/zh-CN/docs/Web/API/HkdfParams) 对象。
     - 使用 [PBKDF2](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2)，则传入 [`Pbkdf2Params`](/zh-CN/docs/Web/API/Pbkdf2Params) 对象。
 - `baseKey`
-  - : 一个 {{domxref("CryptoKey")}}，表示派生算法的输入。如果算法（`algorithm`）是 ECDH，则该对象为 ECDH 的密钥。否则，它为派生函数的初始密钥材料（key material）：例如，对于 PBKDF2，它可能是一个密码（使用 [`SubtleCrypto.importKey()`](/zh-CN/docs/Web/API/SubtleCrypto/importKey) 导入为一个 `CryptoKey` 对象）。
+  - : 一个 {{domxref("CryptoKey")}}，表示派生算法的输入。如果算法（`algorithm`）是 ECDH，则该对象为 ECDH 的私钥。否则，它为派生函数的初始密钥材料（key material）：例如，对于 PBKDF2，它可能是一个密码（使用 [`SubtleCrypto.importKey()`](/zh-CN/docs/Web/API/SubtleCrypto/importKey) 导入为一个 `CryptoKey` 对象）。
 - `length`
   - : 一个数字，表示要派生的比特位数。为了兼容所有浏览器，此数字应为 8 的倍数。
 
@@ -58,7 +58,7 @@ deriveBits(algorithm, baseKey, length)
 
 在此示例中，Alice 和 Bob 分别生成了一个 ECDH 密钥对。
 
-然后，我们使用 Alice 的密钥和 Bob 的公钥来派生一个共享密钥（shared secret）。[在 GitHub 上查看完整代码](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/ecdh.js)。
+然后，我们使用 Alice 的私钥和 Bob 的公钥来派生一个共享密钥（shared secret）。[在 GitHub 上查看完整代码](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/ecdh.js)。
 
 ```js
 async function deriveSharedSecret(privateKey, publicKey) {
@@ -107,8 +107,8 @@ Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then((values) => {
 
   const deriveBitsButton = document.querySelector(".ecdh .derive-bits-button");
   deriveBitsButton.addEventListener("click", () => {
-    // 然后 Alice 使用她的密钥和 Bob 的公钥生成一个密钥（secret）。
-    // Bob 可以使用他的密钥和 Alice 的公钥来生成相同的密钥。
+    // 然后 Alice 使用她的私钥和 Bob 的公钥生成一个密钥（secret）。
+    // Bob 可以使用他的私钥和 Alice 的公钥来生成相同的密钥。
     deriveSharedSecret(alicesKeyPair.privateKey, bobsKeyPair.publicKey);
   });
 });
@@ -182,4 +182,4 @@ deriveBitsButton.addEventListener("click", () => {
 - [HKDF 规范](https://datatracker.ietf.org/doc/html/rfc5869)。
 - [NIST 基于密码的密钥派生指南](https://csrc.nist.gov/publications/detail/sp/800-132/final)。
 - [密码存储备忘录](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)。
-- [关于为 PBKDF2 选择迭代计数器的建议](https://security.stackexchange.com/questions/3959/recommended-of-iterations-whzh-CNing-pbkdf2-sha256/3993#3993)。
+- [关于为 PBKDF2 选择迭代计数器的建议](https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993)。

@@ -67,7 +67,7 @@ CSS에는 크게 두 가지 박스(**블록 박스**와 **인라인 박스**) �
 
 이 시점에 우리는 **내부** 및 **외부** 디스플레이 유형에 대해 설명하는 게 좋겠습니다. 위에서 언급했듯이 CSS의 박스는 _외부_ 디스플레이 유형을 가지며, 이는 박스가 블록인지 인라인인지를 자세히 설명합니다.
 
-그러나 박스에는 _내부_ 디스플레이 유형도 있으며 당 박스 내부의 요소가 배치되는 방법을 나타냅니다. 기본적으로 박스 내부의 요소는 **[일반 대열](/ko/docs/Learn/CSS/CSS_layout/Normal_Flow)**로 배치되며, 이는 (위에서 설명한 바와 같이) 여타 블록 및 인라인 요소와 마찬가지로 작동한다는 것을 의미합니다.
+그러나 박스에는 _내부_ 디스플레이 유형도 있으며 당 박스 내부의 요소가 배치되는 방법을 나타냅니다. 기본적으로 박스 내부의 요소는 [**일반 대열**](/ko/docs/Learn/CSS/CSS_layout/Normal_Flow)로 배치되며, 이는 (위에서 설명한 바와 같이) 여타 블록 및 인라인 요소와 마찬가지로 작동한다는 것을 의미합니다.
 
 그러나 여러분은 `flex`과 같은 `display` 값을 사용하여 내부 디스플레이 유형을 변경할 수 있습니다. 어떤 요소에 우리가 `display: flex;`를 설정하면 외부 디스플레이 유형은 블록이지만 내부 디스플레이 유형은 `flex`으로 변경됩니다. 이 박스의 직계 자식은 가변 항목이 되고, 나중에 익히게 될 [가변박스](/ko/docs/Learn/CSS/CSS_layout/Flexbox) 규격에 명시된 규칙에 따라 배치됩니다.
 
@@ -311,24 +311,3 @@ html {
 다음 단원에서는 [배경과 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)를 사용하여 평범한 보이는 박스를 더욱 흥미롭게 보이려면 어떤 방법이 있는지 살펴보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## 이번 단위에는
-
-1. [계단식 나열과 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택기](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [유형과 클레스, 아이디 선택기 selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [딸린 속성 선택기](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [의사 클래스와 의사 요소](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [조합기](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/%EC%83%81%EC%9E%90_%EB%AA%A8%EB%8D%B8)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [서로 다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [대열이탈 콘텐츠](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [속성값과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 항목 크기 설정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지와 미디아, 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [테이블 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 체계화](/ko/docs/Learn/CSS/Building_blocks/Organizing)

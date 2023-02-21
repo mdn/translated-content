@@ -31,13 +31,7 @@ updateConnectionStatus();
 
 ## 브라우저 호환성
 
-### NetworkInformation
-
-{{Compat("api.NetworkInformation")}}
-
-### Navigator.connection
-
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## 같이 보기
 

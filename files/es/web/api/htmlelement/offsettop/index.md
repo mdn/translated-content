@@ -35,8 +35,8 @@ if (topPos > 10) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement.offsetTop")}}
+{{Compat}}
 
-In compliance with the specification, this property will return `null` on Webkit if the element is hidden (the `style.display` of this element or any ancestor is `"none"`) or if the `style.position` of the element itself is set to `"fixed"`.
+De conformidad con la especificación, esta propiedad devolverá el valor `null` en Webkit si el elemento está oculto (`style.display` de este elemento o de cualquier padre es `"none"`) o si `style.position` del elemento en sí está configurada como `"fixed"`.
 
-This property will return `null` on Internet Explorer (9) if the `style.position` of the element itself is set to `"fixed"`. (Having `display:none` does not affect this browser.)
+Esta propiedad devolverá `null` en Internet Explorer (9) si `style.position` del elemento en sí se establece en `"fixed"`. (Tener `display:none` no afecta a este navegador).

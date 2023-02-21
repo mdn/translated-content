@@ -220,7 +220,7 @@ Heroku 是運行時間最長，且最受歡迎的基於雲的 PaaS 服務之一�
 
 - 大多數情況下，它只是可以工作，如果你最終喜歡它，並希望升級，那麼擴展你的應用程序非常容易。
 
-雖然 Heroku 非常適合舉辦此演示，但它可能並不適合您的真實網站。 Heroku 可以輕鬆設置和擴展，但代價是靈活性較低，而且一旦退 ​​​​ 出免費套餐，可能會花費更多。
+雖然 Heroku 非常適合舉辦此演示，但它可能並不適合您的真實網站。 Heroku 可以輕鬆設置和擴展，但代價是靈活性較低，而且一旦退 出免費套餐，可能會花費更多。
 
 ### Heroku 如何工作?
 
@@ -364,7 +364,7 @@ var mongoDB = process.env.MONGODB_URI || 'mongodb://your_user_id:your_password@d
 
 在我們繼續之前，讓我們再次測試該網站，並確保它不受我們的任何更改的影響。
 
-首先，我們需要獲取我們的依賴項（你會記得，我們 ​​ 沒有將 **node_modules**文件夾，複製到我們的 git 樹中）。您可以通過在項目根目錄的終端中，運行以下命令來執行此操作：
+首先，我們需要獲取我們的依賴項（你會記得，我們 沒有將 **node_modules**文件夾，複製到我們的 git 樹中）。您可以通過在項目根目錄的終端中，運行以下命令來執行此操作：
 
 ```bash
 npm install
@@ -496,15 +496,3 @@ heroku ps   #Display dyno status
   - [Node.js](https://www.digitalocean.com/community/tutorials?q=node.js) tutorials
 
 {{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教學鏈接
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

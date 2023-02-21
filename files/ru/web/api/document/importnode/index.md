@@ -31,7 +31,7 @@ var node = document.importNode(externalNode, deep);
 
 > **Примечание:** In the DOM4 specification, _deep_ was an optional argument with a default value of `true`.
 >
-> This default has changed in the latest spec — the new default value is **`false`**. Though it's still an optional argument, you should always provide the `deep` argument for backward _and_ forward compatibility. With Gecko 28.0 {{geckoRelease(28)}}, the console warns developers not to omit the argument. Starting with Gecko 29.0 {{geckoRelease(29)}}), a shallow clone is defaulted instead of a deep clone.
+> This default has changed in the latest spec — the new default value is **`false`**. Though it's still an optional argument, you should always provide the `deep` argument for backward _and_ forward compatibility. With Gecko 28.0, the console warns developers not to omit the argument. Starting with Gecko 29.0), a shallow clone is defaulted instead of a deep clone.
 
 ## Example
 

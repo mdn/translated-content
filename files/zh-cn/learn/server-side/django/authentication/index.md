@@ -689,21 +689,3 @@ class MyView(PermissionRequiredMixin, View):
 - [介绍从基于类别的视图 > 到使用装饰器的基于类别的视图](https://docs.djangoproject.com/en/2.0/topics/class-based-views/intro/#decorating-class-based-views) (Django 文档)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
-
-## 本教程文档
-
-- [Django 介绍](/zh-CN/docs/Learn/Server-side/Django/Introduction)
-- [架设 Django 开发环境](/zh-CN/docs/Learn/Server-side/Django/development_environment)
-- [Django 教程：The Local Library website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教程 2: Creating a skeleton website](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教程 3: Using models](/zh-CN/docs/Learn/Server-side/Django/Models)
-- [Django 教程 4: Django admin site](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教程 5: Creating our home page](/zh-CN/docs/Learn/Server-side/Django/Home_page)
-- [Django 教程 6: Generic list and detail views](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教程 7: Sessions framework](/zh-CN/docs/Learn/Server-side/Django/Sessions)
-- [Django 教程 8: User authentication and permissions](/zh-CN/docs/Learn/Server-side/Django/Authentication)
-- [Django 教程 9: Working with forms](/zh-CN/docs/Learn/Server-side/Django/Forms)
-- [Django 教程 10: Testing a Django web application](/zh-CN/docs/Learn/Server-side/Django/Testing)
-- [Django 教程 11: Deploying Django to production](/zh-CN/docs/Learn/Server-side/Django/Deployment)
-- [Django 网页应用安全](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 微博客](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -16,11 +16,11 @@ Pour apprendre comment fonctionnent les promesses et comment les utiliser, nous 
 
 ## Description
 
-L'interface **`Promise`** représente un intermédiaire (_proxy_) vers une valeur qui n'est pas nécessairement connue au moment de sa création. Cela permet d'associer des gestionnaires au succès éventuel d'une action asynchrone et à la raison d'une erreur. Ainsi, des méthodes asynchrones renvoient des valeurs comme les méthodes synchrones, la seule différence est que la valeur retournée par la méthode asynchrone est une promesse (d'avoir une valeur plus tard).
+L'interface **`Promise`** représente un intermédiaire (_proxy_) vers une valeur qui n'est pas nécessairement connue au moment de la création de la promesse. Cela permet d'associer des gestionnaires au succès éventuel d'une action asynchrone et à la raison d'une erreur. Ainsi, les méthodes asynchrones peuvent renvoyer des valeurs de manière similaire aux méthodes synchrones, la seule différence est que la valeur retournée par la méthode asynchrone est une promesse (d'avoir une valeur plus tard).
 
 Une `Promise` est dans un de ces états :
 
-- _pending (en attente)_ : état initial, la promesse n'est ni remplie, ni rompue ;
+- _pending (en attente)_ : état initial, la promesse n'est ni tenue, ni rompue ;
 - _fulfilled (tenue_) : l'opération a réussi ;
 - _rejected (rompue)_ : l'opération a échoué.
 

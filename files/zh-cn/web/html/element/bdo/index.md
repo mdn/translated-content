@@ -65,7 +65,7 @@ to left.</bdo></p>
 
 ### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 注意
 
@@ -79,6 +79,6 @@ HTML 4 规范未指定此元素的事件。它们是在 XHTML 中添加的。这
 
 {{Compat}}
 
-## 另参见
+## 参见
 
 - 相关 HTML: {{HTMLElement("bdi")}}

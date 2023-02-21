@@ -41,7 +41,7 @@ _Наследует свойства от своего родителя, {{domxr
       </td>
     </tr>
     <tr>
-      <td><code id="event_property">event</code>{{obsolete_inline}}</td>
+      <td><code id="event_property">event</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
         Старый, способ регистрации обработчиков событий на элементы в

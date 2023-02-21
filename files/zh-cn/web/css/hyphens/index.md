@@ -5,8 +5,6 @@ slug: Web/CSS/hyphens
 
 {{CSSRef}}
 
-## Summary
-
 [CSS](/zh-CN/docs/CSS) 属性 **`hyphens`** 告知浏览器在换行时如何使用连字符连接单词。可以完全阻止使用连字符，也可以控制浏览器什么时候使用，或者让浏览器决定什么时候使用。
 
 连字规则具有语言特定性。在 HTML 中，语言由 lang 属性决定，浏览器只会在当前属性存在且有合适的连字字典可用的情况使用连字进行连接。在 XML 中，必须使用 `xml:lang` 属性。
@@ -48,7 +46,7 @@ There are two Unicode characters that can be used to manually specify potential 
 - U+00AD (SHY)
   - : An invisible, "soft" hyphen. This character is not rendered visibly; instead, it suggests a place where the browser might choose to break the word if necessary. In HTML, you can use `&shy;` to insert a soft hyphen.
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
@@ -92,16 +90,16 @@ p.auto {
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "470'")}}
+{{EmbedLiveSample("示例", "100%", "470'")}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{Cssxref("content")}}

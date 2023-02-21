@@ -90,7 +90,7 @@ Access-Control-Max-Age: 86400
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Allow-Headers")}}
+{{Compat}}
 
 ## 함께 보기
 

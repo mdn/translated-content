@@ -46,11 +46,11 @@ _This interface also inherits methods from its parent, {{domxref("EventTarget")}
   - : Fired when a message arrives that can't be deserialized.
     Also available via the [`onmessageerror`](/en-US/docs/Web/API/BroadcastChannel/onmessageerror) property.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

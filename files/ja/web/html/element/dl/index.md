@@ -47,7 +47,7 @@ slug: Web/HTML/Element/dl
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("group")}}, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>, {{ARIARole("none")}}, {{ARIARole("presentation")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
       </td>
     </tr>
     <tr>
