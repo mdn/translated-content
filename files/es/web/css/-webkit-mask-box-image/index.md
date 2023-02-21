@@ -66,7 +66,7 @@ Where:
 
 ## Especificaciones
 
-{{Specifications}}
+No forma parte de ningún estándar.
 
 ## Compatibilidad con navegadores
 

@@ -62,7 +62,7 @@ Donde:
 
 ## Especificaciones
 
-{{Specifications}}
+No forma parte de ningún estándar. Esta propiedad se especifica como {{CSSxRef("mask-composite")}} utilizando diferentes valores.
 
 ## Compatibilidad con navegadores
 
