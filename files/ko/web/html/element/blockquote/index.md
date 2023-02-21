@@ -106,7 +106,7 @@ slug: Web/HTML/Element/blockquote
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.blockquote")}}
+{{Compat}}
 
 ## 같이 보기
 

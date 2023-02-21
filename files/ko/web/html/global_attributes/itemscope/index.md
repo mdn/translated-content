@@ -248,7 +248,7 @@ slug: Web/HTML/Global_attributes/itemscope
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.itemscope")}}
+{{Compat}}
 
 ## 같이 보기
 

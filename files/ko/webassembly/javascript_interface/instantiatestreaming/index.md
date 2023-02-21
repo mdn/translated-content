@@ -46,11 +46,11 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 그런 다음 `ResultObject`의 인스턴스 구성원에 액세스하고 포함 된 내 보낸 함수를 호출합니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

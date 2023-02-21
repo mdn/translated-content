@@ -268,7 +268,7 @@ border: 1px solid black;
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.table")}}
+{{Compat}}
 
 ## 같이 보기
 

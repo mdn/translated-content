@@ -29,9 +29,9 @@ Ver [Salida de texto en la consola](/es/docs/Web/API/console#Outputting_text_to_
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.console.info")}}
+{{Compat}}
 
 ## Vea tambien
 

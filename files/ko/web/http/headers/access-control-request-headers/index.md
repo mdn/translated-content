@@ -43,7 +43,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Request-Headers")}}
+{{Compat}}
 
 ## 더보기
 

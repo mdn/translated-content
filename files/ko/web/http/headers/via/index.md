@@ -55,7 +55,7 @@ Via: 1.0 fred, 1.1 p.example.net
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Via")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

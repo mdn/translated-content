@@ -105,7 +105,7 @@ _Esta interface não herda nenhum método._
   - : Cancela o evento (caso seja cancelável).
 - {{domxref("Event.stopImmediatePropagation()")}}
   - : Para este evento em particular, nenhum outro ouvinte será chamado. Ou aqueles ligados no mesmo elemento, nem aqueles associados em elementos que serão percorridos mais tarde
-    (em fase de captura, por exemplo)​.
+    (em fase de captura, por exemplo).
 - {{domxref("Event.stopPropagation()")}}
   - : Para a propagação de eventos mais adiante no DOM.
 - {{domxref("Event.getPreventDefault()")}} {{non-standard_inline}}

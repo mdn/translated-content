@@ -29,7 +29,7 @@ WWW-Authenticate: Basic realm="Access to staging site"
 
 ## 브라우저 호환성
 
-{{Compat("http.status.401")}}
+{{Compat}}
 
 ## 같이 보기
 

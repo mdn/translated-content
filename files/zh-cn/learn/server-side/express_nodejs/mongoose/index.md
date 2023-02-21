@@ -711,7 +711,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 以上代码有点儿新东西，即字段选项（黑体字）：
 
 - `enum`：可以设置字符串允许的值。本例中可指定书籍的状态。（使用枚举可以避免状态中出现错误拼写或不允许的值）
-- `default`：用默认值可以设定新 ​ 建藏书实例的默认状态（为'馆藏维护'），还可以将默认还书期限（`due_back`）日期设置为今天（`now`）。（设置日期时请注意 `Date` 函数的用法！）
+- `default`：用默认值可以设定新 建藏书实例的默认状态（为'馆藏维护'），还可以将默认还书期限（`due_back`）日期设置为今天（`now`）。（设置日期时请注意 `Date` 函数的用法！）
 
 其他内容和之前的模式大同小异。
 
@@ -722,7 +722,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 与之前模型的定义方式相似：
 
 - 该模型应该有一个 `String` 模式类型，命名为 `name` ，用来描述图书种类。
-- `name` 字段应该是必需的，并且有 3 到 ​ ​100 个字符。
+- `name` 字段应该是必需的，并且有 3 到 100 个字符。
 - 声明一个 [虚拟属性](#虚拟属性)，命名为 `url`，返回图书类型 URL。
 - 导出模型。
 
@@ -747,7 +747,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 3. 在命令提示符下用 node 运行此脚本，并以 MongoDB 数据库的 URL 作为参数（同 `app.js` 中替换 `insert_your_database_url_here` 占位符的 URL）：
 
     ```bash
-    node populatedb <mongodb url>​​​​
+    node populatedb <mongodb url>
     ```
 
 4. 该脚本应一路运行至完成，并在终端中记录所创建的项目。

@@ -89,7 +89,7 @@ slug: Web/HTML/Element/html
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.html")}}
+{{Compat}}
 
 ## 같이 보기
 

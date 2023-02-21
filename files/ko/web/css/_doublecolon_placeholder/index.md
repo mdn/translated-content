@@ -111,11 +111,11 @@ input::placeholder {
 
 {{EmbedLiveSample("Green_text", 200, 60)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

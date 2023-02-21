@@ -116,13 +116,13 @@ parentElement.insertBefore(newElement, theFirstChild);
 
 Cuando el elemento no tiene ub primer hijo, entonces `firstChild` es `null`. Aun así, el elemento se añade al padre después del último hijo. Puesto que el elemento padre no tenía primer hijo, tampoco tiene último hijo. Por tanto, el nuevo elemento es el único elemento después de ser insertado.
 
-## Compatibilidad en navegadores
-
-{{Compat("api.Node.insertBefore")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

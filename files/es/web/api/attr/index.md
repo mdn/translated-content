@@ -114,4 +114,4 @@ Los siguientes metodos ahora son obsoletos.
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Attr")}}
+{{Compat}}

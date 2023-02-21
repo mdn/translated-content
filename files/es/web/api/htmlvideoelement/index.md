@@ -53,9 +53,9 @@ _Hereda los métodos anteriores de_ _{{domxref("HTMLMediaElement")}} y_ _{{domxr
 
 {{Specifications}}
 
-## Compatibilidad con Navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLVideoElement")}}
+{{Compat}}
 
 ## Lea Tambien
 

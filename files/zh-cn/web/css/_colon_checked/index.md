@@ -17,11 +17,15 @@ slug: Web/CSS/:checked
 
 用户通过勾选/选中元素或取消勾选/取消选中，来改变该元素的 :checked 状态。
 
-> **备注：**因为浏览器经常将`<option>`视为[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element),因此不同的浏览器通过`:checked`伪类渲染出来的效果也不尽相同。
+> **备注：** 因为浏览器经常将 `<option>` 视为[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)，因此不同的浏览器通过`:checked`伪类渲染出来的效果也不尽相同。
 
 ## 语法
 
-{{csssyntax}}
+```css
+:checked {
+  /* CSS declarations */
+}
+```
 
 ## 示例
 

@@ -24,6 +24,6 @@ var corner_td = tr.lastChild;
 
 {{Specifications}}
 
-## Compatibilidad en navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.lastChild")}}
+{{Compat}}

@@ -72,7 +72,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 這個範例使用[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 方法去顯示在鼠標下的顏色。
 
-首先，需要一個正確的滑鼠點`layerX`*​​​​​​​*和 `layerY`。在從[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 提供 pixel 陣列中(array)該點的 pixel 數據(data) 。最後，使用陣列數據(array data)在`<div>`中設置背景色和文字去顯示該色。
+首先，需要一個正確的滑鼠點`layerX` 和 `layerY`。在從[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 提供 pixel 陣列中(array)該點的 pixel 數據(data) 。最後，使用陣列數據(array data)在`<div>`中設置背景色和文字去顯示該色。
 
 ```html hidden
 <canvas id="canvas" width="300" height="227" style="float:left"></canvas>

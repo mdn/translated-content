@@ -5,7 +5,7 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
 
 {{GamesSidebar}}
 
-PlayCanvas は有名な 3D WebGL ゲームエンジンです ​。もともと Will Eastcott と Dave Evans によって作成されました。 [GitHub 上でオープンソース](https://github.com/playcanvas/engine)となっており、オンラインで使用できる[エディター](https://developer.playcanvas.com/en/user-manual/designer/)と優れた[ドキュメント](https://developer.playcanvas.com/en/)が特徴です。 オンラインエディターは、パブリックプロジェクトの場合チームメンバー 2 人まで無料で使用できますが、商用でより多くの開発者が参加できるプライベートプロジェクトを希望される場合は [有償プラン](https://playcanvas.com/plans)もあります。
+PlayCanvas は有名な 3D WebGL ゲームエンジンです 。もともと Will Eastcott と Dave Evans によって作成されました。 [GitHub 上でオープンソース](https://github.com/playcanvas/engine)となっており、オンラインで使用できる[エディター](https://developer.playcanvas.com/en/user-manual/designer/)と優れた[ドキュメント](https://developer.playcanvas.com/en/)が特徴です。 オンラインエディターは、パブリックプロジェクトの場合チームメンバー 2 人まで無料で使用できますが、商用でより多くの開発者が参加できるプライベートプロジェクトを希望される場合は [有償プラン](https://playcanvas.com/plans)もあります。
 
 ![PlayCanvas website.](playcanvas-cover.png)
 

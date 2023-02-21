@@ -277,5 +277,5 @@ stopButton.addEventListener("click", () => {
 ## 関連情報
 
 - [MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API)
-- [Media​Stream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)

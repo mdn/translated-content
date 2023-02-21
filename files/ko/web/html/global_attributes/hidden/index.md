@@ -29,7 +29,7 @@ slug: Web/HTML/Global_attributes/hidden
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.hidden")}}
+{{Compat}}
 
 ## 같이 보기
 
