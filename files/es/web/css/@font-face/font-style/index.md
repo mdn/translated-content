@@ -63,6 +63,6 @@ Por otra parte, si existe un verdadera versión en _cursiva_ del estilo de fuent
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.font-style")}}
+{{Compat}}

@@ -51,13 +51,13 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-## Compatibilidad entre Navegadores
-
-{{Compat("api.Window.requestAnimationFrame")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Véase también
 

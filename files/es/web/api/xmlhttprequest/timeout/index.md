@@ -38,4 +38,4 @@ xhr.send(null);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.timeout")}}
+{{Compat}}

@@ -60,9 +60,13 @@ Donde:
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.properties.-webkit-mask-composite")}}
+No forma parte de ningún estándar. Esta propiedad se especifica como {{CSSxRef("mask-composite")}} utilizando diferentes valores.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

@@ -77,9 +77,9 @@ Esta API es claramente accesible a través de dispositivos móbiles. Vibration A
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## Ver También
 

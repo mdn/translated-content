@@ -39,4 +39,4 @@ if (navigator.storage && navigator.storage.persist)
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.StorageManager.persist")}}
+{{Compat}}

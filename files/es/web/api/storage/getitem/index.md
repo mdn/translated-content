@@ -50,7 +50,7 @@ function setStyles() {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Storage.getItem")}}
+{{Compat}}
 
 ## Vea también
 

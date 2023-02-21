@@ -30,9 +30,9 @@ La propiedad [CSS](/es/docs/Web/CSS) **`-webkit-text-stroke-width`** especifica 
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-text-stroke-width")}}
+{{Compat}}
 
 ## Ver además
 
