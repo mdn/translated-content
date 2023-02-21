@@ -425,7 +425,7 @@ Ball.prototype.update = function() {
 
 对象文章就到这里了。现在剩下的就是在下一节的对象评估中测试你的技能。
 
-## 另请参阅
+## 参见
 
 - [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) —— 2D canvas 初学者指南。
 - [requestAnimationFrame()](/zh-CN/docs/Web/API/window/requestAnimationFrame)
@@ -435,13 +435,3 @@ Ball.prototype.update = function() {
 - [Phaser 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) —— JavaScript 游戏库构建 2D 游戏的基础知识。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
-
-## 本章目录
-
-- [对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)
-- [适合初学者的 JavaScript 面向对象](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [对象原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [JavaScript 中的继承](/zh-CN/docs/Learn/JavaScript/Objects/Inheritance)
-- [使用 JSON 数据](/zh-CN/docs/Learn/JavaScript/Objects/JSON)
-- [构建对象实战](/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [向“弹跳球”演示程序添加新功能](/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

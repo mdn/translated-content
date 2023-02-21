@@ -344,15 +344,3 @@ function updateBtn() {
 > **备注：** 如果您喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates) 和 [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级) 来说，那是一个不错的地方。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
-
-## 在这个模块
-
-- [什么是 JavaScript?](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [哪里出错了](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)[? JavaScript 故障排除](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [存储你需要的信息——变量](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 中的基本运算——数值和运算符](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
-- [文字处理——JavaScript 字符串](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
-- [实用的 strings 方法](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

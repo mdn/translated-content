@@ -471,15 +471,3 @@ for (let i = 0; i < buttons.length; i++) {
 现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将[全力投入实战](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
-
-## 本章目录
-
-- [JavaScript 是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [查找并解决 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [变量：储存所需信息](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
-- [数字和运算符：JavaScript 的基本算数](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
-- [字符串：JavaScript 文本的处理](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
-- [字符串的一些实用方法](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
-- [课程评估：笑话机](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)
