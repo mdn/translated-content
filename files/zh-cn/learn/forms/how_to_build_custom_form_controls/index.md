@@ -5,7 +5,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 {{LearnSidebar}}
 
-在许多情况下，可用的 HTML 表单控件是不够的。如果要在某些小部件（例如 {{HTMLElement("select")}} 元素）上执行[高级样式](/zh-CN/docs/Learn/Form/Advanced_form_styling)，或者如果要提供自定义表现，则别无选择，只能构建自己的小部件。
+在许多情况下，可用的 HTML 表单控件是不够的。如果要在某些小部件（例如 {{HTMLElement("select")}} 元素）上执行[高级样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，或者如果要提供自定义表现，则别无选择，只能构建自己的小部件。
 
 在本文中，我们会看到如何构建这样的组件。为此，我们将使用这样一个例子：重建 {{HTMLElement("select")}} 元素。
 
