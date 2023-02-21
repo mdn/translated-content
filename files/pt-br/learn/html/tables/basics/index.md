@@ -218,7 +218,7 @@ Falamos o suficiente sobre teoria de tabelas, então, vamos partir para um exemp
 
 1. Antes de tudo, faça uma cópia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) e [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dentro de um novo diretório na sua máquina local.
 2. O conteúdo de cada tabela fica contido entre as duas tags : **[`<table></table>`](/pt-BR/docs/Web/HTML/Element/table)**. Acrescente-as dentro da seção body de seu HTML.
-3. O menor contêiner dentro de uma tabela é uma célula da tabela, que é criada por um elemento **[`<td>`](/pt-BR/docs/Web/HTML/Element/td)**  ('td' significa 'dados da tabela'). Adicione as linhas seguintes dentro das tags da tabela:
+3. O menor contêiner dentro de uma tabela é uma célula da tabela, que é criada por um elemento **[`<td>`](/pt-BR/docs/Web/HTML/Element/td)** ('td' significa 'dados da tabela'). Adicione as linhas seguintes dentro das tags da tabela:
 
     ```html
     <td>Hi, I'm your first cell.</td>
@@ -233,7 +233,7 @@ Falamos o suficiente sobre teoria de tabelas, então, vamos partir para um exemp
     <td>I'm your fourth cell.</td>
     ```
 
-Como podemos ver, as células não são posicionadas uma abaixo da outra, em vez disso elas são automaticamente alinhadas umas com as outras na mesma linha. Cada elemento `<td>` cria uma única célula que juntas formam a primeira linha. Cada célula adicionada faz a linha crescer e se tornar mais longa. 
+Como podemos ver, as células não são posicionadas uma abaixo da outra, em vez disso elas são automaticamente alinhadas umas com as outras na mesma linha. Cada elemento `<td>` cria uma única célula que juntas formam a primeira linha. Cada célula adicionada faz a linha crescer e se tornar mais longa.
 
 Para evitar que a linha cresça e começar a posicionar células em uma segunda linha, precisamos usar o elemento **[`<tr>`](/pt-BR/docs/Web/HTML/Element/tr)** ('tr' significa 'linha da tabela'). Vamos investigar isso agora.
 
@@ -419,7 +419,7 @@ Que exibe o seguinte resultado:
 | Calcutta | Orange |
 | Robots   | Jazz   |
 
-Não é o ideal,  uma vez que temos de repetir os dados de estilo em todas as três células da coluna (provavelmente teríamos uma `class` configurada para as  três células em um projeto de verdade e especificaríamos o estilo em uma folha de estilo separada). Em vez disso, podemos especificar a informação uma única vez, no elemento `<col>`. Os elementos `<col>` são especificados dentro de um contêiner `<colgroup>` abaixo da tag de abertura `<table>`. Podemos criar o mesmo efeito que vimos acima espeficiando a tabela da seguinte maneira:
+Não é o ideal, uma vez que temos de repetir os dados de estilo em todas as três células da coluna (provavelmente teríamos uma `class` configurada para as  três células em um projeto de verdade e especificaríamos o estilo em uma folha de estilo separada). Em vez disso, podemos especificar a informação uma única vez, no elemento `<col>`. Os elementos `<col>` são especificados dentro de um contêiner `<colgroup>` abaixo da tag de abertura `<table>`. Podemos criar o mesmo efeito que vimos acima espeficando a tabela da seguinte maneira:
 
 ```html
 <table>
