@@ -60,7 +60,7 @@ parseFloat(foo);
 
 var foo = Object.create(null);
 foo.valueOf = function () { return "3.14"; };
-parseFloat(foo);​​​​​
+parseFloat(foo);
 ```
 
 ### `parseFloat` возвращает NaN
