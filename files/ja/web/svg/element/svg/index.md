@@ -24,7 +24,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{EmbedLiveSample('Example', 300, 100)}}
 
 ## 属性
 
