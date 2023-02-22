@@ -290,16 +290,16 @@ Al compilar la aplicación, Svelte cambia la definición de nuestros estilos `h1
 
 > **Note:** Puedes cambiar este comportamiento al aplicar los estilos globalmente a un selector utilizando el modificador `:global()` (visita la entrada de la [documentación de Svelte para `<style>`](https://svelte.dev/docs#style) para más información).
 
-## Making a couple of changes
+## Aplicando algunos cambios
 
-Now that we have a general idea of how it all fits together, we can start making a few changes.
-At this point you can try updating your `App.svelte` component — for example change the `<h1>` element on line 6 of `App.svelte` so that it reads like this:
+Ahora que tenemos una idea general de cómo funcionan las cosas, podemos empezar a aplicar algunos cambios.
+En este punto puedes intentar actualizar tu componente `App.svelte`, por ejemplo, cambiando el elemento `<h1>` en la línea 6 del archivo anterior para que ahora se muestre de la siguiente forma:
 
 ```html
 <h1>Hello {name} from MDN!</h1>
 ```
 
-Just save your changes and the app running at `localhost:8080` will be automatically updated.
+Simplemente guarda los cambios y la aplicación ejecutándose en `localhost:8080` se actualizará automáticamente.
 
 ### A first look at Svelte reactivity
 
