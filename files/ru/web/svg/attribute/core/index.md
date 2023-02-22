@@ -42,7 +42,7 @@ translation_of: Web/SVG/Attribute/Core
 
     _Значение_: Любой валидный язык ID; _Анимируемый_: **Нет**
 
-- {{SVGAttr('xml:space')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('xml:space')}} {{deprecated_inline}}
 
   - : SVG поддерживает стандартный XML-атрибут `xml:space` для указания обработки символов пробела в пределах заданных {{ SVGElement("text") }} символов текущего элемента.
 

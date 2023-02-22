@@ -216,7 +216,7 @@ window.addEventListener("load", () => {
 
 {{EmbedLiveSample("Using_FormData_bound_to_a_form_element", "100%", 50)}}
 
-フォームの {{domxref("HTMLFormElement.elements", "elements")}} プロパティを使用してフォーム内のすべてのデータ要素のリストを取得し、それらを一度に 1 つずつ手動で管理することで、このプロセスにさらに関わることができます。詳細については、{{SectionOnPage("/ja/docs/Web/API/HTMLFormElement.elements", "要素リストの内容にアクセスする")}}の例を参照してください。
+フォームの {{domxref("HTMLFormElement.elements", "elements")}} プロパティを使用してフォーム内のすべてのデータ要素のリストを取得し、それらを一度に 1 つずつ手動で管理することで、このプロセスにさらに関わることができます。詳細については、[フォームコントロールへのアクセス](/ja/docs/Web/API/HTMLFormElement/elements#%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%81%B8%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9)の例を参照してください。
 
 ## バイナリーデータを扱う
 

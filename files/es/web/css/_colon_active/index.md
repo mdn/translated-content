@@ -49,7 +49,7 @@ a:active { color: lime; }        /* Enlaces activos */
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.active")}}
+{{Compat}}
 
 ## Ver también
 

@@ -89,18 +89,3 @@ The following screenshot shows an example of what the finished design should loo
 If you are following this assessment as part of an organized course, you should be able to give your work to your teacher/mentor for marking. If you are self-learning, then you can get the marking guide fairly easily by asking on the [discussion thread about this exercise](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682), or in the [#mdn](irc://irc.mozilla.org/mdn) IRC channel on [Mozilla IRC](https://wiki.mozilla.org/IRC). Try the exercise first — there is nothing to be gained by cheating!
 
 {{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
-
-## In this module
-
-- [How CSS works](/ko/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
-- [CSS syntax](/ko/docs/Learn/CSS/Introduction_to_CSS/Syntax)
-- [Selectors](/ko/docs/Learn/CSS/Introduction_to_CSS/Selectors)
-- [Simple selectors](/ko/docs/Learn/CSS/Introduction_to_CSS/Selectors/Simple_selectors)
-- [Attribute selectors](/ko/docs/Learn/CSS/Introduction_to_CSS/Selectors/Attribute_selectors)
-- [Pseudo-classes and pseudo-elements](/ko/docs/Learn/CSS/Introduction_to_CSS/Selectors/Pseudo-classes_and_pseudo-elements)
-- [Combinators and multiple selectors](/ko/docs/Learn/CSS/Introduction_to_CSS/Selectors/Combinators_and_multiple_selectors)
-- [CSS values and units](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
-- [Cascade and inheritance](/ko/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
-- [The box model](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model)
-- [Debugging CSS](/ko/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
-- [Fundamental CSS comprehension](/ko/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)

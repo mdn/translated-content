@@ -3,8 +3,6 @@ title: HTMLShadowElement
 slug: Web/API/HTMLShadowElement
 ---
 
-{{obsolete_header}}
-
 {{ APIRef("Web Components") }}
 
 A interface **`HTMLShadowElement`** representa um elemento HTML {{HTMLElement("shadow")}}, Ao qual é usado no [Shadow DOM](/pt-BR/docs/Web/Web_Components/Shadow_DOM).

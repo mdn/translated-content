@@ -573,7 +573,7 @@ The ECMAScript specification mentions [three rules of semicolon insertion](https
 
 ## 브라우저 호환성
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## 같이 보기
 

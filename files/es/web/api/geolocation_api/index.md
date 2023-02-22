@@ -53,11 +53,11 @@ Consulte [Uso de la API de geolocalización](/es/docs/Web/API/Geolocation_API/Us
 
 ## Especificaciones
 
-{{Specifications("api.Geolocation")}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ### Disponibilidad
 

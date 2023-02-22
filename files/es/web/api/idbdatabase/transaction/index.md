@@ -32,7 +32,7 @@ Un objeto {{domxref("IDBTransaction")}}.
 
 ## Ejemplo
 
-En este ejemplo abrimos la conexión a una base de datos, luego usamos `transaction()` para abrir una transacción en dicha base de datos. Para un ejemplo completo, vea nuestra aplicación [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([ver ejemplo en vivo](http://mdn.github.io/to-do-notifications/)).
+En este ejemplo abrimos la conexión a una base de datos, luego usamos `transaction()` para abrir una transacción en dicha base de datos. Para un ejemplo completo, vea nuestra aplicación [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo en vivo](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var db;
@@ -106,9 +106,9 @@ var objectStore = transaction.objectStore("toDoList");
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.IDBDatabase.transaction")}}
+{{Compat}}
 
 ## Ver también
 
@@ -118,4 +118,4 @@ var objectStore = transaction.objectStore("toDoList");
 - Configurar un rango de llaves: {{domxref("IDBKeyRange")}}
 - Recuperando y haciendo cambios a tus datos: {{domxref("IDBObjectStore")}}
 - Usando cursores: {{domxref("IDBCursor")}}
-- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([ver ejemplo en vivo](http://mdn.github.io/to-do-notifications/)).
+- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo en vivo](https://mdn.github.io/dom-examples/to-do-notifications/)).

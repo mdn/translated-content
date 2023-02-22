@@ -33,9 +33,9 @@ La interfaz `Coordinates` no implementa ni edita ningún método.
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GeolocationCoordinates")}}
+{{Compat}}
 
 ## Ver también
 

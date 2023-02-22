@@ -92,7 +92,7 @@ void close(
 - `SYNTAX_ERR`
   - : A string `reason é muito longa ou contém substitutos não comparados.`
 
-> **Nota:** `Note: No Gecko, este método não suporta nenhum parâmetro antes do Gecko 8.0 {{geckoRelease("8.0")}}.`
+> **Nota:** `Note: No Gecko, este método não suporta nenhum parâmetro antes do Gecko 8.0.`
 
 ### `send()`
 
@@ -125,9 +125,9 @@ void send(
 - `SYNTAX_ERR`
   - : `Os dados são uma string que tem substituto não comparado.`
 
-> **Nota:** `Nota: A implementação do método send () de Gecko difere um pouco da especificação em {{Gecko("6.0")}}. Gecko retorna um boolean indicando se a conexão ainda está aberta (por extensão, ou os dados estão em fila ou transmitidos com sucesso). Isso é corrigido em {{Gecko("8.0")}}.`
+> **Nota:** `Nota: A implementação do método send () de Gecko difere um pouco da especificação em Gecko 6.0. Gecko retorna um boolean indicando se a conexão ainda está aberta (por extensão, ou os dados estão em fila ou transmitidos com sucesso). Isso é corrigido em Gecko 8.0.`
 >
-> `A partir de {{Gecko("11.0")}}, o suporte para {{jsxref ("ArrayBuffer")}} está implementado, mas não {{domxref("Blob")}} tipos de dados.`
+> `A partir de Gecko 11.0, o suporte para {{jsxref ("ArrayBuffer")}} está implementado, mas não {{domxref("Blob")}} tipos de dados.`
 
 ## `Especificações`
 

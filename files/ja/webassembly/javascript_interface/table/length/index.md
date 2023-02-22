@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Table/length
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`length`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイププロパティで、このテーブルの長さ、すなわち、テーブルの要素の数を返します。
 

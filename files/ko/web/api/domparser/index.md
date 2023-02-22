@@ -16,7 +16,7 @@ HTML 문서의 경우, {{domxref("Element.innerHTML")}} 속성과 {{domxref("Ele
 ## 문법
 
 ```js
-let domparser = new DOMParser()​​
+let domparser = new DOMParser()
 ```
 
 ## 메소드

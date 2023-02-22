@@ -31,7 +31,7 @@ left: unset;
 - 当`position`设置为`sticky`时，如果元素在 viewport 里面，`left`属性的效果和 position 为`relative`等同；如果元素在 viewport 外面，`left`属性的效果和 position 为`fixed`等同。
 - 当`position`设置为`static`时，`left`属性无效。
 
-当`left`和{{cssxref("right")}}​​​​​​ 同时指定时，元素的位置会被重复指定。当容器是从左到右时，`left`的值会被优先设定；当容器是从右到左时，`right`的值会被优先设定。
+当`left`和{{cssxref("right")}} 同时指定时，元素的位置会被重复指定。当容器是从左到右时，`left`的值会被优先设定；当容器是从右到左时，`right`的值会被优先设定。
 
 {{cssinfo}}
 

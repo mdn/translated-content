@@ -2,6 +2,7 @@
 title: NavigatorConcurrentHardware
 slug: orphaned/Web/API/NavigatorConcurrentHardware
 original_slug: Web/API/NavigatorConcurrentHardware
+browser-compat: api.Navigator.hardwareConcurrency
 ---
 
 {{APIRef("HTML DOM")}}
@@ -25,9 +26,9 @@ _The `NavigatorConcurrentHardware`_ _mixin has no methods._
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.NavigatorConcurrentHardware")}}
+{{Compat}}
 
 ## See also
 

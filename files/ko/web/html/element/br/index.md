@@ -108,7 +108,7 @@ USA
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
 ## 같이 보기
 

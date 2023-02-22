@@ -73,9 +73,9 @@ input[type="checkbox"]:checked {
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.pointer")}}
+{{Compat}}
 
 ## Ver también
 

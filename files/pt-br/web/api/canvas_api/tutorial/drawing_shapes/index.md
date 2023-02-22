@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 Agora que criamos nosso [ambiente em canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_usage), podemos entrar nos detalhes de como desenhar no canvas. No final deste artigo, você terá aprendido a desenhar retângulos, triângulos, linhas, arcos e curvas, proporcionando familiaridade com algumas das formas básicas. Trabalhar com caminhos (_shapes_) é essencial ao desenhar objetos na tela e veremos como isso pode ser feito.
 
@@ -498,7 +498,7 @@ A API `Path2D` também adiciona uma maneira de combinar caminhos usando o métod
 
 ### Exemplo de Path2D
 
-Neste exemplo, estamos criando um retângulo e um círculo. Ambos são armazenados como um objeto de `Path2D`, de modo que eles estão disponíveis para uso posterior. Com a nova API `Path2D`, vários métodos foram atualizados como, por exemplo, opcionalmente usar um objeto `Path2D` em vez do `path` atual. Aqui, os métodos `stroke` e `fill` são usados, ​​com um argumento de _path_, para desenhar ambos os objetos na tela, por exemplo.
+Neste exemplo, estamos criando um retângulo e um círculo. Ambos são armazenados como um objeto de `Path2D`, de modo que eles estão disponíveis para uso posterior. Com a nova API `Path2D`, vários métodos foram atualizados como, por exemplo, opcionalmente usar um objeto `Path2D` em vez do `path` atual. Aqui, os métodos `stroke` e `fill` são usados, com um argumento de _path_, para desenhar ambos os objetos na tela, por exemplo.
 
 ```html hidden
 <html>

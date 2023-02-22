@@ -46,10 +46,10 @@ You can also set up the event handler using the {{domxref("GlobalEventHandlers.o
 input.onselect = logSelection;
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

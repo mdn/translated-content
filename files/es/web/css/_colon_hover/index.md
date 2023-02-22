@@ -51,9 +51,9 @@ a:hover {
 
 ### Galería de imágenes
 
-Puede usar la pseudoclase `:hover` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el mouse se mueve sobre una miniatura. Vea [esta demostración](/@api/deki/files/6247/=css-gallery.zip) para una posible nota.
+Puede usar la pseudoclase `:hover` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el mouse se mueve sobre una miniatura. Vea [esta demostración](css-gallery.zip) para una posible nota.
 
-> **Nota:** Para un efecto análogo, pero basado en la pseudo-clase [`:checked`](/es/docs/Web/CSS/%3Achecked) (aplicado a radioboxes ocultos), vea [esta demostración](/@api/deki/files/6268/=css-checked-gallery.zip), tomada de la página de referencia [:checked](/es/docs/Web/CSS/:checked).
+> **Nota:** Para un efecto análogo, pero basado en la pseudo-clase [`:checked`](/es/docs/Web/CSS/%3Achecked) (aplicado a radioboxes ocultos), vea [esta demostración](css-checked-gallery.zip), tomada de la página de referencia [:checked](/es/docs/Web/CSS/:checked).
 
 ## Especificaciones
 
@@ -61,7 +61,7 @@ Puede usar la pseudoclase `:hover` para crear una galería de imágenes con imá
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.hover")}}
+{{Compat}}
 
 ## Ver también
 

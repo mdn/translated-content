@@ -110,14 +110,6 @@ theDog.toSource();
 // returns ({name:"Gabby", breed:"Lab", color:"chocolate", sex:"female"})
 ```
 
-## Especificaciones
-
-No es parte de ningún estándar. Implementado en JavaScript 1.3.
-
-## Compatibilidad en navegadores
-
-{{Compat("javascript.builtins.Object.toSource")}}
-
 ## Ver también
 
 - {{jsxref("Object.prototype.toString()")}}

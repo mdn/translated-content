@@ -45,13 +45,13 @@ myReq = requestAnimationFrame(step);
 window.cancelAnimationFrame(myReq);
 ```
 
-## Compatibilidad de navegadores
-
-{{Compat("api.Window.cancelAnimationFrame")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

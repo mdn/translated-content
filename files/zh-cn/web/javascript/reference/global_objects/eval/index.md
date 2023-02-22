@@ -55,7 +55,7 @@ function test() {
   var geval = eval; // 等价于在全局作用域调用
   console.log(geval('x + y')); // 间接调用，使用全局作用域，throws ReferenceError 因为`x`未定义
   (0, eval)('x + y'); // 另一个间接调用的例子
-​}
+}
 ```
 
 ## 永远不要使用 `eval`！

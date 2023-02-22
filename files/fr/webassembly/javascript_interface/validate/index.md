@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La fonction **`WebAssembly.validate()`** permet de valider un [tableau typé](/fr/docs/Web/JavaScript/Tableaux_typés) de _bytecode_ WebAssembly et renvoie un booléen qui indique si le contenu du tableau forme un module WebAssembly valide (`true`) ou non (`false`).
 

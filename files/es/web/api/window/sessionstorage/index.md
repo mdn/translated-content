@@ -57,7 +57,7 @@ field.addEventListener("change", function() {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## Vea También
 

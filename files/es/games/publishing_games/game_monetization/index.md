@@ -26,7 +26,7 @@ Los juegos que ofrecen compras en el juego, a menudo se refieren a **freemium** 
 
 ### Complementos y DLCs
 
-Los complementos y el contenido descargable son una buena manera de proporcionar un valor extra a un juego ya lanzado, pero recuerda que tendrás que ofrecer contenido decente y entretenido para atraer a la gente a comprarlo. Un conjunto totalmente nuevo de niveles con nuevos personajes, armas e historia es un buen material para DLC, pero para tener suficientes ventas el juego en sí debe ser popular, o de lo contrario no habrá jugadores interesados ​​en gastar su dinero duramente ganado. eso.
+Los complementos y el contenido descargable son una buena manera de proporcionar un valor extra a un juego ya lanzado, pero recuerda que tendrás que ofrecer contenido decente y entretenido para atraer a la gente a comprarlo. Un conjunto totalmente nuevo de niveles con nuevos personajes, armas e historia es un buen material para DLC, pero para tener suficientes ventas el juego en sí debe ser popular, o de lo contrario no habrá jugadores interesados en gastar su dinero duramente ganado. eso.
 
 En lugar de vender activamente los juegos, también puede intentar obtener un ingreso pasivo: mostrar anuncios y confiar en actividades anteriores relacionadas con la [promoción](/es/docs/Games/Techniques/Publishing_games/Game_promotion) de su juego puede ser beneficioso, pero su juego debe ser adictivo, lo cual no es tan fácil como parece. Todavía necesitas planearlo, y en algún momento también necesitarás un poco de suerte. Si su juego se vuelve viral y la gente comienza a compartirlo, puede obtener muchas descargas y dinero de los anuncios.
 

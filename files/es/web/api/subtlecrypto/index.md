@@ -113,9 +113,9 @@ _Esta interfaz no hereda ningún método._
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.SubtleCrypto")}}
+{{Compat}}
 
 ## Ver también
 

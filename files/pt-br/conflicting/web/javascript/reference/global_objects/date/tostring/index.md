@@ -4,7 +4,7 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
 original_slug: Web/JavaScript/Reference/Global_Objects/Date/toSource
 ---
 
-{{JSRef}} {{obsolete_header}}
+{{JSRef}}
 
 O método **`toSource()`** retorna uma cadeia de caracteres (_string_) representando o código fonte do objeto.
 

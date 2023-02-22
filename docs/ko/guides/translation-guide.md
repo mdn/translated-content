@@ -1,60 +1,22 @@
-# 번역 지침
+# 번역 안내서
 
-## 메타데이터
+## 문서 연결 경로
 
-문서의 상단에 있는 메타데이터는 `title`, `slug`, `original_slug` 그리고 `l10n.*`만 번역해줍니다. (참고: [#7412](https://github.com/mdn/translated-content/issues/7412))
+한글 문서가 존재하지 않더라도 `/en-US` 문서로 넘겨주기 때문에 한국 문서의 모든 경로는 `/ko`로 표기합니다.
 
-영어 원문
+```
+// bad
+[`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
-```markdown
----
-title: Proxy
-slug: Web/JavaScript/Reference/Global_Objects/Proxy
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
-- browser-compat: javascript.builtins.Proxy
----
-{{JSRef}}
-
-The `Proxy` object enables you to create a proxy for another ...
-  :
+// good
+[`Array`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)
 ```
 
-번역본
+## Inline code
 
-```markdown
----
-title: Proxy
-slug: Web/JavaScript/Reference/Global_Objects/Proxy
----
-{{JSRef}}
+원문의 인라인 코드는 번역하지 않습니다.
 
-**`Proxy`** 객체는 기본적인 동작(속성 접근, 할당, 순회, 열거, 함수 ...
-  :
-```
-
-## heading ID 번역
-
-기사 제목에는 거의 항상 ID가 주어지는데, 기사 내에서 네비게이션을 자동으로 생성하고 실시간 샘플을 생성하기 위한 코드 블록을 식별하는 등의 이유가 있습니다. 제목을 번역 할 때 ID도 같이 번역 할 필요가 없습니다. 나머지 슬러그는 번역되지 않으므로 모든 것이 일관되게 유지됩니다.
-
-예를 들면:
-
-```html
-<h2 id="tutorials"> Tutorials </h2> 
-```
-
-`ko` 지역 에서
-
-```html
-<h2 id="tutorials"> 튜토리얼 </h2>
-```
-
-일반적으로 모든 ID를 소문자로 작성하는 것이 좋습니다. 플랫폼은 어쨌든 렌더링시 자동으로 변환하지만 소문자로 유지하면 변환으로 인해 수동으로 만든 앵커 링크가 작동하지 않을 가능성이 적습니다.
-
-## code block 번역
+## Block code
 
 코드 블록을 번역 할 때 주석, 문자열, 변수 이름 및 출력물을 번역하는 것이 좋습니다.
 
@@ -62,21 +24,55 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 
 또한, 예제 번역을 고려할 때, 일부 예제는 별도의 저장소에 있는 라이브 버전 또는 소스 코드에 연결된다는 점을 염두에 두십시오. 여러분은 또한 번역 된 페이지에서 링크 할 외부 코드 예제의 번역 된 버전을 만드는 것을 고려할 수도 있습니다.
 
-## HTML 소스의 줄 바꿈
+## 안내 문구
 
-일부 기사 소스 코드에서, 반드시 필요하지 않은 블록 수준 요소에서 줄 바꿈을 찾을 수 있습니다. 예를 들면 다음과 같습니다.
+각 페이지의 안내 문구에 대한 단어 정의입니다.
 
-```html
-<p>The
-  <code><strong>HTMLCanvasElement</strong></code><strong><code>.transferControlToOffscreen()</code></strong>
-  method transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main
-  thread or on a worker.</p>
+**사전 순으로 용어집을 편집해주세요.**
 
-<pre
-  class="brush: js">OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()</pre>
+| 용어 | 번역 | 참고 링크 |
+| --- | --- | --- |
+| Note | 참고 | |
+| Warning | 경고 | |
+| Callout | 알림 | |
+| Objective | 목표 | [링크][What_is_accessibility] |
+| Prerequisites | 필요한 사전 지식 | [링크][What_is_accessibility] |
+
+### 교육 과정 callout
+
+```markdown
+> **알림:**
+>
+> #### 프론트엔드 웹 개발자가 되고자 하시나요?
+>
+> 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
+>
+> [**시작하기**](/en-US/docs/Learn/Front-end_web_developer)
 ```
 
-일반적으로 소스 코드에서 이와 같은 줄 바꿈을 사용하지 않으므로 원하는 경우 자유롭게 제거 할 수 있으며 새 번역을 만들 때 추가하지 마십시오. 그러나 최종 렌더링 결과에 영향을 미치지 않으므로 이를 제거하는 데 너무 많은 시간을 소비하지 마십시오.
+### 카드 번역
+
+카드는 참고, 경고 그리고 알림의 세 가지 유형이 있으며, 영어 원문에서는 다음과 같이 표시됩니다.
+
+```markdown
+# 참고
+> **Note:** This is a note.
+# 경고
+> **Warning:** This is a warning.
+# 알림
+> **Callout:** This is a callout.
+```
+
+이런 카드는 아래와 같이 번역해주시면 됩니다.
+
+```markdown
+# 참고
+> **참고:** 참고입니다.
+# 경고
+> **경고:** 경고입니다.
+# 알림
+> **알림:** 알림입니다.
+```
 
 ## 역주/역자주
 
@@ -93,7 +89,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 
 다만 진짜 강조를 해야하는 상황에는, 따옴표로 강조하고 PR로 소명합니다.
 
-## `:` 쌍점, `;` 쌍반점 지침
+## `:` 쌍점, `;` 쌍반점
 
 뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-964241518)
 
@@ -143,9 +139,9 @@ The properties of these objects are as follows:
 이 객체들의 속성은 다음과 같습니다.
 ```
 
-## `—` 대시 지침
+## `—` 대시
 
-`: 쌍점,  ; 쌍반점 지침`과 같은 맥락에서 `. 온점`으로 치환하는 것을 권장합니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-965500282)
+`: 쌍점,  ; 쌍반점 안내서`과 같은 맥락에서 `. 온점`으로 치환하는 것을 권장합니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-965500282)
 
 - 원문
 

@@ -27,6 +27,6 @@ slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.contentScripts", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

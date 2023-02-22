@@ -24,4 +24,3 @@ original_slug: Глоссарий/character_encoding
 ### Общие сведения
 
 - [Кодировка символов на W3C](https://www.w3.org/International/articles/definitions-characters/)
-- {{Interwiki("wikipedia", "Кодировка символов")}} на Википедия

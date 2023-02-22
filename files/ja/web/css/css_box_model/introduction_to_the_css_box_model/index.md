@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 
 それぞれのボックスは 4 つの部品 (または*領域*) から構成され、それぞれの縁について*コンテンツの縁 (content edge)*、*パディングの縁 (padding edge)*、*境界の縁 (border edge)*、*マージンの縁 (margin edge)* が定義されています。
 
-![CSS ボックスモデル](<boxmodel-(3).png>)
+![CSS ボックスモデル](boxmodel.png)
 
 ## コンテンツ領域
 

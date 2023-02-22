@@ -53,7 +53,7 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.File.webkitRelativePath")}}
+{{Compat}}
 
 ## Vea también
 

@@ -19,7 +19,7 @@ O **elemento HTML `<form>` **representa uma seção de um documento que contém 
 
 Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("accept")}} {{HTMLVersionInline(4)}} {{obsolete_inline}}
+- {{htmlattrdef("accept")}} {{HTMLVersionInline(4)}}
 
   - : A comma-separated list of content types that the server accepts.
 

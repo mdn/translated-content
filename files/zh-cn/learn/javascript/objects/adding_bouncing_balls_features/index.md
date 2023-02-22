@@ -424,13 +424,3 @@ window.onkeydown = e => {
 如果你将此评估作为有组织的课程的一部分，你可以将你的成果交给您的老师/导师进行评分。如果你是自学的，通过在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)，或者在 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道上申请，你可以十分容易地得到评分指南。首先先尝试这个练习，作弊不会有任何收获。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
-
-## 本章目录
-
-- [对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)
-- [适合初学者的 JavaScript 面向对象](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [对象原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [JavaScript 中的继承](/zh-CN/docs/Learn/JavaScript/Objects/Inheritance)
-- [使用 JSON 数据](/zh-CN/docs/Learn/JavaScript/Objects/JSON)
-- [构建对象实战](/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [向“弹跳球”演示程序添加新功能](/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

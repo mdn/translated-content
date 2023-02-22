@@ -238,7 +238,7 @@ Provides a human-readable name for the application as it is intended to be displ
 Defines the default orientation for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.
 
 ```json
-​​"orientation": "portrait-primary"
+"orientation": "portrait-primary"
 ```
 
 Orientation pode ser um dos seguintes valores:

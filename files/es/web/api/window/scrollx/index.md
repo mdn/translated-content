@@ -54,7 +54,7 @@ var y = (window.pageYOffset !== undefined)
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.scrollX")}}
+{{Compat}}
 
 ## Ver también
 

@@ -83,7 +83,7 @@ See {{HTMLElement("table")}} for examples on `<tr>`.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.tr")}}
+{{Compat}}
 
 ## 같이 보기
 

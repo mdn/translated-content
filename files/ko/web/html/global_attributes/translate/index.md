@@ -28,7 +28,7 @@ slug: Web/HTML/Global_attributes/translate
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.translate")}}
+{{Compat}}
 
 ## 같이 보기
 

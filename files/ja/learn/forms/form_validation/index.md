@@ -187,7 +187,7 @@ input:valid {
 - `a|b` — 一文字の `a` または `b` に一致する
 - `abc|xyz` — `abc` の並びまたは `xyz` の並びに一致する。これは `abcxyz` や `a` や `y` などには一致しない。
 
-正規表現には多くの組合せがあるので例はここまでとする。完全な一覧や多くの例は、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)のドキュメントを参照してください。
+正規表現には多くの組合せがあるので例はここまでとします。完全な一覧や多くの例は、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)のドキュメントを参照してください。
 
 使用例を実装しましょう。HTML を更新して [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性を追加しましょう。
 
@@ -291,7 +291,7 @@ div {
 
 > **メモ:** GitHub の [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) でライブサンプルを見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-length.html)も見てください）
 
-> **メモ:** `<input type="number">` （オヨビ `range` や `date` のような他の型）は [`step`](/ja/docs/Web/HTML/Attributes/step) 属性を取ることもでき、入力コントロール（数値の増加・減少ボタンなど）を使用するときに上げ下げすることができる値の刻みを設定することができます。上の例では `step` 属性を入れていませんので、既定値の `1` となります。つまり 3.2 のような浮動小数でも、不正になります。
+> **メモ:** `<input type="number">` （および、 `range` や `date` のような他の型）は [`step`](/ja/docs/Web/HTML/Attributes/step) 属性を取ることもでき、入力コントロール（数値の増加・減少ボタンなど）を使用するときに上げ下げすることができる値の刻みを設定することができます。上の例では `step` 属性を入れていませんので、既定値の `1` となります。つまり 3.2 のような浮動小数でも、不正になります。
 
 ### サンプル全体
 

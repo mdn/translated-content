@@ -1,62 +1,62 @@
-name: "[via MDN pages only // ko]"
-description: Issue filed via "Report a problem with this content on GitHub" link on MDN pages.
+name: "[MDN 페이지를 통해서만 // ko]"
+description: MDN 페이지의 "Report a problem with this content on GitHub" 링크롤 통해 제기된 이슈입니다.
 labels: ["l10n-ko", "needs triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### Before you start
+        ### 시작하기 전에
 
-        **Want to change this page yourself?** This content is open source!
-        ↩ Go back and use the _Edit on GitHub_ link on the page.
+        **이 페이지를 직접 변경하고싶으신가요?** 이 컨텐츠는 오프소스입니다!
+        ↩ 돌아가서 페이지의 _Edit on GitHub_ 링크를 클릭하세요.
 
-        **Is your issue about the browser compatibility table?**
-        ↩ Go back and use the _Report problems with this compatibility data on GitHub_ link on the page.
+        **브라우저 호환성 테이블에 대한 문제인가요?**
+        ↩ 돌아가서 페이지의 _Report problems with this compatibility data on GitHub_ 링크를 클릭하세요.
 
-        **Need help with a browser?**
-        🙋 To get help with [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), or another browser, check the browser's support site.
+        **브라우저에 대한 도움이 필요하시나요?**
+        🙋 [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html)에서 도움을 받을 수 있고, 다른 브라우저는 해당 브라우저의 지원 사이트를 확인해주세요.
 
         ---
   - type: input
     id: mdn-url
     attributes:
       label: MDN URL
-      description: Set automatically. Do not modify.
+      description: 자동으로 설정되니 수정하지 마세요.
     validations:
       required: true
   - type: input
     id: section
     attributes:
-      label: What specific section or headline is this issue about?
+      label: 이 문제에 관한 특정 섹션 또는 제목은 무엇인가요?
   - type: textarea
     id: problem
     attributes:
-      label: What information was incorrect, unhelpful, or incomplete?
+      label: 어떤 정보가 부정확하거나 도움이 되지 않거나 불완전했나요?
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: What did you expect to see?
+      label: 어떻게 고쳐져야 하나요?
     validations:
       required: true
   - type: textarea
     id: references
     attributes:
-      label: Do you have any supporting links, references, or citations?
-      description: Link to information that helps us confirm your issue.
+      label: 지원 링크, 참조 또는 인용구가 있으신가요?
+      description: 문제를 확인하는 데 도움이 되는 링크입니다.
   - type: textarea
     id: more-info
     attributes:
-      label: Do you have anything more you want to share?
-      description: For example, steps to reproduce a bug, screenshots, screen recordings, or sample code
+      label: 더 공유하고 싶은게 있으신가요?
+      description: 예를 들어 버그를 재현하는 단계, 스크린샷, 화면 녹화 또는 샘플 코드가 있습니다.
   - type: markdown
     attributes:
       value: |
         ---
-        You're finished! The following fields are prefilled. Please click **Submit new issue**.
+        모두 끝났어요! 아래 필드는 미리 채워져 있으니 **Submit new issue**를 클릭해주세요.
   - type: textarea
     id: metadata
     attributes:
       label: MDN metadata
-      description: Set automatically. Do not modify.
+      description: 자동으로 설정되니 수정하지 마세요.

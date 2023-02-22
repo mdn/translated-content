@@ -22,7 +22,7 @@ Puedes usar las características API de audio mejoradas - que son específicas d
 
 - autoplay
   - : Un atributo booleano; si se especifica (incluso aunque el valor sea "false"), el sonido comenzará a reproducirse automáticamente en cuanto sea posible, sin detenerse para terminar de cargar los datos.
-- autobuffer {{ deprecated_inline("2.0") }}
+- autobuffer {{ deprecated_inline }}
   - : Un atributo booleano; si se especifica, el sonido comenzará a reproducirse automáticamente, incluso aunque no se haya configurado para la reproducción automática. Esto continuará hasta que la caché de medios esté llena o se haya descargado el archivo de audio completo, lo que suceda primero. Debería usarse sólo si se espera que el usuario elija reproducir el audio; por ejemplo si el usuario ha navegado hasta una página usando un vínculo de "Reproducir este audio". Este atributo se eliminó de Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) en favor del atributo preload.
 - buffered
   - : Un atributo que se puede leer para determinar qué intervalos de tiempo del multimedia se han almacenado en búfer. Este atributo contiene un objeto {{ domxref("TimeRanges") }}.
@@ -56,7 +56,7 @@ Las compensaciones de tiempo se especifican como valores float que indican el n�
 ## Ejemplos
 
 ```html
-<audio src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg"
+<audio src="audiotest_(1).ogg"
        autoplay>
   Your browser does not support the <code>audio</code> element.
 </audio>

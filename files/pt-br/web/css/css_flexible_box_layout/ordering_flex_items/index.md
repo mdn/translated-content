@@ -16,13 +16,13 @@ the {{cssxref("flex-direction")}} property can take one of four values:
 - `row-reverse`
 - `column-reverse`
 
-The first two values ​​keep the items in the same order that they appear in the document source order and display them sequentially from the start line.
+The first two values keep the items in the same order that they appear in the document source order and display them sequentially from the start line.
 
 ![The items are displayed in a row starting on the left.](basics1.png)
 
 ![The items are displayed as a column starting from the top ](align10.png)
 
-The second two values ​​reverse the items by switching the start and end lines.
+The second two values reverse the items by switching the start and end lines.
 
 ![The items are displayed in reverse order starting on the right-hand line.](align9.png)
 

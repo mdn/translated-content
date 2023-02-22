@@ -57,9 +57,9 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.counter-style.additive-symbols")}}
+{{Compat}}
 
 ## Véase también
 

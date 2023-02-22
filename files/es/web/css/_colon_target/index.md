@@ -184,7 +184,7 @@ Puede usar la pseudo-clase `:target` para crear un lightbox sin usar JavaScript.
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.target")}}
+{{Compat}}
 
 ## Ver también
 

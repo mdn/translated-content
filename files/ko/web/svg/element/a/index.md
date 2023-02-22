@@ -80,7 +80,7 @@ svgns|a:hover, svgns|a:active {
 - {{htmlattrxref("type", "a")}}
   - : This attribute specifies the media type in the form of a {{Glossary("MIME type")}} for the linked URL.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : This attribute contains the URL or URL fragment that the hyperlink points to.
     _Value type_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Default value_: _none_; _Animatable_: **yes**
 
@@ -105,10 +105,10 @@ svgns|a:hover, svgns|a:active {
 
 {{svginfo}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

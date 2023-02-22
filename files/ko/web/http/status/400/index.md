@@ -15,6 +15,6 @@ HyperText Transfer Protocol (HTTP) **`400 Bad Request`** 응답 상태 코드는
 400 Bad Request
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}

@@ -100,7 +100,7 @@ function handleVisibilityChange() {
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

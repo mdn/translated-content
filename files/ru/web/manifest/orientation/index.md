@@ -53,7 +53,7 @@ translation_of: Web/Manifest/orientation
 ## Пример
 
 ```json
-​​"orientation": "portrait-primary"
+"orientation": "portrait-primary"
 ```
 
 ## Specifications

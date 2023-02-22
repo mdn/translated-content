@@ -61,6 +61,6 @@ function closeCurrentWindow()
 
 {{Specifications}}
 
-## Referencia adicional
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.close")}}
+{{Compat}}
