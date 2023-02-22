@@ -252,7 +252,7 @@ Svelte además soporta etiquetas como `{#if}`, `{#each}`, y `{#await}`, que te p
 
 ### The `<style>` section
 
-If you have experience working with CSS, the following snippet should make sense:
+Si tienes experiencia trabajando con CSS, el siguiente código te debería ser familiar:
 
 ```html
 <style>
@@ -278,17 +278,17 @@ If you have experience working with CSS, the following snippet should make sense
 </style>
 ```
 
-We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element. What will happen to other components with `<h1>` elements in them?
+Como puedes ver, estamos aplicando estilos a nuestro elemento [`<h1>`](/es/docs/Web/HTML/Element/Heading_Elements). Tomando en cuenta lo anterior ¿Qué piensas que le pasará a los demás `<h1>` que se encuentran dentro de otros componentes?
 
-In Svelte, CSS inside a component's `<style>` block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.
+En Svelte, el CSS dentro del bloque `<style>` de un componente solo afecta al componente en cuestión. Para que esto funcione, se agrega una clase a los elementos seleccionados, la cual se basa en el _hash_ de los estilos del componente.
 
-You can see this in action by opening `localhost:8080` in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the _HELLO WORLD!_ label, and choosing _Inspect_:
+Para ver esto en acción, abre una nueva pestaña del navegador y dirígete a la dirección `localhost:8080`, haz click derecho sobre la etiqueta que dice _HELLO WORLD!_ y selecciona _Inspeccionar_:
 
-![Svelte starter app with devtools open, showing classes for scoped styles](02-svelte-component-scoped-styles.png)
+![Aplicación inicial de Svelte con las herramientas de desarrollador abiertas, mostrando las clases para los estilos locales](02-svelte-component-scoped-styles.png)
 
-When compiling the app, Svelte changes our `h1` styles definition to `h1.svelte-1tky8bj`, and then modifies every `<h1>` element in our component to `<h1 class="svelte-1tky8bj">`, so that it picks up the styles as required.
+Al compilar la aplicación, Svelte cambia la definición de nuestros estilos `h1` a `h1.svelte-1tky8bj`, modifica todos los elementos `<h1>` de nuestra aplicación y los transforma en elementos de la forma `<h1 class="svelte-1tky8bj">`, para que así coincida con los estilos aplicados.
 
-> **Note:** You can override this behavior and apply styles to a selector globally using the `:global()` modifier (see the [Svelte `<style>` docs](https://svelte.dev/docs#style) for more information).
+> **Note:** Puedes cambiar este comportamiento al aplicar los estilos globalmente a un selector utilizando el modificador `:global()` (visita la entrada de la [documentación de Svelte para `<style>`](https://svelte.dev/docs#style) para más información).
 
 ## Making a couple of changes
 
