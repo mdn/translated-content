@@ -13,7 +13,7 @@ The `showNotification()` method of the {{domxref("ServiceWorkerRegistration")}} 
 ## Syntax
 
 ```
-​ServiceWorkerRegistration.showNotification(title, [options]).then(function(NotificationEvent) { ... });
+ServiceWorkerRegistration.showNotification(title, [options]).then(function(NotificationEvent) { ... });
 ```
 
 ### Returns

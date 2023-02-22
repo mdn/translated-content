@@ -703,7 +703,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 3. Запустите скрипт из командной строки, используя node. В качестве параметра укажите URL вашей БД _MongoDB_ (тот самый, которым вы ранее заменили _insert_your_database_url_here_ в файле `app.js` ):
 
     ```bash
-    node populatedb <your mongodb url>​​​​
+    node populatedb <your mongodb url>
     ```
 
 4. Скрипт должен выполниться до конца, выводя в терминал создаваемые элементы.
