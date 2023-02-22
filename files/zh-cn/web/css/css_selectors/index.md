@@ -54,7 +54,7 @@ slug: Web/CSS/CSS_Selectors
 - [紧邻兄弟组合器](/zh-CN/docs/Web/CSS/Adjacent_sibling_selectors)（[Adjacent sibling combinator](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator)）
   - : `+` 组合器选择相邻元素，即后一个元素紧跟在前一个之后，并且共享同一个父节点。
     **语法：**`A + B`
-    **例子：**`h2 + p` 会匹配所有紧邻在 {{HTMLElement("h2")}} 元素后的 {{HTMLElement("p")}} 元素。
+    **例子：**`h2 + p` 会匹配*紧*邻在 {{HTMLElement("Heading_Elements", "h2")}} 元素后的第一个 {{HTMLElement("p")}} 元素。
 - [列组合器](/zh-CN/docs/Web/CSS/Column_combinator)（[Column combinator](/zh-CN/docs/Web/CSS/Column_combinator)）{{Experimental_Inline}}
   - : `||` 组合器选择属于某个表格行的节点。
     **语法：** `A || B`
