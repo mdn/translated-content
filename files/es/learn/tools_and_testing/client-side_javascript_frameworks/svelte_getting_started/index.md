@@ -301,13 +301,13 @@ En este punto puedes intentar actualizar tu componente `App.svelte`, por ejemplo
 
 Simplemente guarda los cambios y la aplicación ejecutándose en `localhost:8080` se actualizará automáticamente.
 
-### A first look at Svelte reactivity
+### Un primer vistazo a la reactividad de Svelte
 
-In the context of a UI framework, reactivity means that the framework can automatically update the DOM when the state of any component is changed.
+Cuando hablamos dentro del contexto de un _framework_ de interfaz de usuario (IU), el término reactividad se refiere a la capacidad que tiene el _framework_ para actualizar el DOM cuando el estado de un componente cambia. 
 
-In Svelte, reactivity is triggered by assigning a new value to any top-level variable in a component. For example, we could include a `toggleName()` function in our `App` component, and a button to run it.
+En Svelte, la reactividad se activa tras asignar un nuevo valor a cualquier variable en el nivel principal de un componente. Por ejemplo, podríamos incluir una función `toggleName()` en nuestro componente `App` y un botón para invocar a dicha función.
 
-Try updating your `<script>` and markup sections like so:
+Intentar actualizar la sección de `<script>` y el marcado de la siguiente forma:
 
 ```html
 <script>
@@ -331,12 +331,11 @@ Try updating your `<script>` and markup sections like so:
   </p>
 </main>
 ```
+Cada vez que se hace click en el botón, Svelte ejecuta la función `toggleName()`, que a su vez actualiza el contenido de la variable `name`.
 
-Whenever the button is clicked, Svelte executes the `toggleName()` function, which in turn updates the value of the `name` variable.
+Como puedes observar, la etiqueta `<h1>` se actualiza automáticamente. Por detrás de cámaras, Svelte creó el código JavaScript para actualizar el DOM cada vez que el valor de la variable `name` cambia, sin la necesidad de utilizar un DOM virtual o algún otro mecanismo complejo de reconciliación.
 
-As you can see, the `<h1>` label is automatically updated. Behind the scenes, Svelte created the JavaScript code to update the DOM whenever the value of the name variable changes, without using any virtual DOM or other complex reconciliation mechanism.
-
-Note the use of `:` in `on:click`. That's Svelte's syntax for listening to DOM events.
+Observa que se usa `:` en `on:click`. Esta es la sintaxis de Svelte para registrar manejadores de eventos del DOM.
 
 ## Inspecting main.js: the entry point of our app
 
