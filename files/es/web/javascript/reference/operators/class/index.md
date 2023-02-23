@@ -75,9 +75,9 @@ Foo.name; // "NamedFoo"
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.class")}}
+{{Compat}}
 
 ## Ver también
 

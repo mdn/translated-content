@@ -102,27 +102,9 @@ for (const prop in obj) {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.for_in")}}
-
-### Compatibilidad: expresiones iniciadoras en modo estricto
-
-Antes de Firefox 40, era posible utilizar una expresión iniciadora (`i=0`) en un bucle `for...in`:
-
-```js example-bad
-var obj = {a: 1, b: 2, c: 3};
-for (var i = 0 in obj) {
-  console.log(obj[i]);
-}
-// 1
-// 2
-// 3
-```
-
-Este comportamiento no estándar ahora se ignora en la versión 40 y posteriores, y presentará un {{JSxRef("SyntaxError")}} ("{{JSxRef("errors/Invalid_for-in_initializer", "iniciador for...in no válido", "las declaraciones de encabezado del bucle for-in posiblemente no tengan iniciadores")}} en {{JSxRef("Strict_mode", "modo estricto")}} ({{bug(748550)}} y {{bug(1164741)}}").
-
-Otros motores como v8 (Chrome), Chakra (IE/Edge) y JSC (WebKit/Safari) están investigando si eliminar también el comportamiento no estándar.
+{{Compat}}
 
 ## Ve también
 

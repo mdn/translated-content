@@ -153,7 +153,7 @@ obj2.method2(); // logs "method 1"
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.super")}}
+{{Compat}}
 
 ## Ver también
 

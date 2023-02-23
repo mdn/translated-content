@@ -115,9 +115,9 @@ getResponseSize('https://jsonplaceholder.typicode.com/photos');
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.for_await_of")}}
+{{Compat}}
 
 ## Ver también
 

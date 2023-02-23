@@ -46,11 +46,11 @@ function myFunc () {
 
 ## Especificaciones
 
-{{Specificaciones}}
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.comma")}}
+{{Compat}}
 
 ## Ver también
 
