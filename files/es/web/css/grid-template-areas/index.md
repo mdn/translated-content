@@ -3,6 +3,8 @@ title: grid-template-areas
 slug: Web/CSS/grid-template-areas
 ---
 
+{{CSSRef}}
+
 `La propiedad CSS grid-template-areas` especifica nombres para cada una de las {{glossary("grid areas")}}.
 
 ```css

@@ -3,6 +3,8 @@ title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 ---
 
+{{CSSRef}}
+
 La propiedad CSS **`grid-template-rows`** define el nombre de las líneas y las funciones de tamaño de línea de {{glossary("grid rows", "grid rows")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-template-rows.html")}}
