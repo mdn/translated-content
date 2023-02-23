@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 一旦创建 WebGL 上下文创建成功，你就可以在这个上下文里渲染画图了。而对我们而言最简单的事，莫过于绘制一个没有纹理的 2D 图形了。那就让我们从画出一个正方形开始吧。
 
-本项目的完整源代码是 [可在 GitHub 上获得](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2).
+本项目的完整源代码 [可在 GitHub 上获得](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2).
 
 ## 引入 glMatrix 库
 
