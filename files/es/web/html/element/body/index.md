@@ -158,9 +158,9 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.body")}}
+{{Compat}}
 
 ## Ve también
 

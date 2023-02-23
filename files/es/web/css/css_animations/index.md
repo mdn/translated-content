@@ -37,10 +37,6 @@ slug: Web/CSS/CSS_Animations
 
 {{Specifications}}
 
-## Compatibilidad con navegadores
-
-{{Compat}}
-
 ## See also
 
 - Related to CSS Animations, [CSS Transitions](/es/docs/Web/CSS/CSS_Transitions) can trigger animations on user actions.
