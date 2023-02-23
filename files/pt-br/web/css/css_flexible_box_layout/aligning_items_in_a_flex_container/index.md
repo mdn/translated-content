@@ -26,7 +26,7 @@ As propriedades que nós veremos neste guia são as seguintes.
 
 Nós também descobriremos como margens automáticas podem ser utilizadas para o alinhamento no flexbox.
 
-> **Note:** The alignment properties in Flexbox have been placed into their own specification — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). It is expected that this spec will ultimately supersede the properties as defined in Flexbox Level One.
+> **Nota:** The alignment properties in Flexbox have been placed into their own specification — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). It is expected that this spec will ultimately supersede the properties as defined in Flexbox Level One.
 
 ## The Cross Axis
 
@@ -100,7 +100,7 @@ Once again we can switch our `flex-direction` to `column` in order to see how th
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-> **Note:** the value `space-evenly` is not defined in the flexbox specification and is a later addition to the Box Alignment specification. Browser support for this value is not as good as that of the values defined in the flexbox spec.
+> **Nota:** the value `space-evenly` is not defined in the flexbox specification and is a later addition to the Box Alignment specification. Browser support for this value is not as good as that of the values defined in the flexbox spec.
 
 See the [documentation for `justify-content` on MDN](/pt-BR/docs/Web/CSS/justify-content) for more details on all of these values and browser support.
 

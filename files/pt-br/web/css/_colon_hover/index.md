@@ -13,7 +13,7 @@ A pseudo-class `:hover` pode ser aplicada a qualquer [pseudo-elemento.](/pt-BR/d
 
 User agents visuais como Firefox, Internet Explorer, Safari, Opera ou Chrome, aplicam o estilo associado quando o cursor(mouse pointer) passa sobre um elemento.
 
-> **Note:** **Nota de uso:** em telas de toque (touch screens) :hover é impossível ou problemático. Dependendo do navegador a pseudo-classe :hover pode nunca funcionar, ou funcionar apenas por um curto momento depois de “tocar” um elemento, ou podem continuar a funcionar mesmo depois que o usuário pare de “tocar” o elemento até que o usuário toque outro elemento. Como dispositivos touchscreen são comuns, é importante para desenvolvedores web não terem conteúdos acessíveis apenas quando passamos sobre ele, uma vez que esse conteúdo é mais complicado ou impossível de acessar para usuários desses dispositivos.
+> **Nota:** Em telas de toque (touch screens) :hover é impossível ou problemático. Dependendo do navegador a pseudo-classe :hover pode nunca funcionar, ou funcionar apenas por um curto momento depois de “tocar” um elemento, ou podem continuar a funcionar mesmo depois que o usuário pare de “tocar” o elemento até que o usuário toque outro elemento. Como dispositivos touchscreen são comuns, é importante para desenvolvedores web não terem conteúdos acessíveis apenas quando passamos sobre ele, uma vez que esse conteúdo é mais complicado ou impossível de acessar para usuários desses dispositivos.
 
 ## Exemplos
 
@@ -75,7 +75,7 @@ Veja nosso [exemplo de menu dropdown baseado em CSS](/@api/deki/files/6238/=css_
 
 Você pode usar a pseudo-classe `:hover` para construir uma galeria de imagem, exibindo imagens full-size apenas quando o mouse passa sobre as imagens. Veja [esse exemplo](/@api/deki/files/6247/=css-gallery.zip) para uma possível dica.
 
-> **Note:**Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/pt-BR/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](/@api/deki/files/6268/=css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/pt-BR/CSS/%3Achecked)
+> **Nota:** Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/pt-BR/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](/@api/deki/files/6268/=css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/pt-BR/CSS/%3Achecked)
 
 ## Especificações
 
