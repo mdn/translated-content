@@ -16,7 +16,7 @@ let suma = valor1 + valor2;
 console.log(suma);
 ```
 
-En el ejemplo anterior, JavaScript ha coercido el `9` de nùmero a cadena de texto y luego ha concatenado los dos valores resultando en una cadena de texto de `59`. JavaScript tuvo la opción de coercer a cadena de texto o número y decidió usar número.
+En el ejemplo anterior, JavaScript ha coercido el `9` de número a cadena de texto y luego ha concatenado los dos valores resultando en una cadena de texto de `59`. JavaScript tuvo la opción de coercer a cadena de texto o número y decidió usar número.
 
 El compilador pudo haber coercido el `5` a un número y retornar el valor de 14, pero no lo hizo. Para retornar ese resultado, tendrías que convertir explícitamente el `5` a un número usando el método `Number()`:
 
