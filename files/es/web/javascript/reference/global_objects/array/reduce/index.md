@@ -179,7 +179,7 @@ var integrado = [[0,1], [2,3], [4,5]].reduce(function(a,b) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.reduce")}}
+{{Compat}}
 
 ## Ver también
 

@@ -225,7 +225,7 @@ console.log(restoredSession);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.JSON.stringify")}}
+{{Compat}}
 
 ## Ver también
 

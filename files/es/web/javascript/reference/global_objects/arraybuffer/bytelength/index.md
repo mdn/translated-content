@@ -33,7 +33,7 @@ buffer.byteLength; // 8
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.ArrayBuffer.byteLength")}}
+{{Compat}}
 
 ## Ver también
 

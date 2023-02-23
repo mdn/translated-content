@@ -67,7 +67,7 @@ g.return(1); // { value: 1, done: true }
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Generator.return")}}
+{{Compat}}
 
 ## Ver también
 
