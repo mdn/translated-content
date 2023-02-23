@@ -190,9 +190,9 @@ Int8Array.prototype.foo = 'bar';
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.TypedArray")}}
+{{Compat}}
 
 ## Ve también
 

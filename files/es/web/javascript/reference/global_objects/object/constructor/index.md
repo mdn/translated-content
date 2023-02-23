@@ -87,6 +87,6 @@ console.log( types.join( "\n" ) );
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.constructor")}}
+{{Compat}}

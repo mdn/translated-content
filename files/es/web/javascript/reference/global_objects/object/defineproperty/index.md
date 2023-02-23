@@ -309,7 +309,7 @@ console.log(instance.myname); // this is my name string
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.defineProperty")}}
+{{Compat}}
 
 ## See also
 

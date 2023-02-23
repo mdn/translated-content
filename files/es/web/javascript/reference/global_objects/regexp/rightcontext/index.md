@@ -36,11 +36,11 @@ RegExp["$'"];       // " mundo!"
 
 ## Especificaciones
 
-No estándar. No forma parte de ninguna especificación actual.
+{{Specifications}}
 
-## Navegadores compactibles
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.rightContext")}}
+{{Compat}}
 
 ## Ver también
 

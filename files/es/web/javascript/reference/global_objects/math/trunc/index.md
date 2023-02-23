@@ -60,9 +60,9 @@ Math.trunc = Math.trunc || function (x) {
 
 {{Specifications}}
 
-## Compatibilidad con navegadores.
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.trunc")}}
+{{Compat}}
 
 ## Vea también.
 
