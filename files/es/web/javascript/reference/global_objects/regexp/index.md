@@ -214,6 +214,26 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // registra 'xxx'
 
 {{Compat}}
 
+### Notas específicas de Firefox
+
+A partir de Firefox 34, en el caso de un grupo de captura con cuantificadores que impiden su ejercicio, el texto coincidente para un grupo de captura ahora es `undefined` en lugar de una cadena vacía:
+
+```js
+// Firefox 33 o anterior
+'x'.replace(/x(.)?/g, function(m, group) {
+  console.log("'grupo: " + group + "'");
+});
+// 'grupo: '
+
+// Firefox 34 o más reciente
+'x'.replace(/x(.)?/g, function(m, group) {
+  console.log("'grupo: " + group + "'");
+});
+// 'grupo: undefined'
+```
+
+Ten en cuenta que, debido a la compatibilidad web, `RegExp.$N` seguirá devolviendo una cadena vacía en lugar de `undefined` ({{bug(1053944)}}).
+
 ## Ve también
 
 - El capítulo de {{JSxRef("Guide/Regular_Expressions", "Expresiones regulares")}} en la {{JSxRef("Guide", "Guía de JavaScript")}}
