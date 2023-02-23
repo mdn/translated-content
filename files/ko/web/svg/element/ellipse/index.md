@@ -1,6 +1,8 @@
 ---
 title: <ellipse>
 slug: Web/SVG/Element/ellipse
+l10n:
+  sourceCommit: 6313664032844cea1fa62bcc8577d3f68fcd97db
 ---
 
 {{SVGRef}}
