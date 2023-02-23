@@ -45,10 +45,6 @@ Puede obtener más información sobre el uso programático de consultas de medio
 
 {{Specifications}}
 
-## Compatibilidad con navegadores
-
-{{Compat}}
-
 ## Ver también
 
 - Use {{cssxref ("@ apoya")}} para aplicar estilos que dependen del soporte del navegador para varias tecnologías CSS.
