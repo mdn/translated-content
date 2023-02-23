@@ -57,7 +57,7 @@ resulta en :
 
 ## Especificaciones
 
-{{Specifications}}
+El [atributo `contextmenu` está obsoleto](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) y se eliminará de todos los navegadores.
 
 ## Compatibilidad con navegadores
 
