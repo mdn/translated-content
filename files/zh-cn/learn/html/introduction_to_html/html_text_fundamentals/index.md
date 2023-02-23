@@ -343,7 +343,7 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<ul><li>豆浆</li><li>油条</li><li>豆汁</li><li>焦圈</li></ul>';
+const htmlSolution = '<ul>\n<li>豆浆</li>\n<li>油条</li>\n<li>豆汁</li>\n<li>焦圈</li>\n</ul>';
 let solutionEntry = htmlSolution;
 
 reset.addEventListener('click', () => {
