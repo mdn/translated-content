@@ -105,7 +105,6 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
   - : {{domxref("PerformanceElementTiming")}} API による監視のために画像をマークします。指定された値は、監視される画像要素の識別子になります。[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性のページも参照してください。
 
-
 - `fetchpriority` {{experimental_inline}}
 
   - : 画像を取得する際に使用する相対的な優先順位のヒントを提供します。許可されている値は次の通りです。
