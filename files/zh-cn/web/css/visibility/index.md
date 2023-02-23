@@ -48,13 +48,13 @@ visibility: unset;
 
 ## 插值
 
-在设置动画时，会对 visibility 在*可见*和*不可见*之间插值。因此起始值或结束值之一必须是 `visible`，否则不会发生{{Glossary("interpolation", "插值")}}。该值会以离散的步长进行插值，计时函数的值会介于 `0` 到 `1` 之间，map to `visible` and other values of the timing function (which occur only at the start/end of the transition or as a result of `cubic-bezier()` functions with y values outside of \[0, 1]) map to the closer endpoint.
+在设置动画时，会对 visibility 在*可见*和*不可见*之间插值。因此起始值或结束值之一必须是 `visible`，否则不会发生{{Glossary("interpolation", "插值")}}。该值会以离散的步长进行插值，计时函数的值介于 `0` 到 `1` 之间，会被映射到 `visible`，对于其它计时函数的值（即过渡开始/结束时或 `cubic-bezier()` 函数结果的 y 值在 [0, 1] 的范围之外）则映射到较为接近的一个端点。
 
 ## 备注
 
 有些现代浏览器对 `visibility: collapse` 不支持或是不完全支持。很多时候用在不是表格行与列的元素上时不会正确的将它显示成 `visibility: hidden` 的效果。
 
-`visibility:collapse` 会改变表格的布局，嵌套在其被折叠的单元格中的表格也会同样被折叠，除非专门为此嵌套表格指定 `visibility: visible` 。
+`visibility:collapse` 会改变表格的布局，嵌套在其被折叠的单元格中的表格也会同样被折叠，除非专门为此嵌套表格指定 `visibility: visible`。
 
 ## 形式定义
 
