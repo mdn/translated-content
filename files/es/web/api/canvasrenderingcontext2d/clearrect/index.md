@@ -111,9 +111,9 @@ window.addEventListener("load", drawCanvas);
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.clearRect")}}
+{{Compat}}
 
 ## Vea También
 

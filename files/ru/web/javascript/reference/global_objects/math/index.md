@@ -92,8 +92,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
   - : Возвращает наибольшее число из своих аргументов.
 - {{jsxref("Global_Objects/Math/min", "Math.min([x[, y[, …]]])")}}
   - : Возвращает наименьшее число из своих аргументов.
-- {{jsxref("Global_Objects/Math/pow", "Math.pow(x, y)")}}
-  - : Возвращает основание в степени экспоненты, то есть, значение выражения `основаниеэкспонента`.
+- {{jsxref("Global_Objects/Math/pow", "Math.pow(a, n)")}}
+  - : Возвращает `a` в `n`-й степени, то есть _a_<sup><i>n</i></sup>.
 - {{jsxref("Global_Objects/Math/random", "Math.random()")}}
   - : Возвращает псевдослучайное число в диапазоне от 0 до 1.
 - {{jsxref("Global_Objects/Math/round", "Math.round(x)")}}

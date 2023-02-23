@@ -620,13 +620,3 @@ window.addEventListener('load', updateCode);
 - [条件（三元）运算符引用](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
-
-## 本章目录
-
-- **在代码中做决定——条件语句**
-- [代码循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [函数——可复用代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
-- [创建你自己的函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [函数返回值](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- [图片库](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)

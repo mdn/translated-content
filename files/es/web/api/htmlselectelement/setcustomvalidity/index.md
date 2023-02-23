@@ -21,9 +21,9 @@ selectElt.setCustomValidity(string);
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLSelectElement.setCustomValidity")}}
+{{Compat}}
 
 ## See also
 

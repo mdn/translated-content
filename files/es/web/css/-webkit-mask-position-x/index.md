@@ -71,9 +71,9 @@ La propiedad CSS `-webkit-mask-position-x` CSS establece la posición horizontal
 
 No forma parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-mask-position-x")}}
+{{Compat}}
 
 ## See also
 

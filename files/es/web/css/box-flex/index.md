@@ -97,9 +97,9 @@ Un truco para hacer que todos los elementos dentro una caja contenedora tengan e
 
 Esta propiedad es una extensión no estándar. Había una [old draft of the CSS3 Flexbox specification](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) que definía una propiedad `box-flex`, pero ese borrador nunca ha sido sustituido.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.box-flex")}}
+{{Compat}}
 
 ## Ver además
 

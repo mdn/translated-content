@@ -80,7 +80,7 @@ article :last-of-type {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.last-of-type")}}
+{{Compat}}
 
 ## Ver también
 

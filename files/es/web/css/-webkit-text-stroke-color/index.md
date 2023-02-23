@@ -38,9 +38,9 @@ La propiedad CSS **`-webkit-text-stroke-color`** especifica el [color](/es/docs/
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-text-stroke-color")}}
+{{Compat}}
 
 ## Ver además
 

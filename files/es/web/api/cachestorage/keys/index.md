@@ -49,9 +49,9 @@ then.addEventListener('activar', función (evento) {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.CacheStorage.keys")}}
+{{Compat}}
 
 ## Ver también
 

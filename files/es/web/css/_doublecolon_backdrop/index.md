@@ -15,9 +15,9 @@ No se hereda ni es heredado de ningún elemento. Tampoco se hacen restricciones 
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.backdrop")}}
+{{Compat}}
 
 ## Ver además
 

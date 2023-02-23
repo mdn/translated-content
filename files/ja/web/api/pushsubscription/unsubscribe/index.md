@@ -10,7 +10,7 @@ slug: Web/API/PushSubscription/unsubscribe
 ## 構文
 
 ```js-nolint
-​PushSubscription.unsubscribe().then(function(Boolean) { ... });
+PushSubscription.unsubscribe().then(function(Boolean) { ... });
 ```
 
 ### 引数

@@ -760,13 +760,3 @@ self.addEventListener('fetch', function(e) {
 - [Service worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 在本单元中
-
-- [网页端 API 介绍](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [从服务器获取数据 (fetch)](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [第三方 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [视频和音频 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

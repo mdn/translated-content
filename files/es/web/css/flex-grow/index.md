@@ -95,9 +95,9 @@ flex-grow: unset;
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-grow")}}
+{{Compat}}
 
 ## Ver también
 

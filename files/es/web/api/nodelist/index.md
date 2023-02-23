@@ -79,6 +79,6 @@ Array.prototype.forEach.call(list, function (item) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.NodeList")}}
+{{Compat}}

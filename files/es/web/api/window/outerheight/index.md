@@ -31,13 +31,13 @@ La siguiente figura muestra la diferencia entre `innerHeight` y `outerHeight`.
 
 ![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
 
-## Compatibilidad del navegador
-
-{{Compat("api.Window.outerHeight")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

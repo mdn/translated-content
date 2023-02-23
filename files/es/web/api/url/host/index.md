@@ -38,9 +38,9 @@ console.log(url.host); // "developer.mozilla.org:4097"
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.URL.host")}}
+{{Compat}}
 
 ## See also
 

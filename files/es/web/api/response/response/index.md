@@ -48,9 +48,9 @@ var miRespuesta = new Response(miBlob,opciones);
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Response.Response")}}
+{{Compat}}
 
 ## Relacionado
 

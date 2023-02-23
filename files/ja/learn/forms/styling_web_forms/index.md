@@ -366,7 +366,7 @@ button:focus {
 
 > **メモ:** 例が期待どおり動かず、私たちのバージョンを確認したい場合は、 GitHub を参照してください。[ライブ版](https://mdn.github.io/learning-area/html/forms/postcard-example/)を見てください ([ソースコード](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)も見てください)。
 
-## スキルを試しましょう！​
+## スキルを試しましょう！
 
 この記事の終わりまで到達しました。しかし、肝要な点を思い起こせるでしょうか？次に進む前に、テストによって知識の定着を試すことができます——[スキルテスト：スタイル設定の基本](/ja/docs/Learn/Forms/Test_your_skills:_Styling_basics)をご覧ください。
 

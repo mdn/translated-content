@@ -28,9 +28,9 @@ _No hay metodos específicos, hereda los metodos de los elelemtos padres, {{domx
 
 {{Specifications}}
 
-## Compatibilidad de Navegador Web
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLLabelElement")}}
+{{Compat}}
 
 ## Ver también
 

@@ -53,9 +53,9 @@ tbd
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.TextTrack")}}
+{{Compat}}
 
 ## See also
 

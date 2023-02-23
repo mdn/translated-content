@@ -16,9 +16,9 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) CSS `:-webkit-autofill` CSS s
 
 No es parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.autofill")}}
+{{Compat}}
 
 ## Ver además
 

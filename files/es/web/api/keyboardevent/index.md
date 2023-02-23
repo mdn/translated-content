@@ -187,6 +187,6 @@ function metaKeyUp (event) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}

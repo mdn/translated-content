@@ -94,7 +94,7 @@ ul li:last-child {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.last-child")}}
+{{Compat}}
 
 ## Ver también
 

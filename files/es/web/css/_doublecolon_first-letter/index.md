@@ -80,9 +80,9 @@ p::first-letter {
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.first-letter")}}
+{{Compat}}
 
 ## Ver También
 

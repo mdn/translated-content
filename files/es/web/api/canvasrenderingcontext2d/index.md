@@ -316,9 +316,9 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D")}}
+{{Compat}}
 
 ## See also
 

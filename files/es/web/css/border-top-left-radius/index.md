@@ -146,9 +146,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-top-left-radius")}}
+{{Compat}}
 
 ## Véase también
 

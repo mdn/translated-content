@@ -90,7 +90,7 @@ Esto es útil si tiene un elemento personalizado complejo que demora un tiempo e
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.defined")}}
+{{Compat}}
 
 ## Ver también
 

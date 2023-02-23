@@ -60,9 +60,9 @@ var d = new URL('/en-US/docs', b);                     // => 'https://developer.
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.URL.URL")}}
+{{Compat}}
 
 ## Ver también
 

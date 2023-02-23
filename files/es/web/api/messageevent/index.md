@@ -102,9 +102,9 @@ onconnect = function(e) {
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.MessageEvent")}}
+{{Compat}}
 
 ## Ver tambien
 

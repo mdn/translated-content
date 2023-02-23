@@ -30,6 +30,6 @@ var result = window.location.origin; // Devuelve:'https://developer.mozilla.org'
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Location.origin")}}
+{{Compat}}

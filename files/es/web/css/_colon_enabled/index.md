@@ -58,7 +58,7 @@ input:disabled {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.enabled")}}
+{{Compat}}
 
 ## Ver también
 
