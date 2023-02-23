@@ -7,7 +7,7 @@ slug: Web/HTTP/Content_negotiation
 
 在 [HTTP](/zh-CN/docs/Glossary/HTTP) 协议中，***内容协商***是一种机制，用于为同一 URI 提供资源不同的{{Glossary("Representation header","表示")}}形式，以帮助用户代理指定最适合用户的表示形式（例如，哪种文档语言、哪种图片格式或者哪种内容编码）。
 
-> **备注：** 你可以在[来自 WHATWG 的维基百科页面](https://wiki.whatwg.org/wiki/Why_not_conneg)发现 HTTP 内容协商的一些缺点。HTML5 提供其它的选择来进行内容协商，例如 [`<source>` 元素](/zh-CN/docs/Web/HTML/Element/source)。
+> **备注：** 你可以在 [a wiki page from WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg) 发现 HTTP 内容协商的一些缺点。HTML5 提供其它的选择来进行内容协商，例如 [`<source>` 元素](/zh-CN/docs/Web/HTML/Element/source)。
 
 ## 内容协商的基本原则
 
@@ -30,7 +30,7 @@ slug: Web/HTTP/Content_negotiation
 
 HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型内容协商（{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Charset")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}）。尽管严格来说 {{HTTPHeader("User-Agent")}} 并不在此列，有时候它还是会被用来确定给客户端发送的所请求资源的特定表示形式，不过这种做法不提倡使用。服务器会使用 {{HTTPHeader("Vary")}} 标头来说明实际上哪些标头被用作内容协商的参考依据（确切来说是与之相关的响应标头），这样可以使[缓存](/zh-CN/docs/Web/HTTP/Caching)的运作更有效。
 
-除此之外，有一个向可供选择的列表中增加更多标头的实验性提案，称为*客户端示意*（client hints）。客户端示意机制可以告知运行用户代理的设备类型（例如，是桌面计算机还是移动设备）。
+除此之外，有一个向可供选择的列表中增加更多标头的实验性提案，称为*客户端提示*（Client Hint）。客户端示意机制可以告知运行用户代理的设备类型（例如，是桌面计算机还是移动设备）。
 
 即便服务端驱动型内容协商机制是最常用的对资源特定表示形式进行协商的方式，它也存在如下几个缺点：
 
@@ -46,7 +46,7 @@ HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型�
 
 ### `Accept-CH` 标头{{experimental_inline}}
 
-> **备注：** 这是被称为*客户端示意*（Client Hints）的**实验性**技术方案的一部分，目前仅在 Chrome 46 及以后的版本中得到了实现。Device-Memory 值在 Chrome 61 或更高版本中。
+> **备注：** 这是被称为*客户端提示*的**实验性**技术方案的一部分，目前仅在 Chrome 46 及以后的版本中得到了实现。Device-Memory 值在 Chrome 61 或更高版本中。
 
 该实验性标头 {{HTTPHeader("Accept-CH")}} 列出了服务器可以用来选择合适响应的配置数据。合法值如下：
 
@@ -58,7 +58,7 @@ HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型�
 
 ### `Accept-CH-Lifetime` 标头
 
-> **备注：** 这是被称为*客户端示意*（Client Hints）的**实验性**技术方案的一部分，目前仅在 Chrome 61 及以后的版本中得到了实现。
+> **备注：** 这是被称为*客户端提示*的**实验性**技术方案的一部分，目前仅在 Chrome 61 及以后的版本中得到了实现。
 
 {{HTTPHeader("Accept-CH-Lifetime")}} 标头与 `Accept-CH` 标头的 `Device-Memory` 值一起使用，并指示设备应与服务器共享设备内存的时间量。该值以毫秒为单位给出，并且是可选的。
 
