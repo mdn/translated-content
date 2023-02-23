@@ -189,7 +189,7 @@ const programInfo = {
 
 在画正方形前，我们需要创建一个缓冲器来存储它的顶点。我们会用到名字为 initBuffers() 的函数。当我们了解到更多 WebGL 的高级概念时，这段代码会将有更多参数，变得更加复杂，并且用来创建更多的三维物体。
 
-> **备注：** 创建一个新文件叫 “init-buffers.js”，并填写如下内容：
+> **备注：** 创建一个新文件叫“init-buffers.js”，并填写如下内容：
 
 ```js
 function initBuffers(gl) {
@@ -230,7 +230,7 @@ export { initBuffers };
 
 当着色器和物体都创建好后，我们可以开始渲染这个场景了。因为我们这个例子不会产生动画，所以 drawScene() 方法非常简单。它还使用了几个工具函数，稍后我们会介绍。
 
-> **备注：** 创建一个新文件叫 “init-buffers.js”,并填写如下内容：
+> **备注：** 创建一个新文件叫“draw-scene.js”，并填写如下内容：
 
 ```js
 function drawScene(gl, programInfo, buffers) {
@@ -348,7 +348,7 @@ export { drawScene };
 
 最后，让我们引入 `initBuffers()` 和 `drawScene()`。
 
-> **备注：** 在 “webgl-demo.js” 文件头部添加如下代码：
+> **备注：** 在“webgl-demo.js”文件头部添加如下代码：
 
 ```js
 import { initBuffers } from "./init-buffers.js";
@@ -374,7 +374,7 @@ drawScene(gl, programInfo, buffers);
 
 矩阵计算是一个很复杂的运算。没人会想去自己写完所有代码来处理这些运算。通常人们使用一个矩阵运算库，而不会自己实现矩阵运算。在这个例子中我们使用的是[glMatrix library](http://glmatrix.net/).
 
-## 相关资料
+## 参见
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) WebGLFundamentals
 - [Matrices](http://mathworld.wolfram.com/Matrix.html) 线上数学百科全书
