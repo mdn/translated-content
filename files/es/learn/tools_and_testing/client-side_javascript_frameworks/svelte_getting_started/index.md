@@ -288,7 +288,7 @@ Para ver esto en acción, abre una nueva pestaña del navegador y dirígete a la
 
 Al compilar la aplicación, Svelte cambia la definición de nuestros estilos `h1` a `h1.svelte-1tky8bj`, modifica todos los elementos `<h1>` de nuestra aplicación y los transforma en elementos de la forma `<h1 class="svelte-1tky8bj">`, para que así coincida con los estilos aplicados.
 
-> **Note:** Puedes cambiar este comportamiento al aplicar los estilos globalmente a un selector utilizando el modificador `:global()` (visita la entrada de la [documentación de Svelte para `<style>`](https://svelte.dev/docs#style) para más información).
+> **Nota:** Puedes cambiar este comportamiento al aplicar los estilos globalmente a un selector utilizando el modificador `:global()` (visita la entrada de la [documentación de Svelte para `<style>`](https://svelte.dev/docs#style) para más información).
 
 ## Aplicando algunos cambios
 
@@ -402,19 +402,19 @@ Puedes simplemente leer el contenido del tutorial para entender las característ
 Svelte además cuenta con una herramienta REPL en línea, se trata de un entorno de pruebas para programar aplicaciones Svelte sin la necesidad de instalar algo en tu máquina. Te proporcionamos un REPL por cada artículo para que puedas empezar a programar de inmediato.
 A continuación exploraremos un poco más sobre cómo utilizar estas herramientas.
 
-### Using Git
+### Utilizando Git
 
-The most popular version control system is Git, along with GitHub, a site that provides hosting for your repositories and several tools for working with them.
+El sistema de control de versiones más poppular es Git, junto a GitHub, un sitio que provee de almacenamiento para tus repositorios y varias herramientas para trabajar con ellos.
 
-We'll be using GitHub so that you can easily download the source code for each article. You will also be able to get the code as it should be after completing the article, just in case you get lost.
+Estaremos utilizando GitHub para que puedas descargar fácilmente el código fuente de cada artículo. Además tendrás la opción de descargar el código de la forma que debería quedar al finalizar el artículo, en caso de que te pierdas.
 
-After [installing git](https://git-scm.com/downloads), to clone the repository you should execute:
+Después de [instalar git](https://git-scm.com/downloads), ejecuta el siguiente comando para clonar el repositorio:
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
 ```
 
-Then at the beginning of each article, you can just `cd` into the corresponding folder and start the app in dev mode to see what its current state should be, like this:
+De esta forma, al inicio de cada artículo, puedes usar `cd` para posicionarte dentro de la carpeta correspondiente e iniciar la aplicación en modo desarrollo para ver su estado actual, de la siguiente manera:
 
 ```bash
 cd 02-starting-our-todo-app
@@ -422,9 +422,9 @@ npm install
 npm run dev
 ```
 
-If you want lo learn more about git and GitHub, we've compiled a list of links to useful guides — see [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub).
+Si quieres aprender más sobre git y GitHub, hemos compilado una lista de enlaces a guías que te podrían ser útiles. Visita [Git y GitHub](/es/docs/Learn/Tools_and_testing/GitHub).
 
-> **Note:** If you just want to download the files without cloning the git repo, you can use the degit tool like this — `npx degit opensas/mdn-svelte-tutorial`. You can also download a specific folder with `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit won't create a local git repo, it will just download the files of the specified folder.
+> **Nota:**  Si solo quieres descargar los archivos sin clonar el repositorio de git, puedes utilizar la herramienta degit de la siguiente manera: `npx degit opensas/mdn-svelte-tutorial`. También puedes descargar una carpeta específica con el comando `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit no creará un repositorio local de git, en su lugar, simplemente descarga los archivos de la carpeta especificada.
 
 ### Using the Svelte REPL
 
