@@ -34,9 +34,9 @@ X-Content-Type-Options: nosniff
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.X-Content-Type-Options")}}
+{{Compat}}
 
 ## Vea también
 

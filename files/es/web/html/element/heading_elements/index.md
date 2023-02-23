@@ -122,9 +122,9 @@ Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## Véase también
 

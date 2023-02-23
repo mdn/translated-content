@@ -18,9 +18,9 @@ Los elementos ocultos no deben de ser vinculados desde elementos no ocultos y el
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.hidden")}}
+{{Compat}}
 
 ## Ver también
 

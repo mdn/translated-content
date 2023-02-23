@@ -159,9 +159,9 @@ See {{HTMLElement("table")}} for examples on `<th>`.
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.th")}}
+{{Compat}}
 
 ## See also
 

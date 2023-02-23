@@ -69,17 +69,9 @@ Access-Control-Expose-Headers: *, Authorization
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Access-Control-Expose-Headers")}}
-
-## Notas de compatibilidad
-
-- El valor asterisco (\*) indica que no es implementado en navegadores:
-
-  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
-  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
+{{Compat}}
 
 ## Ver también
 

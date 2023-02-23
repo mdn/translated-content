@@ -58,9 +58,9 @@ El atributo `type` permite especificar un tipo MIME para los recursos dados en e
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## Ver también
 
