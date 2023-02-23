@@ -7,13 +7,13 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 一旦创建 WebGL 上下文创建成功，你就可以在这个上下文里渲染画图了。而对我们而言最简单的事，莫过于绘制一个没有纹理的 2D 图形了。那就让我们从画出一个正方形开始吧。
 
-本项目的完整源代码 [可在 GitHub 上获得](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2)。
+本项目的完整源代码[可在 GitHub 上获得](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2)。
 
 ## 引入 glMatrix 库
 
 该项目使用了 [glMatrix](https://glmatrix.net/) 库来执行其矩阵操作，因此需要引入它。本次示例通过 CDN 形式引入使用。
 
-> **备注：** 更新 “index.html” 文件添加 CDN 脚本：
+> **备注：** 更新“index.html”文件，让它看起来像这样：
 
 ```html
 <!DOCTYPE html>
@@ -50,7 +50,7 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 #### 顶点着色器
 
-每次渲染一个形状时，顶点着色器会在形状中的每个顶点运行。它的工作是将输入顶点从原始坐标系转换到 WebGL 使用的[**裁剪空间**](/zh-CN/docs/Web/API/WebGL_API/WebGL_model_view_projection#裁剪空间)**) 坐标系，其中每个轴的坐标范围从 -1.0 到 1.0，并且不考虑纵横比，实际尺寸或任何其他因素。
+每次渲染一个形状时，顶点着色器会在形状中的每个顶点运行。它的工作是将输入顶点从原始坐标系转换到 WebGL 使用的[**裁剪空间**](/zh-CN/docs/Web/API/WebGL_API/WebGL_model_view_projection#裁剪空间)) 坐标系，其中每个轴的坐标范围从 -1.0 到 1.0，并且不考虑纵横比，实际尺寸或任何其他因素。
 
 顶点着色器需要对顶点坐标进行必要的转换，在每个顶点基础上进行其他调整或计算，然后通过将其保存在由 GLSL 提供的特殊变量（我们称为 gl_Position）中来返回变换后的顶点
 
@@ -95,9 +95,9 @@ const fsSource = `
 
 ### 初始化着色器
 
-现在我们已经定义了两个着色器，我们需要将它们传递给 WebGL，编译并将它们连接在一起。下面的代码通过调用 loadShader（），为着色器传递类型和来源，创建了两个着色器。然后创建一个附加着色器的程序，将它们连接在一起。如果编译或链接失败，代码将弹出 alert。
+现在我们已经定义了两个着色器，我们需要将它们传递给 WebGL，编译并将它们连接在一起。下面的代码通过调用 `loadShader()`，为着色器传递类型和来源，创建了两个着色器。然后创建一个附加着色器的程序，将它们连接在一起。如果编译或链接失败，代码将弹出 alert。
 
-> **备注：** 将下面两个函数添加到 “webgl-demo.js” 文件中：
+> **备注：** 将下面两个函数添加到“webgl-demo.js”文件中：
 
 ```js
 //
@@ -168,7 +168,7 @@ loadShader 函数将 WebGL 上下文，着色器类型和`源码`作为参数输
   const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 ```
 
-在创建着色器程序之后，我们需要查找 WebGL 返回分配的输入位置。在上述情况下，我们有一个属性和两个 [Uniforms](/en-US/docs/Web/API/WebGL_API/Data#uniforms) 。属性从缓冲区接收值。顶点着色器的每次迭代都从分配给该属性的缓冲区接收下一个值。uniforms 类似于 JavaScript 全局变量。它们在着色器的所有迭代中保持相同的值。由于属性和统一的位置是特定于单个着色器程序的，因此我们将它们存储在一起以使它们易于传递
+在创建着色器程序之后，我们需要查找 WebGL 返回分配的输入位置。在上述情况下，我们有一个属性和两个 [Uniform](/zh-CN/docs/Web/API/WebGL_API/Data#uniforms) 。属性从缓冲区接收值。顶点着色器的每次迭代都从分配给该属性的缓冲区接收下一个值。uniform 类似于 JavaScript 全局变量。它们在着色器的所有迭代中保持相同的值。由于属性和统一的位置是特定于单个着色器程序的，因此我们将它们存储在一起以使它们易于传递
 
 > **备注：** 添加下面代码到 `main()` 函数中：
 
