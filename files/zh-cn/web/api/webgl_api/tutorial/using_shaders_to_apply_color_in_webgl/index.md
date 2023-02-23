@@ -21,26 +21,25 @@ function initColorBuffer(gl) {
     1.0,
     1.0,
     1.0,
-    1.0, // white
+    1.0, // 白
     1.0,
     0.0,
     0.0,
-    1.0, // red
+    1.0, // 红
     0.0,
     1.0,
     0.0,
-    1.0, // green
+    1.0, // 绿
     0.0,
     0.0,
     1.0,
-    1.0, // blue
+    1.0, // 蓝
   ];
-  
-  
+
   const colorBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
-  
+
   return colorBuffer;
 }
 ```
@@ -70,12 +69,12 @@ return {
 const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec4 aVertexColor;
-    
+
     uniform mat4 uModelViewMatrix;
     uniform mat4 uProjectionMatrix;
-    
+
     varying lowp vec4 vColor;
-    
+
     void main(void) {
       gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
       vColor = aVertexColor;
@@ -96,7 +95,7 @@ const vsSource = `
 
 const fsSource = `
     varying lowp vec4 vColor;
-    
+
     void main(void) {
       gl_FragColor = vColor;
     }
