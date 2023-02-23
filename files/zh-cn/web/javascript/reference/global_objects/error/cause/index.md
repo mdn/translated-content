@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.cause
+title: "Error: cause"
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 ---
 
@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 
 在捕获错误时，我们可能会使用更具体或更加实用的信息对错误进行包装，再将其重新抛出。`cause` 属性就用于这一场景，以便仍然可以访问原始的错误。
 
-## 取值 
+## 取值
 
 它通过 `options.cause` 参数被传入 [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) 构造函数，并且有可能不存在。
 
@@ -34,7 +34,6 @@ try {
 ```
 
 更详细的示例请参阅 [错误 > 区分相似的错误](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error#differentiate_between_similar_errors)。
-
 
 ### 将结构化的数据作为 `cause`
 
