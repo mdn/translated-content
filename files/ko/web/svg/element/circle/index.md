@@ -11,7 +11,6 @@ l10n:
 
 ## 예제
 
-
 ```css hidden
 html,
 body,
@@ -45,7 +44,6 @@ svg {
 
 > **참고:** SVG2부터 시작하여 `cx`, `cy`, 그리고 `r`는 기하학 속성입니다. 즉, 해당 속성을 해당 요소의 CSS 속성으로도 사용할 수 있습니다.
 
-
 ### 전역 속성
 
 - [코어 속성](/ko/docs/Web/SVG/Attribute/Core)
@@ -76,4 +74,3 @@ svg {
 ## 같이 보기
 
 - 기타 기본 SVG 모양: **{{ SVGElement('ellipse') }}**, {{ SVGElement('line') }}, {{ SVGElement('polygon') }}, {{ SVGElement('polyline') }}, {{ SVGElement('rect') }}
-
