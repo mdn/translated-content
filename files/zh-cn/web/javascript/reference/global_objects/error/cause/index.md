@@ -17,11 +17,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 
 ## 描述
 
-`cause` 的值可以是任何类型。你不应该假设捕获错误的 `cause` 属性是一个 `Error`，正如在 `catch` 语句中绑定的变量未必一定是 `Error`。下文 “将结构化的数据作为 `cause`” 示例展示了刻意不提供 `Error` 作为 `cause` 的情况。
+`cause` 的值可以是任何类型。你不应该假设捕获错误的 `cause` 属性是一个 `Error`，正如在 `catch` 语句中绑定的变量未必一定是 `Error`。下文 “将结构化的数据作为 cause” 示例展示了刻意不提供 `Error` 作为 `cause` 的情况。
 
 ## 示例
 
-### 重新抛出包含 `cause` 的错误
+### 重新抛出包含 cause 的错误
 
 有时，捕获错误并使用新的错误信息将其重新抛出是很有用的。在这种情况下，你应该将原始错误传递给新的 `Error` 的构造函数，如下所示：
 
@@ -33,9 +33,9 @@ try {
 }
 ```
 
-更详细的示例请参阅 [错误 > 区分相似的错误](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error#differentiate_between_similar_errors)。
+更详细的示例请参阅[错误 > 区分相似的错误](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error#区分相似的错误)。
 
-### 将结构化的数据作为 `cause`
+### 将结构化的数据作为 cause
 
 为开发者理解而编写的错误消息可能并不适合机器解析，因为它们会受到表达方式改变（rewording），或标点符号改变的影响，破坏已有解析器的正常使用。因此，当从函数中抛出错误时，你可以提供结构化的数据作为错误原因（即 `cause` 字段）供机器解析，以此替代人类可读的错误消息。
 
