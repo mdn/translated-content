@@ -8,7 +8,7 @@ slug: Web/CSS/Child_combinator
 **子组合器**（`>`）被放在两个 CSS 选择器之间。它只匹配那些被第二个选择器匹配的元素，这些元素是被第一个选择器匹配的元素的直接子元素。
 
 ```css
-/* 处于“my-things”类的直接子元素列表 */
+/* 选择属于“my-things”类的无序列表（ul）的直接子列表元素（li） */
 ul.my-things > li {
   margin: 2em;
 }
