@@ -49,7 +49,7 @@ X-ProxyUser-Ip: 203.0.113.19
 
 ## Especificaciones
 
-{{Specifications}}
+No es parte de especificación actual alguna. La versión estandarizada de este cabezal es {{HTTPHeader("Forwarded")}}.
 
 ## Compatibilidad con navegadores
 

@@ -178,6 +178,10 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 {{Compat}}
 
+## Notas de compatibilidad
+
+- Empezando con Chrome 52 y Firefox 52, sitios inseguros (`http:`) no pueden definirse cookies con la directiva 'secure'.
+
 ## Ver también
 
 - [HTTP cookies](/es/docs/Web/HTTP/Cookies)

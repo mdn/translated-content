@@ -91,8 +91,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 ## Especificaciones
 
-## Especificaciones
-
 {{Specifications}}
 
 ## Compatibilidad con navegadores
