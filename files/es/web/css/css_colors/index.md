@@ -27,10 +27,6 @@ _Ninguna._
 
 {{Specifications}}
 
-## Compatibilidad con navegadores
-
-{{Compat}}
-
 ## Ver también
 
 - En CSS, las gradientes no son colores sino [imágenes](/es/docs/Web/CSS/CSS_Images).
