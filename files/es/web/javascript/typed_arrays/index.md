@@ -157,14 +157,6 @@ normalArray.length === 4;
 normalArray.constructor === Array;
 ```
 
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
-
 ## Ve también
 
 - [Conseguir ArrayBuffers o arreglos tipados a partir de cadenas codificadas en Base64](/es/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
