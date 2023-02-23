@@ -180,9 +180,9 @@ th, p, td {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.backface-visibility")}}
+{{Compat}}
 
 ## Véase también
 

@@ -42,6 +42,6 @@ Si las reglas no especifican un color de borde, el borde tendrá la propiedad {{
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-left")}}
+{{Compat}}

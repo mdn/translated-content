@@ -132,9 +132,9 @@ tr, td {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-style")}}
+{{Compat}}
 
 ## Ver también
 

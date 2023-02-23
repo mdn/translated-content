@@ -59,6 +59,6 @@ border-image-outset: inherit;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-image-outset")}}
+{{Compat}}

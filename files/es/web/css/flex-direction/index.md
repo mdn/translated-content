@@ -119,9 +119,9 @@ Si utilizas `flex-direction` con un valor de `row-reverse` o `column-reverse` en
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-direction")}}
+{{Compat}}
 
 ## Ver también
 
