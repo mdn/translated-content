@@ -337,9 +337,9 @@ Como puedes observar, la etiqueta `<h1>` se actualiza automáticamente. Por detr
 
 Observa que se usa `:` en `on:click`. Esta es la sintaxis de Svelte para registrar manejadores de eventos del DOM.
 
-## Inspecting main.js: the entry point of our app
+## Inspeccionando main.js: el punto de entrada de nuestra aplicación
 
-Let's open `src/main.js`, which is where the `App` component is being imported and used. This file is the entry point for our app, and it initially looks like this:
+Vamos a abrir el archivo `src/main.js`, aquí es donde el componente `App`se importa y se usa. Este archivo es el punto de entrada de nuestra aplicación y contiene lo siguiente:
 
 ```js
 import App from "./App.svelte";
@@ -354,20 +354,20 @@ const app = new App({
 export default app;
 ```
 
-`main.js` starts by importing the Svelte component that we are going to use. Then in line 3 it instantiates it, passing an option object with the following properties:
+`main.js` empieza importando el componente Svelte que será utilizado. Acto siguiente, en la línea 3 lo instancia mientras le pasa un objeto de opciones con las siguientes propiedades:
 
-- `target`: The DOM element inside which we want the component to be rendered, in this case the `<body>` element.
-- `props`: the values to assign to each prop of the `App` component.
+- `target`: El elemento del DOM en el cual será renderizado el componente, este caso es el elemento `<body>`.
+- `props`: los valores a asignar a cada prop del componente `App`.
 
-## A look under the hood
+## Un vistazo más a detalle
 
-How does Svelte manage to make all these files work together nicely?
+¿Cómo es que Svelte logra que todos estos archivos trabajen bien en conjunto?
 
-The Svelte compiler processes the `<style>` section of every component and compiles them into the `public/build/bundle.css` file.
+El compilador de Svelte procesa la sección de `<style>` de cada componente y lo compila en el archivo `public/build/bundle.css`.
 
-It also compiles the markup and `<script>` section of every component and stores the result in `public/build/bundle.js`. It also adds the code in `src/main.js` to reference the features of each component.
+Además compila el marcado y la sección de `<script>` de cada componente y almacena el resultado en `public/build/bundle.js`. De forma adicional, Svelte agrega automáticamente el código en `src/main.js` para hacer referencia a las características de cada componente.
 
-Finally the file `public/index.html` includes the generated `bundle.css` and `bundle.js` files:
+Por último, el archivo `public/index.html` incluye los archivos `bundle.css` y `bundle.js` que fueron generados:
 
 ```html
 <!DOCTYPE html>
@@ -389,17 +389,18 @@ Finally the file `public/index.html` includes the generated `bundle.css` and `bu
 </html>
 ```
 
-The minified version of `bundle.js` weighs a little more than 3KB, which includes the "Svelte runtime" (just 300 lines of JavaScript code) and the `App.svelte` compiled component. As you can see, `bundle.js` is the only JavaScript file referenced by `index.html`. There are no other libraries loaded into the web page.
+La versión minificada de `bundle.js` pesa un poco más de 3KB, lo cual ya incluye el "tiempo de ejecución de Svelte" (tan solo son 300 líneas de código JavaScript) y el componente `App.svelte` compilado. Como puedes ver, `bundle.js` es el único archivo de JavaScript al que se hace referencia desde `index.html`. No hay otras bibliotecas cargadas en la página web.  
 
-This is a much smaller footprint than compiled bundles from other frameworks. Take into account that, in the case of code bundles, it's not just the size of the files you have to download that matter. This is executable code that needs to be parsed, executed, and kept in memory. So this really makes a difference, especially in low-powered devices or CPU-intensive applications.
+Esto tiene mucho menor impacto que los paquetes (_bundles_) generados por otros _frameworks_. Toma en cuenta que cuando hablamos de paquetes de código, no solo importa el tamaño del archivo que fue descargado. Este código ejecutable debe ser analizado, ejecutado y cargado en memoria. Esto hace una gran diferencia, en especial en dispositivos de gama baja y en aplicaciones que utilizan el CPU intensivamente.
 
-## Following this tutorial
+## Siguiendo este tutorial
 
-In this tutorial series you will be building a complete web application. We'll learn all the basics about Svelte and also quite a few advanced topics.
+En esta serie de tutoriales, construirás una aplicación web completa. Aprenderemos todos los conceptos básicos de Svelte e incluso algunos temas más avanzados.
 
-You can just read the content to get a good understanding of Svelte features, but you'll get the most out of this tutorial if you follow along coding the app with us as you go. To make it easier for you to follow each article, we provide a GitHub repository with a folder containing the source for the app as it is at the start of each tutorial.
+Puedes simplemente leer el contenido del tutorial para entender las características de Svelte, pero para sacarle todo el provecho a este tutorial te recomendamos ampliamente que además sigas los ejemplos y los programes a la par de nosotros. Para que te sea más sencillo seguir cada artículo, te proporcionamos un repositorio de GitHub con una carpeta que contiene todo el código fuente de la aplicación que representa su estado al inicio de cada tutorial.
 
-Svelte also provides an online REPL, which is a playground for live-coding Svelte apps on the web without having to install anything on your machine. We provide a REPL for each article so you can start coding along right away. Let's talk a bit more about how to use these tools.
+Svelte además cuenta con una herramienta REPL en línea, se trata de un entorno de pruebas para programar aplicaciones Svelte sin la necesidad de instalar algo en tu máquina. Te proporcionamos un REPL por cada artículo para que puedas empezar a programar de inmediato.
+A continuación exploraremos un poco más sobre cómo utilizar estas herramientas.
 
 ### Using Git
 
