@@ -58,13 +58,13 @@ findLast(function (element, index, array) { /* … */ }, thisArg)
 
 ### 반환 값
 
-배열 내에서 제공된 테스트 함수를 만족하는 제일 높은 색인 값을 가진 요소의 값입니다. 일치하는 요소가 찾아지지 않을 때 {{jsxref("undefined")}}.
+배열 내에서 제공된 테스트 함수를 만족하는 제일 높은 색인 값을 가진 요소의 값입니다. 일치하는 요소를 찾을 수 없을 때는 {{jsxref("undefined")}}를 반환합니다.
 
 ## 설명
 
-`findLast()` 메서드는 [반복 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)입니다. 이것은 [참 같은 값](/ko/docs/Glossary/Truthy)이 반환될 때까지 제공된 `callbackFn`을 배열 내에서 각 요소에 내림차순으로 한 번 호출합니다. `findLast()`는 요소를 반환하고 배열을 통한 반복을 그만합니다. `callbackFn`이 진실된 값을 반환하지 않는다면, `findLast()`는 {{jsxref("undefined")}}를 반환합니다.
+`findLast()` 메서드는 [반복 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)입니다. 이것은 [참 같은 값](/ko/docs/Glossary/Truthy)이 반환될 때까지 제공된 `callbackFn`을 배열 내에서 각 요소에 내림차순으로 한 번 호출합니다. `findLast()`는 요소를 반환하고 배열을 통한 반복을 그만합니다. `callbackFn`이 참 같은 값, 즉 `true`를 반환하지 않는다면, `findLast()`는 {{jsxref("undefined")}}를 반환합니다.
 
-`callbackFn`은 할당된 값만이 아닌 _모든_ 배열의 색인에 호출됩니다. [성긴 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) 내의 빈 슬롯은 `undefined`와 동일하게 동작합니다.
+`callbackFn`은 할당된 값만이 아닌 _모든_ 배열의 색인에 호출됩니다. [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) 내의 빈 슬롯은 `undefined`와 동일하게 동작합니다.
 
 `findLast()`는 호출된 배열을 변환하지 않습니다, 하지만 `callbackFn`와 같은 제공된 함수는 할 수 있습니다. 그러나 첫 번째 `callbackFn` _전에_ 배열의 길이는 저장됩니다. 그러므로.
 
@@ -74,7 +74,7 @@ findLast(function (element, index, array) { /* … */ }, thisArg)
 
 > **경고:** 위에서 설명한 종류의 동시 수정은 종종 이해하기 어려운 코드로 이어지며 일반적으로 피해야 합니다 (특별한 경우를 제외하고).
 
-`findLast()` 메서드는 [일반적](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)입니다. 이것은 오직 `length` 특성과 정수 키 특성을 가질 것으로 예상합니다.
+`findLast()` 메서드는 [제네릭](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)입니다. 이것은 오직 `length` 특성과 정수 키 특성을 가질 것으로 예상합니다.
 
 ## 예제
 
@@ -99,7 +99,7 @@ console.log(inventory.findLast(isNotEnough));
 // { name: "fish", quantity: 1 }
 ```
 
-#### 화살표 함수와 구조 분해 할당 사용
+#### 화살표 함수와 구조 분해 사용
 
 이전 예제는 화살표 함수와 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)을 사용하여 작성할 수 있습니다.
 
