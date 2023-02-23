@@ -1,6 +1,8 @@
 ---
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
+l10n:
+  sourceCommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
 ---
 
 {{JSRef}}
@@ -20,7 +22,7 @@ setSeconds(secondsValue, msValue)
 
 - `secondsValue`
   - : 초를 나타내는 0에서 59 사이의 정수입니다.
-- `msValue`
+- `msValue` {{Optional_inline}}
   - : 선택 과목. 밀리 초를 나타내는 0에서 999 사이의 숫자입니다.
 
 ### 반환 값
