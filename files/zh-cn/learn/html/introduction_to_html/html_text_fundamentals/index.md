@@ -47,7 +47,7 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
 <h1>我是文章的标题</h1>
 ```
 
-一共有六种标题元素标签——{{htmlelement("Heading_Elements", "h1")}}、{{htmlelement("Heading_Elements", "h2")}}、{{htmlelement("Heading_Elements", "h3")}}、{{htmlelement("Heading_Elements", "h4")}}、{{htmlelement("Heading_Elements", "h5")}} 和 {{htmlelement("Heading_Elements", "h6")}}。每个元素代表文档中不同级别的内容; `<h1>` 表示主标题，`<h2>` 表示二级子标题，`<h3>` 表示三级子标题，依此类推。
+一共有六种标题元素标签——{{htmlelement("Heading_Elements", "h1")}}、{{htmlelement("Heading_Elements", "h2")}}、{{htmlelement("Heading_Elements", "h3")}}、{{htmlelement("Heading_Elements", "h4")}}、{{htmlelement("Heading_Elements", "h5")}} 和 {{htmlelement("Heading_Elements", "h6")}}。每个元素代表文档中不同级别的内容：`<h1>` 表示主标题，`<h2>` 表示二级子标题，`<h3>` 表示三级子标题，依此类推。
 
 ### 编辑结构层次
 
