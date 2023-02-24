@@ -4,12 +4,12 @@ slug: Web/API/CanvasRenderingContext2D
 ---
 {{APIRef}}
 
-La interface **`CanvasRenderingContext2D`**, parte del [Canvas API](/es/docs/Web/API/Canvas_API), proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento {{HTMLElement("canvas")}}.
+La interfaz **`CanvasRenderingContext2D`**, parte de la [API Canvas](/es/docs/Web/API/Canvas_API), proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento {{HTMLElement("canvas")}}.
 Esto se usa para dibujar, formas, texto, imagenes, y otros objetos.
 
 Las propiedades y métodos de la interface son descritos en la sección de referencia de esta página. El [Tutorial de canvas](/es/docs/Web/API/Canvas_API/Tutorial) también tiene mas explicaciones, ejemplos y recursos.
 
-Para [`OffscreenCanvas`](/es/docs/Web/API/OffscreenCanvas), hay una interface equivalente que proporciona el contexto del renderizado. El contexto de renderizado del offscreen hereda la mayoria de las mismas propiedades y métodos que `CanvasRenderingContext2D` y se describe con mas detalle en la página de referencia {{domxref("OffscreenCanvasRenderingContext2D")}}.
+Para [`OffscreenCanvas`](/es/docs/Web/API/OffscreenCanvas), hay una interfaz equivalente que proporciona el contexto del renderizado. El contexto de renderizado del fuera de la pantalla hereda la mayoría de las mismas propiedades y métodos que `CanvasRenderingContext2D` y se describe con mas detalle en la página de referencia {{domxref("OffscreenCanvasRenderingContext2D")}}.
 
 ## Ejemplo básico
 
@@ -93,11 +93,11 @@ Los siguientes métodos y propiedades controlan cómo se dibujan las líneas.
 - {{domxref("CanvasRenderingContext2D.miterLimit")}}
   - : Relación límite angular. Por defecto `10`.
 - {{domxref("CanvasRenderingContext2D.getLineDash()")}}
-  - : Devuelve la matriz de patrones de líneas y guiones actual que contiene un número par de números no negativos.
+  - : Devuelve el arreglo actual del patrón de líneas de guiones que contiene un número par de números no negativos.
 - {{domxref("CanvasRenderingContext2D.setLineDash()")}}
-  - : Establece el patrón de trazos de la linea actual.
+  - : Establece el patrón de línea de guiones de la linea actual.
 - {{domxref("CanvasRenderingContext2D.lineDashOffset")}}
-  - : Especifica donde inicia una matriz de guiones en una linea.
+  - : Especifica donde inicia el arreglo de guiones en una linea.
 
 ### Estilos de texto
 
@@ -136,20 +136,20 @@ El estilo de relleno se usa para los colores y estilos dentro de las formas y el
 ## Degradados y patrones
 
 - {{domxref("CanvasRenderingContext2D.createConicGradient()")}}
-  - : Creates a conic gradient around a point given by coordinates represented by the parameters.
+  - : Crea un degradado cónico alrededor de un punto dado por las coordenadas representadas por los parámetros.
 - {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
   - : Creates a linear gradient along the line given by the coordinates represented by the parameters.
 - {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
-  - : Creates a radial gradient given by the coordinates of the two circles represented by the parameters.
+  - : Crea un degradado radial dado por las coordenadas de los dos círculos representados por los parámetros.
 - {{domxref("CanvasRenderingContext2D.createPattern()")}}
-  - : Creates a pattern using the specified image. It repeats the source in the directions specified by the repetition argument. This method returns a {{domxref("CanvasPattern")}}.
+  - : Crea un patrón utilizando la imagen especificada. Repite la fuente en las direcciones especificadas por el argumento de repetición. Este método devuelve un {{domxref("CanvasPattern")}}.
 
 ### Sombras
 
 - {{domxref("CanvasRenderingContext2D.shadowBlur")}}
-  - : Especifica el efecto de desenfoque. Por defecto `0`
+  - : Especifica el efecto de desenfoque. Por defecto: `0`
 - {{domxref("CanvasRenderingContext2D.shadowColor")}}
-  - : Color de la sombra. Por defecto totalmente transparente negro.
+  - : Color de la sombra. Por defecto: totalmente transparente negro.
 - {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
   - : Distancia horizontal del desplazamiento de la sombra. Por defecto: `0`.
 - {{domxref("CanvasRenderingContext2D.shadowOffsetY")}}
@@ -221,7 +221,7 @@ Los objetos en el contexto de renderizado `CanvasRenderingContext2D` tienen una 
 ### Composición
 
 - {{domxref("CanvasRenderingContext2D.globalAlpha")}}
-  - : Valor alfa que se aplica a formas e imágenes antes de que se compongan en el canvas. Por defecto `1.0` (opaque).
+  - : Valor alfa que se aplica a formas e imágenes antes de que se compongan en el canvas. Por defecto `1.0` (opaco).
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}
   - : Con `globalAlpha` aplicado esto establece cómo se dibujan las formas y las imágenes en el mapa de bits existente.
 
@@ -235,7 +235,7 @@ Los objetos en el contexto de renderizado `CanvasRenderingContext2D` tienen una 
 Véase también el objeto {{domxref("ImageData")}}.
 
 - {{domxref("CanvasRenderingContext2D.createImageData()")}}
-  - : Crea un nuevo objeto {{domxref("ImageData")}} conas las dimensiones especificadas. Todos los pixeles del nuevo objeto son de color negro transparente.
+  - : Crea un nuevo objeto {{domxref("ImageData")}} con las dimensiones especificadas. Todos los pixeles del nuevo objeto son de color negro transparente.
 - {{domxref("CanvasRenderingContext2D.getImageData()")}}
   - : Devuelve un objeto {{domxref("ImageData")}} que representa los datos de píxeles subyacentes para el área del canvas indicada por el rectángulo que comienza en _(sx, sy)_ y tiene un ancho _sw_ y un alto _sh_.
 - {{domxref("CanvasRenderingContext2D.putImageData()")}}
@@ -268,7 +268,7 @@ El contexto de renderizado `CanvasRenderingContext2D` contiene una variedad de e
 ### Filtros
 
 - {{domxref("CanvasRenderingContext2D.filter")}}
-  - : Aplica filtros a CSS ó SVG, e.g., para cambiar su brillo o borrosidad
+  - : Aplica un filtro CSS ó SVG, por ejemplo, para cambiar su brillo o desenfoque.
 
 ## Especificaciones
 
