@@ -1,7 +1,10 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
+l10n:
+  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
+
 {{APIRef}}
 
 La interfaz **`CanvasRenderingContext2D`**, parte de la [API Canvas](/es/docs/Web/API/Canvas_API), proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento {{HTMLElement("canvas")}}.
@@ -162,9 +165,9 @@ Los siguientes métodos pueden usarse para manipular las rutas de los objetos.
 - {{domxref("CanvasRenderingContext2D.beginPath()")}}
   - : Inicia una nueva ruta al vaciar la lista de sub-rutas. Llame a este método cuando desee crear una nueva ruta.
 - {{domxref("CanvasRenderingContext2D.closePath()")}}
-  - : Hace que la punta del bolígrafo retroceda hasta el inicio del subtrazado actual. Intenta dibujar una línea recta desde el punto actual hasta el inicio. Si la forma ya ha sido cerrada o tiene solo un punto, esta función no hace nada.
+  - : Hace que la punta del bolígrafo retroceda hasta el inicio de la sub-ruta actual. Intenta dibujar una línea recta desde el punto actual hasta el inicio. Si la forma ya ha sido cerrada o tiene solo un punto, esta función no hace nada.
 - {{domxref("CanvasRenderingContext2D.moveTo()")}}
-  - : Mueve el punto de inicio de una nueva subruta a las coordenadas (x, y).
+  - : Mueve el punto de inicio de una nueva sub-ruta a las coordenadas (x, y).
 - {{domxref("CanvasRenderingContext2D.lineTo()")}}
   - : Conecta el último punto de la ruta secundaria actual a las coordenadas (x, y) especificadas con una línea recta.
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}
@@ -185,15 +188,15 @@ Los siguientes métodos pueden usarse para manipular las rutas de los objetos.
 ### Dibujar rutas
 
 - {{domxref("CanvasRenderingContext2D.fill()")}}
-  - : Rellena los subtrazados actuales con el estilo de relleno actual.
+  - : Rellena las sub-rutas actuales con el estilo de relleno actual.
 - {{domxref("CanvasRenderingContext2D.stroke()")}}
-  - : Traza los subtrazados actuales con el estilo de trazo actual.
+  - : Traza las sub-rutas actuales con el estilo de trazo actual.
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
   - : Si se enfoca un elemento dado, este método dibuja un anillo de enfoque alrededor de la ruta actual.
 - {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{Experimental_Inline}}
   - : Desplaza la ruta actual o una ruta dada a la vista.
 - {{domxref("CanvasRenderingContext2D.clip()")}}
-  - : Crea una ruta de recorte a partir de los subtrazados actuales. Todo lo que se dibuja después de llamar a `clip()` aparece solo dentro de la ruta de recorte. Para una ejemplo, consulte [Trazados de recorte](/es/docs/Web/API/Canvas_API/Tutorial/Compositing) en el tutorial de Canvas.
+  - : Crea una ruta de recorte a partir de las sub-rutas actuales. Todo lo que se dibuja después de llamar a `clip()` aparece solo dentro de la ruta de recorte. Para una ejemplo, consulte [Trazados de recorte](/es/docs/Web/API/Canvas_API/Tutorial/Compositing) en el tutorial de Canvas.
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
   - : Informa si el punto especificado está contenido o no en la ruta actual.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
@@ -208,9 +211,9 @@ Los objetos en el contexto de renderizado `CanvasRenderingContext2D` tienen una 
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
   - : Añade una rotación a la matriz de transformación. El argumento del ángulo representa un ángulo de rotación en el sentido de las agujas del reloj y se expresa en radianes.
 - {{domxref("CanvasRenderingContext2D.scale()")}}
-  - : Agrega una transformación de escala a las unidades del canvas por x horizontalmente y por y verticalmente.
+  - : Agrega una transformación de escala a las unidades del canvas por _x_ horizontalmente y por _y_ verticalmente.
 - {{domxref("CanvasRenderingContext2D.translate()")}}
-  - : Agrega una transformación de traslación moviendo el canvas y su origen x horizontalmente y y verticalmente en la cuadricula.
+  - : Agrega una transformación de traslación moviendo el canvas y su origen _x_ horizontalmente y _y_ verticalmente en la cuadricula.
 - {{domxref("CanvasRenderingContext2D.transform()")}}
   - : Multiplica la matriz de transformación actual con la matriz descrito por sus argumentos.
 - {{domxref("CanvasRenderingContext2D.setTransform()")}}
