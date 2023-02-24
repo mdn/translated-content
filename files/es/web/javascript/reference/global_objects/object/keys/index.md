@@ -29,7 +29,7 @@ Un arreglo de strings que representan todas las propiedades del objeto.
 
 ## Descripción
 
-`Object.keys` devuelve un arreglo cuyos elementos son strings correspondientes a las propiedades enumerables que se encuentran directamente en el `object`. Esto es lo mismo que iterar con un bucle {{jsxref("Statements/for...in", "for...in")}}, excepto que un bucle `for...in` también enumera las propiedades en la cadena de prototipo. El orden del arreglo devuelto por `Object.keys()` es el mismo que proporciona el bucle {{jsxref("Statements/for...in", "for...in")}}.
+`Object.keys` devuelve un arreglo cuyos elementos son cadenas correspondientes a las propiedades enumerables que se encuentran directamente en el `object`. Esto es lo mismo que iterar con un bucle {{jsxref("Statements/for...in", "for...in")}}, excepto que un bucle `for...in` también enumera las propiedades en la cadena de prototipo. El orden del arreglo devuelto por `Object.keys()` es el mismo que proporciona el bucle {{jsxref("Statements/for...in", "for...in")}}.
 
 Si necesita los valores de la propiedad, use {{jsxref("Object.values()")}} en su lugar. Si necesita ambos las claves de la propiedad como sus valores, use {{jsxref("Object.entries()")}} en su lugar
 
@@ -69,10 +69,10 @@ Si quieres _todas_ las propiedades, incluso las no enumerables, mira {{jsxref("O
 
 ### Usando Object.keys() en primitivos
 
-Los argumentos que no son objetos son [coerced to objects](/es/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). Únicamente los strings pueden tener propiedades enumerables propias, mientras que todas las demás primitivas devuelven un arreglo vacio.
+Los argumentos que no son objetos son [objetos forzados](/es/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). Únicamente las cadenas pueden tener propiedades enumerables propias, mientras que todas las demás primitivas devuelven un arreglo vacío.
 
 ```js
-// Strings tienen índices como propiedades propias enumerables
+// Las cadenas de texto tienen índices como propiedades propias enumerables
 console.log(Object.keys("foo")); // ['0', '1', '2']
 
 // Otros primitivos no tienen propiedas propias
