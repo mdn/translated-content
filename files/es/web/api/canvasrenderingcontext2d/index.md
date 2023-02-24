@@ -138,7 +138,7 @@ El estilo de relleno se usa para los colores y estilos dentro de las formas y el
 - {{domxref("CanvasRenderingContext2D.createConicGradient()")}}
   - : Crea un degradado cónico alrededor de un punto dado por las coordenadas representadas por los parámetros.
 - {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
-  - : Creates a linear gradient along the line given by the coordinates represented by the parameters.
+  - : Crea un degradado lineal a lo largo de la línea dada por las coordenadas representadas por los parámetros.
 - {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
   - : Crea un degradado radial dado por las coordenadas de los dos círculos representados por los parámetros.
 - {{domxref("CanvasRenderingContext2D.createPattern()")}}
