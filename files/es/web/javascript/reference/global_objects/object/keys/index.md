@@ -2,7 +2,7 @@
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 l10n:
-  sourceCommit: 40bcca4bb35ed086ee2896d9c57ce3bd8f8a718b
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 
