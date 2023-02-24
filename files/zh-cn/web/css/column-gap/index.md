@@ -145,7 +145,7 @@ column-gap: unset;
 
 ## 规范
 
-{{Specifications("css.properties.column-gap.grid_context")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
