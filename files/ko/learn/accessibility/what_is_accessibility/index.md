@@ -2,6 +2,8 @@
 title: What is accessibility?
 slug: Learn/Accessibility/What_is_accessibility
 original_slug: Learn/접근성/What_is_accessibility
+l10n:
+  sourceCommit: 3f24b87ec5ef32a046aa9cabd19a4ced0041385c
 ---
 {{LearnSidebar}}
 
