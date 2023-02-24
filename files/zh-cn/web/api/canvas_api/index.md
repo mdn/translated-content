@@ -89,7 +89,7 @@ Canvas API 是非常强大的，但不总是很容易使用。以下列出的库
 
 ## 标准
 
-{{Specifications("html.elements.canvas")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
