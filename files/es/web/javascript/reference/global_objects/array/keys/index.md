@@ -71,4 +71,3 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [Un polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
