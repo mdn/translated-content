@@ -161,7 +161,7 @@ Document fragments(문서 조각)를 단독으로 사용하여 동일한 문서�
 
 웹에서는 절대 URL과 상대 URL 두 가지의 용어를 찾아볼 수 있습니다.
 
-**절대 URL**: 웹에서 정의된 상대적인 위치를 가리킵니다. {{glossary("protocol")}} and {{glossary("domain name")}} 포함. 예를 들어, 만약 `index.html` 페이지가 `projects` 폴더에 업로드 되면 이는 웹 서버의 root 안에 위치하게 되고
+**절대 URL**: {{glossary("protocol")}}과 {{glossary("domain name")}}을 포함한, 웹에서 정의된 절대적인 위치를 가리킵니다. 예를 들어, 만약 `index.html` 페이지가 `projects` 폴더에 업로드 되면 이는 웹 서버의 root 안에 위치하게 되고
 웹 사이트 도메인은 `http://www.example.com`,
 그 페이지는 `http://www.example.com/projects/index.html`
 (혹은 그저 `http://www.example.com/projects/`, 대부분의 웹 서버는 URL에서 명시되지 않은 경우 페이지를 불러오기 위해 `index.html` 과 같은 랜딩 페이지를 찾습니다.)
