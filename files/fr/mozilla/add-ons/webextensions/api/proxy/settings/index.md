@@ -62,6 +62,6 @@ browser.proxy.settings.set({value: proxySettings});
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.settings", 10)}}
+{{Compat}}

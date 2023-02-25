@@ -25,9 +25,9 @@ Les objets `StorageChange` contiennent les propriétés suivantes :
 - `newValue`{{optional_inline}}
   - : La nouvelle valeur de l'article, s'il y a une nouvelle valeur. Cela peut être n'importe quel type de données.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.StorageChange")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

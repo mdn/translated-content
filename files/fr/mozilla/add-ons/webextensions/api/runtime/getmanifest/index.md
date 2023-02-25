@@ -30,9 +30,9 @@ None.
 
 Un `object` JSON représentant le manifest.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.getManifest")}}
+{{Compat}}
 
 ## Exemples
 
