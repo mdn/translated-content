@@ -3,44 +3,73 @@ title: 类选择器
 slug: Web/CSS/Class_selectors
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
-## 概述
+[CSS](/zh-CN/docs/Web/CSS) **类选择器**根据 {{htmlattrxref("class")}} 属性的内容匹配元素。
 
-在一个 HTML 文档中，CSS 类选择器会根据元素的类属性中的内容匹配元素。类属性被定义为一个以空格分隔的列表项，在这组类名中，必须有一项与类选择器中的类名完全匹配，此条样式声明才会生效。
+```css
+/* 所有含有 class="spacious" 类的元素 */
+.spacious {
+  margin: 2em;
+}
+
+/* 所有含有 class="spacious" 类的 <li> 元素 */
+li.spacious {
+  margin: 2em;
+}
+
+/* 所有同时含有“spacious”和“elegant”类的 <li> 元素 */
+/* 例如 class="elegant retro spacious" */
+li.spacious.elegant {
+  margin: 2em;
+}
+```
 
 ## 语法
 
-```plain
-.类名 {样式声明 }
+```css
+.类名 { 样式声明 }
 ```
 
-注意它与下面的语句等价 {{ Cssxref("Attribute_selectors", "attribute selector") }}:
+注意它与下面的{{Cssxref("Attribute_selectors", "属性选择器")}}语句等价：
 
-```plain
-[class~=类名] {样式声明 }
+```css
+[class~=类名] { 样式声明 }
 ```
 
 ## 示例
 
+### CSS
+
 ```css
-span.classy {
-  background-color: DodgerBlue;
+.red {
+  color: #f33;
+}
+
+.yellow-bg {
+  background: #ffa;
+}
+
+.fancy {
+  font-weight: bold;
+  text-shadow: 4px 4px 3px #77f;
 }
 ```
 
-上面的 CSS 作用于下面的 HTML 代码：
+### HTML
 
 ```html
-  <span class="classy">Here's a span with some text.</span>
-  <span>Here's another.</span>
+<p class="red">这段文字是红色的。</p>
+<p class="red yellow-bg">
+  这段文字是红色的，背景是黄色的。
+</p>
+<p class="red fancy">这段文字是红色的，有“fancy”样式。</p>
+<p>这只是普通的段落。</p>
 ```
 
-则会产生这样的效果：
+### 结果
 
-Here's a span with some text.
-
-Here's another.
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -50,4 +79,7 @@ Here's another.
 
 {{Compat}}
 
-## See also
+## 参见
+
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)
+- [学习 CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
