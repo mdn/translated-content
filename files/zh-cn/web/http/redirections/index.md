@@ -14,7 +14,7 @@ slug: Web/HTTP/Redirections
 
 ## 原理
 
-在 HTTP 协议中，重定向操作由服务器向请求发送特殊的重定向响应而触发。重定向响应包含以 `3` 开头的[状态码](/en-US/docs/Web/HTTP/Status)，以及 {{ httpheader("Location") }} 标头，其保存着重定向的 URL。
+在 HTTP 协议中，重定向操作由服务器向请求发送特殊的重定向响应而触发。重定向响应包含以 `3` 开头的[状态码](/zh-CN/docs/Web/HTTP/Status)，以及 {{ httpheader("Location") }} 标头，其保存着重定向的 URL。
 
 浏览器在接收到重定向时，它们会立刻加载 `Location` 标头中提供的新 URL。除了额外的往返操作中会有一小部分性能损失之外，重定向操作对于用户来说是不可见的。
 
@@ -113,7 +113,7 @@ window.location = "https://example.com/";
   - : 一个常见的场景是，假如站点位于 `www.example.com` 域名下，那么通过 `example.com` 也应该可以访问到。这种情况下，可以建立从 `example.com` 的页面到 `www.example.com` 的重定向。此外还可以提供你域名常见的同义词，或者该域名容易导致的拼写错误的别称来重定向到你的网站。
 - 迁移到新的域名
   - : 例如，公司改名后，你希望用户在搜索旧名称的时候，依然可以访问到应用了新名称的站点。
-- 强制使用 [HTTPS](/en-US/docs/Glossary/https)
+- 强制使用 [HTTPS](/zh-CN/docs/Glossary/https)
   - : 对你网站的 `http://` 版本的请求将重定向到你网站的 `https://` 版本。
 
 ### 保持链接有效
