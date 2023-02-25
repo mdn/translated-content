@@ -55,7 +55,7 @@ slug: Web/HTTP/Redirections
 
 {{HTTPStatus("304")}}（Not Modified）会使页面跳转到本地的缓存副本中（可能已过时），而 {{HTTPStatus("300")}}（Multiple Choice）则是一种手动重定向：将消息主体以 Web 页面形式呈现在浏览器中，列出了可能的重定向链接，用户可以从中进行选择。
 
-| 状态吗 | 状态文本          | 典型应用场景                                                                                                       |
+| 状态码 | 状态文本          | 典型应用场景                                                                                                       |
 | ------ | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
 | `300`  | `Multiple Choice` | 不常用：所有的选项在消息主体的 HTML 页面中列出。鼓励在 {{HTTPHeader("Link")}} 标头中加入机器可读的 `rel=alternate` |
 | `304`  | `Not Modified`    | 发送用于重新验证的条件请求。表示缓存的响应仍然是新的并且可以使用。                                                 |
@@ -126,7 +126,7 @@ window.location = "https://example.com/";
 
 ### 对于不安全请求的临时响应
 
-不安全（{{Glossary("safe", "Unsafe")}}）请求会修改服务器端的状态，应该避免用户无意的重复发送它们。
+{{Glossary("safe", "不安全")}}的请求会修改服务器端的状态，应该避免用户无意的重复发送它们。
 
 通常，你并不想要你的用户重复发送 {{HTTPMethod("PUT")}}、{{HTTPMethod("POST")}} 或 {{HTTPMethod("DELETE")}} 请求。假如你为该类请求返回响应的话，简单地点击刷新按钮就会导致请求的重复发送（可能在确认消息之后）。
 
@@ -202,11 +202,11 @@ rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
 
 有时候，服务器端无法对其进行检测：重定向循环发生于多台服务器之间，对于每一台服务器来说，都无法获得一个全景图。在这种情况下，浏览器会负责进行检测，然后返回错误信息。Firefox 会呈现如下信息：
 
-> Firefox has detected that the server is redirecting the request for this address in a way that will never terminate.
+> Firefox 检测到该服务器正在将指向此网址的请求无限循环重定向。
 
 而 Chrome 则会呈现如下信息：
 
-> This Webpage has a redirect loop
+> 该网页将您重定向的次数过多。
 
 无论哪个场景，用户对此都无能为力（除非客户端发生突变，比如说缓存或者 Cookie 不匹配）。
 
