@@ -43,7 +43,7 @@ Cette méthode peut déclencher une exception [`DOMException`](/fr/docs/Web/API/
 
 ## Exemples
 
-Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture sur la base de données et on récupère un enregistrement particulier du magasin d'objets à l'aide de `get()` (un enregistrement de test dont la clé est "Walk dog"). Une fois l'objet de données récupéré, on pourait le mettre à jour à l'aide de JavaScript, puis le replacer dans la base de données à l'aide de l'opération [`IDBObjectStore.put()`](/fr/docs/Web/API/IDBObjectStore/put). Pour un exemple complet, voir notre application [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/to-do-notifications/)).
+Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture sur la base de données et on récupère un enregistrement particulier du magasin d'objets à l'aide de `get()` (un enregistrement de test dont la clé est "Walk dog"). Une fois l'objet de données récupéré, on pourait le mettre à jour à l'aide de JavaScript, puis le replacer dans la base de données à l'aide de l'opération [`IDBObjectStore.put()`](/fr/docs/Web/API/IDBObjectStore/put). Pour un exemple complet, voir notre application [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On ouvre la base de données
@@ -108,4 +108,4 @@ function getData() {
 - Définir un intervalle de clés&nbsp;: [`IDBKeyRange`](/fr/docs/Web/API/IDBKeyRange)
 - Récupérer et modifier les données&nbsp;: [`IDBObjectStore`](/fr/docs/Web/API/IDBObjectStore)
 - Utiliser les curseurs&nbsp;: [`IDBCursor`](/fr/docs/Web/API/IDBCursor)
-- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/to-do-notifications/))
+- Exemples&nbsp;: [Notifications d'une liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple qui fonctionne](https://mdn.github.io/dom-examples/to-do-notifications/))
