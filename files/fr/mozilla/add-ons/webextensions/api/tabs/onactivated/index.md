@@ -72,9 +72,9 @@ browser.tabs.onActivated.addListener(handleActivated);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onActivated")}}
+{{Compat}}
 
 > **Note :**
 >

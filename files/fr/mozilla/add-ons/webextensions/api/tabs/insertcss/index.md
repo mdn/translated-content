@@ -99,9 +99,9 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.insertCSS")}}
+{{Compat}}
 
 > **Note :**
 >

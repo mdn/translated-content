@@ -38,7 +38,7 @@ var clearing = setting.clear(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rempli avec un `booléen`: `true` Si le paramètre est effacé, `false` sinon.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 Voir {{WebExtAPIRef("types.BrowserSetting")}}.
 
