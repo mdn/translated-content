@@ -45,9 +45,9 @@ Les événements ont trois fonctions :
     - `changeInfo`
       - : `object`. Un objet qui contient une seule propriété, `contextualIdentity`, qui est un objet {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} représentant l'identité qui a été supprimée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities.onRemoved")}}
+{{Compat}}
 
 ## Exemples
 

@@ -53,8 +53,8 @@ Pour utiliser cette API, vous devez inclure la [permission](/fr/docs/Mozilla/Add
 - {{WebExtAPIRef("contextualIdentities.onUpdated")}}
   - : Lancé lorsqu’une ou plusieurs propriétés d’une identité contextuelle sont mises à jour
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

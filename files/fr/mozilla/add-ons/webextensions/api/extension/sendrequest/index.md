@@ -45,9 +45,9 @@ Cette API est également disponible en tant que `browser.extension.sendRequest()
     - `response`
       - : `any`. Objet de réponse JSON envoyé par le gestionnaire de la requête. Si une erreur survient lors de la connexion à l'extension, le rappel sera appelé sans arguments et {{WebExtAPIRef('runtime.lastError')}} sera défini sur le message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.sendRequest")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

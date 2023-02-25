@@ -36,7 +36,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Compatibibilité du navigateur
 
-{{Compat("webextensions.api.cookies.getAllCookieStores")}}
+{{Compat}}
 
 ## Exemples
 
