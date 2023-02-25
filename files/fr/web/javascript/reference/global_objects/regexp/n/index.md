@@ -57,7 +57,7 @@ Ces propriétés ne sont pas standard, elles ne font partie d'aucune spécificat
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.n")}}
+{{Compat}}
 
 ## Voir aussi
 
