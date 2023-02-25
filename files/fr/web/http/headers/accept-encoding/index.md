@@ -80,13 +80,11 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## Spécifications
 
-| Specification                                                                                 | Title                                                         |
-| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 5.3.4: Accept-Encoding](https://tools.ietf.org/html/rfc7231#section-5.3.4) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Accept-Encoding")}}
+{{Compat}}
 
 ## Voir aussi
 
