@@ -23,9 +23,9 @@ Une [balise de langue](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#se
 
 Les valeurs de ce type sont des chaînes.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.i18n.LanguageCode")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

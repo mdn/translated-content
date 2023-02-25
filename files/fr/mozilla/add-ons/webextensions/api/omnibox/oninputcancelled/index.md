@@ -38,9 +38,9 @@ Les événements ont trois fonctions :
 
 La fonction d'écouteur n'a pas de paramètres.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.onInputCancelled")}}
+{{Compat}}
 
 ## Exemples
 

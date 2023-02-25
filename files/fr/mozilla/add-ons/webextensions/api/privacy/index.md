@@ -26,9 +26,9 @@ Pour utiliser l'API de confidentialité, vous devez avoir [l'autorisation de l'A
 - {{WebExtAPIRef("privacy.websites")}}
   - : Accès et modification des paramètres de confidentialité relatifs aux comportements des sites Web.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.privacy", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
