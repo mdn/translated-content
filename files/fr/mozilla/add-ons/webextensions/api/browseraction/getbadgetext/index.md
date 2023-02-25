@@ -48,10 +48,6 @@ var gettingText = browser.browserAction.getBadgeText (
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant le texte du badge.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.getBadgeText",2)}}
-
 ## Exemples
 
 Enregistrez le texte du badge :
@@ -64,6 +60,10 @@ function gotBadgeText(text) {
 var gettingBadgeText = browser.browserAction.getBadgeText({});
 gettingBadgeText.then(gotBadgeText);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

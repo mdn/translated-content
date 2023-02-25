@@ -53,9 +53,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `serviceWorkers` {{optional_inline}}
   - : `boolean`. Données mises en cache par les travailleurs du service.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.DataTypeSet")}}
+{{Compat}}
 
 > **Note :**
 >

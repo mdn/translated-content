@@ -45,7 +45,7 @@ Pour pouvoir utiliser cette API, vous devez disposer de la [permission](/fr/Add-
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms")}}
+{{Compat}}
 
 > **Note :**
 >
