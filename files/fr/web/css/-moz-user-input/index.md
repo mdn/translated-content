@@ -60,7 +60,7 @@ Cette propriété est une propriété propriétaire liée à Gecko/Mozilla et ne
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-user-input")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -88,4 +88,4 @@ Proposé au groupe de travail CSS.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.getDefaultComputedStyle")}}
+{{Compat}}

@@ -35,15 +35,7 @@ Pour aligner le contenu horizontalement, on utilise la propriété `align-items`
 
 ## Compatibilité des navigateurs
 
-Les différentes méthodes utilisées ici peuvent avoir une prise en charge différentes par les navigateurs. Se référer à chacun des tableaux pour avoir plus de détails.
-
-### justify-content
-
-{{Compat("css.properties.justify-content")}}
-
-### align-items
-
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 ## Voir aussi
 

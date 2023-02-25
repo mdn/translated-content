@@ -45,9 +45,7 @@ Une valeur `list-item` indiquera à l'élément de se comporter comme un éléme
 
 ## Compatibilité des navigateurs
 
-### Prise en charge de `list-item`
-
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

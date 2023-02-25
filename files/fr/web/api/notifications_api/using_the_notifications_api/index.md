@@ -251,7 +251,7 @@ Voir le résultat de cet exemple :
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Voir aussi
 
