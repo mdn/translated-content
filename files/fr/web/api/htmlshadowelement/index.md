@@ -33,7 +33,7 @@ Cette fonctionnalité n'est plus définie par aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLShadowElement")}}
+{{Compat}}
 
 ## Voir aussi
 

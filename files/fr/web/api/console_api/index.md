@@ -40,7 +40,7 @@ Consultez [la page de référence de la console](/fr/docs/Web/API/Console#exempl
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.console")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -31,9 +31,9 @@ filter.write(
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.write", 10)}}
+{{Compat}}
 
 ## Exemples
 
