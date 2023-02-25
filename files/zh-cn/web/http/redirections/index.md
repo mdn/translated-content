@@ -208,6 +208,6 @@ rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
 
 > This Webpage has a redirect loop
 
-无论哪个场景，用户对此都无能为力（除非客户端发生突变，比如说缓存或者 Cookie 不匹配）
+无论哪个场景，用户对此都无能为力（除非客户端发生突变，比如说缓存或者 Cookie 不匹配）。
 
 避免重定向循环非常重要，因为它会完全毁掉用户的体验。
