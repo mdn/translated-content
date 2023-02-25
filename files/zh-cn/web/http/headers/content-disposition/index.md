@@ -27,7 +27,7 @@ Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"
 ```
 
-> **备注：** 在 [同源 URL](/en-US/docs/Web/Security/Same-origin_policy) 情况下，Chrome 和 Firefox 82 及之后的版本会优先使用 HTML 的 {{HTMLElement("a", "\<a\> 元素")}} 的 `download` 属性来进行文件下载，而不是使用 `Content-Disposition: inline` 参数来直接在浏览器中展示。而 Firefox 的早期版本则优先使用 Content-Disposition 头部，直接在浏览器中展示文件。
+> **备注：** 在 [同源 URL](/en-US/docs/Web/Security/Same-origin_policy) 情况下，Chrome 和 Firefox 82 及之后的版本会优先使用 HTML 的 {{HTMLElement("a")}} 标签的 `download` 属性来进行文件下载，而不是使用 `Content-Disposition: inline` 参数来直接在浏览器中展示。而 Firefox 的早期版本则优先使用 Content-Disposition 头部，直接在浏览器中展示文件。
 
 ### 作为 multipart body 中的消息头
 
