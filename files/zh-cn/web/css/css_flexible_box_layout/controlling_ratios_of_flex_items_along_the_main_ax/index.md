@@ -34,7 +34,7 @@ slug: >-
 
 为了计算出有多少可用空间能用于放置弹性元素，浏览器必须知道这个元素有多大。它是如何解决没有应用绝对单位的宽度和高度的弹性元素？
 
-在 {{CSSxRef('min-content')}} 和 {{CSSxRef('max-content')}} 的 CSS 中有一个概念——这些关键字[在 CSS 固有和外部尺寸规范中定义](https://drafts.csswg.org/css-sizing-3/#width-height-keywords)，并且可以来代替[长度单位](/zh-CN/docs/Web/CSS/length)。
+在 CSS 中还有 {{CSSxRef('min-content')}} 和 {{CSSxRef('max-content')}} 这两个概念；这两个关键字可以用来代替[长度单位](/zh-CN/docs/Web/CSS/length)。
 
 例如下面的例子，我们有两段包含一个文本字符串的段落。第一段设置了 `min-content` 的宽度。在支持这个关键字的浏览器你可以看见文本已尽可能抓住机会来自动换行，使之变得尽可能小且没有溢出。这就是该字符串的 `min-content` 大小。本质上讲，字符串中最长的单词决定了大小。
 
