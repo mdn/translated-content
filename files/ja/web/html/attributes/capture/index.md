@@ -1,6 +1,8 @@
 ---
 title: "HTML 属性: capture"
 slug: Web/HTML/Attributes/capture
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
@@ -9,7 +11,7 @@ slug: Web/HTML/Attributes/capture
 
 値としては、 `user` と `environment` があります。 capture 属性は {{HTMLElement("input/file", "file")}} 入力型が対応しています。
 
-`capture` 属性は、 [accept](accept) 属性が画像や動画データの入力に使用するカメラの種類を指定する文字列を値とするものです。
+`capture` 属性は、[accept](accept) 属性が入力の種類を示す場合、画像やビデオデータの取り込みに使用するカメラを指定する文字列をその値として受け取ります。
 
 | 値            | 説明                                     |
 | ------------- | ---------------------------------------- |
@@ -17,6 +19,8 @@ slug: Web/HTML/Attributes/capture
 | `environment` | 外向きのカメラやマイクを使用します。     |
 
 > **メモ:** capture は、以前は論理属性で、存在する場合、ファイル入力を要求する代わりに、カメラやマイクなどの機器のメディアキャプチャ機器を使用するように要求していました。
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-capture.html", "tabbed-standard")}}
 
 ## 例
 
