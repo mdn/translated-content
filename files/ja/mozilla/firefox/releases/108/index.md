@@ -37,7 +37,7 @@ l10n:
 - [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP ヘッダーの [`script-src-elem`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) および [`script-src-attr`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) ディレクティブをサポートしました。
   サーバーはそれぞれのディレクティブを使用して、`<script>` 要素の JavaScript、および `onclick` などのイベントハンドラーのインラインスクリプトの正当な提供元を指定できます ({{bug(1529337)}})。
 - [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) の違反内容の報告が、`effective-directive` および `status-code` プロパティを含むようになりました。
-  詳しくは [違反内容の報告の例文](/ja/docs/Web/HTTP/CSP#違反内容の報告の構文) をご覧ください ({{bug(1192684)}})。
+  詳しくは [違反内容の報告の構文](/ja/docs/Web/HTTP/CSP#違反内容の報告の構文) をご覧ください ({{bug(1192684)}})。
 
 ### API
 
