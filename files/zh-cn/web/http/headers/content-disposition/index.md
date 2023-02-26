@@ -87,7 +87,7 @@ value2
 
 ## 兼容性说明
 
-- 在 `filename` 和 `filename*` 两个参数同时出现的情况下，Firefox 5（比以前的版本）可以更好地处理 `Content-Disposition` 应答消息头。它会遍历所有提供的名称，假如 `filename*` 存在的话，就采用它的值，即使 `filename` 更靠前。之前的版本会采用出现在前面的参数的值，导致有更合适的名称而不被使用。参见[Firefox bug 588781](https://bugzil.la/588781).
+- 在 `filename` 和 `filename*` 两个参数同时出现的情况下，Firefox 5（比以前的版本）可以更好地处理 `Content-Disposition` 响应标头。它会遍历所有提供的名称，假如 `filename*` 存在的话，就采用它的值，即使 `filename` 更靠前。之前的版本会采用出现在前面的参数的值，导致有更合适的名称而不被使用。参见 [Firefox bug 588781](https://bugzil.la/588781)。
 
 ## 相关链接
 

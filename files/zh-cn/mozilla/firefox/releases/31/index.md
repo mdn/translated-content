@@ -13,7 +13,7 @@ _No change._
 
 ### CSS
 
-- CSS 变量的语法从旧的 "var-" 前缀更新为新的 "--" 前缀.([Firefox bug 985838](https://bugzil.la/985838))
+- CSS 变量的语法从旧的 "var-" 前缀更新为新的 "--" 前缀。（[Firefox bug 985838](https://bugzil.la/985838)）
 - Unwanted white space for multiple of 10,000 in Korean counte.([Firefox bug 985186](https://bugzil.la/985186))
 
 ### HTML
