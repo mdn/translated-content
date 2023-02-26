@@ -138,25 +138,7 @@ Pour le moment, tous les navigateurs n'ont pas implémenté la version sans pré
 
 ## Compatibilité des navigateurs
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenElement`
-
-{{Compat("api.Document.fullscreenElement")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
-
-### `Document.exitFullscreen`
-
-{{Compat("api.Document.exitFullscreen")}}
-
-### `Element.requestFullscreen`
-
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## Voir aussi
 

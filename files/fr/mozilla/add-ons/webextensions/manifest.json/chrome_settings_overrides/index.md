@@ -211,6 +211,6 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
   </tbody>
 </table>
 
-## Compatibilité de navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.chrome_settings_overrides", 10)}}
+{{Compat}}

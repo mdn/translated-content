@@ -31,9 +31,9 @@ Esta propiedad es [heredada](/es/docs/Web/Guide/CSS/Getting_started/Cascading_an
 
 Aún no es parte de ninguna especificación aunque hay una [propuesta en la wiki de CSSWG](http://wiki.csswg.org/ideas/print-backgrounds) para que sea estandarizada.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.print-color-adjust")}}
+{{Compat}}
 
 ## Ver además
 

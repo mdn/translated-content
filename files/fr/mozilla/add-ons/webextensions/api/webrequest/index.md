@@ -132,9 +132,9 @@ Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Déclenché lorsqu'une erreur se produit.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest")}}
+{{Compat}}
 
 [Extra notes on Chrome incompatibilities](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities).
 

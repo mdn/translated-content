@@ -62,9 +62,7 @@ span {
 
 ## Compatibilité des navigateurs
 
-### Prise en charge `run-in`
-
-{{Compat("css.properties.display.run-in", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

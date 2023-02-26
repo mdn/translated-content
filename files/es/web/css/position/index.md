@@ -283,6 +283,6 @@ Los elementos que se desplazan que contienen contenido `fixed` o `sticky` conten
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.position")}}
+{{Compat}}

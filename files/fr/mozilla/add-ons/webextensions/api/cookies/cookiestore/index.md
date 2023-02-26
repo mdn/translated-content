@@ -31,9 +31,9 @@ Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés su
 - `tabIds`
   - : Un `tableau` d'`entiers`, qui identifie tous les onglets du navigateur qui partagent ce cookie store.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.CookieStore")}}
+{{Compat}}
 
 ## Exemples
 

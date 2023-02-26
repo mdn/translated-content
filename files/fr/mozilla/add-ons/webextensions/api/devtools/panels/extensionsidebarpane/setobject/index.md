@@ -44,9 +44,9 @@ var setting = browser.devtools.panels.setObject(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accomplie sans arguments, une fois l'objet défini.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setObject", 10)}}
+{{Compat}}
 
 ## Exemples
 

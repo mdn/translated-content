@@ -164,7 +164,7 @@ La propiedad `appearance` no se encuentra actualmente presente en ninguna nueva 
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.appearance")}}
+{{Compat}}
 
 ## Ver también
 

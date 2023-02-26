@@ -1,120 +1,85 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/keys
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-{{JSRef("Global_Objects", "Object")}}
 
-## Resumen
+{{JSRef}}
 
-El método `Object.keys()` devuelve un array de las propiedades **`names`** de un objeto, en el mismo orden como se obtienen en un loop normal
+El método estático **`Object.keys()`** devuelve un arreglo de propiedades enumerables propias de un objeto dado.
+
+{{EmbedInteractiveExample("pages/js/object-keys.html")}}
 
 ## Sintaxis
 
-```
+```js-nolint
 Object.keys(obj)
 ```
 
 ### Parámetros
 
 - `obj`
-  - : El objeto cuyas propiedades enumerables serán devueltas.
+  - : Un objeto.
 
-### Valor de retorno
+### Valor devuelto
 
-Un array de strings que representan toda las propiedades del objeto
+Un arreglo de strings que representan todas las propiedades del objeto.
 
 ## Descripción
 
-`Object.keys` devuelve un array cuyos elementos son strings correspondientes a las propiedades enumerables que se encuentran directamente en el object. El orden de las propiedades es el mismo que se proporciona al iterar manualmente sobre las propiedades del objeto.
+`Object.keys` devuelve un arreglo cuyos elementos son cadenas correspondientes a las propiedades enumerables que se encuentran directamente en el `object`. Esto es lo mismo que iterar con un bucle {{jsxref("Statements/for...in", "for...in")}}, excepto que un bucle `for...in` también enumera las propiedades en la cadena de prototipo. El orden del arreglo devuelto por `Object.keys()` es el mismo que proporciona el bucle {{jsxref("Statements/for...in", "for...in")}}.
+
+Si necesita los valores de la propiedad, use {{jsxref("Object.values()")}} en su lugar. Si necesita ambos las claves de la propiedad como sus valores, use {{jsxref("Object.entries()")}} en su lugar
 
 ## Ejemplos
 
-```js
-var arr = ['a', 'b', 'c'];
-console.log(Object.keys(arr)); // console: ['0', '1', '2']
+### Usando Object.keys()
 
-// arreglo como objeto
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
-console.log(Object.keys(obj)); // console: ['0', '1', '2']
+```js
+// Arreglo sencillo
+const arr = ["a", "b", "c"];
+console.log(Object.keys(arr)); // ['0', '1', '2']
+
+// Arreglo como objeto
+const obj = { 0: "a", 1: "b", 2: "c" };
+console.log(Object.keys(obj)); // ['0', '1', '2']
 
 // arreglo como objeto con nombres ordenados aleatoriamente
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
-console.log(Object.keys(an_obj)); // console: ['2', '7', '100']
+const anObj = { 100: "a", 2: "b", 7: "c" };
+console.log(Object.keys(anObj)); // ['2', '7', '100']
 
 // getFoo es una propiedad no enumerable
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
-my_obj.foo = 1;
-
-console.log(Object.keys(my_obj)); // console: ['foo']
+const myObj = Object.create(
+  {},
+  {
+    getFoo: {
+      value() {
+        return this.foo;
+      },
+    },
+  },
+);
+myObj.foo = 1;
+console.log(Object.keys(myObj)); // ['foo']
 ```
 
-Si quieres todas las propiedades, incluso las no enumerables, mira {{jsxref("Object.getOwnPropertyNames()")}}.
+Si quieres _todas_ las propiedades, incluso las no enumerables, mira {{jsxref("Object.getOwnPropertyNames()")}}.
 
-## Notas
+### Usando Object.keys() en primitivos
 
-En ES5, si el argumento para este método no es un objeto (uno primitivo), causará un {{jsxref("Global_Objects/TypeError", "TypeError")}}. En ES2015, un argumento no-objeto será coaccionado hacia un objeto.
+Los argumentos que no son objetos son [objetos forzados](/es/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). Únicamente las cadenas pueden tener propiedades enumerables propias, mientras que todas las demás primitivas devuelven un arreglo vacío.
 
 ```js
-> Object.keys("foo")
-// TypeError: "foo" is not an object  (ES5)
+// Las cadenas de texto tienen índices como propiedades propias enumerables
+console.log(Object.keys("foo")); // ['0', '1', '2']
 
-> Object.keys("foo")
-// ["0", "1", "2"]                    (ES2015)
+// Otros primitivos no tienen propiedas propias
+console.log(Object.keys(100)); // []
 ```
 
-## Polyfill
-
-Para añadir soporte `Object.keys` en entornos más antiguos que no lo soportan de forma nativa, copia el siguiente fragmento:
-
-```js
-// De https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
-if (!Object.keys) {
-  Object.keys = (function() {
-    'use strict';
-    var hasOwnProperty = Object.prototype.hasOwnProperty,
-        hasDontEnumBug = !({ toString: null }).propertyIsEnumerable('toString'),
-        dontEnums = [
-          'toString',
-          'toLocaleString',
-          'valueOf',
-          'hasOwnProperty',
-          'isPrototypeOf',
-          'propertyIsEnumerable',
-          'constructor'
-        ],
-        dontEnumsLength = dontEnums.length;
-
-    return function(obj) {
-      if (typeof obj !== 'object' && (typeof obj !== 'function' || obj === null)) {
-        throw new TypeError('Object.keys called on non-object');
-      }
-
-      var result = [], prop, i;
-
-      for (prop in obj) {
-        if (hasOwnProperty.call(obj, prop)) {
-          result.push(prop);
-        }
-      }
-
-      if (hasDontEnumBug) {
-        for (i = 0; i < dontEnumsLength; i++) {
-          if (hasOwnProperty.call(obj, dontEnums[i])) {
-            result.push(dontEnums[i]);
-          }
-        }
-      }
-      return result;
-    };
-  }());
-}
-```
-
-Ten en cuenta que el código anterior incluye claves no-enumerables en IE7 (y quizás IE8), al pasar en un objeto desde una ventana diferente.
-
-Para un simple Polyfill del Navegador, mira [Javascript - Compatibilidad de Object.keys en Navegadores](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
+> **Nota:** En ES5, si el argumento para `Object.keys()` no es un objeto, causará {{jsxref("TypeError")}}.
 
 ## Especificaciones
 
@@ -122,13 +87,15 @@ Para un simple Polyfill del Navegador, mira [Javascript - Compatibilidad de Obje
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.keys")}}
+{{Compat}}
 
-## Mira también
+## Véase también
 
-- [Propiedades de enumerabilidad y pertenencia](/es/docs/Enumerability_and_ownership_of_properties)
+- [Polyfill de `Object.keys` en `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.entries()")}}
+- {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.values()")}}
-- {{jsxref("Object.entries()")}}
+- {{jsxref("Map.prototype.keys()")}}

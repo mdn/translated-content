@@ -67,13 +67,7 @@ Les ajouts à [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_W
 
 ## Compatibilité des navigateurs
 
-### `PushEvent`
-
-{{Compat("api.PushEvent")}}
-
-### `PushMessageData`
-
-{{Compat("api.PushMessageData")}}
+{{Compat}}
 
 ## Voir aussi
 

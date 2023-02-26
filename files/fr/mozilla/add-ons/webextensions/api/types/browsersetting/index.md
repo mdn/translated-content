@@ -35,11 +35,9 @@ Notez que si cet objet est basé sur le type [ChromeSetting](https://developer.c
 - {{WebExtAPIRef("types.BrowserSetting.onChange")}}
   - : Définit lorsque la valeur du paramètre change.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-## Browser compatibility
-
-{{Compat("webextensions.api.types.BrowserSetting")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

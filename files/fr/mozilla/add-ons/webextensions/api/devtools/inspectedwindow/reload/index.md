@@ -38,9 +38,9 @@ browser.devtools.inspectedWindow.reload(
     - `injectedScript` {{optional_inline}}
       - : `string`. Injectez l'expression JavaScript donnée dans toutes les images de la page, avant tout autre script.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.inspectedWindow.reload")}}
+{{Compat}}
 
 ## Exemples
 

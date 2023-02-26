@@ -36,9 +36,9 @@ Aucun
 
 Une {{JSxRef("Promise")}} qui sera résolu une fois le script utilisateur désenregistré. La promesse ne rapporte rien.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.userScripts.RegisteredUserScript.unregister")}}
+{{Compat}}
 
 ## Voir aussi
 

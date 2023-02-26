@@ -73,6 +73,6 @@ div {
 
 {{Specifications}}
 
-## Compatibilitidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-right")}}
+{{Compat}}

@@ -186,6 +186,6 @@ Demande d'accès aux éléments privilégiés de l'API `tabs.`
 
 Demande des deux permissions ci-dessus.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.permissions")}}
+{{Compat}}

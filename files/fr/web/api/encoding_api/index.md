@@ -33,10 +33,4 @@ L'API fournit quatres interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 
 ## Compatibilité des navigateurs
 
-### `TextDecoder`
-
-{{Compat("api.TextDecoder")}}
-
-### `TextEncoder`
-
-{{Compat("api.TextEncoder")}}
+{{Compat}}

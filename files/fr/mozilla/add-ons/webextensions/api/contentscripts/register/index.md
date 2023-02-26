@@ -63,9 +63,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Actuellement, les scripts de contenu ne sont pas enregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts de contenu ont été enregistrés) est déchargée, vous devez donc enregistrer un script de contenu depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contentScripts.register", 10)}}
+{{Compat}}
 
 ## Exemples
 

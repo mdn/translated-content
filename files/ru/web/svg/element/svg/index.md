@@ -10,6 +10,8 @@ original_slug: Web/SVG/Элемент/svg
 
 > **Примечание:** Примечание. Атрибут `xmlns` требуется только для самого внешнего элемента `svg` документов SVG. Это не нужно для внутренних элементов `svg` или внутри документов HTML.
 
+## Пример
+
 ```css hidden
 html,body,svg { height:100% }
 ```
@@ -25,7 +27,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Exeemple', 150, '100%')}}
+{{EmbedLiveSample('Пример', 300, 100)}}
 
 ## Атрибуты
 

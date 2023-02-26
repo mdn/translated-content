@@ -27,9 +27,9 @@ Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA. Les 
 
 Par exemple , le rouge opaque est `[255, 0, 0, 255]`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.ColorArray")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -28,7 +28,7 @@ Une liste {{domxref("DOMStringList")}}.
 
 ## Exemples
 
-Dans l'exemple suivant, on initialise une transaction de lecture/écriture sur une base de données en ajoutant des données dans un magasin d'objets via la méthode `add()`. Une fois l'objet créé, on affiche `objectStore.indexNames` en sortie de la console. Pour un exemple complet et fonctionnel, vous pouvez utiliser notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([tester la démo](https://mdn.github.io/to-do-notifications/)).
+Dans l'exemple suivant, on initialise une transaction de lecture/écriture sur une base de données en ajoutant des données dans un magasin d'objets via la méthode `add()`. Une fois l'objet créé, on affiche `objectStore.indexNames` en sortie de la console. Pour un exemple complet et fonctionnel, vous pouvez utiliser notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([tester la démo](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On commence par ouvrir la base de données
@@ -99,4 +99,4 @@ function addData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

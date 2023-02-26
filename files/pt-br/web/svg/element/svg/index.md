@@ -9,6 +9,8 @@ O elemento `svg` é um contêiner que define um novo sistema de coordenadas e [j
 
 > **Nota:** The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_. It is unnecessary for inner `svg` elements or inside HTML documents.
 
+## Exemplo
+
 ```css hidden
 html,body,svg { height:100% }
 ```
@@ -24,7 +26,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Exeemple', 150, '100%')}}
+{{EmbedLiveSample('Exemplo', 300, 100)}}
 
 ## Attributes
 

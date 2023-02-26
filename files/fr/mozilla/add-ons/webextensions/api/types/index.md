@@ -20,7 +20,7 @@ Définit le type `BrowserSetting` , qui est utilisé pour représenter un param�
 - {{WebExtAPIRef("types.BrowserSetting")}}
   - : Représente un paramètre de navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{WebExtExamples("h2")}}
 

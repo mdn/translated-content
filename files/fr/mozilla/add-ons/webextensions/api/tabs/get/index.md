@@ -56,9 +56,9 @@ browser.tabs.onActivated.addListener(logListener);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.get")}}
+{{Compat}}
 
 > **Note :**
 >

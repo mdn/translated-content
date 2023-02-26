@@ -69,9 +69,13 @@ Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element).
 </section>
 ```
 
-## Compatibilidad
+## Especificaciones
 
-{{Compat("html.elements.section")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Véase también
 

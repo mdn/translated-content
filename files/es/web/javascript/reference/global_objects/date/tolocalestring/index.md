@@ -140,9 +140,9 @@ When formatting large numbers of dates, it is better to create an {{jsxref("Glob
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toLocaleString")}}
+{{Compat}}
 
 ## See also
 

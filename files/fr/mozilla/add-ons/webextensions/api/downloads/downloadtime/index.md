@@ -30,9 +30,9 @@ Un `DownloadTime` peut être l'un de trois types différents :
 
 - un nombre : ceci est interprété comme le nombre de millisecondes écoulées depuis l'époque UNIX.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.DownloadTime")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -50,4 +50,4 @@ Connection: close
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Connection")}}
+{{Compat}}

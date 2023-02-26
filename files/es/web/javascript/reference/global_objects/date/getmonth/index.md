@@ -41,9 +41,9 @@ console.log(mes); // 11
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getMonth")}}
+{{Compat}}
 
 ## Vea también
 

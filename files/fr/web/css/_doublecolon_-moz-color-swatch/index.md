@@ -46,7 +46,7 @@ Ce pseudo-élément est spécifique à Gecko et ne fait partie d'aucune spécifi
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-color-swatch")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -69,7 +69,7 @@ Esto, junto con el operador {{jsxref("Operators/instanceof", "instanceof")}} res
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.isPrototypeOf")}}
+{{Compat}}
 
 ## Ver también
 

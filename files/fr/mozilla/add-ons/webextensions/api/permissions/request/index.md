@@ -43,9 +43,9 @@ var requesting = browser.permissions.request(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si l'extension a reçu toutes les permissions répertoriées dans l'argument des `permissions` , ou `false` dans le cas contraire.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.request")}}
+{{Compat}}
 
 ## Exemples
 

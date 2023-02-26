@@ -76,7 +76,7 @@ Les extensions ne peuvent pas créer, modifier ou supprimer des signets dans le 
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

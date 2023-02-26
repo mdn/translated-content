@@ -122,9 +122,9 @@ p { overflow: auto; /* se dibujan barras según se necesite */ }
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.overflow")}}
+{{Compat}}
 
 ## Véase también
 

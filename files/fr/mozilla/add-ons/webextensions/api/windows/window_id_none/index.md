@@ -18,9 +18,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_NONE
 
 La valeur `windowId` que représente l'absence d'une fenêtre du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.WINDOW_ID_NONE")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

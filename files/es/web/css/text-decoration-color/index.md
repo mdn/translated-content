@@ -77,6 +77,6 @@ El ejemplo anterior tiene el mismo efecto que el código siguiente, que además 
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-decoration-color")}}
+{{Compat}}

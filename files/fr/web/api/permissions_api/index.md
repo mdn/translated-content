@@ -48,7 +48,7 @@ Vous pouvez également en lire plus sur le fonctionnement de cet exemple dans l'
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Permissions")}}
+{{Compat}}
 
 ## Voir aussi
 

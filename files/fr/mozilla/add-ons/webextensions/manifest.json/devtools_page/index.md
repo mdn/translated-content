@@ -45,6 +45,6 @@ Voir [Extension des outils développeurs](/fr/Add-ons/WebExtensions/Extending_th
 "devtools_page": "devtools/my-page.html"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.devtools_page")}}
+{{Compat}}

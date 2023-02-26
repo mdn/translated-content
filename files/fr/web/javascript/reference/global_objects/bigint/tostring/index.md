@@ -70,13 +70,11 @@ BigInt(-0).toString(); // '0'
 
 ## Spécifications
 
-| Spécification                                                                                      | État                    |
-| -------------------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-bigint.prototype.tostring) | Proposition de niveau 3 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

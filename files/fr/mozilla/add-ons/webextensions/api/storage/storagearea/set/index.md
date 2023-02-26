@@ -47,9 +47,9 @@ let settingItem = browser.storage.<storageType>.set(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments si l'opération a réussi. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.StorageArea.set")}}
+{{Compat}}
 
 ## Exemples
 

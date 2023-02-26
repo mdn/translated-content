@@ -47,9 +47,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - "keyword_generated"
   - : Correspond à une visite générée pour un mot clé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.TransitionType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

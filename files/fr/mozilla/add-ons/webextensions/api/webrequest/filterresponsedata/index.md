@@ -68,6 +68,6 @@ browser.webRequest.onBeforeRequest.addListener(
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.filterResponseData", 10)}}
+{{Compat}}

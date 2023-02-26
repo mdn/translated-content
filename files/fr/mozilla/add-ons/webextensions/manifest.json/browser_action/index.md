@@ -362,9 +362,9 @@ Une action de navigateur avec une icône, un titre et une fenêtre contextuelle.
 
 Pour une extension simple, mais complète, qui utilise une action de navigateur, consultez le [tutoriel pas à pas](/fr/Add-ons/WebExtensions/Your_second_WebExtension).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.browser_action", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

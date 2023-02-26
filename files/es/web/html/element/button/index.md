@@ -358,9 +358,13 @@ Más información (en inglés):
 
 - [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
 
-## Soporte
+## Especificaciones
 
-{{Compat("html.elements.button")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Referencia
 

@@ -71,9 +71,9 @@ Les trois premières propriétés - `type`, `title`, `message` - sont obligatoir
 
 Notez que les propriétés `appIconMaskUrl` et `isClickable` ne sont pas supportées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.NotificationOptions")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

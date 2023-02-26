@@ -40,9 +40,9 @@ var updating = browser.notifications.update(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un booléen : `true` si la notification a été mise à jour, ou `false` si ce n'est pas le cas (par exemple, parce que la notification référencée par `id` n'existe pas).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.update")}}
+{{Compat}}
 
 ## Exemples
 

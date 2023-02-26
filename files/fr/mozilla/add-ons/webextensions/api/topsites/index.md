@@ -31,9 +31,9 @@ Pour utiliser l'API topSites, vous devez disposez de l' [API permission](/fr/Add
 - {{WebExtAPIRef("topSites.get()")}}
   - : Obtient un tableau contenant tous les sites répertoriés dans la page "Nouvel onglet" du navigateur. Notez que le nombre de sites renvoyés ici est spécifique au navigateur, et les sites particuliers retournés seront probablement spécifiques à l'utilisateur, en fonction de leur historique de navigation.
 
-## Compatibilité du Navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.topSites")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -45,7 +45,7 @@ Cette méthode peut lever une des exceptions suivantes :
 
 ## Exemples
 
-Dans l'exemple qui suit, on ouvre une transaction en lecture/écriture et on supprime un enregistrement donné grâce à `delete()`. Pour un exemple complet, voir l'application [Notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([démonstration](https://mdn.github.io/to-do-notifications/)).
+Dans l'exemple qui suit, on ouvre une transaction en lecture/écriture et on supprime un enregistrement donné grâce à `delete()`. Pour un exemple complet, voir l'application [Notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([démonstration](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On ouvre l'accès à la base de données
@@ -107,4 +107,4 @@ function deleteData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- L'exemple de référence : [notifications de trucs à faire](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir la démonstration](https://mdn.github.io/to-do-notifications/))
+- L'exemple de référence : [notifications de trucs à faire](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir la démonstration](https://mdn.github.io/dom-examples/to-do-notifications/))
