@@ -228,13 +228,13 @@ Retournez maintenant dans `Todo.js` et utilisez la prop `id`. Il doit remplacer 
 
 ## Jusqu'ici, tout va bien ?
 
-Nous faisons un bon usage de React jusqu'à présent, mais nous pouvons faire mieux ! Notre code est répétitif. Les trois lignes qui rendent notre composant `<Todo />` sont presque identiques, avec une seule différence : la valeur de chaque prop.
+Nous faisons un bon usage de React jusqu'à présent, mais nous pouvons faire mieux ! Notre code est répétitif. Les trois lignes qui rendent notre composant `<Todo />` sont presque identiques, avec une seule différence: la valeur de chaque prop.
 
 Nous pouvons nettoyer notre code grâce à l'une des capacités principales de JavaScript : l'itération. Pour utiliser l'itération, nous devons d'abord repenser nos tâches.
 
 ## Tâches comme données
 
-Chacune de nos tâches contient actuellement trois informations : son nom, si elle a été vérifiée, et son ID unique. Ces données se traduisent bien par un objet. Puisque nous avons plus d'une tâche, un tableau d'objets fonctionnerait bien pour représenter ces données.
+Chacune de nos tâches contient actuellement trois informations: son nom, si elle a été vérifiée, et son ID unique. Ces données se traduisent bien par un objet. Puisque nous avons plus d'une tâche, un tableau d'objets fonctionnerait bien pour représenter ces données.
 
 Dans `src/index.js`, créez un nouveau `const` sous l'import final, mais au-dessus de `ReactDOM.render()`:
 

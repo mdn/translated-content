@@ -12,7 +12,7 @@ translation_of: >-
 
 Disons que nous avons pour mission de créer une preuve de concept en React - une application qui permet aux utilisateurs d'ajouter, de modifier et de supprimer des tâches sur lesquelles ils veulent travailler, ainsi que de marquer les tâches comme terminées sans les supprimer. Cet article vous guidera pour mettre en place la structure de base et la mise en forme du composant App, prêt pour la définition et l'interactivité des composants individuels, que nous ajouterons plus tard.
 
-> **Note :** Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version terminée du code de l'application React échantillon dans notre dépôt [todo-react repository](https://github.com/mdn/todo-react). Pour une version en direct, consultez <https://mdn.github.io/todo-react-build/>.
+> **Remarque :** Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version terminée du code de l'application React échantillon dans notre dépôt [todo-react repository](https://github.com/mdn/todo-react). Pour une version en direct, consultez <https://mdn.github.io/todo-react-build/>.
 
 <table class="standard-table">
   <tbody>
@@ -232,7 +232,7 @@ Plus bas, vous pouvez trouver notre balise [`<ul>`](/fr/docs/Web/HTML/Element/ul
 >
 ```
 
-L'attribut `role` aide les technologies d'assistance à expliquer le type d'élément qu'une balise représente.  Par défaut, une balise `<ul>` est traitée comme une liste, mais les styles que nous allons ajouter vont rompre cette fonctionnalité. Ce rôle va restaurer la signification "liste" de la balise `<ul>`. Si vous voulez en savoir plus sur la raison pour laquelle cela est nécessaire, vous pouvez consulter l'article de [Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html).
+L'attribut `role` aide les technologies d'assistance à expliquer le type d'élément qu'une balise représente. Par défaut, une balise `<ul>` est traitée comme une liste, mais les styles que nous allons ajouter vont rompre cette fonctionnalité. Ce rôle va restaurer la signification "liste" de la balise `<ul>`. Si vous voulez en savoir plus sur la raison pour laquelle cela est nécessaire, vous pouvez consulter l'article de [Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html).
 
 L'attribut `aria-labelledby` indique aux technologies d'assistance que nous traitons notre en-tête de liste comme une étiquette qui décrit l'objectif de la liste en dessous. Cette association donne à la liste un contexte plus informatif, ce qui pourrait aider les utilisateurs de lecteurs d'écran à mieux comprendre l'objectif de celle-ci.
 
