@@ -24,9 +24,9 @@ Values of this type are objects.
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Removes all items from the storage area.
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("webextensions.api.storage.StorageArea")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

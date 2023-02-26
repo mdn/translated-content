@@ -37,9 +37,9 @@ Ver los ejemplos {{HTMLElement("select")}}.
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.option")}}
+{{Compat}}
 
 ## Ver también
 

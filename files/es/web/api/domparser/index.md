@@ -114,9 +114,9 @@ Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.DOMParser")}}
+{{Compat}}
 
 ## Ver también
 

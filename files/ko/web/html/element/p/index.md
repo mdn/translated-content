@@ -176,7 +176,7 @@ p {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.p")}}
+{{Compat}}
 
 ## 같이 보기
 

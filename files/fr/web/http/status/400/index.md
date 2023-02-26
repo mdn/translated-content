@@ -18,9 +18,11 @@ Le code de statut de réponse HTTP **`400 Bad Request`** indique que le serveur 
 
 ## Spécifications
 
-| Spécification                                                | Titre                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| [RFC 7231, section 6.5.1: 400 Bad Request](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

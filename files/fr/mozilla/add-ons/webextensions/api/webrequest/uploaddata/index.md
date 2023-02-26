@@ -27,9 +27,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `file`{{optional_inline}}
   - : `string`. Une chaîne de caractères avec le chemin et le nom du fichier.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.UploadData")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

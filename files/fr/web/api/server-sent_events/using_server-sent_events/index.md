@@ -202,4 +202,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventSource")}}
+{{Compat}}

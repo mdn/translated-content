@@ -107,9 +107,9 @@ CSS
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-fill-mode")}}
+{{Compat}}
 
 ## Ver también
 

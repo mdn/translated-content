@@ -131,9 +131,9 @@ span[data-descr]:focus::after {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.after")}}
+{{Compat}}
 
 ## Véase también
 

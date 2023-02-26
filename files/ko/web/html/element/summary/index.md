@@ -123,13 +123,13 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("html.elements.summary")}}
+{{Compat}}
 
 ## See also
 

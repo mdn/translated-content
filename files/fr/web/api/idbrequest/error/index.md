@@ -42,7 +42,7 @@ En plus des codes d'erreur envoyés à l'objet [`IDBRequest`](/fr/docs/Web/API/I
 
 Dans l'exemple qui suit, on effectue une requête sur le titre de l'enregistrement. Le gestionnaire d'évèvenement `onsuccess` traite l'enregistrement obtenu depuis le magasin d'objet ({{domxref("IDBObjectStore")}}) et qui est disponible via `objectStoreTitleRequest.result`. Le gestionnaire met ensuite à jour une propriété de l'enregistrement puis replace l'enregistrement mis à jour dans le magasin d'objet.
 
-On dispose également d'une fonction `onerror` qui permet d'indiquer l'erreur qui s'est produite si la requêté échoue. Pour consulter un exemple complet, voir [l'application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. [la démonstration _live_](https://mdn.github.io/to-do-notifications/)).
+On dispose également d'une fonction `onerror` qui permet d'indiquer l'erreur qui s'est produite si la requêté échoue. Pour consulter un exemple complet, voir [l'application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. [la démonstration _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var title = "Walk dog";
@@ -95,4 +95,4 @@ objectStoreTitleRequest.onerror = function() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

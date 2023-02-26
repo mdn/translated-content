@@ -38,7 +38,7 @@ getNapier(); // 2.718281828459045
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.E")}}
+{{Compat}}
 
 ## Ver también
 

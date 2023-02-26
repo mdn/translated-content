@@ -77,7 +77,7 @@ Os seguintes métodos foram reprovados:
   - : Use {{domxref("Element.getAttribute()")}} no lugar.
 - `getAttributeNodeNS()`
   - : Use {{domxref("Element.getAttributeNS()")}} no lugar.
-- `hasAttributes()` {{obsolete_inline("21.0")}}
+- `hasAttributes()`
   - : Este método agora sempre retorna false.
 - `hasChildNodes()`
   - : Este método agora sempre retorna false.

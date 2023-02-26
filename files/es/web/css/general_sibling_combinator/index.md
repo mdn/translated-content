@@ -37,9 +37,9 @@ p ~ span {
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.general_sibling")}}
+{{Compat}}
 
 ## Ver también
 

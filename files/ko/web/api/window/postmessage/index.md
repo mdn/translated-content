@@ -148,11 +148,11 @@ IDN 호스트 명에 한하여, `origin` 프로퍼티 값은 일관되게 Unicod
 
 마지막으로, `file:` URL의 페이지의 메시지를 보낼 경우 `targetOrigin` 파라미터를 `"*"`로 할 필요가 있습니다. `file://` 은 보안 제한으로 사용할 수 없으며 이 제한은 향후 수정될 수 있습니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

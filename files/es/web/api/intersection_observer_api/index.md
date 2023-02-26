@@ -501,9 +501,9 @@ Hay un ejemplo aún más extensivo en [Cronometrando la visibilidad de un elemen
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## Ver también
 

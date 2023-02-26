@@ -36,17 +36,7 @@ Esta pieza de código lee el texto que hay en el portapapeles y lo añade al pri
 
 ## Compatibilidad con navegadores
 
-### Clipboard
-
-{{Compat("api.Clipboard")}}
-
-### ClipboardEvent
-
-{{Compat("api.ClipboardEvent")}}
-
-### ClipboardItem
-
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 ## Véase también
 

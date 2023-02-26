@@ -33,9 +33,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - incognito {{optional_inline}}
   - : `boolean`. Si elles sont fournies, les demandes qui ne correspondent pas à l'état incognito (`true` ou `false`) seront filtrées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.RequestFilter")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

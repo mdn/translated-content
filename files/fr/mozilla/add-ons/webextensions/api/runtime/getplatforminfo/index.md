@@ -34,9 +34,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une valeur {{WebExtAPIRef('runtime.PlatformInfo')}} représentant la plate-forme actuelle.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.getPlatformInfo")}}
+{{Compat}}
 
 ## Exemples
 

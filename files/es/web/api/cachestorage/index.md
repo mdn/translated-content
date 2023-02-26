@@ -158,9 +158,9 @@ try {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.CacheStorage")}}
+{{Compat}}
 
 ## See also
 

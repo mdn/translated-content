@@ -61,7 +61,7 @@ Observese que `insertRow` inserta la fila diréctamente en la tabla y retorna un
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLTableElement.insertRow")}}
+{{Compat}}
 
 ## Ver también
 

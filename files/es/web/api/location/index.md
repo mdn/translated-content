@@ -71,7 +71,7 @@ console.log(url.origin);    // https://developer.mozilla.org
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Location")}}
+{{Compat}}
 
 ## Vea también
 

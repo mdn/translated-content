@@ -35,7 +35,7 @@ Além disso, deixa muito a desejar em termos de tentar ser qualquer tipo de moto
 
 ## O ray-caster
 
-As pessoas agradáveis ​​aqui têm copiado manualmente meus arquivos para que você possa dar uma olhada, e para o seu prazer de hacking eu postei o conteúdo do arquivo individual como listagem de código (veja abaixo).
+As pessoas agradáveis aqui têm copiado manualmente meus arquivos para que você possa dar uma olhada, e para o seu prazer de hacking eu postei o conteúdo do arquivo individual como listagem de código (veja abaixo).
 
 Então você está lá, o fogo até Safari 1.3 ou Firefox 1.5 ou outro navegador que suporta o elemento \<canvas> e divirta-se!
 

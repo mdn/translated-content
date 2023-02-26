@@ -67,9 +67,9 @@ addEventListener('fetch', event => {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.FetchEvent")}}
+{{Compat}}
 
 ## Ver también
 

@@ -121,13 +121,3 @@ overlay.style.backgroundColor = xxx;
     - 一个指向实际任务或评估页面的链接，以便我们找到你需要得到帮助的问题。
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## 本章目录
-
-- [条件语句：在代码中作出决策](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [循环代码](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [函数：可复用的代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
-- [创建自己的函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [函数的返回值](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [初识“事件”](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- **图片库**

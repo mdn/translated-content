@@ -79,6 +79,6 @@ Este elemento implementa [`SVGSVGElement`](/es/docs/Web/API/SVGSVGElement) en la
 
 {{Specifications}}
 
-## Compatibilidad de Navegador
+## Compatibilidad con navegadores
 
-{{Compat("svg.elements.svg")}}
+{{Compat}}

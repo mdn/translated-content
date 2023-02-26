@@ -51,9 +51,9 @@ Pour utiliser l'API de permissions, déterminez les permissions que votre extens
 - {{WebExtAPIRef("permissions.onRemoved")}}
   - : Déclenché lorsque une permission est supprimée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

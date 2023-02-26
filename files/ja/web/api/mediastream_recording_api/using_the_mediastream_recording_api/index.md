@@ -1,5 +1,5 @@
 ---
-title: Media​Stream 収録 API の使用
+title: MediaStream 収録 API の使用
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 l10n:
   sourceCommit: 60c1df4b8b6ed30b2baec49ec3e21a1648a0ba86

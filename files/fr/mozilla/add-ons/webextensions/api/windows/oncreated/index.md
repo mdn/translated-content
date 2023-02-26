@@ -46,9 +46,9 @@ Les événements ont trois fonctions :
     - `window`
       - : Un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre qui a été créée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.onCreated")}}
+{{Compat}}
 
 ## Exemples
 

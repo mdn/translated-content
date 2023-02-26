@@ -105,9 +105,9 @@ The `RTCSignalingState` enum specifies the possible values of {{domxref("RTCPeer
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.RTCPeerConnection")}}
+{{Compat}}
 
 ## See also
 

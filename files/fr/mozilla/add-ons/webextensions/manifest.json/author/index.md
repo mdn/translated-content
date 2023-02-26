@@ -40,4 +40,4 @@ Notez que Firefox ne supporte cette clé qu'à partir de la version 52 et que ce
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.author")}}
+{{Compat}}

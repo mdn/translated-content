@@ -16,9 +16,9 @@ Para la pseudo clase { cssxref(":lang") }} de CSS, dos nombres invalidos de leng
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.lang")}}
+{{Compat}}
 
 ## Ver también
 

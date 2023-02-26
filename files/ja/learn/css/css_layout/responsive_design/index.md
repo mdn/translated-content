@@ -44,7 +44,7 @@ Zoe Mickley Gillenwater は、フレキシブル（柔軟な）サイトを作�
 
 ## レスポンシブデザイン
 
-レスポンシブデザインという用語は、[2010 年に Ethan Marcotte によって初めて作られ](https://alistapart.com/article/responsive-web-design/)、3 つのテクニックを組み合わせて使用 ​​ することを説明しています。
+レスポンシブデザインという用語は、[2010 年に Ethan Marcotte によって初めて作られ](https://alistapart.com/article/responsive-web-design/)、3 つのテクニックを組み合わせて使用することを説明しています。
 
 1. 1 つ目は、Gillenwater が既に検討したフルード（流動的な）グリッドのアイデアであり、Marcotte の記事 [Fluid Grids](https://alistapart.com/article/fluidgrids/)（2009 年に A List Apart で公開）で読むことができます。
 2. 2 番目のテクニックは、[フルード画像](http://unstoppablerobotninja.com/entry/fluid-images)のアイデアです。 `max-width` プロパティを `100%` に設定する非常に簡単なテクニックを使用すると、画像が含まれる列が画像の本来のサイズより狭くなった場合、画像は小さく縮小されますが、大きくなることはありません。 これにより、画像はオーバーフローするのではなく、柔軟なサイズの列に収まるように縮小できますが、列が画像よりも広くなった場合には大きくならず、ピクセル化もされません。

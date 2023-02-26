@@ -47,9 +47,9 @@ Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés su
 - `value`
   - : Une `chaîne` représentant la valeur du cookie.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.Cookie")}}
+{{Compat}}
 
 ## Exemples
 

@@ -1120,9 +1120,9 @@ table.standard-table td {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.filter")}}
+{{Compat}}
 
 ## Véase también
 

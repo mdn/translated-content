@@ -220,13 +220,9 @@ var result = mapped.map(function(el){
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.sort")}}
-
-## Compatibilidad en navegadores
-
-La tabla de compatibilidad en esta página es generada por una data estructurada. Si deseas contribuir a la data, por favor entra a <https://github.com/mdn/browser-compat-data> y envíanos un pull request.
+{{Compat}}
 
 ## Ver también
 

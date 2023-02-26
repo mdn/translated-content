@@ -72,7 +72,7 @@ Bien que [proposée](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-orient")}}
+{{Compat}}
 
 ## Voir aussi
 

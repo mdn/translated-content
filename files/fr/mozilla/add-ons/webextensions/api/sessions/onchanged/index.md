@@ -42,9 +42,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lors de l'événement. Il ne passe aucun paramètre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.onChanged")}}
+{{Compat}}
 
 ## Exemples
 

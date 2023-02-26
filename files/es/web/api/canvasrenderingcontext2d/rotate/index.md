@@ -110,9 +110,9 @@ El rectángulo no rotado es gris, y el rectángulo rotado es rojo.
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.rotate")}}
+{{Compat}}
 
 ## Véase también
 

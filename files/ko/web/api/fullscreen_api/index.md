@@ -128,11 +128,11 @@ function toggleFullScreen() {
 
 full-screen mode가 이미 활성화 된 경우(`fullscreenElement` 가 `null`이 아닌 경우), `document`에서 {{DOMxRef("Document.exitFullscreen", "exitFullscreen()")}}을 호출하여 full-screen mode를 종료합니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

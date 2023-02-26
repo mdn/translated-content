@@ -49,9 +49,9 @@ var getting = browser.cookies.get(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} contenant des détails sur le cookie, ou `null` si le cookie n'a pas été trouvé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.get")}}
+{{Compat}}
 
 ## Exemples
 

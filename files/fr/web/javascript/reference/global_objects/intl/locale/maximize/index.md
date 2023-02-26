@@ -50,13 +50,11 @@ console.log(myLocMaximized.toString());
 
 ## Spécifications
 
-| Spécification                                                                                                                          | État | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.maximize()`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.maximize) |      |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.maximize")}}
+{{Compat}}
 
 ## Voir aussi
 

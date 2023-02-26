@@ -74,6 +74,6 @@ La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimi
 
 {{Specifications}}
 
-## Navegadores compatibles
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.marquee")}}
+{{Compat}}

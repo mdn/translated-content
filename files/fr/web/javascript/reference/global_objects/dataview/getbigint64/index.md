@@ -57,13 +57,11 @@ dataview.getBigInt64(0); // 0n
 
 ## Spécifications
 
-| Spécification                                                                                                                     | État | Commentaires |
-| --------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------ |
-| [Proposition pour `DataView.prototype.getBigInt64()`](https://tc39.github.io/proposal-bigint/#sec-dataview.prototype.getbigint64) |      |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getBigInt64")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -328,7 +328,7 @@ Also it's a good practice to provide some content (such as the direct download l
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.audio")}}
+{{Compat}}
 
 ## 같이 보기
 

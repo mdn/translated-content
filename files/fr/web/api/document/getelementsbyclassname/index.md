@@ -88,7 +88,7 @@ C'est la méthode d'opération la plus couramment utilisée.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.getElementsByClassName")}}
+{{Compat}}
 
 ## Spécification
 

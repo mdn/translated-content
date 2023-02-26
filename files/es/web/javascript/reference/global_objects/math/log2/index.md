@@ -62,9 +62,9 @@ Math.log2 = Math.log2 || function(x) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.log2")}}
+{{Compat}}
 
 ## See also
 

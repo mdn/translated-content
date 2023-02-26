@@ -160,4 +160,4 @@ Puede usar la pseudoclase `:checked` para crear una galería de imágenes con im
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.checked")}}
+{{Compat}}

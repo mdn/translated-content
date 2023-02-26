@@ -36,7 +36,7 @@ var ohGodWhy = "foo";
 
 ### Palavras-chave reservadas não podem ser nomes de variáveis
 
-Existem alguns nomes de variáveis ​​que são palavras-chave resevadas. Você não pode usar isso. Desculpa :(
+Existem alguns nomes de variáveis que são palavras-chave resevadas. Você não pode usar isso. Desculpa :(
 
 ```js example-bad
 var debugger = "whoop";
@@ -86,4 +86,4 @@ var arr = [1,2,3,4,5];
 
 - Bons nomes de variáveis
 - [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)
-- Declarações de variáveis ​​no Guia JavaScript
+- Declarações de variáveis no Guia JavaScript

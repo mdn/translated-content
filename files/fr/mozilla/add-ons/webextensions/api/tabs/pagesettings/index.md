@@ -76,8 +76,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `shrinkToFit` {{optional_inline}}
   - : `boolean`. Si le contenu de la page doit rétrécir pour s'adapter à la largeur de la page (remplace la mise à l'échelle). Par défaut : true.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.PageSettings")}}
+{{Compat}}
 
 {{WebExtExamples}}

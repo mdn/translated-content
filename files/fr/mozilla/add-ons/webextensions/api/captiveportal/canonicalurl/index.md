@@ -14,9 +14,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL
 
 Renvoyer l'URL canonique de la page de détection du portail des prisonniers. En lecture seule.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.captivePortal.canonicalURL")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -22,6 +22,6 @@ Un {{domxref("Boolean")}}.
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.isSecureContext")}}
+{{Compat}}

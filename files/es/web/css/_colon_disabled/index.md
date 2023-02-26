@@ -83,7 +83,7 @@ function toggleBilling() {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.disabled")}}
+{{Compat}}
 
 ## Ver también
 

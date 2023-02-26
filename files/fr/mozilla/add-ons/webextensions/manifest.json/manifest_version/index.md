@@ -37,6 +37,6 @@ Actuellement, cela doit toujours être 2.
 "manifest_version": 2
 ```
 
-## Comptabilité des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.manifest_version")}}
+{{Compat}}

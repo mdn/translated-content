@@ -34,21 +34,11 @@ Ce bout de code analyse le texte à partir du presse-papiers et l'insère après
 
 ## Spécifications
 
-{{Specifications("api.Clipboard")}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Clipboard
-
-{{Compat("api.Clipboard")}}
-
-### ClipboardEvent
-
-{{Compat("api.ClipboardEvent")}}
-
-### ClipboardItem
-
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 ## Voir aussi
 

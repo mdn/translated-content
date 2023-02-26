@@ -435,9 +435,9 @@ const {self, prot} = obj;
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.destructuring")}}
+{{Compat}}
 
 ## Ve también
 

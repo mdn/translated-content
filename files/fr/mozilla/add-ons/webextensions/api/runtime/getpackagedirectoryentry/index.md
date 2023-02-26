@@ -34,9 +34,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet `DirectoryEntry` représentant le répertoire du package.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.getPackageDirectoryEntry")}}
+{{Compat}}
 
 ## Exemples
 

@@ -65,9 +65,9 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.MediaStreamTrack")}}
+{{Compat}}
 
 ## Ver támbien
 

@@ -89,7 +89,7 @@ slug: Web/HTML/Element/progress
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.progress")}}
+{{Compat}}
 
 ## 같이 보기
 

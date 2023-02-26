@@ -34,9 +34,9 @@ let {id} = await browser.management.install({url});
 
 Une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet, contenant l'`ExtensionID` défini pour le thème dans manifest.json.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.install")}}
+{{Compat}}
 
 ## Exemples
 

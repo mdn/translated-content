@@ -50,7 +50,7 @@ The listener function will be passed two parameters: a string `text`, and a call
 - `suggest`
   - : `Function`. Une fonction de rappel que l'écouteur d'événement peut appeler pour fournir des suggestions pour la liste déroulante de la barre d'adresse. La fonction de rappel s'attend à recevoir un tableau d'objets {{WebExtAPIRef("omnibox.SuggestResult")}} un pour chaque suggestion. Seules les six premières suggestions seront affichées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 

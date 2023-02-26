@@ -53,13 +53,11 @@ console.log(maLocMinimized.toString());
 
 ## Spécifications
 
-| Spécification                                                                                                                          | État | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.minimize()`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.minimize) |      |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.minimize")}}
+{{Compat}}
 
 ## Voir aussi
 

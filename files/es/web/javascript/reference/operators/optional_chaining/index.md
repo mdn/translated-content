@@ -171,9 +171,9 @@ console.log(customerCity); // Unknown city
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.optional_chaining")}}
+{{Compat}}
 
 ## Ver también
 

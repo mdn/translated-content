@@ -93,9 +93,9 @@ El operador `in` devuelve `true` para propiedades en la cadena del prototipo.
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.in")}}
+{{Compat}}
 
 ## Vea también
 

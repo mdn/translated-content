@@ -82,9 +82,9 @@ Le filtre fournit également des fonctions à {{WebEXTAPIRef("webRequest.StreamF
 - {{WebExtAPIRef("webRequest.StreamFilter.status")}}
   - : Décrit l'état actuel du flux.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter", 10)}}
+{{Compat}}
 
 ## Exemples
 

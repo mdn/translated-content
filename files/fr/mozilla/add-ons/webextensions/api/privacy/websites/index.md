@@ -71,9 +71,9 @@ Les valeurs par défaut de ces propriétés ont tendance à varier selon les nav
     - `"never"`: La protection de suivi est désactivée.
     - `"private_browsing"`: La protection de suivi est activée uniquement dans les fenêtres de navigation privée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.privacy.websites")}}
+{{Compat}}
 
 ## Exemples
 

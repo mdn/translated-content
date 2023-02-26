@@ -64,9 +64,9 @@ Number.isNaN = Number.isNaN || function(value) {
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.isNaN")}}
+{{Compat}}
 
 ## Ver también
 

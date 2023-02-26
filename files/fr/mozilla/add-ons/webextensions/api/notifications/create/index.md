@@ -46,9 +46,9 @@ var creating = browser.notifications.create(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie lorsque la notification est créée et que le processus d'affichage a été démarré, avant que la notification ne s'affiche réellement à l'utilisateur. Il est rempli avec une chaîne représentant l'identifiant de la notification.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.create")}}
+{{Compat}}
 
 ## Exemples
 

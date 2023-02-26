@@ -13,9 +13,9 @@ La propiedad CSS -**`webkit-text-fill-color`** especifica el [color](/es/docs/We
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-text-fill-color")}}
+{{Compat}}
 
 ## Ver además
 

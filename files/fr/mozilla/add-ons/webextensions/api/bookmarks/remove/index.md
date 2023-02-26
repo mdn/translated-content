@@ -59,9 +59,9 @@ removingBookmark.then(onRemoved, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.remove")}}
+{{Compat}}
 
 > **Note :**
 >

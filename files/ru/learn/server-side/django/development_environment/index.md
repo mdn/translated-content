@@ -315,31 +315,31 @@ py -3 -m django --version
 
 Указанная выше проверка работает, но не представляет особого интереса.Более интересная проверка заключается в создании шаблона проекта и проверки его работы. Для её выполнения перейдите в командной строке/терминале в место, где планируете сохранять приложения Django. Создайте папку для теста и перейдите в неё.
 
-```
+```bash
 mkdir django_test
 cd django_test
 ```
 
 Затем вы можете создать шаблон сайта "_mytestsite_" при помощи инструмента **django-admin**. После создания сайта вы можете перейти в папку, где найдёте основной скрипт для управления проектами с именем **manage.py**.
 
-```
+```bash
 django-admin startproject mytestsite
 cd mytestsite
 ```
 
 Мы можем запустить веб-сервер разработки из этой папки при помощи **manage.py** и команды `runserver`, как показано ниже.
 
-```
+```bash
 $ python3 manage.py runserver
-Performing system checks...
+Watching for file changes with StatReloader
+Performing system checks…
 
 System check identified no issues (0 silenced).
 
-You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
-
-September 19, 2016 - 23:31:14
-Django version 1.10.1, using settings 'mysite.settings'
+March 01, 2022 - 01:19:16
+Django version 4.0.2, using settings 'mytestsite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```

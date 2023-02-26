@@ -77,7 +77,7 @@ Chaque image aura la valeur associée, dans le même ordre.
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-repeat-y")}}
+{{Compat}}
 
 ## Voir aussi
 

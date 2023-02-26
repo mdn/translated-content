@@ -49,9 +49,9 @@ Contrairement aux pages d'options spécifiées à l'aide de la nouvelle clé `op
 "options_page": "options/options.html"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.options_page")}}
+{{Compat}}
 
 ## Voir aussi
 

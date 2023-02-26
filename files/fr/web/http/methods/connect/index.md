@@ -70,13 +70,11 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## Spécifications
 
-| Spécification                                    | Titre                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "CONNECT", "4.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/methods", "CONNECT")}}
+{{Compat}}
 
 ## Voir aussi
 

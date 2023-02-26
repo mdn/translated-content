@@ -9,7 +9,7 @@ Este artículo brinda información sobre cómo comenzar con el *service worker*,
 
 ## La premisa del service worker
 
-Un problema primordial del que los usuarios de la web han adolecido durante años es la pérdida de conectividad. La mejor aplicación web del mundo proporcionará una experiencia de usuario terrible si no la puedes descargar. Ha habido varios intentos de crear tecnologías para resolver este problema, y ​​algunos de los problemas se han resuelto. Pero el problema primordial es que todavía no existe un buen mecanismo de control general para el almacenamiento en caché de activos y las solicitudes de red personalizadas.
+Un problema primordial del que los usuarios de la web han adolecido durante años es la pérdida de conectividad. La mejor aplicación web del mundo proporcionará una experiencia de usuario terrible si no la puedes descargar. Ha habido varios intentos de crear tecnologías para resolver este problema, y algunos de los problemas se han resuelto. Pero el problema primordial es que todavía no existe un buen mecanismo de control general para el almacenamiento en caché de activos y las solicitudes de red personalizadas.
 
 El intento anterior, *AppCache*, parecía ser una buena idea porque te permitía especificar activos para almacenar en caché con mucha facilidad. Sin embargo, hizo muchas suposiciones sobre lo que estabas tratando de hacer y luego se rompió horriblemente cuando tu aplicación no siguió exactamente esas suposiciones. Lee el documento de Jake Archibald (desafortunadamente mal titulado pero bien escrito) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/) para obtener más detalles.
 

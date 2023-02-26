@@ -340,9 +340,9 @@ function voiceMute() { // alternar para silenciar y activar el sonido
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## También ver
 

@@ -158,7 +158,7 @@ Love is a spirit all compact of fire,
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.figure")}}
+{{Compat}}
 
 ## 같이 보기
 

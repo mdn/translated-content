@@ -119,6 +119,6 @@ Toutes les propriétés sont [localisables](/fr/Add-ons/WebExtensions/Internatio
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.chrome_url_overrides")}}
+{{Compat}}

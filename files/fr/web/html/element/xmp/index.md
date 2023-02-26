@@ -32,7 +32,7 @@ Cet élément implémente l'interface {{domxref('HTMLElement')}}.
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.xmp")}}
+{{Compat}}
 
 ## Voir aussi
 

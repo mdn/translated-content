@@ -86,7 +86,7 @@ Puedes [probar o remezclar este ejemplo en tiempo real en Glitch](https://media-
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement.play")}}
+{{Compat}}
 
 ## Ver también
 

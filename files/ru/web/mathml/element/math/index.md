@@ -120,7 +120,7 @@ translation_of: Web/MathML/Element/math
 
 ### Особенности ядра Gecko
 
-В Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4) появилась поддержка всех MathML атрибутов для элементов верхнего уровня (т.е. такое же поведение как [`<mstyle>`](/ru/docs/Web/MathML/Element/mstyle) элемента). Тем не менее, `displaystyle` атрибут не отрабатывается. Его поддержка [была добавлена](https://bugzilla.mozilla.org/show_bug.cgi?id=669719) ​​в Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
+В Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4) появилась поддержка всех MathML атрибутов для элементов верхнего уровня (т.е. такое же поведение как [`<mstyle>`](/ru/docs/Web/MathML/Element/mstyle) элемента). Тем не менее, `displaystyle` атрибут не отрабатывается. Его поддержка [была добавлена](https://bugzilla.mozilla.org/show_bug.cgi?id=669719) в Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
 
 Альтернативные текстовые описания (`alttext`) или ссылки на альтернативное изображение, (атрибуты `altimg` , `altimg-width` , `altimg-height` и `altimg-valign`) в настоящее время не реализованы в Gecko.
 

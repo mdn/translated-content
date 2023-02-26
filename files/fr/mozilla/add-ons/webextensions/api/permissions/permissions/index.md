@@ -24,9 +24,9 @@ Un {{jsxref("object")}} avec les propriétés suivantes :
 - `permissions`{{optional_inline}}
   - : Un tableau de permissions nommées, y compris les [permissions d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) et les [permissions du presse-papiers](/fr/Add-ons/WebExtensions/manifest.json/permissions#Clipboard_access).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.Permissions")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

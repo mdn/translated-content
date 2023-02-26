@@ -48,9 +48,9 @@ Les événements ont trois fonctions :
     - `downloadId`
       - : Un `integer` représentant l'`id` du {{WebExtAPIRef('downloads.DownloadItem')}} qui a été effacé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.onErased")}}
+{{Compat}}
 
 ## Exemples
 

@@ -29,9 +29,9 @@ define un título de dos líneas .
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.title")}}
+{{Compat}}
 
 ## Ver también
 

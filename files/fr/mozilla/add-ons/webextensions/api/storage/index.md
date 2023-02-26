@@ -55,9 +55,9 @@ Bien que cette API soit semblable à {{domxref("Window.localStorage")}} il est c
 - {{WebExtAPIRef("storage.onChanged")}}
   - : Activé quand un ou plusieurs items d'une zone de stockage sont modifiés.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -227,7 +227,7 @@ myElement.addEventListener('click', functionB);
 
 Обе функции будут выполняться при щелчке элемента.
 
-Кроме того, в этом механизме событий имеется ряд других мощных функций и опций. Эта тема выходит за рамки данной статьи, но если вы хотите изучить подробнее, переходите по ссылкам: [Метод Event​Target​.add​Event​Listener()](/ru/docs/Web/API/EventTarget/addEventListener) и [Метод Event​Target​.remove​Event​Listener()](/ru/docs/Web/API/EventTarget/removeEventListener).
+Кроме того, в этом механизме событий имеется ряд других мощных функций и опций. Эта тема выходит за рамки данной статьи, но если вы хотите изучить подробнее, переходите по ссылкам: [Метод EventTarget.addEventListener()](/ru/docs/Web/API/EventTarget/addEventListener) и [Метод EventTarget.removeEventListener()](/ru/docs/Web/API/EventTarget/removeEventListener).
 
 ### Какой механизм мне использовать?
 

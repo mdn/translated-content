@@ -300,6 +300,10 @@ td, th {
 
 {{EmbedLiveSample("",500,500)}}
 
-### Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("html.elements.table")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

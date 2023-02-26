@@ -22,11 +22,11 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}._
 
 ## Especificaciones
 
-{{Specifications}}
+Esta función ya no está definida por ninguna especificación.
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLShadowElement")}}
+{{Compat}}
 
 ## See also
 

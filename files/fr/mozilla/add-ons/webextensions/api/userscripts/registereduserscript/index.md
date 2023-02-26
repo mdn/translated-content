@@ -24,6 +24,6 @@ L'objet définit une méthode unique, {{WebExtAPIRef("userScripts.RegisteredUser
 - {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}}
   - : Désenregistre les scripts utilisateurs représentés par cet objet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.userScripts.RegisteredUserScript", 10)}}
+{{Compat}}

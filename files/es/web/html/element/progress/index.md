@@ -52,9 +52,9 @@ En Windows, el resultante sería este:
 
 {{Specifications}}
 
-## Compatibilidad en los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.progress")}}
+{{Compat}}
 
 ## Mira también
 

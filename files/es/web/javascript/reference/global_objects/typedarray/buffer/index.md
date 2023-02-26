@@ -32,9 +32,9 @@ uint16.buffer; // ArrayBuffer { byteLength: 8 }
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.TypedArray.buffer")}}
+{{Compat}}
 
 ## Véase también
 

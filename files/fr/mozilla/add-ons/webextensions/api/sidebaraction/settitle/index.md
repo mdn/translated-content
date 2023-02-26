@@ -63,10 +63,6 @@ browser.sidebarAction.setTitle(
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et le titre n'est pas défini.
 - SI `windowId` et `tabId` sont tous les deux omis, le titre global est définit.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.setTitle",2)}}
-
 ## Exemples
 
 Ce code modifie le titre de la barre latérale lorsque l'utilisateur clique sur une action du navigateur, mais uniquement pour l'onglet en cours :
@@ -80,6 +76,10 @@ function setTitleForTab(tab) {
 
 browser.browserAction.onClicked.addListener(setTitleForTab);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 
