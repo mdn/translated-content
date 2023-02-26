@@ -76,7 +76,7 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 
 ## 自身的错误
 
-- Firefox：{{bug(1323667)}}
+- Firefox：[Firefox bug 1323667](https://bugzil.la/1323667)
 
 ## 相关链接
 

@@ -147,10 +147,10 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
         </p>
         <p>
           Firefox currently implements the <code>&#x3C;shape-box></code> values
-          ({{bug(1309467)}}) as well as the
-          <code>circle()</code> ({{bug(1311244)}}),
-          <code>ellipse()</code> ({{bug(1326406)}}), and
-          <code>polygon()</code> ({{bug(1326409)}}) functions.
+          (<a href="https://bugzil.la/1309467">Firefox bug 1309467</a>) as well as the
+          <code>circle()</code> (<a href="https://bugzil.la/1311244">Firefox bug 1311244</a>),
+          <code>ellipse()</code> (<a href="https://bugzil.la/1326406">Firefox bug 1326406</a>), and
+          <code>polygon()</code> (<a href="https://bugzil.la/1326409">Firefox bug 1326409</a>) functions.
         </p>
       </td>
       <td>关闭<br /><sub>(available since 53)</sub></td>
@@ -184,8 +184,8 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
           to specify how many columns an element spans across.
         </p>
         <p>
-          Firefox currently only parses the property ({{bug(1339298)}}),
-          it's not actually implemented yet ({{bug(616436)}}).
+          Firefox currently only parses the property (<a href="https://bugzil.la/1339298">Firefox bug 1339298</a>),
+          it's not actually implemented yet (<a href="https://bugzil.la/616436">Firefox bug 616436</a>).
         </p>
       </td>
       <td>
@@ -331,7 +331,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong><code>GeometryUtils.getBoxQuads()</code></strong>
-        ({{bug(917755)}})
+        (<a href="https://bugzil.la/917755">Firefox bug 917755</a>)
       </td>
       <td>31</td>
       <td>31</td>
@@ -353,7 +353,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
         >,<br /><strong><code>GeometryUtils.RectFromNode()</code></strong
         >, and<br /><code
           ><strong>GeometryUtils.convertQuadFromNode()</strong></code
-        ><br />({{bug(918189)}})
+        ><br />(<a href="https://bugzil.la/918189">Firefox bug 918189</a>)
       </td>
       <td>31</td>
       <td>31</td>
@@ -516,7 +516,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
         constructors can be used to clone existing
         {{domxref("KeyframeEffectReadOnly")}} object instances by
         being given the object to clone as their only parameter (see
-        {{bug(1273784)}}.)
+        <a href="https://bugzil.la/1273784">Firefox bug 1273784</a>.)
       </td>
       <td>52</td>
       <td>52</td>
