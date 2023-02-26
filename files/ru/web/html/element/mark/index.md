@@ -10,8 +10,8 @@ translation_of: Web/HTML/Element/mark
 | Разрешённое содержимое                                    | [Содержимое фраз](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                          |
 | Бездействие тега                                          | {{no_tag_omission}}                                                                                                                                       |
 | Разрешённые родители                                      | Любой элемент, который принимает [содержимое фраз.](/ru/docs/HTML/Content_categories#Phrasing_content)                                                         |
-| Разрешённые роли ARIA                                     | Любые                                                                                                                                                          |
-| Интерфейс DOM                                             | {{domxref("HTMLElement")}}                                                                                                                           |
+| Разрешённые ARIA-роли                                     | Любые                                                                                                                                                          |
+| DOM-интерфейс                                             | {{domxref("HTMLElement")}}                                                                                                                           |
 
 ## Атрибуты
 

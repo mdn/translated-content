@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/wbr
 | **Разрешённое содержимое**        | **Отсутствует**                                                                                                                                                 |
 | Пропуск тега                      | **It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.**                                                  |
 | Разрешённые родительские элементы | **Любой элемент принимающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).**                                                  |
-| Разрешённые роли ARIA             | **Любые**                                                                                                                                                       |
+| Разрешённые ARIA-роли             | **Любые**                                                                                                                                                       |
 | DOM-интерфейс                     | **{{domxref("HTMLElement")}}**                                                                                                                        |
 
 ## Атрибуты

@@ -15,7 +15,7 @@ translation_of: Web/HTML/Element/dfn
 | Разрешённый контент                                        | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но ни один {{HTMLElement("dfn")}} элемент не должен быть потомком.               |
 | Пропуск тега                                               | {{no_tag_omission}}                                                                                                                                          |
 | Разрешённые родители                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                       |
-| Разрешённые роли ARIA                                      | Любые                                                                                                                                                             |
+| Разрешённые ARIA-роли                                      | Любые                                                                                                                                                             |
 | DOM интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                              |
 
 ## Атрибуты

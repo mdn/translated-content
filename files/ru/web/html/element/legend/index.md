@@ -21,7 +21,7 @@ translation_of: Web/HTML/Element/legend
 | Разрешённый контент                                    | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content). |
 | Пропуск тегов                                          | {{no_tag_omission}}                                               |
 | Разрешённые родители                                   | Является дочерним элементом тега {{HTMLElement("fieldset")}}  |
-| Разрешённые ARIA roles                                 | Нет                                                                    |
+| Разрешённые ARIA-роли                                  | Нет                                                                    |
 | Взаимодействие с DOM                                   | {{domxref("HTMLLegendElement")}}                           |
 
 ## Атрибуты

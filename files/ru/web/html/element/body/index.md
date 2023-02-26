@@ -60,7 +60,7 @@ translation_of: Web/HTML/Element/body
       </td>
     </tr>
     <tr>
-      <th scope="row">Разрешённые роли ARIA</th>
+      <th scope="row">Разрешённые ARIA-роли</th>
       <td>Отсутствуют</td>
     </tr>
     <tr>

@@ -17,7 +17,7 @@ translation_of: Web/HTML/Element/progress
 | Разрешённый контент                                        | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но среди его потомков не должно быть элемента `<progress>`.                                                              |
 | Tag omission                                               | {{no_tag_omission}}                                                                                                                                                                            |
 | Разрешённые родители                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                         |
-| Разрешённые ARIA роли                                      | Нет                                                                                                                                                                                                 |
+| Разрешённые ARIA-роли                                      | Нет                                                                                                                                                                                                 |
 | DOM интерфейс                                              | {{domxref("HTMLProgressElement")}}                                                                                                                                                        |
 
 ## Атрибуты

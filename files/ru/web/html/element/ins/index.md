@@ -10,8 +10,8 @@ translation_of: Web/HTML/Element/ins
 | Допустимое содержимое                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                   |
 | Бездействие тега                                         | {{no_tag_omission}}                                                                                                                    |
 | Разрешённые родители                                     | Любой элемент, который принимает [содержимое фраз](/ru/docs/HTML/Content_categories#Phrasing_content).                                      |
-| Разрешённые ARIA роли                                    | Любые                                                                                                                                       |
-| Интерфейс DOM                                            | {{domxref("HTMLModElement")}}                                                                                                    |
+| Разрешённые ARIA-роли                                    | Любые                                                                                                                                       |
+| DOM-интерфейс                                            | {{domxref("HTMLModElement")}}                                                                                                    |
 
 ## Атрибуты
 

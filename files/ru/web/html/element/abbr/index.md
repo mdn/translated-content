@@ -20,8 +20,8 @@ translation_of: Web/HTML/Element/abbr
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент), явный контент |
 | Разрешённое содержимое                                           | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент)                                                                                                                                     |
 | Разрешённые родительские элементы                                | Любые, поддерживающие [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент).                                                                                                              |
-| Разрешённые ARIA роли                                            | Любые                                                                                                                                                                                                                                                           |
-| DOM интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                            |
+| Разрешённые ARIA-роли                                            | Любые                                                                                                                                                                                                                                                           |
+| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                            |
 
 ## Атрибуты
 

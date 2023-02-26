@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 | Пропуск тега                                               | {{no_tag_omission}}                                                                                                                                                                     |
 | Разрешённые родители                                       | Любые элементы которые принимают [Содержание потока](/ru/docs/Web/HTML/Content_categories#Flow_content); не используй как дочерний {{HTMLElement("hgroup")}} элемент, сейчас он устарел |
 | Разрешённые ARIA-роли                                      | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>          |
-| DOM интерфейс                                              | {{domxref("HTMLHeadingElement")}}                                                                                                                                                       |
+| DOM-интерфейс                                              | {{domxref("HTMLHeadingElement")}}                                                                                                                                                       |
 
 ## Атрибуты
 

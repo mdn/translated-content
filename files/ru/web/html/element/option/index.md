@@ -16,8 +16,8 @@ translation_of: Web/HTML/Element/option
 | Разрешённое содержимое                                        | Текст, допускаются экранированные символы (например `&eacute;`).                                                                                                                                                              |
 | Пропуск тега                                                  | Открывающий тег обязателен. Закрывающий тег опционален если за этим элементом следует другой элемент `<option>`, или элемент {{HTMLElement("optgroup")}}, или если родительский элемент не имеет больше содержимого. |
 | Разрешённые родители                                          | Элемент {{HTMLElement("select")}}, элемент {{HTMLElement("optgroup")}} или элемент {{HTMLElement("datalist")}}.                                                                                      |
-| Permitted ARIA roles                                          | None                                                                                                                                                                                                                          |
-| DOM interface                                                 | {{domxref("HTMLOptionElement")}}                                                                                                                                                                                  |
+| Разрешённые ARIA-роли                                          | Нет                                                                                                                                                                                                                          |
+| DOM-интерфейс                                                 | {{domxref("HTMLOptionElement")}}                                                                                                                                                                                  |
 
 ## Атрибуты
 

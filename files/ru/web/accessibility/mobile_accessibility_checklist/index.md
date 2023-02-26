@@ -31,7 +31,7 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 - Все интерактивные элементы **ДОЛЖНЫ** иметь состояние фокуса:
 
   - Стандартные элементы, такие как ссылки, кнопки и поля формы фокусируемые по умолчанию.
-  - Нестандартные элементы **ДОЛЖНЫ** иметь соответствующую [ARIA Role](http://www.w3.org/TR/wai-aria/roles), назначенную им. Например, кнопка, ссылка или чекбокс.
+  - Нестандартные элементы **ДОЛЖНЫ** иметь соответствующую [ARIA-роль](http://www.w3.org/TR/wai-aria/roles), назначенную им. Например, кнопка, ссылка или чекбокс.
 
 - Фокус должен обрабатываться в логическом порядке и последовательным образом.
 
@@ -40,14 +40,14 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 - Текстовый эквивалент **ДОЛЖЕН** быть предусмотрен для каждого не строго презентационного нетекстового элемента в приложении.
 
   - Используйте _alt_ и _title_ там, где это уместно ([см. статью](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) Steve Faulkner's про использование HTML атрибута {{ htmlelement("title") }}).
-  - Если вышеуказанные атрибуты неприменимы, используйте соответствующие [ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header), такие как `aria-label`, `aria-labelledby`, или `aria-describedby`.
+  - Если вышеуказанные атрибуты неприменимы, используйте соответствующие [ARIA-свойства](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header), такие как `aria-label`, `aria-labelledby`, или `aria-describedby`.
 
 - Необходимо **ИЗБЕГАТЬ** текста внутри изображений.
 - Все элементы формы **ДОЛЖНЫ** иметь метки ({{ htmlelement("label") }} элементы) в интересах пользователей программы чтения с экрана.
 
 ## Обработка состояния
 
-- Стандартные элементы, такие как радиокнопки и чекбоксы обрабатываются операционной системой. Однако, для других кастомных элементов изменения состояния должны быть предоставлены через [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header), такие как `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`, and `aria-pressed`.
+- Стандартные элементы, такие как радиокнопки и чекбоксы обрабатываются операционной системой. Однако, для других кастомных элементов изменения состояния должны быть предоставлены через [ARIA-состояния](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header), такие как `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`, and `aria-pressed`.
 
 ## Общие рекомендации
 

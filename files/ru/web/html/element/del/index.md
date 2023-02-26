@@ -17,8 +17,8 @@ translation_of: Web/HTML/Element/del
 | Разрешённый контент                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                     |
 | Пропуск тега                                           | {{no_tag_omission}}                                                                                                                      |
 | Допустимые родители                                    | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                       |
-| Допустимые ARIA роли                                   | Любые                                                                                                                                         |
-| DOM интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                      |
+| Разрешённые ARIA-роли                                   | Любые                                                                                                                                         |
+| DOM-интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                      |
 
 ## Атрибуты
 

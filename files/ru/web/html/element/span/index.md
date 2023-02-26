@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/span
 | Разрешённое содержимое                                           | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                                                                                       |
 | Пропуск тега                                                     | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                |
 | Разрешённые родительские элементы                                | Любой элемент, который разрешает [фразовый](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content) или [потоковый](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент) контент в качестве содержимого. |
-| Разрешённые роли ARIA                                            | Любые                                                                                                                                                                                                                  |
+| Разрешённые ARIA-роли                                            | Любые                                                                                                                                                                                                                  |
 | DOM-интерфейс                                                    | {{domxref("HTMLSpanElement")}} (до {{glossary("HTML5")}}, интерфейсом был {{domxref("HTMLElement")}})                                                                                       |
 
 ## Атрибуты

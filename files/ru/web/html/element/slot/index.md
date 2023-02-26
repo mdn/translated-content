@@ -14,8 +14,8 @@ HTML-элемент `<slot>` является частью набора техн
 | События                                                    | {{event("slotchange")}}                                                                                                                      |
 | Пропуск тега                                               | {{no_tag_omission}}                                                                                                                              |
 | Разрешённый родители                                       | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                     |
-| Разрешённые роли ARIA                                      | Никакой                                                                                                                                               |
-| Интерфейс DOM                                              | {{domxref("HTMLSlotElement")}}                                                                                                              |
+| Разрешённые ARIA-роли                                      | Никакой                                                                                                                                               |
+| DOM-интерфейс                                              | {{domxref("HTMLSlotElement")}}                                                                                                              |
 
 ## Атрибуты
 
