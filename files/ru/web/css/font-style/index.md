@@ -68,7 +68,7 @@ font-style: unset;
 
 {{ EmbedLiveSample('Font_styles') }}
 
-## Specific​ations
+## Specifications
 
 | Specification                                                                                | Status                           | Comment            |
 | -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
