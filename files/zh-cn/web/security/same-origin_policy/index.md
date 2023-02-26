@@ -29,11 +29,11 @@ slug: Web/Security/Same-origin_policy
 
 例如，`about:blank` 通常作为父脚本写入内容的新的空白弹出窗口的 URL（例如，通过 {{domxref("Window.open()")}}）。如果此弹出窗口也包含 JavaScript，则该脚本将从创建它的脚本那里继承对应的源。
 
-`data`：URL 将获得一个新的，空的安全上下文。
+`data:` URL 将获得一个新的、空的安全上下文。
 
 ### 文件源
 
-现代浏览器通常将使用 `file:///` 模式加载的文件的来源视为*不透明的来源*。这意味着，假如一个文件包括来自同一文件夹的其他文件，它们不会被认为来自同一来源，并可能引发 {{Glossary("CORS")}} 错误。
+现代浏览器通常将使用 `file:///` 模式加载的文件的来源视为*不透明的来源*。这意味着，假如一个文件包括来自同一文件夹的其它文件，它们不会被认为来自同一来源，并可能引发 {{Glossary("CORS")}} 错误。
 
 请注意，[URL 规范](https://url.spec.whatwg.org/#origin)指出，文件的来源与实现有关，一些浏览器可能将同一目录或子目录下的文件视为同源文件，尽管这有[安全影响](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730)。
 
@@ -49,11 +49,11 @@ slug: Web/Security/Same-origin_policy
 document.domain = "company.com";
 ```
 
-这条语句执行之后，页面将会成功地通过与 `http://company.com/dir/page.html` 的同源检测（假设`http://company.com/dir/page.html` 将其 `document.domain` 设置为“`company.com`”，以表明它希望允许这样做——更多有关信息，请参阅 {{domxref("document.domain")}} ）。然而，`company.com` 不能设置 `document.domain` 为 `othercompany.com`，因为它不是 `company.com` 的父域。
+这条语句执行之后，页面将会成功地通过与 `http://company.com/dir/page.html` 的同源检测（假设`http://company.com/dir/page.html` 将其 `document.domain` 设置为“`company.com`”，以表明它希望允许这样做——更多有关信息，请参阅 {{domxref("document.domain")}}）。然而，`company.com` **不能**设置 `document.domain` 为 `othercompany.com`，因为它不是 `company.com` 的父域。
 
-端口号是由浏览器另行检查的。任何对 document.domain 的赋值操作，包括 `document.domain = document.domain` 都会导致端口号被覆盖为 `null` 。因此 `company.com:8080` **不能**仅通过设置 `document.domain = "company.com"` 来与 `company.com` 通信。必须在它们双方中都进行赋值，以确保端口号都为 `null` 。
+端口号是由浏览器另行检查的。任何对 `document.domain` 的赋值操作，包括 `document.domain = document.domain` 都会导致端口号被覆盖为 `null` 。因此 `company.com:8080` **不能**仅通过设置 `document.domain = "company.com"` 来与 `company.com` 通信。必须在它们双方中都进行赋值，以确保端口号都为 `null` 。
 
-该机制有一些局限性。如果启用了 [`document-domain`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/document-domain) [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy)，或该文档在沙箱 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 下，它将抛出一个“`SecurityError`” [`DOMException`](/zh-CN/docs/Web/API/DOMException)，并且用这种方法改变源并不影响 Web API 使用的源检查（例如 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage)、[`indexedDB`](/zh-CN/docs/Web/API/IndexedDB_API)、[`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)、[`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker)）。更详尽的失败案例列表可以在[Document.domain 的失败章节](/zh-CN/docs/Web/API/Document/domain#failures)找到。
+该机制有一些局限性。如果启用了 [`document-domain`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/document-domain) [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy)，或该文档在沙箱 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 下，它将抛出一个“`SecurityError`” [`DOMException`](/zh-CN/docs/Web/API/DOMException)，并且用这种方法改变源并不影响 Web API 使用的源检查（例如 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage)、[`indexedDB`](/zh-CN/docs/Web/API/IndexedDB_API)、[`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)、[`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker)）。更详尽的失败案例列表可以在 [Document.domain 的错误章节](/zh-CN/docs/Web/API/Document/domain#异常)找到。
 
 > **备注：** 使用 `document.domain` 来允许子域安全访问其父域时，需要在父域和子域中设置 `document.domain` 为*相同*的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。
 
@@ -136,7 +136,7 @@ JavaScript 的 API 中，如 {{domxref("HTMLIFrameElement.contentWindow", "ifram
 
 访问存储在浏览器中的数据，如 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 和 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)，是以源进行分割的。每个源都拥有自己单独的存储空间，一个源中的 JavaScript 脚本不能对属于其它源的数据进行读写操作。
 
-{{glossary("Cookie", "Cookie")}} 使用不同的源定义方式。一个页面可以为本域和其父域设置 cookie，只要是父域不是公共后缀（public suffix）即可。Firefox 和 Chrome 使用 [Public Suffix List](https://publicsuffix.org/) 检测一个域是否是公共后缀。当你设置 cookie 时，你可以使用 `Domain`、`Path`、`Secure`、和 `HttpOnly` 标记来限定可访问性。当你读取 cookie 时，你无法知道它是在哪里被设置的。即使只使用安全的 https 连接，你所看到的任何 cookie 都有可能是使用不安全的连接进行设置的。
+{{glossary("Cookie", "Cookie")}} 使用不同的源定义方式。一个页面可以为本域和其父域设置 cookie，只要是父域不是公共后缀（public suffix）即可。Firefox 和 Chrome 使用 [Public Suffix List](https://publicsuffix.org/) 检测一个域是否是公共后缀。当你设置 cookie 时，你可以使用 `Domain`、`Path`、`Secure` 和 `HttpOnly` 标记来限定可访问性。当你读取 cookie 时，你无法知道它是在哪里被设置的。即使只使用安全的 https 连接，你所看到的任何 cookie 都有可能是使用不安全的连接进行设置的。
 
 ## 参见
 
