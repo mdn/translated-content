@@ -27,11 +27,11 @@ Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"
 ```
 
-> **备注：** 在 [同源 URL](/en-US/docs/Web/Security/Same-origin_policy) 情况下，Chrome 和 Firefox 82 及之后的版本会优先使用 HTML 的 {{HTMLElement("a")}} 标签的 `download` 属性来进行文件下载，而不是使用 `Content-Disposition: inline` 参数来直接在浏览器中展示。而 Firefox 的早期版本则优先使用 Content-Disposition 头部，直接在浏览器中展示文件。
+> **备注：** 在[同源 URL](/en-US/docs/Web/Security/Same-origin_policy)情况下，Chrome 和 Firefox 82 以及更高的版本会优先使用HTML 的 {{HTMLElement("a")}} 标签的 `download` 属性而不是 `Content-Disposition: inline` 参数来处理下载。而 Firefox 的早期版本则优先使用标头信息并内联显示内容。
 
 ### 作为 multipart body 中的消息头
 
-当使用 `multipart/form-data` 格式提交表单数据时，每个子部分（例如每个表单字段和任何与字段数据相关的文件）都需要提供一个 `Content-Disposition` 头，以提供相关信息。该头的第一个指令始终为 `form-data`，并且还必须包含一个 `name` 参数来标识相关字段。其他指令不区分大小写，并使用带引号的字符串语法在 `=` 号后面指定参数。多个参数之间使用分号(`;`)分隔。
+当使用 `multipart/form-data` 格式提交表单数据时，每个子部分（例如每个表单字段和任何与字段数据相关的文件）都需要提供一个 `Content-Disposition` 标头，以提供相关信息。标头的第一个指令始终为 `form-data`，并且还必须包含一个 `name` 参数来标识相关字段。其他指令不区分大小写，并使用带引号的字符串语法在 `=` 号后面指定参数。多个参数之间使用分号(`;`)分隔。
 
 ```http
 Content-Disposition: form-data; name="fieldName"
@@ -93,11 +93,11 @@ value2
 
 ## 兼容性说明
 
-- 在 `filename` 和 `filename*` 两个参数同时出现的情况下，Firefox 5（比以前的版本）可以更好地处理 `Content-Disposition` 应答消息头。它会遍历所有提供的名称，假如 `filename*` 存在的话，就采用它的值，即使 `filename` 更靠前。之前的版本会采用出现在前面的参数的值，导致有更合适的名称而不被使用。参见{{bug(588781)}}。
+- 在 `filename` 和 `filename*` 两个参数同时出现的情况下，Firefox 5 可以更好地处理 `Content-Disposition` 应答消息头。它会遍历所有提供的名称，假如 `filename*` 存在的话，就采用它的值，即使 `filename` 更靠前。之前的版本会采用出现在前面的参数的值，导致有更合适的名称而不被使用。参见 {{bug(588781)}}。
 - Firefox 82（及更高版本）和 Chrome 优先考虑 HTML {{HTMLElement("a", "a 元素")}} 的 `download` 属性，而不是 `Content-Disposition：inline` 参数（对于[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)）。早期的 Firefox 版本优先考虑头部，并会内联显示内容。
 
 ## 参见
 
 - [HTML Forms](/zh-CN/docs/Web/Guide/HTML/Forms)
-- {{HTTPHeader("Content-Type")}} 中定义了 multipart body 的分隔符
+- {{HTTPHeader("Content-Type")}} 中定义了消息中多部分主体的边界。
 - {{domxref("FormData")}} 接口可以用来操作在 {{domxref("XMLHttpRequest")}} API 中使用的表单数据。
