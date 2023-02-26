@@ -146,7 +146,7 @@ shared worker 能夠被多個程式腳本存取，縱使跨越不同 window、if
 
 > **備註：** 所有的瀏覽環境都必需共享相同的來源（相同 protocol, host 和 port），shared worker 才能讓不同瀏覽環境存取。
 
-> **備註：** 在 Firefox， shared worker 無法在一般和隱私模式間共享 ({{bug(1177621)}})。
+> **備註：** 在 Firefox，shared worker 無法在一般和隱私模式間共享（[Firefox bug 1177621](https://bugzil.la/1177621)）。
 
 ### 產生 shared worker
 
