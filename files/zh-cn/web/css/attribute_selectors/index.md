@@ -5,7 +5,7 @@ slug: Web/CSS/Attribute_selectors
 
 {{CSSRef}}
 
-CSS **属性选择器**通过已经存在的属性名或属性值匹配元素。
+CSS **属性选择器**匹配那些具有特定属性或属性值的元素。
 
 ```css
 /* 存在 title 属性的 <a> 元素 */
