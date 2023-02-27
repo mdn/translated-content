@@ -64,7 +64,7 @@ UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode
 
 ### 方案2——使用 `TypedArray` 和 UTF-8 重写 `atob()` 和 `btoa()` 方法
 
-> **备注：** 以下代码对于从 Base64 字符串中获取 [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 和/或从 ArrayBuffer 获取 Base64 字符串（[见下文](#附录：将_Base64_字符串解码为_Uint8Array_或_ArrayBuffer)）也很有用。
+> **备注：** 以下代码对于从 Base64 字符串中获取 [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 和/或从 ArrayBuffer 获取 Base64 字符串（[见下文](#附录：将_base64_字符串解码为_uint8array_或_arraybuffer)）也很有用。
 
 ```js
 "use strict";
