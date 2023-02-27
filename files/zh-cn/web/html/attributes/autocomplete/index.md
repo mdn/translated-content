@@ -15,7 +15,7 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 
 更多信息，请参见 {{HTMLElement("form")}} 中的 {{htmlattrxref("autocomplete", "form")}} 属性。
 
-> **备注：** 为了提供自动完成功能，用户代理可能需要 `<input>` / `<select>` / `<textarea>` 元素具有如下条件：
+> **备注：** 为了提供自动完成功能，用户代理可能需要 `<input>`/`<select>`/`<textarea>` 元素具有如下条件：
 >
 > 1. 具有 `name` 和/或 `id` 属性
 > 2. 作为 `<form>` 元素的后代
@@ -29,7 +29,7 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 
   - : 浏览器不允许为此字段自动输入或选择一个值。文档或应用程序可能提供其自己的自动完成功能，或者出于安全方面的考虑，要求不要自动输入该字段的值。
 
-    > **备注：** 在大多数现代浏览器中， `autocomplete` 设置为“`off`”不会阻止密码管理器询问用户是否要保存用户名和密码信息，或者自动在网站的登录表单中填写这些值。请参阅 [autocomplete 属性与登录表单](/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#autocomplete_属性和登录字段)一文。
+    > **备注：** 在大多数现代浏览器中，`autocomplete` 设置为“`off`”不会阻止密码管理器询问用户是否要保存用户名和密码信息，或者自动在网站的登录表单中填写这些值。请参阅 [autocomplete 属性与登录表单](/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#autocomplete_属性和登录字段)一文。
 
 - "`on`"
   - : 允许浏览器自动完成输入。没有提供有关该字段中期望的数据类型的指导，因此浏览器可以使用自己的判断。
