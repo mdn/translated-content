@@ -24,7 +24,7 @@ In addition to dedicated workers, there are other types of worker:
 - Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to [js-ctypes](/zh-TW/js-ctypes) in your worker. See {{domxref("ChromeWorker")}} for more details.
 - [Audio Workers](/zh-TW/docs/Web/API/Web_Audio_API#Audio_Workers) provide the ability for direct scripted audio processing to be done inside a web worker context.
 
-> **備註：** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see {{bug(1188141)}}. This has been implemented in Firefox 42.
+> **備註：** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see [Firefox bug 1188141](https://bugzil.la/1188141). This has been implemented in Firefox 42.
 
 ## Web Worker interfaces
 

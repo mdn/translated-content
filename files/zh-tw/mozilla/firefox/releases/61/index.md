@@ -29,7 +29,7 @@ _無變動。_
 
 ### JavaScript
 
-- 已實作 {{jsxref("String.prototype.trimStart()")}} 及 {{jsxref("String.prototype.trimEnd()")}} 方法（參考 {{bug(1434007)}}。為了確保相容性，將保留 `trimLeft` 和 `trimRight` 作為別名。
+- 已實作 {{jsxref("String.prototype.trimStart()")}} 及 {{jsxref("String.prototype.trimEnd()")}} 方法（參考 [Firefox bug 1434007](https://bugzil.la/1434007)）。為了確保相容性，將保留 `trimLeft` 和 `trimRight` 作為別名。
 
 ### API
 
@@ -39,9 +39,9 @@ _無變動。_
 
 #### DOM
 
-- The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ({{bug(1415588)}}).
-- The {{domxref("Node.getUserData()")}} and {{domxref("Node.setUserData()")}} methods have been removed from the platform completely ({{bug(749981)}}).
-- {{domxref("DOMTokenList.replace()")}} now returns a {{domxref("Boolean")}} to indicate whether the replacement occurred successfully, rather than void ({{bug(1444909)}}).
+- The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ([Firefox bug 1415588](https://bugzil.la/1415588)).
+- The {{domxref("Node.getUserData()")}} and {{domxref("Node.setUserData()")}} methods have been removed from the platform completely ([Firefox bug 749981](https://bugzil.la/749981)).
+- {{domxref("DOMTokenList.replace()")}} now returns a {{domxref("Boolean")}} to indicate whether the replacement occurred successfully, rather than void ([Firefox bug 1444909](https://bugzil.la/1444909)).
 
 #### DOM 事件
 
@@ -65,7 +65,7 @@ _無變動。_
 
 ### HTTP
 
-- 已實作 cookie 管理中的 **`SameSite`**，見 [Set-Cookie](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie) 及 [HTTP cookies](/zh-TW/docs/Web/HTTP/Cookies)。（{{bug(795346)}}）
+- 已實作 cookie 管理中的 **`SameSite`**，見 [Set-Cookie](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie) 及 [HTTP cookie](/zh-TW/docs/Web/HTTP/Cookies)。（[Firefox bug 795346](https://bugzil.la/795346)）
 
 ### 安全性
 
@@ -95,8 +95,8 @@ _無變動。_
 
 ### SVG
 
-- 從未良好實作且已為標準所廢棄的 {{domxref("SVGViewElement")}}`.viewTarget` 屬性已經移除。（{{bug(1455763)}}）
-- 在標準規格中廢棄的下列屬性已經自 {{domxref("SVGSVGElement")}} 移除（{{bug(1133172)}}）：
+- 從未良好實作且已為標準所廢棄的 {{domxref("SVGViewElement")}}`.viewTarget` 屬性已經移除。（[Firefox bug 1455763](https://bugzil.la/1455763)）
+- 在標準規格中廢棄的下列屬性已經自 {{domxref("SVGSVGElement")}} 移除（[Firefox bug 1133172](https://bugzil.la/1133172)）：
 
   - `pixelUnitToMillimeterX`
   - `pixelUnitToMillimeterY`
