@@ -132,7 +132,7 @@ HTML `autocomplete` 属性可用于以文本或数字值作为输入的 {{HTMLEl
 
 有关更多详细信息，请参见 [WHATWG 标准。](https://html.spec.whatwg.org/multipage/forms.html#autofill)
 
-> **备注：** 与其他浏览器不同， `autocomplete` 属性还控制 Firefox 是否会跨页面加载保持— [是否在整个页面加载期间保持](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) `<input>` 元素，`<textarea>` 元素，或整个 `<form>` 的动态禁用状态和（如果适用）动态检查状态。持久性功能默认情况下处于启用状态。将 `autocomplete` 属性的值设置为`off` 将禁用此功能。即使`autocomplete` 属性通常由于其`type`而不适用，也可以这样做。参考 {{bug(654072)}}.
+> **备注：** 与其他浏览器不同，`autocomplete` 属性还控制 Firefox 是否会跨页面加载保持——[是否在整个页面加载期间保持](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) `<input>` 元素、`<textarea>` 元素，或整个 `<form>` 的动态禁用状态和（如果适用）动态检查状态。持久性功能默认情况下处于启用状态。将 `autocomplete` 属性的值设置为`off` 将禁用此功能。即使 `autocomplete` 属性通常由于其 `type` 而不适用，也可以这样做。参考 [Firefox bug 654072](https://bugzil.la/654072)。
 
 ## 例子
 

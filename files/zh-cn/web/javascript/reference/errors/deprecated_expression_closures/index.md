@@ -17,7 +17,7 @@ Warning: expression closures are deprecated
 
 ## 哪里出错了？
 
-非标准化的[表达式闭包](/zh-CN/docs/Web/JavaScript/Reference/Operators/Expression_closures)语法（简写函数语法）已被废弃，不应该再被使用。该语法将会在 {{bug(1083458)}} 中全部移除，到时候用到该语法的脚本程序会报 SyntaxError 错误。
+非标准化的[表达式闭包](/zh-CN/docs/Web/JavaScript/Reference/Operators/Expression_closures)语法（简写函数语法）已被废弃，不应该再被使用。该语法将会在 [Firefox bug 1083458](https://bugzil.la/1083458) 中全部移除，到时候用到该语法的脚本程序会报 SyntaxError 错误。
 
 ## 示例
 

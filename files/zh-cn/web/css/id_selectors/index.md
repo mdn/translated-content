@@ -20,7 +20,7 @@ CSS **ID 选择器**会根据该元素的 [`id`](/zh-CN/docs/Web/HTML/Global_att
 #id 属性值 { 样式声明 }
 ```
 
-它与下面的{{Cssxref("Attribute selectors", "属性选择器")}}语句语法上等价（但优先级并不等价）：
+它与下面的{{Cssxref("Attribute_selectors", "属性选择器")}}语句语法上等价（但优先级并不等价）：
 
 ```css
 [id=id 属性值] { 样式声明 }
