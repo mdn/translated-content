@@ -223,7 +223,7 @@ Una vez revisado lo anterior, miremos el archivo `src/App.svelte` que viene incl
 </style>
 ```
 
-### The `<script>` section
+### La sección `<script>`
 
 El bloque `<script>` contiene JavaScript que se ejecuta cuando se crea una instancia del componente. Las variables declaradas (o importadas) en el nivel más alto pueden ser referenciadas por el marcado del componente. Svelte usa las variables del nivel más alto para manejar el estado del componente, estas variables son reactivas por defecto. En breve explicaremos esto con más detalle.
 
@@ -235,7 +235,7 @@ El bloque `<script>` contiene JavaScript que se ejecuta cuando se crea una insta
 
 Svelte utiliza la palabra clave [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) para marcar la declaración de una variable como una propiedad (abreviado como prop), lo cual significa que ahora es visible para los consumidores del componente (e.g. otros componentes). Este es un claro ejemplo de cómo Svelte extiende la sintaxis de JavaScript para hacerlo más útil, sin dejar de ser familiar.
 
-### The markup section
+### La sección de marcado
 
 En la sección de marcado puedes insertar todo el HTML que quieras y, adicionalmente, puedes insertar expresiones válidas de JavaScript dentro de llaves (`{}`). En este caso estamos incrustando el valor de la prop `name` justo después del texto `Hello`. 
 
@@ -250,7 +250,7 @@ En la sección de marcado puedes insertar todo el HTML que quieras y, adicionalm
 ```
 Svelte además soporta etiquetas como `{#if}`, `{#each}`, y `{#await}`, que te permiten renderizar condicionalmente un fragmento del marcado, iterar sobre una lista de elementos y trabajar con valores asíncronos, respectivamente.
 
-### The `<style>` section
+### La sección `<style>`
 
 Si tienes experiencia trabajando con CSS, el siguiente código te debería ser familiar:
 
