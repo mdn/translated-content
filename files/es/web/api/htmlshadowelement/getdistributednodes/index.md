@@ -32,4 +32,5 @@ Esta función ya no está definida por ninguna especificación.
 
 ## Véase también
 
-- [HTMLShadowElement](/en-US/docs/Web/API/HTMLShadowElement)
+- [HTMLShadowElement](/es/docs/Web/API/HTMLShadowElement)
+
