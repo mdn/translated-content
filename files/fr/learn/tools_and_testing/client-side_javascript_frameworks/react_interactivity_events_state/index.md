@@ -39,7 +39,7 @@ Après avoir élaboré notre plan de composants, il est maintenant temps de comm
       <th scope="row">Objectifs:</th>
       <td>
         Pour apprendre à gérer les événements et l'état dans React, et utiliser ces éléments pour
-        pour commencer à rendre l'application de l'étude de cas interactive.
+        commencer à rendre l'application de l'étude de cas interactive.
       </td>
     </tr>
   </tbody>
