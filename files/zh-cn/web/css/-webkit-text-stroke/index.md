@@ -1,11 +1,11 @@
 ---
-title: '-webkit-text-stroke'
+title: "-webkit-text-stroke"
 slug: Web/CSS/-webkit-text-stroke
 ---
 
 {{CSSRef}}
 
-**`-webkit-text-stroke`** [CSS](/zh-CN/docs/Web/CSS)属性为文本字符指定了[宽](/zh-CN/docs/Web/CSS/length) 和 [颜色](/zh-CN/docs/Web/CSS/color_value) . 它是{{cssxref("-webkit-text-stroke-width")}} 和{{cssxref("-webkit-text-stroke-color")}}属性的缩写。
+**`-webkit-text-stroke`** [CSS](/zh-CN/docs/Web/CSS) 属性为文本字符指定了[宽](/zh-CN/docs/Web/CSS/length)和[颜色](/zh-CN/docs/Web/CSS/color_value)。它是 {{cssxref("-webkit-text-stroke-width")}} 和 {{cssxref("-webkit-text-stroke-color")}} 属性的缩写。
 
 ## 语法
 
@@ -47,17 +47,17 @@ text-stroke: unset;
 
 {{csssyntax}}
 
-## 用例
+## 示例
 
 ### 添加红色文字描边
 
-### HTML
+#### HTML
 
 ```html
 <p id="example">The stroke of this text is red.</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 #example {
@@ -67,11 +67,11 @@ text-stroke: unset;
 }
 ```
 
-### 结果
+#### 结果
 
-{{EmbedLiveSample("用例", 600, 60)}}
+{{EmbedLiveSample("添加红色文字描边", 600, 60)}}
 
-## 规格
+## 规范
 
 {{Specifications}}
 
