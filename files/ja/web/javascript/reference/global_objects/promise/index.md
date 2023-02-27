@@ -151,9 +151,9 @@ const aThenable = {
 Promise.resolve(aThenable); // プロミスは 42 で履行
 ```
 
-### プロミスの並列処理
+### プロミスの並行処理
 
-`Promise` クラスは，非同期タスクの[並列処理](https://en.wikipedia.org/wiki/Concurrent_computing)を容易にするために、4 つの静的メソッドを提供しています。
+`Promise` クラスは，非同期タスクの[並行処理](https://en.wikipedia.org/wiki/Concurrent_computing)を容易にするために、4 つの静的メソッドを提供しています。
 
 - {{jsxref("Promise.all()")}}
   - : **すべて**のが履行されたときに履行され、**いずれか**のプロミスが拒否されると拒否される。
