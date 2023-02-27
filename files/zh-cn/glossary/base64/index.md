@@ -39,9 +39,11 @@ Base64 编码在网络上的一个常见应用是对二进制数据进行编码�
 function utf8_to_b64(str) {
   return window.btoa(unescape(encodeURIComponent(str)));
 }
+
 function b64_to_utf8(str) {
   return decodeURIComponent(escape(window.atob(str)));
 }
+
 // Usage:
 utf8_to_b64("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
 b64_to_utf8("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
@@ -55,9 +57,11 @@ b64_to_utf8("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
 function b64EncodeUnicode(str) {
   return btoa(encodeURIComponent(str));
 }
+
 function UnicodeDecodeB64(str) {
   return decodeURIComponent(atob(str));
 }
+
 b64EncodeUnicode("✓ à la mode"); // "JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"
 UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode"
 ```
@@ -82,6 +86,7 @@ function b64ToUint6(nChr) {
     ? 63
     : 0;
 }
+
 function base64DecToArr(sBase64, nBlocksSize) {
   const sB64Enc = sBase64.replace(/[^A-Za-z0-9+/]/g, ""); // Remove any non-base64 characters, such as trailing "=", whitespace, and more.
   const nInLen = sB64Enc.length;
@@ -89,6 +94,7 @@ function base64DecToArr(sBase64, nBlocksSize) {
     ? Math.ceil(((nInLen * 3 + 1) >> 2) / nBlocksSize) * nBlocksSize
     : (nInLen * 3 + 1) >> 2;
   const taBytes = new Uint8Array(nOutLen);
+
   let nMod3;
   let nMod4;
   let nUint24 = 0;
@@ -106,8 +112,10 @@ function base64DecToArr(sBase64, nBlocksSize) {
       nUint24 = 0;
     }
   }
+
   return taBytes;
 }
+
 /* Base64 string to array encoding */
 function uint6ToB64(nUint6) {
   return nUint6 < 26
@@ -122,9 +130,11 @@ function uint6ToB64(nUint6) {
     ? 47
     : 65;
 }
+
 function base64EncArr(aBytes) {
   let nMod3 = 2;
   let sB64Enc = "";
+
   const nLen = aBytes.length;
   let nUint24 = 0;
   for (let nIdx = 0; nIdx < nLen; nIdx++) {
@@ -133,6 +143,7 @@ function base64EncArr(aBytes) {
     //   if (nIdx > 0 && ((nIdx * 4) / 3) % 76 === 0) {
     //      sB64Enc += "\r\n";
     //    }
+
     nUint24 |= aBytes[nIdx] << ((16 >>> nMod3) & 24);
     if (nMod3 === 2 || aBytes.length - nIdx === 1) {
       sB64Enc += String.fromCodePoint(
@@ -149,7 +160,9 @@ function base64EncArr(aBytes) {
     (nMod3 === 2 ? "" : nMod3 === 1 ? "=" : "==")
   );
 }
+
 /* UTF-8 array to JS string and vice versa */
+
 function UTF8ArrToStr(aBytes) {
   let sView = "";
   let nPart;
@@ -192,17 +205,21 @@ function UTF8ArrToStr(aBytes) {
   }
   return sView;
 }
+
 function strToUTF8Arr(sDOMStr) {
   let aBytes;
   let nChr;
   const nStrLen = sDOMStr.length;
   let nArrLen = 0;
+
   /* mapping… */
   for (let nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
     nChr = sDOMStr.codePointAt(nMapIdx);
+
     if (nChr >= 0x10000) {
       nMapIdx++;
     }
+
     nArrLen +=
       nChr < 0x80
         ? 1
@@ -216,7 +233,9 @@ function strToUTF8Arr(sDOMStr) {
         ? 5
         : 6;
   }
+
   aBytes = new Uint8Array(nArrLen);
+
   /* transcription… */
   let nIdx = 0;
   let nChrIdx = 0;
@@ -261,6 +280,7 @@ function strToUTF8Arr(sDOMStr) {
     }
     nChrIdx++;
   }
+
   return aBytes;
 }
 ```
@@ -269,12 +289,19 @@ function strToUTF8Arr(sDOMStr) {
 
 ```js
 /* Tests */
+
 const sMyInput = "Base 64 \u2014 Mozilla Developer Network";
+
 const aMyUTF8Input = strToUTF8Arr(sMyInput);
+
 const sMyBase64 = base64EncArr(aMyUTF8Input);
+
 alert(sMyBase64);
+
 const aMyUTF8Output = base64DecToArr(sMyBase64);
+
 const sMyOutput = UTF8ArrToStr(aMyUTF8Output);
+
 alert(sMyOutput);
 ```
 
@@ -287,10 +314,12 @@ alert(sMyOutput);
 const myArray = base64DecToArr(
   "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="
 );
+
 // "Base 64 \u2014 Mozilla Developer Network"
 const myBuffer = base64DecToArr(
   "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="
 ).buffer;
+
 alert(myBuffer.byteLength);
 ```
 
