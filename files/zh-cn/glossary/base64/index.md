@@ -294,4 +294,4 @@ const myBuffer = base64DecToArr(
 alert(myBuffer.byteLength);
 ```
 
-> **备注：** 函数 `base64DecToArr(sBase64[, nBlocksSize])` 将返回 [`uint8Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) 字节数组。如果你的目标是构建 16 位/ 32 位/ 64 位原始数据的缓冲区，使用 `nBlocksSize` 参数，这是`uint8Array.buffer.bytesLength` 属性必须产生的字节数的倍数［`1` 或省略为 ASCII、二进制字符串（即字符串中的每个字符都被当作二进制数据的一个字节来处理）或 UTF-8 编码的字符串，`2` 用于 UTF-16 字符串，`4` 用于 UTF-32 字符串］。
+> **备注：** 函数 `base64DecToArr(sBase64[, nBlocksSize])` 将返回 [`uint8Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) 字节数组。如果你的目标是构建 16 位/ 32 位/ 64 位原始数据的缓冲区，使用 `nBlocksSize` 参数，这是 `uint8Array.buffer.bytesLength` 属性必须产生的字节数的倍数［`1` 或省略为 ASCII、二进制字符串（即字符串中的每个字符都被当作二进制数据的一个字节来处理）或 UTF-8 编码的字符串，`2` 用于 UTF-16 字符串，`4` 用于 UTF-32 字符串］。
