@@ -23,7 +23,7 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 - Support for reverse animation direction (keywords `reverse` and `alternate-reverse` on the {{cssxref("animation-direction")}} property) has been added. ([bug 655920](https://bugzilla.mozilla.org/show_bug.cgi?id=655920)).
 - You can now animate the CSS {{cssxref("height")}} and {{cssxref("width")}} properties.
 - The {{cssxref("animation-duration")}} and {{cssxref("transition-duration")}} CSS properties now reject negative values (and do not handle them as `0s` anymore) ([bug 773102](https://bugzilla.mozilla.org/show_bug.cgi?id=773102)).
-- Support for the standard, unprefixed version of [CSS Transforms](/zh-CN/docs/CSS/Using_CSS_transforms) has been landed ([bug 745523](https://bugzilla.mozilla.org/show_bug.cgi?id=745523)). {{cssxref("&lt;length&gt;")}} cannot be used for translation values in `matrix()` and `matrix3d()` anymore ({{bug(719054)}}).
+- Support for the standard, unprefixed version of [CSS Transforms](/zh-CN/docs/CSS/Using_CSS_transforms) has been landed ([bug 745523](https://bugzilla.mozilla.org/show_bug.cgi?id=745523)). {{cssxref("&lt;length&gt;")}} cannot be used for translation values in `matrix()` and `matrix3d()` anymore ([Firefox bug 719054](https://bugzil.la/719054)).
 - Support for the standard, unprefixed version of [CSS Gradients](/zh-CN/docs/CSS/Using_CSS_gradients) has been landed. Note that the syntax has changed significantly since the prefixed version, so you should read up on this ([bug 752187](https://bugzilla.mozilla.org/show_bug.cgi?id=752187)).
 - The {{cssxref("box-sizing", "-moz-box-sizing")}} implementation has been updated to apply to table cells too ([bug 338554](https://bugzilla.mozilla.org/show_bug.cgi?id=338554)).
 - Support for the standard, unprefixed version of {{cssxref("calc")}} has been landed ([bug 771678](https://bugzilla.mozilla.org/show_bug.cgi?id=771678)).
@@ -43,14 +43,14 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 - The [`java`](/zh-CN/docs/LiveConnect_Reference/java) and [`Packages`](/zh-CN/docs/LiveConnect_Reference/Packages) global objects have been removed. See [LiveConnect](/zh-CN/docs/LiveConnect).
 - The `CSSRule.type` associated with {{domxref("CSSNamespaceRule")}} has been updated from `UNKNOWN_RULE` (`0`) to `NAMESPACE_RULE` (`10`) ([bug 765590](https://bugzilla.mozilla.org/show_bug.cgi?id=765590)).
 - WebSMS API: {{domxref("SmsRequest")}} has been superseded by the more general {{domxref("DOMRequest")}}.
-- The non-standard {{domxref("Element.scrollTopMax")}} and {{domxref("Element.scrollLeftMax")}} read-only properties have been added ({{bug(766937)}}).
-- The second parameter of {{domxref("Blob.blob", "Blob()")}}, when set to `null` or `undefined`, is now being handled as an empty dictionary ({{bug(7691119)}}).
+- The non-standard {{domxref("Element.scrollTopMax")}} and {{domxref("Element.scrollLeftMax")}} read-only properties have been added ([Firefox bug 766937](https://bugzil.la/766937)).
+- The second parameter of {{domxref("Blob.blob", "Blob()")}}, when set to `null` or `undefined`, is now being handled as an empty dictionary ([Firefox bug 7691119](https://bugzil.la/7691119)).
 
 ### JavaScript
 
 - [`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) objects now offer `isFinite()`, `toInteger()`, and `isInteger()` methods. ([bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=761480), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=761495))
 - The Harmony [spread operator](http://wiki.ecmascript.org/doku.php?id=harmony:spread) is now supported in [`Array`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array) initializers ([bug 574130](https://bugzilla.mozilla.org/show_bug.cgi?id=574130)). Note it is not yet supported in calls ([bug 762363](https://bugzilla.mozilla.org/show_bug.cgi?id=762363)).
-- The experimental {{jsxref("TypedArray.prototype.move()")}} method has been added (available in Aurora and Nightly channels only) ({{bug(730873)}}).
+- The experimental {{jsxref("TypedArray.prototype.move()")}} method has been added (available in Aurora and Nightly channels only) ([Firefox bug 730873](https://bugzil.la/730873)).
 
 ### WebGL
 
