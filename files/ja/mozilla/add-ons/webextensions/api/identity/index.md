@@ -1,22 +1,24 @@
 ---
 title: identity
 slug: Mozilla/Add-ons/WebExtensions/API/identity
+l10n:
+  sourceCommit: 593600a6822de931ce9fb369849146ad25f22c6f
 ---
 
 {{AddonSidebar}}
 
-identity API を使って [OAuth2](https://oauth.net/2/) の認証コードやアクセストークンを取得し、拡張機能が OAuth2 での認証 (Google や Facebook アカウントなど) をサポートするサービスからユーザーデータを取得できるようにします。
+identity API を使って [OAuth2](https://oauth.net/2/) の認証コードやアクセストークンを取得し、拡張機能が OAuth2 での認証（Google や Facebook アカウントなど）をサポートするサービスからユーザーデータを取得できるようにします。
 
-OAuth2 フローがどのように機能するかの詳細は、サービスプロバイダーごとに異なるため、特定のサービスプロバイダーにおいてこの API を使用するには、各サービスごとのドキュメントを参照する必要があります。例:
+OAuth2 フローがどのように機能するかの詳細は、サービスプロバイダーごとに異なるため、特定のサービスプロバイダーにおいてこの API を使用するには、各サービスごとのドキュメントを参照する必要があります。例えば以下の通りです。
 
-- <https://developers.google.com/identity/protocols/OAuth2UserAgent>
-- <https://developer.github.com/v3/oauth/>
+- [Google](https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow)
+- [GitHub](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps)
 
 identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提供します。この関数は、必要に応じて、サービスのユーザー認証を行い、また、拡張機能にデータへのアクセスを認可するかどうかをユーザーに確認します。処理が完了すると、プロバイダーによって、アクセストークンか認可コードのどちらかが取得されます。
 
 そして、OAuth2 フローを実施して取得した検証済みアクセストークンを、HTTP リクエスト内で使用することで、拡張機能はユーザーから認可された範囲でデータにアクセスできるようになります。
 
-この API を利用するためには、"identity" [API のパーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)が必要です。
+この API を利用するためには、"identity" [API の権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
 
 ## セットアップ
 
@@ -24,13 +26,19 @@ identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提�
 
 ### リダイレクト URL を取得する
 
-[リダイレクト URL](https://www.oauth.com/oauth2-servers/redirect-uris/) は、アクセストークンまたは認可コードを拡張機能に配布するための {{WebExtAPIRef("identity.launchWebAuthFlow()")}} のエンドポイントを意味します。
+[リダイレクト URL](https://www.oauth.com/oauth2-servers/redirect-uris/) は、アクセストークンまたは認証コードを拡張機能に配布するための {{WebExtAPIRef("identity.launchWebAuthFlow()")}} のエンドポイントを意味します。ブラウザーはレスポンスを読み込まずに、リダイレクト URL から結果を展開します。
 
-{{WebExtAPIRef("identity.getRedirectURL()")}}を呼び出すことでリダイレクト URL を取得できます。この関数は、アドオン ID からリダイレクト URL を生成するため、使用したい場合、[`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを使用してアドオン ID を明示的に設定する必要があるでしょう (設定しない場合、アドオンを[一時的にインストール](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)するたびに、異なるリダイレクト URL を取得することになります)。
+{{WebExtAPIRef("identity.getRedirectURL()")}} を呼び出すことでリダイレクト URL をすることが取得できます。この関数は、アドオン ID からリダイレクト URL を生成するため、使用したい場合、[`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを使用してアドオン ID を明示的に設定する必要があるでしょう（設定しない場合、アドオンを[一時的にインストール](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)するたびに、異なるリダイレクト URL を取得することになります）。
 
-`identity.getRedirectURL()` によって返されるリダイレクト URL の利用が必須というわけではありません。独自の URL を指定することもできます。サービスがリダイレクトするものであれば何でもかまいません。ただし、ドメインは自分で管理しているものでなければいけません。
+{{WebExtAPIRef("identity.getRedirectURL()")}} は、修正されたドメイン名とアドオンの ID に由来するサブドメインで URL を返します。OAuth サーバー（Google など）によっては、所有者が確認されたドメインしかリダイレクト URL として受け入れられない場合があります。ダミードメインは拡張機能開発者がコントロールすることができないため、既定では常に使用することができません。
 
-リダイレクト URL は 2 つの場面で利用されます:
+しかし、ループバックアドレスはドメイン検証を必要としない受け入れ可能な代替手段です（[RFC 8252, section 7.3](https://datatracker.ietf.org/doc/html/rfc8252#section-7.3) に基づいています）。Firefox 86 からは、`http://127.0.0.1/mozoauth2/[identity.getRedirectURL()]` が返す URL のサブドメイン] という形式のループバックアドレスをリダイレクト URL の値として許可しています。
+
+> **メモ:** Firefox 75 からは {{WebExtAPIRef("identity.getRedirectURL()")}} が返すリダイレクト URL を使用する必要があります。それ以前のバージョンでは、任意のリダイレクト URL を指定することができました。
+>
+> Firefox 86 以降は、記述されている特殊なループバックアドレスも使用することができます。
+
+リダイレクト URL は 2 つの場面で利用されます。
 
 - 拡張機能を OAuth2 クライアントとして登録するとき
 - `identity.launchWebAuthFlow()` の `url` 引数に URL パラメーターとして渡すとき
@@ -50,11 +58,11 @@ identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提�
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.identity")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.identity`](https://developer.chrome.com/extensions/identity) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> **メモ:** この API は Chromium の [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API に基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

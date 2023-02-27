@@ -71,11 +71,11 @@ function myFunc() {
 
 ## Especificación
 
-No es parte de ninguna especificación. Se implementa en JavaScript 1.5.
+No es parte de ninguna especificación.
 
 ## Compatiblilidad de Navegadores
 
-{{Compat("javascript.builtins.Function.caller")}}
+{{Compat}}
 
 ## Véase también
 

@@ -113,6 +113,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.slot")}}
+{{Compat}}

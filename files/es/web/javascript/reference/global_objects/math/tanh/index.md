@@ -58,7 +58,7 @@ Math.tanh = Math.tanh || function(x){
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.tanh")}}
+{{Compat}}
 
 ## Ver también
 

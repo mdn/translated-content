@@ -24,40 +24,40 @@ Highlights:
 
 ### CSS
 
-- 默认开启 {{cssxref("mix-blend-mode")}} ({{Bug(952643)}})。
-- 在正式版本中默认开启 `position:sticky` (之前只在 Nightly 和 Aurora 版本中才会开启) ({{Bug(916315)}})。
-- implement box-decoration-break: Left/right part of a box-shadow should only be drawn on the first/last continuation of an inline box ({{Bug(613659)}}).
-- 允许 {{cssxref("flex-grow")}} / {{cssxref("flex-shrink")}} 在 0 和非 0 值之间作 transition , like 'flex-grow: 0.6'({{Bug(996945)}}).
+- 默认开启 {{cssxref("mix-blend-mode")}} ([Firefox bug 952643](https://bugzil.la/952643))。
+- 在正式版本中默认开启 `position:sticky` (之前只在 Nightly 和 Aurora 版本中才会开启) ([Firefox bug 916315](https://bugzil.la/916315))。
+- implement box-decoration-break: Left/right part of a box-shadow should only be drawn on the first/last continuation of an inline box ([Firefox bug 613659](https://bugzil.la/613659)).
+- 允许 {{cssxref("flex-grow")}} / {{cssxref("flex-shrink")}} 在 0 和非 0 值之间作 transition , like 'flex-grow: 0.6'([Firefox bug 996945](https://bugzil.la/996945)).
 
 ### HTML
 
-- Experimentally implemented, behind a pref, {{HTMLElement("img")}} {{HTMLattrxref("srcset", "img")}} property, To activate it set `dom.image.srcset.enable` to `true` ({{Bug(870021)}}).
-- [**id**](/zh-CN/docs/Web/HTML/Global_attributes/id) and [**class**](/zh-CN/docs/Web/HTML/Global_attributes/class) are now true [global attributes](/zh-CN/docs/Web/HTML/Global_attributes) and also apply to XML elements, in a namespace or not ({{bug(741295)}}).
+- Experimentally implemented, behind a pref, {{HTMLElement("img")}} {{HTMLattrxref("srcset", "img")}} property, To activate it set `dom.image.srcset.enable` to `true` ([Firefox bug 870021](https://bugzil.la/870021)).
+- [**id**](/zh-CN/docs/Web/HTML/Global_attributes/id) and [**class**](/zh-CN/docs/Web/HTML/Global_attributes/class) are now true [global attributes](/zh-CN/docs/Web/HTML/Global_attributes) and also apply to XML elements, in a namespace or not ([Firefox bug 741295](https://bugzil.la/741295)).
 
 ### JavaScript
 
 - The following new ECMAScript 2015 built-in methods got implemented:
-- {{jsxref("Array.from()")}} ({{bug(904723)}}),
-- {{jsxref("Array.prototype.copyWithin()")}} ({{bug(934423)}}),
-- {{jsxref("Number.isSafeInteger()")}} ({{bug(1003764)}}).
+- {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723)),
+- {{jsxref("Array.prototype.copyWithin()")}} ([Firefox bug 934423](https://bugzil.la/934423)),
+- {{jsxref("Number.isSafeInteger()")}} ([Firefox bug 1003764](https://bugzil.la/1003764)).
 
 ### Interfaces/APIs/DOM
 
-- 实现了 {{domxref("NavigatorLanguage.languages", "navigator.languages")}} 属性和 [languagechange](/zh-CN/docs/Web/Reference/Events/languagechange) 事件。 ({{Bug(889335)}})。
-- The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ({{bug(1014581)}}).
-- {{domxref("KeyboardEvent.getModifierState")}}() 和 {{domxref("MouseEvent.getModifierState")}}() 支持了 "Accel" 虚拟修饰符 ({{Bug(1009388)}})。
-- 实现了 {{domxref("KeyboardEvent.code")}} 属性，不过目前在正式版本中还是禁用状态 ({{Bug(865649)}})。
-- Scoped selectors for {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")`have been implemented ({{Bug(528456)}}).
+- 实现了 {{domxref("NavigatorLanguage.languages", "navigator.languages")}} 属性和 [languagechange](/zh-CN/docs/Web/Reference/Events/languagechange) 事件。 ([Firefox bug 889335](https://bugzil.la/889335))。
+- The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ([Firefox bug 1014581](https://bugzil.la/1014581)).
+- {{domxref("KeyboardEvent.getModifierState")}}() 和 {{domxref("MouseEvent.getModifierState")}}() 支持了 "Accel" 虚拟修饰符 ([Firefox bug 1009388](https://bugzil.la/1009388))。
+- 实现了 {{domxref("KeyboardEvent.code")}} 属性，不过目前在正式版本中还是禁用状态 ([Firefox bug 865649](https://bugzil.la/865649))。
+- Scoped selectors for {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")`have been implemented ([Firefox bug 528456](https://bugzil.la/528456)).
 - The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](http://dev.w3.org/fxtf/web-animations/), has been added ({{bug("998246")}}). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
 - The [Data Store API](/zh-CN/docs/Web/API/Data_Store_API) has been made available to [Web Workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers) ({{bug("949325")}}). It still is only activated for certified applications.
 - The [ServiceWorker](/zh-CN/docs/Web/API/ServiceWorker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ({{ Bug("967264") }}).
 - The [MSISDN Verification API](/zh-CN/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ({{ Bug("988469") }}).
-- The [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) is now supported on Firefox for Android ({{bug(852935)}}).
-- To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ({{bug(1008719)}})
-- To complete our Hit Regions implementation, {{domxref("MouseEvent.region")}} has been implemented ({{bug(979692)}}).
-- The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ({{bug(1004579)}}).
-- The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of `'yes'` or `'no'` ({{bug(887703)}}).
-- [XMLHttpRequest.responseURL](/zh-CN/docs/Web/API/XMLHttpRequest/responseURL) was implemented ({{bug(998076)}}).
+- The [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) is now supported on Firefox for Android ([Firefox bug 852935](https://bugzil.la/852935)).
+- To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ([Firefox bug 1008719](https://bugzil.la/1008719))
+- To complete our Hit Regions implementation, {{domxref("MouseEvent.region")}} has been implemented ([Firefox bug 979692](https://bugzil.la/979692)).
+- The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ([Firefox bug 1004579](https://bugzil.la/1004579)).
+- The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of `'yes'` or `'no'` ([Firefox bug 887703](https://bugzil.la/887703)).
+- [XMLHttpRequest.responseURL](/zh-CN/docs/Web/API/XMLHttpRequest/responseURL) was implemented ([Firefox bug 998076](https://bugzil.la/998076)).
 
 ### MathML
 

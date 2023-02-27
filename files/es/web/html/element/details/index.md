@@ -75,15 +75,13 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 {{EmbedLiveSample("Example")}}
 
-> **Nota:** Si el el ejemplo de arriba no funciona , ver [Compatibilidad con navegadores](#compatibilidad_con_navegadores) para determinar si el navegador soporta esta característica .
-
 ## Especificaciones
 
 {{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("html.elements.details")}}
+{{Compat}}
 
 ## Ver también
 

@@ -78,9 +78,9 @@ gettingSubTree.then(logSubTree, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.getSubTree")}}
+{{Compat}}
 
 > **Note :**
 >

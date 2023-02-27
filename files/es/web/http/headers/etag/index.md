@@ -64,13 +64,11 @@ El servidor compara el `ETag` del cliente (enviado con un `If-None-Match`) con e
 
 ## Especificaciones
 
-| Especificación                           | Título                                                                         |
-| ---------------------------------------- | ------------------------------------------------------------------------------ |
-| {{RFC("7232", "ETag", "2.3")}} | Protocolo de Transferencia por Hipertexto (HTTP/1.1): Peticiones Condicionales |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.ETag")}}
+{{Compat}}
 
 ## Vea también
 

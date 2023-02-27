@@ -21,9 +21,9 @@ Sa valeur sous-jacente est une chaîne qui peut être "mouseup" ou "mousedown".
 
 La valeur par défaut est "mouseup" sur Windows, et "mousedown" sur macOS et Linux. 'affectation à Windows n'a aucun effet - le paramètre est uniquement conçu pour permettre l'ouverture du menu contextuel sur mouseup au lieu de mousedown, pas l'inverse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.contextMenuShowEvent")}}
+{{Compat}}
 
 ## Exemples
 

@@ -35,4 +35,4 @@ Une autre alternative est `document.body.aLink`, même si elle est [obsolète da
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.alinkColor")}}
+{{Compat}}

@@ -46,9 +46,9 @@ Les événements ont trois fonctions :
     - `port`
       - : Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script courant à l'autre contexte auquel il se connecte.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onConnect")}}
+{{Compat}}
 
 ## Exemples
 

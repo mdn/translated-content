@@ -52,9 +52,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `upgradeToSecure`{{optional_inline}}
   - : `boolean`. Si la valeur `true` est est définie et que la requête originale est une requête HTTP, cela empêchera l'envoi de la requête originale et fera plutôt une requête sécurisée (HTTPS). Si une extension renvoie `redirectUrl` dans `onBeforeRequest`, alors `upgradeToSecure` sera ignoré pour cette requête. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.BlockingResponse")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -68,7 +68,7 @@ Reflect.getOwnPropertyDescriptor(obj, 'undefined');
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Reflect.set")}}
+{{Compat}}
 
 ## Ver también
 

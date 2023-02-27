@@ -31,9 +31,9 @@ browser.browserAction.disable(
 - `tabId`{{optional_inline}}
   - : `integer`. L'identifiant (ID) de l'onglet pour lequel vous souhaitez désactiver l'action du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.disable")}}
+{{Compat}}
 
 ## Exemples
 

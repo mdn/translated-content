@@ -152,9 +152,9 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## Ver también
 

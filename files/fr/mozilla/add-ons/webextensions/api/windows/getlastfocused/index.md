@@ -47,9 +47,9 @@ var gettingWindow = browser.windows.getLastFocused(
 
 `Une Promise` qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la dernière fenêtre ciblée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.getLastFocused",2)}}
+{{Compat}}
 
 ## Exemples
 

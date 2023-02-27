@@ -159,13 +159,7 @@ Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/m
 
 ## Compatibilité des navigateurs
 
-### `navigator.clipboard`
-
-{{Compat("api.Clipboard")}}
-
-### `clipboard.setImageData`
-
-{{Compat("webextensions.api.clipboard")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -69,9 +69,9 @@ Les événements ont trois fonctions :
 - `timeStamp`
   - : `number`. L'heure à laquelle le navigateur est sur le point de démarrer la navigation, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onBeforeNavigate")}}
+{{Compat}}
 
 ## Exemples
 

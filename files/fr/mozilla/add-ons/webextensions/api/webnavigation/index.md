@@ -80,9 +80,9 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
   - : Lancé lorsque la page a utilisé l' [API d'histoirique](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

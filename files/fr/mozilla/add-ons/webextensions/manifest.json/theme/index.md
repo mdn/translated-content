@@ -1417,38 +1417,6 @@ Il vous donnera un navigateur qui ressemble à ceci :
 
 Dans cette capture d'écran, `"toolbar_vertical_separator"` est la ligne verticale blanche dans la barre d'URL divisant l'icône du mode Lecteur des autres icônes.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.theme")}}
-
-### Couleurs
-
-{{Compat("webextensions.manifest.theme.colors", 10)}}
-
-### Images
-
-{{Compat("webextensions.manifest.theme.images", 10)}}
-
-### Propriétés
-
-{{Compat("webextensions.manifest.theme.properties", 10)}}
-
-### Compatibilité de Chrome
-
-Dans Chrome:
-
-- `colors/toolbar_text` n'est pas utilisé, utilisez `colors/bookmark_text` à la place.
-- `images/theme_frame` ancre l'image en haut à gauche de l'en-tête et si l'image ne remplit pas la zone de l'en-tête de l'image.
-- toutes les couleurs doivent être spécifiées sous la forme d'un tableau de valeurs RVB, comme ceci :
-
-```json
-"theme": {
-  "colors": {
-     "frame": [255, 0, 0],
-     "tab_background_text": [0, 255, 0],
-     "bookmark_text": [0, 0, 255]
-  }
-}
-```
-
-A partir de Firefox 59, la forme tableau et la forme couleur CSS sont acceptées pour toutes les propriétés. Avant cela, `colors/frame` et `colors/tab_background_text` nécessitaient la forme tableau, alors que d'autres propriétés nécessitaient la forme couleur CSS.
+{{Compat}}

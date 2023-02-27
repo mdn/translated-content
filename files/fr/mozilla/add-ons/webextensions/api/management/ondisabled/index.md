@@ -46,9 +46,9 @@ Les événement ont trois fonctions :
     - `info`
       - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désactivé
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.onDisabled")}}
+{{Compat}}
 
 ## Exemples
 

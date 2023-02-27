@@ -64,6 +64,6 @@ p::before {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.types.attr")}}
+{{Compat}}

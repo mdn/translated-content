@@ -63,9 +63,9 @@ La propiedad `-webkit-mask` es una manera corta de establecer, en un único siti
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask")}}
+{{Compat}}
 
 ## See also
 

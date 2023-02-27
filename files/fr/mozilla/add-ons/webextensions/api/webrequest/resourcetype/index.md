@@ -78,9 +78,9 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `other`
   - : Ressources qui ne sont couvertes par aucun autre type disponible.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.ResourceType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

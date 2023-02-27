@@ -72,4 +72,4 @@ HTML5
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.lastModified")}}
+{{Compat}}

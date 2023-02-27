@@ -130,9 +130,9 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.move")}}
+{{Compat}}
 
 > **Note :**
 >

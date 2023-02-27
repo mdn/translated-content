@@ -51,9 +51,9 @@ class Square extends Polygon {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.class")}}
+{{Compat}}
 
 ## Ver también
 

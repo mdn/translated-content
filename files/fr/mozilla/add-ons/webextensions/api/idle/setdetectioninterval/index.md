@@ -33,9 +33,9 @@ browser.idle.setDetectionInterval(
 - `intervalInSeconds`
   - : `integer`. Seuil, en secondes, utilisé pour déterminer quand le système est dans un état inactif. La valeur minimum que vous pouvez fournir ici est 15.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle.setDetectionInterval")}}
+{{Compat}}
 
 ## Exemples
 

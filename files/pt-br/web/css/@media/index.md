@@ -42,7 +42,7 @@ The `@media` at-rule is composed of one or more media queries, each of which con
 
 Corresponding styles are applied only if a media query computes to true, i.e., when the specified media type matches the type of device the document is being displayed on _and_ all media feature expressions compute as true. Queries involving unknown media types are always false.
 
-> **Note:** A style sheet with a media query attached to its {{HTMLElement("link")}} tag [will still download](http://scottjehl.github.com/CSS-Download-Tests/) even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.
+> **Nota:** A style sheet with a media query attached to its {{HTMLElement("link")}} tag [will still download](http://scottjehl.github.com/CSS-Download-Tests/) even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.
 
 ### Media types
 
@@ -57,7 +57,7 @@ _Media types_ describe the general category of a device. Unless you use the `not
 - `speech`
   - : Intended for speech synthesizers.
 
-> **Note:** **Deprecated media types:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](http://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used. The `aural` type has been replaced by `speech`, which is similar.
+> **Nota:** **Deprecated media types:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](http://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used. The `aural` type has been replaced by `speech`, which is similar.
 
 ### Media features
 
@@ -108,7 +108,7 @@ The `and` operator is used for combining multiple media features together into a
 
 The `not` operator is used to negate a media query, returning true if the query would otherwise return false. If present in a comma-separated list, it will only negate the specific query to which it is applied. If you use the `not` operator, you _must_ specify an explicit media type.
 
-> **Note:** The `not` keyword can't be used to negate an individual feature expression, only an entire media query.
+> **Nota:** The `not` keyword can't be used to negate an individual feature expression, only an entire media query.
 
 #### `only`
 

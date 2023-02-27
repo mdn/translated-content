@@ -78,7 +78,7 @@ Aquí, el formulario en si mismo, junto con el margen, borde y padding, será de
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.types.min")}}
+{{Compat}}
 
 ## Ver también
 

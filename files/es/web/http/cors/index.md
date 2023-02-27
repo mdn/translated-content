@@ -413,9 +413,9 @@ Ejemplos de esta utilización pueden ser encontrados [arriba](/En/HTTP_access_co
 
 {{Specifications}}
 
-## Compatibilidad con Exploradores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## Vea también
 

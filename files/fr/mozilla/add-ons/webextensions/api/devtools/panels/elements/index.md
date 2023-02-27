@@ -17,9 +17,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements
 
 Un objet [`ElementsPanel`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel) qui représente l'inspecteur HTML/CSS du navigateur
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.elements", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

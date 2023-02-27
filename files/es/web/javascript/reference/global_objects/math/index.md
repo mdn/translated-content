@@ -152,7 +152,7 @@ console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math")}}
+{{Compat}}
 
 ## Ver también
 

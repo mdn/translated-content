@@ -111,7 +111,7 @@ Cette propriété n'est pas standard et est née avec Internet Explorer. Apple l
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.zoom")}}
+{{Compat}}
 
 ## Voir aussi
 

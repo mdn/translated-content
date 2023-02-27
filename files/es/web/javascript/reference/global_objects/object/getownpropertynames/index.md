@@ -101,9 +101,9 @@ console.log(nonenum_only);
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertyNames")}}
+{{Compat}}
 
 ## Ver también
 

@@ -46,7 +46,7 @@ isFinite("0");         // verdadero, hubiera sido falso en el caso de usar Numbe
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.isFinite")}}
+{{Compat}}
 
 ## Vea También
 

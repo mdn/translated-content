@@ -35,9 +35,9 @@ Aucun.
 
 Aucune.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.find.highlightResults", 10)}}
+{{Compat}}
 
 ## Exemples
 

@@ -32,9 +32,9 @@ L'événement **focusin** est déclenché lorsqu'un élément est sur le point d
 | `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | Event target receiving focus.              |
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Element.focusin_event")}}
+{{Compat}}
 
 ## Evénements liés
 

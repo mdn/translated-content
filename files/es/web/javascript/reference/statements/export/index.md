@@ -153,9 +153,9 @@ Tenga en cuenta que no es posible usar `var`, `let` o `const` con `export defaul
 
 {{Specifications}}
 
-## Compatiblidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Vea también
 

@@ -105,13 +105,11 @@ Content-Location: /mis-recibos/38
 
 ## Especificaciones
 
-| Especificación                                               | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Content-Location", "3.1.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Content-Location")}}
+{{Compat}}
 
 ## Ver también
 

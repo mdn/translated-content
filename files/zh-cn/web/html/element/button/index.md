@@ -41,7 +41,7 @@ slug: Web/HTML/Element/button
 - {{htmlattrdef("autofocus")}}
   - : 一个布尔属性，用于指定当页面加载时按钮必须有输入焦点，除非用户重写，例如通过不同控件键入。只有一个表单关联元素可以指定该属性。
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-  - : 该属性在 {{HTMLElement("button")}}上的使用并未标准化，只有 Firefox 允许。不像其它浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态（[Firefox persists the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ）。将此属性设置为`off` (i.e. `autocomplete="off"`) 关闭此特性。参见 {{bug(654072)}}。
+  - : 该属性在 {{HTMLElement("button")}}上的使用并未标准化，只有 Firefox 允许。不像其它浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态（[Firefox persists the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ）。将此属性设置为`off` (i.e. `autocomplete="off"`) 关闭此特性。参见 [Firefox bug 654072](https://bugzil.la/654072)。
 - {{htmlattrdef("disabled")}}
   - : 此布尔属性表示用户不能与 button 交互。如果属性值未指定，button 继承包含元素，例如{{HTMLElement("fieldset")}}；如果没有设置**disabled**属性的包含元素，button 将可交互。不像其它浏览器，Firefox 默认在页面加载时持续禁用 Button 的动态状态。使用{{htmlattrxref("autocomplete","button")}}属性可控制此特性。
 - {{htmlattrdef("form")}}
@@ -92,9 +92,9 @@ IE8 已经修复了这个问题。
 
 Firefox 出于使用方便的目的，会在获得焦点的按钮上添加一个细小的虚线框。这个边框由浏览器内部的样式表中的 CSS 定义，但如果有必要的话，你可以用 `button{{cssxref("::-moz-focus-inner")}} { }` 重写这个样式。
 
-Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [保持动态禁用状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ，这个行为在其它浏览器上是没有的。将 {{htmlattrxref("autocomplete","button")}} 属性设置为 `off` 可以禁用这项特性。参见 {{bug(654072)}}。
+Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [保持动态禁用状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ，这个行为在其它浏览器上是没有的。将 {{htmlattrxref("autocomplete","button")}} 属性设置为 `off` 可以禁用这项特性。参见 [Firefox bug 654072](https://bugzil.la/654072)。
 
-安卓系统上的 Firefox <35 会为每个按钮设置一个默认的 {{ cssxref("background-image") }} 渐变背景（参见 {{bug(763671)}}）。这项可以通过 `background-image: none` 禁用。
+安卓系统上的 Firefox <35 会为每个按钮设置一个默认的 {{ cssxref("background-image") }} 渐变背景（参见 [Firefox bug 763671](https://bugzil.la/763671)）。这项可以通过 `background-image: none` 禁用。
 
 ### 点击和焦点
 

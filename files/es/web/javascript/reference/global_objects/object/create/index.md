@@ -346,7 +346,7 @@ Note that while the setting of `null` as `[[Prototype]]` is supported in the rea
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.create")}}
+{{Compat}}
 
 ## Ver también
 

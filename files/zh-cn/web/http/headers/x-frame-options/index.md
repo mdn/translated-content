@@ -41,7 +41,7 @@ X-Frame-Options: SAMEORIGIN
 - `DENY`
   - : 表示该页面不允许在 frame 中展示，即便是在相同域名的页面中嵌套也不允许。
 - `SAMEORIGIN`
-  - : 表示该页面可以在相同域名页面的 frame 中展示。规范让浏览器厂商决定此选项是否应用于顶层、父级或整个链，有人认为该选项不是很有用，除非所有的祖先页面都属于同一来源（origin）（见 {{bug(725490)}}）。参见[浏览器兼容性](#浏览器兼容性)以获取详细的兼容性信息。
+  - : 表示该页面可以在相同域名页面的 frame 中展示。规范让浏览器厂商决定此选项是否应用于顶层、父级或整个链，有人认为该选项不是很有用，除非所有的祖先页面都属于同一来源（origin）（见 [Firefox bug 725490](https://bugzil.la/725490)）。参见[浏览器兼容性](#浏览器兼容性)以获取详细的兼容性信息。
 - `ALLOW-FROM uri` {{deprecated_inline}}
   - : 这是一个被弃用的指令，不再适用于现代浏览器，请不要使用它。在支持旧版浏览器时，页面可以在指定来源的 frame 中展示。请注意，在旧版 Firefox 上，它会遇到与 `SAMEORIGIN` 相同的问题——它不会检查 frame 所有的祖先页面来确定他们是否是同一来源。{{HTTPHeader("Content-Security-Policy")}} HTTP 首部有一个 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令，你可以使用这一指令来代替。
 

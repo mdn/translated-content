@@ -138,9 +138,9 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.object")}}
+{{Compat}}
 
 ## See also
 

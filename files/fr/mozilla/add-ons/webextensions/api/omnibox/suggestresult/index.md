@@ -28,9 +28,9 @@ Les valeurs de ce type sont des objets. Ils ont les propriétés suivantes :
 - `description`
   - : C'est la chaîne qui est affichée dans la liste déroulante de la barre d'adresse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.SuggestResult")}}
+{{Compat}}
 
 > **Note :**
 >

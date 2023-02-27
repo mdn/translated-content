@@ -50,7 +50,7 @@ console.log(eArr.next().value); // p
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.@@iterator")}}
+{{Compat}}
 
 ## Ver también
 

@@ -60,9 +60,9 @@ Para valores mayores a 1 o menores a -1, {{jsxref("NaN")}} retorna.
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.atanh")}}
+{{Compat}}
 
 ## Puedes leer
 

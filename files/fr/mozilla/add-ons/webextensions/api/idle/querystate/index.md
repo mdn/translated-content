@@ -38,9 +38,9 @@ var querying = browser.idle.queryState(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne {{WebExtAPIRef('idle.IdleState')}}, indiquant l'état actuel.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle.queryState")}}
+{{Compat}}
 
 ## Exemples
 

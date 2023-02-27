@@ -185,9 +185,9 @@ new ClassWithPrivateAccessor();
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes.private_class_fields")}}
+{{Compat}}
 
 ## See also
 

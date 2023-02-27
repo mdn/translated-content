@@ -41,9 +41,9 @@ var getting = browser.tabs.getAllInWindow(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un `tableau` d'ojets `{{WebExtAPIRef('tabs.Tab')}}` contenant des informations sur tous les onglets de la fenêtre. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.getAllInWindow")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

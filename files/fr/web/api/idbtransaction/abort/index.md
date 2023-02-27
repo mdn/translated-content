@@ -34,7 +34,7 @@ Cette méthode peut déclencher une exception {{domxref("DOMException")}} du typ
 
 ## Exemples
 
-Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données au magasin d'objets. On dispose également de fonctions attachées aux gestionnaires d'évènements de la transaction pour gérer la réussite ou l'échec des opérations. Ensuite, on annule les opérations de la transaction grâce à `abort()`. Pour un exemple complet, vous pouvez consulter [notre application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. [la démonstration _live_](https://mdn.github.io/to-do-notifications/)).
+Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données au magasin d'objets. On dispose également de fonctions attachées aux gestionnaires d'évènements de la transaction pour gérer la réussite ou l'échec des opérations. Ensuite, on annule les opérations de la transaction grâce à `abort()`. Pour un exemple complet, vous pouvez consulter [notre application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. [la démonstration _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On ouvre la base de données
@@ -104,4 +104,4 @@ function addData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

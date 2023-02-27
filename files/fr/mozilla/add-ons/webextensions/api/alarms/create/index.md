@@ -82,9 +82,9 @@ browser.alarms.create("my-periodic-alarm", {
 });
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.create")}}
+{{Compat}}
 
 > **Note :**
 >

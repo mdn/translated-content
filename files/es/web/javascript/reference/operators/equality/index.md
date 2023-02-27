@@ -102,9 +102,9 @@ console.log(d == s);    //true
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.equality")}}
+{{Compat}}
 
 ## Ver también
 

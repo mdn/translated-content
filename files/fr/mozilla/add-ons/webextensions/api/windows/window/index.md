@@ -44,9 +44,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `width`{{optional_inline}}
   - : `integer`. La largeur de la fenêtre, y compris le cadre, en pixels.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.Window")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

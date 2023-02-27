@@ -9,7 +9,7 @@ slug: Web/API/Event/defaultPrevented
 
 回傳一個布林值，表示事件的預設行為是否被取消，也就是事件物件是否曾執行 {{domxref("event.preventDefault()", "preventDefault()")}} 方法。
 
-> **備註：** You should use this instead of the non-standard, deprecated `getPreventDefault()` method (see {{ bug(691151) }}).
+> **備註：** You should use this instead of the non-standard, deprecated `getPreventDefault()` method (see [Firefox bug 691151](https://bugzil.la/691151)).
 
 ## 語法
 

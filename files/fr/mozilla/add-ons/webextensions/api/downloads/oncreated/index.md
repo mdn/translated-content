@@ -48,9 +48,9 @@ Les événements ont trois fonctions :
     - `downloadItem`
       - : L'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.onCreated")}}
+{{Compat}}
 
 ## Exemples
 

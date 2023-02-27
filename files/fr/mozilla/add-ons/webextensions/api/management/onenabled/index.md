@@ -46,9 +46,9 @@ Les événements ont trois fonctions :
     - `info`
       - : [`ExtensionInfo`](/fr/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désinstallé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.onEnabled")}}
+{{Compat}}
 
 ## Exemples
 

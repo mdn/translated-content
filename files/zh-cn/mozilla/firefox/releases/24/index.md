@@ -13,7 +13,7 @@ slug: Mozilla/Firefox/Releases/24
 
 ### JavaScript
 
-- [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/arrow_functions)不再默认处于严格模式，除非显示使用 `"use strict"`. ({{bug(852762)}})
+- [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/arrow_functions)不再默认处于严格模式，除非显式使用 `"use strict"`。（[Firefox bug 852762](https://bugzil.la/852762)）
 
 ### DOM
 
