@@ -1,6 +1,6 @@
 ---
 title: 第一字节时间
-slug: Glossary/time_to_first_byte
+slug: Glossary/Time_to_first_byte
 ---
 
 **第一字节时间**（TTFB）是指从浏览器请求页面到从浏览器接收来自服务器发送的信息的第一个字节的时间。这一次包括 DNS 查找和使用（三次）[TCP](/zh-CN/docs/Glossary/TCP)握手和[SSL](/zh-CN/docs/Glossary/SSL)握手建立连接（如果请求是通过[https](/zh-CN/docs/Glossary/https)发出的）。

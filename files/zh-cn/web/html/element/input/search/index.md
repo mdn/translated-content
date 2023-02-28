@@ -1,6 +1,6 @@
 ---
 title: <input type="search">
-slug: Web/HTML/Element/Input/search
+slug: Web/HTML/Element/input/search
 ---
 
 {{HTMLSidebar}}

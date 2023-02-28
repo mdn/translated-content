@@ -1,6 +1,6 @@
 ---
 title: Percent-encoding
-slug: Glossary/percent-encoding
+slug: Glossary/Percent-encoding
 ---
 
 **百分比编码** 是一种拥有 8 位字符编码的编码机制，这些编码在{{Glossary("URL")}}的上下文中具有特定的含义。它有时被称为 URL 编码。编码由英文字母替换组成：“%”后跟替换字符的 ASCII 的十六进制表示。

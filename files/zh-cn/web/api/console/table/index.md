@@ -1,6 +1,6 @@
 ---
 title: Console.table()
-slug: Web/API/Console/table
+slug: Web/API/console/table
 ---
 
 {{APIRef("Console API")}}

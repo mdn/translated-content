@@ -1,6 +1,6 @@
 ---
 title: 使用选择器定位 DOM 元素
-slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 ---
 
 Selectors API 提供了通过与一组选择器匹配来快速轻松地从 DOM 检索 [`Element`](/zh-CN/docs/DOM/element)节点的方法。这比以前的技术要快得多，其中有必要使用 JavaScript 代码中的循环来定位您需要查找的特定项目。

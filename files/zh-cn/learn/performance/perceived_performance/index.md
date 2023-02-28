@@ -1,6 +1,6 @@
 ---
 title: 感知性能
-slug: Learn/Performance/perceived_performance
+slug: Learn/Performance/Perceived_performance
 original_slug: learn/Performance/感知性能
 ---
 

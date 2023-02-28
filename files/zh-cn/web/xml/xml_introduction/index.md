@@ -1,6 +1,6 @@
 ---
 title: XML_介绍
-slug: Web/XML/XML_Introduction
+slug: Web/XML/XML_introduction
 ---
 
 Summary: This article introduces the 'eXtensible Markup Language' (XML) and tells of it's uses.XML (Extensible Markup Language) 是一种类似于 {{Glossary("HTML")}} 的标记语言，但是 XML 没有使用预定义的标记。因此，您可以根据自己的设计需求定义专属于您的标记。这是一种十分有用的可存储、可搜索和可共享的格式存储数据的方法。最重要的是，因为 XML 的基本格式是标准化的，所以如果您跨系统或平台共享或传输 XML，无论是在本地还是在互联网上，接收方仍然可以根据标准化的 XML 语法解析数据。

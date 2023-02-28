@@ -1,6 +1,6 @@
 ---
 title: <input>：输入（表单输入）元素
-slug: Web/HTML/Element/Input
+slug: Web/HTML/Element/input
 ---
 
 {{HTMLSidebar}}
