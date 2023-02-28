@@ -1,7 +1,7 @@
 ---
 title: x-ms-加速装置键
-slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
-original_slug: Web/HTML/Global_attributes/x-ms-加速装置键
+slug: orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
+original_slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}

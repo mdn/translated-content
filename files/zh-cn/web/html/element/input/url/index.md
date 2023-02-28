@@ -1,6 +1,6 @@
 ---
 title: <input type="url">
-slug: Web/HTML/Element/Input/url
+slug: Web/HTML/Element/input/url
 ---
 
 {{HTMLSidebar}}

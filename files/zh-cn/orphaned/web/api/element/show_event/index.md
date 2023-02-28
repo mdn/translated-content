@@ -1,6 +1,7 @@
 ---
 title: show
-slug: Web/API/Element/show_event
+slug: orphaned/Web/API/Element/show_event
+original_slug: Web/API/Element/show_event
 ---
 
 当一个具有 contextmenu 属性的元素的 contextmenu 事件触发或冒泡到该元素时，show 事件会被触发。

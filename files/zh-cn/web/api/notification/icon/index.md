@@ -1,6 +1,6 @@
 ---
 title: Notification.icon
-slug: Web/API/notification/icon
+slug: Web/API/Notification/icon
 ---
 
 {{APIRef("Web Notifications")}}

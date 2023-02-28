@@ -1,6 +1,6 @@
 ---
 title: <input type="week">
-slug: Web/HTML/Element/Input/week
+slug: Web/HTML/Element/input/week
 ---
 
 {{HTMLSidebar("Input_types")}}

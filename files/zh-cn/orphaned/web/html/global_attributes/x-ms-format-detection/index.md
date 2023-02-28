@@ -1,7 +1,7 @@
 ---
 title: x-ms-格式 - 检测
-slug: Web/HTML/Global_attributes/x-ms-format-detection
-original_slug: Web/HTML/Global_attributes/x-ms-格式 - 检测
+slug: orphaned/Web/HTML/Global_attributes/x-ms-format-detection
+original_slug: Web/HTML/Global_attributes/x-ms-format-detection
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}

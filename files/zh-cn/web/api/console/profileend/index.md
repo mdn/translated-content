@@ -1,6 +1,6 @@
 ---
 title: Console.profileEnd()
-slug: Web/API/Console/profileEnd
+slug: Web/API/console/profileEnd
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
