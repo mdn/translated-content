@@ -1,6 +1,6 @@
 ---
 title: Console.log()
-slug: Web/API/Console/log
+slug: Web/API/console/log
 ---
 
 {{APIRef("Console API")}}Muestra un mensaje en la consola web (o del intérprete JavaScript).
