@@ -34,9 +34,9 @@ function openDB() {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.indexedDB")}}
+{{Compat}}
 
 ## Ver también
 
@@ -46,4 +46,4 @@ function openDB() {
 - Estableciendo un rango de claves: {{domxref("IDBKeyRange")}}
 - Recuperación y edición de tus datos: {{domxref("IDBObjectStore")}}
 - Utilización de cursores: {{domxref("IDBCursor")}}
-- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([ver ejemplo _live_](http://mdn.github.io/to-do-notifications/).)
+- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo _live_](https://mdn.github.io/dom-examples/to-do-notifications/).)

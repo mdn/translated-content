@@ -100,6 +100,6 @@ a:focus {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.outline")}}
+{{Compat}}

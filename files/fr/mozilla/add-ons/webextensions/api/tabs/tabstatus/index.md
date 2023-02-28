@@ -22,9 +22,9 @@ Indique si l'onglet a terminé le chargement.
 
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont : `"loading"` et `"complete"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.TabStatus")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

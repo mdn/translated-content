@@ -25,9 +25,9 @@ console.log(syntheticEvent.deltaY);
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.WheelEvent.deltaY")}}
+{{Compat}}
 
 ## Ver más
 

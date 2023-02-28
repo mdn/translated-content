@@ -1,6 +1,8 @@
 ---
 title: WebSocket.bufferedAmount
 slug: Web/API/WebSocket/bufferedAmount
+l10n:
+  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -9,7 +11,7 @@ slug: Web/API/WebSocket/bufferedAmount
 
 ## 値
 
-`unsigned long` の値です。
+`unsigned long` です。
 
 ## 仕様書
 

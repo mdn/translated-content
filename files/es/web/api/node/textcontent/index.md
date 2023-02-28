@@ -58,10 +58,10 @@ document.getElementById("divA").textContent = "Esto es un nuevo texto";
 //   <div id="divA">Esto es un nuevo texto</div>
 ```
 
-## Compatibilidad con navegadores
-
-{{Compat("api.Node.textContent")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

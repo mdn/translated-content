@@ -13,9 +13,9 @@ _No change._
 
 ### CSS
 
-- 实现了 @counter-style 规则 ({{bug(966166)}})。
-- **-moz-ethiopic-numeric** 去除前缀 ({{bug(985825)}})。
-- 支持了**disclosure-open/disclosure-closed** 计数器样式 ({{bug(982355)}})。
+- 实现了 @counter-style 规则（[Firefox bug 966166](https://bugzil.la/966166)）。
+- **-moz-ethiopic-numeric** 去除前缀（[Firefox bug 985825](https://bugzil.la/985825)）。
+- 支持了**disclosure-open/disclosure-closed** 计数器样式（[Firefox bug 982355](https://bugzil.la/982355)）。
 
 ### HTML
 
@@ -23,7 +23,7 @@ _No change._
 
 ### JavaScript
 
-- 移除了非标准的 {{jsxref("Number.toInteger()")}} 方法 ({{bug(1022396)}}).
+- 移除了非标准的 {{jsxref("Number.toInteger()")}} 方法（[Firefox bug 1022396](https://bugzil.la/1022396)）。
 
 ### Interfaces/APIs/DOM
 

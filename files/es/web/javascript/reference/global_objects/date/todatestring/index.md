@@ -41,9 +41,9 @@ console.log(d.toDateString()); // logs Wed Jun 28 1993
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toDateString")}}
+{{Compat}}
 
 ## Vea también
 

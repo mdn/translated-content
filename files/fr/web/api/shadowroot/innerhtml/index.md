@@ -41,4 +41,4 @@ Cette propriété ne fait pas encore partie d'une spécification. Voir [cette _i
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ShadowRoot.innerHTML")}}
+{{Compat}}

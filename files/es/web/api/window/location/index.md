@@ -187,9 +187,9 @@ var showBookmark = (function () {
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.location")}}
+{{Compat}}
 
 ## Ver también
 

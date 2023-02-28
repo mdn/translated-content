@@ -49,9 +49,9 @@ L'API omnibox fournit à l'extension un moyen de personnaliser les suggestions a
 - {{WebExtAPIRef("omnibox.onInputCancelled")}}
   - : Lancé lorsque l'utilisateur supprime la liste déroulante de la barre d'adresse, après avoir défini la barre d'adresse et tapé le mot clé omnibox de votre extension.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

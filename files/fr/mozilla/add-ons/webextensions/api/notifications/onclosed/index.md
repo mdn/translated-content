@@ -48,9 +48,9 @@ Les événements ont trois fonctions :
     - `byUser`
       - : `boolean`. `true` si la notification a été fermée par l'utilisateur, ou `false`si elle a été fermée par le système. Cet argument n'est pas supporté dans Firefox.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.onClosed")}}
+{{Compat}}
 
 ## Exemples
 

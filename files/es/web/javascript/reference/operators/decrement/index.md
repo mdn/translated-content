@@ -50,7 +50,7 @@ b = --a;
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.decrement")}}
+{{Compat}}
 
 ## Ver también
 

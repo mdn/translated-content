@@ -71,9 +71,9 @@ p:first-child {
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.widows")}}
+{{Compat}}
 
 ## Ver tambien
 

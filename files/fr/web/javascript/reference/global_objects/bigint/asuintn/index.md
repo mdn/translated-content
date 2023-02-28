@@ -51,13 +51,11 @@ BigInt.asUintN(64, max + 1n);
 
 ## Spécifications
 
-| Spécification                                                                         | État                    |
-| ------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour BigInt](https://tc39.github.io/proposal-bigint/#sec-bigint.asuintn) | Proposition de niveau 3 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt.asUintN")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -306,4 +306,4 @@ Color contrast ratio is determined by comparing the luminosity of the button tex
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.button")}}
+{{Compat}}

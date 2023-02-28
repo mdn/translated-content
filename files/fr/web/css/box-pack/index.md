@@ -136,7 +136,7 @@ Cette propriété n'est pas standard mais une propriété semblable est apparue 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-pack")}}
+{{Compat}}
 
 ## Voir aussi
 

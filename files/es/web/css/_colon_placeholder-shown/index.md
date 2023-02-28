@@ -73,7 +73,7 @@ input:placeholder-shown {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.placeholder-shown")}}
+{{Compat}}
 
 ## Ver también
 

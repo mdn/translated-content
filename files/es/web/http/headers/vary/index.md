@@ -39,13 +39,11 @@ Vary: User-Agent
 
 ## Especificaciones
 
-| Specification                                | Title                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Vary")}}
+{{Compat}}
 
 ## Notas de Compatibilidad
 

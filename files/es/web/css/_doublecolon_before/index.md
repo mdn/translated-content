@@ -186,9 +186,9 @@ li[aria-current='step']::after {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.before")}}
+{{Compat}}
 
 ## Véase también
 

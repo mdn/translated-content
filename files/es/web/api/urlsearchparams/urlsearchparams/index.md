@@ -49,6 +49,6 @@ var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
 
 {{Specifications}}
 
-## Compatibilidad de browsers
+## Compatibilidad con navegadores
 
-{{Compat("api.URLSearchParams.URLSearchParams")}}
+{{Compat}}

@@ -47,4 +47,4 @@ var firstTable = tables.item(1); // ou simplement tables[1] - renvoie le second 
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.item")}}
+{{Compat}}

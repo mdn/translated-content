@@ -178,9 +178,9 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## See also
 

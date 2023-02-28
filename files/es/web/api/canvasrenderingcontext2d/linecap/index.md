@@ -96,13 +96,9 @@ for (let i = 0; i < lineCap.length; i++) {
 
 {{Specifications}}
 
-## Compatibilidad de navegador.
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.lineCap")}}
-
-### WebKit/Blink-specific notes
-
-- En WebKit- y navegadores basados en Blink, el método no estandard y obsoleto `ctx.setLineCap()` es implementado ademas de esta propiedad.
+{{Compat}}
 
 ## Ver también
 

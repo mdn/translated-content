@@ -904,11 +904,11 @@ Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
 
 ## Especificaciones
 
-{{Specifications("api.XMLHttpRequest")}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## Véase también
 

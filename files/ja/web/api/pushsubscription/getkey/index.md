@@ -10,7 +10,7 @@ slug: Web/API/PushSubscription/getKey
 ## 構文
 
 ```js-nolint
-​var key = subscription.getKey(method);
+var key = subscription.getKey(method);
 ```
 
 ### 引数

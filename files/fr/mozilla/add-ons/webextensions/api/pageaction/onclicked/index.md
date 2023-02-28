@@ -48,9 +48,9 @@ Les événements ont trois fonctions :
     - `tab`
       - : Un objet {{WebExtAPIRef('tabs.Tab')}} représentant l'onglet dont l'action de la page a été cliquée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.onClicked")}}
+{{Compat}}
 
 ## Exemples
 

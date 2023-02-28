@@ -9,4 +9,3 @@ original_slug: Глоссарий/ICANN
 ## Смотрите также:
 
 - [Official website](https://www.icann.org/)
-- {{interwiki("wikipedia", "ICANN", "ICANN")}} на Википедии

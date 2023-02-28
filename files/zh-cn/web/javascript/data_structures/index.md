@@ -212,7 +212,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 通常，可以通过直接在对象上设置属性或使用 `data-*` 属性，将绑定数据到 DOM 节点。然而缺陷是在任何的脚本内，数据都运行在同样的上下文中。`Map` 和 `WeakMap` 能够方便地将数据*私密*地绑定到一个对象。
 
-`WeakMap` 和 `WeakSet` 仅允许对象键，即使这些键留在集合中，页允许这些键被垃圾回收。它们专门用于[内存使用优化](/zh-CN/docs/Web/JavaScript/Memory_Management#data_structures_aiding_memory_management)。
+`WeakMap` 和 `WeakSet` 仅允许对象键，即使这些键留在集合中，也允许这些键被垃圾回收。它们专门用于[内存使用优化](/zh-CN/docs/Web/JavaScript/Memory_Management#data_structures_aiding_memory_management)。
 
 ### 结构化数据：JSON
 

@@ -244,6 +244,6 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.link.rel")}}
+{{Compat}}

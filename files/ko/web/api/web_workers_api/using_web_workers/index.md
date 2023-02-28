@@ -792,7 +792,7 @@ The main thing you _can't_ do in a Worker is directly affect the parent page. Th
 
 > **참고:** For a complete list of functions available to workers, see [Functions and interfaces available to workers](/ko/docs/Web/Reference/Functions_and_classes_available_to_workers).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

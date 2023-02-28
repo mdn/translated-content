@@ -22,9 +22,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la page d'options a été créée avec succés, ou rejetée avec un message d'erreur si l'opération a échoué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.openOptionsPage")}}
+{{Compat}}
 
 ## Exemples
 

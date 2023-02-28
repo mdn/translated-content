@@ -86,7 +86,7 @@ _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用
 
 [Note on position and dimension error correction](#Note_on_position_and_dimension_error_correction)
 
-{{bug(176320)}}
+[Firefox bug 176320](https://bugzil.la/176320)
 
 [Note on precedence](#Note_on_precedence)
 

@@ -97,7 +97,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
     |     | purple (púrpura) = "#800080" |     | teal (verde esmeralda) = "#008080" |
     |     | fuchsia (fucsia) = "#FF00FF" |     | aqua (verde agua) = "#00FFFF"      |
 
-    > **Nota:** **Nota de uso:** No usar este atributo, dado que ha sido declarado obsoleto. El elemento {{HTMLElement("table")}} debe ser estilizado utilizando [CSS](/es/docs/CSS). A fin de dar un efecto similar al atributo bgcolor, la propiedad [CSS](/es/docs/CSS) {{cssxref("background-color")}} debe ser usada.
+    > **Nota:** No usar este atributo, dado que ha sido declarado obsoleto. El elemento {{HTMLElement("table")}} debe ser estilizado utilizando [CSS](/es/docs/CSS). A fin de dar un efecto similar al atributo bgcolor, la propiedad [CSS](/es/docs/CSS) {{cssxref("background-color")}} debe ser usada.
 
 <!---->
 
@@ -105,7 +105,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
   - : Este atributo entero define el tamaño del cuadro alrededor de la tabla . Si estuviese puesta en 0, implicaría que dicho atributo sería nulo.
 
-    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). A fin de dar un efecto similar al atributo, las propiedades CSS nativas {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} y {{cssxref("border-style")}} deben ser usadas.
+    > **Nota:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). A fin de dar un efecto similar al atributo, las propiedades CSS nativas {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} y {{cssxref("border-style")}} deben ser usadas.
 
 <!---->
 
@@ -113,7 +113,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
   - : Este atributo define el espacio entre el contenido de una celda y su borde (mostrado o no), si fuese la longitud de un pixel, dicho espacio será aplicado en los 4 costados, caso que fuese un porcentaje, el contenido será centrado y todo el espacio vertical representará a este porcentaje. Lo mismo será válido para todo el espacio horizontal
 
-    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Para dar un efecto similar al atributo border, use la propiedad CSS {{cssxref("border-collapse")}} con el valor collapse en el mismo elemento {{HTMLElement("table")}}, y la propiedad {{cssxref("padding")}} en el elemento {{HTMLElement("td")}}.
+    > **Nota:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Para dar un efecto similar al atributo border, use la propiedad CSS {{cssxref("border-collapse")}} con el valor collapse en el mismo elemento {{HTMLElement("table")}}, y la propiedad {{cssxref("padding")}} en el elemento {{HTMLElement("td")}}.
 
 <!---->
 
@@ -121,7 +121,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
   - : Este atributo define el espacio entre el contenido de una celda y su borde (mostrado o no), si fuese la longitud de un pixel, dicho espacio será aplicado en los 4 costados, caso que fuese un porcentaje, el contenido será centrado y todo el espacio vertical representará a este porcentaje. Lo mismo será válido para todo el espacio horizontal.
 
-    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Para dar un efecto similar al atributo border, use la propiedad {{cssxref("border-collapse")}} con el valor collapse en el mismo elemento {{HTMLElement("table")}}, y la propiedad {{cssxref("margin")}} en el elemento {{HTMLElement("td")}}.
+    > **Nota:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Para dar un efecto similar al atributo border, use la propiedad {{cssxref("border-collapse")}} con el valor collapse en el mismo elemento {{HTMLElement("table")}}, y la propiedad {{cssxref("margin")}} en el elemento {{HTMLElement("td")}}.
 
 <!---->
 
@@ -136,7 +136,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
     |     | border |     | box    |
     |     | void   |     |        |
 
-    > **Nota:** **Nota de uso:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Para dar un efecto similar al atributo frame use las propiedades CSS {{cssxref("border-style")}} y {{cssxref("border-width")}}.
+    > **Nota:** No usar este atributo en CSS dado que es obsoleto: el elemento {{HTMLElement("table")}} debe ser estilizado usando [CSS](/es/docs/CSS). Para dar un efecto similar al atributo frame use las propiedades CSS {{cssxref("border-style")}} y {{cssxref("border-width")}}.
 
 <!---->
 
@@ -161,7 +161,7 @@ Al igual que otros elementos HTML, este elemento también soporta [atributos glo
 
   - : Este atributo define un texto alternativo para describir una tabla en un usuario incapaz de mostrarlo, corrientemente contiene una descripcion de él que posibilita a discapacitaos visulaes (como invidentes navegando en pantallas braile) a obtener la información que necesitan.Si la información añadida en este atributo puede ser útil a otras personas, considere el utilizar el elemento {{HTMLElement("caption")}} en vez de este. instead. El atributo de resumen no es obligatorio usuarlo, pudiendo ser omitido si un elemento {{HTMLElement("caption")}} realiza similar labor.
 
-    > **Nota:** **Nota de uso:** No use este atributo, dado que ha sido declarado obsoleto. En su lugar, use alguna de estas formas de describir una tabla:
+    > **Nota:** No use este atributo, dado que ha sido declarado obsoleto. En su lugar, use alguna de estas formas de describir una tabla:
     >
     > - En prosa, rodeando la tabla (esta es la forma menos semántica de lograrlo).
     > - En el elemento {{HTMLElement("caption")}} de la tabla.
@@ -300,6 +300,10 @@ td, th {
 
 {{EmbedLiveSample("",500,500)}}
 
-### Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("html.elements.table")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

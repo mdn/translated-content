@@ -42,9 +42,9 @@ var creating = browser.devtools.panels.create(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet [`ExtensionPanel`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel) représentant le nouveau panneau.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.create")}}
+{{Compat}}
 
 ## Exemples
 

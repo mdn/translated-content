@@ -15,10 +15,6 @@ DOM не был определён изначально — он пришёл к
 
 ## Узнать больше
 
-### Общие знания
-
-- {{interwiki("wikipedia", "Document_Object_Model", "Document Object Model")}} на Википедии.
-
 ### Техническая информация
 
 - [Документация DOM на MDN](/ru/docs/DOM)

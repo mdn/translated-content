@@ -46,9 +46,9 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.label")}}
+{{Compat}}
 
 ## See also
 

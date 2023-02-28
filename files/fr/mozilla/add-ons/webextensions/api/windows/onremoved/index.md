@@ -46,9 +46,9 @@ Les événements ont trois fonctions :
     - `windowId`
       - : `integer`. ID de la fenêtre fermée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.onRemoved")}}
+{{Compat}}
 
 ## Exemples
 

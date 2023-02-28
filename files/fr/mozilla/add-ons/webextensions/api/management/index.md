@@ -62,9 +62,9 @@ La plupart de ces opérations requièrent les [permissions d'APIs](/fr/Add-ons/W
 - {{WebExtAPIRef("management.onDisabled")}}
   - : Action quand un module complémenaire est désactivé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

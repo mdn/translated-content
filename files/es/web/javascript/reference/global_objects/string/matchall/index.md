@@ -108,9 +108,9 @@ array[1];
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.matchAll")}}
+{{Compat}}
 
 ## Ver también
 

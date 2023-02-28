@@ -19,7 +19,7 @@ Asociado con el color en el espacio sRGB, un valor `<color>` también consiste e
 
 Aunque los valores de colores en CSS son definidos de manera precisa existe la posibilidad de que parezcan distintos en dispositivos diferentes. La mayoría de ellos no están calibrados y algunos navegadores no soportan los [color profile](http://en.wikipedia.org/wiki/ICC_profile) de algunos dispositivos de salidas. En esta situación el color puede variar bastante.
 
-> **Nota:** **Notas:** La recomendación [WCAG 2.0](http://www.w3.org/TR/WCAG/#visual-audio-contrast) de la W3C aconseja a los autores web de manera clara que no usen _color_ como el único medido para especificar una información, acción o resultado concreto. Algunos usuarios tienen problemas para diferenciar colores y existe la posibilidad de que la información transmitida no sea captada. Por supuesto esto no impide que se use el color, sólo su uso como único medio para describir alguna información.
+> **Nota:** La recomendación [WCAG 2.0](http://www.w3.org/TR/WCAG/#visual-audio-contrast) de la W3C aconseja a los autores web de manera clara que no usen _color_ como el único medido para especificar una información, acción o resultado concreto. Algunos usuarios tienen problemas para diferenciar colores y existe la posibilidad de que la información transmitida no sea captada. Por supuesto esto no impide que se use el color, sólo su uso como único medio para describir alguna información.
 
 ## Interpolación
 
@@ -954,7 +954,7 @@ El color `rebeccapurple` es equivalente al color `#639`, y se puede encontrar in
 
 La palaba `transparent` representa un color totalmente transparente, es decir, el color que veremos será el colore de fondo. Técnicamente es un color negro con un valor mínimo en el canal alfa y la manera de representarlo es `rgba(0,0,0,0)`.
 
-> **Nota:** **Nota histórica**
+> **Nota:**
 > La palabra clave `transparent` no fue un color en CSS hasta CSS Nivel 2 (Revisión 1). Podía ser usada en lugar de un valor \<color> regular en dos propiedades CSS: {{Cssxref("background")}} y {{Cssxref("border")}}. En esencia fue añadida para permitir sobreescribir valores sólidos heredados.
 >
 > Con el soporte de la opacidad que nos proporcionan los [alpha channels](http://en.wikipedia.org/wiki/Alpha_compositing), `transparent` fue redefinido como un color verdadero más en CSS Nivel 3 permitiendo su use en cualquier sitio donde de requiera un valor `<color>` , como la propiedad {{Cssxref("color")}}.
@@ -1245,9 +1245,9 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.color")}}
+{{Compat}}
 
 ## Ver además
 

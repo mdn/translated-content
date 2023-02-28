@@ -224,7 +224,7 @@ Translada un elemento a lo largo del eje Y.
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.transform")}}
+{{Compat}}
 
 ## Véase También
 

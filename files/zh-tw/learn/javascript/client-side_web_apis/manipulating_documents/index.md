@@ -314,13 +314,3 @@ There are lots more features you can use to manipulate your documents. Check out
 (See our [Web API index](/zh-TW/docs/Web/API) for the full list of Web APIs documented on MDN!)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 本系列課程
-
-- [Web API 簡介](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [文件操作](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [從伺服器獲取資料](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [第三方 API](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [繪製圖形](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [視訊及音訊 API](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [用戶端儲存](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

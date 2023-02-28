@@ -71,7 +71,7 @@ if (!Math.sign) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.sign")}}
+{{Compat}}
 
 ## Ver También
 

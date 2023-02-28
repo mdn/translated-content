@@ -58,7 +58,7 @@ Os principais usos para o objeto `Number` são:
   - : Determina se o tipo do valor passado é inteiro.
 - {{jsxref("Number.isSafeInteger()")}} {{experimental_inline}}
   - : Determina se o tipo do valor passado é um inteiro seguro (número entre -(253 -1) e 253 -1).
-- ~~{{jsxref("Number.toInteger()")}} {{obsolete_inline}}~~
+- ~~{{jsxref("Number.toInteger()")}}~~
   - : ~~Usado para avaliar o valor passado e convertê-lo a um inteiro (ou infinito), mas foi removido.~~
 - {{jsxref("Number.parseFloat()")}} {{experimental_inline}}
   - : O valor é o mesmo que {{jsxref("Global_Objects/parseFloat", "parseFloat")}} do objeto global.

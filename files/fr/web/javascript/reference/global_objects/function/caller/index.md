@@ -79,7 +79,7 @@ Ne fait partie d'aucune spécification. Implémentée avec JavaScript 1.5.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.caller")}}
+{{Compat}}
 
 ## Voir aussi
 

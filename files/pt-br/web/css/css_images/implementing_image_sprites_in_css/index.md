@@ -8,7 +8,7 @@ original_slug: Web/CSS/CSS_Images/Implementando_sprites_de_imagens_em_CSS
 
 **Sprites de imagens** são utilizados em diversas aplicações web onde várias imagens são usadas. Ao invés de incluir cada arquivo de imagem separadamente, é mais amigável com a memória e largura de banda enviar tudo como uma única imagem, diminuindo o número de pedidos em HTTP.
 
-> **Note:** **Nota:** Quando usando HTTP/2, é mais amigável com a largura de banda usar vários pequenos pedidos.
+> **Nota:** Quando usando HTTP/2, é mais amigável com a largura de banda usar vários pequenos pedidos.
 
 ## Implementação
 

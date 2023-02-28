@@ -41,7 +41,7 @@ slug: Learn/JavaScript
 
 [解决常见的 JavaScript 问题](/zh-CN/docs/Learn/JavaScript/Howto) 提供一些链接，解释如何使用 JavaScript 来解决创建网页时非常常见的问题。
 
-## 另见
+## 参见
 
 - [Coding math](https://www.youtube.com/user/codingmath)
   - : 由 [Keith Peters](https://twitter.com/bit101) 制作的一个优秀的视频教程系列，向你传授高效编程所需的必备技能。

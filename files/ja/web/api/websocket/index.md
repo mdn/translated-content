@@ -1,6 +1,8 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
+l10n:
+  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -18,22 +20,22 @@ slug: Web/API/WebSocket
 - {{domxref("WebSocket.WebSocket", "WebSocket()")}}
   - : 新しく作成された `WebSocket` オブジェクトを返します。
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("WebSocket.binaryType")}}
   - : 接続で使用されるバイナリデータ型。
-- {{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}
+- {{domxref("WebSocket.bufferedAmount")}} {{ReadOnlyInline}}
   - : キューに入れられたデータのバイト数。
-- {{domxref("WebSocket.extensions")}} {{readonlyinline}}
+- {{domxref("WebSocket.extensions")}} {{ReadOnlyInline}}
   - : サーバーによって選択された拡張機能。
-- {{domxref("WebSocket.protocol")}} {{readonlyinline}}
+- {{domxref("WebSocket.protocol")}} {{ReadOnlyInline}}
   - : サーバーによって選択されたサブプロトコル。
-- {{domxref("WebSocket.readyState")}} {{readonlyinline}}
+- {{domxref("WebSocket.readyState")}} {{ReadOnlyInline}}
   - : 接続の現在の状態。
-- {{domxref("WebSocket.url")}} {{readonlyinline}}
+- {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
   - : WebSocket の絶対 URL。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("WebSocket.close()")}}
   - : 接続を閉じます。
@@ -64,12 +66,12 @@ slug: Web/API/WebSocket
 const socket = new WebSocket('ws://localhost:8080');
 
 // 接続が開いたときのイベント
-socket.addEventListener('open', function (event) {
+socket.addEventListener('open', (event) => {
     socket.send('Hello Server!');
 });
 
 // メッセージの待ち受け
-socket.addEventListener('message', function (event) {
+socket.addEventListener('message', (event) => {
     console.log('Message from server ', event.data);
 });
 ```

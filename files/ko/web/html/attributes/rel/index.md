@@ -561,4 +561,4 @@ original_slug: Web/HTML/Link_types
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.link.rel")}}
+{{Compat}}

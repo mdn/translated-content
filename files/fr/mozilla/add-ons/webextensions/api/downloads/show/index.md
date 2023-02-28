@@ -37,9 +37,9 @@ var showing = browser.downloads.show(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la demande est acceptée, la promise sera remplie avec un booléen indiquant si la demande a été acceptée. Si la demande échoue, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.show")}}
+{{Compat}}
 
 ## Exemples
 

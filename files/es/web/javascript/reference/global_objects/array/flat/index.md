@@ -136,13 +136,11 @@ if (!Array.prototype.flat) {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado         | Comentario |
-| ---------------------------------------------------------------------------------------------------- | -------------- | ---------- |
-| [`Array.prototype.flat` proposal](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flat) | Finalizado (4) |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.flat")}}
+{{Compat}}
 
 ## Ver también
 

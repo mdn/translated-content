@@ -82,7 +82,7 @@ svgns|a:hover, svgns|a:active {
 - {{htmlattrxref("type", "a")}}
   - : Este atributo especifica el tipo de medio en forma de un {{Glossary ( "tipo MIME ")}} para la dirección URL vinculada.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : Este atributo contiene la dirección URL o el fragmento de URL al que apunta el hipervínculo.
     _Value type_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Default value_: _none_; _Animatable_: **yes**
 
@@ -111,6 +111,6 @@ svgns|a:hover, svgns|a:active {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("svg.elements.a")}}
+{{Compat}}

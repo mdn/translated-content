@@ -11,10 +11,6 @@ El pseudo-elemento CSS `::-webkit-meter-optimum-value` da estilo al elemento met
 
 El color por defecto es verde.
 
-## Especificaciones
-
-No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
-
 ## Ejemplos
 
 ```html
@@ -38,9 +34,13 @@ meter::-webkit-meter-optimum-value {
 
 > **Nota:** Sólo funciona en navegadores basado en Webkit/Blink.
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.selectors.-webkit-meter-optimum-value")}}
+No es parte de ninguna especificación. Es un pseudo-elemento propietario y específico de WebKit/Blink.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

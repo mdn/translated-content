@@ -226,6 +226,6 @@ Définissez deux raccourcis clavier, l'un avec une combinaison de touches spéci
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.commands")}}
+{{Compat}}

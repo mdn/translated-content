@@ -92,6 +92,6 @@ browser.runtime.onStartup.addListener(handleStartup);
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onStartup")}}
+{{Compat}}

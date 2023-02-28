@@ -1,6 +1,8 @@
 ---
-title: '<img>: 画像埋め込み要素'
+title: "<img>: 画像埋め込み要素"
 slug: Web/HTML/Element/img
+l10n:
+  sourceCommit: bf3f49611b919685543130b2594668e828855e73
 ---
 
 {{HTMLSidebar}}
@@ -33,7 +35,7 @@ HTML 標準では、対応する画像形式を指定していないので、{{G
 - [AVIF (AV1 Image File Format)](/ja/docs/Web/Media/Formats/Image_types#avif_image) — 高い性能により、画像とアニメーションの両方に適しています。
 - [GIF (Graphics Interchange Format)](/ja/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format) — シンプルな画像やアニメーションに適しています。
 - [JPEG (Joint Photographic Expert Group image)](/ja/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — 静止画の非可逆圧縮に適しています（現在最も普及しています）。
-- [PNG (Portable Network Graphics)](/ja/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) — 静止画の非可逆圧縮に適しています（JPEG より若干画質が良い）。
+- [PNG (Portable Network Graphics)](/ja/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) — 静止画の可逆圧縮に適しています（JPEG より若干画質が良い）。
 - [SVG (Scalable Vector Graphics)](/ja/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — ベクター画像形式。異なるサイズでも正確に描画する必要がある画像に使用します。
 - [WebP (Web Picture format)](/ja/docs/Web/Media/Formats/Image_types#webp_image) — 画像とアニメーションの両方に優れた選択です。
 
@@ -55,7 +57,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("alt")}}
+- `alt`
 
   - : この属性は、画像を説明する代替文字列を定義します。
 
@@ -67,11 +69,11 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
     >
     > このような場合、ブラウザーは、画像をこの要素の `alt` 属性で定義された文字列に置き換えます。このような理由から、 `alt` には可能な限り役に立つ値を指定するべきです。
 
-    `alt` 属性を省略すると、画像がコンテンツの鍵となる部分であり、同等のテキスト表現を行うことができないことを表します。この属性に空文字列を設定すると (`alt=""`)、この画像がコンテンツにおいて重要な箇所*ではない*ことを示し、視覚ブラウザーではない場合は{{Glossary("Rendering engine", "レンダリング")}}を省略することがあります。視覚ブラウザーでは、 `alt` が空欄で画像の表示に失敗した場合は、壊れた画像のアイコンの表示が省略される場合もあります。
+    この属性に空文字列を設定すると (`alt=""`)、この画像がコンテンツにおいて重要な箇所*ではない*ことを示し、視覚ブラウザーではない場合は{{Glossary("Rendering engine", "レンダリング")}}を省略することがあります。視覚ブラウザーでは、 `alt` が空欄で画像の表示に失敗した場合は、壊れた画像のアイコンの表示が省略される場合もあります。
 
     この属性は画像をテキストにコピー＆ペーストした場合や、リンクされた画像をブックマークに保存したときにも使用されます。
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : 関連する画像の取得の際に {{Glossary("CORS")}} を使用しなければならないかどうかを示します。 CORS リクエストから返された[CORS が有効な画像](/ja/docs/Web/HTML/CORS_enabled_image)は、 {{HTMLElement("canvas")}} 要素で「[汚染](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas)」されることなく再利用することができます。
 
@@ -88,7 +90,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
   この属性の値が無効である場合は、列挙型のキーワードに `anonymous` が指定されたものとして扱われます。詳しくは[CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
 
-- {{htmlattrdef("decoding")}}
+- `decoding`
 
   - : ブラウザーに画像のデコードのヒントを提供します。次のような値が使用できます。
 
@@ -99,7 +101,11 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
     - `auto`
       - : 既定のモードで、デコード方式を指定しません。ブラウザーはユーザーのために最良の方法を選択します。
 
-- {{htmlattrdef("fetchpriority")}} {{experimental_inline}}
+- `elementtiming`
+
+  - : {{domxref("PerformanceElementTiming")}} API による監視のために画像をマークします。指定された値は、監視される画像要素の識別子になります。[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性のページも参照してください。
+
+- `fetchpriority` {{experimental_inline}}
 
   - : 画像を取得する際に使用する相対的な優先順位のヒントを提供します。許可されている値は次の通りです。
 
@@ -110,37 +116,43 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
     - `auto`
       - : 既定値。他の画像との相対的な読み込みの優先順位を自動的に決定することを指示します。
 
-- {{htmlattrdef("height")}}
+- `height`
+
   - : 画像固有の高さをピクセル値で指定します。単位のない整数でなければなりません。
-- {{htmlattrdef("ismap")}}
+
+    > **メモ:** `height` と [`width`](#attr-width) を記載することで、画像を読み込む前にブラウザーが画像の縦横比を計算することができるようになります。このアスペクト比は、画像を表示するために必要な空間を確保するために使用され、画像をダウンロードして画面に表示したときのレイアウトのずれを縮小したり、防止したりすることができます。レイアウトのずれを縮小することは、良い使い勝手とウェブパフォーマンスの主要な構成要素です。
+
+- `ismap`
 
   - : 論理属性で、この画像が[サーバーサイドマップ](https://en.wikipedia.org/wiki/Image_map#Server-side)の一部であるかを示します。そうである場合は、クリック位置の正確な座標をサーバーに送信します。
 
     > **メモ:** この属性は `<img>` 要素が、有効な {{htmlattrxref("href","a")}} 属性を持つ {{htmlelement("a")}} 要素の子孫である場合に限り許可されます。これにより、ポインティングデバイスを持たないユーザーのフォールバック先を提供します。
 
-- {{htmlattrdef("loading")}}
+- `loading`
 
   - : ブラウザーがどのように画像を読み込むかを示します。
 
-    - `eager`: 画像が現在可視ビューポートに入っているかどうかにかかわらず、直ちに画像を読み込みます (これが既定値です)。
-    - `lazy`: 画像がブラウザーで定義されたビューポートからの距離に達するまで、画像の読み込みを遅延させます。これは、画像が必要とされるのが合理的に確実になるまで、処理に必要なネットワークやストレージの帯域幅を使用しないようにするためです。これは一般的に、ほとんどの典型的な使用法において、コンテンツの性能を向上させることができます。
+    - `eager`
+      - : 画像が現在可視ビューポートに入っているかどうかにかかわらず、直ちに画像を読み込みます (これが既定値です)。
+    - `lazy`
+      - : 画像がブラウザーで定義されたビューポートからの距離に達するまで、画像の読み込みを遅延させます。これは、画像が必要とされるのが合理的に確実になるまで、処理に必要なネットワークやストレージの帯域幅を使用しないようにするためです。これは一般的に、ほとんどの典型的な使用法において、コンテンツの性能を向上させることができます。
 
       > **メモ:** 読み込みが延期されるのは JavaScript が有効になっているときだけです。これはトラッキング対策であり、スクリプトが無効になっているときにユーザーエージェントが遅延読み込みに対応している場合でも、サーバーがいつ何枚の画像が要求されたかを追跡できるようにページのマークアップに画像を戦略的に配置することで、サイトがセッション全体を通してユーザーのおおよそのスクロール位置を追跡することが可能になるからです。
 
-- {{htmlattrdef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : リソースを読み込む際に、どのリファラーを使用するかを示す文字列です。
 
     - `no-referrer`: {{httpheader("Referer")}} ヘッダーを送信しないことを表します。
     - `no-referrer-when-downgrade`: {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) を使用せずにある{{Glossary("origin", "オリジン")}}へ移動した場合に、 {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
-    - `origin`: 送られるリファラーは、参照しているページページのオリジン、すなわち[スキーム](/ja/docs/Learn/Common_questions/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}のみとなります。
+    - `origin`: 送られるリファラーは、参照しているページページのオリジン、すなわち[スキーム](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}のみとなります。
     - `origin-when-cross-origin`: 異なるオリジンへの移動では、リファラーをスキーム、ホスト、ポートのみに制限します。同一のオリジンへの移動では、リファラーのフルパスを含めます。
     - `same-origin`: リファラーは{{Glossary("Same-origin policy", "同じオリジン")}}に対しては送信されますが、オリジン間リクエストではリファラー情報が入りません。
     - `strict-origin`: プロトコルのセキュリティレベルが同等 (HTTPS→HTTPS) である場合は、リファラーとしてこの文書のオリジンが送信されますが、安全性の低い宛先 (HTTPS→HTTP) には送信されません。
     - `strict-origin-when-cross-origin`（既定値）: 同一オリジンリクエストを行う際には完全な URL を送信し、セキュリティレベルが同等 (HTTPS→HTTPS) の場合はオリジンのみを送信し、安全性の低い宛先 (HTTPS→HTTP) にはヘッダーを送信しません。
     - `unsafe-url`: リファラーにはオリジンとパスを含めることを表します（ただし、フラグメント、パスワード、ユーザー名は含めません）。**この値は安全ではありません**。オリジンやパスの情報が TLS で保護されたリソースから安全でないオリジンへ漏えいするからです。
 
-- {{htmlattrdef("sizes")}}
+- `sizes`
 
   - : ソースのサイズのセットを示す、カンマ区切りの文字列を1個以上並べたリストです。それぞれのソースサイズの構成は以下のとおりです。
 
@@ -151,27 +163,29 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
     ソースサイズ値は、画像の表示サイズを指定するものです。{{Glossary("User agent", "ユーザーエージェント")}}は `srcset` 属性で与えられたソースからひとつを選択するために、現在のソースサイズを使用します。そのとき、ソースは幅記述子 ('`w`') を使用して説明します。選択したソースサイズは画像の{{Glossary("intrinsic size", "固有の寸法")}} ({{Glossary("CSS")}} スタイルが適用されていない場合の、画像の表示サイズ) に影響します。`srcset` 属性がない場合、あるいは幅記述子 (`w`) を持つ値がない場合は、`sizes` 属性の効果はありません。
 
-- {{htmlattrdef("src")}}
+- `src`
   - : 画像の {{Glossary("URL")}} です。 `<img>` 要素に必須です。 `srcset` に対応する{{Glossary("Browser", "ブラウザー")}}では `src` を、画素密度記述子 `1x` の候補画像であるように扱います。ただし、この画素密度記述子が `srcset` で定義済みである、または `srcset` に '`w`' 記述子が含まれている場合を除きます。
-- {{htmlattrdef("srcset")}}
+- `srcset`
 
   - : {{Glossary("User agent", "ユーザーエージェント")}}が使用可能なソース画像のセットを示す、カンマ区切りで文字列を 1 個以上並べたリストです。各々の文字列の構成は以下のとおりです。
 
     1. 画像の {{Glossary("URL")}}
     2. 任意で、ホワイトスペースの後に以下のいずれかを記述します。
 
-        - 幅記述子（正の整数の直後に `w` を付加したもの）。幅記述子は実際の画素密度を計算するために、`sizes` 属性で与えられたソースサイズで割られます。
-        - 画素密度記述子（正の浮動小数点数の直後に `x` を付加したもの）。
+       - 幅記述子（正の整数の直後に `w` を付加したもの）。幅記述子は実際の画素密度を計算するために、`sizes` 属性で与えられたソースサイズで割られます。
+       - 画素密度記述子（正の浮動小数点数の直後に `x` を付加したもの）。
 
     記述子を指定しない場合は、ソースを既定の記述子 `1x` に割り当てます。
 
     幅記述子と画素密度記述子を同一の `srcset` 属性に混在させると無効になります。重複した記述子（例えばひとつの `srcset` に2つのソースがあり、どちらも '`2x`' とする）も無効になります。
 
+    `srcset` 属性が幅の記述子を使用した場合、 `sizes` 属性も指定しなければなりません。そうでなければ、 `srcset` 自体が無視されます。
+
     ユーザーエージェントには、利用可能なソースからひとつを選択する裁量があります。これは、ユーザー設定や{{Glossary("bandwidth", "帯域幅")}}の条件などに基づいて選択を適合させるような、かなりの裁量が与えられています。例としては[レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)のチュートリアルをご覧ください。
 
-- {{htmlattrdef("width")}}
+- `width`
   - : 画像固有の幅をピクセル値で指定します。単位のない整数でなければなりません。
-- {{htmlattrdef("usemap")}}
+- `usemap`
 
   - : 要素に関連づけられた[イメージマップ](/ja/docs/Web/HTML/Element/map)の部分的な {{Glossary("URL")}} ('`#`' で始まる) です。
 
@@ -179,7 +193,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
 ### 非推奨の属性
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : 周囲のコンテキストに対する画像の配置を指定します。代わりに {{Glossary("CSS")}} の {{cssxref('float')}} プロパティや {{cssxref('vertical-align')}} プロパティを使用してください。使用できる値は次の通りです。
 
@@ -194,19 +208,19 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
     - `right`
       - : `float: right;` と等価です。
 
-- {{htmlattrdef("border")}} {{deprecated_inline}}
+- `border` {{deprecated_inline}}
   - : 画像の周りの境界線の幅を指定します。代わりに {{Glossary("CSS")}} の {{cssxref('border')}} プロパティを使用してください。
-- {{htmlattrdef("hspace")}} {{deprecated_inline}}
+- `hspace` {{deprecated_inline}}
   - : 画像の左右に挿入する空間の幅をピクセル単位で指定します。代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
-- {{htmlattrdef("longdesc")}} {{deprecated_inline}}
+- `longdesc` {{deprecated_inline}}
 
   - : 画像の詳細な説明へのリンクです。有効な値は、 {{Glossary("URL")}} または要素の {{htmlattrxref("id")}} です。
 
     > **メモ:** この属性は、最新の {{Glossary("W3C")}} のバージョンである [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc) でも言及されていますが、 {{Glossary("WHATWG")}} の [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) では完全に削除されています。将来が不確実なので、代わりに、[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) または[`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details) のような {{Glossary("WAI")}}-{{Glossary("ARIA")}} の代替手段を使用してください。
 
-- {{htmlattrdef("name")}} {{deprecated_inline}}
+- `name` {{deprecated_inline}}
   - : 要素の名前です。代わりに {{htmlattrxref("id")}} 属性を使用してください。
-- {{htmlattrdef("vspace")}} {{deprecated_inline}}
+- `vspace` {{deprecated_inline}}
   - : 画像の上下に挿入する空間の幅をピクセル単位で指定します。HTML5 では、代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
 
 ## CSS でのスタイル付け
@@ -226,8 +240,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 以下の簡単な例では、ページに画像を埋め込み、アクセシビリティを向上させるために代替テキストを含めています。
 
 ```html
-<img src="favicon144.png"
-     alt="MDN ロゴ">
+<img src="favicon144.png" alt="MDN ロゴ" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
@@ -238,8 +251,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="favicon144.png"
-       alt="MDN サイトにおいでください">
+  <img src="favicon144.png" alt="MDN サイトにおいでください" />
 </a>
 ```
 
@@ -250,9 +262,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 この例では、 `srcset` 属性によって高解像度版のロゴの参照を指定しています。これで、高解像度の端末では `src` 画像の代わりにこちらが読み込まれます。 `src` で参照される画像は、 `srcset` に対応している{{Glossary("User agent", "ユーザーエージェント")}}では、 `1x` の候補としてカウントされます。
 
 ```html
- <img src="favicon72.png"
-      alt="MDN ロゴ"
-      srcset="favicon144.png 2x">
+<img src="favicon72.png" alt="MDN ロゴ" srcset="favicon144.png 2x">
 ```
 
 {{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}
@@ -262,11 +272,11 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 `src` 属性は、 `srcset` に対応している{{Glossary("User agent", "ユーザーエージェント")}}で '`w`' 記述子を使用している場合は無視されます。 `(max-width: 600px)` のメディア条件に一致すると、 200px の幅の画像 (200px にもっと近いもの) が読み込まれ、そうでなければ他の画像が読み込まれます。
 
 ```html
- <img src="clock-demo-200px.png"
-      alt="時計"
-      srcset="clock-demo-200px.png 200w,
-          clock-demo-400px.png 400w"
-      sizes="(max-width: 600px) 200px, 50vw">
+<img
+  src="clock-demo-200px.png"
+  alt="時計"
+  srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
+  sizes="(max-width: 600px) 200px, 50vw" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}
@@ -286,13 +296,13 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 #### 悪い例
 
 ```html example-bad
-<img alt="image" src="penguin.jpg">
+<img alt="image" src="penguin.jpg" />
 ```
 
 #### 良い例
 
 ```html example-good
-<img alt="海岸に立っているイワトビペンギン" src="penguin.jpg">
+<img alt="海岸に立っているイワトビペンギン" src="penguin.jpg" />
 ```
 
 `alt` 属性が画像にない場合、読み上げソフトによっては代わりに画像のファイル名を読み上げることがあります。ファイル名が画像の内容を表していない場合、これが操作を混乱させる可能性があります。
@@ -302,6 +312,14 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
 - [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
 - [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+
+### SVG を画像として識別
+
+[VoiceOver のバグ](https://bugs.webkit.org/show_bug.cgi?id=216364)により、VoiceOver は SVG 画像を画像として正しくアナウンスしません。SVG のソースファイルを持つすべての `<img>` 要素に [`role="img"`](/ja/docs/Web/Accessibility/ARIA/Roles/img_role) を記載し、支援技術が SVG を画像コンテンツとして正しくアナウンスするようにしてください。
+
+```html
+<img src="mdn.svg" alt="MDN logo" role="img" />
+```
 
 ### title 属性
 
@@ -330,7 +348,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td>なし。これは{{Glossary("empty element", "空要素")}}です。</td>
+      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
@@ -343,6 +361,7 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
+        <ul>
           <li>
             空ではない <code>alt</code> がある場合や <code>alt</code> 属性がない場合:
             <code
@@ -383,15 +402,15 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
                   ></code
                 >
               </li>
-              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code></li>
-              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code></li>
-              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code></li>
-              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code></li>
-              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code></li>
-              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/progressbar_role">progressbar</a></code></li>
-              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role">scrollbar</a></code></li>
-              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role">separator</a></code></li>
-              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/slider_role">slider</a></code></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role"><code>scrollbar</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
               <li>
                 <code
                   ><a
@@ -407,12 +426,12 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
                   ></code
                 >
               </li>
-              <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
             </ul>
           </li>
           <li>
-            空の <code>alt</code> 属性がある場合、 <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>
-            または <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
+            空の <code>alt</code> 属性がある場合、 <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+            または <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
           </li>
           <li>
             <code>alt</code> 属性がない場合、許可されている <code>role</code> なし

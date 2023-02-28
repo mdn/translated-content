@@ -75,9 +75,9 @@ reloading.then(onReloaded, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.reload")}}
+{{Compat}}
 
 > **Note :**
 >

@@ -59,9 +59,9 @@ function probarEntrada(regexp, cadena){
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.test")}}
+{{Compat}}
 
 ## Vea también
 

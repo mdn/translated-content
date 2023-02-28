@@ -90,13 +90,11 @@ Content-Language: de, en
 
 ## Spécifications
 
-| Spécification                                                | Titre                                                          |
-| ------------------------------------------------------------ | -------------------------------------------------------------- |
-| {{RFC("7231", "Content-Language", "3.1.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Sémantiques et Contenu |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Content-Language")}}
+{{Compat}}
 
 ## Voir aussi
 

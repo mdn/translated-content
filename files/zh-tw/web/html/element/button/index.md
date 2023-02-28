@@ -20,7 +20,7 @@ slug: Web/HTML/Element/button
 - {{htmlattrdef("autofocus")}}
   - : 頁面載入後, 該按鈕如有輸入的焦點, 這個布林值式屬性即可指定上去, 除非使用者覆寫之, 例如通過不同的控制. 文本中只有一個關聯形式元素可以被指定該屬性.
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-  - : The use of this attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. By default, unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting the value of this attribute to `off` (i.e. `autocomplete="off"`) disables this feature. See {{bug(654072)}}.
+  - : The use of this attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. By default, unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting the value of this attribute to `off` (i.e. `autocomplete="off"`) disables this feature. See [Firefox bug 654072](https://bugzil.la/654072).
 - {{htmlattrdef("disabled")}}
   - : This Boolean attribute indicates that the user cannot interact with the button. If this attribute is not specified, the button inherits its setting from the containing element, for example {{HTMLElement("fieldset")}}; if there is no containing element with the **disabled** attribute set, then the button is enabled.Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
 - {{htmlattrdef("form")}}
@@ -61,9 +61,9 @@ This bug has been fixed in IE8.
 
 Firefox will add, for accessibility purposes, a small dotted border on a focused button. This border is declared through CSS, in the browser stylesheet, but you can override it if necessary to add your own focused style using `button{{cssxref("::-moz-focus-inner")}} { }`
 
-Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting the value of the {{htmlattrxref("autocomplete","button")}} attribute to `off` disables this feature. See {{bug(654072)}}.
+Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting the value of the {{htmlattrxref("autocomplete","button")}} attribute to `off` disables this feature. See [Firefox bug 654072](https://bugzil.la/654072).
 
-Firefox <35 for Android sets a default {{ cssxref("background-image") }} gradient on all buttons (see {{bug(763671)}}). This can be disabled using `background-image: none`.
+Firefox <35 for Android sets a default {{ cssxref("background-image") }} gradient on all buttons (see [Firefox bug 763671](https://bugzil.la/763671)). This can be disabled using `background-image: none`.
 
 ### Clicking and focus
 

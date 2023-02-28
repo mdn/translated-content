@@ -51,9 +51,9 @@ console.log(b); // 0
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.empty")}}
+{{Compat}}
 
 ## Vea también
 

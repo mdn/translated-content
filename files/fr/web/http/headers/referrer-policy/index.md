@@ -217,25 +217,11 @@ Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'
 
 ## Spécifications
 
-| Spécification                                                                              | Statut                  |
-| ------------------------------------------------------------------------------------------ | ----------------------- |
-| [Referrer Policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-header) | Brouillon de l'éditeur. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Referrer-Policy")}}
-
-> **Note :**
->
-> - Version 53 et plus, Gecko offre la possibilité aux utilisateurs de définir leur valeur par défaut de `Referrer-Policy` dans `about:config`, l'option s'appelant `network.http.referer.userControlPolicy`.
-> - Version 59 et plus (Voir [#587523](https://bugzilla.mozilla.org/show_bug.cgi?id=587523)), il a été remplacé par `network.http.referer.defaultPolicy` et `network.http.referer.defaultPolicy.pbmode`.
->
-> Les valeurs permises sont :
->
-> - 0 — `no-referrer`
-> - 1 — `same-origin`
-> - 2 — `strict-origin-when-cross-origin`
-> - 3 — `no-referrer-when-downgrade` (par défaut)
+{{Compat}}
 
 ## Voir aussi
 

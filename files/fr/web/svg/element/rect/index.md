@@ -60,9 +60,9 @@ html,body,svg { height:100% }
 
 Cet élément implémente l'interface [`SVGRectElement`](/fr/DOM/SVGRectElement) .
 
-## Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("svg.elements.rect")}}
+{{Compat}}
 
 ## Voir aussi
 

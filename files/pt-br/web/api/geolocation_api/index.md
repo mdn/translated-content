@@ -80,7 +80,7 @@ A localização do usuário é impressa usando o objeto Position, que tem os seg
   - : Momento em que a leitura foi feita, como `DOMTimeStamp`.
 - coords
   - : Objecto [`nsIDOMGeoPositionCoords`](/pt-BR/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords) indicando a localização.
-- address {{obsolete_inline("14.0")}}
+- address
   - : `nsIDOMGeoPositionAddress` objeto especificando o endereço correspondente, se disponível.
 
 ## <br>Manipulação de erros

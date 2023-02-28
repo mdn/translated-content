@@ -63,13 +63,11 @@ usedOptions.type;                  // "cardinal"
 
 ## Spécifications
 
-| Spécification                                                                                                         | État      | Commentaires         |
-| --------------------------------------------------------------------------------------------------------------------- | --------- | -------------------- |
-| [Brouillon pour les règles de nombre avec `Intl`](https://rawgit.com/caridy/intl-plural-rules-spec/master/index.html) | Brouillon | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.PluralRules.resolvedOptions")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -78,11 +78,11 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
 
 Every method and property listed in this document has its own reference page and each reference page either directly includes an example of the interface or has a link to an example.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

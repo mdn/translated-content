@@ -32,6 +32,6 @@ Aun cuando todas las unidades representan lo mismo para el valor `0`, la unidad 
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.angle")}}
+{{Compat}}

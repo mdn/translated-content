@@ -27,9 +27,9 @@ Si vous définissez `browserSettings.webNotificationsDisabled` à `false` la val
 
 Notez que ce paramètre n'a aucun effet sur les notifications créées par des extensions à l'aide de l'API de [`notifications`](/fr/Add-ons/WebExtensions/API/notifications).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.webNotificationsDisabled")}}
+{{Compat}}
 
 ## Exemples
 

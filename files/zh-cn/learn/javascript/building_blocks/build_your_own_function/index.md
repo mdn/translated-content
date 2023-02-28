@@ -296,13 +296,3 @@ btn.onclick = displayMessage();
 恭喜你，终于到了这里（等你好久了）! 这篇文章介绍了如何写一个自定义函数，要把这个新技能在真实项目中使用上你可能还要花点功夫。下一篇文章中我们将会介绍函数的另一个相关概念 — 返回值。
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
-
-## 在这个模块中
-
-- [在代码中做决定 - 条件语句 在 Wiki 中编辑](/zh-CN/docs/learn/JavaScript/Building_blocks/conditionals)
-- [循环吧代码](/zh-CN/docs/learn/JavaScript/Building_blocks/Looping_code)
-- [函数 - 可复用代码块](/zh-CN/docs/learn/JavaScript/Building_blocks/Functions)
-- [创建您自己的函数](/zh-CN/docs/learn/JavaScript/Building_blocks/Build_your_own_function)
-- [函数返回值](/zh-CN/docs/learn/JavaScript/Building_blocks/Return_values)
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- [照片库](/zh-CN/docs/learn/JavaScript/Building_blocks/%E7%9B%B8%E7%89%87%E8%B5%B0%E5%BB%8A)

@@ -25,19 +25,19 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : O ponto de entrada para muitas características XPCOM. Algumas propriedades, por exemplo, classes, estão apenas disponíveis para código suficientemente privilegiado. Código de Web não deve usar essa propriedade.
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Retorna uma referência para o objeto console fornecendo acesso ao console debugging do navegador.
-- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}}{{ReadOnlyInline}}
   - : Retorna uma referência para o elemento de conteúdo na janela atual. A variante obsoleta com sublinhado não está disponível a partir do conteúdo da Web.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Retorna os objetos de controlador XUL para a janela atual do crome.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : Retorna o objeto de criptografia do navegador.
-- {{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}
+- {{domxref("Window.defaultStatus")}}
   - : Obtém/define o texto da barra de status para determinada janela.
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
   - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an `nsIArray`.
-- {{domxref("Window.directories")}} {{obsolete_inline}}
+- {{domxref("Window.directories")}}
   - : Synonym of {{domxref("window.personalbar")}}
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Retorna a referência à propriedade `document` que a janela contém.
@@ -47,7 +47,7 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : Returns an array of the subframes in the current window.
 - {{domxref("Window.fullScreen")}}
   - : This property indicates whether the window is displayed in full screen or not.
-- {{domxref("Window.globalStorage")}}{{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- {{domxref("Window.globalStorage")}}{{Non-standard_inline}}
   - : Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.
     Was: Multiple storage objects that are used for storing data across multiple pages.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
@@ -100,7 +100,7 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : Provides a hosting area for [performance related](/pt-BR/docs/Navigation_timing) attributes.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Returns the personalbar object, whose visibility can be toggled in the window.
-- {{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}
+- {{domxref("Window.pkcs11")}}
   - : Formerly provided access to install and remove PKCS11 modules.
 - {{domxref("Window.returnValue")}}
   - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
@@ -149,7 +149,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Displays an alert dialog.
 - {{domxref("WindowBase64.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.back()")}} {{Non-standard_inline}}
   - : Moves back one in the window history.
 - {{domxref("Window.blur()")}}
   - : Sets focus away from the window.
@@ -167,19 +167,19 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Closes the current window.
 - {{domxref("Window.confirm()")}}
   - : Displays a dialog with a message that the user needs to respond to.
-- {{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.disableExternalCapture()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.dispatchEvent()")}}
   - : Used to trigger an event.
 - {{domxref("Window.dump()")}}
   - : Writes a message to the console.
-- {{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.enableExternalCapture()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.find()")}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}
   - : Sets focus on the current window.
-- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.forward()")}} {{Non-standard_inline}}
   - : Moves the window one document forward in the history.
 - {{domxref("Window.getAttention()")}}
   - : Flashes the application icon.
@@ -191,7 +191,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Gets default computed style for the specified element, ignoring author stylesheets.
 - {{domxref("Window.getSelection()")}}
   - : Returns the selection object representing the selected item(s).
-- {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.home()")}} {{Non-standard_inline}}
   - : Returns the browser to the home page.
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
@@ -225,7 +225,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Dynamically resizes window.
 - {{domxref("Window.restore()")}}
   - : {{todo("NeedsContents")}}
-- {{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.routeEvent()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
@@ -262,7 +262,7 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
 
-> **Nota:** Starting in {{Gecko("9.0")}}, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/pt-BR/docs/DOM/DOM_event_handlers) for details.
+> **Nota:** Starting in Gecko 9.0, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/pt-BR/docs/DOM/DOM_event_handlers) for details.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : An event handler property for abort events on the window.

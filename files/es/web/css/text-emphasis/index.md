@@ -100,9 +100,9 @@ h2 {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-emphasis")}}
+{{Compat}}
 
 ## Ver también
 

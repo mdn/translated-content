@@ -62,9 +62,9 @@ Les événements ont trois fonctions :
     - `sendResponse`
       - : `function`. Fonction à appeler lorsque vous avez une réponse. L'argument doit être n'importe quel objet JSON-ifiable, ou undefined s'il n'y a pas de réponse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.onRequestExternal")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

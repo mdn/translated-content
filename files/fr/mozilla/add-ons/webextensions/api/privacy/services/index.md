@@ -21,9 +21,9 @@ La propriété {{WebExtAPIRef("privacy.services")}} contient des paramètres li�
 - `passwordSavingEnabled`
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est un booléen. Si il est défini à `true`, le gestionnaire de mot de passe du navigateur proposera de stocker des mots de passe lorsque l'utilisateur les entrera. La valeur par défaut est : `true`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.privacy.services", 10)}}
+{{Compat}}
 
 ## Exemples
 

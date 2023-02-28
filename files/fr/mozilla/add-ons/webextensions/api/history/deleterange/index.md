@@ -43,9 +43,9 @@ var deletingRange = browser.history.deleteRange(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètre lorsque la plage a été supprimée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.deleteRange")}}
+{{Compat}}
 
 ## Exemples
 

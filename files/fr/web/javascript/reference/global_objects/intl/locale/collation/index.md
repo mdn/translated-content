@@ -171,13 +171,11 @@ console.log(configColl.collation); // Affichera "emoji" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                                          | État                    | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.collation`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.collation) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.collation")}}
+{{Compat}}
 
 ## Voir aussi
 

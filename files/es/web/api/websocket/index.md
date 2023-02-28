@@ -145,9 +145,9 @@ socket.addEventListener('message', function (event) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.WebSocket")}}
+{{Compat}}
 
 ## Referencias adicionales
 

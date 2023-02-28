@@ -30,11 +30,11 @@ var myRequest = new Request('flowers.jpg');
 var myCred = myRequest.credentials; // returns "same-origin" by default
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

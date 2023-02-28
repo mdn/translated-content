@@ -94,7 +94,7 @@ if (!Array.isArray) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.isArray")}}
+{{Compat}}
 
 ## Vea también
 

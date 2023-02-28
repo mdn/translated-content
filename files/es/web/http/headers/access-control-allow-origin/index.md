@@ -68,9 +68,9 @@ Vary: Origin
 
 {{Specifications}}
 
-## Compatibilidad del Navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## Veáse también
 

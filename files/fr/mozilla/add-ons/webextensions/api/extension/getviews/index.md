@@ -48,9 +48,9 @@ var windows = browser.extension.getViews(
 
 `array` of `object`. Un tableau d'objets [Window](/fr/docs/Web/API/Window).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.getViews")}}
+{{Compat}}
 
 ## Exemples
 

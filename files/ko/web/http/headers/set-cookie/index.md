@@ -120,13 +120,13 @@ Set-Cookie: __Host-id=1; Secure
 Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("http.headers.Set-Cookie")}}
+{{Compat}}
 
 ## Compatibility notes
 

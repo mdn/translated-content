@@ -13,7 +13,7 @@ original_slug: Web/HTTP/Заголовки/Referer
 
 Заголовок запроса **`Referer`** содержит URL исходной страницы, с которой был осуществлён переход на текущую страницу. Заголовок `Referer` позволяет серверу узнать откуда был осуществлён переход на запрашиваемую страницу. Сервер может анализировать эти данные, записывать их в логи или оптимизировать процесс кеширования.
 
-Обратите внимание, что слово «Referer» на самом деле является неправильным написанием слова «Referrer». См. {{interwiki("wikipedia", "HTTP_referer", "HTTP referer на Wikipedia")}} .
+Обратите внимание, что слово «Referer» на самом деле является неправильным написанием слова «Referrer». См. [HTTP referer](https://ru.wikipedia.org/wiki/HTTP_referer).
 
 > **Предупреждение:** Заголовок `Referer` может раскрыть информацию пользователя об истории посещённых страниц, что может привести к нарушению приватности.
 >
@@ -72,5 +72,4 @@ Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 ## Смотрите также
 
-- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
 - {{HTTPHeader("Referrer-Policy")}}

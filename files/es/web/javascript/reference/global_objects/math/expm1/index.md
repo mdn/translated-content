@@ -53,9 +53,9 @@ Math.expm1 = Math.expm1 || function(x) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.expm1")}}
+{{Compat}}
 
 ## Vea también
 

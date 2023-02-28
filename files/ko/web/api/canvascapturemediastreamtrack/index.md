@@ -23,11 +23,11 @@ _This interface inherits the methods of its parent, {{domxref("MediaStreamTrack"
 - {{domxref("CanvasCaptureMediaStreamTrack.requestFrame()")}}
   - : Manually forces a frame to be captured and sent to the stream. This lets applications that wish to specify the frame capture times directly do so, if they specified a `frameRate` of 0 when calling {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}}.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

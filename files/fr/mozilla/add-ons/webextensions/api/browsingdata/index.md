@@ -68,9 +68,9 @@ Pour utiliser cette API, vous devez disposer de l'[API permission](/fr/Add-ons/W
 - {{WebExtAPIRef("browsingData.settings()")}}
   - : Obtient la valeur actuelle des paramètres dans la fonction "Effacer l'historique" du navigateur
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

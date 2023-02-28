@@ -69,9 +69,9 @@ p {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-clip")}}
+{{Compat}}
 
 ## Ver también
 

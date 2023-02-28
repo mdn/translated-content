@@ -98,7 +98,7 @@ for (var prop in obj) {
 
 ## Поддержка: инициализатор переменных
 
-До SpiderMonkey 40 {{geckoRelease(40)}}, можно было инициализировать переменные (`i=0`) в цикле `for...in`:
+До SpiderMonkey 40, можно было инициализировать переменные (`i=0`) в цикле `for...in`:
 
 ```js example-bad
 var obj = {a:1, b:2, c:3};

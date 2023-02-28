@@ -65,7 +65,7 @@ Nunca elimines el outline de un foco sin reemplazarlo por otro tipo de indicador
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.focus")}}
+{{Compat}}
 
 ## Ver también
 

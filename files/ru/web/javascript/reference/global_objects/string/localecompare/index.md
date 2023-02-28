@@ -59,9 +59,9 @@ console.log(new Intl.Collator().compare('a', 'a')); // 0
 ```js
 function localeCompareSupportsLocales() {
   try {
-    'a'.localeCompare​('b', 'i');
+    'a'.localeCompare('b', 'i');
   } catch (e) {
-    return e​.name === 'RangeError';
+    return e.name === 'RangeError';
   }
   return false;
 }

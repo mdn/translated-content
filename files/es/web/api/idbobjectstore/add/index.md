@@ -45,7 +45,7 @@ Este método puede generar un {{domxref("DOMException")}} con un {{domxref("DOME
 
 ## Ejemplo
 
-En el siguiente código, abrimos una transacción read/write en nuestra base de datos y agregado algunos datos al almacén de datos usando `add()`. También ten en cuenta que las funciones adjuntas a los manejadores de eventos de la transacción para informar en la salida de la apertura de transacciones en el evento de éxito o falla. Para un ejemplo completo funcionando, mira nuestra aplicación [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([ver ejemplo](http://mdn.github.io/to-do-notifications/)).
+En el siguiente código, abrimos una transacción read/write en nuestra base de datos y agregado algunos datos al almacén de datos usando `add()`. También ten en cuenta que las funciones adjuntas a los manejadores de eventos de la transacción para informar en la salida de la apertura de transacciones en el evento de éxito o falla. Para un ejemplo completo funcionando, mira nuestra aplicación [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Abrimos nuestra base de datos
@@ -102,9 +102,9 @@ function addData() {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.IDBObjectStore.add")}}
+{{Compat}}
 
 ## Ver también
 
@@ -114,4 +114,4 @@ function addData() {
 - Estableciendo un rango de llaves: {{domxref("IDBKeyRange")}}
 - Obteniendo y haciendo cambios a tus datos: {{domxref("IDBObjectStore")}}
 - Usando cursores: {{domxref("IDBCursor")}}
-- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([ver ejemplo](http://mdn.github.io/to-do-notifications/).)
+- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo](https://mdn.github.io/dom-examples/to-do-notifications/).)

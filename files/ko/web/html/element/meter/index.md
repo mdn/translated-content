@@ -127,7 +127,7 @@ Google Chrome에서는 다음 그림처럼 보입니다.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.meter")}}
+{{Compat}}
 
 ## 같이 보기
 

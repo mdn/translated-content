@@ -16,9 +16,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstar
 
 Un gestionnaire d'événements qui sera appelé lorsque le flux est ouvert et est sur le point de commencer à livrer les données. A partir de ce point, l'extension peut utiliser des fonctions de filtrage telles que {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, ou {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.onstart", 10)}}
+{{Compat}}
 
 ## Exemples
 

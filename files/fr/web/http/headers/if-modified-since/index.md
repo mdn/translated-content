@@ -59,15 +59,13 @@ If-Modified-Since: <label-jour>, <jour> <mois> <année> <heure>:<minute>:<second
 If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                            | Titre                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "If-Modified-Since", "3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+{{Specifications}}
 
-## Compatibility avec les navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.If-Modified-Since")}}
+{{Compat}}
 
 ## Voir aussi
 

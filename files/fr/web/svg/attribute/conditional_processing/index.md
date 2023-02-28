@@ -13,13 +13,13 @@ Les _attributs SVG de traitement conditionnel_ sont tous les attributs qui peuve
 
 ## Attributs
 
-- {{SVGAttr('externalResourcesRequired')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('externalResourcesRequired')}} {{deprecated_inline}}
   - : Si sa valeur vaut `true`, cela indique que le navigateur doit attendre que toutes les ressources externes nécessaires au rendu de cet élément soient chargées avant de traiter l'élément associé.
     _Valeur_: **`false`**|`true`; _Animation_: **Non**
 - {{SVGAttr('requiredExtensions')}}
   - : Liste toutes les fonctionnalités devant être prises en charge par le navigateur pour autoriser l'affichage de l'élément associé.
     _Valeur_: Une liste d'URI séparées par des espaces; _Animation_: **Non**
-- {{SVGAttr('requiredFeatures')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('requiredFeatures')}} {{deprecated_inline}}
   - : Liste toutes les fonctionnalités, [telles que définies dans la spécification SVG 1.1](https://www.w3.org/TR/SVG11/feature.html), devant être prises en charge par le navigateur pour autoriser l'affichage de l'élément associé.
     _Valeur_: Une list d'URI séparées par espaces; _Animation_: **Non**
 - {{SVGAttr('systemLanguage')}}
@@ -28,4 +28,4 @@ Les _attributs SVG de traitement conditionnel_ sont tous les attributs qui peuve
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.conditional_processing")}}
+{{Compat}}

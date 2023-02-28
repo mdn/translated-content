@@ -20,7 +20,7 @@ objectURL = URL.createObjectURL(object);
 ### 参数
 
 - `object`
-  - : 用于创建 URL 的 {{domxref("File")}} 对象、{{domxref("Blob")}} 对象或者 {{domxref("MediaSource")}} 对象。​
+  - : 用于创建 URL 的 {{domxref("File")}} 对象、{{domxref("Blob")}} 对象或者 {{domxref("MediaSource")}} 对象。
 
 ### 返回值
 

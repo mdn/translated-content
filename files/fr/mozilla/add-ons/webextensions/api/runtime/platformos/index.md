@@ -35,9 +35,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 - `"openbsd"`
   - : Le système d'exploitation est sous Open/FreeBSD.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.PlatformOs")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

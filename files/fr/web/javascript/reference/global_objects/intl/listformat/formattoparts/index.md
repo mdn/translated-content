@@ -58,13 +58,11 @@ console.table(myListFormat.formatToParts(fruits));
 
 ## Spécifications
 
-| Spécification                                                                                                                                       | État    | Commentaires |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------------ |
-| [`Intl.ListFormat.prototype.formatToParts` proposal](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.prototype.formatToParts) | Stage 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.formatToParts")}}
+{{Compat}}
 
 ## Voir aussi
 

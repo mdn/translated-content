@@ -60,13 +60,11 @@ HEAD /index.html
 
 ## Spécifications
 
-| Spécification                                | Titre                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "HEAD", "4.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/methods", "HEAD")}}
+{{Compat}}
 
 ## Voir aussi
 
