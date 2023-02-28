@@ -1469,7 +1469,6 @@
 /zh-CN/docs/Web/API/Element/pointerlockchange_event	/zh-CN/docs/Web/API/Document/pointerlockchange_event
 /zh-CN/docs/Web/API/Element/removeAttributre	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/Web/API/Element/select_event	/zh-CN/docs/Web/API/HTMLInputElement/select_event
-/zh-CN/docs/Web/API/Element/show_event	/zh-CN/docs/orphaned/Web/API/Element/show_event
 /zh-CN/docs/Web/API/Event/CustomEvent	/zh-CN/docs/Web/API/CustomEvent
 /zh-CN/docs/Web/API/Event/pageY	/zh-CN/docs/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/Event/禁用时间冒泡	/zh-CN/docs/Web/API/Event/cancelBubble
@@ -2192,7 +2191,6 @@
 /zh-CN/docs/Web/Events/select	/zh-CN/docs/Web/API/HTMLInputElement/select_event
 /zh-CN/docs/Web/Events/selectionchange	/zh-CN/docs/Web/API/Document/selectionchange_event
 /zh-CN/docs/Web/Events/selectstart	/zh-CN/docs/Web/API/Node/selectstart_event
-/zh-CN/docs/Web/Events/show	/zh-CN/docs/orphaned/Web/API/Element/show_event
 /zh-CN/docs/Web/Events/storage	/zh-CN/docs/Web/API/Window/storage_event
 /zh-CN/docs/Web/Events/timeout	/zh-CN/docs/Web/API/XMLHttpRequest/timeout_event
 /zh-CN/docs/Web/Events/timeupdate	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event

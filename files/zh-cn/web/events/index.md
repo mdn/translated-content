@@ -897,7 +897,6 @@ slug: Web/Events
   - [paste event](/zh-CN/docs/Web/API/Element/paste_event)
   - [scroll event](/zh-CN/docs/Web/API/Element/scroll_event)
   - [select event](/zh-CN/docs/Web/API/Element/select_event)
-  - [show event](/zh-CN/docs/Web/API/Element/show_event)
   - [touchcancel event](/zh-CN/docs/Web/API/Element/touchcancel_event)
   - [touchend event](/zh-CN/docs/Web/API/Element/touchend_event)
   - [touchmove event](/zh-CN/docs/Web/API/Element/touchmove_event)
