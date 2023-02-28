@@ -2,6 +2,8 @@
 title: Introducción a Svelte
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+l10n:
+  sourceCommit: 1ad0cd5faac577bf7b13990242db455f2be2058d
 
 ---
 
