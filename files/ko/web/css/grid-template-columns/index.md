@@ -13,7 +13,7 @@ browser-compat: css.properties.grid-template-columns
 
 {{CSSRef}}
 
-**`grid-template-columns`** CSS 속성은 {{glossary("grid column", "grid columns")}}의 라인(행? 열?) 이름과 트랙 크기 조정 함수들을 정의합니다.
+**`grid-template-columns`** CSS 속성은 {{glossary("grid column", "grid columns")}}의 열 이름과 트랙 크기 조정 함수들을 정의합니다.
 
 {{EmbedInteractiveExample("pages/css/grid-template-columns.html")}}
 
@@ -60,13 +60,13 @@ grid-template-columns: unset;
   - 명시적 그리드가 없음을 의미합니다. 모든 열은 암시적으로 생성되고 각 열의 크기는 {{cssxref("grid-auto-columns")}} 속성에 의해 결정됩니다.
 
 - `[linename]`
-  - 해당 위치의 각 라인에 대한 이름을 명시하는 [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) 입니다. ident는 예약어인 `span` 이나 `auto`를 제외한 어떤 문자열이든 올 수 있습니다. 라인들은 대괄호 안에 공백으로 구분된 여러개의 이름을 가질 수 있습니다. 예시) `[line-name-a line-name-b]`
+  - 해당 위치의 각 열에 대한 이름을 명시하는 [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) 입니다. ident는 예약어인 `span` 이나 `auto`를 제외한 어떤 문자열이든 올 수 있습니다. 라인들은 대괄호 안에 공백으로 구분된 여러개의 이름을 가질 수 있습니다. 예시) `[line-name-a line-name-b]`
 
 - {{cssxref("&lt;length&gt;")}}
   - 음수가 아닌 길이, 열의 너비를 나타냅니다.
 
 - {{cssxref("&lt;percentage&gt;")}}
-  - 음수가 아닌 그리드 컨테이너의 내부 크기에 상대적인 {{cssxref("percentage", "&lt;percentage&gt;")}} 값입니다. 막약 그리드 컨테이너의 크기가 트랙의 크기에 따라 달라지는 경우, 비율(Percentage)는 `auto`. 로 취급됩니다.
+  - 음수가 아닌 그리드 컨테이너의 내부 크기에 상대적인 {{cssxref("percentage", "&lt;percentage&gt;")}} 값입니다. 막약 그리드 컨테이너의 크기가 트랙의 크기에 따라 달라지는 경우, `percentage`값은 `auto`. 로 취급됩니다.
 
     트랙의 본질적인 크기 기여는 그리드 컨테이너의 크기에 맞게 조젇될 수 있고, 백분율에 맞는 최소 크기 만큼 트랙의 최종크기를 증가시킬 수 있습니다.
 
@@ -82,7 +82,8 @@ grid-template-columns: unset;
   - 그리드 트랙을 차지하는 그리드 아이템의 가장 큰 [minimal content contribution](https://www.w3.org/TR/css-sizing-3/#min-content) 를 나타냅니다. 예를들어 그리드 트랙의 첫번째 엘리먼트가 _"Repetitio est mater studiorum"_라는문장을 포함하고, 두번째 앨리먼트가 _"Dum spiro, spero"_라는 문장을 포함한다면, 최소 컨텐츠 기여(minimal content contribution) 는 그리드 요소들 중에서 가장 긴 단어인 _"studiorum"_ 의 크기로 지정됩니다.
 
 - {{cssxref("minmax", "minmax(min, max)")}}
-  - _min_ 이상 _max_ 이하의 사이즈 범위를 정의하는 functional notation 입니다. _max_가 _min_보다 작다면, _max_는 무시되고 이 함수는 _min_으로 처리됩니다. 최대값으로서 `<flex>` 값은 트랙의 flex 요소를 설정합니다. `<flex>` 값은 최소값으로는 유효하지 않습니다.
+  - _min_ 이상 _max_ 이하의 사이즈 범위를 정의하는 함수 표기입니다. _max_가 _min_보다 작다면, _max_는 무시되고 이 함수는 _min_으로 처리됩니다. 최대값으로서 `<flex>` 값은 트랙의 flex 요소를 설정합니다. `<flex>` 값은 최소값으로는 유효하지 않습니다.
+
 - `auto`
   - 최대값으로 트랙 내 모든 아이템 중 가장 큰 {{cssxref("max-content")}} 를 나타냅니다.
 
