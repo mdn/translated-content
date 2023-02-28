@@ -68,7 +68,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 - `<auth-scheme>`
 
-  - : [Authentication scheme](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。一些更常见的类型是（不区分大小写）：[`Basic`](/zh-CN/docs/Web/HTTP/Authentication#basic_验证方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
+  - : [身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。一些更常见的类型是（不区分大小写）：[`Basic`](/zh-CN/docs/Web/HTTP/Authentication#basic_验证方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
     > **备注：** 更多信息和选项，请参见 [HTTP 身份验证 > 身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)
 
