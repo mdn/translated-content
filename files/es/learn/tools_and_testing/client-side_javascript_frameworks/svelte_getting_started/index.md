@@ -51,7 +51,7 @@ Svelte adopta en gran medida el modelo clásico de desarrollo web dado por HTML,
 
 Sus mayores incovenientes vienen dados por su corta edad, pues su ecosistema se encuentra limitado en términos de herramientos, soporte, _plugins_, patrones específicos de uso, etc. en comparación con otros _frameworks_. A pesar de ello, sus beneficios deberían ser suficientes para despertar tu curiosidad en explorarlo.
 
-> **Note:** Recientemente Svelte agregó [soporte oficial de Typescript](https://svelte.dev/blog/svelte-and-typescript), una de sus características más esperadas. Más adelante en esta serie de tutoriales exploraremos esa integración.  
+> **Note:** Recientemente Svelte agregó [soporte oficial de Typescript](https://svelte.dev/blog/svelte-and-typescript), una de sus características más esperadas. Más adelante en esta serie de tutoriales exploraremos esa integración.
 
 Te recomendamos que sigas el [Tutorial de Svelte](https://svelte.dev/tutorial/basics) para una introducción rápida a los conceptos básicos, para después regresar a este tutorial y aprender a construir algo más complicado.
 
@@ -250,6 +250,7 @@ En la sección de marcado puedes insertar todo el HTML que quieras y, adicionalm
   </p>
 </main>
 ```
+
 Svelte además soporta etiquetas como `{#if}`, `{#each}`, y `{#await}`, que te permiten renderizar condicionalmente un fragmento del marcado, iterar sobre una lista de elementos y trabajar con valores asíncronos, respectivamente.
 
 ### La sección `<style>`
@@ -333,6 +334,7 @@ Intentar actualizar la sección de `<script>` y el marcado de la siguiente forma
   </p>
 </main>
 ```
+
 Cada vez que se hace click en el botón, Svelte ejecuta la función `toggleName()`, que a su vez actualiza el contenido de la variable `name`.
 
 Como puedes observar, la etiqueta `<h1>` se actualiza automáticamente. Por detrás de cámaras, Svelte creó el código JavaScript para actualizar el DOM cada vez que el valor de la variable `name` cambia, sin la necesidad de utilizar un DOM virtual o algún otro mecanismo complejo de reconciliación.
@@ -391,7 +393,7 @@ Por último, el archivo `public/index.html` incluye los archivos `bundle.css` y 
 </html>
 ```
 
-La versión minificada de `bundle.js` pesa un poco más de 3KB, lo cual ya incluye el "tiempo de ejecución de Svelte" (tan solo son 300 líneas de código JavaScript) y el componente `App.svelte` compilado. Como puedes ver, `bundle.js` es el único archivo de JavaScript al que se hace referencia desde `index.html`. No hay otras bibliotecas cargadas en la página web.  
+La versión minificada de `bundle.js` pesa un poco más de 3KB, lo cual ya incluye el "tiempo de ejecución de Svelte" (tan solo son 300 líneas de código JavaScript) y el componente `App.svelte` compilado. Como puedes ver, `bundle.js` es el único archivo de JavaScript al que se hace referencia desde `index.html`. No hay otras bibliotecas cargadas en la página web.
 
 Esto tiene mucho menor impacto que los paquetes (_bundles_) generados por otros _frameworks_. Toma en cuenta que cuando hablamos de paquetes de código, no solo importa el tamaño del archivo que fue descargado. Este código ejecutable debe ser analizado, ejecutado y cargado en memoria. Esto hace una gran diferencia, en especial en dispositivos de gama baja y en aplicaciones que utilizan el CPU intensivamente.
 
@@ -426,7 +428,7 @@ npm run dev
 
 Si quieres aprender más sobre git y GitHub, hemos compilado una lista de enlaces a guías que te podrían ser útiles. Visita [Git y GitHub](/es/docs/Learn/Tools_and_testing/GitHub).
 
-> **Nota:**  Si solo quieres descargar los archivos sin clonar el repositorio de git, puedes utilizar la herramienta degit de la siguiente manera: `npx degit opensas/mdn-svelte-tutorial`. También puedes descargar una carpeta específica con el comando `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit no creará un repositorio local de git, en su lugar, simplemente descarga los archivos de la carpeta especificada.
+> **Nota:** Si solo quieres descargar los archivos sin clonar el repositorio de git, puedes utilizar la herramienta degit de la siguiente manera: `npx degit opensas/mdn-svelte-tutorial`. También puedes descargar una carpeta específica con el comando `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit no creará un repositorio local de git, en su lugar, simplemente descarga los archivos de la carpeta especificada.
 
 ### Usando el REPL de Svelte
 
