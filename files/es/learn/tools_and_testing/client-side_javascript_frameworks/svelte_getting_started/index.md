@@ -21,7 +21,7 @@ En este artículo proporcionaremos una breve introducción al [framework Svelte]
         Se recomienda que como mínimo te sientas familiarizado con lo básico de los lenguajes
           <a href="/en-US/docs/Learn/HTML">HTML</a>,
           <a href="/en-US/docs/Learn/CSS">CSS</a> y
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, además tener conocimiento de la 
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, además tener conocimiento de la
           <a
             href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/línea de comandos</a
@@ -43,11 +43,11 @@ En este artículo proporcionaremos una breve introducción al [framework Svelte]
 
 ## Svelte: Una nueva metodología para construir interfaces de usuario avanzadas
 
-Svelte proporciona una metología diferente para construir aplicaciones web, en contraste con otros _frameworks_ que vimos en este módulo. Mientras otros _frameworks_ como _React_ y _Vue_ hacen la mayor parte del trabajo en el navegador del usuario mientras se ejecuta la aplicación, Svelte convierte esa carga de trabajo en un proceso de compilación que se ejecuta a la hora de construir tu aplicación, produciendo así código Javascript puro (_vanilla_) altamente optimizado. 
+Svelte proporciona una metología diferente para construir aplicaciones web, en contraste con otros _frameworks_ que vimos en este módulo. Mientras otros _frameworks_ como _React_ y _Vue_ hacen la mayor parte del trabajo en el navegador del usuario mientras se ejecuta la aplicación, Svelte convierte esa carga de trabajo en un proceso de compilación que se ejecuta a la hora de construir tu aplicación, produciendo así código Javascript puro (_vanilla_) altamente optimizado.
 
-Tras usar esta metodología, como resultado no solo tenemos aplicaciones menos pesadas y rápidas, sino que también mejora la experiencia de creación de aplicaciones para las personas que tienen poca experiencia con el ecosistema moderno de herramientas de desarrollo. 
+Tras usar esta metodología, como resultado no solo tenemos aplicaciones menos pesadas y rápidas, sino que también mejora la experiencia de creación de aplicaciones para las personas que tienen poca experiencia con el ecosistema moderno de herramientas de desarrollo.
 
-Svelte adopta en gran medida el modelo clásico de desarrollo web dado por HTML, JS y CSS, pues solamente añade unas cuantas extensiones sobre HTML y JavaScript. A diferencia del resto de _frameworks_, Svelte probablemente introduce menos conceptos y herramientas por aprender. 
+Svelte adopta en gran medida el modelo clásico de desarrollo web dado por HTML, JS y CSS, pues solamente añade unas cuantas extensiones sobre HTML y JavaScript. A diferencia del resto de _frameworks_, Svelte probablemente introduce menos conceptos y herramientas por aprender.
 
 Sus mayores incovenientes vienen dados por su corta edad, pues su ecosistema se encuentra limitado en términos de herramientos, soporte, _plugins_, patrones específicos de uso, etc. en comparación con otros _frameworks_. A pesar de ello, sus beneficios deberían ser suficientes para despertar tu curiosidad en explorarlo.
 
@@ -61,7 +61,7 @@ Svelte puede ser utilizado para desarrollar porciones de una interfaz o una apli
 
 Tomando en cuenta lo anterior, Svelte es una excelente solución para los siguientes casos:
 
-- Aplicaciones web enfocadas a dispositivos de bajo rendimiento: Las aplicaciones con Svelte son más ligeras, lo cual las vuelve ideal para dispositivos con redes lentas y poder de procesamiento limitado. 
+- Aplicaciones web enfocadas a dispositivos de bajo rendimiento: Las aplicaciones con Svelte son más ligeras, lo cual las vuelve ideal para dispositivos con redes lentas y poder de procesamiento limitado.
 - Páginas altamente interactivas o visualizaciones complejas: Si te encuentras construyendo una aplicación para visualización de datos que necesite mostrar una gran cantidad de elementos en el DOM, la ganancia de rendimiento que viene de la mano de un _framework_ sin sobrecarga en tiempo de ejecución, ayudará a que las interacciones del usuario se mantengan ágiles y responsivas.
 - Gente que se encuentre iniciando en el mundo del desarrollo web: La curva de aprendizaje de Svelte es muy accesible. Desarrolladores web con conocimientos básicos de HTML, CSS y Javascript, fácilmente pueden familiarizarse con los conceptos de Svelte y empezar a construir aplicaciones web.
 
@@ -83,9 +83,9 @@ Debido a que Svelte es un compilador, no es posible simplemente agregar una etiq
 
 ### Requisitos
 
-Para poder trabajar con Svelte, debes tener [Node.js](https://nodejs.org/en/) instalado. Es recomendable que uses una versión con soporte a largo plazo (LTS). Node incluye `npm` (el administrador de paquetes de Node), y `npx` (El lanzador de paquetes de Node). Toma en cuenta que también puedes utilizar el administrador de paquetes Yarn en lugar de npm, no obstante, para este tutorial asumiremos que estás trabajando con npm. Visita [Conceptos básicos de administradores de paquetes](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) para más información de npm y yarn.
+Para poder trabajar con Svelte, debes tener [Node.js](https://nodejs.org/en/) instalado. Es recomendable que uses una versión con soporte a largo plazo (LTS). Node incluye `npm` (el administrador de paquetes de Node), y `npx` (El lanzador de paquetes de Node). Toma en cuenta que también puedes utilizar el administrador de paquetes Yarn en lugar de npm, no obstante, para este tutorial asumiremos que estás trabajando con npm. Visita [Conceptos básicos de administradores de paquetes](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) para más información de npm y yarn.
 
-Si estás utilizando Windows, deberás instalar algunos programas que te proporcionen características de la terminal de sistemas Unix/macOS para poder ejecutar comandos de este tutorial. Dos herramientas que te pueden servir son Gitbash (que forma parte de las [herramientas de git para Windows](https://gitforwindows.org/)) o el [Subsistema de Linux para Windows (WSL)](https://docs.microsoft.com/windows/wsl/about). Visita el [Curso introductorio a la línea de comandos](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) para más información sobre estas herramientas y la línea de comandos en general.
+Si estás utilizando Windows, deberás instalar algunos programas que te proporcionen características de la terminal de sistemas Unix/macOS para poder ejecutar comandos de este tutorial. Dos herramientas que te pueden servir son Gitbash (que forma parte de las [herramientas de git para Windows](https://gitforwindows.org/)) o el [Subsistema de Linux para Windows (WSL)](https://docs.microsoft.com/windows/wsl/about). Visita el [Curso introductorio a la línea de comandos](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) para más información sobre estas herramientas y la línea de comandos en general.
 
 También puedes visitar los siguientes artículos para más información:
 
@@ -106,7 +106,7 @@ npm install
 npm run dev
 ```
 
-> **Nota:** el funcionamiento de degit no es mágico — simplemente te permite descargar y descomprimir la última versión del contenido de un repositorio de git. Esto es mucho más rápido que utilizar el comando `git clone` ya que no se descarga todo el historial del repositorio ni se crea un clon local completo. 
+> **Nota:** el funcionamiento de degit no es mágico — simplemente te permite descargar y descomprimir la última versión del contenido de un repositorio de git. Esto es mucho más rápido que utilizar el comando `git clone` ya que no se descarga todo el historial del repositorio ni se crea un clon local completo.
 
 Después de ejecutar `npm run dev`, Svelte compila y construye tu aplicación.
 Además, inicia un servidor local en la dirección `localhost:8080`. Svelte estará a la espera de modificaciones en el código fuente de tu aplicación para compilar y actualizar la app. Tu navegador mostrará algo parecido a lo siguiente:
@@ -142,10 +142,10 @@ moz-todo-svelte
 
 El contenido del proyecto consta de los siguientes archivos:
 
-- `package.json` y `package-lock.json`: Contienen información sobre el proyecto, son utilizados por Node.js/npm para manterlo organizado. No necesitas entender estos archivos para completar el tutorial, sin embargo, si quieres saber más sobre este tema puedes leer el artículo [¿Qué es el archivo `package.json`? (en-US)](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) en NodeJS.org; también lo analizamos en nuestro [Tutorial básico de administradores de paquetes](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
+- `package.json` y `package-lock.json`: Contienen información sobre el proyecto, son utilizados por Node.js/npm para manterlo organizado. No necesitas entender estos archivos para completar el tutorial, sin embargo, si quieres saber más sobre este tema puedes leer el artículo [¿Qué es el archivo `package.json`? (en-US)](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) en NodeJS.org; también lo analizamos en nuestro [Tutorial básico de administradores de paquetes](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
 - `node_modules`: Aquí Node guarda las dependencias del proyecto. Estas dependencias no estarán presentes en producción, son usadas únicamente en el entorno de desarrollo.
 - `.gitignore`: Le indica a Git cuales son los archivos y carpetas que debe ignorar del proyecto. Esto será de gran ayuda si decides incluir tu aplicación en un repositorio de git.
-- `rollup.config.js`: Svelte usa [rollup.js](https://rollupjs.org/) como un 
+- `rollup.config.js`: Svelte usa [rollup.js](https://rollupjs.org/) como un
 _module bundler_. Este archivo de configuración le dice a _rollup_ cómo compilar y construir tu aplicación. Si prefieres utilizar [webpack](https://webpack.js.org/), en su lugar puedes crear tu proyecto con `npx degit sveltejs/template-webpack svelte-app`.
 - `scripts`: Contiene los _scripts_ de configuración requeridos. Actualmente debería contener únicamente `setupTypeScript.js`.
 
@@ -159,7 +159,7 @@ _module bundler_. Este archivo de configuración le dice a _rollup_ cómo compil
 - `public`: Este directorio contiene todos los archivos que serán publicados en producción.
 
   - `favicon.png`: Este es el _favicon_ para tu aplicación. Actualmente es el logo de Svelte.
-  - `index.html`: Esta es la página principal de tu aplicación. 
+  - `index.html`: Esta es la página principal de tu aplicación.
   Inicialmente es simplemente una página HTML vacía que carga los paquetes de archivos CSS y js generados por Svelte.
   - `global.css`: Este archivo contiene los estilos globales. Es un archivo regular de CSS que será aplicado a toda tu aplicación.
   - `build`: Este directorio contiene el código fuente de JavaScript y CSS que fue generado.
@@ -235,11 +235,11 @@ El bloque `<script>` contiene JavaScript que se ejecuta cuando se crea una insta
 </script>
 ```
 
-Svelte utiliza la palabra clave [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) para marcar la declaración de una variable como una propiedad (abreviado como prop), lo cual significa que ahora es visible para los consumidores del componente (e.g. otros componentes). Este es un claro ejemplo de cómo Svelte extiende la sintaxis de JavaScript para hacerlo más útil, sin dejar de ser familiar.
+Svelte utiliza la palabra clave [`export`](/es/docs/Web/JavaScript/Reference/Statements/export) para marcar la declaración de una variable como una propiedad (abreviado como prop), lo cual significa que ahora es visible para los consumidores del componente (e.g. otros componentes). Este es un claro ejemplo de cómo Svelte extiende la sintaxis de JavaScript para hacerlo más útil, sin dejar de ser familiar.
 
 ### La sección de marcado
 
-En la sección de marcado puedes insertar todo el HTML que quieras y, adicionalmente, puedes insertar expresiones válidas de JavaScript dentro de llaves (`{}`). En este caso estamos incrustando el valor de la prop `name` justo después del texto `Hello`. 
+En la sección de marcado puedes insertar todo el HTML que quieras y, adicionalmente, puedes insertar expresiones válidas de JavaScript dentro de llaves (`{}`). En este caso estamos incrustando el valor de la prop `name` justo después del texto `Hello`.
 
 ```html
 <main>
@@ -306,7 +306,7 @@ Simplemente guarda los cambios y la aplicación ejecutándose en `localhost:8080
 
 ### Un primer vistazo a la reactividad de Svelte
 
-Cuando hablamos dentro del contexto de un _framework_ de interfaz de usuario (IU), el término reactividad se refiere a la capacidad que tiene el _framework_ para actualizar el DOM cuando el estado de un componente cambia. 
+Cuando hablamos dentro del contexto de un _framework_ de interfaz de usuario (IU), el término reactividad se refiere a la capacidad que tiene el _framework_ para actualizar el DOM cuando el estado de un componente cambia.
 
 En Svelte, la reactividad se activa tras asignar un nuevo valor a cualquier variable en el nivel principal de un componente. Por ejemplo, podríamos incluir una función `toggleName()` en nuestro componente `App` y un botón para invocar a dicha función.
 
@@ -440,7 +440,6 @@ Es la forma más sencilla de empezar a experimentar con Svelte desde cualquier d
 
 Veamos brevemente el REPL de Svelte y la forma en que lo usarías. Tiene el siguiente aspecto:
 
-
 ![el repl de svelte en acción, mostrando código de un componente a la izquierda, y el resultado a la derecha](03-svelte-repl-in-action.png)
 
 Para iniciar un REPL, abre tu navegador web y navega a <https://svelte.dev/repl>.
@@ -500,11 +499,11 @@ Esto nos lleva al final de nuestro primer vistazo a Svelte, incluyendo cómo ins
 
 En Svelte:
 
-- Definimos el código JavaScript, estilo y marcado de cada componente en un solo archivo `.svelte`.  
+- Definimos el código JavaScript, estilo y marcado de cada componente en un solo archivo `.svelte`.
 - Las props del componente se definine con la palabra clave `export`.
 - Para utilizar un componente de Svelte, basta con importar el archivo `.svelte` correspondiente.
 - Los estilos de los componentes son locales, lo cual evita colisiones.
-- En la sección de marcado puedes incluir cualquier expresión de JavaScript entre llaves. 
+- En la sección de marcado puedes incluir cualquier expresión de JavaScript entre llaves.
 - Las variables del nivel principal de un componente conforman su estado.
 - La reactividad se activa al asignar un nuevo valor a una variable del nivel principal.
 
