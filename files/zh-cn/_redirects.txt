@@ -1602,7 +1602,6 @@
 /zh-CN/docs/Web/API/HTMLElement/animationend_event	/zh-CN/docs/Web/API/Element/animationend_event
 /zh-CN/docs/Web/API/HTMLElement/animationiteration_event	/zh-CN/docs/Web/API/Element/animationiteration_event
 /zh-CN/docs/Web/API/HTMLElement/animationstart_event	/zh-CN/docs/Web/API/Element/animationstart_event
-/zh-CN/docs/Web/API/HTMLElement/contextMenu	/zh-CN/docs/orphaned/Web/API/HTMLElement/contextMenu
 /zh-CN/docs/Web/API/HTMLElement/oncopy	/zh-CN/docs/Web/API/HTMLElement/copy_event
 /zh-CN/docs/Web/API/HTMLElement/oncut	/zh-CN/docs/Web/API/HTMLElement/cut_event
 /zh-CN/docs/Web/API/HTMLElement/onpaste	/zh-CN/docs/Web/API/HTMLElement/paste_event
