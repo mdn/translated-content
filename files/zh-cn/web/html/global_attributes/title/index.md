@@ -13,7 +13,7 @@ slug: Web/HTML/Global_attributes/title
 
 `title` 属性也可以用来标注[数据表格](/zh-CN/docs/Web/HTML/Element/table)中的控件。
 
-当 `title` 属性被添加到 [`<link rel="styleheet">`](/zh-CN/docs/Web/HTML/Element/link)时，将创建一个替代的样式表。当用 `<link rel="alternate">` 定义一个备用样式表时，该属性是必需的，并且必须设置为一个非空字符串。
+当 `title` 属性被添加到 [`<link rel="styleheet">`](/zh-CN/docs/Web/HTML/Element/link) 时，将创建一个替代的样式表。当用 `<link rel="alternate">` 定义一个备用样式表时，该属性是必需的，并且必须设置为一个非空字符串。
 
 如果包含在 {{htmlelement('abbr')}} 起始标签上，`title` 必须是缩写或首字母的完整扩展。尽可能不要使用 `title`，而是在第一次使用时以纯文本提供缩写或缩略语的扩展，使用 `<abbr>` 来标记缩写。这使所有的用户知道这个缩写或简称是什么名字或术语，同时为用户代理提供一个提示，告诉它们如何宣告这个内容。
 
