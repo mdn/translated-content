@@ -1,6 +1,6 @@
 ---
 title: 事件
-slug: Glossary/event
+slug: Glossary/Event
 ---
 
 事件是 [DOM](/zh-TW/docs/Glossary/DOM) 元素產生的事情，它可以通過 Javascript 代碼來操作.
