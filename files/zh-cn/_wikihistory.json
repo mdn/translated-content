@@ -33666,13 +33666,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey": {
-    "modified": "2019-12-03T17:45:24.248Z",
-    "contributors": ["pans9"]
-  },
-  "orphaned/Web/HTML/Global_attributes/x-ms-format-detection": {
-    "modified": "2019-12-03T17:54:04.795Z",
-    "contributors": ["pans9"]
   }
 }

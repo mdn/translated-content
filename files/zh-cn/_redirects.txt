@@ -2290,10 +2290,6 @@
 /zh-CN/docs/Web/HTML/Forms/How_to_build_custom_form_widgets	/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls
 /zh-CN/docs/Web/HTML/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/Web/HTML/Forms/表单入门	/zh-CN/docs/Learn/Forms/Your_first_form
-/zh-CN/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey	/zh-CN/docs/orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
-/zh-CN/docs/Web/HTML/Global_attributes/x-ms-format-detection	/zh-CN/docs/orphaned/Web/HTML/Global_attributes/x-ms-format-detection
-/zh-CN/docs/Web/HTML/Global_attributes/x-ms-加速装置键	/zh-CN/docs/orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
-/zh-CN/docs/Web/HTML/Global_attributes/x-ms-格式-检测	/zh-CN/docs/orphaned/Web/HTML/Global_attributes/x-ms-format-detection
 /zh-CN/docs/Web/HTML/Global_attributes/摩缺	/zh-CN/docs/Web/HTML/Global_attributes/accesskey
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Web/HTML/Inline_elements
