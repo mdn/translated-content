@@ -42,7 +42,7 @@ slug: >-
 
 {{EmbedGHLiveSample("css-examples/flexbox/ratios/min-max-content.html", '100%', 750)}}
 
-记住这种行为，以及 `min-content` 和`max-content` 所产生的影响，我们将在后文中探索 `flex-grow` 和`flex-shrink`。
+记住这种行为，以及 `min-content` 和 `max-content` 所产生的影响，我们将在后文中探索 `flex-grow` 和 `flex-shrink`。
 
 ### 正负可用空间
 
