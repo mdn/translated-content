@@ -1,43 +1,29 @@
 ---
 title: Organiser notre application React
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - React
-  - client-side
-  - events
-  - interactivity
-  - state
+l10n:
+  sourceCommit: 06754bc607017d19a7f088df7d6b0b7b635cbe58
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Jusqu'à présent, notre application est monolith. Avant de pouvoir lui faire faire des choses, nous devons la décomposer en composants gérables et descriptifs. React n'a pas de règles strictes sur ce qui est et n'est pas un composant – c'est à vous de décider ! Dans cet article, nous allons vous montrer une façon judicieuse de décomposer notre application en composants.
+Jusqu'à présent, notre application est monolithique. Avant de pouvoir en faire quelque chose, nous devons la scinder en composants gérables et descriptifs. React n'a pas de règles strictes sur ce qui est et n'est pas un composant&nbsp;: c'est à vous de décider&nbsp;! Dans cet article, nous allons vous montrer une façon judicieuse de diviser notre application en composants.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prérequis:</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         <p>
-          Être familier avec les languages <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, , et
-          <a href="/fr/docs/Learn/JavaScript">JavaScript</a>,
-          connaitre le
-          <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >terminal/command line</a
-          >.
+          Être familier avec les notions fondamentales de <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et
+          <a href="/fr/docs/Learn/JavaScript">JavaScript</a>, connaitre <a href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">le terminal/la ligne de commande</a>.
         </p>
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs:</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
-        Montrer comment casser notre application monolith (todo list) en différents composants.
+        Illustrer une méthode adaptée pour scinder notre application de liste de tâches en différents composants.
       </td>
     </tr>
   </tbody>
@@ -45,29 +31,29 @@ Jusqu'à présent, notre application est monolith. Avant de pouvoir lui faire fa
 
 ## Définir notre premier composant
 
-Définir un composant peut sembler délicate jusqu'à ce que vous ayez un peu de pratique, mais l'essentiel est le suivant :
+Définir un composant peut sembler délicat avant d'avoir eu un peu de pratique, le principe de base peut se résumer ainsi&nbsp;:
 
-- S'il représente un "morceau" évident de votre application, il s'agit probablement d'un composant.
+- S'il représente un «&nbsp;morceau&nbsp;» évident de votre application, il s'agit probablement d'un composant.
 - S'il est souvent réutilisé, il s'agit probablement d'un composant.
 
-Le deuxième point est particulièrement précieux : la création d'un composant à partir d'éléments communs de l'interface utilisateur vous permet de modifier votre code à un seul endroit et de voir ces modifications partout où ce composant est utilisé. Vous n'êtes pas non plus obligé de tout décomposer en composants tout de suite. Inspirons-nous du deuxième point et créons un composant à partir de l'élément le plus réutilisé et le plus important de l'interface utilisateur : un élément de liste de tâches.
+Le deuxième point est particulièrement précieux&nbsp;: la création d'un composant à partir d'éléments communs de l'interface utilisateur vous permet de modifier votre code à un seul endroit et de voir ces modifications propagées partout où ce composant est utilisé. Il n'y a pas d'obligation non plus à tout décomposer en composants tout de suite. Inspirons-nous du deuxième point et créons un composant à partir de l'élément le plus réutilisé et le plus important de l'interface utilisateur&nbsp;: un élément de la liste de tâches.
 
-## Faire un `<Todo />`
+## Construire un composant `<Todo />`
 
-Avant de pouvoir créer un composant, nous devons créer un nouveau fichier pour celui-ci. En fait, nous devrions créer un répertoire juste pour nos composants. Les commandes suivantes créent un répertoire `components` et ensuite, à l'intérieur de celui-ci, un fichier appelé `Todo.js`. Assurez-vous d'être à la racine de votre application avant de les exécuter !
+Avant de pouvoir créer un composant, nous devons créer un nouveau fichier pour celui-ci. En fait, mieux vaut créer un répertoire dédié à nos composants. Les commandes suivantes créent un répertoire `components` puis un fichier appelé `Todo.js` dans ce nouveau répertoire. Assurez-vous d'être à la racine de votre application avant de les exécuter&nbsp;!
 
 ```bash
 mkdir src/components
 touch src/components/Todo.js
 ```
 
-Notre nouveau fichier `Todo.js` est actuellement vide ! Ouvrez le et ajouter cette première ligne:
+Notre nouveau fichier `Todo.js` est actuellement vide&nbsp;! Ouvrez le et ajoutez cette première ligne&nbsp;:
 
 ```jsx
 import React from "react";
 ```
 
-Puisque nous allons créer un composant appelé `Todo`, vous pouvez commencer à ajouter le code à `Todo.js` aussi, comme suit. Dans ce code, nous définissons la fonction et l'exportons sur la même ligne :
+Puisque nous allons créer un composant appelé `Todo`, nous pouvons commencer à ajouter le code de ce composant dans ce fichier comme suit. Dans ce code, nous définissons la fonction et l'exportons sur la même ligne&nbsp;:
 
 ```jsx
 export default function Todo() {
@@ -77,7 +63,7 @@ export default function Todo() {
 }
 ```
 
-C'est correct jusqu'à présent, mais notre composant doit retourner quelque chose ! Retournez à `src/App.js`, copier le premier [`<li>`](/en-US/docs/Web/HTML/Element/li) de la liste non ordonnée, et le coller dans `Todo.js` pour qu'il se lise comme ceci ::
+Jusque là tout va bien, mais notre composant doit retourner quelque chose&nbsp;! Retournez au fichier `src/App.js`, copiez le premier [`<li>`](/fr/docs/Web/HTML/Element/li) de la liste non ordonnée, puis collez-le dans `Todo.js` afin que ce dernier contienne ceci&nbsp;:
 
 ```jsx
 export default function Todo() {
@@ -86,15 +72,15 @@ export default function Todo() {
       <div className="c-cb">
         <input id="todo-0" type="checkbox" defaultChecked={true} />
         <label className="todo-label" htmlFor="todo-0">
-          Eat
+          Manger
         </label>
       </div>
       <div className="btn-group">
         <button type="button" className="btn">
-          Edit <span className="visually-hidden">Eat</span>
+          Éditer <span className="visually-hidden">Manger</span>
         </button>
         <button type="button" className="btn btn__danger">
-          Delete <span className="visually-hidden">Eat</span>
+          Supprimer <span className="visually-hidden">Manger</span>
         </button>
       </div>
     </li>
@@ -102,15 +88,15 @@ export default function Todo() {
 }
 ```
 
-> **Remarque:** Les composants doivent toujours retourner quelque chose. Si, à un moment donné, vous essayez de rendre un composant qui ne renvoie rien, React affichera une erreur dans votre navigateur.
+> **Note :** Les composants doivent toujours retourner quelque chose. Si, à un moment donné, vous essayez de rendre un composant qui ne renvoie rien, React affichera une erreur dans votre navigateur.
 
-Notre composant `Todo` est terminé, du moins pour l'instant; maintenant nous pouvons l'utiliser. Dans `App.js`, ajoutez la ligne suivante en haut du fichier pour importer `Todo`:
+Notre composant `Todo` est terminé, du moins pour l'instant&nbsp;nous pouvons maintenant l'utiliser. Dans `App.js`, ajoutez la ligne suivante en haut du fichier pour importer `Todo`&nbsp;:
 
 ```jsx
 import Todo from "./components/Todo";
 ```
 
-Avec ce composant importé, vous pouvez remplacer toutes les balises `<li>` dans `App.js` avec le composant importé `<Todo />`. Votre balise `<ul>` doit être comme ceci:
+Avec ce composant importé, vous pouvez remplacer toutes les balises `<li>` dans `App.js` avec le composant importé `<Todo />`. Votre balise `<ul>` devrait donc ressembler à ceci&nbsp;:
 
 ```jsx
 <ul
@@ -124,35 +110,35 @@ Avec ce composant importé, vous pouvez remplacer toutes les balises `<li>` dans
 </ul>
 ```
 
-Lorsque vous retournez sur votre naviguateur, vous remarquerez quelque chose de fâcheux : votre liste répète maintenant la première tâche trois fois !
+Lorsque vous retournez sur votre naviguateur, vous remarquerez quelque chose de fâcheux&nbsp;: votre liste répète maintenant la première tâche trois fois&nbsp;!
 
-![Our todo list app, with todo components repeating because the label is hardcoded into the component](todo-list-repeating-todos.png)
+![Notre application de liste de tâche avec les composants todo répétés, car le libellé est présent en dur dans le composant](todo-list-repeating-todos.png)
 
-Nous ne voulons pas seulement manger (`Eat`); nous avons d'autres choses à faire. Ensuite, nous verrons comment faire en sorte que différents appels de composants rendent un contenu unique.
+Nous ne voulons pas seulement manger, nous avons d'autres choses à faire. Nous allons donc voir comme faire en sorte que différents appels de composants rendent un contenu unique.
 
-## Faire un unique `<Todo />`
+## Rendre `<Todo />` unique
 
-Les composants sont puissants car ils nous permettent de réutiliser des éléments de notre interface utilisateur et de nous référer à un seul endroit pour la source de cette interface. Le problème est que nous ne voulons généralement pas réutiliser la totalité de chaque composant; nous voulons réutiliser la plupart des parties, et changer de petits morceaux. C'est là que les props interviennent.
+Les composants sont puissants, car ils nous permettent de réutiliser des éléments de notre interface utilisateur et de nous référer à un seul endroit pour la source de cette interface. Le problème est que nous ne voulons généralement pas réutiliser la totalité de chaque composant&nbsp;; nous voulons réutiliser la plupart des parties, et changer de petits morceaux. C'est là que les <i lang="en">props</i> interviennent.
 
-### Qu'est-ce qu'un `name`?
+### Quel est ton nom&nbsp;?
 
-Afin de suivre les noms des tâches que nous voulons accomplir, nous devons nous assurer que chaque composant `<Todo />` rend un nom unique.
+Afin de suivre les noms des tâches que nous voulons accomplir, nous devons nous assurer que chaque composant `<Todo />` affiche un nom unique.
 
-Dans `App.js`, donner à chaque `<Todo />` une prop `name`. Utilisons les noms de nos tâches que nous avions auparavant:
+Dans `App.js`, donnez une <i lang="en">prop</i> `name` à chaque `<Todo />`. Utilisez les noms des tâches que nous avions auparavant&nbsp;:
 
 ```jsx
-<Todo name="Eat" />
-<Todo name="Sleep" />
-<Todo name="Repeat" />
+<Todo name="Manger" />
+<Todo name="Dormir" />
+<Todo name="Recommencer" />
 ```
 
-Lorsque votre navigateur se rafraîchira, vous verrez... exactement la même chose que précédemment. Nous avons donné à notre `<Todo />` quelques accessoires, mais nous ne les utilisons pas encore. Retournons dans `Todo.js` et remédions à cela.
+Lorsque votre navigateur se rafraîchira, vous verrez… exactement la même chose qu'avant. Nous avons donné des propriétés à notre `<Todo />`, mais nous ne les utilisons pas encore. Retournons dans `Todo.js` et remédions à cela.
 
-Tout d'abord, modifiez la définition de votre fonction `Todo()` pour qu'elle prenne `props` en paramètre. Vous pouvez utiliser `console.log()` vos `props` comme nous l'avons fait précédemment, si vous souhaitez vérifier qu'ils sont correctement reçus par le composant.
+Tout d'abord, modifiez la définition de votre fonction `Todo()` pour qu'elle prenne `props` en paramètre. Si vous souhaitez vérifier que la valeur `props` est correctement reçue par le composant, vous pouvez utiliser `console.log()` pour la tracer, comme nous l'avons fait précédemment.
 
-Une fois que vous êtes sûr que votre composant reçoit bien ses `props`, vous pouvez remplacer chaque occurrence de `Eat` par votre `name` prop. Rappelez-vous : lorsque vous êtes au milieu d'une expression JSX, vous utilisez des accolades pour injecter la valeur d'une variable.
+Lorsque votre composant reçoit bien ses `props`, vous pouvez remplacer chaque occurrence de `Manger` par le nom que vous voulez dans la <i lang="en">prop</i> `name`. Rappelez-vous&nbsp;: lorsque vous êtes au milieu d'une expression JSX, il faut utiliser des accolades pour injecter la valeur d'une variable.
 
-En mettant tout cela ensemble, votre fonction `Todo()` devrait se lire comme ceci :
+En assemblant tout ça, votre fonction `Todo()` devrait ressembler à ceci&nbsp;:
 
 ```jsx
 export default function Todo(props) {
@@ -177,45 +163,45 @@ export default function Todo(props) {
 }
 ```
 
-_Maintenant_, votre navigateur devrait afficher trois tâches uniques. Un autre problème subsiste cependant: elles sont toujours cochées par défaut.
+_Maintenant_, votre navigateur devrait afficher trois tâches uniques. Un autre problème subsiste cependant&nbsp;: elles sont toujours cochées par défaut.
 
-![Our todo list, with different todo labels now they are passed into the components as props](todo-list-unique-todos.png)
+![Notre liste de tâches, avec des libellés différents maintenant qu'ils sont passés aux composants comme props](todo-list-unique-todos.png)
 
-### Est-ce terminé (`completed`)?
+### Est-ce terminé&nbsp;?
 
-Dans notre liste statique originale, seul `Eat` était coché. Encore une fois, nous voulons réutiliser _la plupart_ de l'interface utilisateur qui compose un composant `<Todo />`, mais changer une chose. C'est un bon travail pour un autre prop ! Donnez à chaque appel `<Todo />` dans `App.js` une nouvelle prop de `completed`. La première (`Eat`) devrait avoir la valeur `true`; les autres devraient être `false` :
+Dans notre liste statique originale, seul `Manger` était coché. Là encore, nous voulons réutiliser _la plupart_ de l'interface utilisateur qui compose un composant `<Todo />`, mais changer une seconde chose. C'est un rôle idéal pour une autre <i lang="en">prop</i>&nbsp;! Ajoutez une nouvelle <i lang="en">prop</i> `completed` à chaque appel de `<Todo />` dans `App.js`. La première (`Manger`) devrait avoir la valeur `true`&nbsp;; les autres devraient être `false`&nbsp;:
 
 ```jsx
-<Todo name="Eat" completed={true} />
-<Todo name="Sleep" completed={false} />
-<Todo name="Repeat" completed={false} />
+<Todo name="Manger" completed={true} />
+<Todo name="Dormir" completed={false} />
+<Todo name="Recommencer" completed={false} />
 ```
 
-Comme précédemment, nous devons retourner dans `Todo.js` pour utiliser réellement ces props. Changez l'attribut `defaultChecked` sur le `<input />` pour que sa valeur soit égale à la prop `completed`. Une fois que vous avez terminé, l'élément `<input />` du composant Todo se présentera comme suit :
+Comme précédemment, nous devons retourner dans `Todo.js` pour utiliser réellement ces <i lang="en">props</i>. Changez l'attribut `defaultChecked` sur l'élément `<input>` pour que sa valeur soit égale à la <i lang="en">prop</i> `completed`. Une fois terminé, l'élément `<input>` du composant Todo se présentera comme suit&nbsp;:
 
 ```jsx
 <input id="todo-0" type="checkbox" defaultChecked={props.completed} />
 ```
 
-Et votre naviguateur mettra à jour et montra seulement `Eat` comme coché:
+Et votre naviguateur se mettra à jour et affichera seulement `Manger` comme coché:
 
-![Our todo list app, now with differing checked states - some checkboxes are checked, others not](todo-list-differing-checked-states.png)
+![Notre application de liste de tâches, avec différents états : certaines cases sont cochées et d'autres non](todo-list-differing-checked-states.png)
 
-Si vous changez chaque composant `<Todo />` avec la prop `completed`, votre naviguateur cochera ou decochera chaque checkboxes en même temps.
+Si vous changez la <i lang="en">prop</i> `completed` de chaque composant `<Todo />`, votre naviguateur cochera ou decochera la case correspondante en même temps.
 
-### Donnez un `id`, svp
+### Identifiez-vous
 
-Mantenant que, notre composant `<Todo />` donne à toutes les tâches un attribut `id` avec la valeur `todo-0`. C'est un mauvais HTML car les attributs [`id`](/en-US/docs/Web/HTML/Global_attributes/id) doivent être uniques (ils sont utilisés comme identifiants uniques pour les fragments de document, par CSS, JavaScript, etc.) Cela signifie que nous devons donner à notre composant une prop `id` qui prend une valeur unique pour chaque `Todo`.
+À l'heure actuelle, notre composant `<Todo />` fournit le même attribut `id`, avec la valeur `todo-0`, pour chaque tâche. Cela ne respecte pas les règles HTML, car les [identifiants (`id`)](/fr/docs/Web/HTML/Global_attributes/id) doivent être uniques (ils sont utilisés comme identifiants uniques pour les fragments de document, CSS, JavaScript, etc.). Cela signifie que nous devons donner à notre composant une prop `id` qui prend une valeur unique pour chaque `Todo`.
 
-Pour suivre le même schéma qu'au départ, donnons à chaque instance du composant `<Todo />` un ID au format `todo-i`, où `i` est incrementé d'une unité à chaque fois:
+Pour suivre le même schéma qu'au départ, donnons à chaque instance du composant `<Todo />` un identifiant au format `todo-i`, où `i` est incrementé d'une unité à chaque fois&nbsp;:
 
 ```jsx
-<Todo name="Eat" completed={true} id="todo-0" />
-<Todo name="Sleep" completed={false} id="todo-1" />
-<Todo name="Repeat" completed={false} id="todo-2" />
+<Todo name="Manger" completed={true} id="todo-0" />
+<Todo name="Dormir" completed={false} id="todo-1" />
+<Todo name="Recommencer" completed={false} id="todo-2" />
 ```
 
-Retournez maintenant dans `Todo.js` et utilisez la prop `id`. Il doit remplacer la valeur de l'attribut `id` de l'élément `<input />`, ainsi que la valeur de l'attribut `htmlFor` de son label:
+Retournez maintenant dans `Todo.js` et utilisez la <i lang="en">prop</i> `id`. Elle doit remplacer la valeur de l'attribut `id` de l'élément `<input>`, ainsi que la valeur de l'attribut `htmlFor` du libellé associé&nbsp;:
 
 ```jsx
 <div className="c-cb">
@@ -226,27 +212,33 @@ Retournez maintenant dans `Todo.js` et utilisez la prop `id`. Il doit remplacer 
 </div>
 ```
 
-## Jusqu'ici, tout va bien ?
+## Jusqu'ici, tout va bien&nbsp;?
 
-Nous faisons un bon usage de React jusqu'à présent, mais nous pouvons faire mieux ! Notre code est répétitif. Les trois lignes qui rendent notre composant `<Todo />` sont presque identiques, avec une seule différence: la valeur de chaque prop.
+Nous utilisons React correctement, mais pourrions faire encore mieux&nbsp;! Notre code est répétitif. Les trois lignes qui rendent notre composant `<Todo />` sont presque identiques, avec une seule différence&nbsp;: la valeur de chaque <i lang="en">prop<i>.
 
-Nous pouvons nettoyer notre code grâce à l'une des capacités principales de JavaScript : l'itération. Pour utiliser l'itération, nous devons d'abord repenser nos tâches.
+Nous pouvons nettoyer notre code grâce à l'une des notions principales de JavaScript&nbsp;: l'itération. Pour utiliser l'itération, nous devons d'abord repenser nos tâches.
 
-## Tâches comme données
+## Gérer les tâches comme des données
 
-Chacune de nos tâches contient actuellement trois informations: son nom, si elle a été vérifiée, et son ID unique. Ces données se traduisent bien par un objet. Puisque nous avons plus d'une tâche, un tableau d'objets fonctionnerait bien pour représenter ces données.
+Chacune de nos tâches contient actuellement trois informations&nbsp;:
 
-Dans `src/index.js`, créez un nouveau `const` sous l'import final, mais au-dessus de `ReactDOM.render()`:
+- Son nom
+- Son état (réalisée ou non)
+- Son identifiant
+
+On peut donc aisément les représenter comme des objets. Puisque nous avons plus d'une tâche, autant utiliser un tableau d'objets pour représenter correctement ces données.
+
+Dans le fichier `src/index.js`, ajoutez une nouvelle déclaration `const` sous l'import final et au-dessus de `ReactDOM.render()`&nbsp;:
 
 ```jsx
 const DATA = [
-  { id: "todo-0", name: "Eat", completed: true },
-  { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false }
+  { id: "todo-0", name: "Manger", completed: true },
+  { id: "todo-1", name: "Dormir", completed: false },
+  { id: "todo-2", name: "Recommencer", completed: false }
 ];
 ```
 
-Ensuite, nous allons passer `DATA` à `<App />` en tant que prop, appelé `tasks`. La dernière ligne de `src/index.js` devrait ressembler à ceci :
+Ensuite, nous allons passer `DATA` à `<App />` en tant que <i lang="en">prop</i> appelée `tasks`. La dernière ligne de `src/index.js` devrait ressembler à ceci&nbsp;:
 
 ```jsx
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -263,7 +255,7 @@ Ce tableau est maintenant disponible pour le composant App en tant que `props.ta
 
 ## Rendu avec itération
 
-Pour rendre notre tableau d'objets, nous devons transformer chacun d'eux en un composant `<Todo />`. JavaScript nous offre une méthode de transformation des données en quelque chose d'autre: [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+Pour rendre notre tableau d'objets, nous devons transformer chacun d'eux en un composant `<Todo />`. JavaScript nous offre une méthode de transformation des données en quelque chose d'autre: [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
 Pour rendre notre tableau d'objets, nous devons transformer chacun d'eux en un composant `<Todo />`. JavaScript nous offre une méthode de transformation des données en quelque chose d'autre:
 
@@ -397,7 +389,7 @@ function FilterButton(props) {
 export default FilterButton;
 ```
 
-> **Remarque:** Vous remarquerez peut-être que nous faisons ici la même erreur que pour le composant `<Todo />`, en ce sens que chaque bouton sera le même. Ce n'est pas grave ! Nous allons corriger ce composant plus tard, dans la section [Back to the filter buttons](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
+> **Remarque:** Vous remarquerez peut-être que nous faisons ici la même erreur que pour le composant `<Todo />`, en ce sens que chaque bouton sera le même. Ce n'est pas grave ! Nous allons corriger ce composant plus tard, dans la section [Back to the filter buttons](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
 
 ## Importation de tous nos composants
 
