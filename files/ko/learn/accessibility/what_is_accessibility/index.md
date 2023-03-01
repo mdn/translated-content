@@ -115,7 +115,7 @@ l10n:
 
 하지만, 프로젝트를 시작할 때부터 접근성을 고려한다면 대부분의 컨텐츠를 접근성있게 만드는 데에 드는 비용은 꽤 적습니다.
 
-프로젝트 계획을 세울 때, 대상 데스크탑이나 모바일 브라우저와 같은 중요한 타겟 오디언스 세그먼트를 위한 테스팅과 함께 접근성 테스팅을 고려하세요. 빠르게, 자주 테스트하세요. 이상적인 방식은 자동화된 테스트를 통해 누락되어 있는 접근성 관련 피쳐들(예를 들어 이미지의 [대체 텍스트](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)나 잘못된 링크 텍스트—[Element relationships and context](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Element_relationships_and_context) 참고)을 잡아내는 것입니다. 또, 장애가 있는 유저 그룹을 대상으로 일부 테스팅을 진행하며 그들이 복잡한 사이트 기능을 얼마나 잘 활용할 수 있는지 확인할 수 있습니다. 다음과 같은 기준을 사용할 수 있습니다.
+프로젝트 계획을 세울 때, 대상 데스크탑이나 모바일 브라우저와 같은 중요한 타겟 오디언스 세그먼트를 위한 테스팅과 함께 접근성 테스팅을 고려하세요. 빠르게, 자주 테스트하세요. 이상적인 방식은 자동화된 테스트를 통해 누락되어 있는 접근성 관련 기능들(예를 들어 이미지의 [대체 텍스트](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)나 잘못된 링크 텍스트. [Element relationships and context](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Element_relationships_and_context)를 참고하세요)을 잡아내는 것입니다. 또, 장애가 있는 유저 그룹을 대상으로 일부 테스팅을 진행하며 그들이 복잡한 사이트 기능을 얼마나 잘 활용할 수 있는지 확인할 수 있습니다. 다음과 같은 기준을 사용할 수 있습니다.
 
 - 날짜 선택 위젯은 스크린 리더에서 사용성이 있나요?
 - 동적으로 업데이트되는 컨텐츠를 시각 장애인도 인지할 수 있나요?
