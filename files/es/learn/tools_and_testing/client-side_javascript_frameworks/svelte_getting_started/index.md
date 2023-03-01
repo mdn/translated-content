@@ -4,7 +4,6 @@ slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 l10n:
   sourceCommit: 1ad0cd5faac577bf7b13990242db455f2be2058d
-
 ---
 
 {{LearnSidebar}}
@@ -49,15 +48,15 @@ Tras usar esta metodología, como resultado no solo tenemos aplicaciones menos p
 
 Svelte adopta en gran medida el modelo clásico de desarrollo web dado por HTML, JS y CSS, pues solamente añade unas cuantas extensiones sobre HTML y JavaScript. A diferencia del resto de _frameworks_, Svelte probablemente introduce menos conceptos y herramientas por aprender.
 
-Sus mayores incovenientes vienen dados por su corta edad, pues su ecosistema se encuentra limitado en términos de herramientos, soporte, _plugins_, patrones específicos de uso, etc. en comparación con otros _frameworks_. A pesar de ello, sus beneficios deberían ser suficientes para despertar tu curiosidad en explorarlo.
+Sus mayores inconvenientes vienen dados por su corta edad, pues su ecosistema se encuentra limitado en términos de herramientas, soporte, complementos (_plugins_), patrones específicos de uso, etc. en comparación con otros _frameworks_. A pesar de ello, sus beneficios deberían ser suficientes para despertar tu curiosidad en explorarlo.
 
-> **Note:** Recientemente Svelte agregó [soporte oficial de Typescript](https://svelte.dev/blog/svelte-and-typescript), una de sus características más esperadas. Más adelante en esta serie de tutoriales exploraremos esa integración.
+> **Nota:** Recientemente Svelte agregó [soporte oficial de Typescript](https://svelte.dev/blog/svelte-and-typescript), una de sus características más esperadas. Más adelante en esta serie de tutoriales exploraremos esa integración.
 
 Te recomendamos que sigas el [Tutorial de Svelte](https://svelte.dev/tutorial/basics) para una introducción rápida a los conceptos básicos, para después regresar a este tutorial y aprender a construir algo más complicado.
 
 ## Casos de uso
 
-Svelte puede ser utilizado para desarrollar porciones de una interfaz o una aplicación completa. Puedes construir tu aplicación desde cero y dejar que Svelte maneje tu IU o incluso puedes integrar Svelte de forma incremental en una aplicación existente.
+Svelte puede ser utilizado para desarrollar porciones de una interfaz o una aplicación completa. Puedes construir tu aplicación desde cero y dejar que Svelte maneje tu Interfaz de Usuarios (IU) o incluso puedes integrar Svelte de forma incremental en una aplicación existente.
 
 Tomando en cuenta lo anterior, Svelte es una excelente solución para los siguientes casos:
 
@@ -65,7 +64,7 @@ Tomando en cuenta lo anterior, Svelte es una excelente solución para los siguie
 - Páginas altamente interactivas o visualizaciones complejas: Si te encuentras construyendo una aplicación para visualización de datos que necesite mostrar una gran cantidad de elementos en el DOM, la ganancia de rendimiento que viene de la mano de un _framework_ sin sobrecarga en tiempo de ejecución, ayudará a que las interacciones del usuario se mantengan ágiles y responsivas.
 - Gente que se encuentre iniciando en el mundo del desarrollo web: La curva de aprendizaje de Svelte es muy accesible. Desarrolladores web con conocimientos básicos de HTML, CSS y Javascript, fácilmente pueden familiarizarse con los conceptos de Svelte y empezar a construir aplicaciones web.
 
-De forma adicional, con la ayuda de [Sapper](https://sapper.svelte.dev/) (un _framework_ que se basa en Svelte), puedes desarrollar aplicaciones con características avanzadas como renderizado del lado del servidor (_SSR_), _code splitting_, enrutamiento basado en archivos y soporte de modo fuera de línea. Incluso existe [Svelte Native](https://svelte-native.technology/), que te permite crear aplicaciones nativas para móviles.
+De forma adicional, con la ayuda de [Sapper](https://sapper.svelte.dev/) (un _framework_ que se basa en Svelte), puedes desarrollar aplicaciones con características avanzadas como renderizado del lado del servidor (_SSR_), [fragmentación de código (_code splitting_)](/es/docs/Glossary/Code_splitting), enrutamiento basado en archivos y soporte de modo fuera de línea. Incluso existe [Svelte Native](https://svelte-native.technology/), que te permite crear aplicaciones nativas para móviles.
 
 ## ¿Cómo funciona Svelte?
 
@@ -145,8 +144,7 @@ El contenido del proyecto consta de los siguientes archivos:
 - `package.json` y `package-lock.json`: Contienen información sobre el proyecto, son utilizados por Node.js/npm para manterlo organizado. No necesitas entender estos archivos para completar el tutorial, sin embargo, si quieres saber más sobre este tema puedes leer el artículo [¿Qué es el archivo `package.json`? (en-US)](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) en NodeJS.org; también lo analizamos en nuestro [Tutorial básico de administradores de paquetes](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
 - `node_modules`: Aquí Node guarda las dependencias del proyecto. Estas dependencias no estarán presentes en producción, son usadas únicamente en el entorno de desarrollo.
 - `.gitignore`: Le indica a Git cuales son los archivos y carpetas que debe ignorar del proyecto. Esto será de gran ayuda si decides incluir tu aplicación en un repositorio de git.
-- `rollup.config.js`: Svelte usa [rollup.js](https://rollupjs.org/) como un
-_module bundler_. Este archivo de configuración le dice a _rollup_ cómo compilar y construir tu aplicación. Si prefieres utilizar [webpack](https://webpack.js.org/), en su lugar puedes crear tu proyecto con `npx degit sveltejs/template-webpack svelte-app`.
+- `rollup.config.js`: Svelte usa [rollup.js](https://rollupjs.org/) como un empaquetador de módulos. Este archivo de configuración le dice a _rollup_ cómo compilar y construir tu aplicación. Si prefieres utilizar [webpack](https://webpack.js.org/), en su lugar puedes crear tu proyecto con `npx degit sveltejs/template-webpack svelte-app`.
 - `scripts`: Contiene los _scripts_ de configuración requeridos. Actualmente debería contener únicamente `setupTypeScript.js`.
 
   - `setupTypeScript.js`: Este script configura el soporte de Typescript dentro de Svelte. Hablaremos más a detalle de este tema en el último artículo.
@@ -159,8 +157,7 @@ _module bundler_. Este archivo de configuración le dice a _rollup_ cómo compil
 - `public`: Este directorio contiene todos los archivos que serán publicados en producción.
 
   - `favicon.png`: Este es el _favicon_ para tu aplicación. Actualmente es el logo de Svelte.
-  - `index.html`: Esta es la página principal de tu aplicación.
-  Inicialmente es simplemente una página HTML vacía que carga los paquetes de archivos CSS y js generados por Svelte.
+  - `index.html`: Esta es la página principal de tu aplicación. Inicialmente es simplemente una página HTML vacía que carga los paquetes de archivos CSS y JavaScript generados por Svelte.
   - `global.css`: Este archivo contiene los estilos globales. Es un archivo regular de CSS que será aplicado a toda tu aplicación.
   - `build`: Este directorio contiene el código fuente de JavaScript y CSS que fue generado.
 
@@ -169,7 +166,7 @@ _module bundler_. Este archivo de configuración le dice a _rollup_ cómo compil
 
 ## Analizando nuestro primer componente de Svelte
 
-Componentes son los bloques para construir aplicaciones con Svelte. Se definen en archivos `.svelte` usando una versión extendida de HTML.
+Los componentes son los bloques para construir aplicaciones con Svelte. Se definen en archivos `.svelte` usando una versión extendida de HTML.
 
 Las tres secciones: `<script>`, `<style>`, y el marcado, son completamente opcionales y pueden aparecer en cualquier orden.
 
@@ -235,7 +232,7 @@ El bloque `<script>` contiene JavaScript que se ejecuta cuando se crea una insta
 </script>
 ```
 
-Svelte utiliza la palabra clave [`export`](/es/docs/Web/JavaScript/Reference/Statements/export) para marcar la declaración de una variable como una propiedad (abreviado como prop), lo cual significa que ahora es visible para los consumidores del componente (e.g. otros componentes). Este es un claro ejemplo de cómo Svelte extiende la sintaxis de JavaScript para hacerlo más útil, sin dejar de ser familiar.
+Svelte utiliza la palabra clave [`export`](/es/docs/Web/JavaScript/Reference/Statements/export) para marcar la declaración de una variable como una propiedad (abreviado como prop), lo cual significa que ahora es visible para los consumidores del componente (por ejemplo, otros componentes). Este es un claro ejemplo de cómo Svelte extiende la sintaxis de JavaScript para hacerlo más útil, sin dejar de ser familiar.
 
 ### La sección de marcado
 
@@ -408,7 +405,7 @@ A continuación exploraremos un poco más sobre cómo utilizar estas herramienta
 
 ### Utilizando Git
 
-El sistema de control de versiones más poppular es Git, junto a GitHub, un sitio que provee de almacenamiento para tus repositorios y varias herramientas para trabajar con ellos.
+El sistema de control de versiones más popular es Git, junto a GitHub, un sitio que provee de almacenamiento para tus repositorios y varias herramientas para trabajar con ellos.
 
 Estaremos utilizando GitHub para que puedas descargar fácilmente el código fuente de cada artículo. Además tendrás la opción de descargar el código de la forma que debería quedar al finalizar el artículo, en caso de que te pierdas.
 
@@ -432,11 +429,11 @@ Si quieres aprender más sobre git y GitHub, hemos compilado una lista de enlace
 
 ### Usando el REPL de Svelte
 
-Un REPL ([ciclo de leer, evaluar, imprimir (REPL en inglés)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) es un entorno interactivo que te permite introducir comandos y ver los resultados de inmediato. Muchos lenguajes de programación proporcionan un REPL.
+Un REPL ([ciclo de leer, evaluar, imprimir (REPL en inglés)](https://es.wikipedia.org/wiki/REPL)) es un entorno interactivo que te permite introducir comandos y ver los resultados de inmediato. Muchos lenguajes de programación proporcionan un REPL.
 
 EL REPL de Svelte es mucho más que eso. Se trata de una herramienta en línea que te permite crear aplicaciones completas, guardarlas en línea y compartirlas con otras personas.
 
-Es la forma más sencilla de empezar a experimentar con Svelte desde cualquier dispositivo, sin la necesidad de install algo. Esta herramienta es ampliamente utilizada por la comunidad de Svelte. Si quieres compartir una idea, pedir ayuda o reportar un problema, siempre lo más útil es crear una instancia del REPL para demostrar el problema.
+Es la forma más sencilla de empezar a experimentar con Svelte desde cualquier dispositivo, sin la necesidad de instalar algo. Esta herramienta es ampliamente utilizada por la comunidad de Svelte. Si quieres compartir una idea, pedir ayuda o reportar un problema, siempre lo más útil es crear una instancia del REPL para demostrar el problema.
 
 Veamos brevemente el REPL de Svelte y la forma en que lo usarías. Tiene el siguiente aspecto:
 
