@@ -184,7 +184,7 @@ span.special {
 }
 ```
 
-Como pode imaginar, algumas classes podem ser aplicadas a muitos elementos e você não quer ter que editar seu CSS a cada vez que algo novo precisar assumir esse estilo. Portanto, as vezes é melhor ignorar o lemento e simplesmente se referir à classe, a menos que você queira criar algumas regras especiais para um elemento em particular, e, talvez, queira ter certeza que eles não serão aplicados aos outros.
+Como pode imaginar, algumas classes podem ser aplicadas a muitos elementos e você não quer ter que editar seu CSS a cada vez que algo novo precisar assumir esse estilo. Portanto, as vezes é melhor ignorar o elemento e simplesmente se referir à classe, a menos que você queira criar algumas regras especiais para um elemento em particular, e, talvez, queira ter certeza que eles não serão aplicados aos outros.
 
 ## Estilizando coisas baseadas em sua localização no documento
 
