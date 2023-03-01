@@ -5,7 +5,6 @@ original_slug: MDN/Structures/Compatibility_tables
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 page-type: mdn-writing-guide
-browser-compat: api.AbortController
 ---
 
 {{MDNSidebar}}
@@ -24,6 +23,7 @@ MDN には、DOM, HTML, CSS, JavaScript, SVG などの、あらゆるブラウ�
 BCD データを MDN ページに取り込むには、BCD ソースファイルで指定されている、取り込みたい該当データのクエリ文字列を使用します。
 
 例：
+
 - {{domxref("AbortController")}} 互換性データは [api/AbortController.json](https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json) で定義されており、クエリ文字列 `api.AbortController` で取り込みが可能です。
 - {{HTTPHeader("Content-Type")}} HTTPヘッダの互換性データは、[http/headers/content-type.json](https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json) で定義されており、クエリ文字列 `http.headers.Content-Type` で取り込みが可能です。
 - {{domxref("VRDisplay.capabilities")}} プロパティの互換性データは [api/VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json) で定義されており、クエリ文字列 `api.VRDisplay.capabilities` で取り込みが可能です。
