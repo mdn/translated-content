@@ -59,9 +59,9 @@ Vary: Accept, Width, ECT
 
 *重要客户端提示*是那些应用响应可能显著改变呈现的页面的提示，可能会以一种不和谐或者会影响可用性的方式出现，因此必须在呈现页面之前应用。例如，`Sec-CH-Prefers-Reduced-Motion` 通常被视作重要提示，因为它可能会显著影响动画的行为，并且也因为选择此首选项的用户需要去设置它。
 
-服务器可以使用 {{HTTPHeader("Critical-CH")}} 响应标头和 `Accept-CH` 去指定已接受的客户端提示也是重要客户端提示（`Critical-CH` 中的标头也必须出现在 `Accept-CH`）。接收到有着 `Critical-CH` 响应的用户代理必须检查指示的标头是否已经在源请求中发送。即使未包含在第一个请求中，活着服务器配置发生改变，这种方法都可以确保始终使用重要客户端提示设置客户端首选项。
+服务器可以使用 {{HTTPHeader("Critical-CH")}} 响应标头和 `Accept-CH` 去指定已接受的客户端提示也是重要客户端提示（`Critical-CH` 中的标头也必须出现在 `Accept-CH`）。接收到有着 `Critical-CH` 响应的用户代理必须检查指示的标头是否已经在源请求中发送。即使未包含在第一个请求中，或者服务器配置发生改变，这种方法都可以确保始终使用重要客户端提示设置客户端首选项。
 
-例如，在这种情况下，服务器通过 {{httpheader("Accept-CH")}} 告诉客户端，它接受 `Sec-CH-Prefers-Reduced-Motion`，而 {{httpheader("Critical-CH")}} 用于指定 `Sec-CH-Prefers-Reduced-Motion`，这杯视为一个重要客户端提示：
+例如，在这种情况下，服务器通过 {{httpheader("Accept-CH")}} 告诉客户端，它接受 `Sec-CH-Prefers-Reduced-Motion`，而 {{httpheader("Critical-CH")}} 用于指定 `Sec-CH-Prefers-Reduced-Motion`，这被视为一个重要客户端提示：
 
 ```http
 HTTP/1.1 200 OK
@@ -71,7 +71,7 @@ Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-> **备注：** 我们还在 {{httpheader("Vary")}} 标头中指定了 `Sec-CH-Prefers-Reduced-Motion` 去向浏览器表明，基于此标头的值不同，提供的值也不同，即使 URL 保持相同，所以浏览器不应该使用已存在的缓存响应，而是应该单独地缓存这个响应。在 `Accept-CH` 中列出的标头也应该出现在 `Accept-CH` 和 `Vary` 标头中。
+> **备注：** 我们还在 {{httpheader("Vary")}} 标头中指定了 `Sec-CH-Prefers-Reduced-Motion`，以向浏览器表明，即使 URL 保持相同，只要基于此标头的值不同，提供的值也不同，所以浏览器不应该使用已存在的缓存响应，而是应该单独地缓存这个响应。在 `Accept-CH` 中列出的标头也应该出现在 `Accept-CH` 和 `Vary` 标头中。
 
 由于 `Sec-CH-Prefers-Reduced-Motion` 是源请求中的不存在的重要提示，因此客户端会自动地重试请求——这次通过 `Sec-CH-Prefers-Reduced-Motion` 告诉服务器它有一个用户首选项要减少运动的动画。
 
@@ -89,7 +89,7 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 
 [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API) 可以在网页的 JavaScript 中使用客户端提示。
 
-> **备注：** 服务器档期通过解析 {{HTTPHeader("User-Agent")}} 标头获得大部分相同的信息。由于历史原因，该标头包含许多不相关的信息，以及用于识别*特定用户*的信息。UA 客户端提示提供更有效的和隐私保护的方式来获取所需要的信息。它们最终用望取代这种旧的方式。
+> **备注：** 服务器当前通过解析 {{HTTPHeader("User-Agent")}} 标头获得大部分相同的信息。由于历史原因，该标头包含许多不相关的信息，以及用于识别*特定用户*的信息。UA 客户端提示提供更有效的和隐私保护的方式来获取所需要的信息。它们最终有望取代这种旧的方式。
 
 ### 用户首选项媒体特性客户端提示
 
