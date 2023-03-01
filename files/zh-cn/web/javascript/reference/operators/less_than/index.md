@@ -135,6 +135,6 @@ console.log(l < r && r < l);
 
 ## 参见
 
-- [大于操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [大于等于操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [小于等于操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [大于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [大于等于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [小于等于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
