@@ -65,7 +65,7 @@ l10n:
 
 ### 청각 장애가 있는 사람
 
-[Deaf and hard-of-hearing(DHH)](https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/) 사람들은 경도에서 심도까지 다양한 수준의 난청을 가지고 있습니다. 이들 중 일부는 보조 기술(AT, [Assistive Devices for People with Hearing, Voice, Speech, or Language Disorders](https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders) 참고)을 사용하지만 보편적이지는 않습니다.
+[청각 장애 및 난청 (Deaf and hard-of-hearing, DHH)](https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/) 사람들은 경도에서 심도까지 다양한 수준의 난청을 가지고 있습니다. 이들 중 일부는 보조 기술(AT, [청각, 음성, 언어 장애가 있는 사람들을 위한 보조 장치](https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders) 참고)을 사용하지만 보편적이지는 않습니다.
 
 따라서 접근성을 위해서는 대체 텍스트가 제공되어야 합니다. 영상에는 수동으로 자막을 달고 오디오 컨텐츠에 대해서도 대본을 제공해야 합니다. 또, DHH 인구의 높은 언어 박탈([language deprivation](https://www.notion.so/6673cd1146724a14aa4f009c6b05af9c))을 고려해 [텍스트 단순화](https://circlcenter.org/collaborative-research-automatic-text-simplification-and-reading-assistance-to-support-self-directed-learning-by-deaf-and-hard-of-hearing-computing-workers/)가 필요할 수 있습니다.
 
