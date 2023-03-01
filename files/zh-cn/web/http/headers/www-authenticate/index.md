@@ -153,8 +153,7 @@ WWW-Authenticate: Digest
     opaque="FQhe/qaU925kfnzjCev0ciny7QMkPqMAFRtzCUYo5tdS"
 ```
 
-客户端提示用户输入他们的用户名和密码，然后响应一个新的请求，该请求在 {{HTTPHeader("Authorization")}} 标头字段中对凭据进行加密。如果客户端选择
- MD5 摘要，则 {{HTTPHeader("Authorization")}} 标头字段看起来可能像如下这样：
+客户端提示用户输入他们的用户名和密码，然后响应一个新的请求，该请求在 {{HTTPHeader("Authorization")}} 标头字段中对凭据进行加密。如果客户端选择 MD5 摘要，则 {{HTTPHeader("Authorization")}} 标头字段看起来可能像如下这样：
 
 ```http
 Authorization: Digest username="Mufasa",
