@@ -1,5 +1,5 @@
 ---
-title: Organiser notre application React
+title: Organiser notre application React en composants
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 l10n:
   sourceCommit: 06754bc607017d19a7f088df7d6b0b7b635cbe58
@@ -15,8 +15,8 @@ Jusqu'à présent, notre application est monolithique. Avant de pouvoir en faire
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         <p>
-          Être familier avec les notions fondamentales de <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et
-          <a href="/fr/docs/Learn/JavaScript">JavaScript</a>, connaitre <a href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">le terminal/la ligne de commande</a>.
+          Connaissances des fondamentaux en <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et
+          <a href="/fr/docs/Learn/JavaScript">JavaScript</a>, connaissance <a href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">du terminal/de la ligne de commande</a>.
         </p>
       </td>
     </tr>
@@ -249,21 +249,21 @@ root.render(
 );
 ```
 
-Ce tableau est maintenant disponible pour le composant App en tant que `props.tasks`. Vous pouvez `console.log()` le vérifier, si vous le souhaitez.
+Ce tableau est maintenant disponible pour le composant App en tant que `props.tasks`. Vous pouvez utiliser `console.table()` pour en inspecter le contenu.
 
-> **Remarque:** Les noms de constantes `ALL_CAPS` n'ont pas de signification particulière en JavaScript; il s'agit d'une convention qui indique aux autres développeurs que "cette donnée ne changera jamais après avoir été définie ici".
+> **Note :** Les noms de constantes `TOUT_EN_MAJUSCULES` n'ont pas de signification particulière en JavaScript. Il s'agit d'une convention qui indique que «&nbsp;cette donnée ne changera jamais après avoir été définie ici&nbsp;».
 
-## Rendu avec itération
+## Effectuer le rendu en itérant
 
-Pour rendre notre tableau d'objets, nous devons transformer chacun d'eux en un composant `<Todo />`. JavaScript nous offre une méthode de transformation des données en quelque chose d'autre: [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+Pour rendre notre tableau d'objets à l'écran, nous devons transformer chacun d'eux en un composant `<Todo />`. JavaScript nous offre une méthode pour transformer les données d'un tableau&nbsp;: [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
-Pour rendre notre tableau d'objets, nous devons transformer chacun d'eux en un composant `<Todo />`. JavaScript nous offre une méthode de transformation des données en quelque chose d'autre:
+Avant l'instruction `return` de `App()`, rajoutez une nouvelle déclaration `const` intitulée `taskList`, puis utilisez `map()` afin de transformer le tableau. Commençons par changer notre tableau de `tasks` en un tableau plus simple qui contient les noms de chaque tâche (avec la propriété `name`)&nbsp;:
 
 ```jsx
 const taskList = props.tasks?.map((task) => task.name);
 ```
 
-Essayons de remplacer tous les enfants de `<ul>` par `taskList`:
+Essayons de remplacer tous les enfants de `<ul>` par `taskList`&nbsp;:
 
 ```jsx
 <ul
@@ -275,17 +275,17 @@ Essayons de remplacer tous les enfants de `<ul>` par `taskList`:
 </ul>
 ```
 
-Cela nous permet d'afficher à nouveau tous les composants, mais nous avons encore du travail à faire : le navigateur rend actuellement le nom de chaque tâche sous forme de texte non structuré. Il nous manque notre structure HTML - le `<li>` et ses cases à cocher et boutons !
+Cela nous permet d'afficher à nouveau tous les composants, mais nous avons encore du travail à faire&nbsp;: le navigateur rend actuellement le nom de chaque tâche sous forme de texte non structuré. Il nous manque notre structure HTML&nbsp;: les éléments `<li>`, les cases à cocher et leur bouton&nbsp;!
 
-![Our todo list app with the todo item labels just shown bunched up on one line](todo-list-unstructured-names.png)
+![Notre application de liste de tâches où les libellés des tâches sont simplement affichés sur une ligne](todo-list-unstructured-names.png)
 
-Pour résoudre ce problème, nous devons retourner un composant `<Todo />` depuis notre fonction `map()` - rappelez-vous que JSX nous permet de mélanger les structures JavaScript et de balisage ! Essayons ce qui suit au lieu de ce que nous avons déjà :
+Pour résoudre ce problème, nous devons retourner un composant `<Todo />` depuis notre fonction `map()`. Rappelez-vous que JSX nous permet de mélanger les structures JavaScript et de balisage&nbsp;! Essayons ce qui suit au lieu de ce que nous avons déjà&nbsp;:
 
 ```jsx
   const taskList = props.tasks.map((task) => <Todo />);
 ```
 
-Regardez à nouveau votre application ; maintenant nos tâches ressemblent plus à ce qu'elles étaient, mais il manque les noms des tâches elles-mêmes. Rappelez-vous que chaque tâche que nous mappons possède les propriétés `id`, `name`, et `completed` que nous voulons passer dans notre composant `<Todo />`. Si nous rassemblons toutes ces connaissances, nous obtenons un code comme celui-ci :
+Regardez à nouveau votre application&nbsp;: maintenant nos tâches ressemblent plus à ce qu'elles étaient, mais il manque les noms des tâches elles-mêmes. Rappelez-vous que chaque tâche que nous ajoutons possède les propriétés `id`, `name`, et `completed` que nous voulons passer dans notre composant `<Todo />`. Si nous rassemblons toutes ces connaissances, nous obtenons un code comme celui-ci&nbsp;:
 
 ```jsx
 const taskList = props.tasks.map((task) => (
@@ -297,9 +297,9 @@ Maintenant l'application ressemble à ce qu'elle était avant, et notre code est
 
 ## Clés uniques
 
-Maintenant que React rend nos tâches dans un tableau, il doit garder la trace de chacune d'entre elles afin de les rendre correctement. React essaie de faire ses propres suppositions pour garder la trace des choses, mais nous pouvons l'aider en passant une prop `key` à nos composants `<Todo />`. `key` est une propriété spéciale qui est gérée par React - vous ne pouvez pas utiliser le mot `key` dans un autre but.
+Maintenant que React affiche nos tâches dans un tableau, il doit garder la trace de chacune d'entre elles afin d'en faire un rendu correct. React essaie de deviner comment suivre les différents éléments, mais nous pouvons l'aider en passant une <i lang="en">prop</i> `key` à nos composants `<Todo />`. `key` est une propriété spéciale qui est gérée par React et ce mot-clé `key` ne peut pas être utilisé dans un autre but.
 
-Parce que les clés doivent être uniques, nous allons réutiliser le `id` de chaque objet de tâche comme clé. Mettez à jour votre constante `taskList` comme ceci:
+Les clés devant être uniques, nous allons réutiliser l'identifiant (`id`) de chaque objet de tâche comme clé (`key`). Mettez à jour votre constante `taskList` comme ceci&nbsp;:
 
 ```jsx
 const taskList = props.tasks.map((task) => (
@@ -313,16 +313,16 @@ const taskList = props.tasks.map((task) => (
 );
 ```
 
-**Vous devez toujours passer une clé unique à tout ce que vous rendez avec l'itération.** Rien d'évident ne changera dans votre navigateur, mais si vous n'utilisez pas de clés uniques, React enregistrera des avertissements dans votre console et votre application pourra se comporter de manière étrange !
+**Vous devez toujours passer une clé unique pour tout composant rendu de façon itérative.** Cela ne changera rien de flagrant dans le comportement du navigateur, mais si vous n'utilisez pas de clés uniques, React enregistrera des avertissements dans votre console et votre application pourra se comporter de manière étrange&nbsp;!
 
-## Composer le reste de l'application
+## Structurer le reste de l'application en composants
 
-Maintenant que nous avons mis au point notre composant le plus important, nous pouvons transformer le reste de notre application en composants. En nous rappelant que les composants sont soit des éléments d'interface utilisateur évidents, soit des éléments d'interface utilisateur réutilisés, soit les deux, nous pouvons créer deux autres composants :
+Maintenant que nous avons mis au point notre composant le plus important, nous pouvons transformer le reste de notre application en composants. En nous rappelant que les composants sont soit des éléments d'interface utilisateur évidents, soit des éléments d'interface utilisateur réutilisés, soit les deux, nous pouvons créer deux autres composants&nbsp;:
 
 - `<Form/>`
 - `<FilterButton/>`
 
-Puisque nous savons que nous avons besoin des deux, nous pouvons regrouper une partie du travail de création de fichiers avec une commande de terminal. Exécutez cette commande dans votre terminal, en prenant soin de vous placer dans le répertoire racine de votre application:
+Puisque nous savons que nous avons besoin des deux, nous pouvons regrouper une partie du travail de création de fichiers avec une seule commande de terminal. Exécutez cette commande dans votre terminal, en prenant soin de vous placer dans le répertoire racine de votre application&nbsp;:
 
 ```bash
 touch src/components/Form.js src/components/FilterButton.js
@@ -330,14 +330,14 @@ touch src/components/Form.js src/components/FilterButton.js
 
 ### Le composant `<Form />`
 
-Ouvrir `components/Form.js` et faire ce qui suit:
+Ouvrez le fichier `components/Form.js` et procédez ainsi&nbsp;:
 
 - Importez `React` en haut du fichier, comme nous l'avons fait dans `Todo.js`.
 - Créez un nouveau composant `Form()` avec la même structure de base que `Todo()`, et exportez ce composant.
 - Copiez les balises `<form>` et tout ce qui se trouve entre elles depuis `App.js`, et collez-les dans l'instruction `return` de `Form()`.
 - Exportez `Form` à la fin du fichier.
 
-Votre fichier `Form.js` devrait se lire comme ceci :
+Votre fichier `Form.js` devrait ressembler à ceci&nbsp;:
 
 ```jsx
 import React from "react";
@@ -347,7 +347,7 @@ function Form(props) {
     <form>
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
-          What needs to be done?
+          Qu'y a-t-il à faire&nbsp;?
         </label>
       </h2>
       <input
@@ -358,7 +358,7 @@ function Form(props) {
         autoComplete="off"
       />
       <button type="submit" className="btn btn__primary btn__lg">
-        Add
+        Ajouter
       </button>
     </form>
   );
@@ -367,11 +367,11 @@ function Form(props) {
 export default Form;
 ```
 
-### Le composant \<FilterButton />
+### Le composant `<FilterButton />`
 
-Faites la même chose que pour créer `Form.js` à l'intérieur de `FilterButton.js`, mais appelez le composant `FilterButton()` et copiez le HTML du premier bouton à l'intérieur de l'élément `<div>` avec la `class` de `filters` de `App.js` dans l'instruction `return`.
+Pour la création, procédez comme `Form.js`. À l'intérieur de `FilterButton.js`, appelez le composant `FilterButton()` et copiez le HTML du premier bouton à l'intérieur de l'élément `<div>` avec la `class` de `filters` de `App.js` dans l'instruction `return`.
 
-Le fichier devrait se lire comme ceci :
+Le fichier devrait ressembler à ce qui suit&nbsp;:
 
 ```jsx
 import React from "react";
@@ -379,9 +379,9 @@ import React from "react";
 function FilterButton(props) {
   return (
     <button type="button" className="btn toggle-btn" aria-pressed="true">
-      <span className="visually-hidden">Show </span>
-      <span>all </span>
-      <span className="visually-hidden"> tasks</span>
+      <span className="visually-hidden">Afficher </span>
+      <span>Toutes </span>
+      <span className="visually-hidden"> les tâches</span>
     </button>
   );
 }
@@ -389,7 +389,7 @@ function FilterButton(props) {
 export default FilterButton;
 ```
 
-> **Remarque:** Vous remarquerez peut-être que nous faisons ici la même erreur que pour le composant `<Todo />`, en ce sens que chaque bouton sera le même. Ce n'est pas grave ! Nous allons corriger ce composant plus tard, dans la section [Back to the filter buttons](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
+> **Note :** Vous remarquerez peut-être que nous faisons ici la même erreur que pour le composant `<Todo />`, en ce sens que chaque bouton sera le même. Ce n'est pas grave&nbsp;! Nous allons corriger ce composant plus tard, dans la section [Revenons aux boutons de filtrage](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
 
 ## Importation de tous nos composants
 
@@ -397,7 +397,7 @@ Utilisons nos nouveaux composants.
 
 Ajoutez quelques instructions `import` au début de `App.js`, pour les importer.
 
-Ensuite, mettez à jour l'instruction `return` de `App()` pour qu'elle rende nos composants. Lorsque vous aurez terminé, le fichier `App.js` ressemblera à ceci :
+Ensuite, mettez à jour l'instruction `return` de `App()` afin de déclencher le rendu de nos composants. Lorsque vous aurez terminé, le fichier `App.js` ressemblera à ceci&nbsp;:
 
 ```jsx
 import React from "react";
@@ -424,7 +424,7 @@ function App(props) {
         <FilterButton />
         <FilterButton />
       </div>
-      <h2 id="list-heading">3 tasks remaining</h2>
+      <h2 id="list-heading">3 tâches restantes</h2>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
@@ -439,10 +439,65 @@ function App(props) {
 export default App;
 ```
 
-Avec cela en place, nous sommes _presque_ prêts à aborder l'interactivité dans notre application React !
+Avec cela, nous sommes _presque_ prêts à aborder l'interactivité dans notre application React&nbsp;!
 
 ## Résumé
 
-Et c'est tout pour cet article - nous avons approfondi la façon de décomposer votre application en composants et de les rendre efficacement. Nous allons maintenant examiner comment gérer les événements dans React et commencer à ajouter de l'interactivité.
+Nous voilà à la fin de cet article où nous avons approfondi la façon de décomposer notre application en composants et de traiter leur rendu efficacement. Nous allons maintenant examiner comment gérer les évènements dans React et commencer à ajouter de l'interactivité.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+
+## Dans ce module
+
+- [Introduction aux <i lang="en">frameworks</i> côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Fonctionnalités principales des <i lang="en">frameworks</i>](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Démarrer avec React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Commencer notre liste de tâches en React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Organiser notre application React en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [Interactivité avec React&nbsp;: évènements et état](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [Interactivité avec React&nbsp;: édition, filtrage, rendu conditionnel](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [L'accessibilité avec React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [Ressources React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Démarrer avec Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Structure d'une application Ember et organisation en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Interactivité avec Ember&nbsp;: évènements, classes et état](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Interactivité avec Ember&nbsp;: pied de page, rendu conditionnel](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routage avec Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ressources Ember et diagnostic des problèmes](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Démarrer avec Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Création de notre premier composant Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Afficher une liste de components Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Ajouter un formulaire pour une nouvelle tâche&nbsp;: évènements Vue, méthodes et modèles](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Mettre en forme les composants Vue avec CSS](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Utiliser les propriétés calculées de Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Rendu conditionnel avec Vue&nbsp;: éditer les tâches existantes](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Gestion du focus avec les références Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Ressources Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Démarrer avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Démarrer notre application de liste de tâches Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Comportement dynamique avec Svelte&nbsp;: travailler avec les variables et les <i lang="en">props</i>](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Organiser notre application Svelte en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Svelte avancé&nbsp;: réactivité, cycle de vie, accessibilité](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Travailler avec les magasins de données Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [Prise en charge de TypeScript par Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Déploiement et prochaines étapes](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+
+- Angular
+
+  - [Démarrer avec Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Commencer notre application de liste de tâches Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Mettre en forme notre application Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Créer un composant pour une tâche](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtrer les éléments de la liste de tâches](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Compiler des applications Angular et autres ressources complémentaires](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
