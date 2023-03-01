@@ -160,7 +160,7 @@ WCAG는 가이드라인일 뿐이지만 당신의 국가에 웹 접근성, 또�
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-웹 앱의 HTML 요소들이 제공하는 네이티브 시맨틱 정보가 부족한 경우는 접근성 트리에 시맨틱 정보를 추가해 접근성을 개선하는 [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/)의 기능들로 보완이 가능합니다. 이 모듈의 [WAI-ARIA basics](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)에서 더 많은 내용을 설명합니다.
+웹 앱의 HTML 요소들이 제공하는 네이티브 시맨틱 정보가 부족한 경우는 접근성 트리에 시맨틱 정보를 추가해 접근성을 개선하는 [WAI-ARIA 명세서](https://www.w3.org/TR/wai-aria/)의 기능들로 보완이 가능합니다. 이 모듈의 [WAI-ARIA basics](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)에서 더 많은 내용을 설명합니다.
 
 ## 요약
 
