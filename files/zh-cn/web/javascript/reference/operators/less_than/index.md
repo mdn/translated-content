@@ -27,11 +27,11 @@ x < y
   - `undefined` 转化为 `NaN`。
   - 字符串根据其包含的值进行转换，如果不包含数字值，则转换为 `NaN`。
 - 如果任意一个值为 [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)，则运算符返回 `false`。
-- 否则，这些值将作为数字值进行比较。BigInt 和数字值可以一起比较
+- 否则，这些值将作为数值进行比较。BigInt 和数值可以一起比较。
 
 其他运算符，包括 [`>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than)、[`>=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal) 和 [`<=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal) 使用与 `<` 相同的算法。有两种情况，所有四个运算符都返回 `false`：
 
-- 如果其中一个操作数被转换为 BigInt，而另一个被转换为无法转换为 BigInt 值的字符串（当传递给 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax)时，它会抛出[语法错误](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)）。
+- 如果其中一个操作数被转换为 BigInt，而另一个被转换为无法转换为 BigInt 值的字符串（当传递给 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)时，它会抛出[语法错误](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax)）。
 - 如果其中一个操作数被转化为 `NaN`，如不能转化为数字的字符串，或 `undefined`。
 
 对于所有其他情况，这四种运算符有以下关系：
