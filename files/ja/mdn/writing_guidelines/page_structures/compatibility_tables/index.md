@@ -10,16 +10,16 @@ browser-compat: api.AbortController
 
 {{MDNSidebar}}
 
-MDN には、DOM, HTML, CSS, JavaScript, SVG などの、あらゆるブラウザーで共有される技術についての互換性を表すテーブルの標準フォーマットがあります。
+MDN には、DOM, HTML, CSS, JavaScript, SVG などの、あらゆるブラウザーで共有される技術についての互換性を表す一覧表の標準フォーマットがあります。
 このデータを複数のプロジェクトで機械的に利用できるようにするため、Node.js パッケージが [`browser-compat-data` リポジトリ](https://github.com/mdn/browser-compat-data)からビルドされ、npm に公開されています。
 
-これらの互換性テーブルのデータを変更するには、`browser-compat-data` リポジトリの[協力者ガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)や[データガイドラインのガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md)中にある包括的なドキュメント（データを表現するために使用される慣習とJSONスキーマの最新の詳細を含みます）をご覧ください。
+これらの互換性一覧表のデータを変更するには、`browser-compat-data` リポジトリの[協力者ガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)や[データガイドラインのガイド](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md)中にある包括的なドキュメント（データを表現するために使用される慣習とJSONスキーマの最新の詳細を含みます）をご覧ください。
 
 質問や問題が見つかった場合は、[助けを求める](/ja/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)をご利用ください。
 
 ## MDN ページで BCD データを使う
 
-`browser-compat-data` リポジトリにデータが格納されると、そのデータを基にしたブラウザ互換性テーブルや仕様書を、MDN ページに動的に生成できるようになります。
+`browser-compat-data` リポジトリにデータが格納されると、そのデータを基にしたブラウザ互換性一覧表や仕様書を、MDN ページに動的に生成できるようになります。
 
 BCD データを MDN ページに取り込むには、BCD ソースファイルで指定されている、取り込みたい該当データのクエリ文字列を使用します。
 
@@ -40,9 +40,9 @@ browser-compat: api.AbortController
 ---
 ```
 
-そして、そのキーに対応する互換性テーブルと仕様書が、ソース中の `\{{Compat}}` マクロと `\{{Specifications}}` マクロから自動的に生成されます。
+そして、そのキーに対応する互換性一覧表と仕様書が、ソース中の `\{{Compat}}` マクロと `\{{Specifications}}` マクロから自動的に生成されます。
 
-同じページに複数の互換性テーブルや仕様書が必要な場合、`browser-compat` の値を配列で指定することができます。例えば、[チャンネルメッセージング API](/ja/docs/Web/API/Channel_Messaging_API) の場合、以下のように追加します。
+同じページに複数の互換性一覧表や仕様書が必要な場合、`browser-compat` の値を配列で指定することができます。例えば、[チャンネルメッセージング API](/ja/docs/Web/API/Channel_Messaging_API) の場合、以下のように追加します。
 
 ```md
 ---
