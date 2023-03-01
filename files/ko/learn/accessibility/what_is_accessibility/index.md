@@ -77,7 +77,7 @@ l10n:
 
 이런 장애의 원인은 특정한 트라우마나 질병이 아닐 수도 있습니다. 노화가 될 수도 있고, 마우스가 없는 사용자처럼 하드웨어의 제약이 될 수도 있습니다.
 
-운동 장애를 고려한 웹 개발의 보편적인 요구 사항은 키보드를 통해 컨트롤(이 가능한 요소들)에 접근할 수 있도록 해야 한다**는 것입니다. 이 모듈의 다른 아티클에서 키보드 접근성에 대해 이야기하겠지만, 웹 사이트를 키보드만으로 사용하는 일을 한번 해보세요. 어떻게 될까요? Tab 키를 사용해 웹 form의 컨트롤 요소들을 왔다갔다 할 수 있나요? 키보드 컨트롤에 관련된 더 많은 이야기는 [Cross browser testing Using native keyboard accessibility](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility) 섹션에서 다루어집니다.
+운동 장애를 고려한 웹 개발의 보편적인 요구 사항은 키보드를 통해 컨트롤(이 가능한 요소들)에 접근할 수 있도록 해야 한다는 것입니다. 이 모듈의 다른 아티클에서 키보드 접근성에 대해 이야기하겠지만, 웹 사이트를 키보드만으로 사용하는 일을 한번 해보세요. 어떻게 될까요? Tab 키를 사용해 웹 form의 컨트롤 요소들을 왔다갔다 할 수 있나요? 키보드 컨트롤에 관련된 더 많은 이야기는 [Cross browser testing Using native keyboard accessibility](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility) 섹션에서 다루어집니다.
 
 통계적으로도 많은 수의 사람들이 운동 장애를 가지고 있습니다. US Centers for Disease Control and Prevention의 [Disability and Functioning (Non-institutionalized Adults 18 Years and Over)](https://www.cdc.gov/nchs/fastats/disability.htm)에 따르면 미국에서 신체 기능 장애가 있는 성인 비율은 16.1%입니다.
 
