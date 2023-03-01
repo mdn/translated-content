@@ -4,7 +4,6 @@ slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
-page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}
