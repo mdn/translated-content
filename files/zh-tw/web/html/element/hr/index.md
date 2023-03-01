@@ -18,15 +18,15 @@ slug: Web/HTML/Element/hr
 
 這個元素支持[全域屬性](/zh-TW/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : 設罝頁面上標線的對齊方式。如果沒有指定，預設值是：`left。`
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : 用色彩名或 16 進位值設罝標線的顏色。
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : 設置這個標線沒有陰影。
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : 設置標線的高度，單位是 px。.
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : 設置標線的長度，單位是 px；或者也可以用頁面寛度的百分比 (%)表示。
 
 ## 範例

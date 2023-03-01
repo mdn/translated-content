@@ -17,7 +17,7 @@ slug: Web/HTML/Element/a
 
 本元素包含[全域屬性](/zh-TW/docs/HTML/Global_attributes)。
 
-- {{HTMLAttrDef("download")}}
+- `download`
 
   - : Causes the browser to treat the linked URL as a download. Can be used with or without a value:
 
@@ -38,7 +38,7 @@ slug: Web/HTML/Element/a
     >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
     >   - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
 
-- {{HTMLAttrDef("href")}}
+- `href`
 
   - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
 
@@ -48,11 +48,11 @@ slug: Web/HTML/Element/a
     - Email addresses with `mailto:` URLs
     - While web browsers may not support other URL schemes, web sites can with [`registerProtocolHandler()`](/zh-TW/docs/Web/API/Navigator/registerProtocolHandler)
 
-- {{HTMLAttrDef("hreflang")}}
+- `hreflang`
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/zh-TW/docs/Web/HTML/Global_attributes/lang).
-- {{HTMLAttrDef("ping")}}
+- `ping`
   - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
-- {{HTMLAttrDef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : How much of the [referrer](/zh-TW/docs/Web/HTTP/Headers/Referer) to send when following the link.
 
@@ -65,9 +65,9 @@ slug: Web/HTML/Element/a
     - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/zh-TW/docs/Web/API/HTMLAnchorElement/hash), [password](/zh-TW/docs/Web/API/HTMLAnchorElement/password), or [username](/zh-TW/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-- {{HTMLAttrDef("rel")}}
+- `rel`
   - : The relationship of the linked URL as space-separated [link types](/zh-TW/docs/Web/HTML/Link_types).
-- {{HTMLAttrDef("target")}}
+- `target`
 
   - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). The following keywords have special meanings for where to load the URL:
 
@@ -78,27 +78,27 @@ slug: Web/HTML/Element/a
 
     > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/zh-TW/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
-- {{HTMLAttrDef("type")}}
+- `type`
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
 
 ### Obsolete
 
-- {{htmlattrdef("charset")}} {{Deprecated_inline}}
+- `charset` {{Deprecated_inline}}
   - : This attribute defined the [character encoding](/zh-TW/docs/Glossary/character_encoding) of the linked URL. The value should be a space- and/or comma-delimited list of character sets defined in [RFC 2045](https://tools.ietf.org/html/rfc2045). The default value is `ISO-8859-1`.
 
     > **備註：** This attribute is obsolete in HTML5 and **should not be used by authors**. To achieve its effect, use the HTTP [`Content-Type:`](/zh-TW/docs/Web/HTTP/Headers/Content-Type) header on the linked URL.
-- {{htmlattrdef("coords")}} {{Deprecated_Inline}}
+- `coords` {{Deprecated_Inline}}
   - : For use with the below `shape` attribute, this attribute used a comma-separated list of numbers to define the coordinates of the link on the page.
-- {{htmlattrdef("name")}} {{Deprecated_Inline}}
+- `name` {{Deprecated_Inline}}
   - : This attribute was required for anchors defining a possible target location within a page. In HTML 4.01, `id` and `name` could be used simultaneously on a `<a>` element as long as they have identical values.
 
-    > **備註：** This attribute is obsolete in HTML5, use the [global attribute `id`](/zh-TW/docs/HTML/Global_attributes#attr-id) instead.
-- {{htmlattrdef("rev")}} {{Deprecated_Inline}}
+    > **備註：** This attribute is obsolete in HTML5, use the [global attribute `id`](/zh-TW/docs/HTML/Global_attributes#id) instead.
+- `rev` {{Deprecated_Inline}}
   - : This attribute specified a reverse link, the inverse relationship of the **rel** attribute. It was deprecated for being very confusing.
-- {{htmlattrdef("shape")}} {{Deprecated_Inline}}
+- `shape` {{Deprecated_Inline}}
   - : This attribute was used to define a region for hyperlinks to create an image map. The values are `circle`, `default`, `polygon`, and `rect`. The format of the **coords** attribute depends on the value of shape. For `circle`, the value is `x,y,r` where `x` and `y` are the pixel coordinates for the center of the circle and `r` is the radius value in pixels. For `rect`, the **coords** attribute should be `x,y,w,h`. The `x,y` values define the upper-left-hand corner of the rectangle, while `w` and `h` define the width and height respectively. A value of `polygon` for **shape** requires `x1,y1,x2,y2,...` values for **coords**. Each of the `x,y` pairs defines a point in the polygon, with successive points being joined by straight lines and the last point joined to the first. The value `default` for shape requires that the entire enclosed area, typically an image, be used.
 
-    > **備註：** Use the [`usemap` attribute](/zh-TW/docs/Web/HTML/Element/img#attr-usemap) for the {{HTMLElement("img")}} element and the associated {{HTMLElement("map")}} element to define hotspots instead of the `shape` attribute.
+    > **備註：** Use the [`usemap` attribute](/zh-TW/docs/Web/HTML/Element/img#usemap) for the {{HTMLElement("img")}} element and the associated {{HTMLElement("map")}} element to define hotspots instead of the `shape` attribute.
 
 ## Examples
 
