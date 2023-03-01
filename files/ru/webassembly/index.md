@@ -25,8 +25,6 @@ WebAssembly разработан для дополнения JavaScript – ис
   - : Главное, что позволяет WebAssembly, это использование огромного множества разнообразных и проверенных временем библиотек, написанных на языке C, в сети.
 - [Загрузка и запуск кода WebAssembly](/ru/docs/WebAssembly/Loading_and_running)
   - : После того, как у вас появился .wasm, эта статья расскажет, как из него получить, скомпилировать и создать экземпляр модуля, совмещая [WebAssembly JavaScript API](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) c [Fetch](/ru/docs/Web/API/Fetch_API) или [XHR](/ru/docs/Web/API/XMLHttpRequest) API.
-- [Кеширование скомпилированных модулей WebAssembly](/ru/docs/WebAssembly/Caching_modules)
-  - : Кеширование больших модулей WebAssembly на клиенте полезно для повышения скорости запуска приложений. В этой статье объясняется, как это сделать с помощью [IndexedDB](/ru/docs/Web/API/IndexedDB_API).
 - [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)
   - : После того, как вы загрузили модуль .wasm, вы захотите его использовать. В этой статье мы покажем вам, как использовать WebAssembly через WebAssembly JavaScript API.
 - [Экспортируемые функции WebAssembly](/ru/docs/WebAssembly/Exported_functions)
@@ -41,7 +39,7 @@ WebAssembly разработан для дополнения JavaScript – ис
 - {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
   - : Этот объект является пространством имён для всех функций, связанных с WebAssembly.
 - {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module()")}}
-  - : Объект `WebAssembly.Module` содержит не контролируемый WebAssembly код, который уже скомпилирован браузером и может эффективно использоваться совместно с [Workers](/ru/docs/Web/API/Worker/postMessage), [кешироваться в IndexedDB](/ru/docs/WebAssembly/Caching_modules), и иметь несколько экземпляров.
+  - : Объект `WebAssembly.Module` содержит не контролируемый WebAssembly код, который уже скомпилирован браузером и может эффективно использоваться совместно с [Workers](/ru/docs/Web/API/Worker/postMessage) и иметь несколько экземпляров.
 - {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance()")}}
   - : Объект `WebAssembly.Instance` это контролируемый, исполняемый экземпляр `Module`. `Instance` содержит все [экспортированные функции WebAssembly](/ru/docs/WebAssembly/Exported_functions), которые позволяют вызывать код WebAssembly из JavaScript.
 - {{jsxref("Global_objects/WebAssembly/instantiateStreaming", "WebAssembly.instantiateStreaming()")}}
