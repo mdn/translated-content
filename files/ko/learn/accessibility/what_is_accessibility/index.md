@@ -54,8 +54,8 @@ l10n:
 여기에는 전맹, 저시력 장애인 및 색각 장애인등이 포함됩니다. 많은 경우 물리적 돋보기나 소프트웨어의 확대 기능을 통해 화면을 확대해서 이용합니다. 요즘에는 대부분의 브라우저와 운영체제가 확대 기능을 제공합니다. 일부 사용자는 디지털 텍스트를 소리내어 읽어주는 소프트웨어인 스크린 리더(screen reader)를 사용합니다. 이런 예시들이 있습니다.
 
 - [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Dolphin Screen Reader](https://yourdolphin.com/en-gb/products/individuals/screen-reader) (Windows) 와 [Dolphin Screen Reader](https://yourdolphin.com/ScreenReader) (Windows) 같은 상업 소프트웨어
-- [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux)와 같은 무료 소프트웨어
-- [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://www.chromevox.com/) (on Chrome OS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android)와 같은 OS 자체 소프트웨어
+- [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome), 그리고 [Orca](https://wiki.gnome.org/Projects/Orca) (Linux)와 같은 무료 소프트웨어
+- [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://www.chromevox.com/) (on Chrome OS), 그리고 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android)와 같은 OS 자체 소프트웨어
 
 이런 스크린 리더에 익숙해지기를 권장합니다. 직접 설치하고 다루어보면서 어떻게 동작하는지 감을 익혀보면 좋습니다. [Cross-browser testing screen readers guide](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)에서 사용 방법에 대한 더 자세한 내용을 확인할 수 있습니다. 아래의 영상에서도 이 경험에 대한 간단한 예시를 보여줍니다.
 
