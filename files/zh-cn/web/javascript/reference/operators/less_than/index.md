@@ -35,7 +35,7 @@ x < y
 - 如果其中一个操作数被转换为 BigInt，而另一个被转换为无法转换为 BigInt 值的字符串（当传递给 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)时，它会抛出[语法错误](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax)）。
 - 如果其中一个操作数被转化为 `NaN`，如不能转化为数字的字符串，或 `undefined`。
 
-对于所有其他情况，这四种运算符有以下关系：
+对于所有其它情况，这四种运算符有以下关系：
 
 ```js
 x < y === !(x >= y);
