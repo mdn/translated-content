@@ -19,7 +19,7 @@ x < y
 
 操作数经过多轮强制比较，可以总结为以下几点：
 
-首先，通过依次调用其 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)、[`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)、[`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法，将对象[转换为原始类型](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)（以 `"number"` 作为提示）。左边的操作数总是在右边的操作数之前被强制转换。请注意，尽管 `[@@toPrimitive]()` 被调用时带有 `"number"` 的提示（意味着有一点倾向于将对象变成数字），但返回值并没有[转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，因为字符串仍然被特别处理。
+首先，通过依次调用其 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（以 `"number"` 作为提示）、[`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 和 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法，将对象[转换为原始类型](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。左边的操作数总是在右边的操作数之前被强制转换。请注意，尽管 `[@@toPrimitive]()` 被调用时带有 `"number"` 的提示（意味着有一点倾向于将对象变成数字），但返回值并没有[转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，因为字符串仍然被特别处理。
 
 - 如果两个值都是字符串，则根据它们所包含的 Unicode 码位的值，将它们作为字符串进行比较。
 - 否则，JavaScript 会尝试将非数值类型转化为数值类型：
@@ -30,7 +30,7 @@ x < y
 - 如果任意一个值为 [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)，则运算符返回 `false`。
 - 否则，这些值将作为数值进行比较。BigInt 和数值可以一起比较。
 
-其他运算符，包括 [`>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than)、[`>=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal) 和 [`<=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal) 使用与 `<` 相同的算法。有两种情况，所有四个运算符都返回 `false`：
+其它运算符，包括 [`>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than)、[`>=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal) 和 [`<=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal) 使用与 `<` 相同的算法。有两种情况，所有四个运算符都返回 `false`：
 
 - 如果其中一个操作数被转换为 BigInt，而另一个被转换为无法转换为 BigInt 值的字符串（当传递给 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)时，它会抛出[语法错误](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax)）。
 - 如果其中一个操作数被转化为 `NaN`，如不能转化为数字的字符串，或 `undefined`。
