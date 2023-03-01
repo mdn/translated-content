@@ -9,7 +9,7 @@ slug: Web/API/MouseEvent/screenX
 
 > **备注：** 在多屏显示的环境下，水平对齐的屏幕将被视为单个设备，因此 `screenX` 值的范围将增加到屏幕的组合宽度。
 
-### 值
+## 值
 
 一个双精度浮点数（`double`）。
 
