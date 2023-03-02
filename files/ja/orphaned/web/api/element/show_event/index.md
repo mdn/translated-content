@@ -2,6 +2,8 @@
 title: 'Element: show イベント'
 slug: orphaned/Web/API/Element/show_event
 original_slug: Web/API/Element/show_event
+l10n:
+  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
 ---
 
 {{APIRef}}{{deprecated_header}}{{Non-standard_header}}
