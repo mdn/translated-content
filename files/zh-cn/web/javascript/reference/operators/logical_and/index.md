@@ -54,8 +54,6 @@ result = "foo" && 4; // 结果被赋值为 4
 
 `expr` 部分**永远不会被求值**，因为第一个操作数 `(some falsy expression)` 被求值为{{Glossary("falsy","假值")}}。如果 `expr` 是一个函数，它将不会被调用。查看如下示例：
 
-Short circuit means that the `expr` part above is **not evaluated**, hence any side effects of doing so do not take effect (e.g., if `expr` is a function call, the calling never takes place). This happens because the value of the operator is already determined after the evaluation of the first operand. See example:
-
 ```js
 function A() {
   console.log("调用了 A");
