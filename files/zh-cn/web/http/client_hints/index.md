@@ -37,7 +37,7 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 Vary: Accept, Width, ECT
 ```
 
-对于值变化很大的客户端提示标头时，最好不要指定 {{HTTPHeader("Vary")}} 或者使用其它的策略，因为这会使资源无法有效缓存。（为每个唯一值创建新的缓存条目。）这尤其适用于网络客户端提示，像 {{HTTPHeader("Downlink")}} 和 {{HTTPHeader("RTT")}}。更多信息请参见 [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应).
+对于值变化很大的客户端提示标头时，最好不要指定 {{HTTPHeader("Vary")}} 或者使用其它的策略，因为这会使资源无法有效缓存。（为每个唯一值创建新的缓存条目。）这尤其适用于网络客户端提示，像 {{HTTPHeader("Downlink")}} 和 {{HTTPHeader("RTT")}}。更多信息请参见 [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)。
 
 ## 提示（hint）的生命周期
 
@@ -45,7 +45,7 @@ Vary: Accept, Width, ECT
 
 换句话说，对一组特定提示的请求，在浏览器关闭之前都不会过期。
 
-服务器可以通过使用一个新列表重新发送 `Accept-CH` 响应标头来替换它接收到并感兴趣的客户端提示集。例如，要停止请求任何提示，它将发送空列表的 `Accept-CH`。
+服务器可以通过重新发送带有新列表的 `Accept-CH` 响应标头，来替换它感兴趣接收的客户端提示集。例如，要停止请求任何提示，它将发送空列表的 `Accept-CH`。
 
 ## 低熵提示
 
@@ -53,11 +53,11 @@ Vary: Accept, Width, ECT
 
 低熵提示是那些不会泄漏太多可用于为用户创建[指纹识别](/zh-CN/docs/Glossary/Fingerprinting)信息的提示。默认情况下，根据权限策略，它们可能为每个客户端请求发送，这与服务器 `Accept-CH` 响应标头无关。这些提示包括：{{HTTPHeader("Save-Data")}}、{{HTTPHeader("Sec-CH-UA")}}、{{HTTPHeader("Sec-CH-UA-Mobile")}}、{{HTTPHeader("Sec-CH-UA-Platform")}}。
 
-高熵提示是那些可能泄漏太多可用于用户指纹识别信息的提示，因此用户代理可以决定是否提供它们进行控制。该决定给予用户首选项、权限请求或者权限策略。所有不是低熵提示的客户端提示都是高熵提示。
+高熵提示是那些可能泄漏太多可用于用户指纹识别信息的提示，因此使用这样一种方式进行控制，即用户代理可以决定是否提供这些信息。该决定可能基于用户首选项、权限请求或者权限策略。所有不是低熵提示的客户端提示都是高熵提示。
 
 ## 重要客户端提示
 
-*重要客户端提示*是那些应用响应可能显著改变呈现的页面的提示，可能会以一种不和谐或者会影响可用性的方式出现，因此必须在呈现页面之前应用。例如，`Sec-CH-Prefers-Reduced-Motion` 通常被视作重要提示，因为它可能会显著影响动画的行为，并且也因为选择此首选项的用户需要去设置它。
+*重要客户端提示*是那些应用响应可能显著改变渲染的页面的提示，可能会以一种不和谐或者会影响可用性的方式出现，因此必须在渲染页面之前应用。例如，`Sec-CH-Prefers-Reduced-Motion` 通常被视作重要提示，因为它可能会显著影响动画的行为，并且也因为选择此首选项的用户需要去设置它。
 
 服务器可以使用 {{HTTPHeader("Critical-CH")}} 响应标头和 `Accept-CH` 去指定已接受的客户端提示也是重要客户端提示（`Critical-CH` 中的标头也必须出现在 `Accept-CH`）。接收到有着 `Critical-CH` 响应的用户代理必须检查指示的标头是否已经在源请求中发送。即使未包含在第一个请求中，或者服务器配置发生改变，这种方法都可以确保始终使用重要客户端提示设置客户端首选项。
 
@@ -73,7 +73,7 @@ Critical-CH: Sec-CH-Prefers-Reduced-Motion
 
 > **备注：** 我们还在 {{httpheader("Vary")}} 标头中指定了 `Sec-CH-Prefers-Reduced-Motion`，以向浏览器表明，即使 URL 保持相同，只要基于此标头的值不同，提供的值也不同，所以浏览器不应该使用已存在的缓存响应，而是应该单独地缓存这个响应。在 `Accept-CH` 中列出的标头也应该出现在 `Accept-CH` 和 `Vary` 标头中。
 
-由于 `Sec-CH-Prefers-Reduced-Motion` 是源请求中的不存在的重要提示，因此客户端会自动地重试请求——这次通过 `Sec-CH-Prefers-Reduced-Motion` 告诉服务器它有一个用户首选项要减少运动的动画。
+由于 `Sec-CH-Prefers-Reduced-Motion` 是源请求中的不存在的重要提示，因此客户端会自动地重试请求——这次通过 `Sec-CH-Prefers-Reduced-Motion` 告诉服务器它有一个用户首选项要减少动画。
 
 ```http
 GET / HTTP/1.1
