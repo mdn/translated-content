@@ -83,7 +83,7 @@ slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 `flex-direction` を `column` に変更すると、主軸の方向が変わり、フレックスアイテムは列に沿って並んで表示されるようになります。 `column-reverse` では、さらに先頭と末尾が入れ替わります。
 
-次の例では、`flex-direction` が `row-reverse` に設定されています。他の値である `row`, `column`, `cokumn-reverse` で何が起こるか確かめてみてください。
+次の例では、`flex-direction` が `row-reverse` に設定されています。他の値である `row`, `column`, `column-reverse` で何が起こるか確かめてみてください。
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/flex-direction.html", '100%', 350)}}
 
