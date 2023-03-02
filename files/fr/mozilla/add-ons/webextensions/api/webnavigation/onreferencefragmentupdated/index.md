@@ -69,9 +69,9 @@ Les événements ont trois fonctions :
 - `transitionQualifiers`
   - : `Array` de `{{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}`. Informations supplémentaires sur la navigation : par exemple, s'il existait une redirection de serveur ou de client.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onReferenceFragmentUpdated")}}
+{{Compat}}
 
 ## Exemples
 

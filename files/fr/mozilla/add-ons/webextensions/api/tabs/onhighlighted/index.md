@@ -71,9 +71,9 @@ browser.tabs.onHighlighted.addListener(handleHighlighted);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onHighlighted")}}
+{{Compat}}
 
 > **Note :**
 >

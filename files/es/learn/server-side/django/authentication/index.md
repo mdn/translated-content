@@ -87,24 +87,24 @@ A continuación, primero crearemos un grupo y luego un usuario. Aunque no tengam
 
 Inicia el servidor de desarrollo y navega hasta el sitio de administracion en tu navegador web local (`http://127.0.0.1:8000/admin/`). Ingresa al sitio usando las credenciales de la cuenta de tu superusuario. El nivel superior del sitio de administracion "Admin site" muestra todos tus modelos, ordenados por la aplicacion por defecto de Django "django application". Desde la seccion de **Autenticación y Autorización** puedes dar click en los enlaces de **Usuarios** "Users" y **Grupos** "Groups" para ver todos sus registros existentes.
 
-![Admin site - add groups or users](https://mdn.mozillademos.org/files/14091/admin_authentication_add.png)
+![Admin site - add groups or users](admin_authentication_add.png)
 
 Primero vamos a crear un nuevo grupo para los miembros de nuestra biblioteca.
 
-1. Da click en el boton **Add** "Añadir" (Enseguida de Group) para crear un nuevo grupo ; ingresa el **Nombre** "Name" para el grupo de "Library Members".![Admin site - add group](https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png)
+1. Da click en el boton **Add** "Añadir" (Enseguida de Group) para crear un nuevo grupo ; ingresa el **Nombre** "Name" para el grupo de "Library Members".![Admin site - add group](admin_authentication_add_group.png)
 2. No necesitamos de ningun permiso para el grupo , entonces solo presiona Save (Seras redirigido a una lista de los grupos disponibles).
 
 Ahora vamos a crear un usuario:
 
 1. Navega de vuelta a la pagina de inicio "home" del sitio de administracion "Admin site".
-2. Da click en el boton **Add** "Añadir" que queda enseguida de Users "Usuarios" para abrir el cuadro de dialogo de Usuario **Add** "Añadir usuario".![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
+2. Da click en el boton **Add** "Añadir" que queda enseguida de Users "Usuarios" para abrir el cuadro de dialogo de Usuario **Add** "Añadir usuario".![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
 3. Ingresa un **Nombre de Usuario** "Username", **Contraseña** "Password" y **Confirmacion de Contraseña** "Password confirmation" apropiado para tu usuario de prueba.
 4. Presiona **Save** "Guardar" para crear el usuario.
 
     El sitio de administrador creara el nuevo usuario e inmediatamente te llevara a la pantalla de _Change user_ "Cambios del usuario" donde puedes cambiar tu **nombre de usuario** "Username" y agregar informacion para los campos opcionales del modelo de Usuario "User". Estos campos incluyen el primer nombre "first name", el apellido "last name", la direcion de correo electronico "email adress", los estados de los usuarios y sus permisos "users status and permissions" (solo el indicador **Active** "Activo" deberia ser activado). Mas abajo puedes especificar los grupos y permisos del usuario, y ver datos importantes relacionados a el usuario (ej: la fecha en que se agrego y la fecha del ultimo inicio de sesion)
 
-5. ![Admin site - add user pt2](https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png)
-6. En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
+5. ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
+6. En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Admin site - add user to group](admin_authentication_user_add_group.png)
 7. Aqui no necesitamos hacer nada adicional, entonces de nuevo solo seleciona **SAVE** "Guardar", para ir a la lista de usuarios.
 
 ¡Esta hecho! Ahora tienes la cuenta de un miembro normal de la libreria, el cual estara disponible para ser usado en tus pruebas (una vez que hayamos implementado las paginas para permitirles iniciar sesion).
@@ -235,7 +235,7 @@ Estas plantillas comparten algunas similitudes con algunas que hemos visto antes
 
 Navega de vuelta a la página de inicio sesión (`http://127.0.0.1:8000/accounts/login/`) una vez que hayas guardado tu plantilla, y deberías ver algo como esto:
 
-![Library login page v1](https://mdn.mozillademos.org/files/14101/library_login.png)
+![Library login page v1](library_login.png)
 
 Si intentas iniciar sesión tendrá éxito y serás redirigido a otra página (por defecto será `http://127.0.0.1:8000/accounts/profile/`). El problema aquí es que, por defecto, Django espera que después de iniciar sesión seas llevado a una página de perfil (que podrá ser el caso o no). Como no has definido esta página todavía, ¡obtendrás otro error!
 
@@ -264,7 +264,7 @@ Crea y abre el fichero /**locallibrary/templates/registration/logged_out.html**.
 
 Esta plantilla es muy simple. Tan sólo muestra un mensaje informándote que has cerrado sesión, y provee un enlace que puedes pulsar para volver a la página de inicio de sesión. Si vas a la url de cierre de sesión otra vez, deberías ver esta página:
 
-![Library logout page v1](https://mdn.mozillademos.org/files/14103/library_logout.png)
+![Library logout page v1](library_logout.png)
 
 ### Plantillas de reinicio de contraseña "Password reset"
 
@@ -599,7 +599,7 @@ Abre la plantilla base (**/locallibrary/catalog/templates/base_generic.html**) y
 
 Cuando cualquier usuario ha iniciado sesión, verán el enlace _My Borrowed_ (Mis Alquileres) en la barra lateral, y la lista de libros mostrados como se ve abajo (¡el primer libro no tiene fecha de vencimiento, que es un bug que esperamos arreglar en un tutorial posterior!).
 
-![Library - borrowed books by user](https://mdn.mozillademos.org/files/14105/library_borrowed_by_user.png)
+![Library - borrowed books by user](library_borrowed_by_user.png)
 
 ## Permisos
 
@@ -676,7 +676,7 @@ Deberías ser capaz de seguir el mismo patrón que el de la otra vista. La princ
 
 Cuando hayas terminado, tu página debería verse algo parecida a la captura de pantalla de abajo.
 
-![All borrowed books, restricted to librarian](https://mdn.mozillademos.org/files/14115/library_borrowed_all.png)
+![All borrowed books, restricted to librarian](library_borrowed_all.png)
 
 ## Sumario
 

@@ -1,39 +1,92 @@
 ---
-title: window.onclose
+title: 'HTMLDialogElement: close イベント'
 slug: Web/API/HTMLDialogElement/close_event
 original_slug: Web/API/GlobalEventHandlers/onclose
+l10n:
+  sourceCommit: 467a3bda135d24e4dafd3dc26fd812a4d48f7b3a
 ---
 
-{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
+{{ APIRef() }}
 
-**`onclose`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、ダイアログ要素に送信された {{event("close")}} イベントを処理するための {{domxref("EventHandler", "イベントハンドラー")}} です。
+`close` イベントは `HTMLDialogElement` オブジェクト上で、これが表すダイアログ ({{htmlelement("dialog")}}) が閉じられたときに発生します。
 
-`close` イベントは、ユーザーが `<dialog>` を閉じたときに発生します。
-
-> **メモ:** ウィンドウのクローズを処理するには、{{domxref("WindowEventHandlers.onbeforeunload", "onbeforeunload")}} または {{domxref("WindowEventHandlers.onunload", "onunload")}} を使用します。
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('close', (event) => {});
+
+onclose = (event) => { };
 ```
-target.onclose = functionRef;
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
+
+## 例
+
+### ライブ例
+
+#### HTML
+
+```html
+<dialog class="example-dialog">
+  <form method="dialog">
+     <button>Close via method="dialog"</button>
+  </form>
+  <button class="close">Close via .close() method</button>
+  <p>Or hit the <kbd>Esc</kbd> key</p>
+</dialog>
+
+<button class="open-dialog">Open dialog</button>
+
+<div class="result"></div>
 ```
 
-### 値
+```css hidden
+button,
+div {
+  margin: 0.5rem;
+}
+```
 
-`functionRef` は、関数名または[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)です。この関数は、{{domxref("Event")}} オブジェクトを唯一の引数として受け取ります。
+#### JavaScript
 
-一度に 1 つのオブジェクトに割り当てることができる `onclose` ハンドラーは 1 つだけです。代わりに、より柔軟性のある {{domxref("EventTarget.addEventListener()")}} メソッドを使用することをお勧めします。
+```js
+const result = document.querySelector('.result');
+
+const dialog = document.querySelector('.example-dialog');
+dialog.addEventListener('close', (event) => {
+    result.textContent = 'dialog was closed';
+});
+
+const openDialog = document.querySelector('.open-dialog');
+openDialog.addEventListener('click', () => {
+  dialog.showModal();
+  result.textContent = "";
+});
+
+const closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', () => {
+    dialog.close();
+});
+```
+
+#### 結果
+
+{{ EmbedLiveSample('Live_example', '100%', '200px') }}
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
-- {{event("close")}} event
-- HTML {{HTMLElement("dialog")}} element
-- Related event handler: {{domxref("GlobalEventHandlers.oncancel")}}
+- HTML の [`<dialog>`](/ja/docs/Web/HTML/Element/dialog) 要素

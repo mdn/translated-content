@@ -1,12 +1,6 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
-tags:
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.Event.cancelable
-translation_of: Web/API/Event/cancelable
 ---
 
 {{ ApiRef("DOM") }}
@@ -15,7 +9,7 @@ translation_of: Web/API/Event/cancelable
 
 이벤트가 취소 불가능한 경우, 해당 이벤트의 `cancelable` 속성은 `false`이며 수신기에서 이벤트의 발생을 멈출 수 없습니다.
 
-취소 가능한 브라우저 내장 이벤트는 대부분 사용자가 페이지와 상호작용해서 발생하는 이벤트입니다. 예컨대 {{event("click")}}, {{event("scroll")}}, {{event("beforeunload")}} 이벤트를 취소하게 되면, 각각 사용자가 어떤 요소를 클릭하는 것, 페이지를 스크롤하는 것, 페이지에서 나가는 것을 막게 됩니다.
+취소 가능한 브라우저 내장 이벤트는 대부분 사용자가 페이지와 상호작용해서 발생하는 이벤트입니다. 예컨대 [`click`](/ko/docs/Web/API/Element/click_event), {{event("scroll")}}, {{event("beforeunload")}} 이벤트를 취소하게 되면, 각각 사용자가 어떤 요소를 클릭하는 것, 페이지를 스크롤하는 것, 페이지에서 나가는 것을 막게 됩니다.
 
 사용자 JavaScript 코드에서 생성하는 [합성 이벤트](/ko/docs/Web/API/Event/Event)의 경우, 이벤트를 초기화할 때 취소 가능 여부를 지정할 수 있습니다.
 

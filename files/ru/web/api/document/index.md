@@ -52,13 +52,13 @@ translation_of: Web/API/Document
   - : Возвращает кодировку, которая использовалась во время парсинга документа.
 - {{domxref("Document.lastStyleSheetSet")}}
   - : Возвращает имя последнего включённого набора таблиц стилей. Имеет значение `null` , пока таблица стилей не будет изменена путём установки значения {{domxref("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
-- {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}} {{gecko_minversion_inline("8.0")}}
+- {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}}
   - : `true` если этот документ является синтетическим, например, отдельные изображения, видео, аудио файлы, или тому подобные.
-- {{domxref("Document.mozFullScreen")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreen")}} {{non-standard_inline}}
   - : `true` когда документ находится в {{domxref("Using_full-screen_mode","full-screen mode")}}.
-- {{domxref("Document.mozFullScreenElement")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreenElement")}} {{non-standard_inline}}
   - : Элемент, который в данный момент находится в полноэкранном режиме для этого документа.
-- {{domxref("Document.mozFullScreenEnabled")}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreenEnabled")}} {{non-standard_inline}}
   - : `true` if calling {{domxref("element.mozRequestFullscreen()")}} would succeed in the curent document.
 - {{domxref("Document.pointerLockElement")}} {{experimental_inline}}
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
@@ -115,7 +115,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns a list of the {{HTMLElement("form")}} elements within the current document.
 - {{domxref("Document.head")}}
   - : Returns the {{HTMLElement("head")}} element of the current document.
-- {{domxref("Document.height")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Document.height")}} {{non-standard_inline}}
   - : Gets/sets the height of the current document.
 - {{domxref("Document.images")}}
   - : Returns a list of the images in the current document.
@@ -129,7 +129,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns the URI of the current document.
 - {{domxref("Document.plugins")}}
   - : Returns a list of the available plugins.
-- {{domxref("Document.readyState")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Document.readyState")}}
   - : Returns loading status of the document.
 - {{domxref("Document.referrer")}}
   - : Returns the URI of the page that linked to this page.
@@ -141,7 +141,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns a string containing the URL of the current document.
 - {{domxref("Document.vlinkColor")}} {{Deprecated_inline}}
   - : Gets/sets the color of visited hyperlinks.
-- {{domxref("Document.width")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Document.width")}} {{non-standard_inline}}
   - : Returns the width of the current document.
 
 ### Event handlers
@@ -150,7 +150,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns the event handling code for the {{event("pointerlockchange")}} event.
 - {{domxref("Document.onpointerlockerror")}} {{experimental_inline}}
   - : Returns the event handling code for the {{event("pointerlockerror")}} event.
-- {{domxref("Document.onreadystatechange")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Document.onreadystatechange")}}
   - : Returns the event handling code for the `readystatechange` event.
 
 ## Methods
@@ -177,7 +177,7 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Creates a new element with the given tag name.
 - {{domxref("Document.createElementNS","Document.createElementNS(String namespace, String name)")}}
   - : Creates a new element with the given tag name and namespace URI.
-- {{domxref("Document.createEntityReference","Document.createEntityReference(String name)")}} {{obsolete_inline}}
+- {{domxref("Document.createEntityReference","Document.createEntityReference(String name)")}}
   - : Creates a new entity reference object and returns it.
 - {{domxref("Document.createEvent","Document.createEvent(String interface)")}}
   - : Creates an event object.
@@ -205,24 +205,24 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
   - : Returns a list of elements with the given tag name and namespace.
 - {{domxref("Document.importNode","Document.importNode(Node node, Boolean deep)")}}
   - : Returns a clone of a node from an external document.
-- {{domxref("document.mozSetImageElement")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("document.mozSetImageElement")}} {{non-standard_inline}}
   - : Allows you to change the element being used as the background image for a specified element ID.
-- {{domxref("Document.normalizeDocument()")}} {{obsolete_inline}}
+- {{domxref("Document.normalizeDocument()")}}
   - : Replaces entities, normalizes text nodes, etc.
-- {{domxref("Document.releaseCapture()")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Document.releaseCapture()")}} {{non-standard_inline}}
   - : Releases the current mouse capture if it's on an element in this document.
 - {{domxref("Document.releaseEvents")}} {{non-standard_inline}} {{Deprecated_inline}}
   - : See {{domxref("window.releaseEvents")}}.
-- {{domxref("document.routeEvent")}} {{non-standard_inline}} {{obsolete_inline(24)}}
+- {{domxref("document.routeEvent")}} {{non-standard_inline}}
   - : See {{domxref("window.routeEvent")}}.
 
 The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
 
 - {{domxref("Document.getElementById","Document.getElementById(String id)")}}
   - : Returns an object reference to the identified element.
-- {{domxref("Document.querySelector","Document.querySelector(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
+- {{domxref("Document.querySelector","Document.querySelector(String selector)")}}
   - : Returns the first Element node within the document, in document order, that matches the specified selectors.
-- {{domxref("Document.querySelectorAll","Document.querySelectorAll(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
+- {{domxref("Document.querySelectorAll","Document.querySelectorAll(String selector)")}}
   - : Returns a list of all the Element nodes within the document that match the specified selectors.
 
 The `Document` interface is extended with the {{domxref("XPathEvaluator")}} interface:
@@ -290,9 +290,9 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
 
 Mozilla defines a set of non-standard properties made only for XUL content:
 
-- {{domxref("document.currentScript")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("document.currentScript")}}
   - : Returns the {{HTMLElement("script")}} element that is currently executing.
-- {{domxref("document.documentURIObject")}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("document.documentURIObject")}}
   - : (**Mozilla add-ons only!**) Returns the `nsIURI` object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).
 - {{domxref("document.popupNode")}}
   - : Returns the node upon which a popup was invoked.
@@ -302,13 +302,13 @@ Mozilla defines a set of non-standard properties made only for XUL content:
 Mozilla also define some non-standard methods:
 
 - {{domxref("Document.execCommandShowHelp")}} {{deprecated_inline}}
-  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : This method never did anything and always threw an exception, so it was removed in Gecko 14.0.
 - {{domxref("Document.getBoxObjectFor")}} {{deprecated_inline}}
   - : Use the {{domxref("Element.getBoundingClientRect()")}} method instead.
 - {{domxref("Document.loadOverlay")}}
   - : Loads a [XUL overlay](/ru/docs/XUL_Overlays) dynamically. This only works in XUL documents.
 - {{domxref("document.queryCommandText")}} {{deprecated_inline}}
-  - : This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : This method never did anything but throw an exception, and was removed in Gecko 14.0.
 
 ### Internet Explorer notes
 

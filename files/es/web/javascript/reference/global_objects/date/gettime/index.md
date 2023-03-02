@@ -54,9 +54,9 @@ console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getTime")}}
+{{Compat}}
 
 ## Ver también
 

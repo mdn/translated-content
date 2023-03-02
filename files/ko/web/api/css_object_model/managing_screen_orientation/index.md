@@ -1,7 +1,6 @@
 ---
 title: Managing screen orientation
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
-translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 original_slug: WebAPI/Managing_screen_orientation
 ---
 

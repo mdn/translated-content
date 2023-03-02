@@ -1,6 +1,6 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ---
 
 {{JSRef}}
@@ -19,7 +19,7 @@ arr.reduce(callback[accumulator, currentValue, currentIndex, array], initialValu
 
 - `callback`
   - : 用於處理陣列中每個元素的函式，可傳入四個參數：
-  
+
     - `accumulator`
       - : 用來累積回呼函式回傳值的累加器（accumulator）或 `initialValue`（若有提供的話，詳如下敘）。累加器是上一次呼叫後，所回傳的累加數值。
     - `currentValue`

@@ -34,12 +34,6 @@ var p = new Proxy(target, handler);
 - {{jsxref("Proxy.revocable()")}}
   - : Creates a revocable `Proxy` object.
 
-## Methods of the handler object
-
-The handler object is a placeholder object which contains traps for `Proxy`.
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}
-
 ## 範例
 
 ### Basic example
@@ -362,9 +356,9 @@ console.log(docCookies.my_cookie1);
 
 ## Gecko specific notes
 
-- At present, `Object.getPrototypeOf(proxy)` unconditionally returns `Object.getPrototypeOf(target)`, because the ES2015 getPrototypeOf trap is not yet implemented ({{bug(795904)}}, {{bug(888969)}}).
-- `Array.isArray(proxy)` unconditionally returns `Array.isArray(target)` ({{bug(1096753)}}, {{bug(1111785)}}).
-- `Object.prototype.toString.call(proxy)` unconditionally returns `Object.prototype.toString.call(target)`, because ES2015 Symbol.toStringTag is not yet implemented ({{bug(1114580)}}).
+- At present, `Object.getPrototypeOf(proxy)` unconditionally returns `Object.getPrototypeOf(target)`, because the ES2015 getPrototypeOf trap is not yet implemented ([Firefox bug 795904](https://bugzil.la/795904), [Firefox bug 888969](https://bugzil.la/888969)).
+- `Array.isArray(proxy)` unconditionally returns `Array.isArray(target)` ([Firefox bug 1096753](https://bugzil.la/1096753), [Firefox bug 1111785](https://bugzil.la/1111785)).
+- `Object.prototype.toString.call(proxy)` unconditionally returns `Object.prototype.toString.call(target)`, because ES2015 Symbol.toStringTag is not yet implemented ([Firefox bug 1114580](https://bugzil.la/1114580)).
 
 ## 參見
 

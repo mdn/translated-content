@@ -1,17 +1,6 @@
 ---
 title: FetchEvent
 slug: Web/API/FetchEvent
-tags:
-  - API
-  - FetchEvent
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - TopicStub
-  - Workers
-translation_of: Web/API/FetchEvent
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -72,11 +61,11 @@ addEventListener('fetch', event => {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

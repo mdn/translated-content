@@ -1,7 +1,6 @@
 ---
 title: element.scrollIntoView
 slug: Web/API/Element/scrollIntoView
-translation_of: Web/API/Element/scrollIntoView
 ---
 {{APIRef("DOM")}}
 
@@ -59,7 +58,7 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 다른 요소의 레이아웃에 따라 위쪽 또는 아래쪽으로 완전히 스크롤되지 않을 수 있습니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

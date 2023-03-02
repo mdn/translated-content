@@ -12,7 +12,7 @@ Es el elemento crea botones marcadores.
 
 - La etiqueta de **HTML `<button>`** representa un elemento cliqueable de tipo botón que puede ser utilizado en formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar. De forma predeterminada, los botones HTML se presentan con un estilo similar en todas las plataformas, estos estilos se pueden cambiar utilizando [CSS](/es/docs/Web/CSS).
   - : **Sus etiquetas son**: \<button> y \</button> (ambas obligatorias).
-  
+
     **Crea una caja**: en linea.
 
     **Está definido como**: [Elemento de control para formulario](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
@@ -358,9 +358,13 @@ Más información (en inglés):
 
 - [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
 
-## Soporte
+## Especificaciones
 
-{{Compat("html.elements.button")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Referencia
 

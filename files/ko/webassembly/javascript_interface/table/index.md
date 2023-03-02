@@ -1,11 +1,10 @@
 ---
 title: WebAssembly.Table()
 slug: WebAssembly/JavaScript_interface/Table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Table()`** 생성자는 지정된 크기 및 요소 유형의 새 `Table` 객체를 만듭니다.
 
@@ -90,11 +89,11 @@ WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 
 이 예제는 자바 스크립트에서 테이블을 만들고 액세스하고 있지만 wasm 인스턴스 내부에서도 같은 테이블을 볼 수 있고 호출 할 수 있음을 보여줍니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

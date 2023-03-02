@@ -201,7 +201,7 @@ original_slug: Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서
 
 Firefox DevTools의 [반응형 디자인 모드](/ko/docs/Tools/Responsive_Design_Mode)는 이러한 분기점이 어느 부분이 될지 알아내는 데 매우 유용합니다. 동 툴은 미디어 쿼리를 추가하고 디자인을 조정하면서 콘텐츠가 개선되는 위치를 파악하기 위해 뷰포트를 쉽게 크거나 작게 만들 수 있습니다.
 
-![파이어폭스 개발툴상에 레이아웃 갈무리](https://mdn.mozillademos.org/files/16867/rwd-mode.png)
+![파이어폭스 개발툴상에 레이아웃 갈무리](rwd-mode.png)
 
 ## 능동 학습: 모바일 우선 반응형 디자인
 
@@ -427,18 +427,3 @@ article {
 또한 서로 다른 구성 요소를 추가하고 미디어 쿼리를 추가한다든지 또는 가변상자나 격자와 같은 레이아웃 방법을 사용하는 것이 구성 요소를 반응형으로 만드는 가장 적절한 방법인지 여부를 실험할 수 있습니다. 바른 방식 혹은 그른 방식 따윈 없습니다. 말하자면 어떤 것이 디자인과 콘텐츠에 가장 적합한지 실험하고 관찰해야 합니다.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [CSS 레이아웃 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [격자](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/위치잡기)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- [레이아웃 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -1,15 +1,6 @@
 ---
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
-tags:
-  - API
-  - Elements
-  - HTML DOM
-  - HTMLFormControlsCollection
-  - HTMLFormElement
-  - Property
-  - Reference
-translation_of: Web/API/HTMLFormElement/elements
 ---
 
 {{APIRef("HTML DOM")}}

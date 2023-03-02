@@ -31,7 +31,7 @@ Si le script qui génère les évènements est hébergé sur une origine différ
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-Une fois que la source d'évènement a été instanciée, on peut écouter les messages provenant du serveur en attachant un gestionnaire d'évènement pour [`message`](/fr/docs/Web/API/MessageEvent)&nbsp;:
+Une fois que la source d'évènement a été instanciée, on peut écouter les messages *sans propriété `event`* provenant du serveur en attachant un gestionnaire d'évènement pour [`message`](/fr/docs/Web/API/MessageEvent)&nbsp;:
 
 ```js
 evtSource.onmessage = function(event) {
@@ -45,7 +45,7 @@ evtSource.onmessage = function(event) {
 
 Ce code écoute les messages entrants (plus précisément, les notifications venant du serveur qui n'ont pas de champ `event` attaché) et ajoute le texte des messages à une liste dans le contenu HTML du document.
 
-On peut aussi écouter les évènements avec `addEventListener()`&nbsp;:
+On peut écouter les évènements de message *avec* un champ `event` grâce à `addEventListener()`&nbsp;:
 
 ```js
 evtSource.addEventListener("ping", function(event) {
@@ -56,7 +56,7 @@ evtSource.addEventListener("ping", function(event) {
 });
 ```
 
-Ce fragment de code est similaire au précédent, mais sera appelé automatiquement si le serveur envoie un message dont le champ `event` est `ping`&nbsp;; il analysera alors le JSON dans le champ `data` et l'affichera.
+Ce fragment de code sera appelé si le serveur envoie un message dont le champ `event` est `ping`&nbsp;; il analysera alors le JSON dans le champ `data` et l'affichera.
 
 > **Attention :** **Lorsque HTTP/2 n'est pas utilisé**, les évènements serveurs sont limités par le nombre maximal de connexion ouvertes, notamment quand on a plusieurs onglets ouverts. La limite est fixée _par le navigateur_ et vaut 6 pour chaque origine (voir les bugs [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) et [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896)). On pourra avoir 6 connexions pour les évènements serveurs parmi tous les onglets ouverts sur `www.example1.com`, 6 autres pour tous les onglets sur `www.example2.com` (voir cette réponse [Stack Overflow](https://stackoverflow.com/a/5326159/1905229)). Avec HTTP/2, le nombre de flux HTTP simultanés est négocié entre le serveur et le client et vaut 100 par défaut.
 
@@ -202,4 +202,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventSource")}}
+{{Compat}}

@@ -1,14 +1,6 @@
 ---
 title: Expresiones y operadores
 slug: Web/JavaScript/Guide/Expressions_and_Operators
-tags:
-  - Expresiones
-  - Guía
-  - JavaScript
-  - Operadores
-  - Principiante
-  - '|10n_prioridad'
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
 
 {{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
@@ -138,7 +130,7 @@ var var2 = 4;
 | {{JSxRef("Operadores/Comparison_Operators", "Menor que", "#Operador_menor_que")}} (`<`)                      | Devuelve `true` si el operando izquierdo es menor que el operando derecho.                                                                                                                                       | `var1 < var2`<br>`"2" < 12`               |
 | {{JSxRef("Operadores/Comparison_Operators", "Menor o igual", "#Operador_menor_que_o_igual")}} (`<=`)     | Devuelve `true` si el operando izquierdo es menor o igual que el operando derecho.                                                                                                                               | `var1 <= var2 var2 <= 5`             |
 
-> **Nota:** **Nota**: (**=>**) no es un operador, sino la notación para {{JSxRef("Funciones/Arrow_functions", "Funciones flecha")}}.
+> **Nota:** (**=>**) no es un operador, sino la notación para {{JSxRef("Funciones/Arrow_functions", "Funciones flecha")}}.
 
 ### Operadores aritméticos
 

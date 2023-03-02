@@ -82,26 +82,26 @@ MIDDLEWARE = [
 
 개발서버를 시작하고, 웹브라우저를 통해 admin site(<http://127.0.0.1:8000/admin/>)에 접속하십시오. 그리고 당신의 superuser 계정으로 로그인하십시오. admin site의 최상위 단계에서는 "Django application"에 의해 소트된 당신의 모델들이 있습니다. Authentication and Authorisation 섹션에 있는 Users or Groups 링크를 클릭하여 현재의 등록된 기록들을 볼 수 있습니다.
 
-![Admin site - add groups or users](https://mdn.mozillademos.org/files/14091/admin_authentication_add.png)
+![Admin site - add groups or users](admin_authentication_add.png)
 
 첫번째로 우리 도서관 멤버를 위한 새 그룹을 만듭시다.
 
 1. Add버튼(Group 다음에 있는)을 클릭하여 새 그룹을 만듭니다; "Library Members"라는 이름을 넣으세요.
 
-![Admin site - add group](https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png)
+![Admin site - add group](admin_authentication_add_group.png)
 
 1. 우리는 그룹을 위한 어떠한 권한도 필요하지 않습니다. 그러므로 **SAVE** 를 누르세요. (you will be taken to a list of groups).
 
 자 이제 사용자(user)를 만들어봅시다 :
 
 1. admin 사이트의 홈페이지로 돌아가주세요.
-2. Users 옆 **Add** 버튼을 클릭하여 user dialog를 열어줍니다.![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
+2. Users 옆 **Add** 버튼을 클릭하여 user dialog를 열어줍니다.![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
 3. 당신의 테스트 사용자(user)를 위해 적절한 사용자이름(**Username)** 과 비밀번호(**Password**/**Password confirmation)** 를 입력해주세요.
 4. 사용자(user)를 만들기 위해 **SAVE** 를 눌러줍시다.
 
-    관리자 사이트는 새로운 유저를 만들고, **username**을 바꿀 수 있고 유저모델의 선택 필드에 정보를 추가할 수 있는 _Change user화면으로 즉각 당신에게 보여줄 것입니다. 이 필드들은 이름, 성, 이메일 주소, 유저 상태 및 권한 (오직_ **Active** 표시만 가능합니다)를 포함합니다. 더 밑으로 내려가면 당신의 그룹과 권한 유저와 관련된 중요한 날짜들(예를 들어 가입일과 마지막 로그인 날짜)을 기입할 수 있습니다. ![Admin site - add user pt2](https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png)
+    관리자 사이트는 새로운 유저를 만들고, **username**을 바꿀 수 있고 유저모델의 선택 필드에 정보를 추가할 수 있는 _Change user화면으로 즉각 당신에게 보여줄 것입니다. 이 필드들은 이름, 성, 이메일 주소, 유저 상태 및 권한 (오직_ **Active** 표시만 가능합니다)를 포함합니다. 더 밑으로 내려가면 당신의 그룹과 권한 유저와 관련된 중요한 날짜들(예를 들어 가입일과 마지막 로그인 날짜)을 기입할 수 있습니다. ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
-5. 그룹 섹션에서, Available groups목록에서 **Library Member** 를 선택하고두 박스 사이에 있는 **오른쪽 화살표**를 누르면 Chosen groups box로 이동이 될 거에요![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
+5. 그룹 섹션에서, Available groups목록에서 **Library Member** 를 선택하고두 박스 사이에 있는 **오른쪽 화살표**를 누르면 Chosen groups box로 이동이 될 거에요![Admin site - add user to group](admin_authentication_user_add_group.png)
 6. 여기서는 아무것도 필요치 않습니다, 그저 **SAVE** 를 선택하고, 유저 목록으로 가십시오.
 
 다됬습니다! 이제 당신은 테스트를 위해 사용할 수 있는 "normal library member" 계정을 갖게 되었습니다(이들이 로그인할 수 있도록 페이지를 만들 때 말이죠).
@@ -231,7 +231,7 @@ This template shares some similarities with the ones we've seen before — it ex
 
 Navigate back to the login page (<http://127.0.0.1:8000/accounts/login/>) once you've saved your template, and you should see something like this:
 
-![Library login page v1](https://mdn.mozillademos.org/files/14101/library_login.png)
+![Library login page v1](library_login.png)
 
 If you try to log in that will succeed and you'll be redirected to another page (by default this will be <http://127.0.0.1:8000/accounts/profile/>). The problem here is that by default Django expects that after login you will want to be taken to a profile page, which may or may not be the case. As you haven't defined this page yet, you'll get another error!
 
@@ -259,7 +259,7 @@ Create and open /**locallibrary/templates/registration/logged_out.html**. Copy i
 
 This template is very simple. It just displays a message informing you that you have been logged out, and provides a link that you can press to go back to the login screen. If you go to the logout URL again you should see this page:
 
-![Library logout page v1](https://mdn.mozillademos.org/files/14103/library_logout.png)
+![Library logout page v1](library_logout.png)
 
 ### Password reset templates
 
@@ -598,7 +598,7 @@ Open the base template (**/locallibrary/catalog/templates/base_generic.html**) a
 
 When any user is logged in, they'll see the _My Borrowed_ link in the sidebar, and the list of books displayed as below (the first book has no due date, which is a bug we hope to fix in a later tutorial!).
 
-![Library - borrowed books by user](https://mdn.mozillademos.org/files/14105/library_borrowed_by_user.png)
+![Library - borrowed books by user](library_borrowed_by_user.png)
 
 ## 허가
 
@@ -675,7 +675,7 @@ You should be able to follow the same pattern as for the other view. The main di
 
 When you are finished, your page should look something like the screenshot below.
 
-![All borrowed books, restricted to librarian](https://mdn.mozillademos.org/files/14115/library_borrowed_all.png)
+![All borrowed books, restricted to librarian](library_borrowed_all.png)
 
 ## Summary
 
@@ -690,21 +690,3 @@ In our next article, we'll look at how you can use Django forms to collect user 
 - [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/2.0/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/ko/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ko/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ko/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ko/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ko/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ko/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ko/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ko/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ko/docs/Learn/Server-side/Django/django_assessment_blog)

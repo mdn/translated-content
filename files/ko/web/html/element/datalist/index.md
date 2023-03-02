@@ -1,15 +1,8 @@
 ---
 title: <datalist>
 slug: Web/HTML/Element/datalist
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/datalist
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<datalist>` 요소**는 다른 컨트롤에서 고를 수 있는 가능한, 혹은 추천하는 선택지를 나타내는 {{htmlelement("option")}} 요소 여럿을 담습니다.
@@ -101,7 +94,7 @@ translation_of: Web/HTML/Element/datalist
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.datalist")}}
+{{Compat}}
 
 ## 폴리필
 

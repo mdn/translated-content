@@ -42,7 +42,7 @@ translation_of: Web/HTML/Element/input/image
   - : This attribute specifies that the user must fill in a value before submitting a form but it cannot be used when the **type** attribute is `image` type (`submit`, `reset`, or `button`). The {{cssxref(":optional")}} and {{cssxref(":required")}} CSS pseudo-classes will be applied to the field as appropriate.
 - {{htmlattrdef("src")}}
   - : This attribute specifies a URI for the location of an image to display on the graphical submit button; otherwise it is ignored.
-- {{htmlattrdef("usemap")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline", "HTML5")}}
+- {{htmlattrdef("usemap")}} {{HTMLVersionInline(4)}} only,
   - : The name of a {{HTMLElement("map")}} element as an image map.
 - {{htmlattrdef("width")}} {{HTMLVersionInline("5")}}
   - : This attribute defines the width of the image displayed for the button.
@@ -52,7 +52,7 @@ translation_of: Web/HTML/Element/input/image
 ### Поле в виде логотипа Firefox
 
 ```html
-<input type="image" name="image" src="https://mdn.mozillademos.org/files/2917/fxlogo.png" width="50">
+<input type="image" name="image" src="fxlogo.png" width="50">
 ```
 
 #### Результат

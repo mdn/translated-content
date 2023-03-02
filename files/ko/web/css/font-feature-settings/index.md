@@ -1,7 +1,6 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
-translation_of: Web/CSS/font-feature-settings
 ---
 
 {{CSSRef}}
@@ -38,7 +37,7 @@ font-feature-settings: unset;
   - : 기본값을 이용하여 텍스트를 표시합니다.
 - `&#x3C;feature-tag-value>`
   - : 텍스트를 렌더링할 때, 오픈타입 피처를 활성화하거나 비활성화하기 위해 피처 태그 목록을 렌더링 엔진에 전달합니다. 피처 태그는 4개의 ASCII 문자로 이루어진 {{cssxref("&lt;string&gt;")}}이어야 합니다. 만약 태그가 네 글자보다 짧거나, 유니코드 `U+20` – `U+7E` 범위 바깥에 있는 문자를 포함한다면 속성 전체가 무효처리됩니다.
-  
+
   값은 양의 정수 값을 가집니다. 각각 `1`, `0`과 같은 의미를 가지는 키워드 `on` 과 `off`도 사용할 수 있습니다. 아무런 값이 설정되지 않았다면 기본값은 `1`입니다. [stylistic alternates](http://www.microsoft.com/typography/otspec/features_pt.htm#salt)와 같이 Boolean 타입이 아닌 오픈타입 피처의 경우, 값은 선택되어야 하는 글리프(글자)를 의미합니다. Boolean 타입인 경우에는 스위치라고 생각하시면 됩니다.
 
 ## Formal definition
@@ -85,11 +84,11 @@ td.tabular { font-feature-settings: "tnum"; }
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

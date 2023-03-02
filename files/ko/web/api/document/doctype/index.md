@@ -1,7 +1,6 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
-translation_of: Web/API/Document/doctype
 ---
 
 {{ApiRef("DOM")}}
@@ -35,6 +34,6 @@ console.log(
 
 DOM level 2는 document type 선언 편집을 지원하지 않습니다. (read-only)
 
-## Specifications
+## 명세서
 
 {{Specifications}}

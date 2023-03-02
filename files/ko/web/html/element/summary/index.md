@@ -1,13 +1,8 @@
 ---
 title: <summary>
 slug: Web/HTML/Element/summary
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/summary
 ---
+
 {{HTMLSidebar}}
 
 **HTML 공개 요약 요소** (**`<요약>`**) 요소는 ("상세") 요소의 공개 상자에 대한 요약, 캡션 또는 범례를 지정한다. `<요약>` 요소를 클릭하면 부모 `<상세>` 요소의 상태가 열리거나 닫힌다.
@@ -40,7 +35,7 @@ translation_of: Web/HTML/Element/summary
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>{{ARIARole("button")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/button_role'><code>button</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>
@@ -128,13 +123,13 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("html.elements.summary")}}
+{{Compat}}
 
 ## See also
 

@@ -57,21 +57,15 @@ For more details on using these features, see [Using the Web Speech API](/es/doc
 
 ## Examples
 
-The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub contains demos to illustrate speech recognition and synthesis.
+The [Web Speech API repo](https://github.com/mdn/dom-examples/tree/main/web-speech-api) on GitHub contains demos to illustrate speech recognition and synthesis.
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-### `SpeechRecognition`
-
-{{Compat("api.SpeechRecognition", 0)}}
-
-### `SpeechSynthesis`
-
-{{Compat("api.SpeechSynthesis", 0)}}
+{{Compat}}
 
 ## See also
 

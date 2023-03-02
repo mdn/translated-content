@@ -1,8 +1,6 @@
 ---
 title: FileReader.result
 slug: Web/API/FileReader/result
-browser-compat: api.FileReader.result
-translation_of: Web/API/FileReader/result
 ---
 {{APIRef("File API")}}
 
@@ -18,11 +16,11 @@ var file = instanceOfFileReader.result
 
 읽기 작업에 사용된 함수에 의해 string 또는 {{domxref("ArrayBuffer")}} 가 된다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

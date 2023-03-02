@@ -1,7 +1,6 @@
 ---
 title: Push API
 slug: Web/API/Push_API
-translation_of: Web/API/Push_API
 ---
 {{DefaultAPISidebar("Push API")}}
 
@@ -55,11 +54,11 @@ The following additions to the [Service Worker API](/ko/docs/Web/API/Service_Wor
 
 Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook/) contains many useful Push examples.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

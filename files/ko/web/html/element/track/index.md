@@ -1,18 +1,8 @@
 ---
 title: '<track>: 텍스트 트랙 삽입 요소'
 slug: Web/HTML/Element/track
-tags:
-  - Accessibility
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Multimedia
-  - Reference
-  - Web
-  - 자막
-translation_of: Web/HTML/Element/track
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<track>` 요소**는 미디어 요소({{HTMLElement("audio")}}, {{HTMLElement("video")}})의 자식으로서, 자막 등 시간별 텍스트 트랙(시간 기반 데이터)를 지정할 때 사용합니다. 트랙은 [WebVTT](/ko/docs/Web/API/WebVTT_API)(Web Video Text Tracks, `.vtt` 파일) 또는 [Timed Text Markup Language(TTML)](https://w3c.github.io/ttml2/index.html)형식을 사용해야 합니다.
@@ -154,7 +144,7 @@ textTrackElem.addEventListener("cuechange", event => {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.track")}}
+{{Compat}}
 
 ## 같이 보기
 

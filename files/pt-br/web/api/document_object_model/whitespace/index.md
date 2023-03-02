@@ -28,7 +28,7 @@ Em outras palavras, a árvore do DOM para o documento seguinte irá parecer como
 </html>
 ```
 
-![](https://mdn.mozillademos.org/files/854/whitespace_tree.png)
+![](whitespace_tree.png)
 
 Isto pode fazer as coisas um pouco difíceis para qualquer usuário do DOM que quer iterar através do conteúdo, excluindo o [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM).
 

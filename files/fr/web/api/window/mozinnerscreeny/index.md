@@ -36,7 +36,7 @@ Ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.mozInnerScreenY")}}
+{{Compat}}
 
 ## Voir aussi
 

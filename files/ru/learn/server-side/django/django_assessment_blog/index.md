@@ -144,7 +144,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
           </li>
           <li>
             После того, как комментарий будет опубликован, страница будет
-            перенаправлена ​​на связанную страницу блога.
+            перенаправлена на связанную страницу блога.
           </li>
           <li>
             Пользователи не могут редактировать или удалять свои сообщения.
@@ -233,35 +233,35 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 - Разбивка включена (в группах по 5)
 - Показ от новых к старым.
 
-![List of all blogs](https://mdn.mozillademos.org/files/14319/diyblog_allblogs.png)
+![List of all blogs](diyblog_allblogs.png)
 
 ### Список всех блогеров
 
 Это ссылки на всех блогеров в "All bloggers" по ссылке, которая на боковой панели. В этом случае мы можем увидеть на боковой панели, что ни один пользователь не вошёл в систему.
 
-![List of all bloggers](https://mdn.mozillademos.org/files/14321/diyblog_blog_allbloggers.png)
+![List of all bloggers](diyblog_blog_allbloggers.png)
 
 ### Подробная страница блога
 
 Это показывает подробную страницу для конкретного блога.
 
-![Blog detail with add comment link](https://mdn.mozillademos.org/files/14323/diyblog_blog_detail_add_comment.png)
+![Blog detail with add comment link](diyblog_blog_detail_add_comment.png)
 
 Обратите внимание, что комментарии имеют дату _и_ время, и расположены в порядке от самых старых до новейших (противоположно порядку ведения блога). В конце у нас есть ссылка для доступа к форме, чтобы добавить новый комментарий. Если пользователь не вошёл в систему, мы бы увидели предложение войти в систему.
 
-![Comment link when not logged in](https://mdn.mozillademos.org/files/14325/diyblog_blog_detail_not_logged_in.png)
+![Comment link when not logged in](diyblog_blog_detail_not_logged_in.png)
 
 ### Добавить форму комментария
 
 Это форма добавления комментариев. Обратите внимание, что мы вошли в систему. Когда это удастся, мы должны вернуться к связанной странице блога.
 
-![Add comment form](https://mdn.mozillademos.org/files/14329/diyblog_comment_form.png)
+![Add comment form](diyblog_comment_form.png)
 
 ### Об авторе
 
 Здесь отображается информация о блогере вместе со списком его блогов.
 
-![Blogger detail page](https://mdn.mozillademos.org/files/14327/diyblog_blogger_detail.png)
+![Blogger detail page](diyblog_blogger_detail.png)
 
 ## Завершающие шаги
 

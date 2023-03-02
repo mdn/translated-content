@@ -1,11 +1,11 @@
 ---
-title: 이미지, 미디어 및 양식 요소nts
+title: 이미지, 미디어 및 양식 요소
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
 
-In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently in terms of your ability to style them with CSS than regular boxes. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.
+이번 수업에서는 특별한 요소들을 CSS에서 어떻게 다루는지 살펴볼 것입니다. 이미지, 기타 미디어 및 양식 요소는 일반 박스와 다르게 CSS를 사용해서 스타일을 지정할 수 있다는 특징 덕분에 약간 다르게 작동합니다. 무엇이 가능하고 불가능한지 이해하는 것은 약간의 불편함을 줄이는 데 도움이 될 수 있으며, 이 수업에서는 여러분이 알아야 할 주요 사항들을 다룰 것입니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -89,7 +89,7 @@ container 내부의 이미지에 대해 다른 선택을 할 수 있습니다. �
 
 이 수업을 순서대로 따르는 경우 레이아웃을 아직 보지 않았을 수 있습니다. 대체 요소는 grid 또는 flex 레이아웃의 일부가 될 때, 기본 동작이 서로 다르다는 점을 유념해 주십시오. 기본적으로 배치로 인해 이상하게 늘어나지 않도록 하기 위해서입니다.
 
-grid 셀을 채우도록 이미지를 늘리려면, 다음과 같은 작업을 수행해야 합니다:
+grid 셀을 채우도록 이미지를 늘리려면, 다음과 같은 작업을 수행해야 합니다.
 
 ```css
 img {
@@ -112,13 +112,13 @@ HTML5 에는 또한 웹 개발자가 어떤 필드가 필요한지, 심지어 �
 
 `<input type="text">` 와 같은 텍스트 입력을 허용하는 요소, `<input type="email">`, 과 같은 특정 유형 및 `<textarea>` 요소는 스타일이 매우 쉽고 다른 박스처럼 동작하는 경향이 있습니다. 귀하의 페이지에 이러한 요소의 기본 스타일은 사용자가 사이트를 방문하는 운영체제 및 브라우저에 따라 다릅니다.
 
-아래 예에서는 CSS 를 사용하여 일부 텍스트 입력의 스타일을 지정했습니다 — 테두리, 마진 및 패딩과 같은 항목이 모두 예상대로 적용되는 것을 볼 수 있습니다. 속성 선택자를 사용하여 다양한 입력 유형을 대상으로 하고 있습니다. 테두리를 조정하고, 필드에 배경색을 추가하고, 글꼴 및 패딩을 변경하여 이 양식의 모양을 변경하십시오.
+아래 예에서는 CSS 를 사용하여 일부 텍스트 입력의 스타일을 지정했습니다. 테두리, 마진 및 패딩과 같은 항목이 모두 예상대로 적용되는 것을 볼 수 있습니다. 속성 선택자를 사용하여 다양한 입력 유형을 대상으로 하고 있습니다. 테두리를 조정하고, 필드에 배경색을 추가하고, 글꼴 및 패딩을 변경하여 이 양식의 모양을 변경하십시오.
 
 {{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}
 
-> **경고:** **중요**: 양식 요소의 스타일을 변경할 때 양식 요소임을 사용자에게 확실히 알 수 있도록 주의해야 합니다. 테두리와 배경이 없는 양식 입력을 작성할 수 있습니다. 이 입력 양식은 주변 내용과 거의 구분할 수 없습니다. 이로 인해 인식하고 채우기가 매우 어려워집니다.
+> **경고:** **중요** 양식 요소의 스타일을 변경할 때 양식 요소임을 사용자에게 확실히 알 수 있도록 주의해야 합니다. 테두리와 배경이 없는 양식 입력을 작성할 수 있습니다. 이 입력 양식은 주변 내용과 거의 구분할 수 없습니다. 이로 인해 인식하고 채우기가 매우 어려워집니다.
 
-이 과정의 HTML 부분에서 [양식 스타일](/ko/docs/Learn/Forms/Styling_web_forms) 에 대한 강의에서 설명한대로, 보다 복잡한 입력 유형 중 많은 부분이 운영체제에서 렌더링되며 스타일에 액세스할 수 없습니다. 따라서 항상 방문자마다 양식이 크게 달라지고 여러 브라우저에서 복잡한 양식을 테스트한다고 가정해야합니다.
+이 과정의 HTML 부분에서 [양식 스타일](/en-US/docs/Learn/Forms/Styling_web_forms) 에 대한 강의에서 설명한대로, 보다 복잡한 입력 유형 중 많은 부분이 운영체제에서 렌더링되며 스타일에 액세스할 수 없습니다. 따라서 항상 방문자마다 양식이 크게 달라지고 여러 브라우저에서 복잡한 양식을 테스트한다고 가정해야합니다.
 
 ### 상속 과 양식 요소
 
@@ -153,7 +153,7 @@ textarea {
 
 ### 다른 유용한 설정
 
-위에서 언급한 규칙 외에도 `<textarea>` 에서 `overflow: auto` 를 설정하여 스크롤 막대가 필요하지 않은 경우 IE 에 스크롤 막대가 표시되지 않도록 설정해야 합니다:
+위에서 언급한 규칙 외에도 `<textarea>` 에서 `overflow: auto` 를 설정하여 스크롤 막대가 필요하지 않은 경우 IE 에 스크롤 막대가 표시되지 않도록 설정해야 합니다.
 
 ```css
 textarea {
@@ -163,7 +163,7 @@ textarea {
 
 ### 모든 것을 "재설정" 으로 통합
 
-마지막 단계로, 위에서 설명한 다양한 속성을 다음 "양식 재설정" 으로 마무리하여 일관된 작업 기반을 제공할 수 있습니다. 여기에는 마지막 세 섹션에서 언급한 모든 항목이 포함됩니다:
+마지막 단계로, 위에서 설명한 다양한 속성을 다음 "양식 재설정" 으로 마무리하여 일관된 작업 기반을 제공할 수 있습니다. 여기에는 마지막 세 섹션에서 언급한 모든 항목이 포함됩니다.
 
 ```css
 button,
@@ -185,32 +185,11 @@ textarea {
 
 스타일링 양식에 대한 자세한 내용은 이 안내의 HTML 섹션에 있는 두 기사를 살펴보십시오.
 
-- [웹 양식 스타일링](/ko/docs/Learn/Forms/Styling_web_forms)
-- [고급 양식 스타일링](/ko/docs/Learn/Forms/Advanced_form_styling)
+- [웹 양식 스타일링](/en-US/docs/Learn/Forms/Styling_web_forms)
+- [고급 양식 스타일링](/en-US/docs/Learn/Forms/Advanced_form_styling)
 
 ## 요약
 
 이 수업에서는 CSS 에서 이미지, 미디어 및 기타 특이한 요소로 작업할 때 발생할 수 있는 몇 가지 차이점을 강조했습니다. 다음 기사에서는 HTML 표의 스타일을 지정해야할 때 유용한 몇 가지 팁을 살펴보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
-
-## 이번 강의에서는
-
-1. [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [콘텐츠 overflow](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 정리](/ko/docs/Learn/CSS/Building_blocks/Organizing)

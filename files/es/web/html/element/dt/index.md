@@ -81,9 +81,9 @@ Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.dt")}}
+{{Compat}}
 
 ## Vea también
 

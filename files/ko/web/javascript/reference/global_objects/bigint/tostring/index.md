@@ -1,13 +1,6 @@
 ---
 title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
-tags:
-  - BigInt
-  - JavaScript
-  - Method
-  - Prototype
-  - toString()
-browser-compat: javascript.builtins.BigInt.toString
 ---
 
 {{JSRef}}
@@ -83,11 +76,11 @@ JavaScript {{jsxref("Number")}} type.
 BigInt(-0).toString(); // '0'
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

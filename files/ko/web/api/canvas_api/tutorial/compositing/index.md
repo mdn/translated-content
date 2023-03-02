@@ -1,11 +1,6 @@
 ---
 title: 도형 합성
 slug: Web/API/Canvas_API/Tutorial/Compositing
-tags:
-  - HTML5
-  - 그래픽
-  - 캔버스
-translation_of: Web/API/Canvas_API/Tutorial/Compositing
 original_slug: Web/HTML/Canvas/Tutorial/Compositing
 ---
 
@@ -24,7 +19,7 @@ original_slug: Web/HTML/Canvas/Tutorial/Compositing
 
 ## 잘라내기 경로(Clipping path)
 
-![](https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png) 잘라내기 경로는 다른 캔버스 도형과 비슷하지만, 다른 도형에서 원하지 않는 부분을 가리는 가면과 같은 역할을 합니다. 오른쪽에 있는 그림을 보면 어떤 역할을 하는지 알 수 있을 것입니다. 붉은 별 모양이 잘라내기 경로입니다. 이 경로 밖에 있는 모든 것은 캔버스에 그려지지 않을 것입니다.
+![](canvas_clipping_path.png) 잘라내기 경로는 다른 캔버스 도형과 비슷하지만, 다른 도형에서 원하지 않는 부분을 가리는 가면과 같은 역할을 합니다. 오른쪽에 있는 그림을 보면 어떤 역할을 하는지 알 수 있을 것입니다. 붉은 별 모양이 잘라내기 경로입니다. 이 경로 밖에 있는 모든 것은 캔버스에 그려지지 않을 것입니다.
 
 잘라내기 경로와 위에서 살펴본 `globalCompositeOperation` 속성을 비교해 보면, `source-in`과 `source-atop`에서 비슷한 효과가 보입니다. 이들과 잘라내기 경로와의 가장 중요한 차이점은, 잘라내기 경로 자체는 캔버스에 전혀 그려지지 않는다는 것입니다. 잘라내기 경로는 제한된 영역 안에서 여러 가지 도형을 그리는 데에 적합합니다.
 
@@ -102,6 +97,6 @@ draw();
 
 잘라내기 경로를 만든 후에 그려지는 모든 것들은, 그 경로의 안쪽에서만 보입니다. 이는 그 다음에 그려지는 선형 그라디언트에서 확실히 볼 수 있습니다. 이렇게 하고 나서, `drawStar()` 함수를 사용하여 위치와 크기가 모두 다른 50개의 별을 그립니다. 이 별들은 잘라내기 경로 안쪽에만 나타납니다.
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}
+{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

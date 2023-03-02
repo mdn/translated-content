@@ -1,6 +1,6 @@
 ---
 title: <input type="search">
-slug: Web/HTML/Element/Input/search
+slug: Web/HTML/Element/input/search
 ---
 
 {{HTMLSidebar}}
@@ -84,7 +84,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-> **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 {{SectionOnPage("/zh-CN/docs/Web/HTML/Element/input", "标签与占位符")}} 以获取更多信息。
+> **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
 
 ### readonly
 

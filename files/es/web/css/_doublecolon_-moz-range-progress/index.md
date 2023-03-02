@@ -38,15 +38,15 @@ input[type=range]::-moz-range-progress {
 
 Una barra de progreso que utilice este estilo se vería de la siguiente manera:
 
-![](https://mdn.mozillademos.org/files/12041/Screen%20Shot%202015-12-04%20at%2020.14.48.png)
+![](screen_shot_2015-12-04_at_20.14.48.png)
 
 ## Especificaciones
 
 No es parte de ninguna especificación. Es un pseudo-elemento propietario de Gecko.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-range-progress")}}
+{{Compat}}
 
 ## Ver además
 

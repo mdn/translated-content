@@ -1,13 +1,6 @@
 ---
 title: <meter>
 slug: Web/HTML/Element/meter
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/meter
 ---
 
 {{HTMLSidebar}}
@@ -107,7 +100,7 @@ translation_of: Web/HTML/Element/meter
 
 Google Chrome에서는 다음 그림처럼 보입니다.
 
-![meter1.png](/@api/deki/files/4940/=meter1.png)
+![current look of \<meter> in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
 
 ### 높은 범위와 낮은 범위
 
@@ -126,7 +119,7 @@ Google Chrome에서는 다음 그림처럼 보입니다.
 
 Google Chrome에서는 다음 그림처럼 보입니다.
 
-![meter2.png](/@api/deki/files/4941/=meter2.png)
+![red meter in Google Chrome](screen_shot_2020-10-12_at_10.11.52_pm.png)
 
 ## 명세
 
@@ -134,7 +127,7 @@ Google Chrome에서는 다음 그림처럼 보입니다.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.meter")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -11,7 +11,7 @@ WebVR proporciona soporte para la exposición de dispositivos de realidad virtua
 
 Any VR devices attached to your computer will be returned by the {{domxref("Navigator.getVRDisplays()")}} method; each one will be represented by a {{domxref("VRDisplay")}} object.
 
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](https://mdn.mozillademos.org/files/11035/hw-setup.png)
+![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](hw-setup.png)
 
 {{domxref("VRDisplay")}} is the central interface in the WebVR API — via its properties and methods you can access functionality to:
 
@@ -107,11 +107,13 @@ You can find a number of examples at these locations:
 
 ## Especificaciones
 
-{{Specifications}}
+Esta API se especificó en la antigua [API de WebVR](https://immersive-web.github.io/webvr/spec/1.1/) que fue reemplazada por la [API del dispositivo WebXR](https://immersive-web.github.io/webxr/). Ya no está en camino de convertirse en un estándar.
 
-## Browser compatibility
+Hasta que todos los navegadores hayan implementado las nuevas [API de WebXR](/es/docs/Web/API/WebXR_Device_API/Fundamentals), se recomienda confiar en _frameworks_, como [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), o [Three.js](https://threejs.org/), o un [polyfill](https://github.com/immersive-web/webxr-polyfill), para desarrollar aplicaciones WebXR que funcionen en todos los navegadores [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
-{{Compat("api.Navigator.getVRDisplays")}}
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## See also
 

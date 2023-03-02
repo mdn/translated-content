@@ -1,12 +1,6 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Prototype
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/has
 ---
 
@@ -46,9 +40,9 @@ mySet.has("bar");  // retorna false
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.has")}}
+{{Compat}}
 
 ## Ver también
 

@@ -8,13 +8,13 @@ original_slug: Web/CSS/transform-function/scale()
 
 A função [CSS](/pt-BR/docs/Web/CSS) **`scale()`** define uma transformação que redimensiona um elemento no plano 2D. Como o redimensionamento é definido por um vetor, ele pode transformar as dimensões verticais e horizontais em escalas diferentes. Seu resultado é um dado do tipo {{cssxref("&lt;transform-function&gt;")}}.
 
-![](https://mdn.mozillademos.org/files/12115/scale.png)
+![](scale.png)
 
 Essa transformação de redimensionamento é caracterizada por um vetor bidimensional. Suas coordenadas definem o quanto cada direção deve ser redimensionada. Se as duas coordenadas forem iguais, o redimensionamento é uniforme (_isotrópico_) e a proporção do elemento é preservada (isto é uma [transformação homotética](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
 Quando o valor de uma coordenada está fora do alcance \[-1, 1], o elemento cresce ao longo daquela dimensão; quando está dentro, ele encolhe. Se for negativo, o resultado é um [ponto de reflexão](https://en.wikipedia.org/wiki/Point_reflection) naquela dimensão. O valor 1 não tem efeito.
 
-> **Note:** **Nota:** A função `scale()` apenas redimensiona em 2D Para redimensionar em 3D, use [`scale3d()`](/pt-BR/docs/Web/CSS/transform-function/scale3d) ao invés.
+> **Nota:** A função `scale()` apenas redimensiona em 2D Para redimensionar em 3D, use [`scale3d()`](/pt-BR/docs/Web/CSS/transform-function/scale3d) ao invés.
 
 ## Sintaxe
 

@@ -41,9 +41,9 @@ var retrieving = browser.sessions.getTabValue(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera résolue avec la valeur si elle existe, ou `undefined`. Si elle n'existe pas. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.getTabValue", 10)}}
+{{Compat}}
 
 ## Exemples
 

@@ -74,7 +74,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("name")}}
   - : El nombre del slot.
-  
+
     Un **slot nombrado** es un elemento `<slot>` con el atributo `name`.
 
 ## Ejemplos
@@ -113,6 +113,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.slot")}}
+{{Compat}}

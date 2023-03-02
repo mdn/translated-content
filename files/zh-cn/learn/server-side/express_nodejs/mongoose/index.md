@@ -517,9 +517,9 @@ SomeModel.find(callback_function);
 
 登录后将进入 [mLab 主屏幕](https://mlab.com/home)：
 
-1. 单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+1. 单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](mlabcreatenewdeployment.png)
 2. 将打开 Cloud Provider（云服务提供商）选择屏幕。
-    ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
+    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
     - 在 Plan Type（方案类型）部分中，选择 SANDBOX（Free）免费沙箱方案。
     - 从 _Cloud Provider_（云服务提供商）部分选择任意提供商。不同地区适用不同提供商（显示在选定的计划类型下面）。
@@ -527,29 +527,29 @@ SomeModel.find(callback_function);
 
 3. 此时将打开 _Select Region_（选择区域）屏幕。
 
-    ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
+    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
     - 选择离你最近的地区，然后 **Continue**。
 
 4. 将打开 Final Details（最后的细节）屏幕。
-    ![New deployment database name](https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png)
+    ![New deployment database name](mlab_new_deployment_final_details.png)
 
     - 输入新数据库的名称 `local_library`，然后 **Continue**。
 
 5. 将打开 _Order Confirmation_（订单确认）屏幕。
-    ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
+    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
     - 点击 **Submit Order（提交订单）**以创建数据库。
 
 6. 将返回到主屏幕。点击刚创建的新数据库可以打开详细信息屏幕。当前数据库还没有任何数据。
 
-    ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
+    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
 
     表单显示了访问数据库的 URL（上图的红框）。此时可以创建一个用户，并在 URL 中指定用户名，就可以访问这个 URL 了。
 
 7. 点击 **Users** 选项卡，点击 **Add database user** 按钮。
 8. 输入用户名和密码（两次），然后按 **Create**。不要选择 Make _read-only_。
-    ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
+    ![](mlab_database_users.png)
 
 现在数据库已经创建好了，并且有一个可访问的 URL（带有用户名和密码）：`mongodb://<dbuser>:<dbpassword>@ds019038.mlab.com:19038/local_library`
 
@@ -711,7 +711,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 以上代码有点儿新东西，即字段选项（黑体字）：
 
 - `enum`：可以设置字符串允许的值。本例中可指定书籍的状态。（使用枚举可以避免状态中出现错误拼写或不允许的值）
-- `default`：用默认值可以设定新 ​ 建藏书实例的默认状态（为'馆藏维护'），还可以将默认还书期限（`due_back`）日期设置为今天（`now`）。（设置日期时请注意 `Date` 函数的用法！）
+- `default`：用默认值可以设定新 建藏书实例的默认状态（为'馆藏维护'），还可以将默认还书期限（`due_back`）日期设置为今天（`now`）。（设置日期时请注意 `Date` 函数的用法！）
 
 其他内容和之前的模式大同小异。
 
@@ -722,7 +722,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 与之前模型的定义方式相似：
 
 - 该模型应该有一个 `String` 模式类型，命名为 `name` ，用来描述图书种类。
-- `name` 字段应该是必需的，并且有 3 到 ​ ​100 个字符。
+- `name` 字段应该是必需的，并且有 3 到 100 个字符。
 - 声明一个 [虚拟属性](#虚拟属性)，命名为 `url`，返回图书类型 URL。
 - 导出模型。
 
@@ -747,7 +747,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 3. 在命令提示符下用 node 运行此脚本，并以 MongoDB 数据库的 URL 作为参数（同 `app.js` 中替换 `insert_your_database_url_here` 占位符的 URL）：
 
     ```bash
-    node populatedb <mongodb url>​​​​
+    node populatedb <mongodb url>
     ```
 
 4. 该脚本应一路运行至完成，并在终端中记录所创建的项目。
@@ -772,15 +772,3 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 - [填充](http://mongoosejs.com/docs/populate.html) (Mongoose 文档)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## 本章目录
-
-- [Express/Node 入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [设置 Node（Express）开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2：创建站点框架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3：使用数据库（Mongoose）](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5：显示图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6：使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7：部署至生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

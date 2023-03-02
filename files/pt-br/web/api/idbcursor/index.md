@@ -43,8 +43,6 @@ Pode ter um número ilimitado de cursores ao mesmo tempo. Você sempre consegue 
 
 ## Constantes
 
-{{ obsolete_header(25) }}
-
 > **Aviso:** These constants are no longer available. You should use the string constants directly instead. ({{ bug(891944) }})
 
 - `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
@@ -94,4 +92,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

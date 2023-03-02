@@ -1,6 +1,6 @@
 ---
 title: Element.scrollWidth
-slug: Web/API/element/scrollWidth
+slug: Web/API/Element/scrollWidth
 ---
 
 {{ APIRef("DOM") }}**`Element.scrollWidth`** 这个只读属性是元素内容宽度的一种度量，包括由于 overflow 溢出而在屏幕上不可见的内容。

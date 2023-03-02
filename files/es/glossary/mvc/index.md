@@ -13,7 +13,7 @@ Las tres partes del patrón de diseño de software MVC se pueden describir de la
 
 ## Modelo Vista Controlador ejemplo
 
-Imagine una sencilla aplicación de lista de compras. Todo lo que queremos es una lista del nombre, la cantidad y el precio de cada artículo que necesitamos comprar esta semana. A continuación describiremos cómo podríamos implementar parte de esta funcionalidad usando MVC.![Diagrama para mostrar las distintas partes de la arquitectura mvc.](https://mdn.mozillademos.org/files/16042/model-view-controller-light-blue.png)
+Imagine una sencilla aplicación de lista de compras. Todo lo que queremos es una lista del nombre, la cantidad y el precio de cada artículo que necesitamos comprar esta semana. A continuación describiremos cómo podríamos implementar parte de esta funcionalidad usando MVC.![Diagrama para mostrar las distintas partes de la arquitectura mvc.](model-view-controller-light-blue.png)
 
 ### Modelo
 

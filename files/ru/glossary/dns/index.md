@@ -20,4 +20,3 @@ original_slug: Глоссарий/DNS
 ### Общие знания
 
 - [Что такое доменные адреса](/ru/docs/Learn/Understanding_domain_names)
-- {{interwiki("wikipedia", "DNS", "DNS")}} на Wikipedia

@@ -1,7 +1,6 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
-translation_of: Web/CSS/@font-face/font-display
 ---
 
 {{CSSRef}}
@@ -62,11 +61,11 @@ font-display: optional;
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

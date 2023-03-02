@@ -1,12 +1,6 @@
 ---
 title: grid
 slug: Web/CSS/grid
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/grid
 ---
 
 **`grid`** CSS 속성은 [shorthand](/ko/docs/Web/CSS/Shorthand_properties) property 입니다. 외재적인 속성인 ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}), 값과 내재적인 속성인 ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}), 값을 한번에 설정합니다.
@@ -103,13 +97,13 @@ grid: unset;
 
 {{EmbedLiveSample("Example", "100%", 150)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

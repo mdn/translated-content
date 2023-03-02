@@ -67,9 +67,9 @@ var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   setInterval(draw,100);
 }
 
@@ -116,7 +116,7 @@ function draw() {
 init();
 ```
 
-{{EmbedLiveSample("An_animated_solar_system", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
+{{EmbedLiveSample("An_animated_solar_system", "310", "310", "canvas_animation1.png")}}
 
 #### Um relógio animado
 
@@ -232,7 +232,7 @@ function clock(){
 init();
 ```
 
-{{EmbedLiveSample("An_animated_clock", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
+{{EmbedLiveSample("An_animated_clock", "180", "180", "canvas_animation2.png")}}
 
 #### Um panorama em loop
 
@@ -244,7 +244,7 @@ var img = new Image();
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
 
-img.src = 'https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg';
+img.src = 'capitan_meadows,_yosemite_national_park.jpg';
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; //lower is faster
@@ -299,7 +299,7 @@ function draw() {
 }
 ```
 
-Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a largura e a altura especificadas aqui devem corresponder aos valores das variáveis ​​CanvasXZSize e CanvasYSize no código JavaScript.
+Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a largura e a altura especificadas aqui devem corresponder aos valores das variáveis CanvasXZSize e CanvasYSize no código JavaScript.
 
 ```html
 <canvas id="canvas" width="800" height="200"></canvas>

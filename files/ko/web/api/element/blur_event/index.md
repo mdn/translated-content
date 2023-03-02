@@ -1,7 +1,6 @@
 ---
 title: blur
 slug: Web/API/Element/blur_event
-translation_of: Web/API/Element/blur_event
 original_slug: Web/Events/blur
 ---
 
@@ -61,7 +60,7 @@ form.addEventListener("blur", function( event ) {
 
 {{EmbedLiveSample('Event_delegation')}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

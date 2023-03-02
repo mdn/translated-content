@@ -105,22 +105,10 @@ CSS 也不例外——它是由 W3C(万维网联盟) 中的一个名叫 [CSS Wor
 
 ## 浏览器支持
 
-当一个浏览器支持 CSS 后，我们就可以用它来进行 Web 开发了。这意味着我们写在 CSS 文件中的代码可以被指令执行，展示到荧幕中。在 [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works) 一节中我们会学习到更多的相关知识。但是让所有的浏览器都同时支持一个 CSS 新特性是不现实的，通常都会一个空档期——一些浏览器已经支持而另一些仍未支持。因此，查看特性的实现状态 (implementation status) 是非常有用的。在 MDN 上的每个属性的页面中都标有它们对应的状态，你可以通过这种方法来查看你是否可以去使用它。
-
-以下是 CSS [`font-family`](/zh-CN/docs/Web/CSS/font-family) 属性的兼容数据表。
-
-{{Compat}}
+当一个浏览器支持 CSS 后，我们就可以用它来进行 Web 开发了。这意味着我们写在 CSS 文件中的代码可以被指令执行，展示到荧幕中。在 [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)一节中我们会学习到更多的相关知识。但是让所有的浏览器都同时支持一个 CSS 新特性是不现实的，通常都会一个空档期——一些浏览器已经支持而另一些仍未支持。因此，查看特性的实现状态是非常有用的。在 MDN 上的每个属性的页面中都标有它们对应的状态，你可以通过这种方法来查看你是否可以去使用它。
 
 ## 下一步
 
 现在你对 CSS 已经有了一定的理解，接下来，通过 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)的学习，你将可以自己写一些 CSS 代码了。
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## 本章目录
-
-1. [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3. [如何构建 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [用用你刚学到的知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

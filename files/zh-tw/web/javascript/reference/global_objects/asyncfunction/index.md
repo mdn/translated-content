@@ -43,16 +43,6 @@ All arguments passed to the function are treated as the names of the identifiers
 - {{jsxref("AsyncFunction.prototype")}}
   - : 可加入屬性至所有陣列物件。
 
-## `AsyncFunction` 原型物件
-
-### 屬性
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Properties')}}
-
-## `AsyncFunction` 實例
-
-`AsyncFunction` 實例繼承 {{jsxref("AsyncFunction.prototype")}} 的屬性和方法. 和所有的建構子一樣，變更該建構子 (constructor) 的原型物件 (prototype object)將會影響所有的 `AsyncFunction` 實例。
-
 ## 範例
 
 ### `AsyncFunction` 建構子建立一個非同步函數

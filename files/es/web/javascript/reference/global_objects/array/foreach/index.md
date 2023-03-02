@@ -56,7 +56,7 @@ El rango de elementos procesados por `forEach()` se establece antes de la primer
 
 `foreach()` no muta/modifica el array desde el que es llamado (aunque `callback`, si se invoca, podría hacerlo).
 
-> **Nota:** **Nota :** No hay forma de detener o cortar un bucle `forEach` que no sea lanzar una excepción. Si necesita dicho comportamiento, el método `.forEach()` es la herramienta equivocada, use una simple iteración en su lugar. Si está probando los elementos del array para un predicado y necesita devolver un valor boleano, puede usar {{jsxref("Array.prototype.every()", "every()")}} o {{jsxref("Array.prototype.some()", "some()")}} en su lugar.
+> **Nota:** No hay forma de detener o cortar un bucle `forEach` que no sea lanzar una excepción. Si necesita dicho comportamiento, el método `.forEach()` es la herramienta equivocada, use una simple iteración en su lugar. Si está probando los elementos del array para un predicado y necesita devolver un valor boleano, puede usar {{jsxref("Array.prototype.every()", "every()")}} o {{jsxref("Array.prototype.some()", "some()")}} en su lugar.
 
 ## Ejemplos
 
@@ -211,7 +211,7 @@ if (!Array.prototype.forEach) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
 ## Vea también
 

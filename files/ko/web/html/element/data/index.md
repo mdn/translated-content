@@ -1,14 +1,8 @@
 ---
 title: <data>
 slug: Web/HTML/Element/data
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/data
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<data>` 요소**는 주어진 콘텐츠를 기계가 읽을 수 있는 해석본과 연결합니다. 콘텐츠가 시간 혹은 날짜 관련 정보라면 대신 {{htmlelement("time")}} 요소를 사용하세요.
@@ -87,7 +81,7 @@ translation_of: Web/HTML/Element/data
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.data")}}
+{{Compat}}
 
 ## 같이 보기
 

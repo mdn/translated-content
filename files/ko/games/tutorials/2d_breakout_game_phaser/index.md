@@ -12,7 +12,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 이 시리즈를 최대한 활용하려면 중급의 [JavaScript](/ko/Learn/Getting_started_with_the_web/JavaScript_basics) 지식이 있어야 합니다. 이 튜토리얼을 끝낸 후에는 여러분은 스스로 간단한 웹 게임들을 만들 수 있게 될 것입니다.
 
-![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](https://mdn.mozillademos.org/files/10383/mdn-breakout-gameplay.png)
+![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 
 ## 강의 내용
 
@@ -31,9 +31,9 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 웹 게임 개발의 확고한 지식을 얻기 위해 순수한 JavaScript로 시작하는 것은 최고의 방법입니다. 이후에, 여러분은 프로젝트에 프레임워크를 골라서 사용할 수도 있습니다. 프레임워크들은 JavaScript로 만들어진 툴일 뿐입니다. 따라서 여러분이 프레임워크를 사용하더라도, 프레임워크 밑에서 정확히 어떤 일이 어떤일이 일어나는지 알기 위해 언어를 배우는것은 좋은 일입니다. 프레임워크들은 개발 속도를 올려주고, 게임의 지루한 부분들을 해결하는데 도움을 줍니다. 하지만 어떤 일들이 기대한대로 일어나지 않는다면, 여러분은 디버그를 시도하거나 여러분 스스로 순수한 JavaScript로 솔루션을 작성할 수 도 있습니다.
 
-> **참고:** **노트**: 만약 여러분이 게임 라이브러리를 이용한 2D 웹 게임 개발의 학습에 흥미가 있다면, 이 시리즈의 대응 파트인 [2D breakout game using Phaser](/ko/docs/Games/Workflows/2D_breakout_game_Phaser)를 살펴보시기 바랍니다.
+> **참고:** 만약 여러분이 게임 라이브러리를 이용한 2D 웹 게임 개발의 학습에 흥미가 있다면, 이 시리즈의 대응 파트인 [2D breakout game using Phaser](/ko/docs/Games/Workflows/2D_breakout_game_Phaser)를 살펴보시기 바랍니다.
 
-> **참고:** **노트**: 이 시리즈의 내용들은 게임개발 워크숍의 재료로 쓰일 수 있습니다. 또한, 만약 여러분이 게임개발에 있어 강연을 원한다면 이 튜토리얼에 기초한 [Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit)를 활용할 수 있습니다.
+> **참고:** 이 시리즈의 내용들은 게임개발 워크숍의 재료로 쓰일 수 있습니다. 또한, 만약 여러분이 게임개발에 있어 강연을 원한다면 이 튜토리얼에 기초한 [Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit)를 활용할 수 있습니다.
 
 ## 다음 단계
 

@@ -35,9 +35,9 @@ var port = browser.runtime.connectNative(
 
 Un objet {{WebExtAPIRef('runtime.Port')}}. Le port que l'appelant peut utiliser pour échanger des messages avec l'application native.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.connectNative")}}
+{{Compat}}
 
 ## Exemples
 

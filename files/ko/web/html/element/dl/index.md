@@ -1,15 +1,6 @@
 ---
 title: <dl>
 slug: Web/HTML/Element/dl
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/dl
 ---
 
 {{HTMLSidebar}}
@@ -64,7 +55,7 @@ The source for this interactive example is stored in a GitHub repository. If you
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -216,7 +207,7 @@ dt:after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.dl")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -45,9 +45,9 @@ L'événement a trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lors de l'événement. La fonction ne passera pas d'arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged", 10)}}
+{{Compat}}
 
 ## Exemples
 

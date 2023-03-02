@@ -35,9 +35,9 @@ Les valeurs de ce type sont des objets.
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Supprime tous les éléments de la zone de stockage.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.StorageArea")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

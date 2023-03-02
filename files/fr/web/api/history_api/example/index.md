@@ -12,7 +12,7 @@ Voici un exemple de site web AJAX composé uniquement de trois pages (_page_un.p
 ```php
 <?php
     $page_title = "Page un";
-    
+
     $as_json = false;
     if (isset($_GET["vie
         $as_json = 
@@ -60,7 +60,7 @@ Voici un exemple de site web AJAX composé uniquement de trois pages (_page_un.p
 ```php
 <?php
     $page_title = "Page deux";
-    
+
     $as_json = false;
     if (isset($_GET["vie
         $as_json = 
@@ -109,7 +109,7 @@ Voici un exemple de site web AJAX composé uniquement de trois pages (_page_un.p
 <?php
     $page_title = "Page trois";
     $page_content = "<p>Ceci est le contenu de la <strong>page_trois.php</strong>. Ce contenu est stocké dans une variable PHP.</p>";
-    
+
     if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
         echo json_encode(array("page" => $page_title, "content" => $page_content));
     } else {

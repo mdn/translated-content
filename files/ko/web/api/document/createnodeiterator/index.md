@@ -1,11 +1,6 @@
 ---
 title: NodeFilter
 slug: Web/API/Document/createNodeIterator
-tags:
-  - API
-  - DOM
-  - Reference
-translation_of: Web/API/NodeFilter
 original_slug: Web/API/NodeFilter
 ---
 
@@ -62,11 +57,11 @@ while ((node = nodeIterator.nextNode())) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

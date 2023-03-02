@@ -1,9 +1,6 @@
 ---
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
-page-type: web-api-instance-method
-browser-compat: api.FormData.getAll
-translation_of: Web/API/FormData/getAll
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -48,11 +45,11 @@ formData.append('username', 'Bob');
 formData.getAll('username'); // Returns ["Chris", "Bob"]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

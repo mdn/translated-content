@@ -74,12 +74,12 @@ slug: Web/HTML/Element/button
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("checkbox")}}, {{ARIARole("link")}},
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("radio")}}, {{ARIARole("switch")}},
-        {{ARIARole("tab")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>
       </td>
     </tr>
     <tr>

@@ -52,7 +52,7 @@ original_slug: Learn/CSS/CSS_layout/定位
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
 ```
 
 ```css
@@ -141,7 +141,7 @@ left: 30px;
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -195,7 +195,7 @@ position: absolute;
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -259,7 +259,7 @@ position: relative;
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -333,7 +333,7 @@ z-index: 1;
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -371,7 +371,7 @@ p:nth-of-type(1) {
 }
 ```
 
-{{ EmbedLiveSample('Introducing_z-index', '100%', 400) }}
+{{ EmbedLiveSample('介绍 z-index', '100%', 400) }}
 
 请注意，z-index 只接受无单位索引值；你不能指定你想要一个元素是 Z 轴上 23 像素—— 它不这样工作。较高的值将高于较低的值，这取决于你使用的值。使用 2 和 3 将产生与 300 和 40000 相同的效果。
 
@@ -427,7 +427,7 @@ p:nth-of-type(1) {
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -463,13 +463,13 @@ p:nth-of-type(1) {
 }
 ```
 
-{{ EmbedLiveSample('Fixed_positioning', '100%', 400) }}
+{{ EmbedLiveSample('固定定位', '100%', 400) }}
 
 > **备注：** 你可以在这里看到这个例子[`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ### position: sticky
 
-还有一个可用的位置值称为 position: sticky，比起其他位置值要新一些。它基本上是相对位置和固定位置的混合体，它允许被定位的元素表现得像相对定位一样，直到它滚动到某个阈值点（例如，从视口顶部起 1​​0 像素）为止，此后它就变得固定了。例如，它可用于使导航栏随页面滚动直到特定点，然后粘贴在页面顶部。
+还有一个可用的位置值称为 position: sticky，比起其他位置值要新一些。它基本上是相对位置和固定位置的混合体，它允许被定位的元素表现得像相对定位一样，直到它滚动到某个阈值点（例如，从视口顶部起 10 像素）为止，此后它就变得固定了。例如，它可用于使导航栏随页面滚动直到特定点，然后粘贴在页面顶部。
 
 #### Sticky positioning example
 
@@ -508,7 +508,9 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Sticky_1', '100%', 200) }}
+{{ EmbedLiveSample('Sticky positioning example', '100%', 200) }}
+
+#### 滚动索引
 
 `position: sticky` 的另一种有趣且常用的用法，是创建一个滚动索引页面。在此页面上，不同的标题会停留在页面顶部。这样的示例的标记可能如下所示：
 
@@ -558,57 +560,47 @@ dt {
 }
 ```
 
-```css
+```css hidden
 body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
 }
-
-dt {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  margin: 1em 0;
-}
 ```
 
-```html
+```html hidden
 <h1>Sticky positioning</h1>
 
 <dl>
-    <dt>A</dt>
-    <dd>Apple</dd>
-    <dd>Ant</dd>
-    <dd>Altimeter</dd>
-    <dd>Airplane</dd>
-    <dt>B</dt>
-    <dd>Bird</dd>
-    <dd>Buzzard</dd>
-    <dd>Bee</dd>
-    <dd>Banana</dd>
-    <dd>Beanstalk</dd>
-    <dt>C</dt>
-    <dd>Calculator</dd>
-    <dd>Cane</dd>
-    <dd>Camera</dd>
-    <dd>Camel</dd>
-    <dt>D</dt>
-    <dd>Duck</dd>
-    <dd>Dime</dd>
-    <dd>Dipstick</dd>
-    <dd>Drone</dd>
-    <dt>E</dt>
-    <dd>Egg</dd>
-    <dd>Elephant</dd>
-    <dd>Egret</dd>
+  <dt>A</dt>
+  <dd>Apple</dd>
+  <dd>Ant</dd>
+  <dd>Altimeter</dd>
+  <dd>Airplane</dd>
+  <dt>B</dt>
+  <dd>Bird</dd>
+  <dd>Buzzard</dd>
+  <dd>Bee</dd>
+  <dd>Banana</dd>
+  <dd>Beanstalk</dd>
+  <dt>C</dt>
+  <dd>Calculator</dd>
+  <dd>Cane</dd>
+  <dd>Camera</dd>
+  <dd>Camel</dd>
+  <dt>D</dt>
+  <dd>Duck</dd>
+  <dd>Dime</dd>
+  <dd>Dipstick</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Egg</dd>
+  <dd>Elephant</dd>
+  <dd>Egret</dd>
 </dl>
 ```
 
-{{ EmbedLiveSample('Sticky_2', '100%', 200) }}
+{{ EmbedLiveSample('滚动索引', '100%', 200) }}
 
 > **备注：** 你可以在 [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html))。
 
@@ -621,12 +613,3 @@ dt {
 我相信你用基本定位愉快地玩耍；它是创建复杂的 CSS 布局和 UI 功能背后的基本工具之一。考虑到这一点，在下一篇文章中，我们将更有趣的定位——我们将进一步，开始建立一些真实世界有用的东西。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout")}}
-
-## 在本单元中
-
-- [布局介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [定位练习案例](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)

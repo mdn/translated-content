@@ -40,7 +40,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 이미지를 웹사이트에 넣기위해서 {{htmlelement("img")}} 요소를 사용합니다. 이것은 텍스트 내용이나 클로징 태그를 갖지 않는 {{glossary("비어있는 요소 (empty element)")}}이며, 적어도 `src`(풀네임인 source라고 불리곤 합니다)라는 속성 하나는 사용되어야합니다. `src` 속성은 당신이 페이지에 삽입하고자 하는 이미지를 가리키는 경로를 포함합니다. 그 경로는 {{htmlelement("a")}} 요소의 `href` 속성 값처럼 상대경로여도, 절대경로여도 됩니다.
 
-> **참고:** **노트**: 계속하기 전에 절대경로, 상대경로에 대해 복습하기 위해 [A quick primer on URLs and paths](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)를 읽어보세요.
+> **참고:** 계속하기 전에 절대경로, 상대경로에 대해 복습하기 위해 [A quick primer on URLs and paths](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)를 읽어보세요.
 
 예를 들어, 당신의 이미지 파일 이름이 `dinosaur.jpg` 이고, 당신의 HTML 페이지와 같은 디렉토리 아래에 위치한다면 이런 식으로 이미지를 삽입할 수 있습니다:
 
@@ -75,7 +75,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 위에서 쓴 우리의 코드는 이러한 결과를 보여줄 것입니다:
 
-![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](https://mdn.mozillademos.org/files/12700/basic-image.png)
+![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](basic-image.png)
 
 > **참고:** {{htmlelement("img")}} 와 {{htmlelement("video")}} 와 같은 element들을 대체 element라고 하기도 합니다. 그 이유는 element의 내용과 크기가 element 그 자체가 아니라, 외부적인 요소(이미지나 비디오)에 의해 결정되기 때문입니다.
 
@@ -93,7 +93,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 `alt` 를 잘 작성하였는지 확인하기 위한 가장 쉬운 방법은 파일 이름을 고의로 틀리게 적는 것이다. 예를 들어 이미지 파일의 이름을 `dinosooooor.jpg` 로 바꾼다면 브라우저는 이미지를 보여주는 대신, alt의 내용을 보여줄 것이다:
 
-![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](https://mdn.mozillademos.org/files/12702/alt-text.png)
+![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
 
 alt는 왜 굳이 사용되거나 필요한걸까? alt는 여러가지 이유로 유용하게 사용된다:
 
@@ -128,7 +128,7 @@ alt는 왜 굳이 사용되거나 필요한걸까? alt는 여러가지 이유로
 
 평범한 경우에 위와 같은 방법은 디스플레이에 큰 차이를 주지 않는다. 그러나 만약에 이미지가 로딩중이어서 아직 페이지에 안나타나더라도 브라우저는 지정된 크기의 공간을 이미지를 위해 할당해둔다:
 
-![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png)
+![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](alt-text-with-width-height.png)
 
 이미지 크기를 지정해두는 것은 좋은 습관이며 이를 통해, 페이지가 더 빠르고 순조롭게 로딩될 수 있다.
 
@@ -151,7 +151,7 @@ As [with links](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Addin
 
 This gives us a tooltip, just like link titles:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](https://mdn.mozillademos.org/files/12708/image-with-title.png)
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
 
 Image titles aren't essential to include. It is often better to include such supporting information in the main article text, rather than attached to the image. However, they are useful in some circumstances; for example, in an image gallery when you have no space for captions.
 
@@ -490,12 +490,3 @@ Summing up: if an image has meaning, in terms of your content, you should use an
 That's all for now. We have covered images and captions in detail. In the next article we'll move it up a gear, looking at how to use HTML to embed video and audio in web pages.
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## In this module
-
-- [Images in HTML](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/ko/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/ko/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

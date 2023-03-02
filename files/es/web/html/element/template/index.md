@@ -21,7 +21,7 @@ Piensa en la plantilla como un fragmento de contenido que está siendo almacenad
 
 Este elemento sólo incluye [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-SInembargo, {{domxref("HTMLTemplateElement")}} tiene una propiedad {{domxref("HTMLTemplateElement.content", "content")}}, que es solo-lectura cuyo {{domxref("DocumentFragment")}} contiene el subárbol DOM que representa a la plantilla.
+Sin embargo, {{domxref("HTMLTemplateElement")}} tiene una propiedad {{domxref("HTMLTemplateElement.content", "content")}}, que es solo-lectura cuyo {{domxref("DocumentFragment")}} contiene el subárbol DOM que representa a la plantilla.
 
 ## Ejemplo
 
@@ -100,9 +100,9 @@ table td {
 
 {{Specifications}}
 
-## Compatibilidad navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## Ver también
 

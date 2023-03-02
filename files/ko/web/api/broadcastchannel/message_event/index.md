@@ -1,7 +1,6 @@
 ---
 title: message
 slug: Web/API/BroadcastChannel/message_event
-translation_of: Web/API/BroadcastChannel/message_event
 original_slug: Web/Events/message
 ---
 
@@ -32,12 +31,9 @@ original_slug: Web/Events/message
 
 - {{event("open")}}, {{event("close")}}.
 
-## 사양
+## 명세서
 
-| 사양                                                                                                                 | 상황                             | Comment                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('WebRTC 1.0', '#event-datachannel-message', 'message on RTCDataChannel') }} | {{Spec2('WebRTC 1.0')}} | {{domxref("RTCDataChannel")}} 를 {{domxref("EventTarget")}}로 추가하고 이 이벤트가 전송될 시기를 정의합니다. |
-| {{SpecName('HTML WHATWG', '#', 'message on BroadcastChannel')}}                                 | {{Spec2('HTML WHATWG')}} | {{domxref("RTCDataChannel")}} 를 {{domxref("EventTarget")}}로 추가하고 이 이벤트가 전송될 시기를 정의합니다. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

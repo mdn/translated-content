@@ -1,19 +1,6 @@
 ---
 title: AbstractRange
 slug: Web/API/AbstractRange
-tags:
-  - API
-  - Abstract
-  - Abstract Interface
-  - AbstractRange
-  - DOM
-  - DOM API
-  - Interface
-  - NeedsTranslation
-  - Range
-  - Reference
-  - TopicStub
-translation_of: Web/API/AbstractRange
 ---
 
 {{APIRef("DOM WHATWG")}}
@@ -104,7 +91,7 @@ To illustrate this, consider the HTML below:
 
 After loading the HTML and constructing the DOM representation of the document, the resulting DOM tree looks like this:
 
-[![Diagram of the DOM for a simple web page](https://mdn.mozillademos.org/files/16887/SimpleDOM.svg)](https://mdn.mozillademos.org/files/16886/SimpleDOM.svg)
+[![Diagram of the DOM for a simple web page](simpledom.svg)](simpledom.svg)
 
 In this diagram, the nodes representing HTML elements are shown in green. Eah row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
 
@@ -142,7 +129,7 @@ The contents of the text nodes are then determined by the offsets into those tex
 
 The resulting document fragment looks like this:
 
-![A DocumentFragment representing the cloned content](https://mdn.mozillademos.org/files/16891/dom-fragment.svg)
+![A DocumentFragment representing the cloned content](dom-fragment.svg)
 
 Notice especially that the contents of this fragment are all _below_ the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it is isn't included.
 
@@ -178,10 +165,10 @@ The result looks like this:
 
 {{EmbedLiveSample("Example", 600, 80)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

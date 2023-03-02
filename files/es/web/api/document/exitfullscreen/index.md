@@ -37,7 +37,7 @@ document.onclick = function (event) {
 };
 ```
 
-> **Nota:** Para un ejemplo más completo, vea {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullScreen", "Example")}}.
+> **Nota:** Para un ejemplo más completo, vea [Example](/es/docs/Web/API/Element/requestFullScreen#example).
 
 ## Especificaciones
 

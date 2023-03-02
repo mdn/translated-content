@@ -1,13 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/label
 ---
 
 {{HTMLSidebar}}
@@ -196,4 +189,4 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.label")}}
+{{Compat}}

@@ -81,7 +81,7 @@ Façamos de `.wrapper` um grid container.
 
 Todos os elementos filhos diretos agora são grid items. Observando a renderização em um navegador web você não notará nenhuma diferença em relação a renderização já conhecida de um elemento container com seus cinco elementos filhos, pois no exemplo foi criado um grid constítuido de uma única coluna para acomodar os elementos filhos. A partir desse ponto você pode achar mais útil trabalhar no _Firefox Developer Edition_, que possui o [Grid Inspector](/pt-BR/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) disponÍvel como parte das Ferramentas do desenvolvedor. Se você ver este exemplo no Firefox e inspecionar o Grid, você verá um pequeno ícone ao lado do valor Grid (na propiedade _display_ do elemento container). Clique nele e o Grid neste elemento será sobreposto na janela do navegador.
 
-![Using the Grid Highlighter in DevTools to view a grid](https://mdn.mozillademos.org/files/14631/1-grid-inspector.png)
+![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
 
 À medida que você aprende e depois trabalha com _CSS Grid Layout_, esta ferramenta lhe dará uma idéia melhor do que está acontecendo com suas _Grids_ visualmente.
 
@@ -91,7 +91,7 @@ Se nós queremos começar a fazer isso parecer mais com os _Grids layouts_ , nó
 
 Nós definimos linhas e colunas no nosso grid com as propriedades {{cssxref("grid-template-columns")}} e {{cssxref("grid-template-rows")}}. Isso define o grid tracks. Um _grid track_ é o espaço entre duas linhas em um grid. Na imagem abaixo você pode ver um track highlighter – o track na primeira linha do nosso grid.
 
-![](https://mdn.mozillademos.org/files/14637/1_Grid_Track.png)
+![](1_grid_track.png)
 
 Posso adicionar ao exemplo anterior a propriedade `grid-template-columns`, depois definir o tamanho da column tracks.
 
@@ -345,7 +345,7 @@ Grid tem uma solução para isso com a função {{cssxref("minmax", "minmax()")}
 
 Devemos observar que quando definimos um grid definimos as trilhas do grid, não as linhas. O grid então nos devolve linhas numeradas para usarmos ao posicionar itens. Em nossa grid de 3 colunas por duas linhas, temos quatro linhas de colunas.
 
-![Diagram showing numbered grid lines.](https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png)
+![Diagram showing numbered grid lines.](1_diagram_numbered_grid_lines.png)
 
 Linhas são numeradas de acordo a forma de escrita do documento. Em uma linguagem da esquerda para a direita, a linha 1 está à esquerda do grid. Em uma linguagem da direita para a esquerda, ela está no lado direito do grid. Linhas também podem ser nomeadas, e veremos como fazer isso em um guia posterior nessa série.
 
@@ -416,13 +416,13 @@ Não esqueça que o [Grid Inspector](/pt-BR/docs/Tools/Page_Inspector/How_to/Exa
 
 Uma célula de grid é a menor unidade em um grid. Conceitualmente é como se fosse uma célula de tabela. Como vimos em nossos exemplos anteriores, uma vez que o grid é definido como o pai os itens filhos serão organizados cada um em uma célula do grid definido. Na imagem abaixo, temos destacado a primeira célula do grid.
 
-![The first cell of the grid highlighted](https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png)
+![The first cell of the grid highlighted](1_grid_cell.png)
 
 ## Áreas do grid
 
 Itens podem se espalhar por uma ou mais células ambas entre linhas ou colunas, e isto cria uma _área de grid._ Áreas de grid devem ser retangulares – não é possível criar uma área em L por exemplo. A área destacada se espalha por duas trilhas de linhas e duas trilhas de colunas.
 
-![A grid area](https://mdn.mozillademos.org/files/14645/1_Grid_Area.png)
+![A grid area](1_grid_area.png)
 
 ## Gutters
 
@@ -491,7 +491,7 @@ Um item de grid pode se tornar um container de grid. No exemplo a seguir, temos 
 </div>
 ```
 
-![Nested grid in flow](https://mdn.mozillademos.org/files/14641/1_Nested_Grids_in_flow.png)
+![Nested grid in flow](1_nested_grids_in_flow.png)
 
 Se definimos `box1` como `display: grid` podemos dar uma definição de tracks e ela também se tornará uma grid. Os itens então são dispostos nesse novo grid.
 
@@ -536,7 +536,7 @@ Nesse caso o grid aninhado não possui relação com o pai. Como é possível pe
 
 No nível das especificações do grid tem uma _feature_ chamada _subgrid_ que nos permitiria criar grids aninhados que usa aquilo que foi definido no grid pai.
 
-> **Note:** Subgrids ainda não foram implementados em nenhum browser, e as especificações são sujeitas a mudanças.
+> **Nota:** Subgrids ainda não foram implementados em nenhum browser, e as especificações são sujeitas a mudanças.
 
 Na especificação atual, no exemplo acima editaríamos o grid aninhado usando `display: subgrid` ao invés de `display: grid`, e remover o que havia sido definido. O grid aninhado vai usar as propriedades definidas no pai para dispor os itens.
 

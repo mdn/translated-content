@@ -48,9 +48,9 @@ Les événements ont trois fonctions :
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. L'onglet qui était actif lorsque l'icône a été cliquée .
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.onClicked")}}
+{{Compat}}
 
 ## Exemples
 

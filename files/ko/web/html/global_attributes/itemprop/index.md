@@ -1,15 +1,6 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-  - 마이크로데이터
-translation_of: Web/HTML/Global_attributes/itemprop
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -288,7 +279,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
   </tbody>
 </table>
 
-**토큰(Tokens)**은 문자열이거나 URL일 수 있습니다. item이 URL일 경우는 **typed item**이라고 하고 그렇지 않은 경우는 문자열(string)이라고 합니다. 문자열에는 마침표(period)나 콜론(colon)이 포함되어서는 안됩니다(아래 참고).
+**토큰**(**Tokens**)은 문자열이거나 URL일 수 있습니다. item이 URL일 경우는 **typed item**이라고 하고 그렇지 않은 경우는 문자열(string)이라고 합니다. 문자열에는 마침표(period)나 콜론(colon)이 포함되어서는 안됩니다(아래 참고).
 
 1. 아이템이 typed item일 경우 다음 중 하나이어야 합니다:
 
@@ -308,7 +299,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 - 해당 요소가 **itemscope** 속성을 가지고 있을 경우
 
-  - 그 값은 해당 요소가 생성한 **아이템(item)**입니다.
+  - 그 값은 해당 요소가 생성한 **아이템**(**item**)입니다.
 
 - 해당 요소가 **meta** 요소일 경우
 
@@ -446,7 +437,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.itemprop")}}
+{{compat}}
 
 ## 같이 보기
 

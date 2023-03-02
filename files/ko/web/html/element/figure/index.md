@@ -1,13 +1,8 @@
 ---
 title: <figure>
 slug: Web/HTML/Element/figure
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/figure
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<figure>` 요소**는 독립적인 콘텐츠를 표현합니다. {{htmlelement("figcaption")}} 요소를 사용해 설명을 붙일 수 있습니다. 피규어, 설명, 콘텐츠는 하나의 단위로 참조됩니다.
@@ -63,7 +58,7 @@ The source for this interactive example is stored in a GitHub repository. If you
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -163,7 +158,7 @@ Love is a spirit all compact of fire,
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.figure")}}
+{{Compat}}
 
 ## 같이 보기
 

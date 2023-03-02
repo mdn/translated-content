@@ -1,7 +1,6 @@
 ---
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
-translation_of: Web/API/Node/ownerDocument
 ---
 
 {{APIRef("DOM")}}
@@ -30,10 +29,10 @@ var html = d.documentElement;
 
 이 속성에 의해 반환된`document` 객체는 실제 HTML 문서의 모든 child 노드들이 생성되는 메인 객체입니다. 이 속성이 document 그 자체 노드에서 사용될 경우, 결과는 `null` 이 됩니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

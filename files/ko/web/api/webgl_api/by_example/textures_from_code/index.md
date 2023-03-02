@@ -1,7 +1,6 @@
 ---
 title: 코드에서의 텍스쳐
 slug: Web/API/WebGL_API/By_example/Textures_from_code
-translation_of: Web/API/WebGL_API/By_example/Textures_from_code
 ---
 {{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
 

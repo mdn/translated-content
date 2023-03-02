@@ -77,7 +77,7 @@ Os recursos da nota são:
 
 O vídeo incorporado será mais ou menos assim:
 
-![A simple video player showing a video of a small white rabbit](https://mdn.mozillademos.org/files/12794/simple-video.png)
+![A simple video player showing a video of a small white rabbit](simple-video.png)
 
 Você pode tentar o [exemplo ao vivo](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) aqui (veja também o [código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html).)
 
@@ -87,7 +87,7 @@ Há um problema no exemplo acima, que você já deve ter notado se você tentou 
 
 #### Conteúdo de um arquivo de mídia
 
-Primeiro, vamos analisar a terminologia rapidamente. Formatos como MP3, MP4 e WebM são chamados de [arquivos recipiente](https://pt.wikipedia.org/wiki/Arquivo_recipiente) (formatos de contêiner). Eles definem uma estrutura na qual cada faixa de áudio e / ou vídeo que compõe a mídia é armazenada, juntamente com os metadados que descrevem a mídia, quais codecs são usados ​​para codificar seus canais e assim por diante.
+Primeiro, vamos analisar a terminologia rapidamente. Formatos como MP3, MP4 e WebM são chamados de [arquivos recipiente](https://pt.wikipedia.org/wiki/Arquivo_recipiente) (formatos de contêiner). Eles definem uma estrutura na qual cada faixa de áudio e / ou vídeo que compõe a mídia é armazenada, juntamente com os metadados que descrevem a mídia, quais codecs são usados para codificar seus canais e assim por diante.
 
 As faixas de áudio e vídeo também estão em diferentes formatos, por exemplo:
 
@@ -105,15 +105,15 @@ Um reprodutor de áudio tenderá a reproduzir uma faixa de áudio diretamente, p
 
 #### Suporte a arquivos de mídia em navegadores
 
-Os codecs descritos na seção anterior existem para compactar vídeo e áudio em arquivos gerenciáveis, pois o áudio e o vídeo bruto são extremamente grandes. Cada navegador da web suporta uma variedade de **{{Glossary("Codec","Codecs")}}**, como Vorbis ou H.264, que são usados ​​para converter o áudio e o vídeo compactados em dados binários e vice-versa. Cada codec oferece suas próprias vantagens e desvantagens, e cada contêiner também pode oferecer seus próprios recursos positivos e negativos, afetando suas decisões sobre qual usar.
+Os codecs descritos na seção anterior existem para compactar vídeo e áudio em arquivos gerenciáveis, pois o áudio e o vídeo bruto são extremamente grandes. Cada navegador da web suporta uma variedade de **{{Glossary("Codec","Codecs")}}**, como Vorbis ou H.264, que são usados para converter o áudio e o vídeo compactados em dados binários e vice-versa. Cada codec oferece suas próprias vantagens e desvantagens, e cada contêiner também pode oferecer seus próprios recursos positivos e negativos, afetando suas decisões sobre qual usar.
 
 As coisas se tornam um pouco mais complicadas porque cada navegador não apenas suporta um conjunto diferente de formatos de arquivo de contêiner, como também suporta uma seleção diferente de codecs. Para maximizar a probabilidade de seu site ou aplicativo funcionar no navegador de um usuário, você pode precisar fornecer cada arquivo de mídia usado em vários formatos. Se o seu site e o navegador do usuário não compartilharem um formato de mídia em comum, sua mídia simplesmente não será reproduzida.
 
-Devido à complexidade de garantir que a mídia do aplicativo seja visível em todas as combinações de navegadores, plataformas e dispositivos que você deseja acessar, a escolha da melhor combinação de codecs e contêiner pode ser uma tarefa complicada. Veja {{SectionOnPage("/en-US/docs/Web/Media/Formats/Containers", "Choosing the right container")}} para obter ajuda na seleção do formato de arquivo do contêiner mais adequado às suas necessidades; Da mesma forma, veja {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_codecs", "Choosing a video codec")}} e {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing an audio codec")}} para obter ajuda na seleção dos primeiros codecs de mídia a serem usados ​​no seu conteúdo e no seu público-alvo.
+Devido à complexidade de garantir que a mídia do aplicativo seja visível em todas as combinações de navegadores, plataformas e dispositivos que você deseja acessar, a escolha da melhor combinação de codecs e contêiner pode ser uma tarefa complicada. Veja {{SectionOnPage("/en-US/docs/Web/Media/Formats/Containers", "Choosing the right container")}} para obter ajuda na seleção do formato de arquivo do contêiner mais adequado às suas necessidades; Da mesma forma, veja {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_codecs", "Choosing a video codec")}} e {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing an audio codec")}} para obter ajuda na seleção dos primeiros codecs de mídia a serem usados no seu conteúdo e no seu público-alvo.
 
 Um aspecto adicional a ter em mente: os navegadores móveis podem suportar formatos adicionais não compatíveis com seus equivalentes de desktop, assim como podem não suportar os mesmos formatos da versão para desktop. Além disso, os navegadores de desktop e móveis _podem_ ser projetados para descarregar o manuseio da reprodução de mídia (para todas as mídias ou apenas para tipos específicos que não podem ser tratados internamente). Isso significa que o suporte à mídia depende parcialmente do software que o usuário instalou.
 
-> **Nota:** Você pode estar se perguntando por que essa situação existe. **MP3** (para áudio) e **MP4 / H.264** (para vídeo) são amplamente suportados e de boa qualidade. No entanto, eles também são patentiados - as patentes americanas cobrem o MP3 até pelo menos 2017 e o H.264 até 2027, o que significa que os navegadores que não possuem a patente precisam pagar grandes quantias para suportar esses formatos. Além disso, muitas pessoas evitam, por princípio, software restrito, a favor de formatos abertos. É por isso que precisamos fornecer vários formatos para diferentes navegadores.
+> **Nota:** Você pode estar se perguntando por que essa situação existe. **MP3** (para áudio) e **MP4 / H.264** (para vídeo) são amplamente suportados e de boa qualidade. No entanto, eles também são patenteados - as patentes americanas cobrem o MP3 até pelo menos 2017 e o H.264 até 2027, o que significa que os navegadores que não possuem a patente precisam pagar grandes quantias para suportar esses formatos. Além disso, muitas pessoas evitam, por princípio, software restrito, a favor de formatos abertos. É por isso que precisamos fornecer vários formatos para diferentes navegadores.
 
 Então, como fazemos isso? Dê uma olhada no seguinte [exemplo atualizado](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)([tente ao vivo aqui](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html), também):
 
@@ -147,7 +147,7 @@ Há vários outros recursos que você pode incluir em um vídeo HTML5. Dê uma o
 
 Isso nos dará uma saída parecida com esta:
 
-![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](https://mdn.mozillademos.org/files/12796/extra-video-features.png)Os novos recursos são:
+![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](extra-video-features.png)Os novos recursos são:
 
 - {{htmlattrxref("width","video")}} and {{htmlattrxref("height","video")}}
   - : Você pode controlar o tamanho do vídeo com esses atributos ou com {{Glossary("CSS")}}. Nos dois casos, os vídeos mantêm sua proporção largura-altura nativa - conhecida como **proporção de tela**. Se a proporção não for mantida pelos tamanhos definidos, o vídeo aumentará para preencher o espaço horizontalmente, e o espaço não preenchido receberá apenas uma cor sólida de fundo por padrão.
@@ -183,7 +183,7 @@ O elemento {{htmlelement("audio")}} funciona exatamente como o elemento {{htmlel
 
 Isso produz algo como o seguinte em um navegador:
 
-![A simple audio player with a play button, timer, volume control, and progress bar](https://mdn.mozillademos.org/files/12798/audio-player.png)
+![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
 > **Nota:** You can [run the audio demo live](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on Github (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
@@ -271,7 +271,7 @@ Aqui está um exemplo:
 
 Isso resultará em um vídeo com legendas exibidas, mais ou menos assim:
 
-![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 Para mais detalhes, leia [Adicionando legendas e legendas ao vídeo HTML5](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Você pode [encontrar o exemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompanha este artigo no Github, escrito por Ian Devlin (consulte o [código-fonte](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) também.) Este exemplo usa algum JavaScript para permitir que os usuários escolham entre diferentes legendas. Observe que, para ativar as legendas, você precisa pressionar o botão "CC" e selecionar uma opção - inglês, alemão ou espanhol.
 

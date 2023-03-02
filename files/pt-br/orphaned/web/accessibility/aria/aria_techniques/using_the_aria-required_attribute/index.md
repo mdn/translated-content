@@ -2,10 +2,6 @@
 title: Usando o atributo aria-required
 slug: >-
   orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
-tags:
-  - ARIA
-  - Acessibilidade
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 ---
 

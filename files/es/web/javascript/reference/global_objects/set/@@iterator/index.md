@@ -1,9 +1,6 @@
 ---
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-tags:
-  - Iteradores
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/@@iterator
 ---
 
@@ -59,9 +56,9 @@ for (const v of mySet) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.@@iterator")}}
+{{Compat}}
 
 ## Vea también
 

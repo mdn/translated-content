@@ -42,9 +42,9 @@ original_slug: Learn/CSS/Building_blocks/선택자
 
 ## 선택자란 무엇인가?
 
-우리는 이미 선택자 (selector) 를 만났습니다. CSS 선택자는 CSS 규칙의 첫 부분입니다. 규칙 내의 CSS 속성값을 적용하기 위해 어떤 HTML 요소를 선택해야 하는지 브라우저에 알려주는 요소 및 기타 용어의 패턴입니다. 선택자에 의해 선택된 요소들은 ***선택자의 주제(subject)** *로 지칭됩니다.
+우리는 이미 선택자 (selector) 를 만났습니다. CSS 선택자는 CSS 규칙의 첫 부분입니다. 규칙 내의 CSS 속성값을 적용하기 위해 어떤 HTML 요소를 선택해야 하는지 브라우저에 알려주는 요소 및 기타 용어의 패턴입니다. 선택자에 의해 선택된 요소들은 **선택자의 주제(subject)** 로 지칭됩니다.
 
-![Some code with the h1 highlighted.](https://mdn.mozillademos.org/files/16550/selector.png)
+![h1이 강조된 코드](selector.png)
 
 이전 기사에서는 몇 가지 다른 선택자를 만났으며 — 예를 들어 `h1` 과 같은 요소 또는 `.special` 과 같은 class 를 선택하는 등 다양한 방법으로 문서를 대상으로 하는 선택자가 있다는 것을 배웠습니다.
 
@@ -87,7 +87,7 @@ h1,
 
 이러한 방식으로 선택자를 그룹화할 때, 선택자가 유효하지 않은 경우 전체 규칙이 무시됩니다.
 
-다음 예에서는, 잘못된 class 선택자 규칙이 무시되고 `h1` 은 여전히 스타일이 지정됩니다.
+다음 예에서는 잘못된 class 선택자 규칙이 무시되고 `h1` 은 여전히 스타일이 지정됩니다.
 
 ```css
 h1 {
@@ -119,13 +119,13 @@ h1, ..special {
 h1 { }
 ```
 
-또한 class 를 대상으로 하는 선택자가 포함됩니다:
+또한 class 를 대상으로 하는 선택자가 포함됩니다.
 
 ```css
 .box { }
 ```
 
-또는 ID:
+또는 ID
 
 ```css
 #unique { }
@@ -133,7 +133,7 @@ h1 { }
 
 ### 속성 선택자
 
-이 선택자 그룹은 요소에 특정 속성이 있는지에 따라 요소를 선택하는 다른 방법을 제공합니다:
+이 선택자 그룹은 요소에 특정 속성이 있는지에 따라 요소를 선택하는 다른 방법을 제공합니다.
 
 ```css
 a[title] { }
@@ -190,24 +190,3 @@ article > p { }
 | [자식 결합자](/ko/docs/Web/CSS/Child_combinator)                 | `article > p`       | [Child combinator](/ko/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Child_combinator)                               |
 | [인접 형제 결합자](/ko/docs/Web/CSS/Adjacent_sibling_combinator) | `h1 + p`            | [Adjacent sibling](/ko/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Adjacent_sibling)                               |
 | [일반 형제 결합자](/ko/docs/Web/CSS/General_sibling_combinator)  | `h1 ~ p`            | [General sibling](/ko/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#General_sibling)                                 |
-
-## 이번 강의에서는
-
-1. [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [콘텐츠 overflow](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [값과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 정리](/ko/docs/Learn/CSS/Building_blocks/Organizing)

@@ -16,7 +16,7 @@ original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 
 웹에 연결된 컴퓨터는 **클라이언트** 와 **서버** 라고 합니다. 그들이 어떻게 상호작용하는가에 대한 간소화된 다이어그램은 다음과 같습니다:
 
-![](https://mdn.mozillademos.org/files/8973/Client-server.jpg)
+![](client-server.jpg)
 
 - 클라이언트는 일반적인 웹 사용자의 인터넷이 연결된 장치들 (예를 들어, 여러분의 컴퓨터는 WI-FI에 연결되어 있고, 또는 여러분의 폰은 모바일 네트워크에 연결되어 있습니다) 과 이런 장치들에서 이용가능한 웹에 접근하는 소프트웨어 (일반적으로 파이어폭스 또는 크롬 과 같은 웹 브라우저) 입니다.
 - 서버는 웹페이지, 사이트, 또는 앱을 저장하는 컴퓨터입니다. 클라이언트의 장비가 웹페이지에 접근하길 원할 때, 서버로부터 클라이언트의 장치로 사용자의 웹 브라우저에서 보여지기 위한 웹페이지의 사본이 다운로드 됩니다.
@@ -27,7 +27,7 @@ original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 
 지금은, 웹이 도로라고 상상해봅시다. 도로의 한 쪽 끝은 여러분의 집 같은 클라이언트 입니다. 다른 한 쪽 끝은 여러분이 뭔가를 사길 원하는 상점같은 서버입니다.
 
-![](https://mdn.mozillademos.org/files/9749/road.jpg)
+![](road.jpg)
 
 클라이언트와 서버에 덧붙여서 우리는 다음 내용들도 알아볼 필요가 있습니다.
 
@@ -73,14 +73,3 @@ original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 거리 사진: [Street composing](https://www.flickr.com/photos/kdigga/9110990882/in/photolist-cXrKFs-c1j6hQ-mKrPUT-oRTUK4-7jSQQq-eT7daG-cZEZrh-5xT9L6-bUnkip-9jAbvr-5hVkHn-pMfobT-dm8JuZ-gjwYYM-pREaSM-822JRW-5hhMf9-9RVQNn-bnDMSZ-pL2z3y-k7FRM4-pzd8Y7-822upY-8bFN4Y-kedD87-pzaATg-nrF8ft-5anP2x-mpVky9-ceKc9W-dG75mD-pY62sp-gZmXVZ-7vVJL9-h7r9AQ-gagPYh-jvo5aM-J32rC-ibP2zY-a4JBcH-ndxM5Y-iFHsde-dtJ15p-8nYRgp-93uCB1-o6N5Bh-nBPUny-dNJ66P-9XWmVP-efXhxJ), by [Kevin D](https://www.flickr.com/photos/kdigga/).
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

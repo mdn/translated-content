@@ -5,7 +5,7 @@ slug: Web/HTML/Element/article
 
 {{HTMLSidebar}}
 
-**HTML `<article>`** 元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。​​
+**HTML `<article>`** 元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。
 
 {{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
 
@@ -31,7 +31,7 @@ slug: Web/HTML/Element/article
   </tr>
   <tr>
    <th scope="row">允许的 ARIA roles</th>
-   <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("main")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/main_role"><code>main</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 实例</th>

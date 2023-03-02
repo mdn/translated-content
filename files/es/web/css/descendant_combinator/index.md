@@ -37,8 +37,8 @@ div span { background-color: DodgerBlue; }
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.descendant")}}
+{{Compat}}
 
 ## Ver también

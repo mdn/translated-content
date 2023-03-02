@@ -1,14 +1,8 @@
 ---
 title: '<iframe>: 인라인 프레임 요소'
 slug: Web/HTML/Element/iframe
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/iframe
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<iframe>` 요소**는 중첩 {{glossary("browsing context", "브라우징 맥락")}}을 나타내는 요소로, 현재 문서 안에 다른 HTML 페이지를 삽입합니다.
@@ -46,8 +40,8 @@ translation_of: Web/HTML/Element/iframe
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("img")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/application_role'><code>application</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/document_role'><code>document</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/img_role'><code>img</code></a>
       </td>
     </tr>
     <tr>
@@ -219,11 +213,11 @@ People navigating with assistive technology such as a screen reader can use the 
 
 Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

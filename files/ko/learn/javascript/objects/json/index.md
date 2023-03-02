@@ -181,7 +181,7 @@ JSON 데이터를 다음 깃허브 링크에서 가져올수 있습니다. <http
 
 페이지에 JSON 데이터를 로딩하고 DOM 조작을 통해 아래와 같이 만들어 봅시다. :
 
-![](https://mdn.mozillademos.org/files/13857/json-superheroes.png)
+![](json-superheroes.png)
 
 ### JSON 가져오기
 
@@ -359,13 +359,3 @@ myString
 - [Official JSON web site with link to ECMA standard](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
-
-## 다음 단계
-
-- [Object basics](/ko/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/ko/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/ko/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/ko/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/ko/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/ko/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

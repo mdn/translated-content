@@ -1,15 +1,6 @@
 ---
 title: Trabajando con objetos
 slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Comparación de objetos
-  - Constructor
-  - Documento
-  - Guía
-  - JavaScript
-  - Objeto
-  - Principiante
-translation_of: Web/JavaScript/Guide/Working_with_Objects
 original_slug: Web/JavaScript/Guide/Trabajando_con_objectos
 ---
 
@@ -50,7 +41,7 @@ var myCar = {
 };
 ```
 
-Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y​no {{jsxref("null")}}).
+Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y no {{jsxref("null")}}).
 
 ```js
 myCar.color; // undefined

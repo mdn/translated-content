@@ -3,7 +3,7 @@ title: Pixel manipulation with canvas
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 直到目前為止，我們還沒真正了解 pixels 在 canvas 上的運用。使用`ImageData`物件，可直接對 pixel 裡的陣列資料**讀(read)**和**寫(write)**。在接下的內容中，也可了解到如何使影像平滑化(反鋸齒)及如何將影像保存在 canvas 之中。
 
@@ -72,7 +72,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 這個範例使用[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 方法去顯示在鼠標下的顏色。
 
-首先，需要一個正確的滑鼠點`layerX`*​​​​​​​*和 `layerY`。在從[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 提供 pixel 陣列中(array)該點的 pixel 數據(data) 。最後，使用陣列數據(array data)在`<div>`中設置背景色和文字去顯示該色。
+首先，需要一個正確的滑鼠點`layerX` 和 `layerY`。在從[getImageData()](/zh-TW/docs/Web/API/CanvasRenderingContext2D/getImageData) 提供 pixel 陣列中(array)該點的 pixel 數據(data) 。最後，使用陣列數據(array data)在`<div>`中設置背景色和文字去顯示該色。
 
 ```html hidden
 <canvas id="canvas" width="300" height="227" style="float:left"></canvas>
@@ -81,7 +81,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 img.onload = function() {
@@ -102,7 +102,7 @@ function pick(event) {
 canvas.addEventListener('mousemove', pick);
 ```
 
-{{ EmbedLiveSample('A_color_picker', 610, 240) }}
+{{ EmbedLiveSample('調色盤', 610, 240) }}
 
 ## 在內容中寫入 pixel 資料
 
@@ -134,7 +134,7 @@ In this example we iterate over all pixels to change their values, then we put t
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 img.onload = function() {
   draw(this);
 };
@@ -173,7 +173,7 @@ function draw(img) {
 }
 ```
 
-{{ EmbedLiveSample('Grayscaling_and_inverting_colors', 330, 270) }}
+{{ EmbedLiveSample('灰階和負片效果', 330, 270) }}
 
 ## 放大和平滑化(反鋸齒)
 
@@ -204,7 +204,7 @@ Because anti-aliasing is enabled by default, we might want to disable the smooth
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 img.onload = function() {
   draw(this);
 };
@@ -251,7 +251,7 @@ The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is u
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.
 
-Once you have generated a data URI from you canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a [download attribute](/zh-TW/docs/Web/HTML/Element/a#attr-download) to save it to disc, for example.
+Once you have generated a data URI from you canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a [download attribute](/zh-TW/docs/Web/HTML/Element/a#download) to save it to disc, for example.
 
 You can also create a {{domxref("Blob")}} from the canvas.
 

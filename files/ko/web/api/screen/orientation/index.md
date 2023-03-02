@@ -1,7 +1,6 @@
 ---
 title: Screen.orientation
 slug: Web/API/Screen/orientation
-translation_of: Web/API/Screen/orientation
 ---
 
 {{APIRef("CSSOM View")}} {{SeeCompatTable}}
@@ -36,11 +35,11 @@ if (orientation === "landscape-primary") {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

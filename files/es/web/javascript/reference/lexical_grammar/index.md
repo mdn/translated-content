@@ -1,13 +1,6 @@
 ---
 title: Gramática léxica
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - Gramática léxica
-  - Guía
-  - JaveScript
-  - Literal
-  - Palabra clave
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 original_slug: Web/JavaScript/Referencia/Gramatica_lexica
 ---
 
@@ -542,9 +535,9 @@ a + b;
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## Ve también
 

@@ -40,7 +40,7 @@ Il renvoie également `null` si le nœud vient d'être créé et n'est pas encor
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.parentNode")}}
+{{Compat}}
 
 ## Spécification
 

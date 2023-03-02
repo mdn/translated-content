@@ -39,9 +39,9 @@ Les valeurs de ce type sont des objets.
 - {{WebExtAPIRef("events.Event.removeRules()")}}
   - : Annule l'inscription des règles actuellement enregistrées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.events.Event")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

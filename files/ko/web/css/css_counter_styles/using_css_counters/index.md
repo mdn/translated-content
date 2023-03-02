@@ -1,16 +1,6 @@
 ---
 title: CSS 카운터 사용하기
 slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
-tags:
-  - CSS
-  - CSS Counter Styles
-  - Guide
-  - Layout
-  - Reference
-  - Web
-  - 번호
-  - 카운터
-translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 
@@ -155,7 +145,7 @@ li::before {
 
 {{EmbedLiveSample("Example_of_a_nested_counter", "100%", 350)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

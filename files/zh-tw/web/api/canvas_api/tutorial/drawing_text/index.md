@@ -3,13 +3,11 @@ title: 使用canvas繪製文字
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 [`canvas`](/zh-TW/HTML/Canvas)元素支援在[標準 HTML 5 特色](http://www.whatwg.org/specs/web-apps/current-work/#text-0)以及少許實驗性的 Mozilla 方法和功能上繪製文字。
 
 文字可以包括任何 Unicode 字元，即使用那些超出“基本多文種平面”的字元也可以。
-
-{{ fx_minversion_note("3.5", '在Firefox 3.5或之後的版本，當繪圖時，任何對於 <a href="/en/Canvas_tutorial/Applying_styles_and_colors#Shadows">shadow effects</a>（陰影效果）的處理可以使用在文字上。') }}
 
 ## 方法概述
 

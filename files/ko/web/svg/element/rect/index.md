@@ -1,7 +1,6 @@
 ---
 title: <rect>
 slug: Web/SVG/Element/rect
-translation_of: Web/SVG/Element/rect
 original_slug: Web/SVG/Element/사각형
 ---
 
@@ -68,7 +67,7 @@ html,body,svg { height:100% }
 
 This element implements the [`SVGRectElement`](/en/DOM/SVGRectElement) interface.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

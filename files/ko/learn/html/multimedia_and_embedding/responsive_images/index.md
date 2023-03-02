@@ -37,7 +37,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 일반적인 웹 사이트를 떠올려 보라. 헤더 이미지가 있을 것이고, 헤더 이후 본문에는 이미지가 몇 개 있을 것이다. 헤더 이미지는 헤더의 전체 가로 너비를 자치할 것이고, 본문 이미지는 본문 영역 안에서 어느 정도를 차지할 것이다. 아래 사이트의 이미지 처럼 말이다.
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
 노트북이나 데스크톱처럼 화면이 넓은 기기에서는 잘 작동할 것이다([실제 예시는 여기에 있고](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), Github에서 [소스코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html)를 볼 수 있다.) CSS에 대해 너무 깊이 들어가고 싶진 않지만, 이정도는 이야기하자.
 
@@ -47,11 +47,11 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 그러나, 좁은 화면 기기로 사이트를 보기 시작하면 문제가 생긴다. 헤더는 괜찮아 보이지만, 모바일 기기에서는 화면 높이를 너무 많이 차지하기 시작한다. 이 사이즈에서는, 본문 첫번째 사진의 사람들이 나타나기 어렵다.
 
-![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](https://mdn.mozillademos.org/files/12936/non-responsive-narrow.png)
+![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
 
-개선책은 좁은 화면에서 사이트를 볼 때 이미지의 중요한 상세를 보여 주는 자른 이미지를 보여 주는 것이다. 또 다르게 자른 이미지를 태블릿처럼 중간 정도 너비 화면의 기기에서 보여줄 수 있을 것이다. 이를 보통 **아트 디렉션 문제(art direction problem)**라고 한다. \[아트 디렉션은 ‘연출 방향’ 정도로 번역할 수 있을 듯한데, 보통은 용어를 그대로 사용한다. 반응형 이미지에서는 이미지의 의도가 제대로 전달되도록 기기에 따라 사진의 핵심을 확대해서 보여 주거나 하는 방식을 의미한다. - 역자 주]
+개선책은 좁은 화면에서 사이트를 볼 때 이미지의 중요한 상세를 보여 주는 자른 이미지를 보여 주는 것이다. 또 다르게 자른 이미지를 태블릿처럼 중간 정도 너비 화면의 기기에서 보여줄 수 있을 것이다. 이를 보통 **아트 디렉션 문제(art direction problem)** 라고 한다. \[아트 디렉션은 ‘연출 방향’ 정도로 번역할 수 있을 듯한데, 보통은 용어를 그대로 사용한다. 반응형 이미지에서는 이미지의 의도가 제대로 전달되도록 기기에 따라 사진의 핵심을 확대해서 보여 주거나 하는 방식을 의미한다. - 역자 주]
 
-게다가, 작은 모바일 화면에서는 페이지에 그렇게 큰 이미지를 포함할 필요가 없다. 이것을 **해상도 전환 문제(resolution switching problem)**라고 부른다. [벡터 그래픽 단원](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)에서 배웠듯이, 래스터 이미지\[비트맵 이미지 - 역자 주]는 가로 픽셀들과 세로 픽셀들의 세트로 구성된다. 작은 래스터 이미지를 실제 사이즈보다 확대해서 보면 도트가 깨져 보인다(벡터 그래픽은 그렇지 않은데 반해).
+게다가, 작은 모바일 화면에서는 페이지에 그렇게 큰 이미지를 포함할 필요가 없다. 이것을 **해상도 전환 문제(resolution switching problem)** 라고 부른다. [벡터 그래픽 단원](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)에서 배웠듯이, 래스터 이미지\[비트맵 이미지 - 역자 주]는 가로 픽셀들과 세로 픽셀들의 세트로 구성된다. 작은 래스터 이미지를 실제 사이즈보다 확대해서 보면 도트가 깨져 보인다(벡터 그래픽은 그렇지 않은데 반해).
 
 역으로, 적당한 크기보다 훨씬 작은 화면에 큰 이미지를 표시 할 필요가 없다. 그렇게 하는 것은 대역폭을 낭비하는 것이다. 특히, 모바일 사용자는 기기에 맞는 작은 이미지 대신 데스크톱에 사용되는 커다른 이미지를 다운로드하느라 대역폭을 낭비하고 싶어하지 않는다. 이상적인 상황은 다양한 해상도를 준비해 두고, 웹사이트 데이터를 받는 기기에 따라 적당한 사이즈를 제공하는 것이다.
 
@@ -61,7 +61,10 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 이런 종류의 문제는 90년대 초중반에 웹이 처음 등장했을 때는 존재하지 않았다. 당시 웹을 탐색할 수 있는 기기는 데스크톱과 노트북뿐이었기 때문에 브라우저 개발자와 명세 작성자는 해결책 구현에 대한 생각조차 하지 않았다. 브라우저에 여러 개의 이미지 파일들을 제공하는 *반응형 이미지 기술*은 위에서 지적한 문제를 해결하기 위해 최근에 구현됐다. 픽셀 수가 다르지만 동일한 이미지를 보여주거나(_해상도 전환_), 다른 공간 점유에 맞는 다른 이미지를 보여 주거나(_아트 디렉션_).
 
-> **참고:** **알림**: 이 글에서 다루는 새로운 기능들 — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — 은 모두 출시된 최신 데스크톱과 모바일 브라우저(인터넷 익스플로러는 구현이 안 돼 있지만, 마이크로소프트 엣지를 포함해)에서 지원된다.
+> **참고:**
+>
+>이 글에서 다루는 새로운 기능들 — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — 은 모두 출시된 최신 데스크톱과 모바일 브라우저(인터넷 익스플로러는 구현이 안 돼 있지만, 마이크로소프트 엣지를 포함해)에서 지원된다.
+>
 
 ## 반응형 이미지를 어떻게 만들까?
 
@@ -89,7 +92,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 `srcset`과 `sizes` 속성은 복잡해 보이지만 위에서 보여 준 것처럼 각 행에 속성 값을 나눠 적으면 이해하기 어렵지 않다. 각 값은 쉼표로 구분한 목록으로 적고, 목록의 각 부분은 세 부분으로 구성된다. 이제 각 내용을 살펴 보자.
 
-**`srcset`**은 브라우저에게 제시할 이미지 목록과 그 크기를 정의한다. 각 쉼표 앞에 이렇게 적는다.
+**`srcset`** 은 브라우저에게 제시할 이미지 목록과 그 크기를 정의한다. 각 쉼표 앞에 이렇게 적는다.
 
 1. **이미지 파일명** (`elva-fairy-480w.jpg`.)
 2. 공백
@@ -103,13 +106,18 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
     를 눌러 정보를 표시 할 수 있다).
 
-**`sizes`**는 미디어 조건문들을 정의하고(예를 들면, 화면 크기) 특정 미디어 조건문이 참일 때 어떤 이미지 크기가 최적인지 나타낸다(앞서 언급한 힌트). 이 경우, 각 쉼표 전에 이렇게 쓴다.
+**`sizes`** 는 미디어 조건문들을 정의하고(예를 들면, 화면 크기) 특정 미디어 조건문이 참일 때 어떤 이미지 크기가 최적인지 나타낸다(앞서 언급한 힌트). 이 경우, 각 쉼표 전에 이렇게 쓴다.
 
 1. **미디어 조건문** (`(max-width:480px)`) — CSS 주제에서 이에 대해 더 많은 것을 배울 수 있을 테지만, 지금 간단히 말하면, 미디어 조건문은 가능한 화면 상태를 기술한다. 이 경우, 이렇게 말하는 것이다: “뷰포트 너비가 480픽셀 이하”.
 2. 공백.
 3. 미디어 조건문이 참인 경우 이미지가 채울 **슬롯의 너비**(`440px`).
 
-> **참고:** **알림**: 슬롯 너비로 절대값(`px`, `em`)이나 뷰포트에 대한 상대값(`vw`)을 넣어야 한다. 상대값으로 퍼센트(`%`)를 넣을 수는 없다. 마지막 슬롯 너비에는 미디어 조건문이 없다는 것을 확인했을 것이다. 이것은 미디어 조건문이 참인 경우가 하나도 없는 것우의 기본값이다. 브라우저는 첫 번째 조건문이 맞으면 나머지 모든 조건문을 무시한다. 따라서 미디어 조건문의 순서에 유의하라.
+> **참고:**
+>
+> 슬롯 너비로 절대값(`px`, `em`)이나 뷰포트에 대한 상대값(`vw`)을 넣어야 한다.
+> 상대값으로 퍼센트(`%`)를 넣을 수는 없다.
+> 마지막 슬롯 너비에는 미디어 조건문이 없다는 것을 확인했을 것이다. 이것은 미디어 조건문이 참인 경우가 하나도 없는 것우의 기본값이다. 브라우저는 첫 번째 조건문이 맞으면 나머지 모든 조건문을 무시한다.
+> 따라서 미디어 조건문의 순서에 유의하라.
 
 그래서, 이 속성들을 제대로 적으면, 브라우저는 이렇게 할 것이다.
 
@@ -122,7 +130,11 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 이 기능을 지원하지 않는 낡은 브라우저들은 이 속성들을 무시할 것이다. 그리고 {{htmlattrxref("src", "img")}} 속성에 참조된 보통 이미지를 불러올 것이다.
 
-> **참고:** **알림**: 문서의 {{htmlelement("head")}}에서 `<meta name="viewport" content="width=device-width">` 줄을 찾을 수 있을 것이다. 이것은 모바일 브라우저가 실제 뷰포트 너비로 웹페이지를 보여주도록 강제한다. (몇몇 모바일 브라우저들은 뷰포트 너비를 속인다, 그리고 대신에 더 큰 뷰포트 너비에서 페이지를 불러오고, 불러온 페이지를 축소한다. 이것은 반응형 이미지나 디자인에 별로 도움이 되지 않는다. 이것에 대해서는 향후 더 자세히 다룰 것이다.)
+> **참고:**
+>
+> 문서의 {{htmlelement("head")}}에서 `<meta name="viewport" content="width=device-width">` 줄을 찾을 수 있을 것이다.
+> 이것은 모바일 브라우저가 실제 뷰포트 너비로 웹페이지를 보여주도록 강제한다.
+> (몇몇 모바일 브라우저들은 뷰포트 너비를 속인다, 그리고 대신에 더 큰 뷰포트 너비에서 페이지를 불러오고, 불러온 페이지를 축소한다. 이것은 반응형 이미지나 디자인에 별로 도움이 되지 않는다. 이것에 대해서는 향후 더 자세히 다룰 것이다.)
 
 ### 유용한 개발 도구
 
@@ -130,13 +142,16 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 나는 뷰포트 너비를 320px로 했다가 480px로 한다. 각 너비에서 나는 [DOM 검사기](/ko/docs/%EB%8F%84%EA%B5%AC%EB%93%A4/Page_Inspector)로 가서, 확인하고 싶은 {{htmlelement("img")}} 요소를 클릭한다. 그리고 화면의 오른쪽에 있는 박스 모델 뷰 탭에서 크기를 확인한다. 이렇게 하면 필요한 고유 너비를 알 수 있다.
 
-![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](https://mdn.mozillademos.org/files/12932/box-model-devtools.png)
+![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](box-model-devtools.png)
 
 다음으로 원하는 뷰포트 너비를 설정해서 어떤 `srcset`이 작동하는지 체크할 수 있다(예컨대, 좁게 설정할 수 있다). 네트워크 검사기(도구 > 웹 개발 도구 > 네트워크)를 열고, 페이지를 새로 고침 한다. 웹페이지를 만들기 위해 다운로드한 항목들을 보여 주는데, 따라서 어떤 이미지가 사용됐는지 여기서 확인할 수 있다.
 
-> **참고:** **알림:** 크롬에서 테스트할 때 캐시를 비활성화하라. 개발자 도구를 열고, **Network** 탭의 체크박스들 중 **Disable cache**에 체크하라. 이렇게 하지 않으면 크롬은 최적의 이미지보다 캐시된 이미지를 선호할 것이다.
+> **참고:**
+>
+> 크롬에서 테스트할 때 캐시를 비활성화하라.
+> 개발자 도구를 열고, **Network** 탭의 체크박스들 중 **Disable cache**에 체크하라. 이렇게 하지 않으면 크롬은 최적의 이미지보다 캐시된 이미지를 선호할 것이다.
 
-![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](https://mdn.mozillademos.org/files/12934/network-devtools.png)
+![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](network-devtools.png)
 
 ### 해상도 전환: 같은 크기, 다른 해상도
 
@@ -149,7 +164,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
      src="elva-fairy-640w.jpg" alt="요정 옷을 입은 엘바">
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](https://mdn.mozillademos.org/files/12942/resolution-example.png)이 예에서, 다음 CSS가 이미지에 적용되고, 따라서 화면에서 너비는 320px이 된다(CSS 픽셀이라고 부르기도 한다).
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)이 예에서, 다음 CSS가 이미지에 적용되고, 따라서 화면에서 너비는 320px이 된다(CSS 픽셀이라고 부르기도 한다).
 
 ```css
 img {
@@ -185,9 +200,11 @@ img {
 
 이 코드는 넓은 화면과 좁은 화면 둘 다에서 적절한 이미지를 표시하게 해 준다. 아래를 보자.
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](https://mdn.mozillademos.org/files/12938/picture-element-narrow.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
-> **참고:** **알림**: 미디어 속성은 아트 디렉션 시나리오에서만 사용하라. 만약 미디어를 사용한다면, 미디어 조건문을 사이즈 속성에 넣지 마라.
+> **참고:**
+>
+> 미디어 속성은 아트 디렉션 시나리오에서만 사용하라. 만약 미디어를 사용한다면, 미디어 조건문을 사이즈 속성에 넣지 마라.
 
 ### 왜 CSS나 자바스크립트를 이용해 이렇게 할 수 없는가?
 
@@ -219,7 +236,9 @@ img {
 2. 어딘가에 상세한 부분이 있는 멋진 가로 풍경 사진을 찾아라. 그래픽 편집기를 이용해 웹 사이즈 버전을 만들고, 상세한 부분을 확대해 보여줄 수 있도록 그걸 더 작게 잘라서 두 번째 이미지를 만들자(대략 480px 정도면 적당하다).
 3. `srcset` / `size` 를 사용해, 서로 다른 해상도에서 같은 크기의 이미지를 제공하거나 서로 다른 뷰포트 너비에서 서로 다른 크기 이미지를 제공하는 해상도 전환 예제를 만들자.
 
-> **참고:** **알림**: 위에서 보여 줬듯이, 브라우저 개발자 도구를 사용해 필요한 크기가 얼마인지 찾아내는 데 도움을 얻자.
+> **참고:**
+>
+> 위에서 봤듯이, 브라우저 개발자 도구를 사용해 필요한 크기가 얼마인지 찾아내는 데 도움을 얻자.
 
 ## 정리
 
@@ -239,12 +258,3 @@ img {
 - {{htmlelement("source")}}
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
-
-## In this module
-
-- [HTML의 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/ko/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/ko/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

@@ -1,6 +1,6 @@
 ---
 title: <input type="week">
-slug: Web/HTML/Element/Input/week
+slug: Web/HTML/Element/input/week
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -50,7 +50,7 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
 
 ## 值
 
-一个字符串代表所输入的星期/年的值。{{SectionOnPage("/zh-CN/docs/Web/HTML/Date_and_time_formats", "合法的星期字符串")}}中描述了此输入类型使用的日期和时间值的格式。
+一个字符串代表所输入的星期/年的值。[星期字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#星期字符串)中描述了此输入类型使用的日期和时间值的格式。
 
 你可以通过在 {{htmlattrxref("value", "input")}} 属性中包含一个值来为输入设置默认值，如下所示：
 

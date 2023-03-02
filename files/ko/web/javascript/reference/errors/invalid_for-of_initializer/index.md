@@ -3,12 +3,6 @@ title: >-
   SyntaxError: a declaration in the head of a for-of loop can't have an
   initializer
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
-tags:
-  - For문 초기화
-  - 구문 에러
-  - 반복문
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
 
 {{jsSidebar("Errors")}}

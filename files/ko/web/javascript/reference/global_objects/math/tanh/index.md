@@ -1,13 +1,6 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-tags:
-  - ECMAScript 2015
-  - 레퍼런스
-  - 메서드
-  - 수학
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
 
 {{JSRef}}
@@ -58,7 +51,7 @@ Math.tanh = Math.tanh || function(x){
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

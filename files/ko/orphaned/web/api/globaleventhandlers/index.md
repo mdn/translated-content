@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers
 slug: orphaned/Web/API/GlobalEventHandlers
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - Mixin
-  - Reference
-translation_of: Web/API/GlobalEventHandlers
 original_slug: Web/API/GlobalEventHandlers
 ---
 
@@ -36,7 +29,7 @@ _이 인터페이스는 아래에 나열된 이벤트 처리기를 위한 속성
 - {{domxref("GlobalEventHandlers.onanimationstart")}} {{Non-standard_inline}}
   - : [CSS 애니메이션](/ko/docs/Web/CSS/CSS_Animations)의 재생이 시작됐음을 알리는 {{event("animationstart")}} 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
 - {{domxref("GlobalEventHandlers.onauxclick")}} {{Non-standard_inline}}
-  - : 마우스 휠 클릭 등 비주요 버튼이 눌렸음을 알리는 {{event("auxclick")}} 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
+  - : 마우스 휠 클릭 등 비주요 버튼이 눌렸음을 알리는 `auxclick` 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
 - {{domxref("GlobalEventHandlers.onblur")}}
   - : {{event("blur")}} 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
 - {{domxref("GlobalEventHandlers.onerror")}}
@@ -52,7 +45,7 @@ _이 인터페이스는 아래에 나열된 이벤트 처리기를 위한 속성
 - {{domxref("GlobalEventHandlers.onchange")}}
   - : {{event("change")}} 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
 - {{domxref("GlobalEventHandlers.onclick")}}
-  - : {{event("click")}} 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
+  - : [`click`](/ko/docs/Web/API/Element/click_event) 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
 - {{domxref("GlobalEventHandlers.onclose")}}
   - : {{event("close")}} 이벤트가 발생했을 때 호출할 코드를 나타내는 {{event("Event_handlers", "event handler")}}.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}

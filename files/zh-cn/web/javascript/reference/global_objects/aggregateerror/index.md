@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 
 > {{JSRef}}{{SeeCompatTable}}
 
-**`AggregateError`**当多个错误 ​​ 需要包装在一个错误中时，该对象表示一个错误。
+**`AggregateError`**当多个错误 需要包装在一个错误中时，该对象表示一个错误。
 
 ## 语法
 

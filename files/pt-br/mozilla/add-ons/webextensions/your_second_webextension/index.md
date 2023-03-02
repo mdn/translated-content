@@ -23,7 +23,7 @@ Para implementar esse extensão, será necessário:
 
 Você pode visualizar toda a estrutura da extensão da seguinte forma:
 
-![](https://mdn.mozillademos.org/files/11467/beastify-anatomy.svg)
+![](beastify-anatomy.svg)
 
 É uma extensão extremamente simples, mas mostra muitos conceitos básicos da API de Extensões:
 
@@ -248,7 +248,7 @@ Finalmente, nós precisamos incluir as imagens dos animais.
 
 Crie um novo diretório chamado "beasts", e adicione as três imagens nos diretório, com os nomes apropriados. Você pode obter as imagens aqui no [GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), ou aqui:
 
-![](https://mdn.mozillademos.org/files/11459/frog.jpg)![](https://mdn.mozillademos.org/files/11461/snake.jpg)![](https://mdn.mozillademos.org/files/11463/turtle.jpg)
+![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 
 ## Empacotando e instalando
 

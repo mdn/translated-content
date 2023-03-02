@@ -26,7 +26,9 @@ JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 �
 
 시작하기 전에, 우리의 기대 목표를 먼저 확실하게 짚고 넘어가겠습니다. 이 글을 끝낸 뒤에도, 함께 따라서 작성한 코드를 이해하지 못할 수 있습니다. 그래도 괜찮습니다. 이 시간은 JavaScript의 기능들이 함께 어떻게 동작하는지, JavaScript 코드를 작성하는 게 어떤 느낌인지 알려드리기 위한 시간일 뿐입니다. 여기에서 사용한 기능들은 이후의 다른 여러 글에서 자세하게 짚어볼 테니, 지금 당장은 굳이 모두 이해하려고 애쓰지 마세요.
 
-> **참고:** 함수와 반복문처럼 JavaScript의 많은 코드 기능은 다른 프로그래밍 언어에도 존재합니다. 코드 구문은 다르더라도, 그 개념은 많은 부분 동일합니다.
+> **참고:**
+>
+> 함수와 반복문처럼 JavaScript의 많은 코드 기능은 다른 프로그래밍 언어에도 존재합니다. 코드 구문은 다르더라도, 그 개념은 많은 부분 동일합니다.
 
 ## 프로그래머처럼 사고하기
 
@@ -139,7 +141,9 @@ let resetButton;
 
 - 마지막 두 변수는 플레이어가 사용한 턴 수인 1과, 지금은 없지만 이 글의 뒤에서 추가할 초기화 버튼의 참조를 저장하기 위해 사용합니다.
 
-> **참고**: [바로 다음 글](/ko/docs/Learn/JavaScript/First_steps/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
+> **참고:**
+>
+> [바로 다음 글](/ko/docs/Learn/JavaScript/First_steps/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
 
 ### 함수
 
@@ -163,7 +167,9 @@ checkGuess();
 
 키보드의 <kbd>Return</kbd>(<kbd>Enter</kbd>) 키를 누르면 `I am a placeholder`라는 경고 창이 나타날 겁니다. 이로써, 우리 코드 안에 호출할 때마다 경고 창을 띄우는 함수를 정의했습니다.
 
-> **참고**: [이후 과정](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 함수에 대해 많이 배울 수 있습니다.
+> **참고:**
+>
+> [이후 과정](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 함수에 대해 많이 배울 수 있습니다.
 
 ### 연산자
 
@@ -504,15 +510,3 @@ guessField.focus();
 예제 따라 해보기가 끝났습니다. 마지막까지 오셨군요. 축하합니다! 최종 코드를 직접 실행해 보거나, MDN에서 준비한 [최종판을 시험해 보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). 여러분의 예제 코드가 잘 돌아가지 않으면 완성본의 [소스 코드](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)와 비교해 보세요.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
-
-## 이 과정은
-
-- [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [텍스트 다루기 — JavaScript의 문자열](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [유용한 문자열 메서드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [평가: 바보같은 이야기 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

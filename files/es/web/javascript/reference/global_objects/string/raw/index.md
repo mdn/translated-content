@@ -1,7 +1,6 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/raw
 ---
 
@@ -78,9 +77,9 @@ String.raw({
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.raw")}}
+{{Compat}}
 
 ## Tambien ver
 

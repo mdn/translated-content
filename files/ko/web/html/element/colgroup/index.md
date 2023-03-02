@@ -1,13 +1,6 @@
 ---
 title: <colgroup>
 slug: Web/HTML/Element/colgroup
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/colgroup
 ---
 
 {{HTMLSidebar}}
@@ -135,4 +128,4 @@ The following attributes are deprecated and should not be used. They are documen
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.colgroup")}}
+{{Compat}}

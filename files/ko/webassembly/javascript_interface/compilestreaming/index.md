@@ -1,11 +1,10 @@
 ---
 title: WebAssembly.compileStreaming()
 slug: WebAssembly/JavaScript_interface/compileStreaming
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.compileStreaming()`**함수는 스트림 된 원본 소스에서 직접 {{jsxref ( "WebAssembly.Module")}}을 컴파일합니다. 이 함수는 모듈을 인스턴스화하기 전에 컴파일해야하는 경우 유용합니다 (그렇지 않으면 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 함수를 사용해야합니다).
 
@@ -43,11 +42,11 @@ WebAssembly.compileStreaming(fetch('simple.wasm'))
 
 결과 모듈 인스턴스는 {{jsxref ( "WebAssembly.instantiate ()")}}를 사용하여 인스턴스화되고 내 보낸 함수가 호출됩니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

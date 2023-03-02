@@ -1,20 +1,6 @@
 ---
 title: Web Performance
 slug: Web/Performance
-tags:
-  - API
-  - App
-  - App Performance
-  - HTML
-  - JavaScript
-  - Landing
-  - Mobile
-  - Mobile Performance
-  - Performance
-  - Performance Budget
-  - Start-Up Performance
-  - Web
-  - Web Performance
 ---
 
 Web performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions - is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.

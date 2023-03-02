@@ -1,11 +1,6 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-tags:
-  - HTTP
-  - HTTP method
-  - Reference
-translation_of: Web/HTTP/Methods/HEAD
 ---
 
 {{HTTPSidebar}}
@@ -59,7 +54,7 @@ HEAD /index.html
 
 ## 브라우저 호환성
 
-{{Compat("http.methods.HEAD")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,7 +1,6 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-translation_of: Web/API/DOMParser
 ---
 
 {{APIRef("DOM")}}
@@ -17,12 +16,12 @@ HTML 문서의 경우, {{domxref("Element.innerHTML")}} 속성과 {{domxref("Ele
 ## 문법
 
 ```js
-let domparser = new DOMParser()​​
+let domparser = new DOMParser()
 ```
 
 ## 메소드
 
-### {{domxref("DOMParser.parseFromString()", "", "", "1")}}
+- {{domxref("DOMParser.parseFromString()")}}
 
 #### 문법
 
@@ -51,104 +50,11 @@ let doc = domparser.parseFromString(string, mimeType)
 
 ## 예제
 
-### XML 해석
+이 인터페이스의 유일한 메서드인 {{domxref("DOMParser.parseFromString()")}}에 대한 설명서에는 XML, SVG 및 HTML 문자열을 구문 분석하기 위한 예제가 포함되어 있습니다.
 
-parser 변수를 통해 새로이 해석할 객체를 만들었다면, 이제 `parseFromString()` 메소드를 통해 XML 문서를 해석할 수 있다.
+## 명세서
 
-```js
-let parser = new DOMParser()
-let doc = parser.parseFromString(stringContainingXMLSource, "application/xml")
-```
-
-#### 오류 대응
-
-만약 해석에 실패할 경우, `DOMParser` 객체는 예외를 발생시키지 않고, 아래와 같은 오류 문서를 반환한다.
-
-```xml
-<parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
-  (영문 오류 내용)
-  <sourcetext>(오류가 발생한 XML 소스 조각)</sourcetext>
-</parsererror>
-```
-
-또한 해석 오류를 [오류 콘솔](/ko/docs/Error_Console)에서도 볼 수 있으며, 여기에 후술할(역주: geckoRelease) 문서 URI도 포함된다
-
-### SVG 및 HTML 해석
-
-The `DOMParser` 객체는 {{geckoRelease("10.0")}} 규격에 맞는 SVG 문서도 해석할 수 있으며,{{geckoRelease("12.0")}} 규격에 맞는 HTML 문서를 해석할 수 있다. MIME 형식에 따라 아래와 같이 다른 객체가 반환될 수 있다.
-
-1. IME 형식이 `text/xml`이면, `XMLDocument` 객체가 반환된다.
-2. MIME 형식이 `image/svg+xml`이면, `SVGDocument` 객체가 반환된다.
-3. MIME 형식이 `text/html`이면, `HTMLDocument` 객체가 반환된다.
-
-```js
-let parser = new DOMParser()
-let doc = parser.parseFromString(stringContainingXMLSource, "application/xml")
-// Document 객체가 반환되지만, SVGDocument 및 HTMLDocument 객체가 아니다.
-
-parser = new DOMParser();
-doc = parser.parseFromString(stringContainingSVGSource, "image/svg+xml")
-// SVGDocument 객체가 반환되며, 이 또한 Document 객체이기도 하다.
-
-parser = new DOMParser();
-doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
-// HTMLDocument 객체가 반환되며, 이 또한 Document 객체이기도 하다.
-```
-
-## DOMParser HTML 확장
-
-```js
-/*
- * DOMParser HTML 확장
- * 2012-09-04
- *
- * By Eli Grey, http://eligrey.com
- * Public domain.
- * 이 구현체에 대한 보증이 없으므로 주의해서 사용할 것.
- */
-
-/*! @source https://gist.github.com/1129031 */
-/*global document, DOMParser*/
-
-(function(DOMParser) {
-    "use strict";
-
-    var proto = DOMParser.prototype,
-        nativeParse = proto.parseFromString;
-
-    // Firefox/Opera/IE 에서 지원하지 않는 형식에 오류 발생
-    try {
-        // WebKit returns null on unsupported types
-        if ((new DOMParser()).parseFromString("", "text/html")) {
-            // text/html parsing is natively supported
-            return;
-        }
-    } catch (ex) {}
-
-    proto.parseFromString = function(markup, type) {
-        if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-            var
-              doc = document.implementation.createHTMLDocument("")
-            ;
-                  if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-                    doc.documentElement.innerHTML = markup;
-                  }
-                  else {
-                    doc.body.innerHTML = markup;
-                  }
-            return doc;
-        } else {
-            return nativeParse.apply(this, arguments);
-        }
-    };
-}(DOMParser));
-```
-
-## 규격
-
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#dom-parsing-and-serialization', 'DOM parsing')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 

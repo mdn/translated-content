@@ -73,7 +73,7 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 }
 ```
 
-{{ EmbedLiveSample('The_Grid_container', '200', '330') }}
+{{ EmbedLiveSample('格線容器', '200', '330') }}
 
 在它下面的直接子元素，現在都是格線單元了。從網路瀏覽器來看，各單元變成格線的前後，似乎沒什麼不同，因為目前格線只有建立一個格線列，來放所有的格線單元。這時候，你會發現[格線檢測器](/zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)相當好用。如果在 Firefox 檢查這個示例的格線，你會發現在 `grid` 值旁邊，有一個小圖標。點選這個小圖標，瀏覽器視窗的元素，就會被一個圖層覆蓋。
 
@@ -132,7 +132,7 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 }
 ```
 
-{{ EmbedLiveSample('grid_first', '610', '200') }}
+{{ EmbedLiveSample('格線軌道（Grid Track）', '610', '200') }}
 
 ### fr 單位
 
@@ -177,7 +177,7 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 }
 ```
 
-{{ EmbedLiveSample('fr_unit_ls', '220', '180') }}
+{{ EmbedLiveSample('fr 單位', '220', '180') }}
 
 接著下例將創建有一個 `2fr` 的軌道，接著還有兩個 `1fr` 的軌道。可用空間會因此被分為四塊：其中兩塊給第一個軌道、剩下兩塊給兩個軌道各一個。
 
@@ -283,7 +283,7 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 }
 ```
 
-{{ EmbedLiveSample('The_implicit_and_explicit_grid', '210', '410') }}
+{{ EmbedLiveSample('明式與暗式格線', '210', '410') }}
 
 ### 軌道縮放與 `minmax()`
 
@@ -330,7 +330,7 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 </div>
 ```
 
-{{ EmbedLiveSample('Track_sizing_and_minmax()', '230', '490') }}
+{{ EmbedLiveSample('軌道縮放與_minmax', '230', '490') }}
 
 ## Grid Lines
 
@@ -519,7 +519,7 @@ If I set `box1` to `display: grid` I can give it a track definition and it too w
 }
 ```
 
-{{ EmbedLiveSample('nesting', '600', '410') }}
+{{ EmbedLiveSample('Nesting grids', '600', '410') }}
 
 In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the {{cssxref("grid-gap")}} of the parent and the lines in the nested grid do not align to the lines in the parent grid.
 
@@ -598,7 +598,7 @@ Grid items can occupy the same cell. If we return to our example with items posi
 }
 ```
 
-{{ EmbedLiveSample('l_ex', '210', '410') }}
+{{ EmbedLiveSample('Layering items with z-index', '210', '410') }}
 
 The item `box2` is now overlapping `box1`, it displays on top as it comes later in the source order.
 

@@ -1,6 +1,6 @@
 ---
 title: Console.debug()
-slug: Web/API/Console/debug
+slug: Web/API/console/debug
 ---
 
 {{APIRef("Console API")}}
@@ -23,9 +23,9 @@ console.debug(消息 [, 字符串 1, ..., 字符串 N]);
 - `消息`
   - : 一个 JavaScript 字符串，其中包含零个或多个替代字符串。
 - `字符串 1` ... `字符串 N`
-  - : JavaScript 对象，用来依次替换`msg`中的替代字符串。你可以在替代字符串中指定对象的输出格式。查看{{SectionOnPage("/zh-CN/docs/Web/API/Console", "使用字符串替换")}}了解替换字符串如何工作。
+  - : JavaScript 对象，用来依次替换`msg`中的替代字符串。你可以在替代字符串中指定对象的输出格式。查看[使用字符串替换](/zh-CN/docs/Web/API/console#使用字符串替换)了解替换字符串如何工作。
 
-有关详细信息，请参阅{{domxref("console")}} 对象文档中的[将文本输出到控制台](/zh-CN/docs/Web/API/console#Outputting_text_to_the_console)。
+有关详细信息，请参阅 {{domxref("console")}} 对象文档中的[输出文本到控制台](/zh-CN/docs/Web/API/console#输出文本到控制台)。
 
 ## 规范
 
@@ -35,7 +35,7 @@ console.debug(消息 [, 字符串 1, ..., 字符串 N]);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)

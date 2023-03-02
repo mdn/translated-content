@@ -7,9 +7,9 @@ slug: Web/API/WebGL_API/By_example/Simple_color_animation
 
 这是一个非常基础的{{Glossary("WebGL")}}色彩动画案例，通过定时器来逐秒填充不同的颜色来实现。
 
-{{EmbedLiveSample("simple-color-animation-source",660,425)}}
-
 ### 通过填充实现色彩动画
+
+{{EmbedLiveSample("通过填充实现色彩动画",660,425)}}
 
 本案例使用{{Glossary("WebGL")}}来实现简单的色彩动画和用户交互效果，用户可以通过按按钮来开始/暂停/重新开始动画。
 

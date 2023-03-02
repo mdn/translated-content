@@ -1,6 +1,6 @@
 ---
 title: Console
-slug: Web/API/Console
+slug: Web/API/console
 ---
 
 {{APIRef("Console API")}}
@@ -169,7 +169,7 @@ console.debug("Back to the outer level");
 
 The output looks like this:
 
-![nesting.png](/@api/deki/files/6082/=nesting.png)
+![nesting.png](console_groups_demo.png)
 
 ### Timers
 
@@ -185,7 +185,7 @@ console.timeEnd("answer time");
 
 Will log the time needed by the user to discard the alert box:
 
-![timerresult.png](/@api/deki/files/6084/=timerresult.png)
+![timerresult.png](console-timelog.png)
 
 Notice that the timer's name is displayed both when the timer is started and when it's stopped.
 
@@ -221,7 +221,7 @@ The output in the console looks something like this:
 ## Notes
 
 - At least in Firefox, if a page defines a `console` object, that object overrides the one built into Firefox.
-- Prior to {{Gecko("12.0")}}, the console object's methods only work when the Web Console is open. Starting with {{Gecko("12.0")}}, output is cached until the Web Console is opened, then displayed at that time.
+- Prior to Gecko 12.0, the console object's methods only work when the Web Console is open. Starting with Gecko 12.0, output is cached until the Web Console is opened, then displayed at that time.
 - It's worth noting that the Firefox's built-in `Console` object is compatible with the one provided by [Firebug](http://getfirebug.com/).
 
 ## See also

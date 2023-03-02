@@ -131,7 +131,7 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.fullscreen")}}
+{{Compat}}
 
 ## Ver también
 

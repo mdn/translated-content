@@ -37,7 +37,7 @@ background-attachment: scroll | fixed | inherit
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("starsolid.gif");
   background-attachment: fixed;
 }
 ```
@@ -65,7 +65,7 @@ Esta propiedad soporta multiples imágenes de fondo. Puedes especificar un `<att
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("starsolid.gif"), url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }

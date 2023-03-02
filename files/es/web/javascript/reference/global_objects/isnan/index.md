@@ -46,9 +46,9 @@ isNaN(12) //devuelve false
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.isNaN")}}
+{{Compat}}
 
 ### Vea También
 

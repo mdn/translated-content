@@ -1,15 +1,6 @@
 ---
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-tags:
-  - Espacios en blanco
-  - JavaScript
-  - Métodos
-  - Prototype
-  - String
-  - Texto
-  - cadenas de texto
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/trimEnd
 ---
 
@@ -62,9 +53,9 @@ console.log(str);        // '   foo'
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.trimEnd")}}
+{{Compat}}
 
 ## Ver también
 

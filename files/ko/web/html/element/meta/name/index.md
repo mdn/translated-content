@@ -1,14 +1,6 @@
 ---
 title: 표준 메타데이터 이름
 slug: Web/HTML/Element/meta/name
-tags:
-  - Attribute
-  - HTML
-  - HTML document metadata
-  - Reference
-  - metadata
-  - 메타데이터
-translation_of: Web/HTML/Element/meta/name
 ---
 
 {{HTMLSidebar}}
@@ -136,4 +128,4 @@ CSS {{cssxref("@viewport")}} @-규칙
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.meta.name")}}
+{{Compat}}

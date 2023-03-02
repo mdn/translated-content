@@ -1,11 +1,10 @@
 ---
 title: WebAssembly.CompileError()
 slug: WebAssembly/JavaScript_interface/CompileError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.CompileError()`**생성자는 WebAssembly 디코딩 또는 유효성 검사 중에 발생한 오류를 나타내는 WebAssembly `CompileError` 객체를 새로 만듭니다.
 
@@ -70,11 +69,11 @@ try {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

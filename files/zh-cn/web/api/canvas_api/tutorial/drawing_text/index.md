@@ -3,7 +3,7 @@ title: 绘制文本
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 在前一个章节中看过 [应用样式和颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) 之后，我们现在来看一下如何在 canvas 中绘制文本
 
@@ -36,7 +36,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_fillText_example", 310, 110)}}
+{{EmbedLiveSample("一个填充文本的示例", 310, 110)}}
 
 ### 一个文本边框的示例
 
@@ -58,7 +58,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_strokeText_example", 310, 110)}}
+{{EmbedLiveSample("一个文本边框的示例", 310, 110)}}
 
 ## 有样式的文本
 
@@ -136,7 +136,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('textBaseline 例子', 700, 360) }}
 
 ## 预测量文本宽度
 

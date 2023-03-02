@@ -86,7 +86,7 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 
 - una cadena válida de año
   - : `2011`
-  
+
     `0001`
 - una cadena válida de mes
   - : `2011-11`
@@ -98,17 +98,17 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
   - : `2011-W47`
 - una cadena de hora válida
   - : `14:54`
-  
+
     `14:54:39`
 
     `14:54:39.929`
 - una cadena de fecha y hora local válida
   - : `2011-11-18T14:54:39.929`
-  
+
     `2011-11-18 14:54:39.929`
 - una cadena de fecha y hora global válida
   - : `2011-11-18T14:54:39.929Z`
-  
+
     `2011-11-18T14:54:39.929-0400`
 
     `2011-11-18T14:54:39.929-04:00`
@@ -152,9 +152,9 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## Ver también
 

@@ -7,7 +7,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 A navegação "migalha de pão" ajuda o usuário a enteder sua localização no site, fornecendo uma trilha de navegação de volta à pagina inicial.
 
-![Links displayed inline with separators](https://mdn.mozillademos.org/files/16228/breadcrumb-navigation.png)
+![Links displayed inline with separators](breadcrumb-navigation.png)
 
 ## Exigências
 
@@ -17,7 +17,7 @@ Os itens tipicamente são exibidos em linha com um separador para indicar uma hi
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **Note:** [Baixe esse exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> **Nota:** [Baixe esse exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
 
 ## Faça escolhas
 

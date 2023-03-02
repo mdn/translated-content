@@ -22,9 +22,9 @@ Chaîne d'écrivant l'état d'inactivité du périphérique.
 
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont : `"active"`, `"idle"`, `"locked"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle.IdleState")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

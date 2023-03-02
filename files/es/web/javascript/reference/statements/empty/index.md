@@ -1,11 +1,6 @@
 ---
 title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
-tags:
-  - JavaScript
-  - Sentencia
-  - Vacía
-translation_of: Web/JavaScript/Reference/Statements/Empty
 original_slug: Web/JavaScript/Referencia/Sentencias/Empty
 ---
 
@@ -56,9 +51,9 @@ console.log(b); // 0
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.empty")}}
+{{Compat}}
 
 ## Vea también
 

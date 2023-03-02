@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial
 original_slug: Web/Guide/HTML/Canvas_tutorial
 ---
 
-{{CanvasSidebar}} [![](https://mdn.mozillademos.org/files/257/Canvas_tut_examples.jpg)](/pt-BR/docs/Web/HTML/Canvas)
+{{DefaultAPISidebar("Canvas API")}} [![](canvas_tut_examples.jpg)](/pt-BR/docs/Web/HTML/Canvas)
 
 [**`<canvas>`**](/pt-BR/docs/HTML/Canvas) é um elemento [HTML](/pt-BR/docs/HTML) que pode ser usado para desenhar usando linguagem de "script" (normalmente [JavaScript](/pt-BR/docs/JavaScript)). Isto pode ser usado, por exemplo, para desenhar gráficos, fazer composições de fotos ou simples (e [não tão simples](/pt-BR/docs/HTML/Canvas/A_Basic_RayCaster)) animações. As imagens à direita mostram exemplos de implementações **[`<canvas>`](/pt-BR/docs/HTML/Canvas)** que serão parte deste tutorial.
 

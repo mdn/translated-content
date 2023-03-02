@@ -12,7 +12,7 @@ original_slug: SVG/Tutorial/Basic_Shapes
 
 你需要在文档里创建一个元素，来新增相应的形状。不同的元素用来定义不同的形状，并采用不同的属性定义尺寸和位置。其中一些是可以被其他形状命令替代的，所以显得有点多余，但是它们的存在是有意义的，它们可以让你用起来更方便，并且保证你的 SVG 文档尽可能简洁易懂。所有的基本形状都在右边的图例里展示出来了，生成它们的代码如下：
 
-![](/@api/deki/files/359/=Shapes.png)
+![](shapes.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>

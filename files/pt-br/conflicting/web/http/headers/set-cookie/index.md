@@ -1,17 +1,10 @@
 ---
 title: Set-Cookie2
 slug: conflicting/Web/HTTP/Headers/Set-Cookie
-tags:
-  - Cookies
-  - HTTP
-  - Obsoleto
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Set-Cookie2
 original_slug: Web/HTTP/Headers/Set-Cookie2
 ---
 
-{{HTTPSidebar}} {{obsolete_header}}
+{{HTTPSidebar}}
 
 O obsoleto cabeçalho de resposta HTTP **`Set-Cookie2`** usado para enviar _cookies_ do servidor para o agente de usuário, mas ele foi depreciado por especificação. Use {{HTTPHeader("Set-Cookie")}} ao invés disso.
 

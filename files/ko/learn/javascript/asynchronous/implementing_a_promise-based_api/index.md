@@ -213,11 +213,3 @@ button.addEventListener('click', async () => {
 - [Using promises](/ko/docs/Web/JavaScript/Guide/Using_promises)
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## 이번 과정
-
-- [Introducing asynchronous JavaScript](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-- **Implementing a promise-based API**
-- [Introducing workers](/ko/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/ko/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

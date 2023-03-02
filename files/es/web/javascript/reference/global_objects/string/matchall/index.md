@@ -1,14 +1,6 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-tags:
-  - Cadena
-  - Expresiones Regulares
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/matchAll
 ---
 
@@ -116,9 +108,9 @@ array[1];
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.matchAll")}}
+{{Compat}}
 
 ## Ver también
 

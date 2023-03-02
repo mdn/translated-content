@@ -256,15 +256,15 @@ p {
 
 아래 이미지는 단일 속성과 값을 강조 표시합니다. 속성 이름은 `color` 이고 값은 `blue` 입니다.
 
-![A declaration highlighted in the CSS](https://mdn.mozillademos.org/files/16498/declaration.png)
+![A declaration highlighted in the CSS](declaration.png)
 
 값 과 쌍을 이루는 속성을 _CSS **선언 (declaration)**_ 이라고 합니다. CSS 선언은 _CSS **선언 블록**_ 안에 있습니다. 다음 이미지는 선언 블록이 강조 표시된 CSS 를 보여줍니다.
 
-![A highlighted declaration block](https://mdn.mozillademos.org/files/16499/declaration-block.png)
+![A highlighted declaration block](declaration-block.png)
 
-마지막으로, CSS 선언 블록은 _선택자_ 와 쌍을 이루어 _CSS Rulesets_ (또는 _CSS **규칙** _) 를 생성합니다. 이미지에는 `h1` 선택자 및 `p` 선택자의 두 가지 규칙이 있습니다. `h1` 의 규칙이 강조 표시됩니다.
+마지막으로, CSS 선언 블록은 _선택자_ 와 쌍을 이루어 _CSS Rulesets_ (또는 **CSS 규칙**) 를 생성합니다. 이미지에는 `h1` 선택자 및 `p` 선택자의 두 가지 규칙이 있습니다. `h1` 의 규칙이 강조 표시됩니다.
 
-![The rule for h1 highlighted](https://mdn.mozillademos.org/files/16500/rules.png)
+![The rule for h1 highlighted](rules.png)
 
 CSS 속성을 특정 값으로 설정하는 것은 CSS 언어의 핵심 기능입니다. CSS 엔진은 페이지의 모든 단일 요소에 적용할 선언을 계산하여 적절하게 배치하고 스타일을 지정합니다. 기억해야 할 것은 CSS 에서 속성과 값이 모두 대소문자를 구분한다는 것입니다. 각 쌍의 속성 과 값은 콜론 (`:`) 으로 구분됩니다.
 
@@ -540,11 +540,3 @@ padding- left: 10px;
 브라우저가 HTML 과 CSS 를 가져와서 웹 페이지로 전환하는 방법에 대해 약간 이해하는 것이 유용합니다. 따라서 다음 기사 — [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works) — 에서 해당 작업을 살펴 보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## 이번 강의에서는
-
-1. [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [새로운 지식 사용](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

@@ -38,10 +38,10 @@ new Error([message[, fileName[, lineNumber]]])
 
 Когда `Error` используется как функции-- без {{jsxref("Operators/new", "new")}}, она возвращает `Error` объект. Следовательно простой вызов `Error` произведёт тот же результат, что и конструктор `Error` объявленный через `new`.
 
-```
+```js
 // this:
 const x = Error('I was created using a function call!');
-​​​​// Такая же функциональность:
+// Такая же функциональность:
 const y = new Error('I was constructed via the "new" keyword!');
 ```
 

@@ -11,7 +11,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 Для центрирования элемента по перекрёстной оси (в данном случае - вертикальной) используется свойство `align-items`. Для центрирования элемента по главной оси (в данном случае - горизонтально), используется свойство `justify-content`.
 
-![A containing element with another box centered inside it.](https://mdn.mozillademos.org/files/15627/align1.png)
+![A containing element with another box centered inside it.](align1.png)
 
 На примере ниже можно изменить размер контейнера или вложенного элемента, но элемент всегда останется по центру.
 
@@ -28,7 +28,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 Также будет рассмотрены авто-отступы для выравнивания элементов во flexbox.
 
-> **Примечание:** **Замечание**: Свойства выравнивания во Flexbox помещены в отдельную спецификацию — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Ожидается, что данная спецификация в конце концов заменит свойства, определённые во Flexbox Level One.
+> **Примечание:** Свойства выравнивания во Flexbox помещены в отдельную спецификацию — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Ожидается, что данная спецификация в конце концов заменит свойства, определённые во Flexbox Level One.
 
 ## Перекрёстная ось
 
@@ -36,9 +36,9 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 Рассмотрим выравнивание по перекрёстной оси на простейшем примере. Если установить `display: flex` у контейнера, все дочерние элементы становятся flex элементами, выстроенными в ряд. Все они по вертикали примут размер самого высокого элемента, который станет определяющим вертикального размера. Если у flex контейнера задана высота, то все элементы растянутся до высоты контейнера, независимо от размера содержимого.
 
-![Three items, one with additional text causing it to be taller than the others.](https://mdn.mozillademos.org/files/15628/align2.png)
+![Three items, one with additional text causing it to be taller than the others.](align2.png)
 
-![Three items stretched to 200 pixels tall](https://mdn.mozillademos.org/files/15629/align3.png)
+![Three items stretched to 200 pixels tall](align3.png)
 
 Все элементы становятся одной высоты, т.к. по умолчанию свойство `align-items` имеет значение `stretch`.
 
@@ -66,11 +66,11 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 До сего момента мы изучали поведение при `flex-direction` установленном в `row`, в языке, использующем написание сверху вниз. Это означает, что основная ось идёт горизонтально, а выравнивание по перекрёстной оси сдвигает элементы вверх или вниз.
 
-![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis.](https://mdn.mozillademos.org/files/15630/align4.png)
+![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis.](align4.png)
 
 Если изменить `flex-direction` на column, `align-items` и `align-self` будут сдвигать элементы влево или вправо.
 
-![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis.](https://mdn.mozillademos.org/files/15631/align5.png)
+![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis.](align5.png)
 
 Можно попробовать пример ниже, где установлено `flex-direction: column`.
 
@@ -102,7 +102,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-> **Примечание:** **Замечание**: значение `space-evenly` не определено в спецификации flexbox и добавлено позже в спецификацию Box Alignment. Поддержка браузерами этого значение не так широка, как значений определённым в спецификации flexbox.
+> **Примечание:** значение `space-evenly` не определено в спецификации flexbox и добавлено позже в спецификацию Box Alignment. Поддержка браузерами этого значение не так широка, как значений определённым в спецификации flexbox.
 
 В [документации по `justify-content` на MDN](/ru/docs/Web/CSS/justify-content) приведено больше деталей о всех значениях и поддержке браузерами.
 
@@ -112,7 +112,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 В нашем первом примере с использованием свойства `display: flex`, применённым к контейнеру, элементы отображаются как строка и выстраиваются в начале блока. Это обусловлено тем, что свойство `justify-content` имеет начальное значение `flex-start`. Все свободное место располагается в конце контейнера.
 
-![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](https://mdn.mozillademos.org/files/15632/align6.png)
+![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](align6.png)
 
 Свойство `justify-content` может принимать те же самые значения, что и `align-content`.
 
@@ -136,11 +136,11 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 Необходимо помнить, что при использовании свойств `flex-start` и `flex-end` элементы позиционируются в режиме записи. Если свойству `justify-content` задано значение `start` и стоит режим записи left-to-right (слева-направо), как в английском, то элементы выравниваются, начиная с левой стороны контейнера.
 
-![Three items lined up on the left](https://mdn.mozillademos.org/files/15638/Basics5.png)
+![Three items lined up on the left](basics5.png)
 
 Однако, если задан режим записи right-to-left (справа-налево), как в арабском языке, то элементы будут выстраиваться с правой стороны контейнера.
 
-![Three items lined up from the right](https://mdn.mozillademos.org/files/15639/Basics6.png)
+![Three items lined up from the right](basics6.png)
 
 В примере ниже свойству `property` задано значение `rtl`, которое изменяет порядок наших элементов. Вы можете удалить это свойство или изменить значение свойства `justify-content`, чтобы увидеть, как работает flexbox, когда отображение элементов начинается справа.
 
@@ -156,17 +156,17 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 Может показаться немного запутанным, но главное правило, которое необходимо запомнить – до тех пор, пока вы не измените свойство `flex-direction`, элементы контейнера выстраиваются в режиме записи вашего языка (`ltr` или `rtl`).
 
-![Diagram showing start on the left and end on the right.](https://mdn.mozillademos.org/files/15634/align8.png)
+![Diagram showing start on the left and end on the right.](align8.png)
 
 Вы можете сделать отображение элементов контейнера блочным, задав свойству `flex-direction` значение `column`. Свойство `flex-start` будет отображать элементы в столбец сверху вниз. Таким образом, первый элемент будет первым параграфом.
 
-![Diagram showing start at the top and end at the bottom.](https://mdn.mozillademos.org/files/15636/align10.png)
+![Diagram showing start at the top and end at the bottom.](align10.png)
 
 Если вы зададите свойству `flex-direction` реверсивное значение, то элементы будут позиционироваться в обратном порядке. Так, свойство `flex-start` будет брать начало в конце контейнера. Первый элемент будет находится в конце строки, если задано строчное отображение элементов или в конце параграфа, если задано блочное отображение.
 
-![Diagram showing start on the right and end on the left.](https://mdn.mozillademos.org/files/15635/align9.png)
+![Diagram showing start on the right and end on the left.](align9.png)
 
-![Diagram showing end at the top and start at the bottom](https://mdn.mozillademos.org/files/15637/align11.png)
+![Diagram showing end at the top and start at the bottom](align11.png)
 
 ## Использование авто отступов для выравнивания по главной оси
 
@@ -176,7 +176,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 На первый взгляд может показаться, что этот пример использования свойства `justify-self`. Однако, рассмотрим следующий ниже пример. Имеется три элемента с одной стороны и два — с другой. Если бы мы могли использовать `justify-self` на элементе _d_, это также изменило бы выравнивание следующего элемента — _e_, что может противоречить первоначальному замыслу.
 
-![Five items, in two groups. Three on the left and two on the right.](https://mdn.mozillademos.org/files/15633/align7.png)
+![Five items, in two groups. Three on the left and two on the right.](align7.png)
 
 Вместо этого мы можем выбрать четвёртый элемент (_d_) и отделить его от первых трёх, задав ему значение `auto` для `margin-left`. Авто-margin заполнит всё доступное свободное место по своей оси. Тем же образом работает `margin-right`. Оба свойства со значениями `auto` отцентрируют блок, так как каждый из отступов будет пытаться занять максимум пространства.
 

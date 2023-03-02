@@ -23,7 +23,7 @@ animate(keyframes, options)
     cuyas propiedades son arreglos de valores a iterar. Ver [Keyframe Formats](/es/docs/Web/API/Web_Animations_API/Keyframe_Formats)
     para más detalles.
 - `options`
-  
+
   - : Puede ser un **entero representando la duración de la animación** (en milisegundos), **o** un
     objeto que contiene una o más propiedades acerca del tiempo descritas en los
     [los parametros de opciones del `KeyframeEffect()`](/es/docs/Web/API/KeyframeEffect) y/o las

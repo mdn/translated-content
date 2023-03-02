@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 Comúnmente denominado botón de acción de página, esta opción de interfaz de usuario es un botón agregado a la barra de direcciones del navegador. Los usuarios pueden hacer clic en el botón para interactuar con sus extensiones.
 
-![](https://mdn.mozillademos.org/files/15745/address_bar_button.png)
+![](address_bar_button.png)
 
 ## Acciones de página y acciones de navegador
 

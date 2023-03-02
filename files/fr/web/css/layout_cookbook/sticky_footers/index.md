@@ -46,21 +46,7 @@ On commence de la même façon mais on utilise `display:flex` plutôt que `displ
 
 ## Compatibilité des navigateurs
 
-#### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
-
-#### flex-direction
-
-{{Compat("css.properties.flex-direction")}}
-
-#### flex-grow
-
-{{Compat("css.properties.flex-grow")}}
-
-#### flex-shrink
-
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Voir aussi
 

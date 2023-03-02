@@ -81,7 +81,7 @@ function startCapture(displayMediaOptions) {
 
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} は、ユーザーの画面（またはその一部）の動画をキャプチャするために最も一般的に使用されています。しかし、{{Glossary("user agent", "ユーザーエージェント")}}は、動画コンテンツと一緒に音声のキャプチャを許可する場合があります。この音声のソースは、選択されたウィンドウ、コンピューター全体のオーディオシステム、またはユーザーのマイク（または上記のすべての組み合わせ）であるかもしれません。
 
-音声の共有が必要なプロジェクトを始める前に、 {{SectionOnPage("/ja/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} を確認し、互換性を希望するブラウザーがキャプチャした画面ストリームに音声のサポートがあるかどうかを確認してください。
+音声の共有が必要なプロジェクトを始める前に、 [ブラウザーの互換性](/ja/docs/Web/API/MediaDevices/getDisplayMedia#%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%83%BC%E3%81%AE%E4%BA%92%E6%8F%9B%E6%80%A7) を確認し、互換性を希望するブラウザーがキャプチャした画面ストリームに音声のサポートがあるかどうかを確認してください。
 
 音声を含む画面の共有を要求するには、 `getDisplayMedia()` に渡すオプションは次のようになります。
 

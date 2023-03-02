@@ -1,12 +1,6 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript6
-  - Generator
-  - Iterator
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 {{jsSidebar("Statements")}}
 
@@ -109,11 +103,11 @@ gen.next('mayonnaise'); // mayonnaise
     var obj = new f; // throws "TypeError: f is not a constructor"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

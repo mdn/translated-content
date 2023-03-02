@@ -1,15 +1,6 @@
 ---
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
-tags:
-  - API
-  - AbortController
-  - Fetch
-  - abort()
-  - 레퍼런스
-  - 메소드
-  - 실험적
-translation_of: Web/API/AbortController/abort
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
@@ -62,7 +53,7 @@ function fetchVideo() {
 }
 ```
 
-> **참고:** **노트**: `abort()`가 호출되면, `fetch()` promise는 <code dir="ltr">AbortError</code>과 함께 reject된다.
+> **참고:** `abort()`가 호출되면, `fetch()` promise는 <code dir="ltr">AbortError</code>과 함께 reject된다.
 
 동작하는 완전한 예제는 GitHub에서 확인 할 수 있다 — [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) 참고([라이브 실행도 확인할 수 있다](https://mdn.github.io/dom-examples/abort-api/)).
 

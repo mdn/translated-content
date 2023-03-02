@@ -13,7 +13,7 @@ El método **`CanvasRenderingContext2D.rotate()`** de la API Canvas 2D añade un
 void ctx.rotate(angulo);
 ```
 
-![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)
+![](canvas_grid_rotate.png)
 
 ### Parámetros
 
@@ -110,9 +110,9 @@ El rectángulo no rotado es gris, y el rectángulo rotado es rojo.
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.rotate")}}
+{{Compat}}
 
 ## Véase también
 

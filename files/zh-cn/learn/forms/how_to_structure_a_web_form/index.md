@@ -1,7 +1,6 @@
 ---
 title: 如何构造 HTML 表单
 slug: Learn/Forms/How_to_structure_a_web_form
-original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Your_first_HTML_form", "Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms")}}
@@ -202,7 +201,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 5. 接下来，我们将在表单中添加一个更大的代码段，在我们之前的代码下面。在这里，您将看到，我们正在将联系人信息字段包装在一个单独的{{htmlelement("section")}}元素中。此外，我们有一组两个单选按钮，每个单选按钮都放在自己的列表中 ({{htmlelement("li")}})) 元素。最后，我们有两个标准文本{{htmlelement("input")}}和它们相关的{{htmlelement("label")}}元素，每个元素包含在{{htmlelement("p")}}中，加上输入密码的密码输入。现在将这些代码添加到您的表单中：
 
-    ```plain
+    ```html
     <section>
         <h2>Contact information</h2>
         <fieldset>
@@ -293,13 +292,13 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 您可以在下面看到已完成的表单 (你可以在 Github 上看到[源码](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html)和[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)）：
 
-{{EmbedLiveSample("a_payment_form","100%",620, "", "Learn/Forms/How_to_structure_a_web_form/Example")}}
+{{EmbedLiveSample("自主学习：构建一个表单结构","100%",620)}}
 
 ## 总结
 
 现在，您已经具备了正确地构造 HTML 表单所需的所有知识;下一篇文章将深入介绍各种不同类型的表单小部件，您将希望从用户那里收集信息。
 
-## 另见
+## 参见
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
 

@@ -1,13 +1,6 @@
 ---
 title: Proximity Events
 slug: Web/API/Proximity_Events
-tags:
-  - API
-  - Experimental
-  - Proximity Events
-  - Reference
-  - Deprecated
-translation_of: Web/API/Proximity_Events
 original_slug: WebAPI/Proximity
 ---
 
@@ -26,6 +19,6 @@ original_slug: WebAPI/Proximity
 
 > **참고:** 당연히 이 API는 근접 센서를 가진 장치를 필요로 하며, 이 근접 센서는 대게 모바일 다비이스들에서만 이용 가능하다. 근접 센서가 없는 장치들에서는 근접 이벤트들을 지원할 수는 있을 지 몰라도 해당 이벤트들은 절대 발생하지 않을 것이다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}

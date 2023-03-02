@@ -63,7 +63,7 @@ background-size: unset;
   margin: 8px;
   padding: 5px;
   background-color: white;
-  background-image: url("https://mdn.mozillademos.org/files/15195/eagle.jpg");
+  background-image: url("eagle.jpg");
   background-repeat: no-repeat;
   color: white;
   font-family: monospace;
@@ -138,11 +138,11 @@ background-size: 50% 25%, contain, 3em;
 
 A interpretação dos possíveis valores depende das dimensões intrínsecas da imagem (largura e altura) e da proporção intrínseca (proporção da largura e altura). Um imagem bitmap sempre tem dimensões intrínsecas e uma proporção intrínseca. Uma imagem pode conter ambas as dimensões intrínsecas (e portanto deve ter uma proporção intrínseca). Poderá contar também uma ou nenhuma dimensão intrínseca, e portanto pode ou não pode conter uma proporção intrínseca. Gradients são tratados como imagens sem dimensões ou proporções intrínsecas.
 
-> **Note:** **Nota:** Esse comportamento mudou no Gecko 8.0 {{geckoRelease("8.0")}}. Antes disso, gradients eram tratados como imagens sem dimensões intrínsecas, porém com uma proporção intrínseca idêntica a da área do elemento pai.
+> **Nota:** Esse comportamento mudou no Gecko 8.0. Antes disso, gradients eram tratados como imagens sem dimensões intrínsecas, porém com uma proporção intrínseca idêntica a da área do elemento pai.
 
 Imagens geradas por elementos usando {{cssxref("-moz-element")}} (que na realidade casa com um elemento) são atualmente tratadas como imagens com as dimensões do elemento, ou da área de posicionamento de fundo se o elemento é SVG, com a proporção intrínseca correspondente.
 
-> **Note:** **Nota:** Este não é o comportamento atualmente especificado, que é que as dimensões intrínsecas e a proporção devem ser as do elemento em todos os casos.
+> **Nota:** Este não é o comportamento atualmente especificado, que é que as dimensões intrínsecas e a proporção devem ser as do elemento em todos os casos.
 
 O tamanho renderizado da imagem de fundo é então computado da seguinte forma:
 
@@ -154,7 +154,7 @@ O tamanho renderizado da imagem de fundo é então computado da seguinte forma:
 
   - : Se a imagem tiver duas dimensões intrínsecas, ela é renderizada nesse tamanho. Se não tiver dimensões intrínsecas e nenhuma proporção intrínseca, ela é renderizada ao tamanho da área do elemento pai. Se não tiver dimensões, mas tiver uma proporção, é processado como se `contain` tivesse sido especificado. Se a imagem tiver uma dimensão intrínseca e uma proporção, ela é renderizada no tamanho determinado por essa dimensão e a proporção. Se a imagem tiver uma dimensão intrínseca mas nenhuma proporção, ela é processada usando a dimensão intrínseca e a dimensão correspondente da área do elemento pai.
 
-    > **Note:** **Nota:** imagens SVG tem um atributo [preserveAspectRatio](/pt-BR/docs/Web/SVG/Attribute/preserveAspectRatio) que é equivalente ao 'contain'. No Firefox 43, ao contrário do Chrome 52, um background-size especificado explicitamente faz com que [preserveAspectRatio](/pt-BR/docs/Web/SVG/Attribute/preserveAspectRatio) seja ignorado.
+    > **Nota:** imagens SVG tem um atributo [preserveAspectRatio](/pt-BR/docs/Web/SVG/Attribute/preserveAspectRatio) que é equivalente ao 'contain'. No Firefox 43, ao contrário do Chrome 52, um background-size especificado explicitamente faz com que [preserveAspectRatio](/pt-BR/docs/Web/SVG/Attribute/preserveAspectRatio) seja ignorado.
 
 - Se o background-size tem um componente `auto` e um componente não `auto`:
   - : Se a imagem tiver uma proporção intrínseca, então use a dimensão especificada. Se a imagem não tiver uma proporção intrínseca, use a dimensão especificada para essa dimensão. Para a outra dimensão, use a dimensão intrínseca correspondente da imagem se houver uma. Se não existe essa dimensão intrínseca, use a dimensão correspondente da área do elemento pai.

@@ -331,7 +331,7 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 
 如您所见，发送表单数据很容易，但要确保应用程序的安全性是很棘手的。请记住，前端开发人员不是应该定义数据安全模型的人。是的，我们将看到，[执行客户端数据验证](/zh-CN/docs/HTML/Forms/Data_form_validation)是可能的，但是服务器不能信任这种验证，因为它无法真正知道客户端到底发生了什么。
 
-## 相关链接
+## 参见
 
 如果您想了解更多关于保护 web 应用程序的信息，您可以深入了解这些资源：
 
@@ -340,17 +340,3 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 - [Chris Shiflett's blog about PHP Security](http://shiflett.org/)
 
 {{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
-
-## 在本单元中
-
-- [Your first HTML form](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/zh-CN/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/zh-CN/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

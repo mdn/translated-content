@@ -1,17 +1,8 @@
 ---
 title: '<var>: 변수 요소'
 slug: Web/HTML/Element/var
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/var
 ---
+
 {{HTMLSidebar}}
 
 **HTM `<var>` 요소**는 수학 표현 또는 프로그래밍에서 변수의 이름을 나타냅니다. 보통 현재 글씨체의 기울임꼴로 표시하지만, 브라우저마다 다를 수 있습니다.
@@ -103,4 +94,4 @@ A simple equation:
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.var")}}
+{{Compat}}

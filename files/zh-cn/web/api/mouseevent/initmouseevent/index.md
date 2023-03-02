@@ -108,9 +108,7 @@ simulateClick();//Why it can not show "input" ?
 
 这里有个在线演示
 
-{{EmbedLiveSample('Example', 200, 36)}}
-
-{{ LiveSampleLink('Example', 'Link to live demo') }}
+{{EmbedLiveSample('示例', 200, 36)}}
 
 ## 规范
 

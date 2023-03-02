@@ -1,12 +1,6 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - 헤더
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 
 {{HTTPSidebar}}
@@ -96,7 +90,7 @@ Access-Control-Max-Age: 86400
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Allow-Headers")}}
+{{Compat}}
 
 ## 함께 보기
 

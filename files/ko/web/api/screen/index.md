@@ -1,13 +1,6 @@
 ---
 title: Screen
 slug: Web/API/Screen
-tags:
-  - API
-  - CSSOM View
-  - Interface
-  - Reference
-browser-compat: api.Screen
-translation_of: Web/API/Screen
 ---
 
 {{APIRef("CSSOM")}}
@@ -67,10 +60,10 @@ if (screen.pixelDepth < 8) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

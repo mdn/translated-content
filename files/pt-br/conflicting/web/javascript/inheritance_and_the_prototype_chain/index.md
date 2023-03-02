@@ -1,12 +1,6 @@
 ---
 title: Detalhes do modelo de objeto
 slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - Entidade
-  - Modelo
-  - Objeto
-  - Orientação á Objeto
-translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 
@@ -58,7 +52,7 @@ O restante deste capítulo usa a hierarquia employee como mostrado na figura aba
 
 Uma simples hierarquia de objetos:
 
-![](https://mdn.mozillademos.org/files/3060/figure8.1.png)
+![](figure8.1.png)
 
 - `Employee` tem a propriedade `name` (cujo valor padrão é uma string vazia) e `dept` (cujo valor padrão e o "general").
 - `Manager` é baseado no `Employee`. É adicionada a propriedade `reports` (cujo valor padrão é um array vazio, planejado para ter um array do objeto `Employee como valor`).
@@ -173,7 +167,7 @@ Usando estas definições, você pode criar instâncias desses objetos que obter
 
 A hierarquia abaixo foi criada utilizando o código ao lado.
 
-![](https://mdn.mozillademos.org/files/10412/=figure8.3.png)
+![](=figure8.3.png)
 
 #### Objetos individuais = Jim, Sally, Mark, Fred, Jane, etc. "Instancias" criadas a partir do construtor.
 

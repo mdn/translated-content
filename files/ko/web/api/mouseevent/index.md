@@ -1,12 +1,11 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
-translation_of: Web/API/MouseEvent
 ---
 
 {{APIRef("DOM Events")}}
 
-**`MouseEvent`** 인터페이스는 특정 지점을 가리키는 장치를 통해 발생하는 이벤트를 의미한다 (마우스 등). 주로 사용되는 이벤트로는 {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}가 있다.
+**`MouseEvent`** 인터페이스는 특정 지점을 가리키는 장치를 통해 발생하는 이벤트를 의미한다 (마우스 등). 주로 사용되는 이벤트로는 [`click`](/ko/docs/Web/API/Element/click_event), {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}가 있다.
 
 `MouseEvent` 는 {{domxref("UIEvent")}}에서, {{domxref("UIEvent")}}는 {{domxref("Event")}}에서 파생되었다. `MouseEvent` 객체(object)를 생성하고자 할 때에는 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} 생성자(constructor)를 사용해야 한다. {{domxref("MouseEvent.initMouseEvent()")}} 메서드는 하위호환성을 위해 유지된다.
 
@@ -125,11 +124,11 @@ document.getElementById("button").addEventListener('click', simulateClick);
 
 {{EmbedLiveSample('Example')}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

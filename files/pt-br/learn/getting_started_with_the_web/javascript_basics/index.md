@@ -26,7 +26,7 @@ Está fora do escopo deste artigo — como uma introdução leve ao JavaScript �
 
 A seção abaixo apresenta alguns aspectos da linguagem principal e também oferece uma oportunidade de jogar com alguns recursos da API do navegador. Divirta-se!
 
-## Um "Olá, mundo!" exemplo
+## Um exemplo "Olá, mundo!"
 
 JavaScript é uma das tecnologias da web modernas mais populares! À medida que suas habilidades em JavaScript aumentam, seus sites entrarão em uma nova dimensão de poder e criatividade.
 
@@ -53,7 +53,7 @@ No entanto, familiarizar-se com JavaScript é mais desafiador do que familiariza
 
 ![Título "hello world" acima de um logotipo do firefox](hello-world.png)
 
-> **Nota:** A razão pela qual as instruções (acima) colocam o elemento {{htmlelement("script")}} perto da parte inferior do arquivo HTML é que **o navegador lê o código na ordem em que aparece no arquivo **.
+> **Nota:** A razão pela qual as instruções (acima) colocam o elemento {{htmlelement("script")}} perto da parte inferior do arquivo HTML é que o navegador lê o código na ordem em que aparece no arquivo.
 >
 > Se o JavaScript carregar primeiro e supostamente afetar o HTML que ainda não foi carregado, pode haver problemas. Colocar JavaScript perto da parte inferior de uma página HTML é uma maneira de acomodar essa dependência. Para saber mais sobre abordagens alternativas, consulte [Estratégias de carregamento de script](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies).
 
@@ -110,7 +110,7 @@ let myVariable = "Bob";
 myVariable = "Steve";
 ```
 
-Observe que as variáveis ​​podem conter valores que têm diferentes [tipos de dados](/pt-BR/docs/Web/JavaScript/Data_structures):
+Observe que as variáveis podem conter valores que têm diferentes [tipos de dados](/pt-BR/docs/Web/JavaScript/Data_structures):
 
 <table class="standard-table">
   <thead>
@@ -266,7 +266,7 @@ Um `{{Glossary("operator")}}` é um símbolo matemático que produz um resultado
 
 Existem muito mais operadores para explorar, mas isso é o suficiente por enquanto. Consulte [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators) para obter uma lista completa.
 
-> **Nota:** misturar tipos de dados pode levar a alguns resultados estranhos ao realizar cálculos. Tenha cuidado para se referir às suas variáveis ​​corretamente e obter os resultados esperados. Por exemplo, digite `'35' + '25'` em seu console. Por que você não consegue o resultado que esperava? Como as aspas transformam os números em strings, você acabou concatenando strings em vez de adicionar números. Se você inserir `35 + 25`, obterá o total dos dois números.
+> **Nota:** misturar tipos de dados pode levar a alguns resultados estranhos ao realizar cálculos. Tenha cuidado para se referir às suas variáveis corretamente e obter os resultados esperados. Por exemplo, digite `'35' + '25'` em seu console. Por que você não consegue o resultado que esperava? Como as aspas transformam os números em strings, você acabou concatenando strings em vez de adicionar números. Se você inserir `35 + 25`, obterá o total dos dois números.
 
 ### Condicionais
 

@@ -10,7 +10,7 @@ slug: Web/API/Headers/delete
 下列原因将会导致该方法抛出一个{{jsxref("TypeError")}}:
 
 - header 名在 HTTP header 中是不存在的。
-- header 被锁定了.​
+- header 被锁定了.
 
 > **备注：** 出于安全原因，部分头信息只能被用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 

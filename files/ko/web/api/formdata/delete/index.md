@@ -1,9 +1,6 @@
 ---
 title: FormData.delete()
 slug: Web/API/FormData/delete
-page-type: web-api-instance-method
-browser-compat: api.FormData.delete
-translation_of: Web/API/FormData/delete
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -41,11 +38,11 @@ var formData = new FormData(myForm);
 formData.delete('username');
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

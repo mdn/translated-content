@@ -1,14 +1,6 @@
 ---
 title: AbortSignal
 slug: Web/API/AbortSignal
-tags:
-  - API
-  - AbortSignal
-  - DOM
-  - 레퍼런스
-  - 실험적
-  - 인터페이스
-translation_of: Web/API/AbortSignal
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
@@ -65,7 +57,7 @@ function fetchVideo() {
 }
 ```
 
-> **참고:** **노트**: `abort()`가 호출되면, `fetch()` promise는 <code dir="ltr">AbortError</code>과 함께 reject됩니다.
+> **참고:** `abort()`가 호출되면, `fetch()` promise는 <code dir="ltr">AbortError</code>과 함께 reject됩니다.
 
 > **경고:** 현재 버전의 Firefox는 `DOMException`으로 promise를 reject합니다.
 

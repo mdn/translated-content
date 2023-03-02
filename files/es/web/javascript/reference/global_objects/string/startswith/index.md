@@ -1,17 +1,6 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Reference
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/startsWith
 ---
 
@@ -76,9 +65,9 @@ console.log(str.startsWith('Esa es la', 16)); // true
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.startsWith")}}
+{{Compat}}
 
 ## Ver también
 

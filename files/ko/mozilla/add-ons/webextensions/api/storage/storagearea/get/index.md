@@ -32,7 +32,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.storage.StorageArea.get")}}
+{{Compat}}
 
 ## 예제
 

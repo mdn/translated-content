@@ -172,13 +172,3 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — 一个常见的 JavaScript 模式是把一个函数传递给另一个函数作为参数，然后在第一个函数中调用它。这有点超出了这门课的范围，但值得学习很久。
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## 在本单元中
-
-- [Making decisions in your code — conditionals](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)

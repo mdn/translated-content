@@ -1,13 +1,6 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Protocols
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/has
 ---
 
@@ -51,7 +44,7 @@ wm.has('baz');  // Devuelve false
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WeakMap.has")}}
+{{Compat}}
 
 ## Vea también
 

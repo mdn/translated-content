@@ -154,7 +154,7 @@ ol {
 
 This gives us the following look:
 
-![an ordered list with the bullet points set to appear outside the list item text.](https://mdn.mozillademos.org/files/12962/outer-bullets.png)
+![an ordered list with the bullet points set to appear outside the list item text.](outer-bullets.png)
 
 You can find a lot more options by checking out the {{cssxref("list-style-type")}} reference page.
 
@@ -171,7 +171,7 @@ ol {
 }
 ```
 
-![an ordered list with the bullet points set to appear inside the list item text.](https://mdn.mozillademos.org/files/12958/inner-bullets.png)
+![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
 
 ### Using a custom bullet image
 
@@ -215,7 +215,7 @@ Here we've done the following:
 
 This gives us the following result:
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/16226/list_formatting.png)
+![an unordered list with the bullet points set as little star images](list_formatting.png)
 
 ### list-style shorthand
 
@@ -386,11 +386,3 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article we'll get on to link styling techniques.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## In this module
-
-- [Fundamental text and font styling](/ko/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/ko/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/ko/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/ko/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)

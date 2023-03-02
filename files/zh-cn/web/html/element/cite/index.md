@@ -92,7 +92,7 @@ More information can be found in <cite>[ISO-0000]</cite>.
 
 该段代码的输出如下：
 
-{{EmbedLiveSample("Example", 640, 60)}}
+{{EmbedLiveSample("示例", 640, 60)}}
 
 ## 规范
 
@@ -102,7 +102,7 @@ More information can be found in <cite>[ISO-0000]</cite>.
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 适用于长引用的 {{HTMLElement("blockquote")}} 元素。
 - 适用于行内引用的 {{HTMLElement("q")}} 元素。

@@ -32,7 +32,7 @@ Se le han proporcionado algunos HTML / CSS en bruto y algunas cadenas de texto y
 
 La siguiente captura de pantalla muestra un ejemplo de lo que debería producir el programa terminado:
 
-![](https://mdn.mozillademos.org/files/16178/Screen_Shot_2018-09-19_at_10.01.38_AM.png)
+![](screen_shot_2018-09-19_at_10.01.38_am.png)
 
 Para darle más idea, eche un vistazo al ejemplo final (¡no mire el código fuente!)
 

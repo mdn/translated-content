@@ -9,7 +9,7 @@ Add event listeners for the various stages of making an HTTP request. The event 
 
 Each event is fired at a particular stage of the request. The typical sequence of events is like this:
 
-![](https://mdn.mozillademos.org/files/13376/webRequest-flow.png)
+![](webrequest-flow.png)
 
 {{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can be fired at any time during the request. Also, note that sometimes the sequence of events may differ from this: for example, in Firefox, on an [HSTS](/ko/docs/Web/HTTP/Headers/Strict-Transport-Security) upgrade, the `onBeforeRedirect` event will be triggered immediately after `onBeforeRequest`.
 
@@ -120,9 +120,9 @@ To do this, you must have the "webRequestBlocking" API permission as well as the
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Fired when an error occurs.
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("webextensions.api.webRequest")}}
+{{Compat}}
 
 [Extra notes on Chrome incompatibilities](/ko/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities).
 
@@ -130,7 +130,8 @@ To do this, you must have the "webRequestBlocking" API permission as well as the
 
 > **참고:** **Acknowledgments**This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -157,4 +158,4 @@ To do this, you must have the "webRequestBlocking" API permission as well as the
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

@@ -12,7 +12,7 @@ slug: Web/API/PushManager/subscribe
 ## 構文
 
 ```js-nolint
-​PushManager.subscribe(options).then(function(pushSubscription) { ... } );
+PushManager.subscribe(options).then(function(pushSubscription) { ... } );
 ```
 
 ### 引数

@@ -1,13 +1,13 @@
 ---
 title: structuredClone()
-slug: web/api/structuredClone
+slug: Web/API/structuredClone
 ---
 
 {{APIRef("HTML DOM")}}
 
 全局的 **`structuredClone()`** 方法使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)将给定的值进行[深拷贝](/zh-CN/docs/Glossary/Deep_copy)。
 
-该方法还支持把原始值中的 {{Glossary("transferable objects")}} (可转移对象) 转移到新对象，而不是把属性引用拷贝过去。
+该方法还支持把原始值中的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)转移到新对象，而不是把属性引用拷贝过去。
 可转移对象与原始对象分离并附加到新对象;它们不可以在原始对象中访问被访问到。
 
 ## 语法
@@ -22,7 +22,7 @@ structuredClone(value, { transfer })
 - `value`
   - : 被克隆的对象。可以是任何[结构化克隆支持的类型](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#支持的类型)。
 - `transfer` {{optional_inline}}
-  - : 是一个 {{Glossary("transferable objects", "可转移对象")}}的数组，里面的 `值` 并没有被克隆，而是被转移到被拷贝对象上。
+  - : 是一个[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)的数组，里面的 `值` 并没有被克隆，而是被转移到被拷贝对象上。
 
 ### 返回值
 
@@ -53,8 +53,8 @@ console.assert(clone.itself === clone); // and the circular reference is preserv
 
 ### Transferring values
 
-使用可选参数 `transfer` 里的值，可以使{{Glossary("Transferable objects")}} (仅) 被传递，不被克隆。
-传输导致原始对象 (里的属性) 无法继续使用。
+使用可选参数 `transfer` 里的值，可以使[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)（仅）被传递，不被克隆。
+传输导致原始对象（里的属性）无法继续使用。
 
 > **备注：** 一个可能有用的场景是在保存 buffer 之前先异步的校验里面的数据。为了避免 buffer 在保存之前有其他修改，你可以先克隆这个 buffer 然后校验数据。为了防止意外的错误引用，在传输数据时，任何修改 buffer 的尝试都会失败。
 

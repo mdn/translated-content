@@ -19,5 +19,4 @@ original_slug: Глоссарий/Domain_name
 
 ### Общие сведения
 
-- {{interwiki("wikipedia", "Доменное имя")}} на Wikipedia
 - [Understanding domain names](/en-US/Learn/Understanding_domain_names)

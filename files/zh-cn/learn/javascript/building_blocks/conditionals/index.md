@@ -346,7 +346,7 @@ function setWeather() {
 }
 ```
 
-{{ EmbedLiveSample('A_switch_example', '100%', 100) }}
+{{ EmbedLiveSample('switch 语句示例', '100%', 100) }}
 
 > **备注：** 你可以 [在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) （也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)。）
 
@@ -395,7 +395,7 @@ select.onchange = function() {
 }
 ```
 
-{{ EmbedLiveSample('Ternary_operator_example', '100%', 300) }}
+{{ EmbedLiveSample('三元运算符示例', '100%', 300) }}
 
 在这里，我们有一个 [`<select>`](/zh-CN/docs/Web/HTML/Element/select) 选择主题（黑色或白色）的元素，加上一个简单 [`<h1>`](/zh-CN/docs/Web/HTML/Element/h1) 的显示网站标题。我们也有一个函数叫做 `update()`，它将两种颜色作为参数（输入）。网站的背景颜色设置为第一个提供的颜色，其文本颜色设置为第二个提供的颜色。
 
@@ -620,13 +620,3 @@ window.addEventListener('load', updateCode);
 - [条件（三元）运算符引用](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
-
-## 本章目录
-
-- **在代码中做决定——条件语句**
-- [代码循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [函数——可复用代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
-- [创建你自己的函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [函数返回值](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- [图片库](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)

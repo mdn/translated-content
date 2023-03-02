@@ -64,9 +64,9 @@ Pour utiliser l'API des sessions, vous devez avoir la [permission API](/fr/Add-o
 - {{WebExtAPIRef("sessions.onChanged")}}
   - : Mise en place lorsqu'un onglet ou une fenêtre est fermée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

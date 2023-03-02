@@ -1,12 +1,6 @@
 ---
 title: autocapitalize
 slug: Web/HTML/Global_attributes/autocapitalize
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - 자동 대문자화
-translation_of: Web/HTML/Global_attributes/autocapitalize
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -28,4 +22,4 @@ translation_of: Web/HTML/Global_attributes/autocapitalize
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.autocapitalize")}}
+{{Compat}}

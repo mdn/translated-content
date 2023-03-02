@@ -107,13 +107,11 @@ server.modules += ( "mod_setenv" )
 
 ## Spécifications
 
-| Spécification                                            | Description                                           |
-| -------------------------------------------------------- | ----------------------------------------------------- |
-| {{RFC("7469", "Public-Key-Pins", "2.1")}} | Extension de l'épinglage des clés publiques pour HTTP |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Public-Key-Pins")}}
+{{Compat}}
 
 ## Voir aussi
 

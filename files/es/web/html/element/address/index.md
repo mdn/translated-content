@@ -42,7 +42,7 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Atributos_
 
 Above HTML will output:
 
-![Image:HTML-address.png](/@api/deki/files/238/=HTML-address.png)
+![Image:HTML-address.png](html-address.png)
 
 Aunque el elemento de dirección representa el texto con el mismo estilo predeterminado de los elementos {{HTMLElement("i")}} o {{HTMLElement("em")}}, es más apropiado utilizarlo cuando se trata información de contacto, ya que transmite la información semántica adicional.
 
@@ -50,9 +50,9 @@ Aunque el elemento de dirección representa el texto con el mismo estilo predete
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.address")}}
+{{Compat}}
 
 ## Ver también
 

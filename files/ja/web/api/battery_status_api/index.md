@@ -1,21 +1,30 @@
 ---
-title: Battery Status API
+title: バッテリー状態 API
 slug: Web/API/Battery_Status_API
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
-{{DefaultAPISidebar("Battery API")}}{{deprecated_header}}
+{{DefaultAPISidebar("Battery API")}}
 
-**Battery Status API** は、 **Battery API** と呼ばれることの方が多いのですが、システムのバッテリー充電レベルに関する情報の提供、およびバッテリーレベルや充電状態が変化したときに発生するイベントによる通知を可能にします。これは、バッテリーが消耗したときにバッテリー消費を減らすためアプリのリソース使用状況を調整したり、データを失わないためにバッテリーが切れる前に変更点を保存したりするために使用できます。
+**バッテリー状態 API** は、 **バッテリー API** と呼ばれることの方が多いのですが、システムのバッテリー充電レベルに関する情報の提供、およびバッテリーレベルや充電状態が変化したときに発生するイベントによる通知を可能にします。これは、バッテリーが消耗したときにバッテリー消費を減らすためアプリのリソース使用状況を調整したり、データを失わないためにバッテリーが切れる前に変更点を保存したりするために使用できます。
 
-Battery Status API は {{domxref("window.navigator")}} を、 battery promise を返す {{domxref("navigator.getBattery()")}} メソッドで拡張します。 Promise は、バッテリーの状態監視を制御できる新たなイベントも提供する、{{domxref("BatteryManager")}} オブジェクトで解決します。
+> **メモ:** この API は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API) では利用できません（{{domxref("WorkerNavigator")}} には公開されていません）。
+
+## インターフェイス
+
+- {{domxref("BatteryManager")}}
+  - : システムのバッテリー充電レベルに関する情報を提供します。
+- {{domxref("navigator.getBattery()")}} {{ReadOnlyInline}}
+  - : {{JSxRef("Promise")}} を返します。これは {{DOMxRef("BatteryManager")}} オブジェクトで解決します。
 
 ## 例
 
-以下の例では、充電状況 (電源に接続して充電中であるか) の変化およびバッテリーレベルの変化およびタイミングを監視します。これは、 {{event("chargingchange")}}, {{event("levelchange")}}, {{event("chargingtimechange")}}, {{event("dischargingtimechange")}} の各イベントをそれぞれ待ち受けすることによって実現します。
+以下の例では、充電状況（電源に接続して充電中であるか）の変化およびバッテリーレベルの変化およびタイミングを監視します。これは、 {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}, {{domxref("BatteryManager.levelchange_event", "levelchange")}}, {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}, {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}} の各イベントをそれぞれ待ち受けすることによって実現します。
 
 ```js
-navigator.getBattery().then(function(battery) {
-  function updateAllBatteryInfo(){
+navigator.getBattery().then((battery) => {
+  function updateAllBatteryInfo() {
     updateChargeInfo();
     updateLevelInfo();
     updateChargingInfo();
@@ -23,42 +32,37 @@ navigator.getBattery().then(function(battery) {
   }
   updateAllBatteryInfo();
 
-  battery.addEventListener('chargingchange', function(){
+  battery.addEventListener("chargingchange", () => {
     updateChargeInfo();
   });
-  function updateChargeInfo(){
-    console.log("Battery charging? "
-                + (battery.charging ? "Yes" : "No"));
+  function updateChargeInfo() {
+    console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
   }
 
-  battery.addEventListener('levelchange', function(){
+  battery.addEventListener("levelchange", () => {
     updateLevelInfo();
   });
-  function updateLevelInfo(){
-    console.log("Battery level: "
-                + battery.level * 100 + "%");
+  function updateLevelInfo() {
+    console.log(`Battery level: ${battery.level * 100}%`);
   }
 
-  battery.addEventListener('chargingtimechange', function(){
+  battery.addEventListener("chargingtimechange", () => {
     updateChargingInfo();
   });
-  function updateChargingInfo(){
-    console.log("Battery charging time: "
-                 + battery.chargingTime + " seconds");
+  function updateChargingInfo() {
+    console.log(`Battery charging time: ${battery.chargingTime} seconds`);
   }
 
-  battery.addEventListener('dischargingtimechange', function(){
+  battery.addEventListener("dischargingtimechange", () => {
     updateDischargingInfo();
   });
-  function updateDischargingInfo(){
-    console.log("Battery discharging time: "
-                 + battery.dischargingTime + " seconds");
+  function updateDischargingInfo() {
+    console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
   }
-
 });
 ```
 
-[仕様書に記載されているサンプル](http://www.w3.org/TR/battery-status/#examples)もご覧ください。
+[仕様書に記載されているサンプル](https://www.w3.org/TR/battery-status/#examples)もご覧ください。
 
 ## 仕様書
 
@@ -66,9 +70,8 @@ navigator.getBattery().then(function(battery) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.BatteryManager")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Retrieving battery status information - demo & article](/ja/Apps/Build/gather_and_modify_data/retrieving_battery_status_information)
-- [Hacks blog post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [Hacks blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)

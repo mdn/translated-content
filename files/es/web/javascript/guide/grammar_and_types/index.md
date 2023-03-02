@@ -1,13 +1,6 @@
 ---
 title: Gramática y Tipos
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - Guia(2)
-  - Guía
-  - JavaScript
-  - Variables
-  - literales
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
@@ -446,7 +439,7 @@ Sin embargo, al escribir tu propio código, debes declarar explícitamente los e
 
 El tipo booleano tiene dos valores literales: `true` y `false`.
 
-> **Nota:** **Ten cuidado**: No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}.El objeto `Boolean` es un contenedor alrededor del tipo de dato primitivo `Boolean`. Consulta {{JSxRef("Boolean")}} para obtener más información.
+> **Nota:** No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}.El objeto `Boolean` es un contenedor alrededor del tipo de dato primitivo `Boolean`. Consulta {{JSxRef("Boolean")}} para obtener más información.
 
 ### Literales numéricos
 

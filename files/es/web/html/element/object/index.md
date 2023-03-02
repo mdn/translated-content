@@ -71,8 +71,8 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("image")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>
       </td>
     </tr>
     <tr>
@@ -86,19 +86,19 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
 
 Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("archive")}} only {{deprecated_inline("HTML5")}}
+- {{HTMLAttrDef("archive")}} only {{deprecated_inline}}
   - : Una lista separada por espacios de las URl's de archivos o recursos para el objeto.
-- {{HTMLAttrDef("border")}}{{Deprecated_Inline("HTML4.01")}}{{deprecated_inline("HTML5")}}
+- {{HTMLAttrDef("border")}} {{deprecated_inline}}
   - : El grosor de una línea de margen alrededor del control, en pixeles.
-- {{HTMLAttrDef("classid")}} only {{deprecated_inline("HTML5")}}
+- {{HTMLAttrDef("classid")}} only {{deprecated_inline}}
   - : The URI of the object's implementation. It can be used together with, or in place of, the **data** attribute.
-- {{HTMLAttrDef("codebase")}} only {{deprecated_inline("HTML5")}}
+- {{HTMLAttrDef("codebase")}} only {{deprecated_inline}}
   - : The base path used to resolve relative URIs specified by **classid**, **data**, or **archive**. If not specified, the default is the base URI of the current document.
-- {{HTMLAttrDef("codetype")}} only {{deprecated_inline("HTML5")}}
+- {{HTMLAttrDef("codetype")}} only {{deprecated_inline}}
   - : The content type of the data specified by **classid**.
 - {{HTMLAttrDef("data")}}
   - : La dirección de la fuente, escrita como una URL válida. Al menos uno de los dos atributos, **data** o **type**, deben estar definidos.
-- {{HTMLAttrDef("declare")}} only {{deprecated_inline("HTML5")}}
+- {{HTMLAttrDef("declare")}} only {{deprecated_inline}}
   - : The presence of this Boolean attribute makes this element a declaration only. The object must be instantiated by a subsequent `<object>` element. In HTML5, repeat the \<object> element completely each that that the resource is reused.
 - {{HTMLAttrDef("form")}}
   - : El elemento form, si es que hay alguno, al que el objeto está asociado (su _form propietario_). El valor de este atributo debe ser el ID de un elemento {{HTMLElement("form")}} del mismo documento.
@@ -106,9 +106,9 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
   - : La altura del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 - {{HTMLAttrDef("name")}}
   - : El nombre de un contexto de navegación válido (HTML5), o el nombre del control (HTML4).
-- {{HTMLAttrDef("standby")}} only {{deprecated_inline("HTML5")}}
+- {{HTMLAttrDef("standby")}} only {{deprecated_inline}}
   - : A message that the browser can show while loading the object's implementation and data.
-- {{HTMLAttrDef("tabindex")}} only {{deprecated_inline("HTML5")}}
+- {{HTMLAttrDef("tabindex")}} only {{deprecated_inline}}
   - : The position of the element in the tabbing navigation order for the current document.
 - {{HTMLAttrDef("type")}}
   - : El [content type](/es/docs/Glossary/Content_type) del recurso especificado mediante **data**. Al menos uno de los dos atributos, **data** o **type**, deben estar definidos.
@@ -138,9 +138,9 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.object")}}
+{{Compat}}
 
 ## See also
 

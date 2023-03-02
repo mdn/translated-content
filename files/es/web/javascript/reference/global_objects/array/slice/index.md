@@ -211,9 +211,7 @@ El _shim_ también soluciona que IE pueda tratar con el caso de que el segundo a
 
 ## Compatibilidad con navegadores
 
-La tabla de compatibilidad en esta página esta generada desde datos estructurados. Si desea contribuir con los datos, por favor _"checkout"_ [https://github.com/mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)y envíenos un _"pull request"_.
-
-{{Compat("javascript.builtins.Array.slice")}}
+{{Compat}}
 
 ## Ver también
 

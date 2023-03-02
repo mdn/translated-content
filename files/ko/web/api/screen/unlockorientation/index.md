@@ -1,7 +1,6 @@
 ---
 title: window.screen.unlockOrientation
 slug: Web/API/Screen/unlockOrientation
-translation_of: Web/API/Screen/unlockOrientation
 ---
 
 {{APIRef("CSSOM View")}}{{Deprecated_header}}
@@ -30,11 +29,11 @@ if (window.screen.unlockOrientation()) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

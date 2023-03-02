@@ -1,12 +1,6 @@
 ---
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-tags:
-  - Funciones
-  - JavaScript
-  - Propiedades
-  - argumentos
-translation_of: Web/JavaScript/Reference/Functions/arguments/length
 original_slug: Web/JavaScript/Referencia/Funciones/arguments/length
 ---
 
@@ -46,9 +40,9 @@ function adder(base /*, n2, ... */) {
 
 {{Specifications}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.arguments.length")}}
+{{Compat}}
 
 ## Véase también
 

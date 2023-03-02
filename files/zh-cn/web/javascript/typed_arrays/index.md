@@ -31,9 +31,9 @@ slug: Web/JavaScript/Typed_arrays
 | {{jsxref("Uint8Array")}}        | 0~255                                        | 1     | 8 位无符号整数                                     | `octet`               | `uint8_t`                       |
 | {{jsxref("Uint8ClampedArray")}} | 0~255                                        | 1     | 8 位无符号整数（值会被裁剪）                         | `octet`               | `uint8_t`                       |
 | {{jsxref("Int16Array")}}        | -32768~32767                                 | 2     | 16 位有符号整数（补码）                             | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}       | 0~65535                                      | 2     | 16 位有符号整数                                    | `unsigned short`      | `uint16_t`                      |
+| {{jsxref("Uint16Array")}}       | 0~65535                                      | 2     | 16 位无符号整数                                    | `unsigned short`      | `uint16_t`                      |
 | {{jsxref("Int32Array")}}        | -2147483648~2147483647                       | 4     | 32 位有符号整数（补码）                             | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}       | 0~4294967295                                 | 4     | 32 位有符号整数                                    | `unsigned long`       | `uint32_t`                      |
+| {{jsxref("Uint32Array")}}       | 0~4294967295                                 | 4     | 32 位无符号整数                                    | `unsigned long`       | `uint32_t`                      |
 | {{jsxref("Float32Array")}}      | `-3.4E38`~`3.4E38` 以及 `1.2E-38`（最小正数）  | 4     | 32 位 IEEE 浮点数（7 位有效数字，例如 `1.123456`）    | `unrestricted float`  | `float`                         |
 | {{jsxref("Float64Array")}}      | `-1.8E308`~`1.8E308` 以及 `5E-324`（最小正数） | 8     | 64 位 IEEE 浮点数（16 位有效数字，例如 `1.123...15`） | `unrestricted double` | `double`                        |
 | {{jsxref("BigInt64Array")}}     | -2<sup>63</sup>~2<sup>63</sup> - 1           | 8     | 64 位有符号整数（补码）                             | `bigint`              | `int64_t (signed long long)`    |
@@ -111,7 +111,7 @@ int16View[0] = 32;
 console.log(`Entry 0 in the 32-bit array is now ${int32View[0]}`);
 ```
 
-这次的输出是 `"Entry 0 in the 32-bit array is now 32"`。也就是，这 2 个数组都是同一数据的以不同格式展示出来的视图。你可以使用任何一种[视图类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)。
+这次的输出是 `"Entry 0 in the 32-bit array is now 32"`。也就是，这 2 个数组都是同一数据的以不同格式展示出来的视图。你可以使用任何一种[视图类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)。
 
 ### 使用复杂的数据结构
 
@@ -152,7 +152,7 @@ const typedArray = new Uint8Array([1, 2, 3, 4]);
 const normalArray = Array.from(typedArray);
 ```
 
-也可以使用{{jsxref("operators/spread_syntax", "展开语法", "", 1)}}
+也可以使用{{jsxref("operators/spread_syntax", "展开语法", "", 1)}}。
 
 ```js
 const typedArray = new Uint8Array([1, 2, 3, 4]);

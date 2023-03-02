@@ -1,13 +1,6 @@
 ---
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
-tags:
-  - API
-  - BiquadFilterNode
-  - Interface
-  - Reference
-  - Web Audio API
-translation_of: Web/API/BiquadFilterNode
 ---
 
 {{APIRef("Web Audio API")}}
@@ -198,11 +191,11 @@ _{{domxref("AudioNode")}} 로부터 메서드를 상속받습니다_.
 
 See [`AudioContext.createBiquadFilter`](/ko/docs/Web/API/BaseAudioContext/createBiquadFilter#example) for example code that shows how to use an `AudioContext` to create a Biquad filter node.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

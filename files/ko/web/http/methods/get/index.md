@@ -1,12 +1,8 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-tags:
-  - HTTP
-  - Reference
-  - Request method
-translation_of: Web/HTTP/Methods/GET
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `GET` 메서드**는 특정한 리소스를 가져오도록 요청합니다. `GET` 요청은 데이터를 가져올 때만 사용해야 합니다.
@@ -56,7 +52,7 @@ GET /index.html
 
 ## 브라우저 호환성
 
-{{Compat("http.methods.GET")}}
+{{Compat}}
 
 ## 같이 보기
 

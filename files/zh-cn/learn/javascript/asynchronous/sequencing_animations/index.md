@@ -105,11 +105,3 @@ alice1.animate(aliceTumbling, aliceTiming);
     - 指向实际任务或评估页面的链接，这样我们就可以找到你需要帮助的问题。
 
 {{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## 在本模块中
-
-- [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [如何使用 Promise](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
-- [应用一个基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Worker 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- **测验：序列动画**

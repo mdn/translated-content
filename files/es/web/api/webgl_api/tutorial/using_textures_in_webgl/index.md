@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Ahora que nuestro programa de prueba tiene un cubo, asignemos una textura en lugar de tener sus caras de un color solido.
 
@@ -197,12 +197,12 @@ La carga de texturas WebGL esta sujeta a controles de acceso entre dominios. Par
 
 Ver este articulo [hacks.mozilla.org](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) para una explicacion de como usar imágenes CORS-approved como texturas WebGL , con un [ejemplo auto-contenido](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
 
-> **Nota:** El soporte CORS para texturas WebGL y el atributo crossOrigin para elementos de imagen se implementan en {{Gecko ("8.0")}}.
+> **Nota:** El soporte CORS para texturas WebGL y el atributo crossOrigin para elementos de imagen se implementan en Gecko 8.0.
 
 Canvas 2D contaminados (Solo lectura) no pueden ser utilizados como texturas WebGL. una 2D {{ HTMLElement("canvas") }} se convierte en contaminada, por ejemplo, cuando una imagen de dominio cruzado (cross-domain) es dibujada en el.
 
-> **Nota:** El soporte de CORS para Canvas 2D drawImage se implementa en {{Gecko ("9.0")}}. Esto significa que el uso de una imagen de dominio cruzado con aprobación de CORS ya no pinta el lienzo 2D, por lo que el lienzo 2D sigue siendo utilizable como fuente de una textura WebGL.
+> **Nota:** El soporte de CORS para Canvas 2D drawImage se implementa en Gecko 9.0. Esto significa que el uso de una imagen de dominio cruzado con aprobación de CORS ya no pinta el lienzo 2D, por lo que el lienzo 2D sigue siendo utilizable como fuente de una textura WebGL.
 
-> **Nota:** El soporte de CORS para videos de dominio cruzado y el atributo de crossorigin para elementos {{HTMLElement("video")}} se implementa en {{Gecko ("12.0")}}.
+> **Nota:** El soporte de CORS para videos de dominio cruzado y el atributo de crossorigin para elementos {{HTMLElement("video")}} se implementa en Gecko 12.0.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

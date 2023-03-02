@@ -22,7 +22,7 @@ Ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.srcElement")}}
+{{Compat}}
 
 ## Voir aussi
 

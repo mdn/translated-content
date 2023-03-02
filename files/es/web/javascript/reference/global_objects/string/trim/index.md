@@ -1,7 +1,6 @@
 ---
 title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/Trim
-translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/Trim
 ---
 
@@ -59,9 +58,9 @@ if (!String.prototype.trim) {
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.trim")}}
+{{Compat}}
 
 ## Ver también
 

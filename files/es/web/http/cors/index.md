@@ -12,7 +12,7 @@ Un ejemplo de solicitud de origen cruzado: el código JavaScript frontend de una
 
 Por razones de seguridad, los exploradores restringen las solicitudes HTTP de origen cruzado iniciadas dentro de un script. Por ejemplo, [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) y la API [Fetch](/es/docs/Web/API/Fetch_API) siguen la [política de mismo-origen](/es/docs/Web/Security/Same-origin_policy). Ésto significa que una aplicación que utilice esas APIs [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) sólo puede hacer solicitudes HTTP a su propio dominio, a menos que se utilicen cabeceras CORS.
 
-![](https://mdn.mozillademos.org/files/14295/CORS_principle.png)
+![](cors_principle.png)
 
 El [W3C](http://www.w3.org/) [Grupo de Trabajo de Aplicaciones Web](http://www.w3.org/2008/webapps/) recomienda el nuevo mecanismo de [Intercambio de Recursos de Origen Cruzado](http://www.w3.org/TR/cors/) (CORS, por sus siglas en inglés). CORS da controles de acceso a dominios cruzados para servidores web y transferencia segura de datos en dominios cruzados entre navegadores y servidores Web. Los exploradores modernos utilizan CORS en un **contenedor API** (como [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) o [Fetch](/es/docs/Web/API/Fetch_API)) para ayudar a mitigar los riesgos de solicitudes HTTP de origen cruzado.
 
@@ -129,7 +129,7 @@ A diferencia de las solicitudes simples (discutidas arriba), las solicitudes "ve
 - Usa métodos **distintos** a `GET, HEAD` `o POST`. También, si `POST` es utilizado para enviar solicitudes de información con Content-Type **distinto** a `application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`, ej. si la solicitud `POST` envía una carga XML al servidor utilizando `application/xml` or `text/xml`, entonces la solicitud **es** verificada.
 - Se establecen encabezados personalizados (ej. la solicitud usa un encabezado como `X-PINGOTHER`)
 
-> **Nota:** Empezando en {{Gecko("2.0")}}, las codificaciones de datos `text/plain`, `application/x-www-form-urlencoded`, y `multipart/form-data` pueden ser enviadas en sitios cruzados sin verificación. Anteriormente, solo `text/plain` podía ser enviado sin verificación.
+> **Nota:** Empezando en Gecko 2.0, las codificaciones de datos `text/plain`, `application/x-www-form-urlencoded`, y `multipart/form-data` pueden ser enviadas en sitios cruzados sin verificación. Anteriormente, solo `text/plain` podía ser enviado sin verificación.
 
 Un ejemplo de este tipo de invocación puede ser:
 
@@ -413,9 +413,9 @@ Ejemplos de esta utilización pueden ser encontrados [arriba](/En/HTTP_access_co
 
 {{Specifications}}
 
-## Compatibilidad con Exploradores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## Vea también
 

@@ -36,9 +36,9 @@ browser.userScripts.onBeforeScript.hasListener(functionRef)
 
 Voir [ce billet de blog](https://blog.mozilla.org/addons/2019/03/26/extensions-in-firefox-67/#userscripts) pour des exemples détaillés
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.userScripts.onBeforeScript")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: <menu>
 slug: Web/HTML/Element/menu
-translation_of: Web/HTML/Element/menu
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}
@@ -126,7 +125,7 @@ translation_of: Web/HTML/Element/menu
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.menu")}}
+{{Compat}}
 
 ## 같이 보기
 

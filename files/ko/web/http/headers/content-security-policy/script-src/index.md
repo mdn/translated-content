@@ -1,8 +1,8 @@
 ---
 title: 'CSP: script-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** 는 자바스크립트트에 대한 검증된 출처를 지정합니다. 여기에는 {{HTMLElement("script")}} 요소에서 직접 호출한 URL뿐만 아니라, 인라인 스크립트 이벤트 핸들러(`onclick`) 및 스크립트를 실행할 수 있는 [XSLT stylesheets](/ko/docs/Web/XSLT) 가 포함됩니다.
@@ -152,11 +152,11 @@ script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'
 
 will act like`'unsafe-inline' https:` in browsers that support CSP1, `https: 'nonce-abcdefg'` in browsers that support CSP2, and `'nonce-abcdefg' 'strict-dynamic'` in browsers that support CSP3.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

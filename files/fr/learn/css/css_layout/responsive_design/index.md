@@ -26,7 +26,7 @@ Aux débuts de la conception Web, les pages étaient construites pour cibler une
         Les bases du HTML (étudier
         <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction au HTML</a
-        >), et une idée du fonctionnement du CSS (édutier
+        >), et une idée du fonctionnement du CSS (étudier
         <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a> et
         <a href="/fr/docs/Apprendre/CSS/Building_blocks">Blocs de base en CSS</a
         >.)

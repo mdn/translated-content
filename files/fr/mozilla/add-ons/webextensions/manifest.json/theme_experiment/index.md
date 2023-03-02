@@ -184,6 +184,6 @@ Ceci a pour effet de rendre l'icône de recharge orange.
 
 Cette propriété peut également être utilisée dans `browser.theme.update()`. `images` et `properties` travaillent de la même manière que `colors`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.theme_experiment")}}
+{{Compat}}

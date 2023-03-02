@@ -1,12 +1,8 @@
 ---
 title: <td>
 slug: Web/HTML/Element/td
-tags:
-  - Element
-  - HTML
-  - Reference
-translation_of: Web/HTML/Element/td
 ---
+
 {{HTMLSidebar}}
 
 _Table cell_ [HTML](/ko/docs/Web/HTML) 요소 (**`<td>`**) 는 데이터를 포함하는 표의 셀을 정의합니다. 이것은 *표 모델*에 참여합니다.
@@ -86,7 +82,7 @@ Please see the {{HTMLElement("table")}} page for examples on `<td>`.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.td")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -820,13 +820,3 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，�
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic)：用画布为 Web 音频 API 产生的音效提供实时的视觉效果。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 本章目录
-
-- [web API 简介](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [文档操作](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [从服务器获得数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [第三方 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [绘图](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [视频 API 和 音频 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

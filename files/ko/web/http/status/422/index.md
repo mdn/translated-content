@@ -1,14 +1,6 @@
 ---
 title: 422 Unprocessable Entity
 slug: Web/HTTP/Status/422
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
-  - WebDAV
-translation_of: Web/HTTP/Status/422
 ---
 
 {{HTTPSidebar}}

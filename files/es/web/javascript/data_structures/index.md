@@ -1,12 +1,6 @@
 ---
 title: Tipos de datos y estructuras en JavaScript
 slug: Web/JavaScript/Data_structures
-tags:
-  - JavaScript
-  - Novato
-  - Principiante
-  - Tipado
-translation_of: Web/JavaScript/Data_structures
 ---
 
 {{jsSidebar("More", "Más")}}
@@ -81,7 +75,7 @@ Infinity
 
 Aunque un `number` a menudo representa solo su valor, JavaScript proporciona {{jsxref("Operators/Bitwise_Operators", "operadores binarios (bitwise)")}}.
 
-> **Nota:** **Precaución**: Aunque los operadores bit a bit se _pueden_ usar para representar múltiples valores Booleanos dentro de un solo número usando el [enmascaramiento de bits](<https://es.wikipedia.org/wiki/Máscara_(informática)>), esto generalmente se considera una mala práctica. JavaScript ofrece otros medios para representar un conjunto de valores booleanos (como un arreglo de valores booleanos o un objeto con valores booleanos asignados a propiedades con nombre). El enmascaramiento de bits también tiende a hacer que el código sea más difícil de leer, comprender y mantener.
+> **Nota:** Aunque los operadores bit a bit se _pueden_ usar para representar múltiples valores Booleanos dentro de un solo número usando el [enmascaramiento de bits](<https://es.wikipedia.org/wiki/Máscara_(informática)>), esto generalmente se considera una mala práctica. JavaScript ofrece otros medios para representar un conjunto de valores booleanos (como un arreglo de valores booleanos o un objeto con valores booleanos asignados a propiedades con nombre). El enmascaramiento de bits también tiende a hacer que el código sea más difícil de leer, comprender y mantener.
 
 Posiblemente sea necesario utilizar estas técnicas en entornos muy restringidos, como cuando se intenta hacer frente a las limitaciones del almacenamiento local, o en casos extremos (como cuando cada bit de la red cuenta). Esta técnica solo se debe considerar cuando sea la última medida que se pueda tomar para optimizar el tamaño.
 
@@ -147,7 +141,7 @@ En JavaScript, los objetos se pueden ver como una colección de propiedades. Con
 
 Hay dos tipos de propiedades de objeto que tienen ciertos atributos: la propiedad _data_ y la propiedad _accessor_.
 
-> **Nota:** **Nota**: Cada propiedad tiene _atributos correspondientes_. Los atributos, internamente los utiliza el motor JavaScript, por lo que no puedes acceder a ellos directamente. Es por eso que los atributos se enumeran entre corchetes dobles, en lugar de simples.Consulta {{jsxref("Object.defineProperty()")}} para obtener más información.
+> **Nota:** Cada propiedad tiene _atributos correspondientes_. Los atributos, internamente los utiliza el motor JavaScript, por lo que no puedes acceder a ellos directamente. Es por eso que los atributos se enumeran entre corchetes dobles, en lugar de simples.Consulta {{jsxref("Object.defineProperty()")}} para obtener más información.
 
 #### Propiedad `Data`
 

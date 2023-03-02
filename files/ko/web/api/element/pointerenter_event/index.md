@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointerenter
 slug: Web/API/Element/pointerenter_event
-translation_of: Web/API/GlobalEventHandlers/onpointerenter
 original_slug: Web/API/GlobalEventHandlers/onpointerenter
 ---
 
@@ -45,11 +44,11 @@ function init() {
 </html>
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

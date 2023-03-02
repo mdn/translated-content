@@ -58,10 +58,10 @@ function dessiner() {
 
   for(var i = 0; i < tailleMemoireTampon; i++) {
     hauteurBarre = tableauDonnees[i];
-    
+
     canvasCtx.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
        canvasCtx.fillRect(x,HEIGHT-hauteurBarre/2,largeurBarre,hauteurBarre/2);
-       
+
     x += largeurBarre + 1;
   }
 };
@@ -73,9 +73,9 @@ dessiner();
 
 {{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AnalyserNode.minDecibels")}}
+{{Compat}}
 
 ## Voir aussi
 

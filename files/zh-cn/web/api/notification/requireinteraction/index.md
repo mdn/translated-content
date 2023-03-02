@@ -1,6 +1,6 @@
 ---
 title: Notification.requireInteraction
-slug: Web/API/notification/requireInteraction
+slug: Web/API/Notification/requireInteraction
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -29,7 +29,7 @@ function spawnNotification(theTitle,theBody,shouldRequireInteraction) {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 

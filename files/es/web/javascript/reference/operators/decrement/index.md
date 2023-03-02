@@ -1,12 +1,6 @@
 ---
 title: Decremento(--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - Decremento
-  - JavaScript
-  - JavaScript basico
-  - Operadores
-translation_of: Web/JavaScript/Reference/Operators/Decrement
 original_slug: Web/JavaScript/Referencia/Operadores/Decremento
 ---
 
@@ -56,7 +50,7 @@ b = --a;
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.decrement")}}
+{{Compat}}
 
 ## Ver también
 

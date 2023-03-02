@@ -53,7 +53,7 @@ sudo npm install express-generator -g
 
 生成器有许多选项，可以使用 `--help`（或 `-h`）命令进行查看：
 
-![express 生成器的帮助信息](https://mdn.mozillademos.org/files/16407/express-help.png)
+![express 生成器的帮助信息](express-help.png)
 
 大意如下：
 
@@ -132,7 +132,7 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 
 首先，进入准备放置项目的目录，然后在命令提示符运行 Express 应用生成器，生成器将创建（并列出）项目的文件：
 
-![用 express 生成器生成一个应用](https://mdn.mozillademos.org/files/16408/express.png)
+![用 express 生成器生成一个应用](express.png)
 
 生成器在最后还告诉你如何安装（**package.json** 中所列的）依赖，以及如何运行该应用。
 
@@ -152,11 +152,11 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
     DEBUG=express-locallibrary-tutorial:* npm start
     ```
 
-3. 最后在浏览器中导航至 <http://localhost:3000/> ，就可以访问该应用。你应该可以看到： ![Express 应用生成器生成的应用启动成功](https://mdn.mozillademos.org/files/16410/success.png)
+3. 最后在浏览器中导航至 <http://localhost:3000/> ，就可以访问该应用。你应该可以看到： ![Express 应用生成器生成的应用启动成功](success.png)
 
 一个 Express 应用就配置成功了，它托管于 localhost:3000。
 
-> **备注：** 指定 DEBUG 变量可启用控制台日志记录/调试。例如，当你访问上面的页面时，你会看到像这样的调试输出： ![用 npm start 启动这个应用](https://mdn.mozillademos.org/files/16409/npm-start.png) 直接通过 `npm start` 命令启动应用也可以，但不会看到调试信息。
+> **备注：** 指定 DEBUG 变量可启用控制台日志记录/调试。例如，当你访问上面的页面时，你会看到像这样的调试输出： ![用 npm start 启动这个应用](npm-start.png) 直接通过 `npm start` 命令启动应用也可以，但不会看到调试信息。
 
 ## 文件改动时重启服务器
 
@@ -391,7 +391,7 @@ module.exports = app;
 
 ### 路由
 
-路由文档 **/routes/users.js** 如下所示（由于路由文件均使用类似结构，所以 **index.js** 略过不讲）。首先加载 `express` 模块 ​​ 并获取 `express.Router` 对象（命名为 `router`）。然后为 `router` 指定路由，最后导出 `router`（就可以导入 **app.js** 了）。
+路由文档 **/routes/users.js** 如下所示（由于路由文件均使用类似结构，所以 **index.js** 略过不讲）。首先加载 `express` 模块 并获取 `express.Router` 对象（命名为 `router`）。然后为 `router` 指定路由，最后导出 `router`（就可以导入 **app.js** 了）。
 
 ```js
 var express = require('express');
@@ -448,15 +448,3 @@ block content
 - [在 Express 中使用模板引擎](http://www.expressjs.com.cn/guide/using-template-engines.html)（Express 镜像文档）
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
-
-## 本章目录
-
-- [Express/Node 入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [设置 Node（Express）开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2：创建站点框架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3：使用数据库（Mongoose）](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5：显示图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6：使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7：部署至生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

@@ -1,13 +1,6 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - 글자 간격
-translation_of: Web/CSS/letter-spacing
 ---
 
 {{CSSRef}}

@@ -31,9 +31,9 @@ browser.extension.setUpdateUrlData(
 - `data`
   - : `string`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.setUpdateUrlData")}}
+{{Compat}}
 
 ## Exemples
 

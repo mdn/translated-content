@@ -128,7 +128,7 @@ new TypedArray(buffer, byteOffset, length)
 
 这些方法定义在 `TypedArray` 原型对象中，因此由所有 `TypedArray` 子类型共享。
 
-- {{jsxref("TypedArray.prototype.at()")}}  
+- {{jsxref("TypedArray.prototype.at()")}}
   - : 返回给定索引处的数组元素。接受从最后一项往回计算的负整数。
 - {{jsxref("TypedArray.prototype.copyWithin()")}}
   - : 在数组内复制数组元素序列。参见 {{jsxref("Array.prototype.copyWithin()")}}。

@@ -104,9 +104,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
     - `text`
       - : Le texte complet de comparaison, "You may" dans l'exemple ci-dessus.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.find.find", 10)}}
+{{Compat}}
 
 ## Exemples
 

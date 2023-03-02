@@ -391,8 +391,6 @@ tag `string text ${expression} string text`
 - `continue`, `break`, `throw`
 - `return`
 
-Спецификация ECMAScript напоминает о [трёх правилах вставки точки с запятой](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-rules-of-automatic-semicolon-insertion).
-
 1\. Точка с запятой ставится до, когда ограничитель строки или "}" is encountered that is not allowed by the grammar.
 
 ```js

@@ -1,6 +1,6 @@
 ---
 title: console.dir
-slug: Web/API/Console/dir
+slug: Web/API/console/dir
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -9,7 +9,7 @@ slug: Web/API/Console/dir
 
 {{AvailableInWorkers}}
 
-![console-dir.png](/@api/deki/files/6081/=console-dir.png)
+![console-dir.png](console-dir.png)
 
 ## 语法
 

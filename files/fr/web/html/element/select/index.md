@@ -227,7 +227,7 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisé</th>
-      <td>{{ARIARole("menu")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>

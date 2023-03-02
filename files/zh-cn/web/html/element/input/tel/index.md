@@ -1,6 +1,6 @@
 ---
 title: <input type="tel">
-slug: Web/HTML/Element/Input/tel
+slug: Web/HTML/Element/input/tel
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -86,7 +86,7 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向性呈现占位符，可以使用 Unicode 双向算法格式化字符来覆盖占位符内的方向性；更多信息请参见[如何使用 Unicode 控件处理 bidi 文本](https://www.w3.org/International/questions/qa-bidi-unicode-controls)。
 
-> **备注：** 如果可以的话，避免使用 `placeholder` 属性。它在语义上不如其他解释表单的方式有用，而且会对你的内容造成意想不到的技术问题。参见{{SectionOnPage("/zh-CN/docs/Web/HTML/Element/input", "标签和占位符")}}获取更多信息。
+> **备注：** 如果可以的话，避免使用 `placeholder` 属性。它在语义上不如其他解释表单的方式有用，而且会对你的内容造成意想不到的技术问题。参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)获取更多信息。
 
 ### readonly
 

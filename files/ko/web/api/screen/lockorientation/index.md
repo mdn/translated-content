@@ -1,7 +1,6 @@
 ---
 title: Screen.lockOrientation
 slug: Web/API/Screen/lockOrientation
-translation_of: Web/API/Screen/lockOrientation
 ---
 
 {{APIRef("CSSOM View")}}{{Deprecated_header}}
@@ -52,11 +51,11 @@ if (window.screen.mozLockOrientation("landscape-primary")) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

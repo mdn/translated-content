@@ -1,13 +1,6 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Protocols
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/set
 ---
 
@@ -54,11 +47,7 @@ wm.set(obj, 'baz');
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WeakMap.set")}}
-
-## Notas específicas de Firefox
-
-- Antes de Firefox 33 (Firefox 33 / Thunderbird 33 / SeaMonkey 2.30), `WeakMap.prototype.set` devolvía `undefined` y no permitía el encadenamiento. Esto ha sido corregido ({{bug(1031632)}}). Este comportamiento puede encontrarse también en Chrome/v8 ([fallo](https://code.google.com/p/v8/issues/detail?id=3410)).
+{{Compat}}
 
 ## Vea también
 

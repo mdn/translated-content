@@ -1,7 +1,6 @@
 ---
-title: 쌓임 맥락 예제1
+title: 쌓임 맥락 예제 1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 
@@ -11,15 +10,15 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_e
 
 유일한 쌓임 맥락은 뿌리 엘리먼트다. z-index가 없는 엘리먼트들은 HTML 문서에서 등장 순서대로 쌓인다.
 
-![Stacking context example 1](/@api/deki/files/914/=Understanding_zindex_05a.png)
+![쌓임 맥락 예제 1](understanding_zindex_05a.png)
 
 DIV #2의 z-index 속성 값을 0또는 auto가 아닌 양의 정수로 지정하면 다른 DIV들 보다 위에 렌더링된다.
 
-![Stacking context example 1](/@api/deki/files/915/=Understanding_zindex_05b.png)
+![쌓임 맥락 예제 1](understanding_zindex_05b.png)
 
 DIV #4의 z-index 속성 값을 DIV #2의 z-index 속성 값보다 큰 값으로 지정하면 DIV #4는 DIV #2보다 위에 렌더링된다.
 
-![Stacking context example 1](/@api/deki/files/916/=Understanding_zindex_05c.png)
+![Stacking context example 1](understanding_zindex_05c.png)
 
 마지막 예제에서 DIV #2와 DIV #4는 형제가 아니다. 왜냐하면 둘의 부모가 다르기 때문이다. 그럼에도 불구하고 DIV #2와 DIV #4의 쌓임 순서를 z-index 속성 값을 지정함으로써 바꿀 수 있었다. 왜냐하면 DIV #1과 DIV #3은 z-index 속성 값이 지정되지 않았고 따라서 쌓임 맥락을 만들지 않았기 때문이다. 따라서 DIV #2와 DIV #4는 둘 다 뿌리 엘리먼트의 쌓임 맥락에 속해있고, z-index 속성 값을 변경하여 쌓임 순서를 바꿀 수 있다.
 
@@ -32,84 +31,79 @@ DIV #4의 z-index 속성 값을 DIV #2의 z-index 속성 값보다 큰 값으로
 
 > **참고:** DIV #1과 DIV #3은 투명하지 않다. 투명도를 1보다 적은 값으로 지정하게 되면 내부적으로 쌓임 맥락을 만든다는걸 기억하자. 이건 마치 z-index 값을 설정한 것과 비슷하다. 이 예제는 부모 엘리먼트들이 쌓임 맥락을 형성하지 않을 때 어떤 일이 일어나는지 보여준다.
 
-### 예제 소스 코드
+## 예제
+
+### HTML
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head><style type="text/css">
-
-div { font: 12px Arial; }
-
-span.bold { font-weight: bold; }
-
-#div1,#div3 {
-   height: 80px;
-   position: relative;
-   border: 1px dashed #669966;
-   background-color: #ccffcc;
-   padding-left: 5px;
-}
-
-#div2 {
-   opacity: 0.8;
-   z-index: 1;
-   position: absolute;
-   width: 150px;
-   height: 200px;
-   top: 20px;
-   left: 170px;
-   border: 1px dashed #990000;
-   background-color: #ffdddd;
-   text-align: center;
-}
-
-#div4 {
-   opacity: 0.8;
-   z-index: 2;
-   position: absolute;
-   width: 200px;
-   height: 70px;
-   top: 65px;
-   left: 50px;
-   border: 1px dashed #000099;
-   background-color: #ddddff;
-   text-align: left;
-   padding-left: 10px;
-}
-
-
-</style></head>
-
-<body>
-
-<br />
-
 <div id="div1">
-<br /><span class="bold">DIV #1</span>
-<br />position: relative;
-   <div id="div2">
-   <br /><span class="bold">DIV #2</span>
-   <br />position: absolute;
-   <br />z-index: 1;
-   </div>
+  <br /><span class="bold">DIV #1</span> <br />position: relative;
+  <div id="div2">
+    <br /><span class="bold">DIV #2</span> <br />position: absolute;
+    <br />z-index: 1;
+  </div>
 </div>
 
 <br />
 
 <div id="div3">
-<br /><span class="bold">DIV #3</span>
-<br />position: relative;
-   <div id="div4">
-   <br /><span class="bold">DIV #4</span>
-   <br />position: absolute;
-   <br />z-index: 2;
-   </div>
+  <br /><span class="bold">DIV #3</span> <br />position: relative;
+  <div id="div4">
+    <br /><span class="bold">DIV #4</span> <br />position: absolute;
+    <br />z-index: 2;
+  </div>
 </div>
-
-</body></html>
 ```
+
+### CSS
+
+```css
+.bold {
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#div1,
+#div3 {
+  height: 80px;
+  position: relative;
+  border: 1px dashed #669966;
+  background-color: #ccffcc;
+  padding-left: 5px;
+}
+
+#div2 {
+  opacity: 0.8;
+  z-index: 1;
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  top: 20px;
+  left: 170px;
+  border: 1px dashed #990000;
+  background-color: #ffdddd;
+  text-align: center;
+}
+
+#div4 {
+  opacity: 0.8;
+  z-index: 2;
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  top: 65px;
+  left: 50px;
+  border: 1px dashed #000099;
+  background-color: #ddddff;
+  text-align: left;
+  padding-left: 10px;
+}
+```
+
+## 결과
+
+{{ EmbedLiveSample('예제', '', '300') }}
 
 ### See also
 

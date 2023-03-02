@@ -1,14 +1,6 @@
 ---
 title: ':default'
 slug: Web/CSS/:default
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-translation_of: Web/CSS/:default
 ---
 {{CSSRef}}
 

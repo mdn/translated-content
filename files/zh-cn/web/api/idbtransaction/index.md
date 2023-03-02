@@ -78,7 +78,7 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 
 {{deprecated_header}}
 
-> **警告：** 这些常量将不再可用——它们在 Gecko 25 中被移除。你应该直接使用字符串常量来作为替代。 ({{ bug(888598) }})
+> **警告：** 这些常量将不再可用——它们在 Gecko 25 中被移除。你应该直接使用字符串常量来作为替代。 ([Firefox bug 888598](https://bugzil.la/888598))
 
 Transactions 可使用以下三种模式中的一种：
 
@@ -96,7 +96,7 @@ var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || {
 
 ## Example
 
-In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)
+In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 ```js
 // Let us open our database
@@ -158,4 +158,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

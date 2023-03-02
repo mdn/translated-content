@@ -1,13 +1,6 @@
 ---
 title: '<small>: 덧붙임 글 요소'
 slug: Web/HTML/Element/small
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/small
 ---
 
 {{HTMLSidebar}}
@@ -104,7 +97,7 @@ translation_of: Web/HTML/Element/small
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.small")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,18 +1,10 @@
 ---
 title: A basic ray-caster
 slug: orphaned/Web/API/Canvas_API/A_basic_ray-caster
-tags:
-  - Advanced
-  - Canvas
-  - Example
-  - Graphics
-  - HTML
-  - Web
-translation_of: Web/API/Canvas_API/A_basic_ray-caster
 original_slug: Web/API/Canvas_API/A_basic_ray-caster
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 This article provides an interesting real-world example of using the {{HTMLElement("canvas")}} element to do software rendering of a 3D environment using ray-casting.
 

@@ -41,7 +41,7 @@ HTML을 작성을 할 수 있지만, 문제가 생겼을 때 코드의 오류가
 
 아래는 [Rust](https://www.rust-lang.org/) 언어로 작성된 간단한 프로그램을 {{glossary ( "compile")}}할 때 발생한 오류를 보여줍니다.
 
-![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](https://mdn.mozillademos.org/files/12435/error-message.png)
+![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)
 
 여기나온 오류 메시지는 상대적으로 이해하기 쉽습니다. "끝나지 않은 큰 따옴표 문자열". 애러 내용을 보면 코드 2번째 줄의 `println! (Hello, world! ");`에 큰 따옴표가 누락 된 것을 금방 볼 수 있습니다. 하지만 프로그램이 커질수록 오류 메시지는 점점더 복잡해지고 해석하기가 쉽지 않아집니다. 단순한 경우라 할지라도 Rust에 대해 전혀 모르는 사람에게 약간 무섭게 보일 수 있습니다.(보통은 점점 무서워지죠..)
 
@@ -67,7 +67,7 @@ HTML은 Rust만큼 복잡하지 않습니다. HTML은 브라우저가 구문 분
 유연한 성질의 HTML 코드를 배울 시간입니다.
 
 1. 첫째로, 우리의 [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html)를 다운로드하고 Local에 저장하세요. This demo is deliberately written to have some errors in it for us to explore (the HTML markup is said to be **badly-formed**, as opposed to **well-formed**).
-2. Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](https://mdn.mozillademos.org/files/12437/badly-formed-html.png)
+2. Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
 3. This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
 
     ```html
@@ -97,7 +97,7 @@ HTML은 Rust만큼 복잡하지 않습니다. HTML은 브라우저가 구문 분
     - The {{htmlattrxref("href","a")}} attribute value has a missing closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
 
 5. Now let's look at the markup the browser has rendered, as opposed to the markup in the source code. To do this, we can use the browser developer tools. If you are not familiar with how to use your browser's developer tools, take a few minutes to review [Discover browser developer tools](/ko/docs/Learn/Discover_browser_developer_tools).
-6. In the DOM inspector, you can see what the rendered markup looks like: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](https://mdn.mozillademos.org/files/12439/html-inspector.png)
+6. In the DOM inspector, you can see what the rendered markup looks like: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. Using the DOM inspector, let's explore our code in detail to see how the browser has tried to fix our HTML errors (we did the review in Firefox; other modern browsers _should_ give the same result):
 
     - The paragraphs and list items have been given closing tags.
@@ -126,7 +126,7 @@ So you can see from the above example that you really want to make sure your HTM
 
 The best strategy is to start by running your HTML page through the [Markup Validation Service](https://validator.w3.org/) — created and maintained by the W3C, the organization that looks after the specifications that define HTML, CSS, and other web technologies. This webpage takes an HTML document as an input, goes through it, and gives you a report to tell you what is wrong with your HTML.
 
-![The HTML validator homepage](https://mdn.mozillademos.org/files/12441/validator.png)
+![The HTML validator homepage](validator.png)
 
 To specify the HTML to validate, you can give it a web address, upload an HTML file, or directly input some HTML code.
 
@@ -141,7 +141,7 @@ Let's try this with our [sample document](https://github.com/mdn/learning-area/b
 
 This should give you a list of errors and other information.
 
-![A list of of HTML validation results from the W3C markup validation service](https://mdn.mozillademos.org/files/12443/validation-results.png)
+![A list of of HTML validation results from the W3C markup validation service](validation-results.png)
 
 #### Interpreting the error messages
 
@@ -165,22 +165,10 @@ If you can't work out what every error message means, don't worry about it — a
 
 You will know when all your errors are fixed when you see the following banner in your output:
 
-![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](https://mdn.mozillademos.org/files/12445/valid-html-banner.png)
+![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](valid-html-banner.png)
 
 ## 요약
 
 그래서 HTML을 디버깅하는 방법에 대해 소개합니다. 이 방법은 나중에 CSS, JavaScript 및 다른 유형의 코드를 디버깅 할 때 유용한 기술을 제공합니다. 이것은 또한 HTML 모듈 학습 입문의 끝 부분입니다. 이제 평가를 통해 스스로 테스트 할 수 있습니다. 첫 번째 것은 아래에 링크되어 있습니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/ko/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/ko/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

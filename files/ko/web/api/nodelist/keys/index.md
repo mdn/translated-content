@@ -1,7 +1,6 @@
 ---
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
-translation_of: Web/API/NodeList/keys
 ---
 
 {{APIRef("DOM")}}
@@ -46,11 +45,11 @@ for(var key of list.keys()) {
 2
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

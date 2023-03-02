@@ -26,7 +26,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 Пока что мы не создавали каких-либо форм в этом учебнике, но мы встречались с ними в административной панели Django — например, снимок экрана ниже показывает форму для редактирования одной из наших моделей книг ([Book](/ru/docs/Learn/Server-side/Django/Models)), состоящую из нескольких списков выбора и текстовых редакторов.
 
-![Admin Site - Book Add](https://mdn.mozillademos.org/files/13979/admin_book_add.png)
+![Admin Site - Book Add](admin_book_add.png)
 
 Работа с формами может быть достаточно сложной! Разработчикам надо описать форму на HTML, проверить её валидность, а также, на стороне сервера, проверять введённые пользователем данные (а возможно и на стороне клиента), далее, в случае возникновения ошибок необходимо опять показать пользователю форму и, при этом, указать на то, что пошло не так, в случае же успеха проделать с данными необходимые операции и каким-то образом проинформировать об этом пользователя. Django, при работе с формами, берёт большую часть, описанной выше работы, на себя. Он предоставляет фреймворк, который позволяет вам определять форму и её поля программно, а затем использовать эти объекты и для генерации непосредственно кода HTML-формы, и для контроля за процессом валидации и других пользовательский взаимодействий с формой.
 
@@ -36,7 +36,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 Начнём мы с краткого обзора [Форм HTML](/ru/docs/Web/Guide/HTML/Forms). Рассмотрим простую форму HTML, имеющую поле для ввода имени некоторой "команды" ("team"), и, связанную с данным полем, текстовой меткой:
 
-![Simple name field example in HTML form](https://mdn.mozillademos.org/files/14117/form_example_name_field.png)
+![Simple name field example in HTML form](form_example_name_field.png)
 
 Форма описывается на языке HTML как набор элементов, расположенных внутри парных тэгов `<form>...</form>`. Любая форма содержит как минимум одно поле-тэг `input` типа `type="submit"`.
 
@@ -68,7 +68,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 Диаграмма, представленная ниже, демонстрирует процесс работы с формой в Django, начиная с запроса страницы, содержащей форму (выделено зелёным цветом).
 
-![Updated form handling process doc.](https://mdn.mozillademos.org/files/14205/Form%20Handling%20-%20Standard.png)
+![Updated form handling process doc.](form_handling_-_standard.png)
 
 В соответствии с данной диаграммой, главными моментами, которые берут на себя формы Django являются:
 
@@ -121,7 +121,7 @@ class RenewBookForm(forms.Form):
 
 В нашем случае мы имеем одно поле типа [`DateField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#datefield), которое служит для ввода обновлённой даты возврата книги, которое будет отрендерено в HTML с пустым значением и текстовой меткой "_Renewal date:_", а также текстовым описанием: "_Enter a date between now and 4 weeks (default 3 weeks)._" Так как никаких дополнительных опций мы не определяем, то поле будет "получать" даты в следующем формате [input_formats](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#django.forms.DateField.input_formats): YYYY-MM-DD (2016-11-06), MM/DD/YYYY (02/26/2016), MM/DD/YY (10/25/16), а для отрисовки по умолчанию, будет использовать [виджет](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#widget): [DateInput](https://docs.djangoproject.com/en/1.10/ref/forms/widgets/#django.forms.DateInput).
 
-Существует множество других типов полей для класса формы, которые по своей функциональности подобны соответствующим им эквивалентам типов полей для классов моделей: [`BooleanField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#booleanfield), [`CharField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#charfield), [`ChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#choicefield), [`TypedChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#typedchoicefield), [`DateField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#datefield), [`DateTimeField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#datetimefield), [`DecimalField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#decimalfield), [`DurationField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#durationfield), [`EmailField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#emailfield), [`FileField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#filefield), [`FilePathField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#filepathfield), [`FloatField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#floatfield), [`ImageField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#imagefield), [`IntegerField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#integerfield), [`GenericIPAddressField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#genericipaddressfield), [`MultipleChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#multiplechoicefield), [`TypedMultipleChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#typedmultiplechoicefield), [`NullBooleanField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#nullbooleanfield), [`RegexField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#regexfield), [`SlugField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#slugfield), [`TimeField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#timefield), [`URLField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#urlfield), [`UUIDField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#uuidfield), [`ComboField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#combofield), [`MultiValueField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#multivaluefield), [`SplitDateTimeField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#splitdatetimefield), [`ModelMultipleChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#modelmultiplechoicefield), [`ModelChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#modelchoicefield)​​​​.
+Существует множество других типов полей для класса формы, которые по своей функциональности подобны соответствующим им эквивалентам типов полей для классов моделей: [`BooleanField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#booleanfield), [`CharField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#charfield), [`ChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#choicefield), [`TypedChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#typedchoicefield), [`DateField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#datefield), [`DateTimeField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#datetimefield), [`DecimalField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#decimalfield), [`DurationField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#durationfield), [`EmailField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#emailfield), [`FileField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#filefield), [`FilePathField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#filepathfield), [`FloatField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#floatfield), [`ImageField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#imagefield), [`IntegerField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#integerfield), [`GenericIPAddressField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#genericipaddressfield), [`MultipleChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#multiplechoicefield), [`TypedMultipleChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#typedmultiplechoicefield), [`NullBooleanField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#nullbooleanfield), [`RegexField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#regexfield), [`SlugField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#slugfield), [`TimeField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#timefield), [`URLField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#urlfield), [`UUIDField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#uuidfield), [`ComboField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#combofield), [`MultiValueField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#multivaluefield), [`SplitDateTimeField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#splitdatetimefield), [`ModelMultipleChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#modelmultiplechoicefield), [`ModelChoiceField`](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#modelchoicefield).
 
 Общие аргументы для большинства полей перечислены ниже:
 
@@ -373,7 +373,7 @@ def renew_book_librarian(request, pk):
 </tr>
 ```
 
-> **Примечание:** Возможно это не очевидно, поскольку наша форма содержит только одно поле, но по умолчанию каждое поле формы помещается в её собственную строку таблицы (поэтому переменная `\{{form}}` находится внутри тэга `table`.​​​​​​ Тот же результат можно получить, если воспользоваться следующим вызовом `\{{ form.as_table }}`.
+> **Примечание:** Возможно это не очевидно, поскольку наша форма содержит только одно поле, но по умолчанию каждое поле формы помещается в её собственную строку таблицы (поэтому переменная `\{{form}}` находится внутри тэга `table`. Тот же результат можно получить, если воспользоваться следующим вызовом `\{{ form.as_table }}`.
 
 Если вы ввели неправильную дату, то на странице вы должны получить список сообщений об ошибках (показано жирным ниже).
 
@@ -421,15 +421,15 @@ def renew_book_librarian(request, pk):
 
 Если все получилось как надо, то форма по умолчанию должна выглядеть следующим образом:
 
-![](https://mdn.mozillademos.org/files/14209/forms_example_renew_default.png)
+![](forms_example_renew_default.png)
 
 А такой наша форма будет в случае ввода неправильной даты:
 
-![](https://mdn.mozillademos.org/files/14211/forms_example_renew_invalid.png)
+![](forms_example_renew_invalid.png)
 
 Список всех книг с ссылками на страницу обновления данных:
 
-![](https://mdn.mozillademos.org/files/14207/forms_example_renew_allbooks.png)
+![](forms_example_renew_allbooks.png)
 
 ## Класс ModelForm
 
@@ -595,7 +595,7 @@ urlpatterns += [
 
 Затем перейдите на страницу создания новой записи автора: `http://127.0.0.1:8000/catalog/author/create/`, которая должна быть похожей на следующий скриншот.
 
-![Form Example: Create Author](https://mdn.mozillademos.org/files/14223/forms_example_create_author.png)
+![Form Example: Create Author](forms_example_create_author.png)
 
 Введите в поля значения и нажмите на кнопку **Submit**, чтобы сохранить новую запись об авторе. После этого, вы должны были перейти на страницу редактирования только что созданного автора, имеющий адрес, похожий на следующий `http://127.0.0.1:8000/catalog/author/10`.
 
@@ -603,13 +603,13 @@ urlpatterns += [
 
 И последнее, мы можем удалить страницу, добавляя строку `/delete/` в конец адреса подробной информации автора (то есть, `http://127.0.0.1:8000/catalog/author/10/delete/`). Django должен показать страницу, которая похожа на представленную ниже. Нажмите **Yes, delete.**, чтобы удалить запись и перейти на страницу со списком авторов.
 
-![](https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png)
+![](forms_example_delete_author.png)
 
 ## Проверьте себя
 
 Создайте несколько форм создания, редактирования и удаления записей в модели `Book`. При желании, вы можете использовать тоже структуры как и в случае с моделью `Authors`. Если ваш шаблон **book_form.html** является просто копией шаблона **author_form.html**, тогда новая страница "create book" будет выглядеть как на следующем скриншоте:
 
-![](https://mdn.mozillademos.org/files/14225/forms_example_create_book.png)
+![](forms_example_create_book.png)
 
 ## Итоги
 

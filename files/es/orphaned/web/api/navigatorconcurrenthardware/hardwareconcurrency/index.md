@@ -2,6 +2,7 @@
 title: navigator.hardwareConcurrency
 slug: orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency
 original_slug: Web/API/NavigatorConcurrentHardware/hardwareConcurrency
+browser-compat: api.Navigator.hardwareConcurrency
 ---
 
 {{APIRef("HTML DOM")}}
@@ -44,9 +45,9 @@ for (let i = 0; i < window.navigator.hardwareConcurrency; i++) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.NavigatorConcurrentHardware.hardwareConcurrency")}}
+{{Compat}}
 
 ## See also
 

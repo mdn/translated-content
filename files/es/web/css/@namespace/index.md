@@ -51,6 +51,6 @@ En [HTML5](/es/docs/Glossary/HTML5), conocidos como[elementos externos](https://
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

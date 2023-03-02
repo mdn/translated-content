@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 
 [페이지 액션](/ko/docs/Mozilla/Add-ons/WebExtensions/Page_actions)은 브라우저의 주소창에 있는 아이콘이다.
 
-![](https://mdn.mozillademos.org/files/12960/page-action.png)
+![](page-action.png)
 
 아이콘 클릭에 대한 대응은 리스너를 등록하고 클릭 이벤트를 기다리는 것이나, [팝업창](/ko/docs/Mozilla/Add-ons/WebExtensions/Popups)이 열리게 하는 것일 수 있다.
 
@@ -50,7 +50,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.pageAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

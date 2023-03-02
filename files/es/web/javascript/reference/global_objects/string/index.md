@@ -1,14 +1,6 @@
 ---
 title: String — Cadena de caracteres
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - Clase
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Referencia
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String
 ---
 
@@ -34,7 +26,7 @@ const string4 = new String("Un objeto String");
 
 Las `string`s primitivas y los objetos `string` se pueden usar indistintamente en la mayoría de las situaciones. Consulta "[Primitivas `String` y objetos `String`](#Primitivas_string_y_objetos_string)" a continuación.
 
-Los cadena literales se pueden especificar usando comillas simples o dobles, que se tratan de manera idéntica, o usando el carácter de comilla invertida <kbd>`</kbd>. Esta última forma especifica una [Plantilla literal](/es/docs/Web/JavaScript/Reference/Template_literals): con esta forma puedes interpolar expresiones.
+Los cadena literales se pueden especificar usando comillas simples o dobles, que se tratan de manera idéntica, o usando el carácter de comilla invertida <kbd>\`</kbd>. Esta última forma especifica una [Plantilla literal](/es/docs/Web/JavaScript/Reference/Template_literals): con esta forma puedes interpolar expresiones.
 
 ### Acceder a un caracter
 
@@ -296,9 +288,9 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String")}}
+{{Compat}}
 
 ## Ve también
 

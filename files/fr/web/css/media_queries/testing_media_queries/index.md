@@ -70,9 +70,7 @@ mql.removeListener(handleOrientationChange);
 
 ## Compatibilité des navigateurs
 
-### Interface `MediaQueryList`
-
-{{Compat("api.MediaQueryList")}}
+{{Compat}}
 
 ## Voir aussi
 

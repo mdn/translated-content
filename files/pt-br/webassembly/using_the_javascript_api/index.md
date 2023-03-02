@@ -81,7 +81,7 @@ Este exemplo é longo e um pouco complicado que alcança muito pouco, mas serve 
 
 No Firefox 54+, o painel Debugger do Developer Tool consegue exibir a representação textual do qualquer código wasm inserido em uma página web. Para visualizá-lo, abra o painel Debugger e clique em “xxx > wasm”.
 
-![](https://mdn.mozillademos.org/files/14655/wasm-debugger-output.png)
+![](wasm-debugger-output.png)
 
 Muito em breve no Firefox, além de visualizar o WebAssembly em seu formato textual, os desenvolvedores serão capazes de depurar (colocar breakpoints, inspecionar o callstack, etc.) o WebAssembly utilizando o formato textual. Assista o vídeo [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) para ter uma prévia.
 
@@ -166,7 +166,7 @@ Let’s make the above assertions clearer by looking at a more involved memory e
 
 Note how we create the {{domxref("Uint32Array")}} view on the Memory object’s buffer ([`Memory.prototype.buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)), not on the Memory itself.
 
-As importações de memória funcionam como importações de função, apenas objetos de memória são passados ​​como valores em vez de funções JavaScript. As importações de memória são úteis por dois motivos:
+As importações de memória funcionam como importações de função, apenas objetos de memória são passados como valores em vez de funções JavaScript. As importações de memória são úteis por dois motivos:
 
 - Eles permitem que o JavaScript busque e crie o conteúdo inicial da memória antes ou simultaneamente com a compilação do módulo.
 - Eles permitem que um único objeto Memory seja importado por várias instâncias do módulo, o que é um bloco de construção crítico para implementar a vinculação dinâmica no WebAssembly.

@@ -32,7 +32,7 @@ HTML의 주요 작업 중 하나는 브라우저가 텍스트를 올바르게 �
 
 대부분의 구조화 된 텍스트는 기사, 신문, 대학 교과서, 잡지 등 무엇을 읽든지 간에 제목과 단락으로 구성됩니다.
 
-![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](https://mdn.mozillademos.org/files/12371/newspaper_small.jpg)
+![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](newspaper_small.jpg)
 
 구조화된 컨텐츠는 읽는 경험을 더 쉽고 즐겁게 만들어줍니다.
 
@@ -84,7 +84,7 @@ heading 요소는 총 6개가 있습니다— {{htmlelement("h1")}}, {{htmleleme
 
 하지만, 당신이 브라우저에서 문서를 열어보았을 때 당신은 텍스트가 한 덩어리로 뭉쳐있는 것을 볼 것입니다!
 
-![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](https://mdn.mozillademos.org/files/14827/Screen%20Shot%202017-03-29%20at%2009.20.35.png)
+![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](screen_shot_2017-03-29_at_09.20.35.png)
 
 이는 컨텐츠에 구조를 입히는 요소가 없기 때문인데, 그래서 브라우저는 무엇이 heading이고 무엇이 문단인지 알 수 없는 것입니다. 추가로:
 
@@ -661,15 +661,3 @@ HTML5 에서는 `<b>`, `<i>,` `<u>` 를 조금 혼란스럽긴 하지만 새로�
 일단 이게 다에요! 이 글을 통해 여러분은 HTML에서 텍스트를 표현하기 시작하는 방법에 대해 좋은 아이디어를 얻었고, 이 영역에서 가장 중요한 몇가지 요소들을 알게되었습니다. 이 코스에에서 다룰 의미론적 요소는 훨씬 더 많으며 [하이퍼링크를 만드는 방법](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)에 대해 자세히 알아보도록 합시다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/ko/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/ko/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/ko/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

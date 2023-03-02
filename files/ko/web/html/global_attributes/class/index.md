@@ -1,11 +1,6 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/class
 original_slug: Web/HTML/Global_attributes/클래스
 ---
 
@@ -25,7 +20,7 @@ original_slug: Web/HTML/Global_attributes/클래스
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.class")}}
+{{Compat}}
 
 ## 같이 보기
 

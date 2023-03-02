@@ -206,7 +206,7 @@ function import() {} // Proibido.
 
 ### Null
 
-Veja também [`null`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null) para mais informações.
+Veja também [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null) para mais informações.
 
 ```js
 null
@@ -234,7 +234,7 @@ false
 0777 // Convertido como octal, 511 em decimal
 ```
 
-Veja que números decimais podem começar com zero (`0`) seguido de outro dígito decimal, porém se todos dígitos após o zero inicial forem menores que 8, o número é interpretado como um número octal. Isso não vai disparar um erro em JavaScript, veja {{bug(957513)}}. Veja também esta página sobre conversão de tipo [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix).
+Veja que números decimais podem começar com zero (`0`) seguido de outro dígito decimal, porém se todos dígitos após o zero inicial forem menores que 8, o número é interpretado como um número octal. Isso não vai disparar um erro em JavaScript, veja {{bug(957513)}}. Veja também esta página sobre conversão de tipo [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt#octal_interpretations_with_no_radix).
 
 #### Binário
 
@@ -341,7 +341,7 @@ Veja também [`RegExp`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegE
 
 ### Templates
 
-Veja também [template strings](/pt-BR/docs/Web/JavaScript/Reference/template_strings) para mais informações .
+Veja também [template strings](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) para mais informações .
 
 ```js
 `texto`
@@ -422,7 +422,7 @@ a + b;
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## Firefox-notas específicas
 
@@ -430,8 +430,8 @@ a + b;
 
 ## Veja também
 
-- [Jeff Walden: Binary and octal numbers](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}
 - {{jsxref("RegExp")}}

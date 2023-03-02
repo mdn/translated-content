@@ -1,15 +1,8 @@
 ---
 title: '<rp>: 루비 대체 괄호 요소'
 slug: Web/HTML/Element/rp
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Web
-translation_of: Web/HTML/Element/rp
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<rp>` 요소**는 {{htmlelement("ruby")}} 요소를 사용한 루비 주석을 지원하지 않는 경우 보여줄 괄호를 제공할 때 사용합니다. {{htmlelement("rt")}} 요소를 감싸는 여는 괄호와 닫는 괄호를 각각의 `<rp>` 요소로 나타내야 합니다.
@@ -105,7 +98,7 @@ body {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.rp")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,9 +1,6 @@
 ---
 title: FormData.set()
 slug: Web/API/FormData/set
-page-type: web-api-instance-method
-browser-compat: api.FormData.set
-translation_of: Web/API/FormData/set
 ---
 {{APIRef("XMLHttpRequest")}}
 
@@ -48,11 +45,11 @@ formData.set('username', 'Chris');
 formData.set('userpic', myFileInput.files[0], 'chris.jpg');
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

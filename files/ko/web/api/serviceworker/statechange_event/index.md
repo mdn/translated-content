@@ -1,7 +1,6 @@
 ---
 title: ServiceWorker.onstatechange
 slug: Web/API/ServiceWorker/statechange_event
-translation_of: Web/API/ServiceWorker/onstatechange
 original_slug: Web/API/ServiceWorker/onstatechange
 ---
 
@@ -54,10 +53,10 @@ navigator.serviceWorker.register(..).then(function(swr) {
 })
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

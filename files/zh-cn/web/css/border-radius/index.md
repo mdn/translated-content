@@ -7,8 +7,6 @@ slug: Web/CSS/border-radius
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-radius`** 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个（椭）圆与边框的交集形成圆角效果。
 
-![Images of CSS3 rounded corners: no rounding, rounding w/ an arc of circle, rounding w/ an arc of ellipse](/files/3638/border-radius-sh.png)
-
 {{EmbedInteractiveExample("pages/css/border-radius.html")}}
 
 该属性是一个 [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，是为了将这四个属性 {{Cssxref("border-top-left-radius")}}、{{Cssxref("border-top-right-radius")}}、{{Cssxref("border-bottom-right-radius")}}，和 {{Cssxref("border-bottom-left-radius")}} 简写为一个属性。
@@ -18,25 +16,25 @@ slug: Web/CSS/border-radius
 当 {{Cssxref("border-collapse")}} 的值为 `collapse` 时，`border-radius` 属性不会被应用到表格元素上。
 
 _radius_
-![all-corner.png](/@api/deki/files/6138/=all-corner.png)
+![all-corner.png](all-corner.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框四角的圆角半径。只在单值语法中使用。
 _top-left-and-bottom-right_
-![top-left-bottom-right.png](/@api/deki/files/6141/=top-left-bottom-right.png)
+![top-left-bottom-right.png](top-left-bottom-right.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框左上角和右下角的圆角半径。只在双值语法中使用。
 _top-right-and-bottom-left_
-![top-right-bottom-left.png](/@api/deki/files/6143/=top-right-bottom-left.png)
+![top-right-bottom-left.png](top-right-bottom-left.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框右上角和左下角的圆角半径。只在双值或三值语法中使用。
 _top-left_
-![top-left.png](/@api/deki/files/6142/=top-left.png)
+![top-left.png](top-left.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框左上角的圆角半径。只在三值或四值语法中使用。
 _top-right_
-![top-right.png](/@api/deki/files/6144/=top-right.png)
+![top-right.png](top-right.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框右上角的圆角半径。只在四值语法中使用。
 _bottom-right_
-![bottom-rigth.png](/@api/deki/files/6140/=bottom-rigth.png)
+![bottom-rigth.png](bottom-right.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框右下角的圆角半径。只在三值或四值语法中使用。
 _bottom-left_
-![bottom-left.png](/@api/deki/files/6139/=bottom-left.png)
+![bottom-left.png](bottom-left.png)
 可以是 {{ cssxref("&lt;length&gt;") }} 或者 {{cssxref("&lt;percentage&gt;")}}，表示边框左下角的圆角半径。只在四值语法中使用。
 `inherit`
 表示四个值都从父元素计算值继承。

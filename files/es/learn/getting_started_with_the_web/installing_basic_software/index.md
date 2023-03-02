@@ -47,14 +47,3 @@ Antes de continuar, deberías instalar al menos dos de estos navegadores y tener
 Algunos ejemplos necesitarás ejecutarlos a través de un servidor web para que funcionen exitosamente. Puedes encontrar cómo hacer esto en [¿Cómo se configura un servidor de prueba local?](/es/docs/Learn/Common_questions/set_up_a_local_testing_server)
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
-
-## En este módulo
-
-- [Instalación de software básico](/es/Learn/Getting_started_with_the_web/Instalacion_de_software_basico)
-- [¿Cómo se verá tu sitio web?](/es/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Manejo de archivos](/es/Learn/Getting_started_with_the_web/Manejando_los_archivos)
-- [Conceptos básicos de HTML](/es/Learn/Getting_started_with_the_web/HTML_basics)
-- [Conceptos básicos de CSS](/es/Learn/Getting_started_with_the_web/CSS_basics)
-- [Conceptos básicos de JavaScript](/es/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publicar tu sitio web](/es/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Cómo funciona la Web](/es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web)

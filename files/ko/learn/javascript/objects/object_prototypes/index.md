@@ -34,7 +34,7 @@ Javascript에서는 객체를 상속하기 위하여 프로토타입이라는 �
 
 ## 프로토타입 기반 언어?
 
-JavaScript는 흔히 **프로토타입 기반 언어(prototype-based language)**라 불립니다.— 모든 객체들이 메소드와 속성들을 상속 받기 위한 템플릿으로써 **프로토타입 객체(prototype object)**를 가진다는 의미입니다. 프로토타입 객체도 또 다시 상위 프로토타입 객체로부터 메소드와 속성을 상속 받을 수도 있고 그 상위 프로토타입 객체도 마찬가지입니다. 이를 **프로토타입 체인(prototype chain)**이라 부르며 다른 객체에 정의된 메소드와 속성을 한 객체에서 사용할 수 있도록 하는 근간입니다.
+JavaScript는 흔히 **프로토타입 기반 언어**(**prototype-based language**)라 불립니다.— 모든 객체들이 메소드와 속성들을 상속 받기 위한 템플릿으로써 **프로토타입 객체**(**prototype object**)를 가진다는 의미입니다. 프로토타입 객체도 또 다시 상위 프로토타입 객체로부터 메소드와 속성을 상속 받을 수도 있고 그 상위 프로토타입 객체도 마찬가지입니다. 이를 **프로토타입 체인**(**prototype chain**)이라 부르며 다른 객체에 정의된 메소드와 속성을 한 객체에서 사용할 수 있도록 하는 근간입니다.
 
 정확히 말하자면 상속되는 속성과 메소드들은 각 객체가 아니라 객체의 생성자의 `prototype`이라는 속성에 정의되어 있습니다.
 
@@ -68,11 +68,11 @@ var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
 
 Javascript 콘솔에서 "person1."을 치게 되면 브라우저는 아래처럼 해당 객체의 멤버 이름을 자동 완성 팝업으로 보여줄 것입니다:
 
-![](https://mdn.mozillademos.org/files/13853/object-available-members.png)
+![](object-available-members.png)
 
 위에서 `person1`의 프로토타입 객체인 `Person()`에 정의된 멤버들 — `name`, `age`, `gender`, `interests`, `bio`, `greeting`을 볼 수 있습니다. 또한 — `watch`, `valueOf`처럼 `Person()`의 프로토타입 객체인 [`Object`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)에 정의된 다른 멤버들도 보실 수 있습니다. 이는 프로토타입 체인이 동작한다는 증거입니다.
 
-![](https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png)
+![](mdn-graphics-person-person-object-2.png)
 
 그럼 실제로는 `Object`에 정의되어 있는 메소드를 `person1`에서 호출하면 어떻게 될까요?
 아래 처럼 말이죠:
@@ -275,13 +275,3 @@ Test.prototype.y = function() { ... };
 다음 글에서는 직접 만든 객체간의 상속을 구현하는 방법에 대해 알아봅시다.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/ko/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/ko/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/ko/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/ko/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/ko/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/ko/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

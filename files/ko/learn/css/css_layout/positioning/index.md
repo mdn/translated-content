@@ -91,7 +91,7 @@ left: 30px;
 
 <p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -145,7 +145,7 @@ position: absolute;
 
 <p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -209,7 +209,7 @@ position: relative;
 
 <p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -283,7 +283,7 @@ z-index: 1;
 
 <p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -377,7 +377,7 @@ p:nth-of-type(1) {
 
 <p>우리는 여백으로 구분됩니다. 여백 축소로 때문에 우리의 여백 중의 하나의 너비로 구분됩니다. 두게의 여백이 아니라.</p>
 
-<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>인라인 요소 <span>이 것과 같은</span> 그리고 <span>이것이</span> 차례로 같은 라인에, 그리고 같은 라인에 공간이 있을 경우 인접한 텍스트 노드에 자리를 잡게 됩니다. 인라인 요소가 대열이탈할 경우 <span>(이 경우와 같이 텍스트를 포함했을 경우) 가능하면 새 줄로 접혀들어갑니다.)</span>, 그렇지 않으면 새로운 라인으로 계속 진행할 것입니다. 이 이미지가 하는 것처럼: <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -570,18 +570,3 @@ dt {
 
 - {{cssxref("position")}} 속성 참조.
 - 좀 더 유용한 구상을 위한 [실용적인 위치잡기 사례](/ko/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-
-## 이번 단위에는
-
-- [CSS 레이아웃 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [격자](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/위치잡기)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- [레이아웃 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

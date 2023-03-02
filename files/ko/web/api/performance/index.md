@@ -1,16 +1,6 @@
 ---
 title: Performance
 slug: Web/API/Performance
-tags:
-  - API
-  - Interface
-  - Navigation Timing
-  - NeedsTranslation
-  - Performance
-  - Reference
-  - TopicStub
-  - Web Performance
-translation_of: Web/API/Performance
 ---
 
 {{APIRef("High Resolution Time")}}
@@ -65,10 +55,10 @@ _The `Performance` interface doesn't inherit any properties._
 - {{domxref("Performance.toJSON()")}}
   - : Is a jsonizer returning a json object representing the `Performance` object.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

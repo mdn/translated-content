@@ -150,7 +150,7 @@ importScripts('foo.js', 'bar.js');      /* 引入两个脚本 */
 
 > **备注：** 如果共享 worker 可以被多个浏览上下文调用，所有这些浏览上下文必须属于同源（相同的协议，主机和端口号）。
 
-> **备注：** 在 Firefox 中，共享 worker 不能被私有和非私有 window 对象的 document 所共享 ({{bug(1177621)}})。
+> **备注：** 在 Firefox 中，共享 worker 不能被私有和非私有 window 对象的 document 所共享（[Firefox bug 1177621](https://bugzil.la/1177621)）。
 
 ### 生成一个共享 worker
 
@@ -235,7 +235,7 @@ Content-Security-Policy: script-src 'self'
 
 ## worker 中数据的接收与发送：详细介绍
 
-在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化拷贝](/zh-CN/DOM/The_structured_clone_algorithm)来实现该特性。
+在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)来实现该特性。
 
 在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面 (反之亦然) 的通信过程中，变量的「_拷贝而非共享_」行为：
 

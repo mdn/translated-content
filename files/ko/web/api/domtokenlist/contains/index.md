@@ -1,7 +1,6 @@
 ---
 title: DOMTokenList.contains()
 slug: Web/API/DOMTokenList/contains
-translation_of: Web/API/DOMTokenList/contains
 ---
 
 {{APIRef("DOM")}}
@@ -50,10 +49,10 @@ The output looks like this:
 
 {{ EmbedLiveSample('Examples', '100%', 60) }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

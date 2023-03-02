@@ -196,7 +196,7 @@ At this point, we have a complete skeleton project. The website doesn't actually
 
 You should see a browser page that looks like this:
 
-![Browser for default Express app generator website](https://mdn.mozillademos.org/files/14375/ExpressGeneratorSkeletonWebsite.png)
+![Browser for default Express app generator website](expressgeneratorskeletonwebsite.png)
 
 You have a working Express application, serving itself to _localhost:3000_.
 
@@ -507,15 +507,3 @@ Next, we'll start modifying the skeleton so that it works as a library website.
 - [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/ko/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/ko/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/ko/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/ko/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/ko/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/ko/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/ko/docs/Learn/Server-side/Express_Nodejs/deployment)

@@ -1,7 +1,6 @@
 ---
 title: Vary
 slug: Web/HTTP/Headers/Vary
-translation_of: Web/HTTP/Headers/Vary
 ---
 
 {{HTTPSidebar}}
@@ -56,7 +55,7 @@ Vary: User-Agent
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Vary")}}
+{{Compat}}
 
 ## 호환성 노트
 

@@ -13,7 +13,7 @@ La propiedad CSS flex es una propiedad resumida que indica la capacidad de un el
 
 Consulte [Cómo usar las cajas flexibles de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS/) para conocer más propiedades e información.
 
-## Sintáxis
+## Sintaxis
 
 ```css
 /* 0 0 auto */
@@ -46,11 +46,11 @@ flex: unset;
 ### Valores
 
 - `<'flex-grow'>`
-  - : Define el [flex-grow](/es/docs/Web/CSS/flex-grow) del elemento flexible. Ver { { Xref_cssnumber ( ) } } para obtener más detalles . Los valores negativos no se consideran válidos . El valor predeterminado es 1 cuando se omite.
+  - : Define el [flex-grow](/es/docs/Web/CSS/flex-grow) del elemento flexible. Ver { { Xref_cssnumber ( ) } } para obtener más detalles. Los valores negativos no se consideran válidos. El valor predeterminado es 1 cuando se omite.
 - `<'flex-shrink'>`
-  - : Define el [`flex-shrink`](/es/docs/Web/CSS/flex-shrink) del elemento flexible. Ver { { Xref_cssnumber ( ) } } para obtener más detalles . Los valores negativos no se consideran válidos . El valor predeterminado es 1 cuando se omite.
+  - : Define el [`flex-shrink`](/es/docs/Web/CSS/flex-shrink) del elemento flexible. Ver { { Xref_cssnumber ( ) } } para obtener más detalles. Los valores negativos no se consideran válidos. El valor predeterminado es 1 cuando se omite.
 - `<'flex-basis'>`
-  - : Define el [`flex-basis`](/es/docs/CSS/flex-basis) del elemento flexible. Se acepta cualquier valor válido para las propiedades `width` y `height` . Un tamaño preferente de 0 debe tener una unidad para evitar ser interpretado como flexible. El valor predeterminado es 0% cuando se omite.
+  - : Define el [`flex-basis`](/es/docs/CSS/flex-basis) del elemento flexible. Se acepta cualquier valor válido para las propiedades `width` y `height`. Un tamaño preferente de 0 debe tener una unidad para evitar ser interpretado como flexible. El valor predeterminado es 0% cuando se omite.
 - `none`
   - : Esta palabra clave se computa a `0 0 auto`.
 
@@ -117,9 +117,9 @@ flex.addEventListener("click", function() {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Ver también
 

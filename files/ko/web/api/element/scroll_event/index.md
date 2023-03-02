@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onscroll
 slug: Web/API/Element/scroll_event
-translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
 
@@ -59,11 +58,11 @@ function logScroll(e) {
 
 {{EmbedLiveSample("Example", 700, 200)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

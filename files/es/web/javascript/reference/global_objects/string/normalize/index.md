@@ -1,16 +1,6 @@
 ---
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
-tags:
-  - Cadena
-  - ECMAScript 2015
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - Unicode
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/normalize
 ---
 
@@ -92,9 +82,9 @@ str.normalize('NFKD'); // '\u0073\u0323\u0307'
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.normalize")}}
+{{Compat}}
 
 ## Vea también
 

@@ -1,12 +1,6 @@
 ---
 title: <hr>
 slug: Web/HTML/Element/hr
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/hr
 ---
 
 {{HTMLSidebar}}
@@ -52,7 +46,7 @@ translation_of: Web/HTML/Element/hr
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("presentation")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -108,7 +102,7 @@ This is second paragraph of text.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.hr")}}
+{{Compat}}
 
 ## 같이 보기
 

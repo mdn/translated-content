@@ -1,18 +1,6 @@
 ---
 title: Web Storage API
 slug: Web/API/Web_Storage_API
-tags:
-  - API
-  - Reference
-  - Storage
-  - Web Storage
-  - Web Storage API
-  - localStorage
-  - sessionStorage
-  - 로컬스토리지
-  - 세션스토리지
-  - 웹 스토리지
-translation_of: Web/API/Web_Storage_API
 ---
 
 {{DefaultAPISidebar("Web Storage API")}}
@@ -61,13 +49,7 @@ Web Storage의 두 가지 방식은 다음과 같습니다.
 
 ## 브라우저 호환성
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## 사생활 보호 / 시크릿 모드
 

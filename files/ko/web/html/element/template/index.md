@@ -1,19 +1,6 @@
 ---
 title: '<template>: 콘텐츠 템플릿 요소'
 slug: Web/HTML/Element/template
-tags:
-  - Element
-  - HTML
-  - HTML Web Components
-  - HTML:Flow content
-  - HTML:Metadata content
-  - HTML:Phrasing content
-  - HTML:Script-supporting element
-  - Reference
-  - Web
-  - Web Components
-  - 웹 컴포넌트
-translation_of: Web/HTML/Element/template
 ---
 
 {{HTMLSidebar}}
@@ -155,7 +142,7 @@ table td {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,18 +1,6 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
-tags:
-  - API
-  - Communications
-  - EventSource
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Server Sent Events
-  - Server-sent events
-  - TopicStub
-  - messaging
-translation_of: Web/API/EventSource
 ---
 
 {{APIRef("Server Sent Events")}}
@@ -75,11 +63,11 @@ evtSource.onmessage = function(e) {
 
 > **참고:** You can find a full example on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

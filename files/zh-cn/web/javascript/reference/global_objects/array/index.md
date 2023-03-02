@@ -169,7 +169,7 @@ console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 
 #### 长度属性的规范化
 
-`length` 属性被[转换为一个数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)，被截断为一个整数，然后固定为 0 到 2<sup>53</sup> - 1 之间的范围。`NaN` 变成 `0`，所以即使 `length` 没有出现或 `undefined`，它也会表现得好像它的值是 `0`。
+`length` 属性被[转换为一个数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，被截断为一个整数，然后固定为 0 到 2<sup>53</sup> - 1 之间的范围。`NaN` 变成 `0`，所以即使 `length` 没有出现或 `undefined`，它也会表现得好像它的值是 `0`。
 
 ```js
 Array.prototype.flat.call({}); // []
@@ -605,7 +605,7 @@ const fruitsCopy3 = fruits.slice();
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-你还可以使用 [`structuredClone()`](/zh-CN/docs/Web/API/structuredClone) 方法创建深拷贝，该方法的优点是允许源代码中的{{Glossary("transferable objects", "可转移对象")}}被*转移*到新的副本，而不仅仅是克隆。
+你还可以使用 [`structuredClone()`](/zh-CN/docs/Web/API/structuredClone) 方法创建深拷贝，该方法的优点是允许源代码中的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)被*转移*到新的副本，而不仅仅是克隆。
 
 最后，重要的是要理解，将现有数组赋值给新变量并不会创建数组或其元素的副本。相反，新变量只是对原数组的引用或别名；也就是说，原来的数组名和新的变量名只是同一个对象的两个名称（因此总是被计算为[严格相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#严格相等)）。因此，如果你对原数组的值或新变量的值做了任何改变，另一个也会改变：
 

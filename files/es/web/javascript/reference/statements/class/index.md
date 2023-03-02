@@ -1,7 +1,6 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-translation_of: Web/JavaScript/Reference/Statements/class
 original_slug: Web/JavaScript/Referencia/Sentencias/class
 ---
 
@@ -52,9 +51,9 @@ class Square extends Polygon {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.class")}}
+{{Compat}}
 
 ## Ver también
 

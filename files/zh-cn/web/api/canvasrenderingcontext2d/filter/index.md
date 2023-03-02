@@ -53,7 +53,7 @@ filter 属性接受{{domxref("DOMString")}}字符串，可以包含一个或多�
 
 ## 示例
 
-### 使用 `filter` 属性
+### 应用模糊
 
 这是一段使用 `filter` 属性的简单的代码片段。
 
@@ -66,59 +66,21 @@ filter 属性接受{{domxref("DOMString")}}字符串，可以包含一个或多�
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-ctx.filter = "blur(5px)";
-ctx.font = "48px serif";
-ctx.strokeText("Hello world", 50, 100);
+ctx.filter = 'blur(4px)';
+ctx.font = '48px serif';
+ctx.fillText('Hello world', 50, 100);
 ```
 
-修改下面的代码并在线查看 canvas 的变化 (确保你的浏览器提供这些特性，查看浏览器兼容性列表):
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.filter = "blur(5px)";
-ctx.font = "48px serif";
-ctx.strokeText("Hello world", 50, 100);</textarea>
-```
+{{ EmbedLiveSample('应用模糊', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+## 规范
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
-
-当前的规范或草案不包含此内容，但是正考虑进行标准化。参考 [CSS Filter Effects](http://dev.w3.org/fxtf/filters/#FilterProperty) 规范。
+{{Specifications}}
 
 ## 浏览器兼容性
 

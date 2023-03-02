@@ -36,9 +36,9 @@ var restoringSession = browser.sessions.restore(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Cela sera rempli avec un objet {{WebExtAPIRef("sessions.Session", "Session")}} représentant la session qui a été restaurée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.restore")}}
+{{Compat}}
 
 ## Exemples
 

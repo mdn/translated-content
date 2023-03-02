@@ -1,6 +1,6 @@
 ---
 title: <input type="time">
-slug: Web/HTML/Element/Input/time
+slug: Web/HTML/Element/input/time
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -101,7 +101,7 @@ timeControl.value = '15:30';
 
 ### 时间格式
 
-`time` 输入框无论输入何种格式的值（这可能由用户的区域设置，或用户代理决定），其 `value` 值总是带有前导零的 24 小时制时间：`hh:mm`。如果输入的时间包含秒数（参见[使用 step 属性](#使用_step_属性)），则格式总是为 `hh:mm:ss`。你可以在 {{SectionOnPage("/zh-CN/docs/Web/HTML/Date_and_time_formats", "时间字符串")}}了解到更多有关时间值的格式。
+`time` 输入框无论输入何种格式的值（这可能由用户的区域设置，或用户代理决定），其 `value` 值总是带有前导零的 24 小时制时间：`hh:mm`。如果输入的时间包含秒数（参见[使用 step 属性](#使用_step_属性)），则格式总是为 `hh:mm:ss`。你可以在[时间字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#时间字符串)中了解到更多有关时间值的格式。
 
 在此示例中，你可以通过输入时间并查看之后如何更改来查看时间输入的值。
 

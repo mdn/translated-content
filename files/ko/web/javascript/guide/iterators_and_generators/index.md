@@ -1,11 +1,6 @@
 ---
 title: 반복기 및 생성기
 slug: Web/JavaScript/Guide/Iterators_and_Generators
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
@@ -21,7 +16,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 
 ## 반복자
 
-자바스크립트에서 **반복자(Iterator)**는 시퀀스를 정의하고 종료시의 반환값을 잠재적으로 정의하는 객체입니다. 더 구체적으로 말하자면, 반복자는 두 개의 속성( `value`, `done`)을 반환하는 next() 메소드 사용하여 객체의 [Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol)을 구현합니다. 시퀀스의 마지막 값이 이미 산출되었다면 `done` 값은 true 가 됩니다. 만약 `value`값이 `done` 과 함께 존재한다면, 그것은 반복자의 반환값이 됩니다.
+자바스크립트에서 **반복자**(**Iterator**)는 시퀀스를 정의하고 종료시의 반환값을 잠재적으로 정의하는 객체입니다. 더 구체적으로 말하자면, 반복자는 두 개의 속성( `value`, `done`)을 반환하는 next() 메소드 사용하여 객체의 [Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol)을 구현합니다. 시퀀스의 마지막 값이 이미 산출되었다면 `done` 값은 true 가 됩니다. 만약 `value`값이 `done` 과 함께 존재한다면, 그것은 반복자의 반환값이 됩니다.
 
 반복자를 생성하면 `next()` 메소드를 반복적으로 호출하여 명시적으로 반복시킬 수 있습니다. 반복자를 반복시키는 것은 일반적으로 한 번씩만 할 수 있기 때문에, 반복자를 소모시키는 것이라고 할 수 있습니다. 마지막 값을 산출하고나서 `next()`를 추가적으로 호출하면 `{done: true}`. 가 반환됩니다.
 

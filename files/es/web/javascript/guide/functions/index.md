@@ -1,14 +1,6 @@
 ---
 title: Funciones
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Funciones
-  - Guía
-  - JavaScript
-  - Novato
-  - Principiante
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Functions
 original_slug: Web/JavaScript/Guide/Funciones
 ---
 
@@ -492,7 +484,7 @@ var getCode = (function () {
 getCode(); // Devuelve el apiCode
 ```
 
-> **Nota:** **Precaución** ¡Hay una serie de trampas a tener en cuenta al usar cierres!
+> **Nota:** ¡Hay una serie de trampas a tener en cuenta al usar cierres!
 >
 > Si una función encerrada define una variable con el mismo nombre que una variable en el ámbito externo, entonces no hay forma de hacer referencia a la variable en el ámbito externo nuevamente. (La variable de ámbito interno "anula" la externa, hasta que el programa sale de el ámbito interno).
 >

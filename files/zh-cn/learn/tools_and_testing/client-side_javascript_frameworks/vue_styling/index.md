@@ -1,30 +1,30 @@
 ---
-title: Styling Vue components with CSS
+title: 使用 CSS 为 Vue 组件添加样式
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-现在终于到了使我们的应用程序看起来更好的时候了。在本文中，我们将探讨使用 CSS 样式 Vue 组件的不同方法。
+现在终于到了使我们的应用程序看起来更好的时候了。在本文中，我们将探讨使用 CSS 样式化 Vue 组件的不同方法。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先决条件：</th>
       <td>
         <p>
-          熟悉核心<a href="/zh-CN/docs/Learn/HTML">HTML</a>，<a
+          熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
             href="/zh-CN/docs/Learn/CSS"
             >CSS</a
-          >和<a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>语言，了解<a
+          > 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
             href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >终端/命令行</a
-          >。
+          >知识。
         </p>
         <p>
           Vue 组件是由管理应用程序数据的 JavaScript 对象和映射到基础 DOM
           结构的基于 HTML 的模板语法组成的。为了进行安装并使用 Vue
-          的一些更高级的功能（例如“单个文件组件”或渲染功能），您将需要一个装有
+          的一些更高级的功能（例如“单文件组件（SFC）”或渲染功能），你将需要一个装有
           node + npm 的终端。
         </p>
       </td>
@@ -41,20 +41,20 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 在继续向我们的应用程序添加更多高级功能之前，我们应该添加一些基本的 CSS 使其看起来更好。Vue 具有三种样式化应用程序的方法：
 
 - 外部 CSS 文件。
-- 单个文件组件（`.vue`文件）中的全局样式。
-- 单个文件组件中组件范围的样式。
+- 单文件组件（`.vue` 文件）中的全局样式。
+- 单文件组件中组件范围的样式。
 
-为帮助您熟悉每个应用程序，我们将所有三个功能结合使用，以使我们的应用程序具有更好的外观。
+为帮助你熟悉每个应用程序，我们将所有三个功能结合使用，以使我们的应用程序具有更好的外观。
 
 ## 外部 CSS 文件的样式
 
-您可以包括外部 CSS 文件，并将其全局应用于您的应用程序。让我们看看这是如何完成的。
+你可以包括外部 CSS 文件，并将其全局应用于你的应用程序。让我们看看这是如何完成的。
 
-首先，`reset.css`在`src/assets`目录中创建一个名为的文件。Webpack 将处理此文件夹中的文件。这意味着我们可以使用 CSS 预处理器（如 SCSS）或后处理器（如 PostCSS）。
+首先，在 `src/assets` 目录中创建一个名为 `reset.css` 的文件。Webpack 将处理此文件夹中的文件。这意味着我们可以使用 CSS 预处理器（如 SCSS）或后处理器（如 PostCSS）。
 
-尽管本教程不会使用此类工具，但很高兴知道在资产文件夹中包含此类代码后，它将自动进行处理。
+尽管本教程不会使用此类工具，但最好知道在资产文件夹中包含此类代码后，它将自动进行处理。
 
-将以下内容添加到`reset.css`文件中：
+将以下内容添加到 `reset.css` 文件中：
 
 ```css
 /*reset.css*/
@@ -90,7 +90,7 @@ button {
   line-height: normal;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
+  appearance: none;
 }
 button::-moz-focus-inner {
   border: 0;
@@ -132,10 +132,10 @@ body {
 /*END RESETS*/
 ```
 
-接下来，在您的`src/main.js`文件中，如下导入`reset.css`文件：
+接下来，在 `src/main.js` 文件中，如下导入 `reset.css` 文件：
 
 ```js
-import './assets/reset.css';
+import "./assets/reset.css";
 ```
 
 这将导致在构建步骤中拾取文件并自动将其添加到我们的网站。
@@ -146,150 +146,150 @@ import './assets/reset.css';
 
 ![已添加部分样式的 todo 应用程序；该应用现在位于卡片中，但某些内部功能仍需要样式](todo-app-unstyled.png)
 
-后：![已添加部分样式的 todo 应用程序；该应用现在位于卡片中，但某些内部功能仍需要样式](todo-app-reset-styles.png)
+之后：
 
-显着的更改包括删除列表项目符号，更改背景颜色以及更改基本按钮和输入样式。
+![已添加部分样式的 todo 应用程序；该应用现在位于卡片中，但某些内部功能仍需要样式](todo-app-reset-styles.png)
 
-## 向单个文件组件添加全局样式
+显著的更改包括列表项目符号删除、背景颜色更改以及基本按钮和输入样式更改。
 
-现在，我们已将 CSS 重置为在浏览器之间统一，我们需要对样式进行更多自定义。我们希望将某些样式应用于应用程序中的各个组件。虽然可以直接将这些文件添加到`reset.css`样式表中，但是我们将它们添加到的`<style>`标签中，`App.vue`以演示如何使用它们。
+## 向单文件组件添加全局样式
 
-文件中已经存在一些样式。让我们删除它们，并用下面的样式替换它们。这些样式可以做一些事情 - 为按钮和输入添加一些样式，并自定义`#app`元素及其子元素。
+现在，我们已将 CSS 重置为在浏览器之间统一，需要对样式进行更多自定义。我们希望将某些样式应用于应用程序中的各个组件。虽然可以直接将这些文件添加到 `reset.css` 样式表中，但是我们将它们添加到 `App.vue`  文件的 `<style>` 标签中，以演示如何使用它们。
 
-更新`App.vue`文件的`<style>`元素，如下所示：
+文件中已经存在一些样式。让我们删除它们，并用下面的样式替换它们。这些样式可以做一些事情——为按钮和输入添加一些样式，并自定义 `#app` 元素及其子元素。
 
-```css
+更新 `App.vue` 文件的 `<style>` 元素，如下所示：
+
+```html
 <style>
-/* Global styles */
-.btn {
-  padding: 0.8rem 1rem 0.7rem;
-  border: 0.2rem solid #4d4d4d;
-  cursor: pointer;
-  text-transform: capitalize;
-}
-.btn__danger {
-  color: #fff;
-  background-color: #ca3c3c;
-  border-color: #bd2130;
-}
-.btn__filter {
-  border-color: lightgrey;
-}
-.btn__danger:focus {
-  outline-color: #c82333;
-}
-.btn__primary {
-  color: #fff;
-  background-color: #000;
-}
-.btn-group {
-  display: flex;
-  justify-content: space-between;
-}
-.btn-group > * {
-  flex: 1 1 auto;
-}
-.btn-group > * + * {
-  margin-left: 0.8rem;
-}
-.label-wrapper {
-  margin: 0;
-  flex: 0 0 100%;
-  text-align: center;
-}
-[class*="__lg"] {
-  display: inline-block;
-  width: 100%;
-  font-size: 1.9rem;
-}
-[class*="__lg"]:not(:last-child) {
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 620px) {
-  [class*="__lg"] {
-    font-size: 2.4rem;
+  /* 全局样式 */
+  .btn {
+    padding: 0.8rem 1rem 0.7rem;
+    border: 0.2rem solid #4d4d4d;
+    cursor: pointer;
+    text-transform: capitalize;
   }
-}
-.visually-hidden {
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
-}
-[class*="stack"] > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.stack-small > * + * {
-  margin-top: 1.25rem;
-}
-.stack-large > * + * {
-  margin-top: 2.5rem;
-}
-@media screen and (min-width: 550px) {
+  .btn__danger {
+    color: #fff;
+    background-color: #ca3c3c;
+    border-color: #bd2130;
+  }
+  .btn__filter {
+    border-color: lightgrey;
+  }
+  .btn__danger:focus {
+    outline-color: #c82333;
+  }
+  .btn__primary {
+    color: #fff;
+    background-color: #000;
+  }
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-group > * {
+    flex: 1 1 auto;
+  }
+  .btn-group > * + * {
+    margin-left: 0.8rem;
+  }
+  .label-wrapper {
+    margin: 0;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  [class*="__lg"] {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.9rem;
+  }
+  [class*="__lg"]:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  @media screen and (min-width: 620px) {
+    [class*="__lg"] {
+      font-size: 2.4rem;
+    }
+  }
+  .visually-hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+  }
+  [class*="stack"] > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .stack-small > * + * {
-    margin-top: 1.4rem;
+    margin-top: 1.25rem;
   }
   .stack-large > * + * {
-    margin-top: 2.8rem;
+    margin-top: 2.5rem;
   }
-}
-/* End global styles */
-#app {
-  background: #fff;
-  margin: 2rem 0 4rem 0;
-  padding: 1rem;
-  padding-top: 0;
-  position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
-}
-@media screen and (min-width: 550px) {
+  @media screen and (min-width: 550px) {
+    .stack-small > * + * {
+      margin-top: 1.4rem;
+    }
+    .stack-large > * + * {
+      margin-top: 2.8rem;
+    }
+  }
+  /* 全局样式结束 */
   #app {
-    padding: 4rem;
+    background: #fff;
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    padding-top: 0;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
   }
-}
-#app > * {
-  max-width: 50rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-#app > form {
-  max-width: 100%;
-}
-#app h1 {
-  display: block;
-  min-width: 100%;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 1rem;
-}
+  @media screen and (min-width: 550px) {
+    #app {
+      padding: 4rem;
+    }
+  }
+  #app > * {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #app > form {
+    max-width: 100%;
+  }
+  #app h1 {
+    display: block;
+    min-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
 </style>
 ```
 
-If you check the app, you'll see that our todo list is now in a card, and we have some better formatting of our to-do items. Now we can go through and begin editing our components to use some of these styles.
+如果检查该应用，会发现我们的 todo 列表目前在卡片中呈现，一些 to-do 项目已经有了更好的格式。现在我们可以直截了当地开始编辑我们的组件，来使用这些样式。
 
 ![已添加部分样式的 todo 应用程序；该应用现在位于卡片中，但某些内部功能仍需要样式](todo-app-partial-styles.png)
 
-### Adding CSS classes in Vue
+### 在 Vue 中添加 CSS 类
 
-We should apply the button CSS classes to the `<button>` in our `ToDoForm` component. Since Vue templates are valid HTML, this is done in the same way to how you might do it in plain HTML — by adding a `class=""` attribute to the element.
+我们应当在 `ToDoForm` 组件中的 `<button>` 元素上应用 CSS 按钮类。由于 Vue 模板是有效的 HTML 代码，这个步骤的实现与在纯 HTML 上实现类似——通过在元素中添加 `class=""` 属性实现。
 
-Add `class="btn btn__primary btn__lg"` to your form's `<button>` element:
+在表单中的 `<button>` 元素上添加 `class="btn btn__primary btn__lg"`：
 
 ```html
-<button type="submit" class="btn btn__primary btn__lg">
-  Add
-</button>
+<button type="submit" class="btn btn__primary btn__lg">Add</button>
 ```
 
-While we're here, there's one more semantic and styling change we can make. Since our form denotes a specific section of our page, it could benefit from an `<h2>` element. The label, however, already denotes the purpose of the form. To avoid repeating ourselves, let's wrap our label in an `<h2>`. There are a few other global CSS styles which we can add as well. We'll also add the `input__lg` class to our `<input>` element.
+我们可以做更多的语义和风格上的变化。由于我们的表格表示我们页面的一个特定部分，可以通过使用一个 `<h2>` 元素受益。然而，标签已经表明了表单的目的。为了避免重复，让我们用一个 `<h2>` 来包装我们的标签。还有一些其他的全局 CSS 样式，我们也可以添加。我们还将把 `input__lg` 类添加到我们的 `<input>` 元素中。
 
-Update your `ToDoForm` template so that it looks like this:
+更新你的 `ToDoForm` 模板，它看起来像这样：
 
 ```html
 <template>
@@ -305,35 +305,35 @@ Update your `ToDoForm` template so that it looks like this:
       name="new-todo"
       autocomplete="off"
       v-model.lazy.trim="label"
-      class="input__lg"
-    />
-    <button type="submit" class="btn btn__primary btn__lg">
-      Add
-    </button>
+      class="input__lg" />
+    <button type="submit" class="btn btn__primary btn__lg">Add</button>
   </form>
 </template>
 ```
 
-Let's also add the `stack-large` class to the `<ul>` tag in our `App.vue` file. This will help improve the spacing of our to-do items a bit.
+让我们也在 `App.vue` 文件中的 `<ul>` 标签上添加 `stack-large` 类。这将有助于改善我们待办事项的间距。
 
-Update it as follows:
+将它更新为这样：
 
 ```html
 <ul aria-labelledby="list-summary" class="stack-large">
+  …
+</ul>
 ```
 
-## Adding scoped styles
+## 添加作用域样式
 
-The last component we want to style is our `ToDoItem` component. To keep the style definitions close to the component we can add a `<style>` element inside it. However, if these styles alter things outside of this component, it could be challenging to track down the styles responsible, and fix the problem. This is where the `scoped` attribute can be useful — this attaches a unique HTML `data` attribute selector to all of your styles, preventing them from colliding globally.
+我们要添加样式的最后一个组件是我们的 `ToDoItem` 组件。为了使样式的定义靠近组件，我们可以在它里面添加一个 `<style>` 元素。然而，如果这些样式改变了这个组件之外的东西，要追踪到负责的样式并解决这个问题可能会很困难。这就是 `scoped` 属性有用的地方——它为你所有的样式附加了一个独特的 HTML `data` 属性选择器，防止它们在全局范围内发生冲突。
 
-To use the `scoped` modifier, create a `<style>` element inside `ToDoItem.vue`, at the bottom of the file, and give it a `scoped` attribute:
+要使用 `scoped` 标识符，在 `ToDoItem.vue` 中创建一个 `<style>` 元素，位于文件的底部，并给它 `scoped` 属性：
 
 ```html
 <style scoped>
+  /* … */
 </style>
 ```
 
-Next, copy the following CSS into the newly created `<style>` element:
+然后，将以下 CSS 代码复制到新创建的 `<style>` 元素中：
 
 ```css
 .custom-checkbox > .checkbox-label {
@@ -364,8 +364,6 @@ Next, copy the following CSS into the newly created `<style>` element:
   padding: 5px;
   border: 2px solid #0b0c0c;
   border-radius: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 .custom-checkbox > input:focus {
@@ -416,7 +414,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid currentColor;
+  border: 2px solid currentcolor;
   background: transparent;
 }
 .custom-checkbox > input[type="checkbox"]:focus + label::before {
@@ -452,62 +450,25 @@ Next, copy the following CSS into the newly created `<style>` element:
 }
 ```
 
-Now we need to add some CSS classes to our template to connect the styles.
+现在我们需要在模板中添加一些 CSS 类来与我们的样式连接。
 
-To the root `<div>`, add a `custom-checkbox` class. To the `<input>`, add a `checkbox` class. Last of all, to the `<label>` add a `checkbox-label` class. The updated template is below:
+在根 `<div>` 中，添加一个 `custom-checkbox` 类。在 `<input>` 中，添加一个 `checkbox` 类。最后，在 `<label>` 中添加一个 `checkbox-label` 类。更新的模板如下所示：
 
-The app should now have custom checkboxes. Your app should look something like the screenshot below.
+```html
+<template>
+  <div class="custom-checkbox">
+    <input type="checkbox" :id="id" :checked="isDone" class="checkbox" />
+    <label :for="id" class="checkbox-label">\{{label}}</label>
+  </div>
+</template>
+```
+
+应用现在应该具有自定义的复选框，并且外观类似于下方的截图。
 
 ![具有完整样式的待办事项应用程序。现在可以正确设置输入表单的样式，并且待办事项现在具有间距和自定义复选框](todo-app-complete-styles.png)
 
-## Summary
+## 总结
 
-Our work is done on the styling of our sample app. In the next article we'll return to adding some more functionlity to our app, namely using a computed property to add a count of completed todo items to our app.
+目前，我们已经做完了示例程序的样式设计。在下一篇文章中，我们将为我们的应用程序添加一些更多的功能，即使用一个计算属性来为我们的应用程序添加一个已完成的 todo 项目的计数。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember 应用程序的结构和组件化](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [灰烬互动：事件，类和状态](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [灰烬交互性：页脚功能，条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [在 Ember 中路由](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [灰烬资源和故障排除](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Vue 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [创建我们的第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染 Vue 组件列表](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [添加新的待办事项表单：Vue 事件，方法和模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [使用 CSS 样式化 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 计算的属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 条件渲染：编辑现有待办事项](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [使用 Vue 裁判进行焦点管理](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- 斯维尔特
-
-  - [Svelte 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [启动我们的 Svelte Todo 列表应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Svelte 中的动态行为：使用变量和道具](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [组成我们的 Svelte 应用程序](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [先进的 Svelte：反应性，生命周期，无障碍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [与 Svelte 商店合作](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Svelte 中的 TypeScript 支持](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [部署和后续步骤](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

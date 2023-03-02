@@ -1,16 +1,8 @@
 ---
 title: '<rb>: 루비 베이스 요소'
 slug: Web/HTML/Element/rb
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Ruby
-  - Text
-  - Web
-translation_of: Web/HTML/Element/rb
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<rb>` 요소**는 {{HTMLElement("ruby")}} 표기의 기반 텍스트 구성요소(루비 주석을 적용하려는 글자)를 나눌 때 사용합니다. 하나의 `<rb>` 요소는 기반 텍스트에서의 최소 단위를 하나 감싸야 합니다.
@@ -117,7 +109,7 @@ body {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.rb")}}
+{{Compat}}
 
 ## 같이 보기
 

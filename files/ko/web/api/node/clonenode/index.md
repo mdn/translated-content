@@ -1,7 +1,6 @@
 ---
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
-translation_of: Web/API/Node/cloneNode
 ---
 
 {{APIRef("DOM")}}**`Node.cloneNode()`** 메서드는 이 메서드를 호출한 Node 의 복제된 Node를 반환합니다.
@@ -18,8 +17,6 @@ var dupNode = node.cloneNode(deep);
   - : _복제된 새로운 node._
 - _deep {{optional_inline}}_
   - : _해당 node의 children 까지 복제하려면 true, 해당 node 만 복제하려면 false_
-
-> **참고:** **Note:** In the DOM4 specification (as implemented in Gecko 13.0 {{geckoRelease(13)}}), `deep` is an optional argument. If omitted, the method acts as if the value of `deep` was **`true`**, defaulting to using deep cloning as the default behavior. To create a shallow clone, `deep` must be set to `false`.This behavior has been changed in the latest spec, and if omitted, the method will act as if the value of `deep` was **`false`**. Though It's still optional, you should always provide the `deep` argument both for backward and forward compatibility. With Gecko 28.0 {{geckoRelease(28)}}), the console warned developers not to omit the argument. Starting with Gecko 29.0 {{geckoRelease(29)}}), a shallow clone is defaulted instead of a deep clone.
 
 ## Example
 
@@ -44,10 +41,10 @@ If the original node has an ID and the clone is to be placed in the same documen
 
 To clone a node for appending to a different document, use {{domxref("Document.importNode()")}} instead.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

@@ -27,9 +27,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `previous`{{optional_inline}}
   - : Un `string` représentant la valeur de chaîne précédente.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.StringDelta")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

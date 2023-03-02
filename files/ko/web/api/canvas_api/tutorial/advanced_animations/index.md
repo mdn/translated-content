@@ -1,11 +1,10 @@
 ---
 title: 발전된 애니메이션
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
-translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 original_slug: Web/HTML/Canvas/Tutorial/Advanced_animations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 마지막 챕터에서 우리는 몇가지 [간단한 애니메이션들](/ko/docs/Web/API/Canvas_API/Tutorial/Basic_animations)을 만들었고 이제 이것들을 어떻게 움직이게 하는지 안다. 이 챕터에서 우리는 각각의 모션들을 자세히 살펴보고 애니메이션을 더 발전시키기 위해 몇가지 물리 동작을 추가할 것이다.
 

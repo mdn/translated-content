@@ -68,9 +68,9 @@ browser.tabs.onReplaced.addListener(handleReplaced);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onReplaced")}}
+{{Compat}}
 
 > **Note :**
 >

@@ -1,6 +1,6 @@
 ---
 title: <input type="number">
-slug: Web/HTML/Element/Input/number
+slug: Web/HTML/Element/input/number
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -78,7 +78,7 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-> **备注：** 请尽可能避免使用 `placeholder` 属性，它在语义上没有其他解释表单的方式有用，并且可能会导致额外的问题。参见 {{SectiononPage("/zh-CN/docs/Web/HTML/Element/input", "标签与占位符")}}以获取更多信息。
+> **备注：** 请尽可能避免使用 `placeholder` 属性，它在语义上没有其他解释表单的方式有用，并且可能会导致额外的问题。参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
 
 ### `readonly`
 
@@ -106,7 +106,7 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 `<input type ="number">` 元素可以帮助简化构建在表单中输入数字的用户界面和逻辑。当你使用正确的 `type` 值 `number` 创建数字输入时，会自动验证你输入的文本是否为数字，而且通常会一同设置一组用于步进数字值的向上向下按钮。
 
-> **警告：** 逻辑上，不应该向数字输入框输入数字以外的字符。某些浏览器允许这些不合法字符，另外一些浏览器不允许；请查看 {{bug(1398528)}}。
+> **警告：** 逻辑上，不应该向数字输入框输入数字以外的字符。某些浏览器允许这些不合法字符，另外一些浏览器不允许；请查看 [Firefox bug 1398528](https://bugzil.la/1398528)。
 
 > **备注：** 记住，用户可以在幕后修改 HTML ，因此网站*不得*使用简单的客户端验证来实现任何安全目的。你*必须*在服务器端验证所提供的值，以确保这些值没有任何安全问题。
 

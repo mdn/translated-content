@@ -1,13 +1,6 @@
 ---
 title: '<br>: 줄바꿈 요소'
 slug: Web/HTML/Element/br
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/br
 ---
 
 {{HTMLSidebar}}
@@ -115,7 +108,7 @@ USA
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -36,7 +36,7 @@ document.body.addEventListener('click', hide, false);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Event.currentTarget")}}
+{{Compat}}
 
 ## Ver también
 

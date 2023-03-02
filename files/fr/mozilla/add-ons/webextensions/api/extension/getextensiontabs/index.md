@@ -39,9 +39,9 @@ Cette API est également disponible en tant que `browser.extension.getExtensionT
 
 `array` of `object`. Tableau d'objets de fenêtre globaux
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.getExtensionTabs")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

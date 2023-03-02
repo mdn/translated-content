@@ -1,13 +1,6 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
-tags:
-  - API
-  - DragEvent
-  - Reference
-  - drag and drop
-browser-compat: api.DragEvent
-translation_of: Web/API/DragEvent
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -66,11 +59,11 @@ Although this interface has a constructor, it is not possible to create a useful
 
 An Example of each property, constructor, event type and global event handlers is included in their respective reference page.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

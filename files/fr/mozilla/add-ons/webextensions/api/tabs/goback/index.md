@@ -39,9 +39,9 @@ var withgoingBack = browser.tabs.goBack(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est tenue lorsque la navigation sur la page se termine.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.goBack")}}
+{{Compat}}
 
 ## Exemples
 

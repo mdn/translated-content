@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 No capítulo sobre [desenhando formas com canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), usamos apenas os estilos padrões de preenchimento e linha. Aqui vamos explorar as opções do canvas que temos à nossa disposição para tornar nossos desenhos um pouco mais atraentes. Você aprenderá a adicionar cores diferentes, estilos de linhas, gradientes, padrões e sombras aos seus desenhos.
 
@@ -59,7 +59,7 @@ draw();
 
 O resultado se parece com isto:
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}
 
 ### Um `strokeStyle` exemplo
 
@@ -90,7 +90,7 @@ draw();
 
 O resultado se parece com isto:
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
 
 ## Transparência
 
@@ -151,7 +151,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
+{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
 
 ### Um exemplo usando o `rgba()`
 
@@ -189,7 +189,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}
+{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "canvas_rgba.png")}}
 
 ## Line styles
 
@@ -241,10 +241,10 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}
+{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}
 
 A obtenção de linhas nítidas requer a compreensão de como os caminhos são traçados. Nas imagens abaixo, a grade representa a grade de coordenadas da tela. Os quadrados entre as linhas de grade são pixels reais na tela. Na primeira imagem da grade abaixo, um retângulo de (2,1) a (5,5) é preenchido. A área inteira entre eles (vermelho claro) cai nos limites dos pixels, portanto, o retângulo preenchido resultante terá bordas nítidas.
-![](https://mdn.mozillademos.org/files/201/Canvas-grid.png)
+![](canvas-grid.png)
 
 Se você considerar um caminho de (3,1) a (3,5) com uma espessura de linha de 1,0, você terminará com a situação na segunda imagem. A área real a ser preenchida (azul escuro) se estende apenas até a metade dos pixels dos dois lados do caminho. Uma aproximação disso deve ser renderizada, o que significa que esses pixels são sombreados apenas parcialmente e resultam em toda a área (azul claro e azul escuro) sendo preenchida com uma cor apenas metade da escuridão da cor real do traço. É o que acontece com a linha de largura 1.0 no código de exemplo anterior.
 
@@ -260,7 +260,7 @@ Embora seja um pouco doloroso ao trabalhar inicialmente com gráficos 2D escalon
 
 ### Exemplo lineCap.
 
-A propriedade lineCap determina como os pontos finais de cada linha são desenhados. Existem três valores possíveis para essa propriedade e são: bunda, redondo e quadrado. Por padrão, essa propriedade está configurada para butt.![](https://mdn.mozillademos.org/files/236/Canvas_linecap.png)
+A propriedade lineCap determina como os pontos finais de cada linha são desenhados. Existem três valores possíveis para essa propriedade e são: bunda, redondo e quadrado. Por padrão, essa propriedade está configurada para butt.![](canvas_linecap.png)
 
 - `butt`
   - : As extremidades das linhas são quadradas nos pontos finais.
@@ -309,13 +309,13 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}
 
 ### Um exemplo de lineJoin
 
 A propriedade lineJoin determina como dois segmentos de conexão (de linhas, arcos ou curvas) com comprimentos diferentes de zero em uma forma são unidos (segmentos degenerados com comprimentos zero, cujos pontos finais e pontos de controle especificados são exatamente na mesma posição, são ignorados) .
 
-Existem três valores possíveis para essa propriedade: round, chanfro e mitra. Por padrão, essa propriedade está configurada para mitra. Observe que a configuração lineJoin não terá efeito se os dois segmentos conectados tiverem a mesma direção, porque nenhuma área de junção será adicionada neste caso.![](https://mdn.mozillademos.org/files/237/Canvas_linejoin.png)
+Existem três valores possíveis para essa propriedade: round, chanfro e mitra. Por padrão, essa propriedade está configurada para mitra. Observe que a configuração lineJoin não terá efeito se os dois segmentos conectados tiverem a mesma direção, porque nenhuma área de junção será adicionada neste caso.![](canvas_linejoin.png)
 
 - `round`
   - : Arredonda os cantos de uma forma preenchendo um setor adicional de disco centralizado no ponto final comum dos segmentos conectados. O raio desses cantos arredondados é igual à metade da largura da linha.
@@ -352,7 +352,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
+{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}
 
 ### Uma demonstração da propriedade miterLimit
 
@@ -427,7 +427,7 @@ document.getElementById('miterLimit').value = document.getElementById('canvas').
 draw();
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}
+{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}
 
 ### Usando linhas tracejadas
 
@@ -462,7 +462,7 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}
+{{EmbedLiveSample("Using_line_dashes", "120", "120", "marching-ants.png")}}
 
 ## Gradients
 
@@ -535,7 +535,7 @@ The first is a background gradient. As you can see, we assigned two colors at th
 
 In the second gradient, we didn't assign the starting color (at position 0.0) since it wasn't strictly necessary, because it will automatically assume the color of the next color stop. Therefore, assigning the black color at position 0.5 automatically makes the gradient, from the start to this stop, black.
 
-{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}
+{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}
 
 ### A `createRadialGradient` example
 
@@ -590,7 +590,7 @@ In this case, we've offset the starting point slightly from the end point to ach
 
 The last color stop in each of the four gradients uses a fully transparent color. If you want to have a nice transition from this to the previous color stop, both colors should be equal. This isn't very obvious from the code because it uses two different CSS color methods as a demonstration, but in the first gradient `#019F62 = rgba(1,159,98,1)`.
 
-{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}
+{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
 
 ## Patterns
 
@@ -630,7 +630,7 @@ function draw() {
 
   // create new image object to use as pattern
   var img = new Image();
-  img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+  img.src = 'canvas_createpattern.png';
   img.onload = function() {
 
     // create pattern
@@ -650,7 +650,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_createPattern_example", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}
+{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}
 
 ## Shadows
 
@@ -700,7 +700,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}
+{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
 
 We will look at the `font` property and `fillText` method in the next chapter about [drawing text](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -735,6 +735,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}
+{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

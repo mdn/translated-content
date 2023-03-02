@@ -61,9 +61,9 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ## 적용된 CSS 검사
 
-페이지에서 요소를 마우스 오른쪽/ctrl 키를 누른 채 클릭하고 ***검사 (Inspect)** *를 선택하거나, 개발자 도구 디스플레이 왼쪽의 HTML tree 에서 요소를 선택하십시오. `box1` class 의 요소를 선택하십시오; 이것은 테두리 박스가 그려진 페이지의 첫 번째 요소입니다.
+페이지에서 요소를 마우스 오른쪽/ctrl 키를 누른 채 클릭하고 **검사 (Inspect)** 를 선택하거나, 개발자 도구 디스플레이 왼쪽의 HTML tree 에서 요소를 선택하십시오. `box1` class 의 요소를 선택하십시오; 이것은 테두리 박스가 그려진 페이지의 첫 번째 요소입니다.
 
-![The example page for this tutorial with DevTools open.](https://mdn.mozillademos.org/files/16606/inspecting1.png)
+![DevTools가 열려 있는 이 튜토리얼의 예제 페이지](inspecting1.png)
 
 HTML 오른쪽의 [Rules view](/ko/docs/Tools/Page_Inspector/UI_Tour#Rules_view)를 보면 해당 요소에 적용된 CSS 속성과 값을 볼 수 있습니다. `box1`클래스에 직접 적용된 규칙과 상자가 조상으로부터 상속받은 CSS(이 경우 `<body>`)를 볼 수 있습니다. 이것은 예상하지 못한 일부 CSS가 적용되는 경우에 유용합니다. 아마도 부모 요소에서 상속되고 있고 이 요소의 컨텍스트에서 덮어쓰는 규칙을 추가해야 합니다.
 
@@ -81,7 +81,7 @@ HTML 오른쪽의 [Rules view](/ko/docs/Tools/Page_Inspector/UI_Tour#Rules_view)
 
 **`box1`을 선택한 상태에서 테두리에 적용된 색상을 표시하는 견본(색상이 지정된 작은 원)을 클릭합니다. 색상 선택기가 열리고 몇 가지 다른 색상을 시도할 수 있습니다. 페이지에서 실시간으로 업데이트됩니다. 비슷한 방식으로 테두리의 너비나 스타일을 변경할 수 있습니다.**
 
-![DevTools Styles Panel with a color picker open.](https://mdn.mozillademos.org/files/16607/inspecting2-color-picker.png)
+![색상 선택기가 열린 DevTools](inspecting2-color-picker.png)
 
 ## 새 속성 추가
 
@@ -89,7 +89,7 @@ DevTools를 사용하여 속성을 추가할 수 있습니다. 상자가 `<body>
 
 **규칙에서 닫는 중괄호를 클릭하여 새 선언 입력을 시작할 수 있습니다. 이 시점에서 새 속성 입력을 시작할 수 있으며 DevTools는 일치하는 속성의 자동 완성 목록을 표시합니다. `font-size`를 선택한 후 시도하려는 값을 입력합니다. + 버튼을 클릭하여 동일한 선택기로 규칙을 추가하고 거기에 새 규칙을 추가할 수도 있습니다.**
 
-![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](https://mdn.mozillademos.org/files/16608/inspecting3-font-size.png)
+![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
 > **참고:** 규칙 보기에는 다른 유용한 기능도 있습니다. 예를 들어 유효하지 않은 값이 있는 선언에는 줄이 그어 표시됩니다. 자세한 내용은 [CSS 검사 및 수정](/ko/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)에서 확인할 수 있습니다.
 
@@ -105,9 +105,9 @@ DevTools를 사용하여 속성을 추가할 수 있습니다. 상자가 `<body>
 
 `box2` 클래스가 있는 요소는 `border-box`를 사용하므로 여기에서 요소에 지정한 크기에서 패딩과 테두리를 뺍니다. 즉, 상자가 페이지에서 차지하는 공간이 지정한 정확한 크기(이 경우 `width: 400px`)입니다.
 
-![The Layout section of the DevTools](https://mdn.mozillademos.org/files/16609/inspecting4-box-model.png)
+![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **참고:** [박스 모델 검사 및 검사](/ko/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)에서 자세히 알아보십시오.
+> **참고:** [박스 모델 검사](/ko/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)에서 자세히 알아보십시오.
 
 ## 특이성 문제 해결
 
@@ -134,7 +134,7 @@ em {
 
 **`.special` 클래스로 `<em>`을 검사하면 DevTools에서 주황색이 적용되는 색상임을 보여주고 또한 em에 적용된 `color` 속성은 그어진 선으로 표시됩니다. 이제 클래스가 요소 선택기를 재정의하는 것을 볼 수 있습니다.**
 
-![Selecting an em and looking at DevTools to see what is over-riding the color.](https://mdn.mozillademos.org/files/16610/inspecting5-specificity.png)
+![em을 선택하고 DevTools에서 색상을 재정의](inspecting5-specificity.png)
 
 ## Firefox DevTools에 대해 자세히 알아보기
 
@@ -159,11 +159,11 @@ DevTools는 CSS 문제를 해결할 때 큰 도움이 될 수 있으므로 CSS�
 
 브라우저는 이해하지 못하는 CSS를 무시합니다. 사용 중인 속성이나 값이 테스트 중인 브라우저에서 지원되지 않으면 아무 것도 중단되지 않지만 해당 CSS는 적용되지 않습니다. DevTools는 일반적으로 어떤 방식으로든 지원되지 않는 속성과 값을 강조 표시합니다. 아래 스크린샷에서 브라우저는 {{cssxref("grid-template-columns")}}의 하위 그리드 값을 지원하지 않습니다.
 
-![Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported.](https://mdn.mozillademos.org/files/16641/no-support.png)
+![grid-template-columns: subgrid 값이 지원되지 않아 subgrid가 제외된 브라우저 DevTools의 이미지](no-support.png)
 
 또한 MDN의 각 속성 페이지 하단에 있는 브라우저 호환성 표를 볼 수 있습니다. 이것들은 해당 속성에 대한 브라우저 지원을 보여주며, 속성의 일부 사용에 대한 지원이 있고 다른 것은 지원하지 않는 경우 종종 세분화됩니다. 아래 표는 {{cssxref("shape-outside")}} 속성에 대한 호환성 데이터를 보여줍니다.
 
-{{compat("css.shape-outside")}}
+{{Compat}}
 
 ### 다른 것이 CSS를 무시합니까?
 
@@ -186,29 +186,8 @@ DevTools는 CSS 문제를 해결할 때 큰 도움이 될 수 있으므로 CSS�
 
 여전히 문제를 해결하는 데 어려움을 겪고 있다면 테스트 케이스를 축소하면 포럼에 게시하거나 동료에게 보여줌으로써 도움을 요청할 수 있습니다. 도움을 요청하기 전에 문제를 줄이고 문제가 발생한 위치를 정확히 식별하는 작업을 완료했음을 보여줄 수 있다면 도움을 받을 가능성이 훨씬 더 높습니다. 경험이 더 많은 개발자는 문제를 신속하게 찾아내고 올바른 방향으로 안내할 수 있으며, 그렇지 않더라도 축소된 테스트 사례를 통해 빠르게 살펴보고 최소한 도움을 줄 수 있기를 바랍니다.<!-- 피-->
 
-문제가 실제로 브라우저의 버그인 경우 축소된 테스트 사례를 사용하여 관련 브라우저 공급업체에 버그 보고서를 제출할 수도 있습니다(예: Mozilla의 [bugzilla 사이트](<https://bugzilla .mozilla.org>)).
+문제가 실제로 브라우저의 버그인 경우 축소된 테스트 사례를 사용하여 관련 브라우저 공급업체에 버그 보고서를 제출할 수도 있습니다(예: Mozilla의 [bugzilla 사이트](https://bugzilla.mozilla.org)).
 
 CSS에 대한 경험이 많을수록 문제를 더 빨리 파악하게 될 것입니다. 그러나 우리 중 가장 경험이 많은 사람들조차도 때때로 도대체 무슨 일이 일어나고 있는지 궁금해합니다. 체계적인 접근 방식을 취하고 축소된 테스트 사례를 만들고 다른 사람에게 문제를 설명하면 일반적으로 수정 사항을 찾을 수 있습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1. [Cascade and inheritance](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/ko/docs/Learn/CSS/Building_blocks/Organizing)

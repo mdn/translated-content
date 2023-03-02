@@ -47,7 +47,7 @@ slug: Learn/Server-side/Express_Nodejs/routes
 - Views (templates) used by the controllers to render the data.
 - View들(템플릿들)은 데이터를 렌더링하는 컨트롤러에 의해서 사용된다.
 
-![](https://mdn.mozillademos.org/files/14456/MVC%20Express.png)
+![](mvc_express.png)
 
 Ultimately we might have pages to show lists and detail information for books, genres, authors and bookinstances, along with pages to create, update, and delete records. That's a lot to document in one article. Therefore most of this article will concentrate on setting up our routes and controllers to return "dummy" content. We'll extend the controller methods in our subsequent articles to work with model data.
 
@@ -126,7 +126,7 @@ The callback function here calls [`send()`](https://expressjs.com/en/4x/api.html
 
 The example routes above use the `Router.get()` method to respond to HTTP GET requests with a certain path.
 
-The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, ​​​​​​ `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
+The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
 
 For example, the code below behaves just like the previous `/about` route, but only responds to HTTP POST requests.
 

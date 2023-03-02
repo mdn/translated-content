@@ -1,10 +1,6 @@
 ---
 title: 사용값
 slug: Web/CSS/used_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/used_value
 ---
 
 {{cssref}}

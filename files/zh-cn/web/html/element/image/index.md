@@ -1,14 +1,23 @@
 ---
-title: <image>
+title: <image>：图像元素
 slug: Web/HTML/Element/image
 ---
 
-{{non-standard_header}}
+{{HTMLSidebar}}{{deprecated_header}}{{Non-standard_header}}
 
-## 概要
+[HTML](/zh-CN/docs/Web/HTML) `<image>` 元素是 {{HTMLElement("img")}} 元素的一个古老且支持不足的前身。**不应该使用它**。
 
-HTML `<image>元素曾经是一个试验性的元素，用来显示图片。它从未被实现过，请使用标准的`{{HTMLElement("img")}}元素。
+某些浏览器会尝试将它自动转化为 {{HTMLElement("img")}} 元素，在也指定了 {{htmlattrxref("src", "img")}} 属性时可能会成功。
 
-> **备注：** **不要使用它！**要显示图片，请使用标准的{{HTMLElement("img")}}.
+## 规范
 
-直到 Firefox 22，虽然 image 仍然没有被支持，但是该元素被关联到{{domxref("HTMLSpanElement")}}。现在已经修正，image 按照规范要求，被关联到{{domxref("HTMLElement")}} 。
+这似乎并不是任何正式规范的一部分。它在 [HTML+ Discussion Document - Dave Raggett, November 8, 1993](https://www.w3.org/MarkUp/HTMLPlus/htmlplus_21.html) 中被提及（第 5.9 节——图像），但在 1994 年的 [HyperText Markup Language Specification - 2.0](https://datatracker.ietf.org/doc/html/draft-ietf-html-spec-00) 的第一次修订中没有被纳入。
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{HTMLElement("img")}}：文档中显示图片的正确方式
+- {{HTMLElement("picture")}}：文档中显示图片更强大的方式

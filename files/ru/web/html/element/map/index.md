@@ -39,17 +39,17 @@ translation_of: Web/HTML/Element/map
 
 ## Живой пример
 
-{{ EmbedLiveSample('Пример', '350', '150', '', 'Web/HTML/Element/map') }}
+{{ EmbedLiveSample('Пример', '350', '150') }}
 
 ### Ожидаемые выходные данные
 
 Живой пример выше должен выглядеть как нижеследующее изображение (при использовании клавиши на клавиатуре):
 
 _Для ссылки `left.html`:_
-![](https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png)
+![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
 _Для ссылки `right.html`:_
-![](https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png)
+![](screen_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## Спецификации
 

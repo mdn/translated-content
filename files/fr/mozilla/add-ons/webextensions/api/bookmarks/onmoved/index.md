@@ -64,9 +64,9 @@ Les événements ont trois fonctions :
 - `oldIndex`
   - : `integer`. L'ancien index de l'élément dans son parent.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.onMoved")}}
+{{Compat}}
 
 ## Exemples
 

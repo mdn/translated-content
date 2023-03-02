@@ -23,4 +23,4 @@ slug: Glossary/Signature/Security
 
 ### 技术参考
 
-- [信息安全基础 ​​​​​​​](/zh-CN/docs/Web/Security/Information_Security_Basics)
+- [信息安全基础](/zh-CN/docs/Web/Security/Information_Security_Basics)

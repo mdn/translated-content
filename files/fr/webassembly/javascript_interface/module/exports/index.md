@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/expor
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/exports
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La fonction **`WebAssembly.Module.exports()`** renvoie un tableau qui contient les descriptions des exports déclarés pour un module donné.
 

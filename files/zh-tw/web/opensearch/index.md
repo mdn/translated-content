@@ -124,7 +124,7 @@ OpenSearch 描述檔能由網站[自動提示安裝](#.E8.87.AA.E5.8B.95.E6.B8.A
 - 確認搜尋套件 XML 的格式正確。你可以直接用 Firefox 載入該檔案。template URL 的 & 符號需要像 `&amp;` 這樣跳脫，標籤也要用正斜線或 end tag 關閉。
 - `xmlns` 屬性很重要，少了它就會出現「Firefox could not download the search plugin」的錯誤訊息。
 - 你**必須**包含 `text/html` URL：搜尋套件只包含 Atom 或 [RSS](/zh-TW/RSS) URL 類型（雖然它有效，但 Firefox 不支援）都可能發生「could not download the search plugin」錯誤。
-- 遠端擷取的小圖標（favicon）不能大於 10KB(請參見 {{ Bug(361923) }}）。
+- 遠端擷取的小圖標（favicon）不能大於 10KB（請參見 [Firefox bug 361923](https://bugzil.la/361923)）。
 
 In addition, the search plugin service provides a logging mechanism that may be of use to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Logging information will appear in Firefox's [Error Console](/zh-TW/Error_Console) (Tools 〉 Error Console) when search plugins are added.
 

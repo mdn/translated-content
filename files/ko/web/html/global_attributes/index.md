@@ -1,14 +1,8 @@
 ---
 title: 전역 특성
 slug: Web/HTML/Global_attributes
-tags:
-  - Attribute
-  - HTML
-  - Reference
-  - Web
-  - 특성
-translation_of: Web/HTML/Global_attributes
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **전역 특성**(Global attributes)은 모든 HTML에서 공통으로 사용할 수 있는 특성입니다. 그러나 일부 요소에는 아무런 효과도 없을 수 있습니다.
@@ -101,7 +95,7 @@ translation_of: Web/HTML/Global_attributes
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes")}}
+{{Compat}}
 
 ## 같이 보기
 

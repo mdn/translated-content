@@ -35,9 +35,9 @@ myWorker.terminate();
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Worker.terminate")}}
+{{Compat}}
 
 ## Mirar también
 

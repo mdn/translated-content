@@ -25,7 +25,7 @@ _也从其父接口继承属性，{{domxref("BaseAudioContext")}}._
 
 ## 方法
 
-_也从其父接口继承方法 ​​​​, {{domxref("BaseAudioContext")}}._
+_也从其父接口继承方法 , {{domxref("BaseAudioContext")}}._
 
 - {{domxref("AudioContext.close()")}}
   - : 关闭一个音频环境，释放任何正在使用系统资源的音频。

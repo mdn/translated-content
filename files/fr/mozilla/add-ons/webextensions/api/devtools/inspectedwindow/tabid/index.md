@@ -44,9 +44,9 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.inspectedWindow.tabId")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

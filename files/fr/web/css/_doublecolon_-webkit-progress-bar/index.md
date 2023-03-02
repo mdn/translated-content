@@ -49,7 +49,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-progress-bar")}}
+{{Compat}}
 
 ## Voir aussi
 

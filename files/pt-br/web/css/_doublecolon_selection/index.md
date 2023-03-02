@@ -98,7 +98,7 @@ Facilite para os usuários ver e ouvir o conteúdo, incluindo a separação do p
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
 | {{SpecName('CSS4 Pseudo-Elements', '#selectordef-selection', '::selection')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Definição inicial. |
 
-> **Note:** **Nota:** `::selection` estava nos rascunhos do Nível 3 dos Seletores de CSS, mas foi removido na fase Recomendação do Candidato porque estava subespecificado (especialmente com elementos aninhados) e a interoperabilidade não foi alcançada ([com base na lista de discussão de estilos W3C](http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html)). Ele retornou no [Nível 4 dos Pseudo-Elementos](http://dev.w3.org/csswg/css-pseudo-4/).
+> **Nota:** `::selection` estava nos rascunhos do Nível 3 dos Seletores de CSS, mas foi removido na fase Recomendação do Candidato porque estava subespecificado (especialmente com elementos aninhados) e a interoperabilidade não foi alcançada ([com base na lista de discussão de estilos W3C](http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html)). Ele retornou no [Nível 4 dos Pseudo-Elementos](http://dev.w3.org/csswg/css-pseudo-4/).
 
 ## Compatibilidade com navegadores
 

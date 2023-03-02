@@ -3,7 +3,7 @@ title: Animating textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 En esta demostración nos basamos en el ejemplo anterior, solo que ahora reemplazaremos nuestra textura estática con los fotogramas de un video Ogg.
 

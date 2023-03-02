@@ -17,7 +17,3 @@ original_slug: Глоссарий/Type_Conversion
 
     1. {{Glossary("Type")}}
     2. {{Glossary("Type coercion")}}
-
-2. Статьи Википедии
-
-    1. {{Interwiki("wikipedia", "Type conversion")}}

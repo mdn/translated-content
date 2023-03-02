@@ -1,16 +1,6 @@
 ---
 title: '@viewport'
 slug: conflicting/Web/CSS
-tags:
-  - Adaptation
-  - At-rule
-  - CSS
-  - Device
-  - NeedsContent
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/@viewport
 original_slug: Web/CSS/@viewport
 ---
 
@@ -86,11 +76,11 @@ Browser support for `@viewport` is weak at this time, with support being largely
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

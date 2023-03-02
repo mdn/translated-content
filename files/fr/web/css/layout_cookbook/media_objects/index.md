@@ -56,15 +56,7 @@ En revanche, il faudra retirer les marges appliquées aux objets et les largeurs
 
 ## Compatibilité des navigateurs
 
-Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en charge différente selon les navigateurs, se référer à chacun des tableaux suivant pour plus de détails sur la prise en charge de chaque propriété.
-
-### grid-template-areas
-
-{{Compat("css.properties.grid-template-areas")}}
-
-### float
-
-{{Compat("css.properties.float")}}
+{{Compat}}
 
 ## Voir aussi
 

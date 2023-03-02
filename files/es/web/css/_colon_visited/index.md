@@ -69,7 +69,7 @@ a:visited {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.visited")}}
+{{Compat}}
 
 ## Ver también
 

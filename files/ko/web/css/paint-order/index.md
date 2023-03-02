@@ -1,13 +1,6 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - Reference
-  - SVG
-  - Web
-  - recipe:css-property
-translation_of: Web/CSS/paint-order
 ---
 {{CSSRef}}
 

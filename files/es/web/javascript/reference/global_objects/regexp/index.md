@@ -1,13 +1,6 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Clase
-  - Expresiones Regulares
-  - JavaScript
-  - Referencia
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp
 ---
 
@@ -217,9 +210,9 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // registra 'xxx'
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp")}}
+{{Compat}}
 
 ### Notas específicas de Firefox
 

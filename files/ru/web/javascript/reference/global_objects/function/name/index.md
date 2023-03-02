@@ -35,7 +35,7 @@ alert(doSomething.name); // выведет "doSomething"
 
 ### Имя функции-конструктора
 
-Функции, созданные синтаксисом `new Function(...)` или просто `Function(...)` создают {{jsxref("Function")}} и имеют name "anonymous":​​​
+Функции, созданные синтаксисом `new Function(...)` или просто `Function(...)` создают {{jsxref("Function")}} и имеют name "anonymous":
 
 ```js
 (new Function).name; // "anonymous"
@@ -127,7 +127,7 @@ console.log(fooInstance.constructor.name); // logs "Foo"
 
 > **Предупреждение:** Интерпретатор объявит встроенное `Function.name` свойство только если функция не имеет своего собственного свойства _name_ (см. [9.2.11 of the ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Однако, в ES2015 статичные методы перезаписывают OwnProperty конструкторов класса-функции (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
 
-Таким образом, нельзя получить доступ к `name` любого класса со статичным свойством `name()​​​​​​:`
+Таким образом, нельзя получить доступ к `name` любого класса со статичным свойством `name():`
 
 ```js
 class Foo {

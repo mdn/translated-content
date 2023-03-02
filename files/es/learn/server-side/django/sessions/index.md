@@ -137,7 +137,7 @@ def index(request):
 
 Aquí primero obtenemos el valor de la clave de sesión `'num_visits'`, estableciendo el valor a 0 si no había sido establecido previamente. Cada vez que se recibe la solicitud, incrementamos el valor y lo guardamos de vuelta en la sesión (para la siguiente vez que el usuario visita la página). La variable `num_visits` se envía entonces a la plantilla en nuestra variable de contexto.
 
-> **Nota:** Aquí podríamos incluso revisar si el navegador soporta cookies (mira [Cómo usar sesiones](/es/docs/https://docs.djangoproject.com/en/1.10/topics/http/sessions/) para ejemplos) o diseñar nuestra UI de modo que no importe si el navegador soporta cookies o no.
+> **Nota:** Aquí podríamos incluso revisar si el navegador soporta cookies (mira [Cómo usar sesiones](https://docs.djangoproject.com/en/1.10/topics/http/sessions/) para ejemplos) o diseñar nuestra UI de modo que no importe si el navegador soporta cookies o no.
 
 Añade la línea que se ve al final del siguiente bloque a tu plantilla HTML principal (**/locallibrary/catalog/templates/index.html**) al final de la sección "Dynamic content" para desplegar la variable de contexto:
 

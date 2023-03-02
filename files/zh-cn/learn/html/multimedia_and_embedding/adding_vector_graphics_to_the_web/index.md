@@ -68,7 +68,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 
 这将创建以下输出：
 
-{{ EmbedLiveSample('What_is_SVG', 300, 200, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('SVG 是什么？', 300, 200) }}
 
 从上面的例子可以看出，SVG 很容易手工编码。是的，您可以在文本编辑器中手动编写简单的 SVG，但是对于复杂的图像，这很快就开始变得非常困难。为了创建 SVG 图像，大多数人使用矢量图形编辑器，如 [Inkscape](https://inkscape.org/en/) 或 [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator)。这些软件包允许您使用各种图形工具创建各种插图，并创建照片的近似值（例如 Inkscape 的跟踪位图功能）。
 
@@ -320,7 +320,7 @@ textarea.onkeyup = function(){
 
 在本模块的最后一篇文章中，我们将详细探索响应式图像，查看 HTML 可以让您的图像在不同设备上更好地适配。
 
-## 相关链接
+## 参见
 
 - [SVG tutorial](/zh-CN/docs/Web/SVG/Tutorial/Getting_Started) on MDN
 - [Quick tips for responsive SVGs](http://thenewcode.com/744/Making-SVG-Responsive)
@@ -329,12 +329,3 @@ textarea.onkeyup = function(){
 - [How to scale SVGs](https://css-tricks.com/scale-svg/)（它不像光栅图形那么简单！）
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## 在这个模块中
-
-- [Images in HTML](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

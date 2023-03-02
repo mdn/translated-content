@@ -55,6 +55,6 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.saveAsPDF")}}
+{{Compat}}

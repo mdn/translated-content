@@ -17,7 +17,7 @@ En cualquier lenguaje de programación, el código necesita realizar decisiones 
 
 Los seres humanos (y otros animales) toman decisiones todo el tiempo que afectan sus vidas, desde la más insignificante ("¿Debería comer una galleta o dos?") hasta la más grande (¿Debería quedarme en mi país y trabajar en la granja de mi padre, o debería mudarme a Estados Unidos y estudiar astrofísica?).
 
-![](https://mdn.mozillademos.org/files/13703/cookie-choice-small.png)
+![](cookie-choice-small.png)
 
 ## Declaraciones if ... else
 

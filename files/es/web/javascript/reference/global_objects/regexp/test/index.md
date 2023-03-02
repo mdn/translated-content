@@ -1,11 +1,6 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - Expresion Regular
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/test
 ---
 
@@ -64,9 +59,9 @@ function probarEntrada(regexp, cadena){
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.test")}}
+{{Compat}}
 
 ## Vea también
 

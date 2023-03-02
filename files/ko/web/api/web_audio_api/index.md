@@ -1,7 +1,6 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-translation_of: Web/API/Web_Audio_API
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
@@ -75,7 +74,7 @@ Web Audio API 사용범위 내에서 오디오 그래프를 형성하는 일반�
 Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터페이스입니다.
 
 - {{domxref("AudioScheduledSourceNode")}}
-  - : **`AudioScheduledSourceNode`**는 오디오 소스 노드 인터페이스의 몇 가지 유형에 대한 부모 인터페이스입니다. 이것은 {{domxref("AudioNode")}}입니다.
+  - : **`AudioScheduledSourceNode`** 는 오디오 소스 노드 인터페이스의 몇 가지 유형에 대한 부모 인터페이스입니다. 이것은 {{domxref("AudioNode")}}입니다.
 - {{domxref("OscillatorNode")}}
   - : **`OscillatorNode`** 인터페이스는 삼각파 또는 사인파와 같은 주기적 파형을 나타냅니다. 이것은 주어진 주파수의 파동을 생성하는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다.
 - {{domxref("AudioBuffer")}}
@@ -195,9 +194,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 
 ## 브라우저 호환성
 
-### AudioContext
-
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## 같이 보기
 

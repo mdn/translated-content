@@ -1,9 +1,6 @@
 ---
 title: FormData.keys()
 slug: Web/API/FormData/keys
-page-type: web-api-instance-method
-browser-compat: api.FormData.keys
-translation_of: Web/API/FormData/keys
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -43,11 +40,11 @@ key1
 key2
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

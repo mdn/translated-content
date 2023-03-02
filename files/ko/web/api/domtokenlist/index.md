@@ -1,13 +1,6 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
-tags:
-  - API
-  - DOM
-  - DOMTokenList
-  - Interface
-  - Reference
-translation_of: Web/API/DOMTokenList
 ---
 
 {{APIRef("DOM")}}
@@ -88,11 +81,11 @@ The output looks like this:
 
 {{ EmbedLiveSample('Trimming_of_whitespace_and_removal_of_duplicates', '100%', 60) }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

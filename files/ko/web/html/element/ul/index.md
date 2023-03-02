@@ -1,13 +1,6 @@
 ---
 title: <ul>
 slug: Web/HTML/Element/ul
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/ul
 ---
 
 {{HTMLSidebar}}
@@ -56,11 +49,11 @@ translation_of: Web/HTML/Element/ul
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
-        {{ARIARole("listbox")}}, {{ARIARole("menu")}},
-        {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}},
-        {{ARIARole("tablist")}}, {{ARIARole("toolbar")}},
-        {{ARIARole("tree")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/directory_role'><code>directory</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/listbox_role'><code>listbox</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menu_role'><code>menu</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menubar_role'><code>menubar</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/radiogroup_role'><code>radiogroup</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tablist_role'><code>tablist</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/toolbar_role'><code>toolbar</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tree_role'><code>tree</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -152,7 +145,7 @@ translation_of: Web/HTML/Element/ul
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.ul")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,18 +1,6 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
-tags:
-  - API
-  - Apps
-  - Battery API
-  - Battery Status API
-  - Obsolete
-  - 가이드
-  - 개요
-  - 모바일
-  - 배터리
-  - 어플리케이션
-translation_of: Web/API/Battery_Status_API
 original_slug: WebAPI/Battery_Status
 ---
 {{DefaultAPISidebar("Battery API")}}
@@ -41,7 +29,7 @@ battery.addEventListener("levelchange", updateBatteryStatus);
 updateBatteryStatus();
 ```
 
-명세서의 예제도 **[확인](http://dev.w3.org/2009/dap/system-info/battery-status.html#introduction)**해보세요.
+명세서의 예제도 [**확인**](http://dev.w3.org/2009/dap/system-info/battery-status.html#introduction)해보세요.
 
 ## 명세
 

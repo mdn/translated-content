@@ -57,7 +57,7 @@ slug: Web/HTML/Element/ul
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        {{ARIARole("directory")}}、{{ARIARole("group")}}、{{ARIARole("listbox")}}、{{ARIARole("menu")}}、{{ARIARole("menubar")}}、{{ARIARole("none")}}、{{ARIARole("presentation")}}、{{ARIARole("radiogroup")}}、{{ARIARole("tablist")}}、{{ARIARole("toolbar")}}、{{ARIARole("tree")}}
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>
@@ -84,9 +84,9 @@ slug: Web/HTML/Element/ul
     - `circle`
     - `disc`
     - `square`
-  
+
     存在第四种定义于 WebTV 接口的着重号样式，但并不是所有浏览器都支持：`triangle`。
-  
+
     如果未设置此 HTML 属性且没有 [CSS](/zh-CN/docs/Web/CSS) {{ cssxref("list-style-type") }} 属性作用于这个元素，用户代理会决定使用哪种着重号样式，一般来说这也和嵌套的层级数有关。
 
     > **警告：** 不要使用这个属性，它已经被废弃了：请使用 [CSS](/zh-CN/docs/Web/CSS) {{ cssxref("list-style-type") }} 属性作为代替。

@@ -1,12 +1,6 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-tags:
-  - HTTP
-  - HTTP 헤더
-  - 응답 헤더
-  - 참고자료
-translation_of: Web/HTTP/Headers/Last-Modified
 ---
 
 {{HTTPSidebar}}
@@ -71,7 +65,7 @@ Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Last-Modified")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

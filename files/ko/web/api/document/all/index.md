@@ -1,15 +1,6 @@
 ---
 title: Document.all
 slug: Web/API/Document/all
-tags:
-  - API
-  - DOM
-  - Document
-  - HTMLAllCollection
-  - Property
-  - Reference
-  - all
-translation_of: Web/API/Document/all
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
@@ -25,10 +16,10 @@ var htmlAllCollection = document.all;
 
 {{DOMxRef("HTMLAllCollection")}}는 문서 내에서 모든 node를 담고 있다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

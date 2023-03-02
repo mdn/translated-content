@@ -261,7 +261,7 @@ Por controles de interfaz de usuario nos referimos a las partes principales de l
 
 Un aspecto clave de la accesibilidad de los controles de interfaz de usuario es que, de forma predeterminada, los navegadores permiten que sean manipulados por el teclado. Puedes probar esto usando nuestro ejemplo [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ([código fuente](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)). Ábrelo en una nueva pestaña y prueba a pulsar la tecla de tabulación; después de algunas pulsaciones, deberías ver que el foco de la pestaña comienza a moverse a través de los diferentes elementos enfocables. Los elementos enfocados reciben un estilo predeterminado resaltado en cada navegador (difiere ligeramente entre diferentes navegadores) para que puedas saber qué elemento está enfocado.
 
-![](https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png)
+![](button-focused-unfocused.png)
 
 Después puedes pulsar <kbd>Enter</kbd> / <kbd>Return</kbd> para seguir un enlace enfocado o pulsar un botón (hemos incluido algo de JavaScript para que los botones lancen un mensaje), o comenzar a escribir para introducir texto en un campo de texto. Otros elementos de formulario tienen diferentes controles; por ejemplo, el elemento {{htmlelement ("select")}} puede mostrar sus opciones y alternar entre usar las teclas de flecha arriba y abajo.
 
@@ -354,7 +354,7 @@ Las etiquetas textuales de los controles de la interfaz de usuario son muy útil
 
 Deberías asegurarte de que las etiquetas de texto de tus botones y enlaces sean comprensibles y distintivas. No uses simplemente "Haz clic aquí" para tus etiquetas, ya que los usuarios de lectores de pantalla a veces obtienen una lista de botones y controles de formulario. La siguiente captura de pantalla muestra nuestros controles enumerados por VoiceOver en Mac.
 
-![Form controls. Click me! button. Click me too! button. And me! button. Fill me in: edit text. Fill me in: edit text. Happy collapsed pop up button. Happy menu item. Sad menu item. Angry menu item. Worried menu item.](https://mdn.mozillademos.org/files/14335/voiceover-formcontrols.png)
+![Form controls. Click me! button. Click me too! button. And me! button. Fill me in: edit text. Fill me in: edit text. Happy collapsed pop up button. Happy menu item. Sad menu item. Angry menu item. Worried menu item.](voiceover-formcontrols.png)
 
 Asegúrate de que tus etiquetas tienen sentido sin su contexto, leídas solas, así como en el contexto del párrafo en que están. Por ejemplo, lo siguiente muestra un buen ejemplo de enlace de texto:
 
@@ -389,7 +389,7 @@ El siguiente es un ejemplo mucho mejor:
 
 Con código como este, la etiqueta estará claramente asociada con la entrada; la descripción se parecerá más a "Entra tu nombre: editar texto".
 
-![](https://mdn.mozillademos.org/files/14337/voiceover-good-form-label.png)
+![](voiceover-good-form-label.png)
 
 Como ventaja adicional, en la mayoría de los navegadores asociar una etiqueta con una entrada de formulario significa que puedes hacer clic en la etiqueta para seleccionar / activar el elemento del formulario. Esto le da a la entrada un área de impacto más grande, lo que facilita la selección.
 
@@ -471,7 +471,7 @@ Una cosa a considerar es si tus imágenes tienen significado dentro del contenid
 
 Si deseas proporcionar información contextual adicional, deberías colocarla en el texto que rodea la imagen o dentro de un atributo `title`, como se muestra a continuación. En este caso, la mayoría de los lectores de pantalla leerán el texto alternativo, el atributo del título y el nombre del archivo. Además, los navegadores muestran el texto del título como información cuando se pasa por encima con el ratón.
 
-![](https://mdn.mozillademos.org/files/14333/title-attribute.png)
+![](title-attribute.png)
 
 Echemos otro vistazo al cuarto método:
 

@@ -53,7 +53,7 @@ slug: Web/HTML/Element/dialog
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>
@@ -72,7 +72,7 @@ slug: Web/HTML/Element/dialog
   - : 指示这个对话框是激活的和能互动的。当没有设置 `open` 属性时，对话框*不应该*显示给用户。推荐使用 `.show()` 或 `.showModal()` 方法来渲染对话框，而不是使用 `open` 属性。
 
 ## 无障碍考虑
-  
+
 `<dialog>` 元素的早期实现[在某些形式的辅助技术上仍存在可用性问题](https://www.scottohara.me/blog/2019/03/05/open-dialog.html)。为了保证 Safari 15.4 版本以下的无障碍性，推荐使用临时的解决方案（如：[a11y-dialog](https://a11y-dialog.netlify.app/)）以获得持续的可用性支持。
 
 在实现一个对话框时，考虑最合适的地方来设置用户焦点是很重要的。通过使用 [autofocus](/zh-CN/docs/Web/HTML/Global_attributes/autofocus) 属性明确指出初始焦点的位置，将有助于确保初始焦点被设置到被认为是任何特定对话框的最佳初始焦点位置的元素。由于并不总是知道初始焦点可以设置在对话框中的什么地方，特别是对于对话框的内容在被调用时动态呈现的情况，如果有必要，作者可以决定聚焦于 `<dialog>` 元素本身，提供最佳的初始焦点位置。

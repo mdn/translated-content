@@ -1,16 +1,6 @@
 ---
 title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - RTCIceCandidateEvent
-  - Reference
-  - TopicStub
-  - WebRTC
-translation_of: Web/API/RTCPeerConnectionIceEvent
 ---
 
 {{APIRef("WebRTC")}}
@@ -43,11 +33,11 @@ pc.onicecandidate = function( ev ) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

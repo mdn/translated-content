@@ -1,11 +1,6 @@
 ---
 title: Sintaxis Spread
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript6
-  - Iteradores
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 original_slug: Web/JavaScript/Referencia/Operadores/Sintaxis_Spread
 ---
 
@@ -228,9 +223,9 @@ La sintaxis Rest luce exactamente como la sintaxis spread, pero esto es usado po
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.spread")}}
+{{Compat}}
 
 ## Vea también
 

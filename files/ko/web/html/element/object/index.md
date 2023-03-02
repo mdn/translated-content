@@ -1,13 +1,8 @@
 ---
 title: <object>
 slug: Web/HTML/Element/object
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/object
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<object>` 요소**는 이미지나, 중첩된 브라우저 컨텍스트, 플러그인에 의해 다뤄질수 있는 리소스와 같은 외부 리소스를 나타냅니다.
@@ -26,7 +21,7 @@ translation_of: Web/HTML/Element/object
 
 - {{htmlattrdef("archive")}} {{deprecated_inline}}
   - : A space-separated list of URIs for archives of resources for the object.
-- {{htmlattrdef("border")}} {{deprecatedGeneric('inline','HTML4.01')}}; {{deprecated_inline}}
+- {{htmlattrdef("border")}} {{deprecated_inline}}
   - : The width of a border around the control, in pixels.
 - {{htmlattrdef("classid")}} {{deprecated_inline}}
   - : The URI of the object's implementation. It can be used together with, or in place of, the **data** attribute.
@@ -77,7 +72,7 @@ translation_of: Web/HTML/Element/object
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.object")}}
+{{Compat}}
 
 ## 같이 보기
 

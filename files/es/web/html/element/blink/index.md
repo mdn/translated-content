@@ -22,15 +22,15 @@ Este elemento no es soportado y por lo tanto implementa la interface {domxref("H
 
 ### Resultado
 
-![Image:HTMLBlinkElement.gif](/@api/deki/files/247/=HTMLBlinkElement.gif)
+![Image:HTMLBlinkElement.gif](htmlblinkelement.gif)
 
-## Especificación
+## Especificaciones
 
-Este elemento no es parte del estándar ni de alguna espeficación . Si no nos crees puedes verlo por ti mismo en la [espeficicación de HTML](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features).
+{{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.blink")}}
+{{Compat}}
 
 ## Ver también
 

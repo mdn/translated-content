@@ -170,6 +170,10 @@
     "modified": "2020-08-05T01:06:55.575Z",
     "contributors": ["alattalatta"]
   },
+  "Glossary/CSS_Descriptor": {
+    "modified": "2020-06-18T03:48:31.777Z",
+    "contributors": ["DeadIntegral"]
+  },
   "Glossary/CSS_preprocessor": {
     "modified": "2019-04-18T12:04:13.994Z",
     "contributors": ["alattalatta", "ByeongGi"]
@@ -209,10 +213,6 @@
   "Glossary/DOM": {
     "modified": "2019-03-18T21:26:45.962Z",
     "contributors": ["cs09g"]
-  },
-  "Glossary/Descriptor_(CSS)": {
-    "modified": "2020-06-18T03:48:31.777Z",
-    "contributors": ["DeadIntegral"]
   },
   "Glossary/Doctype": {
     "modified": "2019-10-31T03:37:46.868Z",
@@ -647,13 +647,13 @@
     "modified": "2019-11-17T09:43:44.308Z",
     "contributors": ["enfroze"]
   },
-  "Glossary/XHR_(XMLHttpRequest)": {
-    "modified": "2019-05-26T04:21:15.494Z",
-    "contributors": ["alattalatta", "frankradio", "OKCHANGWON", "kidkkr"]
-  },
   "Glossary/XHTML": {
     "modified": "2019-12-26T10:45:10.722Z",
     "contributors": ["04SeoHyun", "jeonnoej", "teoli", "Sebuls"]
+  },
+  "Glossary/XMLHttpRequest": {
+    "modified": "2019-05-26T04:21:15.494Z",
+    "contributors": ["alattalatta", "frankradio", "OKCHANGWON", "kidkkr"]
   },
   "Glossary/array": {
     "modified": "2019-03-18T21:24:02.576Z",
@@ -896,15 +896,31 @@
     "modified": "2020-07-17T04:53:21.623Z",
     "contributors": ["AlexChoi", "rudolfo"]
   },
-  "Learn/Common_questions/Checking_that_your_web_site_is_working_properly": {
-    "modified": "2020-07-16T22:35:50.357Z",
-    "contributors": ["best8248"]
-  },
-  "Learn/Common_questions/HTML_features_for_accessibility": {
+  "Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility": {
     "modified": "2020-07-16T22:35:51.295Z",
     "contributors": ["woojin.jo"]
   },
-  "Learn/Common_questions/How_does_the_Internet_work": {
+  "Learn/Common_questions/Design_and_accessibility/Thinking_before_coding": {
+    "modified": "2020-07-16T22:35:34.712Z",
+    "contributors": ["Silvermist", "ssilb4", "daebum-lee"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
+    "modified": "2020-07-16T22:35:50.357Z",
+    "contributors": ["best8248"]
+  },
+  "Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server": {
+    "modified": "2020-07-16T22:35:41.806Z",
+    "contributors": ["Je-Gwan", "kuil09"]
+  },
+  "Learn/Common_questions/Tools_and_setup/What_software_do_I_need": {
+    "modified": "2020-07-16T22:35:33.374Z",
+    "contributors": ["ssilb4"]
+  },
+  "Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server": {
+    "modified": "2020-11-29T09:15:10.698Z",
+    "contributors": ["yr4978", "anoncaco", "rkdxofyd", "jungyh0218", "dolmoon"]
+  },
+  "Learn/Common_questions/Web_mechanics/How_does_the_Internet_work": {
     "modified": "2020-07-16T22:35:37.384Z",
     "contributors": [
       "FreelyReceivedFreelyGive",
@@ -914,31 +930,23 @@
       "ssilb4"
     ]
   },
-  "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
+  "Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines": {
     "modified": "2020-07-16T22:35:40.167Z",
     "contributors": ["doong-jo", "ssilb4"]
   },
-  "Learn/Common_questions/Thinking_before_coding": {
-    "modified": "2020-07-16T22:35:34.712Z",
-    "contributors": ["Silvermist", "ssilb4", "daebum-lee"]
-  },
-  "Learn/Common_questions/Upload_files_to_a_web_server": {
-    "modified": "2020-07-16T22:35:41.806Z",
-    "contributors": ["Je-Gwan", "kuil09"]
-  },
-  "Learn/Common_questions/What_are_hyperlinks": {
+  "Learn/Common_questions/Web_mechanics/What_are_hyperlinks": {
     "modified": "2020-07-16T22:35:43.271Z",
     "contributors": ["ssilb4"]
   },
-  "Learn/Common_questions/What_is_a_URL": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_URL": {
     "modified": "2020-07-16T22:35:29.813Z",
     "contributors": ["ssilb4"]
   },
-  "Learn/Common_questions/What_is_a_domain_name": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_domain_name": {
     "modified": "2020-07-16T22:35:44.305Z",
     "contributors": ["peacekimjapan", "hyunjinyoon", "ssilb4"]
   },
-  "Learn/Common_questions/What_is_a_web_server": {
+  "Learn/Common_questions/Web_mechanics/What_is_a_web_server": {
     "modified": "2020-11-29T22:15:28.062Z",
     "contributors": [
       "yr4978",
@@ -949,14 +957,6 @@
       "namwoo",
       "woojin.jo"
     ]
-  },
-  "Learn/Common_questions/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:33.374Z",
-    "contributors": ["ssilb4"]
-  },
-  "Learn/Common_questions/set_up_a_local_testing_server": {
-    "modified": "2020-11-29T09:15:10.698Z",
-    "contributors": ["yr4978", "anoncaco", "rkdxofyd", "jungyh0218", "dolmoon"]
   },
   "Learn/Forms": {
     "modified": "2020-07-16T22:20:59.522Z",
@@ -1696,17 +1696,6 @@
   "MDN/Contribute": {
     "modified": "2019-01-16T19:13:18.509Z",
     "contributors": ["wbamberg", "zziuni", "hoony", "Junny", "Sheppy"]
-  },
-  "MDN/Contribute/Howto": {
-    "modified": "2019-01-16T19:13:26.954Z",
-    "contributors": [
-      "wbamberg",
-      "zziuni",
-      "Netaras",
-      "Junbong",
-      "KwanHong_Lee66",
-      "Sheppy"
-    ]
   },
   "MDN/Contribute/Processes": {
     "modified": "2019-01-17T02:54:48.050Z",
@@ -2710,7 +2699,7 @@
     "modified": "2019-05-29T17:36:17.250Z",
     "contributors": ["jswisher", "alattalatta"]
   },
-  "Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core": {
+  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
     "modified": "2020-03-10T10:48:51.010Z",
     "contributors": ["kimploo"]
   },
@@ -4304,10 +4293,6 @@
   "Web/API/WebRTC_API/Using_data_channels": {
     "modified": "2020-04-05T10:19:30.624Z",
     "contributors": ["peacekimjapan"]
-  },
-  "Web/API/WebRTC_API/adapter.js": {
-    "modified": "2020-08-14T03:48:29.087Z",
-    "contributors": ["breadfit"]
   },
   "Web/API/WebSocket": {
     "modified": "2020-10-15T21:42:28.844Z",
@@ -6141,20 +6126,6 @@
     "modified": "2020-02-15T07:39:57.101Z",
     "contributors": ["Netaras", "hyeonseok", "narae_lee"]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2020-07-29T11:16:44.120Z",
-    "contributors": [
-      "jojengman",
-      "alattalatta",
-      "chrisdavidmills",
-      "dooglegh",
-      "cs09g",
-      "KlausLee",
-      "lovefield",
-      "Kaben",
-      "azunyan3"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-05-30T06:59:50.297Z",
     "contributors": ["SDSkyKlouD", "Seia-Soto", "xfq"]
@@ -6195,6 +6166,10 @@
     "modified": "2020-10-15T22:29:00.912Z",
     "contributors": ["ahnzaz"]
   },
+  "Web/HTML/Attributes/rel": {
+    "modified": "2020-10-15T21:56:00.564Z",
+    "contributors": ["alattalatta", "limjungmok", "young-gratia"]
+  },
   "Web/HTML/Block-level_elements": {
     "modified": "2020-01-20T08:47:15.147Z",
     "contributors": [
@@ -6208,6 +6183,20 @@
   "Web/HTML/CORS_enabled_image": {
     "modified": "2020-01-17T14:43:53.038Z",
     "contributors": ["alattalatta", "proost"]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2020-07-29T11:16:44.120Z",
+    "contributors": [
+      "jojengman",
+      "alattalatta",
+      "chrisdavidmills",
+      "dooglegh",
+      "cs09g",
+      "KlausLee",
+      "lovefield",
+      "Kaben",
+      "azunyan3"
+    ]
   },
   "Web/HTML/Element": {
     "modified": "2020-03-20T02:38:46.890Z",
@@ -6876,10 +6865,6 @@
   "Web/HTML/Inline_elements": {
     "modified": "2020-02-12T03:45:21.056Z",
     "contributors": ["SphinxKnight", "alattalatta", "teoli", "Gilchris"]
-  },
-  "Web/HTML/Link_types": {
-    "modified": "2020-10-15T21:56:00.564Z",
-    "contributors": ["alattalatta", "limjungmok", "young-gratia"]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-18T20:35:03.733Z",
@@ -7552,22 +7537,6 @@
       "JongChun"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:36:55.143Z",
-    "contributors": [
-      "JinKang",
-      "Parcovia",
-      "cs09g",
-      "imjang57",
-      "wayne-kim",
-      "desty",
-      "stephenjang",
-      "Luzi.kr",
-      "teoli",
-      "Zer0th",
-      "99corps"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-03-12T19:37:58.819Z",
     "contributors": [
@@ -7953,17 +7922,6 @@
       "Constantine Kim",
       "MoGi",
       "Dyhan81",
-      "Goldmund"
-    ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:37:02.761Z",
-    "contributors": [
-      "limkukhyun",
-      "teoli",
-      "Dyhan81",
-      "Netaras",
-      "taggon",
       "Goldmund"
     ]
   },
@@ -10494,58 +10452,6 @@
     "modified": "2019-03-23T23:41:54.185Z",
     "contributors": ["ExE-Boss", "teoli", "Netaras"]
   },
-  "Web/XPath/Axes/ancestor": {
-    "modified": "2019-03-23T23:41:51.868Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/ancestor-or-self": {
-    "modified": "2019-03-23T23:41:53.193Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/attribute": {
-    "modified": "2019-01-16T16:16:10.374Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/child": {
-    "modified": "2019-01-16T16:16:18.107Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/descendant": {
-    "modified": "2019-01-16T16:16:11.286Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/descendant-or-self": {
-    "modified": "2019-01-16T16:16:11.121Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/following": {
-    "modified": "2019-01-16T16:16:17.035Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/following-sibling": {
-    "modified": "2019-01-16T16:16:13.970Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/namespace": {
-    "modified": "2019-03-23T23:41:52.884Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/parent": {
-    "modified": "2019-01-16T16:16:10.076Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/preceding": {
-    "modified": "2019-01-16T16:16:13.085Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/preceding-sibling": {
-    "modified": "2019-01-16T16:16:15.097Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "Web/XPath/Axes/self": {
-    "modified": "2019-01-16T16:16:15.156Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
   "Web/XPath/Functions": {
     "modified": "2019-03-23T23:41:49.260Z",
     "contributors": ["ExE-Boss", "teoli", "mete0r", "Netaras"]
@@ -11061,6 +10967,17 @@
     "modified": "2020-07-16T22:32:06.697Z",
     "contributors": ["alattalatta", "beowolf9", "lunarlit", "dsma73"]
   },
+  "conflicting/MDN/Contribute": {
+    "modified": "2019-01-16T19:13:26.954Z",
+    "contributors": [
+      "wbamberg",
+      "zziuni",
+      "Netaras",
+      "Junbong",
+      "KwanHong_Lee66",
+      "Sheppy"
+    ]
+  },
   "conflicting/MDN/Tools": {
     "modified": "2019-01-16T20:50:22.654Z",
     "contributors": ["wbamberg", "andrewJYjang"]
@@ -11199,6 +11116,22 @@
     "modified": "2020-02-05T12:28:02.372Z",
     "contributors": ["alattalatta"]
   },
+  "conflicting/Web/JavaScript": {
+    "modified": "2020-03-12T19:36:55.143Z",
+    "contributors": [
+      "JinKang",
+      "Parcovia",
+      "cs09g",
+      "imjang57",
+      "wayne-kim",
+      "desty",
+      "stephenjang",
+      "Luzi.kr",
+      "teoli",
+      "Zer0th",
+      "99corps"
+    ]
+  },
   "conflicting/Web/JavaScript/Guide": {
     "modified": "2019-01-16T16:10:38.273Z",
     "contributors": ["teoli", "Wafe"]
@@ -11263,6 +11196,17 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
     "modified": "2020-03-12T19:44:13.687Z",
     "contributors": ["limkukhyun", "hoony"]
+  },
+  "conflicting/Web/JavaScript/Reference": {
+    "modified": "2020-03-12T19:37:02.761Z",
+    "contributors": [
+      "limkukhyun",
+      "teoli",
+      "Dyhan81",
+      "Netaras",
+      "taggon",
+      "Goldmund"
+    ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {
     "modified": "2020-10-15T21:52:46.647Z",
@@ -11709,6 +11653,10 @@
     "modified": "2020-10-15T22:22:07.358Z",
     "contributors": ["chansbro"]
   },
+  "orphaned/Web/API/WebRTC_API/adapter.js": {
+    "modified": "2020-08-14T03:48:29.087Z",
+    "contributors": ["breadfit"]
+  },
   "orphaned/Web/API/WindowEventHandlers": {
     "modified": "2020-10-15T21:46:21.497Z",
     "contributors": ["alattalatta", "fscholz"]
@@ -11954,6 +11902,58 @@
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2019-03-23T22:05:46.762Z",
     "contributors": ["daebum-lee"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor": {
+    "modified": "2019-03-23T23:41:51.868Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/ancestor-or-self": {
+    "modified": "2019-03-23T23:41:53.193Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/attribute": {
+    "modified": "2019-01-16T16:16:10.374Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/child": {
+    "modified": "2019-01-16T16:16:18.107Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/descendant": {
+    "modified": "2019-01-16T16:16:11.286Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/descendant-or-self": {
+    "modified": "2019-01-16T16:16:11.121Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/following": {
+    "modified": "2019-01-16T16:16:17.035Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/following-sibling": {
+    "modified": "2019-01-16T16:16:13.970Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/namespace": {
+    "modified": "2019-03-23T23:41:52.884Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/parent": {
+    "modified": "2019-01-16T16:16:10.076Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/preceding": {
+    "modified": "2019-01-16T16:16:13.085Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/preceding-sibling": {
+    "modified": "2019-01-16T16:16:15.097Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
+  },
+  "orphaned/Web/XPath/Axes/self": {
+    "modified": "2019-01-16T16:16:15.156Z",
+    "contributors": ["ExE-Boss", "teoli", "Netaras"]
   },
   "orphaned/WebAssembly/Caching_modules": {
     "modified": "2019-03-18T21:26:57.835Z",

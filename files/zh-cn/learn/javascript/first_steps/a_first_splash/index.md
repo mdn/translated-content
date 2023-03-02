@@ -392,7 +392,7 @@ function resetGame() {
 
 ### 循环（Loop）
 
-上面代码中有一部分需要我们仔细研读，那就是 [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 循环。循环是一个非常重要的编程概念，它让你能够重复运行一段代码，直到满足某个条件为止。
+上面代码中有一部分需要我们仔细研读，那就是 [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环。循环是一个非常重要的编程概念，它让你能够重复运行一段代码，直到满足某个条件为止。
 
 首先，请再次转到 [浏览器开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 然后输入以下内容：
 
@@ -500,15 +500,3 @@ guessField.focus();
 这个示例已经构建完毕，做得好！来尝试运行一下最终的代码，或者[看看我们的最终版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。如果你的版本无法正常工作，请对照[源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)进行检查。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
-
-## 本章目录
-
-- [JavaScript 是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [查找并解决 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [变量：储存所需信息](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
-- [数字和运算符：JavaScript 的基本算数](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
-- [字符串：JavaScript 文本的处理](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
-- [字符串的一些实用方法](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
-- [测验：笑话生成器](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

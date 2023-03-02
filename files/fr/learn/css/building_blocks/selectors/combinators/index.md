@@ -139,4 +139,4 @@ Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous 
 9. [Images, média, et élements de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Mise en page de tableaux](/fr/docs/Apprendre/CSS/Building_blocks/Styling_tables)
 11. [Débogage CSS](/fr/docs/Apprendre/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser votre CSS](/fr/docs/https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+12. [Organiser votre CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

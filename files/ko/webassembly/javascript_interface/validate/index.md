@@ -1,10 +1,10 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
-{{JSRef}}
+
+{{WebAssemblySidebar}}
 
 **`WebAssembly.validate()`** 함수는 바이트가 유효한 wasm 모듈을 형성하는지 (`true`) 또는 생성하지 않는지 (`false`)를 반환하여 WebAssembly 바이너리 코드의 지정된 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)의 유효성을 검사합니다.
 
@@ -39,11 +39,11 @@ fetch('simple.wasm').then(response =>
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

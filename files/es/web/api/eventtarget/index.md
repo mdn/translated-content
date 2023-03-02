@@ -24,9 +24,9 @@ Muchos objetivos de eventos tales como: elementos, documentos y ventanas, tambi√
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("api.EventTarget")}}
+{{Compat}}
 
 ## Vea tambi√©n
 

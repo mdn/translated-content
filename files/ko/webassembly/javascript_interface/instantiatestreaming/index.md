@@ -1,11 +1,10 @@
 ---
 title: WebAssembly.instantiateStreaming()
 slug: WebAssembly/JavaScript_interface/instantiateStreaming
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.instantiateStreaming()`** 함수는 스트림 된 원본 소스에서 직접 WebAssembly 모듈을 컴파일하고 인스턴스화합니다. Wasm 코드를로드하는 가장 효율적이고 최적화 된 방법입니다.
 
@@ -47,11 +46,11 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 그런 다음 `ResultObject`의 인스턴스 구성원에 액세스하고 포함 된 내 보낸 함수를 호출합니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

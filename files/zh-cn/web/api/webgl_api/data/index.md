@@ -3,7 +3,7 @@ title: Data in WebGL
 slug: Web/API/WebGL_API/Data
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 GLSL 为 Shader 提供了三种不同作用的数据存储，每种都有一个特定的用例。每种数据依作用不同可以被一种或者全部 shader 访问（取决于数据存储类型），也可能通过站点的 Javascript 代码进行访问，这取决于变量的特定类型。
 

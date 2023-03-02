@@ -1,10 +1,6 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - 브라우저
-  - 상태 코드
-translation_of: Web/HTTP/Status/404
 ---
 
 {{HTTPSidebar}}
@@ -37,7 +33,7 @@ ErrorDocument 404 /notfound.html
 
 ## 브라우저 호환성
 
-{{Compat("http.status.404")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

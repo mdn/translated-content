@@ -1,7 +1,6 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
 
 {{JSRef}}
@@ -41,11 +40,11 @@ Math.round(-20.5 ); // -20
 Math.round(-20.51); // -21
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

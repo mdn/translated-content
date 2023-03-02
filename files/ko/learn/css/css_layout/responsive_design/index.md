@@ -40,13 +40,13 @@ original_slug: Learn/CSS/CSS_layout/반응형_디자인
 
 이러한 두 가지 접근법은 사이트를 디자인하는 사람의 화면에서 가장 보기 좋은 웹 사이트로 귀결되는 경향이 있었습니다! 유동 사이트는 (아래에서 볼 수 있듯이) 디자이너의 화면보다 더 작은 화면에는 찌부러진 디자인이 나오고, 더 큰 화면에는 읽을 수 없을 정도로 길이가 긴 라인을 만들어냅니다.
 
-![두 개의 열이 있는 레이아웃이 모바일 크기 뷰포트에서 찌부러집니다.](https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png)
+![두 개의 열이 있는 레이아웃이 모바일 크기 뷰포트에서 찌부러집니다.](mdn-rwd-liquid.png)
 
 > **참고:** **주석**: 여기 간단한 유동 레이아웃을 보세요: [예제](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). 예제를 보면 브라우저 창을 안팎으로 드래그하여 서로 다른 크기에 반응해 어떻게 보이는지 확인합니다.
 
 고정 폭 사이트는 (아래에서 보듯) 사이트 너비보다 작은 화면상에 수평 스크롤 막대가 생기는 위험이 있고 더 큰 화면상에서는 웹디자인 가장자리에 많은 흰색 공간이 생길 위험이 있습니다.
 
-![이동 뷰포트에 수평 스크롤 막대가 있는 레이아웃입니다.](https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png)
+![이동 뷰포트에 수평 스크롤 막대가 있는 레이아웃입니다.](mdn-rwd-fixed.png)
 
 > **참고:** **주석**: 여기 간단한 고정 너비 레이아웃을 보세요: [예제](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). 역시 브라우저 창 크기를 변경할 때 결과를 관찰하세요.
 
@@ -118,11 +118,11 @@ target / context = result
 
 다음 예제에서는 미디어 쿼리와 가변 격자를 사용하여 간단한 반응형 디자인를 보여줍니다. 좁은 화면상에서는 상자가 상대 요소 위해 겹겹이 쌓여지는 레이아웃 형태로 표시됩니다.
 
-![상자 무리가 상대 요소의 상단에 수직으로 겹겹이 쌓이는 모바일뷰 레이아웃입니다.](https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png)
+![상자 무리가 상대 요소의 상단에 수직으로 겹겹이 쌓이는 모바일뷰 레이아웃입니다.](mdn-rwd-mobile.png)
 
 On wider screens they move to two columns:
 
-![2단 레이아웃이 적용된 데스크탑 뷰입니다.](https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png)
+![2단 레이아웃이 적용된 데스크탑 뷰입니다.](mdn-rwd-desktop.png)
 
 > **참고:** **주석**: 여러분은 여기서 [실례](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)를 찾아볼 수 있으며, 이 예제에 대한 [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html)를 깃허브에서 찾을 수 있습니다.
 
@@ -168,7 +168,7 @@ On wider screens they move to two columns:
 
 ### CSS 격자
 
-CSS 격자 레이아웃에서 `fr` 단위는 격자 트랙 전역에 걸쳐 이용할 수 있는 공간을 분배할 수 있습니다. 다음 예에서는 `1fr` 크기의 트랙 3개가 있는 격자 컨테이너를 만듭니다. 이렇게 하면 3개의 열 트랙이 생성되며, 각 트랙은 컨테이너에 있는 사용 가능한 공간\의 한 부분을 차지합니다. 여러분은 [fr 단위를 포함한 가변 격자](ko/docs/Learn/CSS/CSS_layout/Grids#fr_단위를_포함하는_가변_격자)라는 격자 레이아웃 학습 주제에서 격자를 생성하는 이같은 접근 방식에 대해 자세히 알 수 있습니다.
+CSS 격자 레이아웃에서 `fr` 단위는 격자 트랙 전역에 걸쳐 이용할 수 있는 공간을 분배할 수 있습니다. 다음 예에서는 `1fr` 크기의 트랙 3개가 있는 격자 컨테이너를 만듭니다. 이렇게 하면 3개의 열 트랙이 생성되며, 각 트랙은 컨테이너에 있는 사용 가능한 공간\의 한 부분을 차지합니다. 여러분은 [fr 단위를 포함한 가변 격자](/ko/docs/Learn/CSS/CSS_layout/Grids#fr_단위를_포함하는_가변_격자)라는 격자 레이아웃 학습 주제에서 격자를 생성하는 이같은 접근 방식에 대해 자세히 알 수 있습니다.
 
 ```css
 .container {
@@ -223,11 +223,11 @@ h1 {
 
 모바일에서는 머리글이 더 작다:
 
-![머리글 크기가 작은 스택 모양의 레이아웃입니다.](https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png)
+![머리글 크기가 작은 스택 모양의 레이아웃입니다.](mdn-rwd-font-mobile.png)
 
 On desktop however we see the larger heading size:
 
-![큰 머리글이 딸린 두개의 열 레이아웃입니다.](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
+![큰 머리글이 딸린 두개의 열 레이아웃입니다.](mdn-rwd-font-desktop.png)
 
 > **참고:** 이 예제의 실제 구현 장면: [예제](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 
@@ -294,18 +294,3 @@ h1 {
 또한 이번 단원에서 배운 레이아웃 메서드의 도움으로 반응형 디자인을 달성하기가 훨씬 쉬워졌습니다. 여러분이 당대 웹 개발에 신출내기라면, 반응형 디자인 초창기보다 훨씬 많은 도구가 마련되어 있으니 맘껏 이용하십시요. 따라서 당신이 참조하고 있는 어떤 자료의 연혁을 확인할 가치가 있습니다. 역사적 기록 문서로서 여전히 유용하지만, 사이트 방문자가 이용하는 장치가 무엇이건 관계없이 우아하고 유용한 디자인을 훨씬 쉽게 생성하려면 CSS와 HTML의 현대적 용법이 정답입니다.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [CSS 레이아웃 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [격자](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/위치잡기)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- [레이아웃 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

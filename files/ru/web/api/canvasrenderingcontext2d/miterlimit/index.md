@@ -68,7 +68,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{EmbedLiveSample("Демонстрация_свойства_miterLimit", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{EmbedLiveSample("Using_the_miterLimit_property", "100%", "400", "canvas_miterlimit.png")}}
 
 ## Спецификации
 
@@ -84,7 +84,7 @@ window.addEventListener("load", drawCanvas);
 
 ### Gecko-specific notes
 
-- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `miterLimit` to a negative value no longer throws an exception; instead, it properly ignores non-positive values.
+- Starting Gecko 2.0, setting `miterLimit` to a negative value no longer throws an exception; instead, it properly ignores non-positive values.
 
 ## See also
 

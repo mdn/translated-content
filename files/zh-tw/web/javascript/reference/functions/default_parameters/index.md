@@ -152,7 +152,7 @@ withoutDefaults.call({value: '=^_^='});
 
 ### 函式內再定義函式
 
-Introduced in Gecko 33. Functions declared in the function body cannot be referred inside default parameters and throw a {{jsxref("ReferenceError")}} (currently a {{jsxref("TypeError")}} in SpiderMonkey, see {{bug(1022967)}}). Default parameters are always executed first, function declarations inside the function body evaluate afterwards.
+Introduced in Gecko 33. Functions declared in the function body cannot be referred inside default parameters and throw a {{jsxref("ReferenceError")}} (currently a {{jsxref("TypeError")}} in SpiderMonkey, see [Firefox bug 1022967](https://bugzil.la/1022967)). Default parameters are always executed first, function declarations inside the function body evaluate afterwards.
 
 ```js
 // 行不通的！ 最後會丟出 ReferenceError。
@@ -163,7 +163,7 @@ function f(a = go()) {
 
 ### Parameters without defaults after default parameters
 
-Prior to Gecko 26, the following code resulted in a {{jsxref("SyntaxError")}}. This has been fixed in {{bug(777060)}} and works as expected in later versions. Parameters are still set left-to-right, overwriting default parameters even if there are later parameters without defaults.
+Prior to Gecko 26, the following code resulted in a {{jsxref("SyntaxError")}}. This has been fixed in [Firefox bug 777060](https://bugzil.la/777060) and works as expected in later versions. Parameters are still set left-to-right, overwriting default parameters even if there are later parameters without defaults.
 
 ```js
 function f(x = 1, y) {

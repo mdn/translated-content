@@ -68,6 +68,6 @@ browser.tabs.show([15, 14, 1]).then(onShown, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.show")}}
+{{Compat}}

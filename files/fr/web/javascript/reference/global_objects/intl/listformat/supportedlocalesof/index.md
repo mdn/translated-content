@@ -56,13 +56,11 @@ console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(', '));
 
 ## Spécifications
 
-| Spécification                                                                                                                                     | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.ListFormat.supportedLocalesOf`](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.supportedLocalesOf) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.supportedLocalesOf")}}
+{{Compat}}
 
 ## Voir aussi
 

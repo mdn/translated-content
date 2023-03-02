@@ -52,7 +52,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 "전형적인 웹사이트"는 다음과 같이 구성될 수 있습니다:
 
-![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](https://mdn.mozillademos.org/files/12417/sample-website.png)
+![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
 ## 컨텐츠 구조화를 위한 HTML
 
@@ -74,7 +74,7 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
 
 ### 능동적 학습: 예제 코드 탐색
 
-위에서 본 예제는 다음 코드로 표시됩니다([Github 리포지토리에서 예제를 찾아보세요](<https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html >)). 위의 예를 살펴본 다음 아래 목록을 살펴보고 어떤 부분이 시각적 개체의 어떤 섹션을 구성하는지 확인하시기 바랍니다.
+위에서 본 예제는 다음 코드로 표시됩니다([Github 리포지토리에서 예제를 찾아보세요](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). 위의 예를 살펴본 다음 아래 목록을 살펴보고 어떤 부분이 시각적 개체의 어떤 섹션을 구성하는지 확인하시기 바랍니다.
 
 ```html
 <!DOCTYPE html>
@@ -254,11 +254,11 @@ Meanwhile, Harry was sitting at home, staring at his royalty statement and ponde
 
 간단한 웹페이지의 콘텐츠를 계획했다면 다음 논리적 단계는 최고의 사용자 경험을 위해 전체 웹사이트에 어떤 콘텐츠를 넣고 싶은지, 어떤 페이지가 필요한지, 어떻게 정렬하고 서로 연결해야 하는지 알아내는 것입니다. 이를 {{glossary("Information architecture")}}라고 합니다. 크고 복잡한 웹 사이트에서는 이 프로세스에 많은 계획이 포함될 수 있지만 몇 페이지로 된 간단한 웹 사이트에서는 상당히 간단하고 재미있을 수 있습니다!
 
-1. 몇 요소들은 대부분의 페이지에 공통적으로 적용될 것이란 걸 명심하세요 — 네비게이션 메뉴나 footer 컨텐츠처럼. 예를 들어 비즈니스를 위한 페이지라면, 당신의 연락처를 각각의 페이지의 footer에 보이도록 하는 것은 좋은 생각입니다. 모든 페이지에 공통적으로 포함하고 싶은 것을 적어보세요.![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](https://mdn.mozillademos.org/files/12423/common-features.png)
-2. 다음으로, 각 페이지의 구조를 간단한 스케치로 그리세요.아마 위의 우리의 간단한 웹사이트 같을 것입니다). 각 블럭의 기능을 적으세요.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](https://mdn.mozillademos.org/files/12429/site-structure.png)
-3. 이제 웹사이트에 포함시키길 원하는 (각 페이지에 공통적이지 않은) 다른 모든 컨텐츠를 brainstorm하세요 - 리스트에 모두 적어 내려가세요. ![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](https://mdn.mozillademos.org/files/12425/feature-list.png)
-4. 다음으로, 이 모든 컨텐츠들을 그룹화 해 다른 페이지에서 어떤 부분들이 함께할 수 있을지 생각할 수 있습니다. 이것은 {{glossary("Card sorting")}}이라는 기술과 매우 유사합니다.![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](https://mdn.mozillademos.org/files/12421/card-sorting.png)
-5. 이제 대략적인 사이트맵을 그려보세요 - 사이트의 각 페이지를 동그라미로 지정하고, 각 페이지 간 동작 흐름을 보여주기 위해 선을 그으세요. 홈페이지는 아마 가운데에 있고, 모두는 아니어도 대부분에 연결될 것 입니다; 작은 사이트 안의 대부분의 페이지는, 비록 예외는 있겠지만, 메인 네비게이션에서 사용할 수 있어야 합니다. 당신은 아마 이것들이 어떻게 보여져야 할지에 대한 설명도 적고 싶을 것입니다. ![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](https://mdn.mozillademos.org/files/12427/site-map.png)
+1. 몇 요소들은 대부분의 페이지에 공통적으로 적용될 것이란 걸 명심하세요 — 네비게이션 메뉴나 footer 컨텐츠처럼. 예를 들어 비즈니스를 위한 페이지라면, 당신의 연락처를 각각의 페이지의 footer에 보이도록 하는 것은 좋은 생각입니다. 모든 페이지에 공통적으로 포함하고 싶은 것을 적어보세요.![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](common-features.png)
+2. 다음으로, 각 페이지의 구조를 간단한 스케치로 그리세요.아마 위의 우리의 간단한 웹사이트 같을 것입니다). 각 블럭의 기능을 적으세요.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
+3. 이제 웹사이트에 포함시키길 원하는 (각 페이지에 공통적이지 않은) 다른 모든 컨텐츠를 brainstorm하세요 - 리스트에 모두 적어 내려가세요. ![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](feature-list.png)
+4. 다음으로, 이 모든 컨텐츠들을 그룹화 해 다른 페이지에서 어떤 부분들이 함께할 수 있을지 생각할 수 있습니다. 이것은 {{glossary("Card sorting")}}이라는 기술과 매우 유사합니다.![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](card-sorting.png)
+5. 이제 대략적인 사이트맵을 그려보세요 - 사이트의 각 페이지를 동그라미로 지정하고, 각 페이지 간 동작 흐름을 보여주기 위해 선을 그으세요. 홈페이지는 아마 가운데에 있고, 모두는 아니어도 대부분에 연결될 것 입니다; 작은 사이트 안의 대부분의 페이지는, 비록 예외는 있겠지만, 메인 네비게이션에서 사용할 수 있어야 합니다. 당신은 아마 이것들이 어떻게 보여져야 할지에 대한 설명도 적고 싶을 것입니다. ![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](site-map.png)
 
 ### 능동적인 학습: 나만의 사이트맵 만들기
 

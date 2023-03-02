@@ -1,19 +1,6 @@
 ---
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Interface
-  - Media
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Video
-  - Web
-  - WebRTC
-translation_of: Web/API/RTCSessionDescription
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
@@ -74,11 +61,11 @@ signalingChannel.onmessage = function (evt) {
 };
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

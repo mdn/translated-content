@@ -1,7 +1,6 @@
 ---
 title: NodeList.item()
 slug: Web/API/NodeList/item
-translation_of: Web/API/NodeList/item
 ---
 
 {{APIRef("DOM")}}
@@ -39,6 +38,6 @@ var firstTable = tables.item(1); // or simply tables[1] - returns the second tab
 
 [DOM Level 2 Core: NodeList.item()](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-844377136)
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

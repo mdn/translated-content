@@ -1,48 +1,60 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
-original_slug: Web/JavaScript/Referencia/Objetos_globales/unescape
+l10n:
+  sourceCommit: c4e3558ee1045803df4a685f11f94dca273cd5fe
 ---
 
-{{jsSidebar("Objects")}}
+{{jsSidebar("Objects")}}{{Deprecated_Header}}
 
-La función deprecada **`unescape()`** calcula un nuevo string en el cual secuencia de valores hexadecimales son reemplazados con el caracter que representa. La secuencia de calculo deber{ia ser introducida por una función como {{jsxref("escape")}}. Por que `unescape` está deprecada, usar {{jsxref("decodeURI")}} or {{jsxref("decodeURIComponent")}}.
+> **Nota:** `unescape()` no es una función estándar implementada por los navegadores y solo se estandarizó para la compatibilidad entre motores. No es necesario que todos los motores de JavaScript lo implementen y es posible que no funcione en todas partes. Use {{jsxref("decodeURIComponent()")}} o {{jsxref("decodeURI()")}} si es posible.
 
-> **Nota:** Do not use `unescape` to decode URIs, use `decodeURI` instead.
+La función **`unescape()`** calcula una nueva cadena en la que las secuencias de escape hexadecimales se reemplazan con los caracteres que representan. Las secuencias de escape pueden ser introducidas por una función como {{jsxref("escape()")}}.
 
 ## Sintaxis
 
-```
+```js-nolint
 unescape(str)
 ```
 
-### Parameters
+### Parámetros
 
 - `str`
-  - : A string to be decoded.
+  - : Una cadena a decodificar.
 
-## Description
+### Valor de retorno
 
-The `unescape` function is a property of the _global object_.
+Una nueva cadena en la que ciertos caracteres no han sido reemplazados.
 
-## Examples
+## Descripción
+
+`unescape()` es una propiedad de función del objeto global.
+
+La función `unescape()` reemplaza cualquier secuencia de escape con el carácter que representa. Específicamente, reemplaza cualquier secuencia de escape de la forma `%XX` o `%uXXXX` (donde `X` representa un dígito hexadecimal) con el carácter que tiene el valor hexadecimal `XX`/`XXXX`. Si la secuencia de escape no es una secuencia de escape válida (por ejemplo, si "%" va seguido de uno o ningún dígito hexadecimal), se deja como está.
+
+> **Nota:** Esta función se usó principalmente para la codificación de URL y se basa en parte en el formato de escape en {{rfc(1738)}}. La función `unescape()` _no_ evalúa [secuencias de escape](/es/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) en cadenas literales. Puede reemplazar `\xXX` con `%XX` y `\uXXXX` con `%uXXXX` para obtener una cadena que `unescape()` pueda manejar.
+
+## Ejemplos
+
+### Utilizando unescape()
 
 ```js
-unescape("abc123");     // "abc123"
-unescape("%E4%F6%FC");  // "äöü"
-unescape("%u0107");     // "ć"
+unescape("abc123"); // "abc123"
+unescape("%E4%F6%FC"); // "äöü"
+unescape("%u0107"); // "ć"
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.unescape")}}
+{{Compat}}
 
-## See also
+## Véase también
 
+- [Polyfill de `unescape` en `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("decodeURI")}}
 - {{jsxref("decodeURIComponent")}}
+- {{jsxref("escape")}}

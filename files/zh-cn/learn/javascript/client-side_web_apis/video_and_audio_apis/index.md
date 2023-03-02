@@ -466,13 +466,3 @@ clearInterval(intervalFwd);
 - [Media formats supported by the HTML audio and video elements](/zh-CN/docs/Web/HTML/Supported_media_formats).
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 本章目录
-
-- [Introduction to web APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

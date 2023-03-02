@@ -5,7 +5,7 @@ slug: Web/API/IDBCursor
 
 {{APIRef("IndexedDB")}}
 
-[IndexedDB API](/ja/docs/IndexedDB) の **`IDBCursor`** インターフェイスはデータベースの複数レコードを横断したり繰り返すための[カーソル](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor)です。
+[IndexedDB API](/ja/docs/IndexedDB) の **`IDBCursor`** インターフェイスはデータベースの複数レコードを横断したり繰り返すための[カーソル](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB)です。
 
 このカーソルはどのインデックスやオブジェクトをループしているかを示す元です。これは範囲内の位置を示し、レコードのキー順に増/減して動きます。カーソルはアプリケーションからカーソル範囲内の全レコードに非同期に処理できるようにします。
 

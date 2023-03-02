@@ -43,8 +43,8 @@ translation_of: Web/MathML/Element/menclose
     | `verticalstrike`     | ![verticalstrike](/files/3179/verticalstrike.png)                                                  | <math><menclose notation="verticalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>     | вертикальная линия, зачёркивающая содержимое                                                                          |
     | `horizontalstrike`   | ![horizontalstrike](/files/3180/horizontalstrike.png)                                              | <math><menclose notation="horizontalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>   | горизонтальная линия, зачёркивающая содержимое                                                                        |
     | `madruwb`            | ![madruwb](/files/3181/madruwb.png)                                                                | <math><menclose notation="madruwb"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | [Арабский символ факториала](http://en.wikipedia.org/wiki/Modern_Arabic_mathematical_notation#Arithmetic_and_algebra) |
-    | `updiagonalarrow`    | ![](https://mdn.mozillademos.org/files/6255/updiagonalarrow.png)                                   | <math><menclose notation="updiagonalarrow"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>    | диагональная стрелка                                                                                                  |
-    | `phasorangle`        | ![Screenshot of the phasorangle notation](https://mdn.mozillademos.org/files/7851/phasorangle.png) | <math><menclose notation="phasorangle"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>        | угол                                                                                                                  |
+    | `updiagonalarrow`    | ![](updiagonalarrow.png)                                   | <math><menclose notation="updiagonalarrow"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>    | диагональная стрелка                                                                                                  |
+    | `phasorangle`        | ![Screenshot of the phasorangle notation](phasorangle.png) | <math><menclose notation="phasorangle"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>        | угол                                                                                                                  |
 
 ## Примеры
 
@@ -72,6 +72,6 @@ translation_of: Web/MathML/Element/menclose
 
 - Дополнительные значения для атрибута `notation` были добавлены в следующих релизах:
 
-  - `madruwb` в Gecko 2.0 {{GeckoRelease("2.0")}}.
-  - `updiagonalarrow` в Gecko 24.0 {{GeckoRelease("24.0")}}
-  - `phasorangle` в Gecko 32.0 {{GeckoRelease("32.0")}}
+  - `madruwb` в Gecko 2.0.
+  - `updiagonalarrow` в Gecko 24.0
+  - `phasorangle` в Gecko 32.0

@@ -1,14 +1,6 @@
 ---
 title: 함수
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Function
-  - Functions
-  - Guide
-  - JavaScript
-  - Reference
-browser-compat: javascript.functions
-translation_of: Web/JavaScript/Reference/Functions
 ---
 {{jsSidebar("Functions")}}
 

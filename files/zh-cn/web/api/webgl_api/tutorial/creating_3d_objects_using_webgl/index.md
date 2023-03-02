@@ -3,7 +3,7 @@ title: Creating 3D objects using WebGL
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 现在让我们给之前的正方形添加五个面从而可以创建一个三维的立方体。最简单的方式就是通过调用方法 {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} 使用顶点数组列表来替换之前的通过方法{{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} 直接使用顶点数组。而顶点数组列表里保存着将会被引用到一个个独立的顶点。
 
@@ -125,8 +125,8 @@ gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
 
 到现在为止，我们已经创建了一个颜色生动的并且会在场景中移动和旋转的立方体，这一定很酷吧。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[查看全部源代码](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [在新页面打开示例](http://mdn.github.io/webgl-examples/tutorial/sample5/)
+[查看全部源代码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample5) | [在新页面打开示例](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

@@ -1,7 +1,6 @@
 ---
 title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
 
 {{JSRef}}
@@ -59,11 +58,11 @@ Math.sinh = Math.sinh || function(x) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

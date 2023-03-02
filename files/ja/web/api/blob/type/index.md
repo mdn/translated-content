@@ -1,55 +1,75 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
 {{APIRef("File API")}}
 
-{{domxref("Blob")}} オブジェクトの **`type`** プロパティは、ファイルの {{Glossary("MIME type")}} を返します。
-
-## シンタックス
-
-```
-var mimetype = blob.type
-```
+**`type`** は {{domxref("Blob")}} オブジェクトのプロパティで、ファイルの {{Glossary("MIME type", "MIME タイプ")}}を返します。
 
 ### 値
 
-ファイルの MIME タイプを含む {{domxref("DOMString")}}、または型が特定できなかった場合は空文字列を指定します。
+ファイルの MIME タイプを含む文字列、または型が特定できなかった場合は空文字列を指定します。
 
 ## 例
 
 この例では、ユーザーにいくつかのファイルを選択してもらい、各ファイルが指定された画像ファイルタイプのセットのいずれかであるかどうかを確認します。
 
+### HTML
+
+```html
+<input type="file" id="input" multiple />
+<output id="output">画像ファイルを選択してください…</output>
+```
+
+```css hidden
+output {
+  display: block;
+  margin-top: 16px;
+}
+```
+
+### JavaScript
+
 ```js
-var i, fileInput, files, allowedFileTypes;
+// このアプリケーションは GIF, PNG, JPEG 画像のみを許可します
+const allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
 
-// fileInput は HTMLInputElement <input type="file" multiple id="myfileinput"> です。
-fileInput = document.getElementById("myfileinput");
+const input = document.getElementById("input");
+const output = document.getElementById("output");
 
-// files は FileList オブジェクトです (NodeList に似ています)。
-files = fileInput.files;
+input.addEventListener("change", (event) => {
+  const files = event.target.files;
 
-// 私たちのアプリケーションは GIF、PNG、JPEG 画像のみを許可しています。
-allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
-
-for (i = 0; i < files.length; i++) {
-  // file.type が許可されたファイルタイプであるかどうかをテストします。
-  if (allowedFileTypes.indexOf(files[i].type) > -1) {
-    // マッチしたファイルタイプは、許可されているファイルタイプの一つです。ここで何か処理を行います。
+  if (files.length === 0) {
+    output.innerText = "画像ファイルを選択してください…";
+    return;
   }
+
+  const allAllowed = Array.from(files).every((file) =>
+    allowedFileTypes.includes(file.type)
+  );
+  output.innerText = allAllowed
+    ? "すべてのファイルが合格です!"
+    : "画像ファイルのみを選択してください。";
 });
 ```
 
-## 仕様
+### 結果
+
+{{EmbedLiveSample("Examples")}}
+
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
-{{Compat("api.Blob.type")}}
+{{Compat}}
 
-## あわせて参照
+## 関連情報
 
 - {{domxref("Blob")}}
-- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

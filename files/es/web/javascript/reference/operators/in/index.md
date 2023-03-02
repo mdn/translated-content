@@ -1,11 +1,6 @@
 ---
 title: in
 slug: Web/JavaScript/Reference/Operators/in
-tags:
-  - JavaScript
-  - Operator
-  - Relational Operators
-translation_of: Web/JavaScript/Reference/Operators/in
 original_slug: Web/JavaScript/Referencia/Operadores/in
 ---
 
@@ -98,9 +93,9 @@ El operador `in` devuelve `true` para propiedades en la cadena del prototipo.
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.in")}}
+{{Compat}}
 
 ## Vea también
 

@@ -47,6 +47,10 @@ Aquí encontrarás enlaces a documentación, ejemplos y herramientas que te ayud
 - [HTML](/es/docs/Web/HTML)
 - [SVG](/es/docs/Web/SVG)
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("mathml.elements.math", 0)}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

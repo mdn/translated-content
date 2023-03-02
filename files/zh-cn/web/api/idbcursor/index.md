@@ -37,7 +37,7 @@ slug: Web/API/IDBCursor
 
 {{deprecated_header}}
 
-> **警告：** 这些常量不再被支持。你应该使用字符串常量。({{ bug(891944) }})
+> **警告：** 这些常量不再被支持。你应该使用字符串常量。([Firefox bug 891944](https://bugzil.la/891944))
 
 - `NEXT`: `"next"` :游标展示所有记录，包括重复的记录。它从主键区间下届开始逐步上升（按键的顺序单调递增）。
 - `NEXTUNIQUE` : `"nextunique"` : 游标展示所有记录，不包括重复的记录。如果同一个主键存在重复的记录，只有第一条迭代记录被取出。它从主键区间的下界开始逐步上升
@@ -84,4 +84,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

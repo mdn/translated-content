@@ -56,7 +56,7 @@ Usa CSS para cambiar el aspecto de esta biografía, cambiando los valores de las
 
 Deberías conseguir algo parecido a esta página:
 
-![Screenshot of how the example should look after completing the assessment.](https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png)
+![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
 
 Posteriormente intenta buscar algunas propiedades no mencionadas en esta página en la [referencia de CSS de MDN](/es/docs/Web/CSS/Reference) y ¡arriésgate!.
 

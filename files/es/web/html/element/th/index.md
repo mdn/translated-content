@@ -59,7 +59,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
   - : Este atributo contiene una breve descripción del contenido de las celdas. Algunos agentes de usuario (e.g., a speech reader) pueden presentar esta descripción antes que el propio contenido.
 
-    > **Nota:** **Nota de uso:** No uses este atributo, ya que se ha vuelto obsoleto en el último estandar. Alternativamente, puedes poner la descripción abreviada dentro de la celda y colocarla el largo contenido en el atributo de **title**.
+    > **Nota:** No uses este atributo, ya que se ha vuelto obsoleto en el último estandar. Alternativamente, puedes poner la descripción abreviada dentro de la celda y colocarla el largo contenido en el atributo de **title**.
 
 - {{htmlattrdef("align")}} {{Deprecated_inline}} in HTML4, {{deprecated_inline}} in HTML5
 
@@ -143,13 +143,13 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     - `middle`: Centers the text in the cell.
     - and `top`: Positions the text near the top of the cell.
 
-    > **Nota:** **Usage Note:** Do not use this attribute as it is no longer supported by the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
+    > **Nota:** Do not use this attribute as it is no longer supported by the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
 
 - {{htmlattrdef("width")}} {{Deprecated_inline}} in HTML4.01
 
   - : This attribute is used to define a recommended cell width. Additional space can be added with the [cellspacing](/es/docs/Web/API/HTMLTableElement/cellSpacing) and [cellpadding](/es/docs/Web/API/HTMLTableElement/cellPadding) properties and the width of the {{HTMLElement("col")}} element can also create extra width. But, if a column's width is too narrow to show a particular cell properly, it will be widened when displayed.
 
-    > **Nota:** **Usage Note:** Do not use this attribute in the latest standard: use the CSS {{cssxref("width")}} property instead.
+    > **Nota:** Do not use this attribute in the latest standard: use the CSS {{cssxref("width")}} property instead.
 
 ## Examples
 
@@ -159,9 +159,9 @@ See {{HTMLElement("table")}} for examples on `<th>`.
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.th")}}
+{{Compat}}
 
 ## See also
 

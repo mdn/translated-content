@@ -1,6 +1,6 @@
 ---
 title: Notification
-slug: Web/API/notification
+slug: Web/API/Notification
 ---
 
 {{APIRef("Web Notifications")}}
@@ -178,9 +178,9 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## See also
 

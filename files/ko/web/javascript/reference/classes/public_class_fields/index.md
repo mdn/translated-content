@@ -1,7 +1,6 @@
 ---
 title: Class fields
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
-translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 original_slug: Web/JavaScript/Reference/Classes/Class_fields
 ---
 
@@ -25,7 +24,7 @@ class ClassWithStaticField {
 }
 
 console.log(ClassWithStaticField.staticField)
-// expected output: "static field"​
+// expected output: "static field"
 ```
 
 Fields without initializers are initialized to `undefined`.
@@ -168,7 +167,7 @@ class ClassWithPublicInstanceMethod {
 
 const instance = new ClassWithPublicInstanceMethod()
 console.log(instance.publicMethod())
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Public instance methods are added to the class prototype at the time of class evaluation using {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. They are writable, non-enumerable, and configurable.
@@ -201,7 +200,7 @@ class SubClass extends BaseClass {
 
 const instance = new SubClass()
 console.log(instance.subPublicMethod())
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Getters and setters are special methods that bind to a class property and are called when that property is accessed or set. Use the [get](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [set](/en-US/docs/Web/JavaScript/Reference/Functions/set) syntax to declare a public instance getter or setter.
@@ -219,7 +218,7 @@ class ClassWithGetSet {
 
 const instance = new ClassWithGetSet()
 console.log(instance.msg)
-// expected output: "hello worl​d"
+// expected output: "hello world"
 
 instance.msg = 'cake'
 console.log(instance.msg)
@@ -353,7 +352,7 @@ class ClassWithPrivateMethod {
 
 const instance = new ClassWithPrivateMethod()
 console.log(instance.getPrivateMessage())
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Private instance methods may be generator, async, or async generator functions. Private getters and setters are also possible:
@@ -376,7 +375,7 @@ class ClassWithPrivateAccessor {
 }
 
 new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"
+// expected output: "✨hello world✨"
 ```
 
 ## 명세서

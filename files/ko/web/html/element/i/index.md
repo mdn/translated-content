@@ -1,14 +1,8 @@
 ---
 title: <i>
 slug: Web/HTML/Element/i
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/i
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<i>` 요소**는 텍스트에서 어떤 이유로 주위와 구분해야 하는 부분을 나타냅니다. 기술 용어, 외국어 구절, 등장인물의 생각 등을 예시로 들 수 있습니다. 보통 기울임꼴로 표시합니다.
@@ -96,7 +90,7 @@ translation_of: Web/HTML/Element/i
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.i")}}
+{{Compat}}
 
 ## 같이 보기
 

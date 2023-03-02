@@ -40,17 +40,17 @@ image-rendering: unset;
 
 > **备注：** 早期草案中出现的 `optimizationQuality` 和 `optimizationSpeed` （来自 SVG 的对应值）分别被定义为 `smooth` 和 `pixelated`。
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ```html hidden
 <div>
-  <img class="auto" alt="auto" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
-  <img class="pixelated" alt="pixelated" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
-  <img class="crisp-edges" alt="crisp-edges" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
+  <img class="auto" alt="auto" src="blumen.jpg" />
+  <img class="pixelated" alt="pixelated" src="blumen.jpg" />
+  <img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" />
 </div>
 ```
 
@@ -76,7 +76,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

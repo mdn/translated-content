@@ -1,7 +1,6 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
 {{jsSidebar("Statements")}}
 
@@ -234,11 +233,11 @@ If the `finally`-block returns a value, this value becomes the return value of t
 
 The outer "oops" is not thrown because of the return in the `finally`-block. The same would apply to any value returned from the `catch`-block.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

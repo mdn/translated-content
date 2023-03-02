@@ -1,7 +1,6 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
-translation_of: Web/HTTP/Headers/Content-Length
 ---
 
 {{HTTPSidebar}}
@@ -38,7 +37,7 @@ Content-Length: <length>
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Content-Length")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

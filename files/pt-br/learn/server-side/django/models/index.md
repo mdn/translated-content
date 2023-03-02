@@ -47,7 +47,7 @@ Após decidirmos nossos modelos e campos, precisamos pensar no relacionamento de
 
 Com isso em mente, os diagramas UML de associação, mostram abaixo os modelos que definiremos nesse caso (como caixas).
 
-![LocalLibrary Model UML](https://mdn.mozillademos.org/files/15646/local_library_model_uml.png)
+![LocalLibrary Model UML](local_library_model_uml.png)
 
 Como acima, criamos modelos para `Book` (que contém os detalhes genéricos do livro),
 `BookInstance` (contém os status das cópias físicas e específicas dos livros disponíveis no sistema) e `Author`. Também decidimos ter um modelo para o gênero (`Genre`), para que os valores possam ser criados/selecionados através da interface administrativa. Decidimos não ter um modelo para o `BookInstance: status` - pois, codificamos os valores em (`LOAN_STATUS`) porque não esperamos que isso mude. Dentro de cada uma das caixas você pode ver o nome do modelo, os campos nomes e tipos e também os métodos e seus tipos de retorno.
@@ -98,7 +98,7 @@ Um modelo pode ter um número árbitrário de campos, de qualquer tipo -- cada u
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
 ```
 
-Nosso exemplo acima tem um único campo chamado `my_field_name`, do tipo `models.CharField` - o que significa que este campo conterá strings de caracteres alfanuméricos. Os tipos de cada campo são atribuídos usando classes específicas, que determinam o tipo de registro usado para armazenar os dados no banco de dados, juntamente com os critérios de validação a serem usados ​​quando os valores são recebidos de um formulário HTML (ou seja, o que constitui um valor válido). Os tipos de cada campo também podem receber argumentos que especifiquem como o campo é armazenado ou pode ser usado. Neste caso, estamos dando ao nosso campo dois argumentos:
+Nosso exemplo acima tem um único campo chamado `my_field_name`, do tipo `models.CharField` - o que significa que este campo conterá strings de caracteres alfanuméricos. Os tipos de cada campo são atribuídos usando classes específicas, que determinam o tipo de registro usado para armazenar os dados no banco de dados, juntamente com os critérios de validação a serem usados quando os valores são recebidos de um formulário HTML (ou seja, o que constitui um valor válido). Os tipos de cada campo também podem receber argumentos que especifiquem como o campo é armazenado ou pode ser usado. Neste caso, estamos dando ao nosso campo dois argumentos:
 
 - `max_length=20` — Afima que o valor máximo do comprimento desse campo é de 20 caracteres.
 - `help_text='Enter field documentation'` — fornece um rótulo de texto para exibir uma ajuda para os usuários saberem qual valor fornecer, quando esse valor é inserido por um usuário por meio de um formulário HTML.
@@ -179,7 +179,7 @@ def __str__(self):
     return self.field_name
 ```
 
-Outro método comum a incluir nos modelos do Django é o `get_absolute_url()`, que retorna uma URL para exibir registros de modelos individuais no site (se você definir esse método, o Django adicionará automaticamente um botão "View on Site" às ​​telas de edição de registros do modelo o site Admin). Um padrão típico para `get_absolute_url ()` é mostrado abaixo.
+Outro método comum a incluir nos modelos do Django é o `get_absolute_url()`, que retorna uma URL para exibir registros de modelos individuais no site (se você definir esse método, o Django adicionará automaticamente um botão "View on Site" às telas de edição de registros do modelo o site Admin). Um padrão típico para `get_absolute_url ()` é mostrado abaixo.
 
 ```python
 def get_absolute_url(self):

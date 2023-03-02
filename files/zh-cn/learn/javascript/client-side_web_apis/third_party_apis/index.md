@@ -219,7 +219,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。
 
-![](https://mdn.mozillademos.org/files/14821/nytimes-search.png)
+![](nytimes-search.png)
 
 ### 将 API 连接到应用
 
@@ -439,13 +439,3 @@ function displayResults(json) {
 本文介绍了如何使用第三方 API 给网页添加功能。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 本章目录
-
-- [Introduction to web APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

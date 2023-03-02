@@ -1,6 +1,6 @@
 ---
 title: 如何建立 DOM 樹
-slug: Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
 ---
 
 This page describes how to use the [DOM Core](http://www.w3.org/TR/DOM-Level-3-Core/core.html) API in JavaScript to create and modify DOM objects. It applies to all Gecko-based applications (such as Firefox) both in privileged (extensions) and unprivileged (web pages) code.

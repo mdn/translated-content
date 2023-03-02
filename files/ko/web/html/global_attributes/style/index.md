@@ -1,11 +1,6 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/style
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -24,7 +19,7 @@ translation_of: Web/HTML/Global_attributes/style
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.style")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,17 +1,6 @@
 ---
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - Cut
-  - Event
-  - Experimental
-  - Interface
-  - copy
-  - paste
-browser-compat: api.ClipboardEvent
 ---
 
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}

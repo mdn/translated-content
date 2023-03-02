@@ -68,7 +68,7 @@ Voici un exemple d'ouverture de la base de données `toDoList` en utilisant la s
 var request = window.indexedDB.open("toDoList", 4);
 ```
 
-Dans le fragment de code qui suit, on effectue une requête pour ouvrir une base de données et on inclut des gestionnaires d'évènements pour gérer la réussite ou l'échec de l'ouverture. Pour consulter un exemple fonctionnel complet, vous pouvez étudier notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([cf. l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+Dans le fragment de code qui suit, on effectue une requête pour ouvrir une base de données et on inclut des gestionnaires d'évènements pour gérer la réussite ou l'échec de l'ouverture. Pour consulter un exemple fonctionnel complet, vous pouvez étudier notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([cf. l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var note = document.querySelector("ul");
@@ -116,4 +116,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Définir un intervalle de clés&nbsp;: {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier&nbsp;: {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs&nbsp;: {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB&nbsp;: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB&nbsp;: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

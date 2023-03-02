@@ -83,31 +83,31 @@ python3 manage.py runserver
 
 이곳은 설치된 어플리케이션에 따라 그룹지어진 모든 모델들을 보여줍니다. 모델 이름을 클릭해서 모든 관련 레코드들의 목록을 볼 수 있고, 그 목록들을 클릭하여 수정할 수 있습니다. 또한 모델 오른쪽의 **Add** 링크를 클릭하여 그 타입의 레코드를 곧바로 생성할 수 있습니다.
 
-![Admin Site - Home page](https://mdn.mozillademos.org/files/13975/admin_home.png)
+![Admin Site - Home page](admin_home.png)
 
 **Books 모델 오른쪽의 Add** 링크를 클릭해서 새로운 책을 만드세요(아래와 같은 화면이 보일 것입니다). 각 필드의 제목, 사용된 위젯의 타입 그리고 `help_text`(있는 경우)가 모델 안에서 지정한 값과 일치하는 방식에 유의하세요.
 
 필드에 값들을 입력하세요. 해당 필드 옆에 있는 **+** 버튼을 눌러 새로운 저자나 장르를 생성할 수 있습니다 (이미 생성했다면 목록에서 값을 선택하세요). 모두 완료했다면 레코드를 저장하기 위해 **SAVE**, **Save and add another** 또는 **Save and continue editing**을 클릭할 수 있습니다.
 
-![Admin Site - Book Add](https://mdn.mozillademos.org/files/13979/admin_book_add.png)
+![Admin Site - Book Add](admin_book_add.png)
 
 > **참고:** **주의**: 이 지점에서 어플리케이션에 몇 가지 책들, 저자 그리고 장르(예: 판타지)를 추가하면서 시간을 보내보세요. 각각 저자와 장르에 서로 다른 두 가지 책이 포함되어 있는지 확인하세요 (이렇게 하면 나중에 리스트(list)와 디테일 뷰(detail view)들을 구현할 때 그것들을 더욱 흥미롭게 만들어 줍니다).
 
 책을 추가했다면, 상단 북마크 안의 **Home** 링크를 클릭해서 관리자 페이지로 되돌아가세요. 그리고 **Books** 링크를 클릭해서 책들의 현재 목록을 나타내세요(아니면 다른 링크를 클릭해서 다른 모델의 목록을 보세요). 이제 몇 가지 책을 추가했으니, 목록은 아래 스크린샷과 비슷하게 보일 겁니다. 각 책의 제목이 보입니다; 이것은 지난 글에서 다뤘던 Book 모델의 `__str__()` 메소드가 반환한 값입니다.
 
-![Admin Site - List of book objects](https://mdn.mozillademos.org/files/13935/admin_book_list.png)
+![Admin Site - List of book objects](admin_book_list.png)
 
 이 리스트에서 원하지 않는 책의 왼쪽에 있는 체크박스를 선택하고, Action 드랍-다운 목록에서 delete... 동작을 선택한 후, **Go** 버튼을 클릭해 책을 삭제할 수 있습니다. 또한 **ADD BOOK** 버튼을 클릭해서 새로운 책들을 추가할 수 있습니다.
 
 링크 안의 책 이름을 선택해서 책을 편집할 수 있습니다. 아래에 보여지는 책 모델의 편집 페이지는 "Add" 페이지와 거의 동일합니다. 페이지의 제목 (_Change book_)과 **Delete**, **HISTORY** 그리고 **VIEW ON SITE** 버튼들의 추가가 큰 차이점입니다(마지막 버튼은 모델에서 `get_absolute_url()` 메소드를 정의했기 때문에 나타납니다).
 
-![Admin Site - Book Edit](https://mdn.mozillademos.org/files/13977/admin_book_modify.png)
+![Admin Site - Book Edit](admin_book_modify.png)
 
 이제 **Home** 페이지로 되돌아가서 (홈 링크를 사용해서) **Author** 와 **Genre** 목록들을 보세요 — 새로운 책들을 추가하면서 이미 몇 가지 목록들이 있겠지만, 조금 더 추가해도 됩니다.
 
-아직 가지고 있지 않은 것은 Book Instance들입니다. 왜냐하면 Books에서 만들어지지 않았기 때문이죠( `BookInstance`에서 `Book`을 만들 수 있긴 하지만 — 이것은 `ForeignKey` 필드의 특성입니다). Home 페이지로 되돌아가서 연관된 **추가(Add)**버튼을 눌러 아래의 Add book Instance 화면을 나타내세요. 크고 전역적으로 고유한 id에 주의하세요. 이것은 도서관에서 한 권의 책을 개별적으로 식별하는 데 사용할 수 있습니다.
+아직 가지고 있지 않은 것은 Book Instance들입니다. 왜냐하면 Books에서 만들어지지 않았기 때문이죠( `BookInstance`에서 `Book`을 만들 수 있긴 하지만 — 이것은 `ForeignKey` 필드의 특성입니다). Home 페이지로 되돌아가서 연관된 **추가**(**Add**)버튼을 눌러 아래의 Add book Instance 화면을 나타내세요. 크고 전역적으로 고유한 id에 주의하세요. 이것은 도서관에서 한 권의 책을 개별적으로 식별하는 데 사용할 수 있습니다.
 
-![Admin Site - BookInstance Add](https://mdn.mozillademos.org/files/13981/admin_bookinstance_add.png)
+![Admin Site - BookInstance Add](admin_bookinstance_add.png)
 
 각각의 책마다 여러 개의 레코드를 만드세요. 상태(Status)를 최소한 몇 개의 레코드는 대여 가능(Available)로 설정하고, 나머지는 대여 중(On loan)으로 설정하세요. 만약 상태가 대여 불가능(**not** Available)이면, 만기 날짜도 같이 설정하세요.
 
@@ -194,7 +194,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 이제 웹사이트 안의 저자 목록으로 이동하세요. 위의 필드들이 아래와 같이 보여질 것입니다:
 
-![Admin Site - Improved Author List](https://mdn.mozillademos.org/files/14023/admin_improved_author_list.png)
+![Admin Site - Improved Author List](admin_improved_author_list.png)
 
 우리의 `Book` 모델을 위해서 추가적으로 `author` 그리고 `genre`를 표시해 봅시다. `author`는 `Foreignkey` 필드 관계(일-대-다)이기 때문에, 관련된 레코드의 `__str__()` 값에 의해 나타내어질 것입니다. 아래의 버전으로 `BookAdmin` 클래스를 대체하세요.
 
@@ -219,7 +219,7 @@ class BookAdmin(admin.ModelAdmin):
 
 모델을 저장하고 관리자를 업데이트 했다면, 웹사이트를 열어서 Books 목록 페이지로 이동하세요; 아래와 같은 책 리스트가 있을 것입니다:
 
-![Admin Site - Improved Book List](https://mdn.mozillademos.org/files/14025/admin_improved_book_list.png)
+![Admin Site - Improved Book List](admin_improved_book_list.png)
 
 `Genre` 모델 (그리고 `Language` 모델도, 정의했다면) 은 단일 필드를 갖고 있기 때문에, 추가적인 필드를 보여주기 위해 추가적인 모델을 생성하는 것은 의미가 없습니다.
 
@@ -236,7 +236,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 목록 뷰(list view)는 이제 오른쪽에 필터 상자를 갖고 있을 겁니다. 값을 필터링하기 위해 날짜와 상태를 선택하는 방법에 주의하세요:
 
-![Admin Site - BookInstance List Filters](https://mdn.mozillademos.org/files/14037/admin_improved_bookinstance_list_filters.png)
+![Admin Site - BookInstance List Filters](admin_improved_bookinstance_list_filters.png)
 
 ### 세뷰 보기 레이아웃(detail view layout) 조직하기
 
@@ -258,7 +258,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 웹사이트 안에서 저자 세부 사항 뷰로 이동하세요 — 이제 아래와 같이 보일겁니다:
 
-![Admin Site - Improved Author Detail](https://mdn.mozillademos.org/files/14027/admin_improved_author_detail.png)
+![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
 > **참고:** **주의**: 당신은 또한 양식(form)에서 제외되어야 할 속성들의 목록을 선언하기 위해 `exclude` 속성을 사용할 수 있습니다 (모델 안의 다른 모든 속성들이 표시될 겁니다).
 
@@ -287,7 +287,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 이제 웹사이트 안의 book instance view로 이동하세요; 이제 아래와 같은 양식이 보일겁니다:
 
-![Admin Site - Improved BookInstance Detail with sections](https://mdn.mozillademos.org/files/14029/admin_improved_bookinstance_detail_sections.png)
+![Admin Site - Improved BookInstance Detail with sections](admin_improved_bookinstance_detail_sections.png)
 
 ### 연관 레코드들의 인라인 편집(Inline editing of associated records)
 
@@ -307,7 +307,7 @@ class BookAdmin(admin.ModelAdmin):
 
 이제 웹사이트의 `Book` 을 위한 화면으로 이동하세요 — 화면의 하단에서 이제 이 책과 연관된 책 인스턴스(book instances)를 볼 수 있을 겁니다(책의 장르 필드 바로 아래에):
 
-![Admin Site - Book with Inlines](https://mdn.mozillademos.org/files/14033/admin_improved_book_detail_inlines.png)
+![Admin Site - Book with Inlines](admin_improved_book_detail_inlines.png)
 
 이 경우 우리는 인라인된 모델의 모든 필드들을 추가하는, 테이블화된 인라인 클래스를 선언했습니다. 레이아웃을 위해 모든 종류의 추가적인 정보들을 지정할 수 있습니다. 표시할 필드, 그것들의 순서, 그것들이 읽기 전용인지 아닌지, 등등을 포함해서요. (더 많은 정보를 위해 [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) 를 보세요).
 
@@ -330,21 +330,3 @@ class BookAdmin(admin.ModelAdmin):
 - [The Django Admin site](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/ko/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ko/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ko/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ko/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ko/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ko/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ko/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ko/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ko/docs/Learn/Server-side/Django/django_assessment_blog)

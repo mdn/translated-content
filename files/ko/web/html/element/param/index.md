@@ -1,13 +1,6 @@
 ---
 title: '<param>: 객체 매개변수 요소'
 slug: Web/HTML/Element/param
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/param
 ---
 
 {{HTMLSidebar}}
@@ -74,7 +67,7 @@ translation_of: Web/HTML/Element/param
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.param")}}
+{{Compat}}
 
 ## 같이 보기
 

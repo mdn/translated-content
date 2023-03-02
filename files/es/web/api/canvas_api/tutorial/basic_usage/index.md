@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_usage
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Dibujando_formas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Dibujando_formas")}}
 
 Comenzamos este tutorial observando el elemento {{HTMLElement("canvas")}}. Al final de esta página, sabrás como configurar el entorno 2D de canvas y habrás dibujado el primer ejemplo en tu navegador.
 
@@ -138,6 +138,6 @@ Para comenzar, daremos un vistazo a un simple ejemplo que dibuja dos rectangulos
 
 Este ejemplo quedaría así:
 
-{{EmbedLiveSample("Un_simple_ejemplo", 160, 160, "https://mdn.mozillademos.org/files/228/canvas_ex1.png")}}
+{{EmbedLiveSample("Un_simple_ejemplo", 160, 160, "canvas_ex1.png")}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial", "Web/Guide/HTML/Canvas_tutorial/Dibujando_formas")}}

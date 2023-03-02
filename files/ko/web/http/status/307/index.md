@@ -1,8 +1,8 @@
 ---
 title: 307 Temporary Redirect
 slug: Web/HTTP/Status/307
-translation_of: Web/HTTP/Status/307
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("HTTP")}} **`307 Temporary Redirect`** 리다이렉트 상태 응답 코드는 요청한 리소스가 {{HTTPHeader("Location")}} 헤더에 주어진 URL 로 임시로 옮겨졌다는 것을 나타냅니다.
@@ -23,7 +23,7 @@ translation_of: Web/HTTP/Status/307
 
 ## 브라우저 호환성
 
-{{Compat("http.status.307")}}
+{{Compat}}
 
 ## 같이 보기
 

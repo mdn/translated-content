@@ -73,9 +73,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si le
 
 Si vous utilisez [URL.createObjectURL()](/fr/docs/Web/API/URL/createObjectURL) pour télécharger des données créées en JavaScript et que vous voulez révoquer l'URL de l'objet (avec [revokeObjectURL](/fr/docs/Web/API/URL/revokeObjectURL)) plus tard (comme il est fortement recommandé), vous devez le faire après le téléchargement. Pour ce faire, écoutez l'événement [downloads.onChanged](/fr/Add-ons/WebExtensions/API/downloads/onChanged).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.download")}}
+{{Compat}}
 
 ## Examples
 

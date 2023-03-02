@@ -1,14 +1,8 @@
 ---
 title: '<tbody>: 표 본문 요소'
 slug: Web/HTML/Element/tbody
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/tbody
 ---
+
 {{HTMLSidebar}}
 
 **HTML** **`<tbody>`** 요소는 표의 여러 행({{htmlelement("tr")}})을 묶어서 표 본문을 구성합니다.
@@ -264,7 +258,7 @@ tbody > tr > th {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.tbody")}}
+{{Compat}}
 
 ## 같이 보기
 

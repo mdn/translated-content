@@ -1,13 +1,6 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-tags:
-  - HTTP
-  - 레퍼런스
-  - 응답
-  - 쿠키
-  - 헤더
-translation_of: Web/HTTP/Headers/Set-Cookie
 ---
 
 {{HTTPSidebar}}
@@ -127,13 +120,13 @@ Set-Cookie: __Host-id=1; Secure
 Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("http.headers.Set-Cookie")}}
+{{Compat}}
 
 ## Compatibility notes
 

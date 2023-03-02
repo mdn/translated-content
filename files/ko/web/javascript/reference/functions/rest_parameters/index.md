@@ -1,13 +1,6 @@
 ---
 title: 나머지 매개변수
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-tags:
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
-browser-compat: javascript.functions.rest_parameters
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 {{jsSidebar("Functions")}}
 
@@ -200,11 +193,11 @@ function sortArguments() {
 console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

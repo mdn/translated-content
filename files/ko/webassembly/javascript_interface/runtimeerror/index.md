@@ -1,10 +1,10 @@
 ---
 title: WebAssembly.RuntimeError()
 slug: WebAssembly/JavaScript_interface/RuntimeError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ---
-{{JSRef}}
+
+{{WebAssemblySidebar}}
 
 **`WebAssembly.RuntimeError()`** 생성자는 WebAssembly에서 [trap](http://webassembly.org/docs/semantics/#traps)을 지정할 때마다 throw되는 새 WebAssembly `RuntimeError` 객체를 만듭니다.
 
@@ -69,11 +69,11 @@ try {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

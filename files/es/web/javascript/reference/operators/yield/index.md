@@ -1,14 +1,6 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - Característica del lenguaje
-  - ECMAScript 2015
-  - Generadores
-  - Iterador
-  - JavaScript
-  - Operador
-translation_of: Web/JavaScript/Reference/Operators/yield
 original_slug: Web/JavaScript/Referencia/Operadores/yield
 ---
 
@@ -103,9 +95,9 @@ console.log(generatorFunc.next(10).value); // 26
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.yield")}}
+{{Compat}}
 
 ## Ve también
 

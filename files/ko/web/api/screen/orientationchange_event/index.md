@@ -1,7 +1,6 @@
 ---
 title: window.screen.onorientationchange
 slug: Web/API/Screen/orientationchange_event
-translation_of: Web/API/Screen/onorientationchange
 original_slug: Web/API/Screen/onorientationchange
 ---
 {{ ApiRef() }}
@@ -20,11 +19,11 @@ screen.onorientationchange = funcRef;
 
 `funcRef` 는 함수로의 참조 이다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

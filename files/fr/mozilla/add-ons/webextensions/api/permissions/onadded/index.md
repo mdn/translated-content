@@ -44,9 +44,9 @@ Les événements ont trois fonctions :
     - `permissions`
       - : Objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été accordées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.onAdded")}}
+{{Compat}}
 
 ## Exemples
 

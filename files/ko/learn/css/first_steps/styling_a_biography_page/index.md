@@ -54,7 +54,7 @@ CSS 를 사용하여 내가 사용한 속성 값을 변경하여 이 전기(biog
 
 이 이미지와 비슷한 결과가 나옵니다.
 
-![Screenshot of how the example should look after completing the assessment.](https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png)
+![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
 
 그런 다음 [MDN CSS 참조](/ko/docs/Web/CSS/Reference) 에서 이 페이지에 언급되지 않은 일부 속성을 찾아보고 시도해 보십시오!
 
@@ -79,11 +79,3 @@ CSS 를 사용하여 내가 사용한 속성 값을 변경하여 이 전기(biog
 첫 번째 강의를 완료한 것을 축하합니다. 이제 CSS 에 대해 잘 이해하고 스타일 시트에서 발생하는 많은 부분을 이해할 수 있어야 합니다. 다음 강의인 [CSS building blocks](/ko/docs/Learn/CSS/Building_blocks) 에서는 여러 가지 주요 영역을 자세히 살펴보겠습니다.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## 이번 강의에서는
-
-1. [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 로 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 의 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [새로운 지식을 사용하기](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

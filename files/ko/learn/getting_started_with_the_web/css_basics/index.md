@@ -30,13 +30,13 @@ p {
 
 2. `index.html`을 저장하고 브라우저에서 불러오세요. 여러분은 다음과 같은 것을 보게 되실겁니다:
 
-![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](https://mdn.mozillademos.org/files/9435/website-screenshot-styled.png)문단의 글자가 빨간색이라면 축하드립니다! 지금 여러분은 첫번째 CSS 를 성공적으로 작성하셨습니다!
+![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)문단의 글자가 빨간색이라면 축하드립니다! 지금 여러분은 첫번째 CSS 를 성공적으로 작성하셨습니다!
 
 ### CSS의 ruleset 해부
 
 위의 CSS를 좀 더 자세히 살펴 봅시다:
 
-![](https://mdn.mozillademos.org/files/9461/css-declaration-small.png)
+![](css-declaration-small.png)
 
 전체 구조는 **rule set** 라 불립니다 (하지만 종종 줄여서 "rule"이라고 합니다). 각 부분의 이름에도 주목하세요:
 
@@ -93,7 +93,7 @@ p,li,h1 {
 
 지금까지 약간의 CSS 기본에 대해 살펴보았습니다, 우리의 예제가 멋있게 보이도록 `style.css` 파일에 더 많은 rule 과 정보를 추가해 봅시다. 우선, 글꼴과 문자가 조금 더 나아보이도록 해보죠.
 
-> **참고:** **노트**: "px" 가 무슨 뜻인지 설명하는 주석을 추가해 두었습니다. CSS 문서의 /\* 와 \*/ 사이에 있는 것은 브라우저가 코드를 표현할 때 무시하는 **CSS 주석**입니다. 여러분이 하고 있는 것에 대한 유용한 메모를 작성하기 위한 공간입니다.
+> **참고:** "px" 가 무슨 뜻인지 설명하는 주석을 추가해 두었습니다. CSS 문서의 /\* 와 \*/ 사이에 있는 것은 브라우저가 코드를 표현할 때 무시하는 **CSS 주석**입니다. 여러분이 하고 있는 것에 대한 유용한 메모를 작성하기 위한 공간입니다.
 
 1. 먼저, 돌아가서 여러분이 안전한 어딘가에 저장해 두었던 [구글 글꼴의 결과물](/ko/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font)을 찾으세요. `index.html` 의 head 안 어딘가에 `<link>` 요소를 추가하세요 (다시 말해서, `<head>` 와 `</head>` 태그 사이 어디에나). 이런식이 될 겁니다:
 
@@ -128,13 +128,13 @@ p,li,h1 {
 
 `px(픽셀)` 값들은 여러분이 원하는대로 조정할 수 있지만, 여러분이 원하는 디자인을 얻도록, 여러분의 디자인은 이런식으로 보여야 합니다:
 
-![a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](https://mdn.mozillademos.org/files/9447/website-screenshot-font-small.png)
+![a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](website-screenshot-font-small.png)
 
 ## 박스, 박스, 박스의 모든 것
 
 CSS 작성에서 여러분이 알게 될 한 가지는 많은 것들이 박스에 관한 것이라는 겁니다 — 그들의 크기, 색상, 위치 등을 설정하는 것. 여러분의 페이지에 있는 대부분의 HTML 요소들은 서로의 위에 놓여있는 박스로 생각해볼 수 있습니다.
 
-![a big stack of boxes or crates sat on top of one another](https://mdn.mozillademos.org/files/9441/boxes.jpg)
+![a big stack of boxes or crates sat on top of one another](boxes.jpg)
 
 놀랍지 않게도, CSS 레이아웃은 _박스모델_ 을 주 기반으로 하고 있습니다. 여러분의 페이지의 공간을 차지하고 있는 각각의 블록들은 이와 같은 속성들을 가집니다:
 
@@ -142,7 +142,7 @@ CSS 작성에서 여러분이 알게 될 한 가지는 많은 것들이 박스�
 - `border`, padding 의 바깥쪽에 놓인 실선
 - `margin`, 요소의 바깥쪽을 둘러싼 공간
 
-![three boxes sat inside one another. From outside to in they are labelled margin, border and padding](https://mdn.mozillademos.org/files/9443/box-model.png)
+![three boxes sat inside one another. From outside to in they are labelled margin, border and padding](box-model.png)
 
 여기서 이런 것도 사용합니다:
 
@@ -221,27 +221,16 @@ img {
 
 > **참고:** 노트: 위의 지침에서는 body에 설정된 너비(600 픽셀) 보다 작은 이미지를 사용한다고 가정합니다. 이미지가 더 크면 body가 넘쳐 페이지의 나머지 부분으로 유출됩니다. 이 문제를 해결하려면 1) [그래픽 편집기](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%9E%98%ED%94%BD_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)를 사용하여 이미지의 너비를 줄이거나 2) 더 작은 값(예: `400px`) 으로 `<img>` 요소에 width 속성을 설정하고 CSS를 사용하여 이미지 크기를 조정할 수 있습니다.
 
-> **참고:** **노트**: 아직 `display: block;` 과 block-level/inline 차이를 이해하지 못하였더라도 걱정하시마세요. CSS 를 더 깊게 공부하면 이해하실 수 있을것입니다. display 의 여러 값들에 대한 더 많은 정보는 [display 참조](/ko/docs/Web/CSS/display) 페이지에서 찾아보세요.
+> **참고:** 아직 `display: block;` 과 block-level/inline 차이를 이해하지 못하였더라도 걱정하시마세요. CSS 를 더 깊게 공부하면 이해하실 수 있을것입니다. display 의 여러 값들에 대한 더 많은 정보는 [display 참조](/ko/docs/Web/CSS/display) 페이지에서 찾아보세요.
 
 ## 마무리
 
 이 글의 모든 설명을 따라오셨다면, 이와 같이 보이는 페이지가 되실 겁니다. ([여기서](http://mdn.github.io/beginner-html-site-styled/) 확인하실 수도 있습니다):
 
-![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](https://mdn.mozillademos.org/files/9455/website-screenshot-final.png)
+![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
 혹시 막히셨다면, 여러분의 코드와 Github에 있는 우리의 [예제 코드](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)와 항상 비교해보세요.
 
 여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/en-US/Learn/CSS) 페이지로 가보세요.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
-
-## 이번 과목에서는
-
-- [기본 소프트웨어 설치 방법](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [파일 다루기](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 기본 사항](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 기본 사항](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 기본 사항](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [웹 사이트 출판](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [웹 작동 방식](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

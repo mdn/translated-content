@@ -67,7 +67,7 @@ CSS에는 크게 두 가지 박스(**블록 박스**와 **인라인 박스**) �
 
 이 시점에 우리는 **내부** 및 **외부** 디스플레이 유형에 대해 설명하는 게 좋겠습니다. 위에서 언급했듯이 CSS의 박스는 _외부_ 디스플레이 유형을 가지며, 이는 박스가 블록인지 인라인인지를 자세히 설명합니다.
 
-그러나 박스에는 _내부_ 디스플레이 유형도 있으며 당 박스 내부의 요소가 배치되는 방법을 나타냅니다. 기본적으로 박스 내부의 요소는 **[일반 대열](/ko/docs/Learn/CSS/CSS_layout/Normal_Flow)**로 배치되며, 이는 (위에서 설명한 바와 같이) 여타 블록 및 인라인 요소와 마찬가지로 작동한다는 것을 의미합니다.
+그러나 박스에는 _내부_ 디스플레이 유형도 있으며 당 박스 내부의 요소가 배치되는 방법을 나타냅니다. 기본적으로 박스 내부의 요소는 [**일반 대열**](/ko/docs/Learn/CSS/CSS_layout/Normal_Flow)로 배치되며, 이는 (위에서 설명한 바와 같이) 여타 블록 및 인라인 요소와 마찬가지로 작동한다는 것을 의미합니다.
 
 그러나 여러분은 `flex`과 같은 `display` 값을 사용하여 내부 디스플레이 유형을 변경할 수 있습니다. 어떤 요소에 우리가 `display: flex;`를 설정하면 외부 디스플레이 유형은 블록이지만 내부 디스플레이 유형은 `flex`으로 변경됩니다. 이 박스의 직계 자식은 가변 항목이 되고, 나중에 익히게 될 [가변박스](/ko/docs/Learn/CSS/CSS_layout/Flexbox) 규격에 명시된 규칙에 따라 배치됩니다.
 
@@ -116,7 +116,7 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 
 아래 도표는 이들 레이어를 보여줍니다.
 
-![Diagram of the box model](https://mdn.mozillademos.org/files/16558/box-model.png)
+![박스 모델](box-model.png)
 
 ### 표준 CSS box model
 
@@ -136,7 +136,7 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 
 표준 박스 모델을 사용하여 박스가 차지하는 공간은 실제로 너비 410px(350 + 25 + 25 + 5 + 5), 높이 210px(150 + 25 + 25 + 5 + 5)가 될 것인데, 양쪽 패딩과 테두리는 콘텐츠 박스에 사용되는 너비에 더해지기 때문입니다.
 
-![Showing the size of the box when the standard box model is being used.](https://mdn.mozillademos.org/files/16559/standard-box-model.png)
+![표준 박스 모델을 사용했을 때의 박스 크기](standard-box-model.png)
 
 > **참고:** 여백은 박스의 실제 크기에 포함되지 않습니다. 물론 여백은 박스가 페이지에서 차지하는 총 공간에 영향을 미치지만, 박스의 외부 공간에만 영향을 미칩니다. 박스의 영역은 테두리에서 멈추게 됩니다. 여백으로 확장되지 않습니다.
 
@@ -144,7 +144,7 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 
 박스의 실제 크기를 얻기 위해 테두리와 패딩을 추가하는 것이 다소 불편하다고 생각할 수 있습니다. 당신 말이 옳을 것입니다! 이러한 이유로 CSS는 표준 박스 모델 이후 머지않아 대체 박스 모델이 도입되었습니다. 이 모델을 사용한다면 너비는 페이지에서 표시되는 박스 너비이므로 콘텐츠 영역 너비는 너비에서 패딩 및 테두리 너비를 뺀 너비입니다. 위에서 사용된 것과 동일한 CSS를 아래 결과에 대입하면(폭 = 350px, 높이 = 150px)가 됩니다.
 
-![Showing the size of the box when the alternate box model is being used.](https://mdn.mozillademos.org/files/16557/alternate-box-model.png)
+![대체 표준 박스 모델을 사용했을 때의 박스 크기](alternate-box-model.png)
 
 기본값으로 브라우저는 기본 박스 모델을 사용합니다. 요소에 대체 모델을 활성화하려면 거기에 `box-sizing: border-box`를 설정하여 그렇게 할 수 있습니다. 이렇게 하면 당신이 설정한 크기에 따라 정의된 영역만큼 테두리 박스가 점유하도록 브라우저에 전달할 수 있습니다.
 
@@ -181,11 +181,11 @@ html {
 
 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하면 박스 모델을 훨씬 쉽게 이해할 수 있습니다. 파이어폭스의 개발자 도구에서 요소를 검사하면 요소의 크기와 여백, 패딩 및 테두리를 볼 수 있습니다. 이 방법으로 요소를 검사하면 실제로 그것이 당신이 생각하는 크기인지를 알아낼 수 있어 좋은 방법입니다.
 
-![Inspecting the box model of an element using Firefox DevTools](https://mdn.mozillademos.org/files/16560/box-model-devtools.png)
+![FireFox의 DevTools를 이용한 박스 모델 검사](box-model-devtools.png)
 
 ## 여백과 패딩과 테두리
 
-상술한 예제에서 여러분은 이미 {{cssxref("margin")}}과 {{cssxref("padding")}}, 그리고 {{cssxref("border")}}를 보았습니다. 이번 예제에서 사용된 속성은 **`shorthands`**으로 한꺼번에 박스의 사방면을 설정할 수 있게 해줍니다. 해당 약칭은 또한 동명의 정식 명칭 속성도 있어 박스의 사방면을 개별적으로 제어할 수 있도록 해줍니다.
+상술한 예제에서 여러분은 이미 {{cssxref("margin")}}과 {{cssxref("padding")}}, 그리고 {{cssxref("border")}}를 보았습니다. 이번 예제에서 사용된 속성은 `shorthands`으로 한꺼번에 박스의 사방면을 설정할 수 있게 해줍니다. 해당 약칭은 또한 동명의 정식 명칭 속성도 있어 박스의 사방면을 개별적으로 제어할 수 있도록 해줍니다.
 
 해당 속성에 대한 자세한 내용을 탐구해 봅시다.
 
@@ -311,24 +311,3 @@ html {
 다음 단원에서는 [배경과 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)를 사용하여 평범한 보이는 박스를 더욱 흥미롭게 보이려면 어떤 방법이 있는지 살펴보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## 이번 단위에는
-
-1. [계단식 나열과 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택기](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [유형과 클레스, 아이디 선택기 selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [딸린 속성 선택기](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [의사 클래스와 의사 요소](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [조합기](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/%EC%83%81%EC%9E%90_%EB%AA%A8%EB%8D%B8)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [서로 다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [대열이탈 콘텐츠](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [속성값과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 항목 크기 설정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지와 미디아, 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [테이블 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 체계화](/ko/docs/Learn/CSS/Building_blocks/Organizing)

@@ -1,7 +1,6 @@
 ---
 title: timeout
 slug: Web/API/XMLHttpRequest/timeout_event
-translation_of: Web/API/XMLHttpRequest/timeout_event
 original_slug: Web/API/XMLHttpRequest/timeout
 ---
 
@@ -28,11 +27,11 @@ client.send();
 
 `timeout` 이벤트는 {{domxref("Event")}}에서 상속받은 {{domxref("ProgressEvent")}} 인터페이스를 구현합니다. 이 인터페이스에 선언된 속성(property)과 메서드를 사용할 수 있습니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

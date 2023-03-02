@@ -32,23 +32,23 @@ Você pode criar quatro tipos diferentes de itens de menu, com base no valor da 
 
 Se você criou mais de um item de menu de contexto ou mais de um item de menu de ferramentas, os itens serão colocados em um submenu. O pai do submenu será identificado com o nome da extensão. Por exemplo, aqui está uma extensão chamada "Demonstração de menu" ("Menu demo"), que adicionou dois itens de menu de contexto:
 
-![](https://mdn.mozillademos.org/files/15431/menus-1.png)
+![](menus-1.png)
 
 ## Ícones
 
 Se você especificou ícones para sua extensão usando a [chave "icons" do manifest](/pt-BR/Add-ons/WebExtensions/manifest.json/icons), o item de menu exibirá o ícone especificado ao lado do rótulo. O navegador tentará escolher um ícone de 16x16 pixels para uma exibição normal ou um ícone de 32x32 pixels para uma exibição de alta densidade:
 
-![](https://mdn.mozillademos.org/files/15433/menus-2.png)
+![](menus-2.png)
 
 Apenas para itens dentro de um submenu, você pode especificar ícones customizados passando a opção `icons` para o {{WebExtAPIRef("menus.create()")}}:
 
-![](https://mdn.mozillademos.org/files/15435/menus-3.png)
+![](menus-3.png)
 
 ## Exemplo
 
 Aqui está um menu de contexto contendo quatro itens: um item normal, dois itens de rádio com separadores em cada lado, e uma marca de seleção. Os itens de rádio receberam ícones customizados.
 
-![](https://mdn.mozillademos.org/files/15437/menus-4.png)Você pode criar um submenu como este usando o código abaixo:
+![](menus-4.png)Você pode criar um submenu como este usando o código abaixo:
 
 ```js
 browser.menus.create({

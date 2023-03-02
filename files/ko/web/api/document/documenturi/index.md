@@ -1,10 +1,6 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
-tags:
-  - URL
-  - documentURI
-translation_of: Web/API/Document/documentURI
 ---
 {{ApiRef("DOM")}}
 
@@ -22,10 +18,10 @@ var string = document.documentURI;
 
 HTML documents 는 동일한 값을 반환하는 {{domxref("document.URL")}} 속성을 가집니다. `URL` 과는 달리, `documentURI` 는 모든 타입의 documents 에서 이용 가능합니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

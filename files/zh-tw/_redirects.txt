@@ -13,8 +13,6 @@
 /zh-TW/docs/CSS/@font-face	/zh-TW/docs/Web/CSS/@font-face
 /zh-TW/docs/CSS/border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/CSS/border-image/border-image	/zh-TW/docs/Web/CSS/border-image
-/zh-TW/docs/CSS/ime-mode	/zh-TW/docs/Web/CSS/ime-mode
-/zh-TW/docs/CSS:ime-mode	/zh-TW/docs/Web/CSS/ime-mode
 /zh-TW/docs/CSS_一般問題	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
 /zh-TW/docs/CSS_動畫	/zh-TW/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /zh-TW/docs/CSS_轉場	/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
@@ -142,13 +140,13 @@
 /zh-TW/docs/Glossary/Empty_element	/zh-TW/docs/Glossary/Void_element
 /zh-TW/docs/Glossary/偽元素	/zh-TW/docs/Glossary/Pseudo-element
 /zh-TW/docs/Glossary/字元	/zh-TW/docs/Glossary/Character
-/zh-TW/docs/Glossary/字元編碼	/zh-TW/docs/Glossary/character_encoding
+/zh-TW/docs/Glossary/字元編碼	/zh-TW/docs/Glossary/Character_encoding
 /zh-TW/docs/Glossary/布林	/zh-TW/docs/Glossary/Boolean
 /zh-TW/docs/Glossary/抽象化	/zh-TW/docs/Glossary/Abstraction
 /zh-TW/docs/Glossary/瀏覽器	/zh-TW/docs/Glossary/Browser
 /zh-TW/docs/Glossary/物件導向程式設計(OOP)	/zh-TW/docs/Glossary/OOP
 /zh-TW/docs/Glossary/資料結構	/zh-TW/docs/Glossary/Data_structure
-/zh-TW/docs/Glossary/陣列	/zh-TW/docs/Glossary/array
+/zh-TW/docs/Glossary/陣列	/zh-TW/docs/Glossary/Array
 /zh-TW/docs/HTML	/zh-TW/docs/Web/HTML
 /zh-TW/docs/HTML/Canvas	/zh-TW/docs/Web/API/Canvas_API
 /zh-TW/docs/HTML/Element	/zh-TW/docs/Web/HTML/Element
@@ -402,6 +400,7 @@
 /zh-TW/docs/Learn/CSS/Using_the_:target_selector	/zh-TW/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 /zh-TW/docs/Learn/CSS/文字樣式	/zh-TW/docs/Learn/CSS/Styling_text
 /zh-TW/docs/Learn/CSS/樣式化容器	/en-US/docs/Learn/CSS/Building_blocks
+/zh-TW/docs/Learn/Common_questions/What_is_a_web_server	/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
 /zh-TW/docs/Learn/HTML/Forms	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form	/zh-TW/docs/Learn/Forms/How_to_structure_a_web_form
 /zh-TW/docs/Learn/HTML/HTML介紹	/zh-TW/docs/Learn/HTML/Introduction_to_HTML
@@ -543,6 +542,7 @@
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/DOMString	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-TW/docs/Web/API/Document/keyup_event	/zh-TW/docs/Web/API/Element/keyup_event
+/zh-TW/docs/Web/API/Document/registerElement	/zh-TW/docs/Web/API/CustomElementRegistry/define
 /zh-TW/docs/Web/API/Document/width	/zh-TW/docs/Web/API/Element/clientWidth
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
 /zh-TW/docs/Web/API/DocumentTemp/createElement	/zh-TW/docs/Web/API/Document/createElement
@@ -669,6 +669,7 @@
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Using_images
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/基礎動畫	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/最佳化_canvas	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
+/zh-TW/docs/Web/Guide/HTML/Content_categories	/zh-TW/docs/Web/HTML/Content_categories
 /zh-TW/docs/Web/Guide/HTML/Drag_and_drop	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/Web/Guide/HTML/Drag_operations	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /zh-TW/docs/Web/Guide/HTML/Event_attributes	/zh-TW/docs/Learn/JavaScript/Building_blocks/Events

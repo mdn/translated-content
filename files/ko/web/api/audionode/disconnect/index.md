@@ -1,15 +1,6 @@
 ---
 title: AudioNode.disconnect()
 slug: Web/API/AudioNode/disconnect
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Disconnect
-  - Method
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioNode.disconnect
 ---
 {{ APIRef("Web Audio API") }}
 
