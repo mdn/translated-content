@@ -1,6 +1,6 @@
 ---
 title: Контекст приложения
-slug: Glossary/application_context
+slug: Glossary/Application_context
 tags:
   - CodingScripting
   - Glossary

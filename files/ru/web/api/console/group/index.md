@@ -1,6 +1,6 @@
 ---
 title: Console.group()
-slug: Web/API/Console/group
+slug: Web/API/console/group
 translation_of: Web/API/Console/group
 ---
 

@@ -1,8 +1,9 @@
 ---
 title: <input type="image">
-slug: Web/HTML/Element/Input/image
+slug: Web/HTML/Element/input/image
 translation_of: Web/HTML/Element/input/image
 ---
+
 `<input type="image"> - это кнопка отправки в виде изображения. Вы можете использовать атрибут src, чтобы выбрать источник изображения и атрибут alt, чтобы добавить альтернативный текст. Атрибутами width и height можно указать размер изображения в пикселях.`
 
 | Разрешённое содержимое            | Нету, это пустой элемент.                                                                                                         |
