@@ -195,7 +195,7 @@ function attemptMutation(v) {
 ```js
 function sameValueZero(x, y) {
   if (typeof x === "number" && typeof y === "number") {
-   // x и y равны (могут быть -0 и 0) или они оба равны NaN
+    // x и y равны (могут быть -0 и 0) или они оба равны NaN
     return x === y || (x !== x && y !== y);
   }
   return x === y;
