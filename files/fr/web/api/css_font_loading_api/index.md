@@ -25,6 +25,6 @@ L'API CSS Font Loading API fournit des évènements et interfaces pour le charge
 
 {{Specifications("api.FontFace")}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.FontFace")}}
+{{Compat}}

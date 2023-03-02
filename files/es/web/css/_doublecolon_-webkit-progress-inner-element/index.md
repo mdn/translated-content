@@ -43,9 +43,9 @@ Una barra de progreso que use el estilo especificado anteriormente tendrá una a
 
 No es parte de ninguna especificación. Es un pseudo-elemento propitario y específico de WebKit/Blink.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-webkit-progress-inner-element")}}
+{{Compat}}
 
 ## Ver además
 

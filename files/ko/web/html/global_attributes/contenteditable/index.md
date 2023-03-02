@@ -30,7 +30,7 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.contenteditable")}}
+{{Compat}}
 
 ## 같이 보기
 

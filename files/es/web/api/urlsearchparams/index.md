@@ -74,11 +74,9 @@ searchParams.toString(); // "q=URLUtils.searchParams"
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.URLSearchParams")}}
+{{Compat}}
 
 ## Vea también
 
 - Otras interfaces relacionadas con URL: {{domxref("URL")}}, {{domxref("URLUtils")}}.
 - [Google Developers: Fácil manipulación de una URL con URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)
-
-<!---->

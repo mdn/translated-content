@@ -150,7 +150,7 @@ p {
         <img
           alt="t-o_clip.png"
           class="default internal"
-          src="/@api/deki/files/6056/=t-o_clip.png"
+          src="t-o_clip.png"
         />
       </td>
       <td style="direction: ltr">
@@ -171,7 +171,7 @@ p {
         <img
           alt="t-o_clip_rtl.png"
           class="default internal"
-          src="/@api/deki/files/6057/=t-o_clip_rtl.png"
+          src="t-o_clip_rtl.png"
         />
       </td>
       <td style="direction: rtl">
@@ -425,9 +425,9 @@ p {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-overflow")}}
+{{Compat}}
 
 ## See also
 

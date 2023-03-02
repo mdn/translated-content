@@ -536,7 +536,7 @@ Nesse caso o grid aninhado não possui relação com o pai. Como é possível pe
 
 No nível das especificações do grid tem uma _feature_ chamada _subgrid_ que nos permitiria criar grids aninhados que usa aquilo que foi definido no grid pai.
 
-> **Note:** Subgrids ainda não foram implementados em nenhum browser, e as especificações são sujeitas a mudanças.
+> **Nota:** Subgrids ainda não foram implementados em nenhum browser, e as especificações são sujeitas a mudanças.
 
 Na especificação atual, no exemplo acima editaríamos o grid aninhado usando `display: subgrid` ao invés de `display: grid`, e remover o que havia sido definido. O grid aninhado vai usar as propriedades definidas no pai para dispor os itens.
 

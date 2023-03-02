@@ -57,9 +57,7 @@ La regla `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` estiliza tod
 
 ## Compatibilidad con navegadores
 
-Compatible con Chrome y Safari.
-
-{{Compat("css.selectors.host")}}
+{{Compat}}
 
 ## Ver también
 

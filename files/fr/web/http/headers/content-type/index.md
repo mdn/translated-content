@@ -86,12 +86,9 @@ Content-Type: text/plain
 
 ## Spécifications
 
-| Spécification                                                        | Titre                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
-| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilité selon les navigateurs
+## Compatibilité des navigateurs
 
 {{Compat}}
 

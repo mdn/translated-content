@@ -84,9 +84,9 @@ Los métodos blur () y focus () se heredan de {{domxref ("HTMLElement")}} de HTM
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLAnchorElement")}}
+{{Compat}}
 
 ## Ver tambien
 

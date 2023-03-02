@@ -22,7 +22,7 @@ function.toString(indentation)
 
 ### Параметры
 
-- `indentation` {{non-standard_inline}} {{obsolete_inline(17)}}
+- `indentation` {{non-standard_inline}}
   - : Количество пробелов для отступов в строковом представлении исходного кода. Если параметр меньше или равен `-1`, большинство ненужных пробелов будет удалено.
 
 ## Описание

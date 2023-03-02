@@ -104,7 +104,7 @@ let expandingList = document.createElement('ul', { is : 'expanding-list' })
 - Gecko 2.0 之前，quirks 模式下 tagName 可以包含尖括号 (<和>)；从 Gecko2.0 开始，该方法在 quirks 模式和标准模式下表现一致。
 - 从 Gecko 19.0 开始， `createElement(null)` 和 `createElement("null")` 相同。Opera 也会将 null 字符串化，但是 Chrome 和 IE 都会抛出错误。
 - 从 Gecko 22.0 开始，当参数为"bgsounds", "multicol", 或"image"时， `createElement()` 不再使用 {{domxref("HTMLSpanElement")}} 接口，参数为 "bgsound" 和 "multicol" 时，使用 `HTMLUnknownElement`，为“image”时使用{{domxref("HTMLElement")}} `HTMLElement`。
-- `createElement` 的 Gecko 实现不遵循 XUL 和 XHTML 的 DOM 说明文档：创建元素的`localName`和`namespaceURI 不会被设置为 null`. 更多细节详见 {{Bug(280692)}}。
+- `createElement` 的 Gecko 实现不遵循 XUL 和 XHTML 的 DOM 说明文档：创建元素的 `localName` 和 `namespaceURI` 不会被设置为 `null`。更多细节详见 [Firefox bug 280692](https://bugzil.la/280692)。
 
 ## 规范
 

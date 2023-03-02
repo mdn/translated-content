@@ -88,9 +88,9 @@ repetition.addEventListener("change", function (evt) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-image-repeat")}}
+{{Compat}}
 
 ## Véase también
 

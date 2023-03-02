@@ -95,9 +95,9 @@ o.propertyIsEnumerable('firstMethod'); // regresa false
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
+{{Compat}}
 
 ## Notas específicas para Gecko
 

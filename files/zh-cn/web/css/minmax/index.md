@@ -4,6 +4,8 @@ slug: Web/CSS/minmax
 original_slug: Web/CSS/minmax()
 ---
 
+{{CSSRef}}
+
 [CSS](/zh-CN/docs/Web/CSS)函数 **`minmax()`** 定义了一个长宽范围的闭区间，它与[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)一起使用。
 
 ```css

@@ -113,7 +113,7 @@ router.get('/about', function (req, res) {
 
 ### HTTP 動詞
 
-上面的示例路由使用`Router.get()`方法，響應具有特定路徑的 HTTP GET 請求。路由器`Router`還為所有其他 HTTP 動詞提供路由方法，這些方法多數以完全相同的方式使用：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`​​​​​​, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`,和`connect()`。
+上面的示例路由使用`Router.get()`方法，響應具有特定路徑的 HTTP GET 請求。路由器`Router`還為所有其他 HTTP 動詞提供路由方法，這些方法多數以完全相同的方式使用：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`,和`connect()`。
 
 例如，下面的代碼就像上一個`/about`路由一樣，但只響應 HTTP POST 請求。
 
@@ -626,15 +626,3 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 - [Routing guide](http://expressjs.com/en/guide/routing.html) (Express docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教學連結
-
-- [Express/Node 介紹](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [設定 Node（Express）開發環境](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教學 1: 本地圖書館網站](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教學 2: 建立骨架網站](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教學 3: 使用資料庫（Mongoose）](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教學 4: 路由與控制器](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教學 5: 呈現圖書館的資料](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教學 6: 使用表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教學 7: 佈署到正式環境](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

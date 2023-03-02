@@ -28,7 +28,7 @@ Microsoft en a publié [une description sur MSDN](<https://msdn.microsoft.com/en
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLElement.outerText")}}
+{{Compat}}
 
 ## Voir aussi
 

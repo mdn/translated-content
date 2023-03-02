@@ -120,9 +120,9 @@ void send(
 - `SYNTAX_ERR`
   - : La data tiene caracteres no válidos que no se pueden decodificar.
 
-> **Nota:** La implementación del método `send()` en el motor de renderizado Gecko puede cambiar de la especificación en {{Gecko("6.0")}}; Gecko devuelve un `boolean` indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en {{Gecko("8.0")}}.
+> **Nota:** La implementación del método `send()` en el motor de renderizado Gecko puede cambiar de la especificación en Gecko 6.0; Gecko devuelve un `boolean` indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en Gecko 8.0.
 >
-> A partir de {{Gecko("11.0")}}, implementa {{jsxref("ArrayBuffer")}} pero no tipos de datos {{domxref("Blob")}}.
+> A partir de Gecko 11.0, implementa {{jsxref("ArrayBuffer")}} pero no tipos de datos {{domxref("Blob")}}.
 
 ## Ejemplo
 
@@ -145,9 +145,9 @@ socket.addEventListener('message', function (event) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.WebSocket")}}
+{{Compat}}
 
 ## Referencias adicionales
 

@@ -226,9 +226,9 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
 
 Pour un exemple simple d'une extension qui utilise une barre latérale, regarder [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.sidebar_action")}}
+{{Compat}}
 
 ## Voir aussi
 

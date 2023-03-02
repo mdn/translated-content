@@ -218,6 +218,7 @@ var section = document.querySelector('section');
 
 ```js
 function populateHeader(jsonObj) {
+  var header = document.querySelector('header');
   var myH1 = document.createElement('h1');
   myH1.textContent = jsonObj['squadName'];
   header.appendChild(myH1);
@@ -236,6 +237,7 @@ function populateHeader(jsonObj) {
 
 ```js
 function showHeroes(jsonObj) {
+  var section = document.querySelector('section');
   var heroes = jsonObj['members'];
 
   for (var i = 0; i < heroes.length; i++) {

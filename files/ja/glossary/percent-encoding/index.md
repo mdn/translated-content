@@ -1,6 +1,6 @@
 ---
 title: Percent-encoding (パーセントエンコーディング)
-slug: Glossary/percent-encoding
+slug: Glossary/Percent-encoding
 ---
 
 パーセントエンコーディング（Percent-encoding）は、{{Glossary("URL")}} のコンテキストで特定の意味を持つ 8 ビット文字をエンコードするメカニズムです。URL エンコードとも呼ばれます。エンコードは置換で構成されます。`'%'` の後に、置換文字の ASCII 値の 16 進表現が続きます。

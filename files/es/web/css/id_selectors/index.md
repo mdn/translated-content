@@ -53,4 +53,4 @@ Nótese que esto es equivalente al siguiente {{Cssxref("Attribute_selectors", "a
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.id")}}
+{{Compat}}

@@ -34,7 +34,7 @@ slug: Web/CSS/CSS_Animations
 - [CSS animations tips and tricks](/ko/docs/Web/CSS/CSS_Animations/Tips)
   - : Tips and tricks to help you get the most out of CSS animations. Currently offers a technique for replaying an animation which has already run through to completion, which the API doesn't support inherently.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

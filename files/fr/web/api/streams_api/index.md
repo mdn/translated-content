@@ -94,13 +94,7 @@ Examples from other developers:
 
 ## Compatibilité des navigateurs
 
-### ReadableStream
-
-{{Compat("api.ReadableStream")}}
-
-### WritableStream
-
-{{Compat("api.WritableStream")}}
+{{Compat}}
 
 ## Voir aussi
 

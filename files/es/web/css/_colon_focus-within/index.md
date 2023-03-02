@@ -67,7 +67,7 @@ input {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.focus-within")}}
+{{Compat}}
 
 ## Ver también
 

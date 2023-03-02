@@ -16,7 +16,6 @@ original_slug: Глоссарий/Тег
 
 ### Общие знания
 
-- {{Interwiki("wikipedia", "Элементы HTML")}} on Wikipedia
 - [HTML Теги на W3](http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
 ### Техническое руководство

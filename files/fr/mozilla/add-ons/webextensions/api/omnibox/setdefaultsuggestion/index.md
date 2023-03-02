@@ -36,9 +36,9 @@ browser.omnibox.setDefaultSuggestion(
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.setDefaultSuggestion")}}
+{{Compat}}
 
 ## Exemples
 

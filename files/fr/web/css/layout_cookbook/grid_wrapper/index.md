@@ -68,9 +68,7 @@ Bien que les grilles CSS nous permettent potentiellement de positionner n'import
 
 ## Compatibilité des navigateurs
 
-### `grid-template-columns`
-
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -262,7 +262,7 @@ p {
 
 ![A highlighted declaration block](declaration-block.png)
 
-마지막으로, CSS 선언 블록은 _선택자_ 와 쌍을 이루어 _CSS Rulesets_ (또는 _CSS **규칙** _) 를 생성합니다. 이미지에는 `h1` 선택자 및 `p` 선택자의 두 가지 규칙이 있습니다. `h1` 의 규칙이 강조 표시됩니다.
+마지막으로, CSS 선언 블록은 _선택자_ 와 쌍을 이루어 _CSS Rulesets_ (또는 **CSS 규칙**) 를 생성합니다. 이미지에는 `h1` 선택자 및 `p` 선택자의 두 가지 규칙이 있습니다. `h1` 의 규칙이 강조 표시됩니다.
 
 ![The rule for h1 highlighted](rules.png)
 
@@ -540,11 +540,3 @@ padding- left: 10px;
 브라우저가 HTML 과 CSS 를 가져와서 웹 페이지로 전환하는 방법에 대해 약간 이해하는 것이 유용합니다. 따라서 다음 기사 — [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works) — 에서 해당 작업을 살펴 보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## 이번 강의에서는
-
-1. [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [새로운 지식 사용](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

@@ -89,9 +89,9 @@ var myResponse = new Response();
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## Ver también
 

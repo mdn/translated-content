@@ -271,27 +271,3 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 如果你开始遇到样式没有按照预期应用的奇怪问题，请回到这里。这可能是一个特殊的问题。
 
 {{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
-
-## 本章目录
-
-- [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-  - [标签、类、ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-- [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)
-- [基本的 CSS 理解](/zh-CN/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-- [创建精美的信纸](/zh-CN/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [一个漂亮的盒子](/zh-CN/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

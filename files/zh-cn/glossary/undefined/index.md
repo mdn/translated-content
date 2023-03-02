@@ -1,6 +1,6 @@
 ---
 title: undefined
-slug: Glossary/undefined
+slug: Glossary/Undefined
 ---
 
 一个声明未定义的变量的初始值，或没有实际参数的形式参数。

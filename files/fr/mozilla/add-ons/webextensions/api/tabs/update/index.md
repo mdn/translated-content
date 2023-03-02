@@ -127,9 +127,9 @@ querying.then(updateFirstTab, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.update", 10)}}
+{{Compat}}
 
 > **Note :**
 >

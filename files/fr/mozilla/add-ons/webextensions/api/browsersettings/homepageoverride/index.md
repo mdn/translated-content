@@ -19,9 +19,9 @@ Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut êt
 
 Notez qu'il s'agit d'un paramètre en lecture seule. Pour changer la page d'accueil, voir [chrome_settings_overrides](/fr/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.homepageOverride", 10)}}
+{{Compat}}
 
 ## Exemples
 

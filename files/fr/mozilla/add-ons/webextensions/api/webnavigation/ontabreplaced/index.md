@@ -60,9 +60,9 @@ Les événements ont trois fonctions :
 - `timeStamp`
   - : `number`. Le moment où le remplacement s'est produit, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onTabReplaced")}}
+{{Compat}}
 
 ## Exemples
 

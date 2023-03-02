@@ -184,7 +184,7 @@ slug: Web/HTML/Element/script
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.script", 2)}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -111,7 +111,7 @@ if (!Array.prototype.fill) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.fill")}}
+{{Compat}}
 
 ## Ver también
 

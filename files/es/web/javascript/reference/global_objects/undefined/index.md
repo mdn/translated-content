@@ -104,6 +104,6 @@ if (y === void 0) {
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.undefined")}}
+{{Compat}}

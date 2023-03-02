@@ -42,7 +42,7 @@ class ClassWithStaticField {
 }
 
 console.log(ClassWithStaticField.staticField);
-// expected output: "static field"​
+// expected output: "static field"
 ```
 
 Campos sin inicializadores son inicializados como `undefined`.
@@ -194,7 +194,7 @@ class ClassWithPublicInstanceMethod {
 
 const instance = new ClassWithPublicInstanceMethod();
 console.log(instance.publicMethod());
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Los métodos públicos de instancia son agregeados al prototipo de clase durante la evaluacón de la clase usando [Object.defineProperty](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Estos metodos son "escribibles" (writable), no-enumerables y configurables.
@@ -227,7 +227,7 @@ class SubClass extends BaseClass {
 
 const instance = new SubClass();
 console.log(instance.subPublicMethod());
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Existen metodos especiales llamados "Getters" y "Setters" que se vinculan a una propiedad de una clase, y que son ejecutados o llamados cuando esa propiedad es consultada o moditficada. Puede usar las palabras reservaddas [get](/es/docs/Web/JavaScript/Reference/Functions/get) y [set](/es/docs/Web/JavaScript/Reference/Functions/set) para declarar una instancia pública de "getter" or "setter". [N.T. preferí decir Getter/Setter que decir Consultadores/Mofificadores]
@@ -245,7 +245,7 @@ class ClassWithGetSet {
 
 const instance = new ClassWithGetSet();
 console.log(instance.msg);
-// expected output: "hello worl​d"
+// expected output: "hello world"
 
 instance.msg = 'cake';
 console.log(instance.msg);
@@ -351,7 +351,7 @@ class ClassWithPrivateMethod {
 
 const instance = new ClassWithPrivateMethod();
 console.log(instance.getPrivateMessage());
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Private instance methods may be generator, async or async generator functions. Private getters and setters are also possible:
@@ -374,24 +374,16 @@ class ClassWithPrivateAccessor {
 }
 
 new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"
+// expected output: "✨hello world✨"
 ```
 
 ## Especificaciones
 
-| Especificación                                                                            | Estado  | Comentario |
-| ----------------------------------------------------------------------------------------- | ------- | ---------- |
-| [FieldDefinition production](https://tc39.es/proposal-class-fields/#prod-FieldDefinition) | Stage 3 |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-### Campos públicos de clse
-
-{{Compat("javascript.classes.public_class_fields")}}
-
-### Campos privados de clase
-
-{{Compat("javascript.classes.private_class_fields")}}
+{{Compat}}
 
 ## Ver también
 

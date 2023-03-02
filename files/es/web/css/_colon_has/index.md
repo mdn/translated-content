@@ -27,6 +27,6 @@ a:has(> img)
 
 {{Specifications}}
 
-## Compatibilidad entre los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.has")}}
+{{Compat}}

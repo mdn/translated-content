@@ -23,9 +23,9 @@ Por defecto Gecko aplica un estilo que crear un brillo rojo "glow" (usando la pr
 
 No es parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.user-invalid")}}
+{{Compat}}
 
 ## Ver además
 

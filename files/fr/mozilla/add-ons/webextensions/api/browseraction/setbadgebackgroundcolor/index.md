@@ -54,12 +54,6 @@ browser.browserAction.setBadgeBackgroundColor(
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la couleur n'est pas définie.
 - Si `windowId` et `tabId` sont tous deux omis, la couleur d'arrière-plan du badge global est définie à la place.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setBadgeBackgroundColor",2)}}
-
-La couleur par défaut dans Firefox est : `[217, 0, 0, 255]`.
-
 ## Exemples
 
 Une couleur d'arrière plan qui commence en rouge et devient verte lorsque l'action du navigateur est cliquée :
@@ -86,6 +80,10 @@ browser.browserAction.onClicked.addListener((tab)=> {
   });
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

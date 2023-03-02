@@ -51,9 +51,9 @@ Para desplazarse sobre elementos, mira {{domxref("Element.scrollTop")}} y {{domx
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.scroll")}}
+{{Compat}}
 
 ## Ver también
 

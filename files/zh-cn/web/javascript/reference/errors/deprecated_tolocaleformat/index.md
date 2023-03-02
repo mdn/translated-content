@@ -17,7 +17,7 @@ Warning: Date.prototype.toLocaleFormat is deprecated; consider using Intl.DateTi
 
 ## 哪里出错了？
 
-{{jsxref("Date.prototype.toLocaleFormat")}} 是非标准化的方法，已经被废弃，不应该再进行使用。该方法需要传入与 C 语言中的 strftime() 方法相似的格式化字符串。该实现将会在 {{bug(818634)}} 中完全移除。
+{{jsxref("Date.prototype.toLocaleFormat")}} 是非标准化的方法，已经被废弃，不应该再进行使用。该方法需要传入与 C 语言中的 strftime() 方法相似的格式化字符串。该实现将会在 [Firefox bug 818634](https://bugzil.la/818634) 中完全移除。
 
 ## 示例
 

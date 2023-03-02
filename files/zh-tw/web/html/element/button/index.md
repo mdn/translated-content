@@ -17,38 +17,38 @@ slug: Web/HTML/Element/button
 
 這元素的屬性包含[全域屬性](/zh-TW/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("autofocus")}}
+- `autofocus`
   - : 頁面載入後, 該按鈕如有輸入的焦點, 這個布林值式屬性即可指定上去, 除非使用者覆寫之, 例如通過不同的控制. 文本中只有一個關聯形式元素可以被指定該屬性.
-- {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-  - : The use of this attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. By default, unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting the value of this attribute to `off` (i.e. `autocomplete="off"`) disables this feature. See {{bug(654072)}}.
-- {{htmlattrdef("disabled")}}
+- `autocomplete` {{non-standard_inline}}
+  - : The use of this attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. By default, unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting the value of this attribute to `off` (i.e. `autocomplete="off"`) disables this feature. See [Firefox bug 654072](https://bugzil.la/654072).
+- `disabled`
   - : This Boolean attribute indicates that the user cannot interact with the button. If this attribute is not specified, the button inherits its setting from the containing element, for example {{HTMLElement("fieldset")}}; if there is no containing element with the **disabled** attribute set, then the button is enabled.Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
-- {{htmlattrdef("form")}}
+- `form`
   - : The form element that the button is associated with (its _form owner_). The value of the attribute must be the **id** attribute of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, the `<button>` element will be associated to an ancestor {{HTMLElement("form")}} element, if one exists. This attribute enables you to associate `<button>` elements to {{HTMLElement("form")}} elements anywhere within a document, not just as descendants of {{HTMLElement("form")}} elements.
-- {{htmlattrdef("formaction")}}
+- `formaction`
   - : The URI of a program that processes the information submitted by the button. If specified, it overrides the {{htmlattrxref("action","form")}} attribute of the button's form owner.
-- {{htmlattrdef("formenctype")}}
+- `formenctype`
   - : If the button is a submit button, this attribute specifies the type of content that is used to submit the form to the server. Possible values are: `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
     - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the {{htmlattrxref("type","input")}} attribute set to `file`.
     - `text/plain`If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the button's form owner.
-- {{htmlattrdef("formmethod")}}
+- `formmethod`
   - : If the button is a submit button, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are: `post`: The data from the form is included in the body of the form and is sent to the server.
     - `get`: The data from the form are appended to the **form** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.
-- {{htmlattrdef("formnovalidate")}}
+- `formnovalidate`
   - : If the button is a submit button, this Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.
-- {{htmlattrdef("formtarget")}}
+- `formtarget`
   - : If the button is a submit button, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings: `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
-- {{htmlattrdef("name")}}
+- `name`
   - : The name of the button, which is submitted with the form data.
-- {{htmlattrdef("type")}}
+- `type`
   - : The type of the button. Possible values are: `submit`: The button submits the form data to the server. This is the default if the attribute is not specified, or if the attribute is dynamically changed to an empty or invalid value.
     - `reset`: The button resets all the controls to their initial values.
     - `button`: The button has no default behavior. It can have client-side scripts associated with the element's events, which are triggered when the events occur.
     - menu: The button opens a popup menu defined via its designated {{HTMLElement("menu")}} element.
-- {{htmlattrdef("value")}}
+- `value`
   - : The initial value of the button. It defines the value associated with the button which is submitted with the form data. This value is passed to the server in params when the form is submitted.
 
 ## Notes
@@ -61,9 +61,9 @@ This bug has been fixed in IE8.
 
 Firefox will add, for accessibility purposes, a small dotted border on a focused button. This border is declared through CSS, in the browser stylesheet, but you can override it if necessary to add your own focused style using `button{{cssxref("::-moz-focus-inner")}} { }`
 
-Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting the value of the {{htmlattrxref("autocomplete","button")}} attribute to `off` disables this feature. See {{bug(654072)}}.
+Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting the value of the {{htmlattrxref("autocomplete","button")}} attribute to `off` disables this feature. See [Firefox bug 654072](https://bugzil.la/654072).
 
-Firefox <35 for Android sets a default {{ cssxref("background-image") }} gradient on all buttons (see {{bug(763671)}}). This can be disabled using `background-image: none`.
+Firefox <35 for Android sets a default {{ cssxref("background-image") }} gradient on all buttons (see [Firefox bug 763671](https://bugzil.la/763671)). This can be disabled using `background-image: none`.
 
 ### Clicking and focus
 

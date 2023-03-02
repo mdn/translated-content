@@ -51,10 +51,6 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
 ```
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.getPanel",2)}}
-
 ## Exemples
 
 Obtenez l'URL du panneau :
@@ -67,6 +63,10 @@ function onGot(sidebarUrl) {
 var gettingPanel = browser.sidebarAction.getPanel({});
 gettingPanel.then(onGot);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -79,7 +79,7 @@ navigator.storage.estimate().then(estimate => {
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.StorageManager")}}
+{{Compat}}
 
 ## Voir aussi
 

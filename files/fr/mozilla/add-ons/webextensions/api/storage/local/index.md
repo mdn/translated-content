@@ -44,9 +44,9 @@ L'objet `local` local implémente les méthodes définies sur le type {{WebExtAP
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Supprime tous les éléments de la zone de stockage.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.local")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

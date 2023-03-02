@@ -114,9 +114,9 @@ Checkout more examples on the [demo page](https://mdn.github.io/css-counter-styl
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.counter-style")}}
+{{Compat}}
 
 ## See also
 

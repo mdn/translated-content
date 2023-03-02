@@ -32,4 +32,4 @@ document.clear()
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.clear")}}
+{{Compat}}

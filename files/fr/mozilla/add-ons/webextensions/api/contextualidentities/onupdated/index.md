@@ -45,9 +45,9 @@ Events have three functions:
     - `changeInfo`
       - : `object`. Un objet qui contient une seule propriété, `contextualIdentity`, qui est un objet {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} représentant l'identité dont les propriétés ont été mises à jour.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities.onUpdated")}}
+{{Compat}}
 
 ## Exemples
 

@@ -10,7 +10,7 @@ slug: Web/API/PushSubscription/toJSON
 ## 構文
 
 ```js-nolint
-​mySubscription = subscription.toJSON()
+mySubscription = subscription.toJSON()
 ```
 
 ### 引数

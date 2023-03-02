@@ -24,7 +24,7 @@ JavaScript는 불리언 문맥에서 {{Glossary("Type_Conversion", "형 변환")
     if (-Infinity)
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -100,9 +100,9 @@ table td {
 
 {{Specifications}}
 
-## Compatibilidad navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## Ver también
 

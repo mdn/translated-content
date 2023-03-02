@@ -58,9 +58,9 @@ browser.captivePortal.onStateChanged.addListener(handlePortalStatus)
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.captivePortal.onStateChanged")}}
+{{Compat}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

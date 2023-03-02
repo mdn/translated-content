@@ -163,7 +163,7 @@ DevTools는 CSS 문제를 해결할 때 큰 도움이 될 수 있으므로 CSS�
 
 또한 MDN의 각 속성 페이지 하단에 있는 브라우저 호환성 표를 볼 수 있습니다. 이것들은 해당 속성에 대한 브라우저 지원을 보여주며, 속성의 일부 사용에 대한 지원이 있고 다른 것은 지원하지 않는 경우 종종 세분화됩니다. 아래 표는 {{cssxref("shape-outside")}} 속성에 대한 호환성 데이터를 보여줍니다.
 
-{{compat("css.shape-outside")}}
+{{Compat}}
 
 ### 다른 것이 CSS를 무시합니까?
 
@@ -191,24 +191,3 @@ DevTools는 CSS 문제를 해결할 때 큰 도움이 될 수 있으므로 CSS�
 CSS에 대한 경험이 많을수록 문제를 더 빨리 파악하게 될 것입니다. 그러나 우리 중 가장 경험이 많은 사람들조차도 때때로 도대체 무슨 일이 일어나고 있는지 궁금해합니다. 체계적인 접근 방식을 취하고 축소된 테스트 사례를 만들고 다른 사람에게 문제를 설명하면 일반적으로 수정 사항을 찾을 수 있습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1. [Cascade and inheritance](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/ko/docs/Learn/CSS/Building_blocks/Organizing)

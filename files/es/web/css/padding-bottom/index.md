@@ -50,6 +50,6 @@ padding-bottom: unset;
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.padding-bottom")}}
+{{Compat}}

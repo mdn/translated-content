@@ -82,7 +82,7 @@ Autres mots clés utilisés dans cette section.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Selection")}}
+{{Compat}}
 
 ### Voir aussi
 

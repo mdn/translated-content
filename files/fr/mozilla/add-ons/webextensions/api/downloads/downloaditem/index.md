@@ -63,9 +63,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `url`
   - : Un `string` représentant l'URL absolue à partir de laquelle le fichier a été téléchargé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.DownloadItem")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

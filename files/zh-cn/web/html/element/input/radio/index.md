@@ -1,6 +1,6 @@
 ---
 title: <input type="radio">
-slug: Web/HTML/Element/Input/radio
+slug: Web/HTML/Element/input/radio
 ---
 
 {{HTMLSidebar}}

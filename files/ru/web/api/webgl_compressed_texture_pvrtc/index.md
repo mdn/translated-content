@@ -12,7 +12,7 @@ translation_of: Web/API/WEBGL_compressed_texture_pvrtc
 
 WebGL расширения доступны через метод {{domxref("WebGLRenderingContext.getExtension()")}}. Для подробностей смотри также [Использование расширений](/ru/docs/Web/API/WebGL_API/Using_Extensions) в [туториале по WebGL.](/ru/docs/Web/API/WebGL_API/Tutorial)
 
-> **Примечание:** **Доступность:** Обычно PVRTC доступен только на мобильных устройствах с чипсетом PowerVR. Используется во всех поколениях iPhone, iPod Touch и iPad и поддерживается на определённых Android устройствах, использующих PowerVR GPU.
+> **Примечание:** Обычно PVRTC доступен только на мобильных устройствах с чипсетом PowerVR. Используется во всех поколениях iPhone, iPod Touch и iPad и поддерживается на определённых Android устройствах, использующих PowerVR GPU.
 >
 > Версии контекста, поддерживающие расширение: {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} , и {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}.
 

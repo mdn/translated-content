@@ -7,7 +7,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 original_slug: Web/API/Canvas_API/Tutorial/Композиции
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 Во всех наших [предыдущих примерах](/ru/docs/Web/API/Canvas_API/Tutorial/Transformations), фигуры всегда были нарисованы одна поверх другой. Это более чем достаточно для большинства ситуаций, но это ограничивает порядок, в котором построены композиционные формы. Однако, мы можем изменить это поведение, установив свойство `globalCompositeOperation`. Кроме того, свойства `clip` позволяет скрыть нежелательные части формы.
 
@@ -20,7 +20,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Композиции
 
 См. [примеры компоновки](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) кода из следующих примеров.
 
-{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
+{{ EmbedLiveSample("Compositing_example", "100%", 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example" )}}
 
 ## Обрезка контуров
 

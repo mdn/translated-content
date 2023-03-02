@@ -35,7 +35,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td>A single character that switches input focus to the control.</td>
     </tr>
     <tr>
-      <td><code>align</code> {{obsolete_inline}}</td>
+      <td><code>align</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>Alignment of the element.</td>
     </tr>
@@ -434,7 +434,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
       </td>
     </tr>
     <tr>
-      <td><code>useMap</code> {{ obsolete_inline }}</td>
+      <td><code>useMap</code> </td>
       <td>{{domxref("DOMString")}}</td>
       <td>A client-side image map.</td>
     </tr>

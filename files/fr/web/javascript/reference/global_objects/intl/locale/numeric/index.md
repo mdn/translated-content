@@ -44,13 +44,11 @@ console.log(us12hour.numeric);
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                    | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.numeric) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.numeric")}}
+{{Compat}}
 
 ## Voir aussi
 

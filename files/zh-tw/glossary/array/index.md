@@ -1,6 +1,6 @@
 ---
 title: 陣列
-slug: Glossary/array
+slug: Glossary/Array
 ---
 
 陣列是個有序資料的集合（按程式語言不同，資料型態可以是{{Glossary("primitive","原始型別")}}或{{Glossary("object","物件")}}）。陣列是用來把複數的值存進一個變數裡。與只能存一個值的變數，呈現強烈的對比。

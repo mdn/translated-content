@@ -45,9 +45,9 @@ Les événements ont trois fonctions :
     - `themeName`
       - : `string`. Nom du nouveau thème : ce sera l'une des valeurs autorisées pour [`devtools.panels.themeName`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.onThemeChanged")}}
+{{Compat}}
 
 ## Exemples
 

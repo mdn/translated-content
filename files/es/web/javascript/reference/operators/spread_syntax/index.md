@@ -223,9 +223,9 @@ La sintaxis Rest luce exactamente como la sintaxis spread, pero esto es usado po
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.spread")}}
+{{Compat}}
 
 ## Vea también
 

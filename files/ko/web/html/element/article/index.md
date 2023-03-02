@@ -135,4 +135,4 @@ slug: Web/HTML/Element/article
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.article")}}
+{{Compat}}

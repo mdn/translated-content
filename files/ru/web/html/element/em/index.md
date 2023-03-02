@@ -52,7 +52,7 @@ translation_of: Web/HTML/Element/em
 
 ### Результат
 
-{{ EmbedLiveSample('Пример', '', '', '', 'Web/HTML/Element/em') }}
+{{ EmbedLiveSample('Пример') }}
 
 ## Спецификации
 

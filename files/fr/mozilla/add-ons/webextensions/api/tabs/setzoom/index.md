@@ -66,9 +66,9 @@ setting.then(null, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.setZoom")}}
+{{Compat}}
 
 > **Note :**
 >

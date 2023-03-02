@@ -1,6 +1,6 @@
 ---
 title: <shadow>
-slug: Web/HTML/Element/Shadow
+slug: Web/HTML/Element/shadow
 ---
 
 {{deprecated_header}}

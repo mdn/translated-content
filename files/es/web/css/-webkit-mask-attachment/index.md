@@ -31,9 +31,13 @@ body {
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.properties.-webkit-mask-attachment")}}
+No forma parte de ningún estándar.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

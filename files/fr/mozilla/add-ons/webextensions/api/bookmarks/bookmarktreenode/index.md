@@ -43,9 +43,9 @@ Un {{jsxref("object")}} avec les propriétés suivantes :
 - `url` {{optional_inline}}
   - : Un {{jsxref("string")}} qui représente l'URL du signet. Si le nœud représente un dossier, cette propriété est omise.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.BookmarkTreeNode", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

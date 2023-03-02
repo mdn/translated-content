@@ -78,7 +78,7 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
 - {{SVGAttr('baseline-shift')}}
   - : Permet de positionner la ligne de pied de l'élément par rapport à celle de son parent.
     _Valeur_: **`auto`**|`baseline`|`super`|`sub`|[\<percentage>](/fr/docs/Web/SVG/Content_type#Percentage)|[\<length>](/fr/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
-- {{SVGAttr('clip')}} {{deprecated_inline('css')}}
+- {{SVGAttr('clip')}} {{deprecated_inline}}
   - : Définit quelle partie d'un élément est visible.
     _Valeur_: **`auto`**|{{cssxref("shape")}}|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('clip-path')}}
@@ -96,7 +96,7 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
 - {{SVGAttr('color-interpolation-filters')}}
   - : Spécifie l'espace colométrique pour les opérations effectuées via des effets de filtre.
     _Valeur_: `auto`|`sRGB`|**`linearRGB`**|`inherit`; _Animation_: **Oui**
-- {{SVGAttr('color-profile')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('color-profile')}} {{deprecated_inline}}
   - : Définit le profil de couleur qu'une image bitmap incluse via l'élément {{SVGElement('image')}} doit utiliser.
     _Valeur_: `auto`|`sRGB`|`linearRGB`|[\<name>](/fr/docs/Web/SVG/Content_type#Name)|[\<IRI>](/fr/docs/Web/SVG/Content_type#IRI)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('color-rendering')}}
@@ -114,7 +114,7 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
 - {{SVGAttr('dominant-baseline')}}
   - : Définit la ligne de pied utilisée pour aligner le texte.
     _Valeur_: `auto`|`text-bottom`|`alphabetic`|`ideographic`|`middle`|`central`| `mathematical`|`hanging`|`text-top`; _Animation_: **Oui**
-- {{SVGAttr('enable-background')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('enable-background')}} {{deprecated_inline}}
   - : Indique au navigateur comment gérer l'image d'arrière plan.
     _Valeur_: **`accumulate`**|`new`|`inherit`; _Animation_: **Non**
 - {{SVGAttr('fill')}}
@@ -156,16 +156,16 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
 - {{SVGAttr('font-weight')}}
   - : Spécifie l'épaisseur (ou graisse) de la police.
     _Valeur_: **`normal`**|`bold`|`lighter`|`bolder`|`100`|`200`|`300`|`400`|`500`|`600`|`700`|`800`|`900`; _Animation_: **Oui**
-- {{SVGAttr('glyph-orientation-horizontal')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('glyph-orientation-horizontal')}} {{deprecated_inline}}
   - : Contrôle l'orientation des glyphes lorsque la direction en ligne est horizontale.
     _Valeur_: [\<angle>](/fr/docs/Web/SVG/Content_type#Angle)|`inherit`; _Animation_: **Non**
-- {{SVGAttr('glyph-orientation-vertical')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('glyph-orientation-vertical')}} {{deprecated_inline}}
   - : Contrôle l'orientation des glyphes lorsque la direction en ligne est verticale.
     _Valeur_: **`auto`**|[\<angle>](/fr/docs/Web/SVG/Content_type#Angle)|`inherit`; _Animation_: **Non**
 - {{SVGAttr('image-rendering')}}
   - : Indique au navigateur le compromis à effectuer entre vitesse et qualité du rendu des images.
     _Valeur_: **`auto`**|`optimizeQuality`|`optimizeSpeed`; _Animation_: **Oui**
-- {{SVGAttr('kerning')}} {{deprecated_inline('svg2')}}
+- {{SVGAttr('kerning')}} {{deprecated_inline}}
   - : Indique au navigateur s'il doit ajuster l'espacement entre les glyphes.
     _Valeur_: **`auto`**|[\<length>](/fr/docs/Web/SVG/Content_type#Length)|`inherit`; _Animation_: **Oui**
 - {{SVGAttr('letter-spacing')}}
@@ -264,4 +264,4 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation")}}
+{{Compat}}

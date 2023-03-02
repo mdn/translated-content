@@ -2514,7 +2514,7 @@ gecko 在 keyboardvent 中定义了许多 keycode 值，用于显式地生成映
 | `DOM_VK_TAB`                 | 0x09 (9)   | Tab key.                                                                                                                   |
 | `DOM_VK_CLEAR`               | 0x0C (12)  | "5" key on Numpad when NumLock is unlocked. Or on Mac, clear key which is positioned at NumLock key.                       |
 | `DOM_VK_RETURN`              | 0x0D (13)  | Return/enter key on the main keyboard.                                                                                     |
-| `DOM_VK_ENTER`               | 0x0E (14)  | Reserved, but not used. {{Deprecated_Inline}} (Dropped, see {{bug(969247)}}.)                                  |
+| `DOM_VK_ENTER`               | 0x0E (14)  | Reserved, but not used. {{Deprecated_Inline}} (Dropped, see [Firefox bug 969247](https://bugzil.la/969247).)                                  |
 | `DOM_VK_SHIFT`               | 0x10 (16)  | Shift key.                                                                                                                 |
 | `DOM_VK_CONTROL`             | 0x11 (17)  | Control key.                                                                                                               |
 | `DOM_VK_ALT`                 | 0x12 (18)  | Alt (Option on Mac) key.                                                                                                   |

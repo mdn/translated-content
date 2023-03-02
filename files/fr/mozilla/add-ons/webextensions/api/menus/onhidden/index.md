@@ -47,9 +47,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction sera transmise sans paramètre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.onHidden", 10)}}
+{{Compat}}
 
 ## Exemples
 

@@ -71,4 +71,4 @@ Les éléments suivants peuvent utiliser l'attribut `color`:
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.color")}}
+{{Compat}}

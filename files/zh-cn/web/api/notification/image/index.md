@@ -1,6 +1,6 @@
 ---
 title: Notification.image
-slug: Web/API/notification/image
+slug: Web/API/Notification/image
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

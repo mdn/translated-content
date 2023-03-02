@@ -35,7 +35,7 @@ Math.pow(2, 53) - 1     // 9007199254740991
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.MAX_SAFE_INTEGER")}}
+{{Compat}}
 
 ## Ver también
 

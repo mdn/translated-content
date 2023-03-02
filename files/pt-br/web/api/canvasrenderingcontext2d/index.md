@@ -285,13 +285,13 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
   - : Specifies where to start a dash array on a line. Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`
   - : Introduced in in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozDrawText()`
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozDrawText()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozMeasureText()`
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozMeasureText()`
   - : This method was introduced in Gecko 1.9 and is unimplemented starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.measureText()")}} instead.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozPathText()`
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozPathText()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
+- {{non-standard_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
 
 #### Internal APIs (chrome-context only)
@@ -320,7 +320,7 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 ## Compatibility notes
 
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, `rotate()`, `scale()`, `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
+- Starting with Gecko 5.0, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, `rotate()`, `scale()`, `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
 
 ## Veja também
 

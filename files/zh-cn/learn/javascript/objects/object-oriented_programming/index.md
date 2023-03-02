@@ -241,13 +241,3 @@ student.year // 错误：'year'是学生类的私有属性
 在下一篇文章中，我们会关注 JavaScript 所提供的其他关于类的特性，这些特性用于支持基于类的面向对象编程。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
-
-## 本章目录
-
-- [对象基础概念](/zh-CN/docs/Learn/JavaScript/Objects/Basics)
-- [对象原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)
-- **面向对象编程基本概念**
-- [JavaScript 中的类](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [使用 JSON 数据](/zh-CN/docs/Learn/JavaScript/Objects/JSON)
-- [对象构建实践](/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [测验：为弹球示例新增功能](/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

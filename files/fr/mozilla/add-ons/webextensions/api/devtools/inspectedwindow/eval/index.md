@@ -86,7 +86,7 @@ Si une erreur s'est produite, l'élément 0 sera indéfini et l'élément 1 cont
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.inspectedWindow.eval")}}
+{{Compat}}
 
 ## Exemples
 

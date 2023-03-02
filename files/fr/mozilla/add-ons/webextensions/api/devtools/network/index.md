@@ -30,9 +30,9 @@ Comme toutes les APIs de devtools, cette API est uniquement disponible pour le c
 - [`devtools.network.onRequestFinished`](/fr/Add-ons/WebExtensions/API/devtools.network/onRequestFinished)
   - : Lancé lorsque la demande réseau est terminée et que ses détails sont disponibles pour l'extension.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.network")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

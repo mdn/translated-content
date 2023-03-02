@@ -443,15 +443,3 @@ typeof myNumber
 到目前为止，您应该了解了一些 JavaScript 变量以及如何创建它们。在下一篇文章中，我们将更详细地关注数字，了解如何在 JavaScript 中使用基础数学。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
-
-## 在此模块内
-
-- [What is JavaScript?](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

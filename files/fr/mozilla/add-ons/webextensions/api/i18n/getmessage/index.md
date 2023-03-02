@@ -43,9 +43,9 @@ browser.i18n.getMessage(
 
 `string`. Message localisé pour les paramètres régionaux en cours.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.i18n.getMessage")}}
+{{Compat}}
 
 ## Exemples
 

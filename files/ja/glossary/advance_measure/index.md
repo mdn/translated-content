@@ -1,6 +1,6 @@
 ---
 title: Advance measure
-slug: Glossary/advance_measure
+slug: Glossary/Advance_measure
 l10n:
   sourceCommit: 73f237cb0643ee0c4dadee33b53fd5ec307f1502
 ---

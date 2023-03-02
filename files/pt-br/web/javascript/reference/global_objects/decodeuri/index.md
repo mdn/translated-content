@@ -22,7 +22,7 @@ decodeURI(encodedURI)
 
 ### Valor retornado
 
-Uma nova string representando a versão não codificada do URI (Uniform Resource Identifier) ​​codificado fornecido.
+Uma nova string representando a versão não codificada do URI (Uniform Resource Identifier) codificado fornecido.
 
 ### Exceções
 

@@ -84,9 +84,9 @@ Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
 
 {{Specifications}}
 
-## Compatibilidad con buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Proxy.handler.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## Ver también
 

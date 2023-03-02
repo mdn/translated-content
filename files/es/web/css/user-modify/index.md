@@ -64,9 +64,9 @@ La propiedad `-moz-user-modify` determina si el contenido de un elemento puede s
 
 `user-modify` en [una versión inicial de la especificación CSS 3 UI](http://www.w3.org/TR/2000/WD-css3-userint-20000216#user-modify) (Borrador de trabajo Febrero del 2000, Working Draft February 2000 que ya ha sido reeemplazado por _CSS 3 UI_)
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.user-modify")}}
+{{Compat}}
 
 ## Ver además
 

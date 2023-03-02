@@ -15,10 +15,6 @@ original_slug: Глоссарий/MathML
 
 ## Для дополнительного изучения
 
-### Общие сведения
-
-- {{interwiki("wikipedia", "MathML", "MathML")}} on Wikipedia
-
 ### Техническая справка
 
 - {{spec("http://www.w3.org/Math/whatIsMathML.html", "MathML", "REC")}}

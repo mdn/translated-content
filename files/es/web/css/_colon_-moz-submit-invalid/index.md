@@ -11,9 +11,9 @@ La [pseudo-clase](/es/CSS/Pseudo-classes) CSS `:-moz-submit-invalid` representa 
 
 Por defecto no se aplica ningún estilo. Puedes usar tu estilo para personalizar la apariencia del botón de enviar cuando existen campos no válidos en el formulario.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-submit-invalid")}}
+{{Compat}}
 
 ## Ver además
 

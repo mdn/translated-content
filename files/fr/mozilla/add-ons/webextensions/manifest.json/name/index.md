@@ -39,6 +39,6 @@ C'est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalizati
 "name": "Mon extension"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.name")}}
+{{Compat}}

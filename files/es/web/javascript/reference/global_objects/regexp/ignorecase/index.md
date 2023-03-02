@@ -30,9 +30,9 @@ console.log(regex.ignoreCase); // true
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.ignoreCase")}}
+{{Compat}}
 
 ## Ver también
 

@@ -51,15 +51,9 @@ if (connection) {
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-### NetworkInformation
-
-{{Compat("api.NetworkInformation")}}
-
-### Navigator.connection
-
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## Véase también
 

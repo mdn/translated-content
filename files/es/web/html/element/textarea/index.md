@@ -74,7 +74,7 @@ Este elemento contiene [global attributes](/es/docs/HTML/Global_attributes).
 
 Este elemento implementa el interfaz [`HTMLTextAreaElement`](/en/DOM/HTMLTextAreaElement) .
 
-{{ gecko("2.0") }} introduce el soporte para textareas redimensionable. Esto se controla con la propiedad CSS {{ cssxref("resize") }} . Por defecto la posibilidad de redimiensionar el control está habilitada, pero puede ser explícitamente deshabilitada mediante el uso del siguiente CSS:
+Gecko 2.0 introduce el soporte para textareas redimensionable. Esto se controla con la propiedad CSS {{ cssxref("resize") }} . Por defecto la posibilidad de redimiensionar el control está habilitada, pero puede ser explícitamente deshabilitada mediante el uso del siguiente CSS:
 
 ```css
 textarea {
@@ -102,9 +102,9 @@ Un _textarea_ tiene dimensiones intrínsecas, como una imagen agrandada.
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.textarea")}}
+{{Compat}}
 
 ## Ver además
 

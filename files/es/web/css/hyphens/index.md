@@ -101,9 +101,9 @@ p.auto {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.hyphens")}}
+{{Compat}}
 
 ## Ver también
 

@@ -68,11 +68,9 @@ Para ejemplos con `<figcaption>`, por favor ver la página {{HTMLElement("figure
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
-
-{{Compat("html.elements.figcaption")}}
+{{Compat}}
 
 ## Ver además
 

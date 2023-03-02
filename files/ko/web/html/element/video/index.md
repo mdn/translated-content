@@ -118,7 +118,7 @@ AddType video/webm .webm
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.video")}}
+{{Compat}}
 
 ## 참고
 

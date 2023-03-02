@@ -43,11 +43,9 @@ for (var i = 0; i < array.length; i++) {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir a los datos, por favor, compruebe <https://github.com/mdn/browser-compat-data> y envianos un pull request.
-
-{{Compat("api.Crypto.getRandomValues")}}
+{{Compat}}
 
 ## Ver también
 

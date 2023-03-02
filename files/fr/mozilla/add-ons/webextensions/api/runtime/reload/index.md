@@ -30,9 +30,9 @@ browser.runtime.reload()
 
 Aucun.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.reload")}}
+{{Compat}}
 
 ## Exemples
 

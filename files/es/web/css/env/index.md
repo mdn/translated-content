@@ -10,6 +10,10 @@ La función env() puede ser utilizada en el lugar de cualquier parte de un valor
 
 Las Variables de Entorno CSS están actualmente en curso de definición en un borrador de Recomendación: [CSS Environment Variables Module Level 1](https://drafts.csswg.org/css-env-1/).
 
+## Especificaciones
+
+{{Specifications}}
+
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.custom-property.env")}}
+{{Compat}}

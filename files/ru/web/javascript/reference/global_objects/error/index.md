@@ -41,7 +41,7 @@ new Error([message[, fileName[, lineNumber]]])
 ```js
 // this:
 const x = Error('I was created using a function call!');
-​​​​// Такая же функциональность:
+// Такая же функциональность:
 const y = new Error('I was constructed via the "new" keyword!');
 ```
 

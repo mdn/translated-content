@@ -81,7 +81,7 @@ Usando este manejador de evento tu pagina previene que Firefox cambie el cache d
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.beforeunload_event")}}
+{{Compat}}
 
 ## Mire tambien
 

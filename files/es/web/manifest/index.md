@@ -159,7 +159,7 @@ Provides a human-readable name for the application as it is intended to be displ
 Define la orientación por defecto for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.
 
 ```json
-​​"orientation": "portrait-primary"
+"orientation": "portrait-primary"
 ```
 
 Orientation puede ser alguno de los siguentes valores:
@@ -253,4 +253,4 @@ Los manifiestos web se deben servir con el tipo MIME `application/manifest+json`
 
 ## Compatibilidad con navegadores
 
-{{Compat("html.manifest")}}
+{{Compat}}

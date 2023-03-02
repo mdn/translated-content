@@ -49,9 +49,9 @@ La notification est identique sur tous les systèmes d'exploitation de bureau. Q
 - {{WebExtAPIRef("notifications.onShown")}}
   - : Lancé immédiatement après l'affichage d'une notification.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

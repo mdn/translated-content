@@ -218,9 +218,9 @@ Para más información por favor referirse a los siguientes artículos:
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.display")}}
+{{Compat}}
 
 ## Ver también
 

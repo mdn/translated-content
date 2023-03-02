@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Memory
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Memory`** オブジェクトはサイズ変更可能な {{jsxref("ArrayBuffer")}} または [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) であり、 WebAssembly `Instance` からアクセスする生のバイト列のメモリーを持ちます。</p>
 

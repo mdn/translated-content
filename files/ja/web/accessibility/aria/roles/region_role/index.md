@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: region ロール'
-slug: Web/Accessibility/ARIA/Roles/Region_role
+slug: Web/Accessibility/ARIA/Roles/region_role
 ---
 
 リージョン (`region`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、文書内で、著者が重要であると識別した領域を識別するために使用されます。 これは、他のランドマークロールのどれも適切でないときでも、汎用のランドマークを提供することで、人々が容易にナビゲートできるようにするために使用されます。

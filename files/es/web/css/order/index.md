@@ -80,9 +80,9 @@ Para más información por favor, referirse a estos artículos:
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.order")}}
+{{Compat}}
 
 ## Ver también
 

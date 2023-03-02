@@ -1,6 +1,6 @@
 ---
 title: Notification.dir
-slug: Web/API/notification/dir
+slug: Web/API/Notification/dir
 ---
 
 {{APIRef("Web Notifications")}}

@@ -129,11 +129,10 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 
 | 原文 | 翻譯 |
 | --- | --- |
-| Try It | 試試看 |
-| Examples | 範例 |
-| Specifications | 規範 |
 | Browser compatibility | 瀏覽器相容性 |
+| Examples | 範例 |
 | See also | 參見 |
+| Specifications | 規範 |
 
 ### 慣用語及術語
 

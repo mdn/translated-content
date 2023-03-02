@@ -19,10 +19,7 @@ Certains sites web utilisent ce code de réponse pour les requêtes qu'ils ne so
 
 ## Spécifications
 
-| Spécification                                                | Titre                                                                                             |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| [RFC 2324, section 2.3.2: 418 I'm a teapot](https://datatracker.ietf.org/doc/html/rfc2324#section-2.3.2) | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content                        |
-| [RFC 7168, section 2.3.3: 418 I'm a teapot](https://datatracker.ietf.org/doc/html/rfc7168#section-2.3.3) | The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA): Response Codes |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

@@ -26,9 +26,9 @@ Il définit une seule fonction {{WebExtAPIRef("contentScripts.RegisteredContentS
 - {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister","unregister()")}}
   - : Annule l'inscription des scripts de contenu représentés par cet objet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contentScripts.RegisteredContentScript", 10)}}
+{{Compat}}
 
 ## Exemples
 

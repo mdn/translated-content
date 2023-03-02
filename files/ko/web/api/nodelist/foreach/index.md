@@ -88,11 +88,11 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 The above behavior is how many browsers actually implement NodeList.prototype.forEach (Chrome, for example).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser Compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

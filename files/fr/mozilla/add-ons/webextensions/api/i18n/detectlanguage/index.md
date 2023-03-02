@@ -48,9 +48,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
     - `percentage`
       - : `integer`. Le pourcentage de la chaîne d'entrée qui était dans la langue détectée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.i18n.detectLanguage")}}
+{{Compat}}
 
 ## Exemples
 

@@ -12,7 +12,6 @@ original_slug: Глоссарий/TLS
 
 - [Transport Layer Security](/ru/docs/Web/Security/Transport_Layer_Security)
 - [OWASP: Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-- {{Interwiki("wikipedia", "Transport Layer Security")}} on Wikipedia
 
 ### Specifications
 

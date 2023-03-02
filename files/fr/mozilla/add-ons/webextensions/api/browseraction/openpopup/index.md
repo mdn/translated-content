@@ -31,9 +31,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) cela est résolu sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.openPopup", 10)}}
+{{Compat}}
 
 ## Exemples
 

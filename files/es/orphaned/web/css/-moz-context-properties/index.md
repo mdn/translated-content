@@ -70,8 +70,4 @@ Aqui hemos puesto que la imagen `src` sea una URL de datos que contiene una imag
 
 ## Especificaciones
 
-Esta propiedad no esta definida en ningun estándar de CSS
-
-## Browser compatibility
-
-{{Compat("css.properties.-moz-context-properties")}}
+Esta propiedad no esta definida en ningun estándar de CSS.

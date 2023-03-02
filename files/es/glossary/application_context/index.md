@@ -1,6 +1,6 @@
 ---
 title: Contexto de aplicación
-slug: Glossary/application_context
+slug: Glossary/Application_context
 ---
 
 Un contexto de aplicación es un [contexto de navegación](/es/docs/Glossary/Browsing_context) de nivel superior que tiene aplicado un [manifiesto](/es/docs/Web/Manifest).

@@ -55,13 +55,13 @@ function loop(x) {
 ```js
 // Примеры:
 
-​function foo(){
+function foo(){
  console.log('Здравствуй Foo');
 }();
 
 
 (function foo() {
-​ console.log('Здравствуй Foo');
+ console.log('Здравствуй Foo');
 }());
 
 

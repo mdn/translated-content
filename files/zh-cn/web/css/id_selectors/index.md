@@ -5,10 +5,10 @@ slug: Web/CSS/ID_selectors
 
 {{CSSRef}}
 
-在一个 HTML 文档中，CSS ID 选择器会根据该元素的 ID 属性中的内容匹配元素，元素 ID 属性名必须与选择器中的 ID 属性名完全匹配，此条样式声明才会生效。
+CSS **ID 选择器**会根据该元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性中的内容匹配元素。为了使该元素被选中，它的 `id` 属性必须与选择器中给出的值完全匹配。
 
 ```css
-/* The element with id="demo" */
+/* id 为 "demo" 的元素会被选中 */
 #demo {
   border: red 2px solid;
 }
@@ -16,14 +16,14 @@ slug: Web/CSS/ID_selectors
 
 ## 语法
 
-```plain
-#id 属性值 {样式声明 }
+```css
+#id 属性值 { 样式声明 }
 ```
 
-它与下面的{{Cssxref("Attribute selectors", "属性选择器")}}语句等价：
+它与下面的{{Cssxref("Attribute_selectors", "属性选择器")}}语句语法上等价（但优先级并不等价）：
 
-```plain
-[id=id 属性值] {样式声明 }
+```css
+[id=id 属性值] { 样式声明 }
 ```
 
 ## 示例
@@ -31,16 +31,16 @@ slug: Web/CSS/ID_selectors
 ### CSS
 
 ```css
-span#identified {
-  background-color: DodgerBlue;
+#identified {
+  background-color: skyblue;
 }
 ```
 
 ### HTML
 
 ```html
-  <span id="identified">Here's a span with some text.</span>
-  <span>Here's another.</span>
+<div id="identified">这个 div 有一个特别的 ID 属性！</div>
+<div>这只是一个普通的 div。</div>
 ```
 
 ### 结果
@@ -54,3 +54,8 @@ span#identified {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)
+- [学习 CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)

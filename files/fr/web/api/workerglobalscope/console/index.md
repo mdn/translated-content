@@ -43,7 +43,7 @@ Ne fait pas encore parti d'une spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.console")}}
+{{Compat}}
 
 ## Voir aussi
 

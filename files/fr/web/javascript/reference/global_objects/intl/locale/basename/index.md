@@ -55,13 +55,11 @@ console.log(dutch.baseName); // Prints out "nl-Latn-NL"
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.baseName`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.baseName) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.baseName")}}
+{{Compat}}
 
 ## Voir aussi
 
