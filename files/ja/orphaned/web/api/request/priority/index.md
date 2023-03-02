@@ -2,6 +2,8 @@
 title: Request.priority
 slug: orphaned/Web/API/Request/priority
 original_slug: Web/API/Request/priority
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
 {{APIRef("Fetch")}}{{SeeCompatTable}}
