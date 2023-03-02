@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND
 
 {{jsSidebar("Operators")}}
 
-当且仅当所有操作数为 `true` 时，一组布尔操作数的**逻辑与**（`&&`，逻辑连接）运算结果为 `true`，否则为 `false`。
+当且仅当所有操作数为 `true` 时，一组布尔操作数的**逻辑与**（**`&&`**，逻辑连接）运算结果为 `true`，否则为 `false`。
 
 一般来说，当从左到右求值时，该操作符返回第一个{{Glossary("falsy","假值")}}操作数的值；如果它们都是{{Glossary("truthy","真值")}}，则返回最后一个操作数的值。
 
@@ -101,7 +101,7 @@ a9 = false && ""; // f && f returns false
 
 #### 与运算符转化为或运算符
 
-下述涉及到 **boolean** 运算符的运算：
+下述涉及到**布尔**运算符的运算：
 
 ```js-nolint
 bCondition1 && bCondition2
@@ -115,7 +115,7 @@ bCondition1 && bCondition2
 
 #### 或运算符转化为与运算符
 
-下述涉及到 **boolean** 运算符的运算：
+下述涉及到**布尔**运算符的运算：
 
 ```js-nolint
 bCondition1 || bCondition2
@@ -131,7 +131,7 @@ bCondition1 || bCondition2
 
 由于逻辑表达式是从左到右进行求值的，只要遵循一定的规则，总是可以从一个复杂的表达式中删除括号。
 
-下述涉及到 **boolean** 运算符的复杂运算：
+下述涉及到**布尔**运算符的复杂运算：
 
 ```js-nolint
 bCondition1 || (bCondition2 && bCondition3)
