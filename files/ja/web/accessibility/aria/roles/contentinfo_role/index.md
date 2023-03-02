@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: contentinfo ロール'
-slug: Web/Accessibility/ARIA/Roles/Contentinfo_role
+slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 ---
 
 コンテンツ情報 (`contentinfo`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、著作権情報、ナビゲーションリンク、プライバシーステートメントなど、ウェブサイトの各ページの最後に繰り返される情報を識別するために使用します。 このセクションは一般的にフッターと呼ばれます。

@@ -1,6 +1,7 @@
 ---
 title: ブラウザー間の違い
-slug: Web/API/XSLTProcessor/Browser_Differences
+slug: orphaned/Web/API/XSLTProcessor/Browser_Differences
+original_slug: Web/API/XSLTProcessor/Browser_Differences
 ---
 
 ## ブラウザー間の違い
