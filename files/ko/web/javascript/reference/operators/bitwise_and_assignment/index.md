@@ -19,7 +19,7 @@ x &= y // x = x & y
 
 ## 예제
 
-### Using bitwise AND assignment 사용하기
+### AND 비트 할당 사용하기
 
 ```js
 let a = 5;
