@@ -31207,10 +31207,6 @@
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
   },
-  "orphaned/Web/HTML/Global_attributes/x-ms-format-detection": {
-    "modified": "2020-08-19T07:01:29.371Z",
-    "contributors": ["mfuji09", "eltociear"]
-  },
   "orphaned/Web/JavaScript/Guide/Expressions": {
     "modified": "2019-03-24T00:01:13.077Z",
     "contributors": ["ethertank", "happysadman", "Yuichirou", "electrolysis"]
