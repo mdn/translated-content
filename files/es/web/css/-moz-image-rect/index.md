@@ -141,4 +141,4 @@ Usa {{domxref("window.getComputedStyle()")}} para establecer el estilo de cada e
 
 ### Bugs
 
-- {{WebkitBug(32177)}}
+- [WebKit bug 32177](https://webkit.org/b/32177)
