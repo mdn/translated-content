@@ -1,6 +1,6 @@
 ---
 title: <input type="tel">
-slug: Web/HTML/Element/Input/tel
+slug: Web/HTML/Element/input/tel
 ---
 
 {{HTMLSidebar("Input_types")}}

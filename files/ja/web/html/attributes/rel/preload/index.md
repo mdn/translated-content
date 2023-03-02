@@ -1,7 +1,9 @@
 ---
-title: 'リンク種別: preload'
+title: rel=preload
 slug: Web/HTML/Attributes/rel/preload
 original_slug: Web/HTML/Link_types/preload
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
@@ -72,8 +74,6 @@ original_slug: Web/HTML/Link_types/preload
 - `worker`: JavaScript ウェブワーカーまたは共有ワーカー。
 - `video`: 通常は {{htmlelement("video")}} で使用される動画ファイル。
 
-> **メモ:** `video` の先読み機能は Preload 仕様書に含まれていますが、現在ブラウザーでは実装されていません。
-
 > **メモ:** `font` および `fetch` の先読みには、 `crossorigin` 属性を設定する必要があります。下記の [CORS を使用したフェッチ](#cors_を使用したフェッチ)を参照してください。
 
 > **メモ:** 使用されると予想されるこれらの値やウェブ機能について、もっと詳細は Preload の仕様書にあります。 — [link element extensions](https://w3c.github.io/preload/#link-element-extensions) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
@@ -82,7 +82,7 @@ original_slug: Web/HTML/Link_types/preload
 
 `<link>` 要素は {{htmlattrxref("type", "link")}} 要素を受け付け、要素が指す先のリソースの MIME タイプを指定することができます。これは特にリソースの先読み時に便利です。 — ブラウザーは `type` 属性の値を使用して対応しているリソースであるかどうかを確認し、その場合だけダウンロードを開始し、そうでない場合は開始しないようにすることができます。
 
-この例を動画のデモで見ることができます（[ソースコード全体](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video)と[デモ版](https://mdn.github.io/html-examples/link-rel-preload/video/)もご覧ください。）。コードスニペットは下記の通りです。このコードは、どのブラウザーでも実際に先読み処理を発生させるわけではありませんが（動画の先読み処理はまだどのブラウザーでも対応していないため）、一般的な先読み処理の背後にある中核的な動作を示しています。
+この例を動画のデモで見ることができます（[ソースコード全体](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video)と[デモ版](https://mdn.github.io/html-examples/link-rel-preload/video/)もご覧ください。）。コードスニペットは下記の通りです。
 
 ```html
 <head>

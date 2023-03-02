@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: main ロール'
-slug: Web/Accessibility/ARIA/Roles/Main_role
+slug: Web/Accessibility/ARIA/Roles/main_role
 ---
 
 メイン (`main`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、文書の主要なコンテンツを示すために使用します。 メインコンテンツ領域は、文書の中心的な話題やアプリケーションの中心的な機能と直接関連したり、それらを拡張するコンテンツで構成されます。

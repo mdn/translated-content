@@ -1,11 +1,12 @@
 ---
 title: Console.info()
-slug: Web/API/Console/info
+slug: Web/API/console/info
 tags:
   - Debugging
   - Web Development
 translation_of: Web/API/Console/info
 ---
+
 {{APIRef("Console API")}}
 
 Выводит сообщения, содержащие некоторую информацию, в Веб-консоль. В Firefox и Chrome, рядом с этими элементами в консоли отображается маленькая иконка "i".

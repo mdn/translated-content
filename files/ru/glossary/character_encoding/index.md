@@ -1,6 +1,6 @@
 ---
 title: Кодировка символов
-slug: Glossary/character_encoding
+slug: Glossary/Character_encoding
 tags:
   - Composing
   - Glossary

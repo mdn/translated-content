@@ -18,7 +18,7 @@ slug: Web/HTML/Element/blockquote
 
 這個屬性包含[全局屬性](/zh-TW/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 一個指向被引用的原始文件或訊息的 URL 。這個屬性預期要指引到解釋內容的資訊，或是引言的援引。
 
 ## 範例

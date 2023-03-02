@@ -65,14 +65,3 @@ Para elegir un tipo de letra:
 3. Para obtener más detalles sobre el uso de Google Fonts, consulta [esta página](https://developers.google.com/fonts/docs/getting_started)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
-
-## En este módulo
-
-- [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico)
-- [Cuál será la apariencia de tu sitio web](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Conceptos básicos de HTML](/es/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Conceptos básicos de CSS](/es/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Conceptos básicos de JavaScript](/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publicar tu sitio web](/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Cómo funciona la Web](/es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web)

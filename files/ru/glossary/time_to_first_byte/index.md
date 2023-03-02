@@ -1,6 +1,6 @@
 ---
 title: Time to first byte
-slug: Glossary/time_to_first_byte
+slug: Glossary/Time_to_first_byte
 translation_of: Glossary/time_to_first_byte
 original_slug: Глоссарий/time_to_first_byte
 ---

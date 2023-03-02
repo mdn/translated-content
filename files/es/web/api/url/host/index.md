@@ -1,6 +1,6 @@
 ---
 title: Estabilidad
-slug: Web/API/URL/Host
+slug: Web/API/URL/host
 ---
 
 {{ApiRef("URL API")}}

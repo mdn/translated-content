@@ -7,7 +7,7 @@ slug: Web/API/HTMLDialogElement
 
 {{ SeeCompatTable() }}
 
-**`HTMLDialogElement`**接口提供操作{{HTMLElement("dialog")}} 元素的方法.。此接口的方法和属性继承自 {{domxref("HTMLElement")}} 接口。
+**`HTMLDialogElement`** 接口提供操作{{HTMLElement("dialog")}} 元素的方法.。此接口的方法和属性继承自 {{domxref("HTMLElement")}} 接口。
 
 ## 属性
 

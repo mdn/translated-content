@@ -1,8 +1,9 @@
 ---
 title: <input type="date">
-slug: Web/HTML/Element/Input/date
+slug: Web/HTML/Element/input/date
 translation_of: Web/HTML/Element/input/date
 ---
+
 {{HTMLSidebar}}
 
 Элементы {{htmlelement("input")}} типа **`date`** создают поля ввода и позволяют пользователю ввести дату, либо использовать _text box_ для автоматической проверки контента или использовать специальный интерфейс _date picker_. Возвращаемое значение включает год, месяц, день, но _не_ время. Используйте поля ввода {{HTMLElement("input/time", "time")}} или {{HTMLElement("input/datetime-local", "datetime-local")}}, чтобы вводить время или дату+время соответственно.

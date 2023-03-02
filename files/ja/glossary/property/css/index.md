@@ -1,6 +1,6 @@
 ---
 title: Property (プロパティ) (CSS)
-slug: Glossary/property/CSS
+slug: Glossary/Property/CSS
 ---
 
 **CSS のプロパティ**は、関連付けられた値によりブラウザーがどのように要素を表示するかを定義する特性です。

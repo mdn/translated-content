@@ -1,6 +1,6 @@
 ---
 title: Массив
-slug: Glossary/array
+slug: Glossary/Array
 tags:
   - JavaScript
   - Массив,

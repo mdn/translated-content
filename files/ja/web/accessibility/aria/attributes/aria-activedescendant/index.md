@@ -1,7 +1,8 @@
 ---
 title: aria-activedescendant 属性の使用
-slug: web/Accessibility/ARIA/Attributes/aria-activedescendant
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute
+slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
+original_slug: >-
+  Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute
 ---
 
 この記事では、[`aria-activedescendant`](https://www.w3.org/TR/wai-aria/#aria-activedescendant) プロパティについて説明します。

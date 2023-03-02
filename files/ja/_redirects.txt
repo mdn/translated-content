@@ -422,7 +422,6 @@
 /ja/docs/CSS/hyphens	/ja/docs/Web/CSS/hyphens
 /ja/docs/CSS/image	/ja/docs/Web/CSS/image
 /ja/docs/CSS/image-rendering	/ja/docs/Web/CSS/image-rendering
-/ja/docs/CSS/ime-mode	/ja/docs/Web/CSS/ime-mode
 /ja/docs/CSS/inherit	/ja/docs/Web/CSS/inherit
 /ja/docs/CSS/inheritance	/ja/docs/Web/CSS/inheritance
 /ja/docs/CSS/initial	/ja/docs/Web/CSS/initial
@@ -545,7 +544,6 @@
 /ja/docs/CSS:color	/ja/docs/Web/CSS/color
 /ja/docs/CSS:computed_value	/ja/docs/Web/CSS/computed_value
 /ja/docs/CSS:font	/ja/docs/Web/CSS/font
-/ja/docs/CSS:ime-mode	/ja/docs/Web/CSS/ime-mode
 /ja/docs/CSS:inheritance	/ja/docs/Web/CSS/inheritance
 /ja/docs/CSS:initial_value	/ja/docs/Web/CSS/initial_value
 /ja/docs/CSS:min-width	/ja/docs/Web/CSS/min-width
@@ -808,7 +806,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/String/anchor	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
@@ -1884,8 +1882,8 @@
 /ja/docs/Glossary/スラグ	/ja/docs/Glossary/Slug
 /ja/docs/Glossary/ドメイン	/ja/docs/Glossary/Domain
 /ja/docs/Glossary/ネームスペース	/ja/docs/Glossary/Namespace
-/ja/docs/Glossary/ファイアウォール	/ja/docs/Glossary/firewall
-/ja/docs/Glossary/ルーター	/ja/docs/Glossary/routers
+/ja/docs/Glossary/ファイアウォール	/ja/docs/Glossary/Firewall
+/ja/docs/Glossary/ルーター	/ja/docs/Glossary/Routers
 /ja/docs/HTML	/ja/docs/Web/HTML
 /ja/docs/HTML/Attributes	/ja/docs/Web/HTML/Attributes
 /ja/docs/HTML/Block-level_elements	/ja/docs/Web/HTML/Block-level_elements
@@ -1893,7 +1891,7 @@
 /ja/docs/HTML/Canvas	/ja/docs/Web/API/Canvas_API
 /ja/docs/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/HTML/Canvas/Tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
-/ja/docs/HTML/Content_Editable	/ja/docs/conflicting/Web/HTML/Global_attributes/contenteditable
+/ja/docs/HTML/Content_Editable	/ja/docs/Web/HTML/Global_attributes/contenteditable
 /ja/docs/HTML/Content_categories	/ja/docs/Web/HTML/Content_categories
 /ja/docs/HTML/Element	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/Element/Audio	/ja/docs/Web/HTML/Element/audio
@@ -2439,7 +2437,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/JavaScript/Reference/Global_Objects/RegExp/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
-/ja/docs/JavaScript/Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+/ja/docs/JavaScript/Reference/Global_Objects/String/Trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 /ja/docs/JavaScript/Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/JavaScript/Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ja/docs/JavaScript/Reference/Global_Objects/String/anchor	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
@@ -2492,7 +2490,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/JavaScript/Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-/ja/docs/JavaScript/Reference/Global_Objects/String/trim-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+/ja/docs/JavaScript/Reference/Global_Objects/String/trim-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 /ja/docs/JavaScript/Reference/Global_Objects/String/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /ja/docs/JavaScript/Reference/Global_Objects/SyntaxError	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/JavaScript/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
@@ -3117,7 +3115,7 @@
 /ja/docs/Using_gradients	/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 /ja/docs/Using_native_JSON	/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /ja/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
-/ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
+/ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
 /ja/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /ja/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /ja/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
@@ -3271,6 +3269,7 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
 /ja/docs/Web/API/EffectTiming	/ja/docs/Web/API/KeyframeEffect/KeyframeEffect
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
@@ -3286,6 +3285,7 @@
 /ja/docs/Web/API/Element/pointerlockchange_event	/ja/docs/Web/API/Document/pointerlockchange_event
 /ja/docs/Web/API/Element/pointerlockerror_event	/ja/docs/Web/API/Document/pointerlockerror_event
 /ja/docs/Web/API/Element/select_event	/ja/docs/Web/API/HTMLInputElement/select_event
+/ja/docs/Web/API/Element/show_event	/ja/docs/orphaned/Web/API/Element/show_event
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/Web/Events/Event_handlers
@@ -3370,6 +3370,7 @@
 /ja/docs/Web/API/HTMLElement/animationend_event	/ja/docs/Web/API/Element/animationend_event
 /ja/docs/Web/API/HTMLElement/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/HTMLElement/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
+/ja/docs/Web/API/HTMLElement/contextMenu	/ja/docs/orphaned/Web/API/HTMLElement/contextMenu
 /ja/docs/Web/API/HTMLElement/gotpointercapture_event	/ja/docs/Web/API/Element/gotpointercapture_event
 /ja/docs/Web/API/HTMLElement/lostpointercapture_event	/ja/docs/Web/API/Element/lostpointercapture_event
 /ja/docs/Web/API/HTMLElement/oncopy	/ja/docs/Web/API/HTMLElement/copy_event
@@ -3564,6 +3565,7 @@
 /ja/docs/Web/API/Range1/setStart	/ja/docs/Web/API/Range/setStart
 /ja/docs/Web/API/Range1/startContainer	/ja/docs/Web/API/Range/startContainer
 /ja/docs/Web/API/Range1/startOffset	/ja/docs/Web/API/Range/startOffset
+/ja/docs/Web/API/Request/priority	/ja/docs/orphaned/Web/API/Request/priority
 /ja/docs/Web/API/Screen/onorientationchange	/ja/docs/Web/API/Screen/orientationchange_event
 /ja/docs/Web/API/ScrollToOptions	/ja/docs/Web/API/Window/scroll
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
@@ -3738,6 +3740,7 @@
 /ja/docs/Web/API/XRReferenceSpaceEventInit/transform	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /ja/docs/Web/API/XRReferenceSpaceType	/ja/docs/Web/API/XRSession/requestReferenceSpace
 /ja/docs/Web/API/XRTargetRayMode	/ja/docs/Web/API/XRInputSource/targetRayMode
+/ja/docs/Web/API/XSLTProcessor/Browser_Differences	/ja/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/Console/dir
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/Console/log
 /ja/docs/Web/API/console.time	/ja/docs/Web/API/Console/time
@@ -3881,7 +3884,7 @@
 /ja/docs/Web/API/window.moveTo	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/window.mozInnerScreenX	/ja/docs/Web/API/Window/mozInnerScreenX
 /ja/docs/Web/API/window.mozInnerScreenY	/ja/docs/Web/API/Window/mozInnerScreenY
-/ja/docs/Web/API/window.mozRequestAnimationFrame	/ja/docs/Web/API/Window/requestAnimationFrame
+/ja/docs/Web/API/window.mozRequestAnimationFrame	/ja/docs/Web/API/window/requestAnimationFrame
 /ja/docs/Web/API/window.name	/ja/docs/Web/API/Window/name
 /ja/docs/Web/API/window.navigator	/ja/docs/Web/API/Window/navigator
 /ja/docs/Web/API/window.navigator.appCodeName	/ja/docs/Web/API/Navigator/appCodeName
@@ -3920,7 +3923,7 @@
 /ja/docs/Web/API/window.personalbar	/ja/docs/Web/API/Window/personalbar
 /ja/docs/Web/API/window.prompt	/ja/docs/Web/API/Window/prompt
 /ja/docs/Web/API/window.releaseEvents	/ja/docs/Web/API/Window/releaseEvents
-/ja/docs/Web/API/window.requestAnimationFrame	/ja/docs/Web/API/Window/requestAnimationFrame
+/ja/docs/Web/API/window.requestAnimationFrame	/ja/docs/Web/API/window/requestAnimationFrame
 /ja/docs/Web/API/window.resizeBy	/ja/docs/Web/API/Window/resizeBy
 /ja/docs/Web/API/window.resizeTo	/ja/docs/Web/API/Window/resizeTo
 /ja/docs/Web/API/window.screen	/ja/docs/Web/API/Window/screen
@@ -3962,7 +3965,7 @@
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/ja/docs/conflicting/Web/Accessibility/ARIA/Roles/alert_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
-/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/ja/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/ja/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role	/ja/docs/Web/Accessibility/ARIA/Roles/group_role
@@ -4015,7 +4018,6 @@
 /ja/docs/Web/CSS/-moz-outline-style	/ja/docs/Web/CSS/outline-style
 /ja/docs/Web/CSS/-moz-zoom-in	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
-/ja/docs/Web/CSS/-ms-high-contrast	/ja/docs/Web/CSS/@media/-ms-high-contrast
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
 /ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/:-moz-locale-dir(ltr)	/ja/docs/Web/CSS/:-moz-locale-dir_ltr
@@ -4358,7 +4360,7 @@
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/ja/docs/Web/API/Canvas_API/Tutorial/Using_images
 /ja/docs/Web/Guide/HTML/Constraint_validation	/ja/docs/Web/HTML/Constraint_validation
 /ja/docs/Web/Guide/HTML/Content_categories	/ja/docs/Web/HTML/Content_categories
-/ja/docs/Web/Guide/HTML/Editable_content	/ja/docs/conflicting/Web/HTML/Global_attributes/contenteditable
+/ja/docs/Web/Guide/HTML/Editable_content	/ja/docs/Web/HTML/Global_attributes/contenteditable
 /ja/docs/Web/Guide/HTML/Event_attributes	/ja/docs/Learn/JavaScript/Building_blocks/Events
 /ja/docs/Web/Guide/HTML/Forms	/ja/docs/Learn/Forms
 /ja/docs/Web/Guide/HTML/Forms/Data_form_validation	/ja/docs/Learn/Forms/Form_validation
@@ -4392,7 +4394,7 @@
 /ja/docs/Web/HTML/Canvas	/ja/docs/Web/API/Canvas_API
 /ja/docs/Web/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/HTML/Canvas/Tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
-/ja/docs/Web/HTML/Content_Editable	/ja/docs/conflicting/Web/HTML/Global_attributes/contenteditable
+/ja/docs/Web/HTML/Content_Editable	/ja/docs/Web/HTML/Global_attributes/contenteditable
 /ja/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /ja/docs/Web/HTML/Element/Input1	/ja/docs/Web/HTML/Element/input
 /ja/docs/Web/HTML/Element/Input1/button	/ja/docs/Web/HTML/Element/input/button
@@ -4498,7 +4500,7 @@
 /ja/docs/Web/HTML/Link_types/prefetch	/ja/docs/Web/HTML/Attributes/rel/prefetch
 /ja/docs/Web/HTML/Link_types/preload	/ja/docs/Web/HTML/Attributes/rel/preload
 /ja/docs/Web/HTML/Link_types/prerender	/ja/docs/Web/HTML/Attributes/rel/prerender
-/ja/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/ja/docs/Glossary/speculative_parsing
+/ja/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/ja/docs/Glossary/Speculative_parsing
 /ja/docs/Web/HTML/Preloading_content	/ja/docs/Web/HTML/Attributes/rel/preload
 /ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/Web/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
@@ -5046,7 +5048,7 @@
 /ja/docs/XMLHttpRequest/setRequestHeader	/ja/docs/Web/API/XMLHttpRequest/setRequestHeader
 /ja/docs/XMLHttpRequest/timeout	/ja/docs/Web/API/XMLHttpRequest/timeout
 /ja/docs/XMLSerializer	/ja/docs/Web/API/XMLSerializer
-/ja/docs/XML_Introduction	/ja/docs/Web/XML/XML_Introduction
+/ja/docs/XML_Introduction	/ja/docs/Web/XML/XML_introduction
 /ja/docs/XPath	/ja/docs/Web/XPath
 /ja/docs/XPath/Axes	/ja/docs/Web/XPath/Axes
 /ja/docs/XPath/Functions	/ja/docs/Web/XPath/Functions
@@ -5179,12 +5181,12 @@
 /ja/docs/XSLTProcessor	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/XSLT_in_Gecko	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/XSLT_in_Gecko/Basic_Example	/ja/docs/Web/API/XSLTProcessor/Basic_Example
-/ja/docs/XSLT_in_Gecko/Browser_Differences	/ja/docs/Web/API/XSLTProcessor/Browser_Differences
+/ja/docs/XSLT_in_Gecko/Browser_Differences	/ja/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /ja/docs/XSLT_in_Gecko/Generating_HTML	/ja/docs/Web/API/XSLTProcessor/Generating_HTML
 /ja/docs/XSLT_in_Gecko/Introduction	/ja/docs/Web/API/XSLTProcessor/Introduction
 /ja/docs/XSLT_in_Gecko/Resources	/ja/docs/Web/API/XSLTProcessor/Resources
 /ja/docs/XSLT_in_Gecko:Basic_Example	/ja/docs/Web/API/XSLTProcessor/Basic_Example
-/ja/docs/XSLT_in_Gecko:Browser_Differences	/ja/docs/Web/API/XSLTProcessor/Browser_Differences
+/ja/docs/XSLT_in_Gecko:Browser_Differences	/ja/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /ja/docs/XSLT_in_Gecko:Generating_HTML	/ja/docs/Web/API/XSLTProcessor/Generating_HTML
 /ja/docs/XSLT_in_Gecko:Introduction	/ja/docs/Web/API/XSLTProcessor/Introduction
 /ja/docs/XSLT_in_Gecko:Resources	/ja/docs/Web/API/XSLTProcessor/Resources
@@ -5388,7 +5390,7 @@
 /ja/docs/dummySlug/Reference/Global_Objects/String/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /ja/docs/dummySlug/Reference/Global_Objects/String/toUpperCase	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-/ja/docs/dummySlug/Reference/Global_Objects/String/trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+/ja/docs/dummySlug/Reference/Global_Objects/String/trim	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 /ja/docs/dummySlug/Reference/Global_Objects/String/valueOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /ja/docs/dummySlug/Reference/Global_Objects/SyntaxError	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
 /ja/docs/dummySlug/Reference/Global_Objects/SyntaxError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError

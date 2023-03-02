@@ -1,9 +1,7 @@
 ---
 title: Consola
-slug: Web/API/Console
+slug: Web/API/console
 original_slug: Web/API/Console
-l10n:
-  sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
 
 {{APIRef("Console API")}}

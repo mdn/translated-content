@@ -31,8 +31,8 @@ original_slug: Web/Guide/HTML/Content_categories
 在滿足特定條件下，某些元素也屬這個類型：
 
 - {{HTMLElement("area")}}，如果它是 {{HTMLElement("map")}} 元素的後代。
-- {{HTMLElement("link")}}，如果[**itemprop**](/zh-TW/docs/HTML/Global_attributes#attr-itemprop) 屬性存在。
-- {{HTMLElement("meta")}}，如果[**itemprop**](/zh-TW/docs/HTML/Global_attributes#attr-itemprop) 屬性存在。
+- {{HTMLElement("link")}}，如果[**itemprop**](/zh-TW/docs/HTML/Global_attributes#itemprop) 屬性存在。
+- {{HTMLElement("meta")}}，如果[**itemprop**](/zh-TW/docs/HTML/Global_attributes#itemprop) 屬性存在。
 - {{HTMLElement("style")}}，如果 {{htmlattrxref("scoped","style")}} 屬性存在。
 
 ### 章節型內容（Sectioning content）

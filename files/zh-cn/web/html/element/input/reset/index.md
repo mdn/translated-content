@@ -1,6 +1,6 @@
 ---
 title: <input type="reset">
-slug: Web/HTML/Element/Input/reset
+slug: Web/HTML/Element/input/reset
 ---
 
 {{HTMLSidebar("Input_types")}}

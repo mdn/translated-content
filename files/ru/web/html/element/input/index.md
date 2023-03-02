@@ -1,6 +1,6 @@
 ---
 title: <input>
-slug: Web/HTML/Element/Input
+slug: Web/HTML/Element/input
 translation_of: Web/HTML/Element/input
 ---
 
