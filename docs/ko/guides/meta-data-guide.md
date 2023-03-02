@@ -30,6 +30,8 @@ The `Proxy` object enables you to create a proxy for another ...
 ---
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
+l10n:
+  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
 {{JSRef}}
@@ -44,7 +46,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 
 - sourceCommit: `en-US` 페이지의 가장 최신 40자리 hash를 명시합니다.
 
-```md
+```markdown
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
