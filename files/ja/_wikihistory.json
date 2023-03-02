@@ -31093,20 +31093,6 @@
     "modified": "2020-07-16T08:38:55.565Z",
     "contributors": ["ExE-Boss", "mfuji09"]
   },
-  "orphaned/Web/CSS/ime-mode": {
-    "modified": "2020-10-15T21:14:16.842Z",
-    "contributors": [
-      "YujiSoftware",
-      "momdo",
-      "ethertank",
-      "fscholz",
-      "Potappo",
-      "Miho",
-      "Mgjbot",
-      "Masayuki",
-      "Norah"
-    ]
-  },
   "orphaned/Web/Compatibility_FAQ": {
     "modified": "2019-03-23T23:03:33.809Z",
     "contributors": ["wtrfp"]

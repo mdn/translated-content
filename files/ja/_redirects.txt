@@ -422,7 +422,6 @@
 /ja/docs/CSS/hyphens	/ja/docs/Web/CSS/hyphens
 /ja/docs/CSS/image	/ja/docs/Web/CSS/image
 /ja/docs/CSS/image-rendering	/ja/docs/Web/CSS/image-rendering
-/ja/docs/CSS/ime-mode	/ja/docs/orphaned/Web/CSS/ime-mode
 /ja/docs/CSS/inherit	/ja/docs/Web/CSS/inherit
 /ja/docs/CSS/inheritance	/ja/docs/Web/CSS/inheritance
 /ja/docs/CSS/initial	/ja/docs/Web/CSS/initial
@@ -545,7 +544,6 @@
 /ja/docs/CSS:color	/ja/docs/Web/CSS/color
 /ja/docs/CSS:computed_value	/ja/docs/Web/CSS/computed_value
 /ja/docs/CSS:font	/ja/docs/Web/CSS/font
-/ja/docs/CSS:ime-mode	/ja/docs/orphaned/Web/CSS/ime-mode
 /ja/docs/CSS:inheritance	/ja/docs/Web/CSS/inheritance
 /ja/docs/CSS:initial_value	/ja/docs/Web/CSS/initial_value
 /ja/docs/CSS:min-width	/ja/docs/Web/CSS/min-width
@@ -4174,7 +4172,6 @@
 /ja/docs/Web/CSS/image/image()	/ja/docs/Web/CSS/image/image
 /ja/docs/Web/CSS/image/image-set()	/ja/docs/Web/CSS/image/image-set
 /ja/docs/Web/CSS/image/paint()	/ja/docs/Web/CSS/image/paint
-/ja/docs/Web/CSS/ime-mode	/ja/docs/orphaned/Web/CSS/ime-mode
 /ja/docs/Web/CSS/linear-gradient	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/linear-gradient()	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/margin-new	/ja/docs/Web/CSS/margin
