@@ -1,8 +1,9 @@
 ---
 title: <input type="number">
-slug: Web/HTML/Element/Input/number
+slug: Web/HTML/Element/input/number
 translation_of: Web/HTML/Element/input/number
 ---
+
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} элементы типа **`number`** используются для того, чтобы дать возможность пользователю ввести число. У них есть встроенная валидация, запрещающая вводить нечисловые значения. Браузер может предоставить возможность увеличить или уменьшить значение специальными стрелками, используя мышь или просто двигая пальцем по экрану.

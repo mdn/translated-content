@@ -1,6 +1,6 @@
 ---
 title: Console.timeEnd
-slug: Web/API/Console/timeEnd
+slug: Web/API/console/timeEnd
 tags:
   - API
   - Method
@@ -9,6 +9,7 @@ tags:
   - консоль
 translation_of: Web/API/Console/timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 Останавливает таймер, который был запущен до этого через функцию {{domxref("console.time()")}}.

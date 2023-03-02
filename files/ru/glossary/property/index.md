@@ -1,6 +1,6 @@
 ---
 title: Свойство
-slug: Glossary/property
+slug: Glossary/Property
 tags:
   - Глоссарий
   - Неоднозначность
