@@ -1,5 +1,5 @@
 ---
-title: HTTP 客户端提示（Clinet Hints）
+title: HTTP 客户端提示（Clinet Hint）
 slug: Web/HTTP/Client_hints
 ---
 
