@@ -1,6 +1,7 @@
 ---
 title: Microsoft CSS 拡張
-slug: Web/CSS/Microsoft_Extensions
+slug: orphaned/Web/CSS/Microsoft_Extensions
+original_slug: Web/CSS/Microsoft_Extensions
 ---
 
 {{CSSRef}}

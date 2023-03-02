@@ -1,6 +1,6 @@
 ---
 title: Router (ルーター)
-slug: Glossary/routers
+slug: Glossary/Routers
 original_slug: Glossary/ルーター
 ---
 

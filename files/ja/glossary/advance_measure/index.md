@@ -1,8 +1,6 @@
 ---
 title: Advance measure
-slug: Glossary/advance_measure
-l10n:
-  sourceCommit: 73f237cb0643ee0c4dadee33b53fd5ec307f1502
+slug: Glossary/Advance_measure
 ---
 
 **advance measure** は字体がとるすべての間隔で、記述方向（横書き・縦書き）によって水平方向または垂直方向の間隔を表します。カーソルがある文字の手前から背後までを進む距離と等しいです。

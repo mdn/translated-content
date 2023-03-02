@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: form ロール'
-slug: Web/Accessibility/ARIA/Roles/Form_Role
+slug: Web/Accessibility/ARIA/Roles/form_role
 ---
 
 フォーム (`form`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、HTML のフォームと同等の機能を提供するページ上の要素のグループを識別するために使用できます。

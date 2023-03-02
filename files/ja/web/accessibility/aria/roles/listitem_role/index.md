@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: listitem ロール'
-slug: Web/Accessibility/ARIA/Roles/Listitem_role
+slug: Web/Accessibility/ARIA/Roles/listitem_role
 ---
 
 ARIA のリスト項目 (`listitem`) ロールは、項目のリスト内の項目を識別するために使用できます。 これは、通常、リストコンテナーを識別するために使用するリスト (`list`) ロールと組み合わせて使用します。

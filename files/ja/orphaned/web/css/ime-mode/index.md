@@ -1,8 +1,7 @@
 ---
 title: ime-mode
-slug: Web/CSS/ime-mode
-l10n:
-  sourceCommit: fb2af1f15456199685a9f4fbaf8c9d003a2bf91f
+slug: orphaned/Web/CSS/ime-mode
+original_slug: Web/CSS/ime-mode
 ---
 
 {{CSSRef}} {{deprecated_header}}

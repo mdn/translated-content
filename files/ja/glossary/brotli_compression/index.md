@@ -1,8 +1,6 @@
 ---
 title: Brotli
-slug: Glossary/brotli_compression
-l10n:
-  sourceCommit: a0e987d407b31560bde1f982520ee10103db4ba0
+slug: Glossary/Brotli_compression
 ---
 
 **Brotli** は、汎用の可逆圧縮アルゴリズムです。
