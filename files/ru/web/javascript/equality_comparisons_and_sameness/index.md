@@ -186,11 +186,11 @@ function attemptMutation(v) {
 
 Именно для сравнения нового и текущего неизменяемых свойств используется сравнение одинаковых величин, представленное методом {{jsxref("Object.is")}}.
 
-## Равенство с одинаковым значением и нулем
+## Равенство одинаковых величин и нулей
 
-Аналогично равенству с одинаковым значением, но +0 и -0 считаются равными.
+Аналогично равенству одинаковых величин, но +0 и -0 считаются равными.
 
-Равенство с одинаковым значением и нулем не предоставляется как JavaScript API, но может быть реализовано с помощью пользовательского кода:
+Равенство одинаковых величин и нулей не предоставляется как JavaScript API, но может быть реализовано с помощью пользовательского кода:
 
 ```js
 function sameValueZero(x, y) {
@@ -202,7 +202,7 @@ function sameValueZero(x, y) {
 }
 ```
 
-Нулевое значение с одинаковым значением отличается от строгого равенства только тем, что рассматривает `NaN` как эквивалент, и отличается от равенства с одинаковым значением только тем, что рассматривает `-0` как эквивалент `0`. Это обычно приводит к наиболее разумному поведению во время поиска, особенно при работе с `NaN`. Он используется с помощью [`Array.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), [`TypedArray.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes), также как [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) и [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) методы сравнения равенства ключей.
+_Равенство одинаковых величин и нулей_ отличается от _строгого равенства_ тем, что принимает каждое значение `NaN` равным любому другому значению `NaN`, а от _равенства одинаковых величин_ тем, что принимает `-0` равным `0`. Подобное поведение обычно оказывается самым уместным при поиске в списках, особенно при работе с `NaN`. Данная стратегия сравнения используется в методах [`Array.prototype.includes()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), [`TypedArray.prototype.includes()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes), а так же в [`Map`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Map) и [`Set`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set) для оценки равенства ключей.
 
 ## Спецификации для равенства, строгого равенства и равенства одинаковых величин
 
@@ -243,11 +243,11 @@ function sameValueZero(x, y) {
 | `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
 | `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`       |
 
-### Когда использовать Object.is (), а когда ===
+### Когда использовать Object.is(), а когда ===
 
-В общем, единственный раз, когда {{jsxref("Object.is")}} особое поведение по отношению к нулям, вероятно, будет представлять интерес при реализации определенных схем метапрограммирования, особенно в отношении дескрипторов свойств, когда желательно, чтобы ваша работа отражала некоторые характеристики {{jsxref("Object.defineProperty")}}. Если ваш вариант использования этого не требует, рекомендуется избегать {{jsxref("Object.is")}} и вместо этого используйте [`===`](/en-US/docs/Web/JavaScript/Reference/Operators). Даже если ваши требования предполагают сравнение между двумя значениями {{jsxref("NaN")}}, равными `true`, как правило, проще выполнить проверку {{jsxref("NaN")}} в специальном случае (используя метод {{jsxref("isNaN")}} доступно в предыдущих версиях ECMAScript), чем выяснить, как окружающие вычисления могут повлиять на знак любых нулей, с которыми вы сталкиваетесь при сравнении.
+Особое поведение {{jsxref("Object.is")}} по отношению к нулям, вероятно, будет представлять интерес при реализации определенных схем метапрограммирования, особенно в отношении дескрипторов свойств, когда желательно, чтобы ваш алгоритм имел такое же поведение, как {{jsxref("Object.defineProperty")}}. В случае, если вам этого не требуется, рекомендуется избегать {{jsxref("Object.is")}} и вместо этого использовать [`===`](/ru/docs/Web/JavaScript/Reference/Operators). Как правило, даже при необходимости сравнения {{jsxref("NaN")}}-значений, эффективнее выполнить проверку таких значений отдельно, при помощи метода {{jsxref("isNaN")}}, чем выяснять, как окружающие вычисления могут повлиять на знаки нулей и как это отразится на вашем алгоритме.
 
-Вот неполный список встроенных методов и операторов, которые могут привести к тому, что различие между `-0` и `+0` проявится в вашем коде:
+Вот неполный список встроенных методов и операторов, при использовании которых, различие между `-0` и `+0` может оказаться важным для вашего кода:
 
 - [`-` (unary negation)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 
@@ -257,7 +257,7 @@ function sameValueZero(x, y) {
     const stoppingForce = obj.mass * -obj.velocity;
     ```
 
-    Если `obj.velocity` равно `0` (или вычисляется до `0`), в этом месте вводится `-0` и распространяется в `stoppingForce`.
+    Если `obj.velocity` равно `0` (или вычисляется как `0`), в этом месте возникает `-0` и присваивается в `stoppingForce`.
 
 - {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
   - : In some cases, it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
