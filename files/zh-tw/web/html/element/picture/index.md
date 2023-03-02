@@ -64,7 +64,7 @@ slug: Web/HTML/Element/picture
 
 ### srcset 屬性
 
-The [{{htmlattrdef("srcset")}}](/zh-TW/docs/Web/HTML/Element/source#attr-srcset) 屬性用來提供根據大小區分的可能圖片清單。
+[`srcset`](/zh-TW/docs/Web/HTML/Element/source#srcset) 屬性用來提供根據大小區分的可能圖片清單。
 
 它是由逗號分隔的圖片描述句清單組成的。每一個圖片描述句是由該圖片的 URL 以及以下描述組成（擇一）：
 
