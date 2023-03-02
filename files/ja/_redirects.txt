@@ -4094,7 +4094,6 @@
 /ja/docs/Web/CSS/List_of_Proprietary_CSS_Features	/ja/docs/Web/CSS/Reference
 /ja/docs/Web/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Media/Visual	/ja/docs/Web/CSS/@media
-/ja/docs/Web/CSS/Microsoft_Extensions	/ja/docs/orphaned/Web/CSS/Microsoft_Extensions
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_Motion_Path
 /ja/docs/Web/CSS/Other_Resources	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport	/ja/docs/Web/CSS
