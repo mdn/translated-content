@@ -19,7 +19,7 @@ slug: Glossary/Falsy
 | {{Glossary("null")}}        | [null](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 值——任意值缺失。                                                                                                                                          |
 | {{Glossary("undefined")}}   | [undefined](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 值——初始值。                                                                                                                                |
 | {{Glossary("NaN")}}         | [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值——非数值。                                                                                                                                                   |
-| {{domxref("document.all")}} | 当且仅当对象具有 [\[\[IsHTMLDDA\]\]](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot) 内部插槽时，它才是假值。这个槽只存在于  {{domxref("document.all")}} 中，不能用 JavaScript 来设置。 |
+| {{domxref("document.all")}} | 当且仅当对象具有 [\[\[IsHTMLDDA\]\]](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot) 内部插槽时，它才是假值。这个槽只存在于 {{domxref("document.all")}} 中，不能用 JavaScript 来设置。 |
 
 ## 示例
 
