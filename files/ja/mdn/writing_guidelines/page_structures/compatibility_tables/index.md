@@ -34,7 +34,7 @@ BCD データを MDN ページに取り込むには、BCD ソースファイル�
 ---
 title: AbortController
 slug: Web/API/AbortController
-# …（略）…
+page-type: web-api-interface
 browser-compat: api.AbortController
 ---
 ```
@@ -47,7 +47,7 @@ browser-compat: api.AbortController
 ---
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
-# …（略）…
+page-type: web-api-overview
 browser-compat:
   - api.MessageChannel
   - api.MessagePort
