@@ -77,7 +77,7 @@ document.getElementById("lyrics").textContent ||= "没有歌词。";
 ## 参见
 
 - [逻辑或（||）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [按位或赋值（`|=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - {{Glossary("Truthy","真值")}}
 - {{Glossary("Falsy","假值")}}
