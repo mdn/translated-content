@@ -88,6 +88,29 @@ forEach(function(element, index, array) { /* … */ }, thisArg)
 >
 > 译者注：只要条件允许，也可以使用 {{jsxref("Array.prototype.filter()", "filter()")}} 提前过滤出需要遍历的部分，再用 `forEach()` 处理。
 
+
+
+`forEach()`方法支持同步函数 - 所以它不会等待promise执行完成。当你使用promise（或者async/await）作为`forEach`的回调函数时，请确保你知道自己在做什么。
+
+```js
+const ratings = [5, 4, 5];
+let sum = 0;
+
+const sumFunction = async (a, b) => a + b;
+
+ratings.forEach(async (rating) => {
+  sum = await sumFunction(sum, rating);
+});
+
+console.log(sum);
+// Naively expected output: 14
+// Actual output: 0
+
+```
+如果希望按顺序的或者并发的执行一些列操作，可以[查看promise 组合](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#组合)。
+
+
+
 ## 示例
 
 ### 不对未初始化的值进行任何操作（稀疏数组）
