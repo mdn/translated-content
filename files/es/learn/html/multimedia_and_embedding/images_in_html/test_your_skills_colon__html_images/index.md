@@ -26,7 +26,7 @@ Prueba a actualizar este ejemplo vivo de código para recrear el ejemplo finaliz
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images1.html", '100%', 700)}}
 
-> **Importante:**
+> **Observación:**
 >
 > [Descarga el punto inicial para esta actividad](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images1-download.html) para trabajar desde tu propio editor o en un editor en línea.
 
@@ -34,11 +34,11 @@ Prueba a actualizar este ejemplo vivo de código para recrear el ejemplo finaliz
 
 En esta tarea, actualmente ya tienes una imagen con todas sus características, pero nos gustaría que agregaras una etiqueta flotante que aparece cuando pasas el ratón por encima. Deberías colocar la información más apropiada en dicha etiqueta.
 
-intenta actualizar el siguiente código vivo para recrear el ejemplo finalizado:
+Intenta actualizar el siguiente código vivo para recrear el ejemplo finalizado:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images2.html", '100%', 1000)}}
 
-> **Importante:**
+> **Observación:**
 >
 > [Descarga el punto inicial para esta actividad](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images2-download.html) para trabajar desde tu propio editor o en un editor en línea.
 
@@ -46,11 +46,11 @@ intenta actualizar el siguiente código vivo para recrear el ejemplo finalizado:
 
 En esta actividad, se te proporciona una imagen con todas sus características así como un texto descriptivo. Lo que debes hacer es agregar elementos que asocien a la imagen con la descripción.
 
-intenta actualizar el siguiente código vivo para recrear el ejemplo finalizado:
+Intenta actualizar el siguiente código vivo para recrear el ejemplo finalizado:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images3.html", '100%', 1000)}}
 
-> **Importante:**
+> **Observación:**
 >
 > [Descarga el punto inicial para esta actividad](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images3-download.html) para trabajar desde tu propio editor o en un editor en línea.
 
@@ -61,7 +61,7 @@ Puedes practicar estos ejemplos en los editores interactivos mencionados anterio
 Si deseas que tu trabajo sea asesorado o estás atorado y necesitas ayuda:
 
 1. Pon tu trabajo en un editor en línea que se pueda compartir, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por tu cuenta o usar los archivos iniciales que se proporcionan en las secciones de arriba.
-2. Escribe una publicación en la que pides asesoría y/o ayuda en el [foro de MDN Discourse en la categoría de aprendizaje](https://discourse.mozilla.org/c/mdn/learn/250). Tu publicación debe incluir:
+2. Escribe una publicación en la que pides asesoría y/o ayuda en el [foro de Discourse de MDN  en la categoría de aprendizaje](https://discourse.mozilla.org/c/mdn/learn/250). Tu publicación debe incluir:
 
    - Un texto descriptivo, como "Necesito asesoría para la prueba de habilidad de imágenes en HTML, actividad 1"
    - Detalles de lo que ya has intentado y lo que quieres que nosotros hagamos; por ejemplo, dinos si estás atorado y necesitas ayuda o quieres una evaluación.
