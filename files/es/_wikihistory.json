@@ -4880,6 +4880,10 @@
       "maedca"
     ]
   },
+  "Web/API/Navigator/hardwareConcurrency": {
+    "modified": "2020-10-15T22:26:06.271Z",
+    "contributors": ["Gnuxdar"]
+  },
   "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2019-03-23T23:53:04.318Z",
     "contributors": ["fscholz", "khalid32", "Nukeador", "HenryGR", "Mgjbot"]
@@ -15578,10 +15582,6 @@
   },
   "orphaned/Web/API/NavigatorConcurrentHardware": {
     "modified": "2020-10-15T22:25:58.692Z"
-  },
-  "orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency": {
-    "modified": "2020-10-15T22:26:06.271Z",
-    "contributors": ["Gnuxdar"]
   },
   "orphaned/Web/API/NavigatorLanguage": {
     "modified": "2019-03-23T22:46:20.556Z",
