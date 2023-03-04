@@ -214,7 +214,10 @@ HTML ofrece una selección de elementos que pueden ayudar a crear objetos de int
 
 Los Componentes Web son una tecnología relacionada con HTML que hacen que sea posible, en esencia, crear y personalizar elementos como si fueran HTML normal. Además, pueden crear versiones personalizadas de los elementos HTML estándar.
 
-{{HTMLRefTable({"include":["Web Components"],"elements":["shadow"]})}}
+| Element | Description |
+| ------- | ----------- |
+| {{HTMLElement("slot")}}     | **El elemento HTML `<slot>`** —parte de la suite tecnologica [Web Components](/es/docs/Web/Web_Components) — es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos. |
+| {{HTMLElement("template")}} | El **elemento** **HTML `<template>`** es un mecanismo para mantener el contenido {{Glossary("HTML")}} del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript. |
 
 ## Elementos obsoletos y en desuso
 
