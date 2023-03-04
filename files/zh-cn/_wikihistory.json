@@ -33659,10 +33659,6 @@
       "xgqfrms-GitHub"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Reflect": {
-    "modified": "2020-09-02T03:21:36.745Z",
-    "contributors": ["tita0x00"]
-  },
   "orphaned/Web/JavaScript/Reference/Errors/Dead_object": {
     "modified": "2020-03-12T19:46:28.473Z",
     "contributors": ["WayneCui"]

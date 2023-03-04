@@ -2485,8 +2485,8 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExtensions	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Reflect
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_和_Object_方法	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Reflect
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_和_Object_方法	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/prototype	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set
