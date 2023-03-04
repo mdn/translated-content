@@ -17,112 +17,203 @@ translation_of: Web/HTML/Element
 
 Основные элементы являются основой любого HTML документа. Вы увидите эти элементы в исходном коде для всех веб-страниц после задания типа документа на первой строке на странице. DOCTYPE определяет, какую версию (X) HTML эта страница использует. Элементы страницы находятся между открывающим тегом \<HTML> и закрывающим \</ HTML>. Элемент{{HTMLElement("html")}} называется корневым элементом.
 
-{{HTMLRefTable("HTML Root Element")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("html")}} | **HTML-элемент `<html>`** представляет собой корень (элемент верхнего уровня) HTML-документа, поэтому его так же называют корневым элементом. Все другие элементы должны быть потомками этого элемента (должны находиться внутри него). |
 
 ## Метаданные документа
 
 Метаданные содержат информацию о странице. Они включают в себя информацию о стилях, скрипты и данные, чтобы помочь программному обеспечению (поисковые системы, {{Glossary("Browser","браузеры")}} и т.д.) использовать и отображать страницу. Метаданные для стилей и скрипты могут быть определены на странице или ссылке на другой файл, который имеет информацию.
 
-{{HTMLRefTable("HTML Document Metadata")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("base")}}  | **HTML-элемент** **`<base>`** определяет основной адрес (URL), используемый для всех относительных адресов (URLs) в документе. Может быть только один **`<base>`** элемент в одном документе. |
+| {{HTMLElement("head")}}  | **HTML-элемент `<head>`** содержит машиночитаемую информацию ({{glossary("metadata")}}) о документе, например его [заголовок](/ru/docs/Web/HTML/Element/title), [скрипты](/ru/docs/Web/HTML/Element/script) и [страницы стилей](/ru/docs/Web/HTML/Element/style). |
+| {{HTMLElement("link")}}  | **Элемент HTML - Ссылка на Внешний Ресурс (`<link>`)** определяет отношения между текущим документом и внешним ресурсом. Этот элемент чаще всего используется для ссылки на {{Glossary("CSS", "stylesheets")}}, а также для создания иконок сайта (как для иконок в стиле "favicon", так и для иконок домашних экранов и приложений мобильных устройств) среди прочего. |
+| {{HTMLElement("meta")}}  | **HTML-элемент `<meta>`** представляет такие {{Glossary("Metadata","метаданные")}}, которые не могут быть представлены другими HTML-метатегами, такими как {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} или {{HTMLElement("title")}}. |
+| {{HTMLElement("style")}} | _HTML-элемент **\<style>**_ содержит стилевую информацию для документа или его части. По умолчанию стилевые инструкции внутри этого элемента считаются написанными на [CSS](/ru/docs/Web/CSS). |
+| {{HTMLElement("title")}} | **HTML-элемент заголовка** (**`<title>`**) определяет заголовок документа, который отображается в заголовке окна {{glossary("Browser", "браузера")}} или на вкладке страницы. Он содержит только текст, а теги внутри элемента игнорируются. |
 
 ## Sectioning root
 
-{{HTMLRefTable("Sectioning Root Element")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("body")}} | **HTML-элемент `<body>`** представляет собой контент (содержимое) документа HTML. В документе может быть только один элемент `<body>`. |
 
 ## Секционирование содержания
 
 Секционирование содержания элементов позволяет разложить содержимое документа на логические части. Используйте секционирование элементов для создания общих черт содержания страницы, включая шапку и подвал и заголовочные элементы для обозначения разделов.
 
-{{HTMLRefTable("HTML Sections")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("address")}}                                                                                                                                                                                                                                                                                                                           | **HTML- тег `<address>`** задаёт контактные данные для ближайшего родительского {{HTMLElement("article")}} или {{HTMLElement("body")}} ; В последнем случае применяется ко всему документу, визуально выделяется курсивом. |
+| {{HTMLElement("article")}}                                                                                                                                                                                                                                                                                                                           | **HTML-элемент `<article>`** представляет самостоятельную часть документа, страницы, приложения или сайта, предназначенную для независимого распространения или повторного использования. Этот элемент может представлять статью на форуме, статью в журнале или газете, запись в блоге или какой-либо другой самостоятельный фрагмент содержимого. |
+| {{HTMLElement("aside")}}                                                                                                                                                                                                                                                                                                                             | **HTML-элемент `<aside>`** представляет собой часть документа, чьё содержимое только косвенно связанно с основным содержимым документа. Чаще всего представлен в виде боковой панели, сносок или меток. |
+| {{HTMLElement("footer")}}                                                                                                                                                                                                                                                                                                                            | **HTML-элемент** **`<footer>`** представляет собой нижний колонтитул (футер, подвал) для своего ближайшего [секционного контента](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Задание_разделов_в_HTML5) или [секционного корня](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Корни_задания_разделов). Футер обычно содержит информацию об авторе раздела, информацию об авторском праве или ссылки на связанные документы. |
+| {{HTMLElement("header")}}                                                                                                                                                                                                                                                                                                                            | **HTML-элемент `<header>`** представляет собой вводный контент, обычно группу вводных или навигационных средств. Он может содержать другие элементы-заголовки, а также логотип, форму поиска, имя автора и другие элементы. |
+| [`<h1>`](/ru/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/ru/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/ru/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/ru/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/ru/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/ru/docs/Web/HTML/Element/Heading_Elements) | **HTML-элементы `<h1>`–`<h6>`** представляют собой 6 уровней заголовков секций. `<h1>` это наибольший заголовок и `<h6>` - наименьший |
+| {{HTMLElement("main")}}                                                                                                                                                                                                                                                                                                                              | **HTML-элемент `<main>`** предназначен для основного контента (содержимого) {{HTMLElement("body")}} документа (страницы). Основной контент состоит из контента, который непосредственно относится к главной теме документа или её развивает. |
+| {{HTMLElement("nav")}}                                                                                                                                                                                                                                                                                                                               | **HTML-элемент `<nav>`** определяет отдельную секцию документа, назначение которой обозначение ссылок навигации (как внутри текущего документа, так и ведущих на другую страницу). В качестве примера такой секции можно привести меню, якорные ссылки. |
+| {{HTMLElement("section")}}                                                                                                                                                                                                                                                                                                                           | **HTML-элемент `<section>`** представляет собой автономный раздел — который не может быть представлен более точным по семантике элементом — внутри HTML-документа. Как правило, но не всегда, разделы имеют заголовок. |
 
 ## Текстовое содержание
 
 Используйте текстовые элементы HTML для организации блоков или разделов содержания, размещённые между тегами открытия \<body> и закрытия \</body>. Важное значение для {{Glossary("accessibility")}} и {{Glossary("SEO")}}, чтобы эти элементы определили цель или структуру этого контента.
 
-{{HTMLRefTable("HTML Grouping Content")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("blockquote")}} | **HTML-элемент `<blockquote>`** (от англ. _Block Quotation_) указывает на то, что заключённый в нем текст является развёрнутой цитатой. Обычно он (текст) визуально выделяется наклонным (смотри [Примечание](/ru/docs/HTML/Element/blockquote#Notes), где говорится о том, как это изменить). URI на источник цитаты можно указать в атрибуте **cite**, тогда как текстовое представление источника может быть задано элементом {{HTMLElement("cite")}}. |
+| {{HTMLElement("dd")}}         | **HTML-элемент `<dd>`** (_от англ. Description Details_) предоставляет подробности или определение предшествующего термина ({{HTMLElement("dt")}}) в списке определений ({{HTMLElement("dl")}}). |
+| {{HTMLElement("div")}}        | **Элемент разделения контента HTML** (**`<div>`**) является универсальным контейнером для [потокового контента](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент). Он не влияет на контент или макет до тех пор, пока не будет стилизован с помощью {{glossary("CSS")}}. |
+| {{HTMLElement("dl")}}         | **HTML-элемент `<dl>`** (_от англ._ _Description List_) представляет собой список описаний. Этот элемент служит контейнером для списка пар терминов (определяемых элементом {{HTMLElement("dt")}}) и их описаний (определяемых элементами {{HTMLElement("dd")}}). Этот элемент обычно используют при создании глоссария или для отображения метаданных (списка пар ключ-значение). |
+| {{HTMLElement("dt")}}         | **HTML-элемент `<dt>`** который определяет термин в описании или списке определений, как таковой должен использоваться внутри элемента {{HTMLElement("dl")}} . Обычно за ним следует элемент {{HTMLElement("dd")}}. Кроме того, несколько элементов `<dt>` идущие друг за другом будут содержать своё определение в следующем идущем за ним элементом{{HTMLElement("dd")}}. |
+| {{HTMLElement("figcaption")}} | **HTML-элемент `<figcaption>` или элемент подписи иллюстрации** представляет собой подпись (заголовок) или легенду, описывающую остальную часть содержимого родительского элемента {{HTMLElement("figure")}}. |
+| {{HTMLElement("figure")}}     | **HTML-элемент `<figure>` (Иллюстрация с необязательной подписью)** представляет самостоятельный контент, часто с подписью (заголовком), которая указывается с помощью элемента ({{HTMLElement("figcaption")}}). Диаграмма и её подпись представляет собой единое целое. |
+| {{HTMLElement("hr")}}         | **HTML `<hr>` элемент** служит для тематического разделения абзацев.Рисует горизонтальную прямую |
+| {{HTMLElement("li")}}         | **HTML-элемент `<li>`** используется для создания элементов списка. Он также должен находиться в родительском элементе: упорядоченном списке ({{HTMLElement("ol")}}), неупорядоченном списке ({{HTMLElement("ul")}}), или меню ({{HTMLElement("menu")}}). В меню и неупорядоченных списках, элементы списка обычно отображаются с маркерами в виде круга. В упорядоченных списках, они обычно отображаются с маркерами в виде возрастающего счётчика слева, например числа или буквы. |
+| {{HTMLElement("menu")}}       | **HTML-элемент `<menu>`** представляет группу команд, которые пользователь может выполнить или активировать. Он включает как меню-списки, которые могут отображаться в верхней части экрана, так и [контекстные меню](/ru/docs/Web/HTML/Element/menu#Context_menu), например, такие, что могут появиться под кнопкой после нажатия. |
+| {{HTMLElement("ol")}}         | **HTML-элемент `<ol>`** используется для упорядоченного списка — в частности для пронумерованного списка. |
+| {{HTMLElement("p")}}          | **HTML-элемент `<p>`** представляет собой абзац. Абзацы обычно представлены в визуальной среде в виде блоков текста, отделённых от соседних блоков пустыми строками и/или отступом в первой строке, кроме этого HTML-абзацы могут представлять собой структурную группировку однотипного содержимого, например изображений или полей формы. |
+| {{HTMLElement("pre")}}        | **Элемент HTML `<pre>`** представляет собой предварительно отформатированный текст, который должен быть представлен точно так, как написано в HTML-файле. Текст обычно отображается с использованием непропорционального ("[monospace](/ru/docs/XUL/Style/monospace)") шрифта. Пробелы внутри этого элемента отображаются как записанные. |
+| {{HTMLElement("ul")}}         | **HTML-элемент `<ul>`** используется для неупорядоченного списка - в частности для маркированного списка. |
 
 ## Встроенные текстовые семантики
 
 Используйте встроенную в HTML текстовую семантику, чтобы определить смысл, структуру или стиль текста, линий или части текста.
 
-{{HTMLRefTable("HTML Text-Level Semantics")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("a")}}      | HTML-элемент `<a>` определяет гиперссылку для перехода на определённое место на странице или на другую страницу в Интернете. Также он может быть использован (в устаревшем варианте) для создания якоря — это место назначения для гиперссылок внутри страницы: так ссылки не ограничены только в перемещении между страницами. |
+| {{HTMLElement("abbr")}}   | **Элемент HTML «аббревиатура» (`<abbr>`)** представляет собой аббревиатуру и, опционально, может показывать её расшифровку. Расшифровка записывается в атрибут {{htmlattrxref("title")}}. Иные значения `title`, кроме расшифровки аббревиатуры не допускаются. |
+| {{HTMLElement("b")}}      | **HTML-элемент `<b>`** является частью текста стилистически отличающейся от нормального текста, не носящий какого-либо специального значения или важности, и как правило выделен жирным шрифтом. |
+| {{HTMLElement("bdi")}}    | **HTML-элемент `<bdi>`** (_bidirectional isolation_, или изоляция двунаправленности \[текста]) изолирует от окружающего текста текстовый фрагмент, направление в котором может отличаться от направления окружающего текста (но не обязательно отличается). |
+| {{HTMLElement("bdo")}}    | **HTML - элемент переопределения двунаправленного текста** (**`<bdo>`**) переопределяет текущее направление текста так, что текст внутри отображается в другом направлении. |
+| {{HTMLElement("br")}}     | **HTML-элемент `<br>`** устанавливает перевод строки в тексте (возврат каретки). Он полезен при написании поэмы или адреса, где важно деление на строки. |
+| {{HTMLElement("cite")}}   | **HTML-элемент \<cite>** (_от англ. Citation_) представляет из себя ссылку на источник цитаты. Он должен включать в себя название произведения или URL, который может быть в сокращённом виде в соответствии с правилами, используемых для добавления метаданных цитирования. |
+| {{HTMLElement("code")}}   | **Элемент HTML `<code>`** отображает его содержимое в стиле, предназначенном для указания на то, что текст является коротким фрагментом компьютерного кода. По умолчанию текст содержимого отображается с использованием шрифта монопространства по умолчанию {{Glossary("user agent", "пользовательского агента")}}. |
+| {{HTMLElement("data")}}   | **HTML-элемент `<data>`** связывает данное содержимое с машиночитаемым представлением. Если содержимое относится к времени или дате, необходимо использовать элемент {{HTMLElement("time")}}. |
+| {{HTMLElement("dfn")}}    | **Элемент определения HTML** (**_\<dfn>_**) используется для указания термина, определяемого в контексте фразы или предложения. Элемент{{HTMLElement("p")}}, пара{{HTMLElement("dt")}}/{{HTMLElement("dd")}} или {{HTMLElement("section")}} элемент, который является ближайшим предком `<dfn>` считается определением термина. |
+| {{HTMLElement("em")}}     | **HTML `<em>` элемент** отмечает акцентируемый текст. Элемент `<em>` может быть вложенным, причём каждый уровень вложенности указывает на большую степень акцента. |
+| {{HTMLElement("i")}}      | Represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others. Historically, these have been presented using italicized type, which is the original source of the `<i>` naming of this element. |
+| {{HTMLElement("kbd")}}    | **HTML-элемент ввода с клавиатуры** (**`<kbd>`**) указывает на то, что текст внутри элемента описывает пользовательский ввод с клавиатуры, голосовой ввод или ввод с использованием любого другого типа устройств ввода текста. По общему соглашению, {{Glossary("user agent")}} использует моноширинный шрифт для отображения содержимого элемента `<kbd>` по умолчанию, хотя это и не указывается HTML стандартом явно. |
+| {{HTMLElement("mark")}}   | **HTML** **элемент `<mark>` **представляет текст, выделенный в справочных целях из-за своей _актуальности_ в определённом контексте. Например, он может быть использован на странице с результатом поиска, в которой выделяется каждый экземпляр искомого слова. |
+| {{HTMLElement("q")}}      | Indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. This element is intended for short quotations that don't require paragraph breaks; for long quotations use the {{HTMLElement("blockquote")}} element. |
+| {{HTMLElement("rp")}}     | Used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the {{HTMLElement("ruby")}} element. One `<rp>` element should enclose each of the opening and closing parentheses that wrap the {{HTMLElement("rt")}} element that contains the annotation's text. |
+| {{HTMLElement("rt")}}     | Specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography. The `<rt>` element must always be contained within a {{HTMLElement("ruby")}} element. |
+| {{HTMLElement("ruby")}}   | `HTML-элемент<ruby>` предназначен для добавления небольшой аннотации сверху или снизу от заданного текста. Такая форма записи преимущественно используется для идеографической письменности вроде китайского языка, но может применяться и для других языков, если требуется написать один текст над другим. |
+| {{HTMLElement("s")}}      | Renders text with a strikethrough, or a line through it. Use the `<s>` element to represent things that are no longer relevant or no longer accurate. However, `<s>` is not appropriate when indicating document edits; for that, use the del and ins elements, as appropriate. |
+| {{HTMLElement("samp")}}   | Used to enclose inline text which represents sample (or quoted) output from a computer program. Its contents are typically rendered using the browser's default monospaced font (such as [Courier](<https://en.wikipedia.org/wiki/Courier_(typeface)>) or Lucida Console). |
+| {{HTMLElement("small")}}  | Represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from `small` to `x-small`. |
+| {{HTMLElement("span")}}   | **HTML-элемент `<span>`** является основным строковым контейнером для фразового контента, который, по существу, ничего не представляет. Он может использоваться для группировки элементов в целях стилизации (использование атрибутов {{htmlattrxref("class")}} или {{htmlattrxref("id")}}) или потому, что они имеет общие значения атрибутов, например {{htmlattrxref("lang")}}. Он должен быть использован только когда нет другого подходящего по семантике элемента. `<span>` очень похож на элемент {{HTMLElement("div")}}, но {{HTMLElement("div")}} является [блочным](/ru/docs/Web/HTML/Block-level_elements) элементом, в то время как `<span>` является [строчным](/ru/docs/Web/HTML/Строчные_Элементы). |
+| {{HTMLElement("strong")}} | Элемент **сильной значимости** (**`<strong>`)** указывает на то, что его содержание имеет большое значение, серьёзность или срочность. Браузеры обычно отображают содержимое жирным шрифтом. |
+| {{HTMLElement("sub")}}    | Specifies inline text which should be displayed as subscript for solely typographical reasons. Subscripts are typically rendered with a lowered baseline using smaller text. |
+| {{HTMLElement("sup")}}    | Specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text. |
+| {{HTMLElement("time")}}   | **Элемент HTML** **`<time>`** используется для представления либо времени в 24-часовом формате, либо точной даты по [Григорианскому календарю](http://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C) (с опциональным указанием времени и часового пояса). |
+| {{HTMLElement("u")}}      | The HTML **Unarticulated Annotation Element** (**`<u>`**) represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS. |
+| {{HTMLElement("var")}}    | Represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent. |
+| {{HTMLElement("wbr")}}    | **Элемент HTML `<wbr>`** предоставляет возможность переноса слова – позицию в тексте, где браузер может по желанию разбить строку, в противном случае его правила разрыва строки не будут создавать разрыв в этом месте. |
 
 ## Изображения и мультимедиа
 
 HTML позволяет использовать различные мультимедийные ресурсы, такие как изображения, аудио и видео.
 
-{{HTMLRefTable("multimedia")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("area")}}  | **HTML `<area>` элемент** определяет активную область на изображении и, при желании, связывает её с {{Glossary("Hyperlink", "гипертекстовой ссылкой")}}. Этот элемент используется только внутри элемента {{HTMLElement("map")}}.{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}} |
+| {{HTMLElement("audio")}} | **HTML-элемент `<audio>`** используется для встраивания звукового контента в документ. Он может содержать один или более источников аудио, представленных с помощью атрибута `src` или элемента {{HTMLElement("source")}} – браузер выберет один наиболее подходящий. Он так же может предназначаться для потокового мультимедиа, используя интерфейс {{domxref("MediaStream")}}. |
+| {{HTMLElement("img")}}   | **HTML-элемент `<img>`** встраивает изображение в документ. Это [замещаемый элемент](/ru/docs/Web/CSS/Замещаемый_элемент). |
+| {{HTMLElement("map")}}   | **HTML-элемент `<map>` **используется с элементами {{HTMLElement("area")}} для определения карты изображения (интерактивной области ссылок). |
+| {{HTMLElement("track")}} | **HTML-элемент `<track>` **используется как дочерний элемент медиа-элементов {{HTMLElement("audio")}} and {{HTMLElement("video")}}. Позволяет указать синхронизированные текстовые дорожки (или данные на основе времени), например, для автоматической обработки субтитров. Файлы треков используют [формат WebVTT](/ru/docs/Web/API/WebVTT_API) (`.vtt` файлы) — Web Video Text Tracks или [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html) |
+| {{HTMLElement("video")}} | Для встраивания видео контента в документ используйте **элемент HTML \<video>**. Видео элемент может содержать один или несколько источников видео. Чтобы указать источник видео, необходимо использовать атрибут **src** или элемент {{HTMLElement("source")}}; браузер сам определит наиболее подходящий источник. |
 
 ## Встроенное содержание
 
 Содержание мультимедийных HTML включает в себя другие материалы, даже если они не всегда легко взаимодействуют.
 
-{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("embed")}}   | **HTML-элемент `<embed>` **вставляет расширенный контент в выбранное место документа. Этот контент может быть представлен от внешнего приложения или другого источника интерактивного контента, такого как плагин для браузера, например. |
+| {{HTMLElement("iframe")}}  | Represents a nested browsing context, embedding another HTML page into the current one. |
+| {{HTMLElement("object")}}  | Represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin. |
+| {{HTMLElement("picture")}} | **HTML-элемент `<picture>` **служит контейнером для одного или более элементов {{HTMLElement("source")}} и одного элемента {{HTMLElement("img")}} для обеспечения оптимальной версии изображения для различных размеров экрана. Браузер рассмотрит каждый из дочерних элементов `<source>` и выберет один, соответствующий лучшему совпадению; если совпадений среди элементов `<source>` найдено не будет, то будет выбран файл, указанный атрибутом {{htmlattrxref("src", "img")}} элемента `<img>` . Затем выбранное изображение отображается в пространстве, занятом элементом `<img>`. |
+| {{HTMLElement("portal")}}  | Enables the embedding of another HTML page into the current one for the purposes of allowing smoother navigation into new pages. |
+| {{HTMLElement("source")}}  | **HTML-элемент `<source>` **указывает несколько медиа-ресурсов для элементов {{HTMLElement("picture")}}, {{HTMLElement("video")}} и {{HTMLElement("audio")}}. Это пустой элемент. Он обычно используется для обслуживания одного и того же медиа-контента [в нескольких форматах, поддерживаемых различными браузерами](/ru/docs/Media_formats_supported_by_the_audio_and_video_elements). |
 
 ## SVG and MathML
 
-You can embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) content directly into HTML documents, using the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements.
+You can embed [SVG](/ru/docs/Web/SVG) and [MathML](/ru/docs/Web/MathML) content directly into HTML documents, using the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements.
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Element</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SVGElement("svg")}}</td>
-      <td>
-        The <code>svg</code> element is a container that defines a new
-        coordinate system and
-        <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewport</a>. It is used
-        as the outermost element of SVG documents, but it can also be used to
-        embed an SVG fragment inside an SVG or HTML document.
-      </td>
-    </tr>
-    <tr>
-      <td>{{MathMLElement("math")}}</td>
-      <td>
-        The top-level element in MathML is <code>&#x3C;math></code>. Every valid
-        MathML instance must be wrapped in <code>&#x3C;math></code> tags. In
-        addition you must not nest a second <code>&#x3C;math></code> element in
-        another, but you can have an arbitrary number of other child elements in
-        it.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Элемент | Описание |
+| ------- | -------- |
+| {{SVGElement("svg")}}     | Элемент `svg` является контейнером, который определяет новую систему координат и [область просмотра](/ru/docs/Web/SVG/Attribute/viewBox). Он используется, как самый внешний элемент документов SVG, но также может использоваться для встраивания фрагмента SVG в документ SVG или HTML. |
+| {{MathMLElement("math")}} | Элементом верхнего уровня в MathML является тэг `<math>`. Каждый допустимый экземпляр MathML должен быть внутри этого контейнера. Он не допускает вложений, но внутри может быть произвольное число других дочерних элементов. |
 
 ## Скриптинг
 
 Чтобы создавать динамический контент и веб-приложения, HTML поддерживает использование скриптовых языков, наиболее известным является JavaScript. Некоторые элементы поддерживают эту возможность.
 
-{{HTMLRefTable("HTML Scripting")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("canvas")}}   | **HTML `<canvas>` Элемент** может быть использован для отрисовки графики через скрипты (обычно используется [JavaScript](/ru/docs/Web/JavaScript)). Например, его можно использовать для отрисовки графиков, делать композиции фото или даже выполнять анимации. Вы можете (и должны) дать альтернативное содержание внутри блока `<canvas>`. Этот контент будет рендерится в обоих браузерах, в старых которые не поддерживают canvas и в браузерах с отключённым JavaScript. |
+| {{HTMLElement("noscript")}} | [HTML](/ru/docs/Web/HTML)-элемент **`<noscript>`** определяет секцию HTML кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript. |
+| {{HTMLElement("script")}}   | HTML Элемент **`<script>`** используется для встраивания или подключения исполняемого JavaScript кода. Элемент `<script>` также может использоваться с другими языками, такими как [GLSL](/ru/docs/Web/API/WebGL_API/By_example/Hello_GLSL) от [WebGL](/ru/docs/Web/API/WebGL_API). |
 
 ## Разграничительные правки
 
 Эти элементы позволяют вам отметить определённые части текста.
 
-{{HTMLRefTable("HTML Edits")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("del")}} | Элемент **HTML `<del>` **представляет диапазон текста, который был удалён из документа. Он может быть использован, например, при отображении "отслеживания изменений" или различий в исходном коде. Элемент {{HTMLElement("ins")}} можно использовать для противоположной цели: указание текста, который был добавлен в документ. |
+| {{HTMLElement("ins")}} | **Элемент** **HTML `<ins>` **представляет собой диапазон текста, который был добавлен в документ |
 
 ## Содержание таблиц
 
 Эти элементы используются для создания и обработки табличных данных.
 
-{{HTMLRefTable("HTML tabular data")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("caption")}}  | **HTML** элемент заголовка таблицы (**`<caption>`**) определяет название (заголовок) таблицы. Если этот элемент используется, он _всегда_ должен быть первым вложенным элементом тэга {{HTMLElement("table")}}. Внешний вид и расположение заголовка по отношению к самой таблице может быть изменено с помощью стилей CSS {{cssxref("caption-side")}} and {{cssxref("text-align")}}. |
+| {{HTMLElement("col")}}      | **HTML-элемент** **`<col>`** определяет столбец в таблице и используется для определения общей семантики на всех ячейках. Обычно он находится в элементе {{HTMLElement("colgroup")}}. |
+| {{HTMLElement("colgroup")}} | Defines a group of columns within a table. |
+| {{HTMLElement("table")}}    | Represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data. |
+| {{HTMLElement("tbody")}}    | Encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of the table ({{HTMLElement("table")}}). |
+| {{HTMLElement("td")}}       | **HTML-элемент `<td>`** определяет ячейку таблицы которая содержит данные. Участвует в _табличной модели_. |
+| {{HTMLElement("tfoot")}}    | _HTML_ элемент подвала таблицы (`<tfoot>`) определяющий набор строк суммирующих столбцы таблицы. |
+| {{HTMLElement("th")}}       | Defines a cell as header of a group of table cells. The exact nature of this group is defined by the `scope` and `headers` attributes. |
+| {{HTMLElement("thead")}}    | Defines a set of rows defining the head of the columns of the table. |
+| {{HTMLElement("tr")}}       | Defines a row of cells in a table. The row's cells can then be established using a mix of {{HTMLElement("td")}} (data cell) and {{HTMLElement("th")}} (header cell) elements. |
 
 ## Формы
 
 HTML содержит некоторое количество элементов, которые используются вместе для создания форм, которые пользователь может заполнить и отправить на сервер. Доступно множество информации по этой теме в [руководстве по HTML формам](/ru/docs/Web/Guide/HTML/Forms).
 
-{{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("button")}}   | **HTML-элемент _`<button>`_** создаёт кликабельную кнопку, которая может быть использована в формах или в любом другом месте документа, который требует простой, стандартной кнопки. По умолчанию, кнопки HTML обычно представлены в стиле, аналогичном стилю хост-платформы, на которой работает {{Glossary ("user agent")}}, но вы можете изменить внешний вид кнопки, используя CSS. |
+| {{HTMLElement("datalist")}} | **HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом {{htmlattrxref("list", "input")}}. |
+| {{HTMLElement("fieldset")}} | **HTML-элемент `<fieldset>`** используется для группировки нескольких элементов управления в веб-форме. |
+| {{HTMLElement("form")}}     | _Элемент HTML form_ (`<form>`) представляет (собой) раздел документа, содержащий интерактивные элементы управления, которые позволяют пользователю отправлять информацию на веб-сервер. |
+| {{HTMLElement("input")}}    | **Элемент** **HTML `<input>`** используется для создания интерактивных элементов управления в веб-формах для получения данных от пользователя; в зависимости от устройства и {{Glossary("user agent")}}, доступен широкий выбор типов входных данных и виджетов управления. Из-за огромного количества возможных сочетаний типов ввода и атрибутов это один из самых мощных и сложных элементов HTML. |
+| {{HTMLElement("label")}}    | **HTML-элемент `<label>` **представляет собой подпись к элементу пользовательского интерфейса. |
+| {{HTMLElement("legend")}}   | **HTML-элемент `<legend>`** представляет собой заголовок содержания родительского элемента {{HTMLElement("fieldset")}}. |
+| {{HTMLElement("meter")}}    | **HTML-элемент `<meter>`** представляет собой скалярное значение в пределах известного диапазона или дробного значения. |
+| {{HTMLElement("optgroup")}} | **HTML-элемент `<optgroup>` **позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}. |
+| {{HTMLElement("option")}}   | **HTML-элемент `<option>`** используется для определения пункта списка контейнера {{HTMLElement("select")}}, элемента {{HTMLElement("optgroup")}}, или элемента {{HTMLElement("datalist")}}. Элемент `<option>` может представлять раздел меню всплывающих окон и других перечней или списков HTML документа. |
+| {{HTMLElement("output")}}   | **HTML-элемент вывода** (**`<output>`**) является контейнерным элементом, в котором сайт или приложение могут выводить результаты вычислений или действий пользователя. |
+| {{HTMLElement("progress")}} | **HTML-элемент `<progress>` **отображает индикатор, показывающий ход выполнения задачи, обычно отображаемый в виде прогресс бара (индикатора выполнения). |
+| {{HTMLElement("select")}}   | **HTML тэг `<select>`** представляет собой элемент управления который содержит меню опций: |
+| {{HTMLElement("textarea")}} | Represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form. |
 
 ## Интерактивные элементы
 
 HTML содержит в себе элементы, которые помогают создавать интерактивные объекты пользовательского интерфейса.
 
-{{HTMLRefTable("HTML interactive elements")}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("details")}} | HTML-элемент **`<details>`** используется для раскрытия скрытой (дополнительной) информации. |
+| {{HTMLElement("dialog")}}  | **HTML-элемент `<dialog>`** определяет диалоговое окно или другой интерактивный элемент, такой как инспектор или окно. Элементы `<form>` могут интегрироваться с диалогом с помощью указания атрибута `method="dialog"`. Когда отправляется такая форма, диалог закрывается с returnValue равным value нажатой кнопки submit. |
+| {{HTMLElement("summary")}} | The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the `<summary>` element toggles the state of the parent `<details>` element open and closed. |
 
 ## Веб-компоненты
 
@@ -130,10 +221,41 @@ HTML содержит в себе элементы, которые помога�
 
 > **Примечание:** Эти элементы определены в {{Glossary("W3C","World Wide Web Consortium")}} (W3C) [Web Components collection of specifications](http://www.w3.org/TR/components-intro/) скорее, чем в HTML спецификации. К тому же, спецификация Веб-компонентов не завершена и является темой для обсуждений.
 
-{{HTMLRefTable({"include":["Web Components"],"elements":["shadow"]})}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("slot")}}     | HTML-элемент `<slot>` является частью набора технологии [Web Components](/ru/docs/Web/Web_Components), является заполнителем внутри веб компонента, который можно заполнить собственной разметкой, которая позволяет создавать отдельные деревья DOM и представлять их вместе. |
+| {{HTMLElement("template")}} | [HTML](/ru/docs/Web/HTML)-элемент шаблона контента **`<template>`** — это механизм для отложенного создания клиентского контента, который не отображается во время загрузки страницы, но может быть инициализирован при помощи JavaScript. |
 
 ## Устаревшие и осуждаемые элементы
 
 > **Предупреждение:** Эти HTML элементы являются устаревшими, и их использование не рекомендуется. **Вы не должны использовать их для новых проектов, а также должны заменить их в старых проектах как можно быстрее.** Они перечислены здесь только в информационных целях.
 
-{{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}
+| Элемент | Описание |
+| ------- | -------- |
+| {{HTMLElement("acronym")}}   | Элемент акронима (`<acronym>)` позволяет явно указать, что данная последовательность букв, являющуюся акронимом или аббревиатурой. |
+| {{HTMLElement("applet")}}    | Элемент HTML апплет (\<applet>) определяет включение апплета java. |
+| {{HTMLElement("bgsound")}}   | Sets up a sound file to play in the background while the page is used; use {{HTMLElement("audio")}} instead. |
+| {{HTMLElement("big")}}       | Renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example). The size is capped at the browser's maximum permitted font size. |
+| {{HTMLElement("blink")}}     | Causes the enclosed text to flash slowly. |
+| {{HTMLElement("center")}}    | Displays its block-level or inline contents centered horizontally within its containing element. |
+| {{HTMLElement("content")}}   | An obsolete part of the [Web Components](/ru/docs/Web/Web_Components) suite of technologies—was used inside of [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) as an insertion point, and wasn't meant to be used in ordinary HTML. It has now been replaced by the {{HTMLElement("slot")}} element, which creates a point in the DOM at which a shadow DOM can be inserted. |
+| {{HTMLElement("dir")}}       | Container for a directory of files and/or folders, potentially with styles and icons applied by the user agent. Do not use this obsolete element; instead, you should use the {{HTMLElement("ul")}} element for lists, including lists of files. |
+| {{HTMLElement("font")}}      | _HTML фонт элемент_(`<font>`) определяет размер шрифта, цвета и лицо для его содержимого |
+| {{HTMLElement("frame")}}     | Defines a particular area in which another HTML document can be displayed. A frame should be used within a {{HTMLElement("frameset")}}. |
+| {{HTMLElement("frameset")}}  | Used to contain {{HTMLElement("frame")}} elements. |
+| {{HTMLElement("image")}}     | > **Примечание:** Этот элемент был удалён из HTML5 (W3C) спецификации , но до сих пор остаётся в спецификации WHATWG. Он частично встроен в большинство браузеров, хотя бы поэтому вряд ли уйдёт. Поскольку схематический алгоритм не реализован ни в одном браузере, семантика тега `<hgroup>` на практике реализована только теоретически. Спецификация HTML5 (W3C) даёт совет как обозначать [подзаголовки, альтернативные заголовки и слоганы](http://www.w3.org/TR/html5/common-idioms.html#sub-head). |
+| {{HTMLElement("keygen")}}    | Элемент HTML `<image>` был экспериментальным элементом, предназначенный для отображения изображений. Он никогда не был реализован, вместо него должен использоваться стандартный элемент {{HTMLElement("img")}}. |
+| {{HTMLElement("marquee")}}   | Used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes. |
+| {{HTMLElement("menuitem")}}  | HTML-элемент `<marquee>` используется для создания на странице прокручивающегося текста (бегущей строки). |
+| {{HTMLElement("nobr")}}      | Prevents the text it contains from automatically wrapping across multiple lines, potentially resulting in the user having to scroll horizontally to see the entire width of the text. |
+| {{HTMLElement("noembed")}}   | An obsolete, non-standard way to provide alternative, or "fallback", content for browsers that do not support the embed element or do not support the type of [embedded content](/en-US/docs/Web/HTML/Content_categories#embedded_content) an author wishes to use. This element was deprecated in HTML 4.01 and above in favor of placing fallback content between the opening and closing tags of an {{HTMLElement("object")}} element. |
+| {{HTMLElement("noframes")}}  | Provides content to be presented in browsers that don't support (or have disabled support for) the {{HTMLElement("frame")}} element. Although most commonly-used browsers support frames, there are exceptions, including certain special-use browsers including some mobile browsers, as well as text-mode browsers. |
+| {{HTMLElement("param")}}     | Defines parameters for an {{HTMLElement("object")}} element. |
+| {{HTMLElement("plaintext")}} | Renders everything following the start tag as raw text, ignoring any following HTML. There is no closing tag, since everything after it is considered raw text. |
+| {{HTMLElement("rb")}}        | Used to delimit the base text component of a ruby annotation, i.e. the text that is being annotated. One `<rb>` element should wrap each separate atomic segment of the base text. |
+| {{HTMLElement("rtc")}}       | Embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{HTMLElement("ruby")}} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic ({{HTMLElement("rtc")}}) annotations. |
+| {{HTMLElement("shadow")}}    | An obsolete part of the [Web Components](/ru/docs/Web/Web_Components) technology suite that was intended to be used as a shadow DOM insertion point. You might have used it if you have created multiple shadow roots under a shadow host. |
+| {{HTMLElement("spacer")}}    | Allows insertion of empty spaces on pages. It was devised by Netscape to accomplish the same effect as a single-pixel layout image, which was something web designers used to use to add white spaces to web pages without actually using an image. However, `<spacer>` is no longer supported by any major browser and the same effects can now be achieved using simple CSS. |
+| {{HTMLElement("strike")}}    | Places a strikethrough (horizontal line) over text. |
+| {{HTMLElement("tt")}}        | Creates inline text which is presented using the user agent default monospace font face. This element was created for the purpose of rendering text as it would be displayed on a fixed-width display such as a teletype, text-only screen, or line printer. |
+| {{HTMLElement("xmp")}}       | Renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. The HTML2 specification recommended that it should be rendered wide enough to allow 80 characters per line. |
