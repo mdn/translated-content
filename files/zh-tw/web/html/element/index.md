@@ -53,6 +53,41 @@ In addition to regular multimedia content, HTML can include a variety of other c
 
 {{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}
 
+## SVG and MathML
+
+You can embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) content directly into HTML documents, using the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements.
+
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">Element</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SVGElement("svg")}}</td>
+      <td>
+        The <code>svg</code> element is a container that defines a new
+        coordinate system and
+        <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewport</a>. It is used
+        as the outermost element of SVG documents, but it can also be used to
+        embed an SVG fragment inside an SVG or HTML document.
+      </td>
+    </tr>
+    <tr>
+      <td>{{MathMLElement("math")}}</td>
+      <td>
+        The top-level element in MathML is <code>&#x3C;math></code>. Every valid
+        MathML instance must be wrapped in <code>&#x3C;math></code> tags. In
+        addition you must not nest a second <code>&#x3C;math></code> element in
+        another, but you can have an arbitrary number of other child elements in
+        it.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## 腳本
 
 In order to create dynamic content and Web applications, HTML supports the use of scripting languages, most prominently JavaScript. Certain elements support this capability.
