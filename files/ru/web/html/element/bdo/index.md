@@ -16,11 +16,11 @@ translation_of: Web/HTML/Element/bdo
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content.                           |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                 |
+| Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                 |
 | Закрывающий тег                                        | {{no_tag_omission}}                                                                                                                                                               |
-| Разрешённые родители                                    | Все элементы, принимающие [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content),                                                                                       |
-| Разрешённые ARIA-роли                                   | Любые                                                                                                                                                                                  |
-| DOM interface                                          | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) для этого элемента. |
+| Допустимые родители                                    | Все элементы, принимающие [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content),                                                                                       |
+| Допустимые ARIA-роли                                   | Любые                                                                                                                                                                                  |
+| DOM-интерфейс                                          | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) для этого элемента. |
 
 ## Атрибуты
 
