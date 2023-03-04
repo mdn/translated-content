@@ -9,6 +9,6 @@ Los Espacio de Nombres son un contexto para identificadores, un agrupamiento ló
 
 En un sistema operativo, un directorio es un espacio de nombre. Cada archivo o subdirectorio tiene un nombre único, pero un archivo puede usar el mismo nombre múltiples veces.
 
-## See also
+## Veáse también
 
 - [Espacio de Nombres](https://es.wikipedia.org/wiki/Espacio_de_nombres) en Wikipedia
