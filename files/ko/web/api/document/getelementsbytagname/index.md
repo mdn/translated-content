@@ -84,7 +84,7 @@ var elements = document.getElementsByTagName(name);
 
 ## 노트
 
-HTML 다큐먼트에서 호출될 때, getElementsByTagName() 은 처리전에 인수를 소문자로 변환합니다. 이는 HTML 다큐먼트의 하위 트리에 속한 낙타 표기법의 SVG 엘리먼트를 찾으려할 때 바람직하지 않습니다. 그런 경우에는 {{Domxref("document.getElementsByTagNameNS()")}} 가 유용합니다.{{Bug(499656)}} 버그도 확인하시기 바랍니다.
+HTML 다큐먼트에서 호출될 때, getElementsByTagName() 은 처리전에 인수를 소문자로 변환합니다. 이는 HTML 다큐먼트의 하위 트리에 속한 낙타 표기법의 SVG 엘리먼트를 찾으려할 때 바람직하지 않습니다. 그런 경우에는 {{Domxref("document.getElementsByTagNameNS()")}} 가 유용합니다.[Firefox bug 499656](https://bugzil.la/499656) 버그도 확인하시기 바랍니다.
 
 `document.getElementsByTagName()` 은 전체 다큐먼트를 포함하여 탐색한다는 점만 제외하고 {{domxref("Element.getElementsByTagName()")}} 와 유사합니다.
 
