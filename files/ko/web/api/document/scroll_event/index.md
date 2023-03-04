@@ -62,7 +62,7 @@ window.addEventListener('scroll', function(e) {
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
