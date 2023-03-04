@@ -58,7 +58,7 @@ window.addEventListener('scroll', function(e) {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
