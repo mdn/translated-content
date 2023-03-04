@@ -76,14 +76,11 @@ button.addEventListener('click', event => {
 
 ## 같이 보기
 
-- {{domxref("GlobalEventHandlers.onclick")}}
-- {{event("mousedown")}}
-- {{event("mouseup")}}
-- {{event("mousemove")}}
-- [`click`](/ko/docs/Web/API/Element/click_event)
-- {{event("dblclick")}}
-- {{event("mouseover")}}
-- {{event("mouseout")}}
-- {{event("mouseenter")}}
-- {{event("mouseleave")}}
-- {{event("contextmenu")}}
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}

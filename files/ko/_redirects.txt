@@ -145,7 +145,6 @@
 /ko/docs/DOM/event.preventDefault	/ko/docs/Web/API/Event/preventDefault
 /ko/docs/DOM/form	/ko/docs/Web/API/HTMLFormElement
 /ko/docs/DOM/range	/ko/docs/Web/API/Range
-/ko/docs/DOM/selection	/ko/docs/Web/API/Selection
 /ko/docs/DOM/table	/ko/docs/Web/API/HTMLTableElement
 /ko/docs/DOM/table.width	/ko/docs/Web/API/HTMLTableElement/width
 /ko/docs/DOM/window	/ko/docs/Web/API/Window
@@ -170,7 +169,6 @@
 /ko/docs/DOM:event	/ko/docs/Web/API/Event
 /ko/docs/DOM:form	/ko/docs/Web/API/HTMLFormElement
 /ko/docs/DOM:range	/ko/docs/Web/API/Range
-/ko/docs/DOM:selection	/ko/docs/Web/API/Selection
 /ko/docs/DOM:table	/ko/docs/Web/API/HTMLTableElement
 /ko/docs/DOM:table.width	/ko/docs/Web/API/HTMLTableElement/width
 /ko/docs/DOM:window	/ko/docs/Web/API/Window
@@ -645,7 +643,6 @@
 /ko/docs/Web/Events/dragstart	/ko/docs/Web/API/HTMLElement/dragstart_event
 /ko/docs/Web/Events/keydown	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/Events/load	/ko/docs/Web/API/Window/load_event
-/ko/docs/Web/Events/message	/ko/docs/Web/API/BroadcastChannel/message_event
 /ko/docs/Web/Events/orientationchange	/ko/docs/Web/API/Window/orientationchange_event
 /ko/docs/Web/Events/popstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/Events/resize	/ko/docs/Web/API/Window/resize_event
@@ -793,7 +790,6 @@
 /ko/docs/Web/Reference/Events/click	/ko/docs/Web/API/Element/click_event
 /ko/docs/Web/Reference/Events/keydown	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/Reference/Events/load	/ko/docs/Web/API/Window/load_event
-/ko/docs/Web/Reference/Events/message	/ko/docs/Web/API/BroadcastChannel/message_event
 /ko/docs/Web/Reference/Events/orientationchange	/ko/docs/Web/API/Window/orientationchange_event
 /ko/docs/Web/Reference/Events/popstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/Reference/Events/resize	/ko/docs/Web/API/Window/resize_event
