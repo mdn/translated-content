@@ -2407,6 +2407,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Date/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
 /zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_type
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Dead_object	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Errors/Dead_object
 /zh-CN/docs/Web/JavaScript/Reference/Errors/不能添加属性	/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property
 /zh-CN/docs/Web/JavaScript/Reference/Function	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function
 /zh-CN/docs/Web/JavaScript/Reference/Function/apply	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
@@ -2484,7 +2485,8 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExtensions	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_和_Object_方法	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Reflect
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_和_Object_方法	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Reflect
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/prototype	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set

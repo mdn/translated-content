@@ -1,8 +1,8 @@
 ---
 title: 比较 Reflect 和 Object 方法
-slug: >-
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Reflect
+original_slug: >-
   Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
-original_slug: Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_和_Object_方法
 ---
 
 {{jssidebar}}

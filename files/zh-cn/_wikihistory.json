@@ -25850,10 +25850,6 @@
     "modified": "2020-07-13T11:27:10.484Z",
     "contributors": ["Mrdapeng", "540692039", "nansanhao", "WayneCui"]
   },
-  "Web/JavaScript/Reference/Errors/Dead_object": {
-    "modified": "2020-03-12T19:46:28.473Z",
-    "contributors": ["WayneCui"]
-  },
   "Web/JavaScript/Reference/Errors/Delete_in_strict_mode": {
     "modified": "2020-03-12T19:46:25.179Z",
     "contributors": ["WayneCui"]
@@ -29417,10 +29413,6 @@
       "wzx",
       "ziyunfei"
     ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods": {
-    "modified": "2020-09-02T03:21:36.745Z",
-    "contributors": ["tita0x00"]
   },
   "Web/JavaScript/Reference/Global_Objects/Reflect/apply": {
     "modified": "2020-10-15T21:46:16.764Z",
@@ -33666,5 +33658,13 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Reflect": {
+    "modified": "2020-09-02T03:21:36.745Z",
+    "contributors": ["tita0x00"]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Dead_object": {
+    "modified": "2020-03-12T19:46:28.473Z",
+    "contributors": ["WayneCui"]
   }
 }
