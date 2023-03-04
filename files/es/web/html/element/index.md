@@ -226,7 +226,7 @@ Los Componentes Web son una tecnología relacionada con HTML que hacen que sea p
 | {{HTMLElement("applet")}}    | **Sus etiquetas son**: \<applet> y \</applet> (ambas obligatorias) |
 | {{HTMLElement("bgsound")}}   | El elemento HTML de sonido de fondo (\<bgsound>) es un elemento de Internet Explorer que asocia un sonido de fondo con un página . |
 | {{HTMLElement("big")}}       | **big** de big=grande |
-| {{HTMLElement("blink")}}     | {{Deprecated_header}} {{Non-standard_header}} |
+| {{HTMLElement("blink")}}     | El elemento HTML blink (`<blink>`) no es un elemento estándar que causa que el texto encerrado parpadee lentamente . |
 | {{HTMLElement("center")}}    | **Sus etiquetas son**: \<center> y \</center> (ambas obligatorias). |
 | {{HTMLElement("content")}}   | El elemento [HTML](/es/docs/Web/HTML) `<content>` es usado dentro de un [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) como un {{glossary("insertion point")}} . No está pensado para ser usado en HTML ordinario . Es usado con [Web Components](/es/docs/Web/Web_Components). |
 | {{HTMLElement("dir")}}       | **Sus etiquetas son**: \<dir> y \</dir> (ambas obligatorias). |
