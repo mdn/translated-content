@@ -56,6 +56,26 @@ jobs:
         working-directory: ${{ github.workspace }}/mdn/content
         run: yarn content sync-translated-content ${{ matrix.lang }}
 
+      - name: Generate relative commit message
+        run: |
+          git add files/${{ matrix.lang }}
+          FILE_NAMES=$(git diff --name-only --cached | egrep -i "^files/${{ matrix.lang }}/.*\.md$")
+          # get the reflecting commit of en-US
+          cd mdn/content
+          # generate a string for each line in '<file name> <commit hash>'
+          EN_US_COMMIT=$(echo "${FILE_NAMES}" | sed '0,/${{ matrix.lang }}/s//en-us/' | \
+            xargs -L1 git log -1 --format="%H")
+          COMMIT_MESSAGE=$(paste -d ' mdn/content@' <(echo "${FILE_NAMES}") <(echo "${EN_US_COMMIT}"))
+          # add '- ' prefix to each line
+          COMMIT_MESSAGE=$(echo "${COMMIT_MESSAGE}" | sed 's/^/- /')
+          COMMENT="Reflected commit in en-US:"$'\n'"${COMMIT_MESSAGE}"
+
+          # set the environment variable for the next step
+          DELIMITER="$(openssl rand -hex 16)"
+          echo "COMMENT<<${DELIMITER}" >> $GITHUB_ENV
+          echo "${COMMENT}" >> $GITHUB_ENV
+          echo "${DELIMITER}" >> $GITHUB_ENV
+
       - name: Create PR with sync for ${{ matrix.lang }}
         uses: peter-evans/create-pull-request@v4
         with:
@@ -63,5 +83,8 @@ jobs:
           branch: content-sync-${{ matrix.lang }}
           title: "[${{ matrix.lang }}] sync translated content"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
-          body: Yari generated sync
+          body: |
+            Yari generated sync.
+
+            ${{ env.COMMENT }}
           token: ${{ secrets.AUTOMERGE_TOKEN }}
