@@ -41,6 +41,7 @@ const x = {
     console.log("调用了 setter");
   },
 };
+
 x.value ||= 2;
 ```
 
