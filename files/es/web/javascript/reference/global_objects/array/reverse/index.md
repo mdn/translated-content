@@ -45,9 +45,9 @@ console.log(a); // [3, 2, 1]
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.reverse")}}
+{{Compat}}
 
 ## Ver también
 

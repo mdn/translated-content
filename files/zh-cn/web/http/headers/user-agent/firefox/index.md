@@ -160,7 +160,7 @@ Firefox iOS 版使用 Safari 移动版的默认 User Agent 再加上 **FxiOS/\<v
 
 ## 对于应用、供应商、扩展程序的注意事项
 
-在 Firefox 4 和 Gecko 2.0 之前，扩展程序可以通过 `general.useragent.extra.identifier` 附加 User Agent 值，（参考 [废弃的 User Agent 值参考](/En/User_Agent_Strings_Reference)）。不过 {{ Bug(581008) }} 出现后，这种操作已被禁止。
+在 Firefox 4 和 Gecko 2.0 之前，扩展程序可以通过 `general.useragent.extra.identifier` 附加 User Agent 值，（参考 [废弃的 User Agent 值参考](/En/User_Agent_Strings_Reference)）。不过 [Firefox bug 581008](https://bugzil.la/581008) 出现后，这种操作已被禁止。
 
 在过去，特定的插件、扩展程序会在 User Agent 中添加字段，以表明他们被安装的来源网站。如果非要如此（请注意，这会减慢每个请求的发送速度），推荐的做法是 [设定自定义 HTTP 请求头](/zh-CN/Setting_HTTP_request_headers)。
 

@@ -48,13 +48,11 @@ Symbol.for('toto').description; // "toto"
 
 ## Spécifications
 
-| Spécification                                                                                                                           | État                    |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour `Symbol.prototype.description`](https://tc39.github.io/proposal-Symbol-description/#sec-symbol.prototype.description) | Proposition de niveau 4 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.description")}}
+{{Compat}}
 
 ## Voir aussi
 

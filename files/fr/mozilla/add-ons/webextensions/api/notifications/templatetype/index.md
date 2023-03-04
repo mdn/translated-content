@@ -46,9 +46,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
 Actuellement Firefox ne supporte que "basic" ici.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.TemplateType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

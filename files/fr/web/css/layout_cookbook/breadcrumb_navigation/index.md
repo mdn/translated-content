@@ -34,9 +34,7 @@ On utilise ici les attributs `aria-label` et `aria-current` afin d'aider les uti
 
 ## Compatibilité des navigateurs
 
-### Boîtes flexibles
-
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Voir aussi
 

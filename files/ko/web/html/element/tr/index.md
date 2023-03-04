@@ -20,7 +20,7 @@ The _HTML Table Row Element_ (`<tr>`) defines a row of cells in a table. Those c
 
 This element includes the [global attributes](/ko/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
+- {{htmlattrdef("align")}} {{deprecated_inline}}
 
   - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
 
@@ -38,7 +38,7 @@ This element includes the [global attributes](/ko/docs/HTML/Global_attributes).
 
 <!---->
 
-- {{htmlattrdef("bgcolor")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
+- {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
 
   - : This attribute defines the background color of each cell of the row. It can be either an [#RRGGBB code](/ko/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords) or an [SVG color keyword](/#HTML.2fSVG.2fX11.c2.a0_Color_Keywords).
 
@@ -46,7 +46,7 @@ This element includes the [global attributes](/ko/docs/HTML/Global_attributes).
 
 <!---->
 
-- {{htmlattrdef("char")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
+- {{htmlattrdef("char")}} {{deprecated_inline}}
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
 
@@ -54,7 +54,7 @@ This element includes the [global attributes](/ko/docs/HTML/Global_attributes).
 
 <!---->
 
-- {{htmlattrdef("charoff")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
+- {{htmlattrdef("charoff")}} {{deprecated_inline}}
 
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
 
@@ -62,7 +62,7 @@ This element includes the [global attributes](/ko/docs/HTML/Global_attributes).
 
 <!---->
 
-- {{htmlattrdef("valign")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
+- {{htmlattrdef("valign")}} {{deprecated_inline}}
 
   - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
 

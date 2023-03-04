@@ -25,7 +25,7 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Is an enumerated attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values: `true` or the _empty string_, which indicates that the element must be editable;
     - `false`, which indicates that the element must not be editable.
 - [`contextmenu`](/zh-TW/docs/Web/HTML/Global_attributes/contextmenu)
-  - : Is the [**`id`**](#attr-id) of an {{HTMLElement("menu")}} to use as the contextual menu for this element.
+  - : Is the [**`id`**](#id) of an {{HTMLElement("menu")}} to use as the contextual menu for this element.
 - [`data-*`](/zh-TW/docs/Web/HTML/Global_attributes/data-*)
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [HTML](/zh-TW/docs/Web/HTML) and its [DOM](/zh-TW/docs/Glossary/DOM) representation that may be used by scripts. All such custom data are available via the {{domxref("HTMLElement")}} interface of the element the attribute is set on. The {{domxref("HTMLElement.dataset")}} property gives access to them.
 - [`dir`](/zh-TW/docs/Web/HTML/Global_attributes/dir)
@@ -57,7 +57,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`itemtype`](/zh-TW/docs/Web/HTML/Global_attributes/itemtype) {{experimental_inline}}
   - : Specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure. [Itemscope](/zh-TW/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by itemtype will be active.
 - [`lang`](/zh-TW/docs/Web/HTML/Global_attributes/lang)
-  - : Participates in defining the language of the element, the language that non-editable elements are written in or the language that editable elements should be written in. The tag contains one single entry value in the format defines in the [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt) IETF document. [**xml:lang**](#attr-xml:lang) has priority over it.
+  - : Participates in defining the language of the element, the language that non-editable elements are written in or the language that editable elements should be written in. The tag contains one single entry value in the format defines in the [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt) IETF document. **xml:lang** has priority over it.
 
 - [`slot`](/zh-TW/docs/Web/HTML/Global_attributes/slot) {{experimental_inline}}
   - : Assigns a slot in a [shadow DOM](/zh-TW/docs/Web/Web_Components/Shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{htmlattrxref("name", "slot")}} attribute's value matches that `slot` attribute's value.
@@ -69,7 +69,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`tabindex`](/zh-TW/docs/Web/HTML/Global_attributes/tabindex)
   - : Is an integer attribute indicating if the element can take input focus (is _focusable_), if it should participate to sequential keyboard navigation, and if so, at what position. It can takes several values: a _negative value_ means that the element should be focusable, but should not be reachable via sequential keyboard navigation;
     - `0` means that the element should be focusable and reachable via sequential keyboard navigation, but its relative order is defined by the platform convention;
-    - a _positive value_ which means should be focusable and reachable via sequential keyboard navigation; its relative order is defined by the value of the attribute: the sequential follow the increasing number of the [**tabindex**](#attr-tabindex). If several elements share the same tabindex, their relative order follows their relative position in the document).
+    - a _positive value_ which means should be focusable and reachable via sequential keyboard navigation; its relative order is defined by the value of the attribute: the sequential follow the increasing number of the [**tabindex**](#tabindex). If several elements share the same tabindex, their relative order follows their relative position in the document).
 - [`title`](/zh-TW/docs/Web/HTML/Global_attributes/title)
   - : Contains a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip.
 - [`translate`](/zh-TW/docs/Web/HTML/Global_attributes/translate)

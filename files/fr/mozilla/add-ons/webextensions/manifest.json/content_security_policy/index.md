@@ -133,4 +133,4 @@ La directive inclut le mot-clé non pris en charge `'unsafe-inline'`&nbsp;:
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.content_security_policy")}}
+{{Compat}}

@@ -39,6 +39,6 @@ Puedes verlo aquí en un [ejemplo en directo](/samples/cssref/moz-window-inactiv
 
 No es parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-window-inactive")}}
+{{Compat}}

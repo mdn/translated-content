@@ -12,36 +12,36 @@ HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過
 
 ## 屬性
 
-- {{htmlattrdef("behavior")}}
+- `behavior`
   - : 設定文字如何在 marquee 內捲動。可用值為 `scroll`、`slide`、`alternate`。若無指定，預設值為 `scroll`。
-- {{htmlattrdef("bgcolor")}}
+- `bgcolor`
   - : 透過色彩名或十六進位值指定背景顏色。
-- {{htmlattrdef("direction")}}
+- `direction`
   - : 設定 marquee 內的捲動方向。可用值為 `left`、`right`、`up`、`down`。若無指定，預設值為 `left`。
-- {{htmlattrdef("height")}}
+- `height`
   - : 設定像素或百分比高度。
-- {{htmlattrdef("hspace")}}
+- `hspace`
   - : 設定橫向外邊（horizontal margin）
-- {{htmlattrdef("loop")}}
+- `loop`
   - : 設定 marquee 捲動的次數。若無指定，預設值為 -1，意思是的 marquee 將持續捲動。
-- {{htmlattrdef("scrollamount")}}
+- `scrollamount`
   - : 以像素為單位，設定捲動的間隔量。預設值為 6。
-- {{htmlattrdef("scrolldelay")}}
+- `scrolldelay`
   - : 設定每次捲動時之間間隔的毫秒。預設值為 85。請注意，除非指定了 `truespeed`，否則小於 60 的數字會被忽略，並值使用 60。
-- {{htmlattrdef("truespeed")}}
+- `truespeed`
   - : `scrolldelay` 預設上會忽略低於 60 的值。但如果有 `truespeed` 的話，就不會忽略此值。
-- {{htmlattrdef("vspace")}}
+- `vspace`
   - : 以像素或百分比值設置垂直邊距。
-- {{htmlattrdef("width")}}
+- `width`
   - : 設置以像素或百分比值為單位的寬度。
 
 ## 事件處理器
 
-- {{htmlattrdef("onbounce")}}
+- `onbounce`
   - : marquee 滾動到結尾時觸發。只能在 behavior 屬性設置為 `alternate` 時觸發。
-- {{htmlattrdef("onfinish")}}
+- `onfinish`
   - : marquee 完成 loop 屬性的設定值時觸發。只能在 loop 屬性設為大於 0 的數字時觸發。
-- {{htmlattrdef("onstart")}}
+- `onstart`
   - : marquee 開始捲動時觸發。
 
 ## 方法

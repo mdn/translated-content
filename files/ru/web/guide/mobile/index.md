@@ -1,6 +1,6 @@
 ---
 title: Веб-разработка под мобильные устройства
-slug: Web/Guide/mobile
+slug: Web/Guide/Mobile
 tags:
   - Средний уровень
 translation_of: Web/Guide/Mobile

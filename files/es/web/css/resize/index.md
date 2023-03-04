@@ -110,9 +110,9 @@ p {
 
 {{Specifications}}
 
-## Compatibilidad de Navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.resize")}}
+{{Compat}}
 
 ## Ver también
 

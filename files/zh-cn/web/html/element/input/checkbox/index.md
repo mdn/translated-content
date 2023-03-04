@@ -1,6 +1,6 @@
 ---
 title: <input type="checkbox">
-slug: Web/HTML/Element/Input/checkbox
+slug: Web/HTML/Element/input/checkbox
 ---
 
 {{HTMLSidebar}}

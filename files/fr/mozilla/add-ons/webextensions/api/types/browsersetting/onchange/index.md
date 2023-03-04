@@ -74,9 +74,9 @@ Les événement ont trois fonctions :
               </tbody>
             </table>
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.types.BrowserSetting.onChange")}}
+{{Compat}}
 
 ## Exemples
 

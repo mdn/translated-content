@@ -1,6 +1,6 @@
 ---
 title: <input type="datetime-local">
-slug: Web/HTML/Element/Input/datetime-local
+slug: Web/HTML/Element/input/datetime-local
 ---
 
 {{HTMLSidebar("Input_types")}}

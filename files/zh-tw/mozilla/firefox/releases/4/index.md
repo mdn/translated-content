@@ -41,7 +41,7 @@ Gecko now uses the [HTML5](/zh-TW/HTML/HTML5) parser, which fixes bugs, improves
 - [CSS transitions](/zh-TW/CSS/CSS_transitions)
   - : New CSS transitions support is available in Firefox 4.
 - Computed values in CSS
-  - : Support for` calc() `to compute values in CSS is in progress. See {{ bug(363249) }}.
+  - : Support for` calc() `to compute values in CSS is in progress. See [Firefox bug 363249](https://bugzil.la/363249).
 - Selector grouping
   - : Support for {{ cssxref(":-moz-any") }} to group selectors and factorize combinators.
 - Background image subrectangle support
@@ -73,16 +73,16 @@ Gecko now uses the [HTML5](/zh-TW/HTML/HTML5) parser, which fixes bugs, improves
 - Full screen API
   - : Details coming soon.
 - SMIL animation
-  - : Support for SMIL animation of SVG is now available. See {{ bug(482402) }}.
+  - : Support for SMIL animation of SVG is now available. See [Firefox bug 482402](https://bugzil.la/482402).
 - Using SVG as images and as CSS backgrounds
-  - : You can now use SVG with the {{ htmlelement("img") }} element, as well as the background image in CSS. See {{ bug(272288) }}, {{ bug(276431) }} and {{ bug(231179) }}.
+  - : You can now use SVG with the {{ htmlelement("img") }} element, as well as the background image in CSS. See [Firefox bug 272288](https://bugzil.la/272288), [Firefox bug 276431](https://bugzil.la/276431) and [Firefox bug 231179](https://bugzil.la/231179).
 
 ### DOM
 
 - Obtaining boundary rectangles for ranges
-  - : The Range object now has `getClientRects()` and `getBoundingClientRect()` methods. See {{ bug(396392) }}.
+  - : The Range object now has `getClientRects()` and `getBoundingClientRect()` methods. See [Firefox bug 396392](https://bugzil.la/396392).
 - Capturing mouse events on arbitrary elements
-  - : Support for the Internet Explorer-originated `setCapture()` and `releaseCapture()` APIs has been added. See {{ bug(503943) }}.
+  - : Support for the Internet Explorer-originated `setCapture()` and `releaseCapture()` APIs has been added. See [Firefox bug 503943](https://bugzil.la/503943).
 - [Manipulating the browser history](/zh-TW/DOM/Manipulating_the_browser_history)
   - : The existing document history object, available through the {{ domxref("window.history") }} object, now supports the new HTML5 `pushState()` and `replaceState()` methods.
 - Touch and multi-touch events
@@ -92,14 +92,14 @@ Gecko now uses the [HTML5](/zh-TW/HTML/HTML5) parser, which fixes bugs, improves
 
 #### Miscellaneous DOM changes
 
-- The wrapping of a {{ HTMLElement("textarea") }} element can now be controlled via the DOM, via the `wrap` DOM attribute. {{ bug(41464) }}
+- The wrapping of a {{ HTMLElement("textarea") }} element can now be controlled via the DOM, via the `wrap` DOM attribute. [Firefox bug 41464](https://bugzil.la/41464)
 - DOM {{ domxref("file") }} objects now offer a `url` property.
 - DOM {{ domxref("file") }} objects now have a new `click()` method. (Note: not done yet, see [bug 36619](https://bugzilla.mozilla.org/show_bug.cgi?id=36619).)
 - [FormData](/En/XMLHttpRequest/Using_XMLHttpRequest#Using_FormData_objects) support for XMLHttpRequest.
 - The {{ domxref("element.isContentEditable") }} property has been implemented.
 - Added the [`mozSourceNode`](/En/DragDrop/DataTransfer#mozSourceNode) property to the [`DragTransfer`](/En/DragDrop/DataTransfer) object.
 - Added the [`selection.modify()`](/zh-TW/DOM/Selection/modify) method to the {{ domxref("Selection") }} object; this lets you easily alter the current text selection or cursor position in a browser window.
-- Support for the `window.directories` object and the `directories` feature for {{ domxref("window.open") }}, which are not supported in any other browser, has been removed. Use `personalbar` instead. {{ Bug(474058) }}
+- Support for the `window.directories` object and the `directories` feature for {{ domxref("window.open") }}, which are not supported in any other browser, has been removed. Use `personalbar` instead. [Firefox bug 474058](https://bugzil.la/474058)
 - The {{ domxref("event.mozInputSource") }} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.
 - The {{ domxref("document.onreadystatechange") }} event has been implemented.
 - The {{ domxref("document.createElement") }} method no longer accepts `<` and `>` around the tag name in quirks mode.

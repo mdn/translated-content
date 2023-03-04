@@ -49,13 +49,13 @@ _This interface also inherits methods of its parent, {{domxref("Event")}}._
 - {{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}
   - : Initializes a `UIEvent` object. If the event has already being dispatched, this method does nothing.
 
-## Specifications
+## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.UIEvent")}}
+{{Compat}}
 
 ## See also
 

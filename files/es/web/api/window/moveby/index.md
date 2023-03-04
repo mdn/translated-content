@@ -41,9 +41,9 @@ Desde Firefox 7, no es posible para un sitio web mover una ventana en el navegad
 
 {{Specifications}}
 
-## Compatilidad de Navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.moveBy")}}
+{{Compat}}
 
 ## Ver también
 

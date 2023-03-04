@@ -55,17 +55,11 @@ Vary: User-Agent
 
 ## Spécifications
 
-| Spécification                                | Titre                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Vary")}}
-
-## Notes de compatibilité
-
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+{{Compat}}
 
 ## Voir aussi
 

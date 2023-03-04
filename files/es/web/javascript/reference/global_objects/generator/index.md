@@ -99,7 +99,7 @@ console.log(it.next());   // throws StopIteration (as the generator is now close
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Generator")}}
+{{Compat}}
 
 ## Vea también
 

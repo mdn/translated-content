@@ -32,9 +32,9 @@ Aucun
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue sans arguments..
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sidebarAction.open", 10)}}
+{{Compat}}
 
 ## Exemples
 

@@ -16,7 +16,7 @@ button:hover {
 
 Pseudo-classes permitem que você aplique um estilo a um elemento não apenas em relação ao conteúdo da árvore do documento, mas também em relação a fatores externos como o histórico de navegação ({{CSSxRef(":visited")}}, por exemplo), o status do seu conteúdo (como {{ CSSxRef(":checked")}} em certos elementos de um formulário), ou a posição do mouse (como {{CSSxRef(":hover")}}, que permite saber se o mouse está sobre um elemento ou não).
 
-> **Note:** **Observação:** Diferentemente das pseudo-classes, [pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elementos) podem ser usados para estilizar uma _parte específica_ de um elemento.
+> **Nota:** Diferentemente das pseudo-classes, [pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elementos) podem ser usados para estilizar uma _parte específica_ de um elemento.
 
 ## Sintaxe
 

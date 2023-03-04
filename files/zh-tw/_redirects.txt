@@ -13,8 +13,6 @@
 /zh-TW/docs/CSS/@font-face	/zh-TW/docs/Web/CSS/@font-face
 /zh-TW/docs/CSS/border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/CSS/border-image/border-image	/zh-TW/docs/Web/CSS/border-image
-/zh-TW/docs/CSS/ime-mode	/zh-TW/docs/Web/CSS/ime-mode
-/zh-TW/docs/CSS:ime-mode	/zh-TW/docs/Web/CSS/ime-mode
 /zh-TW/docs/CSS_一般問題	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
 /zh-TW/docs/CSS_動畫	/zh-TW/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /zh-TW/docs/CSS_轉場	/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
@@ -142,13 +140,13 @@
 /zh-TW/docs/Glossary/Empty_element	/zh-TW/docs/Glossary/Void_element
 /zh-TW/docs/Glossary/偽元素	/zh-TW/docs/Glossary/Pseudo-element
 /zh-TW/docs/Glossary/字元	/zh-TW/docs/Glossary/Character
-/zh-TW/docs/Glossary/字元編碼	/zh-TW/docs/Glossary/character_encoding
+/zh-TW/docs/Glossary/字元編碼	/zh-TW/docs/Glossary/Character_encoding
 /zh-TW/docs/Glossary/布林	/zh-TW/docs/Glossary/Boolean
 /zh-TW/docs/Glossary/抽象化	/zh-TW/docs/Glossary/Abstraction
 /zh-TW/docs/Glossary/瀏覽器	/zh-TW/docs/Glossary/Browser
 /zh-TW/docs/Glossary/物件導向程式設計(OOP)	/zh-TW/docs/Glossary/OOP
 /zh-TW/docs/Glossary/資料結構	/zh-TW/docs/Glossary/Data_structure
-/zh-TW/docs/Glossary/陣列	/zh-TW/docs/Glossary/array
+/zh-TW/docs/Glossary/陣列	/zh-TW/docs/Glossary/Array
 /zh-TW/docs/HTML	/zh-TW/docs/Web/HTML
 /zh-TW/docs/HTML/Canvas	/zh-TW/docs/Web/API/Canvas_API
 /zh-TW/docs/HTML/Element	/zh-TW/docs/Web/HTML/Element

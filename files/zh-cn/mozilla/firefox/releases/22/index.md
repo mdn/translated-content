@@ -9,26 +9,26 @@ slug: Mozilla/Firefox/Releases/22
 
 ### HTML
 
-- 实现了 HTML5 中的{{HTMLElement("data")}}元素 ({{bug(839371)}}).
-- The HTML5 {{HTMLElement("time")}} element has been implemented ({{bug(629801)}}).
-- The `range` state of the {{HTMLElement("input")}} element (`<input type="range">`) has been implemented, behind the preference `dom.experimental_forms_range`, only enabled by default on Nightly and Aurora channel ({{bug(841948)}}).
-- The support for the {{HTMLElement("template")}} element, part of the Web component specification has been implemented ({{bug(818976)}}).
+- 实现了 HTML5 中的{{HTMLElement("data")}}元素 ([Firefox bug 839371](https://bugzil.la/839371)).
+- The HTML5 {{HTMLElement("time")}} element has been implemented ([Firefox bug 629801](https://bugzil.la/629801)).
+- The `range` state of the {{HTMLElement("input")}} element (`<input type="range">`) has been implemented, behind the preference `dom.experimental_forms_range`, only enabled by default on Nightly and Aurora channel ([Firefox bug 841948](https://bugzil.la/841948)).
+- The support for the {{HTMLElement("template")}} element, part of the Web component specification has been implemented ([Firefox bug 818976](https://bugzil.la/818976)).
 
 ### JavaScript
 
 - [Asm.js](http://asmjs.org/spec/latest/) optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.
-- 实现了 ES6 中的[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)({{bug(846406)}}).
-- The new [Object.is](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) function has been added ({{bug(839979)}}).
-- [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) in generator expressions is now inherited from enclosing lexical scope ({{bug(848051)}}).
-- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "preventExtensions")}} trap have been implemented ({{bug(789897)}}).
+- 实现了 ES6 中的[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)([Firefox bug 846406](https://bugzil.la/846406)).
+- The new [Object.is](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) function has been added ([Firefox bug 839979](https://bugzil.la/839979)).
+- [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) in generator expressions is now inherited from enclosing lexical scope ([Firefox bug 848051](https://bugzil.la/848051)).
+- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "preventExtensions")}} trap have been implemented ([Firefox bug 789897](https://bugzil.la/789897)).
 
 ### DOM
 
 - 不再支持 `XMLHttpRequest` 中的 `multipart` 属性和 `multipart/x-mixed-replace` 响应。这是一个 Gecko 独有的特性，从来没被标准化过。你可以使用[Server-Sent Events](/zh-CN/docs/Server-sent_events), [Web Sockets](/zh-CN/docs/WebSockets)或者在 progress 事件中查看 `responseText` 属性的变化来实现同样的效果。
-- 实现了[Web Notifications](http://notifications.spec.whatwg.org/) ({{bug(782211)}}).
-- {{domxref("XMLHttpRequest/FormData", "FormData")}}对象的`append`方法现在开始接受第三个参数`filename`({{bug(690659)}}).
-- 移除了{{domxref("Node.isSupported")}}方法 ({{bug(801562)}}).
-- {{domxref("Node.setUserData")}} and {{domxref("Node.getUserData")}} has been removed for web content and are deprecated for chrome content ({{bug(842372)}}).
+- 实现了[Web Notifications](http://notifications.spec.whatwg.org/) ([Firefox bug 782211](https://bugzil.la/782211)).
+- {{domxref("XMLHttpRequest/FormData", "FormData")}}对象的`append`方法现在开始接受第三个参数`filename`([Firefox bug 690659](https://bugzil.la/690659)).
+- 移除了{{domxref("Node.isSupported")}}方法 ([Firefox bug 801562](https://bugzil.la/801562)).
+- {{domxref("Node.setUserData")}} and {{domxref("Node.getUserData")}} has been removed for web content and are deprecated for chrome content ([Firefox bug 842372](https://bugzil.la/842372)).
 - The {{domxref("Element.attributes")}} property has been moved there from {{domxref("Node")}} as required by the spec ({{bug("844134")}}).
 - 实现了 Mac OS X 中的{{domxref("DeviceLightEvent", "Ambient Light Events")}}后端。
 - Elements in the HTML namespace with local names {{HTMLElement("bgsound")}}, {{HTMLElement("multicol")}}, and {{HTMLElement("image")}} no longer implement the {{domxref("HTMLSpanElement")}} interface. {{HTMLElement("bgsound")}} and {{HTMLElement("bgsound")}} implement {{domxref("HTMLUnknownElement")}} and {{HTMLElement("image")}} implements {{domxref("HTMLElement")}}.

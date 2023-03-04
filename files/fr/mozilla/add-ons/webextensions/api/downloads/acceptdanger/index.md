@@ -39,9 +39,9 @@ var prompting = browser.downloads.acceptDanger(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Lorsque la boîte de dialogue se ferme, la promesse sera remplie sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.acceptDanger")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -26,9 +26,9 @@ translation_of: Web/CSS/background-repeat
 background-repeat: repeat-x;
 background-repeat: repeat-y;
 background-repeat: repeat;
-​​​​​​​background-repeat: space;
-​​​​​​​background-repeat: round;
-​​​​​​​background-repeat: no-repeat;
+background-repeat: space;
+background-repeat: round;
+background-repeat: no-repeat;
 
 /*Два значения: горизонтальное | вертикальное*/
 background-repeat: repeat space;

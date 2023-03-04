@@ -80,9 +80,11 @@ ETag: "e0023aa4f"
 
 ## Spécifications
 
-| Spécification                    | Titre                                           |
-| -------------------------------- | ----------------------------------------------- |
-| {{RFC("5789", "PATCH")}} | Méthode PATCH pour HTTP (PATCH Method for HTTP) |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

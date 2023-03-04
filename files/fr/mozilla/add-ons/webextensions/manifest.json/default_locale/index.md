@@ -42,6 +42,6 @@ Voir [Internationalisation](/fr/Add-ons/WebExtensions/Internationalization).
 "default_locale": "fr"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.default_locale")}}
+{{Compat}}

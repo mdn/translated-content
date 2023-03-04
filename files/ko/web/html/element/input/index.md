@@ -1,6 +1,6 @@
 ---
 title: '<input>: 입력 요소'
-slug: Web/HTML/Element/Input
+slug: Web/HTML/Element/input
 ---
 
 {{HTMLSidebar}}

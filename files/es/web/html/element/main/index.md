@@ -58,17 +58,9 @@ Algunos lectores de pantalla reconocen la etiqueta `main` y proveen un atajo par
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-Como una caracterisca nueva propuesta para HTML, el elemento `<main>` no está todavía ampliamente soportado. Es sumamente recomendable añadir el rol ARIA `"main"` a cualquier elemento `<main>`:
-
-```html
-<main role="main">
-  ...
-</main>
-```
-
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## Ver también
 

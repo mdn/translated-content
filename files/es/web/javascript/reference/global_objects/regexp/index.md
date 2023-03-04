@@ -210,9 +210,9 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // registra 'xxx'
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp")}}
+{{Compat}}
 
 ### Notas específicas de Firefox
 

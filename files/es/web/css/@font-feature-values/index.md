@@ -54,9 +54,9 @@ La regla-at `@font-feature-values` debe ser usada en la parte superior de la hoj
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-feature-values")}}
+{{Compat}}
 
 ## Véase también
 

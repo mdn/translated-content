@@ -28,9 +28,9 @@ Une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est 
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.captivePortal.getLastChecked")}}
+{{Compat}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

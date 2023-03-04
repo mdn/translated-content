@@ -135,17 +135,17 @@ This section lists the attributes available to all form `<input>` types. Non-glo
 
 > **備註：** This includes the [global HTML attributes](/zh-TW/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("type")}}
+- `type`
   - : The type of control to render. See [Form \<input> types](#form_input_types) for the individual types, with links to more information about each.
-- {{htmlattrdef("accept")}}
+- `accept`
   - : If the value of the **type** attribute is `file`, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers: A file extension starting with the STOP character (U+002E). (e.g. .jpg, .png, .doc).
     - A valid MIME type with no extensions.
     - `audio/*` representing sound files.
     - `video/*` representing video files.
     - `image/*` representing image files.
-- {{htmlattrdef("accesskey")}} {{Deprecated_Inline}}
+- `accesskey` {{Deprecated_Inline}}
   - : A single-character that the user can press to switch input focus to the control. This attribute is global in HTML5.
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
 
   - : This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are: `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method. The browser does not automatically complete the entry.
 
@@ -191,37 +191,37 @@ This section lists the attributes available to all form `<input>` types. Non-glo
       - additional `tel` variants: `tel-country-code`, `tel-national`, `tel-area-code`, `tel-local`, `tel-local-prefix`, `tel-local-suffix`, `tel-extension`
 
     - `url`: Home page or other Web page corresponding to the company, person, address, or contact information in the other fields associated with this field.
-    - `photo`: Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field.See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) for more detailed information.If the **autocomplete** attribute is not specified on an input element then the browser uses the **autocomplete** attribute value of the `<input>` element's form owner. The form owner is either the `form` element that this `<input>` element is a descendant of or the form element whose **id** is specified by the **form** attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.The **autocomplete** attribute also controls whether Firefox will, unlike other browsers, [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. The persistence feature is enabled by default. Setting the value of the **autocomplete** attribute to `off` disables this feature. This works even when the **autocomplete** attribute would normally not apply to the `<input>` by virtue of its **type**. See {{bug(654072)}}.For most modern browsers (including Firefox 38+, Google Chrome 34+, IE 11+), setting the **autocomplete** attribute will _not_ prevent a browser's password manager from asking the user if they want to store login (username and password) fields and, if they agree, from autofilling the login the next time the user visits the page. See [the autocomplete attribute and login fields](/zh-TW/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields).
+    - `photo`: Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field.See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) for more detailed information.If the **autocomplete** attribute is not specified on an input element then the browser uses the **autocomplete** attribute value of the `<input>` element's form owner. The form owner is either the `form` element that this `<input>` element is a descendant of or the form element whose **id** is specified by the **form** attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.The **autocomplete** attribute also controls whether Firefox will, unlike other browsers, [persist the dynamic disabled state and (if applicable) dynamic checkedness](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. The persistence feature is enabled by default. Setting the value of the **autocomplete** attribute to `off` disables this feature. This works even when the **autocomplete** attribute would normally not apply to the `<input>` by virtue of its **type**. See [Firefox bug 654072](https://bugzil.la/654072).For most modern browsers (including Firefox 38+, Google Chrome 34+, IE 11+), setting the **autocomplete** attribute will _not_ prevent a browser's password manager from asking the user if they want to store login (username and password) fields and, if they agree, from autofilling the login the next time the user visits the page. See [the autocomplete attribute and login fields](/zh-TW/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields).
 
-- {{htmlattrdef("autofocus")}}
+- `autofocus`
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads, unless the user overrides it (e.g. by typing in a different control). Only one form element in a document can have the **autofocus** attribute, which is a Boolean. It cannot be applied if the **type** attribute is set to `hidden` (that is, you cannot automatically set focus to a hidden control). Note that the focusing of the control may occur before the firing of the [`DOMContentLoaded` event.](/zh-TW/docs/Web/Events/DOMContentLoaded)
-- {{htmlattrdef("capture")}}
+- `capture`
   - : When the value of the **type** attribute is `file`, the presence of this Boolean attribute indicates that capture of media directly from the device's environment using a [media capture mechanism](https://www.w3.org/TR/html-media-capture/#dfn-media-capture-mechanism) is preferred.
-- {{htmlattrdef("checked")}}
+- `checked`
   - : When the value of the **type** attribute is `radio` or `checkbox`, the presence of this Boolean attribute indicates that the control is selected by default, otherwise it is ignored.Unlike other browsers, Firefox will by default [persist the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : This Boolean attribute indicates that the form control is not available for interaction. In particular, the `click` event [will not be dispatched](https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute) on disabled controls. Also, a disabled control's value isn't submitted with the form.Unlike other browsers, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
-- {{htmlattrdef("form")}}
+- `form`
   - : The form element that the input element is associated with (its _form owner_). The value of the attribute must be an **id** of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this `<input>` element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<input>` elements anywhere within a document, not just as descendants of their form elements. An input can only be associated with one form.
-- {{htmlattrdef("formaction")}}
+- `formaction`
   - : The URI of a program that processes the information submitted by the input element, if it is a submit button or image. If specified, it overrides the {{htmlattrxref("action","form")}} attribute of the element's form owner.
-- {{htmlattrdef("formenctype")}}
+- `formenctype`
   - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are: `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
     - `multipart/form-data`: Use this value if you are using an `<input>` element with the {{htmlattrxref("type","input")}} attribute set to `file`.
     - `text/plain`If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.
-- {{htmlattrdef("formmethod")}}
+- `formmethod`
   - : If the input element is a submit button or image, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are: `post`: The data from the form is included in the body of the form and is sent to the server.
     - `get`: The data from the form are appended to the **form** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.
-- {{htmlattrdef("formnovalidate")}}
+- `formnovalidate`
   - : If the input element is a submit button or image, this Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the element's form owner.
-- {{htmlattrdef("formtarget")}}
+- `formtarget`
   - : If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (e.g. tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the elements's form owner. The following keywords have special meanings: `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (i.e. the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
-- {{htmlattrdef("height")}}
+- `height`
   - : If the value of the **type** attribute is `image`, this attribute defines the height of the image displayed for the button.
-- {{htmlattrdef("inputmode")}}
+- `inputmode`
   - : A hint to the browser for which keyboard to display. This attribute applies when the value of the **type** attribute is text, password, email, or url. Possible values are: `verbatim`: Alphanumeric, non-prose content such as usernames and passwords.
     - `latin`: Latin-script input in the user's preferred language with typing aids such as text prediction enabled. For human-to-computer communication such as search boxes.
     - `latin-name`: As _latin_, but for human names.
@@ -233,75 +233,75 @@ This section lists the attributes available to all form `<input>` types. Non-glo
     - `tel`: Telephone input, including asterisk and pound key. Use \<input type="tel"> if possible instead.
     - `email`: Email input. Use \<input type="email"> if possible instead.
     - `url`: URL input. Use \<input type="url"> if possible instead.
-- {{htmlattrdef("list")}}
+- `list`
   - : Identifies a list of pre-defined options to suggest to the user. The value must be the **id** of a {{HTMLElement("datalist")}} element in the same document. The browser displays only options that are valid values for this input element. This attribute is ignored when the **type** attribute's value is `hidden`, `checkbox`, `radio`, `file`, or a button type.
-- {{htmlattrdef("max")}}
+- `max`
   - : The maximum (numeric or date-time) value for this item, which must not be less than its minimum (**min** attribute) value.
-- {{htmlattrdef("maxlength")}}
+- `maxlength`
   - : If the value of the **type** attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. It can exceed the value of the **size** attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior (i.e. the user can enter an unlimited number of characters). The constraint is evaluated only when the value of the attribute has been changed.
-- {{htmlattrdef("min")}}
+- `min`
   - : The minimum (numeric or date-time) value for this item, which must not be greater than its maximum (**max** attribute) value.
-- {{htmlattrdef("minlength")}}
+- `minlength`
   - : If the value of the **type** attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter. For other control types, it is ignored.
-- {{htmlattrdef("multiple")}}
+- `multiple`
   - : This Boolean attribute indicates whether the user can enter more than one value. This attribute applies when the **type** attribute is set to `email` or `file`, otherwise it is ignored.
-- {{htmlattrdef("name")}}
+- `name`
   - : The name of the control, which is submitted with the form data.
-- {{htmlattrdef("pattern")}}
+- `pattern`
   - : A regular expression that the control's value is checked against. The pattern must match the entire value, not just some subset. Use the **title** attribute to describe the pattern to help the user. This attribute applies when the value of the **type** attribute is `text`, `search`, `tel`, `url`, `email`, or `password`, otherwise it is ignored. The regular expression language is the same as JavaScript {{jsxref("RegExp")}} algorithm, with the `'u'` parameter that makes it treat the pattern as a sequence of unicode code points. The pattern is not surrounded by forward slashes.
-- {{htmlattrdef("placeholder")}}
+- `placeholder`
   - : A hint to the user of what can be entered in the control . The placeholder text must not contain carriage returns or line-feeds.
 
     > **備註：** Do not use the `placeholder` attribute instead of a {{HTMLElement("label")}} element, their purposes are different. The {{HTMLElement("label")}} attribute describes the role of the form element (i.e. it indicates what kind of information is expected), and the `placeholder` attribute is a hint about the format that the content should take. There are cases in which the `placeholder` attribute is never displayed to the user, so the form must be understandable without it.
-- {{htmlattrdef("readonly")}}
+- `readonly`
   - : This attribute indicates that the user cannot modify the value of the control. The value of the attribute is irrelevant. If you need read-write access to the input value, _do not_ add the "**readonly**" attribute. It is ignored if the value of the **type** attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type (such as `button` or `submit`).
-- {{htmlattrdef("required")}}
+- `required`
   - : This attribute specifies that the user must fill in a value before submitting a form. It cannot be used when the **type** attribute is `hidden`, `image`, or a button type (`submit`, `reset`, or `button`). The {{cssxref(":optional")}} and {{cssxref(":required")}} CSS pseudo-classes will be applied to the field as appropriate.
-- {{htmlattrdef("selectionDirection")}}
+- `selectionDirection`
   - : The direction in which selection occurred. This is `"forward"` if the selection was made from left-to-right in an LTR locale or right-to-left in an RTL locale, or `"backward"` if the selection was made in the opposite direction. On platforms on which it's possible this value isn't known, the value can be `"none"`; for example, on macOS, the default direction is `"none"`, then as the user begins to modify the selection using the keyboard, this will change to reflect the direction in which the selection is expanding.
-- {{htmlattrdef("selectionEnd")}}
+- `selectionEnd`
   - : The offset into the element's text content of the last selected character. If there's no selection, this value indicates the offset to the character following the current text input cursor position (that is, the position the next character typed would occupy).
-- {{htmlattrdef("selectionStart")}}
+- `selectionStart`
   - : The offset into the element's text content of the first selected character. If there's no selection, this value indicates the offset to the character following the current text input cursor position (that is, the position the next character typed would occupy).
-- {{htmlattrdef("size")}}
+- `size`
   - : The initial size of the control. This value is in pixels unless the value of the **type** attribute is `text` or `password`, in which case it is an integer number of characters. Starting in HTML5, this attribute applies only when the **type** attribute is set to `text`, `search`, `tel`, `url`, `email`, or `password`, otherwise it is ignored. In addition, the size must be greater than zero. If you do not specify a size, a default value of 20 is used. HTML5 simply states "the user agent should ensure that at least that many characters are visible", but different characters can have different widths in certain fonts. In some browsers, a certain string with _x_ characters will not be entirely visible even if size is defined to at least _x_.
-- {{htmlattrdef("spellcheck")}}
+- `spellcheck`
   - : Setting the value of this attribute to `true` indicates that the element needs to have its spelling and grammar checked. The value `default` indicates that the element is to act according to a default behavior, possibly based on the parent element's own `spellcheck` value. The value `false` indicates that the element should not be checked.
-- {{htmlattrdef("src")}}
+- `src`
   - : If the value of the **type** attribute is `image`, this attribute specifies a URI for the location of an image to display on the graphical submit button, otherwise it is ignored.
-- {{htmlattrdef("step")}}
+- `step`
   - : Works with the **min** and **max** attributes to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this attribute is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
-- {{htmlattrdef("tabindex")}}
+- `tabindex`
   - : The position of the element in the tabbing navigation order for the current document.
-- {{htmlattrdef("usemap")}} {{Deprecated_Inline}}
+- `usemap` {{Deprecated_Inline}}
   - : The name of a {{HTMLElement("map")}} element to be used as an image map.
-- {{htmlattrdef("value")}}
+- `value`
   - : The initial value of the control. This attribute is optional except when the value of the **type** attribute is `radio` or `checkbox`.
     Note that when reloading the page, Gecko and IE [will ignore the value specified in the HTML source](https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186), if the value was changed before the reload.
-- {{htmlattrdef("width")}}
+- `width`
   - : If the value of the **type** attribute is `image`, this attribute defines the width of the image displayed for the button.
 
 ### Non-standard `<input>` attributes
 
-- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
+- `autocapitalize` {{non-standard_inline}}
   - : This is a nonstandard attribute used [by Chrome](https://developers.google.com/web/updates/2015/04/autocapitalize) and iOS Safari Mobile, which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are: `none`: Completely disables automatic capitalisation.
     - `sentences`: Automatically capitalise the first letter of sentences.
     - `words`: Automatically capitalise the first letter of words.
     - `characters`: Automatically capitalise all characters.
     - `on`: {{deprecated_inline}} Deprecated since iOS 5.
     - `off`: {{deprecated_inline}} Deprecated since iOS 5.[`autocapitalize` documentation](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize) in the Safari HTML Reference.
-- {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
+- `autocorrect` {{non-standard_inline}}
   - : This is a non-standard attribute supported by Safari that is used to control whether autocorrection should be enabled when the user is entering/editing the text value of the `<input>`. Possible attribute values are: `on`: Enable autocorrection.
     - `off`: Disable autocorrection.[`autocorrect` documentation](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect) in the Safari HTML Reference.
-- {{htmlattrdef("incremental")}} {{non-standard_inline}}
+- `incremental` {{non-standard_inline}}
   - : This is a nonstandard attribute supported by WebKit (Safari) and Blink (Chrome) that only applies when the **type** is `search`. If the attribute is present, regardless of what its value is, the `<input>` fires [`search`](/zh-TW/docs/Web/Events/search) events as the user edits the text value. The event is only fired after an implementation-defined timeout has elapsed since the most recent keystroke, and new keystrokes reset the timeout. In other words, the event firing is debounced. If the attribute is absent, the [`search`](/zh-TW/docs/Web/Events/search) event is only fired when the user explicitly initiates a search (e.g. by pressing the Enter key while within field). [`incremental` documentation in the Safari HTML Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-incremental)
-- {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
+- `mozactionhint` {{non-standard_inline}}
   - : Specifies an "action hint" used to determine how to label the enter key on mobile devices with virtual keyboards. Supported values are `go`, `done`, `next`, `search`, and `send`. These automatically get mapped to the appropriate string and are case-insensitive.
-- {{htmlattrdef("results")}} {{non-standard_inline}}
+- `results` {{non-standard_inline}}
   - : This is a nonstandard attribute supported by Safari that only applies when the **type** is `search`. It is used to control the maximum number of entries that should be displayed in the `<input>`'s native dropdown list of past search queries. Its value should be a nonnegative decimal integer.
-- {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
+- `webkitdirectory` {{non-standard_inline}}
   - : This Boolean attribute indicates if the selector used when the **type** attribute is `file` has to allow for the selection of directories only.
-- {{htmlattrdef("x-moz-errormessage")}} {{non-standard_inline}}
+- `x-moz-errormessage` {{non-standard_inline}}
   - : This Mozilla extension allows you to specify the error message to display when a field doesn't successfully validate.
 
 ## Examples

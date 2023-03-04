@@ -143,7 +143,7 @@ executing.then(onExecuted, onError);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.executeScript")}}
+{{Compat}}
 
 > **Note :**
 >

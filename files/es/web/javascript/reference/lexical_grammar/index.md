@@ -535,9 +535,9 @@ a + b;
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## Ve también
 

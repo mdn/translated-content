@@ -39,9 +39,9 @@ Aucun.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se réalise sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.refresh", 10)}}
+{{Compat}}
 
 ## Exemples
 

@@ -119,7 +119,7 @@ onmessage = function(evt) {
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.OffscreenCanvas")}}
+{{Compat}}
 
 ## Voir aussi
 

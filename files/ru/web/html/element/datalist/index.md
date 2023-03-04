@@ -19,10 +19,10 @@ translation_of: Web/HTML/Element/datalist
 
 | [Категория контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                           | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                              |
+| Допустимое содержимое                                            | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                              |
 | Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                            |
-| Разрешённые родители                                             | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                             |
-| Разрешённые ARIA-роли                                            | Нет                                                                                                                                                                 |
+| Допустимые родители                                              | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                             |
+| Допустимые ARIA-роли                                             | Нет                                                                                                                                                                 |
 | DOM-интерфейс                                                    | {{domxref("HTMLDataListElement")}}                                                                                                                        |
 
 ## Атрибуты

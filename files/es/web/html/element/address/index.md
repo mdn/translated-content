@@ -50,9 +50,9 @@ Aunque el elemento de dirección representa el texto con el mismo estilo predete
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.address")}}
+{{Compat}}
 
 ## Ver también
 

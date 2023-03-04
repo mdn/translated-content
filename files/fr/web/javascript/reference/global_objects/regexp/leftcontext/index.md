@@ -45,7 +45,7 @@ Cette propriété n'est pas standard et ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.leftContext")}}
+{{Compat}}
 
 ## Voir aussi
 

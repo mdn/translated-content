@@ -117,9 +117,9 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("svg.elements.script")}}
+{{Compat}}
 
 ## Ver también
 

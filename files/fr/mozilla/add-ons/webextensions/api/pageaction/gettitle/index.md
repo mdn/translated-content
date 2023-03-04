@@ -41,9 +41,9 @@ var gettingTitle = browser.pageAction.getTitle(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accomplie avec une chaîne contenant le titre de l'action de la page.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.getTitle")}}
+{{Compat}}
 
 ## Exemples
 

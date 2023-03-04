@@ -44,9 +44,9 @@ a * c + b * c // 9
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.grouping")}}
+{{Compat}}
 
 ## Temas relacionados
 

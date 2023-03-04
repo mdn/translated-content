@@ -54,7 +54,7 @@ var setting = setting.set(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un `booléen`: `true` si le paramètre a été modifié, `false` sinon (par exemple, parce que l'extension n'a pas contrôlé le paramètre).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 Voir {{WebExtAPIRef("types.BrowserSetting")}}.
 

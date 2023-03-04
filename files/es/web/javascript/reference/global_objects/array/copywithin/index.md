@@ -138,7 +138,7 @@ if (!Array.prototype.copyWithin) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.copyWithin")}}
+{{Compat}}
 
 ## Ver también
 
