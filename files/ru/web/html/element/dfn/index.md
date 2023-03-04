@@ -10,13 +10,13 @@ translation_of: Web/HTML/Element/dfn
 
 {{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
 
-| [Категории Контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент. |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент. |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                        | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но ни один {{HTMLElement("dfn")}} элемент не должен быть потомком.               |
+| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но ни один {{HTMLElement("dfn")}} элемент не должен быть потомком.               |
 | Пропуск тега                                               | {{no_tag_omission}}                                                                                                                                          |
-| Разрешённые родители                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                       |
-| Разрешённые роли ARIA                                      | Любые                                                                                                                                                             |
-| DOM интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                              |
+| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                       |
+| Допустимые ARIA-роли                                       | Любые                                                                                                                                                             |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                              |
 
 ## Атрибуты
 
