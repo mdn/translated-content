@@ -22,9 +22,9 @@ Le type de vue de l'extension.
 
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont : `"tab"`, `"popup"`, `"sidebar"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.ViewType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -183,6 +183,6 @@ document.body.removeAll();
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.Node")}}
+{{Compat}}

@@ -9,13 +9,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ## 解説
 
-`Set` オブジェクトは値のコレクションです。挿入順に要素を反復することができます。 `Set` に**重複する値は格納出来ません**。 `Set` 内の値はコレクション内で一意になります。
+`Set` オブジェクトは値のコレクションです。 `Set` に**重複する値は格納出来ません**。 `Set` 内の値はコレクション内で一意になります。 `Set` はその要素について挿入順で反復処理を行うことができます。挿入順は、各要素が [`add`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/add) メソッドによって正常に `Set` に挿入された順番に対応します。
+
+仕様書では `Set` の実装について「平均アクセス時間がコレクション内の要素数に対して線形以下」であることが要求されています。したがって、計算量が O(N) よりも優れていれば、内部的にはハッシュテーブル（ O(1) ルックアップ)、探索木（　O(log(N) ルックアップ)、その他のデータ構造として表現することが可能です。
 
 ### 値の等価性
 
-`Set` オブジェクト内の各値は一意でなければならないので、値の等価性が調べられます。初期の ECMAScript では `===` 演算子とは違うアルゴリズムが用いられていました。特に `+0` (厳密に言えば `-0` と等価です) と `-0` が区別されていた点は重要です。しかしこの振る舞いは ECMAScript 2015 で変更されました。[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。
-
-また、 {{jsxref("NaN")}} と {{jsxref("undefined")}} も Set 内に格納できます。`NaN` は (`NaN !== NaN` として扱われますが) `NaN` と同じと扱われます。
+値の等値性は、[Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) アルゴリズムに基づいています。(以前は [Same-value](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality) を使用しており、0 と -0 は異なるものとして扱われていました。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。) つまり、 `NaN` は `NaN` と同じとみなされ (例え `NaN !== NaN` であっても)、それ以外の値は `===` 演算子の挙動に従って等しいとみなされます。
 
 ### 性能
 
@@ -33,6 +33,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ## インスタンスプロパティ
 
+- `Set.prototype[@@toStringTag]`
+  - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列の `"Set"` です。 このプロパティは {{jsxref("Object.prototype.toString()")}} で利用されます。
 - {{jsxref("Set.prototype.size")}}
   - : `Set` オブジェクト内の値の数を返します。
 
@@ -46,14 +48,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
   - : `value` に関連した要素を取り除き、要素の削除に成功したかどうかを示す論理値を返します。 `Set.prototype.has(value)` はその後は `false` を返します。
 - {{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}
   - : `Set` オブジェクト内に引数で与えられた値をもつ要素が存在するかどうかを示す論理値を返します。
-
-### 反復処理メソッド
-
 - {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
   - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しい反復子オブジェクトを返します。
 - {{jsxref("Set.prototype.values()")}}
   - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しい反復子オブジェクトを返します。
-- {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.keys()")}}
   - : {{jsxref("Set.prototype.values()")}} の別名です。
 - {{jsxref("Set.prototype.entries()")}}
 
@@ -94,9 +93,9 @@ mySet1.has(5)       // false。 5 は削除された
 
 mySet1.size         // 4。 1 つの値を削除したばかりであるため
 
-console.log(mySet1)
-// logs Set(4) [ 1, "some text", {…}, {…} ] in Firefox
-// logs Set(4) { 1, "some text", {…}, {…} } in Chrome
+mySet1.add(5);       // Set(5) { 1, 'some text', {...}, {...}, 5 }。 一度削除された要素は、新しい要素として追加されるため削除前の位置は保持されない
+
+console.log(mySet1); // Set(5) { 1, "some text", {…}, {…}, 5 }
 ```
 
 ### Set の反復処理

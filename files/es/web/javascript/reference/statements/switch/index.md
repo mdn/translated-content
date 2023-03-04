@@ -188,13 +188,13 @@ La salida (output) de este ejemplo:
 | 4                                      | Salida: ?                                  |
 | 5                                      | Salida: !                                  |
 
-### Variables centradas en bloques sin un estamento de switch
+## Especificaciones
 
-Con ECMAScript 2015 (ES6)
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.switch")}}
+{{Compat}}
 
 ## Ver también
 

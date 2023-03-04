@@ -158,8 +158,6 @@ Los navegadores simplemente ignoran el CSS que no entienden. Si la propiedad o e
 
 También puedes echar un vistazo a las tablas de compatibilidad de navegadores en la parte inferior de cada página de propiedades del proyecto MDN. Te muestran la compatibilidad de cada navegador para esa propiedad, a menudo desglosado si hay compatibilidad para un uso de la propiedad y no para otros. La tabla siguiente muestra los datos de compatibilidad para la propiedad {{cssxref ("shape-outside")}}.
 
-{{compat("css.shape-outside")}}
-
 ### ¿Hay algo más que anule tu CSS?
 
 Aquí es donde la información que has aprendido sobre la especificidad será muy útil. Si tienes algo más específico que anula lo que intentas hacer, puedes entrar en un juego muy frustrante de tratar de resolverlo sin saber qué tienes que resolver. Sin embargo, como hemos dicho, las DevTools te mostrarán qué CSS se ha aplicado y así puedes averiguar cómo hacer que el nuevo selector sea lo suficientemente específico como para anularlo.

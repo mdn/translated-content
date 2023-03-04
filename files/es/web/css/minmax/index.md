@@ -116,9 +116,9 @@ La función `minmax()` puede ser usada dentro de:
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.grid-template-columns.minmax")}}
+{{Compat}}
 
 ## Mira también
 

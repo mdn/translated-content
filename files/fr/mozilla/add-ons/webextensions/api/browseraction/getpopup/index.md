@@ -48,10 +48,6 @@ var gettingPopup = browser.browserAction.getPopup(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaine cntenant l'URL du document contextuel. Ce sera une URL entièrement qualifiée, telle que `moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/popups/popup2.html`.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.getPopup",2)}}
-
 ## Exemples
 
 Obtenez l'URL du Popup:
@@ -64,6 +60,10 @@ function gotPopup(popupURL) {
 var gettingPopup = browser.browserAction.getPopup({});
 gettingPopup.then(gotPopup);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

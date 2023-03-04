@@ -56,9 +56,9 @@ history.pushState(state, title, url)
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.History.pushState")}}
+{{Compat}}
 
 ## Mira también
 

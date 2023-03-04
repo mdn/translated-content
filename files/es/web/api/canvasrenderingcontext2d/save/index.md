@@ -60,9 +60,9 @@ ctx.fillRect(150, 40, 100, 100);
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.save")}}
+{{Compat}}
 
 ## Véase también
 

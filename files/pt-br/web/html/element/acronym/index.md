@@ -7,7 +7,7 @@ slug: Web/HTML/Element/acronym
 
 O Elemento HTML Acrônimo (`<acronym>)` permite à autores claramente indicar que uma seqüência de caracteres compõe um acrônimo ou uma abreviação de uma palavra.
 
-> **Note:** **Nota de uso:** Este elemento foi removido no HTML5 e não deve ser usado mais. Ao invés dele, desenvolvedores devem usar o elemento {{HTMLElement("abbr")}}.
+> **Note:** Este elemento foi removido no HTML5 e não deve ser usado mais. Ao invés dele, desenvolvedores devem usar o elemento {{HTMLElement("abbr")}}.
 
 ## Atributos
 

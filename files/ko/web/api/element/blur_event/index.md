@@ -60,7 +60,7 @@ form.addEventListener("blur", function( event ) {
 
 {{EmbedLiveSample('Event_delegation')}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

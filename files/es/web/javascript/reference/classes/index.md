@@ -314,9 +314,9 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Ver también
 

@@ -41,7 +41,7 @@ Las entradas requeridas también deben indicarse visualmente, utilizando un trat
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.optional")}}
+{{Compat}}
 
 ## Ver también
 

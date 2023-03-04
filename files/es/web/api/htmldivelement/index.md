@@ -26,7 +26,7 @@ _No hay métodos específicos; hereda los métodos de su padre, {{domxref("HTMLE
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLDivElement")}}
+{{Compat}}
 
 ## Ver también
 

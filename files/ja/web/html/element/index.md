@@ -13,109 +13,243 @@ slug: Web/HTML/Element
 
 ## メインルート
 
-{{HTMLRefTable("HTML Root Element")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("html")}} | **`<html>`** は [HTML](/ja/docs/Web/HTML) 要素で、 HTML 文書においてルート (基点) となる要素 (最上位要素) であり、*ルート要素*とも呼ばれます。他のすべての要素は、この要素の子孫として配置しなければなりません。 |
 
 ## 文書メタデータ
 
 メタデータは、ページに関する情報のことです。これはソフトウェア ({{Glossary("search engine", "検索エンジン")}} や {{Glossary("Browser","ブラウザー")}} など) が利用する、およびページの描画を支援するスタイル、スクリプト、データといった情報を含みます。スタイルやスクリプトのメタデータはページ内で定義するか、それらの情報を持つ別のファイルへのリンクとして定義します。
 
-{{HTMLRefTable("HTML Document Metadata")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("base")}}  | **`<base>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内におけるすべての*相対* URL の基点となる URL を指定します。 `<base>` 要素は、文書内に 1 つだけ置くことができます。 |
+| {{HTMLElement("head")}}  | **HTML の `<head>` 要素**は、文書に関する機械可読な情報 ({{glossary("metadata", "メタデータ")}})、たとえば[題名](/ja/docs/Web/HTML/Element/title)、[スクリプト](/ja/docs/Web/HTML/Element/script)、[スタイルシート](/ja/docs/Web/HTML/Element/style)などを含みます。 |
+| {{HTMLElement("link")}}  | **`<link>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書と外部のリソースとの関係を指定します。 |
+| {{HTMLElement("meta")}}  | **`<meta>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("Metadata","メタデータ")}}を表します。これは、他のメタ関連要素 ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}) で表すことができないものを表します。 |
+| {{HTMLElement("style")}} | **HTML の `<style>` 要素**は、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。 |
+| {{HTMLElement("title")}} | **`<title>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{glossary("Browser", "ブラウザー")}}のタイトルバーやページのタブに表示される文書の題名を定義します。テキストのみを含めることができます。要素内のタグはすべて無視されます。 |
 
 ## 区分化ルート
 
-{{HTMLRefTable("Sectioning Root Element")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("body")}} | **`<body>`** は [HTML](/ja/docs/Web/HTML) の要素で、 HTML 文書のコンテンツを示す要素です。 `<body>` 要素は文書中に一つだけ配置できます。 |
 
 ## コンテンツ区分
 
 コンテンツ区分要素は、文書のコンテンツを論理的な断片に体系づけます。ページのコンテンツでヘッダーやフッターのナビゲーション、あるいはコンテンツのセクションを識別する見出しなどの、大まかなアウトラインを作成するために区分要素を使用します。
 
-{{HTMLRefTable("HTML Sections")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("address")}}                                                                                                                                                                                                                                                                                                                           | **HTML の `<address>` 要素**は、これを含んでいる HTML が個人、団体、組織の連絡先を提供していることを示します。 |
+| {{HTMLElement("article")}}                                                                                                                                                                                                                                                                                                                           | **HTML の `<article>` 要素**は文書、ページ、アプリケーション、サイトなどの中で自己完結しており、 (集合したものの中で) 個別に配信や再利用を行うことを意図した構成物を表します。例えば、フォーラムの投稿、雑誌や新聞の記事、ブログの記事、商品カード、ユーザーが投稿したコメント、対話型のウィジェットやガジェット、その他の独立したコンテンツの項目が含まれます。 |
+| {{HTMLElement("aside")}}                                                                                                                                                                                                                                                                                                                             | **HTML の `<aside>` 要素**は、文書のメインコンテンツと間接的な関係しか持っていない文書の部分を表現します。サイドバーやコールアウトボックスなどを表現するためによく使われます。 |
+| {{HTMLElement("footer")}}                                                                                                                                                                                                                                                                                                                            | **HTML の `<footer>` 要素**は、直近の[区分コンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_root)要素のフッターを表します。フッターには通常、そのセクションの著作者に関する情報、関連文書へのリンク、著作権情報等を含めます。 |
+| {{HTMLElement("header")}}                                                                                                                                                                                                                                                                                                                            | **HTML の `<header>` 要素**は、導入的なコンテンツ、ふつうは導入部やナビゲーション等のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、作者名、その他の要素を含むこともできます。 |
+| [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) | **HTML の `<h1>`–`<h6>` 要素**は、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。 |
+| {{HTMLElement("main")}}                                                                                                                                                                                                                                                                                                                              | **HTML の `<main>` 要素**は、文書の {{HTMLElement("body")}} の主要な内容を表します。主要な内容とは、文書の中心的な主題、またはアプリケーションの中心的な機能に直接関連または拡張した内容の範囲のことです。 |
+| {{HTMLElement("nav")}}                                                                                                                                                                                                                                                                                                                               | **HTML の `<nav>` 要素**は、現在の文書内の他の部分や他の文書へのナビゲーションリンクを提供するためのセクションを表します。ナビゲーションセクションの一般的な例としてメニュー、目次、索引などがあります。 |
+| {{HTMLElement("section")}}                                                                                                                                                                                                                                                                                                                           | **HTML の `<section>` 要素**は、文書の自立した一般的なセクション (区間) を表します。そのセクションを表現するより意味的に具体的な要素がない場合に使用します。少数の例外を除いて、セクションには見出しを置いてください。 |
 
 ## テキストコンテンツ
 
 HTML テキストコンテンツ要素は、開始タグ {{HTMLElement("body")}} と終了タグ `</body>` の間にあるコンテンツでブロックやセクションを編成します。これらの要素はコンテンツの用途や構造を識別するものであり、{{Glossary("accessibility","アクセシビリティ")}} や {{Glossary("SEO")}} のために重要です。
 
-{{HTMLRefTable("HTML Grouping Content")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("blockquote")}} | **HTML の `<blockquote>` 要素** _(HTML ブロック引用要素_) は、内包する要素の文字列が引用文であることを示します。通常、字下げを伴ってレンダリングされます (整形方法については[注意](#Usage_notes)の項を参照してください)。 **cite** 属性により引用元の文書の URL を、 {{HTMLElement("cite")}} 要素により引用元の文書のタイトルなどを明示可能です。 |
+| {{HTMLElement("dd")}}         | **`<dd>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リスト要素 ({{HTMLElement("dl")}}) 内で、その前の用語 ({{HTMLElement("dt")}}) の説明、定義、値などを示します。 |
+| {{HTMLElement("div")}}        | **HTML の コンテンツ区分要素** (**`<div>`**) は、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いて何らかのスタイル付けがされる (例えば、スタイルが直接適用されたり、親要素に[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などの何らかのレイアウトモデルが適用されるなど) までは、コンテンツやレイアウトには影響を与えません。 |
+| {{HTMLElement("dl")}}         | **`<dl>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リストを表します。この要素は、一連の用語（{{HTMLElement("dt")}} 要素を使用して指定）と説明（{{HTMLElement("dd")}} 要素によって提供）をリスト化したものです。一般的な使用例として、用語集の作成やメタデータ（キーと値のペアのリスト）の表示が挙げられます。 |
+| {{HTMLElement("dt")}}         | **`<dt>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明または定義リストの中で用語を表す部分であり、 {{HTMLElement("dl")}} の子要素としてのみ用いることができます。普通は {{HTMLElement("dd")}} 要素が続きます。しかし、複数の `<dt>` 要素が続くと、複数の用語がすぐ後に続く {{HTMLElement("dd")}} 要素で定義されていることを表します。 |
+| {{HTMLElement("figcaption")}} | **HTML の `<figcaption>` 要素または図キャプション要素**は、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。 |
+| {{HTMLElement("figure")}}     | **HTML の `<figure>` (キャプションが付けられる図) 要素**は、図表などの自己完結型のコンテンツを表し、任意で {{HTMLElement("figcaption")}} 要素を使用して表されるキャプションを付けることができます。図、すなわちキャプションとその中身は一つの単位として参照されます。 |
+| {{HTMLElement("hr")}}         | **HTML の `<hr>` 要素**は、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。 |
+| {{HTMLElement("li")}}         | **HTML の `<li>` 要素**は、リストの項目を表すために用いられます。この要素は、その項目が属する順序付きリスト ({{HTMLElement("ol")}})、順序なしリスト ({{HTMLElement("ul")}})、メニュー ({{HTMLElement("menu")}}) のいずれかの子要素として配置する必要があります。メニュー要素および順序なしリスト内においては、リストの項目は通常、行頭文字伴って表示され、順序付きリスト内では、数字や文字による連番のリストマーカーを伴って表示されます。 |
+| {{HTMLElement("menu")}}       | **HTML の `<menu>` 要素**は、ユーザーが実行またはアクティブ化できるコマンドのグループを表します。これは画面の上部に現れるリストメニューと、ボタンを押したときにその下部付近に現れるような[コンテキストメニュー](/ja/docs/Web/HTML/Element/menu#context_menu)の両方を含みます。 |
+| {{HTMLElement("ol")}}         | **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。 |
+| {{HTMLElement("p")}}          | **HTML の `<p>` 要素**は、テキストの段落を表します。視覚メディアにおいて、段落はふつう隣接するブロックと上下の空白や最初の行の字下げによって隔てられたテキストのブロックとして表現されますが、 HTML の段落は画像やフォーム欄などの関連するコンテンツを構造的にまとめることができます。 |
+| {{HTMLElement("pre")}}        | **`<pre>`** は [HTML](/ja/docs/Web/HTML) の要素で、整形済みテキスト (preformatted text) を表します。この要素内のテキストは一般的に、ファイル内でのレイアウトをそのまま反映して[等幅フォント](https://ja.wikipedia.org/wiki/等幅フォント)で表示されます。この要素内のホワイトスペース文字はそのまま表示します。 |
+| {{HTMLElement("ul")}}         | **HTML の `<ul>` 要素**は、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。 |
 
 ## インラインテキスト意味付け
 
 HTML インラインテキスト意味づけ要素は、単語、行、あるいは任意のテキスト範囲の意味、構造、スタイルを定義します。
 
-{{HTMLRefTable("HTML Text-Level Semantics")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("a")}}      | **`<a>`** は [HTML](/ja/docs/Web/HTML) の要素（*アンカー*要素）で、 [`href` 属性](#attr-href)を用いて、別のウェブページ、ファイル、メールアドレス、同一ページ内の場所、または他の URL へのハイパーリンクを作成します。 |
+| {{HTMLElement("abbr")}}   | **HTML の略語要素** (**`<abbr>`**) は略語や頭字語を表します。任意で {{htmlattrxref("title")}} 属性で、略語の完全形または説明を提供することができます。 `title` 属性はこの完全な説明のみを含み、それ以外を含んではいけません。 |
+| {{HTMLElement("b")}}      | **HTML の注目付け要素 (`<b>`)** は、要素の内容に読み手の注意を惹きたい場合で、他の特別な重要性が与えられないものに使用します。これは以前は太字要素と呼ばれており、ほとんどのブラウザーでは文字列を太字で描画していました。しかし、 `<b>` を文字列の装飾に使うべきではありません。太字の文字列を作成するには、 CSS の {{cssxref("font-weight")}} プロパティを使用し、特別な重要性を持つテキストを示すには {{HTMLElement("strong")}} 要素を使用してください。 |
+| {{HTMLElement("bdi")}}    | HTML の**書字方向分離要素** (**`<bdi>`**) は、ブラウザーの書字方向アルゴリズムにこのテキストが周囲のテキストから独立していると扱うよう指示します。これは特に、ウェブサイトがテキストを動的に挿入し、挿入されるテキストの書字方向が不明な場合に便利です。 |
+| {{HTMLElement("bdo")}}    | **`<bdo>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在のテキストの書字方向を上書きし、中のテキストが異なる書字方向で描画されるようにします。 |
+| {{HTMLElement("br")}}     | **HTML の `<br>` 要素** は、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。 |
+| {{HTMLElement("cite")}}   | **HTML の引用元要素** (**`<cite>`**) は、引用された創作物の参照を表し、作品のタイトルを含む必要があります。参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。 |
+| {{HTMLElement("code")}}   | **HTML の `<code>` 要素**は、コンピューターコードの短い断片の文字列であると識別できるような外見のコンテンツを表示します。既定では、中の文字列が{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントを使用して表示されます。 |
+| {{HTMLElement("data")}}   | **HTML の `<data>` 要素**は、与えられたコンテンツの断片を機械可読な翻訳にリンクします。コンテンツが時刻または日付に関連するものであれば、 {{HTMLElement("time")}} 要素を使用する必要があります。 |
+| {{HTMLElement("dfn")}}    | **HTML の定義要素** (**_\<dfn>_**) は、定義句や文の文脈の中で定義している用語を示すために用いられます。 `<dfn>` の直近の祖先である {{HTMLElement("p")}} 要素、 {{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ、 {{HTMLElement("section")}} 要素が用語の定義とみなされます。 |
+| {{HTMLElement("em")}}     | **HTML の `<em>` 要素**は、強調されたテキストを示します。`<em>` 要素は入れ子にすることができ、入れ子の段階に応じてより強い程度の強調を表すことができます。 |
+| {{HTMLElement("i")}}      | **`<i>`** は [HTML](/ja/docs/Web/HTML) の要素で、何らかの理由で他のテキストと区別されるテキストの範囲を表します。例えば、慣用句、技術用語、分類学上の呼称、などです。英文においてはよくイタリック体で表現されてきたものであり、それがこの要素の `<i>` という名前の元になっています。 |
+| {{HTMLElement("kbd")}}    | **HTML のキーボード入力要素** (**`<kbd>`**) はキーボード、音声入力、その他の入力端末からのユーザーによる文字入力を表す行内の文字列の区間を表します。慣習的に、{{Glossary("user agent", "ユーザーエージェント")}}は既定で `<kbd>` 要素の中身を等幅フォントで表示しますが、 HTML 標準で規定されているものではありません。 |
+| {{HTMLElement("mark")}}   | **HTML の文字列マーク要素** (**`<mark>`**) は、周囲の文脈の中でマークを付けた部分の関連性や重要性のために、参照や記述の目的で目立たせたり強調したりする文字列を表します。 |
+| {{HTMLElement("q")}}      | **HTML の `<q>` 要素** は、その内容が行内の引用であることを表します。最近の多くのブラウザーでは、文字列を引用符で囲むように実装しています。この要素は、段落区切りをまたがない短い引用のためのものです。長文の引用には、 {{HTMLElement("blockquote")}} 要素を使用してください。 |
+| {{HTMLElement("rp")}}     | **HTML のルビ代替表示用括弧 (`<rp>`) 要素**は、 {{HTMLElement("ruby")}} 要素によるルビの表示に対応していないブラウザー向けの代替表示用括弧を提供するために使用します。 `<rp>` 要素は、注釈の文字列を {{HTMLElement("rt")}} 要素を囲む開き括弧と閉じ括弧をそれぞれ囲む必要があります。 |
+| {{HTMLElement("rt")}}     | **HTML のルビ文字列 (`<rt>`) 要素**は、ルビによる注釈（振り仮名）のルビ文字列の部分を定義し、東アジアの組版において発音、翻訳、音写などの情報を提供するために使用します。 `<rt>` 要素は常に {{HTMLElement("ruby")}} 要素の中で使用されます。 |
+| {{HTMLElement("ruby")}}   | The **HTML `<ruby>` element** はベーステキストの上、下、隣に描画される小さな注釈で、よく東アジアの文字の発音を表すのに使われます。他の種類の注釈にも使われることがありますが、この使い方はあまり一般的ではありません。 |
+| {{HTMLElement("s")}}      | **HTML の `<s>` 要素**は取り消し線を引いた文字列を表示します。 `<s>` 要素はすでに適切または正確ではなくなった事柄を表現します。しかし、文書の修正を示す場合、 `<s>` 要素は適切ではありません。この場合は {{HTMLElement("del")}} と {{HTMLElement("ins")}} の方が適しているので、こちらを使用してください。 |
+| {{HTMLElement("samp")}}   | **HTML のサンプル要素** (**`<samp>`**) は、コンピュータープログラムからのサンプル出力を表す行内文字列を含めるために使用されます。内容は普通、ブラウザーの既定の等幅フォント（[Courier](https://ja.wikipedia.org/wiki/Courier_(書体)) や Lucida Console など）を使用して表示されます。 |
+| {{HTMLElement("small")}}  | **HTML の `<small>` 要素**は、表示上のスタイルとは関係なく、著作権表示や法的表記のような、注釈や小さく表示される文を表します。既定では、 `small` から `x-small` のように、一段階小さいフォントでテキストが表示されます。 |
+| {{HTMLElement("span")}}   | **HTML の `<span>` 要素**は、記述コンテンツの汎用的な行内コンテナーであり、何かを表すものではありません。スタイル付けのため ({{htmlattrxref("class")}} または {{htmlattrxref("id")}} 属性を使用して)、または {{htmlattrxref("lang")}} のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)であるのに対し、 `<span>` は[インライン要素](/ja/docs/Web/HTML/Inline_elements)です。 |
+| {{HTMLElement("strong")}} | HTML の**強い重要性要素** (**`<strong>`**) は、内容の重要性、重大性、または緊急性が高いテキストを表します。ブラウザーは一般的に太字で描画します。 |
+| {{HTMLElement("sub")}}    | HTML の **下付き文字要素** (**`<sub>`**) は、表記上の理由で下付き文字として表示するべき行内文字列を指定します。下付き文字は普通、小さめのテキストを使用してベースラインよりも低く表示されます。 |
+| {{HTMLElement("sup")}}    | HTML の **上付き文字要素** (**`<sup>`**) は、表記上の理由で上付き文字として表示するべき行内文字列を指定します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。 |
+| {{HTMLElement("time")}}   | HTML の **`<time>` 要素**は、特定の時の区間を表します。 `datetime` 属性を使用して、機械可読な形式の日付を記述することができ、検索エンジンの結果を改善したりリマインダーなどの独自機能に使用したりすることができます。 |
+| {{HTMLElement("u")}}      | **HTML** の**非言語的注釈要素** (**`<u>`**) は、非言語的に注釈があることを示す方法で表示する行内テキストの区間を示します。これは既定で単純な実線の下線として表示されますが、 CSS を使用して変更することもできます。 |
+| {{HTMLElement("var")}}    | HTML の**変数要素** (**`<var>`**) は、数式やプログラムコード内の変数の名前を表します。挙動はブラウザーに依存しますが、通常は現在のフォントのイタリック体を使って表示されます。 |
+| {{HTMLElement("wbr")}}    | **HTML の `<wbr>` 要素**は、改行可能位置 — テキスト内でブラウザーが任意で改行してよい位置を表しますが、この改行規則は必要のない場合は改行を行いません。 |
 
 ## 画像とマルチメディア
 
 HTML は画像、音声、映像といった、さまざまなマルティメディアリソースに対応しています。
 
-{{HTMLRefTable("multimedia")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("area")}}  | **HTML の `<area>` 要素**は、イメージマップの中でクリック可能な領域をあらかじめ定義します。*イメージマップ*では、画像上の幾何学的な領域を{{Glossary("Hyperlink", "ハイパーテキストリンク")}}と関連付けすることができます。 |
+| {{HTMLElement("audio")}} | **`<audio>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内に音声コンテンツを埋め込むために使用します。この要素は、1 つまたは複数の音源を含むことができます。音源は `src` 属性または {{HTMLElement("source")}} 要素を使用して表し、ブラウザーがもっとも適切な音源を選択します。また、 {{domxref("MediaStream")}} を使用してストリーミングメディアを指し示すこともできます。 |
+| {{HTMLElement("img")}}   | **`<img>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に画像を埋め込みます。 |
+| {{HTMLElement("map")}}   | **`<map>`** は [HTML](/ja/docs/Web/HTML) の要素で、イメージマップ（クリック可能なリンク領域）を定義するために {{HTMLElement("area")}} 要素とともに使用します。 |
+| {{HTMLElement("track")}} | **`<track>`** は [HTML](/ja/docs/Web/HTML) の要素で、メディア要素 ({{HTMLElement("audio")}} および {{HTMLElement("video")}}) の子として使用します。この要素は自動的に処理される字幕など、時間指定されたテキストトラック (または時系列データ) を指定することができます。トラックは [WebVTT 形式](/ja/docs/Web/API/WebVTT_API) (`.vtt` ファイル) を用います。 |
+| {{HTMLElement("video")}} | **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。 |
 
 ## 埋め込みコンテンツ
 
 HTML は公式に対応しているマルチメディアコンテンツ以外のさまざまなコンテンツを、容易に対話できるとは限らないものであっても埋め込むことができます。
 
-{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("embed")}}   | **HTML の `<embed>` 要素**は、外部のコンテンツを文書中の指定された場所に埋め込みます。コンテンツは外部アプリケーションや、対話型コンテンツの他の出所 (ブラウザーのプラグインなど) によって提供されます。 |
+| {{HTMLElement("iframe")}}  | **HTML のインラインフレーム要素 (`<iframe>`)** は、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに他のページを埋め込むことができます。 |
+| {{HTMLElement("object")}}  | **`<object>`** は [HTML](/ja/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。 |
+| {{HTMLElement("picture")}} | **HTML の `<picture>` 要素**は、0 個以上の {{HTMLElement("source")}} 要素と一つの {{HTMLElement("img")}} 要素を含み、様々な画面や端末の条件に応じた画像を提供します。 |
+| {{HTMLElement("portal")}}  | **`<portal>`** は [HTML](/ja/docs/Web/HTML) の要素で、他の HTML ページを現在のページに埋め込み、新しいページへの移動がスムーズにできるようにします。 |
+| {{HTMLElement("source")}}  | **HTML の `<source>` 要素**は、 {{HTMLElement("picture")}} 要素、 {{HTMLElement("audio")}} 要素、 {{HTMLElement("video")}} 要素に対し、複数のメディアリソースを指定します。この要素は空要素であり、つまり中身も閉じタグもありません。[画像ファイル形式](/ja/docs/Web/Media/Formats/Image_types)や[メディアファイル形式](/ja/docs/Web/Media/Formats)の対応状況が様々であるブラウザーの幅広い互換性を確保するために、同じメディアコンテンツを複数のファイル形式で提供することはよくあることです。 |
 
 ## SVG と MathML
 
 [SVG](/ja/docs/Web/SVG) と [MathML](/ja/docs/Web/MathML) のコンテンツを、 {{SVGElement("svg")}} および {{MathMLElement("math")}} 要素を使用して直接 HTML 文書に埋め込むことができます。
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">要素</th>
-      <th scope="col">説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="vertical-align: top;">{{SVGElement("svg")}}</td>
-      <td><code>svg</code> 要素は、新しい座標系と<a href="/ja/docs/Web/SVG/Attribute/viewBox">ビューポート</a>を定義するコンテナーです。これは SVG 文書の最も外側の要素として使用されますが、SVG または HTML 文書の中に SVG フラグメントを埋め込むためにも使用できます。</td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">{{MathMLElement("math")}}</td>
-      <td>MathML における最上位の要素は <code>&#x3C;math></code> です。有効な MathML のインスタンスはすべて <code>&#x3C;math></code> タグに囲まれています。加えて、 <code>&#x3C;math></code> 要素を入れ子状に配置してはなりませんが、中にその他の子要素をいくつでも持つことができます。</td>
-    </tr>
-  </tbody>
-</table>
+| 要素 | 説明 |
+| ---- | ---- |
+| {{SVGElement("svg")}}     | `svg` 要素は、新しい座標系と[ビューポート](/ja/docs/Web/SVG/Attribute/viewBox)を定義するコンテナです。これは SVG ドキュメントの最も外側の要素として使用されますが、SVG または HTML ドキュメントの中に SVG フラグメントを埋め込むためにも使用できます。 |
+| {{MathMLElement("math")}} | MathML における最上位の要素は `<math>` です。有効な MathML のインスタンスはすべて `<math>` タグに囲まれています。加えて、 `<math>` 要素を入れ子状に配置してはなりませんが、中にその他の子要素をいくつでも持つことができます。 |
 
 ## スクリプティング
 
 動的なコンテンツやウェブアプリケーションを作成するために、 HTML ではスクリプト言語を使用できます。もっとも有名な言語は、JavaScript です。いくつかの要素がスクリプト機能をサポートします。
 
-{{HTMLRefTable("HTML Scripting")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("canvas")}}   | **HTML の `<canvas>` 要素** と [Canvas スクリプティング API](/ja/docs/Web/API/Canvas_API) や [WebGL API](/ja/docs/Web/API/WebGL_API) を使用して、グラフィックやアニメーションを描画することができます。 |
+| {{HTMLElement("noscript")}} | **HTML の `<noscript>` 要素**は、このページ上のスクリプトの種類に対応していない場合や、スクリプトの実行がブラウザーで無効にされている場合に表示する HTML の部分を定義します。 |
+| {{HTMLElement("script")}}   | **`<script>`** は [HTML](/ja/docs/Web/HTML) の要素で、実行できるコードやデータを埋め込むために使用します。ふつうは JavaScript のコードの埋め込みや参照に使用されます。 `<script>` 要素は [WebGL](/ja/docs/Web/API/WebGL_API) の GLSL shader プログラミング言語、 [JSON](/ja/docs/Glossary/JSON) 等の他の言語にも使用することができます。 |
 
 ## 編集範囲の特定
 
 これらの要素は、テキストの特定の範囲が変更されたことを示します。
 
-{{HTMLRefTable("HTML Edits")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("del")}} | **HTML の `<del>` 要素**は、文書から削除された文字列の範囲を表します。これは例えば、「変更の追跡」や、ソースコードの差分情報を描画するときに使用することができます。 {{HTMLElement("ins")}} 要素は逆の目的に、文書に追加された文字列を示すために用いることができます。 |
+| {{HTMLElement("ins")}} | **HTML の `<ins>` 要素**は、文書に追加されたテキストの範囲を表します。同様に、 {{HTMLElement("del")}} 要素を使用して文書から削除されたテキストの範囲を表すことができます。 |
 
 ## テーブル
 
 以下の要素は、表形式のデータを作成および制御するために使用します。
 
-{{HTMLRefTable("HTML tabular data")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("caption")}}  | **HTML の `<caption>` 要素**は、表のキャプション (またはタイトル) を指定します。 |
+| {{HTMLElement("col")}}      | **HTML の `<col>` 要素**は、表内の列を定義して、すべての一般セルに共通の意味を定義するために使用します。この要素は通常、 {{HTMLElement("colgroup")}} 要素内にみられます。 |
+| {{HTMLElement("colgroup")}} | **`<colgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内の列のグループを定義します。 |
+| {{HTMLElement("table")}}    | **HTML の `<table>` 要素**は表形式のデータ、つまり、行と列の組み合わせによるセルに含まれたデータによる二次元の表で表現される情報です。 |
+| {{HTMLElement("tbody")}}    | **HTML の表本体要素** (**`<tbody>`**) は、表の一連の行 ({{HTMLElement("tr")}} 要素) を内包し、その部分が表 ({{HTMLELement("table")}}) の本体部分を構成することを表します。 |
+| {{HTMLElement("td")}}       | **`<td>`** は [HTML](/ja/docs/Web/HTML) の要素で、表でデータを包含するセルを定義します。これは*モデル*に関与します。 |
+| {{HTMLElement("tfoot")}}    | **`<tfoot>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の一連の列を総括する行のセットを定義します。 |
+| {{HTMLElement("th")}}       | **`<th>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のセルのグループ用の見出しであるセルを定義します。このグループの正確な性質は、{{htmlattrxref("scope", "th")}} 属性と {{htmlattrxref("headers", "th")}} 属性で定義します。 |
+| {{HTMLElement("thead")}}    | **`<thead>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の列の見出しを定義する行のセットを定義します。 |
+| {{HTMLElement("tr")}}       | **`<tr>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素をを混在させることができます。 |
 
 ## フォーム
 
 HTML では、ユーザーがデータを記入してウェブサイトやアプリケーションに送信することを可能にするフォームを作成するために、組み合わせて使用する要素をいくつか提供します。フォームに関する多くの情報を、 [HTML フォームガイド](/ja/docs/Learn/Forms)に掲載しています。
 
-{{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("button")}}   | **HTML の `<button>` 要素**はクリックできるボタンを表し、[フォーム](/ja/docs/Learn/Forms)や、文書で単純なボタン機能が必要なあらゆる場所で使用することができます。既定では、 HTML のボタンは {{Glossary("user agent", "ユーザーエージェント")}} が実行されているホストのプラットフォームのスタイルと似ていますが、 [CSS](/ja/docs/Web/CSS) を使用してボタンの外見を変更することができます。 |
+| {{HTMLElement("datalist")}} | **HTML の `<datalist>` 要素**は、他のコントロールで利用可能な値を表現する一連の {{HTMLElement("option")}} 要素を含みます。 |
+| {{HTMLElement("fieldset")}} | **HTML の `<fieldset>` 要素**は、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。 |
+| {{HTMLElement("form")}}     | **`<form>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブサーバーに情報を送信するための対話型コントロールを含む文書の区間を表します。 |
+| {{HTMLElement("input")}}    | **`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("user agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。 `<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、 HTML の中で最も強力かつ最も複雑な要素の一つです。 |
+| {{HTMLElement("label")}}    | **HTML の `<label>` 要素**は、ユーザーインターフェイスの項目のキャプションを表します。 |
+| {{HTMLElement("legend")}}   | **HTML の `<legend>` 要素**は、その親要素である {{HTMLElement("fieldset")}} の内容のキャプションを表します。 |
+| {{HTMLElement("meter")}}    | **HTML の `<meter>` 要素**は、既知の範囲内のスカラー値、または小数値を表します。 |
+| {{HTMLElement("optgroup")}} | **`<optgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("select")}} 要素内の選択肢 ({{HTMLElement("option")}}) のグループを作成します。 |
+| {{HTMLElement("option")}}   | **HTML の `<option>` 要素**は、 {{HTMLElement("select")}} 要素、{{HTMLElement("optgroup")}} 要素、{{HTMLElement("datalist")}} 要素内で項目を定義するために使われます。したがって、`<option>` は HTML 文書でポップアップメニューのメニュー項目や、その他の項目の一覧を表すことができます。 |
+| {{HTMLElement("output")}}   | **HTML の出力要素** (**`<output>`**) は、サイトやアプリが計算結果やユーザー操作の結果を挿入することができるコンテナー要素です。 |
+| {{HTMLElement("progress")}} | **HTML の `<progress>` 要素**は、タスクの進捗状況を表示します。プログレスバーとしてよく表示されます。 |
+| {{HTMLElement("select")}}   | **HTML の `<select>` 要素**は、選択式のメニューを提供するコントロールを表します。 |
+| {{HTMLElement("textarea")}} | **`<textarea>`** は [HTML](/ja/docs/Web/HTML) の要素で、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。 |
 
 ## インタラクティブ要素
 
 HTML には、インタラクティブなユーザーインターフェイスを作成するための要素があります。
 
-{{HTMLRefTable("HTML interactive elements")}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("details")}} | **`<details>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウィジェットが「開いた」状態になった時のみ情報が表示される折りたたみウィジェットを作成します。</span>概要やラベルは {{HTMLElement("summary")}} 要素を使用して提供する必要があります。 |
+| {{HTMLElement("dialog")}}  | **HTML の `<dialog>` 要素**は、ダイアログボックスや、消すことができるアラート、インスペクター、サブウィンドウ等のような対話的コンポーネントを表します。 |
+| {{HTMLElement("summary")}} | **`<summary>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("details")}} 要素の折り畳みボックスの要約、キャプション、説明、凡例を表します。 `<summary>` 要素をクリックすると、親の `<details>` 要素の開閉状態を切り替えることができます。 |
 
 ## ウェブコンポーネント
 
 ウェブコンポーネントは要するに、独自の要素を作成して通常の HTML 要素であるかのように使用できる、HTML 関連技術です。加えて、独自版の標準 HTML 要素を作成することもできます。
 
-{{HTMLRefTable({"include":["Web Components"],"exclude":["Deprecated", "Obsolete"]})}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("slot")}}     | **`<slot>`** は [HTML](/ja/docs/Web/HTML) の要素 — [ウェブコンポーネント](/ja/docs/Web/Web_Components) — は、ウェブコンポーネント内で別な DOM ツリーを構築し、一緒に表示することができる独自のマークアップを入れることができるプレイスホルダーです。 |
+| {{HTMLElement("template")}} | **`<template>`** は [HTML](/ja/docs/Web/HTML) の要素で、ページが読み込まれたときにすぐにレンダリングされるのではなく、実行時に JavaScript を使って後からインスタンス化することができる {{Glossary("HTML")}} を保持するためのメカニズムです。 |
 
 ## 廃止または非推奨の要素
 
 > **警告:** 以下は非推奨の古い HTML 要素であり、使用するべきものではありません。 **新たなプロジェクトではこれらを使用せず、また既存のプロジェクトでも可能な限りこれらを置き換えてください。** この一覧は、情報提供のために記載しています。
 
-{{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}
+| 要素 | 説明 |
+| ---- | ---- |
+| {{HTMLElement("acronym")}}   | **`<acronym>`** は [HTML](/ja/docs/Web/HTML) の要素で、頭字語または略語の単語を構成する文字の並びを明示することができます。 |
+| {{HTMLElement("applet")}}    | **HTML の アプレット要素** (**`<applet>`**) は文書に Java アプレットを埋め込みます。この要素は {{HTMLElement("object")}} にとって代わり、廃止されました。 |
+| {{HTMLElement("bgsound")}}   | **`<bgsound>`** は [HTML](/ja/docs/Web/HTML) の非推奨の要素です。そのページが使用されている間の背景として再生される音声ファイルを設定します。代わりに {{HTMLElement("audio")}} 要素を使用してください。 |
+| {{HTMLElement("big")}}       | **`<big>`** は [HTML](/ja/docs/Web/HTML) の非推奨の要素で、内包するテキストを周りの文字列よりも1段階大きいフォントの大きさで描画します（例えば `medium` が `large` になります）。大きさはブラウザーの最大フォントの大きさに制限されます。 |
+| {{HTMLElement("blink")}}     | **`<blink>`** は [HTML](/ja/docs/Web/HTML) の要素で、標準外の要素であり、包含するテキストをゆっくり点滅させます。 |
+| {{HTMLElement("center")}}    | **`<center>`** は [HTML](/ja/docs/Web/HTML) の要素で、中に含まれるブロックレベルまたはインラインコンテンツを中央揃えして表示する[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)です。コンテナーはふつう {{HTMLElement("body")}} ですが、必ずしもそうとは限りません。 |
+| {{HTMLElement("content")}}   | **HTML の `<content>` 要素**は、一連の[ウェブコンポーネント](/ja/docs/Web/Web_Components)技術の廃止された部分であり、 [Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM) の中で {{glossary("insertion point")}} として使われていましたが、通常の HTML で利用することは意図されていませんでした。現在では DOM の中で Shadow DOM を挿入することができる場所を作成する {{HTMLElement("slot")}} 要素に置き換えられました。 |
+| {{HTMLElement("dir")}}       | **`<dir>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("user agent","ユーザーエージェント")}}が適用するスタイルやアイコンを用いて表示する、ファイルやフォルダーのディレクトリーのコンテナとして使われます。この要素は廃止されたので使わないで下さい。代わりに、ファイル一覧を含め、一覧には {{HTMLElement("ul")}} 要素を使用してください。 |
+| {{HTMLElement("font")}}      | **`<font>`** は [HTML](/ja/docs/Web/HTML) の要素で、その内容のフォントサイズ、文字色、使用フォントを定義します。 |
+| {{HTMLElement("frame")}}     | `<frame>` は、別の HTML 文書を表示できる個々の領域を定義する HTML 要素です。 frame 要素は {{HTMLElement("frameset")}} の内部で使用します。 |
+| {{HTMLElement("frameset")}}  | **HTML の `<frameset>` 要素**は、 {{HTMLElement("frame")}} 要素を包含するために使用する HTML 要素です。 |
+| {{HTMLElement("image")}}     | **HTML の `<hgroup>` 要素**は、見出しとそれに関連する内容を表します。これは 1 つの [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素と、 1 つ以上の [`<p>`](/ja/docs/Web/HTML/Element/p) 要素をグループ化します。 |
+| {{HTMLElement("keygen")}}    | **`<image>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("img")}} 要素の古く、対応が不十分な前身です。 |
+| {{HTMLElement("marquee")}}   | **`<keygen>`** は [HTML](/ja/docs/Web/HTML) の要素で、鍵の材料の生成を容易にするため、および [HTML フォーム](/ja/docs/Learn/Forms)の一部として公開鍵を送信するための要素です。この仕組みは、ウェブベースの資格情報管理システムと合わせて使用するものとして設計されています。証明書の要求に必要な他の情報を伴う HTML フォームで `<keygen>` 要素を使用して、その処理結果が署名済み資格情報になることを想定しています。 |
+| {{HTMLElement("menuitem")}}  | **`<marquee>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストがスクロールする領域を挿入します。要素の属性を使用して、テキストがコンテンツ領域の端に達したときにどうするかを制御できます。 |
+| {{HTMLElement("nobr")}}      | **`<menuitem>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーがポップアップメニューから呼び出すことができるコマンドを表します。メニューボタンに割り当てるメニューはもちろん、コンテキストメニューも含みます。 |
+| {{HTMLElement("noembed")}}   | **`<nobr>`** は [HTML](/ja/docs/Web/HTML) の要素で、その内包する文字列の自動改行を無効化します。行内に収まらない文字列は、領域からはみ出てレンダリングされるか、スクロールバーを伴って表示されます。 |
+| {{HTMLElement("noframes")}}  | **`<noembed>`** は [HTML](/ja/docs/Web/HTML) の要素で、廃止された、標準外の方法であり、 {{HTMLElement("embed")}} 要素に対応していないブラウザーや、ユーザーが仕様とした種類の[埋め込みコンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ)に対応していないブラウザーで代替または「フォールバック」コンテンツを提供するものです。これは HTML 4.01 で非推奨となり、代替コンテンツは {{HTMLElement("object")}} 要素の開始タグと終了タグの間に配置されるようになりました。 |
+| {{HTMLElement("param")}}     | **`<noframes>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("frame")}} 要素に対応していない（または対応を無効化した）ブラウザーのためのコンテンツを提供します。よく使われるほとんどのブラウザーがフレームに対応していますが、一部のモバイルブラウザーやテキストモードブラウザーなどの例外もあります。 |
+| {{HTMLElement("plaintext")}} | **HTML の `<param>` 要素**は、{{HTMLElement("object")}} 要素の引数を定義します。 |
+| {{HTMLElement("rb")}}        | **`<plaintext>`** は [HTML](/ja/docs/Web/HTML) の要素で、開始タグ以降のすべてを生のテキストとして表示し、それ以降の HTML を無視します。開始タグ以降は全て生のテキスト扱いになるので、終了タグはありません。 |
+| {{HTMLElement("rtc")}}       | **HTML ルビベース (`<rb>`) 要素**は、 {{HTMLElement("ruby") }} 表記のベースとなるテキストの部分を区切るために使用されます。つまり、修飾される文字列です。一つの `<rb>` 要素がベーステキストの不可分な区間を隔てるように囲みます。 |
+| {{HTMLElement("shadow")}}    | **HTML のルビ文字列コンテナー (`<rtc>`) 要素**は、 {{HTMLElement("ruby")}} 要素内で使用する {{HTMLElement("rb")}} 要素にルビで与える文字列の、意味を表す注釈を包含します。{{HTMLElement("rb")}} 要素は発音の注釈 ({{HTMLElement("rt")}}) と意味の注釈 ({{HTMLElement("rtc")}}) の両方を持つことができます。 |
+| {{HTMLElement("spacer")}}    | **HTML `<shadow>`** 要素 ([Web Components](/ja/docs/Web/Web_Components) 技術スイートの廃止された部分) は shadow DOM の {{glossary("insertion point")}} として使用するものでした。 shadow ホスト配下に複数の shadow ルートを生成する場合に使用しました。これは通常の HTML としては役立ちません。 |
+| {{HTMLElement("strike")}}    | **`<spacer>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブページに空の空間を挿入するための廃止された HTML 要素です。ウェブデザイナーによって用いられていた 1px の透過 GIF 画像（いわゆる**スペーサー GIF**）の挿入と同様の効果を実現するために Netscape 社が実装したものです。しかし `<spacer>` はほとんどの主要ブラウザーで対応されず、また、同様の効果は CSS を用いて実現可能です。 |
+| {{HTMLElement("tt")}}        | **`<strike>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストの上に取り消し線（水平線）を引きます。 |
+| {{HTMLElement("xmp")}}       | **`<tt>`** は [HTML](/ja/docs/Web/HTML) は、{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントで表示される行内文字列を生成します。この要素は、テレタイプ、テキスト専用画面、ラインプリンターのような等幅の表示装置で表示されるテキストとしてスタイルを設定しようとするものです。 |

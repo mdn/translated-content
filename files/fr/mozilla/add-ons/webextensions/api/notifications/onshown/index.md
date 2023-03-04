@@ -45,9 +45,9 @@ Les événements ont trois fonctions :
     - `notificationId`
       - : `string`. ID de la notification qui a été affichée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.onShown")}}
+{{Compat}}
 
 ## Exemples
 

@@ -101,10 +101,6 @@ var settingIcon = browser.sidebarAction.setIcon(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument une fois l'icône définie.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.setIcon",2)}}
-
 ## Exemples
 
 Le code ci-dessous bascule l'icône de la barre latérale de l'onglet actif lorsque l'utilisateur clique sur une action du navigateur :
@@ -130,6 +126,10 @@ function toggle(tab) {
 
 browser.browserAction.onClicked.addListener(toggle);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

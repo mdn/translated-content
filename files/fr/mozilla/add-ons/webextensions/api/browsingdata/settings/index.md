@@ -46,9 +46,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.settings")}}
+{{Compat}}
 
 ## Exemples
 

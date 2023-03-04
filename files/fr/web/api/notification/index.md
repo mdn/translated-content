@@ -136,7 +136,7 @@ function notifyMe() {
 }
 ```
 
-Nous ne montrons plus d'exemple en direct sur cette page, car Chrome et Firefox n'autorisent plus les demandes de notification des {{htmlelement ("iframe")}}s d'origine croisée, avec d'autres navigateurs à suivre. Pour voir un exemple en action, consultez notre [exemple de liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (voir également l'[application en cours d'exécution](https://mdn.github.io/to-do-notifications/).)
+Nous ne montrons plus d'exemple en direct sur cette page, car Chrome et Firefox n'autorisent plus les demandes de notification des {{htmlelement ("iframe")}}s d'origine croisée, avec d'autres navigateurs à suivre. Pour voir un exemple en action, consultez notre [exemple de liste de tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (voir également l'[application en cours d'exécution](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 > **Note :** Dans l'exemple ci-dessus, nous générons des notifications en réponse à un geste de l'utilisateur (en cliquant sur un bouton). Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.
 

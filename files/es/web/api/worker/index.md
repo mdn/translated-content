@@ -57,11 +57,9 @@ For a full example, see our[Basic dedicated worker example](https://github.com/m
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-Support varies for different types of workers. See each worker type's page for specifics.
-
-{{Compat("api.Worker")}}
+{{Compat}}
 
 ## See also
 

@@ -24,7 +24,7 @@ data = ClipboardEvent.clipboardData
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.ClipboardEvent.clipboardData")}}
+{{Compat}}
 
 ## Ver también
 

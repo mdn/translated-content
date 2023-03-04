@@ -69,9 +69,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-end-end-radius")}}
+{{Compat}}
 
 ## Mira también
 

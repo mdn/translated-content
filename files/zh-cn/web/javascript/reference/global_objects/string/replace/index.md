@@ -215,10 +215,10 @@ console.log(retArr);
 ### Firefox 备注
 
 - `flags` 是一个仅在 Gecko 中可用的非标准的第三方参数：`str.replace(regexp|substr, newSubStr|function, flags)`
-- 从 Gecko 27 开始，这个方法就被整合到了 ECMAScript 规范中。当 replace() 被使用全局 g 标志的正则表达式调用时，{{jsxref("RegExp.lastIndex")}} 属性将被重置为 0（{{bug(501739)}}）。
-- 从 Gecko 39 开始，`flags` 参数便被弃用，且在调用时会抛出一个控制台警告（{{bug(1142351)}}）。
-- 从 Gecko 47 开始，在非发行版本中已不再支持非标准的 `flags` 参数，并且不久后会完全移除该参数（{{bug(1245801)}}）。
-- 从 Gecko 49 开始，不再支持非标准的 `flags` 参数（{{bug(1108382)}}）。
+- 从 Gecko 27 开始，这个方法就被整合到了 ECMAScript 规范中。当 replace() 被使用全局 g 标志的正则表达式调用时，{{jsxref("RegExp.lastIndex")}} 属性将被重置为 0（[Firefox bug 501739](https://bugzil.la/501739)）。
+- 从 Gecko 39 开始，`flags` 参数便被弃用，且在调用时会抛出一个控制台警告（[Firefox bug 1142351](https://bugzil.la/1142351)）。
+- 从 Gecko 47 开始，在非发行版本中已不再支持非标准的 `flags` 参数，并且不久后会完全移除该参数（[Firefox bug 1245801](https://bugzil.la/1245801)）。
+- 从 Gecko 49 开始，不再支持非标准的 `flags` 参数（[Firefox bug 1108382](https://bugzil.la/1108382)）。
 
 ## 参见
 

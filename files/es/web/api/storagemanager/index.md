@@ -20,6 +20,6 @@ The **`StorageManager`** interface of the the [Storage API](/es/docs/Web/API/Sto
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.StorageManager")}}
+{{Compat}}

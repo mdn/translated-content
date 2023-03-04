@@ -48,9 +48,9 @@ Les événements ont trois événements :
     - `windowId`
       - : `integer`. ID de la fenêtre nouvellement localisée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.onFocusChanged")}}
+{{Compat}}
 
 ## Exemples
 

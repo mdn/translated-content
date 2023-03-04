@@ -58,9 +58,9 @@ Les événements ont trois fonctions :
 - `tabIds`
   - : `array` d'`integer`. Tous les onglets en surbrillance dans la fenêtre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onHighlightChanged")}}
+{{Compat}}
 
 > **Note :**
 >

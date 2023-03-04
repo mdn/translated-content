@@ -31,9 +31,9 @@ Aucun
 
 Aucune.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.find.removeHighlighting", 10)}}
+{{Compat}}
 
 ## Exemples
 

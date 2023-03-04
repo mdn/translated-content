@@ -46,7 +46,7 @@ var element = document.getElementById(id);
 
 ```js
 function changeColor(newColor) {
-​  var elem = document.getElementById('para');
+  var elem = document.getElementById('para');
   elem.style.color = newColor;
 }
 ```

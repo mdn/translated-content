@@ -36,7 +36,7 @@ Que una página dada sea "izquierda" o "derecha" está determinada por la direcc
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.right")}}
+{{Compat}}
 
 ## Ver también
 

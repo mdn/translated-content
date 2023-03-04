@@ -36,9 +36,9 @@ var searching = browser.downloads.search(query);
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). La promise est remplie avec un `tableau d'objets` `{{WebExtAPIRef('downloads.DownloadItem')}}` qui correspondent aux critères donnés.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.search")}}
+{{Compat}}
 
 ## Exemples
 

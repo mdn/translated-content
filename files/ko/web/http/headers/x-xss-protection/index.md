@@ -66,7 +66,7 @@ Nginx
 add_header "X-XSS-Protection" "1; mode=block";
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

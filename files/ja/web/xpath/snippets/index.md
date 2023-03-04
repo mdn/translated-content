@@ -93,7 +93,7 @@ alert(results.length);
 
 以下は、ネームスペースリゾルバなどの特別な必要性に関わらず、XPath の結果を配列に取得（順序づけ）する簡単なユーティリティ関数です。そうでない場合は、[`document.evaluate()`](/ja/docs/Web/API/document/evaluate)のより複雑な構文は避けてください [`XPathResult`](/ja/docs/Web/API/XPathResult)の特別なイテレータ（代わりに配列を返す）を使用する必要があります。
 
-##### 例: シンプルな `docEvaluateArray​()` ユーティリティ関数を定義する
+##### 例: シンプルな `docEvaluateArray()` ユーティリティ関数を定義する
 
 ```js
 // Example usage:
@@ -118,7 +118,7 @@ function docEvaluateArray (expr, doc, context, resolver) {
 
 次の関数は、要素と XML 文書を渡して、その要素につながる一意の文字列 XPath 式を検索することを可能にします。
 
-##### 例: `getXPathForElement​​()` ユーティリティ関数を定義する
+##### 例: `getXPathForElement()` ユーティリティ関数を定義する
 
 ```js
 function getXPathForElement(el, xml) {

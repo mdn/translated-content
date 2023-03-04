@@ -38,9 +38,9 @@ input[type=color]::-moz-color-swatch {
 
 No es parte de ninguna especificacion. Es un pseudo-elemento patentado específicamente para Gecko.
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-color-swatch")}}
+{{Compat}}
 
 ## Ver tambien
 

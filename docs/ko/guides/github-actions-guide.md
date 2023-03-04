@@ -28,7 +28,7 @@ yarn content fix-redirects ko
 
 /files/ko 폴더 하위에 있는 마크다운 파일들은 오류가 발생하지 않지만, /docs/ko/guides 폴더 하위에 있는 안내서와 관련된 파일들은 린트 오류가 발생하여 다음 방법으로 해결 할 수 있습니다. [참고](https://github.com/mdn/translated-content/pull/11031#discussion_r1066091908)
 
-Markdown Lint 규칙을 우회하기위해 `https://developer.mozilla.org/`로 시작하는 링크들은 맨 아래로 이동해서 작성합니다. 
+Markdown Lint 규칙을 우회하기위해 `https://developer.mozilla.org/`로 시작하는 링크들은 맨 아래로 이동해서 작성합니다.
 
 예를들어, `[CSS 기본 박스 모델 입문](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)`에서 `[CSS 기본 박스 모델 입문]` 부분은 `[CSS 기본 박스 모델 입문][]`로 작성하고,
 
@@ -37,7 +37,6 @@ Markdown Lint 규칙을 우회하기위해 `https://developer.mozilla.org/`로 �
 ```
 
 `(https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)`부분은 페이지 가장 하단에 아래와 같이 작성해야합니다.
-
 
 ```md
 [CSS 기본 박스 모델 입문]: https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model

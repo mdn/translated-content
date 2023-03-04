@@ -150,7 +150,7 @@ Você pode encontrar mais detalhes sobre o assunto em [How To Copy Files With Rs
 
 ### Ferramentas Rsync GUI
 
-Ferramentas GUI estão disponíveis para Rsync (para aqueles que não se sentem tão confortáveis ​​com o uso da linha de comando). [Acrosync](https://acrosync.com/mac.html) é uma dessas ferramentas e está disponível para Windows e macOS
+Ferramentas GUI estão disponíveis para Rsync (para aqueles que não se sentem tão confortáveis com o uso da linha de comando). [Acrosync](https://acrosync.com/mac.html) é uma dessas ferramentas e está disponível para Windows e macOS
 
 Novamente, você teria que obter as credenciais de conexão do seu provedor de hospedagem, mas desta forma você teria uma GUI para inseri-lás.
 

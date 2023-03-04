@@ -163,7 +163,7 @@ withoutDefaults.call({value: '=^_^='});
 
 ### 函数嵌套定义
 
-在 Gecko 33 中引入。在函数体内的函数声明不能引用内部的默认参数，并且会在 SpiderMonkey 抛出一个{{jsxref("ReferenceError")}}（现在是 {{jsxref("TypeError")}}），参见 {{bug(1022967)}}。默认参数总是会被首先执行，而在函数体内部的函数声明会在之后生效。
+在 Gecko 33 中引入。在函数体内的函数声明不能引用内部的默认参数，并且会在 SpiderMonkey 抛出一个{{jsxref("ReferenceError")}}（现在是 {{jsxref("TypeError")}}），参见 [Firefox bug 1022967](https://bugzil.la/1022967)。默认参数总是会被首先执行，而在函数体内部的函数声明会在之后生效。
 
 ```js
 // Doesn't work! Throws ReferenceError.
@@ -174,7 +174,7 @@ function f(a = go()) {
 
 ### 位于默认参数之后非默认参数
 
-在 Gecko 26 之前，以下代码会造成{{jsxref("SyntaxError")}}错误。这已经在{{bug(1022967)}}中修复，并在以后的版本中按预期方式工作。参数仍然设置为从左到右，覆盖默认参数，即使后面的参数没有默认值。
+在 Gecko 26 之前，以下代码会造成{{jsxref("SyntaxError")}}错误。这已经在[Firefox bug 1022967](https://bugzil.la/1022967)中修复，并在以后的版本中按预期方式工作。参数仍然设置为从左到右，覆盖默认参数，即使后面的参数没有默认值。
 
 ```js
 function f(x = 1, y) {

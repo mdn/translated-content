@@ -95,7 +95,7 @@ KeyboardEvent 有 `keydown` 、 `keypress` 、 `keyup` 三種事件。對大多�
 
 某些按鍵，例如 <kbd>Caps Lock</kbd> 、 <kbd>Num Lock</kbd> 和 <kbd>Scroll Lock</kbd> 能切換鍵盤上的 LED 燈。在 Windows 和 Linux 系統上，這些按鍵只會觸發 `keydown` 和 `keyup` 事件。但是 Linux 上的 Firefox 12 或更早的版本亦會觸發 `keypress` 事件。
 
-而在 Mac 電腦則不同， <kbd>Caps Lock</kbd> 只會觸發 `keydown` 事件；而 <kbd>Num Lock</kbd> 則是只有舊版的 Mac 電腦（2007 或之前的版本）才有，現在的 Mac 即便使用外部鍵盤也不支援 <kbd>Num Lock</kbd> 。雖說舊版的 Mac 電腦支援 <kbd>Num Lock</kbd> 鍵，但 <kbd>Num Lock</kbd> 並不會執行任何 KeyboardEvent；而 Gecko 瀏覽器在特殊情況（外接一個有 <kbd>F14</kbd> 的鍵盤）下能支援 <kbd>Scroll Lock</kbd> ，但是它會產生 `keypress` 事件。這個異常狀態是個 bug ，詳情可參考 {{bug(602812)}}。
+而在 Mac 電腦則不同，<kbd>Caps Lock</kbd> 只會觸發 `keydown` 事件；而 <kbd>Num Lock</kbd> 則是只有舊版的 Mac 電腦（2007 或之前的版本）才有，現在的 Mac 即便使用外部鍵盤也不支援 <kbd>Num Lock</kbd>。雖說舊版的 Mac 電腦支援 <kbd>Num Lock</kbd> 鍵，但 <kbd>Num Lock</kbd> 並不會執行任何 KeyboardEvent；而 Gecko 瀏覽器在特殊情況（外接一個有 <kbd>F14</kbd> 的鍵盤）下能支援 <kbd>Scroll Lock</kbd>，但是它會產生 `keypress` 事件。這個異常狀態是個 bug ，詳情可參考 [Firefox bug 602812](https://bugzil.la/602812)。
 
 ### 自動迴圈（Auto-Repeat ）的執行
 

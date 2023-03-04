@@ -203,7 +203,6 @@
 [CSS 기본 박스 모델 입문]: https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 [Introduction_to_HTML5_Game_Development]: https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development
 [HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC]: https://developer.mozilla.org/ko/docs/Glossary/HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC
-[What_is_accessibility]: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility
 [target]: https://developer.mozilla.org/en-US/docs/Web/API/Event/target
 [GLSL_Shaders]: https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders#demo
 [Array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description

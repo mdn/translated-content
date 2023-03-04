@@ -135,7 +135,7 @@ Voici un exemple d'un envoi de formulaire, tel qu'envoyé au programme CGI par l
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.keygen")}}
+{{Compat}}
 
 ## Voir aussi
 

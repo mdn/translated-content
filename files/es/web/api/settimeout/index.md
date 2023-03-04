@@ -260,13 +260,13 @@ Browsers including Internet Explorer, Chrome, Safari, and Firefox store the dela
 
 In (Firefox 5.0 / Thunderbird 5.0 / SeaMonkey 2.2) and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or [crbug.com/66078](http://crbug.com/66078) for details about this in Chrome.
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("api.setTimeout")}}
+{{Specifications}}
 
-## Especificación
+## Compatibilidad con navegadores
 
-Parte del DOM nivel 0, como se especifica en [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#timers).
+{{Compat}}
 
 ## Vea también
 

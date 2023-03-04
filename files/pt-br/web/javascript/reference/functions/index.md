@@ -316,9 +316,9 @@ if (0) {
 
 If the script is changed so that the condition becomes '`if (1)`', function `zero` is defined.
 
-Note: Although this kind of function looks like a function declaration, it is actually an expression (or statement), since it is nested within another statement. See differences between function declarations and function expressions.
+Nota: Although this kind of function looks like a function declaration, it is actually an expression (or statement), since it is nested within another statement. See differences between function declarations and function expressions.
 
-Note: Some JavaScript engines, not including [SpiderMonkey](/pt-BR/docs/SpiderMonkey), incorrectly treat any function expression with a name as a function definition. This would lead to `zero` being defined, even with the always-false `if` condition. A safer way to define functions conditionally is to define the function anonymously and assign it to a variable:
+Nota: Some JavaScript engines, not including [SpiderMonkey](/pt-BR/docs/SpiderMonkey), incorrectly treat any function expression with a name as a function definition. This would lead to `zero` being defined, even with the always-false `if` condition. A safer way to define functions conditionally is to define the function anonymously and assign it to a variable:
 
 ```js
 if (0) {

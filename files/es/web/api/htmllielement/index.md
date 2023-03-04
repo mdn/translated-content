@@ -24,9 +24,9 @@ _No specific method; inherits properties from its parent, {{domxref("HTMLElement
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLLIElement")}}
+{{Compat}}
 
 ## Ver también
 

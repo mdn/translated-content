@@ -116,7 +116,7 @@ router.get('/about', (req, res) => {
 
 上面的示例使用 `Router.get()` 方法来响应特定路径的 HTTP GET 请求。
 
-`Router` 还为所有其他 HTTP 动词提供路由方法，大都用法相同：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, ​​​​​​ `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, 和 `connect()`。
+`Router` 还为所有其他 HTTP 动词提供路由方法，大都用法相同：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, 和 `connect()`。
 
 比如下方代码与上方 `/about` 路由行为一致，但只响应 HTTP POST 请求。
 

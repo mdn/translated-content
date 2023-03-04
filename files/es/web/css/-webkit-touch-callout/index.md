@@ -49,6 +49,6 @@ No es parte de ninguna especificación.
 
 Apple tiene una [descripcón en la Referencia CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-touch-callout")}}
+{{Compat}}

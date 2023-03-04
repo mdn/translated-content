@@ -1,6 +1,6 @@
 ---
 title: <input type="submit">
-slug: Web/HTML/Element/Input/submit
+slug: Web/HTML/Element/input/submit
 ---
 
 {{HTMLSidebar("Input_types")}}

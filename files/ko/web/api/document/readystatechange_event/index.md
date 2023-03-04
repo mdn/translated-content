@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 {{ EmbedLiveSample('Live_example', '100%', '160px') }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

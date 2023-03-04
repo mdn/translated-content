@@ -1,6 +1,6 @@
 ---
 title: Notification.requestPermission()
-slug: Web/API/notification/requestPermission
+slug: Web/API/Notification/requestPermission
 ---
 
 {{APIRef("Web Notifications")}}

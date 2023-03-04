@@ -335,7 +335,7 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
         null se o canal não foi criado ainda. No caso de um pedido de múltiplas
         partes, isto é o canal inicial, não as diferentes partes do pedido de
         várias partes.
-        <strong>Requer privilégios elevados para o acesso.​​</strong>
+        <strong>Requer privilégios elevados para o acesso.</strong>
       </td>
     </tr>
     <tr id="mozAnon">
@@ -485,7 +485,7 @@ Retorna a string contendo o texto do cabeçalho especificado, ou null se quer a 
 
 ### open()
 
-Inicializa um pedido. Este método é para ser usado a partir do código JavaScript; para inicializar um pedido do código nativo, use [`openRequest()`](</en/nsIXMLHttpRequest#openRequest()> "/en/XMLHttpRequest#openRequest()") em seu lugar.​
+Inicializa um pedido. Este método é para ser usado a partir do código JavaScript; para inicializar um pedido do código nativo, use [`openRequest()`](</en/nsIXMLHttpRequest#openRequest()> "/en/XMLHttpRequest#openRequest()") em seu lugar.
 
 > **Nota:** Chamar esse método uma solicitação já está ativo (aquele para o qual open() ou openRequest() já foi chamado) é o equivalente de chamar abort().
 

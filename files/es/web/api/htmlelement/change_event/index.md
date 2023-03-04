@@ -123,8 +123,8 @@ function updateValue(e) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement.change_event")}}
+{{Compat}}
 
 Diferentes navegadores no siempre concuerdan cuando un evento `change` debería ser disparado para ciertos tipo de interacciones. Por ejemplo, navegación por teclado en en elementos {{HTMLElement("select")}} nunca disparan el evento `change` en Gecko hasta que el usuario presiona Enter o cambia el foco fuera del `<select>` (ver {{bug("126379")}}). A partir de Firefox 63 (Quantum), sin embargo, este comportamiento es consistente entre los mayores navegadores.

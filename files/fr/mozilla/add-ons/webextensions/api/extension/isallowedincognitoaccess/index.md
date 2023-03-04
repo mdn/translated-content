@@ -47,9 +47,9 @@ isAllowed.then(logIsAllowed);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.isAllowedIncognitoAccess")}}
+{{Compat}}
 
 > **Note :**
 >

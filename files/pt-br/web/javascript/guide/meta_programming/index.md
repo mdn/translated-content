@@ -27,7 +27,7 @@ Exemplos adicionais estão disponíveis na página de referência de {{jsxref("P
 
 ### Terminologia
 
-Os seguintes termos são usados ​​quando se fala sobre a funcionalidade de proxies.
+Os seguintes termos são usados quando se fala sobre a funcionalidade de proxies.
 
 - {{jsxref("Global_Objects/Proxy/handler","handler","","true")}}
   - : Espaço reservado de objeto que contenha traps.

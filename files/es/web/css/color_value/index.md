@@ -1245,9 +1245,9 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.color")}}
+{{Compat}}
 
 ## Ver además
 

@@ -56,12 +56,6 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 
 ## 브라우저 호환성
 
-### scrollbar-width
-
-{{Compat}}
-
-### scrollbar-color
-
 {{Compat}}
 
 ## 같이 보기

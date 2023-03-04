@@ -40,16 +40,13 @@ WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 
 Vea también [HTTP authentication](/es/docs/Web/HTTP/Authentication) por ejemplos sobre como configurar un servidor Apache o nginx para proteger con contraseña tu sitio con autenticación básica HTTP.
 
-## Specifications
+## Especificaciones
 
-| Espeficicación                                           | Título                                 |
-| -------------------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "WWW-Authenticate", "4.1")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                     | The 'Basic' HTTP Authentication Scheme |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.WWW-Authenticate")}}
+{{Compat}}
 
 ## Véase también
 

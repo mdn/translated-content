@@ -18,7 +18,7 @@ O _HTML `<area>` elemento_ define uma região hot-spot em uma imagem, e, opciona
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 - {{Htmlattrdef ("accesskey")}} {{HTMLVersionInline ("4")}} só,
-  - : Especifica um acelerador de navegação pelo teclado para o elemento. Pressionando ALT ou uma chave semelhante, em associação com o caractere especificado seleciona a forma de controle correlacionada com a seqüência de teclas. Os projetistas de página são avisados ​​para evitar sequências de teclas já vinculados aos navegadores. Este atributo é global desde HTML5.
+  - : Especifica um acelerador de navegação pelo teclado para o elemento. Pressionando ALT ou uma chave semelhante, em associação com o caractere especificado seleciona a forma de controle correlacionada com a seqüência de teclas. Os projetistas de página são avisados para evitar sequências de teclas já vinculados aos navegadores. Este atributo é global desde HTML5.
 - {{Htmlattrdef ("alt")}}
   - : Uma alternativa seqüência de texto para exibir em navegadores que não exibem imagens. O texto deve ser formulada de modo a que apresenta o usuário com o mesmo tipo de escolha como a imagem iria oferecer quando exibido sem o texto alternativo. Em HTML4, este atributo é necessário, mas pode ser uma string vazia (""). Em HTML5, este atributo é necessário apenas se o **href** atributo é usado.
 - {{Htmlattrdef ("coords")}}

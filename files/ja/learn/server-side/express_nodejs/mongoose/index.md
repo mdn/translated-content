@@ -710,7 +710,7 @@ In order to test the models (and to create some example books and other items th
 3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
     ```bash
-    node populatedb <your mongodb url>​​​​
+    node populatedb <your mongodb url>
     ```
 
 4. The script should run through to completion, displaying items as it creates them in the terminal.

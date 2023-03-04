@@ -21,7 +21,7 @@ var newString = myText.replace('string', 'sausage');
 console.log(newString);
 // la función de cadena replace () toma una cadena,
 // sustituyendo una subcadena con otra y devoviendo
-// ​​una cadena nueva con la sustitución realizada
+// una cadena nueva con la sustitución realizada
 ```
 
 Vimos exactamente este bloque de código en nuestro primer artículo de función. Estamos invocando la función [replace ()](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace) en la cadena `myText`, y le pasamos dos parámetros: la subcadena a encontrar y la subcadena con la que reemplazarla. Cuando esta función se completa (termina de ejecutarse), devuelve un valor, que es una nueva cadena con el reemplazo realizado. En el código anterior, estamos guardando este valor de retorno como el valor de la variable `newString`.

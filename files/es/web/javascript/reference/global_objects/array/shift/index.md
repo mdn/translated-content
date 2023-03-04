@@ -45,9 +45,9 @@ console.log('Elemento eliminado: ' + eliminado);
 
 {{Specifications}}
 
-## Navegadores compatibles
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.shift")}}
+{{Compat}}
 
 ## Ver también
 

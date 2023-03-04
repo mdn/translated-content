@@ -125,11 +125,11 @@ onmessage = function(e) {
 };
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

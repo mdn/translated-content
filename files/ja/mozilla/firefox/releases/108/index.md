@@ -2,7 +2,7 @@
 title: Firefox 108 for developers
 slug: Mozilla/Firefox/Releases/108
 l10n: 
-  sourceCommit: f7eb57fe7b7063932cf93af70ffb70d063ac912d
+  sourceCommit: edeb48d22b0865ede34c8ca70cd2eb60010cbf9c
 ---
 
 {{FirefoxSidebar}}
@@ -36,6 +36,8 @@ l10n:
   サーバーはそれぞれのディレクティブを使用して、`<style>` 要素や `rel="stylesheet"` を持つ `<link>` 要素のスタイルシート、および個々の要素に適用するスタイルの正当な提供元を指定できます ({{bug(1529338)}})。
 - [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP ヘッダーの [`script-src-elem`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) および [`script-src-attr`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) ディレクティブをサポートしました。
   サーバーはそれぞれのディレクティブを使用して、`<script>` 要素の JavaScript、および `onclick` などのイベントハンドラーのインラインスクリプトの正当な提供元を指定できます ({{bug(1529337)}})。
+- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) の違反内容の報告が、`effective-directive` および `status-code` プロパティを含むようになりました。
+  詳しくは [違反内容の報告の構文](/ja/docs/Web/HTTP/CSP#違反内容の報告の構文) をご覧ください ({{bug(1192684)}})。
 
 ### API
 

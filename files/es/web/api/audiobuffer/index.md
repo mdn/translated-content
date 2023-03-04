@@ -75,9 +75,9 @@ source.start();
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.AudioBuffer")}}
+{{Compat}}
 
 ## Mira también
 

@@ -289,7 +289,7 @@ pip3 install virtualenvwrapper-win
 
 一旦你安裝了 virtualenvwrapper 或 virtualenvwrapper-win，那麼在所有平台上使用虛擬環境都非常相似。
 
-現在，您可以使用`mkvirtualenv`命令創建新的虛擬環境。當此命令運行時，您將看到正在設置的環境（您看到的是略微特定 ​​ 於平台的）。當命令完成時，新的虛擬環境，將處於活動狀態 - 您可以看到這一點，因為提示的開頭，將是括號中環境的名稱（如下所示）。
+現在，您可以使用`mkvirtualenv`命令創建新的虛擬環境。當此命令運行時，您將看到正在設置的環境（您看到的是略微特定 於平台的）。當命令完成時，新的虛擬環境，將處於活動狀態 - 您可以看到這一點，因為提示的開頭，將是括號中環境的名稱（如下所示）。
 
   ```
   $ mkvirtualenv my_django_environment

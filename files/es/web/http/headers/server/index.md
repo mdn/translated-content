@@ -32,13 +32,11 @@ Server: Apache/2.4.1 (Unix)
 
 ## Especificaciones
 
-| Especificación                               | Título                                                        |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Server", "7.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.Server")}}
+{{Compat}}
 
 ## Véase también
 

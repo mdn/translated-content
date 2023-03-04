@@ -2,7 +2,7 @@
 title: Firefox 109 for developers
 slug: Mozilla/Firefox/Releases/109
 l10n:
-  sourceCommit: 7a9defe6c6e0d334a9a71b37ef2beb01f84c6c39
+  sourceCommit: 6d2bbd133371731c0896cb62803db8251c81b864
 ---
 
 {{FirefoxSidebar}}
@@ -18,7 +18,6 @@ l10n:
 ### CSS
 
 - [`<system-color>`](/ja/docs/Web/CSS/system-color) CSS データ型で、値 [`Mark`](/ja/docs/Web/CSS/system-color#mark)、[`MarkText`](/ja/docs/Web/CSS/system-color#marktext)、[`ButtonBorder`](/ja/docs/Web/CSS/system-color#buttonborder) をサポートしました ({{bug(1638052)}})。
-- [`content-visibility`](/ja/docs/Web/CSS/content-visibility) CSS プロパティで、値 `auto` をサポートしました。これは、[ユーザーに関連](/ja/docs/Web/CSS/CSS_Containment#relevant_to_the_user) がない場合にコンテンツの描画をスキップすることを可能にします ({{bug(1791759)}})。
 
 ### JavaScript
 
@@ -34,6 +33,11 @@ l10n:
 - `SVGGraphicsElement.nearestViewportElement` および `SVGGraphicsElement.farthestViewportElement` 属性を、nightly および初期の beta ビルドにおいてデフォルトで無効にしました (設定項目 `svg.nearestAndFarthestViewportElement.enabled` で制御します)。
   `SVGGraphicsElement.nearestViewportElement` の代替として [`SVGElement.viewportElement`](/ja/docs/Web/API/SVGElement#svgelement.viewportelement) を使用できます。
   これらは SVG2 仕様書から削除されており、将来の Firefox リリースで完全に削除する予定です ({{bug(1133174)}})。
+
+### HTTP
+
+- {{HTTPHeader("Content-Security-Policy")}} のソースディレクティブ用の値 `'unsafe-hashes'` をサポートしました。
+  詳しくは [CSP unsafe-hashes](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_hashes) ({{bug(1343950)}}) をご覧ください。
 
 ### API
 
@@ -59,6 +63,7 @@ l10n:
 - Manifest V3 の署名と、AMO で Manifest V3 拡張機能を公開する機能をサポートしました。詳しくは [Manifest v3 signing available November 21 on Firefox Nightly](https://blog.mozilla.org/addons/2022/11/17/manifest-v3-signing-available-november-21-on-firefox-nightly/) のブログ記事をご覧ください。
 - Manifest V3 拡張機能のデフォルトの [Content Security Policy (CSP)](/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) を、[`upgrade-insecure-requests` を含む](/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#upgrade_insecure_network_requests_in_manifest_v3) ように更新しました。これはデフォルトで、すべてのネットワーク要求が `https:` を使用するように更新されることを意味します。`http:` を使用することが必要な拡張機能は、[`content_security_policy`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json キーでデフォルトの CSP を上書きすることで `http:` を使用できます ({{bug(1797086)}})。
 - {{WebExtAPIRef("webRequest.SecurityInfo")}} に `secretKeyLength` プロパティを追加しました。これは、ウェブ要求のセキュリティプロパティにある暗号鍵の長さをビット数で表します ({{bug(1778473)}})。
+- [拡張機能ボタン](https://support.mozilla.org/kb/unified-extensions) の導入に合わせて、[`action`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) および [`browser_action`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) マニフェストキーの `default_area` の既定値を `"navbar"` から `"menupanel"` に変更しました ({{bug(1799947)}})。
 
 ## 過去のバージョン
 

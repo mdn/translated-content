@@ -122,9 +122,9 @@ El resultado se vería:
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.mark")}}
+{{Compat}}
 
 ## Consulta también
 

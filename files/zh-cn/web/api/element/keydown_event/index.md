@@ -37,7 +37,7 @@ slug: Web/API/Element/keydown_event
 
 键盘事件只能由 `<inputs>`, `<textarea>` 以及任何具有 `contentEditable` 或 `tabindex="-1"`属性的组件触发。
 
-自 Firefox 65 起， `keydown` 与 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件会在 IME（输入法编辑器）复合事件中被触发，目的是为了提升 CJKT（中日韩台地区）用户跨浏览器性能，({{bug(354358)}}). 若要忽略复合事件中所有 `keydown` 事件，可以按照如下代码修改 (229 是某个在 IME 中触发的键盘事件对应的 `keyCode`):
+自 Firefox 65 起， `keydown` 与 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件会在 IME（输入法编辑器）复合事件中被触发，目的是为了提升 CJKT（中日韩台地区）用户跨浏览器性能，([Firefox bug 354358](https://bugzil.la/354358)). 若要忽略复合事件中所有 `keydown` 事件，可以按照如下代码修改 (229 是某个在 IME 中触发的键盘事件对应的 `keyCode`):
 
 ```js
 eventTarget.addEventListener("keydown", event => {

@@ -47,7 +47,7 @@ translation_of: Web/HTML/Element/picture
 Атрибут `type` позволяет вам обозначить MIME-тип данных, указанных в атрибуте `srcset` элемента {{HTMLElement("source")}}. Если браузер не поддерживает данный тип, то элемент {{ HTMLElement("source")}} опускается.
 
 ```html
-​<picture>
+<picture>
  <source srcset="mdn-logo.svg" type="image/svg+xml">
  <img src="mdn-logo.png" alt="MDN">
 </picture>

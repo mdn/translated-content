@@ -20,7 +20,7 @@ slug: Web/HTML/Element/time
 
 和其他 HTML elements 一樣，接受所有 [global attributes](/zh-TW/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : 此 attribute 用以表示日期或時間，其格式必須是[有效的日期/時間格式](http://www.w3.org/TR/html-markup/datatypes.html#common.data.datetime)。若其值不正確，則 element 就不會有關連的 time stamp.
 
 ## 示例

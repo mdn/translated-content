@@ -38,9 +38,9 @@ Cada vez que se llama a `createObjectURL()`, un nuevo objeto URL es creado, incl
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.URL.createObjectURL")}}
+{{Compat}}
 
 ## Mirar también
 
