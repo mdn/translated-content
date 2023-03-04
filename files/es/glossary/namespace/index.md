@@ -11,4 +11,4 @@ En un sistema operativo, un directorio es un espacio de nombre. Cada archivo o s
 
 ## See also
 
-- [Espacio de Nombres](https://es.wikipedia.org/wiki/Espacio_de_nombres) em Wikipedia
+- [Espacio de Nombres](https://es.wikipedia.org/wiki/Espacio_de_nombres) en Wikipedia
