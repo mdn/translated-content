@@ -318,7 +318,6 @@
 /ko/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data	/ko/docs/Learn/Forms/Sending_and_retrieving_form_data
 /ko/docs/Learn/HTML/Forms/Your_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
 /ko/docs/Learn/HTML/Howto/데이터_속성_사용하기	/ko/docs/Learn/HTML/Howto/Use_data_attributes
-/ko/docs/Learn/HTML/Multimedia_and_embedding/ideo_and_audio_content	/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ko/docs/Learn/Index	/ko/docs/Learn
 /ko/docs/Learn/JavaScript/Asynchronous/Async_await	/ko/docs/Learn/JavaScript/Asynchronous/Promises
 /ko/docs/Learn/JavaScript/Asynchronous/Concepts	/ko/docs/Learn/JavaScript/Asynchronous/Introducing
@@ -495,7 +494,6 @@
 /ko/docs/Web/API/File/Using_files_from_web_applications	/ko/docs/Web/API/File_API/Using_files_from_web_applications
 /ko/docs/Web/API/File/size	/ko/docs/Web/API/Blob/size
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
-/ko/docs/Web/API/GlobalEventHandlers	/ko/docs/orphaned/Web/API/GlobalEventHandlers
 /ko/docs/Web/API/GlobalEventHandlers/onchange	/ko/docs/Web/API/HTMLElement/change_event
 /ko/docs/Web/API/GlobalEventHandlers/oncontextmenu	/ko/docs/Web/API/Element/contextmenu_event
 /ko/docs/Web/API/GlobalEventHandlers/ondblclick	/ko/docs/Web/API/Element/dblclick_event
@@ -556,7 +554,6 @@
 /ko/docs/Web/API/WebRTC_API/adapter.js	/ko/docs/orphaned/Web/API/WebRTC_API/adapter.js
 /ko/docs/Web/API/Web_Workers_API/basic_usage	/ko/docs/Web/API/Web_Workers_API/Using_web_workers
 /ko/docs/Web/API/Window/crypto	/ko/docs/Web/API/crypto_property
-/ko/docs/Web/API/WindowEventHandlers	/ko/docs/orphaned/Web/API/WindowEventHandlers
 /ko/docs/Web/API/WindowEventHandlers/onhashchange	/ko/docs/Web/API/Window/hashchange_event
 /ko/docs/Web/API/WindowEventHandlers/onpopstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/WindowEventHandlers/onstorage	/ko/docs/Web/API/Window/storage_event
