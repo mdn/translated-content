@@ -19,6 +19,10 @@ Os metadados são onde se guardam várias informações sobre a página, incluin
 
 {{HTMLRefTable("HTML Document Metadata")}}
 
+## Sectioning root
+
+{{HTMLRefTable("Sectioning Root Element")}}
+
 ## Separação de conteúdo
 
 Elementos de separação de conteúdo permitem organizar o conteúdo do documento em partes lógicas. Use elementos de separação para criar um esboço do conteúdo da página, incluindo navegação por cabeçalho e rodapé, e elementos de cabeçalho para identificar seções de conteúdo.
