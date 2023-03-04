@@ -58,15 +58,21 @@ form.addEventListener("blur", function( event ) {
 }, true);
 ```
 
-{{EmbedLiveSample('Event_delegation')}}
+#### 결과
+
+{{EmbedLiveSample("Event_delegation", '100%', '50px')}}
+
+## 명세서
+
+{{Specifications}}
 
 ## 브라우저 호환성
 
 {{Compat}}
 
-## Related Events
+## 같이 보기
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- The {{domxref("HTMLElement.blur()")}} method
+- Related events: {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}
+- This event on `Window` targets: {{domxref("Window/blur_event", "blur")}} event
+- [Focusing: focus/blur](https://javascript.info/focus-blur)
