@@ -772,6 +772,7 @@
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields
 /ru/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
+/ru/docs/Web/JavaScript/Reference/Errors/Dead_object	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Dead_object
 /ru/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 /ru/docs/Web/JavaScript/Reference/Errors/Var_hides_argument	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
 /ru/docs/Web/JavaScript/Reference/Errors/Переменные_скрывают_аргумент	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
