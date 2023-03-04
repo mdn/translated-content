@@ -12270,10 +12270,6 @@
     "modified": "2020-10-19T11:06:58.196Z",
     "contributors": ["sovushka-utrom", "MakarovDs777"]
   },
-  "Web/JavaScript/Reference/Errors/Dead_object": {
-    "modified": "2020-03-12T19:48:38.148Z",
-    "contributors": ["MakarovDs777"]
-  },
   "Web/JavaScript/Reference/Errors/Delete_in_strict_mode": {
     "modified": "2020-03-12T19:48:34.125Z",
     "contributors": ["Akh-rman", "MakarovDs777"]
@@ -17845,6 +17841,10 @@
   "orphaned/Web/JavaScript/Guide/Об_этом_руководстве": {
     "modified": "2019-03-24T00:13:23.720Z",
     "contributors": ["teoli", "danielgn96"]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Dead_object": {
+    "modified": "2020-03-12T19:48:38.148Z",
+    "contributors": ["MakarovDs777"]
   },
   "orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated": {
     "modified": "2020-03-12T19:48:56.664Z",
