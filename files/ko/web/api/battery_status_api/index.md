@@ -11,7 +11,7 @@ Battery Status API 는 {{domxref("window.navigator.battery")}} 를 제공 합니
 
 ## 예제
 
-아래 예제에서는 배터리가 충전중인 상태 (전원 케이블을 연결하여 충전 중인지) 와 배터리 수준의 변화를 감시합니다. 각각 {{event("chargingchange")}} 와 {{event("levelchange")}} 이벤트가 발생하면 완료 됩니다.
+아래 예제에서는 배터리가 충전중인 상태 (전원 케이블을 연결하여 충전 중인지) 와 배터리 수준의 변화를 감시합니다. 각각 {{domxref("BatteryManager.chargingchange_event", "chargingchange")}} 와 {{domxref("BatteryManager.levelchange_event", "levelchange")}} 이벤트가 발생하면 완료 됩니다.
 
 ```js
 var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
