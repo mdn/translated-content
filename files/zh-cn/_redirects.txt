@@ -2407,7 +2407,6 @@
 /zh-CN/docs/Web/JavaScript/Reference/Date/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
 /zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_type
-/zh-CN/docs/Web/JavaScript/Reference/Errors/Dead_object	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Errors/Dead_object
 /zh-CN/docs/Web/JavaScript/Reference/Errors/不能添加属性	/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property
 /zh-CN/docs/Web/JavaScript/Reference/Function	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function
 /zh-CN/docs/Web/JavaScript/Reference/Function/apply	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
