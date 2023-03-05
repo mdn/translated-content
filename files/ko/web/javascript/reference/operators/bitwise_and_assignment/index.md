@@ -38,5 +38,5 @@ a &= 2; // 0
 
 ## 같이 보기
 
-- [JS의 할당 연산자 가이드](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
+- [JS의 할당 연산자 안내서](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
 - [AND 비트 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
