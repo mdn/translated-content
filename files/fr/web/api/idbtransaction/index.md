@@ -109,7 +109,7 @@ Une transaction peut s'effectuer dans l'un de ces modes :
 
 ## Exemples
 
-Dans l'exemple qui suit, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données dans le magasin d'objet. On notera également l'utilisation des gestionnaires d'évènements attachés à la transaction qui permettent d'indiquer la réussite ou l'échec de l'ouverture de la transaction. Pour un exemple complet, voir [l'application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir également la démonstration _live_](https://mdn.github.io/to-do-notifications/))
+Dans l'exemple qui suit, on ouvre une transaction en lecture/écriture sur la base de données et on ajoute des données dans le magasin d'objet. On notera également l'utilisation des gestionnaires d'évènements attachés à la transaction qui permettent d'indiquer la réussite ou l'échec de l'ouverture de la transaction. Pour un exemple complet, voir [l'application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir également la démonstration _live_](https://mdn.github.io/dom-examples/to-do-notifications/))
 
 ```js
 // On commence par ouvrir la base de données
@@ -178,4 +178,4 @@ function addData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

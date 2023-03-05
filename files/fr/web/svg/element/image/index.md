@@ -55,4 +55,4 @@ Cet élément implémente l'interface [`SVGImageElement`](/fr/DOM/SVGImageElemen
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.image")}}
+{{Compat}}

@@ -41,9 +41,9 @@ var oMiBlob = new Blob(unaParteDeArchivo, {type : 'text/html'}); // el blob
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Blob.Blob")}}
+{{Compat}}
 
 ## Vea también
 

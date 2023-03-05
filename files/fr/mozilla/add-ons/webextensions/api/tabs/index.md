@@ -169,7 +169,7 @@ De nombreuses opérations d'onglet utilisent un identifiant (`id`) d'onglet. Les
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

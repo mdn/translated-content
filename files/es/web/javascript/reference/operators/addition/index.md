@@ -50,9 +50,9 @@ false + false // 0
 
 {{Specifications}}
 
-## Compatibilidad de Explorador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.addition")}}
+{{Compat}}
 
 ## También revisa
 

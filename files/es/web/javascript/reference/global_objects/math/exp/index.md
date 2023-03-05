@@ -41,7 +41,7 @@ Math.exp(1);  // 2.718281828459045
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.exp")}}
+{{Compat}}
 
 ## Ve también
 

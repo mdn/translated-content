@@ -92,6 +92,6 @@ border: 1px solid black; outline: dotted red;
 
 Esta propiedad no se define es ningún estándar CSS.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-moz-outline-radius")}}
+{{Compat}}

@@ -102,7 +102,7 @@ browser.menus.create(
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.menus.create", 10)}}
+{{Compat}}
 
 ## 예제
 

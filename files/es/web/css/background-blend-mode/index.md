@@ -79,9 +79,9 @@ console.log(document.getElementById('div'));
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-blend-mode")}}
+{{Compat}}
 
 ## Véase también
 

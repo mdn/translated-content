@@ -1,6 +1,6 @@
 ---
 title: '<input>: 입력 요소'
-slug: Web/HTML/Element/Input
+slug: Web/HTML/Element/input
 ---
 
 {{HTMLSidebar}}
@@ -645,4 +645,4 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.input")}}
+{{Compat}}

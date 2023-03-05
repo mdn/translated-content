@@ -97,9 +97,9 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.search")}}
+{{Compat}}
 
 > **Note :**
 >

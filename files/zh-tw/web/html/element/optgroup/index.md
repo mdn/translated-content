@@ -20,9 +20,9 @@ In a Web form, the **HTML `<optgroup>` element** creates a grouping of options w
 
 This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
-- {{htmlattrdef("label")}}
+- `label`
   - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
 
 ## 範例

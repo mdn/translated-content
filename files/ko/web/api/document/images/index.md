@@ -30,6 +30,6 @@ for(var i = 0; i < ilist.length; i++) {
 
 `document.images` 는 DOM HTML의 part이며, HTML documents 에서만 지원된다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}

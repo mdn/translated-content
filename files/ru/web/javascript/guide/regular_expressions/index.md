@@ -595,7 +595,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
           табуляция, прогон страницы, перевод строки. Эквивалентен
           <code
             >[
-            \f\n\r\t\v​\u00A0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004​\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​\u2028\u2029​\u202f\u205f​\u3000]</code
+            \f\n\r\t\v\u00A0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u2028\u2029\u202f\u205f\u3000]</code
           >.
         </p>
         <p>Например, <code>/\s\w*/</code> совпадает с ' bar' в "foo bar."</p>
@@ -615,7 +615,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
           Соответствует одиночному символу непустого пространства.
           Эквивалентен<code>
             [^
-            \f\n\r\t\v​\u00A0\u1680​\u180e\u2000-\u200a​​\u2028\u2029​\u202f\u205f​\u3000]</code
+            \f\n\r\t\v\u00A0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000]</code
           >.
         </p>
         <p>Например, <code>/\S\w*/</code> совпадает с 'foo' в "foo bar."</p>

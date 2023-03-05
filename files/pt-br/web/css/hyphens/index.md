@@ -19,7 +19,7 @@ hyphens: unset;
 
 Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo `lang`, e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo `xml:lang.`
 
-> **Note:** **Nota:** As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.
+> **Nota:** As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.
 
 {{cssinfo}}
 
@@ -36,7 +36,7 @@ A propriedade `hyphens` é especificada como uma única palavra-chave escolhida 
 - `auto`
   - : O navegador é livre para quebrar palavras automaticamente nos pontos apropriados de hifenização, seguindo quaisquer regras que ele escolher. Entretanto, oportunidades sugeridas de quebras de linha (veja [Oportunidades sugeridas de quebra de linha](#suggesting_line_break_opportunities) abaixo) irão sobrepor a seleção automática de pontos de quebra quando presentes.
 
-> **Note:** **Nota:** O comportamento da configuração `auto` requer que a propriedade idioma seja indicada corretamente para que as regras de hifenização sejam selecionadas. Você deve especificar o idioma utilizando o atributo HTML `lang` para garantir que a hifenização automática seja aplicada na linguagem de sua escolha.
+> **Nota:** O comportamento da configuração `auto` requer que a propriedade idioma seja indicada corretamente para que as regras de hifenização sejam selecionadas. Você deve especificar o idioma utilizando o atributo HTML `lang` para garantir que a hifenização automática seja aplicada na linguagem de sua escolha.
 
 ## Oportunidades sugeridas de quebra de linha
 

@@ -64,8 +64,6 @@ function fail()
 fail();
 ```
 
-​​​​
-
 不可扩展对象的原型是不可变的：
 
 ```plain

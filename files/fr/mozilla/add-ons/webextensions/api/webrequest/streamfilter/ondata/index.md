@@ -201,6 +201,6 @@ browser.webRequest.onBeforeRequest.addListener(
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.ondata", 10)}}
+{{Compat}}

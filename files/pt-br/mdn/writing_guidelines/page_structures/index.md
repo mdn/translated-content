@@ -8,7 +8,7 @@ original_slug: MDN/Structures/Compatibility_tables
 
 A MDN possui um formato padrão para tabelas de compatibilidade para nossa documentação da Web aberta; isto é, documentação de tecnologias como DOM, HTML, CSS, JavaScript, SVG etc., compartilhadas em todos os navegadores. Este artigo é um guia de "introdução" sobre como adicionar, manter o banco de dados a partir do qual as tabelas de compatibilidade são geradas e como integrar as tabelas em artigos.
 
-Para obter uma documentação mais avançada, bem como as alterações mais recentes nos processos e esquemas JSON usados ​​para representar os dados, consulte o [guia do colaborador](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md) do repositório de dados e o [guia de diretrizes de dados](https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md).
+Para obter uma documentação mais avançada, bem como as alterações mais recentes nos processos e esquemas JSON usados para representar os dados, consulte o [guia do colaborador](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md) do repositório de dados e o [guia de diretrizes de dados](https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md).
 
 Se você tiver dúvidas ou descobrir problemas, compartilhe conosco no [fórum de discussão da MDN](https://discourse.mozilla-community.org/c/mdn).
 

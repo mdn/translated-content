@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.captureStream()
 slug: Web/API/HTMLMediaElement/captureStream
+l10n:
+  sourceCommit: 5e10a2aab4ec9ecbcf8cf79f589f9b7ece88ef60
 ---
 
 {{APIRef("HTML Media Capture")}}
@@ -11,13 +13,13 @@ slug: Web/API/HTMLMediaElement/captureStream
 
 ## 構文
 
-```js
+```js-nolint
 captureStream()
 ```
 
 ### 引数
 
-無し。
+なし。
 
 ### 返値
 
@@ -28,7 +30,7 @@ captureStream()
 この例では、イベントハンドラーが確立されているため、ボタンをクリックすると、ID が `"playback"` のメディア要素のコンテンツの {{domxref("MediaStream")}} へのキャプチャを開始します。 これにより、WebRTC を介したストリーミングのソースなど、他の目的にストリームを使用して、動画通話中に録画済みの動画を他の人と共有できるようになります。
 
 ```js
-document.querySelector('.playAndRecord').addEventListener('click', function() {
+document.querySelector('.playAndRecord').addEventListener('click', () => {
   const playbackElement = document.getElementById("playback");
   const captureStream = playbackElement.captureStream();
   playbackElement.play();
@@ -61,7 +63,7 @@ Firefox 51 より前のバージョンでは、 `captureStream()` はソース�
 ## 関連情報
 
 - [メディア要素の記録](/ja/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
-- [MediaStream 記録 API](/ja/docs/Web/API/MediaStream_Recording_API)
+- [MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API)
 - {{domxref("HTMLCanvasElement.captureStream()")}}
 - {{domxref("MediaStream")}}
 - [WebRTC API](/ja/docs/Web/API/WebRTC_API)

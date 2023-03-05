@@ -56,9 +56,6 @@ Al usar `yarn start` en localhost para el repositorio `mdn/content`, es posible 
 
 La comunidad de español sugiere utilizar las siguientes convenciones al traducir el contenido.
 
-<details>
-  <summary>Traducciones recomendadas</summary>
-
 | Término original                | Traducción                     |
 | ------------------------------- | ------------------------------ |
 | Event listener                  | Detector de eventos            |
@@ -69,8 +66,6 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 | HTML Content o HTML             | HTML                           |
 | JavaScript Content o JavaScript | JavaScript                     |
 | Warning                         | Advertencia                    |
-
-</details>
 
 ## Formateo
 

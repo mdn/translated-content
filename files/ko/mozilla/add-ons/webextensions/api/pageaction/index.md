@@ -50,7 +50,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.pageAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

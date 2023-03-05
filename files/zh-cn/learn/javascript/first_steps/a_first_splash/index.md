@@ -500,15 +500,3 @@ guessField.focus();
 这个示例已经构建完毕，做得好！来尝试运行一下最终的代码，或者[看看我们的最终版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。如果你的版本无法正常工作，请对照[源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)进行检查。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
-
-## 本章目录
-
-- [JavaScript 是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [查找并解决 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [变量：储存所需信息](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
-- [数字和运算符：JavaScript 的基本算数](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
-- [字符串：JavaScript 文本的处理](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
-- [字符串的一些实用方法](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
-- [测验：笑话生成器](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

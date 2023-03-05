@@ -35,9 +35,9 @@ None.
 
 Une chaîne contenant une valeur d'URL de redirection.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity.getRedirectURL")}}
+{{Compat}}
 
 ## Exemples
 

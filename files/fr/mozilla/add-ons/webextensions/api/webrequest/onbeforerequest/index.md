@@ -153,9 +153,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onBeforeRequest", 10)}}
+{{Compat}}
 
 ### Ordre de résolution DNS lorsque BlockingResponse est utilisé
 

@@ -457,7 +457,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -94,7 +94,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,44 +1,56 @@
 ---
-title: 子选择器
+title: 子组合器
 slug: Web/CSS/Child_combinator
 ---
 
-{{ CSSRef() }}
+{{CSSRef("Selectors")}}
 
-## 概述
+**子组合器**（`>`）被放在两个 CSS 选择器之间。它只匹配那些被第二个选择器匹配的元素，这些元素是被第一个选择器匹配的元素的直接子元素。
 
-当使用 `>` 选择符分隔两个元素时，它只会匹配那些作为第一个元素的**直接后代 (**子元素) 的第二元素。与之相比，当两个元素由 [后代选择器](/zh-CN/CSS/Descendant_selectors) 相连时，它表示匹配存在的所有由第一个元素作为祖先元素 (但不一定是父元素) 的第二个元素，无论它在 DOM 中"跳跃" 多少次。
+```css
+/* 选择属于“my-things”类的无序列表（ul）的直接子列表元素（li） */
+ul.my-things > li {
+  margin: 2em;
+}
+```
+
+被第二个选择器匹配的元素必须是被第一个选择器匹配的元素的直接子元素。这比[后代组合器](/zh-CN/docs/Web/CSS/Descendant_combinator)更严格，后者匹配所有被第二个选择器匹配的元素，这些元素存在被第一个选择器匹配的祖先元素，无论在 DOM 上有多少“跳”。
 
 ## 语法
 
-```plain
-元素 1 > 元素 2 {样式声明 }
+```css
+元素 1 > 元素 2 { 样式声明 }
 ```
 
 ## 示例
 
+### CSS
+
 ```css
-span { background-color: white; }
+span {
+  background-color: aqua;
+}
+
 div > span {
-  background-color: DodgerBlue;
+  background-color: yellow;
 }
 ```
 
-当应用与如下标记时：
+### HTML
 
 ```html
 <div>
-  <span>Span 1. In the div.
-    <span>Span 2. In the span that's in the div.</span>
+  <span>
+    1 号 span，在 div 中。
+    <span>2 号 span，在 div 中的 span 中。</span>
   </span>
 </div>
-<span>Span 3. Not in a div at all</span>
+<span>3 号 span，不在 div 中。</span>
 ```
 
-会得到下面的效果：
+### 运行结果
 
-Span 1. In the div. Span 2. In the span that's in the div.
-Span 3. Not in a div at all.
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## 规范
 
@@ -48,4 +60,6 @@ Span 3. Not in a div at all.
 
 {{Compat}}
 
-## 相关
+## 参见
+
+- [后代组合器](/zh-CN/docs/Web/CSS/Descendant_combinator)

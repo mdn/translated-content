@@ -256,11 +256,11 @@ window.addEventListener('load', function () {
 
 ## Especificaciones
 
-{{Specifications("api.Notification")}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Véase también
 

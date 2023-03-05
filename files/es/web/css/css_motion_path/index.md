@@ -49,10 +49,8 @@ La idea es que cuando se deseaba animar un elemento que se movía a lo largo de 
 
 ## Especificaciones
 
-{{Specificaciones}}
+{{Specifications}}
 
-## Compatibilidad de Browsers
+## Compatibilidad con navegadores
 
-### `offset` property
-
-{{Compat("css.properties.offset-path")}}
+{{Compat}}

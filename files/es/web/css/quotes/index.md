@@ -56,7 +56,7 @@ Desde Firefox 3.5, el valor inicial de la propiedad de las citas se puede leer u
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.quotes")}}
+{{Compat}}
 
 ## Ver también
 

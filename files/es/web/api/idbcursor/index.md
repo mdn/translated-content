@@ -80,9 +80,9 @@ function displayData() {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.IDBCursor")}}
+{{Compat}}
 
 ## See also
 

@@ -157,11 +157,11 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 > [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
 > for more details and examples.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

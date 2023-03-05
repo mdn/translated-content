@@ -42,9 +42,9 @@ var erasing = browser.downloads.erase(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'appel a réussi, la promesse sera remplie avec un tableau d'entiers représentant les identifiants des {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} effacés. Si aucun élément correspondant au paramètre de requête n'a pu être trouvé, le tableau sera vide. Si l'appel a échoué, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.erase")}}
+{{Compat}}
 
 ## Exemples
 

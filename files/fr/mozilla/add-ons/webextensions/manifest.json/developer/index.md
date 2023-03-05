@@ -49,6 +49,6 @@ Ceci est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationaliz
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.developer")}}
+{{Compat}}

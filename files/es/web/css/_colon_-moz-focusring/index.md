@@ -29,9 +29,9 @@ mybutton:-moz-focusring {
 
 Esta propiedad todavía no está definida en ninguna especificación, aunque fue [debatida en el grupo de trabajo](https://lists.w3.org/Archives/Public/www-style/2015Sep/0226.html) y se [decidió añadirla a los selectores 4 o 5](https://lists.w3.org/Archives/Public/www-style/2015Oct/0012.html).
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-focusring")}}
+{{Compat}}
 
 ## Ver además
 

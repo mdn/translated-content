@@ -1,71 +1,87 @@
 ---
 title: Worker
 slug: Web/API/Worker
+l10n:
+  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
 {{APIRef("Web Workers API")}}
 
-The **`Worker`** interface of the [Web Workers API](/es/docs/Web/API/Web_Workers_API) represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the `Worker()` constructor and specifying a script to be run in the worker thread.
+La interfaz **`Worker`** de la [API de Web Workers](/es/docs/Web/API/Web_Workers_API) representa una tarea en segundo plano que se puede crear a través de un script, que puede enviar mensajes a su creador.
 
-Workers may in turn spawn new workers as long as those workers are hosted within the same origin as the parent page (Note: nested workers are [currently not implemented in Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). In addition workers may use [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) for network I/O, with the stipulation that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.
+La creación de un _worker_ se realiza llamando al constructor `Worker("path/to/worker/script")`.
 
-Not [all interfaces and functions are available](/En/DOM/Worker/Functions_available_to_workers) to the script associated with a `Worker`.
+Los _workers_ pueden generar nuevos _workers_, siempre y cuando esos _workers_ estén alojados en el mismo [origen](/es/docs/Web/Security/Same-origin_policy) que la página principal. (Nota: [los trabajadores anidados aún no están implementados en WebKit](https://webkit.org/b/22723)).
 
-In Firefox, if you want to use workers in extensions and would like to have access to [js-ctypes](/en/js-ctypes), you should use the {{ domxref("ChromeWorker") }} object instead.
+[No todas las interfaces y funciones están disponibles](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) para scripts dentro de un `Worker`. Los _workers_ pueden usar {{domxref("XMLHttpRequest")}} para la comunicación de red, pero sus atributos `responseXML` y `channel` son siempre `null`. ([`fetch`](/es/docs/Web/API/Fetch_API) también está disponible, sin tales restricciones).
 
-## Properties
+{{InheritanceDiagram}}
 
-_Inherits properties from its parent, {{domxref("EventTarget")}}, and implements properties from {{domxref("AbstractWorker")}}._
-
-### Event handlers
-
-- {{domxref("AbstractWorker.onerror")}}
-  - : An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type `error` bubbles through to the worker. This is inherited from {{domxref("AbstractWorker")}}.
-- {{domxref("Worker.onmessage")}}
-  - : An {{ domxref("EventListener") }} called whenever a {{domxref("MessageEvent")}} of type `message` bubbles through the worker — i.e. when a message is sent to the parent document from the worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. The message is stored in the event's {{domxref("MessageEvent.data", "data")}} property.
-
-## Constructors
+## Constructor
 
 - {{domxref("Worker.Worker", "Worker()")}}
-  - : Creates a dedicated web worker that executes the script at the specified URL. Workers can also be constructed using [Blobs](/es/docs/Web/API/Blob).
+  - : Crea un _worker_ web dedicado que ejecuta el script en la URL especificada. Esto también funciona para [Blob URLs](/es/docs/Web/API/Blob).
 
-## Methods
+## Propiedades de instancia
 
-_Inherits methods from its parent, {{domxref("EventTarget")}}, and implements properties from {{domxref("AbstractWorker")}}._
+_Hereda las propiedades de su padre, {{domxref("EventTarget")}}._
+
+## Métodos de instancia
+
+_Hereda los métodos de su padre, {{domxref("EventTarget")}}._
 
 - {{domxref("Worker.postMessage()")}}
-  - : Sends a message — which can consist of `any` JavaScript object — to the worker's inner scope.
+  - : Envía un mensaje, que consta de cualquier objeto de JavaScript, al ámbito interno del _worker_.
 - {{domxref("Worker.terminate()")}}
-  - : Immediately terminates the worker. This does not offer the worker an opportunity to finish its operations; it is simply stopped at once. ServiceWorker instances do not support this method.
+  - : Termina inmediatamente el _worker_. Esto no permite que el _worker_ finalice sus operaciones; se detiene de una vez. Las instancias de [`ServiceWorker`](/es/docs/Web/API/ServiceWorker) no admiten este método.
 
-## Example
+## Eventos
 
-The following code snippet shows creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor and usage of the object:
+- [`error`](/es/docs/Web/API/Worker/error_event)
+  - : Se activa cuando se produce un error en el _worker_.
+- [`message`](/es/docs/Web/API/Worker/message_event)
+  - : Se activa cuando el padre del _worker_ recibe un mensaje de ese _worker_.
+- [`messageerror`](/es/docs/Web/API/Worker/messageerror_event)
+  - : Se activa cuando un objeto `Worker` recibe un mensaje que no puede ser [deserializado](/es/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+- [`rejectionhandled`](/es/docs/Web/API/Window/rejectionhandled_event)
+  - : Se activa cada vez que se rechaza una {{jsxref("Promise","Promesa")}}, independientemente de si hay o no un controlador para capturar el rechazo.
+- [`unhandledrejection`](/es/docs/Web/API/Window/unhandledrejection_event)
+  - : Se activa cuando una {{jsxref("Promise","Promesa")}} se rechaza sin un controlador para detectar el rechazo.
+
+## Ejemplo
+
+El siguiente fragmento de código crea un objeto {{domxref("Worker")}} usando el constructor {{domxref("Worker.Worker", "Worker()")}}, luego usa el objeto _worker_:
 
 ```js
-var myWorker = new Worker("worker.js");
+const myWorker = new Worker('/worker.js');
+const first = document.querySelector('input#number1');
+const second = document.querySelector('input#number2');
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
+first.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
+  console.log('Mensaje enviado al worker');
 }
 ```
 
-For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+Para ver un ejemplo completo, consulte nuestro [Ejemplo básico de un _worker_ dedicado](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([ejecutar _worker_ dedicado](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-Support varies for different types of workers. See each worker type's page for specifics.
+El apoyo varía para los diferentes tipos de _workers_. Consulte la página de cada tipo de trabajador para obtener información específica.
 
-{{Compat("api.Worker")}}
+{{Compat}}
 
-## See also
+### Comportamiento de error del worker de origen cruzado
 
-- [Using web workers](/En/Using_web_workers)
-- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers)
-- Other kind of workers: {{ domxref("SharedWorker") }} and [ServiceWorker](/es/docs/Web/API/ServiceWorker_API).
-- Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.
+En las primeras versiones de la especificación, la carga de un script de _worker_ de origen cruzado generaba un `SecurityError`. Hoy en día, en su lugar, se lanza un evento {{domxref("Worker/error_event", "error")}}.
+
+## Véase también
+
+- [Usando Web Workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Funciones y clases disponibles para Web Workers](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- Otro tipo de _workers_: {{domxref("SharedWorker")}} y [Service Worker](/es/docs/Web/API/Service_Worker_API).
+- Interfaz [`OffscreenCanvas`](/es/docs/Web/API/OffscreenCanvas).

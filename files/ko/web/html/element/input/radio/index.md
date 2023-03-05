@@ -1,6 +1,6 @@
 ---
 title: <input type="radio">
-slug: Web/HTML/Element/Input/radio
+slug: Web/HTML/Element/input/radio
 ---
 
 {{HTMLSidebar}}
@@ -308,7 +308,7 @@ Most notable here is the use of the {{cssxref("-moz-appearance")}} property (wit
 
 Notice that when clicking on a radio button, there's a nice, smooth fade out/in effect as the two buttons change state. In addition, the style and coloring of the legend and submit button are customized to have strong contrast. This might not be a look you'd want in a real web application, but it definitely shows off the possibilities.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

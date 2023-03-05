@@ -60,4 +60,4 @@ div {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.unicode-range")}}
+{{Compat}}

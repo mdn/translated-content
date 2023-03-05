@@ -19,7 +19,7 @@ HyperText Transfer Protocol (HTTP) **`408 Request Timeout`** 응답 상태 코�
 408 요청 시간 만료
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -97,7 +97,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
   </tbody>
 </table>
 
-> **备注：** 查看 {{bug(1465256)}} 以了解相关修订
+> **备注：** 查看 [Firefox bug 1465256](https://bugzil.la/1465256) 以了解相关修订
 
 ## 浏览器兼容性
 

@@ -29,7 +29,7 @@ str.toLowerCase()
 console.log('中文简体 zh-CN || zh-Hans'.toLowerCase());
 // 中文简体 zh-cn || zh-hans
 
-​console.log( "ALPHABET".toLowerCase() );
+console.log( "ALPHABET".toLowerCase() );
 // "alphabet"
 ```
 

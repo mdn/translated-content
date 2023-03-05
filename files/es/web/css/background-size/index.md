@@ -88,9 +88,9 @@ Tenga en cuenta que particularmente no es recomendado usar una dimensión de pí
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-size")}}
+{{Compat}}
 
 ## Ver también
 

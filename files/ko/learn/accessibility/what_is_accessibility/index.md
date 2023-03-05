@@ -163,13 +163,3 @@ Where the native semantic information provided by the HTML elements in your web 
 This article should have given you a useful high level overview of accessibility, shown you why it's important, and looked at how you can fit it into your workflow. You should now also have a thirst to learn about the implementation details that can make sites accessible, and we'll start on that in the next section, looking at why HTML is a good basis for accessibility.
 
 {{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/ko/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/ko/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/ko/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/ko/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/ko/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/ko/docs/Learn/Accessibility/Accessibility_troubleshooting)

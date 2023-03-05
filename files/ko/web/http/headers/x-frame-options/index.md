@@ -104,13 +104,13 @@ HAProxy에서 `X-Frame-Options` 헤더를 전송하려면, front-end, listen, �
 rspadd X-Frame-Options:\ sameorigin
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("http.headers.X-Frame-Options")}}
+{{Compat}}
 
 ## See also
 

@@ -100,7 +100,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
 
 > **Note :** Voir le {{bug(1465256)}} pour la suppression de cette exigence inutile.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 

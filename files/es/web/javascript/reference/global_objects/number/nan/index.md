@@ -35,9 +35,9 @@ See [Testing against NaN](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN#T
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.NaN")}}
+{{Compat}}
 
 ## Tambien mira
 

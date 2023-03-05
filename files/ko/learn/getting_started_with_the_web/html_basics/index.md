@@ -230,14 +230,3 @@ alt 텍스트에서 핵심 단어는 "설명 텍스트" 입니다. 여러분이 
 여기서 우리는 HTML 맛보기를 하였습니다. 더 알아보기 위해, [HTML 배우기](/ko/docs/Learn/HTML) 페이지로 가보세요.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## 이번 과정에서는
-
-- [기본 소프트웨어 설치하기](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [여러분의 웹사이트는 어떤 모습일까요?](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [파일 다루기](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 기본 사항](/ko/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 기본 사항](/ko/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 기본 사항](/ko/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [웹 사이트 출판](/ko/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [웹 작동 방식](/ko/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

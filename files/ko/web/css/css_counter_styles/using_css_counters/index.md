@@ -145,7 +145,7 @@ li::before {
 
 {{EmbedLiveSample("Example_of_a_nested_counter", "100%", 350)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

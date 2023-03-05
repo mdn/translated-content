@@ -41,11 +41,11 @@ Un barra de progreso con ese estilo tendrá una apariencia similar a la siguient
 
 ## Especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propietario específico del motor Gecko.
+No es parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-range-track")}}
+{{Compat}}
 
 ## Ver además
 

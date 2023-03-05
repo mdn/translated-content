@@ -94,11 +94,11 @@ The resulting content looks like this in action:
 
 {{EmbedLiveSample("Example", 600, 250)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

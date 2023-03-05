@@ -29,7 +29,7 @@ Esses blocos são chamados de **blocos de declaração** e as declarações dent
 
 ![css syntax - declarations block.png](/@api/deki/files/6166/=css_syntax_-_declarations_block.png)
 
-> **Note:** O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/HTML/Global_attributes#attr-style).
+> **Nota:** O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/HTML/Global_attributes#attr-style).
 
 ## Regras CSS
 
@@ -39,7 +39,7 @@ O CSS associa as condições com os blocos de declaração. Cada bloco (válido)
 
 Um elemento pode ser modificado por diversos seletores, e por isso por diversas regras que potencialmente podem conter diversas propriedades, com diferentes valores, o CSS padrão define aquele que possui a precedência e que será aplicado: esse é o tal algoritmo em [cascata](/pt-BR/docs/Web/CSS/Getting_Started/Cascading_and_inheritance).
 
-> **Note:** É importante perceber que quando uma regra é caracterizada por um grupo de seletores que são algum tipo de atalho com cada um sendo um simples seletor isso não se aplica a validade da regra por si só.
+> **Nota:** É importante perceber que quando uma regra é caracterizada por um grupo de seletores que são algum tipo de atalho com cada um sendo um simples seletor isso não se aplica a validade da regra por si só.
 >
 > Isso leva a uma importante consequência: se apenas um dos seletores for inválido, como usar uma pseudo-classe ou pseudo-elemento desconhecido, todo o _seletor_ é inválido e por isso toda a regra é ignorada (invalidada também).
 

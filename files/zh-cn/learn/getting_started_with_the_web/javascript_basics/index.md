@@ -452,14 +452,3 @@ function setUserName() {
 本章介绍的 JavaScript 知识非常有限，更多内容请访问 [Javascript 学习页面](/zh-CN/docs/Learn/JavaScript)。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## 本章目录
-
-- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [设计网站的外观](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Web 是如何运作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

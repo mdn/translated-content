@@ -29,9 +29,9 @@ var isSameNode = node.isSameNode(other);
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.isSameNode")}}
+{{Compat}}
 
 ## Ver además
 

@@ -17,9 +17,11 @@ Un [groupe de médias](/fr/docs/Web/CSS/@media#Groupes_de_médias) défini par l
 
 ## Spécifications
 
-| Spécification                                              | État         | Commentaires         |
-| ---------------------------------------------------------- | ------------ | -------------------- |
-| [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0) | Dépréciation | Définition initiale. |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

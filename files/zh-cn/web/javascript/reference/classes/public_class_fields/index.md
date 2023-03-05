@@ -39,7 +39,7 @@ class ClassWithStaticField {
 }
 
 console.log(ClassWithStaticField.staticField)
-// 预期输出值："static field"​ 
+// 预期输出值："static field" 
 ```
 
 没有设定初始化的字段将默认被初始化为 `undefined`。

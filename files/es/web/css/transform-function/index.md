@@ -121,6 +121,6 @@ Existen varias funciones disponibles para describir transformaciones en CSS. Cad
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.transform-function")}}
+{{Compat}}

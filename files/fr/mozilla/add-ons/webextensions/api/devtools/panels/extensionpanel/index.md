@@ -23,9 +23,9 @@ Les valeurs de ce type sont des objets. Définissez deux événements, `onShown`
 - `onShown` est émis lorsque le panneau est affiché dans les devtools (par exemple, quand l'utilisateur a cliqué sur le panneau dans la fenêtre des devtools).
 - `onHidden` est émis lorsque le panneau est caché (par exemple, quand l'utilisateur a basculé sur un onglet différent dans la fenêtre devtools).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionPanel")}}
+{{Compat}}
 
 ## Exemples
 

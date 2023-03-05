@@ -196,9 +196,9 @@ p { color: hsla(0, 100%, 50%, 0.5); }
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
 ## Ver también
 

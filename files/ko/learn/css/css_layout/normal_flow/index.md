@@ -89,17 +89,3 @@ span {
 이제 당신은 normal flow은 물론, 기본값으로 브라우저가 어떤 방식으로 사물을 배치하는지 이해했습니다. 당신의 디자인 필요에 따라 레이아웃을 만들기 위해 디스플레이 기본값을 변경하는 방법을 배우려면 다음 단계로 이동하세요.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [CSS 레이아웃 입문서](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [normal flow](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%BC%EB%B0%98_%ED%9D%90%EB%A6%84)
-- [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [격자](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/%EC%9C%84%EC%B9%98%EC%9E%A1%EA%B8%B0)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/%EB%B0%98%EC%9D%91%ED%98%95_%EB%94%94%EC%9E%90%EC%9D%B8)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- 필수 레이아웃 이해도 평가

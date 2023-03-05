@@ -78,11 +78,11 @@ console.log(str.slice(11, -7)) // => "is u";
 console.log(str.slice(-5, -1)) // => "n us";
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -74,9 +74,9 @@ Es posible especificar un `<repeat-style>` diferente para cada una de las imáge
 
 Cada imagen se asocia con el correspondiente estilo de repetición, desde la primera hasta la última y siguiendo el orden que se ha establecido.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-mask-repeat-y")}}
+{{Compat}}
 
 ## Ver además
 

@@ -201,7 +201,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
 此時，你的待辦事項呈現應該如同以往，除了現在我們是從 `App.svelte` 元件來傳遞它們之外。
 
-## 切換和刪除​​待辦事項
+## 切換和刪除待辦事項
 
 讓我們新增一些功能性來切換任務狀態。Svelte 具有用於監聽 DOM 事件的 `on:eventname` 指令。讓我們為勾選框的 `on:click` 事件新增一個處理器來切換已完成的數值。
 
@@ -251,7 +251,7 @@ let totalTodos = todos.length
 let completedTodos = todos.filter((todo) => todo.completed).length
 ```
 
-我們可以在切換和刪除​​待辦事項後重新計算它們，但有一種更簡單的方式可以做到。
+我們可以在切換和刪除待辦事項後重新計算它們，但有一種更簡單的方式可以做到。
 
 可以告訴 Svelte 我們想要 `totalTodos` 和 `completedTodos` 等變數藉由前綴 `$:`，使其具有反應性。Svelte 將產生程式碼以在它們相依的資料發生變化時自動更新它們。
 

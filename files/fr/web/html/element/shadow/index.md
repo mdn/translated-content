@@ -115,7 +115,7 @@ Cet élément ne fait plus partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.shadow")}}
+{{Compat}}
 
 ## Voir aussi
 

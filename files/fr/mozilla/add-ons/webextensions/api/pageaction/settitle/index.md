@@ -37,9 +37,9 @@ browser.pageAction.setTitle(
     - `title`
       - : `string`. Le texte de l'info-bulle.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.setTitle")}}
+{{Compat}}
 
 ## Exemples
 

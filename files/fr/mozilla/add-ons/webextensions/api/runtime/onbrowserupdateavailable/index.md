@@ -42,9 +42,9 @@ Les événements ont trois fonctions :
 - `function`
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onBrowserUpdateAvailable")}}
+{{Compat}}
 
 ## Exemples
 

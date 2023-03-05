@@ -35,9 +35,7 @@ Dans notre exemple, c'est la marge à gauche du dernier élément qui est automa
 
 ## Compatibilité des navigateurs
 
-#### Boîtes flexibles
-
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Voir aussi
 

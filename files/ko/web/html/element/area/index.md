@@ -160,4 +160,4 @@ No effect. Browsers ignore it. (The W3C 5.3 fork of the HTML specification defin
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.area")}}
+{{Compat}}

@@ -498,7 +498,7 @@ A API `Path2D` também adiciona uma maneira de combinar caminhos usando o métod
 
 ### Exemplo de Path2D
 
-Neste exemplo, estamos criando um retângulo e um círculo. Ambos são armazenados como um objeto de `Path2D`, de modo que eles estão disponíveis para uso posterior. Com a nova API `Path2D`, vários métodos foram atualizados como, por exemplo, opcionalmente usar um objeto `Path2D` em vez do `path` atual. Aqui, os métodos `stroke` e `fill` são usados, ​​com um argumento de _path_, para desenhar ambos os objetos na tela, por exemplo.
+Neste exemplo, estamos criando um retângulo e um círculo. Ambos são armazenados como um objeto de `Path2D`, de modo que eles estão disponíveis para uso posterior. Com a nova API `Path2D`, vários métodos foram atualizados como, por exemplo, opcionalmente usar um objeto `Path2D` em vez do `path` atual. Aqui, os métodos `stroke` e `fill` são usados, com um argumento de _path_, para desenhar ambos os objetos na tela, por exemplo.
 
 ```html hidden
 <html>

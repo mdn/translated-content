@@ -36,9 +36,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Notez que vous pouvez définir explicitement un ID pour une notification en le passant dans {{WebExtAPIRef("notifications.create()")}}. Si vous ne le faites pas, le navigateur en générera un. Les ID spécifiés explicitement sont des chaînes, mais les ID générés sont des nombres.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.getAll")}}
+{{Compat}}
 
 ## Exemples
 

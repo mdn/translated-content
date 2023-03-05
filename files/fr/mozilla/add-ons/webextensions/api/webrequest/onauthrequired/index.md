@@ -165,9 +165,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onAuthRequired", 10)}}
+{{Compat}}
 
 ## Exemples
 

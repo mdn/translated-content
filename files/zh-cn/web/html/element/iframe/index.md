@@ -107,7 +107,7 @@ slug: Web/HTML/Element/iframe
 - **{{htmlattrdef("mozbrowser")}} {{non-standard_inline}}**
   - : 这个属性可以让 `<iframe>` 变得像顶级浏览器窗口，详情请参看 [Browser API](/zh-CN/docs/Web/API/Using_the_Browser_API)。这个属性**只能**在 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 中使用。
 
-> **备注：** 查看 {{bug(1318532)}} 了解如何在 Firefox 的 WebExtensions 中使用此属性。
+> **备注：** 查看 [Firefox bug 1318532](https://bugzil.la/1318532) 了解如何在 Firefox 的 WebExtensions 中使用此属性。
 
 ## 脚本
 

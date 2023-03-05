@@ -65,9 +65,9 @@ function displayData() {
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.IDBCursor.continue")}}
+{{Compat}}
 
 ## Te puede interesar
 

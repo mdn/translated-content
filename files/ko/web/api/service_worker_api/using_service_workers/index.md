@@ -428,7 +428,7 @@ Firefox has also started to implement some useful tools related to service worke
 
 > **참고:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

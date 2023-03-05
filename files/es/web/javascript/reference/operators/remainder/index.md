@@ -60,7 +60,7 @@ Infinity % Infinity // NaN
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.remainder")}}
+{{Compat}}
 
 ## Ver también
 

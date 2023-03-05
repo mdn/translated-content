@@ -90,7 +90,7 @@ function instantiateCachedURL(dbVersion, url, importObject) {
 
 ### Using our helper functions
 
-모든 Promise 기반 헬퍼 함수를 ​​정의하여 IndexedDB 캐시 조회의 핵심 로직을 표현할 수 있습니다. 우선 데이터베이스를 열어서, 주어진 `db`에 저장된 key `url`을 가진 컴파일 된 Module을 이미 가지고 있는지 확인합니다.
+모든 Promise 기반 헬퍼 함수를 정의하여 IndexedDB 캐시 조회의 핵심 로직을 표현할 수 있습니다. 우선 데이터베이스를 열어서, 주어진 `db`에 저장된 key `url`을 가진 컴파일 된 Module을 이미 가지고 있는지 확인합니다.
 
 ```js
   return openDatabase().then(db => {

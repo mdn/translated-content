@@ -42,9 +42,9 @@ var settingEnabled = browser.management.setEnabled(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promisee) qui sera remplie sans arguments lorsque l'extension a été désactivé ou activé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.setEnabled")}}
+{{Compat}}
 
 ## Exemples
 

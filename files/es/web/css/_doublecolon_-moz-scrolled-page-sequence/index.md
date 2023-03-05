@@ -11,11 +11,11 @@ El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS `::-moz-scrolled-page
 
 ## Especificaciones
 
-Not part of any specification.
+No es parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-scrolled-page-sequence")}}
+{{Compat}}
 
 ## Ver además
 

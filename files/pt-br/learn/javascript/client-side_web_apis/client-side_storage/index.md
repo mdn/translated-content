@@ -50,7 +50,7 @@ O armazenamento do lado do cliente funciona em princípios semelhantes, mas tem 
 - Salvar dados e ativos localmente para que o download de um site seja mais rápido (e potencialmente mais barato) ou possa ser usado sem uma conexão de rede.
 - Salvar documentos gerados por aplicativos da web localmente para uso offline
 
-Freqüentemente, o armazenamento do lado do cliente e do lado do servidor são usados ​​juntos. Por exemplo, você pode baixar um lote de arquivos de música (talvez usados ​​por um jogo da web ou aplicativo de reprodutor de música), armazená-los em um banco de dados do cliente e reproduzi-los conforme necessário. O usuário só teria que baixar os arquivos de música uma vez - em visitas subsequentes, eles seriam recuperados do banco de dados.
+Freqüentemente, o armazenamento do lado do cliente e do lado do servidor são usados juntos. Por exemplo, você pode baixar um lote de arquivos de música (talvez usados por um jogo da web ou aplicativo de reprodutor de música), armazená-los em um banco de dados do cliente e reproduzi-los conforme necessário. O usuário só teria que baixar os arquivos de música uma vez - em visitas subsequentes, eles seriam recuperados do banco de dados.
 
 > **Nota:** : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consulte [Limites de armazenamento do navegador e critérios de despejo](/pt-BR/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) para obter mais informações..
 

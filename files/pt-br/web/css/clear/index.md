@@ -15,7 +15,7 @@ As margens verticais entre dois elementos flutuantes não irão sofrer esse cola
 
 Os elementos flutuantes que devem ser limpos (clear) são os elementos anteriores dentro do mesmo contexto de bloco ([block formatting context](/pt-BR/docs/Web/Guide/CSS/Block_formatting_context)).
 
-> **Note:** **Nota:** se um elemento possuir apenas elementos flutuantes, sua altura é zerada. Se você quiser que o mesmo seja redimensionado, de modo que contenha elementos flutuantes dentro dele, você precisa limpar(clear) seus filhos automaticamente. Isso é chamado clearfix, e uma maneira de fazê-lo é adicionando um {{cssxref("::after")}} pseudo-elemento com a propriedade `clear.`
+> **Nota:** se um elemento possuir apenas elementos flutuantes, sua altura é zerada. Se você quiser que o mesmo seja redimensionado, de modo que contenha elementos flutuantes dentro dele, você precisa limpar(clear) seus filhos automaticamente. Isso é chamado clearfix, e uma maneira de fazê-lo é adicionando um {{cssxref("::after")}} pseudo-elemento com a propriedade `clear.`
 >
 > ```css
 > #container::after {

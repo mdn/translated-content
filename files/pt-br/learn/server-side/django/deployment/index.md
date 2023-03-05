@@ -100,7 +100,7 @@ O [esqueleto do site do Django](/pt-BR/docs/Learn/Server-side/Django/skeleton_we
 
 As configurações críticas que você deve verificar são:
 
-- `DEBUG`. Isso deve ser definido como `False` em produção (`DEBUG = False`). Isso impede que o rastreamento de depuração sensível/confidencial e as informações variáveis ​​sejam exibidas.
+- `DEBUG`. Isso deve ser definido como `False` em produção (`DEBUG = False`). Isso impede que o rastreamento de depuração sensível/confidencial e as informações variáveis sejam exibidas.
 - `SECRET_KEY`. Este é um grande valor aleatório usado para proteção contra CSRF etc. É importante que a chave usada na produção não esteja no controle de origem ou acessível fora do servidor de produção. Os documentos do Django sugerem que isso pode ser melhor carregado de uma variável de ambiente ou lido de um arquivo somente servidor.
 
   ```python
@@ -115,7 +115,7 @@ As configurações críticas que você deve verificar são:
       SECRET_KEY = f.read().strip()
   ```
 
-Vamos mudar o aplicativo LocalLibrary para que possamos ler nosso `SECRET_KEY` e `DEBUG` variáveis ​​de variáveis ​​de ambiente se forem definidas, mas caso contrário, use os valores padrão no arquivo de configuração.
+Vamos mudar o aplicativo LocalLibrary para que possamos ler nosso `SECRET_KEY` e `DEBUG` variáveis de variáveis de ambiente se forem definidas, mas caso contrário, use os valores padrão no arquivo de configuração.
 
 Abra **/locallibrary/settings.py**, desative o original `SECRET_KEY`configuração e adicione as novas linhas conforme mostrado abaixo em **negrito**. Durante o desenvolvimento, nenhuma variável de ambiente será especificada para a chave, então o valor padrão será usado (não importa qual chave você usa aqui, ou se a chave "vaza", porque você não a usará na produção).
 
@@ -134,7 +134,7 @@ Em seguida, comente o existente `DEBUG` configuração e adicione a nova linha m
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 ```
 
-O valor do `DEBUG` será `True` por padrão, mas será apenas `False` se o valor do `DJANGO_DEBUG` variável de ambiente é definida para `False`. Observe que as variáveis ​​de ambiente são strings e não tipos Python. Portanto, precisamos comparar strings. A única maneira de definir o `DEBUG` variável para `False` é realmente configurá-lo para a string `False`
+O valor do `DEBUG` será `True` por padrão, mas será apenas `False` se o valor do `DJANGO_DEBUG` variável de ambiente é definida para `False`. Observe que as variáveis de ambiente são strings e não tipos Python. Portanto, precisamos comparar strings. A única maneira de definir o `DEBUG` variável para `False` é realmente configurá-lo para a string `False`
 
 Você pode definir a variável de ambiente como False, emitindo o seguinte comando:
 

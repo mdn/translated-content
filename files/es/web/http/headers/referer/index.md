@@ -39,13 +39,11 @@ Referer: https://developer.mozilla.org/es/docs/Web/JavaScript
 
 ## Especificaciones
 
-| Especificación                                   | Título                                                        |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Referer", "5.5.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Referer")}}
+{{Compat}}
 
 ## Véase también
 

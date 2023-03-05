@@ -134,13 +134,13 @@ media_feature: width | min-width | max-width
 
 _Media queries_ são _case insensitive_. _Media queries_ envolvidas em _media types_ desconhecidos serão sempre falsas.
 
-> **Note:** **Nota:** Parenteses são obrigatórios em volta de expressões; a falta deles é um erro.
+> **Nota:** Parenteses são obrigatórios em volta de expressões; a falta deles é um erro.
 
 ## Características de mídia
 
 A maioria das _media features_ podem ter prefixo “min-” ou “max-“ para expressar as restrições “maior ou igual” ou “menor ou igual”. Isto evita o uso dos símbolos “<” e “>” , que entrem em conflito com HTML e XML. Se você usar uma _media feature_ sem especificar um valor, a expressão retorna verdadeiro, se o valor da _feature_ for diferente de zero.
 
-> **Note:** **Nota:** Se uma media feature não se aplicar ao dispositivo onde o navegador esta sendo executado, as expressões que envolvem essa media feature são sempre falsas. Por exemplo, consultar um aspecto de um dispositivo sonoro, sempre resulta em falso.
+> **Nota:** Se uma media feature não se aplicar ao dispositivo onde o navegador esta sendo executado, as expressões que envolvem essa media feature são sempre falsas. Por exemplo, consultar um aspecto de um dispositivo sonoro, sempre resulta em falso.
 
 ### cor
 
@@ -150,7 +150,7 @@ A maioria das _media features_ podem ter prefixo “min-” ou “max-“ para e
 
 Indica o número de bits por componente de cor no dispositivo de saída. Se o dispositivo não é um dispositivo de cor, o valor é zero.
 
-> **Note:** **Nota:** Se os componentes de cor têm diferentes números de bits por componente de cor, o menor valor é utilizado. Por exemplo, se o display usa 5 bits para azul e vermelho e 6 bits para verde, então o dispositivo considera 5 bits por componente de cor. Se o dispositivo usar cores indexadas, o menor número de bits por componente de cor na tabela de cores é usado.
+> **Nota:** Se os componentes de cor têm diferentes números de bits por componente de cor, o menor valor é utilizado. Por exemplo, se o display usa 5 bits para azul e vermelho e 6 bits para verde, então o dispositivo considera 5 bits por componente de cor. Se o dispositivo usar cores indexadas, o menor número de bits por componente de cor na tabela de cores é usado.
 
 #### Exemplos
 
@@ -272,7 +272,7 @@ Para aplicar um estilo a dispositivos postáteis com 15-carácteres ou uma tela 
 @media handheld and (grid) and (max-width: 15em) { ... }
 ```
 
-> **Note:** **Nota:** A unidade "em" tem um significado especial para dispositivos de grade, uma vez que a exata largura de um "em" não pode ser determinada, 1em é assumido para ser a largura de uma célula da grade horizontalmente, e a altura de uma célula verticalmente.
+> **Nota:** A unidade "em" tem um significado especial para dispositivos de grade, uma vez que a exata largura de um "em" não pode ser determinada, 1em é assumido para ser a largura de uma célula da grade horizontalmente, e a altura de uma célula verticalmente.
 
 ### height
 
@@ -282,7 +282,7 @@ Para aplicar um estilo a dispositivos postáteis com 15-carácteres ou uma tela 
 
 A característica `height` descreve a altura da superfície de renderização do dispositivo de saída (tal como a altura do viewport ou da caixa de página em uma impressora).
 
-> **Note:** **Nota:** Como o usuário redimensiona a janela, o Firefox muda as folhas de estilo como apropriado, com base nas media queries, usando as media features `width` e `height`.
+> **Nota:** Como o usuário redimensiona a janela, o Firefox muda as folhas de estilo como apropriado, com base nas media queries, usando as media features `width` e `height`.
 
 ### monochrome
 
@@ -322,7 +322,7 @@ Para aplicar a folha de estilo apenas em orientação _portrait_:
 @media all and (orientation: portrait) { ... }
 ```
 
-> **Note:** **Nota:** Este valor não corresponde com a orientação real do dispositivo. Abrindo o teclado virtual na maioria dos dispositivos na orientação retrato fará com que o viewport torne-se mais largo do que alto, fazendo assim que o navegador use estilos de paisagem em vez de retrato.
+> **Nota:** Este valor não corresponde com a orientação real do dispositivo. Abrindo o teclado virtual na maioria dos dispositivos na orientação retrato fará com que o viewport torne-se mais largo do que alto, fazendo assim que o navegador use estilos de paisagem em vez de retrato.
 
 ### resolution
 
@@ -451,7 +451,7 @@ Exemplo:
 
 Veja este artigo [CSSWG](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) para ccompatibilidade de boas práticas em relação a _`resolution`_ e _`dppx`_.
 
-> **Note:** **Nota**: Esta _media feature_ é também implementada pelo Webkit e pelo [IE 11 para Windows Phone 8.1](<https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx>)como -webkit-device-pixel-ratio. Os prefixos min e max implementados pelo Gecko são nomeados min--moz-device-pixel-ratio e max--moz-device-pixel-ratio; mas os mesmos prefixos implementados pelo Webkit são chamados -webkit-min-device-pixel-ratio e -webkit-max-device-pixel-ratio.
+> **Nota:** Esta _media feature_ é também implementada pelo Webkit e pelo [IE 11 para Windows Phone 8.1](<https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx>)como -webkit-device-pixel-ratio. Os prefixos min e max implementados pelo Gecko são nomeados min--moz-device-pixel-ratio e max--moz-device-pixel-ratio; mas os mesmos prefixos implementados pelo Webkit são chamados -webkit-min-device-pixel-ratio e -webkit-max-device-pixel-ratio.
 
 ### -moz-os-version
 

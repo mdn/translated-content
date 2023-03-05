@@ -38,6 +38,10 @@ La [guia de estilo de Yahoo](http://styleguide.yahoo.com/) recomienda [romper un
 
 {{EmbedLiveSample("Example")}}
 
-## Compatibilidad en exploradores
+## Especificaciones
 
-{{Compat("html.elements.wbr")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
