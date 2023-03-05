@@ -419,7 +419,7 @@ Reflect.has(Object, 'assign') // true
 
 ### より優れた `apply` 関数
 
-ES5 では、所定の `this` 値と配列や[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)として提供される `arguments` を使って関数を呼び出す {{jsxref("Function.prototype.apply()")}} メソッドがよく使われてきました。
+ES5 では、所定の `this` 値と配列や[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)として提供される `arguments` を使って関数を呼び出す {{jsxref("Function.prototype.apply()")}} メソッドがよく使われてきました。
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75])
