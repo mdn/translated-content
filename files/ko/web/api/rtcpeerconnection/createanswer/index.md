@@ -61,7 +61,7 @@ pc.createAnswer().then(function(answer) {
 
 이 과정이 성공하면, answer는 적당한 아무 프로토콜을 사용해서 시그널링 서버에 전달됩니다. 그리고 {{jsxref("Promise.catch()")}}는 에러를 잡아내고 처리하기 위해 사용됩니다.
 
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Handling the invitation")}}를 확인해서 전체 코드를 확인해보십시오. 이 문서를 보면 시그널링 과정 및 answer가 어떻게 작동하는지를 이해 할 수 있습니다.
+[Handling the invitation](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling)를 확인해서 전체 코드를 확인해보십시오. 이 문서를 보면 시그널링 과정 및 answer가 어떻게 작동하는지를 이해 할 수 있습니다.
 
 ## 명세
 
