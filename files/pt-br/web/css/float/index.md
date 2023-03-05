@@ -56,7 +56,7 @@ float: unset;
 - `right`
   - : É uma palavra-chave que indica que o elemento deve flutuar à direita do bloco.
 - `none`
-  - : É uma palavra-chave que indica que o elemtno não deve flutuar.
+  - : É uma palavra-chave que indica que o elemento não deve flutuar.
 - `inline-start` {{experimental_inline}}
   - : É uma palavra-chave que indica que o elemento deve flutuar no lado inicial do seu bloco, ou seja, o lado esquerdo em scripts `ltr` e no direito em scripts `rtl`.
 - `inline-end` {{experimental_inline}}
