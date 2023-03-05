@@ -3,7 +3,7 @@ title: 'Pon a prueba tus habilidades: imágenes HTML'
 slug: >-
   Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
 l10n:
-  sourceCommit: ad20678be564e8df6495c2f352dc0daaa88371b7
+  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
 
 {{learnsidebar}}
