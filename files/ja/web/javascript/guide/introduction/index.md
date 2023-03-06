@@ -60,7 +60,7 @@ Java は高速実行と型安全のために設計されたクラスベースの
 
 JavaScript は、ヨーロッパの情報通信システム標準化団体である [Ecma International](https://www.ecma-international.org/) （ECMA は、以前は European Computer Manufacturers Association の頭字語）で標準化されており、 JavaScript をベースとした国際的なプログラミング言語の標準化を実現しています。この標準化された JavaScript は ECMAScript と呼ばれ、この規格に対応するすべてのアプリケーションで同じように動作します。企業は、このオープンスタンダードな言語を使って、 JavaScript の実装を開発することができます。 ECMAScript 標準は、 ECMA-262 仕様書に記載されています。
 
-ECMA-262 標準は、[ISO](https://www.iso.org/home.html)（International Organization for Standardization、国際標準化機構）により ISO-16262 としても承認されています。また仕様書は、[Ecma International のウェブサイト](https://www.ecma-international.org/publications/standards/ecma-262/)でも確認できます。ECMAScript 仕様書には、[World Wide Web Consortium (W3C)](https://www.w3.org/) によって標準化されているドキュメントオブジェクトモデル (DOM) は記載されていません。 DOM はスクリプトから利用できる HTML 文書のオブジェクトを定義しています。 JavaScript でプログラミングする際に使われる様々な技術のさらに詳しい情報は、[JavaScript 技術概説](/ja/docs/Web/JavaScript/JavaScript_technologies_overview)の記事を参考にしてください。
+ECMA-262 標準は、[ISO](https://www.iso.org/home.html)（International Organization for Standardization、国際標準化機構）により ISO-16262 としても承認されています。また仕様書は、[Ecma International のウェブサイト](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)でも確認できます。ECMAScript 仕様書には、[World Wide Web Consortium (W3C)](https://www.w3.org/) によって標準化されているドキュメントオブジェクトモデル (DOM) は記載されていません。 DOM はスクリプトから利用できる HTML 文書のオブジェクトを定義しています。 JavaScript でプログラミングする際に使われる様々な技術のさらに詳しい情報は、[JavaScript 技術概説](/ja/docs/Web/JavaScript/JavaScript_technologies_overview)の記事を参考にしてください。
 
 ### JavaScript ドキュメント vs ECMAScript 仕様書
 
