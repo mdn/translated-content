@@ -93,9 +93,9 @@ Utilice la semántica del texto en línea HTML para definir el significado, estr
 | {{HTMLElement("kbd")}}    | **Sus etiquetas son**: \<kbd> y \</kbd> (ambas obligatorias) |
 | {{HTMLElement("mark")}}   | El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado** como referencia o anotación, debido a su relevancia o importancia en un contexto particular. |
 | {{HTMLElement("q")}}      | El **elemento HTML `<q>`** indica que el texto adjunto es una cita corta en línea. La mayoría de los navegadores modernos implementan esto rodeando el texto entre comillas. Este elemento está destinado a citas breves que no requieren saltos de párrafo; para citas de bloque independiente, utiliza el elemento {{HTMLElement("blockquote")}}. |
-| {{HTMLElement("rp")}}     | Used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the {{HTMLElement("ruby")}} element. One `<rp>` element should enclose each of the opening and closing parentheses that wrap the {{HTMLElement("rt")}} element that contains the annotation's text. |
-| {{HTMLElement("rt")}}     | Specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography. The `<rt>` element must always be contained within a {{HTMLElement("ruby")}} element. |
-| {{HTMLElement("ruby")}}   | Represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common. |
+| {{HTMLElement("rp")}}     | Se utiliza para proporcionar paréntesis alternativos para navegadores que no admiten la visualización de anotaciones Ruby mediante el elemento {{HTMLElement("ruby")}}. Un elemento `<rp>` debe incluir cada uno de los paréntesis de apertura y cierre que envuelven el elemento {{HTMLElement("rt")}} que contiene el texto de la anotación. |
+| {{HTMLElement("rt")}}     | Especifica el componente de texto ruby de una anotación ruby, que se utiliza para proporcionar información de pronunciación, traducción o transliteración para la tipografía de Asia oriental. El elemento `<rt>` siempre debe estar contenido dentro de un elemento {{HTMLElement("ruby")}}. |
+| {{HTMLElement("ruby")}}   | Representa pequeñas anotaciones que se muestran encima, debajo o al lado del texto base, generalmente utilizadas para mostrar la pronunciación de los caracteres de Asia oriental. También se puede usar para anotar otros tipos de texto, pero este uso es menos común. |
 | {{HTMLElement("s")}}      | **Sus etiquetas son**: \<s> y \</s> (Ambas obligatorias) |
 | {{HTMLElement("samp")}}   | El elemento HTML Sample (**`<samp>`**) se utiliza para incluir texto en línea que representa una muestra (o cita) de la salida de un programa de ordenador. El contenido de esta etiqueta es renderizado generalmente usando la tipografía monoespaciada por defecto del navegador. |
 | {{HTMLElement("small")}}  | El **elemento HTML \<small>** hace el tamaño del texto una talla más pequeña (por ejemplo, de largo a mediano, o de pequeño a extra pequeño) que el tamaño mínimo de fuente del navegador. En HTML5, este elemento es reutilizado para representar comentarios laterales y letra pequeña, incluyendo derechos de autor y texto legal, independientemente de su estilo de presentación. |
@@ -127,16 +127,16 @@ Además de los contenidos multimedia habituales, HTML puede incluir otra varieda
 
 | Element | Description |
 | ------- | ----------- |
-| {{HTMLElement("embed")}}   | > **Nota:** este tema documenta sólo el elemento \<embed> que se define como parte de HTML5. No trata las implementaciones anteriores no estandarizadas del elemento `<embed>`. |
-| {{HTMLElement("iframe")}}  | El **elemento HTML `<iframe>`** (de inline frame) representa un {{Glossary("contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual. |
+| {{HTMLElement("embed")}}   | El _Elemento HTML Embed_ ( `<embed>` ) representa un punto de integración para una aplicación externa o de contenido interactivo (en otras palabras, un plug-in). |
+| {{HTMLElement("iframe")}}  | El **elemento HTML `<iframe>`** (de inline frame) representa un contexto de navegación anidado, el cual permite incrustar otra página HTML en la página actual. |
 | {{HTMLElement("object")}}  | El **elemento HTML `<object>`** representa un recurso externo, que puede ser tratado como una imagen, un contexto de navegación anidado, o como un recurso que debe ser manejado por un plugin. |
 | {{HTMLElement("picture")}} | El **elemento HTML `<picture>`** es un contenedor usado para especificar múltiples elementos {{HTMLElement("source")}} y un elemento {{HTMLElement("img")}} contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. Si no hay coincidencias con los elementos `<source>`, el archivo especificado en los atributos {{htmlattrxref("src", "img")}} del elemento `<img>` es utilizado. La imagen seleccionada es entonces presentada en el espacio ocupado por el elemento `<img>`. |
-| {{HTMLElement("portal")}}  | Enables the embedding of another HTML page into the current one for the purposes of allowing smoother navigation into new pages. |
+| {{HTMLElement("portal")}}  | Habilita la incrustación de otra página HTML en la actual con el fin de permitir una navegación más fluida en nuevas páginas. |
 | {{HTMLElement("source")}}  | El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Media_formats_supported_by_the_audio_and_video_elements). |
 
 ## SVG and MathML
 
-You can embed [SVG](/es/docs/Web/SVG) and [MathML](/es/docs/Web/MathML) content directly into HTML documents, using the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements.
+Puede incrustar contenido [SVG](/es/docs/Web/SVG) y [MathML](/es/docs/Web/MathML) directamente en documentos HTML, usando los elementos {{SVGElement("svg")}} y { {MathMLElement("math")}}.
 
 | Element | Description |
 | ------- | ----------- |
@@ -151,7 +151,7 @@ Con el fin de crear contenido dinámico y aplicaciones Web, HTML soporta el uso 
 | ------- | ----------- |
 | {{HTMLElement("canvas")}}   | El elemento HTML _canvas_ (\<canvas>) se puede utilizar para dibujar gráficos a través de secuencias de comandos (por lo general [JavaScript](/en/JavaScript) ). Por ejemplo, puede usarse para dibujar gráficos, hacer composiciones de fotos o incluso realizar animaciones. |
 | {{HTMLElement("noscript")}} | **Sus etiquetas son**: `<noscript>` y `</noscript>` (ambas obligatorias). |
-| {{HTMLElement("script")}}   | Used to embed executable code or data; this is typically used to embed or refer to JavaScript code. The `<script>` element can also be used with other languages, such as [WebGL](/es/docs/Web/API/WebGL_API)'s GLSL shader programming language and [JSON](/es/docs/Glossary/JSON). |
+| {{HTMLElement("script")}}   | Se utiliza para incrustar código ejecutable o datos; esto generalmente se usa para incrustar o hacer referencia al código JavaScript. El elemento `<script>` también se puede usar con otros lenguajes, como el lenguaje de programación de sombreado GLSL de [WebGL](/es/docs/Web/API/WebGL_API) y [JSON](/es/docs/Glossary/ JSON). |
 
 ## Ediciones demarcadas
 
@@ -172,11 +172,11 @@ Estos elementos son usados para crear y manejar datos tabulados.
 | {{HTMLElement("col")}}      | **Sus etiquetas son**: `<col>` (solo tiene una). |
 | {{HTMLElement("colgroup")}} | **Sus etiquetas son**: `<colgroup>` y `</colgroup>` (la de cierre es opcional). |
 | {{HTMLElement("table")}}    | El _Elemento de Tabla HTML_ (`<table>`) representa datos en dos o mas dimensiones. |
-| {{HTMLElement("tbody")}}    | Encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of the table ({{HTMLElement("table")}}). |
+| {{HTMLElement("tbody")}}    | Encapsula un conjunto de filas de una tabla (elementos {{HTMLElement("tr")}}), lo que indica que abarcan el cuerpo de la tabla ({{HTMLElement("table")}}). |
 | {{HTMLElement("td")}}       | El elemento [HTML](/es/docs/Web/HTML) _Celda de tabla_ (**`<td>`**) define la celda de una tabla que contiene datos. Esta participa en el _modelo de tablas_. |
-| {{HTMLElement("tfoot")}}    | Defines a set of rows summarizing the columns of the table. |
+| {{HTMLElement("tfoot")}}    | Define un conjunto de filas que resumen las columnas de la tabla. |
 | {{HTMLElement("th")}}       | El elemento **HTML `<th>`** define una celda como encabezado de un grupo de celdas en una tabla. La naturaleza exacta de este grupo está definida por los atributos {{htmlattrxref("scope", "th")}} y {{htmlattrxref("headers", "th")}}. |
-| {{HTMLElement("thead")}}    | Defines a set of rows defining the head of the columns of the table. |
+| {{HTMLElement("thead")}}    | Define un conjunto de filas que definen el encabezado de las columnas de la tabla. |
 | {{HTMLElement("tr")}}       | El elemento HTML _fila de tabla_ (_table row_) `<tr>` define una fila de celdas en una tabla. Estas pueden ser una mezcla de elementos {{HTMLElement("td")}} y {{HTMLElement("th")}}. |
 
 ## Formularios
@@ -192,10 +192,10 @@ HTML provee un número de elementos que pueden usarse conjuntamente para crear f
 | {{HTMLElement("input")}}    | El elemento HTML `<input>` se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario.Hay disponible una amplia variedad de tipos de datos de entrada y widgets de control, que dependen del dispositivo y el agente de usuario ([user agent](/es/docs/Glossary/user_agent)).El elemento `<input>` es uno de los más potentes y complejos en todo HTML debido a la gran cantidad de combinaciones de tipos y atributos de entrada. |
 | {{HTMLElement("label")}}    | El **Elemento HTML `<label>`** representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo for, o ubicando el control dentro del elemento label. Tal control es llamado "el control etiquetado" del elemento label. |
 | {{HTMLElement("legend")}}   | **Sus etiquetas son**: \<legend> y \</legend> (ambas obligatorias). |
-| {{HTMLElement("meter")}}    | Represents either a scalar value within a known range or a fractional value. |
-| {{HTMLElement("optgroup")}} | Creates a grouping of options within a {{HTMLElement("select")}} element. |
+| {{HTMLElement("meter")}}    | Representa un valor escalar dentro de un rango conocido o un valor fraccionario. |
+| {{HTMLElement("optgroup")}} | Crea una agrupación de opciones dentro de un elemento {{HTMLElement("select")}}. |
 | {{HTMLElement("option")}}   | En un formulario Web , el **elemento** **HTML `<option>`** se usa para representar un item dentro de un {{HTMLElement("select")}}, un {{HTMLElement("optgroup")}} o un elemento HTML5 {{HTMLElement("datalist")}} . |
-| {{HTMLElement("output")}}   | Container element into which a site or app can inject the results of a calculation or the outcome of a user action. |
+| {{HTMLElement("output")}}   | Elemento contenedor en el que un sitio o aplicación puede inyectar los resultados de un cálculo o el resultado de una acción del usuario. |
 | {{HTMLElement("progress")}} | La etiqueta **HTML `<progress>`** se utiliza para visualizar el progreso de una tarea. Aunque los detalles de como se muestran depende directamente del navegador que utiliza el cliente, aunque básicamente aparece una barra de progreso. |
 | {{HTMLElement("select")}}   | El elemento select (`<select>`) de HTML representa un control que muestra un menú de opciones. Las opciones contenidas en el menú son representadas por elementos {{HTMLElement("option")}}, los cuales pueden ser agrupados por elementos {{HTMLElement("optgroup")}}. La opcion puede estar preseleccionada por el usuario. |
 | {{HTMLElement("textarea")}} | El **elemento** **HTML `<textarea>`** representa un control para la edición mutilínea de texto sin formato. |
@@ -208,7 +208,7 @@ HTML ofrece una selección de elementos que pueden ayudar a crear objetos de int
 | ------- | ----------- |
 | {{HTMLElement("details")}} | El elemento HTML Details **\<details>** es usado como un widget de revelación a través del cual el usuario puede obtener información adicional . |
 | {{HTMLElement("dialog")}}  | El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro componente interactivo, como inspector o ventana. |
-| {{HTMLElement("summary")}} | Specifies a summary, caption, or legend for a details element's disclosure box. Clicking the `<summary>` element toggles the state of the parent {{HTMLElement("details")}} element open and closed. |
+| {{HTMLElement("summary")}} | Especifica un resumen, un título o una leyenda para el cuadro de información de un elemento de detalles. Al hacer clic en el elemento `<summary>`, el estado del elemento principal {{HTMLElement("details")}} se abre y se cierra. |
 
 ## Componentes Web
 
@@ -225,30 +225,30 @@ Los Componentes Web son una tecnología relacionada con HTML que hacen que sea p
 
 | Element | Description |
 | ------- | ----------- |
-| {{HTMLElement("acronym")}}   | **acromym** de acromyn=acrónimo |
+| {{HTMLElement("acronym")}}   | Permite a los autores indicar claramente una secuencia de caracteres que componen un acrónimo o abreviatura de una palabra. |
 | {{HTMLElement("applet")}}    | **Sus etiquetas son**: \<applet> y \</applet> (ambas obligatorias) |
 | {{HTMLElement("bgsound")}}   | El elemento HTML de sonido de fondo (\<bgsound>) es un elemento de Internet Explorer que asocia un sonido de fondo con un página . |
 | {{HTMLElement("big")}}       | **big** de big=grande |
 | {{HTMLElement("blink")}}     | El elemento HTML blink (`<blink>`) no es un elemento estándar que causa que el texto encerrado parpadee lentamente . |
 | {{HTMLElement("center")}}    | **Sus etiquetas son**: \<center> y \</center> (ambas obligatorias). |
-| {{HTMLElement("content")}}   | El elemento [HTML](/es/docs/Web/HTML) `<content>` es usado dentro de un [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) como un {{glossary("insertion point")}} . No está pensado para ser usado en HTML ordinario . Es usado con [Web Components](/es/docs/Web/Web_Components). |
+| {{HTMLElement("content")}}   | El elemento [HTML](/es/docs/Web/HTML) `<content>` es usado dentro de un [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) como un punto de inserción . No está pensado para ser usado en HTML ordinario . Es usado con [Web Components](/es/docs/Web/Web_Components). |
 | {{HTMLElement("dir")}}       | **Sus etiquetas son**: \<dir> y \</dir> (ambas obligatorias). |
 | {{HTMLElement("font")}}      | **Sus etiquetas son**: \<font> y \</font> (ambas obligatorias). |
 | {{HTMLElement("frame")}}     | **Sus etiquetas son**: `<frame>` (solo tiene una). |
 | {{HTMLElement("frameset")}}  | **Sus etiquetas son**: `<frameset>` y `</frameset>` (ambas obligatorias). |
-| {{HTMLElement("image")}}     | El _elemento de grupo de cabeceras HTML_ (\<hgroup>) representa el encabezado de una sección. Define un solo título que participa de [la estructura del documento](/en/Sections_and_Outlines_of_an_HTML5_document) como el encabezado de la sección implícita o explícita a la que pertenece. |
-| {{HTMLElement("keygen")}}    | El elemento HTML `<image>` fue un elemento experimental diseñado para mostrar imágenes . Nuca fue implementado y el elemento estándar {{HTMLElement("img")}} debe de ser usado . |
-| {{HTMLElement("marquee")}}   | El elemento `keygen` de HTML existe para facilitar la generación de llaves, y el envío de la clave pública como parte de un formulario HTML. Este mecanismo está diseñado para utilizarse con sistemas de gestión de certificados basados en la Web. Se espera que el elemento `keygen` se utilice en un formulario HTML, junto con otra información necesaria para la construcción de una solicitud de certificado, y que el resultado del proceso será un certificado firmado. |
-| {{HTMLElement("menuitem")}}  | La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimiento. También se la conoce como marquesina. |
-| {{HTMLElement("nobr")}}      | Prevents the text it contains from automatically wrapping across multiple lines, potentially resulting in the user having to scroll horizontally to see the entire width of the text. |
-| {{HTMLElement("noembed")}}   | El elemento HTML `<nobr>` previene que una línea de texto se divida en una nueva línea, así, se presentará en una línea larga por lo que puede ser necesario hacer un desplazamiento de pantalla. Esta etiqueta no es un estándar HTML y no debería ser usada, en su lugar use la propiedad CSS {{Cssxref("white-space")}} como en este ejemplo: |
-| {{HTMLElement("noframes")}}  | Provides content to be presented in browsers that don't support (or have disabled support for) the {{HTMLElement("frame")}} element. Although most commonly-used browsers support frames, there are exceptions, including certain special-use browsers including some mobile browsers, as well as text-mode browsers. |
-| {{HTMLElement("param")}}     | **Sus etiquetas son**: `<noframes>` y `</noframes>` (ambas obligatorias). |
-| {{HTMLElement("plaintext")}} | **Sus etiquetas son**: `<param>` (solo tiene una). |
-| {{HTMLElement("rb")}}        | Used to delimit the base text component of a ruby annotation, i.e. the text that is being annotated. One `<rb>` element should wrap each separate atomic segment of the base text. |
-| {{HTMLElement("rtc")}}       | Embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{HTMLElement("ruby")}} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic ({{HTMLElement("rtc")}}) annotations. |
-| {{HTMLElement("shadow")}}    | An obsolete part of the [Web Components](/es/docs/Web/Web_Components) technology suite that was intended to be used as a shadow DOM insertion point. You might have used it if you have created multiple shadow roots under a shadow host. |
-| {{HTMLElement("spacer")}}    | Allows insertion of empty spaces on pages. It was devised by Netscape to accomplish the same effect as a single-pixel layout image, which was something web designers used to use to add white spaces to web pages without actually using an image. However, `<spacer>` is no longer supported by any major browser and the same effects can now be achieved using simple CSS. |
-| {{HTMLElement("strike")}}    | Places a strikethrough (horizontal line) over text. |
-| {{HTMLElement("tt")}}        | **Sus etiquetas son**: \<strike> y \</strike> (Ambas obligatorias) |
-| {{HTMLElement("xmp")}}       | **Sus etiquetas son**: \<tt> y \</tt> (Ambas obligatorias) |
+| {{HTMLElement("image")}}     | El elemento HTML `<image>` fue un elemento experimental diseñado para mostrar imágenes . Nuca fue implementado y el elemento estándar {{HTMLElement("img")}} debe de ser usado . |
+| {{HTMLElement("keygen")}}    | El elemento `keygen` de HTML existe para facilitar la generación de llaves, y el envío de la clave pública como parte de un formulario HTML. Este mecanismo está diseñado para utilizarse con sistemas de gestión de certificados basados en la Web. Se espera que el elemento `keygen` se utilice en un formulario HTML, junto con otra información necesaria para la construcción de una solicitud de certificado, y que el resultado del proceso será un certificado firmado. |
+| {{HTMLElement("marquee")}}   | La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimiento. También se la conoce como marquesina. |
+| {{HTMLElement("menuitem")}}  | Representa un comando que un usuario puede invocar a través de un menú emergente. Esto incluye menús contextuales, así como menús que pueden adjuntarse a un botón de menú. |
+| {{HTMLElement("nobr")}}      | El elemento HTML `<nobr>` previene que una línea de texto se divida en una nueva línea, así, se presentará en una línea larga por lo que puede ser necesario hacer un desplazamiento de pantalla. Esta etiqueta no es un estándar HTML y no debería ser usada, en su lugar use la propiedad CSS {{Cssxref("white-space")}} como en este ejemplo: |
+| {{HTMLElement("noembed")}}   | Proporciona contenido para ser presentado en navegadores que no admiten (o han desactivado la compatibilidad) con el elemento {{HTMLElement("frame")}}. Aunque los navegadores más utilizados admiten marcos, existen excepciones, incluidos ciertos navegadores de uso especial, incluidos algunos navegadores móviles, así como navegadores en modo texto. |
+| {{HTMLElement("noframes")}}  | **Sus etiquetas son**: `<noframes>` y `</noframes>` (ambas obligatorias). |
+| {{HTMLElement("param")}}     | **Sus etiquetas son**: `<param>` (solo tiene una). |
+| {{HTMLElement("plaintext")}} | Muestra todo lo que sigue a la etiqueta de inicio como texto sin formato, ignorando cualquier código HTML siguiente. No hay una etiqueta de cierre, ya que todo lo que sigue se considera texto sin formato. |
+| {{HTMLElement("rb")}}        | Se utiliza para delimitar el componente de texto base de una anotación Ruby, es decir, el texto que se está anotando. Un elemento `<rb>` debe envolver cada segmento atómico separado del texto base. |
+| {{HTMLElement("rtc")}}       | Adopta anotaciones semánticas de caracteres presentados en un rubí de elementos {{HTMLElement("rb")}} utilizados dentro del elemento {{HTMLElement("ruby")}}. Los elementos {{HTMLElement("rb")}} pueden tener anotaciones de pronunciación ({{HTMLElement("rt")}}) y semánticas ({{HTMLElement("rtc")}}). |
+| {{HTMLElement("shadow")}}    | Una parte obsoleta de la suite de tecnología de [Componentes Web](/es/docs/Web/Web_Components) que estaba pensada para ser utilizada como un punto de inserción en el shadow DOM. Es posible que lo haya utilizado si ha creado varias raíces ocultas en un host oculto. |
+| {{HTMLElement("spacer")}}    | Permite la inserción de espacios vacíos en las páginas. Fue diseñado por Netscape para lograr el mismo efecto que una imagen de diseño de un solo píxel, que era algo que los diseñadores web solían usar para agregar espacios en blanco a las páginas web sin usar realmente una imagen. Sin embargo, `<spacer>` ya no es compatible con ninguno de los principales navegadores y ahora se pueden lograr los mismos efectos usando CSS simple. |
+| {{HTMLElement("strike")}}    | Coloca un tachado (línea horizontal) sobre el texto. |
+| {{HTMLElement("tt")}}        | **Sus etiquetas son**: \<tt> y \</tt> (Ambas obligatorias) |
+| {{HTMLElement("xmp")}}       | Muestra el texto entre las etiquetas de inicio y finalización sin interpretar el HTML intermedio y utilizando una fuente monoespaciada. La especificación HTML2 recomendaba que se representara lo suficientemente ancho como para permitir 80 caracteres por línea. |
