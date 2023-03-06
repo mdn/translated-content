@@ -12,7 +12,7 @@ Esta página lista todos los {{Glossary("Element","elementos")}} {{Glossary("HTM
 
 ## Raíz principal
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("html")}} | El **elemento HTML `<html>`** (o _elemento HTML raiz_) representa la raiz de un documento HTML. El resto de elementos descienden de este elemento. |
 
@@ -20,7 +20,7 @@ Esta página lista todos los {{Glossary("Element","elementos")}} {{Glossary("HTM
 
 Los metadatos contienen información sobre la página. Esto incluye información sobre estilos, _scripts_ y datos que ayudan al _software_ ({{Glossary("search engine", "search engines")}}, {{Glossary("Browser","browsers")}}, etc.) a usar y generar la página. Los metadatos de estilos y _scripts_ pueden estar definidos en la página o estar enlazados a otro fichero que contiene la información.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("base")}}  | El **elemento HTML `<base>`** especifica la dirección URL base que se utilizará para todas las direcciones URL relativas contenidas dentro de un documento. Sólo puede haber un elemento \<base> en un documento. |
 | {{HTMLElement("head")}}  | El **elemento HTML `<head>`** provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos. |
@@ -31,7 +31,7 @@ Los metadatos contienen información sobre la página. Esto incluye información
 
 ## Seccionamiento básico
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("body")}} | El **elemento `<body>` de HTML** representa el contenido de un documento HTML. Solo puede haber un elemento `<body>` en un documento. |
 
@@ -39,7 +39,7 @@ Los metadatos contienen información sobre la página. Esto incluye información
 
 Los elementos de seccionamiento del contenido te permiten organizar los contenidos del documento en partes lógicas. Usa los elementos de seccionado para crear una descripción amplia de los contenidos de tu página, incluyendo el encabezado y pie de página y elementos para identificar secciones.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("address")}}                                                                                                                                                                                                                                                                                                                           | El **elemento HTML `<address>`** aporta información de contacto para su {{HTMLElement("article")}} más cercano o ancestro {{HTMLElement("body")}}; en el último caso lo aplica a todo el documento. |
 | {{HTMLElement("article")}}                                                                                                                                                                                                                                                                                                                           | El Elemento de HTML **`<article>`** representa una composición auto-contenida en un documento, una página, una aplicación o en un sitio, que se quiere que sea distribuíble y/o reutilizable de manera independiente, por ejemplo, en la redifusión. Algunos ejemplos podrían ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, el comentario de un usuario, un widget o gadget interactivo, o cualquier otro elemento de contenido independiente. |
@@ -55,7 +55,7 @@ Los elementos de seccionamiento del contenido te permiten organizar los contenid
 
 Utiliza los elementos HTML de contenido del texto para organizar bloques o secciones de contenido colocados entre los tags de apertura{{HTMLElement("body")}} y cierre. Es importante para la {{Glossary("accessibility")}} y el {{Glossary("SEO")}}, que estos elementos se identifiquen con el objetivo o la estructura de ese contenido.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("blockquote")}} | **Sus etiquetas son**: `<blockquote>` y `</blockquote>` (ambas obligatorias). |
 | {{HTMLElement("dd")}}         | El **elemento HTML `<dd>`** provee detalles acerca de o la definición de un término precedente ({{HTMLElement("dt")}}) en una lista de descripciones ({{HTMLElement("dl")}}). |
@@ -76,7 +76,7 @@ Utiliza los elementos HTML de contenido del texto para organizar bloques o secci
 
 Utilice la semántica del texto en línea HTML para definir el significado, estructura, o el estilo de una palabra, una línea o cualquier pieza arbitraria de texto.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("a")}}      | El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL. |
 | {{HTMLElement("abbr")}}   | El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una abreviación o acrónimo; el atributo opcional {{htmlattrxref("title")}} puede ampliar o describir la abreviatura. Si está presente, el atributo `title` debe contener la descripción completa y nada más. |
@@ -112,7 +112,7 @@ Utilice la semántica del texto en línea HTML para definir el significado, estr
 
 HTML soporta varios recursos multimedia como imágenes, audio, y video.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("area")}}  | **area** de area=área |
 | {{HTMLElement("audio")}} | El elemento `audio` se usa para insertar contenido de audio en un documento HTML o XHTML. El elemento `audio` se agregó como parte de HTML 5. |
@@ -125,7 +125,7 @@ HTML soporta varios recursos multimedia como imágenes, audio, y video.
 
 Además de los contenidos multimedia habituales, HTML puede incluir otra variedad de contenidos, aunque no siempre es fácil de interactuar con ellos.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("embed")}}   | El _Elemento HTML Embed_ ( `<embed>` ) representa un punto de integración para una aplicación externa o de contenido interactivo (en otras palabras, un plug-in). |
 | {{HTMLElement("iframe")}}  | El **elemento HTML `<iframe>`** (de inline frame) representa un contexto de navegación anidado, el cual permite incrustar otra página HTML en la página actual. |
@@ -138,7 +138,7 @@ Además de los contenidos multimedia habituales, HTML puede incluir otra varieda
 
 Puede incrustar contenido [SVG](/es/docs/Web/SVG) y [MathML](/es/docs/Web/MathML) directamente en documentos HTML, usando los elementos {{SVGElement("svg")}} y { {MathMLElement("math")}}.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{SVGElement("svg")}}     | El elemento `svg` es un contenedor que define un nuevo sistema de coordenadas y [viewport](/es/docs/Web/SVG/Attribute/viewBox). Es usado como el elemento más externo de cualquier documento SVG, pero también puede ser usado para agregar un fragmento de un SVG dentro de un documento SVG o HTML. |
 | {{MathMLElement("math")}} | `<math>` es el elemento superior en MathML. Cada instancia válida de MathML debe estar rodeada de etiquetas `<math>`. Además, no debes anidar un segundo elemento `<math>` dentro de un primero, pero puedes tener un número arbitrario de otros elementos hijos en él. |
@@ -147,7 +147,7 @@ Puede incrustar contenido [SVG](/es/docs/Web/SVG) y [MathML](/es/docs/Web/MathML
 
 Con el fin de crear contenido dinámico y aplicaciones Web, HTML soporta el uso de lenguajes de scripting, el más prominente es JavaScript. Ciertos elementos soportan esta capacidad.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("canvas")}}   | El elemento HTML _canvas_ (\<canvas>) se puede utilizar para dibujar gráficos a través de secuencias de comandos (por lo general [JavaScript](/en/JavaScript) ). Por ejemplo, puede usarse para dibujar gráficos, hacer composiciones de fotos o incluso realizar animaciones. |
 | {{HTMLElement("noscript")}} | **Sus etiquetas son**: `<noscript>` y `</noscript>` (ambas obligatorias). |
@@ -157,7 +157,7 @@ Con el fin de crear contenido dinámico y aplicaciones Web, HTML soporta el uso 
 
 Estos elementos permiten proporcionar indicios de que determinadas partes del texto han sido alteradas.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("del")}} | **Sus etiquetas son**: \<del> y \</del> (ambas obligatorias). |
 | {{HTMLElement("ins")}} | **Sus etiquetas son**: \<ins> e \</ins> (ambas obligatorias). |
@@ -166,7 +166,7 @@ Estos elementos permiten proporcionar indicios de que determinadas partes del te
 
 Estos elementos son usados para crear y manejar datos tabulados.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("caption")}}  | **Sus etiquetas son**: `<caption>` y `</caption>` (ambas obligatorias). |
 | {{HTMLElement("col")}}      | **Sus etiquetas son**: `<col>` (solo tiene una). |
@@ -183,7 +183,7 @@ Estos elementos son usados para crear y manejar datos tabulados.
 
 HTML provee un número de elementos que pueden usarse conjuntamente para crear formularios los cuales el usuario puede completar y enviar al sitio Web o a una aplicación. Hay una gran cantidad de información acerca de ésto disponible en la [HTML forms guide](/es/docs/Web/Guide/HTML/Forms).
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("button")}}   | **button** = botón. |
 | {{HTMLElement("datalist")}} | El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElement("option")}} que representan los valores disponibles para otros controles. |
@@ -204,7 +204,7 @@ HTML provee un número de elementos que pueden usarse conjuntamente para crear f
 
 HTML ofrece una selección de elementos que pueden ayudar a crear objetos de interfaz de usuario interactivos.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("details")}} | El elemento HTML Details **\<details>** es usado como un widget de revelación a través del cual el usuario puede obtener información adicional . |
 | {{HTMLElement("dialog")}}  | El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro componente interactivo, como inspector o ventana. |
@@ -214,7 +214,7 @@ HTML ofrece una selección de elementos que pueden ayudar a crear objetos de int
 
 Los Componentes Web son una tecnología relacionada con HTML que hacen que sea posible, en esencia, crear y personalizar elementos como si fueran HTML normal. Además, pueden crear versiones personalizadas de los elementos HTML estándar.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("slot")}}     | **El elemento HTML `<slot>`** —parte de la suite tecnologica [Web Components](/es/docs/Web/Web_Components) — es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos. |
 | {{HTMLElement("template")}} | El **elemento** **HTML `<template>`** es un mecanismo para mantener el contenido {{Glossary("HTML")}} del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript. |
@@ -223,7 +223,7 @@ Los Componentes Web son una tecnología relacionada con HTML que hacen que sea p
 
 > **Advertencia:** Estos son elementos HTML viejos los cuales están obsoletos y no deben usarse. **Nunca debería usarlos en un nuevo proyecto y debería reemplazarlos en proyectos viejos tan pronto como sea posible.** Se listan aquí solo con propósitos informativos.
 
-| Element | Description |
+| Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("acronym")}}   | Permite a los autores indicar claramente una secuencia de caracteres que componen un acrónimo o abreviatura de una palabra. |
 | {{HTMLElement("applet")}}    | **Sus etiquetas son**: \<applet> y \</applet> (ambas obligatorias) |
