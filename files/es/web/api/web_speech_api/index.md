@@ -1,5 +1,5 @@
 ---
-title: Web Speech API
+title: API Web de Voz
 slug: Web/API/Web_Speech_API
 l10n:
   sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
@@ -7,12 +7,12 @@ l10n:
 
 {{DefaultAPISidebar("Web Speech API")}}
 
-**Web Speech API** te permite incorporar datos de voz en aplicaciones web.
-Web Speech API tiene dos partes: `SpeechSynthesis` (Texto a voz) y `SpeechRecognition` (Reconocimiento de voz asíncrono).
+La **API Web de Voz** (Web Speech API) te permite incorporar datos de voz en aplicaciones web.
+La API Web de Voz tiene dos partes: `SpeechSynthesis` (Texto a voz) y `SpeechRecognition` (Reconocimiento de voz asíncrono).
 
-## Conceptos y uso de Web Speech
+## Conceptos y uso de la API Web de Voz
 
-Web Speech API permite que las aplicaciones web manejen datos de voz.
+La API Web de Voz permite que las aplicaciones web manejen datos de voz.
 Hay dos componentes en esta API:
 
 - Se accede al reconocimiento de voz a través de la interfaz {{domxref("SpeechRecognition")}}, que brinda la capacidad de reconocer el contexto de voz desde una entrada de audio (normalmente a través del servicio de reconocimiento de voz predeterminado del dispositivo) y responder adecuadamente.
@@ -21,9 +21,9 @@ Hay dos componentes en esta API:
 - Se accede a la síntesis de voz a través de la interfaz {{domxref("SpeechSynthesis")}}, un componente de texto a voz que permite que los programas lean su contenido de texto (normalmente a través del sintetizador de voz predeterminado del dispositivo). Los diferentes tipos de voz se representan mediante Los objetos {{domxref("SpeechSynthesisVoice")}} y las diferentes partes del texto que desea que se hablen se representan mediante objetos {{domxref("SpeechSynthesisUtterance")}}.
   Puedes hacer que se hablen pasándolos al método {{domxref("SpeechSynthesis.speak()")}}.
 
-Para obtener más detalles sobre el uso de estas funciones, consulte [Uso de Web Speech API](/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API).
+Para obtener más detalles sobre el uso de estas funciones, consulte [Uso de la API Web de Voz](/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API).
 
-## Interfaces de Web Speech API
+## Interfaces de la API Web de Voz
 
 ### Reconocimiento de voz
 
@@ -63,14 +63,14 @@ Para obtener más detalles sobre el uso de estas funciones, consulte [Uso de Web
 
 ## Errores
 
-Para obtener información sobre los errores arrohados por Speech API (por ejemplo, `"language-not-supported"` y `"language-unavailable"`), consulte la siguiente documentación:
+Para obtener información sobre los errores arrojados por la API Web de Voz (por ejemplo, `"language-not-supported"` y `"language-unavailable"`), consulte la siguiente documentación:
 
 - [Propiedad `error` del objeto `SpeechRecognitionErrorEvent`](/es/docs/Web/API/SpeechRecognitionErrorEvent/error)
 - [Propiedad `error` del objeto `SpeechSynthesisErrorEvent`](/es/docs/Web/API/SpeechSynthesisErrorEvent/error)
 
 ## Ejemplos
 
-Los [ejemplos de Web Speech API](https://github.com/mdn/dom-examples/tree/main/web-speech-api) en GitHub contienen demostraciones para ilustrar el reconocimiento y la síntesis de voz.
+Los [ejemplos de la API Web de Voz](https://github.com/mdn/dom-examples/tree/main/web-speech-api) en GitHub contienen demostraciones para ilustrar el reconocimiento y la síntesis de voz.
 
 ## Especificaciones
 
@@ -82,5 +82,5 @@ Los [ejemplos de Web Speech API](https://github.com/mdn/dom-examples/tree/main/w
 
 ## Véase también
 
-- [Uso de la Web Speech API](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
+- [Uso de la API Web de Voz](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
 - [Artículo HTML5Rocks](https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api/)
