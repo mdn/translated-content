@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
-Los Espacio de Nombres son un contexto para identificadores, un agrupamiento lógico de nombres usado en un programa. Dentro del mismo contexto, y el mismo ámbito, un identificator debe identificar una entidad de forma única.
+Los Espacios de Nombres son un contexto para identificadores, un agrupamiento lógico de nombres usado en un programa. Dentro del mismo contexto, y el mismo ámbito, un identificator debe identificar una entidad de forma única.
 
 En un sistema operativo, un directorio es un espacio de nombre. Cada archivo o subdirectorio tiene un nombre único, pero un archivo puede usar el mismo nombre múltiples veces.
 
