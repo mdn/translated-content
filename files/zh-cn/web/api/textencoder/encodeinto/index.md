@@ -31,7 +31,7 @@ encodeInto(string, uint8Array)
 
 ## 编码到特定的位置
 
-_encoder_`.encodeInto()` 总是将它输出的结果放在数组的开头。然而，有时使输出从一个指定的索引开始很有用。解决方案是：[`TypedArray.prototype.subarray()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray)：
+_encoder_`.encodeInto()` 总是将它输出的结果放在数组的开头。然而，有时使输出从一个指定的索引开始很有用。解决方案是：[`TypedArray.prototype.subarray()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray)：
 
 ```js
 const encoder = new TextEncoder();
