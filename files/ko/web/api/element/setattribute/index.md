@@ -74,7 +74,6 @@ button.setAttribute("disabled", "");
 
 {{DOMAttributeMethods}}
 
-
 ## 명세서
 
 {{Specifications}}
