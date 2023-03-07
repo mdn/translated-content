@@ -330,12 +330,3 @@ En el próximo artículo de este módulo, exploraremos las imágenes adaptables 
 - [Cómo escalar SVGs](https://css-tricks.com/scale-svg/) (¡no es tan simple como los gráficos rasterizados!)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## En este módulo
-
-- [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Contenido de Audio y Video](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [De \<object> a \<iframe> - otras tecnologías de incrustación](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Agregar gráficos vectoriales a la web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Imágenes adaptables](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Página de presentación de Mozilla](/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
