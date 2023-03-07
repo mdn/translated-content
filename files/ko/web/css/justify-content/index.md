@@ -22,7 +22,7 @@ l10n:
 justify-content: center; /* 항목들을 축의 중심 부분에 정렬합니다. */
 justify-content: start; /* 항목들을 축의 시작 부분에 정렬합니다.. */
 justify-content: end; /* 항목들을 축의 끝 부분에 정렬합니다. */
-justify-content: flex-start; /* 플렉스 항목들을 축의 시작 부분에 정렬합니다.. */
+justify-content: flex-start; /* 플렉스 항목들을 축의 시작 부분에 정렬합니다. */
 justify-content: flex-end; /* 플렉스 항목들을 축의 끝 부분에 정렬합니다. */
 justify-content: left; /* 항목들을 축의 왼쪽 부분에 정렬합니다. */
 justify-content: right; /* 항목들을 축의 오른쪽 부분에 정렬합니다. */
