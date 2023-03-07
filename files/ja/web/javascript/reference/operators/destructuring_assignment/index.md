@@ -273,7 +273,7 @@ console.log(pop, push); // [Function pop] [Function push]
 ```
 
 ```js
-const [a, b, ...[c, d]] = [1, 2, 3, 4];
+deconst [a, b, ...[c, d]] = [1, 2, 3, 4];
 console.log(a, b, c, d); // 1 2 3 4
 ```
 

@@ -43,7 +43,7 @@ _変更なし。_
 
 - ES6 の[オブジェクトリテラルにおける computed property names](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names) の構文を実装しました ({{bug(924688)}})。
 
-  - これは [getter](/ja/docs/Web/JavaScript/Reference/Functions/get) および [setter](/ja/docs/Web/JavaScript/Reference/Functions/set) のメソッド名も同様に含まれており ({{bug(1048384)}})、また [destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Computed_object_property_names_and_destructuring) と共に使用することもできます。
+  - これは [getter](/ja/docs/Web/JavaScript/Reference/Functions/get) および [setter](/ja/docs/Web/JavaScript/Reference/Functions/set) のメソッド名も同様に含まれており ({{bug(1048384)}})、また [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#計算されたオブジェクトのプロパティの名前と分割代入)と共に使用することもできます。
 
 - ES6 の、オブジェクトの[メソッド定義における短縮記法](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)を実装しました ({{bug(924672)}})。
 - ES6 の `Object` のメソッドである {{jsxref("Object.assign", "Object.assign()")}} を実装しました ({{bug(937855)}})。
@@ -57,8 +57,8 @@ _変更なし。_
 - 実験的な実装であった {{jsxref("TypedArray.prototype.move()")}} メソッド (以前の Nightly および Aurora チャンネルでのみ有効) を、ES6 標準の {{jsxref("TypedArray.prototype.copyWithin()")}} メソッドの実装で置き換えました ({{bug(1021379)}})。
 - [Strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で、ES6 の仕様に応じて[オブジェクトリテラルでの重複するプロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Duplicate_property_names)に対して `SyntaxError` が発生しないようになりました ({{bug(1041128)}})。
 - 正規表現において (`String.replace` を含む)、量指定子が妨げたために捕獲式集合が調査されなかったときのマッチ文字列が、空文字列から `undefined` に変わりました ({{bug(369778)}} および[サンプルコード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#firefox_固有の注意事項)を参照)。Web 互換性のため、RegExp.$N は引き続き空文字列を返します ({{bug(1053944)}})。
-- [Destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で、ES6 の [Spread Operator](/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator)をサポートしました ({{bug(933276)}})。
-- [Destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で、配列のような手順に代わりイテレータの手順を使用するようになりました ({{bug(933276)}})。
+- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)で、ES6 の [Spread Operator](/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator)をサポートしました ({{bug(933276)}})。
+- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)で、配列のような手順に代わりイテレータの手順を使用するようになりました ({{bug(933276)}})。
 - {{jsxref("Proxy.revocable()")}} を実装しました ({{bug(978279)}})。
 
 ### インターフェイス/API/DOM

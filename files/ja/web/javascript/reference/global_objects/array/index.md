@@ -464,7 +464,7 @@ const inventory = [
 
 `group()` を使用するには、現在の要素、およびオプションで現在の添字と配列を指定して呼び出され、要素のグループを示す文字列を返すコールバック関数を指定します。
 
-以下のコードでは、アロー関数を使用してそれぞれの配列要素の `type` を返しています（これは、[関数引数のオブジェクト構造化構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_fields_from_objects_passed_as_a_function_parameter)を使用して、渡されたオブジェクトから型要素を展開するものです）。
+以下のコードでは、アロー関数を使用してそれぞれの配列要素の `type` を返しています（これは、[関数引数のオブジェクト構造化構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#関数の引数として渡されたオブジェクトからのプロパティの展開)を使用して、渡されたオブジェクトから型要素を展開するものです）。
 結果は、コールバックから返された一意の文字列を名前とするプロパティを持つオブジェクトになります。
 各プロパティには、グループ内の要素を含む配列が割り当てられます。
 
