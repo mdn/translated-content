@@ -103,7 +103,7 @@ MDN Web 文档的不当主题示例包括：
 
 有关如何删除文档的更多信息，请参阅[创建、移动和删除页面指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)。
 
-## 哪些类型在 MDN 的范畴内？
+## 哪些类型在 MDN Web 文档的范畴内
 
 一般来说，我们的文档分为以下几类：
 
