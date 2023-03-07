@@ -47,7 +47,7 @@ backface-visibility: unset;
 
 这个例子展示了一个透明面的立方体和一个不透明面的立方体。
 
-### HTML
+#### HTML
 
 ```html
 <table>
@@ -86,7 +86,7 @@ backface-visibility: unset;
 </table>
 ```
 
-### CSS
+#### CSS
 
 ```css
 /* Classes that will show or hide the
@@ -170,15 +170,13 @@ th, p, td {
 }
 ```
 
-### 结果
+#### 结果
 
-{{EmbedLiveSample('示例', '100%', 360)}}
+{{EmbedLiveSample('具有透明和不透明面的立方体', '100%', 360)}}
 
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 
