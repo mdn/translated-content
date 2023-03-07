@@ -67,7 +67,7 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>由于所有的面都是部分透明的，所以背面(2、4、5)可以透过前面(1、3、6)看到。</p>
+      <p>由于所有的面都是部分透明的，所以背面（2、4、5）可以透过前面（1、3、6）看到。</p>
     </td>
     <td>
       <div class="container">
@@ -80,7 +80,7 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>后面的三个面 (2、4、5) 被隐藏了。</p>
+      <p>后面的三个面（2、4、5）被隐藏了。</p>
     </td>
   </tr>
 </table>
