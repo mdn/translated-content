@@ -56,7 +56,7 @@ justify-content: revert-layer;
 justify-content: unset;
 ```
 
-### 값들
+### 값
 
 - `start`
   - : 항목들은 정렬 컨테이너의 메인 축을 따라 시작 부분의 가장자리에 밀착되어 정렬됩니다.
