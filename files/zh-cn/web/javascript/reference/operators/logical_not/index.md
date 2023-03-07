@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 
 {{jsSidebar("Operators")}}
 
-**逻辑非**运算符（`!`，逻辑连接取反）将真值或假值转换为对应的相反值，经常用于布尔（逻辑）值。当与非布尔值使用时，如果其操作数可以转化为 `true`，则返回 `false`，否则返回 `true`。
+**逻辑非**（`!`，逻辑连接取反）运算符将真值或假值转换为对应的相反值，经常用于布尔（逻辑）值。当与非布尔值使用时，如果其操作数可以转化为 `true`，则返回 `false`，否则返回 `true`。
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}
 
@@ -61,7 +61,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 
 ### 非运算符转换
 
-下述涉及到**布尔**运算符的运算：
+下述涉及到**布尔值**的运算：
 
 ```js-nolint
 !!bCondition
