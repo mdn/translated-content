@@ -186,4 +186,4 @@ th, p, td {
 
 ## 参见
 
-- [使用 CSS transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
