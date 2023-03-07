@@ -13,11 +13,11 @@ translation_of: Web/HTML/Element/ruby
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток(Flow content)](/ru/docs/Web/HTML/Content_categories#Flow_content), [текстовой контент(phrasing content)](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент(palpable content). |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                         | [Текстовый контент(phrasing content)](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                                     |
-| Тэг пропускания                                            | {{no_tag_omission}}                                                                                                                                                                                          |
-| Разрешённые родители                                       | Любой элемент который согласован с [текстовым контентом(phrasing content)](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                    |
-| Разрешённые роли ARIA                                      | Любые                                                                                                                                                                                                             |
-| DOM интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                              |
+| Допустимое содержимое                                      | [Текстовый контент(phrasing content)](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                                     |
+| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                                          |
+| Допустимые родители                                        | Любой элемент который согласован с [текстовым контентом(phrasing content)](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                    |
+| Допустимые ARIA-роли                                       | Любые                                                                                                                                                                                                             |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                              |
 
 ## Атрибуты
 

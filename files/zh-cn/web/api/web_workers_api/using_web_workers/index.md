@@ -150,7 +150,7 @@ importScripts('foo.js', 'bar.js');      /* 引入两个脚本 */
 
 > **备注：** 如果共享 worker 可以被多个浏览上下文调用，所有这些浏览上下文必须属于同源（相同的协议，主机和端口号）。
 
-> **备注：** 在 Firefox 中，共享 worker 不能被私有和非私有 window 对象的 document 所共享 ({{bug(1177621)}})。
+> **备注：** 在 Firefox 中，共享 worker 不能被私有和非私有 window 对象的 document 所共享（[Firefox bug 1177621](https://bugzil.la/1177621)）。
 
 ### 生成一个共享 worker
 

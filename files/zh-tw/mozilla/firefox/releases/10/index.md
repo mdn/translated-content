@@ -21,7 +21,7 @@ This documentation is not yet complete. Want to help document Firefox 10? See th
 ### JavaScript
 
 - The method `WeakMap.set()` now returns `undefined`, instead of itself.
-- A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.
+- A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See [Firefox bug 683838](https://bugzil.la/683838) if you want the gory details.
 - You can no longer use [E4X](/zh-TW/E4X) syntax while in [ECMAScript 5 strict mode](/zh-TW/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (that is, after `"use strict;"`).
 
 ### DOM
@@ -143,7 +143,7 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 ### Build system changes
 
-- The `--disable-rdf` build option, which actually made it impossible to successfully build, has been removed. Work is ongoing on being able to actually remove RDF support entirely, but at present XUL still requires it to function. See {{ bug(559505) }} for progress on removing the last vestiges of RDF being required.
+- The `--disable-rdf` build option, which actually made it impossible to successfully build, has been removed. Work is ongoing on being able to actually remove RDF support entirely, but at present XUL still requires it to function. See [Firefox bug 559505](https://bugzil.la/559505) for progress on removing the last vestiges of RDF being required.
 - The `--disable-smil` build option has been removed.
 
 ### See also

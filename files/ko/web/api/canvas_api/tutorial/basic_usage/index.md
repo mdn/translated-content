@@ -106,7 +106,7 @@ if (canvas.getContext){
 </html>
 ```
 
-위 스크립트에 `draw()` 함수 문서가 호출되었는데, 이는 문서가 {{event("load")}} 이벤트를 수신하여 페이지 로딩이 완료될 때 한번 실행됩니다. 이 함수 혹은 이와 유사한 함수는, 페이지가 처음 로딩되는 한, {{domxref("WindowTimers.setTimeout", "window.setTimeout()")}}, {{domxref("WindowTimers.setInterval", "window.setInterval()")}}, 혹은 또 다른 이벤트 핸들러 등을 이용하여 호출될 수 있습니다.
+위 스크립트에 `draw()` 함수 문서가 호출되었는데, 이는 문서가 {{domxref("Window/load_event", "load")}} 이벤트를 수신하여 페이지 로딩이 완료될 때 한번 실행됩니다. 이 함수 혹은 이와 유사한 함수는, 페이지가 처음 로딩되는 한, {{domxref("WindowTimers.setTimeout", "window.setTimeout()")}}, {{domxref("WindowTimers.setInterval", "window.setInterval()")}}, 혹은 또 다른 이벤트 핸들러 등을 이용하여 호출될 수 있습니다.
 
 다음은 템플릿이 실제로 어떻게 실행되는지를 보여줍니다. 보이는 바와 같이, 초기에 blank 로 보여집니다.
 

@@ -283,6 +283,10 @@
     "modified": "2019-03-23T22:09:03.834Z",
     "contributors": ["bsergey", "pgooood"]
   },
+  "Glossary/Application_context": {
+    "modified": "2019-03-18T21:33:46.218Z",
+    "contributors": ["bsergey", "Lana-Light"]
+  },
   "Glossary/Argument": {
     "modified": "2019-05-03T12:07:33.735Z",
     "contributors": ["Lana-Light"]
@@ -290,6 +294,10 @@
   "Glossary/Arpanet": {
     "modified": "2019-03-18T21:25:16.563Z",
     "contributors": ["bsergey"]
+  },
+  "Glossary/Array": {
+    "modified": "2020-01-06T03:28:26.834Z",
+    "contributors": ["LesikTheCat", "sashakrauzer", "Cyganov"]
   },
   "Glossary/Asynchronous": {
     "modified": "2019-03-18T21:40:41.315Z",
@@ -313,6 +321,10 @@
       "KSH-audibene",
       "kerosan"
     ]
+  },
+  "Glossary/Baseline": {
+    "modified": "2020-08-27T06:37:10.071Z",
+    "contributors": ["DarkExodusXX"]
   },
   "Glossary/Bezier_curve": {
     "modified": "2019-08-19T18:48:29.930Z",
@@ -368,6 +380,10 @@
     "modified": "2019-03-23T22:17:49.487Z",
     "contributors": ["anastasiya-solodkaya"]
   },
+  "Glossary/Buffer": {
+    "modified": "2019-03-18T21:38:54.270Z",
+    "contributors": ["PavelVolkovRussia", "ivan-krot"]
+  },
   "Glossary/CDN": {
     "modified": "2019-07-08T10:40:37.612Z",
     "contributors": ["LesikTheCat"]
@@ -418,6 +434,10 @@
     "modified": "2019-05-20T15:27:57.334Z",
     "contributors": ["vanjacksing"]
   },
+  "Glossary/Cacheable": {
+    "modified": "2019-03-23T22:25:05.632Z",
+    "contributors": ["vykulakov", "pk.prog"]
+  },
   "Glossary/Call_stack": {
     "modified": "2019-03-26T03:35:33.245Z",
     "contributors": ["boxa6", "Dimas-X", "Iroshh"]
@@ -441,6 +461,10 @@
   "Glossary/Character": {
     "modified": "2019-03-26T03:36:39.039Z",
     "contributors": ["boxa6"]
+  },
+  "Glossary/Character_encoding": {
+    "modified": "2019-11-23T10:06:58.821Z",
+    "contributors": ["Igor-Sangin"]
   },
   "Glossary/Chrome": {
     "modified": "2019-01-16T20:45:50.537Z",
@@ -546,6 +570,10 @@
     "modified": "2020-03-13T19:29:42.150Z",
     "contributors": ["fuggy", "opereverzeva"]
   },
+  "Glossary/Event": {
+    "modified": "2019-08-19T18:18:09.165Z",
+    "contributors": ["regeneratorl"]
+  },
   "Glossary/Expando": {
     "modified": "2019-03-23T22:25:14.834Z",
     "contributors": ["Chamie", "Aksana-Tsishchanka"]
@@ -580,6 +608,10 @@
   },
   "Glossary/First_interactive": {
     "modified": "2019-11-20T05:51:30.233Z",
+    "contributors": ["Antosik"]
+  },
+  "Glossary/First_meaningful_paint": {
+    "modified": "2019-11-19T16:13:59.472Z",
     "contributors": ["Antosik"]
   },
   "Glossary/First_paint": {
@@ -654,9 +686,17 @@
     "modified": "2019-11-07T07:41:21.870Z",
     "contributors": ["duckDominatrix", "gadjetron", "MuradAz"]
   },
+  "Glossary/HTTPS": {
+    "modified": "2019-01-17T02:14:25.160Z",
+    "contributors": ["bazoooker", "dzandut"]
+  },
   "Glossary/HTTP_2": {
     "modified": "2019-11-06T06:45:14.792Z",
     "contributors": ["duckDominatrix", "e-h-h"]
+  },
+  "Glossary/Hash": {
+    "modified": "2019-03-23T22:13:59.337Z",
+    "contributors": ["RealRedFox"]
   },
   "Glossary/Head": {
     "modified": "2019-03-18T21:25:04.199Z",
@@ -739,6 +779,10 @@
     "modified": "2019-06-17T12:53:37.150Z",
     "contributors": ["kss555", "bsergey"]
   },
+  "Glossary/JPEG": {
+    "modified": "2019-03-18T21:38:25.986Z",
+    "contributors": ["kayablue"]
+  },
   "Glossary/JSON": {
     "modified": "2019-01-17T00:40:57.677Z",
     "contributors": ["ezekeli"]
@@ -761,6 +805,10 @@
       "Sheppy",
       "Vovchikb6"
     ]
+  },
+  "Glossary/Loop": {
+    "modified": "2020-02-28T13:59:22.366Z",
+    "contributors": ["almaceleste"]
   },
   "Glossary/MIME_type": {
     "modified": "2020-04-21T12:17:26.839Z",
@@ -847,6 +895,10 @@
     "modified": "2020-02-16T08:27:27.366Z",
     "contributors": ["vitaminX", "bsergey", "aleks43"]
   },
+  "Glossary/Privileged_code": {
+    "modified": "2019-03-23T22:25:30.067Z",
+    "contributors": ["pk.prog"]
+  },
   "Glossary/Progressive_web_apps": {
     "modified": "2020-10-23T07:12:55.057Z",
     "contributors": ["ksam"]
@@ -854,6 +906,10 @@
   "Glossary/Promise": {
     "modified": "2019-05-15T10:24:56.596Z",
     "contributors": ["Mashka241"]
+  },
+  "Glossary/Property": {
+    "modified": "2019-03-23T22:15:35.268Z",
+    "contributors": ["mlilin"]
   },
   "Glossary/Protocol": {
     "modified": "2019-03-18T21:36:48.161Z",
@@ -915,6 +971,10 @@
     "modified": "2019-03-18T21:43:05.908Z",
     "contributors": ["KirilSlender"]
   },
+  "Glossary/Safe": {
+    "modified": "2020-08-24T16:48:10.493Z",
+    "contributors": ["dev4lex", "InfinityBuddha", "serhii73", "pk.prog"]
+  },
   "Glossary/Scroll_container": {
     "modified": "2020-04-24T15:33:30.579Z",
     "contributors": ["hisbvdis"]
@@ -947,6 +1007,10 @@
     "modified": "2019-03-23T22:19:46.992Z",
     "contributors": ["gogumaUno", "anastasiya-solodkaya", "JeanPaulLucien"]
   },
+  "Glossary/Speculative_parsing": {
+    "modified": "2019-03-23T23:28:56.065Z",
+    "contributors": ["s1lver", "pk.prog", "SnejUgal", "teoli", "Gucci_08_rus"]
+  },
   "Glossary/Statement": {
     "modified": "2019-03-23T22:35:20.625Z",
     "contributors": ["DashPisareva", "tronov", "BychekRU"]
@@ -975,6 +1039,10 @@
     "modified": "2019-03-23T22:18:08.637Z",
     "contributors": ["skapesec", "AKonia"]
   },
+  "Glossary/Time_to_first_byte": {
+    "modified": "2019-11-20T06:03:31.278Z",
+    "contributors": ["Antosik"]
+  },
   "Glossary/Time_to_interactive": {
     "modified": "2019-11-20T05:58:04.636Z",
     "contributors": ["Antosik"]
@@ -1002,6 +1070,10 @@
   "Glossary/URL": {
     "modified": "2019-03-23T22:09:11.858Z",
     "contributors": ["djigach", "gadjetron", "s-mage"]
+  },
+  "Glossary/Undefined": {
+    "modified": "2019-03-23T22:59:57.929Z",
+    "contributors": ["Sheppy", "jaguardev"]
   },
   "Glossary/User_agent": {
     "modified": "2019-04-09T06:22:31.182Z",
@@ -1066,78 +1138,6 @@
   "Glossary/XMLHttpRequest": {
     "modified": "2020-10-27T09:22:04.704Z",
     "contributors": ["duckDominatrix"]
-  },
-  "Glossary/application_context": {
-    "modified": "2019-03-18T21:33:46.218Z",
-    "contributors": ["bsergey", "Lana-Light"]
-  },
-  "Glossary/array": {
-    "modified": "2020-01-06T03:28:26.834Z",
-    "contributors": ["LesikTheCat", "sashakrauzer", "Cyganov"]
-  },
-  "Glossary/baseline": {
-    "modified": "2020-08-27T06:37:10.071Z",
-    "contributors": ["DarkExodusXX"]
-  },
-  "Glossary/buffer": {
-    "modified": "2019-03-18T21:38:54.270Z",
-    "contributors": ["PavelVolkovRussia", "ivan-krot"]
-  },
-  "Glossary/cacheable": {
-    "modified": "2019-03-23T22:25:05.632Z",
-    "contributors": ["vykulakov", "pk.prog"]
-  },
-  "Glossary/character_encoding": {
-    "modified": "2019-11-23T10:06:58.821Z",
-    "contributors": ["Igor-Sangin"]
-  },
-  "Glossary/event": {
-    "modified": "2019-08-19T18:18:09.165Z",
-    "contributors": ["regeneratorl"]
-  },
-  "Glossary/first_meaningful_paint": {
-    "modified": "2019-11-19T16:13:59.472Z",
-    "contributors": ["Antosik"]
-  },
-  "Glossary/hash": {
-    "modified": "2019-03-23T22:13:59.337Z",
-    "contributors": ["RealRedFox"]
-  },
-  "Glossary/https": {
-    "modified": "2019-01-17T02:14:25.160Z",
-    "contributors": ["bazoooker", "dzandut"]
-  },
-  "Glossary/jpeg": {
-    "modified": "2019-03-18T21:38:25.986Z",
-    "contributors": ["kayablue"]
-  },
-  "Glossary/loop": {
-    "modified": "2020-02-28T13:59:22.366Z",
-    "contributors": ["almaceleste"]
-  },
-  "Glossary/privileged_code": {
-    "modified": "2019-03-23T22:25:30.067Z",
-    "contributors": ["pk.prog"]
-  },
-  "Glossary/property": {
-    "modified": "2019-03-23T22:15:35.268Z",
-    "contributors": ["mlilin"]
-  },
-  "Glossary/safe": {
-    "modified": "2020-08-24T16:48:10.493Z",
-    "contributors": ["dev4lex", "InfinityBuddha", "serhii73", "pk.prog"]
-  },
-  "Glossary/speculative_parsing": {
-    "modified": "2019-03-23T23:28:56.065Z",
-    "contributors": ["s1lver", "pk.prog", "SnejUgal", "teoli", "Gucci_08_rus"]
-  },
-  "Glossary/time_to_first_byte": {
-    "modified": "2019-11-20T06:03:31.278Z",
-    "contributors": ["Antosik"]
-  },
-  "Glossary/undefined": {
-    "modified": "2019-03-23T22:59:57.929Z",
-    "contributors": ["Sheppy", "jaguardev"]
   },
   "Learn": {
     "modified": "2020-10-04T14:26:11.837Z",
@@ -4318,114 +4318,6 @@
     "modified": "2020-10-15T22:18:03.333Z",
     "contributors": ["opereverzeva"]
   },
-  "Web/API/Console": {
-    "modified": "2019-09-04T06:35:56.879Z",
-    "contributors": [
-      "damirJa",
-      "pk.prog",
-      "CiliZ",
-      "alexbaumgertner",
-      "Aleksej",
-      "fscholz"
-    ]
-  },
-  "Web/API/Console/assert": {
-    "modified": "2020-10-15T21:45:38.665Z",
-    "contributors": ["almaceleste", "lazyexpert"]
-  },
-  "Web/API/Console/clear": {
-    "modified": "2020-10-15T21:49:40.634Z",
-    "contributors": ["georgelviv", "YozhEzhi", "art-gur"]
-  },
-  "Web/API/Console/count": {
-    "modified": "2019-03-23T22:08:48.787Z",
-    "contributors": ["FlowerDeLuce"]
-  },
-  "Web/API/Console/countReset": {
-    "modified": "2020-10-15T22:14:44.244Z",
-    "contributors": ["damirJa"]
-  },
-  "Web/API/Console/debug": {
-    "modified": "2020-11-19T07:02:35.541Z",
-    "contributors": ["m0nclous", "ekirpichyov"]
-  },
-  "Web/API/Console/dir": {
-    "modified": "2019-04-03T11:56:01.265Z",
-    "contributors": ["Dzvonek", "Polina", "einomi", "NovikovViktor"]
-  },
-  "Web/API/Console/dirxml": {
-    "modified": "2020-10-15T22:04:45.997Z",
-    "contributors": ["snegovik.dev", "MindWorm"]
-  },
-  "Web/API/Console/error": {
-    "modified": "2019-03-23T22:10:04.839Z",
-    "contributors": ["csepanda"]
-  },
-  "Web/API/Console/group": {
-    "modified": "2019-03-23T22:03:18.640Z",
-    "contributors": ["vilyus"]
-  },
-  "Web/API/Console/info": {
-    "modified": "2019-03-23T22:27:55.127Z",
-    "contributors": ["pk.prog", "nontrip"]
-  },
-  "Web/API/Console/log": {
-    "modified": "2020-10-15T21:39:00.717Z",
-    "contributors": [
-      "aleshkanet",
-      "IgorPuchkov2003",
-      "alfill",
-      "pk.prog",
-      "Bargamut",
-      "Lukavyi"
-    ]
-  },
-  "Web/API/Console/profile": {
-    "modified": "2020-10-15T21:54:55.312Z",
-    "contributors": ["ekirpichyov", "RslnMtvv"]
-  },
-  "Web/API/Console/table": {
-    "modified": "2019-11-28T12:52:39.225Z",
-    "contributors": ["1cepeak", "xefimx"]
-  },
-  "Web/API/Console/time": {
-    "modified": "2020-10-15T21:37:02.751Z",
-    "contributors": [
-      "Mialik-Kirill-Sergeevich",
-      "SphinxKnight",
-      "ekirpichyov",
-      "YozhEzhi",
-      "terranisu"
-    ]
-  },
-  "Web/API/Console/timeEnd": {
-    "modified": "2020-10-15T21:29:08.226Z",
-    "contributors": [
-      "Arhidimon",
-      "ekirpichyov",
-      "teoli",
-      "Aleksej",
-      "fscholz",
-      "AshfaqHossain",
-      "Troynov"
-    ]
-  },
-  "Web/API/Console/timeLog": {
-    "modified": "2020-10-15T22:12:51.490Z",
-    "contributors": ["ekirpichyov", "evilandfox"]
-  },
-  "Web/API/Console/timeStamp": {
-    "modified": "2020-10-15T22:22:33.891Z",
-    "contributors": ["ekirpichyov"]
-  },
-  "Web/API/Console/trace": {
-    "modified": "2020-10-15T21:56:15.688Z",
-    "contributors": ["Solant", "nikitaermishin"]
-  },
-  "Web/API/Console/warn": {
-    "modified": "2020-10-15T22:00:31.979Z",
-    "contributors": ["ekirpichyov", "ArtemPolanskiy"]
-  },
   "Web/API/Console_API": {
     "modified": "2020-10-15T22:22:34.778Z",
     "contributors": ["ekirpichyov"]
@@ -6618,6 +6510,10 @@
       "dginzburg"
     ]
   },
+  "Web/API/Notification": {
+    "modified": "2019-03-23T22:43:07.772Z",
+    "contributors": ["Dimonasdf", "talgautb", "102", "teoli", "fsanano"]
+  },
   "Web/API/Notifications_API": {
     "modified": "2019-03-23T22:16:18.353Z",
     "contributors": ["curdwithraisins"]
@@ -7957,6 +7853,114 @@
     "modified": "2020-10-15T22:33:31.469Z",
     "contributors": ["andzion105"]
   },
+  "Web/API/console": {
+    "modified": "2019-09-04T06:35:56.879Z",
+    "contributors": [
+      "damirJa",
+      "pk.prog",
+      "CiliZ",
+      "alexbaumgertner",
+      "Aleksej",
+      "fscholz"
+    ]
+  },
+  "Web/API/console/assert": {
+    "modified": "2020-10-15T21:45:38.665Z",
+    "contributors": ["almaceleste", "lazyexpert"]
+  },
+  "Web/API/console/clear": {
+    "modified": "2020-10-15T21:49:40.634Z",
+    "contributors": ["georgelviv", "YozhEzhi", "art-gur"]
+  },
+  "Web/API/console/count": {
+    "modified": "2019-03-23T22:08:48.787Z",
+    "contributors": ["FlowerDeLuce"]
+  },
+  "Web/API/console/countReset": {
+    "modified": "2020-10-15T22:14:44.244Z",
+    "contributors": ["damirJa"]
+  },
+  "Web/API/console/debug": {
+    "modified": "2020-11-19T07:02:35.541Z",
+    "contributors": ["m0nclous", "ekirpichyov"]
+  },
+  "Web/API/console/dir": {
+    "modified": "2019-04-03T11:56:01.265Z",
+    "contributors": ["Dzvonek", "Polina", "einomi", "NovikovViktor"]
+  },
+  "Web/API/console/dirxml": {
+    "modified": "2020-10-15T22:04:45.997Z",
+    "contributors": ["snegovik.dev", "MindWorm"]
+  },
+  "Web/API/console/error": {
+    "modified": "2019-03-23T22:10:04.839Z",
+    "contributors": ["csepanda"]
+  },
+  "Web/API/console/group": {
+    "modified": "2019-03-23T22:03:18.640Z",
+    "contributors": ["vilyus"]
+  },
+  "Web/API/console/info": {
+    "modified": "2019-03-23T22:27:55.127Z",
+    "contributors": ["pk.prog", "nontrip"]
+  },
+  "Web/API/console/log": {
+    "modified": "2020-10-15T21:39:00.717Z",
+    "contributors": [
+      "aleshkanet",
+      "IgorPuchkov2003",
+      "alfill",
+      "pk.prog",
+      "Bargamut",
+      "Lukavyi"
+    ]
+  },
+  "Web/API/console/profile": {
+    "modified": "2020-10-15T21:54:55.312Z",
+    "contributors": ["ekirpichyov", "RslnMtvv"]
+  },
+  "Web/API/console/table": {
+    "modified": "2019-11-28T12:52:39.225Z",
+    "contributors": ["1cepeak", "xefimx"]
+  },
+  "Web/API/console/time": {
+    "modified": "2020-10-15T21:37:02.751Z",
+    "contributors": [
+      "Mialik-Kirill-Sergeevich",
+      "SphinxKnight",
+      "ekirpichyov",
+      "YozhEzhi",
+      "terranisu"
+    ]
+  },
+  "Web/API/console/timeEnd": {
+    "modified": "2020-10-15T21:29:08.226Z",
+    "contributors": [
+      "Arhidimon",
+      "ekirpichyov",
+      "teoli",
+      "Aleksej",
+      "fscholz",
+      "AshfaqHossain",
+      "Troynov"
+    ]
+  },
+  "Web/API/console/timeLog": {
+    "modified": "2020-10-15T22:12:51.490Z",
+    "contributors": ["ekirpichyov", "evilandfox"]
+  },
+  "Web/API/console/timeStamp": {
+    "modified": "2020-10-15T22:22:33.891Z",
+    "contributors": ["ekirpichyov"]
+  },
+  "Web/API/console/trace": {
+    "modified": "2020-10-15T21:56:15.688Z",
+    "contributors": ["Solant", "nikitaermishin"]
+  },
+  "Web/API/console/warn": {
+    "modified": "2020-10-15T22:00:31.979Z",
+    "contributors": ["ekirpichyov", "ArtemPolanskiy"]
+  },
   "Web/API/crypto_property": {
     "modified": "2019-03-23T22:55:57.909Z",
     "contributors": ["pinal"]
@@ -7964,10 +7968,6 @@
   "Web/API/fetch": {
     "modified": "2020-10-15T22:06:28.491Z",
     "contributors": ["BadLame", "dasha_hshr"]
-  },
-  "Web/API/notification": {
-    "modified": "2019-03-23T22:43:07.772Z",
-    "contributors": ["Dimonasdf", "talgautb", "102", "teoli", "fsanano"]
   },
   "Web/API/origin": {
     "modified": "2019-03-23T22:40:35.301Z",
@@ -10125,6 +10125,10 @@
       "nedimaon"
     ]
   },
+  "Web/Guide/Mobile": {
+    "modified": "2020-02-07T13:05:09.003Z",
+    "contributors": ["McBurns", "VDyrda"]
+  },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2020-10-11T12:29:17.772Z",
     "contributors": ["Akhat", "bogpok"]
@@ -10140,10 +10144,6 @@
   "Web/Guide/WOFF": {
     "modified": "2020-10-15T22:33:54.379Z",
     "contributors": ["bogpok"]
-  },
-  "Web/Guide/mobile": {
-    "modified": "2020-02-07T13:05:09.003Z",
-    "contributors": ["McBurns", "VDyrda"]
   },
   "Web/HTML": {
     "modified": "2020-05-09T08:33:52.357Z",
@@ -10249,7 +10249,16 @@
       "Softwayer"
     ]
   },
-  "Web/HTML/Element/A": {
+  "Web/HTML/Element/Heading_Elements": {
+    "modified": "2020-10-15T22:03:00.576Z",
+    "contributors": [
+      "ryabv",
+      "chrisdavidmills",
+      "chamaraviktoriia4",
+      "kayablue"
+    ]
+  },
+  "Web/HTML/Element/a": {
     "modified": "2020-10-15T21:14:56.082Z",
     "contributors": [
       "brussens",
@@ -10265,85 +10274,6 @@
       "pepyaka",
       "Softwayer"
     ]
-  },
-  "Web/HTML/Element/Heading_Elements": {
-    "modified": "2020-10-15T22:03:00.576Z",
-    "contributors": [
-      "ryabv",
-      "chrisdavidmills",
-      "chamaraviktoriia4",
-      "kayablue"
-    ]
-  },
-  "Web/HTML/Element/Input": {
-    "modified": "2020-10-15T21:28:48.484Z",
-    "contributors": [
-      "surface74",
-      "torbasow",
-      "SedovDP",
-      "YozhEzhi",
-      "CS313",
-      "Stasonuke",
-      "solncebro",
-      "mennekis",
-      "S-le",
-      "pgpa",
-      "Lambrusco.pro"
-    ]
-  },
-  "Web/HTML/Element/Input/button": {
-    "modified": "2020-10-15T22:29:54.816Z",
-    "contributors": ["Thr0TT1e"]
-  },
-  "Web/HTML/Element/Input/color": {
-    "modified": "2020-12-03T08:52:52.055Z",
-    "contributors": ["rebsys", "podocenov"]
-  },
-  "Web/HTML/Element/Input/date": {
-    "modified": "2020-12-03T06:52:26.983Z",
-    "contributors": ["AeShevch", "Virss", "Detrimon", "lelikdub", "ishpartko"]
-  },
-  "Web/HTML/Element/Input/datetime-local": {
-    "modified": "2019-03-18T21:42:35.150Z",
-    "contributors": ["yanaSelin", "inquartatech", "bad4iz"]
-  },
-  "Web/HTML/Element/Input/file": {
-    "modified": "2020-01-28T03:20:25.992Z",
-    "contributors": [
-      "AlexeiBelov",
-      "danvop",
-      "oxmap",
-      "nernerstudios",
-      "ahtohbi4"
-    ]
-  },
-  "Web/HTML/Element/Input/image": {
-    "modified": "2019-03-23T22:16:14.461Z",
-    "contributors": ["Skadelig"]
-  },
-  "Web/HTML/Element/Input/number": {
-    "modified": "2020-10-15T22:14:38.174Z",
-    "contributors": ["Virss", "S-konoplich", "lalexx", "viktoryiakuzmitskaya"]
-  },
-  "Web/HTML/Element/Input/password": {
-    "modified": "2019-03-23T22:04:39.681Z",
-    "contributors": ["Goodzonchik"]
-  },
-  "Web/HTML/Element/Input/radio": {
-    "modified": "2020-09-22T11:17:49.407Z",
-    "contributors": ["bekmuradov", "Nina_Amatova"]
-  },
-  "Web/HTML/Element/Input/range": {
-    "modified": "2020-12-01T07:31:01.378Z",
-    "contributors": ["k1rilenko", "h-labushkina", "opereverzeva"]
-  },
-  "Web/HTML/Element/Input/search": {
-    "modified": "2020-10-15T22:27:41.233Z",
-    "contributors": ["Nichon4"]
-  },
-  "Web/HTML/Element/Input/tel": {
-    "modified": "2020-10-15T22:14:58.253Z",
-    "contributors": ["SixtyNice"]
   },
   "Web/HTML/Element/abbr": {
     "modified": "2020-10-15T21:27:33.577Z",
@@ -10579,6 +10509,76 @@
       "Aleksej",
       "solovyev"
     ]
+  },
+  "Web/HTML/Element/input": {
+    "modified": "2020-10-15T21:28:48.484Z",
+    "contributors": [
+      "surface74",
+      "torbasow",
+      "SedovDP",
+      "YozhEzhi",
+      "CS313",
+      "Stasonuke",
+      "solncebro",
+      "mennekis",
+      "S-le",
+      "pgpa",
+      "Lambrusco.pro"
+    ]
+  },
+  "Web/HTML/Element/input/button": {
+    "modified": "2020-10-15T22:29:54.816Z",
+    "contributors": ["Thr0TT1e"]
+  },
+  "Web/HTML/Element/input/color": {
+    "modified": "2020-12-03T08:52:52.055Z",
+    "contributors": ["rebsys", "podocenov"]
+  },
+  "Web/HTML/Element/input/date": {
+    "modified": "2020-12-03T06:52:26.983Z",
+    "contributors": ["AeShevch", "Virss", "Detrimon", "lelikdub", "ishpartko"]
+  },
+  "Web/HTML/Element/input/datetime-local": {
+    "modified": "2019-03-18T21:42:35.150Z",
+    "contributors": ["yanaSelin", "inquartatech", "bad4iz"]
+  },
+  "Web/HTML/Element/input/file": {
+    "modified": "2020-01-28T03:20:25.992Z",
+    "contributors": [
+      "AlexeiBelov",
+      "danvop",
+      "oxmap",
+      "nernerstudios",
+      "ahtohbi4"
+    ]
+  },
+  "Web/HTML/Element/input/image": {
+    "modified": "2019-03-23T22:16:14.461Z",
+    "contributors": ["Skadelig"]
+  },
+  "Web/HTML/Element/input/number": {
+    "modified": "2020-10-15T22:14:38.174Z",
+    "contributors": ["Virss", "S-konoplich", "lalexx", "viktoryiakuzmitskaya"]
+  },
+  "Web/HTML/Element/input/password": {
+    "modified": "2019-03-23T22:04:39.681Z",
+    "contributors": ["Goodzonchik"]
+  },
+  "Web/HTML/Element/input/radio": {
+    "modified": "2020-09-22T11:17:49.407Z",
+    "contributors": ["bekmuradov", "Nina_Amatova"]
+  },
+  "Web/HTML/Element/input/range": {
+    "modified": "2020-12-01T07:31:01.378Z",
+    "contributors": ["k1rilenko", "h-labushkina", "opereverzeva"]
+  },
+  "Web/HTML/Element/input/search": {
+    "modified": "2020-10-15T22:27:41.233Z",
+    "contributors": ["Nichon4"]
+  },
+  "Web/HTML/Element/input/tel": {
+    "modified": "2020-10-15T22:14:58.253Z",
+    "contributors": ["SixtyNice"]
   },
   "Web/HTML/Element/ins": {
     "modified": "2019-03-23T22:16:48.097Z",
@@ -12270,10 +12270,6 @@
     "modified": "2020-10-19T11:06:58.196Z",
     "contributors": ["sovushka-utrom", "MakarovDs777"]
   },
-  "Web/JavaScript/Reference/Errors/Dead_object": {
-    "modified": "2020-03-12T19:48:38.148Z",
-    "contributors": ["MakarovDs777"]
-  },
   "Web/JavaScript/Reference/Errors/Delete_in_strict_mode": {
     "modified": "2020-03-12T19:48:34.125Z",
     "contributors": ["Akh-rman", "MakarovDs777"]
@@ -12577,20 +12573,6 @@
     "modified": "2020-03-12T19:41:39.567Z",
     "contributors": ["SphinxKnight", "sergeymakoveev", "BatenkovT"]
   },
-  "Web/JavaScript/Reference/Functions/Rest_parameters": {
-    "modified": "2020-11-24T01:31:54.419Z",
-    "contributors": [
-      "almaceleste",
-      "CLoud-Maker",
-      "ekirpichyov",
-      "jt3k",
-      "IlyaMokin",
-      "forestbird",
-      "dtretyakov",
-      "fscholz",
-      "EgorSinitcin"
-    ]
-  },
   "Web/JavaScript/Reference/Functions/arguments": {
     "modified": "2020-10-15T21:34:47.356Z",
     "contributors": [
@@ -12626,6 +12608,20 @@
       "andrey-gnl",
       "pierreneter",
       "etokareva"
+    ]
+  },
+  "Web/JavaScript/Reference/Functions/rest_parameters": {
+    "modified": "2020-11-24T01:31:54.419Z",
+    "contributors": [
+      "almaceleste",
+      "CLoud-Maker",
+      "ekirpichyov",
+      "jt3k",
+      "IlyaMokin",
+      "forestbird",
+      "dtretyakov",
+      "fscholz",
+      "EgorSinitcin"
     ]
   },
   "Web/JavaScript/Reference/Functions/set": {
@@ -12679,24 +12675,6 @@
   "Web/JavaScript/Reference/Global_Objects/Array/@@unscopables": {
     "modified": "2020-10-15T22:00:26.446Z",
     "contributors": ["fax1ty"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Array/Reduce": {
-    "modified": "2020-10-15T21:28:31.597Z",
-    "contributors": [
-      "sborenko",
-      "nikolai-shabalin",
-      "likerRr",
-      "Ant-VAV",
-      "Metotron",
-      "fxrbfg",
-      "Ohar",
-      "slavablind91",
-      "AliaksandrSith",
-      "Riim",
-      "Mingun",
-      "NikitaK",
-      "Anton_Arestov"
-    ]
   },
   "Web/JavaScript/Reference/Global_Objects/Array/concat": {
     "modified": "2020-10-15T21:29:20.106Z",
@@ -12897,6 +12875,24 @@
   "Web/JavaScript/Reference/Global_Objects/Array/push": {
     "modified": "2020-10-15T21:29:29.342Z",
     "contributors": ["art-gur", "roma-derski", "Mingun"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Array/reduce": {
+    "modified": "2020-10-15T21:28:31.597Z",
+    "contributors": [
+      "sborenko",
+      "nikolai-shabalin",
+      "likerRr",
+      "Ant-VAV",
+      "Metotron",
+      "fxrbfg",
+      "Ohar",
+      "slavablind91",
+      "AliaksandrSith",
+      "Riim",
+      "Mingun",
+      "NikitaK",
+      "Anton_Arestov"
+    ]
   },
   "Web/JavaScript/Reference/Global_Objects/Array/reduceRight": {
     "modified": "2019-03-23T23:10:37.299Z",
@@ -17845,6 +17841,10 @@
   "orphaned/Web/JavaScript/Guide/Об_этом_руководстве": {
     "modified": "2019-03-24T00:13:23.720Z",
     "contributors": ["teoli", "danielgn96"]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Dead_object": {
+    "modified": "2020-03-12T19:48:38.148Z",
+    "contributors": ["MakarovDs777"]
   },
   "orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated": {
     "modified": "2020-03-12T19:48:56.664Z",

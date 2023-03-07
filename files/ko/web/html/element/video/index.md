@@ -1,6 +1,6 @@
 ---
 title: '<video>: 비디오 삽입 요소'
-slug: Web/HTML/Element/Video
+slug: Web/HTML/Element/video
 ---
 
 {{HTMLSidebar}}

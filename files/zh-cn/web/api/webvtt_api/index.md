@@ -597,7 +597,7 @@ Sur les <i.foreignphrase><lang en>playground</lang></i>, ici à Montpellier
 
 WebVTT 在 Firefox 24 的首选项 `media.webvtt.enabled` 之后实现，默认是禁止的；你可以设置这个选项为 `true` 以启用它。WebVTT 在 Firefox 31 默认开启并可以通过设置这个选项为 `false` 以禁止它。
 
-在 Firefox 58 之前，`REGION` 关键字由 {{domxref("VTTRegion")}} 对象创建，但是它们没有被使用。Firefox 58 现在完全支持 `VTTRegion` 以及它的使用；然而，这个功能在首选项 `media.webvtt.regions.enabled` 默认是禁用的；将其设置为 `true` 以在 Firefox 58 开启区域支持。在 Firefox 59 中默认是开启的（参见 bug {{bug(1338030)}} 和 {{bug(1415805)}}）。
+在 Firefox 58 之前，`REGION` 关键字由 {{domxref("VTTRegion")}} 对象创建，但是它们没有被使用。Firefox 58 现在完全支持 `VTTRegion` 以及它的使用；然而，这个功能在首选项 `media.webvtt.regions.enabled` 默认是禁用的；将其设置为 `true` 以在 Firefox 58 开启区域支持。在 Firefox 59 中默认是开启的（参见 bug [Firefox bug 1338030](https://bugzil.la/1338030) 和 [Firefox bug 1415805](https://bugzil.la/1415805)）。
 
 ## 参见
 

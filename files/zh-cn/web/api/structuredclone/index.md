@@ -1,6 +1,6 @@
 ---
 title: structuredClone()
-slug: web/api/structuredClone
+slug: Web/API/structuredClone
 ---
 
 {{APIRef("HTML DOM")}}

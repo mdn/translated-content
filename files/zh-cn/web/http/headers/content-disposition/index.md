@@ -11,13 +11,25 @@ slug: Web/HTTP/Headers/Content-Disposition
 
 `Content-Disposition` 标头最初是在 MIME 标准中定义的，HTTP 表单及 {{HTTPMethod("POST")}} 请求只用到了其所有参数的一个子集。只有 `form-data` 以及可选的 `name` 和 `filename` 三个参数可以应用在 HTTP 上下文中。
 
-| Header type                                      | {{Glossary("Response header")}} (for the main body) {{Glossary("General header")}} (for a subpart of a multipart body) |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                                                                                                                        |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>
+        {{Glossary("Response header", "响应标头")}}（对于消息主体），<br />
+        {{Glossary("Request header", "请求标头")}}、{{Glossary("Response header", "响应标头")}}（对于多部分主体）
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-### 作为消息主体中的消息头
+### 作为消息主体的标头
 
 在 HTTP 场景中，第一个参数或者是 `inline`（默认值，表示回复中的消息体会以页面的一部分或者整个页面的形式展示），或者是 `attachment`（意味着消息体应该被下载到本地；大多数浏览器会呈现一个“保存为”的对话框，将 `filename` 的值预填为下载后的文件名，假如它存在的话）。
 
@@ -27,9 +39,9 @@ Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"
 ```
 
-> **备注：** 在[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)情况下，Chrome 和 Firefox 82 以及更高的版本会优先使用HTML 的 [\<a> 元素](/zh-CN/docs/Web/HTML/Element/a)的 `download` 属性而不是 `Content-Disposition: inline` 参数来处理下载。而 Firefox 的早期版本则优先使用标头信息并内联显示内容。
+> **备注：** 在[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)情况下，Chrome 和 Firefox 82 以及更高的版本会优先使用 HTML 的 [\<a> 元素](/zh-CN/docs/Web/HTML/Element/a)的 `download` 属性而不是 `Content-Disposition: inline` 参数来处理下载。而 Firefox 的早期版本则优先使用标头信息并内联显示内容。
 
-### 作为 multipart body 中的消息头
+### 作为多部分主体的标头
 
 当使用 `multipart/form-data` 格式提交表单数据时，每个子部分（例如每个表单字段和任何与字段数据相关的文件）都需要提供一个 `Content-Disposition` 标头，以提供相关信息。标头的第一个指令始终为 `form-data`，并且还*必须*包含一个 `name` 参数来标识相关字段。额外的指令不区分大小写，并使用带引号的字符串语法在 `=` 号后面指定参数。多个参数之间使用分号（`;`）分隔。
 
@@ -53,7 +65,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 ## 示例
 
-以下是一则可以触发"保存为"对话框的服务器应答：
+以下是一则可以触发“保存为”对话框的服务器应答：
 
 ```http
 200 OK
@@ -66,7 +78,7 @@ Content-Length: 22
 
 这个简单的 HTML 文件会被下载到本地而不是在浏览器中展示。大多数浏览器默认会建议将 `cool.html` 作为文件名。
 
-以下是一个 HTML 表单的示例，展示了在 `multipart/form-data` 格式的报文中使用`Content-Disposition` 消息头的情况：
+以下是一个 HTML 表单的示例，展示了在 `multipart/form-data` 格式的报文中使用`Content-Disposition` 标头的情况：
 
 ```http
 POST /test.html HTTP/1.1

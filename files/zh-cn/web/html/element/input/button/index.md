@@ -1,6 +1,6 @@
 ---
 title: <input type="button">
-slug: Web/HTML/Element/Input/button
+slug: Web/HTML/Element/input/button
 ---
 
 {{HTMLSidebar}}

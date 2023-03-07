@@ -1,6 +1,6 @@
 ---
 title: 字元編碼
-slug: Glossary/character_encoding
+slug: Glossary/Character_encoding
 ---
 
 字元編碼提供了一套編碼系統，使不同的電腦系統或編譯環境可以存在並處理存在於其他語言當中的特殊字元。

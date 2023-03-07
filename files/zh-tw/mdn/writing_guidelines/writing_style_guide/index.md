@@ -223,7 +223,7 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 - 屬性名稱
   - : 使用「行內程式碼」樣式讓它以`程式碼字型`顯示。此外，當屬性在解釋其為何的相關說明或其在文章中首次出現時要把它們加上**粗體**。
 - 屬性定義
-  - : 對定義的術語使用 [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) 巨集（舉例， \\{{htmlattrdef("type")}} ） ，以便它們可以用 [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) 巨集（舉例，\\{{htmlattrxref("type","element")}} ）的方式被其他頁面連結來參照屬性定義。
+  - : 對定義的術語使用「行內程式碼」樣式（舉例，`type` ）。
 - 屬性值
   - : 使用「行內程式碼」樣式來套用 `<code>` 屬性值，而且不要使用引述標示環繞字串值，除非程式碼範例有此需要。
     **譬如：**「當 `<input>` 的 `type` 屬性被設定為 `email` 或 `tel` ……」

@@ -8,15 +8,14 @@ translation_of: Web/HTML/Element/noscript
 
 [HTML](/ru/docs/Web/HTML)-элемент **`<noscript>`** определяет секцию HTML кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
 
-| | |
-| - | - |
-| _[Категории контента](/ru/docs/Web/HTML/Content_categories)_ | [метаданные](/ru/docs/Web/HTML/Content_categories#метаданные), [основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [фразовый контент](/ru/docs/Web/HTML/Content_categories#фразовый_контент). |
-| _Разрешенный контент_ | Когда выполнение JavaScript отключено и когда он вложен в элемент {{HTMLElement("head")}}: в любом порядке, ноль или более элементов {{HTMLElement("link")}}, ноль или более элементов {{HTMLElement("style")}} и ноль или более элементов {{HTMLElement("meta")}}. <br> Когда выполнение JavaScript отключено и когда он не вложен в элемент {{HTMLElement("head")}}: любой [прозрачный контент](/ru/docs/Web/HTML/Content_categories#прозрачная_модель_контента), но среди его потомков не должно быть элемента `<noscript>`. <br> В противном случае: основной поток или фразовый контент. |
-| _Пропуск тега_ | {{no_tag_omission}} |
-| _Разрешенные родительские элементы_ | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content) или элемент {{HTMLElement("head")}} (только для HTML-документа). Оба варианта возможны только если нет элемента-предка `<noscript>`. |
-| _Неявная ARIA-роль_ | [нет роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role) |
-| _Возможные ARIA-роли_ | нет |
-| _DOM интерфейс_ | {{domxref("HTMLElement")}} |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [метаданные](/ru/docs/Web/HTML/Content_categories#метаданные), [основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [фразовый контент](/ru/docs/Web/HTML/Content_categories#фразовый_контент). |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                         | Когда выполнение JavaScript отключено и когда он вложен в элемент {{HTMLElement("head")}}: в любом порядке, ноль или более элементов {{HTMLElement("link")}}, ноль или более элементов {{HTMLElement("style")}} и ноль или более элементов {{HTMLElement("meta")}}. <br> Когда выполнение JavaScript отключено и когда он не вложен в элемент {{HTMLElement("head")}}: любой [прозрачный контент](/ru/docs/Web/HTML/Content_categories#прозрачная_модель_контента), но среди его потомков не должно быть элемента `<noscript>`. <br> В противном случае: основной поток или фразовый контент. |
+| Пропуск тега                                               | {{no_tag_omission}} |
+| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content) или элемент {{HTMLElement("head")}} (только для HTML-документа). Оба варианта возможны только если нет элемента-предка `<noscript>`. |
+| Неявная ARIA-роль                                          | [нет роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role) |
+| Допустимые ARIA-роли                                       | нет |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}} |
 
 ## Атрибуты
 
