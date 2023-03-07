@@ -5,9 +5,8 @@ slug: WebAssembly/Reference/Control_flow/br
 
 {{WebAssemblySidebar}}
 
-**`br`** 是讓程式跳躍至指定區塊（可能是loop 、 block 或是 if）。
-
-`br` 有以下幾種變體：`br_if` 是在符合指定條件下程式才會跳躍至指定區塊； `br_table`則是根據給予的參數不同，跳至不同區塊。
+**`br`** 是讓程式跳躍至指定區塊（可能是 loop、block 或是 if）。
+`br` 有以下幾種變體：`br_if` 是在符合指定條件下程式才會跳躍至指定區塊；`br_table` 則是根據給予的參數不同，跳至不同區塊。
 
 {{EmbedInteractiveExample("pages/wat/br.html", "tabbed-taller")}}
 
@@ -23,8 +22,7 @@ slug: WebAssembly/Reference/Control_flow/br
 )
 ```
 
-| 指令          | 二進制操作碼 |
-| ----------- | ------------- |
+| 指令          | 二進制運算碼 |
 | `br`        | `0x0c`        |
 | `br_if`     | `0x0d`        |
 | `br_table`  | `0x0e`        |

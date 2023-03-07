@@ -17,6 +17,6 @@ slug: WebAssembly/Reference/Control_flow/unreachable
 unreachable
 ```
 
-| 指令          | 二進制操作碼 |
+| 指令          | 二進制運算碼 |
 | ------------- | ------------- |
 | `unreachable` | `0x00`        |
