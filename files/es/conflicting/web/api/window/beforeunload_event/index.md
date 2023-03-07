@@ -19,7 +19,7 @@ window.onbeforeunload = funcRef
 
 - `funcRef` es una referencia a una función o una función anónima.
 - La función debe asignar una cadena de texto como propiedad `returnValue` del objeto Event y devolver la misma cadena.
-- Nota: en Firefox 4 y superiores la cadena de texto no se muestra al usuario (ver {{bug("588292")}}).
+- Nota: en Firefox 4 y superiores la cadena de texto no se muestra al usuario (ver [Error 588292 en Firefox](https://bugzil.la/588292)).
 
 ## Ejemplo
 

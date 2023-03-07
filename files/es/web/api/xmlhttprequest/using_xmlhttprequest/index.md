@@ -900,7 +900,7 @@ ventana terminada tenga su evento [`unload`](/es/docs/Web/Reference/Events/unloa
 ## Workers
 
 Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
-{{bug(678057)}} para más detalles. Otros navegadores pueden manejar esto de manera diferente.
+[Error 678057 en Firefox](https://bugzil.la/678057) para más detalles. Otros navegadores pueden manejar esto de manera diferente.
 
 ## Especificaciones
 
