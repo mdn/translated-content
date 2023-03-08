@@ -9,7 +9,7 @@ slug: Web/API/Element/keypress_event
 
 产生字符值的键包括字母、数字和标点符号键。不产生字符值的键是修饰键，例如 <kbd>Alt</kbd>、<kbd>Shift</kbd>、<kbd>Ctrl</kbd> 或 <kbd>Meta</kbd> 键。
 
-> **警告：** 由于此事件已被弃用，您应该改用 {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} 或 {{domxref("Element.keydown_event", "keydown")}}。
+> **警告：** 由于此事件已被弃用，你应该改用 {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} 或 {{domxref("Element.keydown_event", "keydown")}}。
 
 ## 语法
 
@@ -39,7 +39,7 @@ _该接口还继承了其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 
 
   - : 返回一个字符串，其中包含由事件表示的物理键的代码值。
 
-    > **警告：** 此方法忽略用户的键盘布局，因此，如果用户按下 QWERTY 键盘布局中 “Y” 位置（在主键盘区域上方的一行中间），即使用户使用 QWERTZ 键盘（这意味着用户期望 “Z” ，而且所有其他属性都指示为 “Z” ）或 Dvorak 键盘布局（其中用户期望 “F” ），此方法仍将始终返回   “KeyY”。如果您想向用户显示正确的按键信息，则可以使用 {{domxref("Keyboard.getLayoutMap()")}} 方法。
+    > **警告：** 此方法忽略用户的键盘布局，因此，如果用户按下 QWERTY 键盘布局中 “Y” 位置（在主键盘区域上方的一行中间），即使用户使用 QWERTZ 键盘（这意味着用户期望 “Z” ，而且所有其他属性都指示为 “Z” ）或 Dvorak 键盘布局（其中用户期望 “F” ），此方法仍将始终返回   “KeyY”。如果你想向用户显示正确的按键信息，则可以使用 {{domxref("Keyboard.getLayoutMap()")}} 方法。
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
@@ -75,7 +75,7 @@ _该接口还继承了其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 
 
 ### addEventListener 按键示例
 
-该示例在聚焦 {{HtmlElement("input")}} 元素后，每当您按下一个键时，记录 {{domxref("KeyboardEvent.code")}} 的值。
+该示例在聚焦 {{HtmlElement("input")}} 元素后，每当你按下一个键时，记录 {{domxref("KeyboardEvent.code")}} 的值。
 
 ```html
 <div>
