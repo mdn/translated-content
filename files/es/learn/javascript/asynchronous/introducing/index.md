@@ -325,11 +325,3 @@ Cuando anidamos devoluciones de llamada de esta manera, también puede ser muy d
 Por estas razones, la mayoría de las APIs asíncronas modernas no utilizan _callbacks_. En su lugar, la base de la programación asíncrona en JavaScript es la {{jsxref("Promise")}}, y ese es el tema del siguiente artículo.
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## En este módulo
-
-- **Introducción a JavaScript asíncrono**
-- [Como utilizar las promesas](/es/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementación de una API basada en promesas](/es/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introducción a los workers](/es/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Evaluación: animación secuencial](/es/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

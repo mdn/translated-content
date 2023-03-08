@@ -276,18 +276,6 @@ Este artículo ha expuesto los tipos de entrada más antiguos: el conjunto origi
 
 {{PreviousMenuNext("Learn/Forms/How_to_structure_an_HTML_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
-## En este módulo
-
-- [Tu primer formulario HTML](/es/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [Cómo estructurar un formulario HTML](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [Los controles básicos de formulario originales](/es/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Tipos de entrada HTML5](/es/docs/Learn/HTML/Forms/HTML5_input_types)
-- [Controles de formulario adicionales](/es/docs/Learn/HTML/Forms/Additional_form_controls)
-- [Pseudoclases UI](/es/docs/Learn/HTML/Forms/UI_pseudo-classes)
-- [Aplicar estilo a formularios HTML](/es/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Validación de datos en un formulario](/es/docs/Learn/HTML/Forms/Form_validation)
-- [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-
 ### Temas avanzados
 
 - [Enviar formularios con JavaScript](/es/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
