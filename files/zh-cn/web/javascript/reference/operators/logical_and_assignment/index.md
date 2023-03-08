@@ -77,7 +77,7 @@ y &&= 0; // 0
 ## 参见
 
 - [逻辑与（&&）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [按位与赋值（`&=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
 - {{Glossary("Truthy","真值")}}
 - {{Glossary("Falsy","假值")}}
