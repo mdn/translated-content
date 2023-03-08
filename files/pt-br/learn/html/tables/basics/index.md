@@ -466,7 +466,7 @@ Recrie a tabela seguindo os passos abaixo.
 
 1. Primeiro, faça uma cópia local do arquivo [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) dentro de um novo diretório na sua máquina local. O HTML contém a mesma tabela que viu acima, porém sem os dados de estilo.
 2. Acrescente um elemento `<colgroup>` na parte superior da tabela, bem abaixo da tag `<table>`, dentro da qual você pode adicionar os elementos `<col>` (veja os passos que faltam abaixo).
-3. As duas primeiras colunas deve ser deixas sem nenhum estilo.
+3. As duas primeiras colunas devem ser deixadas sem nenhum estilo.
 4. Adicione uma cor de fundo para a terceira coluna. O valor do atributo `style` é `background-color:#97DB9A;`
 5. Ajuste uma largura diferente para a quarta coluna. O valor do atributo `style` é `width: 42px;`
 6. Adicione uma cor de fundo para a quinta coluna. O valor do atributo `style` é `background-color: #97DB9A;`
