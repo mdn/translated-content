@@ -39,7 +39,7 @@ _该接口还继承了其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 
 
   - : 返回一个字符串，其中包含由事件表示的物理键的代码值。
 
-    > **警告：** 此方法忽略用户的键盘布局，因此，如果用户按下 QWERTY 键盘布局中 "Y" 位置（在主键盘区域上方的一行中间），即使用户使用 QWERTZ 键盘（这意味着用户期望 "Z" ，而且所有其他属性都指示为 "Z" ）或 Dvorak 键盘布局（其中用户期望 "F" ），此方法仍将始终返回   "KeyY"。如果你想向用户显示正确的按键信息，则可以使用 {{domxref("Keyboard.getLayoutMap()")}} 方法。
+    > **警告：** 此方法忽略用户的键盘布局，因此，如果用户按下 QWERTY 键盘布局中 "Y" 位置（在主键盘区域上方的一行中间），即使用户使用 QWERTZ 键盘（这意味着用户期望 "Z" ，而且所有其他属性都指示为 "Z" ）或 Dvorak 键盘布局（其中用户期望 "F" ），此方法仍将始终返回 "KeyY" 。如果你想向用户显示正确的按键信息，则可以使用 {{domxref("Keyboard.getLayoutMap()")}} 方法。
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
@@ -62,7 +62,7 @@ _该接口还继承了其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 
 
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
 
-  - : 如果在生成按键事件时 <kbd>Meta</kbd> 键（在Mac键盘上是 <kbd>⌘ Command</kbd> 键，在 Windows 键盘上是Windows键（<kbd>⊞</kbd>））处于活动状态，则返回一个布尔值，该布尔值为 `true`。
+  - : 如果在生成按键事件时 <kbd>Meta</kbd> 键（在 Mac 键盘上是 <kbd>⌘ Command</kbd> 键，在 Windows 键盘上是 Windows 键（<kbd>⊞</kbd>））处于活动状态，则返回一个布尔值，该布尔值为 `true`。
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
   - : 如果该按键被按住并且正在生成自动重复事件，则此函数返回一个布尔值 `true`。
