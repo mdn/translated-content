@@ -23,7 +23,7 @@ slug: Web/SVG/Tutorial/Texts
 
 文本的一个至关重要的部分是它显示的字体。SVG 提供了一些属性，类似于它们的 CSS 同行，用来激活文本选区。下列每个属性可以被设置为一个 SVG 属性或者成为一个 CSS 声明：`font-family`、`font-style`、`font-weight`、`font-variant`、`font-stretch`、`font-size`、`font-size-adjust`、`kerning`、`letter-spacing`、`word-spacing`和`text-decoration`。
 
-## 其它文本相关的元素
+## 其他文本相关的元素
 
 ### tspan
 

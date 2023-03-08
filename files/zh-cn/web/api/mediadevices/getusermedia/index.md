@@ -5,7 +5,7 @@ slug: Web/API/MediaDevices/getUserMedia
 
 {{APIRef("WebRTC")}}
 
-**`MediaDevices.getUserMedia()`** 会提示用户给予使用媒体输入的许可，媒体输入会产生一个{{domxref("MediaStream")}}，里面包含了请求的媒体类型的轨道。此流可以包含一个视频轨道（来自硬件或者虚拟视频源，比如相机、视频采集设备和屏幕共享服务等等）、一个音频轨道（同样来自硬件或虚拟音频源，比如麦克风、A/D 转换器等等），也可能是其它轨道类型。
+**`MediaDevices.getUserMedia()`** 会提示用户给予使用媒体输入的许可，媒体输入会产生一个{{domxref("MediaStream")}}，里面包含了请求的媒体类型的轨道。此流可以包含一个视频轨道（来自硬件或者虚拟视频源，比如相机、视频采集设备和屏幕共享服务等等）、一个音频轨道（同样来自硬件或虚拟音频源，比如麦克风、A/D 转换器等等），也可能是其他轨道类型。
 
 它返回一个 {{jsxref("Promise")}} 对象，成功后会`resolve`回调一个 {{domxref("MediaStream")}} 对象。若用户拒绝了使用权限，或者需要的媒体源不可用，`promise`会`reject`回调一个 `PermissionDeniedError` 或者 `NotFoundError` 。
 
@@ -54,7 +54,7 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
     }
     ```
 
-    浏览器会试着满足这个请求参数，但是如果无法准确满足此请求中参数要求或者用户选择覆盖了请求中的参数时，有可能返回其它的分辨率。
+    浏览器会试着满足这个请求参数，但是如果无法准确满足此请求中参数要求或者用户选择覆盖了请求中的参数时，有可能返回其他的分辨率。
 
     强制要求获取特定的尺寸时，可以使用关键字`min`、`max` 或者 `exact`（就是 min == max）。以下参数表示要求获取最低为 1280x720 的分辨率。
 

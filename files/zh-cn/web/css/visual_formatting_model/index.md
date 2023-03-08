@@ -13,7 +13,7 @@ CSS 视觉格式化模型（*visual formatting model）*是用来处理和在视
 - 盒子的尺寸：精确指定、由约束条件指定或没有指定
 - 盒子的类型：行内盒子（inline）、行内级盒子（inline-level）、原子行内级盒子（atomic inline-level）、块盒子（block）
 - [定位方案（positioning scheme）](/zh-CN/docs/CSS/Box_positioning_scheme)：普通流定位、浮动定位或绝对定位
-- 文档树中的其它元素：即当前盒子的子元素或兄弟元素
+- 文档树中的其他元素：即当前盒子的子元素或兄弟元素
 - {{glossary("viewport", "视口")}}尺寸与位置
 - 所包含的图片的尺寸
 - 其他的某些外部因素
@@ -51,7 +51,7 @@ CSS 视觉格式化模型（*visual formatting model）*是用来处理和在视
 
 主块级盒子包含由后代元素生成的盒子以及内容，同时它也会参与[定位方案](/zh-CN/docs/CSS/Positioning_scheme)。
 
-一个块级盒子可能也是一个块容器盒子。块容器盒子（*block container box）要么*只包含其它块级盒子，要么只包含行内盒子并同时创建一个行内[格式化上下文（inline formatting context）](/zh-CN/docs/CSS/Inline_formatting_context)。
+一个块级盒子可能也是一个块容器盒子。块容器盒子（*block container box）要么*只包含其他块级盒子，要么只包含行内盒子并同时创建一个行内[格式化上下文（inline formatting context）](/zh-CN/docs/CSS/Inline_formatting_context)。
 
 能够注意到块级盒子与块容器盒子是不同的这一点很重要。前者描述了元素与其父元素和兄弟元素之间的行为，而后者描述了元素跟其后代之间的行为。有些块级盒子并不是块容器盒子，比如表格；而有些块容器盒子也不是块级盒子，比如非替换行内块和非替换表格单元格。
 

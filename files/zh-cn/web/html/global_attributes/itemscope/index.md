@@ -247,7 +247,7 @@ Directions: <br>
 
 ## 参阅
 
-- [其它不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - 其他 microdata 相关的全局熟悉
 
   - {{htmlattrxref("itemid")}}

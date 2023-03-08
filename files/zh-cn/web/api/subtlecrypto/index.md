@@ -74,7 +74,7 @@ _此接口没有任何父接口，因此没有继承任何方法。_
 
 要在应用程序外部使密钥可用，你需要导出密钥，{{DOMxRef("SubtleCrypto.exportKey","exportKey()")}} 可以为你提供该功能。你可以选择多种导出格式。
 
-{{DOMxRef("SubtleCrypto.importKey","importKey()")}} 与 `exportKey()` 刚好相反。你可以从其它系统导入密钥，并且支持像 [PKCS #8](https://datatracker.ietf.org/doc/html/rfc5208) 和 [JSON Web Key](https://datatracker.ietf.org/doc/html/rfc7517) 这样可以帮助你执行此操作的标准格式。`exportKey()` 函数以非加密格式导出密钥。
+{{DOMxRef("SubtleCrypto.importKey","importKey()")}} 与 `exportKey()` 刚好相反。你可以从其他系统导入密钥，并且支持像 [PKCS #8](https://datatracker.ietf.org/doc/html/rfc5208) 和 [JSON Web Key](https://datatracker.ietf.org/doc/html/rfc7517) 这样可以帮助你执行此操作的标准格式。`exportKey()` 函数以非加密格式导出密钥。
 
 如果密钥是敏感的，你应该使用 {{DOMxRef("SubtleCrypto.wrapKey","wrapKey()")}}，该函数导出密钥并且使用另外一个密钥加密它。此类 API 调用被称为“密钥包装密钥”（key-wrapping key）。
 

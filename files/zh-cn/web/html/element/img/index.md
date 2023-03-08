@@ -14,7 +14,7 @@ slug: Web/HTML/Element/img
 - `src` 属性是**必须的**，它包含了你想嵌入的图片的路径。
 - `alt` 属性包含一条对图像的文本描述，这不是强制性的，但对无障碍而言，它**难以置信地有用**——屏幕阅读器会将这些描述读给需要使用阅读器的使用者听，让他们知道图像的含义。如果由于某种原因无法加载图像，普通浏览器也会在页面上显示 `alt` 属性中的备用文本：例如，网络错误、内容被屏蔽或链接过期。
 
-还有很多其它属性，可以实现各种不同的目的：
+还有很多其他属性，可以实现各种不同的目的：
 
 - [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 {{htmlattrxref("crossorigin", "img")}} 和 {{htmlattrxref("referrerpolicy", "img")}} 属性。
 - 使用 {{htmlattrxref("width", "img")}} 和 {{htmlattrxref("height", "img")}} 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
@@ -89,9 +89,9 @@ Web 最常用的图像格式是：
   - : 为浏览器提供图像解码方式上的提示。允许的值：
 
     - `sync`
-      - : 同步解码图像，实现与其它内容互斥的原子渲染。
+      - : 同步解码图像，实现与其他内容互斥的原子渲染。
     - `async`
-      - : 异步解码图像，以减少其它内容的渲染延迟。
+      - : 异步解码图像，以减少其他内容的渲染延迟。
     - `auto`
       - : 默认值：不指定解码方式，由浏览器决定哪一种对用户来说是最合适的。
 
@@ -100,11 +100,11 @@ Web 最常用的图像格式是：
   - : 提供获取图像时要使用的相对的优先级提示。允许的值：
 
     - `high`
-      - : 表示其获取优先级相对其它图像要高。
+      - : 表示其获取优先级相对其他图像要高。
     - `low`
-      - : 表示其获取优先级相对其它图像要低。
+      - : 表示其获取优先级相对其他图像要低。
     - `auto`
-      - : 默认值：表示自动确定其相对其它图像的获取优先级。
+      - : 默认值：表示自动确定其相对其他图像的获取优先级。
 
 - {{htmlattrdef("height")}}
   - : 图像的固有高度，以像素为单位。必须是没有单位的整数值。
@@ -131,7 +131,7 @@ Web 最常用的图像格式是：
     - `no-referrer`：不会发送 {{httpheader("Referer")}} 标头。
     - `no-referrer-when-downgrade`：若未使用 {{Glossary("TLS")}}（{{glossary("HTTPS")}}）导航到源站，则不发送 `Referer` 标头。
     - `origin`：发送到源站的来源地址将被限制为：[协议](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
-    - `origin-when-cross-origin`：发送到其它来源的来源地址会被限制为协议、主机和端口。同源导航仍将包含路径。
+    - `origin-when-cross-origin`：发送到其他来源的来源地址会被限制为协议、主机和端口。同源导航仍将包含路径。
     - `same-origin`：仅{{Glossary("Same-origin policy", "同源")}}请求发送来源地址，而跨源请求则不包含来源地址信息。
     - `strict-origin`：仅在协议安全级别保持不变（HTTPS→HTTPS）的情况下将文档的来源作为来源地址发送。而在目标的安全性降低（HTTPS→HTTP）时则不发送来源地址。
     - `strict-origin-when-cross-origin`（默认值）：执行同源请求时发送完整的 URL，且仅在协议安全级别保持不变（HTTPS→HTTPS）时发送来源（origin），在目标安全性降低（HTTPS→HTTP）时则不发送来源。
@@ -193,7 +193,7 @@ Web 最常用的图像格式是：
 - {{htmlattrdef("hspace")}} {{Deprecated_Inline}}
   - : 插入到图像的左侧和右侧的空白像素的值。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。
 - {{htmlattrdef("longdesc")}} {{Deprecated_Inline}}
-  - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其它元素的 {{htmlattrxref("id")}}。
+  - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 {{htmlattrxref("id")}}。
 
     > **备注：** 此属性在当前最新的 {{glossary("W3C")}} 版本——[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) 中依然处于被移除的状态。它的未来尚无定数；开发者应使用 {{glossary("WAI")}}-{{glossary("ARIA")}} 这一代替方法，例如：[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) 或 [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details)。
 
@@ -270,7 +270,7 @@ Web 最常用的图像格式是：
 
 ### 使用有实际意义的备用描述
 
-`alt` 属性的值应该清晰、简洁地描述图像的内容。它不应该描述“图像的存在”，或仅仅包含图像的文件名。如果因为图像没有等价的文本描述，`alt` 属性只得不写或留白，那么可以考虑使用其它方法来呈现图像试图传递的内容。
+`alt` 属性的值应该清晰、简洁地描述图像的内容。它不应该描述“图像的存在”，或仅仅包含图像的文件名。如果因为图像没有等价的文本描述，`alt` 属性只得不写或留白，那么可以考虑使用其他方法来呈现图像试图传递的内容。
 
 #### 不要
 
@@ -445,4 +445,4 @@ Web 最常用的图像格式是：
 - [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
 - [响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 - {{HTMLElement("picture")}}、{{HTMLElement("object")}} 和 {{HTMLElement("embed")}} 元素
-- 其它与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}} 和 {{cssxref("image-resolution")}}。
+- 其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}} 和 {{cssxref("image-resolution")}}。

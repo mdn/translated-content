@@ -24,7 +24,7 @@ MDN Web 文档中使用的标签，可以根据标签的用途和它们传达的
 
 ## 文档类别
 
-当你使用这些类别中的一个标签来标记文章的时候，你帮助了自动化工具更准确的生成着陆页面、内容表，以及其它内容。我们新的搜索系统也可以使用这些来让我们的游客更好的根据他们的意愿来定位参考和指南。
+当你使用这些类别中的一个标签来标记文章的时候，你帮助了自动化工具更准确的生成着陆页面、内容表，以及其他内容。我们新的搜索系统也可以使用这些来让我们的游客更好的根据他们的意愿来定位参考和指南。
 
 我们使用以下标签来标识文档的类型：
 
@@ -88,9 +88,9 @@ MDN Web 文档中使用的标签，可以根据标签的用途和它们传达的
 
 此外，参考页面需要在其标签中包含接口、属性和方法名称。一些示例如下：
 
-- 接口 {{DOMxRef("RTCPeerConnection")}}：包含标签 `RTCPeerConnection` 以及其它相关标签，包括 `Interface`、`WebRTC`、`WebRTC API`、`API` 和 `Reference`。
-- 方法 {{DOMxRef("RTCPeerConnection.createOffer()")}}：包括标签 `RTCPeerConnection` 和 `createOffer`（注意标签名中没有括号！）以及其它相关标签，包括 `WebRTC`、`WebRTC API`、`API`、`Reference`。考虑包含 `Offer` 和 `SDP` 标签，它们在这里也是相关的。
-- 属性 {{DOMxRef("RTCPeerConnection.iceConnectionState")}}：包括标签 `RTCPeerConnection` 和 `iceConnectionState` 以及其它相关标签，包括 `Property`、`WebRTC`、`WebRTC API`、`API` 和 `Reference`。也需要考虑包括 `ICE`。
+- 接口 {{DOMxRef("RTCPeerConnection")}}：包含标签 `RTCPeerConnection` 以及其他相关标签，包括 `Interface`、`WebRTC`、`WebRTC API`、`API` 和 `Reference`。
+- 方法 {{DOMxRef("RTCPeerConnection.createOffer()")}}：包括标签 `RTCPeerConnection` 和 `createOffer`（注意标签名中没有括号！）以及其他相关标签，包括 `WebRTC`、`WebRTC API`、`API`、`Reference`。考虑包含 `Offer` 和 `SDP` 标签，它们在这里也是相关的。
+- 属性 {{DOMxRef("RTCPeerConnection.iceConnectionState")}}：包括标签 `RTCPeerConnection` 和 `iceConnectionState` 以及其他相关标签，包括 `Property`、`WebRTC`、`WebRTC API`、`API` 和 `Reference`。也需要考虑包括 `ICE`。
 
 ## 技术状态
 
@@ -133,7 +133,7 @@ MDN Web 文档中使用的标签，可以根据标签的用途和它们传达的
 - `NeedsCompatTable`
   - : 文章需要一个表来指定跨浏览器特性的兼容性表格，有关贡献浏览器兼容数据的指南参见[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)。
 - `NeedsContent`
-  - : 文章是一个存根，或者是缺乏其它信息。这个标签意味着有人应该审查的内容，并添加更多的细节和/或完成写作的文章。
+  - : 文章是一个存根，或者是缺乏其他信息。这个标签意味着有人应该审查的内容，并添加更多的细节和/或完成写作的文章。
 - `NeedsExample`
   - : 文章需要一个或多个示例来帮助说明文章的要点。这些示例应该使用[代码示例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples)。
 - `NeedsLiveSamples`
@@ -171,7 +171,7 @@ MDN Web 文档中使用的标签，可以根据标签的用途和它们传达的
 
 ### 没有标签
 
-一般来说文章应该至少有一个“[文档类别](#文档类别)”标签和一个“[主题标识](#主题标识)”标签。虽然有其它标签也好，但是如果你能帮我们提供最基本的标签，你将会是一名（维护）文档的英雄！
+一般来说文章应该至少有一个“[文档类别](#文档类别)”标签和一个“[主题标识](#主题标识)”标签。虽然有其他标签也好，但是如果你能帮我们提供最基本的标签，你将会是一名（维护）文档的英雄！
 
 ### 不符合我们标准的标签
 
@@ -183,7 +183,7 @@ MDN Web 文档中使用的标签，可以根据标签的用途和它们传达的
 
 ### 缺失标签
 
-如果一篇文章有标签但是不全面，请补全。比如，一个 JavaScript 的参考文档被（正确地）标记为 `JavaScript` 但是除此之外什么也没有了，请你就为它标上 `Reference` 和[其它标签](#文档类别)！
+如果一篇文章有标签但是不全面，请补全。比如，一个 JavaScript 的参考文档被（正确地）标记为 `JavaScript` 但是除此之外什么也没有了，请你就为它标上 `Reference` 和[其他标签](#文档类别)！
 
 ### 垃圾标签
 

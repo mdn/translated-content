@@ -37,7 +37,7 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 Vary: Accept, Width, ECT
 ```
 
-对于值变化很大的客户端提示标头时，最好不要指定 {{HTTPHeader("Vary")}} 或者使用其它的策略，因为这会使资源无法有效缓存。（为每个唯一值创建新的缓存条目。）这尤其适用于网络客户端提示，像 {{HTTPHeader("Downlink")}} 和 {{HTTPHeader("RTT")}}。更多信息请参见 [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)。
+对于值变化很大的客户端提示标头时，最好不要指定 {{HTTPHeader("Vary")}} 或者使用其他的策略，因为这会使资源无法有效缓存。（为每个唯一值创建新的缓存条目。）这尤其适用于网络客户端提示，像 {{HTTPHeader("Downlink")}} 和 {{HTTPHeader("RTT")}}。更多信息请参见 [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)。
 
 ## 提示（hint）的生命周期
 

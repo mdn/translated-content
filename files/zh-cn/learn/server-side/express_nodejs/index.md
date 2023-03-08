@@ -41,7 +41,7 @@ Express 是一款受欢迎的开源 web 框架，构建语言是 JavaScript，�
 - [在 PWS/Cloud Foundry 安装 LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry)
   - : 本文提供了如何在[Pivotal Web Services PaaS](http://run.pivotal.io) 云上安装 LocalLibrary 的实际演示 - 这是 Heroku 的全功能，开源替代品，Heroku 是本教程第 7 部分中使用的 PaaS 云服务，如上所列。如果您正在寻找 Heroku（或其他 PaaS 云服务）的替代方案，或者只是想尝试不同的东西，PWS / Cloud Foundry 绝对值得一试。
 
-## 其它教程
+## 其他教程
 
 本教程到此结束，如果你想要更进一步，以下包含更多有趣的主题：
 

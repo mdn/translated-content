@@ -128,7 +128,7 @@ grid-auto-rows: unset;
 3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
 4. **指南**
 
-    1. [与其它布局方式的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    1. [与其他布局方式的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
     2. [线性布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
     3. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
     4. [使用命名网格行布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)

@@ -9,7 +9,7 @@ slug: Web/API/fetch
 
 {{domxref("Window")}} 和 {{domxref("WorkerGlobalScope")}} 都实现了 WorkerOrGlobalScope。 ——这意味着基本在任何场景下只要你想获取资源，都可以使用 位于 WorkerOrGlobalScope 中的 `fetch()` 方法。
 
-当遇到网络错误时，{{domxref("fetch()")}} 返回的 promise 会被 reject，并传回 {{jsxref("TypeError")}}，虽然这也可能因为权限或其它问题导致。成功的 fetch() 检查不仅要包括 promise 被 resolve，还要包括 {{domxref("Response.ok")}} 属性为 true。HTTP 404 状态并不被认为是网络错误。
+当遇到网络错误时，{{domxref("fetch()")}} 返回的 promise 会被 reject，并传回 {{jsxref("TypeError")}}，虽然这也可能因为权限或其他问题导致。成功的 fetch() 检查不仅要包括 promise 被 resolve，还要包括 {{domxref("Response.ok")}} 属性为 true。HTTP 404 状态并不被认为是网络错误。
 
 `fetch()` 方法由 [Content Security Policy](/zh-CN/docs/Security/CSP/CSP_policy_directives) 的 `connect-src`指令控制，而不是它请求的资源。
 
