@@ -5,7 +5,7 @@ slug: Web/HTTP
 
 {{HTTPSidebar}}
 
-**_超文本传输协议_**（HTTP）是一个用于传输超媒体文档（例如 HTML）的[应用层](https://zh.wikipedia.org/wiki/应用层)协议。它是为 Web 浏览器与 Web 服务器之间的通信而设计的，但也可以用于其它目的。HTTP 遵循经典的[客户端—服务端模型](https://zh.wikipedia.org/wiki/主從式架構)，客户端打开一个连接以发出请求，然后等待直到收到服务器端响应。HTTP 是[无状态协议](http://zh.wikipedia.org/wiki/无状态协议)，这意味着服务器不会在两个请求之间保留任何数据（状态）。
+**_超文本传输协议_**（HTTP）是一个用于传输超媒体文档（例如 HTML）的[应用层](https://zh.wikipedia.org/wiki/应用层)协议。它是为 Web 浏览器与 Web 服务器之间的通信而设计的，但也可以用于其他目的。HTTP 遵循经典的[客户端—服务端模型](https://zh.wikipedia.org/wiki/主從式架構)，客户端打开一个连接以发出请求，然后等待直到收到服务器端响应。HTTP 是[无状态协议](http://zh.wikipedia.org/wiki/无状态协议)，这意味着服务器不会在两个请求之间保留任何数据（状态）。
 
 ## 教程
 
@@ -18,7 +18,7 @@ slug: Web/HTTP
 - [HTTP Cookie](/zh-CN/docs/Web/HTTP/Cookies)
   - : [RFC 6265](https://tools.ietf.org/html/rfc6265) 定义了 cookie 的工作方式。在处理 HTTP 请求时，服务器可以发送带有响应的 `Set-Cookie` 标头。然后，对于同一服务器发起的每一个请求，客户端都会在 HTTP 请求标头中以字段 `Cookie` 的形式将 cookie 的值发送过去。也可以将 cookie 设置为在特定日期过期，或限制为特定的域和路径。
 - [跨域资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
-  - : **跨站点 HTTP 请求**就是从**另一个域**，而不是资源所在的域发起的 HTTP 请求。举例来说，在域 A（`http://domaina.example/`）的 HTML 页面上通过 `img` 元素来请求域 B（`http://domainb.foo/image.jpg`）上的图片资源。这在当今的 Web 页面上是很常见的——加载跨站点资源，包括 CSS 样式表、图片、脚本和其它资源。CORS 允许 Web 开发人员控制其站点对跨站点请求的反应。
+  - : **跨站点 HTTP 请求**就是从**另一个域**，而不是资源所在的域发起的 HTTP 请求。举例来说，在域 A（`http://domaina.example/`）的 HTML 页面上通过 `img` 元素来请求域 B（`http://domainb.foo/image.jpg`）上的图片资源。这在当今的 Web 页面上是很常见的——加载跨站点资源，包括 CSS 样式表、图片、脚本和其他资源。CORS 允许 Web 开发人员控制其站点对跨站点请求的反应。
 - [HTTP 客户端提示（Client Hints）](/en-US/docs/Web/HTTP/Client_hints)
   - : **客户端提示**是一组响应标头，服务器可以使用它来主动从客户端请求关于设备、网络、用户以及用户代理指定的首选项的信息。然后，服务器可以根据客户端选择提供的信息来确定发送哪些资源。
 - [HTTP 的演变](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)

@@ -21,7 +21,7 @@ slug: Web/API/File_and_Directory_Entries_API
 - {{domxref("FileSystem")}}
   - : 表示文件系统。
 - {{domxref("FileSystemEntry")}}
-  - : 表示文件系统中单个条目的基本接口。这是由表示文件或目录的其它接口实现的。
+  - : 表示文件系统中单个条目的基本接口。这是由表示文件或目录的其他接口实现的。
 - {{domxref("FileSystemFileEntry")}}
   - : 表示文件系统中的单个文件。
 - {{domxref("FileSystemDirectoryEntry")}}

@@ -60,7 +60,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
         <div class="geckoVersionNote">Firefox 48 中新出现</div>
         <p>可选，默认为 <code>false</code>。</p>
         <p>
-          使用此项来包含一个样式表以使其与浏览器 UI 和其它使用了
+          使用此项来包含一个样式表以使其与浏览器 UI 和其他使用了
           <code>browser_style</code> 属性的扩展外观上保持一致。虽然此键值默认为
           <code>false</code>，还是建议您将其包含并设其为 <code>true</code>。
         </p>

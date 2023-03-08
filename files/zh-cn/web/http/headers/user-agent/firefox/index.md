@@ -23,7 +23,7 @@ Firefox 的 User Agent（用户代理）值可被拆分为以下四个部分：
 
 > **备注：** （如果你必须检测浏览器引擎，而不是去做特征检测的话）推荐使用"_Gecko_"与"_rv:_"字符串来检测基于 Gecko 的浏览器。因为一些浏览器的 UA 中也包含有"_like Gecko_"字段。
 
-对于其他基于 Gecko 的产品，UA 字符串会符合以下两个规则中的一个，除了下面的描述外，其它字段与上面描述的意义相同。
+对于其他基于 Gecko 的产品，UA 字符串会符合以下两个规则中的一个，除了下面的描述外，其他字段与上面描述的意义相同。
 
 **Mozilla/5.0 (_platform_; rv:_geckoversion_) Gecko/_geckotrail_ _appname_/_appversion_**
 **Mozilla/5.0 (_platform_; rv:_geckoversion_) Gecko/_geckotrail_ Firefox/_firefoxversion_ _appname_/_appversion_**
@@ -40,7 +40,7 @@ Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
 
 > **备注：** 上述版本号并不对应当前版本，请避免基于此例子中的版本号。
 
-推荐的判断设备尺寸的方法是使用 CSS 媒体查询 (CSS Media Query)。但是，当你需要使用 UA 判断用户是否使用移动尺寸的设备，请查找"**Mobi**"（以兼容使用"Mobi"的 Opera 移动浏览器）。**不要** 假定"Android"字符串与设备尺寸存在关联。这样的话，在“Firefox 在其它操作系统的移动尺寸设备上运行”或“使用 Android 的笔记本电脑”的情形下，你的代码才能正确运行。此外，请使用触摸检测以分辨设备是否支持触摸，不要使用"Mobi"或"Tablet"，因为也有很多触摸设备并非移动设备或平板。
+推荐的判断设备尺寸的方法是使用 CSS 媒体查询 (CSS Media Query)。但是，当你需要使用 UA 判断用户是否使用移动尺寸的设备，请查找"**Mobi**"（以兼容使用"Mobi"的 Opera 移动浏览器）。**不要** 假定"Android"字符串与设备尺寸存在关联。这样的话，在“Firefox 在其他操作系统的移动尺寸设备上运行”或“使用 Android 的笔记本电脑”的情形下，你的代码才能正确运行。此外，请使用触摸检测以分辨设备是否支持触摸，不要使用"Mobi"或"Tablet"，因为也有很多触摸设备并非移动设备或平板。
 
 > **备注：** Firefox OS 设备的 UA 中不会有标明操作系统的字段，比如"Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0"。因为其平台实为 Web。
 

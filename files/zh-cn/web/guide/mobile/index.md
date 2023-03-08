@@ -43,7 +43,7 @@ slug: Web/Guide/Mobile
 创建能够完美工作在不同移动浏览器的 web sites:
 
 - 请尽力避免使用特定浏览器的 features，例如 CSS 属性前的 vendor-prefixed(浏览器厂商前缀，也称浏览器引擎前缀)。例如-moz-为 Firefox|Firefox OS 浏览器引擎使用到的前缀。
-- 如果你需要使用这些 features，请检查是否其它浏览器也有实现这些特性的版本。
+- 如果你需要使用这些 features，请检查是否其他浏览器也有实现这些特性的版本。
 - 对于不支持这些特性的浏览器，请提供一个可接受的 fallback。
 
 例如，如果使用诸如 `-webkit-linear-gradient` 之类带有渲染器前缀的属性为一些文字设置了渐变背景，你最好能够将其他带有渲染器前缀的 `linear-gradient` 的相应属性一并添上。如果你没有这么做，请至少确保文字和默认的背景能形成对比。这样，即便在你没有指定 `linear-gradient` 的浏览器里，这个页面仍然是可用的。

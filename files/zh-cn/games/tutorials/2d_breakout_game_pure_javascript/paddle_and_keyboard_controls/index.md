@@ -13,7 +13,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_contr
 
 ## 定义一个球板去接球
 
-我们需要添加一个球板去接球：为此需要先定义一些变量。在你的代码的顶部的其它变量下方添加下列代码：
+我们需要添加一个球板去接球：为此需要先定义一些变量。在你的代码的顶部的其他变量下方添加下列代码：
 
 ```js
 var paddleHeight = 10;
@@ -42,7 +42,7 @@ function drawPaddle() {
 - 两个用于处理按键被按下或松开后的事件处理方法
 - 实现左右移动球拍
 
-按键可以使用 boolean 变量来初始定义。在你的其它变量附近添加下列代码：
+按键可以使用 boolean 变量来初始定义。在你的其他变量附近添加下列代码：
 
 ```js
 var rightPressed = false;

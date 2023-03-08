@@ -5,7 +5,7 @@ slug: Web/CSS/percentage
 
 {{CSSRef}}
 
-[CSS](/zh-CN/CSS) 数据类型 `<percentage>` 表述一个百分比值。许多 [CSS 属性](/zh-CN/CSS_Reference) 可以取百分比值，经常用以根据父对象来确定大小。百分比值由一个{{cssxref("&lt;number&gt;")}}具体数值后跟着%符号构成。就像其它在 css 里的单位一样，在%和数值之间是不允许有空格的。
+[CSS](/zh-CN/CSS) 数据类型 `<percentage>` 表述一个百分比值。许多 [CSS 属性](/zh-CN/CSS_Reference) 可以取百分比值，经常用以根据父对象来确定大小。百分比值由一个{{cssxref("&lt;number&gt;")}}具体数值后跟着%符号构成。就像其他在 css 里的单位一样，在%和数值之间是不允许有空格的。
 
 许多长度属性使用百分比，如 {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}。百分比也可以在 {{Cssxref("font-size")}} 看到，其中的文字大小是其父级元素的大小直接相关。
 

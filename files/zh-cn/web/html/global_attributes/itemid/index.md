@@ -70,8 +70,8 @@ slug: Web/HTML/Global_attributes/itemid
 
 ## 另见
 
-- [其它不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
-- 其它 microdata 相关的全局属性
+- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- 其他 microdata 相关的全局属性
 
   - {{htmlattrxref("itemid")}}
   - {{htmlattrxref("itemprop")}}
