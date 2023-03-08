@@ -23,7 +23,7 @@ onkeypress = (event) => {};
 
 ## 事件类型
 
-{{DOMxRef(KeyboardEvent)}} 继承自 {{DOMxRef(Event)}}。
+{{DOMxRef("KeyboardEvent")}} 继承自 {{DOMxRef("Event")}}。
 
 {{InheritanceDiagram("KeyboardEvent")}}
 
