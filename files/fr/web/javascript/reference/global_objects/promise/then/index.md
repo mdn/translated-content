@@ -44,7 +44,7 @@ p.then((valeur) => {
 
 ### Valeur de retour
 
-La méthode `then()` renvoie une promesse ({{jsxref("Promise")}}) en attente de résolution et dont la valeur est déterminée selon les deux fonctions passées en arguments et qui seront appelées de façon asynchrone :
+La méthode `then()` renvoie immédiatement une promesse ({{jsxref("Promise")}}) en attente de résolution (toujours, même si la promesse originelle sur laquelle `then()` a été appelée a déjà été résolue ou rejetée) et dont la valeur est déterminée selon les deux fonctions passées en arguments et qui seront appelées de façon asynchrone :
 
 - Si `siRejetée` ou `siTenue` lève une exception ou renvoie une promesse rompue, la promesse renvoyée par `then()` est rompue et la valeur fournie est l'exception ou l'explication de la promesse rompue.
 - Si `siRejetée` ou `siTenue` renvoie une promesse tenue ou n'importe quelle autre valeur, la promesse renvoyée est tenue et la valeur de résolution est la même que celle de la promesse tenue.
@@ -55,6 +55,25 @@ La méthode `then()` renvoie une promesse ({{jsxref("Promise")}}) en attente de 
 Comme les méthodes `then()` et {{jsxref("Promise.prototype.catch()")}} renvoient des promesses, on peut enchaîner ces opérations (c'est ce qu'on appelle la _composition_ de promesses, voir l'exemple ci-après).
 
 ## Exemples
+
+### Valeur de retour de la méthode `then()`
+
+L'appel à `then()` sur une promesse retourne toujours une nouvelle promesse en attente de résolution.
+
+```js
+const myOriginalPromise = new Promise(function(resolve, reject){
+	resolve(42); // la promesse est résolue avec la valeur 42 dès sa création
+});
+console.log(myOriginalPromise); // Promise { <state>: "fulfilled", <value>: 42 }
+
+const myThenPromise = myOriginalPromise.then(
+	function(result){ // fonction anonyme qui est toujours appelée car myOriginalPromise est toujours résolue
+		console.log(result); // affiche 42 immédiatement (dès l'appel à then())
+	}
+);
+console.log(myThenPromise); // Promise { <state>: "pending" }
+// Elle est en réalité déjà résolue : on peut voir son état actuel en déroulant les détails avec la petite flèche dans la console
+```
 
 ### Utilisation de la méthode `then()`
 
