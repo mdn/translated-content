@@ -3,9 +3,7 @@ title: Navigator.vendorSub
 slug: Web/API/Navigator/vendorSub
 ---
 
-{{ ApiRef }}
-
-{{Deprecated_Header}}
+{{ApiRef}} {{Deprecated_Header}}
 
 **`Navigator.vendorSub`** 属性的值在任何浏览器中始终为空字符串。
 
