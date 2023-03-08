@@ -63,7 +63,7 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 - {{domxref("CountQueuingStrategy")}}
   - : 当构建流时，提供建立流时所需的块计数队列策略。
 
-### 其它 API 扩展
+### 其他 API 扩展
 
 - {{domxref("Request")}}
   - : 当构造一个新的 `Request` 对象后，你可以给它的 `RequestInit` 中的 `body` 属性传入一个 {{domxref("ReadableStream")}}。这个 `Request` 对象就可以被传入 {{domxref("fetch()")}} 中，开始接收流。
@@ -90,7 +90,7 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 - [简单 writer](https://mdn.github.io/dom-examples/streams/simple-writer/)：这个示例展示了如何写入可写流，然后解码流并将流内容写入 UI。
 - [解压 PNG 分块](https://mdn.github.io/dom-examples/streams/png-transform-stream/)：此示例展示了如何使用 [`pipeThrough()`](/zh-CN/docs/Web/API/ReadableStream/pipeThrough) 通过将 PNG 文件的数据转换为 PNG 分块流来将 ReadableStream 转换为其他数据类型的流。
 
-来自其它开发人员的示例：
+来自其他开发人员的示例：
 
 - [Stream、Service Worker 以及 Fetch 进度指标](https://fetch-progress.anthum.com/).
 

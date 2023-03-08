@@ -59,7 +59,7 @@ slug: Web/CSS/CSS_Columns
 
 ## 参见
 
-其它 CSS 布局方法包括：
+其他 CSS 布局方法包括：
 
 - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)（CSS flexbox）
 - [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)

@@ -143,7 +143,7 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
         한자리 숫자 모노크롬 플래그; 0인 경우 비디오는 U, V, Y 성분을 모두
         가지고 있습니다. 아닌 경우 전체 비디오 데이터는 Y(휘도) 성분 뿐으로
         모노크롬 이미지를 가집니다. 자세한 내용은
-        {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_concepts", "YUV")}}를
+        [YUV](/en-US/docs/Web/Media/Formats/Video_concepts)를
         참조하여 YUV 컬러 시스템이 어떻게 동작하는지 알아보세요. 기본 값은 0
         (모노크롬 아님)입니다.
       </td>
@@ -531,7 +531,7 @@ cccc.PP.LL.DD.CC[.cp[.tc[.mc[.FF]]]]
         <p>
           크로마 서브샘플링 포맷을 2자리 숫자로 표기합니다. 가능한 값은 아래
           표에 있습니다; 자세한 내용은
-          {{SectionOnPage("en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}}
+          [Chroma subsampling](/ko/docs/Web/Media/Formats/Video_concepts)
           를 참조하세요.
         </p>
         <table class="standard-table">

@@ -23,7 +23,7 @@ El evento `blur` es disparado cuando un elemento ha perdido su foco. La diferenc
 - Acción por defecto
   - : Ninguna.
 
-> **Nota:** El valor de {{domxref("Document.activeElement")}} varía a traves de navegadores mientras este evento está siendo manejado ({{bug(452307)}}): IE10 lo agrega al elemento al cual el foco se movera, mientras Firefox y Chrome muy seguido lo agregan al cuerpo del documento.
+> **Nota:** El valor de {{domxref("Document.activeElement")}} varía a traves de navegadores mientras este evento está siendo manejado ([Error 452307 en Firefox](https://bugzil.la/452307)): IE10 lo agrega al elemento al cual el foco se movera, mientras Firefox y Chrome muy seguido lo agregan al cuerpo del documento.
 
 ## Propiedades
 

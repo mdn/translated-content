@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 
 {{JSRef}}
 
-{{jsxref("Promise")}} 对象的 **`catch()`** 方法用于注册一个在 promise 被拒绝时调用的函数。它会立即返回一个等价的 {{jsxref("Promise")}} 对象，这可以允许你[链式](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)调用其它 promise 的方法。此方法是 {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}} 的一种简写形式。
+{{jsxref("Promise")}} 对象的 **`catch()`** 方法用于注册一个在 promise 被拒绝时调用的函数。它会立即返回一个等价的 {{jsxref("Promise")}} 对象，这可以允许你[链式](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)调用其他 promise 的方法。此方法是 {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}} 的一种简写形式。
 
 {{EmbedInteractiveExample("pages/js/promise-catch.html")}}
 

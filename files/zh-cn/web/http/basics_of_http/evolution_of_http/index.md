@@ -196,4 +196,4 @@ HTTP 的下一个主要版本，HTTP/3 有这与 HTTP 早期版本的相同语�
 
 QUIC 旨在为 HTTP 连接设计更低的延迟。类似于 HTTP/2，它是一个多路复用协议，但是 HTTP/2 通过单个 TCP 连接运行，所以在 TCP 层处理的数据包丢失检测和重传可以阻止所有流。QUIC 通过 {{Glossary("UDP")}} 运行多个流，并为每个流独立实现数据包丢失检测和重传，因此如果发生错误，只有该数据包中包含数据的流才会被阻止。
 
-{{RFC("9114")}} 定义的 HTTP/3 被[大多数主流浏览器所支持](https://caniuse.com/http3)，包括 Chromium（及其它的变体，例如 Chrome 和 Edge）和 Firefox。
+{{RFC("9114")}} 定义的 HTTP/3 被[大多数主流浏览器所支持](https://caniuse.com/http3)，包括 Chromium（及其他的变体，例如 Chrome 和 Edge）和 Firefox。

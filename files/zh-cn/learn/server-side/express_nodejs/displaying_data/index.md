@@ -5,7 +5,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
-我们现在准备好要新增网页，以显示[本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)的书本与其它资料。这些网页将包含一个主页，显示我们拥有的每个模型的记录数，以及所有模型的清单和详细信息页面。借此，我们将获得从数据库获取记录、以及使用模板的实战经验。
+我们现在准备好要新增网页，以显示[本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)的书本与其他资料。这些网页将包含一个主页，显示我们拥有的每个模型的记录数，以及所有模型的清单和详细信息页面。借此，我们将获得从数据库获取记录、以及使用模板的实战经验。
 
 <table class="learn-box standard-table">
   <tbody>

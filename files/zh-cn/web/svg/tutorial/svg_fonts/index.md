@@ -39,7 +39,7 @@ slug: Web/SVG/Tutorial/SVG_fonts
 
 它的子元素，{{ SVGElement("font-face-src") }}元素，相对于 CSS 的`@font-face`描述符中的`src`描述符。你可以利用它的子元素 {{ SVGElement("font-face-name") }}和{{ SVGElement("font-face-uri") }}把字体声明指向外源。以上示例表达了如果渲染器有一个名为“Super Sans Bold”的本地字体可用，它将使用这个本地字体。
 
-紧跟着{{ SVGElement("font-face-src") }}元素的是一个{{ SVGElement("missing-glyph") }}元素。它定义了如果一个特定的字形在字体中找不到，而且也没有回调机制的话，该如何显示。它同时还显示了如何创建字形：在里面简单添加任一个图形化 SVG 内容。你可以在这里使用任何其它的 SVG 元素，甚至是 {{ SVGElement("filter") }}元素、{{ SVGElement("a") }}元素或者 {{ SVGElement("script") }}元素。然而，为了简化字形，你可以简单添加一个属性`d`——它精确定义了字形的形状，就像标准 SVG 路径所做的那样。
+紧跟着{{ SVGElement("font-face-src") }}元素的是一个{{ SVGElement("missing-glyph") }}元素。它定义了如果一个特定的字形在字体中找不到，而且也没有回调机制的话，该如何显示。它同时还显示了如何创建字形：在里面简单添加任一个图形化 SVG 内容。你可以在这里使用任何其他的 SVG 元素，甚至是 {{ SVGElement("filter") }}元素、{{ SVGElement("a") }}元素或者 {{ SVGElement("script") }}元素。然而，为了简化字形，你可以简单添加一个属性`d`——它精确定义了字形的形状，就像标准 SVG 路径所做的那样。
 
 真正的字形是用{{ SVGElement("glyph") }}元素定义的。它最重要的属性是`unicode`。它定义了表达这个字形的 unicode 代码点。如果你还在一个字形上指定了{{htmlattrxref("lang")}}属性，你可以更进一步专门限定它为特定的语言（由目标上的`xml:lang`属性表达）。而且，你可以使用任意的 SVG 来定义这个字形，它允许用户代理所支持的很多效果。
 

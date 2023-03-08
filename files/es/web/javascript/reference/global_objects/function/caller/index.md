@@ -79,4 +79,4 @@ No es parte de ninguna especificación.
 
 ## Véase también
 
-- Problema de implementación para SpiderMonkey {{bug(65683)}}
+- Problema de implementación para SpiderMonkey [Error 65683 en Firefox](https://bugzil.la/65683)

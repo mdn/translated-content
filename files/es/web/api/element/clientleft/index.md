@@ -9,7 +9,7 @@ slug: Web/API/Element/clientLeft
 
 El ancho del borde izquierdo de un elemento en pixel. Incluye el ancho de la barra de desplazamiento vertical, si la dirección del texto es *rtl* (derecha a izquierda) y si hay un desbordamiento que provoque la aparición de la barra en el lado izquierdo. `clientLeft` NO incluye *margin-left* o *padding-left*. `clientLeft` es de sólo lectura.
 
-Las aplicaciones "[Gecko](/es/Gecko)-based applications" implementan `clientLeft` a partir de Gecko 1.9 ([Firefox 3](/es/Firefox_3), ver {{ Bug(111207) }}). Esta propiedad no está implementada en Firefox 2 o anteriores.
+Las aplicaciones "[Gecko](/es/Gecko)-based applications" implementan `clientLeft` a partir de Gecko 1.9 ([Firefox 3](/es/Firefox_3), ver [Error 111207 en Firefox](https://bugzil.la/111207)). Esta propiedad no está implementada en Firefox 2 o anteriores.
 
 ## Sintaxis
 

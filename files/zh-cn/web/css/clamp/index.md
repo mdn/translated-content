@@ -24,7 +24,7 @@ original_slug: Web/CSS/clamp()
 
 当首选值比最大值要大时，则使用最大值。
 
-这个表达式可以是数学函数 (参看 {{CSSxRef("calc")}} )、字面量或其它计算为有效的参数类型 (如{{CSSxRef("&lt;length&gt;")}}) 表达式，如 {{CSSxRef("attr", "attr()")}}，或嵌套的 {{CSSxRef("min")}} 和 {{CSSxRef("max")}} 。作为数学表达式，你可以使用加减乘除运算而无需使用 `calc()` 函数。你也可以用括号来确定计算顺序。
+这个表达式可以是数学函数 (参看 {{CSSxRef("calc")}} )、字面量或其他计算为有效的参数类型 (如{{CSSxRef("&lt;length&gt;")}}) 表达式，如 {{CSSxRef("attr", "attr()")}}，或嵌套的 {{CSSxRef("min")}} 和 {{CSSxRef("max")}} 。作为数学表达式，你可以使用加减乘除运算而无需使用 `calc()` 函数。你也可以用括号来确定计算顺序。
 
 表达式中的每一个值都可以用不同的单位。
 

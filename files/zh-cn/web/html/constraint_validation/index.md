@@ -264,7 +264,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 ### 包含多个字段的约束：邮政编码验证
 
-每个国家的邮政编码都不相同。大多数国家允许有一个可选的国家代码前缀（如德国的 `D-`，法国或瑞士的 `F-`），还有其它一些国家的邮政编码只有固定的数字；其他国家，如英国，有更复杂的结构，允许在一些特定的位置有字母。
+每个国家的邮政编码都不相同。大多数国家允许有一个可选的国家代码前缀（如德国的 `D-`，法国或瑞士的 `F-`），还有其他一些国家的邮政编码只有固定的数字；其他国家，如英国，有更复杂的结构，允许在一些特定的位置有字母。
 
 > **备注：** 这不是一个全面的邮政编码验证库，而是关键概念的演示。
 
@@ -416,7 +416,7 @@ window.onload = () => {
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("select")}}
-  - 提交按钮（使用类型为 `submit` 的 {{HTMLElement("button")}} 元素，或类型为 {{HTMLElement("input/submit", "submit")}} 的 `input` 元素创建。其它类型的按钮不参与约束验证。
+  - 提交按钮（使用类型为 `submit` 的 {{HTMLElement("button")}} 元素，或类型为 {{HTMLElement("input/submit", "submit")}} 的 `input` 元素创建。其他类型的按钮不参与约束验证。
   - {{HTMLElement("textarea")}}
 
 - [`ValidityState`](/zh-CN/docs/Web/API/ValidityState) 接口描述了由上述元素类型的 `validity` 属性返回的对象。它表示一个输入值可能无效的各种方式。它们共同解释了为什么一个元素的值是无效的，则不能被验证。

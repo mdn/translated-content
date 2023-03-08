@@ -70,7 +70,7 @@ slug: Web/Progressive_web_apps/Installable_PWAs
 - `theme_color`: UI 主颜色，由操作系统使用。
 - `background_color`: 背景色，用于安装和显示启动画面时。
 
-一份网页清单最少需要 `name` 和一个图标 (带有 `src`, `size` 和 `type`)。最好也要提供 `description`、`short_name`、和 `start_url`。除了上述字段，还有一些其它的字段供您使用，请查看[网页应用清单参考](/zh-CN/docs/Web/Manifest)获取详细信息。
+一份网页清单最少需要 `name` 和一个图标 (带有 `src`, `size` 和 `type`)。最好也要提供 `description`、`short_name`、和 `start_url`。除了上述字段，还有一些其他的字段供您使用，请查看[网页应用清单参考](/zh-CN/docs/Web/Manifest)获取详细信息。
 
 ## 添加到主屏
 

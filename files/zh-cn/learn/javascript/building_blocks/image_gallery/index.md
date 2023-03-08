@@ -12,7 +12,7 @@ original_slug: learn/JavaScript/Building_blocks/相片走廊
   <tbody>
     <tr>
       <th scope="row">预备知识：</th>
-      <td>请读完本章其它所有小节的内容后再开始这个测验。</td>
+      <td>请读完本章其他所有小节的内容后再开始这个测验。</td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
