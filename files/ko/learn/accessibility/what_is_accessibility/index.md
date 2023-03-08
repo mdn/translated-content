@@ -5,6 +5,7 @@ original_slug: Learn/접근성/What_is_accessibility
 l10n:
   sourceCommit: 3f24b87ec5ef32a046aa9cabd19a4ced0041385c
 ---
+
 {{LearnSidebar}}
 
 {{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
@@ -83,7 +84,7 @@ l10n:
 
 ### 인지 장애가 있는 사람
 
-인지 장애의 정의는 광범위합니다. 가장 제한된 인지 능력을 가지는 지적 장애부터 시작해, 나이가 들며 생각하고 기억하는 데 어려움을 느끼는 우리 모두를 가리키기도 합니다.  [우울증](https://www.nimh.nih.gov/health/topics/depression)이나 [정신분열증](https://www.nimh.nih.gov/health/topics/schizophrenia) 같은 정신 질환 그리고 [난독증](https://www.ninds.nih.gov/health-information/disorders/learning-disabilities), [ADHD](https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd) 같은 학습 장애도 포함합니다. 인지 장애에 대한 임상적인 정의는 다양하지만, 중요한 것은 모두가 공통적으로 겪는 기능 문제가 있다는 것입니다. 예를 들어 컨텐츠를 제대로 이해하거나 작업을 완료하는 방법을 기억하는 과정에서 발생하는 어려움과 일관성 없는 웹 페이지의 레이아웃으로 발생하는 혼란이 있습니다.
+인지 장애의 정의는 광범위합니다. 가장 제한된 인지 능력을 가지는 지적 장애부터 시작해, 나이가 들며 생각하고 기억하는 데 어려움을 느끼는 우리 모두를 가리키기도 합니다. [우울증](https://www.nimh.nih.gov/health/topics/depression)이나 [정신분열증](https://www.nimh.nih.gov/health/topics/schizophrenia) 같은 정신 질환 그리고 [난독증](https://www.ninds.nih.gov/health-information/disorders/learning-disabilities), [ADHD](https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd) 같은 학습 장애도 포함합니다. 인지 장애에 대한 임상적인 정의는 다양하지만, 중요한 것은 모두가 공통적으로 겪는 기능 문제가 있다는 것입니다. 예를 들어 컨텐츠를 제대로 이해하거나 작업을 완료하는 방법을 기억하는 과정에서 발생하는 어려움과 일관성 없는 웹 페이지의 레이아웃으로 발생하는 혼란이 있습니다.
 
 인지 장애를 고려한 접근성의 좋은 기반은 다음과 같습니다.
 
@@ -97,11 +98,12 @@ l10n:
 - 보안과 타협하지 않는 선에서 웹 사이트 인증은 가능한 쉽게 구현합니다.
 - 양식은 완성하기 쉽게 만듭니다. 에러는 명확한 메세지를 보여주고 간단하게 복구되어야 합니다.
 
-### 참고 
+### 참고
+
 - [인지적 접근성](/ko/docs/Web/Accessibility/Cognitive_accessibility)을 고려한 디자인은 좋은 디자인입니다. 모든 사람들에게 이점을 제공합니다.
-- 많은 경우 인지 장애는 신체 장애를 동반합니다. 웹 사이트는 [인지적 접근성 가이드라인](/ko/docs/Web/Accessibility/Cognitive_accessibility#wcag_guidelines)을 포함해 W3C의 [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)를 준수해야 합니다.
-- W3C의 [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)에서 인지 장애가 있는 사람들을 위한 웹 접근성 가이드를 제공합니다.
-- WebAIM [Cognitive page](https://webaim.org/articles/cognitive/)에서 관련 정보와 자료를 제공합니다.
+- 많은 경우 인지 장애는 신체 장애를 동반합니다. 웹 사이트는 [인지적 접근성 가이드라인](/ko/docs/Web/Accessibility/Cognitive_accessibility#wcag_guidelines)을 포함해 W3C의 [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)를 준수해야 합니다.
+- W3C의 [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)에서 인지 장애가 있는 사람들을 위한 웹 접근성 가이드를 제공합니다.
+- WebAIM [Cognitive page](https://webaim.org/articles/cognitive/)에서 관련 정보와 자료를 제공합니다.
 - 미국 질병통제센터(The United States Centers for Disease Control)는 2018년 기준으로 미국 시민 4명 중 1명이 장애를 가지고 있으며, 그 중에서 [인지 장애는 젊은 사람들에게서 가장 흔하다](https://www.cdc.gov/media/releases/2018/p0816-disability.html)고 추정합니다.
 - 미국에서 역사적으로 일부 지적 장애가 "정신 지체(mental retardation)"라고 불려왔습니다. 현재는 혐오 표현으로 생각되어 사용을 권장하지 않습니다.
 - 영국에서 일부 지적 장애는 "학습 장애(learning disabilities 또는 learning difficulties)"로 불리기도 합니다.
@@ -142,7 +144,7 @@ l10n:
 접근성 테스트를 위한 가이드로 사용할 수 있는 체크리스트와 가이드라인들은 언뜻 보기에 압도적으로 많아 보입니다. 우리의 조언은 당신이 신경써야 하는 가장 기본적인 영역에 익숙해지는 것이 좋다는 것입니다. 물론 관련된 가이드라인의 고차원적인 구조들을 이해하는 것도 필요합니다.
 
 - 우선 W3C에서 아주 길고 디테일한 문서를 발행했습니다. 여기에서 접근성 적합성에 대해 상세하고 사용 기술에 구애받지 않는 기준을 제시합니다. [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG)라고 불리는 이 문서는 간단하게 읽어지지는 않습니다. 기준은 네 개의 메인 카테고리로 나뉘고, 구현을 인식 가능하게, 작동 가능하게, 이해 가능하게, 또 견고하게 만드는 방법을 설명합니다. 가벼운 소개를 읽고 학습을 시작하기 좋은 곳은 [WCAG at a Glance](https://www.w3.org/WAI/standards-guidelines/wcag/glance/) 입니다. WCAG의 모든 기준을 배울 필요는 없습니다. 주요 관심 분야에 대해 인지하고, WCAG 기준을 충족시키지 못하는 영역을 하이라이트 해주는 다양한 기술과 도구를 사용하세요 (아래쪽에 더 설명되어 있습니다).
-- 당신의 국가에 웹 사이트의 접근성 제공 필요성에 대한 법률이 있을 수도 있습니다. 예를 들어 EU의 [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf), 미국의 [Section 508 of the Rehabilitation Act](https://www.section508.gov/training/), 독일의 [Federal Ordinance on Barrier-Free Information Technology](https://www.einfach-fuer-alle.de/artikel/bitv_english/), 영국의 [Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/introduction/made), 이탈리아의 [Accessibilità](https://www.agid.gov.it/it/design-servizi/accessibilita), 호주의 [Disability Discrimination Act](https://humanrights.gov.au/our-work/disability-rights/world-wide-web-access-disability-discrimination-act-advisory-notes-ver) 등이 있습니다. WC3에서 나라 별로 [웹 접근성 법률 및 정책](https://www.w3.org/WAI/policies/) 목록을 관리하고 있습니다.
+- 당신의 국가에 웹 사이트의 접근성 제공 필요성에 대한 법률이 있을 수도 있습니다. 예를 들어 EU의 [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf), 미국의 [Section 508 of the Rehabilitation Act](https://www.section508.gov/training/), 독일의 [Federal Ordinance on Barrier-Free Information Technology](https://www.einfach-fuer-alle.de/artikel/bitv_english/), 영국의 [Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/introduction/made), 이탈리아의 [Accessibilità](https://www.agid.gov.it/it/design-servizi/accessibilita), 호주의 [Disability Discrimination Act](https://humanrights.gov.au/our-work/disability-rights/world-wide-web-access-disability-discrimination-act-advisory-notes-ver) 등이 있습니다. WC3에서 나라 별로 [웹 접근성 법률 및 정책](https://www.w3.org/WAI/policies/) 목록을 관리하고 있습니다.
 
 WCAG는 가이드라인일 뿐이지만 당신의 국가에 웹 접근성, 또는 대중을 상대로 한 서비스의 접근성에 대한 법률이 있을 것입니다. 당신에게 적용되는 법이 무엇인지 알아보는 것을 권장합니다. 접근성을 위해 노력하지 않으면 사람들이 불만을 제기할 경우 법적인 책임이 생길 수 있습니다.
 
