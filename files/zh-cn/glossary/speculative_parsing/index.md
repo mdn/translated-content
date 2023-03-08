@@ -22,4 +22,4 @@ slug: Glossary/Speculative_parsing
 - 不要以回车结束内容。 `<script>document.write("Hello World!\r");</script>` 很糟糕。 `<script>document.write("Hello World!\n");</script>` 则是可行的。
 - 注意即使对称的标签也可能导致文档的不对称。比如：`head` 元素中的`<script>document.write("<div></div>");</script>` i 会被解析成 `<script>document.write("</head><body><div></div>");</script>` 因次文档是不对称的。
 - 不要仅格式化部分表格。 `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` 很糟糕。然而， `<script>document.write("<table><tr><td>Hello World!</td></tr></table>");</script>` 则是可行的。
-- TODO: 在其它格式化元素中使用 document.write。
+- TODO: 在其他格式化元素中使用 document.write。

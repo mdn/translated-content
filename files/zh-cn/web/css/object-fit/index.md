@@ -141,5 +141,5 @@ img {
 
 ## 参见
 
-- 其它与图像相关的 CSS 属性：{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
+- 其他与图像相关的 CSS 属性：{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
 - {{cssxref("background-size")}}

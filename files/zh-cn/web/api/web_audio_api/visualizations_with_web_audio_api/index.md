@@ -3,7 +3,7 @@ title: 基于 Web Audio API 实现音频可视化效果
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
 
-网页音频接口最有趣的特性之一它就是可以获取频率、波形和其它来自声源的数据，这些数据可以被用作音频可视化。这篇文章将解释如何做到可视化，并提供了一些基础使用案例。
+网页音频接口最有趣的特性之一它就是可以获取频率、波形和其他来自声源的数据，这些数据可以被用作音频可视化。这篇文章将解释如何做到可视化，并提供了一些基础使用案例。
 
 > **备注：** 你可以在[Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)演示里找到本文出现的所有代码片段。
 

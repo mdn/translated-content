@@ -40,7 +40,7 @@ AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 
 ## 描述
 
-执行 `AsyncFunction` 构造函数的时候，会创建一个[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)对象。但是这种方式不如使用 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function)定义一个异步函数，然后再调用它来的高效，因为后者的函数是与其它代码一起被解释器解析的。
+执行 `AsyncFunction` 构造函数的时候，会创建一个[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)对象。但是这种方式不如使用 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function)定义一个异步函数，然后再调用它来的高效，因为后者的函数是与其他代码一起被解释器解析的。
 
 传递给函数的所有参数（除了最后一个）都会成为新函数中的变量，变量的名称和定义顺序与各参数相同。
 

@@ -81,7 +81,7 @@ vertical-align: unset;
 ### 表格单元格的值
 
 - `baseline` (以及 `sub`, `super`, `text-top`, `text-bottom`, `<length>`, `<percentage>`)
-  - : 使单元格的基线，与该行中所有以基线对齐的其它单元格的基线对齐。
+  - : 使单元格的基线，与该行中所有以基线对齐的其他单元格的基线对齐。
 - `top`
   - : 使单元格内边距的上边缘与该行顶部对齐。
 - `middle`
