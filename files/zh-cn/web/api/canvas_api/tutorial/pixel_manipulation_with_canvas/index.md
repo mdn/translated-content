@@ -34,7 +34,7 @@ blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
 imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 0/1/2/3];
 ```
 
-你可能用会使用 `Uint8ClampedArray.length` 属性来读取像素数组的大小（以 bytes 为单位）：
+你可能用会使用 `Uint8ClampedArray.length` 属性来读取像素数组的大小（以字节为单位）：
 
 ```js
 var numBytes = imageData.data.length;
