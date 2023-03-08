@@ -9,11 +9,11 @@ slug: Web/API/Element/keypress_event
 
 产生字符值的键包括字母、数字和标点符号键。不产生字符值的键是修饰键，例如 <kbd>Alt</kbd>、<kbd>Shift</kbd>、<kbd>Ctrl</kbd> 或 <kbd>Meta</kbd> 键。
 
-> **警告：** 由于此事件已被弃用，您应该改用 {{HTMLElement("beforeinput")}} 或 {{HTMLElement("keydown")}}。
+> **警告：** 由于此事件已被弃用，您应该改用 {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} 或 {{domxref("Element.keydown_event", "keydown")}}。
 
 ## 语法
 
-使用 {{DOMxRef("addEventListener()")}} 方法来设置事件监听器中的事件名称，也可以设置一个事件处理程序属性来处理该事件。
+使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法来设置事件监听器中的事件名称，也可以设置一个事件处理程序属性来处理该事件。
 
 ```js
 addEventListener("keypress", (event) => {});
