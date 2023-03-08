@@ -313,7 +313,7 @@ Agora veja como a tabela é exibida:
 
 Aqui, o problema é que mesmo que possamos entender o que está acontecendo, não é tão fácil fazer uma referência cruzada dos dados, como poderia ser. Se os cabeçalhos das colunas e linhas se destacassem de alguma maneira, seria bem melhor.
 
-### Active learning: Cabeçalhos da tabela
+### Aprendizado Ativo
 
 Vamos tentar melhorar essa tabela.
 
@@ -393,7 +393,7 @@ Existe uma última característica da qual vamos falar nesse artigo, antes de pr
 
 > **Nota:** Estilizar colunas dessa maneira está [limitada para umas poucas propriedades](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/pt-BR/docs/Web/CSS/border), [`background`](/pt-BR/docs/Web/CSS/background), [`width`](/pt-BR/docs/Web/CSS/width), e [`visibility`](/pt-BR/docs/Web/CSS/visibility). Para ajustar outras propriedades devemos aplicar o estilo para cada `<td>` ou `<th>` da coluna, ou usar um seletor complexo como um {{cssxref(":nth-child()")}}.
 
-Tome o simples exemplo a seguir:
+Veja o simples exemplo a seguir:
 
 ```html
 <table>
@@ -454,7 +454,7 @@ Para aplicar as informações de estilo para as duas colunas, podemos incluir ap
 
 Como `colspan` e `rowspan`, `span` aceita um valor de número sem unidade que especifica o número de colunas sobre as quais desejamos aplicar o estilo.
 
-### Active learning: colgroup e col
+### Aprendizado ativo: colgroup e col
 
 Agora é hora de tentar sozinho.
 
