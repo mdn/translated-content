@@ -23531,10 +23531,6 @@
     "modified": "2020-09-29T13:14:34.085Z",
     "contributors": ["mfuji09", "YuichiNukiyama"]
   },
-  "Web/JavaScript/Reference/Errors/Dead_object": {
-    "modified": "2020-03-12T19:46:13.252Z",
-    "contributors": ["YuichiNukiyama"]
-  },
   "Web/JavaScript/Reference/Errors/Delete_in_strict_mode": {
     "modified": "2020-03-12T19:46:02.720Z",
     "contributors": ["YuichiNukiyama"]
@@ -26720,10 +26716,6 @@
       "yyss",
       "shide55"
     ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods": {
-    "modified": "2020-11-03T16:46:11.930Z",
-    "contributors": ["mpcjazz", "mfuji09"]
   },
   "Web/JavaScript/Reference/Global_Objects/Reflect/apply": {
     "modified": "2020-10-17T10:26:41.821Z",
@@ -30986,6 +30978,10 @@
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Reflect": {
+    "modified": "2020-11-03T16:46:11.930Z",
+    "contributors": ["mpcjazz", "mfuji09"]
+  },
   "conflicting/Web/Security/Certificate_Transparency": {
     "modified": "2020-10-15T21:36:10.884Z",
     "contributors": ["mfuji09", "silverskyvicto", "hashedhyphen", "clariroid"]
@@ -31332,6 +31328,10 @@
       "Mgjbot",
       "electrolysis"
     ]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Dead_object": {
+    "modified": "2020-03-12T19:46:13.252Z",
+    "contributors": ["YuichiNukiyama"]
   },
   "orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated": {
     "modified": "2020-03-12T19:44:36.287Z",

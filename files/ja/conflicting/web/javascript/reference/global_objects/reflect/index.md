@@ -1,6 +1,8 @@
 ---
 title: Reflect と Object のメソッドの比較
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Reflect
+original_slug: >-
+  Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
 ---
 
 {{jssidebar}}

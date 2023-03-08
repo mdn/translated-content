@@ -4630,6 +4630,7 @@
 /ja/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ja/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
+/ja/docs/Web/JavaScript/Reference/Errors/Dead_object	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Dead_object
 /ja/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 /ja/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 /ja/docs/Web/JavaScript/Reference/Errors/Var_hides_argument	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
@@ -4759,6 +4760,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RangeError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RangeError
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Reflect
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
