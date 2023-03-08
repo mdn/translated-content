@@ -259,10 +259,6 @@ p {
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 另见
 
 - [CSS3 Dock Menu](http://techstream.org/Web-Design/Dock-Menu-with-CSS3) using CSS transitions
