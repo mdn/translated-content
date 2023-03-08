@@ -66,7 +66,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
   - `const a = 1; a = 2;` は {{jsxref("SyntaxError")}} ("invalid assignment to const a") が発生します。
 
 - ES7 の {{jsxref("Array.prototype.includes")}} メソッドを実装しました。ただし、現在は Nightly ビルドのみで有効です ({{bug(1069063)}})。
-- [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) および [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) とともに [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子を使用すると、「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)」が発生するようになりました ({{bug(1074571)}})。
+- [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) および [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) とともに [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子を使用すると、「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」が発生するようになりました ({{bug(1074571)}})。
 - 非標準の [`let` ブロックおよび `let` 式](/ja/docs/Web/JavaScript/Reference/Statements/let#non-standard_let_extensions)は非推奨になり、コンソールに警告が表示されます。将来削除する予定であるため、今後は使用しないようにしてください。
 - [WeakMap](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) コンストラクタで、省略可能な引数 iterable を扱うようになりました ({{bug(1092537)}})。
 
