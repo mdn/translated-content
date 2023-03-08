@@ -590,13 +590,3 @@ Ha llegado al final de este artículo, pero ¿recuerdas la información más imp
 Ahora ya deberías conocer bien la escritura de HTML accesible para la mayoría de las ocasiones. Nuestro artículo de conceptos básicos de WAI-ARIA también llenará algunos vacíos en este conocimiento, pero este artículo se ha ocupado de los conceptos básicos. A continuación, exploraremos CSS y JavaScript, y cómo la accesibilidad se ve afectada por su buen o mal uso.
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/es/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/es/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/es/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/es/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/es/docs/Learn/Accessibility/Accessibility_troubleshooting)

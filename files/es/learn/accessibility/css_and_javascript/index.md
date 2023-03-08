@@ -356,13 +356,3 @@ Esperamos que este artículo te haya brindado una buena cantidad de detalles y c
 ¡Siguiente parada, WAI-ARIA!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/es/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/es/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/es/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/es/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/es/docs/Learn/Accessibility/Accessibility_troubleshooting)
