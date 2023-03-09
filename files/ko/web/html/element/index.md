@@ -29,7 +29,7 @@ slug: Web/HTML/Element
 
 | 요소 | 설명 |
 | ---- | ---- |
-| {{HTMLElement("body")}} | **HTML `<body>` 요소**는 HTML 문서의 내용을 나타냅니다. 한 문서에 하나의 `<body>` 요소만 존재할 수 있습니다. |
+| {{HTMLElement("body")}} | HTML 문서의 내용을 나타냅니다. 문서에는 이러한 요소가 하나만 있을 수 있습니다. |
 
 ## 콘텐츠 섹션
 
