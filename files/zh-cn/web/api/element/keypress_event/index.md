@@ -13,7 +13,7 @@ slug: Web/API/Element/keypress_event
 
 ## 语法
 
-使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法来设置事件监听器中的事件名称，也可以设置一个事件处理程序属性来处理该事件。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
 addEventListener("keypress", (event) => {});
