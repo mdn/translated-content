@@ -81,7 +81,7 @@ Firefox에 내장된 웹 콘솔 도구는 JavaScript를 실험하는 데 유용�
 
 ### 웹 콘솔에서 한 줄 입력하기
 
-[웹 콘설](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)은 현재 로드된 웹 페이지에 대한 정보를 표시하고, 현재 페이지에서 JavaScript 표현식을 실행하는 데 사용할 수 있는 JavaScript 인터프리터도 제공합니다.
+[웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)은 현재 로드된 웹 페이지에 대한 정보를 표시하고, 현재 페이지에서 JavaScript 표현식을 실행하는 데 사용할 수 있는 JavaScript 인터프리터도 제공합니다.
 
 웹 콘솔을 열기 위해서는(윈도우와 리눅스에서는 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>, 맥에서는 <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd>), Firefox에서 **기타 도구** 메뉴를 열고 "**웹 개발자 도구**"를 선택합니다.
 
