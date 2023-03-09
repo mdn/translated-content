@@ -19,7 +19,7 @@ slug: Web/HTML/Element
 | 요소 | 설명 |
 | ---- | ---- |
 | {{HTMLElement("base")}}  | 문서의 모든 상대 URL에 사용할 기본 URL을 지정합니다. 문서에는 이러한 요소가 하나만 있을 수 있습니다. |
-| {{HTMLElement("head")}}  | **HTML `<head>` 요소**는 기계가 식별할 수 있는 문서 정보(메타데이터)를 담습니다. 정보로는 문서가 사용할 [제목](/ko/docs/Web/HTML/Element/title), [스크립트](/ko/docs/Web/HTML/Element/script), [스타일 시트](/ko/docs/Web/HTML/Element/style) 등이 있습니다. |
+| {{HTMLElement("head")}}  | [제목](/ko/docs/Web/HTML/Element/title), [스크립트](/ko/docs/Web/HTML/Element/script) 및 [스타일 시트](/ko/docs/Web/HTML/Element/style)와 같은 문서에 대한 기계 판독 가능 정보(메타데이터)를 포함합니다. |
 | {{HTMLElement("link")}}  | **HTML `<link>`** 요소는 현재 문서와 외부 리소스의 관계를 명시합니다. `<link>`는 {{glossary("CSS", "스타일 시트")}}를 연결할 때 제일 많이 사용하지만, 사이트 아이콘("파비콘"과 홈 화면 아이콘) 연결 등 여러가지로 쓰일 수 있습니다. |
 | {{HTMLElement("meta")}}  | **HTML `<meta>` 요소**는 {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}과 같은 다른 메타관련 요소로 나타낼 수 없는 {{glossary("Metadata", "메타데이터")}}를 나타냅니다. |
 | {{HTMLElement("style")}} | **HTML `<style>` 요소**는 문서나 문서 일부에 대한 스타일 정보를 포함합니다. |
