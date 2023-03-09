@@ -21,7 +21,7 @@ slug: Web/HTML/Element
 | {{HTMLElement("base")}}  | 문서의 모든 상대 URL에 사용할 기본 URL을 지정합니다. 문서에는 이러한 요소가 하나만 있을 수 있습니다. |
 | {{HTMLElement("head")}}  | [제목](/ko/docs/Web/HTML/Element/title), [스크립트](/ko/docs/Web/HTML/Element/script) 및 [스타일 시트](/ko/docs/Web/HTML/Element/style)와 같은 문서에 대한 기계 판독 가능 정보(메타데이터)를 포함합니다. |
 | {{HTMLElement("link")}}  | 현재 문서와 외부 리소스 간의 관계를 지정합니다. 이 요소는 CSS에 연결하는 데 가장 일반적으로 사용되지만 무엇보다도 사이트 아이콘("favicon" 스타일 아이콘과 홈 화면용 아이콘 및 모바일 장치의 앱)을 설정하는 데도 사용됩니다. |
-| {{HTMLElement("meta")}}  | **HTML `<meta>` 요소**는 {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}과 같은 다른 메타관련 요소로 나타낼 수 없는 {{glossary("Metadata", "메타데이터")}}를 나타냅니다. |
+| {{HTMLElement("meta")}}  | {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}과 같은 다른 메타관련 요소로 나타낼 수 없는 {{glossary("Metadata", "메타데이터")}}를 나타냅니다. |
 | {{HTMLElement("style")}} | **HTML `<style>` 요소**는 문서나 문서 일부에 대한 스타일 정보를 포함합니다. |
 | {{HTMLElement("title")}} | **HTML `<title>` 요소**는 브라우저의 제목 표시줄이나 페이지 탭에 보이는 문서 제목을 정의합니다. 텍스트만 포함할 수 있으며 태그를 포함하더라도 무시합니다. |
 
