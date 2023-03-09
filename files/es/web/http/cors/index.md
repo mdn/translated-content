@@ -246,6 +246,26 @@ Content-Type: text/plain
 ```
 
 #### Solicitudes y redireccionamientos controlados previamente
+
+Actualmente, no todos los navegadores admiten las redirecciones posteriores a una solicitud verificada previamente. Si se produce una redirección después de una solicitud de este tipo, algunos navegadores a día de hoy informarán con un mensaje de error como el siguiente:
+
+> La solicitud ha sido redirigida a 'https://example.com/foo' lo cual no está permitido para las solicitudes de origen cruzado que requieren verificación previa. 
+> La solicitud requiere verificación previa, por lo que no tiene permitido seguir las redirecciones de origen cruzado.
+
+El protocolo CORS originalmente requería ese comportamiento, pero [se modificó posteriormente para no exigirlo](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). Sin embargo, no todos los navegadores han implementado el cambio, por lo que todavía muestran el comportamiento requerido originalmente.
+
+Hasta que los navegadores se pongan al día con la especificación, es posible que pueda evitar esta limitación realizando una o ambas de las siguientes acciones:
+
+- Cambiar el comportamiento del servidor para evitar la comprobación previa y/o evitar la redirección.
+- Cambiar la solicitud para que sea una [Solicitud simple](#solicitudes-simples) que no provoque una comprobación previa.
+
+Si eso no es posible, otra forma es:
+
+- Hacer una [Solicitud simple](#solicitudes-simples) (usando {{domxref("Response.url")}} para la API Fetch o {{domxref("Response.url")}}) para determinar en qué URL terminaría la petición real que será verificada previamente.
+- Hacer otra solicitud (la solicitud _real_) utilizando la URL que obtuvo de `Response.url` o de `XMLHttpRequest.responseURL` en el primer paso.
+
+Sin embargo, si se trata de una solicitud que desencadena una verificación previa, debido a la presencia de la cabecera de autorización en la solicitud, no podrá evitar la limitación siguiendo los pasos descritos anteriormente. Y no podrá evitarla en absoluto a menos que tenga control sobre el servidor al que se realiza la solicitud.
+
 ### Solicitudes con credenciales
 #### Solicitudes de verificación previa y credenciales
 #### Solicitudes con credenciales y comodines
