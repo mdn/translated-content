@@ -15,7 +15,7 @@ l10n:
 이 안내서는 여러분이 아래 기본 배경지식이 있다고 가정합니다.
 
 - 인터넷과 월드 와이드 웹 ([WWW](/ko/docs/Glossary/World_Wide_Web))에 대한 일반적인 이해.
-- HyperText Markup Language ([HTML](/en-US/docs/Glossary/HTML))에 대한 적절한 실무 지식.
+- HyperText Markup Language ([HTML](/ko/docs/Glossary/HTML))에 대한 적절한 실무 지식.
 - 약간의 프로그래밍 경험. 만약 프로그래밍이 처음이라면, [JavaScript](/ko/docs/Web/JavaScript) 메인 페이지에 링크된 자습서 중 하나를 공부해보세요.
 
 ## JavaScript 정보를 찾을 수 있는 곳
