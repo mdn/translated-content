@@ -8,7 +8,7 @@ l10n:
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
-이 챕터에선 JavaScript를 소개하고 몇 가지 기본 개념을 다룹니다.
+이 장에서는 JavaScript를 소개하고 몇 가지 기본 개념에 대해 설명합니다.
 
 ## 알고 있어야 하는 것
 
