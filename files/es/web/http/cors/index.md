@@ -70,7 +70,7 @@ Aparte de las cabeceras establecidas automáticamente por el agente de usuario (
 - `multipart/form-data`
 - `text/plain`
 
-- Si la petición se realiza utilizando un objeto {{domxref("XMLHttpRequest")}}, no se registran oyentes de eventos en el objeto devuelto por la propiedad {{domxref("XMLHttpRequest.upload")}} utilizada en la petición; Es decir, dada una instancia {{domxref("XMLHttpRequest")}} `xhr`, ningún código ha llamado a `xhr.upload.addEventListener()` para añadir un oyente de eventos para monitorizar la subida.
+- Si la petición se realiza utilizando un objeto {{domxref("XMLHttpRequest")}}, no se registran detectores de eventos en el objeto devuelto por la propiedad {{domxref("XMLHttpRequest.upload")}} utilizada en la petición; Es decir, dada una instancia {{domxref("XMLHttpRequest")}} `xhr`, ningún código ha llamado a `xhr.upload.addEventListener()` para añadir un detector de eventos para monitorizar la subida.
 - No se utiliza ningún objeto {{domxref("ReadableStream")}} en la solicitud.
 
  > **Nota:** _WebKit Nightly_ y _Safari Technology Preview_ imponen restricciones adicionales a lo valores permitidos en las cabeceras {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} y {{HTTPHeader("Content-Language")}}. Si alguna de esas cabeceras tiene valores "no estándar", WebKit/Safari no consideran que la petición sea una "solicitud simple". Los valores que WebKit/Safari consideran "no estándar" no están documentados, excepto en los siguientes errores de WebKit:
@@ -141,6 +141,110 @@ Access-Control-Allow-Origin: https://foo.example
 > **Nota:** Al responder a una petición con [solicitud con credenciales](#requests_with_credentials), el servidor debe especificar un origen en el valor de la cabecera `Access-Control-Allow-Origin`, en lugar de especificar el comodín "*".
 
 ### Solicitudes verificadas previamente
+
+A diferencia de las [solicitudes simples](#solicitudes-simples), para las "solicitudes verificadas previamente" el navegador envía primero una petición HTTP utilizando el método {{HTTPMethod("OPTIONS")}} al recurso en el otro origen, para determinar si la solicitud real es segura de enviar. Este tipo de solicitudes entre orígenes se verifican previamente porque pueden afectar a los datos del usuario.
+
+A continuación se muestra un ejemplo de solicitud que se comprobará previamente:
+
+```js
+const xhr = new XMLHttpRequest();
+xhr.open("POST", "https://bar.other/doc");
+xhr.setRequestHeader("X-PINGOTHER", "pingpong");
+xhr.setRequestHeader("Content-Type", "text/xml");
+xhr.onreadystatechange = handler;
+xhr.send("<person><name>Arun</name></person>");
+```
+
+El ejemplo anterior crea un cuerpo para enviar con la solicitud `POST`. Además, se establece una cabecera de petición HTTP `X-PINGOTHER`no estándar. Dichas cabeceras no son parte de HTTP/1.1, pero suelen ser útiles para las aplicaciones web. Puesto que la petición utiliza un `Content-Type` de `text/xml` y puesto que se establece una cabecera personalizada, esta petición es "verificada previamente".
+
+![Diagram of a request that is preflighted](preflight_correct.png)
+
+> **Nota:** Como se describe a continuación, la solicitud `POST` real no incluye las cabeceras `Access-Control-Request-*`. Estas solo son necesarias para la solicitud `OPTIONS`. 
+
+Veamos el intercambio completo entre cliente y servidor. El primer intercambio es la solicitud/respuesta verificadas previamente:
+
+```http
+OPTIONS /doc HTTP/1.1
+Host: bar.other
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Connection: keep-alive
+Origin: https://foo.example
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+
+HTTP/1.1 204 No Content
+Date: Mon, 01 Dec 2008 01:15:39 GMT
+Server: Apache/2
+Access-Control-Allow-Origin: https://foo.example
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Access-Control-Max-Age: 86400
+Vary: Accept-Encoding, Origin
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive
+```
+
+Las primeras diez líneas representan la solicitud de verificación previa con el método `OPTIONS`. El navegador determina que necesita enviar esto basándose en los parámetros de petición que el fragmento de código JavaScript de arriba ha usado, para que el servidor pueda responder si es aceptable enviar la petición con los parámetros de solicitud reales. OPTIONS es un método HTTP/1.1 que se utiliza para determinar con más detalle la información de los servidores y es un método seguro, lo que significa que no se puede utilizar para cambiar el recurso. Observe que junto con la solicitud OPTIONS, se envían otras dos cabeceras de solicitud (líneas nueve y diez respectivamente):
+
+```http
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+```
+
+La cabecera {{HTTPHeader("Access-Control-Request-Method")}} notifica al servidor, como parte de una solicitud de verificación previa, que cuando se envíe la solicitud real lo hará con un método `POST`. La cabecera {{HTTPHeader("Access-Control-Request-Headers")}} notifica al servidor que cuando se envíe la solicitud real, lo hará con las cabeceras personalizadas `X-PINGOTHER` and `Content-Type`. Ahora, el servidor tiene la oportunidad de determinar si puede aceptar una petición bajo estas condiciones.
+
+Las líneas del código anterior que van desde la 12 hasta la 21, son la respuesta  que devuelve el servidor, que indican que el método de solicitud `POST` y las cabeceras de solicitud `X-PINGOTHER` son aceptables. Echemos un vistazo más de cerca a las líneas que van desde las 15 a la 18:
+
+```http
+Access-Control-Allow-Origin: https://foo.example
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Access-Control-Max-Age: 86400
+```
+
+El servidor responde con `Access-Control-Allow-Origin: https://foo.example`, restringiendo el acceso únicamente al dominio de origen solicitante. También responde con `Access-Control-Allow-Methods`, que dice que `POST` y `GET` son métodos válidos para consultar el recurso en cuestión (esta cabecera es similar a la cabecera de respuesta {{HTTPHeader("Allow")}}), pero se utiliza estrictamente en el contexto del control de acceso.
+
+El servidor también envía `Access-Control-Allow-Headers` con un valor de "`X-PINGOTHER, Content-Type`", confirmando que se trata de cabeceras permitidas que se utilizarán con la solicitud real. Al igual que `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` es una lista de cabeceras aceptables separada por comas.
+
+Por último, {{HTTPHeader("Access-Control-Max-Age")}} da un valor en segundos, indicando durante cuánto tiempo se puede almacenar en caché la respuesta a la solicitud de verificación previa sin tener que enviar otra solicitud de verificación previa. El valor por defecto es de cinco segundos. En este caso, la edad máxima es de 86400 segundos (lo que son 24 horas). Tenga en cuenta que cada navegador tiene un [Valor interno máximo](/es/docs/Web/HTTP/Headers/Access-Control-Max-Age) que tiene preferencia cuando el `Access-Control-Max-Age` lo supera.
+
+Una vez comprobada la solicitud de verificación previa, se envía la solicitud real:
+
+```http
+POST /doc HTTP/1.1
+Host: bar.other
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Connection: keep-alive
+X-PINGOTHER: pingpong
+Content-Type: text/xml; charset=UTF-8
+Referer: https://foo.example/examples/preflightInvocation.html
+Content-Length: 55
+Origin: https://foo.example
+Pragma: no-cache
+Cache-Control: no-cache
+
+<person><name>Arun</name></person>
+
+HTTP/1.1 200 OK
+Date: Mon, 01 Dec 2008 01:15:40 GMT
+Server: Apache/2
+Access-Control-Allow-Origin: https://foo.example
+Vary: Accept-Encoding, Origin
+Content-Encoding: gzip
+Content-Length: 235
+Keep-Alive: timeout=2, max=99
+Connection: Keep-Alive
+Content-Type: text/plain
+
+[Some XML payload]
+```
+
 #### Solicitudes y redireccionamientos controlados previamente
 ### Solicitudes con credenciales
 #### Solicitudes de verificación previa y credenciales
