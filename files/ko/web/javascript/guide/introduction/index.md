@@ -97,7 +97,7 @@ console.log(eval("3 + 5"));
 
 ### 웹 콘솔에서 여러 줄 입력하기
 
-웹 콘솔의 한 줄 입력 모드는 JavaScript 표현식을 빠르게 테스트하는 데 적합합니다. 그리고 여러 줄을 실행할 수도 있지만 그리 편리하지 않습니다. 보다 복잡한 JavaScript의 경우 [여러 줄 입력 모드](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode)를 사용할 수 있습니다.
+웹 콘솔의 한 줄 입력 모드는 JavaScript 표현식을 빠르게 테스트하는 데 적합합니다. 그리고 여러 줄을 실행할 수도 있지만 그리 편리하지 않습니다. 더 복잡한 JavaScript의 경우 [여러 줄 입력 모드](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line-mode)를 사용할 수 있습니다.
 
 ### Hello world
 
