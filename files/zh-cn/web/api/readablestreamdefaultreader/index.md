@@ -55,11 +55,12 @@ fetch("https://www.example.org/").then((response) => {
 
           // Get the data and send it to the browser via the controller
           controller.enqueue(value);
-        }).then(push);
-      };
+          push();
+        });
+      }
 
       push();
-    }
+    },
   });
 
   return new Response(stream, { headers: { "Content-Type": "text/html" } });
