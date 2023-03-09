@@ -61,7 +61,7 @@ Java는 빠른 실행과 타입 안전성을 위해 설계된 클래스 기반 �
 
 JavaScript는 JavaScript를 기반으로 표준화된 국제 프로그래밍 언어를 제공하기 위해 정보 및 통신 시스템 표준화를 위한 유럽 협회(이전에는 유럽 컴퓨터 제조업체 협회(European Computer Manufacturers Association)의 약자)인 [Ecma International](https://www.ecma-international.org/)에서 표준화되었습니다. ECMAScript라고 하는 이 표준화된 JavaScript 버전은 표준을 지원하는 모든 애플리케이션에서 동일한 방식으로 작동합니다. 회사는 개방형 표준 언어를 사용하여 JavaScript 구현을 개발할 수 있습니다. ECMAScript 표준은 ECMA-262 명세에 문서화되어 있습니다.
 
-ECMA-262 표준은 또한 IOS-16262로서 [ISO](http://www.iso.ch/) (국제 표준화 기구) 에 의해 승인되었습니다. [Ecma International website](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 에서 그 명세를 찾을 수 있습니다. ECMAScript 명세는 [World Wide Web Consortium (W3C)](http://www.w3.org/) 나 [WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org/)에 의해 표준화된 Document Object Model (DOM)을 설명하지 않습니다. DOM은 여러분의 스크립트에 HTML 문서 객체를 드러내는 방법을 정의합니다. JavaScript로 프로그래밍을 할 때 사용되는 여러 기술들에 대한 정보를 얻으 시려면, [JavaScript 기술 개요](/ko/docs/Web/JavaScript/JavaScript_technologies_overview) 를 참고하세요.
+ECMA-262 표준은 또한 IOS-16262로서 [ISO](http://www.iso.ch/) (국제 표준화 기구)에 의해 승인되었습니다. [Ecma International website](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 에서 그 명세를 찾을 수 있습니다. ECMAScript 명세는 [World Wide Web Consortium (W3C)](http://www.w3.org/) 나 [WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org/)에 의해 표준화된 Document Object Model (DOM)을 설명하지 않습니다. DOM은 HTML 문서 객체가 스크립트에 노출되는 방식을 정의합니다. JavaScript로 프로그래밍할 때 사용되는 다양한 기술에 대한 더 나은 아이디어를 얻으려면, [JavaScript 기술 개요](/ko/docs/Web/JavaScript/JavaScript_technologies_overview) 기사를 참고하세요.
 
 ### JavaScript 문서 vs ECMAScript 명세서
 
