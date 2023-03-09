@@ -53,7 +53,7 @@ HTML 텍스트 콘텐츠를 사용하여 여는 {{htmlelement("body")}}와 닫�
 
 | 요소 | 설명 |
 | ---- | ---- |
-| {{HTMLElement("blockquote")}} | **HTML `<blockquote>` 요소**는 안쪽의 텍스트가 긴 인용문임을 나타냅니다. 주로 들여쓰기를 한 것으로 그려집니다. (외형을 바꾸는 법은 [사용 일람](#사용_일람)을 참고하세요) 인용문의 출처 URL은 {{htmlattrxref("cite", "blockquote")}} 특성으로, 출처 텍스트는 {{htmlelement("cite")}} 요소로 제공할 수 있습니다. |
+| {{HTMLElement("blockquote")}} | 안쪽의 텍스트가 긴 인용문임을 나타냅니다. 주로 들여쓰기를 한 것으로 그려집니다. 인용문의 출처 URL은 `cite` 속성으로, 출처 텍스트는 {{HTMLElement("cite")}} 요소로 제공할 수 있습니다. |
 | {{HTMLElement("dd")}}         | **HTML `<dd>` 요소**는 정의 목록 요소({{HTMLElement("dl")}})에서 앞선 용어({{htmlelement("dt")}})에 대한 설명, 정의, 또는 값을 제공합니다. |
 | {{HTMLElement("div")}}        | **HTML `<div>` 요소**는 플로우 콘텐츠를 위한 통용 컨테이너입니다. {{glossary("CSS")}}로 꾸미기 전에는 콘텐츠나 레이아웃에 어떤 영향도 주지 않습니다. |
 | {{HTMLElement("dl")}}         | **HTML `<dl>` 요소**는 설명 목록을 나타냅니다. `<dl>`은 {{htmlelement("dt")}}로 표기한 용어와 {{htmlelement("dd")}} 요소로 표기한 설명 그룹의 목록을 감싸서 설명 목록을 생성합니다. 주로 용어사전 구현이나 메타데이터(키-값 쌍 목록)를 표시할 때 사용합니다. |
