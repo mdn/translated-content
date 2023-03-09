@@ -1,5 +1,5 @@
 ---
-title: '元素：keypress 事件'
+title: 元素：keypress 事件
 slug: Web/API/Element/keypress_event
 ---
 
@@ -39,7 +39,7 @@ _该接口还继承了其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 
   - : 返回一个字符串，其中包含由事件表示的物理键的代码值。
 
-    > **警告：** 此方法忽略用户的键盘布局，因此，如果用户按下 QWERTY 键盘布局中“Y”位置（在主键盘区域上方的一行中间），即使用户使用 QWERTZ 键盘（这意味着用户期望“Z” ，而且所有其他属性都指示为“Z”）或 Dvorak 键盘布局（其中用户期望“F”），此方法仍将始终返回“KeyY”。如果你想向用户显示正确的按键信息，则可以使用 {{domxref("Keyboard.getLayoutMap()")}} 方法。
+    > **警告：** 此方法忽略用户的键盘布局，因此，如果用户按下 QWERTY 键盘布局中“Y”位置（在主键盘区域上方的一行中间），即使用户使用 QWERTZ 键盘（这意味着用户期望“Z”，而且所有其他属性都指示为“Z”）或 Dvorak 键盘布局（其中用户期望“F”），此方法仍将始终返回“KeyY”。如果你想向用户显示正确的按键信息，则可以使用 {{domxref("Keyboard.getLayoutMap()")}} 方法。
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
