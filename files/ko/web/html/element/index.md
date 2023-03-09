@@ -23,7 +23,7 @@ slug: Web/HTML/Element
 | {{HTMLElement("link")}}  | 현재 문서와 외부 리소스 간의 관계를 지정합니다. 이 요소는 CSS에 연결하는 데 가장 일반적으로 사용되지만 무엇보다도 사이트 아이콘("favicon" 스타일 아이콘과 홈 화면용 아이콘 및 모바일 장치의 앱)을 설정하는 데도 사용됩니다. |
 | {{HTMLElement("meta")}}  | {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}과 같은 다른 메타관련 요소로 나타낼 수 없는 {{glossary("Metadata", "메타데이터")}}를 나타냅니다. |
 | {{HTMLElement("style")}} | 문서 또는 문서의 일부에 대한 스타일 정보를 포함합니다. 이 요소를 포함하는 문서의 내용에 적용되는 CSS를 포함합니다 |
-| {{HTMLElement("title")}} | **HTML `<title>` 요소**는 브라우저의 제목 표시줄이나 페이지 탭에 보이는 문서 제목을 정의합니다. 텍스트만 포함할 수 있으며 태그를 포함하더라도 무시합니다. |
+| {{HTMLElement("title")}} | {{glossary("Browser", "browser")}}의 제목 표시줄 또는 페이지의 탭에 표시되는 문서의 제목을 정의합니다. 텍스트만 포함합니다. 요소 내의 태그는 무시됩니다. |
 
 ## 구획 루트
 
