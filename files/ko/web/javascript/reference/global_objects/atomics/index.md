@@ -12,7 +12,7 @@ l10n:
 
 ## 설명
 
-아토믹 연산은 `Atomic` 모듈에 설치됩니다. 다른 전역 개체와 달리 `Atomics`는 생성자가 아니기 때문에,
+아토믹 연산은 `Atomic` 모듈에 설치됩니다. 다른 전역 객체와 달리 `Atomics`는 생성자가 아니기 때문에,
 [`new` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 사용하거나
 `Atomics` 객체를 함수로 호출할 수 없습니다. {{jsxref("Math")}} 객체처럼 `Atomics`의 모든 속성과
 메서드는 정적입니다.
