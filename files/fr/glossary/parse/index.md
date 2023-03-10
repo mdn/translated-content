@@ -1,5 +1,5 @@
 ---
-title: Analyse Syntaxique
+title: Analyse syntaxique
 slug: Glossary/Parse
 ---
 
