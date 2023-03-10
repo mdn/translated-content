@@ -27,7 +27,7 @@ if (bigDay.getTime() < Date.now()) {
 }
 ```
 
-最初の行では、クラス [`Date`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) のインスタンスを作成し、`bigDay` と名付けています。2 行目では、`bigDay` インスタンスに対して [メソッド](/ja/docs/Glossary/Method) [`toLocaleDateString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString) を呼び出して、文字列を返しています。次に、2 つの数値を比較しています。1 つは [`getTime()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) メソッドから返されたもの、もう 1 つは `Date` クラス自体から [`Date.now()`](/ja/docs/JavaScript/Reference/Global_Objects/Date/now) として直接呼び出されたものです。
+最初の行では、クラス [`Date`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) のインスタンスを作成し、`bigDay` と名付けています。2 行目では、`bigDay` インスタンスに対して [メソッド](/ja/docs/Glossary/Method) [`toLocaleDateString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString) を呼び出して、文字列を返しています。次に、2 つの数値を比較しています。1 つは [`getTime()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) メソッドから返されたもの、もう 1 つは `Date` クラス自体から [`Date.now()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/now) として直接呼び出されたものです。
 
 `Date` は JavaScript の組み込みクラスです。この例から、クラスが何をするのかの基本的な考えを得ることができます。
 
